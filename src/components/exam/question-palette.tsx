@@ -1,79 +1,158 @@
 "use client";
 
-import { Flag } from "lucide-react";
+import { useEffect } from "react";
+import { Bookmark, MapPin, X } from "lucide-react";
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import type { QuestionState } from "@/types/exam";
 
-export function QuestionPalette({
-  open,
-  onOpenChange,
+/** Legend shown above the grid, in both the Question Menu and the Review Page. */
+export function QuestionLegend() {
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1.5 text-[12px] text-exam-muted">
+      <span className="flex items-center gap-1.5">
+        <MapPin className="h-3.5 w-3.5 fill-exam-blue text-exam-blue" /> Current
+      </span>
+      <span className="flex items-center gap-1.5">
+        <span className="h-3.5 w-3.5 rounded-[2px] border border-dashed border-exam-disabled" /> Unanswered
+      </span>
+      <span className="flex items-center gap-1.5">
+        <Bookmark className="h-3.5 w-3.5 fill-exam-flag text-exam-flag" /> For Review
+      </span>
+    </div>
+  );
+}
+
+/**
+ * The numbered question grid. Unanswered is the state the legend calls out
+ * (dashed outline); answered questions read as filled.
+ */
+export function QuestionGrid({
   count,
   currentIndex,
   states,
   onJump,
 }: {
-  open: boolean;
-  onOpenChange: (v: boolean) => void;
   count: number;
   currentIndex: number;
   states: QuestionState[];
   onJump: (index: number) => void;
 }) {
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" className="max-h-[70vh] overflow-y-auto rounded-t-lg bg-exam-bg">
-        <SheetHeader>
-          <SheetTitle className="text-exam-text">Question navigator</SheetTitle>
-        </SheetHeader>
-        <div className="mt-4 grid grid-cols-6 gap-2 sm:grid-cols-10">
-          {Array.from({ length: count }).map((_, i) => {
-            const state = states[i];
-            const answered = !!(state?.selectedChoiceId || state?.freeResponseAnswer);
-            // A question with recorded time (or an answer) has been visited;
-            // there's no separate persisted flag, this is a reliable proxy.
-            const visited = answered || (state?.timeSpentSeconds ?? 0) > 0;
-            return (
-              <button
-                key={i}
-                onClick={() => {
-                  onJump(i);
-                  onOpenChange(false);
-                }}
-                className={cn(
-                  "relative flex h-10 w-10 items-center justify-center rounded border text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-2 focus-visible:ring-offset-exam-bg",
-                  answered
-                    ? "border-exam-blue bg-exam-blue text-white"
-                    : visited
-                      ? "border-exam-border bg-gray-100 text-exam-text"
-                      : "border-exam-border bg-exam-card text-exam-text",
-                  i === currentIndex && "ring-2 ring-exam-blue ring-offset-1 ring-offset-exam-bg"
-                )}
-              >
-                {i + 1}
-                {state?.flagged && (
-                  <Flag className="absolute -right-1.5 -top-1.5 h-3.5 w-3.5 fill-warning text-warning" />
-                )}
-              </button>
-            );
-          })}
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(38px,1fr))] gap-x-2 gap-y-3">
+      {Array.from({ length: count }).map((_, i) => {
+        const state = states[i];
+        const answered = !!(state?.selectedChoiceId || state?.freeResponseAnswer);
+        return (
+          <div key={i} className="relative flex justify-center pt-3">
+            {i === currentIndex && (
+              <MapPin className="absolute left-1/2 top-0 h-3.5 w-3.5 -translate-x-1/2 fill-exam-blue text-exam-blue" />
+            )}
+            <button
+              type="button"
+              onClick={() => onJump(i)}
+              aria-label={`Question ${i + 1}${answered ? ", answered" : ", unanswered"}`}
+              className={cn(
+                "relative flex h-[38px] w-[38px] items-center justify-center rounded-[3px] text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1",
+                answered
+                  ? "bg-exam-blue text-white hover:bg-exam-blueHover"
+                  : "border border-dashed border-exam-disabled bg-white text-exam-text hover:bg-exam-hover"
+              )}
+            >
+              {i + 1}
+              {state?.flagged && (
+                <Bookmark className="absolute -right-1 -top-1.5 h-3.5 w-3.5 fill-exam-flag text-exam-flag" />
+              )}
+            </button>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/**
+ * Bluebook's "Question Menu" — a popup anchored above the bottom navigation
+ * bar rather than a slide-up sheet. Its parent must be positioned.
+ */
+export function QuestionPalette({
+  open,
+  onOpenChange,
+  title,
+  count,
+  currentIndex,
+  states,
+  onJump,
+  onGoToReview,
+}: {
+  open: boolean;
+  onOpenChange: (v: boolean) => void;
+  title: string;
+  count: number;
+  currentIndex: number;
+  states: QuestionState[];
+  onJump: (index: number) => void;
+  onGoToReview: () => void;
+}) {
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onOpenChange(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open, onOpenChange]);
+
+  if (!open) return null;
+
+  return (
+    <>
+      <div className="fixed inset-0 z-40" onMouseDown={() => onOpenChange(false)} />
+      <div
+        role="dialog"
+        aria-label="Question Menu"
+        className="absolute bottom-full left-1/2 z-50 mb-2 w-[min(620px,calc(100vw-1.5rem))] -translate-x-1/2 rounded-md border border-exam-border bg-white shadow-examPopup"
+      >
+        <div className="relative px-5 pb-3 pt-4">
+          <p className="text-center text-[13px] font-semibold text-exam-text">{title}</p>
+          <button
+            type="button"
+            onClick={() => onOpenChange(false)}
+            aria-label="Close Question Menu"
+            className="absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded text-exam-muted hover:bg-exam-hover hover:text-exam-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue"
+          >
+            <X className="h-4 w-4" />
+          </button>
+          <div className="mt-2.5">
+            <QuestionLegend />
+          </div>
         </div>
-        <div className="mt-4 flex flex-wrap gap-4 text-xs text-exam-muted">
-          <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-exam-blue bg-exam-blue" /> Answered
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-exam-border bg-gray-100" /> Visited
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-exam-border bg-exam-card" /> Not visited
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Flag className="h-3.5 w-3.5 fill-warning text-warning" /> Flagged for review
-          </span>
+
+        <div className="max-h-[46vh] overflow-y-auto exam-scroll border-t border-exam-divider px-5 py-4">
+          <QuestionGrid
+            count={count}
+            currentIndex={currentIndex}
+            states={states}
+            onJump={(i) => {
+              onJump(i);
+              onOpenChange(false);
+            }}
+          />
         </div>
-      </SheetContent>
-    </Sheet>
+
+        <div className="flex justify-center border-t border-exam-divider px-5 py-3">
+          <button
+            type="button"
+            onClick={() => {
+              onOpenChange(false);
+              onGoToReview();
+            }}
+            className="rounded-full border border-exam-blue px-5 py-1.5 text-[13px] font-medium text-exam-blue transition-colors hover:bg-exam-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1"
+          >
+            Go to Review Page
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

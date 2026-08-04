@@ -39,13 +39,20 @@ const config: Config = {
         // the exam/review screens — that UI has one consistent kiosk
         // appearance regardless of the rest of the site's light/dark theme.
         exam: {
-          bg: "#F8FAFC",
-          card: "#FFFFFF",
-          border: "#E5E7EB",
-          text: "#111827",
-          muted: "#4B5563",
-          blue: "#2563EB",
-          blueHover: "#1D4ED8",
+          bg: "#F5F5F3",
+          passage: "#F7F7F5",
+          question: "#FAFAF8",
+          header: "#F3F4F6",
+          strip: "#0E1728",
+          blue: "#2D6CDF",
+          blueHover: "#245FC9",
+          border: "#D9DEE5",
+          divider: "#E4E7EC",
+          text: "#1D2433",
+          muted: "#505866",
+          disabled: "#9BA3AF",
+          hover: "#F2F5FA",
+          flag: "#F5A623",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",
@@ -106,7 +113,10 @@ const config: Config = {
         panel: "0 12px 40px -12px rgb(17 26 48 / 0.18)",
         // Near-flat — for exam-UI surfaces (dropdowns, sheets) where the
         // rest of the shadow scale reads as too "modern web app."
-        examFlat: "0 1px 2px 0 rgb(0 0 0 / 0.04), 0 1px 3px 0 rgb(0 0 0 / 0.06)",
+        examFlat: "0 1px 2px 0 rgb(14 23 40 / 0.04), 0 1px 3px 0 rgb(14 23 40 / 0.06)",
+        // Popovers/menus that float above the test surface (annotation popup,
+        // Question Menu). Present, but far softer than the app's shadow-panel.
+        examPopup: "0 6px 20px -4px rgb(14 23 40 / 0.14), 0 2px 6px -2px rgb(14 23 40 / 0.08)",
       },
       keyframes: {
         "accordion-down": {

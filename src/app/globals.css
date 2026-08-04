@@ -108,36 +108,101 @@
   }
 }
 
-/* Highlightable passage text (Bluebook-style annotation) */
+/* ---------------------------------------------------------------------------
+   Exam (Bluebook) kiosk UI
+   These styles are scoped to the testing interface and deliberately do not
+   react to the site's light/dark theme — Bluebook has one fixed appearance.
+   --------------------------------------------------------------------------- */
+
+/* Annotations: highlight colors match Bluebook's three swatches. */
 mark.sat-highlight {
-  background-color: hsl(48 96% 76% / 0.7);
-  border-radius: 2px;
-  padding: 0 1px;
+  border-radius: 1px;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
 }
-.dark mark.sat-highlight {
-  background-color: hsl(48 70% 45% / 0.45);
+mark.sat-highlight[data-color="yellow"] {
+  background-color: #FFE9A6;
 }
-mark.sat-note {
-  border-bottom: 2px dotted hsl(222 47% 25%);
-  cursor: help;
+mark.sat-highlight[data-color="pink"] {
+  background-color: #FFD0DE;
+}
+mark.sat-highlight[data-color="blue"] {
+  background-color: #BFDBFE;
+}
+/* A highlight carrying a note gets Bluebook's underline affordance. */
+mark.sat-highlight[data-note="1"] {
+  border-bottom: 2px solid #505866;
+}
+mark.sat-highlight.is-active {
+  outline: 2px solid #2D6CDF;
+  outline-offset: 1px;
+}
+
+/* Passage typography — printed-book rhythm, not web-article rhythm. */
+.exam-passage p {
+  margin-bottom: 1rem;
+}
+.exam-passage p:last-child {
+  margin-bottom: 0;
+}
+.exam-passage ul,
+.exam-passage ol {
+  margin: 0 0 1rem 1.35rem;
+  list-style: disc;
+}
+.exam-passage ol {
+  list-style: decimal;
+}
+.exam-passage li {
+  margin-bottom: 0.35rem;
+}
+.exam-passage u {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.exam-passage table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.exam-passage th,
+.exam-passage td {
+  border: 1px solid #D9DEE5;
+  padding: 0.35rem 0.6rem;
+  text-align: left;
+}
+
+/* Question stem shares the passage rhythm but is never as tall. */
+.exam-stem p {
+  margin-bottom: 0.75rem;
+}
+.exam-stem p:last-child {
+  margin-bottom: 0;
+}
+.exam-stem u {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Thin native-style scrollbars for the exam/review kiosk UI */
 .exam-scroll {
   scrollbar-width: thin;
-  scrollbar-color: #CBD5E1 transparent;
+  scrollbar-color: #C7CCD4 transparent;
 }
 .exam-scroll::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 .exam-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 .exam-scroll::-webkit-scrollbar-thumb {
-  background-color: #CBD5E1;
-  border-radius: 4px;
+  background-color: #C7CCD4;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
 .exam-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #94A3B8;
+  background-color: #9BA3AF;
+  background-clip: content-box;
 }

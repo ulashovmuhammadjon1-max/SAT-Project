@@ -21,19 +21,19 @@ const FORMULAS: { label: string; formula: string }[] = [
 export function ReferenceSheetDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-xl">
+      <DialogContent className="rounded-md border-exam-border bg-white text-exam-text shadow-examPopup sm:max-w-xl">
         <DialogHeader>
-          <DialogTitle>Reference sheet</DialogTitle>
+          <DialogTitle className="text-[15px] font-semibold">Reference Sheet</DialogTitle>
         </DialogHeader>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
           {FORMULAS.map((f) => (
-            <div key={f.label} className="rounded-lg border border-border p-3 text-center">
-              <p className="font-display text-base font-semibold">{f.formula}</p>
-              <p className="mt-1 text-xs text-muted-foreground">{f.label}</p>
+            <div key={f.label} className="rounded border border-exam-border p-2.5 text-center">
+              <p className="text-[15px] font-medium">{f.formula}</p>
+              <p className="mt-1 text-[11px] text-exam-muted">{f.label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground">
+        <p className="text-[12px] leading-[1.6] text-exam-muted">
           The number of degrees of arc in a circle is 360. The number of radians of arc in a circle is 2π. The sum of
           the measures in degrees of the angles of a triangle is 180.
         </p>
