@@ -27,6 +27,9 @@ export interface ExtractedQuestion {
   hasImage: boolean;
   hasTable: boolean;
   confidence: number; // 0-1
+  // Set by an admin in the review UI when a question needs a figure/graph —
+  // PDF text extraction can never recover an embedded image on its own.
+  imageUrl?: string | null;
 }
 
 export interface ExtractedPassage {

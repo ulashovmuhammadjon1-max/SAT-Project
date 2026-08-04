@@ -49,6 +49,12 @@ export async function updateQuestion(questionId: string, input: QuestionUpdateIn
   revalidatePath("/admin/questions");
 }
 
+export async function updatePassage(passageId: string, content: string) {
+  await requireAdmin();
+  await prisma.passage.update({ where: { id: passageId }, data: { content } });
+  revalidatePath("/admin/questions");
+}
+
 export async function deleteQuestion(questionId: string) {
   await requireAdmin();
   await prisma.question.delete({ where: { id: questionId } });

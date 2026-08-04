@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { DeleteTestButton } from "@/components/admin/delete-test-button";
 import { prisma } from "@/lib/prisma";
 
 export const metadata = { title: "Tests & Modules" };
@@ -34,6 +35,7 @@ export default async function AdminTestsPage() {
                 <TableHead>Modules</TableHead>
                 <TableHead>Questions</TableHead>
                 <TableHead>Attempts</TableHead>
+                <TableHead />
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -53,12 +55,15 @@ export default async function AdminTestsPage() {
                     <TableCell className="text-sm">{test.modules.length}</TableCell>
                     <TableCell className="text-sm">{questionCount}</TableCell>
                     <TableCell className="text-sm">{test._count.attempts}</TableCell>
+                    <TableCell>
+                      <DeleteTestButton testId={test.id} title={test.title} />
+                    </TableCell>
                   </TableRow>
                 );
               })}
               {tests.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={6} className="py-12 text-center text-sm text-muted-foreground">
+                  <TableCell colSpan={7} className="py-12 text-center text-sm text-muted-foreground">
                     No tests yet. Publish a PDF upload to create one.
                   </TableCell>
                 </TableRow>

@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TestActions } from "@/components/admin/test-actions";
-import { TestTitleEditor } from "@/components/admin/test-title-editor";
+import { EditTestDialog } from "@/components/admin/edit-test-dialog";
 import { DeleteModuleButton } from "@/components/admin/module-actions";
 import { prisma } from "@/lib/prisma";
 
@@ -34,6 +34,11 @@ export default async function AdminTestDetailPage({ params }: { params: { id: st
 
   if (!test) notFound();
 
+  const adaptiveConfigs = await prisma.adaptiveConfig.findMany({
+    orderBy: { name: "asc" },
+    select: { id: true, name: true },
+  });
+
   const missingSlots =
     test.type === "FULL_LENGTH"
       ? ALL_SLOTS.filter(
@@ -45,14 +50,30 @@ export default async function AdminTestDetailPage({ params }: { params: { id: st
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <TestTitleEditor testId={test.id} title={test.title} />
+          <h1 className="font-display text-2xl font-semibold tracking-tight">{test.title}</h1>
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
             <span>{test.type.replace("_", " ")}</span>
             <span>·</span>
             <Badge variant={test.status === "PUBLISHED" ? "success" : "secondary"}>{test.status}</Badge>
           </div>
         </div>
-        <TestActions testId={test.id} status={test.status} />
+        <div className="flex gap-2">
+          <EditTestDialog
+            testId={test.id}
+            title={test.title}
+            description={test.description}
+            adaptiveConfigId={test.adaptiveConfigId}
+            modules={test.modules.map((m) => ({
+              id: m.id,
+              subject: m.subject,
+              order: m.order,
+              difficulty: m.difficulty,
+              timeLimitMinutes: m.timeLimitMinutes,
+            }))}
+            adaptiveConfigs={adaptiveConfigs}
+          />
+          <TestActions testId={test.id} status={test.status} />
+        </div>
       </div>
 
       {test.status !== "PUBLISHED" && (

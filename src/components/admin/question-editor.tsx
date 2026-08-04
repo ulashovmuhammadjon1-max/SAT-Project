@@ -18,8 +18,11 @@ import {
   deleteQuestion,
   generateExplanationDraft,
   saveExplanation,
+  updatePassage,
   updateQuestion,
 } from "@/server/actions/admin/questions";
+import { ImageUploadField } from "@/components/admin/image-upload-field";
+import { RichTextField } from "@/components/admin/rich-text-field";
 
 interface Choice {
   id?: string;
@@ -44,7 +47,7 @@ interface QuestionData {
   difficulty: "EASY" | "MEDIUM" | "HARD";
   isPublished: boolean;
   choices: Choice[];
-  passage: { content: string; title: string | null } | null;
+  passage: { id: string; content: string; title: string | null } | null;
   explanation: {
     content: string;
     whyCorrect: string | null;
@@ -58,6 +61,8 @@ interface QuestionData {
 export function QuestionEditor({ question, domains }: { question: QuestionData; domains: Domain[] }) {
   const router = useRouter();
   const [stem, setStem] = useState(question.stem);
+  const [imageUrl, setImageUrl] = useState(question.imageUrl);
+  const [passageContent, setPassageContent] = useState(question.passage?.content ?? "");
   const [domainId, setDomainId] = useState(question.domainId);
   const [skillId, setSkillId] = useState(question.skillId);
   const [difficulty, setDifficulty] = useState(question.difficulty);
@@ -99,7 +104,10 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
 
   function save() {
     startSave(async () => {
-      await updateQuestion(question.id, { stem, imageUrl: question.imageUrl, domainId, skillId, difficulty, isPublished, choices });
+      await updateQuestion(question.id, { stem, imageUrl, domainId, skillId, difficulty, isPublished, choices });
+      if (question.passage) {
+        await updatePassage(question.passage.id, passageContent);
+      }
       await saveExplanation(question.id, {
         content: explContent,
         whyCorrect: explWhyCorrect,
@@ -158,9 +166,21 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
               <CardTitle className="text-base">Content</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              {question.passage && (
+                <div className="space-y-1.5">
+                  <Label>Passage {question.passage.title ? `— ${question.passage.title}` : ""}</Label>
+                  <RichTextField value={passageContent} onChange={setPassageContent} rows={6} />
+                </div>
+              )}
+
               <div className="space-y-1.5">
                 <Label>Question stem</Label>
-                <Textarea value={stem} onChange={(e) => setStem(e.target.value)} rows={4} />
+                <RichTextField value={stem} onChange={setStem} rows={4} />
+              </div>
+
+              <div className="space-y-1.5">
+                <Label>Figure (graph, diagram, table)</Label>
+                <ImageUploadField imageUrl={imageUrl} onChange={setImageUrl} />
               </div>
 
               <div className="space-y-2">
@@ -297,9 +317,19 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
             </CardHeader>
             <CardContent className="space-y-4 p-6">
               {question.passage && (
-                <div className="rounded-lg bg-secondary p-4 text-sm leading-relaxed">{question.passage.content}</div>
+                <div
+                  className="rounded-lg bg-secondary p-4 text-sm leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: passageContent }}
+                />
               )}
-              <p className="font-medium leading-relaxed">{stem || "Question stem preview…"}</p>
+              <div
+                className="font-medium leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: stem || "Question stem preview…" }}
+              />
+              {imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element -- proxy URL, not statically optimizable
+                <img src={imageUrl} alt="" className="max-h-64 rounded-lg border border-border" />
+              )}
               <div className="space-y-2">
                 {choices.map((choice) => (
                   <div
@@ -312,7 +342,7 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-semibold">
                       {choice.label}
                     </span>
-                    <span>{choice.content || `Choice ${choice.label}`}</span>
+                    <span dangerouslySetInnerHTML={{ __html: choice.content || `Choice ${choice.label}` }} />
                   </div>
                 ))}
               </div>

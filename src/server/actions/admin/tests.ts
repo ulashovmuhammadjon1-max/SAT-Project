@@ -31,10 +31,16 @@ export async function updateModuleTimeLimit(moduleId: string, minutes: number) {
   revalidatePath("/admin/tests");
 }
 
-export async function updateTestDetails(testId: string, data: { title: string; description?: string | null }) {
+export async function updateTestDetails(
+  testId: string,
+  data: { title: string; description?: string | null; adaptiveConfigId?: string | null }
+) {
   await requireAdmin();
   if (!data.title.trim()) throw new Error("Title cannot be empty.");
-  await prisma.test.update({ where: { id: testId }, data: { title: data.title.trim(), description: data.description } });
+  await prisma.test.update({
+    where: { id: testId },
+    data: { title: data.title.trim(), description: data.description, adaptiveConfigId: data.adaptiveConfigId },
+  });
   revalidatePath("/admin/tests");
   revalidatePath(`/admin/tests/${testId}`);
 }

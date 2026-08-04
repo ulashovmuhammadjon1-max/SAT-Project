@@ -237,6 +237,7 @@ export async function publishTestUpload(uploadId: string, options: PublishTestOp
           type: q.type,
           difficulty: q.difficultyGuess,
           stem: q.stem,
+          imageUrl: q.imageUrl ?? null,
           order: q.number,
           source: "AI_EXTRACTED",
           sourceUploadId: uploadId,

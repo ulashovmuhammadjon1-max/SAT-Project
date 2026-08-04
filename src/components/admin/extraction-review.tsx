@@ -12,9 +12,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { ImageUploadField } from "@/components/admin/image-upload-field";
+import { RichTextField } from "@/components/admin/rich-text-field";
 import { cn } from "@/lib/utils";
 import { publishTestUpload, publishVocabUpload, updateExtractedData } from "@/server/actions/admin/uploads";
 import type {
+  ExtractedPassage,
   ExtractedQuestion,
   ExtractedVocabWord,
   TestExtractionResult,
@@ -177,6 +180,7 @@ function TestReview({
   const [questions, setQuestions] = useState<ExtractedQuestion[]>(() =>
     withTaxonomyDefaults(initial.questions, domains, initialSubject ?? "READING_WRITING")
   );
+  const [passages, setPassages] = useState<ExtractedPassage[]>(initial.passages);
   const [moduleSlot, setModuleSlot] = useState(initialModuleSlot ?? "1");
   const [thresholdPct, setThresholdPct] = useState("");
   const [targetTestId, setTargetTestId] = useState(initialTargetTestId ?? "new");
@@ -256,16 +260,20 @@ function TestReview({
     );
   }
 
+  function updatePassage(index: number, patch: Partial<ExtractedPassage>) {
+    setPassages((prev) => prev.map((p, i) => (i === index ? { ...p, ...patch } : p)));
+  }
+
   function saveDraft() {
     startSave(async () => {
-      await updateExtractedData(jobId, { ...initial, questions });
+      await updateExtractedData(jobId, { ...initial, questions, passages });
       toast.success("Draft saved.");
     });
   }
 
   function publish() {
     startPublish(async () => {
-      await updateExtractedData(jobId, { ...initial, questions });
+      await updateExtractedData(jobId, { ...initial, questions, passages });
       await publishTestUpload(uploadId, {
         subject,
         order: slot.order,
@@ -378,6 +386,34 @@ function TestReview({
         </Card>
       )}
 
+      {passages.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="text-sm font-semibold text-muted-foreground">Passages</h2>
+          {passages.map((p, pIndex) => (
+            <Card key={pIndex}>
+              <CardContent className="space-y-2 p-4">
+                <Input
+                  value={p.title ?? ""}
+                  onChange={(e) => updatePassage(pIndex, { title: e.target.value })}
+                  placeholder="Passage title (optional)"
+                  className="h-8 font-medium"
+                />
+                <RichTextField
+                  value={p.content}
+                  onChange={(v) => updatePassage(pIndex, { content: v })}
+                  rows={6}
+                  placeholder="Passage text"
+                />
+                <p className="text-xs text-muted-foreground">
+                  Select the exact wording that&apos;s underlined in the source PDF and click &quot;Underline
+                  selection&quot; — plain text extraction can&apos;t recover that formatting automatically.
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+
       <div className="space-y-4">
         {questions.map((q, qIndex) => (
           <Card key={qIndex} className={cn(q.confidence < CONFIDENCE_PUBLISH_THRESHOLD && "border-warning/50")}>
@@ -391,11 +427,15 @@ function TestReview({
               </div>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Textarea
+              <RichTextField
                 value={q.stem}
-                onChange={(e) => updateQuestion(qIndex, { stem: e.target.value })}
+                onChange={(v) => updateQuestion(qIndex, { stem: v })}
                 rows={3}
                 className="font-medium"
+              />
+              <ImageUploadField
+                imageUrl={q.imageUrl}
+                onChange={(url) => updateQuestion(qIndex, { imageUrl: url })}
               />
               <div className="grid gap-2 sm:grid-cols-2">
                 {q.choices.map((choice, cIndex) => (
@@ -485,10 +525,24 @@ function TestReview({
                     </SelectContent>
                   </Select>
                 </div>
+                <div className="space-y-1">
+                  <Label className="text-xs text-muted-foreground">Difficulty</Label>
+                  <Select
+                    value={q.difficultyGuess}
+                    onValueChange={(v) => updateQuestion(qIndex, { difficultyGuess: v as ExtractedQuestion["difficultyGuess"] })}
+                  >
+                    <SelectTrigger className="h-8 text-xs">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="EASY">Easy</SelectItem>
+                      <SelectItem value="MEDIUM">Medium</SelectItem>
+                      <SelectItem value="HARD">Hard</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
               <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                <span>Difficulty: {q.difficultyGuess}</span>
-                {q.hasImage && <span>Contains image</span>}
                 {q.hasTable && <span>Contains table</span>}
               </div>
             </CardContent>

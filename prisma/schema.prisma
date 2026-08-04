@@ -409,6 +409,11 @@ enum VocabStatus {
   MASTERED
 }
 
+enum VocabVisibility {
+  PUBLIC // admin-curated, visible to every student
+  PRIVATE // added by a student for their own personal study list
+}
+
 model VocabDeck {
   id          String @id @default(cuid())
   name        String
@@ -429,6 +434,7 @@ model VocabWord {
   antonyms        Json? // string[]
   audioUrl        String?
   imageUrl        String?
+  visibility      VocabVisibility @default(PUBLIC)
 
   createdById    String?
   createdBy      User?   @relation("VocabCreatedBy", fields: [createdById], references: [id])
@@ -442,6 +448,7 @@ model VocabWord {
 
   @@index([difficulty])
   @@index([term])
+  @@index([visibility])
 }
 
 model VocabDeckWord {

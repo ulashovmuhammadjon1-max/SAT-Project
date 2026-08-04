@@ -4,6 +4,8 @@ import { Brain, ListChecks, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AddWordDialog } from "@/components/vocabulary/add-word-dialog";
+import { MyWordsList } from "@/components/vocabulary/my-words-list";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 
@@ -13,10 +15,15 @@ export const dynamic = "force-dynamic";
 export default async function VocabularyPage() {
   const user = await requireUser();
 
-  const [totalWords, progress, dueCount] = await Promise.all([
-    prisma.vocabWord.count(),
+  const [totalWords, progress, dueCount, myWords] = await Promise.all([
+    prisma.vocabWord.count({ where: { OR: [{ visibility: "PUBLIC" }, { createdById: user.id }] } }),
     prisma.vocabProgress.findMany({ where: { userId: user.id } }),
     prisma.vocabProgress.count({ where: { userId: user.id, nextReviewAt: { lte: new Date() } } }),
+    prisma.vocabWord.findMany({
+      where: { createdById: user.id, visibility: "PRIVATE" },
+      orderBy: { createdAt: "desc" },
+      select: { id: true, term: true, definition: true },
+    }),
   ]);
 
   const mastered = progress.filter((p) => p.status === "MASTERED").length;
@@ -25,9 +32,12 @@ export default async function VocabularyPage() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="font-display text-2xl font-semibold tracking-tight">Vocabulary</h1>
-        <p className="text-sm text-muted-foreground">Build your word bank with spaced repetition.</p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="font-display text-2xl font-semibold tracking-tight">Vocabulary</h1>
+          <p className="text-sm text-muted-foreground">Build your word bank with spaced repetition.</p>
+        </div>
+        <AddWordDialog />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">
@@ -100,6 +110,16 @@ export default async function VocabularyPage() {
           </CardContent>
         </Card>
       </div>
+
+      {myWords.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="font-display text-lg font-semibold">Your words</h2>
+          <p className="-mt-2 text-sm text-muted-foreground">
+            Words you added yourself — only visible to you, already in your flashcard and quiz rotation.
+          </p>
+          <MyWordsList words={myWords} />
+        </div>
+      )}
     </div>
   );
 }

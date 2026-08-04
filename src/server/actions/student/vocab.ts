@@ -20,12 +20,62 @@ export async function getDueWords(limit = 20) {
 
   const seenWordIds = due.map((d) => d.wordId);
   const newWords = await prisma.vocabWord.findMany({
-    where: { id: { notIn: seenWordIds }, progress: { none: { userId: user.id } } },
+    where: {
+      id: { notIn: seenWordIds },
+      progress: { none: { userId: user.id } },
+      OR: [{ visibility: "PUBLIC" }, { createdById: user.id }],
+    },
     take: limit - due.length,
     orderBy: { createdAt: "asc" },
   });
 
   return [...due.map((d) => d.word), ...newWords];
+}
+
+export async function addPersonalWord(input: {
+  term: string;
+  definition: string;
+  partOfSpeech?: string;
+  exampleSentence?: string;
+  synonyms?: string[];
+  antonyms?: string[];
+  difficulty?: "EASY" | "MEDIUM" | "HARD";
+}) {
+  const user = await requireUser();
+  if (!input.term.trim() || !input.definition.trim()) {
+    throw new Error("A term and definition are required.");
+  }
+
+  const word = await prisma.vocabWord.create({
+    data: {
+      term: input.term.trim(),
+      definition: input.definition.trim(),
+      partOfSpeech: input.partOfSpeech?.trim() || null,
+      exampleSentence: input.exampleSentence?.trim() || null,
+      synonyms: input.synonyms ?? [],
+      antonyms: input.antonyms ?? [],
+      difficulty: input.difficulty ?? "MEDIUM",
+      createdById: user.id,
+      visibility: "PRIVATE",
+    },
+  });
+
+  // Seed it into this student's rotation right away instead of waiting for
+  // getDueWords' "new word" fallback to notice it.
+  await prisma.vocabProgress.create({
+    data: { userId: user.id, wordId: word.id, status: "NEW", nextReviewAt: new Date() },
+  });
+
+  revalidatePath("/vocabulary");
+  return word;
+}
+
+export async function deletePersonalWord(wordId: string) {
+  const user = await requireUser();
+  const word = await prisma.vocabWord.findUniqueOrThrow({ where: { id: wordId } });
+  if (word.createdById !== user.id) throw new Error("You can only delete words you added yourself.");
+  await prisma.vocabWord.delete({ where: { id: wordId } });
+  revalidatePath("/vocabulary");
 }
 
 export async function reviewWord(wordId: string, quality: 0 | 1 | 2 | 3 | 4 | 5) {

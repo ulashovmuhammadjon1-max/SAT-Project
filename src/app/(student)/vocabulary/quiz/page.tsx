@@ -1,11 +1,17 @@
 import { VocabQuiz } from "@/components/vocabulary/vocab-quiz";
 import { prisma } from "@/lib/prisma";
+import { requireUser } from "@/lib/session";
 
 export const metadata = { title: "Vocabulary Quiz" };
 export const dynamic = "force-dynamic";
 
 export default async function VocabularyQuizPage() {
-  const words = await prisma.vocabWord.findMany({ take: 60, orderBy: { createdAt: "asc" } });
+  const user = await requireUser();
+  const words = await prisma.vocabWord.findMany({
+    where: { OR: [{ visibility: "PUBLIC" }, { createdById: user.id }] },
+    take: 60,
+    orderBy: { createdAt: "asc" },
+  });
 
   if (words.length < 4) {
     return (
