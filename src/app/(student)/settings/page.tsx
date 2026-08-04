@@ -1,18 +1,60 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { StudyPlanForm } from "@/components/student/study-plan-form";
+import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { initials } from "@/lib/utils";
+import { asSection, asWeakArea, EMPTY_PROFILE, type OnboardingProfile } from "@/lib/validations/onboarding";
 
 export const metadata = { title: "Settings" };
+export const dynamic = "force-dynamic";
 
 export default async function StudentSettingsPage() {
   const user = await requireUser();
+
+  const record = await prisma.user.findUnique({
+    where: { id: user.id },
+    select: {
+      onboardingGoal: true,
+      currentScore: true,
+      targetScore: true,
+      dreamUniversities: true,
+      countryCode: true,
+      gradeLevel: true,
+      satDate: true,
+      strongestSection: true,
+      weakestArea: true,
+      studyMinutesPerDay: true,
+      dailyGoalType: true,
+      dailyGoalValue: true,
+    },
+  });
+
+  const initial: OnboardingProfile = record
+    ? {
+        goal: record.onboardingGoal,
+        currentScore: record.currentScore,
+        targetScore: record.targetScore,
+        dreamUniversities: record.dreamUniversities,
+        countryCode: record.countryCode,
+        gradeLevel: record.gradeLevel,
+        // Stored with day precision; the form only edits the month.
+        satMonth: record.satDate
+          ? `${record.satDate.getUTCFullYear()}-${String(record.satDate.getUTCMonth() + 1).padStart(2, "0")}`
+          : null,
+        strongestSection: asSection(record.strongestSection),
+        weakestArea: asWeakArea(record.weakestArea),
+        studyMinutesPerDay: record.studyMinutesPerDay,
+        dailyGoalType: record.dailyGoalType,
+        dailyGoalValue: record.dailyGoalValue,
+      }
+    : EMPTY_PROFILE;
 
   return (
     <div className="space-y-6">
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight">Settings</h1>
-        <p className="text-sm text-muted-foreground">Your account details.</p>
+        <p className="text-sm text-muted-foreground">Your account and study plan.</p>
       </div>
 
       <Card className="max-w-lg">
@@ -28,6 +70,18 @@ export default async function StudentSettingsPage() {
             <p className="font-medium">{user.name}</p>
             <p className="text-sm text-muted-foreground">{user.email}</p>
           </div>
+        </CardContent>
+      </Card>
+
+      <Card className="max-w-2xl">
+        <CardHeader>
+          <CardTitle className="text-base">Study plan</CardTitle>
+          <CardDescription>
+            These answers drive your dashboard — your target, countdown, daily goal, and what we recommend next.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <StudyPlanForm initial={initial} />
         </CardContent>
       </Card>
     </div>

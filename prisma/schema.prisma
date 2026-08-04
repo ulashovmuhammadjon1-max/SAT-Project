@@ -19,6 +19,31 @@ enum Role {
   ADMIN
 }
 
+/// Answers collected by the pre-signup onboarding wizard. Stored on the user
+/// so the dashboard can personalise itself and the admin panel can report on
+/// audience composition (country mix, grade mix, score targets).
+enum OnboardingGoal {
+  IMPROVE_SCORE
+  FIRST_SAT
+  RETAKING
+  COLLEGE_ADMISSIONS
+}
+
+enum GradeLevel {
+  GRADE_9
+  GRADE_10
+  GRADE_11
+  GRADE_12
+  GAP_YEAR
+  COLLEGE
+  OTHER
+}
+
+enum DailyGoalType {
+  QUESTIONS
+  MINUTES
+}
+
 model User {
   id             String    @id @default(cuid())
   name           String?
@@ -34,6 +59,22 @@ model User {
   currentStreak  Int       @default(0)
   longestStreak  Int       @default(0)
   lastActiveDate DateTime?
+
+  // onboarding profile (all optional — accounts created before the wizard
+  // existed, and admin accounts, simply have none of it)
+  onboardingGoal     OnboardingGoal?
+  currentScore       Int?
+  targetScore        Int?
+  dreamUniversities  String[]        @default([])
+  countryCode        String?
+  gradeLevel         GradeLevel?
+  satDate            DateTime?
+  strongestSection   String?
+  weakestArea        String?
+  studyMinutesPerDay Int?
+  dailyGoalType      DailyGoalType?
+  dailyGoalValue     Int?
+  onboardedAt        DateTime?
 
   accounts       Account[]
   sessions       Session[]
@@ -53,6 +94,9 @@ model User {
   adaptiveConfigsSet AdaptiveConfig[] @relation("AdaptiveConfigUpdatedBy")
 
   @@index([role])
+  @@index([countryCode])
+  @@index([gradeLevel])
+  @@index([onboardedAt])
 }
 
 model Account {

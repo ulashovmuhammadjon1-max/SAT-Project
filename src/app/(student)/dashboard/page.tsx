@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { StatCard } from "@/components/student/stat-card";
+import { PersonalizedHeader } from "@/components/student/personalized-header";
 import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
+import { asWeakArea } from "@/lib/validations/onboarding";
 import { formatDuration } from "@/lib/utils";
 
 export const metadata = { title: "Dashboard" };
@@ -18,7 +20,12 @@ export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   const user = await requireUser();
 
-  const [inProgress, recentAttempts, responses, submittedAttempts] = await Promise.all([
+  // Midnight UTC today — StudyActivity.date is a @db.Date, so this matches the
+  // row for the current day without timezone drift.
+  const todayUtc = new Date();
+  todayUtc.setUTCHours(0, 0, 0, 0);
+
+  const [inProgress, recentAttempts, responses, submittedAttempts, profile, todayActivity] = await Promise.all([
     prisma.attempt.findFirst({
       where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
       include: { test: true },
@@ -38,6 +45,24 @@ export default async function DashboardPage() {
       where: { userId: user.id, status: "SUBMITTED" },
       orderBy: { submittedAt: "asc" },
       select: { submittedAt: true, totalScaledScore: true, mathScaledScore: true, rwScaledScore: true },
+    }),
+    prisma.user.findUnique({
+      where: { id: user.id },
+      select: {
+        targetScore: true,
+        currentScore: true,
+        satDate: true,
+        gradeLevel: true,
+        weakestArea: true,
+        dailyGoalType: true,
+        dailyGoalValue: true,
+        currentStreak: true,
+        onboardedAt: true,
+      },
+    }),
+    prisma.studyActivity.findUnique({
+      where: { userId_date: { userId: user.id, date: todayUtc } },
+      select: { questionsAnswered: true, minutesStudied: true },
     }),
   ]);
 
@@ -85,12 +110,22 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="font-display text-2xl font-semibold tracking-tight">
-          Welcome back{user.name ? `, ${user.name.split(" ")[0]}` : ""}
-        </h1>
-        <p className="text-sm text-muted-foreground">Here&apos;s where your prep stands today.</p>
-      </div>
+      <PersonalizedHeader
+        firstName={user.name ? user.name.split(" ")[0] : ""}
+        targetScore={profile?.targetScore ?? null}
+        currentScore={profile?.currentScore ?? null}
+        predictedScore={totalEstimate}
+        satDate={profile?.satDate ?? null}
+        gradeLevel={profile?.gradeLevel ?? null}
+        weakestArea={asWeakArea(profile?.weakestArea)}
+        dailyGoalType={profile?.dailyGoalType ?? null}
+        dailyGoalValue={profile?.dailyGoalValue ?? null}
+        todayQuestions={todayActivity?.questionsAnswered ?? 0}
+        todayMinutes={todayActivity?.minutesStudied ?? 0}
+        currentStreak={profile?.currentStreak ?? 0}
+        weakestSkills={weakest.map((w) => w.domain)}
+        onboarded={profile?.onboardedAt != null}
+      />
 
       {inProgress && (
         <Card className="border-primary/50 bg-primary-50/50">

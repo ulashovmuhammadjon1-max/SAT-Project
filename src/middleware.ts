@@ -5,7 +5,7 @@ import authConfig from "@/lib/auth.config";
 
 const { auth } = NextAuth(authConfig);
 
-const PUBLIC_ROUTES = ["/", "/login", "/register"];
+const PUBLIC_ROUTES = ["/", "/login", "/register", "/onboarding"];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
