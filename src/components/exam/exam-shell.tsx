@@ -21,7 +21,9 @@ import {
   Grid3x3,
   Highlighter,
   LogOut,
+  Minus,
   MoreVertical,
+  Plus,
   Ruler,
   Strikethrough,
   X,
@@ -83,6 +85,7 @@ export function ExamShell({
   const [reviewScreen, setReviewScreen] = useState(false);
   const [directionsOpen, setDirectionsOpen] = useState(false);
   const [crossOutEnabled, setCrossOutEnabled] = useState(false);
+  const [zoomPct, setZoomPct] = useState(100);
   const [passageWidthPct, setPassageWidthPct] = useState<number | null>(null);
   const [isSubmitting, startSubmit] = useTransition();
   const splitPaneRef = useRef<HTMLDivElement>(null);
@@ -222,6 +225,8 @@ export function ExamShell({
           onToggleDirections={() => setDirectionsOpen((v) => !v)}
           onToggleCalculator={() => setCalculatorOpen((v) => !v)}
           onOpenReference={() => setReferenceOpen(true)}
+          zoomPct={zoomPct}
+          onZoomChange={setZoomPct}
           onSaveAndExit={async () => {
             await persist();
             router.push("/dashboard");
@@ -239,6 +244,7 @@ export function ExamShell({
             {module.questions.map((q, i) => {
               const s = states[i];
               const answered = !!(s.selectedChoiceId || s.freeResponseAnswer);
+              const visited = answered || s.timeSpentSeconds > 0;
               return (
                 <button
                   key={q.id}
@@ -248,11 +254,15 @@ export function ExamShell({
                   }}
                   className={cn(
                     "relative flex h-12 w-12 items-center justify-center rounded border text-sm font-semibold",
-                    answered ? "border-navy-950 bg-navy-950 text-white" : "border-navy-300 bg-white text-navy-950"
+                    answered
+                      ? "border-navy-950 bg-navy-950 text-white"
+                      : visited
+                        ? "border-navy-300 bg-navy-100 text-navy-950"
+                        : "border-navy-300 bg-white text-navy-950"
                   )}
                 >
                   {i + 1}
-                  {s.flagged && <Flag className="absolute -right-1 -top-1 h-3.5 w-3.5 fill-warning text-warning" />}
+                  {s.flagged && <Flag className="absolute -right-1.5 -top-1.5 h-3.5 w-3.5 fill-warning text-warning" />}
                 </button>
               );
             })}
@@ -260,7 +270,7 @@ export function ExamShell({
           <div className="flex justify-between">
             <Button
               variant="outline"
-              className="rounded-full border-navy-950 text-navy-950 hover:bg-navy-950/5"
+              className="rounded-full border-gray-300 bg-white text-navy-950 hover:bg-gray-50"
               onClick={() => setReviewScreen(false)}
             >
               <ChevronLeft className="h-4 w-4" /> Back to questions
@@ -287,6 +297,8 @@ export function ExamShell({
         onToggleDirections={() => setDirectionsOpen((v) => !v)}
         onToggleCalculator={() => setCalculatorOpen((v) => !v)}
         onOpenReference={() => setReferenceOpen(true)}
+        zoomPct={zoomPct}
+        onZoomChange={setZoomPct}
         onSaveAndExit={async () => {
           await persist();
           router.push("/dashboard");
@@ -297,7 +309,7 @@ export function ExamShell({
         THIS IS A PRACTICE TEST
       </div>
 
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-hidden" style={{ zoom: `${zoomPct}%` } as CSSProperties}>
         {module.subject === "READING_WRITING" ? (
           <div
             ref={splitPaneRef}
@@ -361,7 +373,7 @@ export function ExamShell({
             <Button
               variant="outline"
               size="sm"
-              className="rounded-full border-navy-950 text-navy-950 hover:bg-navy-950/5 disabled:opacity-30"
+              className="rounded-full border-gray-300 bg-white text-navy-950 hover:bg-gray-50 disabled:opacity-30"
               onClick={() => goTo(currentIndex - 1)}
               disabled={currentIndex === 0}
             >
@@ -423,6 +435,8 @@ function ExamHeader({
   onToggleDirections,
   onToggleCalculator,
   onOpenReference,
+  zoomPct,
+  onZoomChange,
   onSaveAndExit,
 }: {
   module: ExamModule;
@@ -431,6 +445,8 @@ function ExamHeader({
   onToggleDirections: () => void;
   onToggleCalculator: () => void;
   onOpenReference: () => void;
+  zoomPct: number;
+  onZoomChange: (pct: number) => void;
   onSaveAndExit: () => void;
 }) {
   const sectionNumber = module.subject === "READING_WRITING" ? 1 : 2;
@@ -462,6 +478,34 @@ function ExamHeader({
         </div>
 
         <div className="flex items-center gap-1">
+          <div className="hidden items-center gap-0.5 rounded border border-navy-300 bg-white px-1.5 py-1 sm:flex">
+            <button
+              type="button"
+              onClick={() => onZoomChange(Math.max(80, zoomPct - 10))}
+              className="flex h-5 w-5 items-center justify-center text-navy-700 hover:text-navy-950"
+              title="Zoom out"
+            >
+              <Minus className="h-3 w-3" />
+            </button>
+            <span className="w-10 text-center text-xs font-medium tabular-nums text-navy-950">{zoomPct}%</span>
+            <button
+              type="button"
+              onClick={() => onZoomChange(Math.min(150, zoomPct + 10))}
+              className="flex h-5 w-5 items-center justify-center text-navy-700 hover:text-navy-950"
+              title="Zoom in"
+            >
+              <Plus className="h-3 w-3" />
+            </button>
+            {zoomPct !== 100 && (
+              <button
+                type="button"
+                onClick={() => onZoomChange(100)}
+                className="ml-1 border-l border-navy-200 pl-1.5 text-xs font-medium text-navy-700 hover:text-navy-950"
+              >
+                Reset
+              </button>
+            )}
+          </div>
           {module.subject === "MATH" && (
             <>
               <Button variant="ghost" size="sm" className="text-navy-950 hover:bg-navy-950/5" onClick={onToggleCalculator}>
@@ -571,7 +615,7 @@ function QuestionBody({
         )}
       </div>
       <div
-        className="font-serif text-[16px] leading-relaxed text-navy-950"
+        className="font-serif text-[19px] leading-relaxed text-navy-950"
         dangerouslySetInnerHTML={{ __html: question.stem }}
       />
       {question.imageUrl && (
@@ -580,7 +624,7 @@ function QuestionBody({
       )}
 
       {question.type === "MULTIPLE_CHOICE" ? (
-        <div className="space-y-3">
+        <div className="space-y-4">
           {question.choices.map((choice) => {
             const eliminated = state.eliminated.includes(choice.id);
             const selected = state.selectedChoiceId === choice.id;
@@ -590,15 +634,15 @@ function QuestionBody({
                   type="button"
                   onClick={() => !eliminated && onSelect(choice.id)}
                   className={cn(
-                    "flex flex-1 items-start gap-3 rounded-lg border p-3 text-left font-serif text-[15px] transition-colors",
-                    selected ? "border-navy-950 bg-navy-50" : "border-navy-300 bg-white hover:bg-navy-50/50",
+                    "flex flex-1 items-start gap-3 rounded-lg border p-3.5 text-left font-serif text-[17px] transition-colors",
+                    selected ? "border-navy-600 bg-white" : "border-navy-300 bg-white hover:bg-gray-50",
                     eliminated && "opacity-40"
                   )}
                 >
                   <span
                     className={cn(
                       "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-semibold",
-                      selected ? "border-navy-950 bg-navy-950 text-white" : "border-navy-400 text-navy-950"
+                      selected ? "border-navy-600 bg-navy-600 text-white" : "border-navy-400 text-navy-950"
                     )}
                   >
                     {choice.label}

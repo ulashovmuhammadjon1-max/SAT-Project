@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import { Highlighter } from "lucide-react";
+import { Highlighter, StickyNote } from "lucide-react";
 
 export function HighlightablePassage({ content }: { content: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,33 +23,50 @@ export function HighlightablePassage({ content }: { content: string }) {
     setToolbar({ x: rect.left - containerRect.left + rect.width / 2, y: rect.top - containerRect.top - 36 });
   }, []);
 
-  function applyHighlight() {
+  function wrapSelection(note?: string): HTMLElement | null {
     const selection = window.getSelection();
-    if (!selection || selection.rangeCount === 0) return;
+    if (!selection || selection.rangeCount === 0) return null;
     const range = selection.getRangeAt(0);
+    let mark: HTMLElement | null = null;
     try {
-      const mark = document.createElement("mark");
-      mark.className = "sat-highlight";
+      mark = document.createElement("mark");
+      mark.className = note ? "sat-highlight sat-note" : "sat-highlight";
+      if (note) mark.title = note;
       range.surroundContents(mark);
     } catch {
       // Selection spans partial elements (e.g. crosses a <b> boundary) —
       // surroundContents can't wrap it cleanly; skip rather than corrupt the DOM.
+      mark = null;
     }
     selection.removeAllRanges();
     setToolbar(null);
+    return mark;
+  }
+
+  function applyHighlight() {
+    wrapSelection();
+  }
+
+  function applyNote() {
+    const note = window.prompt("Add a note for this selection:");
+    if (note === null) return; // cancelled
+    wrapSelection(note.trim() || undefined);
   }
 
   return (
     <div className="relative">
       {toolbar && (
-        <button
-          type="button"
-          onClick={applyHighlight}
+        <div
           style={{ left: toolbar.x, top: toolbar.y }}
-          className="absolute z-10 flex -translate-x-1/2 items-center gap-1.5 rounded-md bg-navy-900 px-2.5 py-1.5 text-xs font-medium text-white shadow-panel"
+          className="absolute z-10 flex -translate-x-1/2 items-center gap-1 rounded-md bg-navy-900 p-1 text-xs font-medium text-white shadow-panel"
         >
-          <Highlighter className="h-3.5 w-3.5" /> Highlight
-        </button>
+          <button type="button" onClick={applyHighlight} className="flex items-center gap-1.5 rounded px-2 py-1 hover:bg-white/10">
+            <Highlighter className="h-3.5 w-3.5" /> Highlight
+          </button>
+          <button type="button" onClick={applyNote} className="flex items-center gap-1.5 rounded px-2 py-1 hover:bg-white/10">
+            <StickyNote className="h-3.5 w-3.5" /> Add note
+          </button>
+        </div>
       )}
       <div
         ref={containerRef}
