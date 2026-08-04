@@ -11,7 +11,11 @@ import { put, get, del } from "@vercel/blob";
 // private blobs instead. Local dev without that token falls back to disk.
 
 const STORAGE_ROOT = path.join(process.cwd(), "storage", "uploads");
-const useBlob = Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+// A Blob store connected through the Vercel dashboard authenticates via OIDC
+// (BLOB_STORE_ID + an auto-injected VERCEL_OIDC_TOKEN) rather than the older
+// static BLOB_READ_WRITE_TOKEN, so check for either.
+export const blobConfigured = Boolean(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
+const useBlob = blobConfigured;
 
 function sanitizeFileName(name: string): string {
   return name.replace(/[^a-zA-Z0-9._-]/g, "_").slice(-120);

@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { UploadDialog } from "@/components/admin/upload-dialog";
 import { prisma } from "@/lib/prisma";
+import { blobConfigured } from "@/lib/storage";
 
 export const metadata = { title: "PDF Ingestion Queue" };
 export const dynamic = "force-dynamic";
@@ -33,7 +34,7 @@ export default async function UploadsQueuePage() {
             Upload SAT mock tests, question banks, or vocabulary lists — AI structures them automatically.
           </p>
         </div>
-        <UploadDialog blobEnabled={Boolean(process.env.BLOB_READ_WRITE_TOKEN)} />
+        <UploadDialog blobEnabled={blobConfigured} />
       </div>
 
       <Card>
