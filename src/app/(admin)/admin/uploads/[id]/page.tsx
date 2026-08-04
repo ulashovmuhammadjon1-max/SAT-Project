@@ -21,6 +21,18 @@ export default async function UploadDetailPage({ params }: { params: { id: strin
   if (!upload) notFound();
   const job = upload.jobs[0];
 
+  const [domains, existingTests] = await Promise.all([
+    prisma.domain.findMany({
+      orderBy: { name: "asc" },
+      include: { skills: { orderBy: { name: "asc" } } },
+    }),
+    prisma.test.findMany({
+      where: { type: "FULL_LENGTH" },
+      select: { id: true, title: true, modules: { select: { subject: true, order: true, difficulty: true } } },
+      orderBy: { createdAt: "desc" },
+    }),
+  ]);
+
   return (
     <div className="space-y-6">
       <div>
@@ -73,6 +85,8 @@ export default async function UploadDetailPage({ params }: { params: { id: strin
           confidence={job.confidenceScore ?? 0}
           data={job.extractedData as unknown as TestExtractionResult | VocabExtractionResult}
           alreadyPublished={upload.status === "COMPLETED"}
+          domains={domains}
+          existingTests={existingTests}
         />
       )}
     </div>

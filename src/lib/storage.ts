@@ -1,13 +1,17 @@
-import { mkdir, readFile, writeFile } from "fs/promises";
+import { mkdir, readFile, writeFile, unlink } from "fs/promises";
 import path from "path";
 import { nanoid } from "nanoid";
+import { put, get, del } from "@vercel/blob";
 
-// Local-disk storage for uploaded PDFs, kept outside `public/` so raw source
-// documents (often licensed test content) are never served unauthenticated.
-// Swap this module for an S3/Vercel Blob client in production — nothing else
-// in the ingestion pipeline depends on the storage mechanism.
+// Uploaded PDFs are kept out of any public path so raw source documents
+// (often licensed test content) are never served unauthenticated. On Vercel,
+// the deployment filesystem is read-only outside /tmp and /tmp isn't shared
+// across invocations, so when a Blob store is configured (BLOB_READ_WRITE_TOKEN
+// is set — see the Storage tab in the Vercel dashboard) uploads go there as
+// private blobs instead. Local dev without that token falls back to disk.
 
 const STORAGE_ROOT = path.join(process.cwd(), "storage", "uploads");
+const useBlob = Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 
 function sanitizeFileName(name: string): string {
   return name.replace(/[^a-zA-Z0-9._-]/g, "_").slice(-120);
@@ -16,23 +20,47 @@ function sanitizeFileName(name: string): string {
 export async function saveUploadedFile(
   file: File
 ): Promise<{ storedPath: string; fileName: string; fileSize: number }> {
-  await mkdir(STORAGE_ROOT, { recursive: true });
-
   const fileName = sanitizeFileName(file.name || "upload.pdf");
   const storedName = `${nanoid(12)}-${fileName}`;
-  const storedPath = path.join(STORAGE_ROOT, storedName);
-
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
-  await writeFile(storedPath, buffer);
 
+  if (useBlob) {
+    const blob = await put(`uploads/${storedName}`, buffer, {
+      access: "private",
+      contentType: "application/pdf",
+    });
+    return { storedPath: blob.pathname, fileName, fileSize: buffer.byteLength };
+  }
+
+  await mkdir(STORAGE_ROOT, { recursive: true });
+  const storedPath = path.join(STORAGE_ROOT, storedName);
+  await writeFile(storedPath, buffer);
   return { storedPath: storedName, fileName, fileSize: buffer.byteLength };
 }
 
 export async function readUploadedFile(storedName: string): Promise<Buffer> {
+  if (useBlob) {
+    const blob = await get(storedName, { access: "private" });
+    if (!blob) throw new Error("Uploaded file not found in blob storage.");
+    const arrayBuffer = await new Response(blob.stream).arrayBuffer();
+    return Buffer.from(arrayBuffer);
+  }
+
   const fullPath = path.join(STORAGE_ROOT, storedName);
   if (!fullPath.startsWith(STORAGE_ROOT)) {
     throw new Error("Invalid storage path.");
   }
   return readFile(fullPath);
+}
+
+export async function deleteUploadedFile(storedName: string): Promise<void> {
+  if (useBlob) {
+    await del(storedName).catch(() => undefined);
+    return;
+  }
+
+  const fullPath = path.join(STORAGE_ROOT, storedName);
+  if (!fullPath.startsWith(STORAGE_ROOT)) return;
+  await unlink(fullPath).catch(() => undefined);
 }

@@ -139,10 +139,13 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
 
   // Module 1 of a subject with adaptivity enabled -> branch to Module 2's difficulty.
   if (mod.order === 1 && attempt.test.isAdaptive) {
-    const threshold =
+    // A threshold set on this specific module (from the PDF publish flow) wins;
+    // otherwise fall back to the test's linked AdaptiveConfig, then a hard default.
+    const configDefault =
       mod.subject === "MATH"
         ? attempt.test.adaptiveConfig?.mathThresholdPct ?? 70
         : attempt.test.adaptiveConfig?.rwThresholdPct ?? 70;
+    const threshold = mod.adaptiveThresholdPct ?? configDefault;
     const difficulty = determineModule2Difficulty(correctCount, totalCount, threshold);
 
     const nextModule = modules.find((m) => m.subject === mod.subject && m.order === 2 && m.difficulty === difficulty);

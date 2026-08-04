@@ -6,7 +6,7 @@ import type { Subject, UploadCategory } from "@prisma/client";
 
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
-import { saveUploadedFile, readUploadedFile } from "@/lib/storage";
+import { saveUploadedFile, readUploadedFile, deleteUploadedFile } from "@/lib/storage";
 import { extractPdfText } from "@/lib/pdf/text-extract";
 import { getExtractionProvider } from "@/lib/ai/extraction-service";
 import type { TestExtractionResult, VocabExtractionResult } from "@/lib/ai/types";
@@ -133,8 +133,19 @@ async function resolveDomainAndSkill(
   return { domainId: domain.id, skillId: skill.id };
 }
 
-export async function publishTestUpload(uploadId: string, subject: Subject) {
+export interface PublishTestOptions {
+  subject: Subject;
+  order: 1 | 2;
+  difficulty: "STANDARD" | "EASY" | "HARD";
+  /** Module 1 -> Module 2 routing threshold for this specific module, overriding the test's AdaptiveConfig. */
+  thresholdPct?: number | null;
+  /** Publish into an already-existing test instead of creating a new one (e.g. adding the Math module to an R&W test). */
+  targetTestId?: string | null;
+}
+
+export async function publishTestUpload(uploadId: string, options: PublishTestOptions) {
   const admin = await requireAdmin();
+  const { subject, order, difficulty, thresholdPct, targetTestId } = options;
   const upload = await prisma.pDFUpload.findUniqueOrThrow({
     where: { id: uploadId },
     include: { jobs: { orderBy: { createdAt: "desc" }, take: 1 } },
@@ -145,18 +156,36 @@ export async function publishTestUpload(uploadId: string, subject: Subject) {
   const data = job.extractedData as unknown as TestExtractionResult;
 
   const testId = await prisma.$transaction(async (tx) => {
-    const test = await tx.test.create({
-      data: {
-        title: upload.fileName.replace(/\.pdf$/i, ""),
-        type: "PRACTICE_SET",
-        status: "DRAFT",
-        isAdaptive: false,
-        createdById: admin.id,
-      },
-    });
+    let test;
+    if (targetTestId) {
+      test = await tx.test.findUniqueOrThrow({ where: { id: targetTestId } });
+      const clash = await tx.module.findUnique({
+        where: { testId_subject_order_difficulty: { testId: test.id, subject, order, difficulty } },
+      });
+      if (clash) {
+        throw new Error("That test already has a module in this subject/module slot. Pick a different slot or test.");
+      }
+    } else {
+      test = await tx.test.create({
+        data: {
+          title: upload.fileName.replace(/\.pdf$/i, ""),
+          type: upload.category === "FULL_TEST" ? "FULL_LENGTH" : "PRACTICE_SET",
+          status: "DRAFT",
+          isAdaptive: upload.category === "FULL_TEST",
+          createdById: admin.id,
+        },
+      });
+    }
 
     const mod = await tx.module.create({
-      data: { testId: test.id, subject, order: 1, difficulty: "STANDARD", title: "Module 1" },
+      data: {
+        testId: test.id,
+        subject,
+        order,
+        difficulty,
+        title: order === 1 ? "Module 1" : `Module 2 (${difficulty === "HARD" ? "Hard" : "Easy"})`,
+        adaptiveThresholdPct: order === 1 ? thresholdPct ?? null : null,
+      },
     });
 
     const passageIds: string[] = [];
@@ -168,7 +197,10 @@ export async function publishTestUpload(uploadId: string, subject: Subject) {
     }
 
     for (const q of data.questions) {
-      const { domainId, skillId } = await resolveDomainAndSkill(tx, subject, q.domainGuess, q.skillGuess);
+      const { domainId, skillId } =
+        q.domainId && q.skillId
+          ? { domainId: q.domainId, skillId: q.skillId }
+          : await resolveDomainAndSkill(tx, subject, q.domainGuess, q.skillGuess);
       const question = await tx.question.create({
         data: {
           moduleId: mod.id,
@@ -272,6 +304,7 @@ export async function publishVocabUpload(uploadId: string) {
 
 export async function deleteUpload(uploadId: string) {
   await requireAdmin();
-  await prisma.pDFUpload.delete({ where: { id: uploadId } });
+  const upload = await prisma.pDFUpload.delete({ where: { id: uploadId } });
+  await deleteUploadedFile(upload.fileUrl);
   revalidatePath("/admin/uploads");
 }

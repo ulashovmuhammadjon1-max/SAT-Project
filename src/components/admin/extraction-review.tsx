@@ -28,6 +28,21 @@ function ConfidenceBadge({ value }: { value: number }) {
   return <Badge variant={variant as never}>{pct}% confidence</Badge>;
 }
 
+type Subject = "READING_WRITING" | "MATH";
+
+interface DomainOption {
+  id: string;
+  name: string;
+  subject: Subject;
+  skills: { id: string; name: string }[];
+}
+
+interface ExistingTestOption {
+  id: string;
+  title: string;
+  modules: { subject: Subject; order: number; difficulty: "STANDARD" | "EASY" | "HARD" }[];
+}
+
 export function ExtractionReview({
   uploadId,
   jobId,
@@ -35,6 +50,8 @@ export function ExtractionReview({
   confidence,
   data,
   alreadyPublished,
+  domains,
+  existingTests,
 }: {
   uploadId: string;
   jobId: string;
@@ -42,6 +59,8 @@ export function ExtractionReview({
   confidence: number;
   data: TestExtractionResult | VocabExtractionResult;
   alreadyPublished: boolean;
+  domains: DomainOption[];
+  existingTests: ExistingTestOption[];
 }) {
   if (category === "VOCABULARY") {
     return (
@@ -58,9 +77,12 @@ export function ExtractionReview({
     <TestReview
       uploadId={uploadId}
       jobId={jobId}
+      category={category}
       confidence={confidence}
       initial={data as TestExtractionResult}
       alreadyPublished={alreadyPublished}
+      domains={domains}
+      existingTests={existingTests}
     />
   );
 }
@@ -69,29 +91,105 @@ export function ExtractionReview({
 // Test / question bank review
 // ---------------------------------------------------------------------------
 
+function guessDomainId(domains: DomainOption[], subject: Subject, guess?: string | null) {
+  const candidates = domains.filter((d) => d.subject === subject);
+  if (!candidates.length) return "";
+  if (guess) {
+    const g = guess.toLowerCase();
+    const found = candidates.find((d) => d.name.toLowerCase().includes(g) || g.includes(d.name.toLowerCase()));
+    if (found) return found.id;
+  }
+  return candidates[0].id;
+}
+
+function guessSkillId(domain: DomainOption | undefined, guess?: string | null) {
+  if (!domain) return "";
+  if (guess) {
+    const g = guess.toLowerCase();
+    const found = domain.skills.find((s) => s.name.toLowerCase().includes(g) || g.includes(s.name.toLowerCase()));
+    if (found) return found.id;
+  }
+  return domain.skills[0]?.id ?? "";
+}
+
+// Only fills in a guessed domain/skill when the question doesn't already carry
+// an admin-confirmed one (e.g. loaded from a previously saved draft) or when
+// the previous value belongs to a domain outside the newly selected subject.
+function withTaxonomyDefaults(
+  questions: ExtractedQuestion[],
+  domains: DomainOption[],
+  subject: Subject
+): ExtractedQuestion[] {
+  const subjectDomainIds = new Set(domains.filter((d) => d.subject === subject).map((d) => d.id));
+  return questions.map((q) => {
+    if (q.domainId && subjectDomainIds.has(q.domainId) && q.skillId) return q;
+    const domainId = guessDomainId(domains, subject, q.domainGuess);
+    const skillId = guessSkillId(
+      domains.find((d) => d.id === domainId),
+      q.skillGuess
+    );
+    return { ...q, domainId, skillId };
+  });
+}
+
+const MODULE_SLOTS = [
+  { value: "1", label: "Module 1", order: 1 as const, difficulty: "STANDARD" as const },
+  { value: "2E", label: "Module 2 — Easy", order: 2 as const, difficulty: "EASY" as const },
+  { value: "2H", label: "Module 2 — Hard", order: 2 as const, difficulty: "HARD" as const },
+];
+
 function TestReview({
   uploadId,
   jobId,
+  category,
   confidence,
   initial,
   alreadyPublished,
+  domains,
+  existingTests,
 }: {
   uploadId: string;
   jobId: string;
+  category: "FULL_TEST" | "QUESTION_BANK" | "VOCABULARY";
   confidence: number;
   initial: TestExtractionResult;
   alreadyPublished: boolean;
+  domains: DomainOption[];
+  existingTests: ExistingTestOption[];
 }) {
   const router = useRouter();
-  const [questions, setQuestions] = useState<ExtractedQuestion[]>(initial.questions);
-  const [subject, setSubject] = useState<"READING_WRITING" | "MATH">("READING_WRITING");
+  const [subject, setSubject] = useState<Subject>("READING_WRITING");
+  const [questions, setQuestions] = useState<ExtractedQuestion[]>(() =>
+    withTaxonomyDefaults(initial.questions, domains, "READING_WRITING")
+  );
+  const [moduleSlot, setModuleSlot] = useState("1");
+  const [thresholdPct, setThresholdPct] = useState("");
+  const [targetTestId, setTargetTestId] = useState("new");
   const [isSaving, startSave] = useTransition();
   const [isPublishing, startPublish] = useTransition();
+
+  const isFullTest = category === "FULL_TEST";
+  const slot = MODULE_SLOTS.find((s) => s.value === moduleSlot) ?? MODULE_SLOTS[0];
+  const subjectDomains = useMemo(() => domains.filter((d) => d.subject === subject), [domains, subject]);
+
+  const compatibleTests = useMemo(
+    () =>
+      existingTests.filter(
+        (t) => !t.modules.some((m) => m.subject === subject && m.order === slot.order && m.difficulty === slot.difficulty)
+      ),
+    [existingTests, subject, slot]
+  );
 
   const lowConfidenceCount = useMemo(
     () => questions.filter((q) => q.confidence < CONFIDENCE_PUBLISH_THRESHOLD).length,
     [questions]
   );
+
+  function changeSubject(next: Subject) {
+    setSubject(next);
+    setQuestions((prev) => withTaxonomyDefaults(prev, domains, next));
+    setTargetTestId("new");
+  }
 
   function updateQuestion(index: number, patch: Partial<ExtractedQuestion>) {
     setQuestions((prev) => prev.map((q, i) => (i === index ? { ...q, ...patch } : q)));
@@ -129,8 +227,14 @@ function TestReview({
   function publish() {
     startPublish(async () => {
       await updateExtractedData(jobId, { ...initial, questions });
-      await publishTestUpload(uploadId, subject);
-      toast.success("Published to the question bank.");
+      await publishTestUpload(uploadId, {
+        subject,
+        order: slot.order,
+        difficulty: slot.difficulty,
+        thresholdPct: thresholdPct.trim() ? Number(thresholdPct) : null,
+        targetTestId: targetTestId === "new" ? null : targetTestId,
+      });
+      toast.success(targetTestId === "new" ? "Published as a new test." : "Module added to the test.");
       router.refresh();
     });
   }
@@ -149,9 +253,9 @@ function TestReview({
             )}
           </div>
           {!alreadyPublished && (
-            <div className="flex items-center gap-2">
-              <Select value={subject} onValueChange={(v) => setSubject(v as typeof subject)}>
-                <SelectTrigger className="w-48">
+            <div className="flex flex-wrap items-center gap-2">
+              <Select value={subject} onValueChange={(v) => changeSubject(v as Subject)}>
+                <SelectTrigger className="w-44">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -159,18 +263,69 @@ function TestReview({
                   <SelectItem value="MATH">Math</SelectItem>
                 </SelectContent>
               </Select>
+
+              {isFullTest && (
+                <Select value={moduleSlot} onValueChange={setModuleSlot}>
+                  <SelectTrigger className="w-44">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {MODULE_SLOTS.map((s) => (
+                      <SelectItem key={s.value} value={s.value}>
+                        {s.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+
+              {isFullTest && slot.order === 1 && (
+                <Input
+                  type="number"
+                  min={0}
+                  max={100}
+                  placeholder="Threshold % (default 70)"
+                  value={thresholdPct}
+                  onChange={(e) => setThresholdPct(e.target.value)}
+                  className="w-44"
+                />
+              )}
+
+              {isFullTest && (
+                <Select value={targetTestId} onValueChange={setTargetTestId}>
+                  <SelectTrigger className="w-56">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="new">Create new test</SelectItem>
+                    {compatibleTests.map((t) => (
+                      <SelectItem key={t.id} value={t.id}>
+                        Add to: {t.title}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+
               <Button variant="outline" onClick={saveDraft} disabled={isSaving}>
                 {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
                 Save draft
               </Button>
               <Button onClick={publish} disabled={isPublishing || questions.length === 0}>
                 {isPublishing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
-                Publish as new test
+                {targetTestId === "new" ? "Publish as new test" : "Add to test"}
               </Button>
             </div>
           )}
         </CardContent>
       </Card>
+
+      {isFullTest && slot.order === 1 && (
+        <p className="-mt-3 text-xs text-muted-foreground">
+          Routing threshold: the % of Module 1 questions a student must answer correctly to be routed into the
+          Hard Module 2 instead of Easy. Leave blank to use the test-wide adaptive default (70%).
+        </p>
+      )}
 
       {initial.warnings.length > 0 && (
         <Card className="border-warning/40 bg-warning/5">
@@ -229,9 +384,48 @@ function TestReview({
                   </label>
                 ))}
               </div>
+              <div className="grid gap-2 sm:grid-cols-2">
+                <div className="space-y-1">
+                  <Label className="text-xs text-muted-foreground">Domain</Label>
+                  <Select
+                    value={q.domainId ?? ""}
+                    onValueChange={(v) => {
+                      const d = subjectDomains.find((x) => x.id === v);
+                      updateQuestion(qIndex, { domainId: v, skillId: d?.skills[0]?.id ?? "" });
+                    }}
+                  >
+                    <SelectTrigger className="h-8 text-xs">
+                      <SelectValue placeholder="Choose a domain" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {subjectDomains.map((d) => (
+                        <SelectItem key={d.id} value={d.id}>
+                          {d.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-1">
+                  <Label className="text-xs text-muted-foreground">Skill / topic</Label>
+                  <Select
+                    value={q.skillId ?? ""}
+                    onValueChange={(v) => updateQuestion(qIndex, { skillId: v })}
+                  >
+                    <SelectTrigger className="h-8 text-xs">
+                      <SelectValue placeholder="Choose a skill" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {(subjectDomains.find((d) => d.id === q.domainId)?.skills ?? []).map((s) => (
+                        <SelectItem key={s.id} value={s.id}>
+                          {s.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
               <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                <span>Domain: {q.domainGuess || "—"}</span>
-                <span>Skill: {q.skillGuess || "—"}</span>
                 <span>Difficulty: {q.difficultyGuess}</span>
                 {q.hasImage && <span>Contains image</span>}
                 {q.hasTable && <span>Contains table</span>}

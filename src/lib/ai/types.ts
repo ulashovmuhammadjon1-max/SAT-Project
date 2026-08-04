@@ -19,6 +19,10 @@ export interface ExtractedQuestion {
   explanation?: string;
   domainGuess?: string;
   skillGuess?: string;
+  // Set once an admin confirms/overrides the taxonomy in the review UI; takes
+  // priority over domainGuess/skillGuess text-matching at publish time.
+  domainId?: string | null;
+  skillId?: string | null;
   difficultyGuess: "EASY" | "MEDIUM" | "HARD";
   hasImage: boolean;
   hasTable: boolean;
