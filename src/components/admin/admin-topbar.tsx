@@ -18,7 +18,7 @@ export async function AdminTopbar() {
           ← Student view
         </Link>
       </div>
-      {user && <UserMenu name={user.name} email={user.email} image={user.image} />}
+      {user && <UserMenu name={user.name} email={user.email} image={user.image} role={user.role} />}
     </header>
   );
 }

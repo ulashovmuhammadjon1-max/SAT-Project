@@ -1,7 +1,7 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import { LogOut, Settings, User as UserIcon } from "lucide-react";
+import { LayoutDashboard, LogOut, Settings, User as UserIcon } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -18,10 +18,12 @@ export function UserMenu({
   name,
   email,
   image,
+  role,
 }: {
   name?: string | null;
   email?: string | null;
   image?: string | null;
+  role?: "STUDENT" | "ADMIN" | null;
 }) {
   return (
     <DropdownMenu>
@@ -47,6 +49,13 @@ export function UserMenu({
             <Settings className="mr-2 h-4 w-4" /> Settings
           </a>
         </DropdownMenuItem>
+        {role === "ADMIN" && (
+          <DropdownMenuItem asChild>
+            <a href="/admin">
+              <LayoutDashboard className="mr-2 h-4 w-4" /> Admin Panel
+            </a>
+          </DropdownMenuItem>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => signOut({ callbackUrl: "/" })}>
           <LogOut className="mr-2 h-4 w-4" /> Sign out

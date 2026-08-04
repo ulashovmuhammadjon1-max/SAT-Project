@@ -10,7 +10,7 @@ export async function StudentTopbar() {
 
   const user = await prisma.user.findUnique({
     where: { id: sessionUser.id },
-    select: { name: true, email: true, image: true, currentStreak: true },
+    select: { name: true, email: true, image: true, currentStreak: true, role: true },
   });
 
   return (
@@ -21,7 +21,7 @@ export async function StudentTopbar() {
           <Flame className="h-4 w-4 text-warning" />
           {user?.currentStreak ?? 0} day streak
         </div>
-        <UserMenu name={user?.name} email={user?.email} image={user?.image} />
+        <UserMenu name={user?.name} email={user?.email} image={user?.image} role={user?.role} />
       </div>
     </header>
   );
