@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 226 84% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --navy: 222 47% 11%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 226 100% 96%;
+    --accent-foreground: 226 84% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --border: 220 16% 90%;
+    --input: 220 16% 88%;
+    --ring: 226 84% 56%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 20% 96%;
+
+    --card: 222 40% 10%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 222 40% 9%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 226 84% 62%;
+    --primary-foreground: 222 47% 8%;
+
+    --navy: 210 20% 96%;
+
+    --secondary: 222 30% 15%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 220 12% 65%;
+
+    --accent: 222 30% 18%;
+    --accent-foreground: 217 91% 75%;
+
+    --destructive: 0 63% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 55% 45%;
+    --success-foreground: 222 47% 8%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 47% 8%;
+
+    --border: 222 25% 18%;
+    --input: 222 25% 20%;
+    --ring: 226 84% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Highlightable passage text (Bluebook-style annotation) */
+mark.sat-highlight {
+  background-color: hsl(48 96% 76% / 0.7);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.dark mark.sat-highlight {
+  background-color: hsl(48 70% 45% / 0.45);
+}

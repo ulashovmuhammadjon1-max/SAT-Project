@@ -1,0 +1,660 @@
+// SAT Platform database schema
+// Postgres, accessed through Prisma Client.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Auth (Auth.js / NextAuth v5 - Prisma adapter shape) + platform roles
+// ---------------------------------------------------------------------------
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+model User {
+  id             String    @id @default(cuid())
+  name           String?
+  email          String    @unique
+  emailVerified  DateTime?
+  image          String?
+  passwordHash   String?
+  role           Role      @default(STUDENT)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  // streak / gamification
+  currentStreak  Int       @default(0)
+  longestStreak  Int       @default(0)
+  lastActiveDate DateTime?
+
+  accounts       Account[]
+  sessions       Session[]
+
+  attempts        Attempt[]
+  bookmarks       Bookmark[]
+  vocabProgress   VocabProgress[]
+  studyActivities StudyActivity[]
+  chatThreads     ChatThread[]
+  auditLogs       AuditLog[]
+
+  uploadsCreated     PDFUpload[]      @relation("UploadedBy")
+  uploadsReviewed    AIProcessingJob[] @relation("ReviewedBy")
+  testsCreated       Test[]           @relation("TestCreatedBy")
+  vocabWordsCreated  VocabWord[]      @relation("VocabCreatedBy")
+  announcementsMade  Announcement[]   @relation("AnnouncementCreatedBy")
+  adaptiveConfigsSet AdaptiveConfig[] @relation("AdaptiveConfigUpdatedBy")
+
+  @@index([role])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ---------------------------------------------------------------------------
+// Curriculum taxonomy
+// ---------------------------------------------------------------------------
+
+enum Subject {
+  READING_WRITING
+  MATH
+}
+
+model Domain {
+  id          String   @id @default(cuid())
+  subject     Subject
+  name        String
+  code        String   @unique // e.g. "INI", "CAS", "EOI", "SEC", "ALG", "ADV", "PSDA", "GT"
+  description String?
+  order       Int      @default(0)
+
+  skills    Skill[]
+  questions Question[]
+
+  @@index([subject])
+}
+
+model Skill {
+  id          String @id @default(cuid())
+  domainId    String
+  name        String
+  code        String @unique
+  description String?
+  order       Int    @default(0)
+
+  domain    Domain     @relation(fields: [domainId], references: [id], onDelete: Cascade)
+  questions Question[]
+
+  @@index([domainId])
+}
+
+// ---------------------------------------------------------------------------
+// Tests / adaptive modules
+// ---------------------------------------------------------------------------
+
+enum TestType {
+  FULL_LENGTH
+  PRACTICE_SET
+  CUSTOM_QUIZ
+}
+
+enum TestStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ModuleDifficulty {
+  STANDARD // module 1 (or non-adaptive module)
+  EASY // module 2, lower branch
+  HARD // module 2, upper branch
+}
+
+model Test {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  type        TestType   @default(FULL_LENGTH)
+  status      TestStatus @default(DRAFT)
+  isAdaptive  Boolean    @default(true)
+
+  adaptiveConfigId String?
+  adaptiveConfig   AdaptiveConfig? @relation(fields: [adaptiveConfigId], references: [id])
+
+  createdById String?
+  createdBy   User?   @relation("TestCreatedBy", fields: [createdById], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  modules  Module[]
+  attempts Attempt[]
+
+  @@index([status, type])
+}
+
+model Module {
+  id                 String           @id @default(cuid())
+  testId             String
+  subject            Subject
+  order              Int // 1 or 2
+  difficulty         ModuleDifficulty @default(STANDARD)
+  title              String?
+  timeLimitMinutes   Int              @default(32)
+  // overrides the test-level adaptive config threshold when set
+  adaptiveThresholdPct Int?
+
+  test      Test       @relation(fields: [testId], references: [id], onDelete: Cascade)
+  passages  Passage[]
+  questions Question[]
+
+  moduleAttempts ModuleAttempt[]
+
+  @@unique([testId, subject, order, difficulty])
+  @@index([testId])
+}
+
+model Passage {
+  id       String  @id @default(cuid())
+  moduleId String?
+  title    String?
+  content  String  @db.Text // HTML/rich text
+  imageUrl String?
+  source   String?
+
+  module    Module?    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  questions Question[]
+
+  @@index([moduleId])
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  FREE_RESPONSE // student-produced response (grid-in), math only
+}
+
+enum QuestionDifficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+model Question {
+  id             String             @id @default(cuid())
+  moduleId       String?
+  passageId      String?
+  domainId       String
+  skillId        String
+  type           QuestionType       @default(MULTIPLE_CHOICE)
+  difficulty     QuestionDifficulty @default(MEDIUM)
+  stem           String             @db.Text // HTML
+  imageUrl       String?
+  tableData      Json?
+  order          Int                @default(0)
+  points         Int                @default(1)
+  correctAnswerFR String?           // accepted answer(s) for free-response, JSON-encoded list as string
+  isPublished    Boolean            @default(false)
+  source         String? // e.g. "AI_EXTRACTED", "MANUAL"
+  sourceUploadId String?
+
+  module  Module?  @relation(fields: [moduleId], references: [id], onDelete: SetNull)
+  passage Passage? @relation(fields: [passageId], references: [id], onDelete: SetNull)
+  domain  Domain   @relation(fields: [domainId], references: [id])
+  skill   Skill    @relation(fields: [skillId], references: [id])
+
+  choices     AnswerChoice[]
+  explanation Explanation?
+  responses   Response[]
+  bookmarks   Bookmark[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([moduleId])
+  @@index([domainId, skillId])
+  @@index([difficulty])
+}
+
+model AnswerChoice {
+  id         String  @id @default(cuid())
+  questionId String
+  label      String // "A" | "B" | "C" | "D"
+  content    String  @db.Text
+  isCorrect  Boolean @default(false)
+  order      Int     @default(0)
+
+  question  Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  responses Response[]
+
+  @@index([questionId])
+}
+
+enum ExplanationSource {
+  MANUAL
+  AI_GENERATED
+}
+
+model Explanation {
+  id               String            @id @default(cuid())
+  questionId       String            @unique
+  content          String            @db.Text
+  whyCorrect       String?           @db.Text
+  whyWrongJson     Json? // { [choiceId]: string }
+  commonMistakes   String?           @db.Text
+  tips             String?           @db.Text
+  relatedConcepts  String?           @db.Text
+  source           ExplanationSource @default(MANUAL)
+  generatedAt      DateTime?
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+}
+
+// ---------------------------------------------------------------------------
+// Attempts / responses
+// ---------------------------------------------------------------------------
+
+enum AttemptStatus {
+  IN_PROGRESS
+  PAUSED
+  SUBMITTED
+  ABANDONED
+}
+
+model Attempt {
+  id     String        @id @default(cuid())
+  userId String
+  testId String
+  status AttemptStatus @default(IN_PROGRESS)
+
+  startedAt   DateTime  @default(now())
+  submittedAt DateTime?
+  pausedAt    DateTime?
+
+  currentModuleId String?
+
+  module1ScorePct       Float?
+  assignedModule2Level  ModuleDifficulty?
+
+  totalScaledScore Int?
+  mathScaledScore  Int?
+  rwScaledScore    Int?
+
+  duplicateOfAttemptId String?
+  duplicateOf           Attempt?  @relation("AttemptDuplicate", fields: [duplicateOfAttemptId], references: [id])
+  duplicates             Attempt[] @relation("AttemptDuplicate")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  test Test @relation(fields: [testId], references: [id])
+
+  moduleAttempts ModuleAttempt[]
+  responses      Response[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, status])
+  @@index([testId])
+}
+
+model ModuleAttempt {
+  id       String  @id @default(cuid())
+  attemptId String
+  moduleId String
+
+  startedAt        DateTime  @default(now())
+  submittedAt      DateTime?
+  timeSpentSeconds Int       @default(0)
+  correctCount     Int       @default(0)
+  totalCount       Int       @default(0)
+  scaledScore      Int?
+
+  attempt Attempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  module  Module  @relation(fields: [moduleId], references: [id])
+
+  @@unique([attemptId, moduleId])
+}
+
+model Response {
+  id              String   @id @default(cuid())
+  attemptId       String
+  moduleAttemptId String
+  questionId      String
+
+  selectedChoiceId   String?
+  freeResponseAnswer String?
+  isCorrect          Boolean?
+  timeSpentSeconds   Int      @default(0)
+  changedAnswerCount Int      @default(0)
+  flagged            Boolean  @default(false)
+  eliminatedChoiceIds Json? // string[]
+  order              Int      @default(0)
+  answeredAt         DateTime?
+
+  attempt      Attempt       @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question     Question      @relation(fields: [questionId], references: [id])
+  selectedChoice AnswerChoice? @relation(fields: [selectedChoiceId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([attemptId, questionId])
+  @@index([moduleAttemptId])
+}
+
+model Bookmark {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId String
+  note       String?
+  createdAt  DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+}
+
+// ---------------------------------------------------------------------------
+// Vocabulary
+// ---------------------------------------------------------------------------
+
+enum VocabDifficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum VocabStatus {
+  NEW
+  LEARNING
+  MASTERED
+}
+
+model VocabDeck {
+  id          String @id @default(cuid())
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+
+  words VocabDeckWord[]
+}
+
+model VocabWord {
+  id              String          @id @default(cuid())
+  term            String
+  partOfSpeech    String?
+  definition      String          @db.Text
+  exampleSentence String?         @db.Text
+  difficulty      VocabDifficulty @default(MEDIUM)
+  synonyms        Json? // string[]
+  antonyms        Json? // string[]
+  audioUrl        String?
+  imageUrl        String?
+
+  createdById    String?
+  createdBy      User?   @relation("VocabCreatedBy", fields: [createdById], references: [id])
+  sourceUploadId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  decks    VocabDeckWord[]
+  progress VocabProgress[]
+
+  @@index([difficulty])
+  @@index([term])
+}
+
+model VocabDeckWord {
+  deckId String
+  wordId String
+  order  Int    @default(0)
+
+  deck VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  word VocabWord @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  @@id([deckId, wordId])
+}
+
+// Spaced repetition progress per user/word (SM-2 style)
+model VocabProgress {
+  id     String @id @default(cuid())
+  userId String
+  wordId String
+
+  status         VocabStatus @default(NEW)
+  easeFactor     Float       @default(2.5)
+  intervalDays   Int         @default(0)
+  repetitions    Int         @default(0)
+  correctStreak  Int         @default(0)
+  lastReviewedAt DateTime?
+  nextReviewAt   DateTime?
+  isBookmarked   Boolean     @default(false)
+
+  user User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word VocabWord @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, wordId])
+  @@index([userId, nextReviewAt])
+}
+
+// ---------------------------------------------------------------------------
+// PDF ingestion / AI processing pipeline
+// ---------------------------------------------------------------------------
+
+enum UploadCategory {
+  FULL_TEST
+  QUESTION_BANK
+  VOCABULARY
+}
+
+enum UploadStatus {
+  PENDING
+  PROCESSING
+  NEEDS_REVIEW
+  COMPLETED
+  FAILED
+}
+
+model PDFUpload {
+  id       String         @id @default(cuid())
+  fileName String
+  fileUrl  String
+  fileSize Int
+  category UploadCategory
+  status   UploadStatus   @default(PENDING)
+
+  uploadedById String?
+  uploadedBy   User?   @relation("UploadedBy", fields: [uploadedById], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  jobs AIProcessingJob[]
+
+  @@index([status, category])
+}
+
+enum JobStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  FAILED
+}
+
+model AIProcessingJob {
+  id       String    @id @default(cuid())
+  uploadId String
+  status   JobStatus @default(QUEUED)
+
+  startedAt       DateTime?
+  completedAt     DateTime?
+  confidenceScore Float? // 0-1, overall extraction confidence
+  extractedData   Json? // structured extraction result awaiting review
+  errorMessage    String?  @db.Text
+  logs            Json? // step-by-step trace for the admin queue view
+
+  reviewedById String?
+  reviewedBy   User?     @relation("ReviewedBy", fields: [reviewedById], references: [id])
+  reviewedAt   DateTime?
+  publishedAt  DateTime?
+
+  upload PDFUpload @relation(fields: [uploadId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([status])
+  @@index([uploadId])
+}
+
+// ---------------------------------------------------------------------------
+// Adaptive engine configuration (admin-editable)
+// ---------------------------------------------------------------------------
+
+model AdaptiveConfig {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  description String?
+  isActive    Boolean @default(false)
+
+  // % correct on module 1 at/above which a student routes to the HARD module 2
+  rwThresholdPct Int @default(70)
+  mathThresholdPct Int @default(70)
+
+  updatedById String?
+  updatedBy   User?   @relation("AdaptiveConfigUpdatedBy", fields: [updatedById], references: [id])
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  tests Test[]
+}
+
+// ---------------------------------------------------------------------------
+// Platform admin: feature flags, announcements, activity, audit, AI chat
+// ---------------------------------------------------------------------------
+
+model FeatureFlag {
+  id          String  @id @default(cuid())
+  key         String  @unique
+  label       String
+  description String?
+  isEnabled   Boolean @default(false)
+  updatedAt   DateTime @updatedAt
+}
+
+enum AnnouncementAudience {
+  ALL
+  STUDENT
+  ADMIN
+}
+
+model Announcement {
+  id        String               @id @default(cuid())
+  title     String
+  body      String               @db.Text
+  audience  AnnouncementAudience @default(ALL)
+  isActive  Boolean              @default(true)
+  expiresAt DateTime?
+
+  createdById String?
+  createdBy   User?   @relation("AnnouncementCreatedBy", fields: [createdById], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+// per-day activity used for streaks + heatmaps
+model StudyActivity {
+  id                String   @id @default(cuid())
+  userId            String
+  date              DateTime @db.Date
+  questionsAnswered Int      @default(0)
+  minutesStudied    Int      @default(0)
+  vocabReviewed     Int      @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+  @@index([userId, date])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  targetType String?
+  targetId   String?
+  metadata   Json?
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([action])
+}
+
+// Future feature: AI tutor / review-mode chat assistant
+enum ChatRole {
+  USER
+  ASSISTANT
+}
+
+model ChatThread {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId String?
+  attemptId  String?
+  createdAt  DateTime @default(now())
+
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages ChatMessage[]
+}
+
+model ChatMessage {
+  id       String   @id @default(cuid())
+  threadId String
+  role     ChatRole
+  content  String   @db.Text
+  createdAt DateTime @default(now())
+
+  thread ChatThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+}
