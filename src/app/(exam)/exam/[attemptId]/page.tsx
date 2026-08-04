@@ -11,7 +11,6 @@ export default async function ExamPage({ params }: { params: { attemptId: string
 
   const attempt = await prisma.attempt.findUnique({
     where: { id: params.attemptId },
-    include: { test: true },
   });
 
   if (!attempt || attempt.userId !== user.id) notFound();
@@ -70,7 +69,7 @@ export default async function ExamPage({ params }: { params: { attemptId: string
   return (
     <ExamShell
       attemptId={attempt.id}
-      testTitle={attempt.test.title}
+      studentName={user.name ?? "Student"}
       moduleAttemptId={moduleAttempt.id}
       startedAt={moduleAttempt.startedAt}
       module={safeModule}

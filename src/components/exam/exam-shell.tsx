@@ -41,14 +41,14 @@ function buildInitialStates(module: ExamModule, existing: ExistingResponse[]): Q
 
 export function ExamShell({
   attemptId,
-  testTitle,
+  studentName,
   moduleAttemptId,
   module,
   startedAt,
   existingResponses,
 }: {
   attemptId: string;
-  testTitle: string;
+  studentName: string;
   moduleAttemptId: string;
   module: ExamModule;
   startedAt: Date;
@@ -61,6 +61,7 @@ export function ExamShell({
   const [calculatorOpen, setCalculatorOpen] = useState(false);
   const [referenceOpen, setReferenceOpen] = useState(false);
   const [reviewScreen, setReviewScreen] = useState(false);
+  const [directionsOpen, setDirectionsOpen] = useState(false);
   const [isSubmitting, startSubmit] = useTransition();
 
   const totalSeconds = module.timeLimitMinutes * 60;
@@ -175,9 +176,10 @@ export function ExamShell({
     return (
       <div className="flex h-screen flex-col bg-examCream">
         <ExamHeader
-          testTitle={testTitle}
           module={module}
           secondsRemaining={secondsRemaining}
+          directionsOpen={directionsOpen}
+          onToggleDirections={() => setDirectionsOpen((v) => !v)}
           onToggleCalculator={() => setCalculatorOpen((v) => !v)}
           onOpenReference={() => setReferenceOpen(true)}
         />
@@ -235,9 +237,10 @@ export function ExamShell({
   return (
     <div className="flex h-screen flex-col bg-examCream">
       <ExamHeader
-        testTitle={testTitle}
         module={module}
         secondsRemaining={secondsRemaining}
+        directionsOpen={directionsOpen}
+        onToggleDirections={() => setDirectionsOpen((v) => !v)}
         onToggleCalculator={() => setCalculatorOpen((v) => !v)}
         onOpenReference={() => setReferenceOpen(true)}
       />
@@ -252,26 +255,30 @@ export function ExamShell({
                 <p className="font-serif text-sm text-navy-700">No passage for this question.</p>
               )}
             </div>
-            <div className="bg-white p-8 lg:p-10 xl:p-14">
+            <div className="bg-examCream p-8 lg:p-10 xl:p-14">
               <QuestionBody
                 question={question}
                 index={currentIndex}
                 state={states[currentIndex]}
+                flagged={!!states[currentIndex]?.flagged}
                 onSelect={selectChoice}
                 onToggleEliminate={toggleEliminated}
                 onFreeResponseChange={(v) => updateCurrent({ freeResponseAnswer: v })}
+                onToggleFlag={toggleFlag}
               />
             </div>
           </div>
         ) : (
-          <div className="mx-auto h-full max-w-3xl bg-white p-8 lg:p-14">
+          <div className="mx-auto h-full max-w-3xl bg-examCream p-8 lg:p-14">
             <QuestionBody
               question={question}
               index={currentIndex}
               state={states[currentIndex]}
+              flagged={!!states[currentIndex]?.flagged}
               onSelect={selectChoice}
               onToggleEliminate={toggleEliminated}
               onFreeResponseChange={(v) => updateCurrent({ freeResponseAnswer: v })}
+              onToggleFlag={toggleFlag}
             />
           </div>
         )}
@@ -280,18 +287,7 @@ export function ExamShell({
       {/* Bottom toolbar */}
       <div className="shrink-0 border-t border-navy-200 bg-white">
         <div className="flex items-center justify-between gap-2 px-6 py-3">
-          <Button
-            variant="ghost"
-            size="sm"
-            className={cn(
-              "gap-1.5 text-navy-950 hover:bg-navy-950/5",
-              states[currentIndex]?.flagged && "text-warning-foreground"
-            )}
-            onClick={toggleFlag}
-          >
-            <Flag className={cn("h-4 w-4", states[currentIndex]?.flagged && "fill-warning text-warning")} />{" "}
-            {states[currentIndex]?.flagged ? "Flagged for review" : "Mark for review"}
-          </Button>
+          <p className="text-sm font-medium text-navy-950">{studentName}</p>
 
           <div className="flex items-center gap-3">
             <Button
@@ -353,15 +349,17 @@ export function ExamShell({
 }
 
 function ExamHeader({
-  testTitle,
   module,
   secondsRemaining,
+  directionsOpen,
+  onToggleDirections,
   onToggleCalculator,
   onOpenReference,
 }: {
-  testTitle: string;
   module: ExamModule;
   secondsRemaining: number;
+  directionsOpen: boolean;
+  onToggleDirections: () => void;
   onToggleCalculator: () => void;
   onOpenReference: () => void;
 }) {
@@ -369,13 +367,19 @@ function ExamHeader({
   const subjectLabel = module.subject === "READING_WRITING" ? "Reading and Writing" : "Math";
 
   return (
-    <header className="shrink-0 border-b border-navy-200 bg-examCream text-navy-950">
+    <header className="relative shrink-0 border-b border-navy-200 bg-examCream text-navy-950">
       <div className="flex items-center justify-between px-6 py-3">
         <div>
           <p className="text-sm font-semibold leading-tight">
             Section {sectionNumber}, Module {module.order}: {subjectLabel}
           </p>
-          <p className="truncate text-xs text-navy-700">{testTitle}</p>
+          <button
+            type="button"
+            onClick={onToggleDirections}
+            className="flex items-center gap-1 text-xs text-navy-700 hover:text-navy-950"
+          >
+            Directions <ChevronDown className={cn("h-3 w-3 transition-transform", directionsOpen && "rotate-180")} />
+          </button>
         </div>
 
         <div
@@ -400,6 +404,24 @@ function ExamHeader({
           )}
         </div>
       </div>
+
+      {directionsOpen && (
+        <div className="absolute left-0 top-full z-30 m-3 w-[420px] max-w-[calc(100vw-1.5rem)] rounded-lg border border-navy-200 bg-white p-5 text-sm leading-relaxed text-navy-950 shadow-panel">
+          <p>
+            Read each passage and question carefully, then choose the best answer based on the passage(s) and any
+            accompanying figures. Each question has a single best answer.
+          </p>
+          <p className="mt-2">
+            You can flag a question to revisit later, cross out choices you&apos;ve ruled out, and move freely between
+            questions in this module until you submit it.
+          </p>
+          <div className="mt-3 text-right">
+            <Button size="sm" variant="outline" className="rounded-full" onClick={onToggleDirections}>
+              Close
+            </Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
@@ -408,16 +430,20 @@ function QuestionBody({
   question,
   index,
   state,
+  flagged,
   onSelect,
   onToggleEliminate,
   onFreeResponseChange,
+  onToggleFlag,
 }: {
   question: ExamModule["questions"][number];
   index: number;
   state: QuestionState;
+  flagged: boolean;
   onSelect: (choiceId: string) => void;
   onToggleEliminate: (choiceId: string) => void;
   onFreeResponseChange: (value: string) => void;
+  onToggleFlag: () => void;
 }) {
   return (
     <div className="space-y-5">
@@ -428,6 +454,17 @@ function QuestionBody({
           </span>
           {question.imageUrl && <span className="text-xs text-navy-700">Includes a figure</span>}
         </div>
+        <button
+          type="button"
+          onClick={onToggleFlag}
+          className={cn(
+            "flex items-center gap-1.5 text-sm font-medium",
+            flagged ? "text-warning-foreground" : "text-navy-700 hover:text-navy-950"
+          )}
+        >
+          <Flag className={cn("h-4 w-4", flagged && "fill-warning text-warning")} />
+          {flagged ? "Marked for Review" : "Mark for Review"}
+        </button>
       </div>
       <div
         className="font-serif text-[16px] leading-relaxed text-navy-950"
