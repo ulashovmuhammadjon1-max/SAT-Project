@@ -14,7 +14,18 @@ import type {
 // point `getExtractionProvider()` swaps in the Claude provider.
 
 const QUESTION_START = /(?:^|\n)\s*(\d{1,3})[.)]\s+/g;
-const CHOICE_LINE = /(?:^|\n)\s*\(?([A-D])\)[.)]?\s+(.+?)(?=\n\s*\(?[A-D]\)?[.)]|\n\s*\d{1,3}[.)]|\n\n|$)/gs;
+// Matches "(A)", "A)", or "A." as a choice marker — deliberately NOT anchored
+// to a line start, since PDF text extraction frequently runs all four choices
+// together on one wrapped line/paragraph instead of one-per-line.
+const CHOICE_MARKER = /\(?([A-D])\)[.)]?\s+/g;
+
+// Phrases that typically introduce an answer explanation in mock-test PDFs,
+// so it can be split out of the last choice's text instead of being treated
+// as part of the answer content. Not anchored to a word boundary at the
+// start: PDF text extraction often drops the space between the last choice
+// and the explanation sentence (e.g. "...imposingThe correct option is D").
+const EXPLANATION_LEAD_IN =
+  /(?:the\s+correct\s+(?:answer|option|choice)\s+is\s+([A-D])\b[^.]*?(?:because|since|as)?|correct\s+answer\s*:?\s*([A-D])\b|explanation\s*:)/i;
 
 function splitIntoQuestionBlocks(text: string): { number: number; block: string }[] {
   const matches = [...text.matchAll(QUESTION_START)];
@@ -30,20 +41,57 @@ function splitIntoQuestionBlocks(text: string): { number: number; block: string 
   return blocks;
 }
 
-function extractChoices(block: string): { choices: ExtractedChoice[]; stem: string } {
-  const choices: ExtractedChoice[] = [];
-  let firstChoiceIndex = block.length;
-
-  for (const match of block.matchAll(CHOICE_LINE)) {
+function extractChoices(
+  block: string
+): { choices: ExtractedChoice[]; stem: string; explanation?: string } {
+  // Find every (A)/(B)/(C)/(D) marker in document order, but only keep the
+  // sequence while each next letter is exactly the one that should follow —
+  // this rejects a stray "(A)" appearing again inside explanation prose
+  // after the real four choices have already been found.
+  const markers: { label: string; index: number; end: number }[] = [];
+  let expected = 0; // index into "ABCD"
+  for (const match of block.matchAll(CHOICE_MARKER)) {
+    if (expected >= 4) break;
     const label = match[1];
-    const content = match[2].trim();
-    if (!content) continue;
-    firstChoiceIndex = Math.min(firstChoiceIndex, match.index ?? block.length);
-    choices.push({ label, content, isCorrect: false });
+    if (label !== "ABCD"[expected]) continue;
+    markers.push({ label, index: match.index ?? 0, end: (match.index ?? 0) + match[0].length });
+    expected += 1;
   }
 
-  const stem = block.slice(0, firstChoiceIndex).trim();
-  return { choices, stem };
+  if (markers.length === 0) {
+    return { choices: [], stem: block };
+  }
+
+  const stem = block.slice(0, markers[0].index).trim();
+  const choices: ExtractedChoice[] = [];
+  let explanation: string | undefined;
+
+  for (let i = 0; i < markers.length; i++) {
+    const contentStart = markers[i].end;
+    const contentEnd = markers[i + 1]?.index ?? block.length;
+    let content = block.slice(contentStart, contentEnd).trim();
+
+    // Only the last choice can run into trailing explanation prose.
+    if (i === markers.length - 1) {
+      const leadIn = content.match(EXPLANATION_LEAD_IN);
+      if (leadIn && leadIn.index !== undefined) {
+        explanation = content.slice(leadIn.index).trim();
+        content = content.slice(0, leadIn.index).trim();
+      }
+    }
+
+    if (content) choices.push({ label: markers[i].label, content, isCorrect: false });
+  }
+
+  if (explanation) {
+    const correctLetter = (explanation.match(EXPLANATION_LEAD_IN)?.[1] ?? explanation.match(EXPLANATION_LEAD_IN)?.[2])?.toUpperCase();
+    if (correctLetter) {
+      const correctChoice = choices.find((c) => c.label === correctLetter);
+      if (correctChoice) correctChoice.isCorrect = true;
+    }
+  }
+
+  return { choices, stem, explanation };
 }
 
 function guessDifficulty(stem: string): "EASY" | "MEDIUM" | "HARD" {
@@ -65,24 +113,27 @@ export class HeuristicExtractionProvider implements AIExtractionProvider {
     }
 
     const questions: ExtractedQuestion[] = blocks.map(({ number, block }) => {
-      const { choices, stem } = extractChoices(block);
+      const { choices, stem, explanation } = extractChoices(block);
       const hasFourChoices = choices.length === 4;
+      const hasKnownAnswer = choices.some((c) => c.isCorrect);
       const hasImageHint = /\b(figure|graph|diagram|chart|see image)\b/i.test(block);
       const hasTableHint = /\btable\b/i.test(block) && /\|/.test(block);
 
       // Heuristic confidence: a clean 4-choice MCQ with a non-trivial stem
       // scores well; anything irregular is pushed down for manual review.
       let confidence = 0.4;
-      if (hasFourChoices) confidence += 0.35;
+      if (hasFourChoices) confidence += 0.3;
       if (stem.length > 20) confidence += 0.15;
       if (choices.every((c) => c.content.length > 1)) confidence += 0.1;
-      confidence = Math.min(confidence, hasFourChoices ? 0.85 : 0.55);
+      if (hasKnownAnswer) confidence += 0.1;
+      confidence = Math.min(confidence, hasFourChoices ? (hasKnownAnswer ? 0.95 : 0.85) : 0.55);
 
       return {
         number,
         stem: stem || block.slice(0, 200),
         type: "MULTIPLE_CHOICE",
         choices,
+        explanation,
         difficultyGuess: guessDifficulty(stem),
         hasImage: hasImageHint,
         hasTable: hasTableHint,

@@ -32,9 +32,16 @@ const CATEGORIES = [
 // is configured, the browser uploads the PDF directly to Blob storage instead
 // of routing the raw file through a Server Action, so large mock-test PDFs
 // still work. Without it (local dev), the file goes through createUpload as before.
-export function UploadDialog({ blobEnabled }: { blobEnabled: boolean }) {
+export function UploadDialog({
+  blobEnabled,
+  continuationParams,
+}: {
+  blobEnabled: boolean;
+  /** When set, this upload is a module for an existing test — carried through to the review page so it opens pre-targeted. */
+  continuationParams?: { targetTest: string; subject?: string; slot?: string };
+}) {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(Boolean(continuationParams));
   const [file, setFile] = useState<File | null>(null);
   const [category, setCategory] = useState<(typeof CATEGORIES)[number]["value"]>("FULL_TEST");
   const [error, setError] = useState<string | null>(null);
@@ -67,7 +74,14 @@ export function UploadDialog({ blobEnabled }: { blobEnabled: boolean }) {
         toast.success("Upload received — extraction started.");
         setOpen(false);
         setFile(null);
-        if (result.uploadId) router.push(`/admin/uploads/${result.uploadId}`);
+        if (result.uploadId) {
+          const qs = continuationParams
+            ? `?targetTest=${continuationParams.targetTest}${
+                continuationParams.subject ? `&subject=${continuationParams.subject}` : ""
+              }${continuationParams.slot ? `&slot=${continuationParams.slot}` : ""}`
+            : "";
+          router.push(`/admin/uploads/${result.uploadId}${qs}`);
+        }
         router.refresh();
       } catch (err) {
         setError(err instanceof Error ? err.message : "Upload failed.");

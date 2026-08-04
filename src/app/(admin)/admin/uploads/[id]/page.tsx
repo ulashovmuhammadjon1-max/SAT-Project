@@ -12,7 +12,13 @@ import type { TestExtractionResult, VocabExtractionResult } from "@/lib/ai/types
 
 export const dynamic = "force-dynamic";
 
-export default async function UploadDetailPage({ params }: { params: { id: string } }) {
+export default async function UploadDetailPage({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { targetTest?: string; subject?: string; slot?: string };
+}) {
   const upload = await prisma.pDFUpload.findUnique({
     where: { id: params.id },
     include: { jobs: { orderBy: { createdAt: "desc" }, take: 1 }, uploadedBy: true },
@@ -87,6 +93,9 @@ export default async function UploadDetailPage({ params }: { params: { id: strin
           alreadyPublished={upload.status === "COMPLETED"}
           domains={domains}
           existingTests={existingTests}
+          initialTargetTestId={searchParams.targetTest}
+          initialSubject={searchParams.subject as "READING_WRITING" | "MATH" | undefined}
+          initialModuleSlot={searchParams.slot}
         />
       )}
     </div>

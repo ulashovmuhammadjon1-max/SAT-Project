@@ -23,6 +23,7 @@ const questionSchema = z.object({
   type: z.enum(["MULTIPLE_CHOICE", "FREE_RESPONSE"]),
   choices: z.array(choiceSchema),
   correctAnswerFreeResponse: z.string().nullable(),
+  explanation: z.string().nullable(),
   domainGuess: z.string(),
   skillGuess: z.string(),
   difficultyGuess: z.enum(["EASY", "MEDIUM", "HARD"]),
@@ -153,13 +154,18 @@ export class ClaudeExtractionProvider implements AIExtractionProvider {
       testExtractionSchema,
       "sat_test_extraction",
       `You convert raw text extracted from a Digital SAT-style practice test PDF into structured
-data. Identify reading/writing passages and every question with its answer choices. For each
-question, determine the correct choice from context if marked in the source (e.g. an answer key),
-guess the College Board domain/skill category and difficulty if not explicit, and flag whether it
-references an image or table. Set a confidence score (0-1) per question reflecting how certain you
-are the extraction is complete and correctly structured — use lower scores for ambiguous OCR
-artifacts, missing choices, or unclear question boundaries so a human can review them before
-publishing. Never invent question content that is not present in the source text.`,
+data. Identify reading/writing passages and every question with its answer choices. Many source
+PDFs print a written explanation immediately after each question (e.g. "The correct answer is D
+because...") — when present, put that explanation text (cleaned up, not the raw OCR line breaks)
+into the question's "explanation" field, keep it OUT of the last answer choice's "content", and use
+it to determine the correct choice (set that choice's isCorrect true). If no explanation is present,
+determine the correct choice from any other source marking (e.g. an answer key) if available, and
+leave "explanation" null. Guess the College Board domain/skill category and difficulty if not
+explicit, and flag whether the question references an image or table. Set a confidence score (0-1)
+per question reflecting how certain you are the extraction is complete and correctly structured —
+use lower scores for ambiguous OCR artifacts, missing choices, or unclear question boundaries so a
+human can review them before publishing. Never invent question content that is not present in the
+source text.`,
       rawText.slice(0, 100_000)
     );
   }

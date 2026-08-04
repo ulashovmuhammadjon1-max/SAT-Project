@@ -19,11 +19,19 @@ const STATUS_VARIANT: Record<string, string> = {
   FAILED: "destructive",
 };
 
-export default async function UploadsQueuePage() {
+export default async function UploadsQueuePage({
+  searchParams,
+}: {
+  searchParams: { targetTest?: string; subject?: string; slot?: string };
+}) {
   const uploads = await prisma.pDFUpload.findMany({
     orderBy: { createdAt: "desc" },
     include: { uploadedBy: true, jobs: { orderBy: { createdAt: "desc" }, take: 1 } },
   });
+
+  const target = searchParams.targetTest
+    ? await prisma.test.findUnique({ where: { id: searchParams.targetTest }, select: { title: true } })
+    : null;
 
   return (
     <div className="space-y-6">
@@ -31,10 +39,17 @@ export default async function UploadsQueuePage() {
         <div>
           <h1 className="font-display text-2xl font-semibold tracking-tight">PDF Ingestion</h1>
           <p className="text-sm text-muted-foreground">
-            Upload SAT mock tests, question banks, or vocabulary lists — AI structures them automatically.
+            {target
+              ? `Uploading a module for "${target.title}" — pick the matching PDF and it'll be pre-set to merge into that test.`
+              : "Upload SAT mock tests, question banks, or vocabulary lists — AI structures them automatically."}
           </p>
         </div>
-        <UploadDialog blobEnabled={blobConfigured} />
+        <UploadDialog
+          blobEnabled={blobConfigured}
+          continuationParams={
+            target ? { targetTest: searchParams.targetTest!, subject: searchParams.subject, slot: searchParams.slot } : undefined
+          }
+        />
       </div>
 
       <Card>

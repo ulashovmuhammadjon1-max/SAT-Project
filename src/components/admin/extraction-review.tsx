@@ -52,6 +52,9 @@ export function ExtractionReview({
   alreadyPublished,
   domains,
   existingTests,
+  initialTargetTestId,
+  initialSubject,
+  initialModuleSlot,
 }: {
   uploadId: string;
   jobId: string;
@@ -61,6 +64,9 @@ export function ExtractionReview({
   alreadyPublished: boolean;
   domains: DomainOption[];
   existingTests: ExistingTestOption[];
+  initialTargetTestId?: string;
+  initialSubject?: "READING_WRITING" | "MATH";
+  initialModuleSlot?: string;
 }) {
   if (category === "VOCABULARY") {
     return (
@@ -83,6 +89,9 @@ export function ExtractionReview({
       alreadyPublished={alreadyPublished}
       domains={domains}
       existingTests={existingTests}
+      initialTargetTestId={initialTargetTestId}
+      initialSubject={initialSubject}
+      initialModuleSlot={initialModuleSlot}
     />
   );
 }
@@ -147,6 +156,9 @@ function TestReview({
   alreadyPublished,
   domains,
   existingTests,
+  initialTargetTestId,
+  initialSubject,
+  initialModuleSlot,
 }: {
   uploadId: string;
   jobId: string;
@@ -156,15 +168,18 @@ function TestReview({
   alreadyPublished: boolean;
   domains: DomainOption[];
   existingTests: ExistingTestOption[];
+  initialTargetTestId?: string;
+  initialSubject?: Subject;
+  initialModuleSlot?: string;
 }) {
   const router = useRouter();
-  const [subject, setSubject] = useState<Subject>("READING_WRITING");
+  const [subject, setSubject] = useState<Subject>(initialSubject ?? "READING_WRITING");
   const [questions, setQuestions] = useState<ExtractedQuestion[]>(() =>
-    withTaxonomyDefaults(initial.questions, domains, "READING_WRITING")
+    withTaxonomyDefaults(initial.questions, domains, initialSubject ?? "READING_WRITING")
   );
-  const [moduleSlot, setModuleSlot] = useState("1");
+  const [moduleSlot, setModuleSlot] = useState(initialModuleSlot ?? "1");
   const [thresholdPct, setThresholdPct] = useState("");
-  const [targetTestId, setTargetTestId] = useState("new");
+  const [targetTestId, setTargetTestId] = useState(initialTargetTestId ?? "new");
   const [isSaving, startSave] = useTransition();
   const [isPublishing, startPublish] = useTransition();
 
@@ -215,6 +230,30 @@ function TestReview({
 
   function removeQuestion(index: number) {
     setQuestions((prev) => prev.filter((_, i) => i !== index));
+  }
+
+  function addChoice(qIndex: number) {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === qIndex
+          ? { ...q, choices: [...q.choices, { label: "ABCD"[q.choices.length], content: "", isCorrect: false }] }
+          : q
+      )
+    );
+  }
+
+  function removeChoice(qIndex: number, cIndex: number) {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === qIndex
+          ? {
+              ...q,
+              // Relabel remaining choices A, B, C... so labels stay contiguous after a removal.
+              choices: q.choices.filter((_, j) => j !== cIndex).map((c, j) => ({ ...c, label: "ABCD"[j] })),
+            }
+          : q
+      )
+    );
   }
 
   function saveDraft() {
@@ -381,8 +420,30 @@ function TestReview({
                       className="h-8 flex-1 border-none bg-transparent p-0 shadow-none focus-visible:ring-0"
                     />
                     {choice.isCorrect && <Check className="h-4 w-4 shrink-0 text-success" />}
+                    <button
+                      type="button"
+                      onClick={() => removeChoice(qIndex, cIndex)}
+                      className="shrink-0 text-muted-foreground hover:text-destructive"
+                    >
+                      <Trash2 className="h-3.5 w-3.5" />
+                    </button>
                   </label>
                 ))}
+              </div>
+              {q.choices.length < 4 && (
+                <Button variant="outline" size="sm" onClick={() => addChoice(qIndex)}>
+                  <Plus className="h-3.5 w-3.5" /> Add choice {"ABCD"[q.choices.length]}
+                  {q.choices.length === 0 ? " — extraction found no choices here, check the PDF text" : ""}
+                </Button>
+              )}
+              <div className="space-y-1">
+                <Label className="text-xs text-muted-foreground">Explanation (from the PDF, if present)</Label>
+                <Textarea
+                  value={q.explanation ?? ""}
+                  onChange={(e) => updateQuestion(qIndex, { explanation: e.target.value })}
+                  rows={2}
+                  placeholder="No explanation text was detected for this question."
+                />
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
                 <div className="space-y-1">

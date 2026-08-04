@@ -16,7 +16,7 @@ export interface ExtractedQuestion {
   type: "MULTIPLE_CHOICE" | "FREE_RESPONSE";
   choices: ExtractedChoice[];
   correctAnswerFreeResponse?: string | null;
-  explanation?: string;
+  explanation?: string | null;
   domainGuess?: string;
   skillGuess?: string;
   // Set once an admin confirms/overrides the taxonomy in the review UI; takes

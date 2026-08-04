@@ -84,6 +84,19 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
     setChoices((prev) => prev.map((c) => ({ ...c, isCorrect: c.label === label })));
   }
 
+  function addChoice() {
+    setChoices((prev) => [
+      ...prev,
+      { label: "ABCD"[prev.length], content: "", isCorrect: false, order: prev.length },
+    ]);
+  }
+
+  function removeChoice(index: number) {
+    setChoices((prev) =>
+      prev.filter((_, i) => i !== index).map((c, i) => ({ ...c, label: "ABCD"[i], order: i }))
+    );
+  }
+
   function save() {
     startSave(async () => {
       await updateQuestion(question.id, { stem, imageUrl: question.imageUrl, domainId, skillId, difficulty, isPublished, choices });
@@ -167,8 +180,16 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
                       rows={1}
                       className="min-h-9 py-2"
                     />
+                    <Button variant="ghost" size="icon" onClick={() => removeChoice(i)}>
+                      <Trash2 className="h-3.5 w-3.5 text-muted-foreground" />
+                    </Button>
                   </div>
                 ))}
+                {choices.length < 4 && (
+                  <Button variant="outline" size="sm" onClick={addChoice}>
+                    Add choice {"ABCD"[choices.length]}
+                  </Button>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-3">
