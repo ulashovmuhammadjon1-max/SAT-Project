@@ -23,9 +23,9 @@ export function QuestionPalette({
 }) {
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" className="max-h-[70vh] overflow-y-auto rounded-t-2xl bg-examCream">
+      <SheetContent side="bottom" className="max-h-[70vh] overflow-y-auto rounded-t-lg bg-exam-bg">
         <SheetHeader>
-          <SheetTitle className="text-navy-950">Question navigator</SheetTitle>
+          <SheetTitle className="text-exam-text">Question navigator</SheetTitle>
         </SheetHeader>
         <div className="mt-4 grid grid-cols-6 gap-2 sm:grid-cols-10">
           {Array.from({ length: count }).map((_, i) => {
@@ -42,13 +42,13 @@ export function QuestionPalette({
                   onOpenChange(false);
                 }}
                 className={cn(
-                  "relative flex h-11 w-11 items-center justify-center rounded border text-sm font-semibold transition-colors",
+                  "relative flex h-10 w-10 items-center justify-center rounded border text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-2 focus-visible:ring-offset-exam-bg",
                   answered
-                    ? "border-navy-950 bg-navy-950 text-white"
+                    ? "border-exam-blue bg-exam-blue text-white"
                     : visited
-                      ? "border-navy-300 bg-navy-100 text-navy-950"
-                      : "border-navy-300 bg-white text-navy-950",
-                  i === currentIndex && "ring-2 ring-navy-500 ring-offset-1 ring-offset-examCream"
+                      ? "border-exam-border bg-gray-100 text-exam-text"
+                      : "border-exam-border bg-exam-card text-exam-text",
+                  i === currentIndex && "ring-2 ring-exam-blue ring-offset-1 ring-offset-exam-bg"
                 )}
               >
                 {i + 1}
@@ -59,15 +59,15 @@ export function QuestionPalette({
             );
           })}
         </div>
-        <div className="mt-4 flex flex-wrap gap-4 text-xs text-navy-700">
+        <div className="mt-4 flex flex-wrap gap-4 text-xs text-exam-muted">
           <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-navy-950 bg-navy-950" /> Answered
+            <span className="h-3 w-3 rounded-sm border border-exam-blue bg-exam-blue" /> Answered
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-navy-300 bg-navy-100" /> Visited
+            <span className="h-3 w-3 rounded-sm border border-exam-border bg-gray-100" /> Visited
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="h-3 w-3 rounded-sm border border-navy-300 bg-white" /> Not visited
+            <span className="h-3 w-3 rounded-sm border border-exam-border bg-exam-card" /> Not visited
           </span>
           <span className="flex items-center gap-1.5">
             <Flag className="h-3.5 w-3.5 fill-warning text-warning" /> Flagged for review

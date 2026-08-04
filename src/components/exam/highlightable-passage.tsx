@@ -58,7 +58,7 @@ export function HighlightablePassage({ content }: { content: string }) {
       {toolbar && (
         <div
           style={{ left: toolbar.x, top: toolbar.y }}
-          className="absolute z-10 flex -translate-x-1/2 items-center gap-1 rounded-md bg-navy-900 p-1 text-xs font-medium text-white shadow-panel"
+          className="absolute z-10 flex -translate-x-1/2 items-center gap-1 rounded-md bg-exam-text p-1 text-xs font-medium text-white shadow-examFlat"
         >
           <button type="button" onClick={applyHighlight} className="flex items-center gap-1.5 rounded px-2 py-1 hover:bg-white/10">
             <Highlighter className="h-3.5 w-3.5" /> Highlight
@@ -71,7 +71,7 @@ export function HighlightablePassage({ content }: { content: string }) {
       <div
         ref={containerRef}
         onMouseUp={handleMouseUp}
-        className="select-text font-serif text-[16px] leading-relaxed text-navy-950"
+        className="select-text font-sans text-[16px] leading-[1.6] text-exam-text"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>

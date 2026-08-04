@@ -46,6 +46,8 @@ import { cn, formatDuration } from "@/lib/utils";
 import { autosaveResponses, submitModule } from "@/server/actions/student/attempts";
 import type { ExamModule, ExistingResponse, QuestionState } from "@/types/exam";
 
+const FOCUS_RING = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1";
+
 function buildInitialStates(module: ExamModule, existing: ExistingResponse[]): QuestionState[] {
   const byId = new Map(existing.map((r) => [r.questionId, r]));
   return module.questions.map((q) => {
@@ -87,11 +89,13 @@ export function ExamShell({
   const [crossOutEnabled, setCrossOutEnabled] = useState(false);
   const [zoomPct, setZoomPct] = useState(100);
   const [passageWidthPct, setPassageWidthPct] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, startSubmit] = useTransition();
   const splitPaneRef = useRef<HTMLDivElement>(null);
 
   const startDragging = useCallback((startEvent: ReactMouseEvent) => {
     startEvent.preventDefault();
+    setIsDragging(true);
     function onMove(e: MouseEvent) {
       const el = splitPaneRef.current;
       if (!el) return;
@@ -100,6 +104,7 @@ export function ExamShell({
       setPassageWidthPct(Math.min(70, Math.max(30, pct)));
     }
     function onUp() {
+      setIsDragging(false);
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseup", onUp);
     }
@@ -151,7 +156,7 @@ export function ExamShell({
     await autosaveResponses(attemptId, moduleAttemptId, payload);
   }, [attemptId, moduleAttemptId, module.questions]);
 
-  // Autosave every 5 seconds.
+  // Autosave every 5 seconds, plus immediately after selecting an answer (below).
   useEffect(() => {
     const interval = setInterval(persist, 5000);
     return () => clearInterval(interval);
@@ -177,6 +182,9 @@ export function ExamShell({
       selectedChoiceId: choiceId,
       changedAnswerCount: changed ? current.changedAnswerCount + 1 : current.changedAnswerCount,
     });
+    // Answer selections persist right away rather than waiting for the next
+    // 5s tick — the choice that actually matters for not losing progress.
+    void persist();
   }
 
   function toggleEliminated(choiceId: string) {
@@ -210,6 +218,34 @@ export function ExamShell({
     });
   }
 
+  // Keyboard shortcuts: arrow keys to move, digits to pick a choice, F to
+  // flag. Disabled while typing in the free-response box so digits/letters
+  // still work as text input there.
+  useEffect(() => {
+    if (reviewScreen) return;
+    function onKeyDown(e: KeyboardEvent) {
+      const target = e.target as HTMLElement | null;
+      if (target && ["INPUT", "TEXTAREA"].includes(target.tagName)) return;
+
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        if (currentIndex < module.questions.length - 1) goTo(currentIndex + 1);
+        else setReviewScreen(true);
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goTo(currentIndex - 1);
+      } else if (e.key.toLowerCase() === "f") {
+        toggleFlag();
+      } else if (["1", "2", "3", "4"].includes(e.key) && question?.type === "MULTIPLE_CHOICE") {
+        const choice = question.choices[Number(e.key) - 1];
+        if (choice) selectChoice(choice.id);
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, reviewScreen, question]);
+
   const answeredCount = useMemo(
     () => states.filter((s) => s.selectedChoiceId || s.freeResponseAnswer).length,
     [states]
@@ -217,7 +253,7 @@ export function ExamShell({
 
   if (reviewScreen) {
     return (
-      <div className="flex h-screen flex-col bg-examCream">
+      <div className="flex h-screen flex-col bg-exam-bg">
         <ExamHeader
           module={module}
           secondsRemaining={secondsRemaining}
@@ -232,15 +268,15 @@ export function ExamShell({
             router.push("/dashboard");
           }}
         />
-        <div className="mx-auto w-full max-w-3xl flex-1 space-y-6 overflow-y-auto p-8">
+        <div className="mx-auto w-full max-w-3xl flex-1 space-y-5 overflow-y-auto exam-scroll p-6">
           <div>
-            <h1 className="text-xl font-semibold text-navy-950">Review your answers</h1>
-            <p className="text-sm text-navy-700">
+            <h1 className="text-lg font-semibold text-exam-text">Review your answers</h1>
+            <p className="text-sm text-exam-muted">
               {answeredCount} of {module.questions.length} questions answered. You can still change any answer before
               submitting the module.
             </p>
           </div>
-          <div className="grid grid-cols-6 gap-2 sm:grid-cols-10">
+          <div className="grid grid-cols-6 gap-1.5 sm:grid-cols-10">
             {module.questions.map((q, i) => {
               const s = states[i];
               const answered = !!(s.selectedChoiceId || s.freeResponseAnswer);
@@ -253,12 +289,13 @@ export function ExamShell({
                     goTo(i);
                   }}
                   className={cn(
-                    "relative flex h-12 w-12 items-center justify-center rounded border text-sm font-semibold",
+                    "relative flex h-10 w-10 items-center justify-center rounded border text-sm font-medium",
+                    FOCUS_RING,
                     answered
-                      ? "border-navy-950 bg-navy-950 text-white"
+                      ? "border-exam-blue bg-exam-blue text-white"
                       : visited
-                        ? "border-navy-300 bg-navy-100 text-navy-950"
-                        : "border-navy-300 bg-white text-navy-950"
+                        ? "border-exam-border bg-gray-100 text-exam-text"
+                        : "border-exam-border bg-exam-card text-exam-text"
                   )}
                 >
                   {i + 1}
@@ -267,16 +304,16 @@ export function ExamShell({
               );
             })}
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between pt-2">
             <Button
               variant="outline"
-              className="rounded-full border-gray-300 bg-white text-navy-950 hover:bg-gray-50"
+              className="rounded-md border-exam-border bg-exam-card text-exam-text hover:bg-gray-50"
               onClick={() => setReviewScreen(false)}
             >
               <ChevronLeft className="h-4 w-4" /> Back to questions
             </Button>
             <Button
-              className="rounded-full bg-navy-950 text-white hover:bg-navy-900"
+              className="rounded-md bg-exam-blue text-white hover:bg-exam-blueHover"
               onClick={handleSubmitModule}
               disabled={isSubmitting}
             >
@@ -289,7 +326,7 @@ export function ExamShell({
   }
 
   return (
-    <div className="flex h-screen flex-col bg-examCream">
+    <div className="flex h-screen flex-col bg-exam-bg">
       <ExamHeader
         module={module}
         secondsRemaining={secondsRemaining}
@@ -305,7 +342,7 @@ export function ExamShell({
         }}
       />
 
-      <div className="shrink-0 bg-navy-950 py-1.5 text-center text-xs font-semibold tracking-wide text-white">
+      <div className="shrink-0 bg-navy-950 py-1 text-center text-[11px] font-semibold tracking-wide text-white">
         THIS IS A PRACTICE TEST
       </div>
 
@@ -313,25 +350,33 @@ export function ExamShell({
         {module.subject === "READING_WRITING" ? (
           <div
             ref={splitPaneRef}
-            className="grid h-full overflow-y-auto lg:grid-cols-[var(--passage-w,55%)_auto_1fr] lg:overflow-hidden"
+            className="grid h-full overflow-y-auto exam-scroll lg:grid-cols-[var(--passage-w,55%)_auto_1fr] lg:overflow-hidden"
             style={passageWidthPct ? ({ "--passage-w": `${passageWidthPct}%` } as CSSProperties) : undefined}
           >
-            <div className="border-b border-navy-200 bg-examCream p-8 lg:h-full lg:overflow-y-auto lg:border-b-0 lg:p-10 xl:p-14">
+            <div className="border-b border-exam-border bg-exam-bg px-6 pb-6 pt-4 lg:h-full lg:overflow-y-auto lg:exam-scroll lg:border-b-0 lg:px-8 lg:pb-8">
               {question.passage ? (
                 <HighlightablePassage content={question.passage.content} />
               ) : (
-                <p className="font-serif text-sm text-navy-700">No passage for this question.</p>
+                <p className="font-sans text-sm text-exam-muted">No passage for this question.</p>
               )}
             </div>
             <div
               onMouseDown={startDragging}
-              className="hidden lg:flex lg:h-full lg:w-3 lg:cursor-col-resize lg:items-center lg:justify-center lg:bg-navy-100 lg:hover:bg-navy-200"
+              className={cn(
+                "hidden lg:flex lg:h-full lg:w-2.5 lg:cursor-col-resize lg:items-center lg:justify-center",
+                isDragging ? "bg-exam-blue/20" : "bg-transparent hover:bg-gray-100"
+              )}
             >
-              <span className="flex h-6 w-4 items-center justify-center rounded-sm border border-navy-400 bg-white text-navy-500">
-                <GripVertical className="h-3.5 w-3.5" />
+              <span
+                className={cn(
+                  "flex h-8 w-3.5 items-center justify-center rounded-sm border text-gray-400",
+                  isDragging ? "border-exam-blue bg-exam-blue text-white" : "border-exam-border bg-exam-card"
+                )}
+              >
+                <GripVertical className="h-3 w-3" />
               </span>
             </div>
-            <div className="bg-examCream p-8 lg:h-full lg:overflow-y-auto lg:p-10 xl:p-14">
+            <div className="bg-exam-card px-6 pb-6 pt-4 lg:h-full lg:overflow-y-auto lg:exam-scroll lg:px-8 lg:pb-8">
               <QuestionBody
                 question={question}
                 index={currentIndex}
@@ -347,7 +392,7 @@ export function ExamShell({
             </div>
           </div>
         ) : (
-          <div className="mx-auto h-full max-w-3xl overflow-y-auto bg-examCream p-8 lg:p-14">
+          <div className="mx-auto h-full max-w-3xl overflow-y-auto exam-scroll bg-exam-card px-6 pb-8 pt-4 lg:px-10">
             <QuestionBody
               question={question}
               index={currentIndex}
@@ -365,45 +410,56 @@ export function ExamShell({
       </div>
 
       {/* Bottom toolbar */}
-      <div className="shrink-0 border-t border-navy-200 bg-white">
-        <div className="flex items-center justify-between gap-2 px-6 py-3">
-          <p className="text-sm font-medium text-navy-950">{studentName}</p>
+      <div className="shrink-0 border-t border-exam-border bg-exam-card">
+        <div className="flex items-center justify-between gap-2 px-5 py-2">
+          <p className="text-sm font-medium text-exam-text">{studentName}</p>
 
-          <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              size="sm"
-              className="rounded-full border-gray-300 bg-white text-navy-950 hover:bg-gray-50 disabled:opacity-30"
+          <div className={cn("flex items-center divide-x rounded-md border border-exam-border divide-exam-border")}>
+            <button
+              type="button"
               onClick={() => goTo(currentIndex - 1)}
               disabled={currentIndex === 0}
+              className={cn(
+                "flex h-9 items-center gap-1 rounded-l-md px-3.5 text-sm font-medium text-exam-text hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30",
+                FOCUS_RING
+              )}
             >
               <ChevronLeft className="h-4 w-4" /> Back
-            </Button>
-            <Button
-              size="sm"
-              className="gap-1.5 rounded-full bg-navy-950 px-4 text-white hover:bg-navy-900"
+            </button>
+            <button
+              type="button"
               onClick={() => setPaletteOpen(true)}
+              className={cn(
+                "flex h-9 items-center gap-1.5 px-3.5 text-sm font-medium text-exam-text hover:bg-gray-50",
+                FOCUS_RING
+              )}
             >
               <Grid3x3 className="h-3.5 w-3.5" />
               Question {currentIndex + 1} of {module.questions.length}
               <ChevronDown className="h-3.5 w-3.5" />
-            </Button>
+            </button>
             {currentIndex < module.questions.length - 1 ? (
-              <Button
-                size="sm"
-                className="rounded-full bg-navy-950 text-white hover:bg-navy-900"
+              <button
+                type="button"
                 onClick={() => goTo(currentIndex + 1)}
+                className={cn(
+                  "flex h-9 items-center gap-1 rounded-r-md bg-exam-blue px-3.5 text-sm font-medium text-white hover:bg-exam-blueHover",
+                  FOCUS_RING
+                )}
               >
                 Next <ChevronRight className="h-4 w-4" />
-              </Button>
+              </button>
             ) : (
-              <Button
-                size="sm"
-                className="rounded-full bg-navy-950 text-white hover:bg-navy-900"
+              <button
+                type="button"
                 onClick={() => setReviewScreen(true)}
+                className={cn(
+                  "flex h-9 items-center rounded-r-md bg-exam-blue px-3.5 text-sm font-medium text-white hover:bg-exam-blueHover",
+                  FOCUS_RING
+                )}
               >
                 Review &amp; submit
-              </Button>
+              </button>
             )}
           </div>
         </div>
@@ -453,45 +509,42 @@ function ExamHeader({
   const subjectLabel = module.subject === "READING_WRITING" ? "Reading and Writing" : "Math";
 
   return (
-    <header className="relative shrink-0 border-b border-navy-200 bg-examCream text-navy-950">
-      <div className="flex items-center justify-between px-6 py-3">
-        <div>
-          <p className="text-sm font-semibold leading-tight">
+    <header className="relative shrink-0 border-b border-exam-border bg-exam-bg text-exam-text">
+      <div className="flex items-center justify-between px-4 py-1.5">
+        <div className="leading-none">
+          <p className="text-[13px] font-semibold leading-tight">
             Section {sectionNumber}, Module {module.order}: {subjectLabel}
           </p>
           <button
             type="button"
             onClick={onToggleDirections}
-            className="flex items-center gap-1 text-xs text-navy-700 hover:text-navy-950"
+            className={cn("mt-0.5 flex items-center gap-0.5 text-xs text-exam-muted hover:text-exam-text", FOCUS_RING)}
           >
             Directions <ChevronDown className={cn("h-3 w-3 transition-transform", directionsOpen && "rotate-180")} />
           </button>
         </div>
 
         <div
-          className={cn(
-            "font-mono text-lg font-semibold tabular-nums",
-            secondsRemaining < 300 && "text-destructive"
-          )}
+          className={cn("font-mono text-base font-semibold tabular-nums", secondsRemaining < 300 && "text-destructive")}
         >
           {formatDuration(secondsRemaining)}
         </div>
 
         <div className="flex items-center gap-1">
-          <div className="hidden items-center gap-0.5 rounded border border-navy-300 bg-white px-1.5 py-1 sm:flex">
+          <div className="hidden items-center gap-0.5 rounded border border-exam-border bg-exam-card px-1 py-0.5 sm:flex">
             <button
               type="button"
               onClick={() => onZoomChange(Math.max(80, zoomPct - 10))}
-              className="flex h-5 w-5 items-center justify-center text-navy-700 hover:text-navy-950"
+              className={cn("flex h-5 w-5 items-center justify-center text-exam-muted hover:text-exam-text", FOCUS_RING)}
               title="Zoom out"
             >
               <Minus className="h-3 w-3" />
             </button>
-            <span className="w-10 text-center text-xs font-medium tabular-nums text-navy-950">{zoomPct}%</span>
+            <span className="w-9 text-center text-xs font-medium tabular-nums text-exam-text">{zoomPct}%</span>
             <button
               type="button"
               onClick={() => onZoomChange(Math.min(150, zoomPct + 10))}
-              className="flex h-5 w-5 items-center justify-center text-navy-700 hover:text-navy-950"
+              className={cn("flex h-5 w-5 items-center justify-center text-exam-muted hover:text-exam-text", FOCUS_RING)}
               title="Zoom in"
             >
               <Plus className="h-3 w-3" />
@@ -500,7 +553,7 @@ function ExamHeader({
               <button
                 type="button"
                 onClick={() => onZoomChange(100)}
-                className="ml-1 border-l border-navy-200 pl-1.5 text-xs font-medium text-navy-700 hover:text-navy-950"
+                className={cn("ml-1 border-l border-exam-border pl-1.5 text-xs font-medium text-exam-muted hover:text-exam-text", FOCUS_RING)}
               >
                 Reset
               </button>
@@ -508,20 +561,20 @@ function ExamHeader({
           </div>
           {module.subject === "MATH" && (
             <>
-              <Button variant="ghost" size="sm" className="text-navy-950 hover:bg-navy-950/5" onClick={onToggleCalculator}>
-                <Calculator className="h-4 w-4" /> Calculator
+              <Button variant="ghost" size="sm" className="h-7 px-2 text-exam-text hover:bg-gray-100" onClick={onToggleCalculator}>
+                <Calculator className="h-3.5 w-3.5" /> Calculator
               </Button>
-              <Button variant="ghost" size="sm" className="text-navy-950 hover:bg-navy-950/5" onClick={onOpenReference}>
-                <Ruler className="h-4 w-4" /> Reference
+              <Button variant="ghost" size="sm" className="h-7 px-2 text-exam-text hover:bg-gray-100" onClick={onOpenReference}>
+                <Ruler className="h-3.5 w-3.5" /> Reference
               </Button>
             </>
           )}
-          <span className="hidden items-center gap-1 px-2 text-xs text-navy-500 sm:flex">
+          <span className="hidden items-center gap-1 px-1.5 text-xs text-exam-muted sm:flex">
             <Highlighter className="h-3.5 w-3.5" /> Highlights &amp; Notes
           </span>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-navy-950 hover:bg-navy-950/5">
+              <Button variant="ghost" size="icon" className="h-7 w-7 text-exam-text hover:bg-gray-100">
                 <MoreVertical className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -535,7 +588,7 @@ function ExamHeader({
       </div>
 
       {directionsOpen && (
-        <div className="absolute left-0 top-full z-30 m-3 w-[420px] max-w-[calc(100vw-1.5rem)] rounded-lg border border-navy-200 bg-white p-5 text-sm leading-relaxed text-navy-950 shadow-panel">
+        <div className="absolute left-0 top-full z-30 m-2 w-[400px] max-w-[calc(100vw-1rem)] rounded-md border border-exam-border bg-exam-card p-4 text-sm leading-relaxed text-exam-text shadow-examFlat">
           <p>
             Read each passage and question carefully, then choose the best answer based on the passage(s) and any
             accompanying figures. Each question has a single best answer.
@@ -545,7 +598,7 @@ function ExamHeader({
             questions in this module until you submit it.
           </p>
           <div className="mt-3 text-right">
-            <Button size="sm" variant="outline" className="rounded-full" onClick={onToggleDirections}>
+            <Button size="sm" variant="outline" className="rounded-md" onClick={onToggleDirections}>
               Close
             </Button>
           </div>
@@ -579,24 +632,25 @@ function QuestionBody({
   onToggleFlag: () => void;
 }) {
   return (
-    <div className="space-y-5">
-      <div className="flex items-center justify-between border-b border-navy-200 pb-3">
-        <div className="flex items-center gap-3">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-navy-950 text-sm font-semibold text-white">
+    <div className="space-y-4">
+      <div className="flex items-center justify-between border-b border-exam-border pb-2">
+        <div className="flex items-center gap-2.5">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-navy-950 text-xs font-semibold text-white">
             {index + 1}
           </span>
           <button
             type="button"
             onClick={onToggleFlag}
             className={cn(
-              "flex items-center gap-1.5 text-sm font-medium",
-              flagged ? "text-warning-foreground" : "text-navy-700 hover:text-navy-950"
+              "flex items-center gap-1 text-sm font-medium",
+              FOCUS_RING,
+              flagged ? "text-warning-foreground" : "text-exam-muted hover:text-exam-text"
             )}
           >
-            <Flag className={cn("h-4 w-4", flagged && "fill-warning text-warning")} />
+            <Flag className={cn("h-3.5 w-3.5", flagged && "fill-warning text-warning")} />
             {flagged ? "Marked for Review" : "Mark for Review"}
           </button>
-          {question.imageUrl && <span className="text-xs text-navy-700">Includes a figure</span>}
+          {question.imageUrl && <span className="text-xs text-exam-muted">Includes a figure</span>}
         </div>
         {question.type === "MULTIPLE_CHOICE" && (
           <button
@@ -604,10 +658,11 @@ function QuestionBody({
             onClick={onToggleCrossOutEnabled}
             title={crossOutEnabled ? "Hide answer eliminator" : "Show answer eliminator"}
             className={cn(
-              "flex h-7 w-9 shrink-0 items-center justify-center rounded border text-xs font-bold",
+              "flex h-6 w-8 shrink-0 items-center justify-center rounded border text-xs font-bold",
+              FOCUS_RING,
               crossOutEnabled
-                ? "border-navy-950 bg-navy-950 text-white"
-                : "border-navy-300 bg-white text-navy-700 hover:bg-navy-50"
+                ? "border-exam-blue bg-exam-blue text-white"
+                : "border-exam-border bg-exam-card text-exam-muted hover:bg-gray-50"
             )}
           >
             <Strikethrough className="h-3.5 w-3.5" />
@@ -615,45 +670,49 @@ function QuestionBody({
         )}
       </div>
       <div
-        className="font-serif text-[19px] leading-relaxed text-navy-950"
+        className="font-sans text-[17px] leading-[1.6] text-exam-text"
         dangerouslySetInnerHTML={{ __html: question.stem }}
       />
       {question.imageUrl && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={question.imageUrl} alt="Question figure" className="max-w-full rounded-lg border border-navy-200" />
+        <img src={question.imageUrl} alt="Question figure" className="max-w-full rounded border border-exam-border" />
       )}
 
       {question.type === "MULTIPLE_CHOICE" ? (
-        <div className="space-y-4">
+        <div className="space-y-2">
           {question.choices.map((choice) => {
             const eliminated = state.eliminated.includes(choice.id);
             const selected = state.selectedChoiceId === choice.id;
             return (
-              <div key={choice.id} className="flex items-center gap-2">
+              <div key={choice.id} className="flex items-center gap-1.5">
                 <button
                   type="button"
                   onClick={() => !eliminated && onSelect(choice.id)}
                   className={cn(
-                    "flex flex-1 items-start gap-3 rounded-lg border p-3.5 text-left font-serif text-[17px] transition-colors",
-                    selected ? "border-navy-600 bg-white" : "border-navy-300 bg-white hover:bg-gray-50",
+                    "flex flex-1 items-start gap-2.5 rounded-md border p-2.5 text-left font-sans text-[16px] leading-[1.5] transition-colors",
+                    FOCUS_RING,
+                    selected ? "border-exam-blue bg-white" : "border-exam-border bg-exam-card hover:bg-gray-50",
                     eliminated && "opacity-40"
                   )}
                 >
                   <span
                     className={cn(
-                      "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-semibold",
-                      selected ? "border-navy-600 bg-navy-600 text-white" : "border-navy-400 text-navy-950"
+                      "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-semibold",
+                      selected ? "border-exam-blue bg-exam-blue text-white" : "border-gray-400 text-exam-text"
                     )}
                   >
                     {choice.label}
                   </span>
-                  <span className={cn("text-navy-950", eliminated && "line-through")}>{choice.content}</span>
+                  <span className={cn("text-exam-text", eliminated && "line-through")}>{choice.content}</span>
                 </button>
                 {crossOutEnabled && (
                   <button
                     type="button"
                     onClick={() => onToggleEliminate(choice.id)}
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-navy-300 text-xs text-navy-700 hover:bg-navy-50"
+                    className={cn(
+                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-exam-border text-xs text-exam-muted hover:bg-gray-50",
+                      FOCUS_RING
+                    )}
                     title="Cross out this choice"
                   >
                     {eliminated ? <X className="h-3.5 w-3.5" /> : choice.label}
@@ -670,9 +729,9 @@ function QuestionBody({
             onChange={(e) => onFreeResponseChange(e.target.value)}
             placeholder="Enter your answer"
             rows={1}
-            className="border-navy-300 bg-white"
+            className="rounded-md border-exam-border bg-exam-card"
           />
-          <p className="text-xs text-navy-700">Enter a numeric answer (fraction or decimal accepted).</p>
+          <p className="text-xs text-exam-muted">Enter a numeric answer (fraction or decimal accepted).</p>
         </div>
       )}
     </div>

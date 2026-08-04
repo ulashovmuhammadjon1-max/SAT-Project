@@ -35,12 +35,18 @@ const config: Config = {
           900: "#1f2f88",
           950: "#161d4f",
         },
-        // Fixed (non-theme-reactive) palette matching the Bluebook exam app's
-        // look, used only by the exam/review screens — that UI has one
-        // consistent kiosk appearance regardless of the rest of the site's
-        // light/dark theme, the same way the real testing app does.
-        examCream: "#F3F1EA",
-        examCreamDark: "#E8E4D8",
+        // Fixed (non-theme-reactive) palette matching Bluebook, used only by
+        // the exam/review screens — that UI has one consistent kiosk
+        // appearance regardless of the rest of the site's light/dark theme.
+        exam: {
+          bg: "#F8FAFC",
+          card: "#FFFFFF",
+          border: "#E5E7EB",
+          text: "#111827",
+          muted: "#4B5563",
+          blue: "#2563EB",
+          blueHover: "#1D4ED8",
+        },
         navy: {
           DEFAULT: "hsl(var(--navy))",
           50: "#f2f5fb",
@@ -98,6 +104,9 @@ const config: Config = {
         soft: "0 2px 8px -2px rgb(17 26 48 / 0.06), 0 1px 2px -1px rgb(17 26 48 / 0.04)",
         card: "0 4px 20px -4px rgb(17 26 48 / 0.08)",
         panel: "0 12px 40px -12px rgb(17 26 48 / 0.18)",
+        // Near-flat — for exam-UI surfaces (dropdowns, sheets) where the
+        // rest of the shadow scale reads as too "modern web app."
+        examFlat: "0 1px 2px 0 rgb(0 0 0 / 0.04), 0 1px 3px 0 rgb(0 0 0 / 0.06)",
       },
       keyframes: {
         "accordion-down": {
