@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DomainAccuracyChart } from "@/components/charts/domain-accuracy-chart";
 import { AudienceBarChart, CountryPieChart } from "@/components/charts/audience-charts";
 import { prisma } from "@/lib/prisma";
+import { readAudience } from "@/lib/onboarding/profile";
 import { countryByCode } from "@/lib/data/countries";
 import { GRADE_LABELS } from "@/lib/validations/onboarding";
 
@@ -12,7 +13,7 @@ export const dynamic = "force-dynamic";
 const GRADE_ORDER = ["GRADE_9", "GRADE_10", "GRADE_11", "GRADE_12", "GAP_YEAR", "COLLEGE", "OTHER"] as const;
 
 export default async function AdminAnalyticsPage() {
-  const [totalAttempts, submittedAttempts, responses, students, scoreAgg, studyAgg] = await Promise.all([
+  const [totalAttempts, submittedAttempts, responses, audience] = await Promise.all([
     prisma.attempt.count(),
     prisma.attempt.count({ where: { status: "SUBMITTED" } }),
     prisma.response.findMany({
@@ -20,27 +21,10 @@ export default async function AdminAnalyticsPage() {
       include: { question: { include: { domain: true } } },
       take: 5000,
     }),
-    prisma.user.findMany({
-      where: { role: "STUDENT" },
-      select: {
-        countryCode: true,
-        gradeLevel: true,
-        dreamUniversities: true,
-        satDate: true,
-        onboardedAt: true,
-      },
-    }),
-    prisma.user.aggregate({
-      where: { role: "STUDENT" },
-      _avg: { targetScore: true, currentScore: true },
-      _count: { targetScore: true, currentScore: true },
-    }),
-    prisma.user.aggregate({
-      where: { role: "STUDENT" },
-      _avg: { studyMinutesPerDay: true },
-      _count: { studyMinutesPerDay: true },
-    }),
+    readAudience(),
   ]);
+
+  const { students } = audience;
 
   /* ---- existing platform performance ------------------------------------ */
   const byDomain = new Map<string, { correct: number; total: number }>();
@@ -125,9 +109,9 @@ export default async function AdminAnalyticsPage() {
       value,
     }));
 
-  const avgTarget = scoreAgg._avg.targetScore;
-  const avgCurrent = scoreAgg._avg.currentScore;
-  const avgStudy = studyAgg._avg.studyMinutesPerDay;
+  const avgTarget = audience.avgTargetScore;
+  const avgCurrent = audience.avgCurrentScore;
+  const avgStudy = audience.avgStudyMinutes;
 
   return (
     <div className="space-y-8">
@@ -140,6 +124,20 @@ export default async function AdminAnalyticsPage() {
       <section className="space-y-4">
         <h2 className="font-display text-lg font-semibold tracking-tight">Audience</h2>
 
+        {!audience.available && (
+          <div className="rounded-lg border border-warning/40 bg-warning/10 px-4 py-3">
+            <p className="text-sm font-semibold">Onboarding columns not migrated yet</p>
+            <p className="mt-0.5 text-sm text-muted-foreground">
+              Audience analytics stay empty until the database has the onboarding profile columns. Apply{" "}
+              <code className="rounded bg-secondary px-1 py-0.5 text-xs">
+                prisma/migrations/manual/001_onboarding_profile.sql
+              </code>{" "}
+              or run <code className="rounded bg-secondary px-1 py-0.5 text-xs">npx prisma db push</code> against
+              production.
+            </p>
+          </div>
+        )}
+
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <MetricCard label="Students" value={students.length} />
           <MetricCard
@@ -150,17 +148,17 @@ export default async function AdminAnalyticsPage() {
           <MetricCard
             label="Avg. target score"
             value={avgTarget ? Math.round(avgTarget) : "—"}
-            sub={`${scoreAgg._count.targetScore} reported`}
+            sub={`${audience.targetScoreCount} reported`}
           />
           <MetricCard
             label="Avg. current score"
             value={avgCurrent ? Math.round(avgCurrent) : "—"}
-            sub={`${scoreAgg._count.currentScore} reported`}
+            sub={`${audience.currentScoreCount} reported`}
           />
           <MetricCard
             label="Avg. study time"
             value={avgStudy ? `${Math.round(avgStudy)} min` : "—"}
-            sub={`${studyAgg._count.studyMinutesPerDay} reported · per day`}
+            sub={`${audience.studyMinutesCount} reported · per day`}
           />
         </div>
 

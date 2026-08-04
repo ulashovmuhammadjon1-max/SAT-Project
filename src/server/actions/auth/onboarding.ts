@@ -3,6 +3,7 @@
 import bcrypt from "bcryptjs";
 
 import { prisma } from "@/lib/prisma";
+import { isMissingColumnError } from "@/lib/onboarding/profile";
 import { onboardingSignupSchema, type OnboardingSignup } from "@/lib/validations/onboarding";
 
 export interface OnboardingSignupResult {
@@ -41,13 +42,12 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // comparisons in the admin panel don't drift with the viewer's timezone.
   const satDate = profile.satMonth ? new Date(`${profile.satMonth}-01T00:00:00.000Z`) : null;
 
+  const base = { name, email, passwordHash, role: "STUDENT" as const };
+
   try {
     await prisma.user.create({
       data: {
-        name,
-        email,
-        passwordHash,
-        role: "STUDENT",
+        ...base,
         onboardingGoal: profile.goal,
         currentScore: profile.currentScore,
         targetScore: profile.targetScore,
@@ -63,8 +63,23 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
         onboardedAt: new Date(),
       },
     });
-  } catch {
-    return { error: "We couldn't create your account. Please try again in a moment." };
+  } catch (error) {
+    // If the deployed database predates the onboarding columns, still create
+    // the account — being unable to save a target score is no reason to block
+    // someone from signing up. They can fill the plan in from Settings once
+    // the migration lands.
+    if (!isMissingColumnError(error)) {
+      console.error("[onboarding] Failed to create user", error);
+      return { error: "We couldn't create your account. Please try again in a moment." };
+    }
+
+    console.warn("[onboarding] Profile columns missing — creating account without the study plan.");
+    try {
+      await prisma.user.create({ data: base });
+    } catch (fallbackError) {
+      console.error("[onboarding] Fallback user creation failed", fallbackError);
+      return { error: "We couldn't create your account. Please try again in a moment." };
+    }
   }
 
   return { success: true };

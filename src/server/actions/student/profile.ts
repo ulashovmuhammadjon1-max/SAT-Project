@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { prisma } from "@/lib/prisma";
+import { isMissingColumnError, readProfile } from "@/lib/onboarding/profile";
 import { requireUser } from "@/lib/session";
 import { onboardingProfileSchema } from "@/lib/validations/onboarding";
 
@@ -28,32 +29,39 @@ export async function updateStudyPlan(input: unknown): Promise<UpdateStudyPlanRe
   const satDate = p.satMonth ? new Date(`${p.satMonth}-01T00:00:00.000Z`) : null;
 
   // The session user carries no profile columns, so read the existing
-  // completion timestamp before deciding whether to stamp a new one.
-  const existing = await prisma.user.findUnique({
-    where: { id: user.id },
-    select: { onboardedAt: true },
-  });
+  // completion timestamp before deciding whether to stamp a new one. This
+  // read is guarded for the same reason the write below is.
+  const existing = await readProfile(user.id);
 
-  await prisma.user.update({
-    where: { id: user.id },
-    data: {
-      onboardingGoal: p.goal,
-      currentScore: p.currentScore,
-      targetScore: p.targetScore,
-      dreamUniversities: p.dreamUniversities,
-      countryCode: p.countryCode,
-      gradeLevel: p.gradeLevel,
-      satDate,
-      strongestSection: p.strongestSection,
-      weakestArea: p.weakestArea,
-      studyMinutesPerDay: p.studyMinutesPerDay,
-      dailyGoalType: p.dailyGoalType,
-      dailyGoalValue: p.dailyGoalValue,
-      // Marks the profile complete the first time it's filled in; keeps the
-      // original timestamp on later edits.
-      onboardedAt: existing?.onboardedAt ?? new Date(),
-    },
-  });
+  try {
+    await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        onboardingGoal: p.goal,
+        currentScore: p.currentScore,
+        targetScore: p.targetScore,
+        dreamUniversities: p.dreamUniversities,
+        countryCode: p.countryCode,
+        gradeLevel: p.gradeLevel,
+        satDate,
+        strongestSection: p.strongestSection,
+        weakestArea: p.weakestArea,
+        studyMinutesPerDay: p.studyMinutesPerDay,
+        dailyGoalType: p.dailyGoalType,
+        dailyGoalValue: p.dailyGoalValue,
+        // Marks the profile complete the first time it's filled in; keeps the
+        // original timestamp on later edits.
+        onboardedAt: existing?.onboardedAt ?? new Date(),
+      },
+    });
+  } catch (error) {
+    if (isMissingColumnError(error)) {
+      return {
+        error: "Your study plan can't be saved yet — the database is still missing the onboarding fields.",
+      };
+    }
+    throw error;
+  }
 
   revalidatePath("/dashboard");
   revalidatePath("/settings");

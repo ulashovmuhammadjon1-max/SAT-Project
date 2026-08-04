@@ -11,6 +11,7 @@ import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
+import { readProfile } from "@/lib/onboarding/profile";
 import { asWeakArea } from "@/lib/validations/onboarding";
 import { formatDuration } from "@/lib/utils";
 
@@ -46,20 +47,7 @@ export default async function DashboardPage() {
       orderBy: { submittedAt: "asc" },
       select: { submittedAt: true, totalScaledScore: true, mathScaledScore: true, rwScaledScore: true },
     }),
-    prisma.user.findUnique({
-      where: { id: user.id },
-      select: {
-        targetScore: true,
-        currentScore: true,
-        satDate: true,
-        gradeLevel: true,
-        weakestArea: true,
-        dailyGoalType: true,
-        dailyGoalValue: true,
-        currentStreak: true,
-        onboardedAt: true,
-      },
-    }),
+    readProfile(user.id),
     prisma.studyActivity.findUnique({
       where: { userId_date: { userId: user.id, date: todayUtc } },
       select: { questionsAnswered: true, minutesStudied: true },

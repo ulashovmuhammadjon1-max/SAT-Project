@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { StudyPlanForm } from "@/components/student/study-plan-form";
-import { prisma } from "@/lib/prisma";
+import { readProfile } from "@/lib/onboarding/profile";
 import { requireUser } from "@/lib/session";
 import { initials } from "@/lib/utils";
 import { asSection, asWeakArea, EMPTY_PROFILE, type OnboardingProfile } from "@/lib/validations/onboarding";
@@ -12,23 +12,7 @@ export const dynamic = "force-dynamic";
 export default async function StudentSettingsPage() {
   const user = await requireUser();
 
-  const record = await prisma.user.findUnique({
-    where: { id: user.id },
-    select: {
-      onboardingGoal: true,
-      currentScore: true,
-      targetScore: true,
-      dreamUniversities: true,
-      countryCode: true,
-      gradeLevel: true,
-      satDate: true,
-      strongestSection: true,
-      weakestArea: true,
-      studyMinutesPerDay: true,
-      dailyGoalType: true,
-      dailyGoalValue: true,
-    },
-  });
+  const record = await readProfile(user.id);
 
   const initial: OnboardingProfile = record
     ? {
