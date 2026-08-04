@@ -18,7 +18,16 @@ export async function setTestStatus(testId: string, status: TestStatus) {
 
 export async function deleteTest(testId: string) {
   const admin = await requireAdmin();
-  await prisma.test.delete({ where: { id: testId } });
+  // Question->Module is SET NULL on delete, not cascade, so deleting a
+  // test's modules directly would silently orphan every question in them
+  // (they'd stop appearing anywhere, but the rows — and their answer
+  // choices, explanations, passages — would linger in the DB forever).
+  // Delete questions explicitly first so a deleted test actually goes away.
+  await prisma.$transaction(async (tx) => {
+    const moduleIds = (await tx.module.findMany({ where: { testId }, select: { id: true } })).map((m) => m.id);
+    await tx.question.deleteMany({ where: { moduleId: { in: moduleIds } } });
+    await tx.test.delete({ where: { id: testId } });
+  });
   await prisma.auditLog.create({
     data: { userId: admin.id, action: "TEST_DELETED", targetType: "Test", targetId: testId },
   });
