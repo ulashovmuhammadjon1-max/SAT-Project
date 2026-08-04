@@ -8,13 +8,24 @@ import {
   ChevronLeft,
   ChevronRight,
   Flag,
+  GripVertical,
   Grid3x3,
+  Highlighter,
+  LogOut,
+  MoreVertical,
   Ruler,
+  Strikethrough,
   X,
 } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Textarea } from "@/components/ui/textarea";
 import { CalculatorPanel } from "@/components/exam/calculator-panel";
 import { HighlightablePassage } from "@/components/exam/highlightable-passage";
@@ -62,6 +73,7 @@ export function ExamShell({
   const [referenceOpen, setReferenceOpen] = useState(false);
   const [reviewScreen, setReviewScreen] = useState(false);
   const [directionsOpen, setDirectionsOpen] = useState(false);
+  const [crossOutEnabled, setCrossOutEnabled] = useState(false);
   const [isSubmitting, startSubmit] = useTransition();
 
   const totalSeconds = module.timeLimitMinutes * 60;
@@ -182,6 +194,10 @@ export function ExamShell({
           onToggleDirections={() => setDirectionsOpen((v) => !v)}
           onToggleCalculator={() => setCalculatorOpen((v) => !v)}
           onOpenReference={() => setReferenceOpen(true)}
+          onSaveAndExit={async () => {
+            await persist();
+            router.push("/dashboard");
+          }}
         />
         <div className="mx-auto w-full max-w-3xl flex-1 space-y-6 overflow-y-auto p-8">
           <div>
@@ -243,17 +259,30 @@ export function ExamShell({
         onToggleDirections={() => setDirectionsOpen((v) => !v)}
         onToggleCalculator={() => setCalculatorOpen((v) => !v)}
         onOpenReference={() => setReferenceOpen(true)}
+        onSaveAndExit={async () => {
+          await persist();
+          router.push("/dashboard");
+        }}
       />
+
+      <div className="shrink-0 bg-navy-950 py-1.5 text-center text-xs font-semibold tracking-wide text-white">
+        THIS IS A PRACTICE TEST
+      </div>
 
       <div className="flex-1 overflow-y-auto">
         {module.subject === "READING_WRITING" ? (
-          <div className="grid h-full lg:grid-cols-2">
-            <div className="border-b border-navy-200 bg-examCream p-8 lg:border-b-0 lg:border-r lg:p-10 xl:p-14">
+          <div className="relative grid h-full lg:grid-cols-2">
+            <div className="border-b border-navy-200 bg-examCream p-8 lg:border-b-0 lg:p-10 xl:p-14">
               {question.passage ? (
                 <HighlightablePassage content={question.passage.content} />
               ) : (
                 <p className="font-serif text-sm text-navy-700">No passage for this question.</p>
               )}
+            </div>
+            <div className="hidden lg:absolute lg:inset-y-0 lg:left-1/2 lg:flex lg:w-px lg:-translate-x-1/2 lg:items-center lg:justify-center lg:bg-navy-300">
+              <span className="flex h-6 w-4 items-center justify-center rounded-sm border border-navy-400 bg-white text-navy-500">
+                <GripVertical className="h-3.5 w-3.5" />
+              </span>
             </div>
             <div className="bg-examCream p-8 lg:p-10 xl:p-14">
               <QuestionBody
@@ -261,6 +290,8 @@ export function ExamShell({
                 index={currentIndex}
                 state={states[currentIndex]}
                 flagged={!!states[currentIndex]?.flagged}
+                crossOutEnabled={crossOutEnabled}
+                onToggleCrossOutEnabled={() => setCrossOutEnabled((v) => !v)}
                 onSelect={selectChoice}
                 onToggleEliminate={toggleEliminated}
                 onFreeResponseChange={(v) => updateCurrent({ freeResponseAnswer: v })}
@@ -275,6 +306,8 @@ export function ExamShell({
               index={currentIndex}
               state={states[currentIndex]}
               flagged={!!states[currentIndex]?.flagged}
+              crossOutEnabled={crossOutEnabled}
+              onToggleCrossOutEnabled={() => setCrossOutEnabled((v) => !v)}
               onSelect={selectChoice}
               onToggleEliminate={toggleEliminated}
               onFreeResponseChange={(v) => updateCurrent({ freeResponseAnswer: v })}
@@ -355,6 +388,7 @@ function ExamHeader({
   onToggleDirections,
   onToggleCalculator,
   onOpenReference,
+  onSaveAndExit,
 }: {
   module: ExamModule;
   secondsRemaining: number;
@@ -362,6 +396,7 @@ function ExamHeader({
   onToggleDirections: () => void;
   onToggleCalculator: () => void;
   onOpenReference: () => void;
+  onSaveAndExit: () => void;
 }) {
   const sectionNumber = module.subject === "READING_WRITING" ? 1 : 2;
   const subjectLabel = module.subject === "READING_WRITING" ? "Reading and Writing" : "Math";
@@ -402,6 +437,21 @@ function ExamHeader({
               </Button>
             </>
           )}
+          <span className="hidden items-center gap-1 px-2 text-xs text-navy-500 sm:flex">
+            <Highlighter className="h-3.5 w-3.5" /> Highlights &amp; Notes
+          </span>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="text-navy-950 hover:bg-navy-950/5">
+                <MoreVertical className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={onSaveAndExit}>
+                <LogOut className="mr-2 h-4 w-4" /> Save &amp; exit
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
 
@@ -431,6 +481,8 @@ function QuestionBody({
   index,
   state,
   flagged,
+  crossOutEnabled,
+  onToggleCrossOutEnabled,
   onSelect,
   onToggleEliminate,
   onFreeResponseChange,
@@ -440,6 +492,8 @@ function QuestionBody({
   index: number;
   state: QuestionState;
   flagged: boolean;
+  crossOutEnabled: boolean;
+  onToggleCrossOutEnabled: () => void;
   onSelect: (choiceId: string) => void;
   onToggleEliminate: (choiceId: string) => void;
   onFreeResponseChange: (value: string) => void;
@@ -452,19 +506,34 @@ function QuestionBody({
           <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-navy-950 text-sm font-semibold text-white">
             {index + 1}
           </span>
+          <button
+            type="button"
+            onClick={onToggleFlag}
+            className={cn(
+              "flex items-center gap-1.5 text-sm font-medium",
+              flagged ? "text-warning-foreground" : "text-navy-700 hover:text-navy-950"
+            )}
+          >
+            <Flag className={cn("h-4 w-4", flagged && "fill-warning text-warning")} />
+            {flagged ? "Marked for Review" : "Mark for Review"}
+          </button>
           {question.imageUrl && <span className="text-xs text-navy-700">Includes a figure</span>}
         </div>
-        <button
-          type="button"
-          onClick={onToggleFlag}
-          className={cn(
-            "flex items-center gap-1.5 text-sm font-medium",
-            flagged ? "text-warning-foreground" : "text-navy-700 hover:text-navy-950"
-          )}
-        >
-          <Flag className={cn("h-4 w-4", flagged && "fill-warning text-warning")} />
-          {flagged ? "Marked for Review" : "Mark for Review"}
-        </button>
+        {question.type === "MULTIPLE_CHOICE" && (
+          <button
+            type="button"
+            onClick={onToggleCrossOutEnabled}
+            title={crossOutEnabled ? "Hide answer eliminator" : "Show answer eliminator"}
+            className={cn(
+              "flex h-7 w-9 shrink-0 items-center justify-center rounded border text-xs font-bold",
+              crossOutEnabled
+                ? "border-navy-950 bg-navy-950 text-white"
+                : "border-navy-300 bg-white text-navy-700 hover:bg-navy-50"
+            )}
+          >
+            <Strikethrough className="h-3.5 w-3.5" />
+          </button>
+        )}
       </div>
       <div
         className="font-serif text-[16px] leading-relaxed text-navy-950"
@@ -501,14 +570,16 @@ function QuestionBody({
                   </span>
                   <span className={cn("text-navy-950", eliminated && "line-through")}>{choice.content}</span>
                 </button>
-                <button
-                  type="button"
-                  onClick={() => onToggleEliminate(choice.id)}
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-navy-300 text-xs text-navy-700 hover:bg-navy-50"
-                  title="Cross out this choice"
-                >
-                  {eliminated ? <X className="h-3.5 w-3.5" /> : choice.label}
-                </button>
+                {crossOutEnabled && (
+                  <button
+                    type="button"
+                    onClick={() => onToggleEliminate(choice.id)}
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-navy-300 text-xs text-navy-700 hover:bg-navy-50"
+                    title="Cross out this choice"
+                  >
+                    {eliminated ? <X className="h-3.5 w-3.5" /> : choice.label}
+                  </button>
+                )}
               </div>
             );
           })}
