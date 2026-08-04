@@ -3,6 +3,7 @@
 import { useCallback, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { useDropzone } from "react-dropzone";
+import { upload } from "@vercel/blob/client";
 import { FileText, Loader2, UploadCloud } from "lucide-react";
 import { toast } from "sonner";
 
@@ -19,7 +20,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { cn } from "@/lib/utils";
-import { createUpload } from "@/server/actions/admin/uploads";
+import { createUpload, createUploadFromBlob } from "@/server/actions/admin/uploads";
 
 const CATEGORIES = [
   { value: "FULL_TEST", label: "Full practice test", hint: "Modules, passages, and questions" },
@@ -27,7 +28,11 @@ const CATEGORIES = [
   { value: "VOCABULARY", label: "Vocabulary list", hint: "Word, definition, example pairs" },
 ] as const;
 
-export function UploadDialog() {
+// Vercel serverless functions cap request bodies at ~4.5MB. When Blob storage
+// is configured, the browser uploads the PDF directly to Blob storage instead
+// of routing the raw file through a Server Action, so large mock-test PDFs
+// still work. Without it (local dev), the file goes through createUpload as before.
+export function UploadDialog({ blobEnabled }: { blobEnabled: boolean }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState<File | null>(null);
@@ -51,22 +56,44 @@ export function UploadDialog() {
       return;
     }
     setError(null);
+
+    startTransition(async () => {
+      try {
+        const result = blobEnabled ? await submitViaBlob(file, category) : await submitViaFormData(file, category);
+        if (result.error) {
+          setError(result.error);
+          return;
+        }
+        toast.success("Upload received — extraction started.");
+        setOpen(false);
+        setFile(null);
+        if (result.uploadId) router.push(`/admin/uploads/${result.uploadId}`);
+        router.refresh();
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Upload failed.");
+      }
+    });
+  }
+
+  async function submitViaBlob(file: File, category: (typeof CATEGORIES)[number]["value"]) {
+    const blob = await upload(`uploads/${file.name}`, file, {
+      access: "private",
+      handleUploadUrl: "/api/blob-upload",
+      multipart: file.size > 5 * 1024 * 1024,
+    });
+    return createUploadFromBlob({
+      pathname: blob.pathname,
+      fileName: file.name,
+      fileSize: file.size,
+      category,
+    });
+  }
+
+  async function submitViaFormData(file: File, category: (typeof CATEGORIES)[number]["value"]) {
     const formData = new FormData();
     formData.set("file", file);
     formData.set("category", category);
-
-    startTransition(async () => {
-      const result = await createUpload({}, formData);
-      if (result.error) {
-        setError(result.error);
-        return;
-      }
-      toast.success("Upload received — extraction started.");
-      setOpen(false);
-      setFile(null);
-      if (result.uploadId) router.push(`/admin/uploads/${result.uploadId}`);
-      router.refresh();
-    });
+    return createUpload({}, formData);
   }
 
   return (

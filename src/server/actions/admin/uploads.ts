@@ -26,21 +26,48 @@ export async function createUpload(_prev: UploadFormState, formData: FormData): 
   if (file.type !== "application/pdf") return { error: "Only PDF files are supported." };
   if (!category) return { error: "Choose an upload category." };
 
-  const { storedPath, fileName, fileSize } = await saveUploadedFile(file);
+  try {
+    const { storedPath, fileName, fileSize } = await saveUploadedFile(file);
+    return await finishUpload(admin.id, { fileName, fileUrl: storedPath, fileSize, category });
+  } catch (error) {
+    return { error: error instanceof Error ? error.message : "Upload failed." };
+  }
+}
 
+// Used for large files: the browser uploads the PDF directly to Vercel Blob
+// (see /api/blob-upload), so only this small JSON payload — no file bytes —
+// passes through the Server Action body limit.
+export async function createUploadFromBlob(input: {
+  pathname: string;
+  fileName: string;
+  fileSize: number;
+  category: UploadCategory;
+}): Promise<UploadFormState> {
+  const admin = await requireAdmin();
+  if (!input.category) return { error: "Choose an upload category." };
+
+  try {
+    return await finishUpload(admin.id, {
+      fileName: input.fileName,
+      fileUrl: input.pathname,
+      fileSize: input.fileSize,
+      category: input.category,
+    });
+  } catch (error) {
+    return { error: error instanceof Error ? error.message : "Upload failed." };
+  }
+}
+
+async function finishUpload(
+  adminId: string,
+  data: { fileName: string; fileUrl: string; fileSize: number; category: UploadCategory }
+): Promise<UploadFormState> {
   const upload = await prisma.pDFUpload.create({
-    data: {
-      fileName,
-      fileUrl: storedPath,
-      fileSize,
-      category,
-      status: "PENDING",
-      uploadedById: admin.id,
-    },
+    data: { ...data, status: "PENDING", uploadedById: adminId },
   });
 
   await prisma.auditLog.create({
-    data: { userId: admin.id, action: "UPLOAD_CREATED", targetType: "PDFUpload", targetId: upload.id },
+    data: { userId: adminId, action: "UPLOAD_CREATED", targetType: "PDFUpload", targetId: upload.id },
   });
 
   await runExtractionJob(upload.id);

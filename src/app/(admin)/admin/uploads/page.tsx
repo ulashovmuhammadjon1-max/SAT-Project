@@ -33,7 +33,7 @@ export default async function UploadsQueuePage() {
             Upload SAT mock tests, question banks, or vocabulary lists — AI structures them automatically.
           </p>
         </div>
-        <UploadDialog />
+        <UploadDialog blobEnabled={Boolean(process.env.BLOB_READ_WRITE_TOKEN)} />
       </div>
 
       <Card>
