@@ -54,7 +54,7 @@ export function HighlightablePassage({ content }: { content: string }) {
       <div
         ref={containerRef}
         onMouseUp={handleMouseUp}
-        className="select-text text-[15px] leading-relaxed"
+        className="select-text font-serif text-[16px] leading-relaxed text-navy-950"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>

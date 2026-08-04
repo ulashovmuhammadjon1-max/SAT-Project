@@ -35,6 +35,12 @@ const config: Config = {
           900: "#1f2f88",
           950: "#161d4f",
         },
+        // Fixed (non-theme-reactive) palette matching the Bluebook exam app's
+        // look, used only by the exam/review screens — that UI has one
+        // consistent kiosk appearance regardless of the rest of the site's
+        // light/dark theme, the same way the real testing app does.
+        examCream: "#F3F1EA",
+        examCreamDark: "#E8E4D8",
         navy: {
           DEFAULT: "hsl(var(--navy))",
           50: "#f2f5fb",
