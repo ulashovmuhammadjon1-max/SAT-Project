@@ -1,7 +1,9 @@
+import { splitPassageFromStem } from "@/lib/ai/passage-split";
 import type {
   AIExtractionProvider,
   ExplanationDraft,
   ExtractedChoice,
+  ExtractedPassage,
   ExtractedQuestion,
   TestExtractionResult,
   VocabExtractionResult,
@@ -112,12 +114,28 @@ export class HeuristicExtractionProvider implements AIExtractionProvider {
       warnings.push("No numbered questions were detected. Manual entry is required.");
     }
 
+    const passages: ExtractedPassage[] = [];
+
     const questions: ExtractedQuestion[] = blocks.map(({ number, block }) => {
-      const { choices, stem, explanation } = extractChoices(block);
+      const { choices, stem: rawStem, explanation } = extractChoices(block);
       const hasFourChoices = choices.length === 4;
       const hasKnownAnswer = choices.some((c) => c.isCorrect);
       const hasImageHint = /\b(figure|graph|diagram|chart|see image)\b/i.test(block);
       const hasTableHint = /\btable\b/i.test(block) && /\|/.test(block);
+
+      // Real Digital SAT R&W questions always show a passage/stimulus
+      // separately from the instructional question — never merged into one
+      // block of text. Plain-text extraction loses that visual split, so
+      // recover it here: if the stem looks like "<reading material> <actual
+      // question>?", split off the reading material as its own passage.
+      let stem = rawStem;
+      let passageIndex: number | undefined;
+      const split = splitPassageFromStem(rawStem);
+      if (split) {
+        passageIndex = passages.length;
+        passages.push({ content: split.passage });
+        stem = split.stem;
+      }
 
       // Heuristic confidence: a clean 4-choice MCQ with a non-trivial stem
       // scores well; anything irregular is pushed down for manual review.
@@ -131,6 +149,7 @@ export class HeuristicExtractionProvider implements AIExtractionProvider {
       return {
         number,
         stem: stem || block.slice(0, 200),
+        passageIndex,
         type: "MULTIPLE_CHOICE",
         choices,
         explanation,
@@ -151,7 +170,7 @@ export class HeuristicExtractionProvider implements AIExtractionProvider {
       );
     }
 
-    return { passages: [], questions, overallConfidence, warnings };
+    return { passages, questions, overallConfidence, warnings };
   }
 
   async extractVocabulary(rawText: string): Promise<VocabExtractionResult> {

@@ -1,6 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useTransition,
+  type CSSProperties,
+  type MouseEvent as ReactMouseEvent,
+} from "react";
 import { useRouter } from "next/navigation";
 import {
   Calculator,
@@ -74,7 +83,26 @@ export function ExamShell({
   const [reviewScreen, setReviewScreen] = useState(false);
   const [directionsOpen, setDirectionsOpen] = useState(false);
   const [crossOutEnabled, setCrossOutEnabled] = useState(false);
+  const [passageWidthPct, setPassageWidthPct] = useState<number | null>(null);
   const [isSubmitting, startSubmit] = useTransition();
+  const splitPaneRef = useRef<HTMLDivElement>(null);
+
+  const startDragging = useCallback((startEvent: ReactMouseEvent) => {
+    startEvent.preventDefault();
+    function onMove(e: MouseEvent) {
+      const el = splitPaneRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const pct = ((e.clientX - rect.left) / rect.width) * 100;
+      setPassageWidthPct(Math.min(70, Math.max(30, pct)));
+    }
+    function onUp() {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    }
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+  }, []);
 
   const totalSeconds = module.timeLimitMinutes * 60;
   const elapsedAtLoad = Math.floor((Date.now() - new Date(startedAt).getTime()) / 1000);
@@ -269,22 +297,29 @@ export function ExamShell({
         THIS IS A PRACTICE TEST
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-hidden">
         {module.subject === "READING_WRITING" ? (
-          <div className="relative grid h-full lg:grid-cols-2">
-            <div className="border-b border-navy-200 bg-examCream p-8 lg:border-b-0 lg:p-10 xl:p-14">
+          <div
+            ref={splitPaneRef}
+            className="grid h-full overflow-y-auto lg:grid-cols-[var(--passage-w,55%)_auto_1fr] lg:overflow-hidden"
+            style={passageWidthPct ? ({ "--passage-w": `${passageWidthPct}%` } as CSSProperties) : undefined}
+          >
+            <div className="border-b border-navy-200 bg-examCream p-8 lg:h-full lg:overflow-y-auto lg:border-b-0 lg:p-10 xl:p-14">
               {question.passage ? (
                 <HighlightablePassage content={question.passage.content} />
               ) : (
                 <p className="font-serif text-sm text-navy-700">No passage for this question.</p>
               )}
             </div>
-            <div className="hidden lg:absolute lg:inset-y-0 lg:left-1/2 lg:flex lg:w-px lg:-translate-x-1/2 lg:items-center lg:justify-center lg:bg-navy-300">
+            <div
+              onMouseDown={startDragging}
+              className="hidden lg:flex lg:h-full lg:w-3 lg:cursor-col-resize lg:items-center lg:justify-center lg:bg-navy-100 lg:hover:bg-navy-200"
+            >
               <span className="flex h-6 w-4 items-center justify-center rounded-sm border border-navy-400 bg-white text-navy-500">
                 <GripVertical className="h-3.5 w-3.5" />
               </span>
             </div>
-            <div className="bg-examCream p-8 lg:p-10 xl:p-14">
+            <div className="bg-examCream p-8 lg:h-full lg:overflow-y-auto lg:p-10 xl:p-14">
               <QuestionBody
                 question={question}
                 index={currentIndex}
@@ -300,7 +335,7 @@ export function ExamShell({
             </div>
           </div>
         ) : (
-          <div className="mx-auto h-full max-w-3xl bg-examCream p-8 lg:p-14">
+          <div className="mx-auto h-full max-w-3xl overflow-y-auto bg-examCream p-8 lg:p-14">
             <QuestionBody
               question={question}
               index={currentIndex}

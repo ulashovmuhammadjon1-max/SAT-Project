@@ -154,9 +154,18 @@ export class ClaudeExtractionProvider implements AIExtractionProvider {
       testExtractionSchema,
       "sat_test_extraction",
       `You convert raw text extracted from a Digital SAT-style practice test PDF into structured
-data. Identify reading/writing passages and every question with its answer choices. Many source
-PDFs print a written explanation immediately after each question (e.g. "The correct answer is D
-because...") — when present, put that explanation text (cleaned up, not the raw OCR line breaks)
+data. On the real Digital SAT (Bluebook), Reading & Writing questions always show a passage or
+stimulus — a paragraph, a student's bulleted research notes, a short sentence with a blank,
+whatever the reading material is — separately from a short instructional question ("Which choice
+completes the text...", "As used in the text, what does 'X' most nearly mean?", "The student wants
+to...Which choice..."). Extracted PDF text usually runs these together as one block: split them.
+Put the reading material into a "passages" entry and set the question's "passageIndex" to it; the
+question's own "stem" should be ONLY the short instructional question, never the passage text
+itself. Do this for every Reading & Writing question that has reading material to separate — most
+of them will. Self-contained Math problems (no separate reading passage) don't need this: leave
+"passageIndex" null and put the whole problem in "stem". Many source PDFs also print a written
+explanation immediately after each question (e.g. "The correct answer is D because...") — when
+present, put that explanation text (cleaned up, not the raw OCR line breaks)
 into the question's "explanation" field, keep it OUT of the last answer choice's "content", and use
 it to determine the correct choice (set that choice's isCorrect true). If no explanation is present,
 determine the correct choice from any other source marking (e.g. an answer key) if available, and
