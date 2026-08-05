@@ -151,15 +151,24 @@ export function OnboardingWizard() {
 
       {/* Step body */}
       <main className="flex flex-1 items-start justify-center px-5 py-10 sm:py-14">
-        <div className="w-full max-w-xl">
-          <AnimatePresence mode="wait" custom={direction}>
+        <div className="relative w-full max-w-xl">
+          <AnimatePresence custom={direction} initial={false}>
             <motion.div
               key={step}
               custom={direction}
               initial={{ opacity: 0, x: direction * 40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: direction * -40 }}
+              exit={{ opacity: 0, x: direction * -40, position: "absolute" }}
               transition={{ duration: 0.32, ease: EASE }}
+              // The outgoing step's exit animation is decorative only — it
+              // must never be able to block the incoming step from becoming
+              // visible. `mode="wait"` used to make that block possible: if an
+              // exit ever failed to resolve cleanly (e.g. interrupted by a
+              // fast click), AnimatePresence would wait for it forever and
+              // the next step would stay stuck at its `initial` (invisible)
+              // state even though it had already mounted. Letting enter and
+              // exit run independently removes that dependency entirely.
+              className="w-full"
             >
               <div className="text-center">
                 {current.emoji && (

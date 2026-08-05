@@ -31,7 +31,13 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
 
   const { name, email, password, profile } = parsed.data;
 
-  const existing = await prisma.user.findUnique({ where: { email }, select: { id: true } });
+  let existing: { id: string } | null;
+  try {
+    existing = await prisma.user.findUnique({ where: { email }, select: { id: true } });
+  } catch (error) {
+    console.error("[onboarding] Could not check for an existing account", error);
+    return { error: "We couldn't reach the server. Please try again in a moment." };
+  }
   if (existing) {
     return { error: "An account with this email already exists.", field: "email" };
   }
