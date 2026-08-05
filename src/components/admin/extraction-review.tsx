@@ -323,6 +323,11 @@ function TestReview({
                 <AlertTriangle className="h-3.5 w-3.5" /> {lowConfidenceCount} need review
               </span>
             )}
+            {questions.length > 0 && (
+              <a href="#questions-section" className="text-sm font-medium text-primary hover:underline">
+                Jump to questions ↓
+              </a>
+            )}
           </div>
           {!alreadyPublished && (
             <div className="flex flex-wrap items-center gap-2">
@@ -420,22 +425,27 @@ function TestReview({
         </div>
       )}
 
-      <div className="space-y-4">
-        {questions.map((q, qIndex) => (
-          <QuestionCard
-            key={qIndex}
-            question={q}
-            qIndex={qIndex}
-            subjectDomains={subjectDomains}
-            onUpdateQuestion={updateQuestion}
-            onUpdateChoice={updateChoice}
-            onSetCorrectChoice={setCorrectChoice}
-            onRemoveQuestion={removeQuestion}
-            onAddChoice={addChoice}
-            onRemoveChoice={removeChoice}
-          />
-        ))}
-      </div>
+      {questions.length > 0 && (
+        <div id="questions-section" className="scroll-mt-6 space-y-4">
+          <h2 className="text-sm font-semibold text-muted-foreground">
+            Questions ({questions.length}) — each has its own options, explanation, image, and domain/skill/difficulty
+          </h2>
+          {questions.map((q, qIndex) => (
+            <QuestionCard
+              key={qIndex}
+              question={q}
+              qIndex={qIndex}
+              subjectDomains={subjectDomains}
+              onUpdateQuestion={updateQuestion}
+              onUpdateChoice={updateChoice}
+              onSetCorrectChoice={setCorrectChoice}
+              onRemoveQuestion={removeQuestion}
+              onAddChoice={addChoice}
+              onRemoveChoice={removeChoice}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
