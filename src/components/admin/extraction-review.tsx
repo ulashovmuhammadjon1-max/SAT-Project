@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { memo, useCallback, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { AlertTriangle, Check, Loader2, Plus, Save, Trash2, Upload } from "lucide-react";
 import { toast } from "sonner";
@@ -211,33 +211,41 @@ function TestReview({
     setTargetTestId("new");
   }
 
-  function updateQuestion(index: number, patch: Partial<ExtractedQuestion>) {
+  // Stable (empty-dep) callbacks: each only reaches into state through the
+  // functional-update form, so identity never needs to change across
+  // renders. That stability is what lets QuestionCard/PassageCard below be
+  // memoized — without it, every keystroke in any one card would re-render
+  // all thirty, since a fresh `questions` array is created on every edit.
+  const updateQuestion = useCallback((index: number, patch: Partial<ExtractedQuestion>) => {
     setQuestions((prev) => prev.map((q, i) => (i === index ? { ...q, ...patch } : q)));
-  }
+  }, []);
 
-  function updateChoice(qIndex: number, cIndex: number, patch: Partial<ExtractedQuestion["choices"][number]>) {
-    setQuestions((prev) =>
-      prev.map((q, i) =>
-        i === qIndex
-          ? { ...q, choices: q.choices.map((c, j) => (j === cIndex ? { ...c, ...patch } : c)) }
-          : q
-      )
-    );
-  }
+  const updateChoice = useCallback(
+    (qIndex: number, cIndex: number, patch: Partial<ExtractedQuestion["choices"][number]>) => {
+      setQuestions((prev) =>
+        prev.map((q, i) =>
+          i === qIndex
+            ? { ...q, choices: q.choices.map((c, j) => (j === cIndex ? { ...c, ...patch } : c)) }
+            : q
+        )
+      );
+    },
+    []
+  );
 
-  function setCorrectChoice(qIndex: number, label: string) {
+  const setCorrectChoice = useCallback((qIndex: number, label: string) => {
     setQuestions((prev) =>
       prev.map((q, i) =>
         i === qIndex ? { ...q, choices: q.choices.map((c) => ({ ...c, isCorrect: c.label === label })) } : q
       )
     );
-  }
+  }, []);
 
-  function removeQuestion(index: number) {
+  const removeQuestion = useCallback((index: number) => {
     setQuestions((prev) => prev.filter((_, i) => i !== index));
-  }
+  }, []);
 
-  function addChoice(qIndex: number) {
+  const addChoice = useCallback((qIndex: number) => {
     setQuestions((prev) =>
       prev.map((q, i) =>
         i === qIndex
@@ -245,9 +253,9 @@ function TestReview({
           : q
       )
     );
-  }
+  }, []);
 
-  function removeChoice(qIndex: number, cIndex: number) {
+  const removeChoice = useCallback((qIndex: number, cIndex: number) => {
     setQuestions((prev) =>
       prev.map((q, i) =>
         i === qIndex
@@ -259,11 +267,11 @@ function TestReview({
           : q
       )
     );
-  }
+  }, []);
 
-  function updatePassage(index: number, patch: Partial<ExtractedPassage>) {
+  const updatePassage = useCallback((index: number, patch: Partial<ExtractedPassage>) => {
     setPassages((prev) => prev.map((p, i) => (i === index ? { ...p, ...patch } : p)));
-  }
+  }, []);
 
   function saveDraft() {
     startSave(async () => {
@@ -407,168 +415,216 @@ function TestReview({
         <div className="space-y-3">
           <h2 className="text-sm font-semibold text-muted-foreground">Passages</h2>
           {passages.map((p, pIndex) => (
-            <Card key={pIndex}>
-              <CardContent className="space-y-2 p-4">
-                <Input
-                  value={p.title ?? ""}
-                  onChange={(e) => updatePassage(pIndex, { title: e.target.value })}
-                  placeholder="Passage title (optional)"
-                  className="h-8 font-medium"
-                />
-                <RichTextField
-                  value={p.content}
-                  onChange={(v) => updatePassage(pIndex, { content: v })}
-                  rows={6}
-                  placeholder="Passage text"
-                />
-                <p className="text-xs text-muted-foreground">
-                  Select the exact wording that&apos;s underlined in the source PDF and click &quot;Underline
-                  selection&quot; — plain text extraction can&apos;t recover that formatting automatically.
-                </p>
-              </CardContent>
-            </Card>
+            <PassageCard key={pIndex} passage={p} pIndex={pIndex} onUpdate={updatePassage} />
           ))}
         </div>
       )}
 
       <div className="space-y-4">
         {questions.map((q, qIndex) => (
-          <Card key={qIndex} className={cn(q.confidence < CONFIDENCE_PUBLISH_THRESHOLD && "border-warning/50")}>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
-              <CardTitle className="text-sm font-semibold text-muted-foreground">Question {q.number}</CardTitle>
-              <div className="flex items-center gap-2">
-                <ConfidenceBadge value={q.confidence} />
-                <Button variant="ghost" size="icon" onClick={() => removeQuestion(qIndex)}>
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <RichTextField
-                value={q.stem}
-                onChange={(v) => updateQuestion(qIndex, { stem: v })}
-                rows={3}
-                className="font-medium"
-              />
-              <ImageUploadField
-                imageUrl={q.imageUrl}
-                onChange={(url) => updateQuestion(qIndex, { imageUrl: url })}
-              />
-              <div className="grid gap-2 sm:grid-cols-2">
-                {q.choices.map((choice, cIndex) => (
-                  <label
-                    key={choice.label}
-                    className={cn(
-                      "flex items-start gap-2 rounded-lg border border-border p-2.5 text-sm",
-                      choice.isCorrect && "border-success bg-success/5"
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name={`correct-${qIndex}`}
-                      checked={choice.isCorrect}
-                      onChange={() => setCorrectChoice(qIndex, choice.label)}
-                      className="mt-1"
-                    />
-                    <span className="font-semibold">{choice.label}</span>
-                    <Input
-                      value={choice.content}
-                      onChange={(e) => updateChoice(qIndex, cIndex, { content: e.target.value })}
-                      className="h-8 flex-1 border-none bg-transparent p-0 shadow-none focus-visible:ring-0"
-                    />
-                    {choice.isCorrect && <Check className="h-4 w-4 shrink-0 text-success" />}
-                    <button
-                      type="button"
-                      onClick={() => removeChoice(qIndex, cIndex)}
-                      className="shrink-0 text-muted-foreground hover:text-destructive"
-                    >
-                      <Trash2 className="h-3.5 w-3.5" />
-                    </button>
-                  </label>
-                ))}
-              </div>
-              {q.choices.length < 4 && (
-                <Button variant="outline" size="sm" onClick={() => addChoice(qIndex)}>
-                  <Plus className="h-3.5 w-3.5" /> Add choice {"ABCD"[q.choices.length]}
-                  {q.choices.length === 0 ? " — extraction found no choices here, check the PDF text" : ""}
-                </Button>
-              )}
-              <div className="space-y-1">
-                <Label className="text-xs text-muted-foreground">Explanation (from the PDF, if present)</Label>
-                <Textarea
-                  value={q.explanation ?? ""}
-                  onChange={(e) => updateQuestion(qIndex, { explanation: e.target.value })}
-                  rows={2}
-                  placeholder="No explanation text was detected for this question."
-                />
-              </div>
-              <div className="grid gap-2 sm:grid-cols-2">
-                <div className="space-y-1">
-                  <Label className="text-xs text-muted-foreground">Domain</Label>
-                  <Select
-                    value={q.domainId ?? ""}
-                    onValueChange={(v) => {
-                      const d = subjectDomains.find((x) => x.id === v);
-                      updateQuestion(qIndex, { domainId: v, skillId: d?.skills[0]?.id ?? "" });
-                    }}
-                  >
-                    <SelectTrigger className="h-8 text-xs">
-                      <SelectValue placeholder="Choose a domain" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {subjectDomains.map((d) => (
-                        <SelectItem key={d.id} value={d.id}>
-                          {d.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-1">
-                  <Label className="text-xs text-muted-foreground">Skill / topic</Label>
-                  <Select
-                    value={q.skillId ?? ""}
-                    onValueChange={(v) => updateQuestion(qIndex, { skillId: v })}
-                  >
-                    <SelectTrigger className="h-8 text-xs">
-                      <SelectValue placeholder="Choose a skill" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {(subjectDomains.find((d) => d.id === q.domainId)?.skills ?? []).map((s) => (
-                        <SelectItem key={s.id} value={s.id}>
-                          {s.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-1">
-                  <Label className="text-xs text-muted-foreground">Difficulty</Label>
-                  <Select
-                    value={q.difficultyGuess}
-                    onValueChange={(v) => updateQuestion(qIndex, { difficultyGuess: v as ExtractedQuestion["difficultyGuess"] })}
-                  >
-                    <SelectTrigger className="h-8 text-xs">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="EASY">Easy</SelectItem>
-                      <SelectItem value="MEDIUM">Medium</SelectItem>
-                      <SelectItem value="HARD">Hard</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                {q.hasTable && <span>Contains table</span>}
-              </div>
-            </CardContent>
-          </Card>
+          <QuestionCard
+            key={qIndex}
+            question={q}
+            qIndex={qIndex}
+            subjectDomains={subjectDomains}
+            onUpdateQuestion={updateQuestion}
+            onUpdateChoice={updateChoice}
+            onSetCorrectChoice={setCorrectChoice}
+            onRemoveQuestion={removeQuestion}
+            onAddChoice={addChoice}
+            onRemoveChoice={removeChoice}
+          />
         ))}
       </div>
     </div>
   );
 }
+
+// A card holds a real (rich text, image upload) child field per question, so
+// re-rendering all thirty on every keystroke anywhere on the page is not
+// free — memoized so only the card actually being edited re-renders. This
+// depends on every callback prop below having stable identity (see the
+// useCallback-wrapped updaters in TestReview).
+const PassageCard = memo(function PassageCard({
+  passage,
+  pIndex,
+  onUpdate,
+}: {
+  passage: ExtractedPassage;
+  pIndex: number;
+  onUpdate: (index: number, patch: Partial<ExtractedPassage>) => void;
+}) {
+  return (
+    <Card>
+      <CardContent className="space-y-2 p-4">
+        <Input
+          value={passage.title ?? ""}
+          onChange={(e) => onUpdate(pIndex, { title: e.target.value })}
+          placeholder="Passage title (optional)"
+          className="h-8 font-medium"
+        />
+        <RichTextField
+          value={passage.content}
+          onChange={(v) => onUpdate(pIndex, { content: v })}
+          rows={6}
+          placeholder="Passage text"
+        />
+        <p className="text-xs text-muted-foreground">
+          Select the exact wording that&apos;s underlined in the source PDF and click &quot;Underline
+          selection&quot; — plain text extraction can&apos;t recover that formatting automatically.
+        </p>
+      </CardContent>
+    </Card>
+  );
+});
+
+const QuestionCard = memo(function QuestionCard({
+  question: q,
+  qIndex,
+  subjectDomains,
+  onUpdateQuestion,
+  onUpdateChoice,
+  onSetCorrectChoice,
+  onRemoveQuestion,
+  onAddChoice,
+  onRemoveChoice,
+}: {
+  question: ExtractedQuestion;
+  qIndex: number;
+  subjectDomains: DomainOption[];
+  onUpdateQuestion: (index: number, patch: Partial<ExtractedQuestion>) => void;
+  onUpdateChoice: (qIndex: number, cIndex: number, patch: Partial<ExtractedQuestion["choices"][number]>) => void;
+  onSetCorrectChoice: (qIndex: number, label: string) => void;
+  onRemoveQuestion: (index: number) => void;
+  onAddChoice: (qIndex: number) => void;
+  onRemoveChoice: (qIndex: number, cIndex: number) => void;
+}) {
+  return (
+    <Card className={cn(q.confidence < CONFIDENCE_PUBLISH_THRESHOLD && "border-warning/50")}>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
+        <CardTitle className="text-sm font-semibold text-muted-foreground">Question {q.number}</CardTitle>
+        <div className="flex items-center gap-2">
+          <ConfidenceBadge value={q.confidence} />
+          <Button variant="ghost" size="icon" onClick={() => onRemoveQuestion(qIndex)}>
+            <Trash2 className="h-4 w-4" />
+          </Button>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <RichTextField
+          value={q.stem}
+          onChange={(v) => onUpdateQuestion(qIndex, { stem: v })}
+          rows={3}
+          className="font-medium"
+        />
+        <ImageUploadField imageUrl={q.imageUrl} onChange={(url) => onUpdateQuestion(qIndex, { imageUrl: url })} />
+        <div className="grid gap-2 sm:grid-cols-2">
+          {q.choices.map((choice, cIndex) => (
+            <label
+              key={choice.label}
+              className={cn(
+                "flex items-start gap-2 rounded-lg border border-border p-2.5 text-sm",
+                choice.isCorrect && "border-success bg-success/5"
+              )}
+            >
+              <input
+                type="radio"
+                name={`correct-${qIndex}`}
+                checked={choice.isCorrect}
+                onChange={() => onSetCorrectChoice(qIndex, choice.label)}
+                className="mt-1"
+              />
+              <span className="font-semibold">{choice.label}</span>
+              <Input
+                value={choice.content}
+                onChange={(e) => onUpdateChoice(qIndex, cIndex, { content: e.target.value })}
+                className="h-8 flex-1 border-none bg-transparent p-0 shadow-none focus-visible:ring-0"
+              />
+              {choice.isCorrect && <Check className="h-4 w-4 shrink-0 text-success" />}
+              <button
+                type="button"
+                onClick={() => onRemoveChoice(qIndex, cIndex)}
+                className="shrink-0 text-muted-foreground hover:text-destructive"
+              >
+                <Trash2 className="h-3.5 w-3.5" />
+              </button>
+            </label>
+          ))}
+        </div>
+        {q.choices.length < 4 && (
+          <Button variant="outline" size="sm" onClick={() => onAddChoice(qIndex)}>
+            <Plus className="h-3.5 w-3.5" /> Add choice {"ABCD"[q.choices.length]}
+            {q.choices.length === 0 ? " — extraction found no choices here, check the PDF text" : ""}
+          </Button>
+        )}
+        <div className="space-y-1">
+          <Label className="text-xs text-muted-foreground">Explanation (from the PDF, if present)</Label>
+          <Textarea
+            value={q.explanation ?? ""}
+            onChange={(e) => onUpdateQuestion(qIndex, { explanation: e.target.value })}
+            rows={2}
+            placeholder="No explanation text was detected for this question."
+          />
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          <div className="space-y-1">
+            <Label className="text-xs text-muted-foreground">Domain</Label>
+            <Select
+              value={q.domainId ?? ""}
+              onValueChange={(v) => {
+                const d = subjectDomains.find((x) => x.id === v);
+                onUpdateQuestion(qIndex, { domainId: v, skillId: d?.skills[0]?.id ?? "" });
+              }}
+            >
+              <SelectTrigger className="h-8 text-xs">
+                <SelectValue placeholder="Choose a domain" />
+              </SelectTrigger>
+              <SelectContent>
+                {subjectDomains.map((d) => (
+                  <SelectItem key={d.id} value={d.id}>
+                    {d.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-1">
+            <Label className="text-xs text-muted-foreground">Skill / topic</Label>
+            <Select value={q.skillId ?? ""} onValueChange={(v) => onUpdateQuestion(qIndex, { skillId: v })}>
+              <SelectTrigger className="h-8 text-xs">
+                <SelectValue placeholder="Choose a skill" />
+              </SelectTrigger>
+              <SelectContent>
+                {(subjectDomains.find((d) => d.id === q.domainId)?.skills ?? []).map((s) => (
+                  <SelectItem key={s.id} value={s.id}>
+                    {s.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-1">
+            <Label className="text-xs text-muted-foreground">Difficulty</Label>
+            <Select
+              value={q.difficultyGuess}
+              onValueChange={(v) => onUpdateQuestion(qIndex, { difficultyGuess: v as ExtractedQuestion["difficultyGuess"] })}
+            >
+              <SelectTrigger className="h-8 text-xs">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="EASY">Easy</SelectItem>
+                <SelectItem value="MEDIUM">Medium</SelectItem>
+                <SelectItem value="HARD">Hard</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">{q.hasTable && <span>Contains table</span>}</div>
+      </CardContent>
+    </Card>
+  );
+});
 
 // ---------------------------------------------------------------------------
 // Vocabulary review
