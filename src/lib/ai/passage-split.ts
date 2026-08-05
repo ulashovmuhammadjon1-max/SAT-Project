@@ -10,8 +10,12 @@ const BULLET_LINE = /^[ \t]*(?:[•\-*]|\d+[.)])[ \t]+/;
 const MIN_PASSAGE_WORDS = 12;
 
 function splitSentences(text: string): string[] {
-  // Keeps the terminating punctuation attached to each sentence.
-  return (text.match(/[^.?!]+[.?!]+(?:\s|$)/g) ?? [text]).map((s) => s.trim()).filter(Boolean);
+  // Keeps the terminating punctuation attached to each sentence. Allows a
+  // closing quote mark right after the punctuation (e.g. `outdoors."`) —
+  // without it, a sentence ending inside a quotation never counts as a
+  // boundary, so the whole rest of the block (including the real question)
+  // gets swallowed into one non-matching run and no split happens at all.
+  return (text.match(/[^.?!]+[.?!]+["'”’]*(?:\s|$)/g) ?? [text]).map((s) => s.trim()).filter(Boolean);
 }
 
 function wordCount(text: string): number {

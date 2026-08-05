@@ -417,6 +417,14 @@ export function ExamShell({
               <div className="min-h-0 border-b border-exam-border bg-exam-passage lg:border-b-0">
                 <div className="h-full overflow-y-auto exam-scroll px-6 pb-14 pt-8 lg:px-10">
                   <div className="max-w-[44rem]">
+                    {question.imageUrl && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={question.imageUrl}
+                        alt="Question figure"
+                        className="mb-4 max-w-full rounded border border-exam-border bg-white"
+                      />
+                    )}
                     {question.passage ? (
                       <HighlightablePassage
                         passageId={question.passage.id}
@@ -426,9 +434,9 @@ export function ExamShell({
                         onUpdate={updateAnnotation}
                         onRemove={removeAnnotation}
                       />
-                    ) : (
+                    ) : !question.imageUrl ? (
                       <p className="text-[14px] text-exam-muted">No passage for this question.</p>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -467,6 +475,7 @@ export function ExamShell({
                   onToggleEliminate={toggleEliminated}
                   onFreeResponseChange={(v) => updateCurrent({ freeResponseAnswer: v })}
                   onToggleFlag={toggleFlag}
+                  showImage={false}
                 />
               </div>
             </div>
@@ -919,6 +928,7 @@ function QuestionBody({
   onFreeResponseChange,
   onToggleFlag,
   innerClassName,
+  showImage = true,
 }: {
   question: ExamModule["questions"][number];
   index: number;
@@ -930,6 +940,8 @@ function QuestionBody({
   onFreeResponseChange: (value: string) => void;
   onToggleFlag: () => void;
   innerClassName?: string;
+  /** false when the caller already renders the question's image itself (e.g. above the passage panel). */
+  showImage?: boolean;
 }) {
   const flagged = state.flagged;
 
@@ -977,7 +989,7 @@ function QuestionBody({
             dangerouslySetInnerHTML={{ __html: question.stem }}
           />
 
-          {question.imageUrl && (
+          {showImage && question.imageUrl && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={question.imageUrl}

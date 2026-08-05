@@ -2,16 +2,27 @@
 
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { CheckCircle2, Loader2, Trash2, XCircle } from "lucide-react";
+import { BookOpenCheck, CheckCircle2, Loader2, Trash2, XCircle } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
-import { deleteTest, setTestStatus } from "@/server/actions/admin/tests";
+import { deleteTest, publishAllQuestionsInTest, setTestStatus } from "@/server/actions/admin/tests";
 
 export function TestActions({ testId, status }: { testId: string; status: string }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [isDeleting, startDelete] = useTransition();
+  const [isPublishingQuestions, startPublishQuestions] = useTransition();
+
+  function publishQuestions() {
+    startPublishQuestions(async () => {
+      const { count } = await publishAllQuestionsInTest(testId);
+      toast.success(
+        count > 0 ? `${count} question${count === 1 ? "" : "s"} added to the question bank.` : "Already up to date — nothing to publish."
+      );
+      router.refresh();
+    });
+  }
 
   function change(next: "PUBLISHED" | "DRAFT" | "ARCHIVED") {
     startTransition(async () => {
@@ -51,6 +62,15 @@ export function TestActions({ testId, status }: { testId: string; status: string
           Archive
         </Button>
       )}
+      <Button
+        variant="outline"
+        onClick={publishQuestions}
+        disabled={isPublishingQuestions}
+        title="Make every question in this test individually practiceable in the student Question Bank"
+      >
+        {isPublishingQuestions ? <Loader2 className="h-4 w-4 animate-spin" /> : <BookOpenCheck className="h-4 w-4" />}
+        Add to question bank
+      </Button>
       <Button variant="outline" className="text-destructive" onClick={remove} disabled={isDeleting}>
         {isDeleting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}
         Delete

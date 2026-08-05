@@ -12,6 +12,7 @@ import {
   type Annotation,
   type HighlightColor,
 } from "@/lib/exam/annotations";
+import { toPassageHtml } from "@/lib/exam/passage-html";
 
 const SWATCH: Record<HighlightColor, string> = {
   yellow: "#FFE9A6",
@@ -48,7 +49,7 @@ export function HighlightablePassage({
   // HTML on every change so annotation offsets are always applied to a clean
   // tree (see lib/exam/annotations.ts).
   useEffect(() => {
-    if (bodyRef.current) paintAnnotations(bodyRef.current, content, annotations);
+    if (bodyRef.current) paintAnnotations(bodyRef.current, toPassageHtml(content), annotations);
   }, [content, annotations]);
 
   // Close the popup when the student navigates to another passage.

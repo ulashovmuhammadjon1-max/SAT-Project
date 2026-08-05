@@ -16,6 +16,20 @@ export async function setTestStatus(testId: string, status: TestStatus) {
   revalidatePath(`/admin/tests/${testId}`);
 }
 
+export async function publishAllQuestionsInTest(testId: string): Promise<{ count: number }> {
+  const admin = await requireAdmin();
+  const { count } = await prisma.question.updateMany({
+    where: { module: { testId }, isPublished: false },
+    data: { isPublished: true },
+  });
+  await prisma.auditLog.create({
+    data: { userId: admin.id, action: "TEST_QUESTIONS_PUBLISHED", targetType: "Test", targetId: testId },
+  });
+  revalidatePath("/admin/questions");
+  revalidatePath(`/admin/tests/${testId}`);
+  return { count };
+}
+
 export interface DeleteTestResult {
   error?: string;
   success?: boolean;

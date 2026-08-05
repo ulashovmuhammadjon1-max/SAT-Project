@@ -169,8 +169,14 @@ present, put that explanation text (cleaned up, not the raw OCR line breaks)
 into the question's "explanation" field, keep it OUT of the last answer choice's "content", and use
 it to determine the correct choice (set that choice's isCorrect true). If no explanation is present,
 determine the correct choice from any other source marking (e.g. an answer key) if available, and
-leave "explanation" null. Guess the College Board domain/skill category and difficulty if not
-explicit, and flag whether the question references an image or table. Set a confidence score (0-1)
+leave "explanation" null. Passage "content" is rendered as raw HTML, not plain text — a bare string
+with newlines collapses into one run-on block in a browser. When the reading material is a student's
+bulleted research notes, emit real markup: an intro line as its own "<p>", each note as its own
+"<li>" inside a single "<ul>". When it's a paired passage (a "Text 1" / "Text 2" comparison), label
+each with its own "<p><strong>Text 1</strong></p>" before that text's paragraph(s). Otherwise use
+plain "<p>" paragraphs — one per distinct paragraph in the source, not one per wrapped line. Guess
+the College Board domain/skill category and difficulty if not explicit, and flag whether the
+question references an image or table. Set a confidence score (0-1)
 per question reflecting how certain you are the extraction is complete and correctly structured —
 use lower scores for ambiguous OCR artifacts, missing choices, or unclear question boundaries so a
 human can review them before publishing. Never invent question content that is not present in the

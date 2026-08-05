@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn, formatDuration } from "@/lib/utils";
+import { toPassageHtml } from "@/lib/exam/passage-html";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
 
 interface ReviewItem {
@@ -168,20 +169,22 @@ function ReviewDetail({ item }: { item: ReviewItem }) {
         </CardContent>
       </Card>
 
-      <div className={cn("grid gap-4", item.passage && "lg:grid-cols-2")}>
-        {item.passage && (
+      <div className={cn("grid gap-4", (item.passage || item.imageUrl) && "lg:grid-cols-2")}>
+        {(item.passage || item.imageUrl) && (
           <Card>
-            <CardContent className="p-5 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.passage.content }} />
+            <CardContent className="space-y-4 p-5 text-sm leading-relaxed">
+              {item.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={item.imageUrl} alt="Question figure" className="max-w-full rounded-lg border border-border" />
+              )}
+              {item.passage && <div dangerouslySetInnerHTML={{ __html: toPassageHtml(item.passage.content) }} />}
+            </CardContent>
           </Card>
         )}
 
         <Card>
           <CardContent className="space-y-4 p-5">
             <div className="text-[15px] leading-relaxed" dangerouslySetInnerHTML={{ __html: item.stem }} />
-            {item.imageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={item.imageUrl} alt="Question figure" className="max-w-full rounded-lg border border-border" />
-            )}
 
             {item.type === "MULTIPLE_CHOICE" ? (
               <div className="space-y-2">

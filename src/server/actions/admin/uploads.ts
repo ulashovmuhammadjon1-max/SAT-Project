@@ -241,7 +241,14 @@ export async function publishTestUpload(uploadId: string, options: PublishTestOp
           order: q.number,
           source: "AI_EXTRACTED",
           sourceUploadId: uploadId,
-          isPublished: false,
+          // Publishing the test IS the admin's approval gate -- if questions
+          // defaulted to unpublished here, every one of them would need a
+          // second, separate manual toggle in the per-question editor before
+          // students could practice it standalone (they'd still be playable
+          // in the timed test either way, since exam-taking doesn't filter
+          // on isPublished). Admins can still unpublish an individual
+          // question afterward if they want to pull just that one.
+          isPublished: true,
           correctAnswerFR: q.correctAnswerFreeResponse ?? null,
         },
       });
