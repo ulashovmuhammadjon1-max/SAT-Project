@@ -205,6 +205,31 @@ function TestReview({
     [questions]
   );
 
+  // One continuous review order: each passage appears once, immediately
+  // before the first question that references it, so a passage and its
+  // questions can be reviewed together in a single pass instead of jumping
+  // between a "Passages" section and a separate "Questions" section far
+  // below it. Passages no question points to (extraction gaps, or a passage
+  // meant for a question that got deleted) still show up, up front, rather
+  // than silently vanishing.
+  const reviewBlocks = useMemo(() => {
+    const shown = new Set<number>();
+    const blocks: ({ type: "passage"; pIndex: number } | { type: "question"; qIndex: number })[] = [];
+    questions.forEach((q, qIndex) => {
+      const pIndex = q.passageIndex;
+      if (pIndex !== null && pIndex !== undefined && passages[pIndex] && !shown.has(pIndex)) {
+        blocks.push({ type: "passage", pIndex });
+        shown.add(pIndex);
+      }
+      blocks.push({ type: "question", qIndex });
+    });
+    const orphanPassages = passages
+      .map((_, pIndex) => pIndex)
+      .filter((pIndex) => !shown.has(pIndex))
+      .map((pIndex) => ({ type: "passage" as const, pIndex }));
+    return [...orphanPassages, ...blocks];
+  }, [questions, passages]);
+
   function changeSubject(next: Subject) {
     setSubject(next);
     setQuestions((prev) => withTaxonomyDefaults(prev, domains, next));
@@ -323,11 +348,6 @@ function TestReview({
                 <AlertTriangle className="h-3.5 w-3.5" /> {lowConfidenceCount} need review
               </span>
             )}
-            {questions.length > 0 && (
-              <a href="#questions-section" className="text-sm font-medium text-primary hover:underline">
-                Jump to questions ↓
-              </a>
-            )}
           </div>
           {!alreadyPublished && (
             <div className="flex flex-wrap items-center gap-2">
@@ -416,25 +436,20 @@ function TestReview({
         </Card>
       )}
 
-      {passages.length > 0 && (
-        <div className="space-y-3">
-          <h2 className="text-sm font-semibold text-muted-foreground">Passages</h2>
-          {passages.map((p, pIndex) => (
-            <PassageCard key={pIndex} passage={p} pIndex={pIndex} onUpdate={updatePassage} />
-          ))}
-        </div>
-      )}
-
-      {questions.length > 0 && (
-        <div id="questions-section" className="scroll-mt-6 space-y-4">
-          <h2 className="text-sm font-semibold text-muted-foreground">
-            Questions ({questions.length}) — each has its own options, explanation, image, and domain/skill/difficulty
-          </h2>
-          {questions.map((q, qIndex) => (
+      <div className="space-y-4">
+        {reviewBlocks.map((block) =>
+          block.type === "passage" ? (
+            <PassageCard
+              key={`p-${block.pIndex}`}
+              passage={passages[block.pIndex]}
+              pIndex={block.pIndex}
+              onUpdate={updatePassage}
+            />
+          ) : (
             <QuestionCard
-              key={qIndex}
-              question={q}
-              qIndex={qIndex}
+              key={`q-${block.qIndex}`}
+              question={questions[block.qIndex]}
+              qIndex={block.qIndex}
               subjectDomains={subjectDomains}
               onUpdateQuestion={updateQuestion}
               onUpdateChoice={updateChoice}
@@ -443,9 +458,9 @@ function TestReview({
               onAddChoice={addChoice}
               onRemoveChoice={removeChoice}
             />
-          ))}
-        </div>
-      )}
+          )
+        )}
+      </div>
     </div>
   );
 }
@@ -465,8 +480,11 @@ const PassageCard = memo(function PassageCard({
   onUpdate: (index: number, patch: Partial<ExtractedPassage>) => void;
 }) {
   return (
-    <Card>
-      <CardContent className="space-y-2 p-4">
+    <Card className="border-primary/30 bg-primary/[0.02]">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm font-semibold text-muted-foreground">Passage</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-2 p-4 pt-0">
         <Input
           value={passage.title ?? ""}
           onChange={(e) => onUpdate(pIndex, { title: e.target.value })}
@@ -509,6 +527,11 @@ const QuestionCard = memo(function QuestionCard({
   onAddChoice: (qIndex: number) => void;
   onRemoveChoice: (qIndex: number, cIndex: number) => void;
 }) {
+  // Collapsed unless extraction already found explanation text, so reviewing
+  // a batch of questions doesn't mean scrolling past thirty empty boxes for
+  // a field most PDFs don't even include.
+  const [explanationOpen, setExplanationOpen] = useState(!!q.explanation?.trim());
+
   return (
     <Card className={cn(q.confidence < CONFIDENCE_PUBLISH_THRESHOLD && "border-warning/50")}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
@@ -567,15 +590,25 @@ const QuestionCard = memo(function QuestionCard({
             {q.choices.length === 0 ? " — extraction found no choices here, check the PDF text" : ""}
           </Button>
         )}
-        <div className="space-y-1">
-          <Label className="text-xs text-muted-foreground">Explanation (from the PDF, if present)</Label>
-          <Textarea
-            value={q.explanation ?? ""}
-            onChange={(e) => onUpdateQuestion(qIndex, { explanation: e.target.value })}
-            rows={2}
-            placeholder="No explanation text was detected for this question."
-          />
-        </div>
+        {explanationOpen ? (
+          <div className="space-y-1">
+            <Label className="text-xs text-muted-foreground">Explanation (optional)</Label>
+            <Textarea
+              value={q.explanation ?? ""}
+              onChange={(e) => onUpdateQuestion(qIndex, { explanation: e.target.value })}
+              rows={2}
+              placeholder="No explanation text was detected for this question."
+            />
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setExplanationOpen(true)}
+            className="text-xs font-medium text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+          >
+            + Add explanation (optional)
+          </button>
+        )}
         <div className="grid gap-2 sm:grid-cols-2">
           <div className="space-y-1">
             <Label className="text-xs text-muted-foreground">Domain</Label>

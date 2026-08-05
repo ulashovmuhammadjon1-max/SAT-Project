@@ -91,11 +91,24 @@ export async function saveExplanation(
   }
 ) {
   await requireAdmin();
-  await prisma.explanation.upsert({
-    where: { questionId },
-    create: { questionId, ...input, source: "MANUAL" },
-    update: { ...input, source: "MANUAL" },
-  });
+
+  // Explanations are optional — writing one is never required to save a
+  // question. If every field is blank, don't create a row for it (or clear
+  // out an existing one), rather than persisting an empty Explanation that
+  // then shows up as "published" content with nothing in it.
+  const hasContent = [input.content, input.whyCorrect, input.commonMistakes, input.tips, input.relatedConcepts].some(
+    (s) => s.trim().length > 0
+  );
+
+  if (!hasContent) {
+    await prisma.explanation.deleteMany({ where: { questionId } });
+  } else {
+    await prisma.explanation.upsert({
+      where: { questionId },
+      create: { questionId, ...input, source: "MANUAL" },
+      update: { ...input, source: "MANUAL" },
+    });
+  }
   revalidatePath(`/admin/questions/${questionId}`);
 }
 
