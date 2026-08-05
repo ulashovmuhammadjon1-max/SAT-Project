@@ -2,6 +2,7 @@
 
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { updateUserRole } from "@/server/actions/admin/users";
@@ -16,7 +17,11 @@ export function UserRoleSelect({ userId, role }: { userId: string; role: "STUDEN
       disabled={isPending}
       onValueChange={(v) =>
         startTransition(async () => {
-          await updateUserRole(userId, v as "STUDENT" | "ADMIN");
+          const result = await updateUserRole(userId, v as "STUDENT" | "ADMIN");
+          if (result.error) {
+            toast.error(result.error);
+            return;
+          }
           router.refresh();
         })
       }

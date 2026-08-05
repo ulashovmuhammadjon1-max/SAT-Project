@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import Link from "next/link";
 import { Check, PartyPopper, X } from "lucide-react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,7 +31,13 @@ export function VocabQuiz({ questions }: { questions: QuizQuestion[] }) {
     setSelected(optionId);
     const correct = optionId === question.correctId;
     if (correct) setScore((s) => s + 1);
-    startTransition(() => reviewWord(question.id, correct ? 4 : 1));
+    startTransition(async () => {
+      try {
+        await reviewWord(question.id, correct ? 4 : 1);
+      } catch {
+        toast.error("That review didn't save, but your score still counts.");
+      }
+    });
   }
 
   function next() {

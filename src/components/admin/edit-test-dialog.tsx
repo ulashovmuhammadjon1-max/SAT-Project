@@ -61,19 +61,23 @@ export function EditTestDialog({
 
   function save() {
     startSave(async () => {
-      await updateTestDetails(testId, {
-        title: titleValue,
-        description: descriptionValue || null,
-        adaptiveConfigId: configId === "none" ? null : configId,
-      });
-      await Promise.all(
-        modules
-          .filter((m) => timeLimits[m.id] !== m.timeLimitMinutes)
-          .map((m) => updateModuleTimeLimit(m.id, timeLimits[m.id]))
-      );
-      toast.success("Test updated.");
-      setOpen(false);
-      router.refresh();
+      try {
+        await updateTestDetails(testId, {
+          title: titleValue,
+          description: descriptionValue || null,
+          adaptiveConfigId: configId === "none" ? null : configId,
+        });
+        await Promise.all(
+          modules
+            .filter((m) => timeLimits[m.id] !== m.timeLimitMinutes)
+            .map((m) => updateModuleTimeLimit(m.id, timeLimits[m.id]))
+        );
+        toast.success("Test updated.");
+        setOpen(false);
+        router.refresh();
+      } catch (error) {
+        toast.error(error instanceof Error ? error.message : "Couldn't save changes. Please try again.");
+      }
     });
   }
 

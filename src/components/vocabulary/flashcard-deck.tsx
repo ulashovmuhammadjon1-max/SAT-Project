@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { PartyPopper, RotateCw } from "lucide-react";
+import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -38,7 +39,13 @@ export function FlashcardDeck({ words }: { words: FlashcardWord[] }) {
   function rate(quality: 0 | 1 | 2 | 3 | 4 | 5) {
     if (!word) return;
     startTransition(async () => {
-      await reviewWord(word.id, quality);
+      try {
+        await reviewWord(word.id, quality);
+      } catch {
+        // Still move on -- getting stuck on one card because of a network
+        // blip is worse than one review not being recorded, but say so.
+        toast.error("That review didn't save, but you can keep going.");
+      }
       setFlipped(false);
       setIndex((i) => i + 1);
     });
