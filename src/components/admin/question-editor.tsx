@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Loader2, Save, Sparkles, Trash2 } from "lucide-react";
+import { ArrowLeft, Loader2, Save, Sparkles, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
@@ -58,7 +59,15 @@ interface QuestionData {
   } | null;
 }
 
-export function QuestionEditor({ question, domains }: { question: QuestionData; domains: Domain[] }) {
+export function QuestionEditor({
+  question,
+  domains,
+  back,
+}: {
+  question: QuestionData;
+  domains: Domain[];
+  back: { href: string; label: string };
+}) {
   const router = useRouter();
   const [stem, setStem] = useState(question.stem);
   const [imageUrl, setImageUrl] = useState(question.imageUrl);
@@ -142,12 +151,20 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
         return;
       }
       toast.success("Question deleted.");
-      router.push("/admin/questions");
+      router.push(back.href);
     });
   }
 
   return (
     <div className="space-y-6">
+      <div>
+        <Link
+          href={back.href}
+          className="mb-2 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" /> {back.label}
+        </Link>
+      </div>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-semibold tracking-tight">Question Editor</h1>

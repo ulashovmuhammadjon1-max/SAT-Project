@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { AlertTriangle, UploadCloud } from "lucide-react";
+import { AlertTriangle, ArrowLeft, UploadCloud } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -48,6 +48,14 @@ export default async function AdminTestDetailPage({ params }: { params: { id: st
 
   return (
     <div className="space-y-6">
+      <div>
+        <Link
+          href="/admin/tests"
+          className="mb-2 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" /> Back to tests
+        </Link>
+      </div>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-semibold tracking-tight">{test.title}</h1>
