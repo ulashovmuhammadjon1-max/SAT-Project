@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,7 +33,11 @@ function WordRow({
 
   function remove() {
     startDelete(async () => {
-      await deletePersonalWord(word.id);
+      const result = await deletePersonalWord(word.id);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
       onDeleted();
     });
   }

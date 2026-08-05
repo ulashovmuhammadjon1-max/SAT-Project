@@ -55,10 +55,28 @@ export async function updatePassage(passageId: string, content: string) {
   revalidatePath("/admin/questions");
 }
 
-export async function deleteQuestion(questionId: string) {
+export interface DeleteQuestionResult {
+  error?: string;
+  success?: boolean;
+}
+
+export async function deleteQuestion(questionId: string): Promise<DeleteQuestionResult> {
   await requireAdmin();
-  await prisma.question.delete({ where: { id: questionId } });
+  try {
+    await prisma.question.delete({ where: { id: questionId } });
+  } catch (error) {
+    console.error("[admin] Failed to delete question", questionId, error);
+    // Response.question has no cascade, by design: deleting one question out
+    // of a module a student already took would leave that attempt's stored
+    // score counts stale (they aren't recomputed on delete), which is worse
+    // than just blocking. Unpublishing keeps it out of future tests without
+    // touching anything a student has already seen.
+    return {
+      error: "This question has already been answered by students, so it can't be deleted. Unpublish it instead to keep it out of future tests.",
+    };
+  }
   revalidatePath("/admin/questions");
+  return { success: true };
 }
 
 export async function saveExplanation(

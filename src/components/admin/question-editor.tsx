@@ -136,7 +136,12 @@ export function QuestionEditor({ question, domains }: { question: QuestionData; 
   function remove() {
     if (!confirm("Delete this question permanently?")) return;
     startDelete(async () => {
-      await deleteQuestion(question.id);
+      const result = await deleteQuestion(question.id);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success("Question deleted.");
       router.push("/admin/questions");
     });
   }

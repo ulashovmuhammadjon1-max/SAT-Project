@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { deleteTest } from "@/server/actions/admin/tests";
@@ -12,9 +13,19 @@ export function DeleteTestButton({ testId, title }: { testId: string; title: str
   const [isPending, startTransition] = useTransition();
 
   function remove() {
-    if (!confirm(`Delete "${title}" entirely, including every module and question in it? This can't be undone.`)) return;
+    if (
+      !confirm(
+        `Delete "${title}" entirely, including every module, question, and any student attempts on it? This can't be undone.`
+      )
+    )
+      return;
     startTransition(async () => {
-      await deleteTest(testId);
+      const result = await deleteTest(testId);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success(`"${title}" was deleted.`);
       router.refresh();
     });
   }

@@ -273,20 +273,29 @@ export function ExamShell({
   }
 
   async function handleEndModule() {
+    // The countdown timer below calls this unconditionally the instant it
+    // hits zero, with no awareness of a manual "End Module" click already in
+    // flight — guard here so that race can't submit the module twice.
+    if (isSubmitting) return;
     startSubmit(async () => {
-      await persist();
-      const result = await submitModule(attemptId, moduleAttemptId);
       try {
-        window.localStorage.removeItem(storageKey);
-      } catch {
-        // Non-fatal.
-      }
-      if (result.finished) {
-        router.push(`/review/${attemptId}`);
-      } else {
-        toast.success("Module submitted. Starting the next module.");
-        router.push(`/exam/${attemptId}`);
-        router.refresh();
+        await persist();
+        const result = await submitModule(attemptId, moduleAttemptId);
+        try {
+          window.localStorage.removeItem(storageKey);
+        } catch {
+          // Non-fatal.
+        }
+        if (result.finished) {
+          router.push(`/review/${attemptId}`);
+        } else {
+          toast.success("Module submitted. Starting the next module.");
+          router.push(`/exam/${attemptId}`);
+          router.refresh();
+        }
+      } catch (error) {
+        console.error("Failed to submit module", error);
+        toast.error("Couldn't submit the module — check your connection and try again.");
       }
     });
   }

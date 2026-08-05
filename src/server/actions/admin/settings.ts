@@ -15,34 +15,41 @@ export async function updateAdaptiveConfig(input: {
 }) {
   const admin = await requireAdmin();
 
-  if (input.isActive) {
-    await prisma.adaptiveConfig.updateMany({ data: { isActive: false } });
-  }
+  // Deactivating every other config and then writing this one used to be two
+  // separate statements — if the second one failed for any reason, every
+  // config would already be inactive with no way back short of a manual fix.
+  // A transaction makes the whole "make this the one active config" swap
+  // atomic: either both happen or neither does.
+  await prisma.$transaction(async (tx) => {
+    if (input.isActive) {
+      await tx.adaptiveConfig.updateMany({ data: { isActive: false } });
+    }
 
-  if (input.id) {
-    await prisma.adaptiveConfig.update({
-      where: { id: input.id },
-      data: {
-        name: input.name,
-        description: input.description,
-        rwThresholdPct: input.rwThresholdPct,
-        mathThresholdPct: input.mathThresholdPct,
-        isActive: input.isActive,
-        updatedById: admin.id,
-      },
-    });
-  } else {
-    await prisma.adaptiveConfig.create({
-      data: {
-        name: input.name,
-        description: input.description,
-        rwThresholdPct: input.rwThresholdPct,
-        mathThresholdPct: input.mathThresholdPct,
-        isActive: input.isActive,
-        updatedById: admin.id,
-      },
-    });
-  }
+    if (input.id) {
+      await tx.adaptiveConfig.update({
+        where: { id: input.id },
+        data: {
+          name: input.name,
+          description: input.description,
+          rwThresholdPct: input.rwThresholdPct,
+          mathThresholdPct: input.mathThresholdPct,
+          isActive: input.isActive,
+          updatedById: admin.id,
+        },
+      });
+    } else {
+      await tx.adaptiveConfig.create({
+        data: {
+          name: input.name,
+          description: input.description,
+          rwThresholdPct: input.rwThresholdPct,
+          mathThresholdPct: input.mathThresholdPct,
+          isActive: input.isActive,
+          updatedById: admin.id,
+        },
+      });
+    }
+  });
 
   revalidatePath("/admin/settings");
 }

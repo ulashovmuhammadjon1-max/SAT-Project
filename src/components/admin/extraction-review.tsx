@@ -15,6 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ImageUploadField } from "@/components/admin/image-upload-field";
 import { RichTextField } from "@/components/admin/rich-text-field";
 import { cn } from "@/lib/utils";
+import { isNextRedirectError } from "@/lib/next-redirect";
 import { publishTestUpload, publishVocabUpload, updateExtractedData } from "@/server/actions/admin/uploads";
 import type {
   ExtractedPassage,
@@ -266,23 +267,39 @@ function TestReview({
 
   function saveDraft() {
     startSave(async () => {
-      await updateExtractedData(jobId, { ...initial, questions, passages });
-      toast.success("Draft saved.");
+      try {
+        await updateExtractedData(jobId, { ...initial, questions, passages });
+        toast.success("Draft saved.");
+      } catch (error) {
+        toast.error(error instanceof Error ? error.message : "Couldn't save the draft.");
+      }
     });
   }
 
   function publish() {
     startPublish(async () => {
-      await updateExtractedData(jobId, { ...initial, questions, passages });
-      await publishTestUpload(uploadId, {
-        subject,
-        order: slot.order,
-        difficulty: slot.difficulty,
-        thresholdPct: thresholdPct.trim() ? Number(thresholdPct) : null,
-        targetTestId: targetTestId === "new" ? null : targetTestId,
-      });
-      toast.success(targetTestId === "new" ? "Published as a new test." : "Module added to the test.");
-      router.refresh();
+      try {
+        await updateExtractedData(jobId, { ...initial, questions, passages });
+        await publishTestUpload(uploadId, {
+          subject,
+          order: slot.order,
+          difficulty: slot.difficulty,
+          thresholdPct: thresholdPct.trim() ? Number(thresholdPct) : null,
+          targetTestId: targetTestId === "new" ? null : targetTestId,
+        });
+        toast.success(targetTestId === "new" ? "Published as a new test." : "Module added to the test.");
+        router.refresh();
+      } catch (error) {
+        // publishTestUpload redirects to the new test on success, which Next
+        // implements by throwing — that must propagate, not be swallowed as
+        // a failure toast (the mistake this whole fix exists to avoid).
+        if (isNextRedirectError(error)) throw error;
+        toast.error(
+          error instanceof Error
+            ? error.message
+            : "Couldn't publish this module. Your edits above are still here — fix the issue and try again."
+        );
+      }
     });
   }
 
@@ -592,17 +609,32 @@ function VocabReview({
 
   function saveDraft() {
     startSave(async () => {
-      await updateExtractedData(jobId, { ...initial, words });
-      toast.success("Draft saved.");
+      try {
+        await updateExtractedData(jobId, { ...initial, words });
+        toast.success("Draft saved.");
+      } catch (error) {
+        toast.error(error instanceof Error ? error.message : "Couldn't save the draft.");
+      }
     });
   }
 
   function publish() {
     startPublish(async () => {
-      await updateExtractedData(jobId, { ...initial, words });
-      await publishVocabUpload(uploadId);
-      toast.success("Vocabulary deck published.");
-      router.refresh();
+      try {
+        await updateExtractedData(jobId, { ...initial, words });
+        await publishVocabUpload(uploadId);
+        toast.success("Vocabulary deck published.");
+        router.refresh();
+      } catch (error) {
+        // publishVocabUpload redirects on success, which Next implements by
+        // throwing — that must propagate, not be swallowed as a failure toast.
+        if (isNextRedirectError(error)) throw error;
+        toast.error(
+          error instanceof Error
+            ? error.message
+            : "Couldn't publish this deck. Your edits above are still here — fix the issue and try again."
+        );
+      }
     });
   }
 

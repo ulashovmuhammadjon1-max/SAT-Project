@@ -70,12 +70,28 @@ export async function addPersonalWord(input: {
   return word;
 }
 
-export async function deletePersonalWord(wordId: string) {
+export interface DeletePersonalWordResult {
+  error?: string;
+  success?: boolean;
+}
+
+export async function deletePersonalWord(wordId: string): Promise<DeletePersonalWordResult> {
   const user = await requireUser();
-  const word = await prisma.vocabWord.findUniqueOrThrow({ where: { id: wordId } });
-  if (word.createdById !== user.id) throw new Error("You can only delete words you added yourself.");
-  await prisma.vocabWord.delete({ where: { id: wordId } });
+  const word = await prisma.vocabWord.findUnique({ where: { id: wordId } });
+  // A concurrent double-click (or an already-removed word) — treat as done
+  // rather than crashing, since the end state the user wanted is achieved.
+  if (!word) return { success: true };
+  if (word.createdById !== user.id) return { error: "You can only delete words you added yourself." };
+
+  try {
+    await prisma.vocabWord.delete({ where: { id: wordId } });
+  } catch (error) {
+    console.error("[vocab] Failed to delete personal word", wordId, error);
+    return { error: "Couldn't delete this word. Please try again." };
+  }
+
   revalidatePath("/vocabulary");
+  return { success: true };
 }
 
 export async function reviewWord(wordId: string, quality: 0 | 1 | 2 | 3 | 4 | 5) {

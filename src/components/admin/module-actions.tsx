@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { deleteModule } from "@/server/actions/admin/tests";
@@ -14,7 +15,12 @@ export function DeleteModuleButton({ moduleId }: { moduleId: string }) {
   function remove() {
     if (!confirm("Delete this module and all of its questions? This can't be undone.")) return;
     startTransition(async () => {
-      await deleteModule(moduleId);
+      const result = await deleteModule(moduleId);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success("Module deleted.");
       router.refresh();
     });
   }

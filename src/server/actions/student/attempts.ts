@@ -92,6 +92,32 @@ export async function pauseAttempt(attemptId: string) {
   revalidatePath("/dashboard");
 }
 
+/**
+ * Creates the ModuleAttempt for the next module, tolerating a concurrent
+ * duplicate submit. `submitModule` can legitimately be invoked twice for the
+ * same module — the countdown timer auto-submits unconditionally the instant
+ * it hits zero, with no awareness of a manual "End Module" click already in
+ * flight — and `ModuleAttempt` has a `@@unique([attemptId, moduleId])`
+ * constraint, so the loser of that race would otherwise crash with an
+ * uncaught P2002 in the middle of a timed exam. Whoever loses the race just
+ * adopts the winner's row instead of erroring.
+ */
+async function createOrGetModuleAttempt(attemptId: string, moduleId: string) {
+  const existing = await prisma.moduleAttempt.findUnique({
+    where: { attemptId_moduleId: { attemptId, moduleId } },
+  });
+  if (existing) return existing;
+
+  try {
+    return await prisma.moduleAttempt.create({ data: { attemptId, moduleId } });
+  } catch (error) {
+    const isUniqueViolation =
+      typeof error === "object" && error !== null && "code" in error && (error as { code: string }).code === "P2002";
+    if (!isUniqueViolation) throw error;
+    return prisma.moduleAttempt.findUniqueOrThrow({ where: { attemptId_moduleId: { attemptId, moduleId } } });
+  }
+}
+
 export async function submitModule(attemptId: string, moduleAttemptId: string) {
   const user = await requireUser();
 
@@ -151,9 +177,7 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
     const nextModule = modules.find((m) => m.subject === mod.subject && m.order === 2 && m.difficulty === difficulty);
 
     if (nextModule) {
-      const nextModuleAttempt = await prisma.moduleAttempt.create({
-        data: { attemptId, moduleId: nextModule.id },
-      });
+      const nextModuleAttempt = await createOrGetModuleAttempt(attemptId, nextModule.id);
       await prisma.attempt.update({
         where: { id: attemptId },
         data: {
@@ -174,9 +198,7 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
   );
 
   if (nextSubjectModule) {
-    const nextModuleAttempt = await prisma.moduleAttempt.create({
-      data: { attemptId, moduleId: nextSubjectModule.id },
-    });
+    const nextModuleAttempt = await createOrGetModuleAttempt(attemptId, nextSubjectModule.id);
     await prisma.attempt.update({ where: { id: attemptId }, data: { currentModuleId: nextSubjectModule.id } });
     return { nextModuleId: nextSubjectModule.id, nextModuleAttemptId: nextModuleAttempt.id, finished: false };
   }

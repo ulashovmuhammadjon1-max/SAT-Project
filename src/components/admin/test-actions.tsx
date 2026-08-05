@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, Loader2, Trash2, XCircle } from "lucide-react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { deleteTest, setTestStatus } from "@/server/actions/admin/tests";
@@ -20,9 +21,19 @@ export function TestActions({ testId, status }: { testId: string; status: string
   }
 
   function remove() {
-    if (!confirm("Delete this test entirely, including every module and question in it? This can't be undone.")) return;
+    if (
+      !confirm(
+        "Delete this test entirely, including every module, question, and any student attempts on it? This can't be undone."
+      )
+    )
+      return;
     startDelete(async () => {
-      await deleteTest(testId);
+      const result = await deleteTest(testId);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
+      toast.success("Test deleted.");
       router.push("/admin/tests");
     });
   }
