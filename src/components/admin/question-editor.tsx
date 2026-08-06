@@ -114,20 +114,24 @@ export function QuestionEditor({
 
   function save() {
     startSave(async () => {
-      await updateQuestion(question.id, { stem, imageUrl, domainId, skillId, difficulty, isPublished, choices });
-      if (question.passage) {
-        await updatePassage(question.passage.id, passageContent);
+      try {
+        await updateQuestion(question.id, { stem, imageUrl, domainId, skillId, difficulty, isPublished, choices });
+        if (question.passage) {
+          await updatePassage(question.passage.id, passageContent);
+        }
+        await saveExplanation(question.id, {
+          content: explContent,
+          whyCorrect: explWhyCorrect,
+          whyWrongJson: {},
+          commonMistakes: explMistakes,
+          tips: explTips,
+          relatedConcepts: explRelated,
+        });
+        toast.success("Question saved.");
+        router.refresh();
+      } catch (error) {
+        toast.error(error instanceof Error ? error.message : "Couldn't save the question.");
       }
-      await saveExplanation(question.id, {
-        content: explContent,
-        whyCorrect: explWhyCorrect,
-        whyWrongJson: {},
-        commonMistakes: explMistakes,
-        tips: explTips,
-        relatedConcepts: explRelated,
-      });
-      toast.success("Question saved.");
-      router.refresh();
     });
   }
 

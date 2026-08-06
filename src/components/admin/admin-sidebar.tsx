@@ -14,6 +14,7 @@ import {
   Megaphone,
   ScrollText,
   GraduationCap,
+  AlertTriangle,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -23,6 +24,7 @@ const NAV = [
   { href: "/admin/uploads", label: "PDF Ingestion", icon: UploadCloud },
   { href: "/admin/tests", label: "Tests & Modules", icon: BookOpenText },
   { href: "/admin/questions", label: "Question Bank", icon: ListChecks },
+  { href: "/admin/content-health", label: "Content Health", icon: AlertTriangle },
   { href: "/admin/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
   { href: "/admin/users", label: "Users", icon: Users },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },

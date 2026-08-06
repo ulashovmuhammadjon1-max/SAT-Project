@@ -20,6 +20,25 @@ export interface QuestionUpdateInput {
 export async function updateQuestion(questionId: string, input: QuestionUpdateInput) {
   await requireAdmin();
 
+  // A published MULTIPLE_CHOICE question needs exactly 4 real choices with
+  // one marked correct, or students hit an unanswerable question -- same
+  // hard-block rule enforced at initial PDF-publish time (uploads.ts), but
+  // this is the only guard for a question edited after that point.
+  if (input.isPublished) {
+    const existing = await prisma.question.findUnique({ where: { id: questionId }, select: { type: true } });
+    if (existing?.type === "MULTIPLE_CHOICE") {
+      const invalid =
+        input.choices.length !== 4 ||
+        input.choices.some((c) => !c.content.trim()) ||
+        input.choices.filter((c) => c.isCorrect).length !== 1;
+      if (invalid) {
+        throw new Error(
+          "This question needs exactly 4 choices, each with content, and one marked correct before it can be published."
+        );
+      }
+    }
+  }
+
   await prisma.$transaction(async (tx) => {
     await tx.question.update({
       where: { id: questionId },

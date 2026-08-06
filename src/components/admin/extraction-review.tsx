@@ -641,11 +641,40 @@ const QuestionCard = memo(function QuestionCard({
   // a field most PDFs don't even include.
   const [explanationOpen, setExplanationOpen] = useState(!!q.explanation?.trim());
 
+  // A MULTIPLE_CHOICE question that publishes without exactly 4 real
+  // choices and one marked correct is unanswerable for a student -- this
+  // is checked here so the admin sees it before hitting Publish, where the
+  // same rule is enforced server-side as a hard block (uploads.ts).
+  const hasBadChoices =
+    q.type === "MULTIPLE_CHOICE" &&
+    (q.choices.length !== 4 ||
+      q.choices.some((c) => !c.content.trim()) ||
+      q.choices.filter((c) => c.isCorrect).length !== 1);
+  // hasImage is only a guess from extraction (it can be a false positive),
+  // so this is a warning the admin can judge and dismiss by attaching an
+  // image below -- never a hard block.
+  const needsDiagram = q.hasImage && !q.imageUrl;
+
   return (
-    <Card className={cn(q.confidence < CONFIDENCE_PUBLISH_THRESHOLD && "border-warning/50")}>
+    <Card
+      className={cn(
+        (q.confidence < CONFIDENCE_PUBLISH_THRESHOLD || hasBadChoices) && "border-warning/50",
+        hasBadChoices && "border-destructive/60"
+      )}
+    >
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
         <CardTitle className="text-sm font-semibold text-muted-foreground">Question {q.number}</CardTitle>
         <div className="flex items-center gap-2">
+          {hasBadChoices && (
+            <Badge variant="destructive">
+              <AlertTriangle className="h-3.5 w-3.5" /> Missing choices
+            </Badge>
+          )}
+          {needsDiagram && (
+            <Badge variant="warning">
+              <AlertTriangle className="h-3.5 w-3.5" /> Needs diagram
+            </Badge>
+          )}
           <ConfidenceBadge value={q.confidence} />
           <Button variant="ghost" size="icon" onClick={() => onRemoveQuestion(qIndex)}>
             <Trash2 className="h-4 w-4" />
@@ -659,6 +688,12 @@ const QuestionCard = memo(function QuestionCard({
           rows={3}
           className="font-medium"
         />
+        {needsDiagram && (
+          <p className="rounded-lg border border-warning/50 bg-warning/10 px-3 py-2 text-xs text-warning-foreground">
+            This question looks like it references a figure, graph, or table that wasn&apos;t captured as text.
+            Attach the diagram image below, or dismiss this if it doesn&apos;t actually need one.
+          </p>
+        )}
         <ImageUploadField imageUrl={q.imageUrl} onChange={(url) => onUpdateQuestion(qIndex, { imageUrl: url })} />
         <div className="grid gap-2 sm:grid-cols-2">
           {q.choices.map((choice, cIndex) => (

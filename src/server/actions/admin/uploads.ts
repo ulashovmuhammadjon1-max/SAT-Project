@@ -196,6 +196,28 @@ export async function publishTestUpload(uploadId: string, options: PublishTestOp
     }
   }
 
+  // A MULTIPLE_CHOICE question that publishes with anything other than
+  // exactly 4 real choices (extraction sometimes fails to parse all four
+  // out of messy PDF text) is unanswerable for a student -- this is a hard
+  // data-integrity defect, not a judgment call, so it blocks publish
+  // entirely rather than just warning, same as the domain/subtopic gate
+  // above. Missing diagrams are a judgment call (the "needs image" guess
+  // can be a false positive) so those only get a warning badge in the
+  // review UI, not a hard block here.
+  const badChoiceQuestions = data.questions.filter(
+    (q) =>
+      q.type === "MULTIPLE_CHOICE" &&
+      (q.choices.length !== 4 ||
+        q.choices.some((c) => !c.content.trim()) ||
+        q.choices.filter((c) => c.isCorrect).length !== 1)
+  );
+  if (badChoiceQuestions.length > 0) {
+    const numbers = badChoiceQuestions.map((q) => q.number).join(", ");
+    throw new Error(
+      `Question${badChoiceQuestions.length === 1 ? "" : "s"} ${numbers} ${badChoiceQuestions.length === 1 ? "doesn't" : "don't"} have exactly 4 valid choices with one marked correct. Fix ${badChoiceQuestions.length === 1 ? "it" : "them"} in the review screen before publishing.`
+    );
+  }
+
   const testId = await prisma.$transaction(async (tx) => {
     let test;
     if (targetTestId) {
