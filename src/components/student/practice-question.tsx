@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { MathContent } from "@/components/shared/math-content";
 import { cn } from "@/lib/utils";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
 
@@ -71,16 +72,15 @@ export function PracticeQuestion({
       <div className={cn("grid gap-4", question.passage && "lg:grid-cols-2")}>
         {question.passage && (
           <Card>
-            <CardContent
-              className="p-5 text-sm leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: question.passage.content }}
-            />
+            <CardContent className="p-5 text-sm leading-relaxed">
+              <MathContent html={question.passage.content} />
+            </CardContent>
           </Card>
         )}
 
         <Card>
           <CardContent className="space-y-4 p-5">
-            <div className="text-[15px] leading-relaxed" dangerouslySetInnerHTML={{ __html: question.stem }} />
+            <MathContent html={question.stem} className="block text-[15px] leading-relaxed" />
 
             {question.type === "MULTIPLE_CHOICE" ? (
               <div className="space-y-2">
@@ -102,7 +102,7 @@ export function PracticeQuestion({
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-semibold">
                         {choice.label}
                       </span>
-                      <span className="flex-1">{choice.content}</span>
+                      <MathContent html={choice.content} className="flex-1" />
                       {showResult && choice.isCorrect && <Check className="h-4 w-4 shrink-0 text-success" />}
                       {showResult && isSelected && !choice.isCorrect && <X className="h-4 w-4 shrink-0 text-destructive" />}
                     </button>
@@ -144,7 +144,7 @@ export function PracticeQuestion({
         <Card>
           <CardContent className="space-y-3 p-5 text-sm">
             <h3 className="font-display text-base font-semibold">Explanation</h3>
-            <p>{question.explanation.content}</p>
+            <MathContent html={question.explanation.content} className="block" />
             {question.explanation.tips && <p className="text-muted-foreground">Tip: {question.explanation.tips}</p>}
           </CardContent>
         </Card>

@@ -174,7 +174,22 @@ with newlines collapses into one run-on block in a browser. When the reading mat
 bulleted research notes, emit real markup: an intro line as its own "<p>", each note as its own
 "<li>" inside a single "<ul>". When it's a paired passage (a "Text 1" / "Text 2" comparison), label
 each with its own "<p><strong>Text 1</strong></p>" before that text's paragraph(s). Otherwise use
-plain "<p>" paragraphs — one per distinct paragraph in the source, not one per wrapped line. Guess
+plain "<p>" paragraphs — one per distinct paragraph in the source, not one per wrapped line.
+
+Math notation: never write math as plain-text approximations like "x^2", "a/b", "sqrt(x)", or
+"3.14...". Bluebook typesets math properly — stacked fractions, true superscript/subscript
+exponents, radical signs — and "stem"/"choices[].content"/"problem" must match that. Wrap every
+math expression in LaTeX delimiters: \\( ... \\) for anything inline (mixed into a sentence, e.g.
+"the value of \\(x^2 + 3x\\)"), \\[ ... \\] for a standalone displayed equation on its own line
+(e.g. a system of equations block). Inside the delimiters use standard LaTeX: \\frac{a}{b} for
+fractions (never a bare "/"), ^{...} for exponents (x^{2}, not x^2 with no braces — braces matter
+whenever the exponent is more than one character), _{...} for subscripts, \\sqrt{...} or
+\\sqrt[n]{...} for radicals, \\pi, \\theta, \\times, \\cdot, \\leq, \\geq, \\neq as needed. This
+applies to every displayed field: question "stem" (this is where the whole problem goes for
+self-contained Math questions too) and every entry in "choices[].content". The one exception is
+"correctAnswerFreeResponse" -- that value is compared directly against what a student types into a
+grid-in box, so it must stay plain exam-entry format (e.g. "3/4" or "-2.5", never LaTeX). A question with
+no math in it at all needs no delimiters — don't wrap plain prose. Guess
 the College Board domain/skill category and difficulty if not explicit, and flag whether the
 question references an image or table. Set a confidence score (0-1)
 per question reflecting how certain you are the extraction is complete and correctly structured —
@@ -211,7 +226,10 @@ certainty.`,
       "sat_explanation",
       `You write detailed, encouraging explanations for Digital SAT practice questions. Explain why
 the correct answer is right, why each incorrect choice is wrong, common mistakes students make on
-this type of question, a study tip, and related concepts. Be specific to the question, not generic.`,
+this type of question, a study tip, and related concepts. Be specific to the question, not generic.
+Any math you write (equations, fractions, exponents) must use LaTeX delimiters -- \\( ... \\) inline,
+\\[ ... \\] for a standalone equation -- with \\frac{a}{b} for fractions and ^{...} for exponents,
+never plain-text "a/b" or "x^2".`,
       JSON.stringify(input)
     );
   }

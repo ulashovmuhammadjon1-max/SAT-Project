@@ -24,6 +24,7 @@ import {
 } from "@/server/actions/admin/questions";
 import { ImageUploadField } from "@/components/admin/image-upload-field";
 import { RichTextField } from "@/components/admin/rich-text-field";
+import { MathContent } from "@/components/shared/math-content";
 
 interface Choice {
   id?: string;
@@ -339,15 +340,12 @@ export function QuestionEditor({
             </CardHeader>
             <CardContent className="space-y-4 p-6">
               {question.passage && (
-                <div
-                  className="rounded-lg bg-secondary p-4 text-sm leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: passageContent }}
+                <MathContent
+                  html={passageContent}
+                  className="block rounded-lg bg-secondary p-4 text-sm leading-relaxed"
                 />
               )}
-              <div
-                className="font-medium leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: stem || "Question stem preview…" }}
-              />
+              <MathContent html={stem || "Question stem preview…"} className="block font-medium leading-relaxed" />
               {imageUrl && (
                 // eslint-disable-next-line @next/next/no-img-element -- proxy URL, not statically optimizable
                 <img src={imageUrl} alt="" className="max-h-64 rounded-lg border border-border" />
@@ -364,7 +362,7 @@ export function QuestionEditor({
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-semibold">
                       {choice.label}
                     </span>
-                    <span dangerouslySetInnerHTML={{ __html: choice.content || `Choice ${choice.label}` }} />
+                    <MathContent html={choice.content || `Choice ${choice.label}`} />
                   </div>
                 ))}
               </div>

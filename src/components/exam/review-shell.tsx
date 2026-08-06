@@ -7,6 +7,7 @@ import { Bookmark, Check, Clock, Flag, RotateCcw, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { MathContent } from "@/components/shared/math-content";
 import { cn, formatDuration } from "@/lib/utils";
 import { toPassageHtml } from "@/lib/exam/passage-html";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
@@ -177,14 +178,14 @@ function ReviewDetail({ item }: { item: ReviewItem }) {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={item.imageUrl} alt="Question figure" className="max-w-full rounded-lg border border-border" />
               )}
-              {item.passage && <div dangerouslySetInnerHTML={{ __html: toPassageHtml(item.passage.content) }} />}
+              {item.passage && <MathContent html={toPassageHtml(item.passage.content)} className="block" />}
             </CardContent>
           </Card>
         )}
 
         <Card>
           <CardContent className="space-y-4 p-5">
-            <div className="text-[15px] leading-relaxed" dangerouslySetInnerHTML={{ __html: item.stem }} />
+            <MathContent html={item.stem} className="block text-[15px] leading-relaxed" />
 
             {item.type === "MULTIPLE_CHOICE" ? (
               <div className="space-y-2">
@@ -202,7 +203,7 @@ function ReviewDetail({ item }: { item: ReviewItem }) {
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-current text-xs font-semibold">
                         {choice.label}
                       </span>
-                      <span className="flex-1">{choice.content}</span>
+                      <MathContent html={choice.content} className="flex-1" />
                       {choice.isCorrect && <Badge variant="success">Correct answer</Badge>}
                       {isSelected && !choice.isCorrect && <Badge variant="destructive">Your answer</Badge>}
                     </div>

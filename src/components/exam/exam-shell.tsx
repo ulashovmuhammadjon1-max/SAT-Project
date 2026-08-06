@@ -43,6 +43,7 @@ import { HighlightablePassage } from "@/components/exam/highlightable-passage";
 import { LineReader } from "@/components/exam/line-reader";
 import { QuestionGrid, QuestionLegend, QuestionPalette } from "@/components/exam/question-palette";
 import { ReferenceSheetDialog } from "@/components/exam/reference-sheet-dialog";
+import { MathContent } from "@/components/shared/math-content";
 import { cn } from "@/lib/utils";
 import type { Annotation } from "@/lib/exam/annotations";
 import { autosaveResponses, submitModule } from "@/server/actions/student/attempts";
@@ -984,9 +985,9 @@ function QuestionBody({
 
       <div className="min-h-0 flex-1 overflow-y-auto exam-scroll px-6 pb-14 pt-6 lg:px-10">
         <div className={innerClassName}>
-          <div
-            className="exam-stem text-[16px] leading-[1.6] text-exam-text"
-            dangerouslySetInnerHTML={{ __html: question.stem }}
+          <MathContent
+            html={question.stem}
+            className="exam-stem block text-[16px] leading-[1.6] text-exam-text"
           />
 
           {showImage && question.imageUrl && (
@@ -1027,7 +1028,10 @@ function QuestionBody({
                       >
                         {choice.label}
                       </span>
-                      <span className={cn("text-exam-text", eliminated && "line-through")}>{choice.content}</span>
+                      <MathContent
+                        html={choice.content}
+                        className={cn("text-exam-text", eliminated && "line-through")}
+                      />
                     </button>
 
                     {crossOutEnabled && (

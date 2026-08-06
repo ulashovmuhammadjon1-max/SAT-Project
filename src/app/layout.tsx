@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lexend } from "next/font/google";
 import { Providers } from "@/components/shared/providers";
 import "./globals.css";
+import "katex/dist/katex.min.css";
 
 const sans = Inter({
   subsets: ["latin"],

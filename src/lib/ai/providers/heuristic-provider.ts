@@ -96,6 +96,27 @@ function extractChoices(
   return { choices, stem, explanation };
 }
 
+// Best-effort, conservative plain-text-math -> LaTeX conversion for the
+// no-API-key fallback path. Only touches patterns that are unambiguous out
+// of context (an exponent right after a variable/number, an explicit
+// "sqrt(...)" call) — it deliberately leaves bare "/" alone, since a slash
+// in freeform extracted text is just as likely to be a date or a ratio in
+// prose as an actual fraction, and a wrong guess there is worse than no
+// conversion. Extraction confidence already accounts for this path needing
+// a human pass, so this is a partial improvement, not a full fix.
+const EXPONENT = /([A-Za-z0-9)\]])\^(\(-?[^()]+\)|-?\d+(?:\.\d+)?|[A-Za-z])/g;
+const SQRT_CALL = /\bsqrt\(([^()]+)\)/gi;
+
+function mathify(text: string): string {
+  if (!text) return text;
+  let out = text.replace(SQRT_CALL, (_m, radicand: string) => `\\(\\sqrt{${radicand.trim()}}\\)`);
+  out = out.replace(EXPONENT, (_m, base: string, exp: string) => {
+    const cleanExp = exp.startsWith("(") && exp.endsWith(")") ? exp.slice(1, -1) : exp;
+    return `\\(${base}^{${cleanExp}}\\)`;
+  });
+  return out;
+}
+
 function guessDifficulty(stem: string): "EASY" | "MEDIUM" | "HARD" {
   const words = stem.split(/\s+/).length;
   if (words < 25) return "EASY";
@@ -117,7 +138,10 @@ export class HeuristicExtractionProvider implements AIExtractionProvider {
     const passages: ExtractedPassage[] = [];
 
     const questions: ExtractedQuestion[] = blocks.map(({ number, block }) => {
-      const { choices, stem: rawStem, explanation } = extractChoices(block);
+      const extracted = extractChoices(block);
+      const choices = extracted.choices.map((c) => ({ ...c, content: mathify(c.content) }));
+      const rawStem = mathify(extracted.stem);
+      const explanation = extracted.explanation ? mathify(extracted.explanation) : extracted.explanation;
       const hasFourChoices = choices.length === 4;
       const hasKnownAnswer = choices.some((c) => c.isCorrect);
       const hasImageHint = /\b(figure|graph|diagram|chart|see image)\b/i.test(block);
