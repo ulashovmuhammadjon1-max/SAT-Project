@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { TestActions } from "@/components/admin/test-actions";
 import { EditTestDialog } from "@/components/admin/edit-test-dialog";
 import { DeleteModuleButton } from "@/components/admin/module-actions";
+import { QuestionOrderButtons } from "@/components/admin/question-order-buttons";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
@@ -135,20 +136,26 @@ export default async function AdminTestDetailPage({ params }: { params: { id: st
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              {mod.questions.map((q) => (
-                <Link
+              {mod.questions.map((q, i) => (
+                <div
                   key={q.id}
-                  href={`/admin/questions/${q.id}`}
-                  className="flex items-center justify-between rounded-lg border border-border p-3 text-sm hover:bg-accent"
+                  className="flex items-center gap-2 rounded-lg border border-border p-3 text-sm hover:bg-accent"
                 >
-                  <span className="line-clamp-1 pr-4">
-                    {q.order}. {q.stem.replace(/<[^>]+>/g, "")}
-                  </span>
-                  <span className="flex shrink-0 items-center gap-2">
-                    <Badge variant="outline">{q.difficulty}</Badge>
-                    {!q.isPublished && <Badge variant="warning">Draft</Badge>}
-                  </span>
-                </Link>
+                  <QuestionOrderButtons
+                    questionId={q.id}
+                    isFirst={i === 0}
+                    isLast={i === mod.questions.length - 1}
+                  />
+                  <Link href={`/admin/questions/${q.id}`} className="flex flex-1 items-center justify-between gap-4">
+                    <span className="line-clamp-1 pr-4">
+                      {i + 1}. {q.stem.replace(/<[^>]+>/g, "")}
+                    </span>
+                    <span className="flex shrink-0 items-center gap-2">
+                      <Badge variant="outline">{q.difficulty}</Badge>
+                      {!q.isPublished && <Badge variant="warning">Draft</Badge>}
+                    </span>
+                  </Link>
+                </div>
               ))}
               {mod.questions.length === 0 && (
                 <p className="text-sm text-muted-foreground">No questions in this module yet.</p>

@@ -49,6 +49,57 @@ export async function updateQuestion(questionId: string, input: QuestionUpdateIn
   revalidatePath("/admin/questions");
 }
 
+export interface SwapQuestionOrderResult {
+  error?: string;
+  success?: boolean;
+}
+
+/**
+ * Swaps a question with its neighbor (by current position within the module,
+ * not by the raw `order` value) one step up or down. Works even if `order`
+ * values have gaps or duplicates, since it swaps whatever values the two
+ * neighboring rows already hold.
+ */
+export async function swapQuestionOrder(
+  questionId: string,
+  direction: "up" | "down"
+): Promise<SwapQuestionOrderResult> {
+  await requireAdmin();
+
+  const question = await prisma.question.findUnique({ where: { id: questionId } });
+  if (!question || !question.moduleId) return { error: "Question not found." };
+
+  const siblings = await prisma.question.findMany({
+    where: { moduleId: question.moduleId },
+    orderBy: [{ order: "asc" }, { id: "asc" }],
+    select: { id: true, order: true },
+  });
+
+  const index = siblings.findIndex((s) => s.id === questionId);
+  if (index === -1) return { error: "Question not found in its module." };
+
+  const neighborIndex = direction === "up" ? index - 1 : index + 1;
+  if (neighborIndex < 0 || neighborIndex >= siblings.length) {
+    return { error: direction === "up" ? "Already the first question." : "Already the last question." };
+  }
+
+  // Re-sequence every sibling to a clean 1..N order based on current
+  // position, with the two target rows swapped -- rather than just
+  // exchanging the two `order` values directly, which would be a no-op if
+  // extraction ever produced gapped or duplicate order numbers.
+  const reordered = [...siblings];
+  [reordered[index], reordered[neighborIndex]] = [reordered[neighborIndex], reordered[index]];
+
+  await prisma.$transaction(
+    reordered.map((s, i) => prisma.question.update({ where: { id: s.id }, data: { order: i + 1 } }))
+  );
+
+  const mod = await prisma.module.findUnique({ where: { id: question.moduleId }, select: { testId: true } });
+  if (mod) revalidatePath(`/admin/tests/${mod.testId}`);
+
+  return { success: true };
+}
+
 export async function updatePassage(passageId: string, content: string) {
   await requireAdmin();
   await prisma.passage.update({ where: { id: passageId }, data: { content } });

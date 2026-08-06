@@ -182,6 +182,20 @@ export async function publishTestUpload(uploadId: string, options: PublishTestOp
 
   const data = job.extractedData as unknown as TestExtractionResult;
 
+  // Question Bank uploads go straight into student-facing standalone
+  // practice with no surrounding test/module to catch a wrong AI guess
+  // later, so every question must have an admin-confirmed domain and
+  // subtopic before it can publish -- enforced here too, not just in the
+  // review UI, since this action can be reached directly.
+  if (upload.category === "QUESTION_BANK") {
+    const missing = data.questions.filter((q) => !q.domainId || !q.skillId).length;
+    if (missing > 0) {
+      throw new Error(
+        `${missing} question${missing === 1 ? "" : "s"} still need a domain and subtopic chosen before publishing to the Question Bank.`
+      );
+    }
+  }
+
   const testId = await prisma.$transaction(async (tx) => {
     let test;
     if (targetTestId) {

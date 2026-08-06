@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -128,14 +129,22 @@ function guessSkillId(domain: DomainOption | undefined, guess?: string | null) {
 // Only fills in a guessed domain/skill when the question doesn't already carry
 // an admin-confirmed one (e.g. loaded from a previously saved draft) or when
 // the previous value belongs to a domain outside the newly selected subject.
+//
+// Question Bank uploads skip this guessing entirely (see `requireExplicitTaxonomy`
+// below): those questions go straight into student-facing practice, standalone,
+// with no test/module context to catch a wrong guess later, so the admin must
+// pick the domain, subtopic, and difficulty explicitly rather than have an
+// AI guess silently stand in for a real decision.
 function withTaxonomyDefaults(
   questions: ExtractedQuestion[],
   domains: DomainOption[],
-  subject: Subject
+  subject: Subject,
+  guess: boolean
 ): ExtractedQuestion[] {
   const subjectDomainIds = new Set(domains.filter((d) => d.subject === subject).map((d) => d.id));
   return questions.map((q) => {
     if (q.domainId && subjectDomainIds.has(q.domainId) && q.skillId) return q;
+    if (!guess) return { ...q, domainId: null, skillId: null };
     const domainId = guessDomainId(domains, subject, q.domainGuess);
     const skillId = guessSkillId(
       domains.find((d) => d.id === domainId),
@@ -177,9 +186,10 @@ function TestReview({
   initialModuleSlot?: string;
 }) {
   const router = useRouter();
+  const requireExplicitTaxonomy = category === "QUESTION_BANK";
   const [subject, setSubject] = useState<Subject>(initialSubject ?? "READING_WRITING");
   const [questions, setQuestions] = useState<ExtractedQuestion[]>(() =>
-    withTaxonomyDefaults(initial.questions, domains, initialSubject ?? "READING_WRITING")
+    withTaxonomyDefaults(initial.questions, domains, initialSubject ?? "READING_WRITING", !requireExplicitTaxonomy)
   );
   const [passages, setPassages] = useState<ExtractedPassage[]>(initial.passages);
   const [moduleSlot, setModuleSlot] = useState(initialModuleSlot ?? "1");
@@ -187,6 +197,7 @@ function TestReview({
   const [targetTestId, setTargetTestId] = useState(initialTargetTestId ?? "new");
   const [isSaving, startSave] = useTransition();
   const [isPublishing, startPublish] = useTransition();
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const isFullTest = category === "FULL_TEST";
   const slot = MODULE_SLOTS.find((s) => s.value === moduleSlot) ?? MODULE_SLOTS[0];
@@ -204,6 +215,28 @@ function TestReview({
     () => questions.filter((q) => q.confidence < CONFIDENCE_PUBLISH_THRESHOLD).length,
     [questions]
   );
+
+  const missingTaxonomyCount = useMemo(
+    () => (requireExplicitTaxonomy ? questions.filter((q) => !q.domainId || !q.skillId).length : 0),
+    [questions, requireExplicitTaxonomy]
+  );
+
+  // Domain -> subtopic -> difficulty breakdown shown in the pre-publish
+  // confirmation dialog for Question Bank uploads, so the admin sees exactly
+  // what they're about to commit before it becomes practiceable.
+  const taxonomySummary = useMemo(() => {
+    if (!requireExplicitTaxonomy) return [];
+    const rows = new Map<string, { domain: string; skill: string; difficulty: string; count: number }>();
+    for (const q of questions) {
+      const domain = subjectDomains.find((d) => d.id === q.domainId);
+      const skill = domain?.skills.find((s) => s.id === q.skillId);
+      const key = `${domain?.name ?? "?"}__${skill?.name ?? "?"}__${q.difficultyGuess}`;
+      const row = rows.get(key);
+      if (row) row.count += 1;
+      else rows.set(key, { domain: domain?.name ?? "?", skill: skill?.name ?? "?", difficulty: q.difficultyGuess, count: 1 });
+    }
+    return Array.from(rows.values());
+  }, [questions, subjectDomains, requireExplicitTaxonomy]);
 
   // One continuous review order: each passage appears once, immediately
   // before the first question that references it, so a passage and its
@@ -232,7 +265,7 @@ function TestReview({
 
   function changeSubject(next: Subject) {
     setSubject(next);
-    setQuestions((prev) => withTaxonomyDefaults(prev, domains, next));
+    setQuestions((prev) => withTaxonomyDefaults(prev, domains, next, !requireExplicitTaxonomy));
     setTargetTestId("new");
   }
 
@@ -320,7 +353,13 @@ function TestReview({
           thresholdPct: thresholdPct.trim() ? Number(thresholdPct) : null,
           targetTestId: targetTestId === "new" ? null : targetTestId,
         });
-        toast.success(targetTestId === "new" ? "Published as a new test." : "Module added to the test.");
+        toast.success(
+          requireExplicitTaxonomy
+            ? "Published to the Question Bank."
+            : targetTestId === "new"
+              ? "Published as a new test."
+              : "Module added to the test."
+        );
         router.refresh();
       } catch (error) {
         // publishTestUpload redirects to the new test on success, which Next
@@ -408,14 +447,84 @@ function TestReview({
                 {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
                 Save draft
               </Button>
-              <Button onClick={publish} disabled={isPublishing || questions.length === 0}>
+              <Button
+                onClick={requireExplicitTaxonomy ? () => setConfirmOpen(true) : publish}
+                disabled={isPublishing || questions.length === 0 || (requireExplicitTaxonomy && missingTaxonomyCount > 0)}
+                title={
+                  requireExplicitTaxonomy && missingTaxonomyCount > 0
+                    ? `${missingTaxonomyCount} question${missingTaxonomyCount === 1 ? "" : "s"} still need a domain, subtopic, and difficulty`
+                    : undefined
+                }
+              >
                 {isPublishing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
-                {targetTestId === "new" ? "Publish as new test" : "Add to test"}
+                {requireExplicitTaxonomy
+                  ? "Publish to Question Bank"
+                  : targetTestId === "new"
+                    ? "Publish as new test"
+                    : "Add to test"}
               </Button>
             </div>
           )}
         </CardContent>
       </Card>
+
+      {requireExplicitTaxonomy && missingTaxonomyCount > 0 && (
+        <p className="-mt-3 flex items-center gap-1.5 text-xs text-warning-foreground">
+          <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+          {missingTaxonomyCount} question{missingTaxonomyCount === 1 ? "" : "s"} below still need a domain and
+          subtopic chosen before this can go to the Question Bank — pick one from each question&apos;s Domain and
+          Skill dropdowns.
+        </p>
+      )}
+
+      {requireExplicitTaxonomy && (
+        <Dialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Confirm before publishing to the Question Bank</DialogTitle>
+              <DialogDescription>
+                These {questions.length} question{questions.length === 1 ? "" : "s"} will become individually
+                practiceable by students immediately. Double-check the domain, subtopic, and difficulty breakdown
+                below.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="max-h-80 space-y-1.5 overflow-y-auto">
+              {taxonomySummary.map((row, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between rounded-md border border-border px-3 py-2 text-sm"
+                >
+                  <span>
+                    <span className="font-medium">{row.domain}</span>
+                    <span className="text-muted-foreground"> · {row.skill}</span>
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Badge variant="outline">{row.difficulty}</Badge>
+                    <span className="text-xs text-muted-foreground">
+                      {row.count} question{row.count === 1 ? "" : "s"}
+                    </span>
+                  </span>
+                </div>
+              ))}
+            </div>
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setConfirmOpen(false)}>
+                Go back and edit
+              </Button>
+              <Button
+                onClick={() => {
+                  setConfirmOpen(false);
+                  publish();
+                }}
+                disabled={isPublishing}
+              >
+                {isPublishing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
+                Confirm & publish
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      )}
 
       {isFullTest && slot.order === 1 && (
         <p className="-mt-3 text-xs text-muted-foreground">
