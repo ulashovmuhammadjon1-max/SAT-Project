@@ -27,6 +27,13 @@ const DEFAULT_HEIGHT = 480;
 const MIN_WIDTH = 320;
 const MIN_HEIGHT = 340;
 
+// Desmos now requires an apiKey query param on every request — omitting it
+// returns a 403 and the calculator never loads. This is Desmos's public demo
+// key (fine for prototyping); swap in a real key via NEXT_PUBLIC_DESMOS_API_KEY
+// once one is registered at desmos.com/api, since the demo key isn't licensed
+// for production/commercial use.
+const DESMOS_API_KEY = process.env.NEXT_PUBLIC_DESMOS_API_KEY || "dcb31709b452b1cf9dc26972add0fda6";
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
@@ -48,7 +55,14 @@ export function CalculatorPanel({ onClose }: { onClose: () => void }) {
     let cancelled = false;
 
     function mount() {
-      if (cancelled || !mountRef.current || !window.Desmos) return;
+      if (cancelled || !mountRef.current) return;
+      if (!window.Desmos) {
+        // The script tag itself can "load" even when Desmos responds with an
+        // error body (e.g. a rejected/missing apiKey) rather than real JS, so
+        // window.Desmos never gets defined — treat that the same as a load failure.
+        setFailed(true);
+        return;
+      }
       mountRef.current.innerHTML = "";
       const factory = mode === "graphing" ? window.Desmos.GraphingCalculator : window.Desmos.ScientificCalculator;
       if (!factory) return;
@@ -62,7 +76,7 @@ export function CalculatorPanel({ onClose }: { onClose: () => void }) {
       mount();
     } else {
       const script = document.createElement("script");
-      script.src = "https://www.desmos.com/api/v1.9/calculator.js";
+      script.src = `https://www.desmos.com/api/v1.9/calculator.js?apiKey=${DESMOS_API_KEY}`;
       script.async = true;
       script.onload = mount;
       script.onerror = () => !cancelled && setFailed(true);
