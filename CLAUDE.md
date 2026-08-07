@@ -137,6 +137,34 @@ transformation — both a Blob path (`/api/images/{blobPathname}`) and a raw
 base64 data URIs throughout (inserted without `BLOB_READ_WRITE_TOKEN` access) — either is
 fine, but don't mix a broken/relative path in.
 
+### `mathify.mjs` — the plain-text-to-LaTeX converter has two known fixed bugs
+Located at `scratchpad/neon-check/mathify.mjs` in this session's scratchpad (not checked into
+the repo — it's a build-time content tool, not app code). Two real rendering bugs were found
+live in **both** Test 1 and Test 2 and fixed in the converter itself:
+- **The literal word "pi" never became the `π` glyph/`\pi`.** `\bpi\b` doesn't work as the
+  boundary check — a digit and a letter are both `\w`, so "3pi" has no `\b` between "3" and
+  "p" and the replacement silently no-ops. Fixed with a letter-specific lookaround:
+  `(?<![A-Za-z])pi(?![A-Za-z])`. Any future text-processing step that needs to treat "pi" as a
+  standalone math token must use this same lookaround, not `\b`.
+- **Answer choices only got KaTeX-wrapped when they contained a fraction/exponent/inequality/
+  sqrt.** A plain sibling choice like `x - 3` stayed unwrapped, plain-text, non-italic, sitting
+  next to a KaTeX-italicized `x^2 - 3` in the same 4-choice list — individually correct, but
+  visually inconsistent. Fixed by widening the whole-string-wrap trigger to any digit/operator/
+  π (not just `^ / ≤ ≥ ≠ sqrt √`), while still requiring `looksLikePureMath()` to pass so a
+  short plain-English choice like "One"/"Two"/"Zero" (which contains no digit or operator)
+  never gets sent through math mode by mistake.
+
+**If you ever need to re-fix rendered Math content after it's already live: do NOT regenerate
+stems from the original source JSON/pool.** That source is a point-in-time snapshot from
+before insertion — it does not reflect manual post-processing fixes (e.g. `<table>` HTML for
+data tables, `<br/><br/>` line breaks between stacked equations) that get applied directly to
+the live DB afterward and never get written back to the source file. Regenerating a stem from
+that stale source silently destroys those fixes (this almost happened while fixing the "pi"
+bug above — caught by diffing before applying, not by looking at the source). Instead, patch
+the **current live DB value** directly and narrowly: choices are short and safe to reprocess
+in place; stems are not — touch only the specific substring that needs fixing (e.g. a plain
+string replace) and leave the rest of the stem's HTML untouched.
+
 ### Known gap in Test 1 — do not treat as the template
 Test 1 currently has **zero** `Explanation` rows (0 of 147 questions). This is a real content
 gap, not an intentional convention — don't copy "no explanations" into new tests; flag it if
