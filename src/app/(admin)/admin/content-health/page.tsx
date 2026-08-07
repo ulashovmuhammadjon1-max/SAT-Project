@@ -41,7 +41,12 @@ export default async function ContentHealthPage() {
   );
 
   const missingDiagrams = questions.filter(
-    (q) => !q.imageUrl && !q.tableData && (DIAGRAM_HINT.test(q.stem) || DIAGRAM_HINT.test(q.passage?.content ?? ""))
+    (q) =>
+      !q.imageUrl &&
+      !q.tableData &&
+      !q.stem.includes("<table") &&
+      !q.passage?.content.includes("<table") &&
+      (DIAGRAM_HINT.test(q.stem) || DIAGRAM_HINT.test(q.passage?.content ?? ""))
   );
 
   return (
