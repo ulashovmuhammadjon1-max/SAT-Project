@@ -12,7 +12,10 @@ this directory is a staging area, parallel to `content-pool/test-3-4-5-reading-w
 | `2024_May_IntA_EliteXSAT.pdf` | `may_inta_math_m1.json`, `may_inta_math_m2.json` | 22 + 21 = 43 | Done. No official answer key in this PDF — verified by sympy/logic only. |
 | `2024_March_IntB_EliteXSAT.pdf` (Test 1 of file) | `march_intb_test1_math_m1.json`, `march_intb_test1_math_m2.json` | 22 + 22 = 44 | Done. Official answer key found (pages 93-95) and cross-checked — see conflicts below. |
 | `2024_June_V2_EliteXSAT.pdf` | `junev2_math_m1.json`, `junev2_math_m2.json` | 19 + 22 = 41 | Done. Module 1's on-screen question badges genuinely skip 16, 18, 20 (confirmed by paging through the source screen-recording frame by frame — those 3 questions were simply never captured/photographed in this PDF), so only 19 of the real 22 are recoverable here. A compiled multi-test answer key was found at the end of the PDF but did NOT reliably align to this transcript (see note below) — most answers are cross-checked against the source's own circled/highlighted selections instead. |
-| `2023_Dec_IntB_EliteXSAT.pdf` | *(not started)* | unknown | Not yet transcribed. May contain the Math section missing from the earlier partial Dec2023 R&W-only capture. |
+| `2023_Dec_IntB_EliteXSAT.pdf` | `decintb_math_m1.json`, `decintb_math_m2.json` | 22 + 22 = 44 | Done. A dedicated compiled answer key ("2023 Dec E") was found at the end of the PDF, but showed the same unreliable-key pattern as the other two keys in this batch — see conflicts below. |
+
+**All 4 source PDFs are now transcribed. Total: 172 Math questions across 8 module files
+(43 + 44 + 41 + 44).**
 
 Every item uses this schema:
 ```json
@@ -82,8 +85,34 @@ Every item uses this schema:
   primary source — most `junev2` answers instead rely on independent sympy/logic verification,
   cross-checked against the source PDF's own circled/highlighted selections where visible.
 
+- **`decintb_math_m1.json` Q2, Q3, Q4** — conflicts between unambiguous sympy/logic answers and
+  the compiled "2023 Dec E" answer key found at the end of this PDF. All 3 involve simple,
+  unambiguous arithmetic (exact division, direct substitution, straightforward inequality
+  setup) that leaves no real room for a different correct answer, so my own derivation was kept
+  over the key. This is the third source PDF in this batch (after March_IntB and June_V2) where
+  a compiled answer key showed disagreements starting within the first few questions — a human
+  should directly re-check the "2023 Dec E" key image/pages against this transcript before
+  trusting either side blindly.
+- **`decintb_math_m1.json` Q8** — scatterplot line-of-best-fit slope was read visually from the
+  graph (not precise gridline positions); re-verify against the original image.
+- **`decintb_math_m1.json` Q18** — a linear graph's slope/intercept were estimated visually
+  (line reads as passing near (0,-1) with slope about -2); re-verify against the original image.
+- **`decintb_math_m2.json` Q22** — a parallel-lines-cut-by-three-transversals figure (angles
+  v, x, y, z, w) could not be reliably reconstructed from the extracted image/description;
+  `correct` is `"UNVERIFIED"`. Needs the original page image.
+
+## Compiled answer keys found across this batch — a recurring reliability problem
+Three of the four source PDFs (March_IntB, June_V2, Dec_IntB) included a compiled answer key
+appended at the end. In every case, cross-checking the key against unambiguous, independently
+sympy/logic-verified answers turned up real disagreements within the first several questions —
+not just occasional letter mismatches but, in June_V2's case, a structural type mismatch
+(expected a free-response number, the key showed a multiple-choice letter). This is a
+consistent pattern across this whole batch, not a one-off: **treat any compiled key found in
+these EliteXSAT-style PDFs as a secondary cross-check only, never as ground truth**, and prefer
+independent verification (sympy for math, direct logical/geometric reasoning) plus the source
+PDF's own circled/highlighted student selection when both directly agree with each other.
+
 ## Not yet done
-- Dec_IntB Math transcription (1 of 4 source PDFs remains).
 - Cross-source dedup (especially June_V2, which shares R&W history with existing Test 1/2
   content — need to confirm no Math item here is a repeat of anything already used).
 - Domain/Skill classification (ALG/ADV/PSDA/GT) for all items in this directory.
