@@ -34,9 +34,14 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     orderBy: { order: "asc" },
   });
 
+  const subjectByModuleAttemptId = Object.fromEntries(
+    attempt.moduleAttempts.map((ma) => [ma.id, ma.module.subject])
+  );
+
   const items = responses.map((r) => ({
     responseId: r.id,
     questionId: r.questionId,
+    subject: subjectByModuleAttemptId[r.moduleAttemptId] ?? "READING_WRITING",
     stem: r.question.stem,
     passage: r.question.passage ? { title: r.question.passage.title, content: r.question.passage.content } : null,
     imageUrl: r.question.imageUrl,

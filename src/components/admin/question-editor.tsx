@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Loader2, Save, Sparkles, Trash2 } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Loader2, Save, Sparkles, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 import { Badge } from "@/components/ui/badge";
@@ -64,10 +64,14 @@ export function QuestionEditor({
   question,
   domains,
   back,
+  prevId,
+  nextId,
 }: {
   question: QuestionData;
   domains: Domain[];
   back: { href: string; label: string };
+  prevId?: string | null;
+  nextId?: string | null;
 }) {
   const router = useRouter();
   const [stem, setStem] = useState(question.stem);
@@ -176,6 +180,32 @@ export function QuestionEditor({
           <p className="text-sm text-muted-foreground">Edit content, taxonomy, and explanation. Preview updates live.</p>
         </div>
         <div className="flex items-center gap-2">
+          {(prevId || nextId) && (
+            <div className="flex items-center overflow-hidden rounded-lg border border-border">
+              <Button variant="ghost" className="rounded-none border-r border-border" disabled={!prevId} asChild={!!prevId}>
+                {prevId ? (
+                  <Link href={`/admin/questions/${prevId}`}>
+                    <ChevronLeft className="h-4 w-4" /> Prev
+                  </Link>
+                ) : (
+                  <span>
+                    <ChevronLeft className="h-4 w-4" /> Prev
+                  </span>
+                )}
+              </Button>
+              <Button variant="ghost" className="rounded-none" disabled={!nextId} asChild={!!nextId}>
+                {nextId ? (
+                  <Link href={`/admin/questions/${nextId}`}>
+                    Next <ChevronRight className="h-4 w-4" />
+                  </Link>
+                ) : (
+                  <span>
+                    Next <ChevronRight className="h-4 w-4" />
+                  </span>
+                )}
+              </Button>
+            </div>
+          )}
           <Button variant="outline" className="text-destructive" onClick={remove} disabled={isDeleting}>
             {isDeleting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />} Delete
           </Button>

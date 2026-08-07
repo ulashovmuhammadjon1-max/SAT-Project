@@ -139,7 +139,8 @@ export default async function AdminTestDetailPage({ params }: { params: { id: st
               {mod.questions.map((q, i) => (
                 <div
                   key={q.id}
-                  className="flex items-center gap-2 rounded-lg border border-border p-3 text-sm hover:bg-accent"
+                  id={`q-${q.id}`}
+                  className="flex items-center gap-2 rounded-lg border border-border p-3 text-sm hover:bg-accent scroll-mt-24"
                 >
                   <QuestionOrderButtons
                     questionId={q.id}

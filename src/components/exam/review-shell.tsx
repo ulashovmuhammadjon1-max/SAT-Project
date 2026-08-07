@@ -15,6 +15,7 @@ import { toggleBookmark } from "@/server/actions/student/bookmarks";
 interface ReviewItem {
   responseId: string;
   questionId: string;
+  subject: "READING_WRITING" | "MATH";
   stem: string;
   passage: { title: string | null; content: string } | null;
   imageUrl: string | null;
@@ -96,27 +97,72 @@ export function ReviewShell({
       </header>
 
       <div className="mx-auto grid max-w-7xl gap-6 p-6 lg:grid-cols-[280px_1fr]">
-        <div className="space-y-2 lg:sticky lg:top-6 lg:h-fit">
-          <p className="px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Questions</p>
-          <div className="grid grid-cols-6 gap-1.5 lg:grid-cols-5">
-            {items.map((it, i) => (
-              <button
-                key={it.responseId}
-                onClick={() => setIndex(i)}
-                className={cn(
-                  "relative flex h-10 w-10 items-center justify-center rounded-lg border text-xs font-semibold",
-                  i === index && "ring-2 ring-primary ring-offset-1",
-                  it.isCorrect ? "border-success/40 bg-success/10 text-success" : "border-destructive/40 bg-destructive/10 text-destructive"
-                )}
-              >
-                {i + 1}
-                {it.flagged && <Flag className="absolute -right-1 -top-1 h-3 w-3 fill-warning text-warning" />}
-              </button>
-            ))}
-          </div>
+        <div className="space-y-5 lg:sticky lg:top-6 lg:h-fit lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
+          <QuestionNavGroup
+            label="Reading & Writing"
+            items={items}
+            subject="READING_WRITING"
+            activeIndex={index}
+            onSelect={setIndex}
+          />
+          <QuestionNavGroup label="Math" items={items} subject="MATH" activeIndex={index} onSelect={setIndex} />
         </div>
 
         {item && <ReviewDetail item={item} />}
+      </div>
+    </div>
+  );
+}
+
+function QuestionNavGroup({
+  label,
+  items,
+  subject,
+  activeIndex,
+  onSelect,
+}: {
+  label: string;
+  items: ReviewItem[];
+  subject: "READING_WRITING" | "MATH";
+  activeIndex: number;
+  onSelect: (index: number) => void;
+}) {
+  // Indices into the flat `items` array, kept alongside a 1-based label
+  // local to this subject -- students think in terms of "R&W Q12", not the
+  // question's absolute position across the whole 98-question attempt.
+  const entries = items
+    .map((it, i) => ({ it, i }))
+    .filter(({ it }) => it.subject === subject);
+
+  if (entries.length === 0) return null;
+
+  const correctInGroup = entries.filter(({ it }) => it.isCorrect).length;
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between px-1">
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</p>
+        <p className="text-xs text-muted-foreground">
+          {correctInGroup}/{entries.length}
+        </p>
+      </div>
+      <div className="grid grid-cols-6 gap-1.5 lg:grid-cols-5">
+        {entries.map(({ it, i }, localIndex) => (
+          <button
+            key={it.responseId}
+            onClick={() => onSelect(i)}
+            className={cn(
+              "relative flex h-10 w-10 items-center justify-center rounded-lg border text-xs font-semibold",
+              i === activeIndex && "ring-2 ring-primary ring-offset-1",
+              it.isCorrect
+                ? "border-success/40 bg-success/10 text-success"
+                : "border-destructive/40 bg-destructive/10 text-destructive"
+            )}
+          >
+            {localIndex + 1}
+            {it.flagged && <Flag className="absolute -right-1 -top-1 h-3 w-3 fill-warning text-warning" />}
+          </button>
+        ))}
       </div>
     </div>
   );
