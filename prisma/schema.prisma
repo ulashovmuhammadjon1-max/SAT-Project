@@ -82,6 +82,7 @@ model User {
   attempts        Attempt[]
   bookmarks       Bookmark[]
   vocabProgress   VocabProgress[]
+  vocabSetProgress VocabDeckProgress[]
   studyActivities StudyActivity[]
   chatThreads     ChatThread[]
   auditLogs       AuditLog[]
@@ -459,12 +460,54 @@ enum VocabVisibility {
 }
 
 model VocabDeck {
-  id          String @id @default(cuid())
-  name        String
-  description String?
-  createdAt   DateTime @default(now())
+  id           String   @id @default(cuid())
+  name         String
+  description  String?
+  order        Int? // sequence position for gated sets (e.g. "Set 1".."Set 16"); null = not part of a gated sequence
+  passageTitle String?
+  passage      String? @db.Text
+  createdAt    DateTime @default(now())
 
-  words VocabDeckWord[]
+  words         VocabDeckWord[]
+  quizQuestions VocabSetQuizQuestion[]
+  progress      VocabDeckProgress[]
+
+  @@index([order])
+}
+
+model VocabSetQuizQuestion {
+  id      String @id @default(cuid())
+  deckId  String
+  order   Int
+  stem    String @db.Text
+  choiceA String @db.Text
+  choiceB String @db.Text
+  choiceC String @db.Text
+  choiceD String @db.Text
+  correct String // "A" | "B" | "C" | "D"
+
+  deck VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  @@unique([deckId, order])
+}
+
+// Per-user completion state for a gated VocabDeck ("set"). A set counts as
+// passed once its quiz is cleared at or above the required score, which is
+// what unlocks the next set in the sequence.
+model VocabDeckProgress {
+  id          String    @id @default(cuid())
+  userId      String
+  deckId      String
+  bestScore   Int       @default(0)
+  attempts    Int       @default(0)
+  passed      Boolean   @default(false)
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  user User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  deck VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, deckId])
 }
 
 model VocabWord {

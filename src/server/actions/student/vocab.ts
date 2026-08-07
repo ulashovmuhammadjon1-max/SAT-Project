@@ -5,6 +5,137 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { scheduleNextReview, statusForRepetitions } from "@/lib/srs/scheduler";
+import { VOCAB_SET_PASS_THRESHOLD } from "@/lib/vocab-constants";
+
+export async function getVocabSets() {
+  const user = await requireUser();
+
+  const [decks, progressRows] = await Promise.all([
+    prisma.vocabDeck.findMany({
+      where: { order: { not: null } },
+      orderBy: { order: "asc" },
+      include: { _count: { select: { words: true } } },
+    }),
+    prisma.vocabDeckProgress.findMany({ where: { userId: user.id } }),
+  ]);
+
+  const progressByDeck = new Map(progressRows.map((p) => [p.deckId, p]));
+
+  return decks.map((deck, i) => {
+    const progress = progressByDeck.get(deck.id);
+    const previousDeck = decks[i - 1];
+    const previousPassed = !previousDeck || progressByDeck.get(previousDeck.id)?.passed === true;
+    return {
+      id: deck.id,
+      name: deck.name,
+      order: deck.order!,
+      wordCount: deck._count.words,
+      passed: progress?.passed ?? false,
+      bestScore: progress?.bestScore ?? 0,
+      attempts: progress?.attempts ?? 0,
+      unlocked: previousPassed,
+    };
+  });
+}
+
+export async function getVocabSetDetail(deckId: string) {
+  const user = await requireUser();
+
+  const sets = await getVocabSets();
+  const meta = sets.find((s) => s.id === deckId);
+  if (!meta) throw new Error("Set not found.");
+  if (!meta.unlocked) throw new Error("Complete the previous set's quiz first to unlock this one.");
+
+  const deck = await prisma.vocabDeck.findUniqueOrThrow({
+    where: { id: deckId },
+    include: {
+      words: { include: { word: true }, orderBy: { order: "asc" } },
+      quizQuestions: { orderBy: { order: "asc" } },
+    },
+  });
+
+  const progress = await prisma.vocabDeckProgress.findUnique({
+    where: { userId_deckId: { userId: user.id, deckId } },
+  });
+
+  return {
+    id: deck.id,
+    name: deck.name,
+    passageTitle: deck.passageTitle,
+    passage: deck.passage,
+    words: deck.words.map((dw) => ({
+      id: dw.word.id,
+      term: dw.word.term,
+      definition: dw.word.definition,
+      example: dw.word.exampleSentence,
+      antonym: Array.isArray(dw.word.antonyms) ? (dw.word.antonyms as string[])[0] : null,
+    })),
+    quiz: deck.quizQuestions.map((q) => ({
+      id: q.id,
+      order: q.order,
+      stem: q.stem,
+      choices: { A: q.choiceA, B: q.choiceB, C: q.choiceC, D: q.choiceD },
+      // correct answer intentionally omitted from the client-facing payload
+    })),
+    passed: progress?.passed ?? false,
+    bestScore: progress?.bestScore ?? 0,
+    attempts: progress?.attempts ?? 0,
+  };
+}
+
+export interface SubmitSetQuizResult {
+  score: number;
+  total: number;
+  passed: boolean;
+  passThreshold: number;
+  correctAnswers: Record<string, "A" | "B" | "C" | "D">;
+}
+
+export async function submitVocabSetQuiz(
+  deckId: string,
+  answers: Record<string, "A" | "B" | "C" | "D">
+): Promise<SubmitSetQuizResult> {
+  const user = await requireUser();
+
+  const questions = await prisma.vocabSetQuizQuestion.findMany({ where: { deckId } });
+  if (questions.length === 0) throw new Error("This set has no quiz questions.");
+
+  let score = 0;
+  const correctAnswers: Record<string, "A" | "B" | "C" | "D"> = {};
+  for (const q of questions) {
+    correctAnswers[q.id] = q.correct as "A" | "B" | "C" | "D";
+    if (answers[q.id] === q.correct) score++;
+  }
+
+  const passed = score >= VOCAB_SET_PASS_THRESHOLD;
+
+  const existing = await prisma.vocabDeckProgress.findUnique({
+    where: { userId_deckId: { userId: user.id, deckId } },
+  });
+
+  await prisma.vocabDeckProgress.upsert({
+    where: { userId_deckId: { userId: user.id, deckId } },
+    create: {
+      userId: user.id,
+      deckId,
+      bestScore: score,
+      attempts: 1,
+      passed,
+      completedAt: passed ? new Date() : null,
+    },
+    update: {
+      bestScore: Math.max(score, existing?.bestScore ?? 0),
+      attempts: { increment: 1 },
+      passed: passed || existing?.passed === true,
+      completedAt: passed && !existing?.passed ? new Date() : existing?.completedAt,
+    },
+  });
+
+  revalidatePath("/vocabulary/sets");
+  revalidatePath(`/vocabulary/sets/${deckId}`);
+
+  return { score, total: questions.length, passed, passThreshold: VOCAB_SET_PASS_THRESHOLD, correctAnswers };
+}
 
 export async function getDueWords(limit = 20) {
   const user = await requireUser();

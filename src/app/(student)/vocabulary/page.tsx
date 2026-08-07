@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Brain, ListChecks, Sparkles } from "lucide-react";
+import { Brain, Layers, ListChecks, Sparkles } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -63,6 +63,24 @@ export default async function VocabularyPage() {
           <CardContent className="p-5">
             <p className="font-display text-2xl font-semibold">{notStarted}</p>
             <p className="text-xs text-muted-foreground">Not started</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Card className="border-primary/30 bg-primary/[0.03]">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <Layers className="h-4 w-4" /> Vocab Sets
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <p className="text-sm text-muted-foreground">
+              25 words + a passage + a quiz per set. Pass each set&apos;s quiz to unlock the next one.
+            </p>
+            <Button asChild className="w-full">
+              <Link href="/vocabulary/sets">Browse sets</Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
