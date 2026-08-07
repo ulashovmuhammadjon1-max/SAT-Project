@@ -1,14 +1,32 @@
 # Project memory
 
-## Reserved content for Test 3/4/5 — read this before starting a new test build
+## Test 3 and Test 4 are built and live in the DB as DRAFT
+Both are fully inserted (147 questions each: 27/27/27 R&W, 22/22/22 Math) — see
+`content-pool/test-3-4-build/MANIFEST.md` for exact IDs, what was deduped, and known gaps
+(a few graph-reference questions render a text description instead of a real chart image, ~16
+Math stems fall back to plain unstyled text instead of full KaTeX rendering because the
+auto-converter's safety check judged the wrap risky, 4 Math questions carry an `APPROXIMATE`
+graph-reading note, 0 Explanation rows). **Both are DRAFT, not PUBLISHED** — review in the
+admin panel before flipping status. `content-pool/test-3-4-build/full_build.json` is the exact
+content that was inserted; `insert.mjs` in that same directory is idempotent (skips any
+Test/Module that already exists) if it ever needs to be re-run.
+
+Reminder: this environment's sandbox blocks the raw Postgres port (5432) and only allows
+outbound HTTPS, so the normal Prisma/pg client can't reach the DB directly from here — use
+Neon's HTTP query API (`@neondatabase/serverless`'s `neon()` tagged-template function) instead,
+same as `insert.mjs` does. Never write the DB connection string into any file — pass it via
+`process.env.DATABASE_URL` only.
+
+## Reserved content for Test 5 — read this before starting a new test build
 `content-pool/test-3-4-5-reading-writing/` has real, verified Reading & Writing content
-already classified and ready for Test 3 (full 27/27/27), Test 4 (27/26/27), and Test 5
-(26/22/26) — see that directory's `MANIFEST.md` for exact counts, what HTML formatting still
-needs to be applied, and which specific questions need a table converted, a real source image
-(not available in this repo), or a transcription ambiguity re-verified. **There is currently no
-Math content for any of these three tests** — the source files available so far are R&W-only;
-don't start building Test 3+ without either new Math source material or the user's explicit OK
-to write original Math questions (sympy-verified, per the rule below).
+already classified for Test 5 (26/22/26 — short 7 questions total, needs topping up before
+shipping). Test 3 and Test 4's R&W allocations from this same file have already been consumed
+(see above). `content-pool/new-source-transcripts/` has 33 unused, already-classified Math
+questions left over after building Test 3/4 (see `classify_math.py` in
+`content-pool/test-3-4-build/` for the domain/skill assignments and which questions were
+already used) — not yet enough for a full 3×22 Math build on their own; don't start Test 5
+without either more Math source material or the user's explicit OK to write original Math
+questions (sympy-verified, per the rule below).
 
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 
