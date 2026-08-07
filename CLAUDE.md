@@ -149,3 +149,44 @@ monotonic per module (see rule above), confirm every Math module has ≤3 FR and
 questions, confirm every `correctAnswerFR` is JSON-array-encoded, confirm every question has
 a passage/image where the stem implies one needs it, and confirm no bare markdown asterisks
 or un-converted plain-text math slipped through.
+
+### More real bugs found and fixed while building Test 2 (don't reintroduce these)
+- **Deduping/matching by `(source, num)` is NOT safe.** `num` is only unique *within* one
+  source PDF's own module — the same `(source, num)` pair legitimately collides across
+  different modules pulled from the same source pool (verified: `March|14`, `JuneV1|10`, and
+  `May|3` each hit two unrelated questions). Any per-question override (special passage
+  formatting, manual classification fix, etc.) must match on distinctive **content**
+  (a unique substring of the actual stem/passage, checked for uniqueness against the whole
+  pool first) — never on `(source, num)` alone.
+- **The Rhetorical Synthesis classifier missed the "given sentences" phrasing.** Real
+  Rhetorical Synthesis stems come in at least two forms: "The student wants to... Which choice
+  most effectively uses relevant information from **the notes**..." and "Which choice most
+  effectively uses information from **the given sentences**...". The original classifier regex
+  only matched `student.{0,15}(wants|notes)|relevant information from the notes`, silently
+  misfiling every "given sentences" question as `Information and Ideas / Central Ideas and
+  Details`. This was live in **Test 1** too (2 questions) and has been fixed there directly;
+  the classifier itself was fixed to also match `given sentences`. If a module's Rhetorical
+  Synthesis count looks short, grep for `"given sentences"` in stems before assuming supply is
+  actually short.
+- **The Boundaries vs. Form/Structure/Sense classifier can't work off stem text alone.** Real
+  SAT Boundaries questions never literally say "comma"/"semicolon"/etc. in the stem — the only
+  signal is which punctuation mark differs between the four answer **choices** (comma vs.
+  semicolon vs. colon vs. period vs. comma+FANBOYS). A regex over the stem/passage will default
+  everything to Form/Structure/Sense (this happened for both Test 1 and, before being caught,
+  Test 2's first classification pass). Every SEC question needs its choices read by eye (or a
+  choices-aware heuristic) to tell the two apart — don't trust a stem-only classifier for this
+  domain.
+- **Verify transcribed math answers, not just originally-authored ones.** One real transcribed
+  question (a similar-triangles problem, Test 2 Math Module 1) had its two side lengths swapped
+  in transcription, making the marked-correct choice mathematically impossible for any of the 4
+  answer choices (verified with sympy: correct EF ≈ 26.7, not among 12/15/18/24). This was the
+  only error found across 66 transcribed Math questions, but it means transcribed content is
+  not automatically trustworthy — spot-check FR answers with sympy and hand-verify MC answers
+  for at least the geometry/word-problem items, the same as the rule already in place for
+  originally-authored questions.
+- **A markdown-bracket directive can have more than one shape.** The `[UNDERLINED: ...]` source
+  convention sometimes carries an annotation before the colon, e.g.
+  `[UNDERLINED (colored, likely emphasis): ...]`. Match the opening marker with a regex
+  (`\[UNDERLINED[^:\]]*:`), not a literal `'[UNDERLINED:'` string, or some instances silently
+  pass through unconverted (found live in a Test 2 answer choice, not just a passage — brackets
+  can appear in choice text too, so run the same conversion there).
