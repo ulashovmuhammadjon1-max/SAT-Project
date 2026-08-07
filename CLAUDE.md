@@ -92,6 +92,17 @@ run *after* the fact. Do the check *before* writing, not after, and it's a non-i
 scramble. Apply to local first, screenshot-verify, then production, with the same assertion
 gating every production write individually (not just once for the whole batch).
 
+## Vocab Sets feature — Sets 1-5 live, Sets 6-16 extracted but not yet inserted
+Gated vocabulary sets ("Set 1".."Set 16", 25 words + a passage + a 10-question quiz each, must
+pass a set's quiz at ≥8/10 to unlock the next) are a real shipped feature — see `VocabDeck.order`,
+`VocabSetQuizQuestion`, `VocabDeckProgress` in the schema, and
+`src/app/(student)/vocabulary/sets/`. **Sets 1-5 are live in both local dev and production.**
+Sets 6-16 (minus a gap at Set 9) are already transcribed and verified — see
+`content-pool/vocab-book/MANIFEST.md` for exactly what's ready to insert, what's missing (Set 9
+entirely, part of Set 16's quiz), and the two source-content quirks flagged for human review
+before shipping. Don't re-transcribe from the PDFs again; that work is already done and sitting in
+`content-pool/vocab-book/college_panda_sets_extracted.json`.
+
 ## Test 3 and Test 4 are built and live in the DB as DRAFT
 Both are fully inserted (147 questions each: 27/27/27 R&W, 22/22/22 Math) — see
 `content-pool/test-3-4-build/MANIFEST.md` for exact IDs, what was deduped, and known gaps
