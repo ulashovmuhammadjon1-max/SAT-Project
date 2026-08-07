@@ -123,3 +123,38 @@ placeholder. Fabricating plausible-looking chart data for either would risk ship
 that's actually wrong or that doesn't uniquely support the marked correct answer — worse than
 the current text note. These need either the original source PDF page image, or a decision to
 drop/replace the question.
+
+## Follow-up pass: 16 Math stems shipped as plain text instead of KaTeX (this session, continued)
+User caught this live on production (screenshot of Test 3 Math Module 1 Q1 rendering
+`(x - 4)^2 + (y + 3)^2 = 16` as literal plain text instead of styled math, unlike Test 1/2). Root
+cause: these 16 stems fell through `mathify2.py`'s `_is_structurally_suspicious()` safety net
+during the original build and were inserted with un-converted plain-text math syntax.
+
+An initial broad regex ("any digit-containing stem lacking `\(`") returned 69 candidates, mostly
+false positives (plain narrative word problems that never needed math wrapping, e.g. "Javier
+deposits $45..."). Narrowed to a precise check for genuinely unconverted math syntax — unwrapped
+`=`, `^\d`, `^{`, `sqrt(`, or `*` patterns sitting *outside* any existing `\(...\)` span — which
+correctly isolated exactly 16 real cases, matching the user's screenshot.
+
+Each of the 16 stems was hand-rewritten with `\(...\)` KaTeX delimiters (balance-verified) rather
+than re-run through the auto-converter, per the rule above about not blindly regenerating stems.
+Fixes were applied directly via three separate UPDATEs, all matched on a unique stem substring
+(never `(source, num)`):
+- Production DB, via the Neon HTTP driver, matched by question `id` (UUIDs) — confirmed
+  "updated 16 questions."
+- Local dev DB, via Prisma, matched by stem substring since local question IDs differ from
+  production — confirmed "updated 16 of 16."
+- `full_build.json` itself (this repo), matched by the same stem substrings — confirmed 16 of 16
+  patched, so the source artifact now agrees with both live databases.
+
+Affected questions (10 in Test 3, 6 in Test 4): circle-center and point-on-circle equations,
+a projectile-height quadratic, two "equivalent expression" polynomial questions, an absolute-value
+equation, an exponential y-intercept identity question, a linear ant-colony model, a triangle-area
+equation, an isotope half-life exponential, a second absolute-value equation, a linear gas-tank
+model, a proportional-relationship question, a solutions-count quadratic, a population exponential
+model, and an equilateral-triangle side-length question.
+
+Verified live in the exam-taking interface itself (not just the admin editor preview): seeded a
+local `Attempt`/`ModuleAttempt` pointing at Test 3 Math Module 1 and loaded `/exam/{attemptId}` as
+the student user — Q1's circle equation now renders as proper KaTeX (`.katex` elements present,
+no literal `^2` in the stem), matching Test 1/2's exam styling.

@@ -2277,7 +2277,7 @@
     "MATH_M1": [
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>What is the center of the circle in the xy-plane defined by the equation (x - 4)^2 + (y + 3)^2 = 16?</p>",
+        "stem": "<p>What is the center of the circle in the xy-plane defined by the equation \\((x - 4)^2 + (y + 3)^2 = 16\\)?</p>",
         "domain": "GT",
         "skill": "GT-AV",
         "_source": "MarchIntB_T1",
@@ -2343,7 +2343,7 @@
       },
       {
         "type": "FREE_RESPONSE",
-        "stem": "<p>In the xy-plane, the graph of the equation (x-6)^2 + (y-10)^2 = 36 is a circle. The point (12, c), where c is a constant, lies on this circle. What is the value of c?</p>",
+        "stem": "<p>In the xy-plane, the graph of the equation \\((x-6)^2 + (y-10)^2 = 36\\) is a circle. The point \\((12, c)\\), where c is a constant, lies on this circle. What is the value of c?</p>",
         "domain": "GT",
         "skill": "GT-AV",
         "_source": "DecIntB",
@@ -2531,7 +2531,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>An object is kicked from a platform. The equation h = -4.9t^2 + 5t + 12 represents this situation, where h is the height of the object above the ground, in meters, t seconds after it is kicked. Which number represents the height, in meters, from which the object was kicked?</p>",
+        "stem": "<p>An object is kicked from a platform. The equation \\(h = -4.9t^2 + 5t + 12\\) represents this situation, where h is the height of the object above the ground, in meters, t seconds after it is kicked. Which number represents the height, in meters, from which the object was kicked?</p>",
         "domain": "ADV",
         "skill": "ADV-NF",
         "_source": "MarchIntB_T1",
@@ -2587,7 +2587,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>Which expression is equivalent to (x^3 + 4x^2 - 3x) + 5(x^2 + 8)?</p>",
+        "stem": "<p>Which expression is equivalent to \\((x^3 + 4x^2 - 3x) + 5(x^2 + 8)\\)?</p>",
         "domain": "ADV",
         "skill": "ADV-EQ",
         "_source": "JuneV2",
@@ -3067,7 +3067,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>Which expression is equivalent to (9x^2 + 9) - (2x^2)?</p>",
+        "stem": "<p>Which expression is equivalent to \\((9x^2 + 9) - (2x^2)\\)?</p>",
         "domain": "ADV",
         "skill": "ADV-EQ",
         "_source": "MarchIntB_T1",
@@ -3123,7 +3123,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>7|x - 7| = 42. What is the sum of the solutions to the given equation?</p>",
+        "stem": "<p>\\(7|x - 7| = 42\\). What is the sum of the solutions to the given equation?</p>",
         "domain": "ADV",
         "skill": "ADV-NE",
         "_source": "MayIntA",
@@ -3151,7 +3151,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>The function f is defined by f(x) = a(3.1^x + 3.1^b), where a and b are integer constants and 0 < a < b. The functions g and h are equivalent to function f, where k and m are constants: I. g(x) = a(3.1^x + k). II. h(x) = a(3.1)^x + m. Which of the following equations displays the y-coordinate of the y-intercept of the graph of y = f(x) in the xy-plane as a constant or coefficient?</p>",
+        "stem": "<p>The function f is defined by \\(f(x) = a(3.1^x + 3.1^b)\\), where a and b are integer constants and \\(0 < a < b\\). The functions g and h are equivalent to function f, where k and m are constants: I. \\(g(x) = a(3.1^x + k)\\). II. \\(h(x) = a(3.1)^x + m\\). Which of the following equations displays the y-coordinate of the y-intercept of the graph of \\(y = f(x)\\) in the xy-plane as a constant or coefficient?</p>",
         "domain": "ADV",
         "skill": "ADV-EQ",
         "_source": "JuneV2",
@@ -3375,7 +3375,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>Scientists collected fallen acorns that each housed a colony of the ant species P. ohioensis and analyzed each colony's structure. For any of these colonies, if the colony has x worker ants, the equation y = 0.67x + 2.6, where 20 <= x <= 110, gives the predicted number of larvae, y, in the colony. If one of these colonies has 46 worker ants, which of the following is closest to the predicted number of larvae in the colony?</p>",
+        "stem": "<p>Scientists collected fallen acorns that each housed a colony of the ant species P. ohioensis and analyzed each colony's structure. For any of these colonies, if the colony has x worker ants, the equation \\(y = 0.67x + 2.6\\), where \\(20 \\le x \\le 110\\), gives the predicted number of larvae, y, in the colony. If one of these colonies has 46 worker ants, which of the following is closest to the predicted number of larvae in the colony?</p>",
         "domain": "ALG",
         "skill": "ALG-LF",
         "_source": "MayIntA",
@@ -3471,7 +3471,7 @@
       },
       {
         "type": "FREE_RESPONSE",
-        "stem": "<p>The area of a triangle is equal to x^2 square centimeters. The length of the base of the triangle is 2x + 12 centimeters, and the height of the triangle is x - 2 centimeters. What is the value of x?</p>",
+        "stem": "<p>The area of a triangle is equal to \\(x^2\\) square centimeters. The length of the base of the triangle is \\(2x + 12\\) centimeters, and the height of the triangle is \\(x - 2\\) centimeters. What is the value of x?</p>",
         "domain": "GT",
         "skill": "GT-AV",
         "_source": "DecIntB",
@@ -3575,7 +3575,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>A sample of a certain isotope takes 29 years to decay to half its original mass. The function s(t) = 184(0.5)^(t/29) gives the approximate mass of this isotope, in grams, that remains t years after a 184-gram sample starts to decay. Which statement is the best interpretation of s(87) = 23 in this context?</p>",
+        "stem": "<p>A sample of a certain isotope takes 29 years to decay to half its original mass. The function \\(s(t) = 184(0.5)^{t/29}\\) gives the approximate mass of this isotope, in grams, that remains t years after a 184-gram sample starts to decay. Which statement is the best interpretation of \\(s(87) = 23\\) in this context?</p>",
         "domain": "ADV",
         "skill": "ADV-NF",
         "_source": "DecIntB",
@@ -6527,7 +6527,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>The equation 4|x-3| = k, where k is a constant, has exactly one solution. Which of the following could be the value of \\(\\frac{k}{4}\\)?</p>",
+        "stem": "<p>The equation \\(4|x-3| = k\\), where k is a constant, has exactly one solution. Which of the following could be the value of \\(\\frac{k}{4}\\)?</p>",
         "domain": "ADV",
         "skill": "ADV-NE",
         "_source": "JuneV2",
@@ -6611,7 +6611,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>g(m) = -0.05m + 12.4. The given function g models the number of gallons of gasoline that remains from a full gas tank in a car after driving m miles. According to the model, about how many gallons of gasoline are used to drive each mile?</p>",
+        "stem": "<p>\\(g(m) = -0.05m + 12.4\\). The given function g models the number of gallons of gasoline that remains from a full gas tank in a car after driving m miles. According to the model, about how many gallons of gasoline are used to drive each mile?</p>",
         "domain": "ALG",
         "skill": "ALG-LF",
         "_source": "MarchIntB_T1",
@@ -6951,7 +6951,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>There is a proportional relationship between p and t. If p = 2,340 when t = 3,120, then what is the value of p when t = 2,496?</p>",
+        "stem": "<p>There is a proportional relationship between p and t. If \\(p = 2{,}340\\) when \\(t = 3{,}120\\), then what is the value of p when \\(t = 2{,}496\\)?</p>",
         "domain": "PSDA",
         "skill": "PSDA-RP",
         "_source": "JuneV2",
@@ -7007,7 +7007,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>x^2 = 2,601. How many distinct real solutions does the given equation have?</p>",
+        "stem": "<p>\\(x^2 = 2{,}601\\). How many distinct real solutions does the given equation have?</p>",
         "domain": "ADV",
         "skill": "ADV-NE",
         "_source": "MayIntA",
@@ -7119,7 +7119,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>The function P(x) = 533(1.011)^x models the population of a certain town each year from 1951 through 1966, where x is the number of years after 1951. Which of the following is the best interpretation of \"P(5) is approximately equal to 563\" in this context?</p>",
+        "stem": "<p>The function \\(P(x) = 533(1.011)^x\\) models the population of a certain town each year from 1951 through 1966, where x is the number of years after 1951. Which of the following is the best interpretation of \"\\(P(5)\\) is approximately equal to 563\" in this context?</p>",
         "domain": "ADV",
         "skill": "ADV-NF",
         "_source": "MayIntA",
@@ -7401,7 +7401,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>In triangle ABC, AB = 4,290 millimeters (mm) and BC = 4,290 mm. Which statement is sufficient to prove that triangle ABC is equilateral?</p>",
+        "stem": "<p>In triangle ABC, \\(AB = 4{,}290\\) millimeters (mm) and \\(BC = 4{,}290\\) mm. Which statement is sufficient to prove that triangle ABC is equilateral?</p>",
         "domain": "GT",
         "skill": "GT-LA",
         "_source": "DecIntB",
