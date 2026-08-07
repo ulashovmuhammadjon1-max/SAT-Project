@@ -2991,7 +2991,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown, passing through approximately (0,3) with slope ~1.9. Which of the following equations best represents the line of best fit shown?</p>",
+        "stem": "<p>The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown, with a y-intercept near -2.6 and a slope of approximately 1.9. Which of the following equations best represents the line of best fit shown?</p>",
         "domain": "PSDA",
         "skill": "PSDA-DI",
         "_source": "MarchIntB_T1",
@@ -3008,7 +3008,7 @@
           },
           {
             "label": "C",
-            "content": "\\(y = -2.6 + 1.9x\\)"
+            "content": "\\(y = 2.6 + 1.9x\\)"
           },
           {
             "label": "D",

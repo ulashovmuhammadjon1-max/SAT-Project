@@ -54,12 +54,6 @@ itself a duplicate signal.
 - **Test 4 Module 2 (Easy)** was short 1 question (26/27, missing a Transitions item); filled
   with 1 question borrowed from Test 5's EBRW pool (Nov2023 #23, Henry James), verified unique
   against everything already in Test 3/4.
-- **4 R&W questions reference a real graph image not available in this environment**
-  (`test4|RW_M2_EASY` idx10 line graph, `test4|RW_M2_HARD` idx10 bar graph, plus 2 more with
-  fuller diagram-description text) — these were kept (not dropped) with the diagram's text
-  description inserted as an italic note below the passage instead of a rendered chart. This
-  preserves the question's answerability but is not a faithful visual reproduction of the
-  original. Consider replacing with a real chart/image later.
 - **~16 of 132 Math stems** fell back to plain (unstyled) text instead of full KaTeX
   rendering, because the automatic LaTeX-wrapping safety check judged the wrap attempt
   structurally risky for that specific stem (e.g. exponent expressions starting with a
@@ -67,10 +61,65 @@ itself a duplicate signal.
   risk shipping broken math rendering. The content and correct answers are unaffected — these
   just display as plain text instead of italicized math. Search `full_build.json` for stems
   without `\(` that contain digits to find the exact list.
-- **4 Math questions carry an `APPROXIMATE` verification note** (graph/line reading done
-  visually, not from precise pixel data) — inherited from `content-pool/new-source-transcripts/`.
-  Search that directory's JSON files for `"APPROXIMATE"` to find them.
 - **0 Explanation rows** exist for any Test 3/4 question (same known gap as Test 1) — not
   filled in this pass.
 - Both tests are **DRAFT**, not PUBLISHED. Spot-check in the admin panel before flipping the
   status.
+
+## Follow-up pass: real chart images + a live rendering check (this session, continued)
+Set up a local dev environment (local Postgres via `apt install postgresql` — Docker's daemon
+isn't available in this sandbox, so `docker-compose.yml` doesn't work here; Neon's HTTP driver
+for the same reason on the production side, see above) seeded with the exact `full_build.json`
+content, logged into the admin panel with Playwright, and visually confirmed rendering for a
+KaTeX/image question, a table question, and a bullet-list question — all correct.
+
+**Real chart images (not text descriptions) were generated and attached to `Question.imageUrl`**
+for 7 questions where enough real data existed to build an accurate chart, via matplotlib,
+embedded as base64 PNG data URIs (same convention Test 1 uses), applied to both the local dev
+DB and production:
+- Test 3: population-census exponential curve, shaded-inequality region, `y=f(x)-9` line,
+  scatterplot with line of best fit.
+- Test 4: y-intercept-12 line, population-growth exponential curve, and the lizard
+  escaping-vs-pursuing-speed bar chart (built from the real approximate bin values already on
+  record in `content-pool/new-source-transcripts/`).
+
+Each chart was built from the specific equation/data already verified as correct for that
+question (not a fresh guess) — e.g. the shaded-inequality chart plots exactly `y = -2x + 12`,
+the same line used to verify `(8,0)` as the correct answer, so the image and the marked answer
+are guaranteed consistent with each other.
+
+**Important schema note found in the process**: the admin question editor's "Figure" upload
+and the student preview both read `Question.imageUrl`, not `Passage.imageUrl` — an R&W
+question's diagram must be attached to the *question*, not the passage that owns it, even
+though conceptually a shared-passage diagram might seem passage-level. (`Passage.imageUrl`
+exists in the schema but nothing in the app currently renders it.)
+
+**Also fixed while reviewing rendering**: Test 3's March_IntB scatterplot question
+("scatterplot ... line of best fit") had two identical answer choices (A and C both
+`y = -2.6 + 1.9x`), a transcription defect flagged but not resolved when the content was
+originally transcribed. The other 3 choices are exactly the 4 sign-permutations of
+`(±2.6, ±1.9x)` — B and D are already 2 of the other 3 permutations — so the missing 4th
+permutation (`y = 2.6 + 1.9x`, the `++` case) was used to replace the duplicate C rather than
+guessing at unrelated wording. Also corrected the stem's `(0,3)` y-intercept description,
+which contradicted the answer choices' actual `-2.6` intercept.
+
+### Still not resolved — genuinely missing data, not a rendering problem
+Two R&W questions reference a real graph/table with **no usable data on record** (the
+`diagram` field for both is just a placeholder note like "needs image extraction/vision
+check," not real transcribed values), so no accurate image could be built for them without
+inventing numbers:
+- **Test 3** — the Bologna urban-agriculture survey question ("Which choice best describes
+  data in the table that support the city planner's conclusion?"). Source: `May`, R&W Module 2
+  Hard, original num 14.
+- **Test 4** — the science-fair submissions line graph ("Which choice most effectively uses
+  data from the graph to support the underlined claim?"). Source: `Nov2023`, R&W Module 2
+  Easy, original num 11. One data point is confirmed (~285 medicine/health submissions in
+  2019, which is literally the correct choice's own text) but the other 3 topics' values
+  across 2016-2019 are not on record, so a 4-line chart can't be built without fabricating 3 of
+  4 series.
+
+Both currently still show the plain-text diagram-description note (not an image) as a
+placeholder. Fabricating plausible-looking chart data for either would risk shipping a chart
+that's actually wrong or that doesn't uniquely support the marked correct answer — worse than
+the current text note. These need either the original source PDF page image, or a decision to
+drop/replace the question.
