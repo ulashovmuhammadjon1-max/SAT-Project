@@ -29,7 +29,7 @@ export default function GlobalError({
       >
         <h1 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Something went wrong</h1>
         <p style={{ marginTop: "0.5rem", color: "#6B7280", maxWidth: "28rem" }}>
-          Summit Prep hit an unexpected error loading the page. Please try again.
+          SATForge hit an unexpected error loading the page. Please try again.
         </p>
         {error.digest && (
           <p style={{ marginTop: "0.75rem", fontSize: "0.75rem", color: "#9CA3AF" }}>Error reference: {error.digest}</p>

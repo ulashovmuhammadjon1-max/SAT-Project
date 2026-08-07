@@ -18,8 +18,8 @@ const display = Lexend({
 
 export const metadata: Metadata = {
   title: {
-    default: "Summit Prep — Digital SAT Practice",
-    template: "%s | Summit Prep",
+    default: "SATForge — Digital SAT Practice",
+    template: "%s | SATForge",
   },
   description:
     "A premium Digital SAT preparation platform with adaptive full-length tests, a Bluebook-accurate exam interface, targeted practice, and vocabulary mastery.",

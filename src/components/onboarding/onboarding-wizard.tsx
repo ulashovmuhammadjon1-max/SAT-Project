@@ -263,7 +263,7 @@ function buildSteps({
     // 1 — Welcome / motivation
     {
       emoji: "👋",
-      title: "Welcome to Summit Prep",
+      title: "Welcome to SATForge",
       subtitle: "First, what brings you here? This shapes the plan we build for you.",
       canContinue: profile.goal !== null,
       content: (

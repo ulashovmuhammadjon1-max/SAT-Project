@@ -257,7 +257,7 @@ function Ecosystem() {
         <Reveal delay={0.15}>
           <p className="mx-auto mt-9 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
             <ShieldCheck className="mr-1 inline h-3.5 w-3.5 align-[-2px]" />
-            Summit Prep is an independent study platform. We are not affiliated with, authorized by, or endorsed by the
+            SATForge is an independent study platform. We are not affiliated with, authorized by, or endorsed by the
             College Board, Khan Academy, or Desmos. SAT&reg; and Bluebook&trade; are trademarks of their respective
             owners and are referenced here only to describe the exam format our practice material follows.
           </p>
@@ -347,7 +347,7 @@ function Features() {
     <section id="features" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          label="Why Summit Prep"
+          label="Why SATForge"
           icon={Sparkles}
           title="Everything you need, nothing you don't"
           body="Six systems that work together — so practice actually converts into points instead of hours."
@@ -489,7 +489,7 @@ function Analytics() {
               icon={BarChart3}
               label="Analytics"
               title="Stop guessing what to study"
-              body="Most students practise what they're already good at. Summit Prep points at the thing that's actually costing you points."
+              body="Most students practise what they're already good at. SATForge points at the thing that's actually costing you points."
             />
 
             <RevealGroup className="mt-8 grid gap-4 sm:grid-cols-2" stagger={0.07}>
@@ -648,7 +648,7 @@ function Vocabulary() {
 const TESTIMONIALS = [
   {
     quote:
-      "The interface is the whole thing. I'd done six practice tests elsewhere and still felt lost opening Bluebook. After Summit Prep, test day was muscle memory.",
+      "The interface is the whole thing. I'd done six practice tests elsewhere and still felt lost opening Bluebook. After SATForge, test day was muscle memory.",
     name: "Dilnoza R.",
     detail: "1290 → 1480",
     school: "Accepted — NYU Abu Dhabi",
@@ -677,7 +677,7 @@ function Testimonials() {
           label="Results"
           icon={Star}
           title="Students who stopped guessing"
-          body="Score changes reported by students using Summit Prep alongside official practice."
+          body="Score changes reported by students using SATForge alongside official practice."
         />
 
         <RevealGroup className="mt-14 grid gap-5 lg:grid-cols-3" stagger={0.1}>
@@ -728,7 +728,7 @@ const FAQS = [
     a: "Yes. Module 1 performance is measured against a configurable threshold, and Module 2 routes to the easy or hard form accordingly. Section scores are scaled with the routing taken into account, which is why a capped easy module cannot produce a top score here — same as the real exam.",
   },
   {
-    q: "Is Summit Prep affiliated with the College Board?",
+    q: "Is SATForge affiliated with the College Board?",
     a: "No. We are completely independent. SAT® and Bluebook™ are trademarks of the College Board, which does not sponsor or endorse this platform. We reference them only to describe the exam format our material follows.",
   },
   {
@@ -848,7 +848,7 @@ function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white">
                 <GraduationCap className="h-[18px] w-[18px]" />
               </span>
-              <span className="font-display text-[17px] font-semibold tracking-tight">Summit Prep</span>
+              <span className="font-display text-[17px] font-semibold tracking-tight">SATForge</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               An independent Digital SAT preparation platform: adaptive full-length tests, a Bluebook-accurate exam
@@ -906,7 +906,7 @@ function Footer() {
 
         <div className="mt-12 border-t border-border/60 pt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            &copy; {new Date().getFullYear()} Summit Prep. SAT&reg; is a trademark registered by the College Board, which
+            &copy; {new Date().getFullYear()} SATForge. SAT&reg; is a trademark registered by the College Board, which
             is not affiliated with and does not endorse this platform. Bluebook&trade; is a trademark of the College
             Board. All other marks belong to their respective owners.
           </p>
