@@ -2448,7 +2448,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(f(x) = 3\\),000(0.75)^x. A conservation scientist implemented a program to reduce a certain invasive insect population in an area. The given function estimates this insect species' population x years after 2008, where \\(x \\le 8\\). Which of the following is the best interpretation of 3,000 in this context?</p>",
+        "stem": "<p>\\(f(x) = 3{,}000(0.75)^x\\). A conservation scientist implemented a program to reduce a certain invasive insect population in an area. The given function estimates this insect species' population x years after 2008, where \\(x \\le 8\\). Which of the following is the best interpretation of 3,000 in this context?</p>",
         "domain": "ADV",
         "skill": "ADV-NF",
         "_source": "MarchIntB_T1",
@@ -2560,7 +2560,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(y = -4x^2 - 47\\); \\(y = qx - 43\\). In the given system of equations, q is a positive constant. The graphs of the equations in the given system intersect at exactly one point, (x, y), in the xy-plane. What is the value of x?</p>",
+        "stem": "<p>\\(y = -4x^2 - 47\\)<br/>\\(y = qx - 43\\)</p><p>In the given system of equations, q is a positive constant. The graphs of the equations in the given system intersect at exactly one point, (x, y), in the xy-plane. What is the value of x?</p>",
         "domain": "ADV",
         "skill": "ADV-NE",
         "_source": "DecIntB",
@@ -3245,19 +3245,19 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(x:3,5,\\frac{8}{y}:14,32,59\\)"
+            "content": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">32</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">59</td></tr></table>"
           },
           {
             "label": "B",
-            "content": "\\(x:3,5,\\frac{8}{y}:21,39,66\\)"
+            "content": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">39</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">66</td></tr></table>"
           },
           {
             "label": "C",
-            "content": "\\(x:3,5,\\frac{8}{y}:28,32,66\\)"
+            "content": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">28</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">32</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">66</td></tr></table>"
           },
           {
             "label": "D",
-            "content": "\\(x:3,5,\\frac{8}{y}:28,46,73\\)"
+            "content": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">28</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">46</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">73</td></tr></table>"
           }
         ],
         "correct": "D"
@@ -3292,7 +3292,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>Line t in the xy-plane has a slope of 1/8 and passes through the point (40, -7). Which equation defines line t?</p>",
+        "stem": "<p>Line t in the xy-plane has a slope of \\(\\frac{1}{8}\\) and passes through the point (40, -7). Which equation defines line t?</p>",
         "domain": "ALG",
         "skill": "ALG-LF",
         "_source": "DecIntB",
@@ -3348,7 +3348,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(\\frac{1}{x} + 1/(x-9) = 4/(x^2-9x)\\). What are all the solutions to the given equation?</p>",
+        "stem": "<p>\\(\\frac{1}{x} + \\frac{1}{x-9} = \\frac{4}{x^2-9x}\\). What are all the solutions to the given equation?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "DecIntB",
@@ -3357,11 +3357,11 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(-1 and 4\\)"
+            "content": "<p>-1 and 4</p>"
           },
           {
             "label": "B",
-            "content": "\\(0 and 9\\)"
+            "content": "<p>0 and 9</p>"
           },
           {
             "label": "C",
@@ -3434,7 +3434,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>For triangle PQR and triangle STU, angles P and S each measure 30 degrees, \\(QR = 16\\) and \\(TU = 12\\). Which additional piece(s) of information is(are) sufficient to prove that triangle PQR is similar to triangle STU? I. The length of PQ is 4/3 the length of ST. II. The length of PR is 4/3 the length of SU.</p>",
+        "stem": "<p>For triangle PQR and triangle STU, angles P and S each measure 30 degrees, \\(QR = 16\\) and \\(TU = 12\\). Which additional piece(s) of information is(are) sufficient to prove that triangle PQR is similar to triangle STU? I. The length of PQ is \\(\\frac{4}{3}\\) the length of ST. II. The length of PR is \\(\\frac{4}{3}\\) the length of SU.</p>",
         "domain": "GT",
         "skill": "GT-LA",
         "_source": "JuneV2",
@@ -3744,7 +3744,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(y = -(\\frac{1}{7})x\\); \\(y = (\\frac{1}{11})x\\). The solution to the given system of equations is (x, y). What is the value of x?</p>",
+        "stem": "<p>\\(y = -\\frac{1}{7}x\\)<br/>\\(y = \\frac{1}{11}x\\)</p><p>The solution to the given system of equations is (x, y). What is the value of x?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "JuneV2",
@@ -6274,7 +6274,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>In triangle ABC, the measure of angle A is 31 degrees, the measure of angle B is 90 degrees, and the measure of angle C is (k/2) degrees, where k is a constant. What is the value of k?</p>",
+        "stem": "<p>In triangle ABC, the measure of angle A is 31 degrees, the measure of angle B is 90 degrees, and the measure of angle C is \\(\\frac{k}{2}\\) degrees, where k is a constant. What is the value of k?</p>",
         "domain": "GT",
         "skill": "GT-LA",
         "_source": "MarchIntB_T1",
@@ -6311,11 +6311,11 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(25 \\cdot \\pi/2\\)"
+            "content": "\\(\\frac{25\\pi}{2}\\)"
           },
           {
             "label": "B",
-            "content": "\\(27 \\cdot \\pi/2\\)"
+            "content": "\\(\\frac{27\\pi}{2}\\)"
           },
           {
             "label": "C",
@@ -6584,7 +6584,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>(7/2)\\(x + 5y = 32\\); (3/2)\\(x + 5y = 28\\). The solution to the given system of equations is (x, y). What is the value of (13/2)x + 15y?</p>",
+        "stem": "<p>\\(\\frac{7}{2}x + 5y = 32\\)<br/>\\(\\frac{3}{2}x + 5y = 28\\)</p><p>The solution to the given system of equations is (x, y). What is the value of \\(\\frac{13}{2}x + 15y\\)?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "DecIntB",
@@ -6668,7 +6668,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(8(cx+3)/5 = 4x - 3\\). In the given equation, c is a constant. If the equation has no solution, what is the value of c?</p>",
+        "stem": "<p>\\(\\frac{8(cx+3)}{5} = 4x - 3\\). In the given equation, c is a constant. If the equation has no solution, what is the value of c?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "JuneV2",
@@ -6733,26 +6733,26 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(d = c/(7(2-5c))\\)"
+            "content": "\\(d = \\frac{c}{7(2-5c)}\\)"
           },
           {
             "label": "B",
-            "content": "\\(d = 7c/(2-5c)\\)"
+            "content": "\\(d = \\frac{7c}{2-5c}\\)"
           },
           {
             "label": "C",
-            "content": "\\(d = 7(2-5c)/c\\)"
+            "content": "\\(d = \\frac{7(2-5c)}{c}\\)"
           },
           {
             "label": "D",
-            "content": "\\(d = (2-5c)/(7c)\\)"
+            "content": "\\(d = \\frac{2-5c}{7c}\\)"
           }
         ],
         "correct": "B"
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(2x - 3y = 4\\); \\(x = 8\\). What is the solution (x, y) to the given system of equations?</p>",
+        "stem": "<p>\\(2x - 3y = 4\\)<br/>\\(x = 8\\)</p><p>What is the solution (x, y) to the given system of equations?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "MarchIntB_T1",
@@ -7148,7 +7148,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(x + 4y = 2\\); \\(x - 4y = 8\\). The solution to the given system of equations is (x, y). What is the value of x?</p>",
+        "stem": "<p>\\(x + 4y = 2\\)<br/>\\(x - 4y = 8\\)</p><p>The solution to the given system of equations is (x, y). What is the value of x?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "DecIntB",
@@ -7213,19 +7213,19 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(-7x + 8y = -3; 7x - 8y = 3\\)"
+            "content": "\\(-7x + 8y = -3\\)<br/>\\(7x - 8y = 3\\)"
           },
           {
             "label": "B",
-            "content": "\\(7x - 8y = 3; 8x + 9y = 4\\)"
+            "content": "\\(7x - 8y = 3\\)<br/>\\(8x + 9y = 4\\)"
           },
           {
             "label": "C",
-            "content": "\\(7x - 8y = 3; -21x + 24y = -9\\)"
+            "content": "\\(7x - 8y = 3\\)<br/>\\(-21x + 24y = -9\\)"
           },
           {
             "label": "D",
-            "content": "\\(-7x + 8y = 3; 14x - 16y = 6\\)"
+            "content": "\\(-7x + 8y = 3\\)<br/>\\(14x - 16y = 6\\)"
           }
         ],
         "correct": "D"
@@ -7325,7 +7325,7 @@
         "choices": [
           {
             "label": "A",
-            "content": "\\(m = 10(ak-9)/b\\)"
+            "content": "\\(m = \\frac{10(ak-9)}{b}\\)"
           },
           {
             "label": "B",
@@ -7333,11 +7333,11 @@
           },
           {
             "label": "C",
-            "content": "\\(m = ak - 9b/10\\)"
+            "content": "\\(m = ak - \\frac{9b}{10}\\)"
           },
           {
             "label": "D",
-            "content": "\\(m = 10ak/b - 9\\)"
+            "content": "\\(m = \\frac{10ak}{b} - 9\\)"
           }
         ],
         "correct": "D"
@@ -7430,7 +7430,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>In triangle ABC, the measure of angle C is 90 degrees. The cosine of angle A is 60/61. What is the sine of angle B?</p>",
+        "stem": "<p>In triangle ABC, the measure of angle C is 90 degrees. The cosine of angle A is \\(\\frac{60}{61}\\). What is the sine of angle B?</p>",
         "domain": "GT",
         "skill": "GT-TR",
         "_source": "DecIntB",
@@ -7572,7 +7572,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(y = 5(x - 3)\\); \\(y = (x - 3)^2\\). Which ordered pair (x, y) is a solution to the given system of equations?</p>",
+        "stem": "<p>\\(y = 5(x - 3)\\)<br/>\\(y = (x - 3)^2\\)</p><p>Which ordered pair (x, y) is a solution to the given system of equations?</p>",
         "domain": "ADV",
         "skill": "ADV-NE",
         "_source": "MayIntA",
@@ -7712,7 +7712,7 @@
       },
       {
         "type": "MULTIPLE_CHOICE",
-        "stem": "<p>\\(10 + 6(7-x)/5 = 4(7-x)/3\\). Which of the following is equivalent to the given equation?</p>",
+        "stem": "<p>\\(10 + \\frac{6(7-x)}{5} = \\frac{4(7-x)}{3}\\). Which of the following is equivalent to the given equation?</p>",
         "domain": "ALG",
         "skill": "ALG-LE",
         "_source": "MarchIntB_T1",
@@ -7917,7 +7917,7 @@
         "choices": [
           {
             "label": "A",
-            "content": "1/5,100"
+            "content": "\\(\\frac{1}{5{,}100}\\)"
           },
           {
             "label": "B",

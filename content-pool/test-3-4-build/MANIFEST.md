@@ -234,3 +234,49 @@ saved.
 **Still not resolved, unrelated to this pass**: the 2 genuinely data-less R&W questions (Bologna
 survey table, science-fair line graph — see above), Test 5's content gaps, and 0 Explanation rows
 across Test 1-4.
+
+## Follow-up pass: unconverted fractions/exponents and crammed systems of equations (this session, continued again)
+User pointed at specific questions across Test 3/4 Math (Module 1 Q9/Q13, Module 2 Easy Q17/Q21,
+plus several in Test 4 Module 1) reporting bad LaTeX and systems of equations "written in one big
+line" instead of stacked. A full regex sweep of all 132 Math questions (stems + choices, images
+excluded to avoid false positives on base64 data) for raw un-converted `/` division and `^`
+exponents outside any `\(...\)` span, plus a separate sweep for stems containing 2+ separate
+`\(...\)` equation spans, found 20 more real defects on top of everything already fixed above —
+`mathify2.py` had still more edge cases than the two rounds before this one caught:
+
+- **9 stems/choice-sets with a raw `/` instead of `\frac{}{}`**: a slope "1/8", a triangle-ratio
+  "4/3" (appeared twice in one stem), an angle "(k/2) degrees" not even wrapped in math mode at
+  all, `25 · pi/2`-style trig choices, `8(cx+3)/5` in an equation, 4 answer choices expressing a
+  variable as a raw-slash ratio, 3 more answer choices with the same pattern, a triangle cosine
+  "60/61", and a compound fraction equation `6(7-x)/5` / `4(7-x)/3`. All converted to real
+  `\frac{}{}`.
+- **1 badly broken math wrapper**: `\(f(x) = 3\),000(0.75)^x` — the auto-converter closed the
+  `\(...\)` span right after "3" (before the thousands-comma), leaving `,000(0.75)^x` as
+  unrendered plain text with a literal caret. Rewrapped as `\(f(x) = 3{,}000(0.75)^x\)`.
+- **1 more instance of the "which table" broken-fraction bug** from the previous pass
+  (`\(x:3,5,\frac{8}{y}:14,32,59\)`) that the first sweep missed because that pass only checked
+  questions whose stem literally said "table" — this one's stem says "inequality," not "table."
+  Converted all 4 choices to real per-choice tables, same as the earlier fix.
+- **2 short prose-in-math fragments** the previous 30-choice sweep's 5-word threshold missed:
+  `\(-1 and 4\)` and `\(0 and 9\)` as answer choices — same class of bug as the spacing fix above,
+  just too short to trip the word-count filter. Unwrapped to plain text.
+- **7 "crammed" systems of equations** — stems presenting two full equations separated by `; ` on
+  a single line (e.g. `\(y = -4x^2 - 47\); \(y = qx - 43\).`) instead of the real SAT's stacked,
+  one-equation-per-line layout. Reformatted all 7 (6 stems + 1 question's 4 answer choices, each of
+  which was itself a 2-equation system) using `<br/>` between the equations, e.g.
+  `\(y = -4x^2 - 47\)<br/>\(y = qx - 43\)`. Only stems containing the literal `"system of"` phrase
+  were treated as genuine systems — several other stems matched the "2+ equation spans" scan but
+  were ordinary sentences stating two separate facts (e.g. "QR = 16 and TU = 12"), not a system to
+  stack, and were correctly left alone.
+
+No correctness/answer-key issues were found in this pass (unlike the previous one) — this batch
+was pure rendering/formatting, and every choice's marked-correct answer was re-verified against
+its own math (e.g. Q21's `1/x + 1/(x-9) = 4/(x^2-9x)` reduces to `x = 13/2`, matching the
+already-correct D) before touching anything.
+
+All 20 fixes were verified in the exam-taking interface via a fresh seeded `Attempt` per module
+(screenshotted individually), then applied to production using the same
+`(test title, subject, module order, difficulty, question order)` matching as before, with each
+production write additionally gated on a content-substring assertion against the fetched row
+before update (not just before the whole batch) — every one passed on the first attempt, so
+nothing here required an in-flight correction like the digit-fix mix-up in the previous pass.

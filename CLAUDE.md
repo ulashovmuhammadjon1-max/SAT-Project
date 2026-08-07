@@ -1,5 +1,97 @@
 # Project memory
 
+## Efficient test-building playbook — read this before starting any new test work
+This section exists because Claude Code sessions do **not** carry memory between separate
+conversations — only what's committed to files in this repo persists. If a session ever says "I
+don't remember the last conversation," that's expected, not a bug: this file (and the rest of
+`content-pool/`) *is* the memory. Keep it current after any nontrivial content-build session.
+
+### Getting database access without re-pasting the URL every session
+The production DB URL must never be written into any committed file (secrets don't belong in git
+history) — but it also doesn't need to be re-pasted every session. The fix is a **persistent
+environment variable on the Claude Code environment itself** (not a file in this repo):
+1. Go to `claude.ai/code` and open the environment this project runs in (see
+   https://code.claude.com/docs/en/claude-code-on-the-web for how environments work).
+2. Find that environment's settings / environment variables section.
+3. Add a variable named `DATABASE_URL` with the Neon connection string as its value.
+4. Save. Every *future* session's container picks this up automatically at startup as
+   `process.env.DATABASE_URL` — no copy-pasting, and it still never touches a file in the repo.
+   (A session already running when the variable is added won't see it — env vars are injected at
+   container start, so it only applies going forward.)
+This sandbox also blocks raw Postgres (port 5432) and only allows outbound HTTPS, so even with
+`DATABASE_URL` set, use `@neondatabase/serverless`'s `neon()` HTTP-based tagged-template driver for
+production reads/writes, not Prisma's normal TCP client (which only works against the local dev
+Postgres, started via `service postgresql start` after `apt-get install postgresql` once per
+session — Docker's daemon isn't available in this sandbox either).
+
+### Math content: prefer original, sympy-verified questions over PDF transcription
+Building Test 3/4's Math sections from transcribed "clumsy" source PDFs cost three separate
+bug-fixing passes after the initial build (see the MANIFEST.md follow-up sections in
+`content-pool/test-3-4-build/`) — first ~16 stems that fell back to plain text, then a further 20
+questions found only after a full regex audit (systemic KaTeX spacing bugs, raw un-converted
+fractions, crammed systems of equations, a broken math wrapper), plus real correctness defects
+(a duplicate-equivalent answer choice, two answer choices literally shipped as
+`"[cut off in source PDF]"`, an unresolvably ambiguous answer with no source image to check
+against, `CONFLICT`-flagged answers where the transcript's own verification note disagreed with
+the parsed official key). Root cause: a regex-based plain-text-to-LaTeX auto-converter
+(`mathify2.py`) trying to reverse-engineer author intent from noisy OCR'd text — every fix round
+found a new edge case it didn't handle, and the source PDFs' own answer keys were frequently
+unreliable to parse in the first place.
+**Recommendation for future Math content**: default to writing original, SAT-style questions with
+`\( \)`/`\frac{}{}` LaTeX **typed correctly by hand from the start** (no bulk auto-conversion
+step) and every answer verified programmatically with sympy before it ships — this is strictly
+more reliable than transcribing from a source PDF and running it through a converter, and it's
+what CLAUDE.md already mandates as the fallback when transcribed content runs short (see
+"Math modules" rules below) — just prefer it as the default for Math, not only the fallback.
+Reading & Writing is a different story: it's mostly prose/HTML, doesn't go through a LaTeX
+converter, and hasn't had this problem — PDF transcription is fine there.
+
+### If you do transcribe Math from a PDF anyway — audit checklist (run proactively, don't wait for a user report)
+Before shipping, grep every Math stem/choice (excluding `<img>` tags, whose base64 data will
+false-positive on every regex below) for:
+- Raw `/` division outside any `\frac{}{}` — e.g. `\bfrac\{[^}]*\}` is present but a *separate*
+  `\d+\s*/\s*\d+`-shaped pattern also appears. Convert every one to `\frac{}{}`.
+- `^` exponent characters sitting *outside* any `\(...\)` span (find all `\(...\)` spans first,
+  then check every `^` for whether it falls inside one) — a sign the converter closed the math
+  wrapper in the wrong place (this happened right before a thousands-comma: `\(f(x)=3\),000...^x`).
+- A stem containing the literal phrase `"system of"` alongside 2+ separate `\(...\)` equation
+  spans — those need to be visually **stacked** (`<br/>` between them), not crammed onto one line
+  with a `"; "` separator. Don't stack every pair of `\(...\)` spans blindly though — many stems
+  legitimately state two separate facts in one sentence (e.g. "QR = 16 and TU = 12") and should
+  stay as prose.
+- Any answer choice fully wrapped in `\( ... \)` that contains 3+ real English words (not just
+  5+, that threshold missed short ones like `\(-1 and 4\)`) — KaTeX drops whitespace between bare
+  tokens in math mode, so prose sentences (or even short two-item lists) wrapped in math mode
+  render as run-on text with no spaces between words. Unwrap to plain `<p>` text.
+- `\(x:\d,\d,\frac\{\d+\}\{y\}:...\)` or similar — a telltale sign the converter misread a
+  `column / column` separator as a division and produced a nonsense fraction. These are always
+  "which table" questions; convert the choices to real per-choice `<table>` HTML instead.
+- Any question whose stem says "table"/"graph"/"figure"/"shown"/"chart"/"plot" but whose HTML has
+  neither a real `<table>` nor an `<img>` tag — it's a text description standing in for a real
+  visual. Build one (matplotlib chart embedded as base64 PNG on `Question.imageUrl`, or a real
+  `<table>` per the standard style block below) using only data already verified correct for that
+  question — never invent numbers.
+Then **verify in the actual exam-taking interface**, not just the admin editor preview — seed a
+throwaway `Attempt`/`ModuleAttempt` row pointing at the module in question (mirrors
+`startAttempt()` in `src/server/actions/student/attempts.ts`), load `/exam/{attemptId}` as the
+student user via Playwright, screenshot every affected question, and delete the attempt afterward.
+The admin preview and the real exam page have rendered identically in every case so far, but the
+exam page is what the user actually sees and is the only check that matters.
+
+### Applying a fix to both databases without breaking anything
+Local dev question/choice IDs are **not** the same as production IDs (different insert runs,
+different ID schemes — cuid-style locally, UUID in production) — never assume a hardcoded ID
+matches across environments. The pattern that's worked every time: match each target row by
+`(test title, subject, module order, difficulty, question order)` via a small join query, then —
+critically — **assert a distinctive content substring is present in the fetched row before
+writing to it**, every single time, even when you're confident about the position. A single
+hardcoded-position mistake this session (targeting question order 14 instead of 15 in a module
+where two adjacent questions coincidentally had near-identical stems) briefly overwrote an
+already-correct question; it was only caught because of exactly this kind of substring check
+run *after* the fact. Do the check *before* writing, not after, and it's a non-issue instead of a
+scramble. Apply to local first, screenshot-verify, then production, with the same assertion
+gating every production write individually (not just once for the whole batch).
+
 ## Test 3 and Test 4 are built and live in the DB as DRAFT
 Both are fully inserted (147 questions each: 27/27/27 R&W, 22/22/22 Math) — see
 `content-pool/test-3-4-build/MANIFEST.md` for exact IDs, what was deduped, and known gaps
