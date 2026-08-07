@@ -1,5 +1,15 @@
 # Project memory
 
+## Reserved content for Test 3/4/5 — read this before starting a new test build
+`content-pool/test-3-4-5-reading-writing/` has real, verified Reading & Writing content
+already classified and ready for Test 3 (full 27/27/27), Test 4 (27/26/27), and Test 5
+(26/22/26) — see that directory's `MANIFEST.md` for exact counts, what HTML formatting still
+needs to be applied, and which specific questions need a table converted, a real source image
+(not available in this repo), or a transcription ambiguity re-verified. **There is currently no
+Math content for any of these three tests** — the source files available so far are R&W-only;
+don't start building Test 3+ without either new Math source material or the user's explicit OK
+to write original Math questions (sympy-verified, per the rule below).
+
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 
 When building, reordering, or regenerating any Reading & Writing module (Module 1, Module 2
