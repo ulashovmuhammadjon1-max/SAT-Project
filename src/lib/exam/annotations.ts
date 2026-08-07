@@ -67,13 +67,18 @@ export function selectionToRange(container: HTMLElement): { start: number; end: 
   return { start, end, text };
 }
 
-/** Screen position of the current selection, relative to `container`. */
-export function selectionAnchor(container: HTMLElement): { x: number; y: number } | null {
+/**
+ * Screen position of the current selection, relative to `container`. Both
+ * edges are returned (not just the top) so the popup can flip below the
+ * selection when it's too close to the top of the passage for the popup to
+ * fit above it without being clipped off-screen.
+ */
+export function selectionAnchor(container: HTMLElement): { x: number; top: number; bottom: number } | null {
   const selection = window.getSelection();
   if (!selection || selection.rangeCount === 0) return null;
   const rect = selection.getRangeAt(0).getBoundingClientRect();
   const base = container.getBoundingClientRect();
-  return { x: rect.left - base.left + rect.width / 2, y: rect.top - base.top };
+  return { x: rect.left - base.left + rect.width / 2, top: rect.top - base.top, bottom: rect.bottom - base.top };
 }
 
 /** Wrap one offset range in `<mark>` elements, splitting text nodes as needed. */

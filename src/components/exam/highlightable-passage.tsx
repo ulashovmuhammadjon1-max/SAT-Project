@@ -20,9 +20,15 @@ const SWATCH: Record<HighlightColor, string> = {
   blue: "#BFDBFE",
 };
 
+// Conservative estimate of the popup's own rendered height (color row +
+// textarea + button row + padding) -- used to decide whether it fits above
+// the selection or needs to flip below it. Better to flip a little early
+// than to clip the color swatches off the top of the viewport.
+const POPUP_HEIGHT_ESTIMATE = 200;
+
 type Popup =
-  | { mode: "create"; x: number; y: number; start: number; end: number; text: string }
-  | { mode: "edit"; x: number; y: number; id: string };
+  | { mode: "create"; x: number; top: number; bottom: number; start: number; end: number; text: string }
+  | { mode: "edit"; x: number; top: number; bottom: number; id: string };
 
 export function HighlightablePassage({
   passageId,
@@ -68,7 +74,7 @@ export function HighlightablePassage({
     const anchor = selectionAnchor(container);
     if (!anchor) return;
     setNoteDraft("");
-    setPopup({ mode: "create", x: anchor.x, y: anchor.y, ...range });
+    setPopup({ mode: "create", x: anchor.x, top: anchor.top, bottom: anchor.bottom, ...range });
   }, []);
 
   function handleClick(event: ReactMouseEvent) {
@@ -81,7 +87,13 @@ export function HighlightablePassage({
     const rect = mark.getBoundingClientRect();
     const base = container.getBoundingClientRect();
     setNoteDraft(annotations.find((a) => a.id === id)?.note ?? "");
-    setPopup({ mode: "edit", x: rect.left - base.left + rect.width / 2, y: rect.top - base.top, id });
+    setPopup({
+      mode: "edit",
+      x: rect.left - base.left + rect.width / 2,
+      top: rect.top - base.top,
+      bottom: rect.bottom - base.top,
+      id,
+    });
   }
 
   function createWith(color: HighlightColor, note: string | null) {
@@ -112,8 +124,15 @@ export function HighlightablePassage({
           {/* Click-away catcher; sits under the popup itself. */}
           <div className="fixed inset-0 z-20" onMouseDown={closePopup} />
           <div
-            style={{ left: popup.x, top: Math.max(popup.y - 8, 4) }}
-            className="absolute z-30 w-[248px] -translate-x-1/2 -translate-y-full rounded-md border border-exam-border bg-white p-2.5 shadow-examPopup"
+            style={
+              popup.top >= POPUP_HEIGHT_ESTIMATE
+                ? { left: popup.x, top: Math.max(popup.top - 8, 4) }
+                : { left: popup.x, top: popup.bottom + 8 }
+            }
+            className={cn(
+              "absolute z-30 w-[248px] -translate-x-1/2 rounded-md border border-exam-border bg-white p-2.5 shadow-examPopup",
+              popup.top >= POPUP_HEIGHT_ESTIMATE && "-translate-y-full"
+            )}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">

@@ -21,6 +21,8 @@ import {
   Clock,
   Highlighter,
   LogOut,
+  Maximize,
+  Minimize,
   Minus,
   MoreHorizontal,
   Plus,
@@ -101,6 +103,8 @@ export function ExamShell({
   existingResponses: ExistingResponse[];
 }) {
   const router = useRouter();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const [states, setStates] = useState<QuestionState[]>(() => buildInitialStates(module, existingResponses));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -235,6 +239,24 @@ export function ExamShell({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsRemaining]);
 
+  // Keep isFullscreen in sync when the student exits via Esc or browser chrome
+  // instead of the toggle button.
+  useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullscreen(document.fullscreenElement === rootRef.current);
+    }
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", onFullscreenChange);
+  }, []);
+
+  async function toggleFullscreen() {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      await rootRef.current?.requestFullscreen();
+    }
+  }
+
   function updateCurrent(patch: Partial<QuestionState>) {
     setStates((prev) => prev.map((s, i) => (i === currentIndex ? { ...s, ...patch } : s)));
     dirtyRef.current = true;
@@ -361,6 +383,8 @@ export function ExamShell({
       onRemoveAnnotation={removeAnnotation}
       lineReaderOpen={lineReaderOpen}
       onToggleLineReader={() => setLineReaderOpen((v) => !v)}
+      isFullscreen={isFullscreen}
+      onToggleFullscreen={toggleFullscreen}
       onSaveAndExit={async () => {
         await persist();
         router.push("/dashboard");
@@ -369,7 +393,7 @@ export function ExamShell({
   );
 
   return (
-    <div className="flex h-screen flex-col bg-exam-bg text-exam-text">
+    <div ref={rootRef} className="flex h-screen flex-col bg-exam-bg text-exam-text">
       <div className="shrink-0 bg-exam-strip py-[5px] text-center text-[11px] font-medium uppercase tracking-[0.08em] text-white">
         This is a practice test
       </div>
@@ -639,6 +663,8 @@ function ExamHeader({
   onRemoveAnnotation,
   lineReaderOpen,
   onToggleLineReader,
+  isFullscreen,
+  onToggleFullscreen,
   onSaveAndExit,
 }: {
   sectionTitle: string;
@@ -659,6 +685,8 @@ function ExamHeader({
   onRemoveAnnotation: (id: string) => void;
   lineReaderOpen: boolean;
   onToggleLineReader: () => void;
+  isFullscreen: boolean;
+  onToggleFullscreen: () => void;
   onSaveAndExit: () => void;
 }) {
   const [zoomOpen, setZoomOpen] = useState(false);
@@ -824,6 +852,13 @@ function ExamHeader({
               </>
             )}
           </div>
+
+          <ToolButton
+            icon={isFullscreen ? Minimize : Maximize}
+            label={isFullscreen ? "Exit Full Screen" : "Full Screen"}
+            onClick={onToggleFullscreen}
+            active={isFullscreen}
+          />
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
