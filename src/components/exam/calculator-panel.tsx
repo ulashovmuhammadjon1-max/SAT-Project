@@ -76,7 +76,7 @@ export function CalculatorPanel({ onClose }: { onClose: () => void }) {
       mount();
     } else {
       const script = document.createElement("script");
-      script.src = `https://www.desmos.com/api/v1.9/calculator.js?apiKey=${DESMOS_API_KEY}`;
+      script.src = `https://www.desmos.com/api/v1.12/calculator.js?apiKey=${DESMOS_API_KEY}`;
       script.async = true;
       script.onload = mount;
       script.onerror = () => !cancelled && setFailed(true);
