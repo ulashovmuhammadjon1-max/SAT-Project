@@ -158,3 +158,79 @@ Verified live in the exam-taking interface itself (not just the admin editor pre
 local `Attempt`/`ModuleAttempt` pointing at Test 3 Math Module 1 and loaded `/exam/{attemptId}` as
 the student user — Q1's circle equation now renders as proper KaTeX (`.katex` elements present,
 no literal `^2` in the stem), matching Test 1/2's exam styling.
+
+## Follow-up pass: prose "tables"/"graphs", a spacing bug, and real content defects (this session, continued)
+User reported "large texts written without spacing," "incorrect numbers," and "lack of graphs" in
+the Math sections specifically. A full audit of all 132 Test 3/4 Math questions (not just the 16
+already fixed) turned up several distinct, real problems, all now fixed in both DBs and this JSON:
+
+**1. A systemic KaTeX spacing bug — 30 answer choices across Test 3/4 Math (0 in Test 1/2).**
+`mathify2.py`'s whole-string-wrap trigger (any digit/operator) fired on ordinary English
+interpretation sentences that merely *contained* a number, e.g.
+`"The mean of the 14 data points is greater than..."`. Wrapped in `\( ... \)`, KaTeX renders
+consecutive words with no spacing (math mode doesn't preserve whitespace between bare tokens),
+producing exactly the "words jammed together" the user described —
+`Themeanofthe14datapointsisgreater...`. Fix: detect any choice that's fully wrapped in `\( \)`
+but contains 5+ real English words plus a common function word (the/is/of/and/etc.) — that's
+prose, not math — and strip the wrapper back to plain `<p>` text. Found and fixed identically on
+both local and production (30 on each, exact same set, confirming it's a build-time defect, not
+drift between environments).
+
+**2. 9 questions describing real tabular data as run-on prose instead of a `<table>`.** E.g. "The
+table shows the frequency of values in a data set: Value 13 freq 8; Value 20 freq 1; Value 27
+freq 8; Value 34 freq 6." Converted all 9 to real `<table>` HTML using the standard style block
+(cars/passengers linear-relationship data, rectangle area/perimeter, quadratic x/f(x) triples, age
+distribution, value/frequency, pole-vault exponential x/h(x), and 5-task timing data). Two of
+these ("which table..." questions) needed their **answer choices** converted to small tables too
+— those had been mathify'd into a broken `\(x:0,1,\frac{2}{y}:0,45,47\)`, where the auto-converter
+mistook a literal `x-col / y-col` separator for a fraction bar. Now real per-choice tables.
+
+**3. 4 questions describing a graph/figure with zero image anywhere** (distinct from the 7 images
+already added in the prior pass — these are 4 *additional* ones that prior pass missed): a dot
+plot (orbital periods + outlier), a scatterplot (y-intercept -2.6, slope 1.9), a line+parabola
+system (y=3x, y=x²-6), and a 30-60-90 triangle. Built matplotlib images for all 4, consistent with
+the already-verified correct answers. The 30-60-90 triangle's stem was also confusingly worded
+("the side adjacent to the 30 degree angle (opposite the right angle vertex)") — rewrote it
+plainly once the actual geometry was worked out (the leg adjacent to 30°, i.e. opposite the 60°
+angle, is 66 — not the hypotenuse; solving that way is the only reading that matches answer B).
+
+**4. Real correctness defects found while checking the math, not just formatting:**
+- **Test 3 Math Module 1 Q16** (cars/passengers linear equation) — choices A (`35c - p = -6`) and
+  D (`p - 35c = 6`) were algebraically identical (both reduce to `p = 35c + 6`), so two of the four
+  "different" answer choices were actually the same equation. Replaced D with a genuine (wrong)
+  distractor.
+- **Test 4 Math Module 2 Easy Q6** (age-distribution probability) — choices C and D were shipped
+  as the literal string `"[cut off in source PDF]"`, i.e. a 4-choice question with only 2 real
+  choices. Added two original, verification-consistent distractor values (0.28, 0.38 — plausible
+  results of common conditioning/numerator errors); A (0.21) and B (0.29, correct) were already
+  real.
+- **Test 3 Math Module 1 Q2** (similar-triangles area) — the transcript's own verification note
+  flagged this as unresolvable: sympy on the transcribed area (170) gives 170/9, but the parsed
+  official key implies 149/9, and the transcriber suspected the area value itself may have been
+  misread with no independent source (no circled selection, no PDF image on file) to break the
+  tie. Rather than ship a coinflip FREE_RESPONSE answer, replaced it with a fresh, sympy-verified
+  similar-triangles question (side ratio 4, area 15 → 240) testing the identical skill.
+- **Test 3 Math Module 2 Easy Q15** (`4(x+3) = 3(x+3) + 56`) — the transcript's own note already
+  flagged this as likely mistranscribed: solving the equation as given yields x+3=56, but both the
+  official key and the source's own circled student answer independently say 53 — and since
+  `4(x+3) = 3(x+3) + D` reduces to exactly `x+3 = D`, the stem's "56" is inconsistent with its own
+  corroborated answer. Corrected the stem's constant to 53, making the equation self-consistent
+  with the answer already in place.
+  (Caught and self-corrected mid-fix: this question sits immediately next to a different, unrelated
+  question that also happens to be of the form "4(x+3) = 3(x+3) + N" — Module 2 Easy Q14, the
+  exponential-y-intercept question from the earlier 16-question fix. An initial pass targeted Q14
+  by a hardcoded position instead of Q15, briefly overwriting the already-correct Q14 content in
+  both DBs. Caught immediately via a content-substring re-check against the source, and both
+  questions were restored/fixed correctly before this JSON was synced or anything was committed.)
+
+All fixes were verified in the actual exam-taking interface (not just the admin preview) via a
+seeded local `Attempt` across all 6 affected Math modules, screenshotted question-by-question,
+then applied identically to production (matched by `(test title, subject, module order,
+difficulty, question order)` via the Neon HTTP driver — production question IDs differ from
+local, so nothing here is matched on `(source, num)` per the standing rule) and spot-verified by
+re-fetching each updated stem and confirming it contains the expected content before this file was
+saved.
+
+**Still not resolved, unrelated to this pass**: the 2 genuinely data-less R&W questions (Bologna
+survey table, science-fair line graph — see above), Test 5's content gaps, and 0 Explanation rows
+across Test 1-4.
