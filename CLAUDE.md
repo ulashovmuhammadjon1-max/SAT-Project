@@ -11,8 +11,11 @@ carry defects (LaTeX problems, text running together without spacing). Match Tes
 style, and never copy Test 3/4's.
 
 What Test 1/2 actually do differently — verified by diffing live production stems:
-- **Stems are bare HTML, not wrapped in `<p>…</p>`.** Test 3/4 wrap every stem in `<p>`; Test
-  1/2 don't. Follow Test 1/2.
+- **Stems are bare HTML, not wrapped in `<p>…</p>`.** Test 3/4 wrapped every stem in `<p>`; Test
+  1/2 don't. Follow Test 1/2. (Fixed: 113 single-paragraph Test 3/4 Math stems have since been
+  unwrapped by `content-pool/test-6-7-build/fix_math_style.mjs`. The 17 left wrapped are
+  genuinely multi-block — an equation block then prose, or prose then a table then prose — and
+  must stay that way; unwrapping those joins two paragraphs.)
 - **Simple inline math stays plain text.** Test 1 writes `f(x)=6(2x+4)`, `17h+45=164`, `90°F`
   as ordinary text. Reserve `\( … \)` for things that genuinely need typesetting — fractions,
   exponents, radicals, subscripts. Wrapping everything is what makes Test 3/4 look inconsistent.
@@ -32,6 +35,30 @@ Specific LaTeX rules that a converter got wrong and a human must get right:
 - Never wrap prose in math mode. KaTeX drops whitespace between bare tokens, so an answer
   choice like `\(-1 and 4\)` renders as run-on text. Prose choices are plain `<p>` text.
 - Systems of equations get stacked with `<br/>`, never crammed onto one line with `"; "`.
+
+### 2b. Verify house style against the DATABASE, never against your own source file.
+`verify_math_m2easy.py` and `verify_math_authored_mc.py` check only the questions authored in
+their own directory. Test 6 shipped 18 Math questions rendering literal `^`, `sqrt()`, `*`,
+`3/5`, `2\pi`, `x != 0` and `sin(theta)` because those came from
+`content-pool/new-source-transcripts/` as plain text and **no verifier ever read them**. Every
+authored question passed; the bug lived entirely in the content nothing was checking.
+
+**Before publishing any test, run the DB-wide audit against local and production:**
+```
+DATABASE_URL='postgresql://...' node content-pool/test-6-7-build/audit_math_rendering.mjs
+```
+It exits non-zero on any `ERROR` finding. Things it checks that a stem-only or authored-only
+check will miss:
+- `^`, `sqrt(`, `*`-as-multiply, `N/M` slash fractions outside a `\( \)` / `\[ \]` span
+- a **LaTeX macro outside a math span** — `2\pi` renders as literal backslash-p-i
+- ASCII `!=`, `<=`, `>=`, which should be `\ne`, `\le`, `\ge`
+- bare `sin(`/`cos(`/`tan(`/`log(` and Greek spelled out as `theta`/`alpha`
+- `pi` as a word, using the `(?<![A-Za-z])pi(?![A-Za-z])` lookaround, never `\bpi\b`
+
+Two lessons about the checks themselves: it **strips `<img>` tags first**, because base64
+payloads match every pattern above; and a check that under-matches is worse than none — the
+asterisk pattern originally required a digit on the left, so `k*tan(...)` slipped through, and
+six more broken questions only appeared once it was widened.
 
 ### 3. Every question needs a real figure, never a prose description of one.
 Test 3 shipped stems like "a line of best fit is shown, with points scattered around a mildly

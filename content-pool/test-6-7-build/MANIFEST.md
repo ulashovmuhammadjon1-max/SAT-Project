@@ -47,6 +47,69 @@ get them, in preference order:
   outright because their figure survived only as a prose description with no
   source image kept, and four MC questions were authored to replace them.
 
+## Math rendering audit — a class of bug the verifiers could not see
+
+The user reported after Test 6 shipped that "a lot of questions in the sat math were not
+rendered properly … they still have `^` instead of actual sat format where they actually show
+power. also fractions aren't like in the real sat."
+
+**Root cause: the verifiers only ever read questions authored in this directory.**
+`verify_math_m2easy.py` and `verify_math_authored_mc.py` import their questions from
+`math_m2easy.py` / `math_authored_mc.py` and check house style on those. Questions pulled from
+`content-pool/new-source-transcripts/` were transcribed as plain text — `f(x) = 250(5)^x`,
+`26 + 26*sqrt(2)`, `3/5`, `84*pi` — and no check ever looked at them, so they went to production
+rendering as literal carets, asterisks and slashes. Every authored question passed; the bug was
+entirely in the content nothing was verifying.
+
+`audit_math_rendering.mjs` closes that gap by auditing **the database** rather than a source
+file, so transcribed and authored content are treated identically. Run it against local and
+production before publishing any test:
+
+```
+DATABASE_URL='postgresql://...' node audit_math_rendering.mjs
+```
+
+It scans every live Math stem and answer choice for notation sitting outside a `\( \)` / `\[ \]`
+span, stripping `<img>` tags first so base64 payloads don't false-positive on every pattern.
+Findings are split by severity — `ERROR` is notation the student can see is broken and fails the
+run; `style` is readable but off-convention.
+
+The sweep of all 396 production Math questions found **18 with rendering errors**, well beyond
+the 12 the first pass caught. Widening two under-matching patterns is what surfaced the rest:
+the asterisk check required a digit on the left (missing `k*tan(...)`), and there was no check at
+all for a LaTeX macro outside a math span, which is how `2\pi` shipped as literal backslash-p-i.
+
+| Defect | Where |
+|---|---|
+| caret, `sqrt(`, `*`, slash fraction | Test 6 M1 Q9/11/12/14/20, M2H Q3/18/19/21 |
+| `\pi` outside any math span | Test 6 M2H Q19 (all four choices) |
+| `!=`, `<=` as ASCII | Test 1 M2E Q13; Test 2 M1 Q13, M2E Q5/Q14, M2H Q11; Test 6 M1 Q17 |
+| `theta`, `sin(...)`, `cos(...)` as bare text | Test 2 M2E Q20; Test 3 M2H Q3; Test 4 M2H Q4 |
+| a `/13` divisor left outside the span it belonged to | Test 4 M2H Q4 |
+
+`fix_math_rendering.py` carries the replacement for each, typed by hand per standing rule 2 —
+no bulk auto-conversion. Rows are matched on (test title, subject, module order, difficulty,
+question order) because ids differ between environments, and every write asserts a distinctive
+substring is present in the target row first. 57 edits, 0 skipped, on both databases.
+
+`fix_math_style.mjs` then handled the lower-severity findings: `NN degrees` became `NN&deg;`
+(the adverbial "the measure, in degrees, of angle F" is correct English and is left alone), raw
+`°` glyphs were normalized to the entity outside math spans, and two transcription defects were
+repaired by hand — Test 3's copy of the Test 1 temperature question had lost its degree symbol
+entirely ("90 F"), and one stem carried its degree value on a math span rather than a bare
+number.
+
+**It also closed the last structural difference from the reference style.** Tests 1, 2, 5 and 6
+wrap no Math stem in `<p>`; Tests 3 and 4 wrapped 65 of 66 each. 113 single-paragraph stems were
+unwrapped. The other 17 are genuinely multi-block (an equation block then prose, or prose then a
+table then prose) and were left alone — unwrapping those would have joined two paragraphs, and
+the script refuses any unwrap that is not lossless.
+
+Verified in the real exam interface, not just by re-running the audit: Test 6 Math Module 1 and
+Test 3 Math Module 2 (Hard) were swept with Playwright through `/exam/{attemptId}`, all 22
+questions each, no console errors, radicals/exponents/stacked fractions/display equations and
+the unwrapped table stems all rendering correctly. Both throwaway attempts have been deleted.
+
 ## The two findings that shape this build
 
 **1. The October papers are parallel forms of one administration and share questions.**
