@@ -28,7 +28,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Dec2023_12A",
@@ -58,7 +61,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -88,37 +94,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023E",
-   "sourceNum": "5",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Joel Brown and colleagues showed that high moonlight intensity inhibits the activity of the Arizona pocket mouse (Perognathus amplus), a result explicable in terms of benefits and costs: greater lunar intensity may not enable the mice to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Most other nocturnal mammals respond to lunar intensity variations similarly to Arizona pocket mice, but Azara's night monkeys (Aotus azarae) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.</p>",
-   "stem": "Which choice best describes the overall structure of the text?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "It introduces an observation of a behavioral pattern, presents an explanation for the pattern, and then describes an exception to the pattern that casts doubt on that explanation."
-    },
-    {
-     "label": "B",
-     "content": "It describes and accounts for a finding, characterizes the finding as representative of a general pattern, and then describes and accounts for an exception to that pattern."
-    },
-    {
-     "label": "C",
-     "content": "It discusses two different responses to the same natural phenomenon, explains why one of those responses occurs, and then suggests that the other response still needs to be explained."
-    },
-    {
-     "label": "D",
-     "content": "It presents and explains a study result, indicates that the result is similar to the results of many other studies, and then attributes a conflicting study result to a difference in that study's methods."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Dec2023_12A",
@@ -148,7 +127,43 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "source": "Dec2023E",
+   "sourceNum": "5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Joel Brown and colleagues showed that high moonlight intensity inhibits the activity of the Arizona pocket mouse (Perognathus amplus), a result explicable in terms of benefits and costs: greater lunar intensity may not enable the mice to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Most other nocturnal mammals respond to lunar intensity variations similarly to Arizona pocket mice, but Azara's night monkeys (Aotus azarae) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.</p>",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces an observation of a behavioral pattern, presents an explanation for the pattern, and then describes an exception to the pattern that casts doubt on that explanation."
+    },
+    {
+     "label": "B",
+     "content": "It describes and accounts for a finding, characterizes the finding as representative of a general pattern, and then describes and accounts for an exception to that pattern."
+    },
+    {
+     "label": "C",
+     "content": "It discusses two different responses to the same natural phenomenon, explains why one of those responses occurs, and then suggests that the other response still needs to be explained."
+    },
+    {
+     "label": "D",
+     "content": "It presents and explains a study result, indicates that the result is similar to the results of many other studies, and then attributes a conflicting study result to a difference in that study's methods."
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Central Ideas and Details",
+   "diagramNote": "",
+   "order": 5,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Nov2023",
@@ -178,7 +193,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 6,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Dec2023E",
@@ -208,97 +226,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "9",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>In a paper for an art history class, a student claims that Rosa Bonheur's 1855 painting The Horse Fair marks a significant change in Bonheur's artistic development.</p>",
-   "stem": "Which quotation from an art history textbook would most effectively support the student's claim?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "\"The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.\""
-    },
-    {
-     "label": "B",
-     "content": "\"Of all Bonheur's paintings, none so clearly represents her abilities and ideas as The Horse Fair.\""
-    },
-    {
-     "label": "C",
-     "content": "\"The Horse Fair has been analyzed extensively since it was first exhibited, as no two viewers seem to agree about exactly what the painting means.\""
-    },
-    {
-     "label": "D",
-     "content": "\"Although Bonheur was clearly influenced by other artists of her time, she was also an artist ahead of her time, as The Horse Fair demonstrates.\""
-    }
-   ],
-   "correct": "A",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "March2024B",
-   "sourceNum": "12",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p><strong>Numbers of the 23 Non-native Tree Species Reported and the Insect and Fungus Threats to Them</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Country</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Trees</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Fungi</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Insects</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lithuania</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Poland</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">105</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Austria</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">51</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td></tr></tbody></table><p>Elisabeth P&ouml;tzelsberger and colleagues gathered data on 23 non-native tree species grown in Europe. They analyzed reports from Austria, Poland, and Lithuania about the number of these species grown in those countries as well as the numbers of insect and fungus species that damage those trees. The researchers concluded that in only one of these countries are there more insect species than fungus species that pose risks to these trees.</p>",
-   "stem": "Which choice best describes data from the table that support P\u00f6tzelsberger and colleagues' conclusion?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "Austria reported 51 damaging fungus species, which is a greater number of them than either Poland or Lithuania reported."
-    },
-    {
-     "label": "B",
-     "content": "Poland reported 25 damaging fungus species and 105 damaging insect species, while both Austria and Lithuania reported a greater number of damaging fungus species than insect species."
-    },
-    {
-     "label": "C",
-     "content": "Austria reported 51 damaging fungus species, whereas Lithuania reported 7 damaging insect species."
-    },
-    {
-     "label": "D",
-     "content": "Austria and Lithuania both reported fewer damaging insect species than damaging fungus species, whereas Poland reported 105 fungus species and only 10 insect species."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": "The conclusion to support is that in only ONE country are there more insect than fungus species. The table gives Lithuania 12 fungi / 7 insects, Poland 25 / 105, Austria 51 / 50 -- Poland alone. Choice B states exactly that. The recorded choice D claims Poland reported '105 fungus species and only 10 insect species', but the table says 25 fungi, 105 insects and 10 trees, so D contradicts its own table.",
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023E",
-   "sourceNum": "11",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p><strong>Studies of the Effects of Tilling vs. No Tilling on Crop Yields</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Authors</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop yield with tilling (kilograms per hectare)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop yield with no tilling (kilograms per hectare)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Salem Alhajj Ali and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">winter wheat</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,700</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5,300</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Nayasha Kafesu and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">maize</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,078</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,574</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">G.F. Botta and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">soybeans</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,300</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,700</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Laila Nazirah and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">rice</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,370</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,450</td></tr></tbody></table><p>Laila Nazirah and colleagues found that tilling&mdash;the practice of turning soil with hoes, plows, or other machines before planting crops&mdash;was associated with an increased yield of rice. But some studies of other crops have found the opposite effect, raising the question of whether the increase in yield found by Nazirah and colleagues is specific to their study crop. However, this doesn&rsquo;t seem to be the case: _____</p>",
-   "stem": "Which choice most effectively uses data from the table to complete the assertion?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "Salem Alhajj Ali and colleagues reported an even larger positive effect of tilling on the yield of winter wheat."
-    },
-    {
-     "label": "B",
-     "content": "a study using rice yielded 4,370 kilograms per hectare with tilling and only 2,450 kilograms per hectare without tilling."
-    },
-    {
-     "label": "C",
-     "content": "crop yields with tilling have ranged from 3,078 kilograms per hectare for maize to 4,370 kilograms per hectare for rice."
-    },
-    {
-     "label": "D",
-     "content": "G.F. Botta and colleagues found a similar association in a study using soybeans."
-    }
-   ],
-   "correct": "D",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": "[DIAGRAM: table titled 'Studies of the Effects of Tilling vs. No Tilling on Crop Yields' listing authors, crop, and yields with/without tilling]"
+   "diagramNote": "",
+   "order": 7,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "March2024B",
@@ -328,7 +259,109 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "source": "Nov2023",
+   "sourceNum": "9",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In a paper for an art history class, a student claims that Rosa Bonheur's 1855 painting The Horse Fair marks a significant change in Bonheur's artistic development.</p>",
+   "stem": "Which quotation from an art history textbook would most effectively support the student's claim?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\"The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.\""
+    },
+    {
+     "label": "B",
+     "content": "\"Of all Bonheur's paintings, none so clearly represents her abilities and ideas as The Horse Fair.\""
+    },
+    {
+     "label": "C",
+     "content": "\"The Horse Fair has been analyzed extensively since it was first exhibited, as no two viewers seem to agree about exactly what the painting means.\""
+    },
+    {
+     "label": "D",
+     "content": "\"Although Bonheur was clearly influenced by other artists of her time, she was also an artist ahead of her time, as The Horse Fair demonstrates.\""
+    }
+   ],
+   "correct": "A",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "March2024B",
+   "sourceNum": "12",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Numbers of the 23 Non-native Tree Species Reported and the Insect and Fungus Threats to Them</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Country</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Trees</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Fungi</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Insects</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lithuania</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Poland</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">105</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Austria</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">51</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td></tr></tbody></table><p>Elisabeth P&ouml;tzelsberger and colleagues gathered data on 23 non-native tree species grown in Europe. They analyzed reports from Austria, Poland, and Lithuania about the number of these species grown in those countries as well as the numbers of insect and fungus species that damage those trees. The researchers concluded that in only one of these countries are there more insect species than fungus species that pose risks to these trees.</p>",
+   "stem": "Which choice best describes data from the table that support P\u00f6tzelsberger and colleagues' conclusion?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Austria reported 51 damaging fungus species, which is a greater number of them than either Poland or Lithuania reported."
+    },
+    {
+     "label": "B",
+     "content": "Poland reported 25 damaging fungus species and 105 damaging insect species, while both Austria and Lithuania reported a greater number of damaging fungus species than insect species."
+    },
+    {
+     "label": "C",
+     "content": "Austria reported 51 damaging fungus species, whereas Lithuania reported 7 damaging insect species."
+    },
+    {
+     "label": "D",
+     "content": "Austria and Lithuania both reported fewer damaging insect species than damaging fungus species, whereas Poland reported 105 fungus species and only 10 insect species."
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": "The conclusion to support is that in only ONE country are there more insect than fungus species. The table gives Lithuania 12 fungi / 7 insects, Poland 25 / 105, Austria 51 / 50 -- Poland alone. Choice B states exactly that. The recorded choice D claims Poland reported '105 fungus species and only 10 insect species', but the table says 25 fungi, 105 insects and 10 trees, so D contradicts its own table.",
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "Dec2023E",
+   "sourceNum": "11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Studies of the Effects of Tilling vs. No Tilling on Crop Yields</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Authors</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop yield with tilling (kilograms per hectare)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop yield with no tilling (kilograms per hectare)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Salem Alhajj Ali and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">winter wheat</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,700</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5,300</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Nayasha Kafesu and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">maize</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,078</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,574</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">G.F. Botta and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">soybeans</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,300</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,700</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Laila Nazirah and colleagues</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">rice</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,370</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,450</td></tr></tbody></table><p>Laila Nazirah and colleagues found that tilling&mdash;the practice of turning soil with hoes, plows, or other machines before planting crops&mdash;was associated with an increased yield of rice. But some studies of other crops have found the opposite effect, raising the question of whether the increase in yield found by Nazirah and colleagues is specific to their study crop. However, this doesn&rsquo;t seem to be the case: _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the assertion?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Salem Alhajj Ali and colleagues reported an even larger positive effect of tilling on the yield of winter wheat."
+    },
+    {
+     "label": "B",
+     "content": "a study using rice yielded 4,370 kilograms per hectare with tilling and only 2,450 kilograms per hectare without tilling."
+    },
+    {
+     "label": "C",
+     "content": "crop yields with tilling have ranged from 3,078 kilograms per hectare for maize to 4,370 kilograms per hectare for rice."
+    },
+    {
+     "label": "D",
+     "content": "G.F. Botta and colleagues found a similar association in a study using soybeans."
+    }
+   ],
+   "correct": "D",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "[DIAGRAM: table titled 'Studies of the Effects of Tilling vs. No Tilling on Crop Yields' listing authors, crop, and yields with/without tilling]",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
   },
   {
    "source": "Nov2023",
@@ -358,7 +391,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 12,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Dec2023_12A",
@@ -388,7 +424,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 13,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Nov2023",
@@ -418,7 +457,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 14,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Dec2023E",
@@ -448,7 +490,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 15,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023E",
@@ -478,7 +523,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023_12A",
@@ -508,7 +556,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
   },
   {
    "source": "Nov2023",
@@ -538,7 +589,74 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 18,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In the list &ldquo;Splendid Things&rdquo; from Sei Sh&#333;nagon&rsquo;s <em>Pillow Book</em>, the author delights in grape-colored fabric, wisteria vines around a tree, and a snow-covered garden. So shrewd an observer is Sh&#333;nagon, a lady-in-waiting to Empress Teishi, that her book&rsquo;s musings on tenth-century Japanese courtly life _____ readers a thousand years later.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has fascinated"
+    },
+    {
+     "label": "B",
+     "content": "fascinate"
+    },
+    {
+     "label": "C",
+     "content": "is fascinating"
+    },
+    {
+     "label": "D",
+     "content": "fascinates"
+    }
+   ],
+   "correct": "B",
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "diagramNote": "",
+   "order": 19,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 19,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The present-day city of Dushanbe, Tajikistan, was the capital of the Tajik Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Each of these republics _____ established along ethnolinguistic lines: most residents of the Tajik Republic spoke Persian, for example.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have been"
+    },
+    {
+     "label": "B",
+     "content": "are"
+    },
+    {
+     "label": "C",
+     "content": "was"
+    },
+    {
+     "label": "D",
+     "content": "were"
+    }
+   ],
+   "correct": "C",
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "diagramNote": "",
+   "order": 20,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
   },
   {
    "source": "Dec2023_12A",
@@ -568,7 +686,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 21,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Nov2023",
@@ -598,7 +719,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Dec2023_12A",
@@ -628,7 +752,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   },
   {
    "source": "Nov2023",
@@ -658,7 +785,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   },
   {
    "source": "Nov2023",
@@ -688,7 +818,74 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 24,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>A supercontinent is a single landmass made up of most or all of Earth&rsquo;s continents.</li><li>Over time, continents merge together to form supercontinents, which then break apart.</li><li>This process is believed to take hundreds of millions of years and is known as the supercontinent cycle.</li><li>Ur was a supercontinent that formed about 3.1 billion years ago.</li><li>Columbia was a supercontinent that formed about 1.8 billion years ago.</li></ul>",
+   "stem": "The student wants to emphasize the order in which the supercontinents were formed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The supercontinent Columbia formed long after the supercontinent Ur."
+    },
+    {
+     "label": "B",
+     "content": "Ur formed about 3.1 billion years ago but eventually broke apart."
+    },
+    {
+     "label": "C",
+     "content": "Forming and breaking apart over hundreds of millions of years, supercontinents are made up of most or all of Earth&rsquo;s continents."
+    },
+    {
+     "label": "D",
+     "content": "Ur and Columbia were both supercontinents, single landmasses made up of most or all of Earth&rsquo;s continents."
+    }
+   ],
+   "correct": "A",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 25,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li><em>Catharsis, Conversion, Traumata</em> is a 1986 sculpture by American artist Joseph Kosuth.</li><li>It consists of a blue neon sign that spells out the title phrase.</li><li><em>Harvest Moon</em> is a 2013 sculpture by British/Pakistani artist Shezad Dawood.</li><li>It consists of a yellow neon sign that forms an abstract moon shape.</li><li>Neon signs became popular with advertisers in the 1920s and began to decline in popularity in the 1960s.</li><li>Neon signs became popular with artists in the 1960s and continue to be popular today.</li></ul>",
+   "stem": "The student wants to emphasize a difference between the two sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Molded into an evocative phrase in <em>Catharsis, Conversion, Traumata</em> (1986), an abstract form in <em>Harvest Moon</em> (2013), and an advertising tool in decades past, neon lighting has a number of different applications."
+    },
+    {
+     "label": "B",
+     "content": "While the sculptures share a common material, one spells out a phrase while the other is decidedly more abstract."
+    },
+    {
+     "label": "C",
+     "content": "Kosuth&rsquo;s sculpture was made in 1986 and Dawood&rsquo;s in 2013, both well after the advertising heyday of neon signs had passed."
+    },
+    {
+     "label": "D",
+     "content": "American artist Joseph Kosuth&rsquo;s and British/Pakistani artist Shezad Dawood&rsquo;s sculptures have employed neon signs in different ways, demonstrating the versatility of the popular material."
+    }
+   ],
+   "correct": "B",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   }
  ],
  "test5|RW_M2_EASY": [
@@ -720,7 +917,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -750,7 +950,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -780,37 +983,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023_12A",
-   "sourceNum": "6",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.</p>",
-   "stem": "Which choice best describes the overall structure of the text?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "It introduces the topic of a scientific study, describes the study's importance, and then presents the study's results."
-    },
-    {
-     "label": "B",
-     "content": "It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used."
-    },
-    {
-     "label": "C",
-     "content": "It argues for a new approach to scientific research, comments on the public's opinion about the approach, and then describes how that approach was applied in a certain study."
-    },
-    {
-     "label": "D",
-     "content": "It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -840,7 +1016,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
   },
   {
    "source": "Nov2023",
@@ -870,7 +1049,43 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 5,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "source": "Dec2023_12A",
+   "sourceNum": "6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.</p>",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces the topic of a scientific study, describes the study's importance, and then presents the study's results."
+    },
+    {
+     "label": "B",
+     "content": "It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used."
+    },
+    {
+     "label": "C",
+     "content": "It argues for a new approach to scientific research, comments on the public's opinion about the approach, and then describes how that approach was applied in a certain study."
+    },
+    {
+     "label": "D",
+     "content": "It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects."
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Central Ideas and Details",
+   "diagramNote": "",
+   "order": 6,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Dec2023_12A",
@@ -900,67 +1115,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023_12A",
-   "sourceNum": "13",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p><strong>Dated Ages of Lunar Samples from Select Missions</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mission name</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Year</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Landing site</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Approximate age of lunar samples (billions of years)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1969</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Tranquillitatis</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 15</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1971</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Imbrium</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1972</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Serenitatis</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Chang&rsquo;e 5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2020</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Oceanus Procellarum</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.0</td></tr></tbody></table><p>The Apollo program missions were spaceflights to the moon led by the United States during the 1960s and 1970s during which astronauts collected some samples of the moon&rsquo;s surface. More recently, China launched the Chang&rsquo;e 5 mission, which returned additional lunar surface samples. Researchers have analyzed and dated each of the samples, concluding that the lunar samples collected during the Chang&rsquo;e 5 mission are significant because _____</p>",
-   "stem": "Which choice most effectively uses data from the table to complete the claim?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "they are much younger than the samples brought back from any of the Apollo missions."
-    },
-    {
-     "label": "B",
-     "content": "they were collected from the same landing site as the Apollo 11 mission."
-    },
-    {
-     "label": "C",
-     "content": "they are closest in age to the samples brought back by the Apollo 17 mission."
-    },
-    {
-     "label": "D",
-     "content": "they helped confirm the predicted ages of the lunar samples from the Apollo missions."
-    }
-   ],
-   "correct": "A",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023E",
-   "sourceNum": "10",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>External shopping cues are a type of marketing that uses obvious messaging\u2014a display featuring a new product, for example, or a \"buy one, get one free\" offer\u2014to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.</p>",
-   "stem": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "\"I needed to buy some cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.\""
-    },
-    {
-     "label": "B",
-     "content": "\"I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store, even though I looked all over for them.\""
-    },
-    {
-     "label": "C",
-     "content": "\"The store sent me a coupon for a new brand of soup, so I came here to find out what kinds of soup that brand offers. I decided to buy a few cans because I had the coupon.\""
-    },
-    {
-     "label": "D",
-     "content": "\"This store is larger than one that's closer to where I live, and it carries more products. I came here to buy some things that the other store doesn't always have.\""
-    }
-   ],
-   "correct": "A",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Inferences",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 7,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Dec2023E",
@@ -990,7 +1148,76 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "source": "Dec2023_12A",
+   "sourceNum": "13",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Dated Ages of Lunar Samples from Select Missions</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mission name</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Year</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Landing site</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Approximate age of lunar samples (billions of years)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1969</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Tranquillitatis</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 15</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1971</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Imbrium</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Apollo 17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1972</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mare Serenitatis</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Chang&rsquo;e 5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2020</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Oceanus Procellarum</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.0</td></tr></tbody></table><p>The Apollo program missions were spaceflights to the moon led by the United States during the 1960s and 1970s during which astronauts collected some samples of the moon&rsquo;s surface. More recently, China launched the Chang&rsquo;e 5 mission, which returned additional lunar surface samples. Researchers have analyzed and dated each of the samples, concluding that the lunar samples collected during the Chang&rsquo;e 5 mission are significant because _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the claim?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "they are much younger than the samples brought back from any of the Apollo missions."
+    },
+    {
+     "label": "B",
+     "content": "they were collected from the same landing site as the Apollo 11 mission."
+    },
+    {
+     "label": "C",
+     "content": "they are closest in age to the samples brought back by the Apollo 17 mission."
+    },
+    {
+     "label": "D",
+     "content": "they helped confirm the predicted ages of the lunar samples from the Apollo missions."
+    }
+   ],
+   "correct": "A",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "Dec2023E",
+   "sourceNum": "10",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>External shopping cues are a type of marketing that uses obvious messaging\u2014a display featuring a new product, for example, or a \"buy one, get one free\" offer\u2014to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.</p>",
+   "stem": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\"I needed to buy some cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.\""
+    },
+    {
+     "label": "B",
+     "content": "\"I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store, even though I looked all over for them.\""
+    },
+    {
+     "label": "C",
+     "content": "\"The store sent me a coupon for a new brand of soup, so I came here to find out what kinds of soup that brand offers. I decided to buy a few cans because I had the coupon.\""
+    },
+    {
+     "label": "D",
+     "content": "\"This store is larger than one that's closer to where I live, and it carries more products. I came here to buy some things that the other store doesn't always have.\""
+    }
+   ],
+   "correct": "A",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Inferences",
+   "diagramNote": "",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Nov2023",
@@ -1020,37 +1247,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023_12A",
-   "sourceNum": "16",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Oyster mushrooms typically get their nutrients from the damp logs on which they grow, but the fungi are also carnivorous, with the ability to kill and consume microscopic worms known as nematodes. As researcher Yen-Ping Hsueh has shown, the mushrooms release a toxin that is deadly to nematodes that _____ in contact with it.</p>",
-   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "has come"
-    },
-    {
-     "label": "B",
-     "content": "comes"
-    },
-    {
-     "label": "C",
-     "content": "is coming"
-    },
-    {
-     "label": "D",
-     "content": "come"
-    }
-   ],
-   "correct": "D",
-   "answerCorrected": null,
-   "domain": "Standard English Conventions",
-   "skill": "Form, Structure, and Sense",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Dec2023_12A",
@@ -1080,7 +1280,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 12,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023_12A",
@@ -1110,7 +1313,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 13,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023_12A",
@@ -1140,7 +1346,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 14,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Nov2023",
@@ -1170,7 +1379,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 15,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Nov2023",
@@ -1200,7 +1412,75 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 21,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a &ldquo;basket&rdquo; of goods and services priced at 100 US dollars (USD) in the United States would have cost 80 USD in fellow OECD member _____</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "nation Spain."
+    },
+    {
+     "label": "B",
+     "content": "nation, Spain."
+    },
+    {
+     "label": "C",
+     "content": "nation&mdash;Spain."
+    },
+    {
+     "label": "D",
+     "content": "nation: Spain."
+    }
+   ],
+   "correct": "A",
+   "domain": "Standard English Conventions",
+   "skill": "Boundaries",
+   "diagramNote": "",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "source": "Dec2023_12A",
+   "sourceNum": "16",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Oyster mushrooms typically get their nutrients from the damp logs on which they grow, but the fungi are also carnivorous, with the ability to kill and consume microscopic worms known as nematodes. As researcher Yen-Ping Hsueh has shown, the mushrooms release a toxin that is deadly to nematodes that _____ in contact with it.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has come"
+    },
+    {
+     "label": "B",
+     "content": "comes"
+    },
+    {
+     "label": "C",
+     "content": "is coming"
+    },
+    {
+     "label": "D",
+     "content": "come"
+    }
+   ],
+   "correct": "D",
+   "answerCorrected": null,
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "diagramNote": "",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
   },
   {
    "source": "Nov2023",
@@ -1230,7 +1510,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 19,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Nov2023",
@@ -1260,7 +1543,74 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 20,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 22,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In 2015, geologist Peter Rogerson calculated that the geographic center of Kansas was a point 2.1 miles southeast of the municipality of Bushton Bend. Rogerson&rsquo;s calculation was more accurate than the one from 1920 by the US Geological Survey. _____ this earlier calculation was made using far more rudimentary equipment&mdash;only cardboard and string.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ultimately,"
+    },
+    {
+     "label": "B",
+     "content": "Of course,"
+    },
+    {
+     "label": "C",
+     "content": "Likewise,"
+    },
+    {
+     "label": "D",
+     "content": "To that end,"
+    }
+   ],
+   "correct": "B",
+   "domain": "Expression of Ideas",
+   "skill": "Transitions",
+   "diagramNote": "",
+   "order": 21,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 23,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>During the 1952 New York ticker-tape parade for US Olympic champions, the ribbonlike swirls descending on the scene were paper spools from &ldquo;tickers,&rdquo; telegraph machines used to transmit stock prices. Of course, the original ticker tape had long since been retired by the 1986 parade for the New York Mets. _____ shredded standard paper enriched the celebration.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In addition,"
+    },
+    {
+     "label": "B",
+     "content": "In other words,"
+    },
+    {
+     "label": "C",
+     "content": "With this in mind,"
+    },
+    {
+     "label": "D",
+     "content": "Then,"
+    }
+   ],
+   "correct": "D",
+   "domain": "Expression of Ideas",
+   "skill": "Transitions",
+   "diagramNote": "",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Nov2023",
@@ -1290,7 +1640,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   },
   {
    "source": "Nov2023",
@@ -1320,7 +1673,106 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 24,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Grimanesa Amoros is a Peruvian American artist well known for her LED light sculptures.</li><li>Her sculpture <em>Uros House</em> is made of smooth multicolored LED domes.</li><li>It occupies 250 cubic feet of space.</li><li>Her sculpture <em>Golden Waters</em> is made of entangled blue and white LED tubes.</li><li>It occupies 118,080 cubic feet of space.</li></ul>",
+   "stem": "The student wants to emphasize a similarity between <em>Uros House</em> and <em>Golden Waters</em>. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "<em>Uros House</em> is an LED light sculpture made by Grimanesa Amoros, as is <em>Golden Waters</em>."
+    },
+    {
+     "label": "B",
+     "content": "The smooth LED domes of Grimanesa Amoros&rsquo;s <em>Uros House</em> stand in contrast to the tangled LED tubes of <em>Golden Waters</em>."
+    },
+    {
+     "label": "C",
+     "content": "Grimanesa Amoros is the artist behind <em>Uros House</em>&mdash;a sculpture made of smooth multicolored LED domes."
+    },
+    {
+     "label": "D",
+     "content": "At 118,080 cubic feet in size, Grimanesa Amoros&rsquo;s <em>Golden Waters</em> cuts a larger figure than the 250-cubic-foot <em>Uros House</em>."
+    }
+   ],
+   "correct": "A",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 25,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Generally, an object will heat up when twisted.</li><li>The twisting of an object is known as torsion.</li><li>A 2019 study led by Zunfeng Liu and Ray Baughman tested the torsional heating of various fibers.</li><li>When a 0.7-millimeter-thick sample of single-ply nickel-titanium (NiTi) wire was twisted, its average surface temperature increased by 21.3&deg;C.</li><li>When a 2.2-millimeter-thick sample of natural rubber fiber was twisted, its average surface temperature increased by 15.3&deg;C.</li></ul>",
+   "stem": "The student wants to contrast the two samples. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The natural rubber sample used in the 2019 study was thicker than the single-ply NiTi wire sample."
+    },
+    {
+     "label": "B",
+     "content": "When the fibers were twisted as part of the 2019 study, the surface temperature of both samples increased."
+    },
+    {
+     "label": "C",
+     "content": "Twisting an object will generally cause its temperature to increase, a process known as torsional heating."
+    },
+    {
+     "label": "D",
+     "content": "In 2019, researchers studied the effect of torsional heating on various fibers, including samples of natural rubber and single-ply NiTi wire."
+    }
+   ],
+   "correct": "A",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 26,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Merle Oberon (1911&ndash;1979) was an actress born in Mumbai (then known as Bombay), India.</li><li>She was of Indian, Maori, and Irish heritage.</li><li>She was the first Indian-born actress to be nominated for an Academy Award.</li><li>Early in her career, she played many nameless, uncredited roles, such as her role in <em>The Three Passions</em> (1928).</li><li>Later, she played many named, credited roles, such as Marjorie Ismay in <em>Forever and a Day</em> (1943).</li></ul>",
+   "stem": "The student wants to emphasize the order in which the two films were released. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "<em>The Three Passions</em> (1928) was released early in Merle Oberon&rsquo;s career, whereas <em>Forever and a Day</em> (1943) came out years later."
+    },
+    {
+     "label": "B",
+     "content": "Merle Oberon was famous for her roles in films like <em>The Three Passions</em> (1928) and <em>Forever and a Day</em> (1943)."
+    },
+    {
+     "label": "C",
+     "content": "Early in her career, Merle Oberon wasn&rsquo;t listed in some film credits, such as the credits for the film <em>The Three Passions</em>, where she played a nameless, uncredited role."
+    },
+    {
+     "label": "D",
+     "content": "In <em>The Three Passions</em> (1928), actress Merle Oberon played a nameless, uncredited role; however, in <em>Forever and a Day</em> (1943), she played a credited role&mdash;that of Marjorie Ismay."
+    }
+   ],
+   "correct": "A",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   }
  ],
  "test5|RW_M2_HARD": [
@@ -1352,7 +1804,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -1382,7 +1837,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Nov2023",
@@ -1412,7 +1870,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
   },
   {
    "source": "Dec2023_12A",
@@ -1442,7 +1903,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
   },
   {
    "source": "Dec2023_12A",
@@ -1472,7 +1936,10 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 5,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
   },
   {
    "source": "Nov2023",
@@ -1502,7 +1969,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 6,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Dec2023_12A",
@@ -1532,157 +2002,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "11",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>\"Poetry\" is a 1919 poem by Marianne Moore. The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing ____</p>",
-   "stem": "Which quotation from \"Poetry\" most effectively illustrates the claim?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "\"nor is it valid / to discriminate against 'business documents and / school-books'; all these phenomena are important.\""
-    },
-    {
-     "label": "B",
-     "content": "\"One must make a distinction / however: when dragged into prominence by half poets, the result is not / poetry\""
-    },
-    {
-     "label": "C",
-     "content": "\"when [poems] become so derivative as to become unintelligible, the / same thing may be said for all of us\u2014that we / do not admire what / we cannot understand."
-    },
-    {
-     "label": "D",
-     "content": "\"Reading [poetry], however, with a perfect contempt for it, one discovers that there is in / it after all, a place for the genuine.\""
-    }
-   ],
-   "correct": "D",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "March2024B",
-   "sourceNum": "14",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p><strong>Days per Winter That Lakes Have Surface Ice</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lake</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Latitude (degrees)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1980-81</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1985-86</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1990-91</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1995-96</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2000-01</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2005-06</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Spirit Lake</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">43.46</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">135</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">121</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">134</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">147</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">126</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lake Kegonsa</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">42.97</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">94</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">116</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">104</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">113</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">124</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">101</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">N&auml;ckten</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62.913</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">177</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">168</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">144</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">174</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">133</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">134</td></tr></tbody></table><p>It is common for freshwater lakes near or above a latitude of 45&deg; north of the equator, like Lake Stechlin in Germany, to accumulate surface ice in winter. A study from 1980 to 2006 showed that, in general, the number of days per winter that such lakes have measurable amounts of surface ice is declining. However, a researcher claimed that some lakes have instead seen an increase in the duration of ice.</p>",
-   "stem": "Which choice best describes data in the table that support the researcher's claim?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "N\u00e4ckten had more days of ice in the winter of 1980\u201381 than it did in the winter of 2005\u201306."
-    },
-    {
-     "label": "B",
-     "content": "Spirit Lake had fewer days of ice in the winter of 1980\u201381 than it did in the winter of 2005\u201306."
-    },
-    {
-     "label": "C",
-     "content": "N\u00e4ckten is at a higher latitude than Lake Kegonsa and typically had fewer days of ice per winter than Lake Kegonsa did."
-    },
-    {
-     "label": "D",
-     "content": "N\u00e4ckten is at a higher latitude than Lake Kegonsa and typically had more days of ice per winter than Lake Kegonsa did."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": "The claim to support is that some lakes saw an INCREASE in ice duration. The recorded choice A says Naeckten had more ice in 1980-81 (177) than in 2005-06 (134) -- true, but that is a decrease, the opposite of the claim. Spirit Lake goes 102 -> 126 and Lake Kegonsa 94 -> 101; choice B states the Spirit Lake increase.",
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023_12A",
-   "sourceNum": "11",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p><strong>Total Areas of Five Tribal Nations around the United States</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tribal nation</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Location</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Area (square miles)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Tohono O&rsquo;odham Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Arizona</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,453</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Crow Tribe</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Montana</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,606</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Leech Lake Band of Ojibwe</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Minnesota</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,311</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yakama Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Washington</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,188</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Muscogee Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Oklahoma</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,867</td></tr></tbody></table><p>In terms of total area, the Muscogee Nation is one of the largest tribal nations in the United States. It covers 4,867 square miles in what is now eastern Oklahoma. In comparison, the total area of the Leech Lake Band of Ojibwe in Minnesota is only _____</p>",
-   "stem": "Which choice most effectively uses data from the table to complete the comparison?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "1,311 square miles."
-    },
-    {
-     "label": "B",
-     "content": "2,188 square miles."
-    },
-    {
-     "label": "C",
-     "content": "4,453 square miles."
-    },
-    {
-     "label": "D",
-     "content": "3,606 square miles."
-    }
-   ],
-   "correct": "A",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "13",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Some climate models for the western United States predict that while total annual precipitation may remain unchanged from the present level, precipitation will become concentrated into fewer but more intense rain and snow events. University of Texas climate scientist Geeta Persad and her colleagues simulated how the amount of water entering aquifers and the amount being used for irrigation purposes would change if this were to occur. Persad and her colleagues concluded that concentration of precipitation into fewer events would result in a higher number of dry days, triggering more irrigation, but that this change in irrigation output is highly sensitive to the baseline concentration of precipitation that currently exists in an area.</p>",
-   "stem": "Which choice best describes data from the table that support Persad and her colleagues' conclusion?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "If baseline precipitation is somewhat concentrated, the amount of water being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater, whereas the amount of water entering aquifers will increase 11.0% if baseline precipitation is evenly distributed."
-    },
-    {
-     "label": "B",
-     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will increase only slightly, whereas it will increase 9.0% for surface water and 7.9% for groundwater if baseline precipitation is evenly distributed."
-    },
-    {
-     "label": "C",
-     "content": "If baseline precipitation is somewhat concentrated, the amount of water entering aquifers will increase 4.9%, while the amount being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater."
-    },
-    {
-     "label": "D",
-     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will decline by a small amount, whereas it will increase 11.0% for surface water and 9.0% for groundwater if baseline precipitation is evenly distributed."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": "Table titled 'Simulated Change in Annual Aquifer Input and Irrigation Output if Precipitation Concentration Increases as Climate Models Predict,' with rows for baseline precipitation concentration scenarios (somewhat concentrated; evenly distributed [x2]) and columns for % change in water entering aquifers, % change in surface water used for irrigation, and % change in groundwater used for irrigation."
-  },
-  {
-   "source": "March2024B",
-   "sourceNum": "13",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Soil thawing in Alaska has been accelerating in response to climate warming, potentially enabling increased carbon dioxide (CO2) absorption through greater productivity of Port Clarence Indian paintbrush (Castilleja caudata) plants and other vegetation, but also potentially enabling increased CO2 output through greater heterotrophic respiration (CO2 generated by the activity of soil microorganisms). Hydrologist Yonghong Yi and her colleagues developed a model incorporating numerous inputs\u2014years of soil moisture and snow cover data among them\u2014to evaluate the effects of warming on the CO2 balance in Alaska, concluding that net CO2 is likely to increase if warming hastens spring snow melt.</p>",
-   "stem": "Which finding, if true, would most directly support the researchers' conclusion?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "Early snow melt slows the growth of plant species such as C. caudata by reducing soil insulation, and it suppresses heterotrophic respiration."
-    },
-    {
-     "label": "B",
-     "content": "Early snow melt amplifies the effect of soil moisture on the growth of plant species such as C. caudata and on the rate of heterotrophic respiration."
-    },
-    {
-     "label": "C",
-     "content": "Early snow melt reduces the amount of soil moisture available for the growth of plant species such as C. caudata, and it raises the rate of heterotrophic respiration."
-    },
-    {
-     "label": "D",
-     "content": "Early snow melt extends the period in which plant species such as C. caudata can absorb CO2 but has no effect on the rate of heterotrophic respiration."
-    }
-   ],
-   "correct": "A",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 7,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Nov2023",
@@ -1712,7 +2035,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
   },
   {
    "source": "Nov2023",
@@ -1742,7 +2068,175 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "source": "Nov2023",
+   "sourceNum": "11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>\"Poetry\" is a 1919 poem by Marianne Moore. The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing ____</p>",
+   "stem": "Which quotation from \"Poetry\" most effectively illustrates the claim?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\"nor is it valid / to discriminate against 'business documents and / school-books'; all these phenomena are important.\""
+    },
+    {
+     "label": "B",
+     "content": "\"One must make a distinction / however: when dragged into prominence by half poets, the result is not / poetry\""
+    },
+    {
+     "label": "C",
+     "content": "\"when [poems] become so derivative as to become unintelligible, the / same thing may be said for all of us\u2014that we / do not admire what / we cannot understand."
+    },
+    {
+     "label": "D",
+     "content": "\"Reading [poetry], however, with a perfect contempt for it, one discovers that there is in / it after all, a place for the genuine.\""
+    }
+   ],
+   "correct": "D",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "March2024B",
+   "sourceNum": "14",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Days per Winter That Lakes Have Surface Ice</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lake</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Latitude (degrees)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1980-81</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1985-86</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1990-91</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1995-96</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2000-01</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2005-06</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Spirit Lake</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">43.46</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">135</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">121</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">134</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">147</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">126</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lake Kegonsa</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">42.97</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">94</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">116</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">104</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">113</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">124</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">101</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">N&auml;ckten</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62.913</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">177</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">168</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">144</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">174</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">133</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">134</td></tr></tbody></table><p>It is common for freshwater lakes near or above a latitude of 45&deg; north of the equator, like Lake Stechlin in Germany, to accumulate surface ice in winter. A study from 1980 to 2006 showed that, in general, the number of days per winter that such lakes have measurable amounts of surface ice is declining. However, a researcher claimed that some lakes have instead seen an increase in the duration of ice.</p>",
+   "stem": "Which choice best describes data in the table that support the researcher's claim?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "N\u00e4ckten had more days of ice in the winter of 1980\u201381 than it did in the winter of 2005\u201306."
+    },
+    {
+     "label": "B",
+     "content": "Spirit Lake had fewer days of ice in the winter of 1980\u201381 than it did in the winter of 2005\u201306."
+    },
+    {
+     "label": "C",
+     "content": "N\u00e4ckten is at a higher latitude than Lake Kegonsa and typically had fewer days of ice per winter than Lake Kegonsa did."
+    },
+    {
+     "label": "D",
+     "content": "N\u00e4ckten is at a higher latitude than Lake Kegonsa and typically had more days of ice per winter than Lake Kegonsa did."
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": "The claim to support is that some lakes saw an INCREASE in ice duration. The recorded choice A says Naeckten had more ice in 1980-81 (177) than in 2005-06 (134) -- true, but that is a decrease, the opposite of the claim. Spirit Lake goes 102 -> 126 and Lake Kegonsa 94 -> 101; choice B states the Spirit Lake increase.",
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "Dec2023_12A",
+   "sourceNum": "11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Total Areas of Five Tribal Nations around the United States</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tribal nation</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Location</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Area (square miles)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Tohono O&rsquo;odham Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Arizona</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,453</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Crow Tribe</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Montana</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,606</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Leech Lake Band of Ojibwe</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Minnesota</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,311</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yakama Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Washington</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,188</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Muscogee Nation</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Oklahoma</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,867</td></tr></tbody></table><p>In terms of total area, the Muscogee Nation is one of the largest tribal nations in the United States. It covers 4,867 square miles in what is now eastern Oklahoma. In comparison, the total area of the Leech Lake Band of Ojibwe in Minnesota is only _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the comparison?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,311 square miles."
+    },
+    {
+     "label": "B",
+     "content": "2,188 square miles."
+    },
+    {
+     "label": "C",
+     "content": "4,453 square miles."
+    },
+    {
+     "label": "D",
+     "content": "3,606 square miles."
+    }
+   ],
+   "correct": "A",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 12,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "Nov2023",
+   "sourceNum": "13",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Some climate models for the western United States predict that while total annual precipitation may remain unchanged from the present level, precipitation will become concentrated into fewer but more intense rain and snow events. University of Texas climate scientist Geeta Persad and her colleagues simulated how the amount of water entering aquifers and the amount being used for irrigation purposes would change if this were to occur. Persad and her colleagues concluded that concentration of precipitation into fewer events would result in a higher number of dry days, triggering more irrigation, but that this change in irrigation output is highly sensitive to the baseline concentration of precipitation that currently exists in an area.</p>",
+   "stem": "Which choice best describes data from the table that support Persad and her colleagues' conclusion?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "If baseline precipitation is somewhat concentrated, the amount of water being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater, whereas the amount of water entering aquifers will increase 11.0% if baseline precipitation is evenly distributed."
+    },
+    {
+     "label": "B",
+     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will increase only slightly, whereas it will increase 9.0% for surface water and 7.9% for groundwater if baseline precipitation is evenly distributed."
+    },
+    {
+     "label": "C",
+     "content": "If baseline precipitation is somewhat concentrated, the amount of water entering aquifers will increase 4.9%, while the amount being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater."
+    },
+    {
+     "label": "D",
+     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will decline by a small amount, whereas it will increase 11.0% for surface water and 9.0% for groundwater if baseline precipitation is evenly distributed."
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "Table titled 'Simulated Change in Annual Aquifer Input and Irrigation Output if Precipitation Concentration Increases as Climate Models Predict,' with rows for baseline precipitation concentration scenarios (somewhat concentrated; evenly distributed [x2]) and columns for % change in water entering aquifers, % change in surface water used for irrigation, and % change in groundwater used for irrigation.",
+   "order": 13,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "source": "March2024B",
+   "sourceNum": "13",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Soil thawing in Alaska has been accelerating in response to climate warming, potentially enabling increased carbon dioxide (CO2) absorption through greater productivity of Port Clarence Indian paintbrush (Castilleja caudata) plants and other vegetation, but also potentially enabling increased CO2 output through greater heterotrophic respiration (CO2 generated by the activity of soil microorganisms). Hydrologist Yonghong Yi and her colleagues developed a model incorporating numerous inputs\u2014years of soil moisture and snow cover data among them\u2014to evaluate the effects of warming on the CO2 balance in Alaska, concluding that net CO2 is likely to increase if warming hastens spring snow melt.</p>",
+   "stem": "Which finding, if true, would most directly support the researchers' conclusion?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Early snow melt slows the growth of plant species such as C. caudata by reducing soil insulation, and it suppresses heterotrophic respiration."
+    },
+    {
+     "label": "B",
+     "content": "Early snow melt amplifies the effect of soil moisture on the growth of plant species such as C. caudata and on the rate of heterotrophic respiration."
+    },
+    {
+     "label": "C",
+     "content": "Early snow melt reduces the amount of soil moisture available for the growth of plant species such as C. caudata, and it raises the rate of heterotrophic respiration."
+    },
+    {
+     "label": "D",
+     "content": "Early snow melt extends the period in which plant species such as C. caudata can absorb CO2 but has no effect on the rate of heterotrophic respiration."
+    }
+   ],
+   "correct": "A",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
+   "diagramNote": "",
+   "order": 14,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
   },
   {
    "source": "Nov2023",
@@ -1772,7 +2266,10 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 15,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
   },
   {
    "source": "Dec2023E",
@@ -1802,7 +2299,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023E",
@@ -1832,37 +2332,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
-  },
-  {
-   "source": "Dec2023E",
-   "sourceNum": "20",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>A species of Byropsis algae produces toxins to avoid being eaten by predators. However, in some cases, the toxins the organism uses to protect itself from predation actually _____ its attractiveness to predators. The Hawaiian sea slug, for example, not only tolerates Byropsis toxins but actually uses them for protection in the same way the algae does.</p>",
-   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "is increasing"
-    },
-    {
-     "label": "B",
-     "content": "increase"
-    },
-    {
-     "label": "C",
-     "content": "increases"
-    },
-    {
-     "label": "D",
-     "content": "has increased"
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Standard English Conventions",
-   "skill": "Form, Structure, and Sense",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Dec2023E",
@@ -1892,37 +2365,10 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "17",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Round Rock Chapter is one of the 110 chapters of the Navajo Nation (Naabeeho Bindhasdzo). The chapter, known as Tse Nikani in the Navajo language (Dine bizaad), was the subject of a profile ____ in the Navajo Times on February 13, 2014.</p>",
-   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "appeared"
-    },
-    {
-     "label": "B",
-     "content": "appearing"
-    },
-    {
-     "label": "C",
-     "content": "appears"
-    },
-    {
-     "label": "D",
-     "content": "has appeared"
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Standard English Conventions",
-   "skill": "Form, Structure, and Sense",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
   },
   {
    "source": "Nov2023",
@@ -1952,7 +2398,76 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 19,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "source": "Dec2023E",
+   "sourceNum": "20",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>A species of Byropsis algae produces toxins to avoid being eaten by predators. However, in some cases, the toxins the organism uses to protect itself from predation actually _____ its attractiveness to predators. The Hawaiian sea slug, for example, not only tolerates Byropsis toxins but actually uses them for protection in the same way the algae does.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "is increasing"
+    },
+    {
+     "label": "B",
+     "content": "increase"
+    },
+    {
+     "label": "C",
+     "content": "increases"
+    },
+    {
+     "label": "D",
+     "content": "has increased"
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": null,
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "diagramNote": "",
+   "order": 20,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "source": "Nov2023",
+   "sourceNum": "17",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Round Rock Chapter is one of the 110 chapters of the Navajo Nation (Naabeeho Bindhasdzo). The chapter, known as Tse Nikani in the Navajo language (Dine bizaad), was the subject of a profile ____ in the Navajo Times on February 13, 2014.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "appeared"
+    },
+    {
+     "label": "B",
+     "content": "appearing"
+    },
+    {
+     "label": "C",
+     "content": "appears"
+    },
+    {
+     "label": "D",
+     "content": "has appeared"
+    }
+   ],
+   "correct": "B",
+   "answerCorrected": null,
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "diagramNote": "",
+   "order": 21,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
   },
   {
    "source": "Nov2023",
@@ -1982,7 +2497,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Nov2023",
@@ -2012,7 +2530,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
   },
   {
    "source": "Nov2023",
@@ -2042,7 +2563,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   },
   {
    "source": "Nov2023",
@@ -2072,7 +2596,10 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   },
   {
    "source": "Nov2023",
@@ -2102,7 +2629,42 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
-   "diagramNote": ""
+   "diagramNote": "",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 27,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>A river&rsquo;s stream length is the length of a line that follows along the river path.</li><li>A river&rsquo;s valley length is the length of a straight line drawn from the beginning of the river to the end.</li><li>The river&rsquo;s curviness, or sinuosity, is the ratio of the river&rsquo;s stream length to its valley length.</li><li>Low-sinuosity rivers have a stream length 1&ndash;1.5 times longer than their valley length, and high-sinuosity rivers have a stream length 1.5 or more times longer than their valley length.</li><li>The Mississippi River in the United States has high sinuosity.</li><li>The Neales River in Australia has low sinuosity.</li></ul>",
+   "stem": "The student wants to compare the curviness of the two rivers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The high-sinuosity Neales River in Australia is curvier than the low-sinuosity Mississippi River in the United States."
+    },
+    {
+     "label": "B",
+     "content": "In both the Mississippi and the Neales rivers, curviness is determined by comparing stream length to valley length."
+    },
+    {
+     "label": "C",
+     "content": "By comparing the stream lengths of the Mississippi and Neales rivers to their valley lengths, one can calculate their curviness, or sinuosity."
+    },
+    {
+     "label": "D",
+     "content": "The Mississippi River&rsquo;s ratio of stream length to valley length, also known as sinuosity, is greater than that of the Neales River."
+    }
+   ],
+   "correct": "D",
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "diagramNote": "",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
   }
  ]
 }

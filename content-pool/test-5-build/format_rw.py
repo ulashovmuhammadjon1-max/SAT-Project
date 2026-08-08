@@ -47,6 +47,25 @@ UNUSABLE = {
 
 
 
+
+# --- Corrected answers ------------------------------------------------------
+# The banked pool records the wrong answer for these. Both are provable against
+# the question's own data table, so they are corrected here rather than shipped.
+# Keyed (module, index) -> (recorded, corrected, why).
+ANSWER_FIXES = {
+ ("test5|RW_M1", 8): ("D", "B",
+   "The conclusion to support is that in only ONE country are there more insect than fungus "
+   "species. The table gives Lithuania 12 fungi / 7 insects, Poland 25 / 105, Austria 51 / 50 "
+   "-- Poland alone. Choice B states exactly that. The recorded choice D claims Poland reported "
+   "'105 fungus species and only 10 insect species', but the table says 25 fungi, 105 insects "
+   "and 10 trees, so D contradicts its own table."),
+ ("test5|RW_M2_HARD", 8): ("A", "B",
+   "The claim to support is that some lakes saw an INCREASE in ice duration. The recorded "
+   "choice A says Naeckten had more ice in 1980-81 (177) than in 2005-06 (134) -- true, but "
+   "that is a decrease, the opposite of the claim. Spirit Lake goes 102 -> 126 and Lake "
+   "Kegonsa 94 -> 101; choice B states the Spirit Lake increase."),
+}
+
 # --- Hand-built tables ------------------------------------------------------
 # The source stores these on one line with implicit row breaks, e.g.
 # "... | Fungi | Insects Lithuania | 8 | ...", where "Insects Lithuania" is the
@@ -225,7 +244,8 @@ def main():
                 "stem": inline_marks((q.get("stem") or "").strip()),
                 "choices": [{"label": c["label"], "content": inline_marks(c["content"])}
                             for c in q["choices"]],
-                "correct": q["correct"],
+                "correct": ANSWER_FIXES[(mod, i)][1] if (mod, i) in ANSWER_FIXES else q["correct"],
+                "answerCorrected": ANSWER_FIXES[(mod, i)][2] if (mod, i) in ANSWER_FIXES else None,
                 "domain": q["domain"],
                 "skill": q["skill"],
                 "diagramNote": q.get("diagram", ""),
@@ -240,6 +260,8 @@ def main():
         tables = sum(1 for q in qs if "<table" in q["passageHtml"])
         lists = sum(1 for q in qs if "<ul>" in q["passageHtml"])
         print(f"  {m:22} {len(qs):3} kept   tables={tables} lists={lists}")
+    fixed = sum(1 for m, qs in out.items() for q in qs if q.get("answerCorrected"))
+    print(f"\nAnswers corrected against the question's own table: {fixed}")
     print(f"\nDropped {len(dropped)} unusable:")
     for m, i, skill, why in dropped:
         print(f"  {m} idx{i} ({skill}): {why[:96]}")

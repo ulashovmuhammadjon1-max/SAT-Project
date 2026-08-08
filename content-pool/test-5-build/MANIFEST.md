@@ -6,7 +6,7 @@
 | Math M2 **Easy** | **Original, authored here** | ✅ 22/22 written, sympy-verified, deduped |
 | Math M1 | Oct IntB PDF (p51–72) | ✅ 22/22 transcribed, 22/22 sympy-verified |
 | Math M2 Hard | Oct USB PDF (p76–97) | ✅ 22 transcribed, 19 usable (3 rejected) |
-| R&W M1 / M2E / M2H | banked pool + October top-ups | 🟡 formatted, 70 kept, 11 top-ups outstanding |
+| R&W M1 / M2E / M2H | banked pool + October top-ups | 🟡 assembled 27/27/27 — **answers not fully verified** |
 
 ## `t5_math_m2easy.json` — 22 original questions
 Written by hand per the standing rules in `CLAUDE.md` (Test 1/2 house style, no
@@ -146,11 +146,46 @@ from the October sources, which carry reliable answer keys, rather than the Augu
 only answer marking is an inline highlight that appears to be the crossed-out state rather than
 the selected one.
 
+## ⚠️ BLOCKER — the banked R&W answers are not reliable
+
+Test 5 is fully assembled (147 questions), inserted and checked end to end on the **local**
+database, and renders correctly in the real exam interface. It has **not** been written to
+production and has **not** been published, because of this:
+
+Five R&W questions have answers that can be checked mechanically, because the answer must agree
+with a printed data table. **Two of those five were wrong in the banked pool.** Both are proved
+by the table, not judgement calls:
+
+- **M1 Q10 (tree species)** — the conclusion is that only *one* country has more insect than
+  fungus species. Table: Lithuania 12/7, Poland 25/105, Austria 51/50 — only Poland. Choice B
+  says that. The recorded answer D claims Poland reported "105 fungus species and only 10 insect
+  species"; the table says 25 fungi, 105 insects, 10 *trees*. D contradicts its own table.
+- **M2 Hard Q11 (lake ice)** — the claim is that some lakes saw an *increase* in ice duration.
+  The recorded answer A points at Näckten, 177 → 134, which is a *decrease*. Spirit Lake
+  (102 → 126) is the increase; that is choice B.
+
+Both are corrected in `format_rw.py`'s `ANSWER_FIXES`, with the reasoning recorded.
+
+**The concern is what this implies.** That is a 40% error rate on the only subset that can be
+verified without human judgement. The other 76 R&W questions — words in context, inference,
+transitions — can only be checked by reading and reasoning each one. There is no basis for
+assuming they are cleaner. Until they are read, the R&W side should not be published.
+
+The Math side does not have this problem: all 66 answers were independently re-derived, and
+questions whose source key disagreed were rejected rather than shipped.
+
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
   be deduped against the whole database, not just the test being built. Reads the connection
   string from `PRODDB` in the environment; the string is never written to a file.
   `PRODDB='postgresql://...' node dump_existing_questions.mjs MATH out.json`
+- `format_rw.py` → `test5_rw_formatted.json`, `assemble_rw.py` → `test5_rw.json`,
+  `assemble_math.py` → `test5_math.json` — the three build steps, each re-runnable.
+- `insert_test5.mjs` — idempotent insert (skips any Test/Module that already exists). Picks the
+  driver from the URL: `pg` for a localhost dry run, Neon's HTTP API for production, because the
+  sandbox blocks port 5432. `--publish` flips the status; without it the test lands as DRAFT.
+- `seed_attempt.mjs` — seeds a throwaway Attempt so a built test can be walked in the real
+  `/exam/{attemptId}` interface, which CLAUDE.md requires before shipping.
 
 ## Notes for the next session
 - Two questions (Q8, Q18) carry a `table` field that must be rendered with the standard
