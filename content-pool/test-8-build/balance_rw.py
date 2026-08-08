@@ -21,7 +21,23 @@ from rw_test8 import QUESTIONS
 
 LETTERS = "ABCD"
 # A standalone option letter: "A is consistent", "Option D would support".
-LETTER_REF = re.compile(r"(?:^|[\s(])(?:[Oo]ptions?\s+)?([ABCD])(?=[\s,.;:)']|$)")
+# An option letter reference, e.g. "Option B", "choice C", "(D)", or a bare
+# letter used as the subject of a verb ("A is consistent with either").
+#
+# The previous pattern was any bare A-D followed by whitespace, which also
+# matched the ARTICLE "a" at the start of a sentence — "A complete sentence
+# stands in front of the blank" read as a reference to option A. That silently
+# locked the question against rebalancing, and it bit three separate builds
+# before it was tracked down. Requiring an explicit marker, a parenthesis, or a
+# following verb separates the two uses.
+LETTER_REF = re.compile(
+    r"\((?:[ABCD])\)"
+    r"|\b(?:[Oo]ptions?|[Cc]hoices?|[Aa]nswers?)\s+([ABCD])\b"
+    r"|(?:^|(?<=[\s(]))([ABCD])\s+(?:is|are|was|were|would|will|does|do|fails?|"
+    r"states?|says?|gives?|makes?|describes?|names?|answers?|contradicts?|"
+    r"reverses?|adds?|omits?|leaves?|treats?|asserts?|reads?|works?|"
+    r"establishes?|supports?|overstates?|understates?|misses?)\b"
+)
 
 
 def names_a_letter(why):

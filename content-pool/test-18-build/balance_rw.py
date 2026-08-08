@@ -11,13 +11,13 @@ either explanation"). That exact breakage happened during the Test 6 build, so
 this only rotates questions whose `why` names no letter, and re-checks
 afterwards that no rationale points at the wrong option.
 
-Out: rw_test9_balanced.json
+Out: rw_test18_balanced.json
 """
 import json
 import re
 from collections import Counter
 
-from rw_test9 import QUESTIONS
+from rw_test18 import QUESTIONS
 
 LETTERS = "ABCD"
 # A standalone option letter: "A is consistent", "Option D would support".
@@ -88,9 +88,9 @@ def main():
     print(f"most common answer: {worst:.0%}")
     assert worst <= 0.32, "still unbalanced"
 
-    with open("rw_test9_balanced.json", "w") as fh:
+    with open("rw_test18_balanced.json", "w") as fh:
         json.dump(out, fh, indent=1, ensure_ascii=False)
-    print("wrote rw_test9_balanced.json")
+    print("wrote rw_test18_balanced.json")
 
 
 if __name__ == "__main__":
