@@ -202,6 +202,50 @@ QUESTIONS = [
        "<em>Prionospio branchilucida</em>) precisely where species look alike. B is about frequency of "
        "use, C reverses the case that suits it, and D claims more physiological detail, which does not "
        "follow from needing less of it."),
+
+ dict(num=17, skill="Boundaries",
+   passage="When Fiji joined Interpol&mdash;the International Criminal Police _____ in 1971, the Fiji "
+           "National Police Intelligence Bureau gained access to the combined resources of law "
+           "enforcement agencies from around the globe.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["Organization,", "Organization&mdash;", "Organization", "Organization:"], answer="B",
+   why="A dash already opens the appositive that names Interpol in full, so the matching dash must "
+       "close it. Mixing a dash with a comma or a colon, or omitting the closing mark entirely, "
+       "leaves the aside unbounded."),
+
+ dict(num=18, skill="Boundaries",
+   passage="The length of bird eggs varies widely across species, and an ecological _____ compared the "
+           "lengths of eggs produced by different bird species found <em>Milvus migrans</em> eggs to be "
+           "longer, on average, than <em>Gallinula chloropus</em> eggs.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["study, that", "study, which", "study", "study that"], answer="D",
+   why="'That compared the lengths...' is a restrictive relative clause identifying which study, and "
+       "'found' is the main verb; restrictive clauses take no comma, so D. B would need a second "
+       "comma before 'found' to close a nonrestrictive clause, and C leaves two finite verbs "
+       "('compared', 'found') with no conjunction."),
+
+ dict(num=19, skill="Form, Structure, and Sense",
+   passage="Many works of the Roman historian Suetonius (1st century CE), including his book on "
+           "miscellaneous topics, <em>Pratum</em>, have been lost to time. Antiquarians _____ to read "
+           "one of Suetonius&rsquo;s extant works&mdash;not one known only through references to it by "
+           "other authors, that is&mdash;might instead procure a copy of his <em>De vita "
+           "caesarum</em>, a biography of the Roman Empire&rsquo;s first leaders.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["hope", "hoped", "hoping", "have hoped"], answer="C",
+   why="'Might instead procure' is already the sentence's main verb, so the blank must be a "
+       "participle modifying 'Antiquarians'. Any finite form gives the subject two verbs with no "
+       "conjunction."),
+
+ dict(num=20, skill="Form, Structure, and Sense",
+   passage="The Suzuki method is an approach to music instruction _____ to teach music in the same "
+           "natural way children learn language, emphasizes retaining and reviewing previously learned "
+           "pieces of music. In Suzuki piano instruction, students begin their musical education with "
+           "simple folk songs like &ldquo;The Honeybee.&rdquo;",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["that, is aiming", "that, aiming", "that aims", "that has aimed"], answer="B",
+   why="The relative clause's verb is 'emphasizes', which follows the comma after 'language', so the "
+       "blank must open a parenthetical participial phrase: 'that, aiming to teach music..., "
+       "emphasizes...'. Any finite verb in the blank leaves 'emphasizes' stranded without a subject."),
 ]
 
 DROPPED = {
