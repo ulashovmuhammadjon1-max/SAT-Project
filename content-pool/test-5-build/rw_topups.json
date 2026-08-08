@@ -196,6 +196,166 @@
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
    "verified": "only A states something both sculptures share; B and D draw contrasts and C describes one alone. Source also shows A selected."
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 21,
+   "page": 48,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a &ldquo;basket&rdquo; of goods and services priced at 100 US dollars (USD) in the United States would have cost 80 USD in fellow OECD member _____",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "nation Spain."
+    },
+    {
+     "label": "B",
+     "content": "nation, Spain."
+    },
+    {
+     "label": "C",
+     "content": "nation&mdash;Spain."
+    },
+    {
+     "label": "D",
+     "content": "nation: Spain."
+    }
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "domain": "Standard English Conventions",
+   "skill": "Boundaries",
+   "verified": "'Spain' is a restrictive appositive naming which member nation, so it takes no punctuation. Source also shows A selected."
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 23,
+   "page": 50,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "During the 1952 New York ticker-tape parade for US Olympic champions, the ribbonlike swirls descending on the scene were paper spools from &ldquo;tickers,&rdquo; telegraph machines used to transmit stock prices. Of course, the original ticker tape had long since been retired by the 1986 parade for the New York Mets. _____ shredded standard paper enriched the celebration.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In addition,"
+    },
+    {
+     "label": "B",
+     "content": "In other words,"
+    },
+    {
+     "label": "C",
+     "content": "With this in mind,"
+    },
+    {
+     "label": "D",
+     "content": "Then,"
+    }
+   ],
+   "correct": "D",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Transitions",
+   "verified": "ticker tape had been retired, so by then shredded paper was used instead -- a temporal replacement, not an addition"
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 25,
+   "page": 52,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Generally, an object will heat up when twisted.</li><li>The twisting of an object is known as torsion.</li><li>A 2019 study led by Zunfeng Liu and Ray Baughman tested the torsional heating of various fibers.</li><li>When a 0.7-millimeter-thick sample of single-ply nickel-titanium (NiTi) wire was twisted, its average surface temperature increased by 21.3&deg;C.</li><li>When a 2.2-millimeter-thick sample of natural rubber fiber was twisted, its average surface temperature increased by 15.3&deg;C.</li></ul>",
+   "stem": "The student wants to contrast the two samples. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The natural rubber sample used in the 2019 study was thicker than the single-ply NiTi wire sample."
+    },
+    {
+     "label": "B",
+     "content": "When the fibers were twisted as part of the 2019 study, the surface temperature of both samples increased."
+    },
+    {
+     "label": "C",
+     "content": "Twisting an object will generally cause its temperature to increase, a process known as torsional heating."
+    },
+    {
+     "label": "D",
+     "content": "In 2019, researchers studied the effect of torsional heating on various fibers, including samples of natural rubber and single-ply NiTi wire."
+    }
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "only A contrasts the samples (2.2 mm vs 0.7 mm); B states a shared outcome and C and D describe the study generally"
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 26,
+   "page": 53,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Merle Oberon (1911&ndash;1979) was an actress born in Mumbai (then known as Bombay), India.</li><li>She was of Indian, Maori, and Irish heritage.</li><li>She was the first Indian-born actress to be nominated for an Academy Award.</li><li>Early in her career, she played many nameless, uncredited roles, such as her role in <em>The Three Passions</em> (1928).</li><li>Later, she played many named, credited roles, such as Marjorie Ismay in <em>Forever and a Day</em> (1943).</li></ul>",
+   "stem": "The student wants to emphasize the order in which the two films were released. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "<em>The Three Passions</em> (1928) was released early in Merle Oberon&rsquo;s career, whereas <em>Forever and a Day</em> (1943) came out years later."
+    },
+    {
+     "label": "B",
+     "content": "Merle Oberon was famous for her roles in films like <em>The Three Passions</em> (1928) and <em>Forever and a Day</em> (1943)."
+    },
+    {
+     "label": "C",
+     "content": "Early in her career, Merle Oberon wasn&rsquo;t listed in some film credits, such as the credits for the film <em>The Three Passions</em>, where she played a nameless, uncredited role."
+    },
+    {
+     "label": "D",
+     "content": "In <em>The Three Passions</em> (1928), actress Merle Oberon played a nameless, uncredited role; however, in <em>Forever and a Day</em> (1943), she played a credited role&mdash;that of Marjorie Ismay."
+    }
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "only A frames the two films as earlier and later; the others compare credits or list them without sequence"
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 27,
+   "page": 54,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>A river&rsquo;s stream length is the length of a line that follows along the river path.</li><li>A river&rsquo;s valley length is the length of a straight line drawn from the beginning of the river to the end.</li><li>The river&rsquo;s curviness, or sinuosity, is the ratio of the river&rsquo;s stream length to its valley length.</li><li>Low-sinuosity rivers have a stream length 1&ndash;1.5 times longer than their valley length, and high-sinuosity rivers have a stream length 1.5 or more times longer than their valley length.</li><li>The Mississippi River in the United States has high sinuosity.</li><li>The Neales River in Australia has low sinuosity.</li></ul>",
+   "stem": "The student wants to compare the curviness of the two rivers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The high-sinuosity Neales River in Australia is curvier than the low-sinuosity Mississippi River in the United States."
+    },
+    {
+     "label": "B",
+     "content": "In both the Mississippi and the Neales rivers, curviness is determined by comparing stream length to valley length."
+    },
+    {
+     "label": "C",
+     "content": "By comparing the stream lengths of the Mississippi and Neales rivers to their valley lengths, one can calculate their curviness, or sinuosity."
+    },
+    {
+     "label": "D",
+     "content": "The Mississippi River&rsquo;s ratio of stream length to valley length, also known as sinuosity, is greater than that of the Neales River."
+    }
+   ],
+   "correct": "D",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "the notes say the Mississippi is high-sinuosity and the Neales low, so D is right and A reverses them; B and C describe the method rather than comparing"
   }
  ],
  "rejectedKeyConflicts": [
@@ -238,6 +398,22 @@
    "keySays": "A",
    "myAnswer": "B",
    "why": "'...an approach to music instruction ___ to teach music..., emphasizes retaining...'. B ('that, aiming') gives 'that, aiming to teach ..., emphasizes ...', a relative clause with a participial aside -- grammatical. The key's A ('that, is aiming') puts a comma between the relative pronoun and its verb and leaves 'emphasizes' stranded. Source also shows B selected. Rejected."
+  },
+  {
+   "source": "OctUSB",
+   "num": 18,
+   "page": 45,
+   "keySays": "B",
+   "myAnswer": "D",
+   "why": "'an ecological ___ compared the lengths ... found Milvus migrans eggs to be longer'. D ('study that') makes 'that compared...' a restrictive clause and leaves 'found' as the main verb. The key's B ('study, which') opens a non-restrictive clause that is never closed, stranding 'found'. Rejected."
+  },
+  {
+   "source": "OctUSB",
+   "num": 19,
+   "page": 46,
+   "keySays": "D",
+   "myAnswer": "C",
+   "why": "'Antiquarians ___ to read one of Suetonius's extant works ... might instead procure a copy'. The main verb is 'might procure', so the blank needs a participle: 'hoping'. The key's 'have hoped' is finite and gives the sentence two main verbs. Source also shows C selected. Rejected."
   }
  ]
 }
