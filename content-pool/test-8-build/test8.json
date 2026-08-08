@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T8:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Far from being a _____ record of what the painter saw, the sketchbook is full of revisions, abandoned starts and figures redrawn three or four times.",
+   "difficulty": "MEDIUM",
+   "why": "'Far from being ___' must be contradicted by what follows; revisions and abandoned starts contradict faithfulness to what was seen, not hurry or privacy.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "faithful",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "hurried",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "detailed",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "private",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The novel's structure is deliberately _____, doubling back on events the reader has already been shown and retelling them from a second vantage point.",
+   "difficulty": "MEDIUM",
+   "why": "Doubling back and retelling is recursion. 'Linear' and 'conventional' are the opposite of what is described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "conventional",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "linear",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "recursive",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "abrupt",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Rather than confining herself to a single medium, the sculptor Ruth Asawa worked in wire, clay and paper with equal _____, moving between them throughout her career.",
+   "difficulty": "MEDIUM",
+   "why": "'With equal ___' plus 'moving between them' calls for a word meaning skill or ease. 'Reluctance' and 'restraint' both contradict the range being praised.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "obscurity",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "restraint",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "reluctance",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "facility",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Although the technique was developed for restoring frescoes, conservators soon found it _____ to textiles as well.",
+   "difficulty": "MEDIUM",
+   "why": "'Found it ___ to textiles' means it could be used on them. 'Comparable to' would compare the technique with textiles, which makes no sense.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "applicable",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "comparable",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "preferable",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "susceptible",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The theory remains _____ among specialists: three recent papers endorse it, and three others argue it cannot be reconciled with the fossil record.",
+   "difficulty": "MEDIUM",
+   "why": "An even split between endorsement and rejection is a live dispute, not a settled or obscure question.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "obscure",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "outdated",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "settled",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "contested",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "Ordinary glass is a liquid that has been cooled too quickly to crystallise. Its molecules are frozen in the disordered arrangement they held while molten. <u>This is why a pane of glass has no grain and can be cut in any direction.</u>",
+   "difficulty": "MEDIUM",
+   "why": "Having explained the disordered molecular arrangement, the sentence draws out what follows from it for cutting glass. It supplies no evidence and defines nothing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It defines a term used earlier in the text.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It introduces a distinction the text then develops.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It draws a practical consequence from the explanation given.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It provides evidence contradicting the preceding claim.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "In 1901 the physicist Hertha Ayrton became the first woman to read her own paper before the Institution of Electrical Engineers. <u>The paper concerned the hissing of electric arcs, a nuisance that had defeated better-funded laboratories for years.</u> Ayrton traced the noise to a chemical reaction at the carbon rods and showed that reshaping them silenced it.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence says the problem had defeated well-resourced labs for years, which sets up the final sentence in which Ayrton solves it. It never says her methods differed, nor why she was invited.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It establishes the significance of the problem Ayrton is then shown to have solved.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It contrasts Ayrton's methods with those of her better-funded contemporaries.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It explains why Ayrton was invited to address the Institution.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It concedes a limitation in the research the text goes on to describe.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what accounts for the durability of Roman marine concrete?",
+   "passage": "Roman concrete harbours have stood in seawater for two thousand years while modern marine concrete degrades within decades. Analysis of Roman samples shows that seawater percolating through the material reacts with volcanic ash to grow interlocking crystals in the cracks. The concrete is strengthened by the very process that weakens its modern counterpart.",
+   "difficulty": "MEDIUM",
+   "why": "The text says seawater reacting with volcanic ash grows crystals in the cracks. It does not claim the concrete resists cracking or repels water — the opposite, since the water must get in.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The volcanic ash used in it repels seawater.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It contains far less water than modern concrete.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Its cracks are sealed by crystals that seawater helps to form.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It was mixed to a consistency that resists cracking altogether.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what was notable about the solutions Cartwright studied?",
+   "passage": "In the 1930s the mathematician Mary Cartwright was asked to explain why radio amplifiers behaved erratically at high power. The equations she studied produced solutions that never settled and never repeated. Decades later those solutions were recognised as early examples of what is now called chaos.",
+   "difficulty": "MEDIUM",
+   "why": "'Never settled and never repeated' is stated directly. The text says the solutions were later recognised as chaos generally, which contradicts the last option.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "They neither reached a steady state nor repeated themselves.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "They could not be calculated without electronic computers.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "They applied only to radio amplifiers and to no other system.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "They settled into a repeating cycle after a long delay.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly weaken the researchers' conclusion?",
+   "passage": "Researchers studying a songbird found that males raised in isolation produce songs that are simpler than those of wild males but that still contain the species' characteristic opening phrase. They concluded that the opening phrase is innate while the rest is learned.",
+   "difficulty": "MEDIUM",
+   "why": "The conclusion depends on the isolated males never having heard the phrase. If they could hear recordings, the phrase might have been learned after all. Frequency and length differences leave the innate/learned split untouched.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Isolated males can hear recordings of adult song played elsewhere in the facility.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The opening phrase is shorter in isolated males than in wild males.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Isolated males sing less often than wild males.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Wild males vary considerably in the length of their songs.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the linguist's claim?",
+   "passage": "A linguist claims that a community's shift away from its heritage language was driven mainly by schooling policy rather than by migration to cities, since the shift accelerated sharply in the decade a monolingual school system was imposed.",
+   "difficulty": "MEDIUM",
+   "why": "The claim needs schooling separated from migration. Communities with the same migration but different schooling, and a different outcome, isolate schooling as the cause. A alone shows migration was constant but not what the schooling did.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Migration to cities from the community continued at a steady rate throughout the century.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The heritage language is still spoken by elders in the community today.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Neighbouring communities that migrated at similar rates but kept bilingual schooling retained the language.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The monolingual school system was abandoned after thirty years.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the engineer's argument?",
+   "passage": "An engineer argues that a bridge's unexpected swaying was caused by pedestrians unconsciously matching their steps to the bridge's motion, rather than by wind.",
+   "difficulty": "MEDIUM",
+   "why": "Swaying on windless days rules out wind, and its coinciding with crowds points to pedestrians. B shows the bridge could survive wind, not that wind was absent; D is consistent with either cause since closing removes both.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The swaying occurred on days with little or no wind whenever the bridge was crowded.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The bridge was designed to withstand winds far stronger than any recorded.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Pedestrians reported feeling unsteady while crossing.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The swaying stopped when the bridge was closed for repairs.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A study of urban foxes found that individuals living near busy roads were bolder in approaching novel objects than those in quiet parks. The researchers caution, however, that they measured boldness only in adults. If bold foxes are more likely to settle near roads in the first place, then the study's finding _____",
+   "difficulty": "MEDIUM",
+   "why": "The caution raises self-selection: boldness could precede the location rather than result from it. D asserts the causal reading the caution puts in doubt.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "would be strengthened by adding juveniles to the sample.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "may reflect where bold foxes choose to live rather than an effect of traffic.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "would apply only to foxes in the parks studied.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "shows that traffic makes foxes bolder over time.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Manuscripts copied in the scriptorium at Corbie can be identified by a distinctive letterform. Scholars long assumed the form was invented there. But a charter from a monastery three hundred kilometres away, securely dated forty years earlier, uses the same form. The Corbie scribes, it now appears, _____",
+   "difficulty": "MEDIUM",
+   "why": "An earlier, securely dated use elsewhere means Corbie did not originate the form. B and D add specific histories the evidence does not establish.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "adopted a letterform that already existed elsewhere.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "were trained at the monastery that produced the charter.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "invented the letterform independently of the charter's scribe.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "copied the charter directly into their own manuscripts.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Because the samples had been stored improperly _____ the team could not use them to establish a baseline.",
+   "difficulty": "MEDIUM",
+   "why": "An introductory dependent clause beginning 'Because' is followed by a comma before the main clause.",
+   "choices": [
+    {
+     "label": "A",
+     "content": " and ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ": ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Researchers have recovered pollen, seeds and insect remains from the peat _____ each of which helps date the layers around it.",
+   "difficulty": "MEDIUM",
+   "why": "'each of which' opens a non-essential relative clause, attached with a comma; a semicolon would need an independent clause after it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ": ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ". ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The cartographer Marie Tharp spent years plotting soundings by hand _____ the result was the first map to show the mid-Atlantic ridge as a continuous feature.",
+   "difficulty": "MEDIUM",
+   "why": "Two independent clauses with no coordinating conjunction require a semicolon; a comma alone is a splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "; ",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": ", ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ": and",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The revised design reduced material use by a fifth _____ it also cut assembly time almost in half.",
+   "difficulty": "MEDIUM",
+   "why": "Two independent clauses joined by a comma plus the coordinating conjunction 'and'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ", ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "; also ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ", and ",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Each of the three prototypes _____ its own control board.",
+   "difficulty": "MEDIUM",
+   "why": "'Each' is singular regardless of the prepositional phrase that follows it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "were having",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "have",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "has",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "having",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The results were more consistent than _____ obtained in the earlier trial.",
+   "difficulty": "MEDIUM",
+   "why": "The pronoun stands for the plural 'results', so 'those' is required.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "that",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "those",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "them",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "it",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Not only did the storm damage the pier, but it also _____ the harbour wall.",
+   "difficulty": "MEDIUM",
+   "why": "'Not only did... but it also' takes a matching past-tense verb after 'also'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "breach",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "had breach",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "breaching",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "breached",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Lead pipes were used in Roman aqueducts for centuries. _____ the water they carried was so heavily mineralised that a layer of scale quickly coated the metal.",
+   "difficulty": "MEDIUM",
+   "why": "The scale layer works against the expected danger of lead, so it qualifies the preceding sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Thus,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In fact,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The instrument records tremors far too faint for anyone to feel. _____ it can detect a quarry blast fifty kilometres away.",
+   "difficulty": "MEDIUM",
+   "why": "The blast is an instance of the sensitivity just claimed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For example,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Instead,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Early photographs required exposures of several minutes. _____ portrait subjects were clamped into frames to hold their heads still.",
+   "difficulty": "MEDIUM",
+   "why": "The clamping follows from the long exposure — a cause-and-effect link.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In summary,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For this reason,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By comparison,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the lengths Coleman went to in order to fly. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Bessie Coleman was refused entry to American flight schools in 1918.</li><li>She learned French in order to train abroad.</li><li>She earned her licence in France in 1921.</li><li>She was the first African American woman to hold a pilot's licence.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The lengths are the obstacle and the response to it; B carries both, while C states an outcome rather than an effort.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Bessie Coleman earned her pilot's licence in France in 1921.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Refused entry to American flight schools, Coleman learned French so that she could train abroad, earning her licence in 1921.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Coleman was the first African American woman to hold a pilot's licence.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "American flight schools refused Coleman entry in 1918.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the significance of Lovelace's notes. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Ada Lovelace wrote notes on Charles Babbage's Analytical Engine in 1843.</li><li>Her notes were three times longer than the paper she was translating.</li><li>They included a method for computing Bernoulli numbers.</li><li>That method is often called the first published computer program.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "Significance is carried by the 'first published computer program' claim. Length and the fact of translation are incidental.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Lovelace's 1843 notes contained a method for computing Bernoulli numbers that is often called the first published computer program.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Charles Babbage designed the Analytical Engine, which Lovelace wrote about in 1843.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Lovelace's 1843 notes were three times longer than the paper she was translating.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Lovelace translated a paper about Charles Babbage's Analytical Engine in 1843.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the mechanism is considered remarkable. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Antikythera mechanism was recovered from a shipwreck in 1901.</li><li>It contains at least 30 interlocking bronze gears.</li><li>It was used to predict eclipses and track the calendar.</li><li>No comparable geared device is known for the next thousand years.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "Remarkableness rests on the sophistication and the gap that followed; B is the only choice carrying both.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The mechanism was recovered from a shipwreck in 1901 and contains at least 30 gears.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The mechanism used at least 30 interlocking gears to predict eclipses, and nothing comparable is known for the next thousand years.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The mechanism was used to track the calendar and predict eclipses.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "No geared device comparable to the mechanism appeared for a thousand years after it.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T8:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The engineer's design is admired less for its elegance than for its _____: it has run for thirty years with almost no maintenance.",
+   "difficulty": "EASY",
+   "why": "Thirty years with almost no maintenance is lasting well. Simplicity and economy are not what the evidence given measures.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "simplicity",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "economy",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "ingenuity",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "durability",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Early attempts to cultivate the orchid outside its native range were uniformly _____, and it was fifty years before a grower succeeded.",
+   "difficulty": "EASY",
+   "why": "'It was fifty years before a grower succeeded' tells us the earlier attempts failed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "controversial",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "expensive",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "profitable",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unsuccessful",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Grasses colonised the plain so quickly that within two decades they had all but _____ the shrubs that once dominated it.",
+   "difficulty": "EASY",
+   "why": "'All but ___ the shrubs that once dominated' describes replacement; the other options do not account for the shrubs' loss of dominance.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "preserved",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "sheltered",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "supplanted",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "resembled",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;register&rdquo; most nearly mean?",
+   "passage": "The surveyor's field book does not record impressions. It is a register of angles, distances and bearings, set down in the same hand for thirty years, from which the shape of a coastline can be reconstructed but nothing of the weather or the company.",
+   "difficulty": "EASY",
+   "why": "The field book holds angles, distances and bearings set down over thirty years — a systematic record. The 'tone' sense is a real meaning of the word but is ruled out by the list of measurements.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A systematic record.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "An official who keeps records.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A range of musical pitch.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A formal tone of writing.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The committee's report was praised for its _____: it set out the evidence for each recommendation without overstating what the data could show.",
+   "difficulty": "EASY",
+   "why": "Not overstating the evidence is honesty about limits. Brevity is about length, which the sentence never mentions.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "novelty",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "urgency",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "brevity",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "candour",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "passage": "The composer Florence Price sent her scores to conductors who never replied. She kept composing anyway, filling notebooks that stayed in a summer house outside Chicago for decades. In 2009 the house was being renovated when the new owners found the manuscripts stacked in a room they had assumed was empty.",
+   "difficulty": "EASY",
+   "why": "Three moves in order: conductors ignore her, she keeps composing, the manuscripts are found in 2009. The text never states her present reputation, so no comparison is made.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It describes a setback, notes a response to it, and reports a later discovery.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It compares Price's reception during her life with her reputation today.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It lists the works Price completed in chronological order.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It poses a question about Price's career and then answers it.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "A team surveying the seafloor off Norway expected to map sediment. What the sonar returned instead were parallel ridges, regular as ploughed furrows, running for kilometres. They were the scours left by icebergs that had dragged along the bottom as the last ice sheet collapsed.",
+   "difficulty": "EASY",
+   "why": "The text sets up an expectation, reports what was found instead, and explains what made the ridges. It makes no argument about the speed of collapse.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To argue that the last ice sheet collapsed faster than believed.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To compare seafloor sediment with glacial deposits on land.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To explain how sonar surveys of the seafloor are conducted.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To recount an unexpected finding and identify its cause.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The Voynich manuscript has resisted every attempt at decipherment. Its script shows the statistical regularities of a natural language — word lengths cluster, and certain characters recur in fixed positions — which argues against its being random. But no one has matched it to a known tongue, and its illustrations depict plants that do not exist.",
+   "difficulty": "EASY",
+   "why": "Statistical regularity argues for a real language; the unmatched script and impossible plants argue against. The text draws no conclusion, so 'hoax' overstates it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The manuscript's illustrations are its most studied feature.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The manuscript is almost certainly an elaborate hoax.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The manuscript's script has been matched to an extinct language.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Evidence about the manuscript points in conflicting directions.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Between 1935 and 1943 the Federal Writers' Project sent interviewers to record the recollections of formerly enslaved people. The resulting narratives are indispensable and also difficult: most interviewers were white, most subjects were elderly and dependent on local goodwill, and what was said was shaped by both facts.",
+   "difficulty": "EASY",
+   "why": "'Indispensable and also difficult' is the balance the text strikes, and it names the conditions that shaped what was said. It never alleges deliberate alteration.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The interviewers deliberately altered the accounts they recorded.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The project should have employed interviewers of the same background as its subjects.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The narratives are unreliable and should be used with caution only rarely.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The narratives are valuable evidence whose conditions of production affected them.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly undermine the curator's argument?",
+   "passage": "A curator argues that a small panel long catalogued as a workshop copy is in fact by the master herself, pointing to the confidence of the underdrawing revealed by infrared imaging.",
+   "difficulty": "EASY",
+   "why": "The argument rests on confident underdrawing being distinctive of the master. If documented workshop copies show the same, the evidence no longer distinguishes. The dating in C would support the attribution, not undermine it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Infrared imaging of the panel shows no changes between underdrawing and paint layer.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Several documented workshop copies show underdrawing of comparable confidence.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The panel's wooden support comes from a tree felled during the master's lifetime.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The master is known to have completed few panels of this size.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the psychologist's proposal?",
+   "passage": "A psychologist proposes that people recall the beginnings and ends of lists better than the middles because attention lapses during the middle, not because of how memory stores order.",
+   "difficulty": "EASY",
+   "why": "If directing attention to the middle removes the deficit, the deficit was about attention rather than storage — exactly the proposal. A and D are consistent with either explanation.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The effect is stronger for long lists than for short ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Participants warned that they will be tested on middle items recall them as well as the ends.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The effect appears in participants of all ages.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Participants recall the last item best of all.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the scientist's claim?",
+   "passage": "A materials scientist claims that a new alloy resists fatigue because of its unusually fine grain structure, not because of the trace niobium it contains.",
+   "difficulty": "EASY",
+   "why": "Holding niobium constant and varying grain size isolates grain structure as the cause. B establishes the fineness but not that fineness is what does the work.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Alloys with the same niobium content but coarser grains fail after far fewer cycles.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The alloy's grain structure is finer than that of any comparable alloy.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Removing niobium from the alloy makes it harder to cast.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The alloy costs more to produce than conventional alternatives.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Solar panels lose efficiency as they heat, and a panel in direct desert sun can run far hotter than its rated temperature. Engineers testing installations in Morocco found that panels mounted a few centimetres higher above the ground, allowing air to pass beneath, produced measurably more power than identical panels mounted flush. This suggests that in hot climates the mounting height _____",
+   "difficulty": "EASY",
+   "why": "Airflow beneath cools the panel, and cooler panels are more efficient — so height acts through heat shedding. A makes a comparison the text never sets up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "matters more than the efficiency rating of the panel itself.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "affects output by influencing how well the panels shed heat.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "should be minimised to reduce wind loading on the array.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "has no measurable effect once panels exceed their rated temperature.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "The tuatara of New Zealand is often called a living fossil, but the label misleads. Its lineage is indeed ancient, having diverged from other reptiles over two hundred million years ago. Yet molecular studies show that tuatara DNA has accumulated changes faster than that of any other vertebrate yet measured. The animal's appearance has changed little; its genome, by contrast, _____",
+   "difficulty": "EASY",
+   "why": "The contrast is between an unchanged appearance and a fast-changing genome, which is what B states. A contradicts the molecular finding outright.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has remained essentially unaltered since the lineage diverged.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "has changed more rapidly than its outward form would suggest.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "resembles that of other reptiles more closely than expected.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "cannot be compared with that of other vertebrates.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Aksum, a kingdom centred on what is now northern Ethiopia _____ minted its own coinage from the third century onward.",
+   "difficulty": "EASY",
+   "why": "The appositive 'a kingdom centred on...' needs a closing comma to match the one that opened it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ": ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "; ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Hedgerows shelter species that farmland cannot support on its own _____ dormice, several warblers and a great many invertebrates.",
+   "difficulty": "EASY",
+   "why": "The complete clause is followed by a colon introducing the list that specifies the species.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": ", but ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": " and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ": ",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "When the tide is out _____ the causeway is passable on foot.",
+   "difficulty": "EASY",
+   "why": "The dependent clause 'When the tide is out' precedes the main clause and takes a comma.",
+   "choices": [
+    {
+     "label": "A",
+     "content": " that ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ": ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Although the manuscript is undated _____ its watermark places it within a decade.",
+   "difficulty": "EASY",
+   "why": "'Although' opens a dependent clause, which is separated from the main clause by a comma.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ": ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": " and ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The report criticises the ministry for failing to consult residents and for _____ the objections it did receive.",
+   "difficulty": "EASY",
+   "why": "Parallel structure: 'for failing' and 'for ignoring' must take the same form.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "it ignored",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "having ignore",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "to ignore",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "ignoring",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "By the time the expedition reached the coast, the supplies they had packed in September _____ almost entirely.",
+   "difficulty": "EASY",
+   "why": "The depletion finished before the past-tense arrival, so the past perfect is required.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "deplete",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "had been depleted",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "will be depleted",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "are depleted",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The collection of maps, along with several atlases, _____ kept in a climate-controlled room.",
+   "difficulty": "EASY",
+   "why": "The subject is 'collection', singular; 'along with several atlases' is an interrupting phrase and does not change the number.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "is",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "have been",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "were",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "are",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The alloy is light and unusually stiff. _____ it is expensive enough that it is used only where weight is critical.",
+   "difficulty": "EASY",
+   "why": "The cost is a drawback set against the advantages just listed, so a contrast is needed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For example,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The colony's records were destroyed in a fire in 1698. _____ almost everything known about its first decade comes from letters held elsewhere.",
+   "difficulty": "EASY",
+   "why": "The reliance on letters is the result of the records being destroyed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Consequently,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Similarly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Some frogs freeze almost solid through the winter, their hearts stopping entirely. _____ certain fish survive by producing proteins that prevent ice crystals from forming at all.",
+   "difficulty": "EASY",
+   "why": "A second example of the same phenomenon — surviving freezing — calls for a comparison.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Similarly,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the builders' technical skill. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Great Bath at Mohenjo-daro was built around 2500 BCE.</li><li>It is lined with tightly fitted brick sealed with bitumen.</li><li>The seal has kept it watertight for over four thousand years.</li><li>Its purpose is still debated.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Technical skill is demonstrated by the seal still working after four millennia, which only B states.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The Great Bath was built around 2500 BCE, and its purpose is still debated.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The Great Bath's brick lining, sealed with bitumen, has remained watertight for over four thousand years.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The Great Bath at Mohenjo-daro is lined with tightly fitted brick.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Archaeologists continue to debate the purpose of the Great Bath.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the huddle shares the cost of warmth. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Emperor penguins huddle in tight groups during Antarctic winter.</li><li>Birds on the windward edge lose heat fastest.</li><li>The huddle moves slowly, in waves, as birds shuffle inward.</li><li>Over time every bird spends a similar period at the edge.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Sharing the cost requires linking the shuffling to the equal time spent at the edge, which only B does.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Emperor penguins huddle in tight groups during the Antarctic winter.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because the huddle shuffles inward in slow waves, each bird spends a similar period on the cold windward edge.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Birds on the windward edge of the huddle lose heat fastest.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The huddle moves slowly and in waves during the winter.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the lasting influence of Lamarr's patent. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Hedy Lamarr co-patented a frequency-hopping system in 1942.</li><li>The system was designed to stop radio-guided torpedoes being jammed.</li><li>The navy did not adopt it during the war.</li><li>Frequency hopping underlies modern Bluetooth and Wi-Fi.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Lasting influence is the link from the ignored patent to today's technologies, which only C makes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Lamarr co-patented a frequency-hopping system in 1942 to prevent the jamming of torpedoes.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The navy did not adopt Lamarr's frequency-hopping system during the war.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Though the navy passed over her 1942 patent, the frequency hopping Lamarr co-invented underlies Bluetooth and Wi-Fi today.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Lamarr's system was intended to stop radio-guided torpedoes from being jammed.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T8:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Marine biologist Ayanna Osei was initially _____ about the claim that octopuses use discarded coconut shells as portable shelters; only after watching hours of her own footage did she accept it.",
+   "difficulty": "HARD",
+   "why": "'Only after watching hours of footage did she accept it' means she doubted it first. 'Indifferent' would mean she did not care, which the effort contradicts.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "indifferent",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "informed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "adamant",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "sceptical",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The archive's holdings are so _____ that a researcher can spend a week there and examine only a fraction of the material on a single decade.",
+   "difficulty": "HARD",
+   "why": "The consequence given — a week yields only a fraction — measures size, not condition or arrangement, so 'extensive' is what the sentence supports.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "specialised",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "fragile",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "disorganised",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "extensive",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Historians once dismissed the diaries as _____, but chemical analysis of the ink has since confirmed that they date from the period they describe.",
+   "difficulty": "HARD",
+   "why": "Dating the ink to the right period rebuts a charge of forgery specifically, not of triviality or incompleteness.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "incomplete",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "derivative",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "fraudulent",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "trivial",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Because the two research teams published within weeks of each other, the discovery is now conventionally _____ to both.",
+   "difficulty": "HARD",
+   "why": "Credit is 'attributed to' someone. 'Referred' needs a different preposition, and the other two reverse the meaning.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "confined",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "opposed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "referred",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "attributed",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The mayor's proposal was criticised as _____, addressing the symptoms of overcrowding while leaving its causes untouched.",
+   "difficulty": "HARD",
+   "why": "Treating symptoms and not causes is the definition of a superficial remedy; the other three name faults the sentence does not describe.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "superficial",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "costly",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "premature",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unpopular",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "<u>Lichens are not single organisms.</u> Each is a partnership between a fungus, which supplies structure and moisture, and an alga or cyanobacterium, which supplies sugars through photosynthesis. Neither partner can occupy bare rock alone.",
+   "difficulty": "HARD",
+   "why": "The sentence asserts that lichens are not single organisms, and the following sentences explain the partnership that makes this so. Nothing in the text objects to it or qualifies it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It raises an objection that the rest of the text answers.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It offers an example of a phenomenon defined later.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It qualifies a generalisation made elsewhere in the text.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It states the claim that the rest of the text explains.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:S2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Most accounts of the printing revolution begin with Gutenberg. Yet movable type had been in use in Korea for two centuries before him, cast in bronze rather than the lead alloy Gutenberg favoured. What Europe added was not the idea of movable type but a metallurgy cheap enough to make it disposable.",
+   "difficulty": "HARD",
+   "why": "The text grants that Korean type came first, then names precisely what Europe contributed. It does not claim Gutenberg is overrated, nor trace any transmission between the two.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To argue that Gutenberg's contribution has been overstated by historians.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To describe the metallurgical differences between Korean and European type.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To correct a common account by specifying what was actually new in Europe.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "To trace the spread of printing from Korea to Europe.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Bowerbirds build elaborate structures from twigs and decorate them with objects sorted by colour. The bower is not a nest; no eggs are laid in it, and it is abandoned once the breeding season ends. Females inspect several bowers before choosing, and males whose decorations are removed by researchers are chosen less often.",
+   "difficulty": "HARD",
+   "why": "The text says explicitly that the bower is not a nest and that decoration affects female choice. It never says females prefer one colour, only that objects are sorted.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The bower functions in mate choice rather than in raising young.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Female bowerbirds prefer bowers decorated in a single colour.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Researchers have disrupted bowerbird breeding by removing decorations.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Bowerbirds build nests that are unusually elaborate for their size.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Sea otters eat sea urchins, and urchins eat kelp. Where otters were hunted out, urchin populations exploded and kelp forests were grazed to bare rock. Where otters have returned, the kelp has come back within a decade — but only where the rock still holds enough sediment for young kelp to anchor.",
+   "difficulty": "HARD",
+   "why": "The final clause is the qualification the answer must carry: recovery follows the otters' return only where young kelp can anchor. The other options make claims of sole cause or sole predator that the text does not support.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Hunting otters was the sole cause of kelp forest decline.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Sea otters are the only predator capable of controlling urchin numbers.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Kelp forests recover once otters return, provided the substrate permits it.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Urchins cause more damage to kelp forests than any other grazer.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Lindqvist's explanation over the rival one?",
+   "passage": "Ecologist Tomas Lindqvist has proposed that urban street trees grow faster than their rural counterparts because city air is warmer, lengthening the growing season. A rival explanation holds that the difference is instead due to nitrogen deposited from vehicle exhaust, which acts as a fertiliser.",
+   "difficulty": "HARD",
+   "why": "Lindqvist's account depends on warmth, the rival's on traffic nitrogen. A cool city with heavy traffic separates the two: no growth advantage there means nitrogen alone is not enough, favouring warmth. Option D would support the rival.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Street trees in cities are on average taller than rural trees of the same age.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Trees in cool coastal cities with heavy traffic grow no faster than rural trees nearby.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Nitrogen levels in city soils are higher than in rural soils.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Rural trees planted beside motorways grow faster than those planted inland.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly weaken the team's argument?",
+   "passage": "A team argues that a cave's hand stencils were made by adolescents rather than adults, on the basis of the small size of the hands.",
+   "difficulty": "HARD",
+   "why": "The inference runs from small hands to adolescence. If adult women's hands were the same size, small hands no longer indicate age. The other options say nothing about who made them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The stencils were made over a period of several centuries.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Adult women in the population had hands within the same size range as the stencils.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Similar stencils are found in caves elsewhere in the region.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The pigment used in the stencils was traded over long distances.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the historian's argument?",
+   "passage": "A historian argues that a medieval town's sudden prosperity came from a change in trade routes rather than from a local increase in wool production.",
+   "difficulty": "HARD",
+   "why": "If local flocks did not grow, the prosperity cannot be explained by more local wool, which is exactly the alternative the historian rejects. A is consistent with either explanation, since goods could be passing through.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Wool exports recorded at the town's port rose sharply in the same decade.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The number of sheep grazed in the surrounding countryside was unchanged across the period.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The town's population grew steadily over the following century.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Several neighbouring towns also prospered during the same decade.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Coffee plants grown in full sun yield more beans per hectare than those grown under shade trees. Shade-grown plots, however, retain more soil nitrogen, suffer less erosion, and continue producing for decades after full-sun plots have been abandoned. A grower comparing the two systems on yield alone would therefore _____",
+   "difficulty": "HARD",
+   "why": "Yield alone favours full sun, while the omitted factors all favour shade over time — so a yield-only comparison overstates full sun's long-run case.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "find shade-grown coffee more profitable in the first season.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "conclude that shade trees have no effect on soil quality.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "underestimate the number of beans a full-sun plot produces.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "overstate the long-term advantage of full-sun cultivation.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Anthropologist Nadia Behrouz notes that in the communities she studied, gift-giving at weddings is meticulously recorded, and a family that receives a large gift is expected to give one of similar value when the giver's own children marry. The practice functions less as generosity than as _____",
+   "difficulty": "HARD",
+   "why": "Recording gifts and repaying at equal value later is lending and settling — credit across time. Nothing in the text concerns rank, forgetting, or religious authority.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "a ritual whose original meaning has been forgotten.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "an obligation imposed by religious authorities.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "a form of credit extended between families over time.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "a display of wealth intended to establish social rank.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The library holds three items of interest to the project _____ a ledger, a bundle of letters and a hand-drawn plan of the estate.",
+   "difficulty": "HARD",
+   "why": "A colon introduces the list that specifies the 'three items' announced by the complete clause before it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ": ",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "; ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ", and ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": " which are",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The survey covered every district in the city _____ the results were published the following spring.",
+   "difficulty": "HARD",
+   "why": "Two independent clauses with no conjunction: semicolon.",
+   "choices": [
+    {
+     "label": "A",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "; ",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": ", ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": ": ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The engine ran for eleven hours without fault _____ then, without warning, it seized.",
+   "difficulty": "HARD",
+   "why": "'then' is not a coordinating conjunction, so a comma between these two independent clauses would be a splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ": ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "; ",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": ", ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Mercury, the smallest planet in the solar system _____ has almost no atmosphere to retain heat.",
+   "difficulty": "HARD",
+   "why": "The appositive must be closed with a comma before the verb 'has'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": ": ",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": " ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ", ",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "; ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Neither the surveyor nor the two assistants _____ able to reach the summit before dark.",
+   "difficulty": "HARD",
+   "why": "With 'neither...nor', the verb agrees with the nearer subject, 'the two assistants', which is plural.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "were",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The committee published its findings in March, and by June the recommendations _____ into policy.",
+   "difficulty": "HARD",
+   "why": "The writing was complete by June, a point in the past, so the past perfect passive fits.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "are written",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "have written",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "had been written",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "writing",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Having been restored twice in the last century, the fresco _____ more of the restorers' work than of the original.",
+   "difficulty": "HARD",
+   "why": "The introductory participial phrase must be followed by a main clause with a finite verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "shows",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "to show",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "shown",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "showing",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The new timetable reduced the average journey by four minutes. _____ passenger numbers on the line fell in the same period.",
+   "difficulty": "HARD",
+   "why": "Falling numbers are unexpected given the improvement, so the transition must signal contrast.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "That is,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Accordingly,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nonetheless,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Indeed,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Wind turbines are usually sited on ridgelines to catch stronger, steadier air. _____ ridgelines are often the routes migrating birds follow.",
+   "difficulty": "HARD",
+   "why": "The bird routes are a problem created by the siting choice, so the transition must mark the complication.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "As a result,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In particular,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Unfortunately,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:T8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The two manuscripts share the same scribal errors in the same places. _____ they were almost certainly copied from a common source.",
+   "difficulty": "HARD",
+   "why": "The shared errors are the evidence and the common source the conclusion drawn from it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Admittedly,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Conversely,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Thus,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to describe the exchange between fungi and trees. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Fungi form networks of thin filaments called hyphae.</li><li>Hyphae connect to tree roots and exchange nutrients with them.</li><li>Trees supply the fungus with sugars.</li><li>The fungus supplies the tree with phosphorus from the soil.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal names the exchange, so both directions must appear. B asserts mutual benefit without saying what is exchanged.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Fungi form networks of thin filaments called hyphae that connect to tree roots.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Trees and fungi both benefit from the connection between hyphae and roots.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Through hyphae connected to tree roots, trees supply fungi with sugars while fungi supply trees with soil phosphorus.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Fungi obtain phosphorus from the soil and pass some of it on.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to convey the economic importance of cochineal. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Cochineal is a red dye made from insects that feed on cactus.</li><li>It was produced in Oaxaca and exported to Europe from the 1500s.</li><li>For two centuries it was Mexico's second most valuable export after silver.</li><li>Synthetic dyes replaced it in the late 1800s.</li></ul>",
+   "difficulty": "HARD",
+   "why": "Only C measures economic importance; the others describe what the dye is, where it went, or how it ended.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Cochineal is a red dye made from insects that feed on cactus.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Cochineal was exported to Europe from Oaxaca beginning in the 1500s.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For two centuries cochineal was Mexico's second most valuable export, behind only silver.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Synthetic dyes replaced cochineal in the late 1800s.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T8:R1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how mangroves protect coastlines. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Mangrove forests grow in salt water along tropical coasts.</li><li>Their roots trap sediment carried by rivers.</li><li>Trapped sediment raises the seabed over time.</li><li>A raised seabed reduces the height of waves reaching the shore.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal is the mechanism of protection, and only B links trapping to raising to smaller waves. C and A state facts without connecting them to protection.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Mangrove forests grow in salt water along tropical coasts, where rivers carry sediment.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By trapping river sediment, mangrove roots raise the seabed, which reduces the height of waves reaching the shore.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Mangrove roots trap sediment, and mangroves grow along tropical coasts.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Waves reaching tropical shores are lower than they would otherwise be.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "\\[5(x-3)-2(x+4)=13\\]What is the solution to the given equation?",
+   "difficulty": "MEDIUM",
+   "check": "5x-15-2x-8 = 3x-23 = 13, so 3x = 36 and x = 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A shop sells notebooks at x dollars each and pens at y dollars each. Three notebooks and four pens cost $25 in total, and five notebooks cost $7 more than two pens. What is the cost, in dollars, of two notebooks and one pen?",
+   "difficulty": "MEDIUM",
+   "check": "3x+4y=25 and 5x-2y=7 give x = 3 and y = 4, so 2x + y = 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A line passes through \\((-2, 7)\\) and \\((4, -5)\\). At what value of x does the line cross the x-axis?",
+   "difficulty": "MEDIUM",
+   "check": "Slope -2, y = -2x + 3, so x-intercept at x = 3/2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{3}{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{5}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "3",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A delivery van weighs 1,850 kilograms empty and may not exceed a total mass of 3,200 kilograms. Each crate loaded onto the van has a mass of 45 kilograms. What is the greatest number of crates the van can carry?",
+   "difficulty": "MEDIUM",
+   "check": "45c <= 1350 gives c <= 30.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "30",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "31",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A recipe is written twice on a card. The first version reads \\(ax+7y=21\\) and the second reads \\(6x+14y=42\\), where a is a constant, x is the mass of flour and y the mass of sugar. If the two versions place no different requirement on x and y at all, what is the value of a?",
+   "difficulty": "MEDIUM",
+   "check": "Halving the second gives 3x+7y=21, so a = 3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "7",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The function f is linear. If \\(f(3)=8\\) and \\(f(7)=20\\), what is the value of \\(f(0)\\)?",
+   "difficulty": "MEDIUM",
+   "check": "Slope 3; f(0) = 8 - 3(3) = -1.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "-1",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A cyclist rides for 2 hours at one constant speed and then for 3 hours at a speed 8 kilometres per hour slower. The total distance is 156 kilometres. What was the faster speed, in kilometres per hour?",
+   "difficulty": "MEDIUM",
+   "check": "2s + 3(s-8) = 156 gives 5s = 180 and s = 36.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "30",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "34",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "36",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "40",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A large square has side \\(3x-2\\) units and a small square has side \\(x+5\\) units. Which expression gives how much greater the area of the large square is than that of the small square?",
+   "difficulty": "MEDIUM",
+   "check": "(3x-2)^2 - (x+5)^2 = 8x^2 - 22x - 21.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(8x^{2}-22x-21\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(8x^{2}-2x-21\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(10x^{2}-22x+29\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(8x^{2}-22x+29\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A farmer's yield, in tonnes, from applying x units of fertiliser is modelled by \\(Y(x)=-2x^{2}+16x-27\\). What is the greatest yield the model predicts?",
+   "difficulty": "MEDIUM",
+   "check": "Vertex at x = 4; Y(4) = -32 + 64 - 27 = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A file is compressed so that its size is \\(4^{2x-1}\\) kilobytes. The compressed file is 64 kilobytes. What is the value of x?",
+   "difficulty": "MEDIUM",
+   "check": "64 = 4^3, so 2x-1 = 3 and x = 2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{5}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "3",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The solutions to \\(2x^{2}-9x-5=0\\) are p and q, with \\(p>q\\). What is the value of \\(p-q\\)?",
+   "difficulty": "MEDIUM",
+   "check": "Roots 5 and -1/2, so p - q = 11/2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{9}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{11}{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{21}{4}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A rectangle has an area of \\(x^{2}-x-12\\) square units and a width of \\(x+3\\) units. Which expression represents its length, in units, for \\(x>4\\)?",
+   "difficulty": "MEDIUM",
+   "check": "(x^2-x-12)/(x+3) = (x-4)(x+3)/(x+3) = x-4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x-4\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x+4\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x-3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x-12\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A projectile is launched so that its height, in metres, after t seconds is \\(h(t)=-4.9t^{2}+29.4t\\). For how many seconds is the projectile in the air before it returns to the ground?",
+   "difficulty": "MEDIUM",
+   "check": "-4.9t(t-6) = 0 gives t = 0 or t = 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4.9",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "29.4",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A sample of a radioactive isotope halves in mass every 12 years. A laboratory records a mass of 40 grams today. Which function gives the mass, \\(M(y)\\), in grams, y years from today?",
+   "difficulty": "MEDIUM",
+   "check": "Halving every 12 years puts y/12 in the exponent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(M(y)=40\\left(\\frac{1}{2}\\right)^{12y}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(M(y)=40\\left(\\frac{1}{2}\\right)^{\\frac{y}{12}}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(M(y)=40\\left(\\frac{1}{12}\\right)^{\\frac{y}{2}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(M(y)=40-\\frac{y}{12}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A map is drawn to a scale of 1 centimetre to 2.5 kilometres. Two towns are 17.4 centimetres apart on the map. A road between them is 12 kilometres longer than the straight-line distance. How long, in kilometres, is the road?",
+   "difficulty": "MEDIUM",
+   "check": "17.4 * 2.5 = 43.5, plus 12 gives 55.5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "43.5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "51.0",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "55.5",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "58.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "After a 12% increase, the price of a season ticket is $728. What was the price, in dollars, before the increase?",
+   "difficulty": "MEDIUM",
+   "check": "728 / 1.12 = 650.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$616",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$640",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$650",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "$684",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table shows the distribution of scores on a 10-point quiz taken by 25 students.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Score</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Number of students</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td></tr></table>What is the mean score, to the nearest hundredth?",
+   "difficulty": "MEDIUM",
+   "check": "(18+35+72+54+20)/25 = 199/25 = 7.96.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "7.96",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "8.00",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "8.16",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8.24",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A jar holds 9 white counters and 6 black counters. Two counters are drawn at random without replacement. What is the probability that both are black?",
+   "difficulty": "MEDIUM",
+   "check": "(6/15)(5/14) = 30/210 = 1/7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{7}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{2}{15}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{4}{25}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{3}{14}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "Two similar triangles have areas of 45 and 125 square centimetres. The shortest side of the smaller triangle is 6 centimetres. What is the length, in centimetres, of the shortest side of the larger triangle?",
+   "difficulty": "MEDIUM",
+   "check": "Area ratio 45:125 = 9:25, so side ratio 3:5 and 6(5/3) = 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A cone and a cylinder have the same radius and the same height. The volume of the cylinder is 96 cubic centimetres. What is the volume, in cubic centimetres, of the cone?",
+   "difficulty": "MEDIUM",
+   "check": "A cone is one third of the cylinder: 96/3 = 32.",
+   "correctAnswerFR": "[\"32\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "\\[x^{2}+kx+36=0\\]In the given equation, k is a negative constant. If the equation has exactly one real solution, what is the value of \\(|k|\\)?",
+   "difficulty": "MEDIUM",
+   "check": "Discriminant k^2 - 144 = 0 gives k = -12, so |k| = 12.",
+   "correctAnswerFR": "[\"12\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:A1-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A ladder leans against a wall so that its foot is 7 metres from the base of the wall and its top touches the wall 24 metres above the ground. How many metres long is the ladder?",
+   "difficulty": "MEDIUM",
+   "check": "sqrt(49+576) = sqrt(625) = 25.",
+   "correctAnswerFR": "[\"25\"]"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A theatre had some people seated. After 9 more people arrived, there were 23 people seated. How many people were seated before the 9 arrived?",
+   "difficulty": "EASY",
+   "check": "x + 9 = 23 gives x = 14.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Six identical crates have a combined mass of 54 kilograms. What is the mass, in kilograms, of one crate?",
+   "difficulty": "EASY",
+   "check": "54/6 = 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "48",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A shop sells pens for $3 each. Which equation gives the total cost C, in dollars, of p pens?",
+   "difficulty": "EASY",
+   "check": "Three dollars per pen.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(C=3+p\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(C=3p\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(C=p-3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(C=\\frac{p}{3}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A plumber charges a $5 call-out fee plus $2 for each minute on site. What is the total charge, in dollars, for a 4-minute visit?",
+   "difficulty": "EASY",
+   "check": "5 + 2(4) = 13.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "Which value of x satisfies \\(x+4<9\\)?",
+   "difficulty": "EASY",
+   "check": "x < 5, and only 4 qualifies.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "13",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A rope 48 centimetres long is cut into 6 equal pieces. How long, in centimetres, is each piece?",
+   "difficulty": "EASY",
+   "check": "48/6 = 8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "42",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "What is the slope of the line \\(y=7x-2\\)?",
+   "difficulty": "EASY",
+   "check": "Slope is the coefficient of x.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "7",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A square tile has a side length of \\(x+3\\) centimetres. What is the perimeter of the tile, in centimetres?",
+   "difficulty": "EASY",
+   "check": "4(x+3) = 4x + 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(4x+3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(4x+7\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(4x+12\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(x+12\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A storage box has a square base of side \\(x^{2}\\) units and a height of \\(x^{3}\\) units. Which expression gives its volume, in cubic units, for \\(x>0\\)?",
+   "difficulty": "EASY",
+   "check": "x^2 * x^2 * x^3 = x^7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x^{7}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x^{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(2x^{7}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x^{5}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A gardener models the number of blooms on a shrub as \\(B(w)=w^{2}-6\\), where w is the number of weeks since planting. How many blooms does the model predict after 5 weeks?",
+   "difficulty": "EASY",
+   "check": "25 - 6 = 19.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "19",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "25",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A square patio has an area of 49 square metres. What is the length, in metres, of one side?",
+   "difficulty": "EASY",
+   "check": "sqrt(49) = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "24.5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "98",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "Two square rugs have areas of 81 and 16 square metres. What is the combined length, in metres, of one side of each rug?",
+   "difficulty": "EASY",
+   "check": "9 + 4 = 13.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "97",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "25",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A rectangular sheet has an area of \\(10x^{4}\\) square units and a width of \\(2x\\) units. What is its length, in units, for \\(x>0\\)?",
+   "difficulty": "EASY",
+   "check": "10x^4 / 2x = 5x^3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(5x^{3}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(5x^{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(8x^{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(20x^{3}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "What is 30% of 260?",
+   "difficulty": "EASY",
+   "check": "0.30 * 260 = 78.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "68",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "72",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "78",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "86",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A car uses 6 litres of fuel to travel 90 kilometres. At the same rate, how many litres are needed to travel 240 kilometres?",
+   "difficulty": "EASY",
+   "check": "240/90 * 6 = 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "What is the mean of 12, 15, 18, 19 and 26?",
+   "difficulty": "EASY",
+   "check": "90/5 = 18.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "17",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "18",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table shows the number of visitors to a museum on three days.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Day</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Visitors</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Friday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">220</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Saturday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">410</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Sunday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">365</td></tr></table>How many more visitors came on Saturday than on Friday?",
+   "difficulty": "EASY",
+   "check": "410 - 220 = 190.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "145",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "165",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "190",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "215",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A bag holds 4 red and 6 yellow tokens. One token is drawn at random. What is the probability that it is red?",
+   "difficulty": "EASY",
+   "check": "4/10 = 2/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{2}{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{3}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{2}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{1}{4}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A triangular sail has two corners measuring 55&deg; and 65&deg;. What is the measure, in degrees, of the third corner?",
+   "difficulty": "EASY",
+   "check": "180 - 120 = 60.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "60",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "70",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "120",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A rectangle has a length of 14 centimetres and a width of 9 centimetres. What is its area, in square centimetres?",
+   "difficulty": "EASY",
+   "check": "14 * 9 = 126.",
+   "correctAnswerFR": "[\"126\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A circle has a radius of 7 units. What is its circumference, in terms of \\(\\pi\\)? (Enter the coefficient of \\(\\pi\\).)",
+   "difficulty": "EASY",
+   "check": "C = 2 pi r = 14 pi.",
+   "correctAnswerFR": "[\"14\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:A2E-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "In right triangle JKL, angle L is a right angle, \\(JL=6\\) and \\(KL=8\\). What is the length of JK?",
+   "difficulty": "EASY",
+   "check": "sqrt(36+64) = 10.",
+   "correctAnswerFR": "[\"10\"]"
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "\\[px+qy=14\\]\\[3x+2y=7\\]In the given system, p and q are constants. If the system has no solution, which of the following must be true?",
+   "difficulty": "HARD",
+   "check": "Parallel needs p/3 = q/2, i.e. 2p = 3q; p = 6 would also match the constants and give infinitely many solutions, so p != 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(2p=3q\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(2p-3q=0\\) and \\(p\\ne 6\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(p=6\\) and \\(q=4\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3p=2q\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "Line m has equation \\(4x-3y=12\\). Line n is perpendicular to m and passes through the point \\((8, -1)\\). What is the y-intercept of line n?",
+   "difficulty": "HARD",
+   "check": "m has slope 4/3, so n has slope -3/4; -1 = -3/4(8) + b gives b = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-7",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A worker earns $16 per hour for the first 38 hours in a week and $24 per hour for each additional hour. In a week when the worker earned at least $704, what is the least number of hours worked?",
+   "difficulty": "HARD",
+   "check": "16(38) = 608, and 608 + 24e >= 704 needs e >= 4, so 38 + 4 = 42 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "42",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "44",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "46",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "\\[3x^{2}+bx+12=0\\]In the given equation, b is a constant. For how many values of b does the equation have exactly one real solution?",
+   "difficulty": "HARD",
+   "check": "b^2 = 144 gives b = 12 and b = -12, so exactly two.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Zero",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Exactly one",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Exactly two",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Infinitely many",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A parabola has its vertex at \\((4, 7)\\) and passes through \\((2, 19)\\). What is the y-coordinate of the point on the parabola whose x-coordinate is 8?",
+   "difficulty": "HARD",
+   "check": "y = a(x-4)^2 + 7 with 4a + 7 = 19 gives a = 3, so y = 3(16) + 7 = 55.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "31",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "43",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "55",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "67",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "The table gives values of the function f.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">3</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">4</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">f(x)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr></table>The function g is defined by \\(g(x)=x^{2}+2\\). What is the value of \\(g(f(3))\\)?",
+   "difficulty": "HARD",
+   "check": "f(3) = 11 from the table, and g(11) = 121 + 2 = 123.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "38",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "64",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "123",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A support wire of length \\(x+1\\) metres is replaced by one of length \\(\\sqrt{3x+13}\\) metres, and the two lengths turn out to be equal. Given that the length is positive, what is the value of x?",
+   "difficulty": "HARD",
+   "check": "3x+13 = (x+1)^2 gives x^2-x-12 = 0, roots 4 and -3; only 4 keeps the length positive.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "-1",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "4",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A cube has a volume of \\(\\frac{8x^{9}}{27}\\) cubic units, where \\(x>0\\). What is the area, in square units, of one of its faces?",
+   "difficulty": "HARD",
+   "check": "Side = (8x^9/27)^(1/3) = 2x^3/3, and its square is 4x^6/9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{4x^{6}}{9}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{4x^{6}}{27}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{16x^{6}}{9}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{4x^{27}}{9}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A biologist models a population as \\(P(t)=k\\left(\\frac{3}{2}\\right)^{t}\\), where t is measured in years and k is a constant. The population two years from now will exceed today's population by 25. What is the value of k?",
+   "difficulty": "HARD",
+   "check": "k(9/4 - 1) = 5k/4 = 25 gives k = 20.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "20",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "36",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A circular running track is described in the xy-plane by \\[x^{2}+y^{2}-10x+8y=-16\\]with distances measured in metres. How many metres apart are the two points of the track that are farthest from each other?",
+   "difficulty": "HARD",
+   "check": "(x-5)^2+(y+4)^2 = 25, so r = 5 and the greatest separation is the diameter, 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(2\\sqrt{41}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A chemist mixes a 15% saline solution with a 40% saline solution to obtain 20 litres of a 24% solution. How many litres of the 40% solution are used?",
+   "difficulty": "HARD",
+   "check": "0.15(20-v) + 0.40v = 0.24(20) gives 3 + 0.25v = 4.8, v = 7.2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6.4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7.2",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "8.0",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "12.8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A data set of 12 values has a mean of 31. Two values, 18 and 24, are removed. What is the mean of the remaining 10 values?",
+   "difficulty": "HARD",
+   "check": "(372 - 42)/10 = 330/10 = 33.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "32.0",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "33.0",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "34.0",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "35.0",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A survey of 480 commuters is summarised below.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Drives</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Takes transit</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Under 30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">156</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30 or over</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">138</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">222</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">258</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">480</td></tr></table>A commuter who takes transit is selected at random. What is the probability that the commuter is under 30?",
+   "difficulty": "HARD",
+   "check": "156/258 = 26/43.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{13}{40}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{26}{43}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{13}{20}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{17}{43}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A solution's concentration falls by 15% in the first hour and by a further 20% in the second hour. By what percent has the concentration fallen overall?",
+   "difficulty": "HARD",
+   "check": "0.85 * 0.80 = 0.68, a fall of 32%.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "31%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "32%",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "35%",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "37%",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "A researcher reports the mean of 25 measurements as 14.8. A 26th measurement is then added, and the mean of all 26 becomes 15.0. What is the 26th measurement?",
+   "difficulty": "HARD",
+   "check": "26(15.0) - 25(14.8) = 390 - 370 = 20.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18.0",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "19.0",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "20.0",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "21.0",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "In triangle PQR, \\(PQ=15\\), \\(PR=20\\) and the measure of angle P is 90&deg;. Point S lies on QR so that PS is perpendicular to QR. What is the length of PS?",
+   "difficulty": "HARD",
+   "check": "QR = 25; area = (15*20)/2 = 150 = (25*PS)/2, so PS = 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{60}{7}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A sphere has the same volume as a cylinder of radius 4 and height 18. What is the radius of the sphere?",
+   "difficulty": "HARD",
+   "check": "Cylinder is 288pi; (4/3)pi r^3 = 288pi gives r^3 = 216 and r = 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "In a right triangle, \\(\\cos x^{\\circ}=\\frac{8}{17}\\). What is the value of \\(\\sin x^{\\circ}\\)?",
+   "difficulty": "HARD",
+   "check": "Opposite = sqrt(289-64) = 15, so sin = 15/17.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{15}{17}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{8}{15}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{15}{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{17}{15}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The function f is linear and satisfies \\(f(x+4)-f(x)=18\\) for all x. If \\(f(1)=5\\), what is the value of \\(f(9)\\)?",
+   "difficulty": "HARD",
+   "check": "Slope = 18/4 = 4.5; f(9) = 5 + 4.5(8) = 41.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "41",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "45",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A rectangle's length and width, in centimetres, are the two solutions of \\(3x^{2}-14x+8=0\\). What is the area of the rectangle, in square centimetres? (Express your answer as a fraction or a decimal.)",
+   "difficulty": "HARD",
+   "check": "Area is the product of the roots, c/a = 8/3.",
+   "correctAnswerFR": "[\"8/3\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "At a fundraiser, tickets cost $12 for adults and $7 for children. A total of 260 tickets were sold for $2,470. How many child tickets were sold?",
+   "difficulty": "HARD",
+   "check": "12a + 7(260-a) = 2470 gives 5a + 1820 = 2470, a = 130, so children = 130.",
+   "correctAnswerFR": "[\"130\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:A2H-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A conical paper cup has a radius of 6 centimetres and holds \\(96\\pi\\) cubic centimetres of water when full. How deep, in centimetres, is the cup?",
+   "difficulty": "HARD",
+   "check": "(1/3)pi(36)h = 96pi gives 12h = 96 and h = 8.",
+   "correctAnswerFR": "[\"8\"]"
+  }
+ ]
+}
