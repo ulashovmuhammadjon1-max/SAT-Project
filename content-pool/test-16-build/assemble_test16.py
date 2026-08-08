@@ -17,9 +17,10 @@ Two structural rules are enforced by construction, then re-checked:
     their Question Bank difficulty badges and filters are wrong. Test 16 does
     not repeat that.
 
-Nothing here is reused from Tests 1-6: the Math is authored in math_test7.py
-and math_m2easy.py, and every R&W item is checked against the refs Test 6
-consumed before it is eligible.
+Nothing here is reused: the Math is authored in math_test16.py and verified
+independently by verify_math_test16.py, and every R&W passage in
+rw_test16.py was screened against the 809-passage corpus in
+../rw_authored_corpus.json before it was drafted.
 
 Run:  python3 assemble_test16.py
 Out:  test16.json
@@ -30,8 +31,6 @@ import random
 import re
 import sys
 from collections import Counter, defaultdict
-
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "test-8-build"))
 
 from math_test16 import (MODULE_1 as MATH_M1, MODULE_2_EASY as MATH_M2E,      # noqa: E402
                         MODULE_2_HARD as MATH_M2H)
@@ -74,7 +73,7 @@ QUESTION_DIFFICULTY = {
     "MATH_M1": "MEDIUM", "MATH_M2E": "EASY", "MATH_M2H": "HARD",
 }
 
-random.seed(70707)
+random.seed(160016)
 
 
 def load_rw_pool():
@@ -111,14 +110,14 @@ def build_rw(pool):
 
 def build_math():
     def conv(items, mod_key):
-        # math_test7 writes "MC"/"FR"; math_m2easy (built earlier) writes the
-        # full enum names. Accept both rather than editing the older file.
+        # The Math source writes "MC"/"FR"; older authored files write the full
+        # enum names. Accept both rather than editing the older file.
         out = []
         for q in items:
             domain, skill = q["domain"], q["skill"]
             is_fr = q["type"] in ("FR", "FREE_RESPONSE")
             row = {
-                "_ref": f"AUTHORED/T7-{mod_key}:{q['n']}",
+                "_ref": f"AUTHORED/T16-{mod_key}:{q['n']}",
                 "type": "FREE_RESPONSE" if is_fr else "MULTIPLE_CHOICE",
                 "domain": domain, "skill": skill,
                 "stem": q["stem"],
