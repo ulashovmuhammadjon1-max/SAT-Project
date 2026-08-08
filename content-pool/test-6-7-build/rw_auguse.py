@@ -130,6 +130,57 @@ QUESTIONS = [
    why="Only D states what the discovery implies — humans predating the Clovis, against the "
        "hypothesis. C asserts that there are implications without naming them, A describes only the "
        "hypothesis, and B only locates the site."),
+
+ # --- Module 2 (pages p029-p055 hold Q1-Q27). `num` is prefixed to keep it
+ # distinct from the Module 1 badges above.
+ dict(num="M2-19", skill="Boundaries",
+   passage="Joy Williams&rsquo;s essay on &ldquo;cenote,&rdquo; a term referring to a deep sinkhole "
+           "containing a pool of water, is just one of many essays included in <em>Home Ground: A Guide "
+           "to the American _____ by Barry Lopez and Debra Gwartney, the book celebrates the rich "
+           "language used to describe the landscape of North America.",
+   choices_note="The book title's closing italics fall inside the answer choices.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["<em>Landscape</em>, edited", "<em>Landscape</em> edited", "<em>Landscape</em>. Edited",
+            "<em>Landscape</em> and edited"],
+   answer="C",
+   why="'Joy Williams's essay... is just one of many essays included in <em>Home Ground</em>' and "
+       "'the book celebrates the rich language...' are both independent clauses, so a sentence "
+       "boundary is required; the second then opens with the participial phrase 'Edited by Barry "
+       "Lopez and Debra Gwartney'. A, B and D all leave the two clauses spliced by the comma before "
+       "'the book'."),
+
+ dict(num="M2-20", skill="Form, Structure, and Sense",
+   passage="Most US states and territories have had at least one woman serve as governor. In Nebraska, "
+           "for example, Governor Kay A. Orr took office on January 9, 1987. In fact, the number of "
+           "states and territories that have had only male governors _____ almost every year.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["shrinks", "shrink", "are shrinking", "have been shrinking"], answer="A",
+   why="The subject is the singular 'the number' (not the plural 'states and territories' inside the "
+       "modifier), and 'almost every year' calls for the simple present. Only 'shrinks' is both "
+       "singular and simple present."),
+
+ dict(num="M2-23", skill="Transitions",
+   passage="Joseph Goodrich was an outspoken abolitionist whose Wisconsin home was a stop on the "
+           "underground railroad (the network of people and places that some enslaved people used to "
+           "escape to freedom). _____ supporters of the railroad were secretive about their antislavery "
+           "views. By and large, they were vocal abolitionists like Goodrich.",
+   stem="Which choice completes the text with the most logical transition?",
+   choices=["Occasionally,", "For example,", "Accordingly,", "However,"], answer="A",
+   why="The sentence that follows — 'By and large, they were vocal abolitionists' — marks secrecy as "
+       "the exception, so the blank must limit the claim's frequency. Goodrich was outspoken, so "
+       "secrecy is neither an example of (B) nor a consequence of (C) the first sentence."),
+
+ dict(num="M2-24", skill="Transitions",
+   passage="The work of contemporary Asian American poet John Yau often incorporates references to "
+           "other poems and works of visual art. Typically, these allusive gestures are subtle, "
+           "recognized by only the most attentive of Yau&rsquo;s readers. In his 2013 poem &ldquo;Further "
+           "Adventures in Monochrome,&rdquo; _____ Yau explicitly identifies a particular "
+           "artwork&mdash;Yves Klein&rsquo;s 1960 painting <em>Silence is Golden</em>&mdash;as the "
+           "poem&rsquo;s inspiration.",
+   stem="Which choice completes the text with the most logical transition?",
+   choices=["though,", "fittingly,", "similarly,", "for example,"], answer="A",
+   why="'Explicitly identifies' is the opposite of the 'typically... subtle' allusions just described, "
+       "so the 2013 poem is an exception, not an illustration (D) or a parallel case (C)."),
 ]
 
 DROPPED = {
@@ -138,6 +189,11 @@ DROPPED = {
      "[year] CE. Its people ...' followed by a past-tense verb-form choice. Byzantine Empire and "
      "'items that _____ greatly in demand' here; Srivijaya Empire and 'Its people _____ tin, "
      "medicines, and wood' there.",
+ 20: "Passage reuse. Module 1 Q20 is built on the same Sei Shonagon <em>Pillow Book</em> 'Splendid "
+     "Things' list already live in Test 5 RW_M1 as an Oct IntB top-up, sharing the "
+     "'grape-colored fabric' and 'snow-covered garden' details and the tenth-century-courtly-life "
+     "framing. The question tested differs (a colon boundary here, subject-verb agreement there), "
+     "but a student who has taken Test 5 would be reading the same passage again.",
 }
 
 # Pages skipped without reading because a lexical check matched them to a question already live in
