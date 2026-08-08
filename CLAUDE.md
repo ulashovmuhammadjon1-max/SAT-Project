@@ -102,8 +102,13 @@ step) and every answer verified programmatically with sympy before it ships — 
 more reliable than transcribing from a source PDF and running it through a converter, and it's
 what CLAUDE.md already mandates as the fallback when transcribed content runs short (see
 "Math modules" rules below) — just prefer it as the default for Math, not only the fallback.
-Reading & Writing is a different story: it's mostly prose/HTML, doesn't go through a LaTeX
-converter, and hasn't had this problem — PDF transcription is fine there.
+Reading & Writing is a different story *for markup*: it's mostly prose/HTML, doesn't go through a
+LaTeX converter, and has never had the rendering problem. **But R&W transcription has its own,
+worse failure mode: the answer keys.** Test 5 found 6 wrong answers in 81 banked R&W questions
+(7.4%), and the October papers' R&W keys disagreed with a careful reading on 7 of 18 spot-checked
+— while the same papers' Math keys were clean. So R&W PDF transcription is fine for the *content*
+and not to be trusted for the *answers*: every R&W question must be answered independently before
+it ships. See "Test 5 is built and PUBLISHED in production" below.
 
 ### If you do transcribe Math from a PDF anyway — audit checklist (run proactively, don't wait for a user report)
 Before shipping, grep every Math stem/choice (excluding `<img>` tags, whose base64 data will
@@ -179,16 +184,29 @@ Neon's HTTP query API (`@neondatabase/serverless`'s `neon()` tagged-template fun
 same as `insert.mjs` does. Never write the DB connection string into any file — pass it via
 `process.env.DATABASE_URL` only.
 
-## Reserved content for Test 5 — read this before starting a new test build
-`content-pool/test-3-4-5-reading-writing/` has real, verified Reading & Writing content
-already classified for Test 5 (26/22/26 — short 7 questions total, needs topping up before
-shipping). Test 3 and Test 4's R&W allocations from this same file have already been consumed
-(see above). `content-pool/new-source-transcripts/` has 33 unused, already-classified Math
-questions left over after building Test 3/4 (see `classify_math.py` in
-`content-pool/test-3-4-build/` for the domain/skill assignments and which questions were
-already used) — not yet enough for a full 3×22 Math build on their own; don't start Test 5
-without either more Math source material or the user's explicit OK to write original Math
-questions (sympy-verified, per the rule below).
+## Test 5 is built and PUBLISHED in production
+`Test 5` (`5537a8d3-602e-43ab-b973-1bc607d3f37c`), 147 questions, R&W 27/27/27 + Math 22/22/22.
+Math Module 2 (Easy) is 22 originally authored, sympy-verified questions per the standing rule
+above; Math M1 / M2 Hard come from the October IntB / USB / USC papers; R&W comes from the
+banked pool plus October top-ups. Everything is documented in
+`content-pool/test-5-build/MANIFEST.md`, with the answer audit in `rw_answer_audit.md`.
+
+**The lesson from Test 5 worth carrying forward: R&W answer keys lie, Math answer keys mostly
+don't.** All 81 R&W answers were re-answered by hand before shipping and **6 were wrong** —
+and only 2 of those 6 were catchable from a printed data table. The other 4 needed the question
+actually read and reasoned. Two further questions were unrepairable (a mistranscribed stem, a
+table that no longer exists) and were replaced from source page images. The same papers' Math
+keys were clean (Oct IntB: 22/22). So: for any future R&W module, budget a full read-and-answer
+pass before shipping — `content-pool/test-5-build/dump_rw.py "<module>" <lo> <hi>` renders
+questions for exactly that — and never treat a source R&W key as authoritative.
+
+Source pools left over: `content-pool/new-source-transcripts/` still has unused, classified Math
+questions, but not enough for a full 3×22 Math build on their own. `content-pool/test-3-4-5-
+reading-writing/` is now fully consumed across Tests 3, 4 and 5. The October IntB and USB papers
+still have unused R&W Module 1 questions (both papers, ~27 each) and unused Module 2 reading
+questions — the top-up passes only harvested the writing tail. Test 6 needs either more Math
+source material or explicit OK to author original Math questions.
+
 
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 

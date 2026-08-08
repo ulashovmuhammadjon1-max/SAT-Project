@@ -28,6 +28,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -58,6 +59,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -88,6 +90,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -118,6 +121,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -148,6 +152,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -178,6 +183,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -208,6 +214,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -238,6 +245,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -268,6 +276,7 @@
    "answerCorrected": "The conclusion to support is that in only ONE country are there more insect than fungus species. The table gives Lithuania 12 fungi / 7 insects, Poland 25 / 105, Austria 51 / 50 -- Poland alone. Choice B states exactly that. The recorded choice D claims Poland reported '105 fungus species and only 10 insect species', but the table says 25 fungi, 105 insects and 10 trees, so D contradicts its own table.",
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -298,6 +307,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": "[DIAGRAM: table titled 'Studies of the Effects of Tilling vs. No Tilling on Crop Yields' listing authors, crop, and yields with/without tilling]"
   },
   {
@@ -328,6 +338,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -358,6 +369,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -388,6 +400,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -418,6 +431,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -444,10 +458,11 @@
      "content": "however, all"
     }
    ],
-   "correct": "C",
-   "answerCorrected": null,
+   "correct": "A",
+   "answerCorrected": "Boundaries. 'Okinaka doesn't make such decisions single-handedly' and 'historical designations must be approved by a group of nine other experts' are both independent clauses, so a conjunctive adverb alone cannot join them. The recorded choice C ('however all') and choice D ('however, all') are both comma splices; B drops the boundary entirely. Only A ('however. All') closes the first sentence.",
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -478,6 +493,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -508,6 +524,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -538,6 +555,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -568,36 +586,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
-   "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "16",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>What makes the theremin a unique musical instrument? You play it without touching it, when you place your ____ the pitch will shift as your hands move through the air.</p>",
-   "stem": "Which choice completes the text with the most logical transition?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "hand's between the two antenna's."
-    },
-    {
-     "label": "B",
-     "content": "hands between the two antennas."
-    },
-    {
-     "label": "C",
-     "content": "hands' between the two antennas',"
-    },
-    {
-     "label": "D",
-     "content": "hands' between the two antennas,"
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Expression of Ideas",
-   "skill": "Transitions",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -628,6 +617,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -658,6 +648,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -688,6 +679,37 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
+   "diagramNote": ""
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 21,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>As a leader of the National Woman Suffrage Association in the late 1800s, Ann Quinby of _____ an important role in the campaign to secure voting rights for US women.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Kentucky. Played"
+    },
+    {
+     "label": "B",
+     "content": "Kentucky: played"
+    },
+    {
+     "label": "C",
+     "content": "Kentucky; played"
+    },
+    {
+     "label": "D",
+     "content": "Kentucky played"
+    }
+   ],
+   "correct": "D",
+   "answerCorrected": null,
+   "domain": "Standard English Conventions",
+   "skill": "Boundaries",
    "diagramNote": ""
   }
  ],
@@ -720,6 +742,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -750,6 +773,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -780,6 +804,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -810,6 +835,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -840,6 +866,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -870,6 +897,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -900,6 +928,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -930,6 +959,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -960,6 +990,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -986,10 +1017,11 @@
      "content": "It symbolizes the power of contemporary music to influence listeners' sense of self."
     }
    ],
-   "correct": "B",
-   "answerCorrected": null,
+   "correct": "C",
+   "answerCorrected": "The passage ends by saying hyperpop's vocal manipulation 'invites the listener to reflect on the extent to which digital technology mediates the human experience today' -- i.e. it comments on a contemporary social condition, which is choice C. The recorded choice B says the manipulation represents 'the continuity of human experience despite social and historical change'; the text says the opposite, that it is specific to today.",
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1020,6 +1052,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1050,6 +1083,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1080,6 +1114,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1110,6 +1145,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1140,6 +1176,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1170,6 +1207,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1200,6 +1238,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1230,6 +1269,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1260,6 +1300,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1290,6 +1331,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1320,6 +1362,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   }
  ],
@@ -1352,6 +1395,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1382,6 +1426,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1412,6 +1457,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Words in Context",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1442,6 +1488,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1472,6 +1519,7 @@
    "answerCorrected": null,
    "domain": "Craft and Structure",
    "skill": "Text Structure and Purpose",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1502,6 +1550,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1532,6 +1581,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1562,6 +1612,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1592,6 +1643,7 @@
    "answerCorrected": "The claim to support is that some lakes saw an INCREASE in ice duration. The recorded choice A says Naeckten had more ice in 1980-81 (177) than in 2005-06 (134) -- true, but that is a decrease, the opposite of the claim. Spirit Lake goes 102 -> 126 and Lake Kegonsa 94 -> 101; choice B states the Spirit Lake increase.",
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1622,37 +1674,8 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
-  },
-  {
-   "source": "Nov2023",
-   "sourceNum": "13",
-   "type": "MULTIPLE_CHOICE",
-   "passageHtml": "<p>Some climate models for the western United States predict that while total annual precipitation may remain unchanged from the present level, precipitation will become concentrated into fewer but more intense rain and snow events. University of Texas climate scientist Geeta Persad and her colleagues simulated how the amount of water entering aquifers and the amount being used for irrigation purposes would change if this were to occur. Persad and her colleagues concluded that concentration of precipitation into fewer events would result in a higher number of dry days, triggering more irrigation, but that this change in irrigation output is highly sensitive to the baseline concentration of precipitation that currently exists in an area.</p>",
-   "stem": "Which choice best describes data from the table that support Persad and her colleagues' conclusion?",
-   "choices": [
-    {
-     "label": "A",
-     "content": "If baseline precipitation is somewhat concentrated, the amount of water being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater, whereas the amount of water entering aquifers will increase 11.0% if baseline precipitation is evenly distributed."
-    },
-    {
-     "label": "B",
-     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will increase only slightly, whereas it will increase 9.0% for surface water and 7.9% for groundwater if baseline precipitation is evenly distributed."
-    },
-    {
-     "label": "C",
-     "content": "If baseline precipitation is somewhat concentrated, the amount of water entering aquifers will increase 4.9%, while the amount being used for irrigation will increase 0.4% for surface water and 0.9% for groundwater."
-    },
-    {
-     "label": "D",
-     "content": "If baseline precipitation is somewhat concentrated, water use for irrigation will decline by a small amount, whereas it will increase 11.0% for surface water and 9.0% for groundwater if baseline precipitation is evenly distributed."
-    }
-   ],
-   "correct": "B",
-   "answerCorrected": null,
-   "domain": "Information and Ideas",
-   "skill": "Command of Evidence",
-   "diagramNote": "Table titled 'Simulated Change in Annual Aquifer Input and Irrigation Output if Precipitation Concentration Increases as Climate Models Predict,' with rows for baseline precipitation concentration scenarios (somewhat concentrated; evenly distributed [x2]) and columns for % change in water entering aquifers, % change in surface water used for irrigation, and % change in groundwater used for irrigation."
   },
   {
    "source": "March2024B",
@@ -1678,10 +1701,11 @@
      "content": "Early snow melt extends the period in which plant species such as C. caudata can absorb CO2 but has no effect on the rate of heterotrophic respiration."
     }
    ],
-   "correct": "A",
-   "answerCorrected": null,
+   "correct": "C",
+   "answerCorrected": "The conclusion to support is that NET CO2 is likely to INCREASE if warming hastens spring snow melt. Net CO2 rises when absorption falls and/or respiration rises. Choice C has early melt both reducing plant growth (less absorption) and raising heterotrophic respiration (more output) -- both push net CO2 up. The recorded choice A has early melt slowing plant growth but SUPPRESSING respiration, two effects that pull in opposite directions and so cannot establish an increase.",
    "domain": "Information and Ideas",
    "skill": "Command of Evidence",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1712,6 +1736,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Central Ideas and Details",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1741,7 +1766,8 @@
    "correct": "C",
    "answerCorrected": null,
    "domain": "Information and Ideas",
-   "skill": "Central Ideas and Details",
+   "skill": "Inferences",
+   "skillCorrected": "Stem is 'It can most reasonably be inferred from the text that ...', the canonical Inferences phrasing.",
    "diagramNote": ""
   },
   {
@@ -1772,6 +1798,7 @@
    "answerCorrected": null,
    "domain": "Information and Ideas",
    "skill": "Inferences",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1798,10 +1825,11 @@
      "content": "measurement and used"
     }
    ],
-   "correct": "C",
-   "answerCorrected": null,
+   "correct": "B",
+   "answerCorrected": "Boundaries. The sentence is 'The djeser ... and the heqat ... were ancient Egyptian units of measurement used to record length and volume, respectively; ...'. No punctuation belongs before the restrictive participle 'used', which is choice B. The recorded choice C ('measurement. Used') strands 'Used to record length and volume, respectively' as a subjectless fragment; A misplaces a comma and D ('and used') leaves the participle dangling off 'were ... units of measurement'.",
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1832,6 +1860,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1862,6 +1891,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1892,6 +1922,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1922,6 +1953,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Form, Structure, and Sense",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1952,6 +1984,7 @@
    "answerCorrected": null,
    "domain": "Standard English Conventions",
    "skill": "Boundaries",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -1982,6 +2015,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -2012,6 +2046,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Transitions",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -2042,6 +2077,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -2072,6 +2108,7 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
    "diagramNote": ""
   },
   {
@@ -2102,6 +2139,37 @@
    "answerCorrected": null,
    "domain": "Expression of Ideas",
    "skill": "Rhetorical Synthesis",
+   "skillCorrected": null,
+   "diagramNote": ""
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 9,
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><em>Memoirs of Elleanor Eldridge</em> is an 1838 historical account by Elleanor Eldridge and Frances Harriet Whipple Green. In the book, the authors describe how restorative sleep can be for young people, writing, _____</p>",
+   "stem": "Which quotation from <em>Memoirs of Elleanor Eldridge</em> most effectively illustrates the claim?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Let us, dear reader, remember the punishment of idle curiosity, as taught in the true and affecting history [named] &lsquo;Blue Beard;&rsquo; and, striving to be content with the facts in the case, seek not to lift the veil, which the sensibility of true love, and feminine delicacy, have alike conspired to draw.&rdquo;"
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Then let no one turn with too much [fussiness] from the simple story of the humble Elleanor, though it may contain few, or none, of the thrilling charms of poetry and passion.&rdquo;"
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;Blessed are the slumbers of the innocent! They are kindlier than balm, and they refresh and gladden the spirit of childhood, like ministerings from a better world.&rdquo;"
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;Home is home, to the lowly as well as the great; and no rank, or color, destroys its sacred character, its power over the mind, and the affections.&rdquo;"
+    }
+   ],
+   "correct": "C",
+   "answerCorrected": null,
+   "domain": "Information and Ideas",
+   "skill": "Command of Evidence",
    "diagramNote": ""
   }
  ]

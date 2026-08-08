@@ -41,11 +41,104 @@ UNUSABLE = {
                          "itself; the distinction cannot be verified.",
     ("test5|RW_M1", 18): "Choice D was hidden behind a cursor icon in the source capture and was "
                          "transcribed by inference. Unverifiable.",
+    ("test5|RW_M1", 22): "The theremin question's stem was mistranscribed: it reads 'Which choice "
+                         "completes the text with the most logical transition?' while all four "
+                         "choices are apostrophe/plural variants of 'hands between the two "
+                         "antennas' -- a Standard English item whose stem was carried over from a "
+                         "neighbouring Transitions question. The passage's own punctuation around "
+                         "the blank ('You play it without touching it, when you place your ____ "
+                         "the pitch will shift') is inconsistent with every choice's terminal "
+                         "punctuation too, and the Nov2023 source PDF was not kept, so neither "
+                         "defect can be repaired against the original. Replaced by OctIntB M1 Q21.",
     ("test5|RW_M2_EASY", 7): "Line graph (women judges 2009–2013) — source PDF not kept, same "
                              "problem as RW_M1 idx10.",
+    ("test5|RW_M2_HARD", 10): "Command of Evidence question (Persad, precipitation concentration) "
+                              "that asks which choice 'best describes data from the table' — but "
+                              "no table survives. The Nov2023 transcript kept only a structural "
+                              "description of it ('rows for baseline concentration scenarios, "
+                              "columns for % change in aquifer input / surface-water irrigation / "
+                              "groundwater irrigation') with none of the numbers, and the source "
+                              "PDF was not kept. The percentages scattered through the four "
+                              "choices could be assembled into a plausible table, but which row "
+                              "each belongs to is guesswork, and a wrong reconstruction would "
+                              "silently make a distractor correct. Replaced by OctIntB M2 Q9.",
 }
 
+# --- Replacements for the two questions dropped above ------------------------
+# Both are transcribed by hand from the October IntB page images, and both are
+# like-for-like (same skill as the question they replace) so the module's
+# domain mix and block ordering are unchanged. Neither needs an answer key --
+# each one's answer is provable from the question itself, which is exactly the
+# property the dropped questions lacked.
+#
+# RW_M1 gets OctIntB Module 1 question 21 (page image p018): "Ann Quinby of
+# ____ an important role". Nothing belongs between the subject "Ann Quinby of
+# Kentucky" and its verb "played", so D is correct; A strands "Played an
+# important role..." as a subjectless fragment, and B and C put a colon or a
+# semicolon between a subject and its verb.
+M1_REPLACEMENT = {
+    "source": "OctIntB",
+    "sourceNum": 21,
+    "type": "MULTIPLE_CHOICE",
+    "passageHtml": "<p>As a leader of the National Woman Suffrage Association in the late 1800s, "
+                   "Ann Quinby of _____ an important role in the campaign to secure voting rights "
+                   "for US women.</p>",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard "
+            "English?",
+    "choices": [
+        {"label": "A", "content": "Kentucky. Played"},
+        {"label": "B", "content": "Kentucky: played"},
+        {"label": "C", "content": "Kentucky; played"},
+        {"label": "D", "content": "Kentucky played"},
+    ],
+    "correct": "D",
+    "answerCorrected": None,
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "diagramNote": "",
+}
 
+# RW_M2_HARD gets OctIntB Module 2 question 9 (page image p032), a Command of
+# Evidence (quotation) item like the one it replaces. The claim is that the
+# authors describe how restorative sleep can be for young people, and choice C
+# is the only quotation about sleep at all.
+M2H_REPLACEMENT = {
+    "source": "OctIntB",
+    "sourceNum": 9,
+    "type": "MULTIPLE_CHOICE",
+    "passageHtml": "<p><em>Memoirs of Elleanor Eldridge</em> is an 1838 historical account by "
+                   "Elleanor Eldridge and Frances Harriet Whipple Green. In the book, the authors "
+                   "describe how restorative sleep can be for young people, writing, _____</p>",
+    "stem": "Which quotation from <em>Memoirs of Elleanor Eldridge</em> most effectively "
+            "illustrates the claim?",
+    "choices": [
+        {"label": "A", "content": "&ldquo;Let us, dear reader, remember the punishment of idle "
+                                  "curiosity, as taught in the true and affecting history [named] "
+                                  "&lsquo;Blue Beard;&rsquo; and, striving to be content with the "
+                                  "facts in the case, seek not to lift the veil, which the "
+                                  "sensibility of true love, and feminine delicacy, have alike "
+                                  "conspired to draw.&rdquo;"},
+        {"label": "B", "content": "&ldquo;Then let no one turn with too much [fussiness] from the "
+                                  "simple story of the humble Elleanor, though it may contain few, "
+                                  "or none, of the thrilling charms of poetry and passion.&rdquo;"},
+        {"label": "C", "content": "&ldquo;Blessed are the slumbers of the innocent! They are "
+                                  "kindlier than balm, and they refresh and gladden the spirit of "
+                                  "childhood, like ministerings from a better world.&rdquo;"},
+        {"label": "D", "content": "&ldquo;Home is home, to the lowly as well as the great; and no "
+                                  "rank, or color, destroys its sacred character, its power over "
+                                  "the mind, and the affections.&rdquo;"},
+    ],
+    "correct": "C",
+    "answerCorrected": None,
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence",
+    "diagramNote": "",
+}
+
+REPLACEMENTS = {
+    "test5|RW_M1": [M1_REPLACEMENT],
+    "test5|RW_M2_HARD": [M2H_REPLACEMENT],
+}
 
 
 # --- Corrected answers ------------------------------------------------------
@@ -64,6 +157,42 @@ ANSWER_FIXES = {
    "choice A says Naeckten had more ice in 1980-81 (177) than in 2005-06 (134) -- true, but "
    "that is a decrease, the opposite of the claim. Spirit Lake goes 102 -> 126 and Lake "
    "Kegonsa 94 -> 101; choice B states the Spirit Lake increase."),
+ ("test5|RW_M1", 16): ("C", "A",
+   "Boundaries. 'Okinaka doesn't make such decisions single-handedly' and 'historical "
+   "designations must be approved by a group of nine other experts' are both independent "
+   "clauses, so a conjunctive adverb alone cannot join them. The recorded choice C "
+   "('however all') and choice D ('however, all') are both comma splices; B drops the "
+   "boundary entirely. Only A ('however. All') closes the first sentence."),
+ ("test5|RW_M2_EASY", 10): ("B", "C",
+   "The passage ends by saying hyperpop's vocal manipulation 'invites the listener to reflect "
+   "on the extent to which digital technology mediates the human experience today' -- i.e. it "
+   "comments on a contemporary social condition, which is choice C. The recorded choice B "
+   "says the manipulation represents 'the continuity of human experience despite social and "
+   "historical change'; the text says the opposite, that it is specific to today."),
+ ("test5|RW_M2_HARD", 11): ("A", "C",
+   "The conclusion to support is that NET CO2 is likely to INCREASE if warming hastens spring "
+   "snow melt. Net CO2 rises when absorption falls and/or respiration rises. Choice C has "
+   "early melt both reducing plant growth (less absorption) and raising heterotrophic "
+   "respiration (more output) -- both push net CO2 up. The recorded choice A has early melt "
+   "slowing plant growth but SUPPRESSING respiration, two effects that pull in opposite "
+   "directions and so cannot establish an increase."),
+ ("test5|RW_M2_HARD", 15): ("C", "B",
+   "Boundaries. The sentence is 'The djeser ... and the heqat ... were ancient Egyptian units "
+   "of measurement used to record length and volume, respectively; ...'. No punctuation "
+   "belongs before the restrictive participle 'used', which is choice B. The recorded choice "
+   "C ('measurement. Used') strands 'Used to record length and volume, respectively' as a "
+   "subjectless fragment; A misplaces a comma and D ('and used') leaves the participle "
+   "dangling off 'were ... units of measurement'."),
+}
+
+# --- Skill re-classifications -----------------------------------------------
+# Two questions were filed under the wrong skill by the classifier. Domain/Skill
+# drive the question bank's filters, and the module ordering is derived from the
+# skill, so both are corrected here rather than shipped mislabelled.
+SKILL_FIXES = {
+    ("test5|RW_M2_HARD", 13): ("Central Ideas and Details", "Inferences",
+      "Stem is 'It can most reasonably be inferred from the text that ...', the canonical "
+      "Inferences phrasing."),
 }
 
 # --- Hand-built tables ------------------------------------------------------
@@ -247,9 +376,12 @@ def main():
                 "correct": ANSWER_FIXES[(mod, i)][1] if (mod, i) in ANSWER_FIXES else q["correct"],
                 "answerCorrected": ANSWER_FIXES[(mod, i)][2] if (mod, i) in ANSWER_FIXES else None,
                 "domain": q["domain"],
-                "skill": q["skill"],
+                "skill": SKILL_FIXES[(mod, i)][1] if (mod, i) in SKILL_FIXES else q["skill"],
+                "skillCorrected": SKILL_FIXES[(mod, i)][2] if (mod, i) in SKILL_FIXES else None,
                 "diagramNote": q.get("diagram", ""),
             })
+        for r in REPLACEMENTS.get(mod, []):
+            keep.append(dict(r))
         out[mod] = keep
 
     with open(os.path.join(HERE, "test5_rw_formatted.json"), "w") as fh:

@@ -1,4 +1,4 @@
-# Test 5 build — in progress
+# Test 5 build — SHIPPED (published to production)
 
 ## Status
 | Module | Source | State |
@@ -6,7 +6,10 @@
 | Math M2 **Easy** | **Original, authored here** | ✅ 22/22 written, sympy-verified, deduped |
 | Math M1 | Oct IntB PDF (p51–72) | ✅ 22/22 transcribed, 22/22 sympy-verified |
 | Math M2 Hard | Oct USB PDF (p76–97) | ✅ 22 transcribed, 19 usable (3 rejected) |
-| R&W M1 / M2E / M2H | banked pool + October top-ups | 🟡 assembled 27/27/27 — **answers not fully verified** |
+| R&W M1 / M2E / M2H | banked pool + October top-ups | ✅ 27/27/27 — all 81 answers verified by hand |
+
+**Live in production as `Test 5` (`5537a8d3-602e-43ab-b973-1bc607d3f37c`), status `PUBLISHED`.**
+147 questions: R&W 27/27/27, Math 22/22/22.
 
 ## `t5_math_m2easy.json` — 22 original questions
 Written by hand per the standing rules in `CLAUDE.md` (Test 1/2 house style, no
@@ -146,33 +149,65 @@ from the October sources, which carry reliable answer keys, rather than the Augu
 only answer marking is an inline highlight that appears to be the crossed-out state rather than
 the selected one.
 
-## ⚠️ BLOCKER — the banked R&W answers are not reliable
+## R&W answer audit — resolved, and what it found
 
-Test 5 is fully assembled (147 questions), inserted and checked end to end on the **local**
-database, and renders correctly in the real exam interface. It has **not** been written to
-production and has **not** been published, because of this:
+The blocker that held this build back was that the banked R&W pool's recorded answers come from
+source answer keys that had already proved unreliable. All 81 were therefore re-answered by
+hand, from the question text alone, before the recorded answer was looked at. Full detail and
+per-question reasoning: `rw_answer_audit.md`.
 
-Five R&W questions have answers that can be checked mechanically, because the answer must agree
-with a printed data table. **Two of those five were wrong in the banked pool.** Both are proved
-by the table, not judgement calls:
+**6 of 81 recorded answers were wrong** (7.4%), all corrected in `ANSWER_FIXES`:
 
-- **M1 Q10 (tree species)** — the conclusion is that only *one* country has more insect than
-  fungus species. Table: Lithuania 12/7, Poland 25/105, Austria 51/50 — only Poland. Choice B
-  says that. The recorded answer D claims Poland reported "105 fungus species and only 10 insect
-  species"; the table says 25 fungi, 105 insects, 10 *trees*. D contradicts its own table.
-- **M2 Hard Q11 (lake ice)** — the claim is that some lakes saw an *increase* in ice duration.
-  The recorded answer A points at Näckten, 177 → 134, which is a *decrease*. Spirit Lake
-  (102 → 126) is the increase; that is choice B.
+| Module | Order | Recorded | Correct |
+|---|---|---|---|
+| RW_M1 | 10 | D | **B** (tree species — D contradicts its own table) |
+| RW_M1 | 15 | C | **A** (`however. All` — C and D are comma splices) |
+| RW_M2_EASY | 8 | B | **C** (hyperpop — B says the opposite of the text) |
+| RW_M2_HARD | 11 | A | **B** (lake ice — A is a decrease, the claim is an increase) |
+| RW_M2_HARD | 14 | A | **C** (net CO₂ — A's two effects pull in opposite directions) |
+| RW_M2_HARD | 16 | C | **B** (`measurement used` — C strands a fragment) |
 
-Both are corrected in `format_rw.py`'s `ANSWER_FIXES`, with the reasoning recorded.
+Only 2 of the 6 (RW_M1 10, RW_M2_HARD 11) were catchable from a printed data table. The other 4
+required reading and reasoning the question — i.e. the mechanical check alone would have shipped
+four wrong answers, which is exactly why the full pass was worth doing.
 
-**The concern is what this implies.** That is a 40% error rate on the only subset that can be
-verified without human judgement. The other 76 R&W questions — words in context, inference,
-transitions — can only be checked by reading and reasoning each one. There is no basis for
-assuming they are cleaner. Until they are read, the R&W side should not be published.
+**Two more questions were dropped as unrepairable and replaced** (both are in `UNUSABLE` with
+the reason; replacements are hand-transcribed from the October IntB page images, each carrying
+the same skill so the modules' domain mix and ordering are unchanged):
+- RW_M1 Nov2023 16 (theremin) — the stem was mistranscribed from a neighbouring Transitions
+  question while all four choices are punctuation variants. Replaced by OctIntB M1 Q21
+  (Boundaries, answer D).
+- RW_M2_HARD Nov2023 13 (Persad) — asks which choice "best describes data from the table", but
+  no table survives and the transcript kept none of its numbers. Replaced by OctIntB M2 Q9
+  (Command of Evidence, answer C).
 
-The Math side does not have this problem: all 66 answers were independently re-derived, and
-questions whose source key disagreed were rejected rather than shipped.
+That makes 6 dropped of 87 banked, all backfilled; every module ships at a full 27.
+
+**One skill mislabel corrected** (`SKILL_FIXES`): RW_M2_HARD order 9 was filed as Central Ideas
+and Details, but its stem is "It can most reasonably be inferred from the text that…" — the
+canonical Inferences phrasing. This matters twice: skill drives the question bank's filters, and
+module ordering is derived from the skill.
+
+**Reliability note for future builds.** The October papers' *Math* keys were fine (Oct IntB
+scored 22/22). Their *R&W* keys were not, and neither was the banked R&W pool. Treat an R&W
+answer key as a hint, not an authority; the Math side of this build had all 66 answers
+independently re-derived and rejected the ones whose key disagreed.
+
+## Verification performed before publishing
+
+- Local DB: deleted and re-inserted the full 147, then swept every question of R&W M1 and Math
+  M1 in the real `/exam/{attemptId}` interface via Playwright — zero raw-markup hits (no stray
+  `\(`, `\frac`, `&deg;`, `<p>`, markdown asterisks), zero console errors, figures and KaTeX
+  rendering correctly.
+- Production DB after insert: every MC question has exactly 4 choices and exactly 1 marked
+  correct; all 9 `correctAnswerFR` values are JSON-encoded arrays; every R&W question has a
+  passage; 6 questions carry an image; module time limits and `adaptiveThresholdPct` match
+  Test 1's shape.
+- All 6 corrected answers and both replacements re-checked in production **by content
+  substring**, not by hardcoded position — the two dropped questions confirmed absent.
+- satforge.org itself: Test 5 lists on `/tests` (147 questions, ~201 min, Adaptive), and a
+  throwaway attempt confirmed both an R&W and a Math question render end to end on the live
+  site (KaTeX server-rendered, base64 figures present). The attempt was deleted afterwards.
 
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
@@ -188,6 +223,11 @@ questions whose source key disagreed were rejected rather than shipped.
   `/exam/{attemptId}` interface, which CLAUDE.md requires before shipping.
 
 ## Notes for the next session
-- Two questions (Q8, Q18) carry a `table` field that must be rendered with the standard
-  `<table>` style block from `CLAUDE.md` at insert time, not as prose.
-- Nothing here is in the database yet. Test 5 does not exist as a `Test` row.
+- Test 5 is live and PUBLISHED in production; `insert_test5.mjs` is idempotent, so re-running it
+  is a no-op rather than a duplicate.
+- `dump_rw.py "<module>" <lo> <hi>` renders R&W questions readable for an answer audit. Use it
+  before shipping any future R&W module — it is what caught 4 of this build's 6 wrong answers.
+- Test 5 ships 0 `Explanation` rows, same as Tests 1–4. Still a real content gap across the
+  whole platform.
+- Two Math questions carry a `table` field rendered with the standard `<table>` style block from
+  `CLAUDE.md` at insert time.
