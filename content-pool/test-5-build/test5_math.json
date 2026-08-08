@@ -1,0 +1,1130 @@
+{
+ "MATH_M1": [
+  {
+   "order": 1,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(19(x^{2}-8)\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "OctUSC:2",
+   "verified": "19*x^2 - 19*8 = 19x^2 - 152",
+   "choices": [
+    "\\(19x^{2}+11\\)",
+    "\\(19x^{2}-8\\)",
+    "\\(19x^{2}-27\\)",
+    "\\(19x^{2}-152\\)"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 2,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A car travels at a speed of at least 40 miles per hour but no more than 65 miles per hour for a certain part of a trip. Which inequality represents this situation, where x is the speed of the car, in miles per hour, on this part of the trip?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "OctUSC:4",
+   "verified": "'at least 40' and 'no more than 65' is a compound inequality; source shows C selected",
+   "choices": [
+    "\\(x\\ge 40\\)",
+    "\\(x\\ge 65\\)",
+    "\\(40\\le x\\le 65\\)",
+    "\\(x\\le 105\\)"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 3,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(x^{\\frac{1}{17}}\\), where \\(x>0\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "OctUSC:7",
+   "verified": "rational exponent 1/n is the nth root",
+   "choices": [
+    "\\(\\frac{1}{17}\\cdot x\\)",
+    "\\(\\sqrt[17]{x}\\)",
+    "\\(17\\cdot x\\)",
+    "\\(x^{17}\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 4,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The scatterplot shows the relationship between two variables, along with a line of best fit. Which of the following is closest to the slope of this line of best fit?",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "OctUSC:8",
+   "verified": "line runs from about (0,27) to (4,4); slope = -23/4 = -5.75, closest to -6",
+   "choices": [
+    "-6",
+    "\\(-\\frac{1}{6}\\)",
+    "\\(\\frac{1}{6}\\)",
+    "6"
+   ],
+   "correct": "A",
+   "figureFile": "figures/q08_scatterplot.png",
+   "needsFigure": "scatterplot on source page 58"
+  },
+  {
+   "order": 5,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the slope of the graph of \\(48x-6y=-32\\) in the xy-plane?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "OctUSC:10",
+   "verified": "-6y = -48x - 32 -> y = 8x + 16/3; slope 8",
+   "choices": [
+    "-8",
+    "\\(-\\frac{3}{2}\\)",
+    "\\(\\frac{3}{2}\\)",
+    "8"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 6,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[-5(v-8)(v-2)(v+9)=0\\]What value of v is a solution to the given equation?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "OctUSC:11",
+   "verified": "roots are v = 8, 2, -9; only 8 appears among the choices",
+   "choices": [
+    "-5",
+    "-2",
+    "8",
+    "9"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 7,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In triangle DEF, the measure of angle D is 40&deg; and the measure of angle E is 95&deg;. In triangle RST, the measure of angle R is 40&deg; and the measure of angle S is 95&deg;. Which of the following additional pieces of information is needed to determine whether triangle DEF is similar to triangle RST?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "OctUSC:13",
+   "verified": "two pairs of congruent angles already establish similarity (AA)",
+   "choices": [
+    "The measure of angle F",
+    "The measure of angle T",
+    "The measure of angle F and the measure of angle T",
+    "No additional information is needed."
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 8,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function \\(f(x)=\\frac{1}{9}(x-4)^{2}+5\\) gives a toy car's height above the ground f(x), in inches, x seconds after it started moving on an elevated track, where \\(0\\le x\\le 10\\). Which of the following is the best interpretation of the vertex of the graph of \\(y=f(x)\\) in the xy-plane?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:15",
+   "verified": "vertex (4,5); leading coefficient 1/9 > 0 so the vertex is a minimum of 5 inches",
+   "choices": [
+    "The toy car's minimum height was 5 inches above the ground.",
+    "The toy car's minimum height was 4 inches above the ground.",
+    "The toy car's height was 5 inches above the ground when it started moving.",
+    "The toy car's height was 4 inches above the ground when it started moving."
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 9,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function \\(f(t)=30{,}000(2)^{\\frac{t}{370}}\\) gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:16",
+   "verified": "base 2 doubles when the exponent increases by 1, i.e. t = 370",
+   "choices": [
+    "2",
+    "370",
+    "740",
+    "30,000"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 10,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A bin contains a mixture of T-shirts for two sports teams. The table shows the number of T-shirts in the bin, classified by size and sports team. TABLE One T-shirt from the bin will be selected at random. What is the probability of selecting a T-shirt that is medium, given that the T-shirt is a Flames T-shirt?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "OctUSC:17",
+   "verified": "P(medium | Flames) = 22/44 = 0.50",
+   "choices": [
+    "0.20",
+    "0.22",
+    "0.39",
+    "0.50"
+   ],
+   "correct": "D",
+   "table": {
+    "headers": [
+     "",
+     "Flames",
+     "Sharks",
+     "Total"
+    ],
+    "rows": [
+     [
+      "Small",
+      "8",
+      "7",
+      "15"
+     ],
+     [
+      "Medium",
+      "22",
+      "34",
+      "56"
+     ],
+     [
+      "Large",
+      "14",
+      "27",
+      "41"
+     ],
+     [
+      "Total",
+      "44",
+      "68",
+      "112"
+     ]
+    ]
+   },
+   "FLAG": "Choice D was below the page fold and is NOT directly captured in the source. Reconstructed as 0.50: the arithmetic is forced (22/44) and the official key says D. Confirm against the source before publishing."
+  },
+  {
+   "order": 11,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The measure of angle R is \\(\\frac{5\\pi}{6}\\) radians. The measure of angle T is \\(\\frac{7\\pi}{12}\\) radians greater than the measure of angle R. What is the measure of angle T, in <u>degrees</u>?",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "sourceRef": "OctUSC:18",
+   "verified": "5pi/6 + 7pi/12 = 17pi/12 rad; (17pi/12)(180/pi) = 255 degrees",
+   "choices": [
+    "105",
+    "150",
+    "255",
+    "510"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 12,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[g(x)=x^{2}+\\frac{27}{2}x\\]Which expression represents the minimum value of the given function?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:19",
+   "verified": "vertex at x=-b/2a=-27/4; g(-27/4) = -(27/4)^2",
+   "choices": [
+    "\\(-\\left(\\frac{27}{2}\\right)^{2}\\)",
+    "\\(-\\left(\\frac{27}{4}\\right)^{2}\\)",
+    "\\(\\left(\\frac{27}{4}\\right)^{2}\\)",
+    "\\(\\left(\\frac{27}{2}\\right)^{2}\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 13,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The expression 0.33x represents the result of decreasing a positive quantity x by what percent?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "OctUSC:20",
+   "verified": "0.33x = x(1-0.67), a 67% decrease",
+   "choices": [
+    "6.7%",
+    "67%",
+    "3.3%",
+    "33%"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 14,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The edge length, in inches, of cube Y is \\(\\frac{3}{64}\\) the edge length, in inches, of cube X. The surface area, in square inches, of cube Y is n times the surface area, in square inches, of cube X. What is the value of n?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "OctUSC:22",
+   "verified": "surface area scales with the square of the linear ratio: (3/64)^2 = 9/4096",
+   "choices": [
+    "\\(\\frac{9}{4{,}096}\\)",
+    "\\(\\frac{27}{2{,}048}\\)",
+    "\\(\\frac{3}{64}\\)",
+    "\\(\\frac{9}{32}\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 15,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation \\(d=33w+100\\) gives the total amount of money d, in dollars, that James plans to save w weeks after he starts to save. What is the total amount of money, in dollars, he plans to save in 10 weeks?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "OctUSC:M1-Q1",
+   "verified": "33*10 + 100 = 430",
+   "choices": [
+    "380",
+    "430",
+    "480",
+    "530"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 16,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(63x^{2}\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "OctUSC:M1-Q3",
+   "verified": "(7x)(9x) = 63x^2; A expands to 63+63x^2, C to 63x^4, D to 63x^3",
+   "choices": [
+    "\\(63(1+x^{2})\\)",
+    "\\((7x)(9x)\\)",
+    "\\((7x^{2})(9x^{2})\\)",
+    "\\((63x^{2})(x)\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 17,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If \\(\\frac{1}{6}x+5=8\\), what is the value of 6x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:M1-Q6",
+   "verified": "x/6 = 3 -> x = 18 -> 6x = 108",
+   "choices": [
+    "108",
+    "258",
+    "318",
+    "468"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 18,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The table shows the distribution of height, in centimeters, of 25 objects. Which of the following could be the median height of these objects?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "OctUSC:M1-Q9",
+   "verified": "25 values, median is the 13th; cumulative counts 8,14,19,23,25 put the 13th in the 101-200 band, so 155",
+   "choices": [
+    "355",
+    "255",
+    "155",
+    "55"
+   ],
+   "correct": "C",
+   "table": {
+    "headers": [
+     "Height",
+     "Frequency"
+    ],
+    "rows": [
+     [
+      "0 to 100",
+      "8"
+     ],
+     [
+      "101 to 200",
+      "6"
+     ],
+     [
+      "201 to 300",
+      "5"
+     ],
+     [
+      "301 to 400",
+      "4"
+     ],
+     [
+      "401 to 500",
+      "2"
+     ]
+    ]
+   }
+  },
+  {
+   "order": 19,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If \\(\\frac{j}{k}=62\\) and \\(\\frac{96j}{12xk}=62\\), what is the value of x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:M1-Q14",
+   "verified": "96j/(12xk) = (8/x)(j/k) = (8/x)(62) = 62 -> 8/x = 1 -> x = 8",
+   "choices": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{6}{31}\\)",
+    "8",
+    "96"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 20,
+   "type": "FREE_RESPONSE",
+   "stem": "The ratio of k to p is constant. If k=4, then p=3. What is the value of k when p=24?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "OctUSC:5",
+   "verified": "k/p = 4/3 constant; k = (4/3)*24 = 32",
+   "correctAnswerFR": "[\"32\"]"
+  },
+  {
+   "order": 21,
+   "type": "FREE_RESPONSE",
+   "stem": "If \\(-7(13-5x)+3=-8(13-5x)+21\\), what is the value of \\(13-5x\\)?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:14",
+   "verified": "let u=13-5x: -7u+3 = -8u+21 -> u = 18",
+   "correctAnswerFR": "[\"18\"]"
+  },
+  {
+   "order": 22,
+   "type": "FREE_RESPONSE",
+   "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta\\le\\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 28.4 inches, what is the least possible value of x, in inches?",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "sourceRef": "OctUSC:21",
+   "verified": "tan(theta) = 28.4/x <= 1/12 -> x >= 28.4*12 = 340.8",
+   "correctAnswerFR": "[\"340.8\"]",
+   "figureFile": "figures/q21_ramp.png",
+   "needsFigure": "right-triangle ramp diagram on source page 71 (labels: length of the ramp, height of the ramp, x, theta; 'Note: Figure not drawn to scale.')"
+  }
+ ],
+ "MATH_M2_HARD": [
+  {
+   "order": 1,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A shopper goes to a pet store to buy dog food and treats. The shopper has $20. Each can of food costs $1.87, and each bag of treats costs $2.37. Which inequality represents the relationship between the number of cans of food, c, and the number of bags of treats, t, the shopper can buy?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "OctUSC:2",
+   "verified": "cost per can 1.87 pairs with c; total cannot exceed 20",
+   "choices": [
+    "\\(1.87c+2.37t\\le 20\\)",
+    "\\(1.87c+2.37t\\ge 20\\)",
+    "\\(2.37c+1.87t\\le 20\\)",
+    "\\(2.37c+1.87t\\ge 20\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 2,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If \\(f(x)=x+2\\) and \\(g(x)=2x\\), what is the value of \\(6f(3)-g(3)\\)?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "OctUSC:5",
+   "verified": "6*f(3) - g(3) = 6*5 - 6 = 30 - 6 = 24",
+   "choices": [
+    "-1",
+    "12",
+    "14",
+    "24"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 3,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[y=5x+7\\]\\[y=-4x-11\\]The solution to the given system of equations is (x,y). What is the value of y?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:6",
+   "verified": "5x+7 = -4x-11 -> 9x = -18 -> x = -2; y = 5(-2)+7 = -3",
+   "choices": [
+    "-18",
+    "-4",
+    "-3",
+    "-2"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 4,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A plumbing company charges its customers $112 for the first hour of a plumbing service call and $40 for each additional hour, plus the cost of plumbing parts. Which equation represents the total cost y, in dollars, for an x-hour plumbing service call where the cost of parts was $z and \\(x\\ge 1\\)?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:8",
+   "verified": "112 + 40(x-1) + z = 40x + z + 72",
+   "choices": [
+    "\\(y=40x+z\\)",
+    "\\(y=40x+z+72\\)",
+    "\\(y=112x+z\\)",
+    "\\(y=112x+40z+72\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 5,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Circle A has equation \\((x-7)^{2}+(y+3)^{2}=1\\). In the xy-plane, circle B is obtained by translating circle A to the right 4 units. Which equation represents circle B?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "OctUSC:9",
+   "verified": "centre (7,-3) shifts right 4 to (11,-3); radius unchanged",
+   "choices": [
+    "\\((x-7)^{2}+(y+7)^{2}=1\\)",
+    "\\((x-3)^{2}+(y+3)^{2}=1\\)",
+    "\\((x-11)^{2}+(y+3)^{2}=1\\)",
+    "\\((x-7)^{2}+(y-1)^{2}=1\\)"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 6,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A certain open star cluster contains M-type stars and K-type stars. The estimated total mass of M-type and K-type stars in this open star cluster is 129,492 quettagrams. The graph shown models the possible combinations of the number of M-type stars, x, and the number of K-type stars, y, that could be in this open star cluster if all the M-type stars have the same estimated mass and all the K-type stars have the same estimated mass. Based on the graph, which of the following is closest to the estimated mass, in quettagrams, of each M-type star in this cluster?",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "OctUSC:11",
+   "verified": "at the x-intercept all mass is M-type: 129492/156 = 830.1, closest to 830",
+   "choices": [
+    "830",
+    "959",
+    "55,622",
+    "73,870"
+   ],
+   "correct": "A",
+   "figureFile": "figures/usb_q11_starcluster.png",
+   "needsFigure": "line graph, K-type vs M-type star counts, source page 86"
+  },
+  {
+   "order": 7,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "An object is launched into the air from ground level. According to a quadratic model, 2.1 seconds after the object is launched, it reaches its maximum height of 70.56 feet above ground level. Which equation represents this model, where f(t) is the object's height, in feet, above ground level t seconds after it was launched?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:13",
+   "verified": "vertex (2.1, 70.56) needs (t-2.1); a maximum needs a negative leading coefficient",
+   "choices": [
+    "\\(f(t)=-16(t-2.1)^{2}+70.56\\)",
+    "\\(f(t)=16(t+2.1)^{2}+70.56\\)",
+    "\\(f(t)=-16(t+2.1)^{2}+70.56\\)",
+    "\\(f(t)=16(t-2.1)^{2}+70.56\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 8,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which equation has no solution?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:14",
+   "verified": "B gives 3x-3 = 3x+3 -> -3=3, contradiction. A is an identity; C and D each give x=1",
+   "choices": [
+    "\\(3(x-1)=-3(-x+1)\\)",
+    "\\(3(x-1)=-3(-x-1)\\)",
+    "\\(3(x-1)=4(x-1)\\)",
+    "\\(3(x-1)=4(-x+1)\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 9,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The volume of a right rectangular prism with a square base is 539 cubic centimeters. If the area of each of the four lateral faces is 77 square centimeters, what is the height, in centimeters, of the prism?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "OctUSC:15",
+   "verified": "s^2*h=539 and s*h=77; dividing gives s=7, so h=77/7=11",
+   "choices": [
+    "77",
+    "49",
+    "11",
+    "7"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 10,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[f(x)=5x^{2}+60x+181\\]The function g is defined by \\(g(x)=f(x+8)\\). What is the minimum value of g(x)?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:18",
+   "verified": "vertex of f at x=-6, f(-6)=1; a horizontal translation does not change the minimum VALUE, so min g = 1",
+   "choices": [
+    "-14",
+    "-6",
+    "1",
+    "9"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 11,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The functions f and g are defined by the equations shown, where a and b are integer constants, \\(a&lt;b\\) and \\(b&lt;0\\). If \\(y=f(x)\\) and \\(y=g(x)\\) are graphed in the xy-plane, which of the following equations displays, as a constant or coefficient, the y-coordinate of the y-intercept of the graph of the corresponding function?<br/>I. \\(f(x)=a(3.3)^{x+b}\\)<br/>II. \\(g(x)=a(3.3)^{x}+b\\)",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:21",
+   "verified": "f(0)=a(3.3)^b and g(0)=a+b; neither value appears literally as a constant or coefficient in its equation",
+   "choices": [
+    "I only",
+    "II only",
+    "I and II",
+    "Neither I nor II"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 12,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the right triangle shown, what is the value of x?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "OctUSC:M2-Q1",
+   "verified": "legs 37 and 37 -> hypotenuse = 37*sqrt(2)",
+   "choices": [
+    "\\(\\sqrt{2}\\)",
+    "\\(\\sqrt{37}\\)",
+    "\\(\\sqrt{74}\\)",
+    "\\(37\\sqrt{2}\\)"
+   ],
+   "correct": "D",
+   "figureFile": "figures/usc_m2q1_triangle.png",
+   "needsFigure": "right triangle with both legs labelled 37 and hypotenuse x, source page 64"
+  },
+  {
+   "order": 13,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A plant nursery classifies a perennial flower species as tall if its typical height when fully grown is more than 100 centimeters. Each of the following inequalities represents the possible heights h, in centimeters, for a specific perennial flower species when fully grown. Which inequality represents the possible heights h, in centimeters, for a tall perennial flower species?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "OctUSC:M2-Q3",
+   "verified": "only A has every value above 100",
+   "choices": [
+    "\\(107&lt;h&lt;158\\)",
+    "\\(76&lt;h&lt;100\\)",
+    "\\(41&lt;h&lt;95\\)",
+    "\\(16&lt;h&lt;91\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 14,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[3y=8x+18\\]\\[-3y=7x-26\\]The solution to the given system of equations is (x,y). What is the value of 30x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "OctUSC:M2-Q4",
+   "verified": "adding the equations gives 0 = 15x - 8, so x = 8/15 and 30x = 16",
+   "choices": [
+    "-16",
+    "-8",
+    "8",
+    "16"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 15,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[\\frac{x}{(x-1)(x+1)}=\\frac{81}{56x}\\]Which value is a solution to the given equation?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "OctUSC:M2-Q5",
+   "verified": "cross-multiplying gives 56x^2 = 81(x^2-1) -> 25x^2 = 81 -> x = +/-9/5",
+   "choices": [
+    "\\(\\frac{1}{5}\\)",
+    "\\(\\frac{9}{25}\\)",
+    "1",
+    "\\(\\frac{9}{5}\\)"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 16,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of \\(y=f(x)-11\\) is shown. Which equation defines the linear function f?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "OctUSC:M2-Q10",
+   "verified": "plotted line has y-intercept -2 and slope -4, so it is y=-4x-2; since the plot is f(x)-11, f(x) = -4x+9",
+   "choices": [
+    "\\(f(x)=-15x-11\\)",
+    "\\(f(x)=-4x+9\\)",
+    "\\(f(x)=-15x+9\\)",
+    "\\(f(x)=-4x-11\\)"
+   ],
+   "correct": "B",
+   "figureFile": "figures/usc_m2q10_line.png",
+   "needsFigure": "line in the xy-plane, source page 72"
+  },
+  {
+   "order": 17,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The variables x and y have a quadratic relationship. When \\(x=0\\), \\(y=45\\). When \\(x=6\\), \\(y=81\\). When \\(x=15\\), \\(y=0\\). Which equation represents this relationship?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "OctUSC:M2-Q11",
+   "verified": "B gives 45 at x=0, 81 at x=6 and 0 at x=15; all three points check",
+   "choices": [
+    "\\(y=x^{2}-18x+45\\)",
+    "\\(y=-x^{2}+12x+45\\)",
+    "\\(y=x^{2}+45\\)",
+    "\\(y=-3x^{2}+48x-45\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 18,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A researcher is designing a study to investigate the average number of hours students at a high school spend reading per day. The researcher will report an estimated average number of hours students at the high school spend reading per day with an associated margin of error. The researcher is considering using a random sample of either 105 or 210 students from the high school. Which of the following would be the most likely effect of using the larger random sample compared to the smaller random sample?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "OctUSC:M1-Q15",
+   "verified": "margin of error shrinks as sample size grows; sample size does not predictably move the estimate itself",
+   "choices": [
+    "The reported margin of error would be lower.",
+    "The reported margin of error would be higher.",
+    "The reported average number of hours would be lower.",
+    "The reported average number of hours would be higher."
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 19,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The shaded region shown represents the solutions to \\(rx+ty\\ge -77\\), where r and t are constants. What is the value of \\(r+t\\)?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "OctUSC:M2-Q15",
+   "verified": "boundary passes through (0,-11) and (-7,-10): x + 7y = -77, so r=1, t=7 and r+t=8",
+   "choices": [
+    "8",
+    "6",
+    "-6",
+    "-7"
+   ],
+   "correct": "A",
+   "figureFile": "figures/usc_m2q15_shaded.png",
+   "needsFigure": "shaded half-plane with its boundary line, source page 77"
+  },
+  {
+   "order": 20,
+   "type": "FREE_RESPONSE",
+   "stem": "\\[0=(x-k)(7x+t)-(x-k)\\]In the given equation, k and t are positive constants. A solution to the equation is \\(-\\frac{22}{7}\\). What is the value of t?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "OctUSC:3",
+   "verified": "factor: (x-k)(7x+t-1)=0 -> roots x=k or x=(1-t)/7; k>0 so -22/7=(1-t)/7 -> t=23",
+   "correctAnswerFR": "[\"23\"]"
+  },
+  {
+   "order": 21,
+   "type": "FREE_RESPONSE",
+   "stem": "In a set of four consecutive odd integers, where the integers are ordered from least to greatest, the first integer is represented by x. The product of 28 and the third odd integer in the set is at most the value of 50 less than the sum of the first and fourth odd integers in the set. What is the greatest possible value of x?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "OctUSC:19",
+   "verified": "integers x, x+2, x+4, x+6; 28(x+4) <= (x + x+6) - 50 -> 26x <= -156 -> x <= -6; greatest odd value is -7",
+   "correctAnswerFR": "[\"-7\"]"
+  },
+  {
+   "order": 22,
+   "type": "FREE_RESPONSE",
+   "stem": "\\[\\frac{1}{cx}=\\frac{x}{76}+\\frac{1}{c}\\]In the given equation, c is a constant. If the equation has exactly one solution, what is the value of c?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "OctUSC:22",
+   "verified": "multiply by cx: cx^2+76x-76=0; exactly one solution needs 76^2+4*76*c = 0 -> c = -19",
+   "correctAnswerFR": "[\"-19\"]",
+   "NOTE": "The denominator reads 76, not 70 -- only legible after zooming the low-resolution capture. 70 would give c=-17.5 and disagree with the key."
+  }
+ ],
+ "MATH_M2_EASY": [
+  {
+   "order": 1,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If 6x-5=31, what is the value of x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "solve(Eq(6*x-5,31),x) == [6]",
+   "choices": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 2,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A gym charges a onetime registration fee of $30 plus $22 for each month of membership. Which equation gives the total cost C, in dollars, for m months of membership?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "total cost = 22 per month * m + 30 fixed",
+   "choices": [
+    "C=22m-30",
+    "C=22m+30",
+    "C=30m+22",
+    "C=30m-22"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 3,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function f is defined by f(x)=9x+4. What is the value of f(3)?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "9*3+4 == 31",
+   "choices": [
+    "16",
+    "27",
+    "31",
+    "36"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 4,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "3x+y=14<br/>y=2x-1<br/>The solution to the given system of equations is (x,y). What is the value of x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "solve([Eq(3*x+y,14),Eq(y,2*x-1)],[x,y])[x] == 3",
+   "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 5,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "For the linear function g, g(0)=9 and g(1)=14. What is the value of g(4)?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "slope=(14-9)/1=5; g(4)=9+4*5=29",
+   "choices": [
+    "19",
+    "23",
+    "29",
+    "36"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 6,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If 3n+2&le;17, what is the greatest possible integer value of n?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "3*n+2<=17 -> n<=5, greatest integer 5",
+   "choices": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 7,
+   "type": "FREE_RESPONSE",
+   "stem": "If 2(x+5)=34, what is the value of x?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "solve(Eq(2*(x+5),34),x) == [12]",
+   "correctAnswerFR": "[\"12\"]"
+  },
+  {
+   "order": 8,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_G The table shows three values of x and their corresponding values of g(x), where g is a linear function. What is the slope of the graph of y=g(x) in the xy-plane?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "(9-5)/(2-1) == 4 and (13-9)/(3-2) == 4",
+   "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": "C",
+   "table": {
+    "headers": [
+     "x",
+     "g(x)"
+    ],
+    "rows": [
+     [
+      "1",
+      "5"
+     ],
+     [
+      "2",
+      "9"
+     ],
+     [
+      "3",
+      "13"
+     ]
+    ]
+   }
+  },
+  {
+   "order": 9,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(\\frac{12x^{5}}{4x^{2}}\\), where x&gt;0?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "simplify(12*x**5/(4*x**2)) == 3*x**3",
+   "choices": [
+    "\\(3x^{3}\\)",
+    "\\(3x^{7}\\)",
+    "\\(8x^{3}\\)",
+    "\\(16x^{3}\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 10,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to (3x+4)(x-2)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "expand((3*x+4)*(x-2)) == 3*x**2-2*x-8",
+   "choices": [
+    "\\(3x^{2}-2x-8\\)",
+    "\\(3x^{2}+2x-8\\)",
+    "\\(3x^{2}-10x-8\\)",
+    "\\(3x^{2}+10x+8\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 11,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function h is defined by \\(h(x)=x^{2}+6\\). What is the value of h(-4)?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "(-4)**2+6 == 22",
+   "choices": [
+    "-10",
+    "2",
+    "14",
+    "22"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 12,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What are the solutions to the equation \\(x^{2}-9x+20=0\\)?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "sorted(solve(Eq(x**2-9*x+20,0),x)) == [4,5]",
+   "choices": [
+    "-4 and -5",
+    "-4 and 5",
+    "4 and 5",
+    "4 and -5"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 13,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function f is defined by \\(f(x)=2^{x}\\). What is the value of f(5)?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "2**5 == 32",
+   "choices": [
+    "10",
+    "16",
+    "25",
+    "32"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 14,
+   "type": "FREE_RESPONSE",
+   "stem": "If \\(\\sqrt{x+7}=6\\), what is the value of x?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "solve(Eq(sqrt(x+7),6),x) == [29]",
+   "correctAnswerFR": "[\"29\"]"
+  },
+  {
+   "order": 15,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A recipe calls for 3 cups of flour for every 2 cups of sugar. If 18 cups of flour are used, how many cups of sugar are needed?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "18*2/3 == 12",
+   "choices": [
+    "9",
+    "12",
+    "24",
+    "27"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 16,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A car travels 240 miles in 4 hours at a constant speed. At this rate, how many miles will the car travel in 7 hours?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "240/4*7 == 420",
+   "choices": [
+    "350",
+    "420",
+    "480",
+    "560"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 17,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the mean of the five values in the list 4, 8, 10, 12, and 16?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "(4+8+10+12+16)/5 == 10",
+   "choices": [
+    "8",
+    "10",
+    "12",
+    "50"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 18,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_P The table shows the number of books each of four students read last month. How many more books did Priya read than Marcus?",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "12-5 == 7",
+   "choices": [
+    "3",
+    "5",
+    "7",
+    "12"
+   ],
+   "correct": "C",
+   "table": {
+    "headers": [
+     "Student",
+     "Books read"
+    ],
+    "rows": [
+     [
+      "Ana",
+      "7"
+     ],
+     [
+      "Marcus",
+      "5"
+     ],
+     [
+      "Priya",
+      "12"
+     ],
+     [
+      "Devon",
+      "9"
+     ]
+    ]
+   }
+  },
+  {
+   "order": 19,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In an isosceles triangle, each of the two base angles measures 55&deg;. What is the measure, in degrees, of the third angle?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "180-2*55 == 70",
+   "choices": [
+    "55",
+    "70",
+    "110",
+    "125"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 20,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A right circular cylinder has a radius of 3 inches and a height of 10 inches. What is the volume, in cubic inches, of the cylinder?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "pi*3**2*10 == 90*pi",
+   "choices": [
+    "\\(30\\pi\\)",
+    "\\(60\\pi\\)",
+    "\\(90\\pi\\)",
+    "\\(300\\pi\\)"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 21,
+   "type": "FREE_RESPONSE",
+   "stem": "The area of a square is 81 square inches. What is the perimeter, in inches, of the square?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "4*sqrt(81) == 36",
+   "correctAnswerFR": "[\"36\"]"
+  },
+  {
+   "order": 22,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In right triangle ABC, angle C is a right angle, the length of AB is 13, and the length of BC is 5. What is the value of \\(\\sin A\\)?",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "sourceRef": "ORIGINAL (authored for Test 5, sympy-verified)",
+   "verified": "sin A = opposite BC / hypotenuse AB = 5/13",
+   "choices": [
+    "\\(\\frac{5}{13}\\)",
+    "\\(\\frac{12}{13}\\)",
+    "\\(\\frac{5}{12}\\)",
+    "\\(\\frac{13}{5}\\)"
+   ],
+   "correct": "A"
+  }
+ ]
+}

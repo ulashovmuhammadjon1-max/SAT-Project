@@ -1,0 +1,278 @@
+{
+ "source": "OctUSC",
+ "purpose": "MC top-ups so each Test 5 Math module lands on 19 MC + 3 FR",
+ "questions": [
+  {
+   "num": "M1-Q1",
+   "page": 42,
+   "module": "MATH_M1",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation \\(d=33w+100\\) gives the total amount of money d, in dollars, that James plans to save w weeks after he starts to save. What is the total amount of money, in dollars, he plans to save in 10 weeks?",
+   "choices": [
+    "380",
+    "430",
+    "480",
+    "530"
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "verified": "33*10 + 100 = 430"
+  },
+  {
+   "num": "M1-Q3",
+   "page": 44,
+   "module": "MATH_M1",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(63x^{2}\\)?",
+   "choices": [
+    "\\(63(1+x^{2})\\)",
+    "\\((7x)(9x)\\)",
+    "\\((7x^{2})(9x^{2})\\)",
+    "\\((63x^{2})(x)\\)"
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "verified": "(7x)(9x) = 63x^2; A expands to 63+63x^2, C to 63x^4, D to 63x^3"
+  },
+  {
+   "num": "M1-Q6",
+   "page": 47,
+   "module": "MATH_M1",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If \\(\\frac{1}{6}x+5=8\\), what is the value of 6x?",
+   "choices": [
+    "108",
+    "258",
+    "318",
+    "468"
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "verified": "x/6 = 3 -> x = 18 -> 6x = 108"
+  },
+  {
+   "num": "M2-Q1",
+   "page": 64,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the right triangle shown, what is the value of x?",
+   "choices": [
+    "\\(\\sqrt{2}\\)",
+    "\\(\\sqrt{37}\\)",
+    "\\(\\sqrt{74}\\)",
+    "\\(37\\sqrt{2}\\)"
+   ],
+   "correct": "D",
+   "keyAgrees": true,
+   "needsFigure": "right triangle with both legs labelled 37 and hypotenuse x, source page 64",
+   "verified": "legs 37 and 37 -> hypotenuse = 37*sqrt(2)",
+   "figureFile": "figures/usc_m2q1_triangle.png"
+  },
+  {
+   "num": "M2-Q2",
+   "page": 65,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}-100=0\\]How many distinct real solutions does the given equation have?",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "C",
+   "keyAgrees": true,
+   "verified": "x = 10 and x = -10, two distinct real solutions"
+  },
+  {
+   "num": "M2-Q3",
+   "page": 66,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A plant nursery classifies a perennial flower species as tall if its typical height when fully grown is more than 100 centimeters. Each of the following inequalities represents the possible heights h, in centimeters, for a specific perennial flower species when fully grown. Which inequality represents the possible heights h, in centimeters, for a tall perennial flower species?",
+   "choices": [
+    "\\(107&lt;h&lt;158\\)",
+    "\\(76&lt;h&lt;100\\)",
+    "\\(41&lt;h&lt;95\\)",
+    "\\(16&lt;h&lt;91\\)"
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "verified": "only A has every value above 100"
+  },
+  {
+   "num": "M2-Q4",
+   "page": 67,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[3y=8x+18\\]\\[-3y=7x-26\\]The solution to the given system of equations is (x,y). What is the value of 30x?",
+   "choices": [
+    "-16",
+    "-8",
+    "8",
+    "16"
+   ],
+   "correct": "D",
+   "keyAgrees": true,
+   "verified": "adding the equations gives 0 = 15x - 8, so x = 8/15 and 30x = 16"
+  },
+  {
+   "num": "M2-Q5",
+   "page": 68,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[\\frac{x}{(x-1)(x+1)}=\\frac{81}{56x}\\]Which value is a solution to the given equation?",
+   "choices": [
+    "\\(\\frac{1}{5}\\)",
+    "\\(\\frac{9}{25}\\)",
+    "1",
+    "\\(\\frac{9}{5}\\)"
+   ],
+   "correct": "D",
+   "keyAgrees": true,
+   "verified": "cross-multiplying gives 56x^2 = 81(x^2-1) -> 25x^2 = 81 -> x = +/-9/5"
+  },
+  {
+   "num": "M2-Q10",
+   "page": 72,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of \\(y=f(x)-11\\) is shown. Which equation defines the linear function f?",
+   "choices": [
+    "\\(f(x)=-15x-11\\)",
+    "\\(f(x)=-4x+9\\)",
+    "\\(f(x)=-15x+9\\)",
+    "\\(f(x)=-4x-11\\)"
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "needsFigure": "line in the xy-plane, source page 72",
+   "verified": "plotted line has y-intercept -2 and slope -4, so it is y=-4x-2; since the plot is f(x)-11, f(x) = -4x+9",
+   "figureFile": "figures/usc_m2q10_line.png"
+  },
+  {
+   "num": "M2-Q11",
+   "page": 73,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The variables x and y have a quadratic relationship. When \\(x=0\\), \\(y=45\\). When \\(x=6\\), \\(y=81\\). When \\(x=15\\), \\(y=0\\). Which equation represents this relationship?",
+   "choices": [
+    "\\(y=x^{2}-18x+45\\)",
+    "\\(y=-x^{2}+12x+45\\)",
+    "\\(y=x^{2}+45\\)",
+    "\\(y=-3x^{2}+48x-45\\)"
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "verified": "B gives 45 at x=0, 81 at x=6 and 0 at x=15; all three points check"
+  },
+  {
+   "num": "M1-Q9",
+   "page": 50,
+   "module": "MATH_M1",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The table shows the distribution of height, in centimeters, of 25 objects. Which of the following could be the median height of these objects?",
+   "table": {
+    "headers": [
+     "Height",
+     "Frequency"
+    ],
+    "rows": [
+     [
+      "0 to 100",
+      "8"
+     ],
+     [
+      "101 to 200",
+      "6"
+     ],
+     [
+      "201 to 300",
+      "5"
+     ],
+     [
+      "301 to 400",
+      "4"
+     ],
+     [
+      "401 to 500",
+      "2"
+     ]
+    ]
+   },
+   "choices": [
+    "355",
+    "255",
+    "155",
+    "55"
+   ],
+   "correct": "C",
+   "keyAgrees": true,
+   "verified": "25 values, median is the 13th; cumulative counts 8,14,19,23,25 put the 13th in the 101-200 band, so 155"
+  },
+  {
+   "num": "M1-Q14",
+   "page": 55,
+   "module": "MATH_M1",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If \\(\\frac{j}{k}=62\\) and \\(\\frac{96j}{12xk}=62\\), what is the value of x?",
+   "choices": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{6}{31}\\)",
+    "8",
+    "96"
+   ],
+   "correct": "C",
+   "keyAgrees": true,
+   "verified": "96j/(12xk) = (8/x)(j/k) = (8/x)(62) = 62 -> 8/x = 1 -> x = 8"
+  },
+  {
+   "num": "M1-Q15",
+   "page": 56,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A researcher is designing a study to investigate the average number of hours students at a high school spend reading per day. The researcher will report an estimated average number of hours students at the high school spend reading per day with an associated margin of error. The researcher is considering using a random sample of either 105 or 210 students from the high school. Which of the following would be the most likely effect of using the larger random sample compared to the smaller random sample?",
+   "choices": [
+    "The reported margin of error would be lower.",
+    "The reported margin of error would be higher.",
+    "The reported average number of hours would be lower.",
+    "The reported average number of hours would be higher."
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "verified": "margin of error shrinks as sample size grows; sample size does not predictably move the estimate itself"
+  },
+  {
+   "num": "M2-Q15",
+   "page": 77,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The shaded region shown represents the solutions to \\(rx+ty\\ge -77\\), where r and t are constants. What is the value of \\(r+t\\)?",
+   "choices": [
+    "8",
+    "6",
+    "-6",
+    "-7"
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "needsFigure": "shaded half-plane with its boundary line, source page 77",
+   "verified": "boundary passes through (0,-11) and (-7,-10): x + 7y = -77, so r=1, t=7 and r+t=8",
+   "figureFile": "figures/usc_m2q15_shaded.png"
+  }
+ ],
+ "rejectedAsTemplateRepeats": [
+  {
+   "num": "M1-Q2",
+   "reason": "'linear function with slope m through point (0,b), which equation defines f' -- same template as Oct IntB M1 Q1, already in Test 5 Math M1"
+  },
+  {
+   "num": "M1-Q5",
+   "reason": "'two angles of a triangle are each N degrees, find the third' -- same template as the isosceles question already authored for Test 5 Math M2 Easy"
+  },
+  {
+   "num": "M1-Q8",
+   "reason": "'closest to the slope of this line of best fit' scatterplot -- same template as Oct IntB M1 Q8, already in Test 5 Math M1"
+  }
+ ]
+}

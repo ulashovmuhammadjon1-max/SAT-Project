@@ -85,6 +85,39 @@ expression in these screenshot sources needs to be read at zoom, not at page sca
 **Reliability note for future builds:** Oct IntB's key was 22/22 correct. Oct USB's key has at
 least two errors. Trust neither blindly — verify every answer independently.
 
+## `test5_math.json` — the assembled Math side (66 questions), built by `assemble_math.py`
+
+| Module | Shape | Sources |
+|---|---|---|
+| Math M1 | 19 MC + 3 FR | Oct IntB (17) + Oct USC (5) |
+| Math M2 Hard | 19 MC + 3 FR | Oct USB (14) + Oct USC (8) |
+| Math M2 Easy | 19 MC + 3 FR | **all 22 originally authored** |
+
+**Duplicate rejections.** The first assembly was checked against all 264 Math questions live in
+Tests 1–4 and four picks were thrown out and replaced:
+- Oct IntB M1 Q12 (ant-colony larvae model) scored **1.00** — an *exact* duplicate of
+  Test 3 M2E Q22.
+- Oct USB M2 Q1 (`f(x)=10x²-38x-150`, find `f(0)`) vs Test 3 M2H Q12 (`10x²-40x-150`) — the
+  same question with one digit changed.
+- Oct IntB M1 Q1 (line with slope m through a point) vs Test 3 M2E Q19 — same template.
+- Oct USC M2 Q2 ("how many distinct real solutions") vs Test 4 M2E Q10 — same template.
+
+Three more Oct USC questions were rejected before they ever entered the pool for the same
+reason (see `rejectedAsTemplateRepeats` in `octusc_supplement.json`).
+
+After replacement: **0 pairs at ≥0.96** either internally or against Tests 1–4. The residual
+0.93–0.95 scores are unrelated mathematics sharing SAT boilerplate ("Which expression is
+equivalent to…", "The function f is defined by…") and were each read by eye.
+
+**Audit at assembly time is clean**: no `<p>`-wrapped stems, no bare `sin`/`cos`/`log` in math
+mode, no prose in math mode, no missing spaces around inline spans, no raw `/` division, every
+`correctAnswerFR` a JSON array string, every question that mentions a figure or table actually
+has one (6 figures cropped from the source pages, 4 real data tables).
+
+**Known deviation:** Math M2 Hard's domain mix is ALG 10 / ADV 7 / GT 3 / PSDA 2, more
+algebra-heavy than Test 1's ~8/6/4/4. That is what the verified hard-module supply allowed
+after the duplicate rejections; the other two modules match Test 1's proportions closely.
+
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
   be deduped against the whole database, not just the test being built. Reads the connection
