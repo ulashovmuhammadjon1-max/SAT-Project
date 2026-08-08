@@ -4,11 +4,41 @@ Target: two full tests, 147 questions each. R&W 27/27/27 + Math 22/22/22.
 
 ## Where this stands
 
-| Piece | Needed | Done | Source |
+| Piece | Needed | Done | Where |
 |---|---|---|---|
-| R&W questions | 162 | **95** | October papers, hand-transcribed and hand-answered |
-| Math M1 + M2 Hard | 88 | 47 clean already transcribed | `content-pool/new-source-transcripts/` leftovers |
-| Math M2 Easy (both tests) | 44 | 0 | must be **originally authored** per the standing rule |
+| R&W questions | 162 | **107** | `rw_*.py`, hand-transcribed and hand-answered |
+| Math M2 Easy (both tests) | 44 | **44 — complete and verified** | `math_m2easy.py`, `verify_math_m2easy.py` |
+| Math M1 + M2 Hard | 88 | 47 clean, already transcribed | `content-pool/new-source-transcripts/` leftovers |
+
+**Resume here.** In order:
+
+1. **R&W is 55 short** — 25 reading, 30 writing. About 30 usable August pages
+   remain (listed below); the rest must be authored. Writing-domain items are the
+   ones to author, for the reason given in the supply section.
+2. **Math M1 / M2 Hard**: pull 88 from the 47 clean `new-source-transcripts`
+   leftovers plus the untranscribed October Math pages (Oct IntB M2 p073-p096,
+   Oct USB M1 p055-p075, unused Oct USC Math). Dedupe against production and
+   verify every answer with sympy — the October *Math* keys were reliable
+   (Oct IntB scored 22/22) unlike the R&W keys.
+3. **Assemble** with the block-ordering rule below, reusing
+   `../test-5-build/assemble_rw.py`'s rank-sort approach.
+4. **Insert locally, sweep the real exam interface, then insert to production
+   and publish** — the `insert_test5.mjs` / `seed_attempt.mjs` pair in
+   `../test-5-build/` generalises with only the title changed.
+
+### Math Module 2 (Easy) — done
+
+44 authored questions, 22 per test, 19 MC + 3 FR each, domain mix 8 ALG / 6 ADV
+/ 4 PSDA / 4 GT. `verify_math_m2easy.py` passes: sympy re-derives every answer
+independently, module shape and numbering check out, the Test 1/2 house style is
+enforced, and template dedupe runs against all 330 live production Math stems.
+
+Nine first-draft questions were rewritten after the dedupe pass caught them
+repeating a live template — including one that had reproduced a production
+marble-jar question's exact 6/4/10 counts, and a factorable-quadratic item that
+repeated one authored for Test 5. The metric itself had to be fixed first: prose
+similarity alone scored exponential-evaluation against cubic-evaluation at 1.00.
+Details are in `math_m2easy.py`'s docstring.
 
 ## The two findings that shape this build
 
@@ -49,7 +79,13 @@ picked C and the sentence boundary requires D).
 | `rw_octintb_m2.py` | OctIntB M2 | 20 | 7 | includes the build's only Cross-Text item |
 | `rw_octusb_m2.py` | OctUSB M2 | 15 | 12 | |
 | `rw_octusc_m2.py` | OctUSC M2 | 1 | 5 | near-clone of OctUSB M2; abandoned after Q7 |
-| **Total** | | **95** | **31** | |
+| `rw_auguse.py` | AugUSE M1+M2 | 12 | 2 | writing-domain pages transcribed first |
+| **Total** | | **107** | **33** | |
+
+Still unread and believed usable (checked against production and against this
+directory, no lexical match): **August USE** M1 p004, p005, p006, p009, p010,
+p011, p012, p013, p014, p015 and M2 p031, p036, p039, p042, p043, p044 —
+mostly reading-domain; **August USC** p002, p005, p007, p010, p012, p013, p014.
 
 Domain mix so far: reading 59, writing 36. Six modules need roughly 84 reading and 78 writing,
 so **writing is the binding constraint**, as it was for Tests 3–5. Boundaries and Form/Structure
