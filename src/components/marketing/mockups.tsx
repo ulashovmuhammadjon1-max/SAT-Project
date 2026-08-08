@@ -1,7 +1,16 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Bookmark, ChevronUp, Flame, Highlighter, MoreHorizontal, Search, Sparkles } from "lucide-react";
+import {
+  Bookmark,
+  ChevronUp,
+  Flame,
+  Highlighter,
+  MoreHorizontal,
+  Search,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 import {
   Area,
   AreaChart,
@@ -276,6 +285,57 @@ export function AnalyticsMockup({ className }: { className?: string }) {
         </div>
       </div>
     </BrowserChrome>
+  );
+}
+
+/**
+ * Compact analytics panel for the hero showcase — a slice of the real
+ * analytics screen small enough to layer beside the exam window.
+ *
+ * The numbers here are illustrative, exactly like the rest of these mockups,
+ * so the card carries its own "Sample data" marker: it should read as a
+ * product preview, never as a claim about real student results.
+ */
+export function ScorePreviewCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "w-[212px] rounded-xl border border-border/70 bg-card/95 p-3 shadow-panel backdrop-blur",
+        className
+      )}
+    >
+      <div className="flex items-center justify-between">
+        <p className="text-[10px] font-medium text-muted-foreground">Score trend</p>
+        <span className="flex items-center gap-0.5 rounded-full bg-success/10 px-1.5 py-0.5 text-[9px] font-medium text-success">
+          <TrendingUp className="h-2.5 w-2.5" /> Improving
+        </span>
+      </div>
+
+      <p className="mt-1 font-display text-2xl font-semibold leading-none tracking-tight">1450</p>
+
+      <div className="mt-2 h-[42px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={TREND} margin={{ top: 2, right: 2, bottom: 0, left: 2 }}>
+            <defs>
+              <linearGradient id="heroTrend" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="hsl(226 84% 56%)" stopOpacity={0.4} />
+                <stop offset="100%" stopColor="hsl(226 84% 56%)" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="s"
+              stroke="hsl(226 84% 56%)"
+              strokeWidth={2}
+              fill="url(#heroTrend)"
+              dot={false}
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      <p className="mt-1 text-[9px] text-muted-foreground">Sample data — product preview</p>
+    </div>
   );
 }
 

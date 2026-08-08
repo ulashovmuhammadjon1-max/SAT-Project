@@ -20,15 +20,32 @@ import {
   Star,
   Target,
   Timer,
+  UserRound,
   Zap,
 } from "lucide-react";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { SiteNav } from "@/components/marketing/site-nav";
-import { AdaptiveDiagram, AnalyticsMockup, BluebookMockup, VocabMockup } from "@/components/marketing/mockups";
+import {
+  AdaptiveDiagram,
+  AnalyticsMockup,
+  BluebookMockup,
+  ScorePreviewCard,
+  VocabMockup,
+} from "@/components/marketing/mockups";
 import { CountUp, FloatingBlob, HoverLift, Reveal, RevealGroup, RevealItem } from "@/components/marketing/motion";
 import { cn } from "@/lib/utils";
+
+/**
+ * Where the "Get My Free SAT Plan" / "Book a session" CTAs point.
+ *
+ * There is no booking or application route yet, so both currently scroll to
+ * the mentorship block that explains the offer — an honest destination rather
+ * than a dead link or a fake form. Once a real booking page exists, change
+ * this single constant and every mentorship CTA on the page follows.
+ */
+const PLAN_CTA_HREF = "#mentorship";
 
 export function Landing() {
   return (
@@ -36,6 +53,7 @@ export function Landing() {
       <SiteNav />
       <main>
         <Hero />
+        <BeyondSat />
         <Ecosystem />
         <Stats />
         <Features />
@@ -105,12 +123,15 @@ function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const mockY = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const mockRotate = useTransform(scrollYProgress, [0, 0.6], [7, 0]);
-  const mockScale = useTransform(scrollYProgress, [0, 0.6], [0.94, 1]);
+  // Gentle parallax only — the split layout already carries the depth, and a
+  // strong tilt fights the layered cards overlapping the product window.
+  const mockY = useTransform(scrollYProgress, [0, 1], [0, 56]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pb-20 pt-32 sm:pt-40 lg:pt-44">
+    <section
+      ref={ref}
+      className="relative overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-24 lg:pt-36"
+    >
       {/* Animated background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,hsl(226_84%_56%/0.10),transparent_70%)]" />
@@ -128,92 +149,105 @@ function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:56px_56px] opacity-[0.35] [mask-image:radial-gradient(70%_50%_at_50%_0%,black,transparent)]" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-16">
+        {/* ---------------------------------------------------------------- */}
+        {/* Copy column                                                       */}
+        {/* ---------------------------------------------------------------- */}
+        <div className="text-center lg:text-left">
           <Reveal direction="none" scale={0.96}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/70 px-3.5 py-1.5 text-[13px] font-medium shadow-soft backdrop-blur">
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-success/15">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/70 px-3.5 py-1.5 text-[10px] font-semibold uppercase leading-tight tracking-[0.08em] text-muted-foreground shadow-soft backdrop-blur sm:text-[11.5px] sm:tracking-[0.1em]">
+              <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-success/15">
                 <span className="h-1.5 w-1.5 rounded-full bg-success" />
               </span>
-              Adaptive full-length tests are live
+              <span className="text-left">
+                Free SAT prep
+                <span className="mx-1.5 text-border">•</span>
+                <span className="whitespace-nowrap">Built for ambitious students</span>
+              </span>
             </span>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.06] tracking-tight text-balance sm:text-6xl lg:text-[4.25rem]">
-              Practice the Digital SAT
+            <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.05] tracking-tight text-balance sm:text-[3.4rem] lg:text-[2.85rem] xl:text-[3.05rem]">
+              Master the SAT.
               <br />
               <span className="bg-gradient-to-r from-primary via-[hsl(250_84%_60%)] to-[hsl(266_84%_60%)] bg-clip-text text-transparent">
-                exactly how you&apos;ll take it
+                Build skills beyond it.
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.16}>
-            <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground text-balance sm:text-lg">
-              A pixel-faithful Bluebook test engine, real adaptive module routing, and analytics that tell you the one
-              thing worth studying next.
+            <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground text-balance lg:mx-0 lg:text-lg">
+              Practice with adaptive SAT tests, identify exactly what to improve, and get a personalized study plan
+              from a 1580 SAT scorer — completely free.
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="group h-12 w-full rounded-full px-7 text-[15px] shadow-card transition-shadow hover:shadow-panel sm:w-auto"
+                className="group h-12 rounded-full px-7 text-[15px] shadow-card transition-shadow hover:shadow-panel"
                 asChild
               >
                 <Link href="/onboarding">
-                  Start practicing free
+                  Start Practicing — Free
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="h-12 w-full rounded-full border-border/80 px-7 text-[15px] backdrop-blur sm:w-auto"
+                className="h-12 rounded-full border-border/80 px-7 text-[15px] backdrop-blur"
                 asChild
               >
-                <a href="#experience">See the test engine</a>
+                <a href={PLAN_CTA_HREF}>Get My Free SAT Plan</a>
               </Button>
             </div>
           </Reveal>
 
           <Reveal delay={0.32}>
-            <p className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> No credit card
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> Full test free
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> Setup in 60 seconds
-              </span>
+            <p className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground lg:justify-start">
+              {["Always free", "No credit card", "Setup in 60 seconds"].map((t) => (
+                <span key={t} className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-success" /> {t}
+                </span>
+              ))}
             </p>
           </Reveal>
         </div>
 
-        {/* Hero mockup with scroll-driven tilt */}
-        <motion.div
-          style={reduced ? undefined : { y: mockY, rotateX: mockRotate, scale: mockScale }}
-          className="relative mx-auto mt-16 max-w-5xl [perspective:1800px] sm:mt-20"
-        >
-          <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-b from-primary/20 to-transparent blur-3xl" />
-          <BluebookMockup />
+        {/* ---------------------------------------------------------------- */}
+        {/* Product showcase column                                           */}
+        {/* ---------------------------------------------------------------- */}
+        <motion.div style={reduced ? undefined : { y: mockY }} className="relative">
+          <div className="absolute -inset-8 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-3xl" />
 
-          {/* Floating accent cards */}
-          <Reveal delay={0.5} direction="left" className="absolute -left-4 top-1/4 hidden lg:block">
-            <div className="rounded-xl border border-border/70 bg-card/90 p-3 shadow-panel backdrop-blur">
-              <p className="text-[11px] text-muted-foreground">Predicted score</p>
-              <p className="font-display text-xl font-semibold text-primary">1480</p>
+          <Reveal direction="none" scale={0.97} duration={0.7}>
+            {/* The exam window is the hero of this column: the only element
+                allowed to overlap it is the analytics card, and only at a
+                corner, so the interface itself stays readable. */}
+            <div className="relative">
+              <BluebookMockup />
+
+              {/* Anchored bottom-left: the only region of the exam window it
+                  covers is the passage's placeholder lines, so no real
+                  interface content is hidden behind it. */}
+              <Reveal
+                delay={0.45}
+                direction="up"
+                className="absolute -bottom-12 -left-4 hidden sm:block lg:-left-10"
+              >
+                <ScorePreviewCard />
+              </Reveal>
             </div>
           </Reveal>
-          <Reveal delay={0.62} direction="right" className="absolute -right-4 bottom-1/4 hidden lg:block">
-            <div className="rounded-xl border border-border/70 bg-card/90 p-3 shadow-panel backdrop-blur">
-              <p className="text-[11px] text-muted-foreground">Avg. improvement</p>
-              <p className="font-display text-xl font-semibold text-success">+180 pts</p>
-            </div>
+
+          {/* 1580 mentorship card — the differentiator. Sits below the product
+              rather than on top of it, so neither competes with the other. */}
+          <Reveal delay={0.58} direction="up" className="mt-6 sm:mt-16 lg:mt-16">
+            <MentorshipCard className="sm:max-w-[380px] lg:max-w-none" />
           </Reveal>
         </motion.div>
       </div>
@@ -221,8 +255,182 @@ function Hero() {
   );
 }
 
+/** Reusable 1580-scorer guidance card (hero + "beyond the SAT" section). */
+function MentorshipCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "rounded-2xl border border-primary/25 bg-card/95 p-4 shadow-panel backdrop-blur",
+        className
+      )}
+    >
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
+          <UserRound className="h-4 w-4 text-primary" />
+        </span>
+
+        <div className="min-w-[190px] flex-1">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-primary">
+            Free 1-on-1 guidance
+          </p>
+          <p className="mt-1 text-[15px] font-medium leading-snug text-balance">
+            Personalized SAT plan from a 1580 scorer
+          </p>
+        </div>
+
+        <a
+          href={PLAN_CTA_HREF}
+          className="group inline-flex shrink-0 items-center gap-1 text-[13px] font-medium text-primary transition-colors hover:text-primary/80"
+        >
+          Book a session
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 /* -------------------------------------------------------------------------- */
-/* 2. Ecosystem / "trusted by"                                                 */
+/* 2. More than SAT prep                                                       */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * What students can use today. Everything listed here is shipped and reachable
+ * from the app — keep it that way, and move items up from PLANNED rather than
+ * adding aspirational entries.
+ */
+const AVAILABLE_NOW = [
+  { icon: MonitorPlay, title: "Adaptive practice tests", body: "Full-length mocks with real Module 1 → Module 2 routing." },
+  { icon: Layers, title: "SAT question bank", body: "Targeted drills by domain, skill and difficulty." },
+  { icon: BookOpen, title: "Vocabulary sets", body: "Gated word sets with passages and end-of-set quizzes." },
+  { icon: BarChart3, title: "Performance analytics", body: "See which skills are actually costing you points." },
+];
+
+/** Not built yet — labelled as such on the page, deliberately. */
+const PLANNED = [
+  { icon: Timer, title: "Weekly test analysis" },
+  { icon: LineChart, title: "Financial literacy classes" },
+  { icon: GraduationCap, title: "Guest university lectures" },
+  { icon: ClipboardList, title: "Research & academic guidance" },
+];
+
+function BeyondSat() {
+  return (
+    <section id="mentorship" className="scroll-mt-24 py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <SectionHeading
+          label="More than SAT prep"
+          icon={Sparkles}
+          title={
+            <>
+              The SAT is the starting point,{" "}
+              <span className="text-muted-foreground">not the destination</span>
+            </>
+          }
+          body="SATForge is being built as a free academic community for ambitious high-school students — starting with the tools that raise your score, and growing into the learning that outlasts the test."
+        />
+
+        {/* Flagship differentiator: human guidance beside the software. */}
+        <Reveal delay={0.1}>
+          <div className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.07] via-card to-card shadow-panel">
+            <div className="grid gap-8 p-7 sm:p-10 lg:grid-cols-[1.35fr_1fr] lg:items-center">
+              <div>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-primary">
+                  <UserRound className="h-3.5 w-3.5" />
+                  Free 1-on-1 guidance
+                </span>
+
+                <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
+                  Get a personalized SAT plan from a 1580 scorer
+                </h3>
+
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground text-balance">
+                  Software shows you the data. A conversation turns it into a plan. Book a free session to map your
+                  current level, target score, weak areas, test date and study time into a week-by-week schedule you
+                  can actually follow.
+                </p>
+
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <Button size="lg" className="group h-11 rounded-full px-6 text-[15px]" asChild>
+                    <a href={PLAN_CTA_HREF}>
+                      Book a session
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </a>
+                  </Button>
+                  <span className="text-[13px] text-muted-foreground">No cost, no catch.</span>
+                </div>
+              </div>
+
+              <RevealGroup className="grid gap-2.5" delay={0.15}>
+                {[
+                  "Where you stand right now",
+                  "The score your target schools need",
+                  "The weaknesses worth fixing first",
+                  "A study plan built around your test date",
+                ].map((t) => (
+                  <RevealItem key={t}>
+                    <div className="flex items-start gap-2.5 rounded-xl border border-border/60 bg-card/70 px-3.5 py-3 backdrop-blur">
+                      <Target className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <p className="text-[14px] leading-snug">{t}</p>
+                    </div>
+                  </RevealItem>
+                ))}
+              </RevealGroup>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Live now vs. planned — kept visibly separate so the roadmap never
+            reads as a list of things you can use today. */}
+        <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-14">
+          <div>
+            <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-success" />
+              Available today
+            </p>
+
+            <RevealGroup className="mt-5 grid gap-3 sm:grid-cols-2">
+              {AVAILABLE_NOW.map((f) => (
+                <RevealItem key={f.title}>
+                  <HoverLift className="h-full rounded-2xl border border-border/70 bg-card p-4 shadow-soft">
+                    <f.icon className="h-5 w-5 text-primary" />
+                    <p className="mt-3 font-medium leading-snug">{f.title}</p>
+                    <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{f.body}</p>
+                  </HoverLift>
+                </RevealItem>
+              ))}
+            </RevealGroup>
+          </div>
+
+          <div>
+            <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-border" />
+              In development
+            </p>
+
+            <RevealGroup className="mt-5 space-y-2.5">
+              {PLANNED.map((f) => (
+                <RevealItem key={f.title}>
+                  <div className="flex items-center gap-3 rounded-xl border border-dashed border-border/80 bg-secondary/30 px-4 py-3">
+                    <f.icon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    <p className="text-[14px] text-muted-foreground">{f.title}</p>
+                  </div>
+                </RevealItem>
+              ))}
+            </RevealGroup>
+
+            <p className="mt-4 text-[12.5px] leading-relaxed text-muted-foreground">
+              Planned, not yet available. Everything on the left is live in the app today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. Ecosystem / "trusted by"                                                 */
 /* -------------------------------------------------------------------------- */
 
 const ECOSYSTEM = [
