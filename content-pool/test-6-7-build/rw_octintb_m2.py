@@ -206,6 +206,135 @@ QUESTIONS = [
        "Valdez. Constraint on Chicano artists generally covers both taped figures. A leaves them with "
        "unrelated meanings and gets the muralists backwards (it was the muralists who <em>were</em> "
        "recognised), and C keeps the female-only focus the passage rejects."),
+
+ dict(num=14, skill="Boundaries",
+   passage="Despite the fact that what is now known as the Cassegrain reflector was first constructed "
+           "by Bonaventura Cavalieri, the telescope is named after the seventeenth-century French "
+           "astronomer Laurent Cassegrain. One might assume cases like this, where a discovery or "
+           "concept is not named after the first person who discovered it, to be _____ they are "
+           "counted among a litany of examples of Stigler&rsquo;s law.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["rare, on the contrary,", "rare, on the contrary;", "rare on the contrary,", "rare; on the contrary,"],
+   answer="D",
+   why="'One might assume... to be rare' and 'they are counted among a litany of examples' are both "
+       "independent clauses, and 'on the contrary' is a conjunctive adverb opening the second. That "
+       "needs a semicolon before it and a comma after — A and C are comma splices, and B strands "
+       "'on the contrary' at the end of the first clause."),
+
+ dict(num=15, skill="Boundaries",
+   passage="Included in <em>Black Refractions: Highlights from The Studio Museum in Harlem</em>, a 2019 "
+           "group exhibition at the Museum of the African Diaspora in San Francisco, California, was "
+           "the work of artist Lorna Simpson, who is best known for her multimedia artworks that "
+           "juxtapose images of African American women with text fragments. Her work challenges "
+           "conventional notions of race, gender, history, and _____ she is credited with expanding the "
+           "horizons of conceptual photographic art.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["memory, and", "memory and", "memory,", "memory"], answer="A",
+   why="'Memory' closes the list, and 'she is credited with...' is a second independent clause, so a "
+       "comma plus 'and' is required. B omits the comma between independent clauses, C is a comma "
+       "splice and D is a run-on."),
+
+ dict(num=16, skill="Boundaries",
+   passage="Moussa Ould Ebnou is a novelist from Boutilimit, Mauritania, who has earned international "
+           "acclaim in recent years. Writers of other literary forms, such as poetry and drama, are "
+           "less likely to be recognized beyond their nations&rsquo; borders, but many are still well "
+           "_____ Koulsy Lamko, for example, is a celebrated playwright from Chad.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["known,", "known:", "known and", "known"], answer="B",
+   why="The second clause is a specific illustration of 'many are still well known', which a colon "
+       "introduces. A is a comma splice, C joins two independent clauses without a comma, and D "
+       "leaves a run-on."),
+
+ dict(num=17, skill="Boundaries",
+   passage="Recent analysis of 2010 BL4&mdash;an outer solar system object orbiting the Sun between "
+           "Jupiter and Neptune&mdash;has determined its color to be gray, suggesting an icy "
+           "composition. Such interpretations are ultimately _____ the object&rsquo;s gray coloration "
+           "may be an incidental effect of radiation, solar wind, or collisions with other objects "
+           "rather than evidence of its physical makeup.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["speculative, though;", "speculative: however,", "speculative; though", "speculative, though"],
+   answer="A",
+   why="Both halves are independent clauses, so B's colon-plus-'however' and D's bare comma both "
+       "fail, and C leaves 'though the object's coloration may be...' as a subordinate fragment. A "
+       "keeps 'though' as a trailing adverb closing the first sentence (conceding against the "
+       "previous sentence's suggestion) and starts the explanation after a semicolon."),
+
+ dict(num=20, skill="Transitions",
+   passage="When, in 2017, Cambridge University students Lucy Moss and Toby Marlow decided they wanted "
+           "to develop a musical together, one of their goals was for their female actor friends to "
+           "have good parts to play. _____ they created the show <em>Six</em>, a retelling of the "
+           "history of King Henry VIII&rsquo;s wives in which each of the six queens has a starring "
+           "role.",
+   stem="Which choice completes the text with the most logical transition?",
+   choices=["To that end,", "In summary,", "For example,", "In other words,"], answer="A",
+   why="The first sentence states a goal and the second states what they did to achieve it, which is "
+       "exactly what 'to that end' marks. The show is not an example of the goal (C) or a restatement "
+       "of it (D)."),
+
+ dict(num=21, skill="Transitions",
+   passage="The prime meridian, the global indicator of zero degrees longitude established in 1884, was "
+           "originally determined using astronomically derived coordinates. _____ as decades passed, "
+           "new calculations would reveal increasingly precise coordinates, yet the prime meridian "
+           "remained unchanged; it wasn&rsquo;t until the 1980s that, spurred by improved geodetic "
+           "data, the prime meridian was officially moved&mdash;roughly one hundred meters east.",
+   stem="Which choice completes the text with the most logical transition?",
+   choices=["Specifically,", "Again and again,", "Granted,", "To that end,"], answer="B",
+   why="'As decades passed, new calculations would reveal increasingly precise coordinates' describes "
+       "something happening repeatedly over time, which 'again and again' marks. 'Specifically' would "
+       "require the clause to particularise the previous sentence, and it does not."),
+
+ dict(num=22, skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li>Minor planets are astronomical objects that orbit the Sun but are neither planets nor comets.</li>"
+           "<li>Astronomer Jane Luu has discovered many minor planets in her career.</li>"
+           "<li>Alongside colleagues David C. Jewitt and Chadwick Trujillo, she discovered the minor planet (19308) 1996 TO66 on October 12, 1996.</li>"
+           "<li>Alongside colleagues David C. Jewitt, Chadwick Trujillo, and David J. Tholen, she discovered the minor planet (24978) 1998 HJ151 on April 28, 1998.</li></ul>",
+   stem="Which choice most effectively uses information from the given sentences to emphasize the "
+        "discovery of (19308) 1996 TO66 to an audience already familiar with Jane Luu?",
+   choices=["First there was the discovery of (19308) 1996 TO66 on October 12, 1996, and then on April 28, 1998, Jane Luu discovered yet another minor planet with the help of her colleagues David C. Jewitt, Chadwick Trujillo, and David J. Tholen.",
+            "Astronomer Jane Luu helped discover not only the minor planet (19308) 1996 TO66 on October 12, 1996, but also (24978) 1998 HJ151 on April 28, 1998.",
+            "Jane Luu is an astronomer famous for her discovery of many minor planets in our solar system, including (19308) 1996 TO66.",
+            "On October 12, 1996, Jane Luu and her colleagues David C. Jewitt and Chadwick Trujillo made the exciting discovery of the minor planet (19308) 1996 TO66."],
+   answer="D",
+   why="The audience already knows who Luu is, so the sentence should stay on the one discovery. D "
+       "does. C introduces her and treats TO66 as merely one of many, while A and B split attention "
+       "across both discoveries."),
+
+ dict(num=23, skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li>Samoil M. Bilenky is a Russian particle physicist.</li>"
+           "<li>Particle physicists study subatomic particles.</li>"
+           "<li>Neutrinos are some of the least understood subatomic particles.</li>"
+           "<li>Neutrinos were first discovered in the mid-twentieth century.</li>"
+           "<li>Bilenky is known for his research on neutrino oscillations.</li></ul>",
+   stem="The student wants to provide an example of a particle physicist whose research focuses on "
+        "neutrinos. Which choice most effectively uses relevant information from the notes to "
+        "accomplish this goal?",
+   choices=["Neutrinos are a type of subatomic particle that particle physicists are still trying to understand.",
+            "Particle physicist Samoil M. Bilenky is known for his research on neutrino oscillations.",
+            "The research done on neutrino oscillations exemplifies the work particle physicists do to advance our understanding of subatomic particles.",
+            "By studying neutrino oscillations&mdash;to name just one example&mdash;particle physicists can learn more about neutrinos."],
+   answer="B",
+   why="Only B names an individual physicist and ties him to neutrino research. A, C and D talk about "
+       "particle physicists collectively, so none supplies the requested example."),
+
+ dict(num=26, skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li>Pattern analysis and contextual analysis are two approaches to art criticism.</li>"
+           "<li>Pattern analysis examines the repetition of visual elements in an artwork.</li>"
+           "<li>Such an analysis of Andy Warhol&rsquo;s <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.</li>"
+           "<li>Contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.</li>"
+           "<li>Such an analysis of Pablo Picasso&rsquo;s <em>Les Demoiselles d&rsquo;Avignon</em> might consider how the painting&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).</li></ul>",
+   stem="The student wants to present contextual analysis to an audience unfamiliar with the concept. "
+        "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   choices=["A pattern analysis of <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.",
+            "<em>Les Demoiselles d&rsquo;Avignon</em>&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).",
+            "An approach to art criticism, contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.",
+            "Pattern analysis differs from contextual analysis in that pattern analysis examines the repetition of visual elements in an artwork."],
+   answer="C",
+   why="An unfamiliar audience needs the term defined, and C both places contextual analysis as an "
+       "approach to art criticism and says what it does. A and D lead with pattern analysis, and B "
+       "never names the concept at all."),
 ]
 
 NOT_CAPTURED = []
@@ -222,4 +351,9 @@ DROPPED = {
  19: "Already used as a Test 5 R&W top-up.",
  24: "Already used as a Test 5 R&W top-up.",
  25: "Already used as a Test 5 R&W top-up.",
+ 27: "Template repeat of a question already live in Test 5 RW_M2_HARD Q27. The note set is the "
+     "same river-sinuosity one — same definitions of stream length, valley length and sinuosity, "
+     "same low/high 1&ndash;1.5 threshold bullet — and the same goal sentence ('compare the "
+     "curviness of the two rivers'). Only the rivers differ (Embarras and Luni here, Mississippi "
+     "and Neales there).",
 }
