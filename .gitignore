@@ -43,3 +43,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 __pycache__/
+prod_math_stems.json
+_dump_prod.mjs
