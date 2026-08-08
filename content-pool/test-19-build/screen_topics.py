@@ -35,7 +35,16 @@ called known often usually always never sometimes rather instead whether either 
            .split())
 
 
+# Boilerplate shared by every item of a block. Left in, it dominates the n-gram
+# count: every pair of Rhetorical Synthesis passages "shares" the six 5-grams of
+# the notes preamble, and every pair of writing items shares the stem. Stripped,
+# a shared 5-gram means shared content.
+BOILER = re.compile(
+    r"While researching a topic, a student has taken the following notes:?", re.I)
+
+
 def tokens(text):
+    text = BOILER.sub(" ", text)
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"&[a-z]+;", " ", text)
     return [w for w in re.findall(r"[a-z]+", text.lower()) if w not in STOP and len(w) > 2]
@@ -55,7 +64,7 @@ def load_corpus():
     with open(CORPUS) as fh:
         rows = json.load(fh)
     for r in rows:
-        r["_tok"] = tokens(r.get("passage", "") + " " + r.get("stem", ""))
+        r["_tok"] = tokens(r.get("passage", ""))
         r["_set"] = set(r["_tok"])
         r["_5g"] = ngrams(r["_tok"])
     return rows
@@ -150,7 +159,7 @@ def screen_passages():
 
     mine = []
     for q in QUESTIONS:
-        t = tokens(q.get("passage", "") + " " + q.get("stem", ""))
+        t = tokens(q.get("passage", ""))
         mine.append(dict(num=q["num"], skill=q["skill"], tok=t,
                          set=set(t), g5=ngrams(t)))
 
