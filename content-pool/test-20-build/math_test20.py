@@ -348,11 +348,12 @@ MODULE_2_EASY = [
       choices=["4,500", "11,250", "22,500", "45,000"], correct="C",
       check="1,250(18) = 22,500."),
 
- dict(n="H2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A trolleybus reversing loop sweeps a quarter of a circle of radius 12 metres. What is "
-            "the area of the ground it sweeps, in square metres?"),
-      choices=["\\(6\\pi\\)", "\\(9\\pi\\)", "\\(36\\pi\\)", "\\(144\\pi\\)"], correct="C",
-      check="A whole circle of radius 12 covers 144 pi, and a quarter of that is 36 pi."),
+ dict(n="H2E-19", domain="GT", skill="GT-LA", type="MC",
+      stem=("On a setting-out plan a pumping engine's two holding-down bolts are at the points "
+            "\\((-4,7)\\) and \\((10,1)\\). What are the coordinates of the point midway between "
+            "the two bolts?"),
+      choices=["\\((-7,3)\\)", "\\((3,-4)\\)", "\\((3,4)\\)", "\\((7,8)\\)"], correct="C",
+      check="The midpoint averages the coordinates: (-4+10)/2 = 3 and (7+1)/2 = 4."),
 
  dict(n="H2E-20", domain="PSDA", skill="PSDA-ST", type="FR",
       stem=("The number of coils of wire drawn on each of six days was 34, 41, 38, 45, 39 and 43. "

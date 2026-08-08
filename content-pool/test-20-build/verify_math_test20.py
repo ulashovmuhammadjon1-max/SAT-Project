@@ -168,7 +168,7 @@ DERIVE = {
  "H2E-16": lambda: max([22, 19, 25, 19, 30]) - min([22, 19, 25, 19, 30]),
  "H2E-17": lambda: 37 - 14,
  "H2E-18": lambda: 1250 * 18,
- "H2E-19": lambda: pi * 12 ** 2 / 4,
+ "H2E-19": lambda: "(%s,%s)" % (Rational(-4 + 10, 2), Rational(7 + 1, 2)),
  "H2E-20": lambda: Rational(sorted([34, 41, 38, 45, 39, 43])[2]
                             + sorted([34, 41, 38, 45, 39, 43])[3], 2),
  "H2E-21": lambda: 72 * Rational(5, 8),

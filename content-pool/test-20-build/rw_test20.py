@@ -980,25 +980,28 @@ QUESTIONS = [
 
  # -------------------------------------------------------------- Transitions (9)
  trn("N1",
-     "Flotation made it worth working ore bodies carrying less than one per cent copper, and the "
-     "tonnage of metal produced in the twentieth century owes more to it than to any new "
-     "discovery. _____ the process leaves behind a slurry of finely ground rock in far greater "
-     "volume than the coarse waste of earlier methods, and the dams built to hold that slurry are "
-     "among the largest structures on earth.",
+     "An open pit can be worked with machines of a size no underground roadway would admit, and the "
+     "cost of moving a tonne of rock in it is a fraction of the cost of moving one below ground. "
+     "_____ every tonne of barren rock lying over the ore has to be moved as well, and the ratio of "
+     "waste to ore climbs as the pit deepens and its walls step back.",
      ["However,", "Consequently,", "Likewise,", "For instance,"], "A",
-     "The volume of slurry and the dams needed to hold it stand against the benefit just credited "
-     "to the process, so the transition marks a drawback. A consequence transition would make the "
-     "extra waste follow from the metal produced rather than qualify the achievement."),
+     "The barren rock that must be shifted along with the ore works against the low cost per tonne "
+     "just credited to open-pit working, so the transition marks a drawback. A consequence "
+     "transition would make the rising waste ratio follow from the cheapness of moving rock rather "
+     "than qualify it."),
 
  trn("N2",
-     "Electricity cannot be stored in quantity on a grid, and what is generated in a given second "
-     "is consumed in that second. _____ the plant a system owns has to be sized for the highest "
-     "demand of the year rather than for the average, and a good deal of it stands unused for "
-     "months at a time.",
+     "Every generator on an interconnected system turns in step with every other, and a machine "
+     "that begins to fall behind draws power from the rest and is pulled back into step. The "
+     "steadiness of any one region is thus a property of the whole network rather than of that "
+     "region. _____ a disturbance large enough to break the lock in one place can travel across the "
+     "interconnection in seconds, and operators in an undamaged region may find their own machines "
+     "tripping.",
      ["Nevertheless,", "As a result,", "By contrast,", "In other words,"], "B",
-     "Sizing the plant for the annual peak follows directly from the impossibility of storing what "
-     "is generated, which is a cause-and-effect relation. Treating the second sentence as a "
-     "restatement would miss that it draws a consequence rather than rewording the first."),
+     "Machines held in step with one another are what allow a disturbance in one region to reach "
+     "the machines of another, so the closing sentence states the outcome of what precedes it. A "
+     "contrastive transition would set the spread of the disturbance against the coupling that "
+     "carries it."),
 
  trn("N3",
      "An overhead telegraph wire strung on poles could be repaired by a lineman with a ladder, and "
