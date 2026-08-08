@@ -272,8 +272,8 @@ DERIVE = {
  "H2E-17": lambda: Integer(sorted([14, 9, 12, 20, 11, 9, 17])[3]),
  "H2E-18": lambda: Rational(40 - 24, 40),
  "H2E-19": lambda: 360 - 145 - 132,
- "H2E-20": lambda: Integer(3) ** 2 * 10,
- "H2E-21": lambda: Rational(36, 4),
+ "H2E-20": lambda: Rational(84, 12),
+ "H2E-21": lambda: Rational(1, 2) * Integer(4) ** 2,
  "H2E-22": lambda: Rational(7, 25),
 
  "H2H-01": h2h_01,
@@ -307,12 +307,12 @@ DERIVE = {
 MANUAL = {
  "H2E-07": ("The four choices are English sentences interpreting a coefficient "
             "in a linear model; there is no expression for sympy to compare. "
-            "Checked by requiring the key to be the sentence identifying 0.3 "
-            "as the fall in depth produced by one hour of pumping, which is "
-            "what multiplying t by -0.3 means."),
+            "Checked by requiring the key to be the sentence identifying 24 "
+            "as a fixed charge, which is what a term not multiplied by n "
+            "means."),
 }
 MANUAL_MARKER = {
- "H2E-07": "for each hour of pumping",
+ "H2E-07": "fixed charge",
 }
 
 
@@ -628,18 +628,25 @@ SETTING_WORDS = [
     "tanning", "hide", "bark", "leather", "charcoal", "billet", "thatch",
     "straw", "eel", "elver", "weir", "saltmarsh", "grazier", "ewe", "lamb",
     "sluice",
-    "mill", "grind", "grain", "wheat", "barley", "flour", "basket", "osier",
-    "withy", "lime", "kiln", "limestone", "fen", "drain", "pump", "sump",
-    "reed", "hurdle",
+    "mill", "miller", "millwright", "millstone", "grind", "grain",
+    "wheat", "barley", "flour", "basket", "osier", "withy", "lime",
+    "limeburner", "kiln", "limestone", "fen", "drain", "drainage", "pump",
+    "sump", "reed", "hurdle",
 ]
 print("== pass 4b: settings disjoint between Module 1 and Module 2")
 m1_text = " ".join(z["stem"] + " " + " ".join(z.get("choices") or [])
                    for z in MODULE_1).lower()
 m2_text = " ".join(z["stem"] + " " + " ".join(z.get("choices") or [])
                    for z in MODULE_2_EASY + MODULE_2_HARD).lower()
+# The boundary has to close as well as open: a bare "\\bfen" matches the
+# "fen" inside "fence", which is exactly the silent over-match the \\bpi bug
+# was. Plural and participle endings are allowed explicitly instead.
+def uses(word, text):
+    return re.search(r"\b" + word + r"(s|es|ing|ed|er|ers)?\b", text) is not None
+
+
 shared = [word for word in SETTING_WORDS
-          if re.search(r"\b" + word, m1_text)
-          and re.search(r"\b" + word, m2_text)]
+          if uses(word, m1_text) and uses(word, m2_text)]
 check(not shared, f"settings used in both Module 1 and a Module 2: {shared}")
 print(f"   {len(SETTING_WORDS)} setting keywords checked, {len(shared)} shared")
 

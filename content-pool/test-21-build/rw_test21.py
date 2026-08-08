@@ -567,8 +567,8 @@ QUESTIONS = [
  coe("E2",
      "An assistant at a hilltop observatory kept the nightly log for eleven years, recording the "
      "instrument used, the objects observed and the state of the air. Historian Nuria Falc&oacute; "
-     "argues that the log is organised around the atmosphere rather than around the observing "
-     "programme, treating a night's work as something the air granted or refused.",
+     "argues that the log is best read as a record of the atmosphere, into which the observing "
+     "programme is entered only as whatever the air happened to permit on a given night.",
      "Which quotation from the log most effectively illustrates Falc&oacute;'s claim?",
      ["&ldquo;Sky clear from ten o'clock, but the disc boiled at every magnification above two hundred. Nothing attempted, and the sheets for the double stars laid by until the air will carry them.&rdquo;",
       "&ldquo;The great refractor was used throughout, the twelve-inch being still without its new eyepiece.&rdquo;",
@@ -894,9 +894,10 @@ QUESTIONS = [
  bnd("B9",
      "A protein crystal is mostly water and is easily destroyed by the very beam that is meant to "
      "measure it. Cooling the crystal to a hundred kelvin before the exposure slows that damage by "
-     "a large _____ does not prevent it, and a full measurement is still assembled from several "
-     "crystals rather than taken from one.",
-     ["factor; however, it", "factor, however, it", "factor however, it", "factor: however, it"],
+     "a large _____ does not stop it altogether, and a full measurement is still assembled from "
+     "several crystals rather than taken from one.",
+     ["factor; however, cooling", "factor, however, cooling", "factor however, cooling",
+      "factor: however, cooling"],
      "A",
      "Two complete statements meet at the blank, and the adverb that opens the second cannot join "
      "them, so the mark in front of it must be one that separates sentences. A comma there produces "
@@ -1019,6 +1020,248 @@ QUESTIONS = [
      "Three subjects joined by &ldquo;and&rdquo; make a plural subject, which rules out the "
      "singular form, and the sentence describes an observatory of the 1880s, so the past tense is "
      "what the rest of the sentence has already established."),
+
+ # ------------------------------------------------------------- Transitions (9)
+ trn("N1",
+     "A vine standing on deep, well-watered soil makes a great quantity of wood and leaf, and the "
+     "fruit ripens in the shade of its own canopy. _____ the vineyards with the longest "
+     "reputations often sit on thin, stony ground that would carry no other crop at all.",
+     ["By contrast,", "Consequently,", "For example,", "Likewise,"], "A",
+     "The celebrated vineyards stand on ground opposite in character to the rich soil just "
+     "described, so the transition sets the two against each other. Presenting the second sentence "
+     "as a consequence would make deep soil the reason for planting on stony ground."),
+
+ trn("N2",
+     "The larvae of the silkmoth eat nothing but mulberry leaf, and they eat it fresh: a leaf "
+     "picked in the morning is refused by the evening. _____ a filature could not be placed where "
+     "the market or the river was convenient but had to stand among the trees that fed it.",
+     ["Consequently,", "Nevertheless,", "For example,", "By contrast,"], "A",
+     "The siting of the filature follows directly from a diet that will not travel, which is a "
+     "cause-and-effect relation. A concessive transition would suggest the building was placed "
+     "among the trees in spite of the larvae's habits rather than because of them."),
+
+ trn("N3",
+     "A property that survives every permitted redrawing of a diagram can be used to tell two knots "
+     "apart, and a good deal of the subject consists of hunting for such properties. _____ the "
+     "smallest number of crossings a knot can be drawn with does not change however the picture is "
+     "rearranged, so a knot needing seven cannot be the same as one needing three.",
+     ["For instance,", "However,", "In conclusion,", "By contrast,"], "A",
+     "The crossing number is one case of the kind of property the first sentence describes, so the "
+     "transition introduces an illustration. Nothing in the second sentence works against the "
+     "first, which rules out the contrastive options."),
+
+ trn("N4",
+     "A root fixed to a slowly turning wheel receives gravity from every direction in turn and "
+     "grows straight out, which shows that the response depends on a settled direction rather than "
+     "on the pull itself. _____ a shoot on the same wheel still bends towards a lamp fixed at one "
+     "side, since a light in one place is not averaged away by the turning.",
+     ["However,", "Consequently,", "Likewise,", "In short,"], "A",
+     "The shoot goes on responding where the root does not, so the second sentence sets a different "
+     "outcome against the first. Treating it as a further instance of the same behaviour would "
+     "ignore that one organ has been left without a cue while the other keeps one."),
+
+ trn("N5",
+     "A lens gathers light over the area of its opening, and the plate receives that light for the "
+     "length of the exposure. Halving the opening and doubling the time leaves the total almost "
+     "unchanged across the working range of an ordinary emulsion. _____ the photographer has two "
+     "quantities to set and only their product to control.",
+     ["In other words,", "Nevertheless,", "For example,", "Meanwhile,"], "A",
+     "The closing sentence states in general terms what the arithmetic just described amounts to, "
+     "which makes it a restatement. It introduces no new case, so it cannot be an illustration of "
+     "what precedes it."),
+
+ trn("N6",
+     "The atmosphere is unstable in a particular sense: two states differing by less than any "
+     "instrument can detect will grow apart until they have nothing in common. At the scale of a "
+     "weather system the difference doubles in a day or two. _____ no improvement in a model or in "
+     "the density of observations will extend a useful forecast much beyond a fortnight.",
+     ["As a result,", "Even so,", "Similarly,", "For example,"], "A",
+     "The ceiling on forecasting follows from small differences growing until they swamp the "
+     "prediction, so the transition marks a consequence. A concessive transition would set the "
+     "limit against the instability rather than deriving it from it."),
+
+ trn("N7",
+     "The classical jurists wrote for a world of small households and cattle, and the cases "
+     "preserved in the Digest turn on runaway slaves, boundary walls and the sale of oil. _____ "
+     "their reasoning was taken up by the universities of medieval Italy and applied to questions "
+     "of banking and public authority that no Roman had ever faced.",
+     ["Even so,", "Consequently,", "For instance,", "In other words,"], "A",
+     "The later use of the jurists' reasoning runs against the narrowness of the cases just "
+     "listed, so the transition concedes that contrast. Presenting it as a consequence would make "
+     "disputes about cattle the reason medieval lawyers turned to the texts."),
+
+ trn("N8",
+     "A diffraction pattern records the direction and the strength of every reflected beam but "
+     "destroys the information about when each wave arrived relative to the others, and that "
+     "information is needed before an atomic arrangement can be recovered. _____ the strengths "
+     "themselves are measured on a relative scale, so a further step is required before they can be "
+     "set beside the strengths calculated from a proposed structure.",
+     ["In addition,", "By contrast,", "As a result,", "In short,"], "A",
+     "The relative scale is a second obstacle set alongside the first rather than a consequence of "
+     "it, so the transition adds to what precedes. Treating it as a result would make the loss of "
+     "the timing information the reason the strengths are relative."),
+
+ trn("N9",
+     "A fire moving through grass burns fast and cool, and the roots and the seed in the soil "
+     "beneath it are barely warmed. _____ a fire running through a heath of low shrubs passes "
+     "quickly enough that the woody bases under the litter survive it, and the stand regrows from "
+     "them within a season.",
+     ["Similarly,", "By contrast,", "Consequently,", "Nevertheless,"], "A",
+     "The heath and the grassland behave in the same way for the same reason, so the transition "
+     "marks a parallel. A contrastive transition would suggest the second case works against the "
+     "first, when both describe survival beneath a fast fire."),
+
+ # ------------------------------------------------------ Rhetorical Synthesis (9)
+ syn("R1",
+     ["About three fifths of an octopus's neurons lie in its arms rather than in its brain.",
+      "Each arm carries a nerve cord of its own running the whole of its length.",
+      "An arm detached from the body still passes food towards where the mouth would be.",
+      "In experiments the brain sets a target and the arm finds its own path to it.",
+      "The animal has no rigid skeleton, so an arm can bend at any point along it."],
+     "explain how the octopus manages a limb that can bend anywhere along its length.",
+     ["Because an arm with no skeleton can bend at any point, the octopus keeps about three fifths of its neurons and a nerve cord of its own in each arm, so the brain need only set a target and leave the arm to find its own path to it.",
+      "About three fifths of an octopus's neurons lie in its arms rather than in its brain.",
+      "An octopus's arm, detached from the body, will still pass a piece of food towards where the mouth would be.",
+      "The octopus has no rigid skeleton, so each of its arms can bend at any point along its length."],
+     "A",
+     "The goal asks how a limb with no fixed joints is managed, and only the response tying the "
+     "boneless arm to the nervous tissue it carries and to a brain that sets a target explains the "
+     "arrangement. Reporting where the neurons lie states one fact without connecting it to the "
+     "problem the arm presents."),
+
+ syn("R2",
+     ["A diffraction measurement records how strong each reflected beam is.",
+      "It records nothing about the phase of the wave that produced the beam.",
+      "Both quantities are needed in order to calculate where the atoms lie.",
+      "Soaking a crystal in a heavy-metal salt adds a few dense atoms at fixed sites.",
+      "The changes those atoms make to the recorded strengths allow the missing phases to be worked out."],
+     "explain how the heavy-metal soak supplies what the measurement leaves out.",
+     ["Since a measurement records the strength of each beam but not its phase, and both are needed to locate the atoms, the crystal is soaked in a heavy-metal salt whose few dense atoms alter the recorded strengths in ways from which the missing phases can be worked out.",
+      "A diffraction measurement records how strong each reflected beam is but nothing about its phase.",
+      "Soaking a crystal in a heavy-metal salt introduces a few dense atoms at fixed sites within it.",
+      "Both the strength and the phase of each reflected beam are needed before the positions of the atoms can be calculated."],
+     "A",
+     "The goal requires the gap and the remedy to be joined, and only the response naming what the "
+     "measurement omits and then showing the heavy atoms supplying it does both. Describing the "
+     "soak on its own reports a procedure without saying what it recovers."),
+
+ syn("R3",
+     ["Before 1900 collectors wrote tunes down by ear in staff notation.",
+      "Staff notation has no way of showing a pitch lying between two notes of a keyboard.",
+      "Portable phonographs recording on wax cylinders were carried into the field from the 1890s.",
+      "A cylinder preserves the performance as it was sung, ornament and all.",
+      "A transcription could afterwards be made from the cylinder and checked back against it."],
+     "explain what the phonograph changed about the way a tune reached the archive.",
+     ["Where a collector had once written a tune down by ear in a notation that cannot show a pitch between two keys, a cylinder preserved the performance as sung, so a transcription could be made afterwards and checked back against the singing itself.",
+      "Portable phonographs recording on wax cylinders were carried into the field from the 1890s onward.",
+      "Staff notation offers no way of showing a pitch that lies between two notes of a keyboard.",
+      "A wax cylinder preserves a performance as it was sung, including whatever ornament the singer added."],
+     "A",
+     "The goal concerns the route a tune took into the archive, and only the response setting the "
+     "ear-and-notebook method against a recording that can be transcribed and rechecked describes "
+     "that change. Stating what a cylinder preserves gives one end of the comparison and leaves the "
+     "older practice out."),
+
+ syn("R4",
+     ["By 1770 London had dozens of banks, each holding cheques drawn on the others.",
+      "A clerk had spent his day walking from bank to bank to present them and collect coin.",
+      "The clerks began meeting instead at a coffee house to exchange cheques.",
+      "Only the difference between what each bank owed and was owed then had to be paid.",
+      "The coin moved between the banks fell to a small fraction of the value of the cheques exchanged."],
+     "explain how the meeting reduced the amount of coin that had to be moved.",
+     ["Instead of a clerk walking from bank to bank to collect coin on every cheque, the clerks exchanged their cheques at one meeting and each bank paid only the difference between what it owed and what it was owed, so the coin moved fell to a fraction of the value exchanged.",
+      "By 1770 London had dozens of banks, each of which held cheques drawn on the others.",
+      "The clerks of the London banks began meeting at a coffee house rather than walking from bank to bank.",
+      "The coin moved between the London banks fell to a small fraction of the value of the cheques they exchanged."],
+     "A",
+     "The goal asks by what means the coin was reduced, and only the response replacing the round "
+     "of separate collections with one exchange settled on the differences gives that mechanism. "
+     "Reporting the fall in coin states the outcome without supplying the reason for it."),
+
+ syn("R5",
+     ["Wind over the Southern Ocean is slowed near the surface by friction with the water.",
+      "It blows appreciably faster a few metres higher up.",
+      "An albatross climbs into the faster air, turns downwind and descends into the slower air.",
+      "Each crossing of the boundary gains it airspeed at no cost in wingbeats.",
+      "A wandering albatross may travel a thousand kilometres in a day and rarely flaps."],
+     "explain how the bird covers such distances without flapping.",
+     ["Because the wind is slowed by the water at the surface and blows faster a few metres above it, an albatross climbs into the faster air, turns downwind and descends again, gaining airspeed at every crossing of the boundary and so covering a thousand kilometres a day with hardly a wingbeat.",
+      "The wind over the Southern Ocean is slowed near the surface by friction with the water.",
+      "A wandering albatross may travel a thousand kilometres in a day and rarely flaps its wings.",
+      "An albatross climbs into the faster air above the surface, turns downwind and descends again."],
+     "A",
+     "The goal asks how the distance is covered without flapping, and only the response joining the "
+     "difference in wind speed to the repeated climb and descent and to the airspeed each crossing "
+     "yields supplies the mechanism. Describing the climb and the descent alone leaves out the "
+     "gradient that makes the manoeuvre pay."),
+
+ syn("R6",
+     ["A leaf loses water through pores that also admit the carbon dioxide it needs.",
+      "Roots in drying soil produce abscisic acid.",
+      "The acid travels up the stem in the water stream to the leaves.",
+      "In the leaf it makes the guard cells lose pressure, so the pores close.",
+      "A closed pore saves water but brings photosynthesis to a stop."],
+     "explain how a plant closes its pores before the leaves themselves run short of water.",
+     ["Roots meeting dry soil produce abscisic acid and send it up the stem in the water stream, and in the leaf it makes the guard cells lose pressure and the pores close, so the warning reaches the leaf from the soil rather than waiting on the leaf's own supply.",
+      "A leaf loses water through the same pores that admit the carbon dioxide it needs for photosynthesis.",
+      "Abscisic acid makes the guard cells of a leaf lose pressure, so that the pores between them close.",
+      "A closed pore saves the plant water but brings its photosynthesis to a stop."],
+     "A",
+     "The goal turns on the pores closing before the leaf is short of water, and only the response "
+     "tracing the acid from roots in dry soil up to the guard cells identifies where the signal "
+     "starts. Describing what the acid does once it arrives gives the last step and omits the "
+     "source of the warning."),
+
+ syn("R7",
+     ["The second fermentation of a sparkling wine is carried out in the sealed bottle, not in a vat.",
+      "The carbon dioxide it produces cannot escape and dissolves in the wine.",
+      "The pressure in a finished bottle reaches about six atmospheres.",
+      "Early producers lost a large part of every cellar to bursting glass.",
+      "Coal-fired English furnaces made a stronger, darker glass than the wood-fired French ones."],
+     "explain why the method depended on developments in glassmaking.",
+     ["Since the second fermentation is finished inside a sealed bottle, the gas cannot escape and the bottle stands at about six atmospheres, a pressure that burst much of every early cellar and that only the stronger glass of coal-fired English furnaces could contain.",
+      "A second fermentation is carried out in the sealed bottle rather than in an open vat.",
+      "Early producers of sparkling wine lost a large part of every cellar to bursting glass.",
+      "English glass furnaces burned coal and produced a stronger, darker glass than the wood-fired furnaces of France."],
+     "A",
+     "The goal is the dependence on glass, and only the response taking the sealed fermentation "
+     "through to six atmospheres and then to the furnaces able to contain that pressure makes the "
+     "link. Reporting the losses in early cellars records the problem without naming what solved "
+     "it."),
+
+ syn("R8",
+     ["An eighteenth-century coach body hung from leather braces attached to upright posts.",
+      "The braces let the body swing but did nothing to stop it swinging.",
+      "Obadiah Elliott patented elliptical steel springs in 1804, fixed between the axle and the body.",
+      "The springs absorbed a shock and returned to shape without swinging.",
+      "The posts and the heavy perch beneath could then be left off, and the vehicle became lighter."],
+     "explain how the change in suspension altered the vehicle as a whole.",
+     ["Elliptical steel springs fixed between the axle and the body absorbed a shock and returned to shape instead of swinging as the leather braces had, and because they needed neither the upright posts nor the perch beneath, the whole vehicle could be built lighter.",
+      "An eighteenth-century coach body hung from leather braces attached to upright posts.",
+      "Obadiah Elliott patented the elliptical steel spring in 1804.",
+      "Leather braces allowed a coach body to swing but did nothing to stop it swinging."],
+     "A",
+     "The goal asks what the new suspension changed about the vehicle, and only the response "
+     "setting the springs against the braces and then naming the parts that could be left off "
+     "answers both halves. Recording the patent and its date reports the invention without saying "
+     "what it altered."),
+
+ syn("R9",
+     ["The four colour conjecture holds that any map can be coloured with four colours so that no two neighbouring regions share one.",
+      "It resisted proof for more than a century.",
+      "Appel and Haken reduced the problem in 1976 to about 1,500 unavoidable configurations.",
+      "Each of those configurations was checked by computer.",
+      "No mathematician has read the whole of the case-by-case checking."],
+     "explain why the 1976 proof was received differently from the proofs that had come before it.",
+     ["Appel and Haken reduced a conjecture that had resisted proof for a century to about 1,500 configurations and checked each one by computer, so the argument was complete although no mathematician had read the case-by-case checking it rested on.",
+      "The four colour conjecture holds that any map can be coloured with four colours without two neighbouring regions sharing one.",
+      "Appel and Haken reduced the problem in 1976 to about 1,500 unavoidable configurations.",
+      "The four colour conjecture had resisted proof for more than a century before 1976."],
+     "A",
+     "The goal concerns how the proof was received, and only the response pairing a completed "
+     "computer check with the fact that nobody had read it identifies what made this proof unlike "
+     "its predecessors. Stating the reduction to 1,500 configurations describes the method and says "
+     "nothing about its reception."),
 
 ]
 

@@ -244,8 +244,8 @@ MODULE_1 = [
 # ------------------------------------------------------------ Module 2 Easy
 MODULE_2_EASY = [
  dict(n="H2E-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A watermill grinds 24 sacks of grain each hour. At that rate, how many sacks does the "
-            "mill grind in 7 hours?"),
+      stem=("A fen pumping engine lifts 24 cubic metres of water each minute. At that rate, how "
+            "many cubic metres does the engine lift in 7 minutes?"),
       choices=["144", "156", "168", "192"], correct="C",
       check="24(7) = 168."),
 
@@ -369,17 +369,16 @@ MODULE_2_EASY = [
       check="Angles round a point total 360 degrees, and 360 - 145 - 132 = 83."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("A cylindrical lime silo has a radius of 3 metres and a height of 10 metres. The volume "
-            "of the silo is \\(k\\pi\\) cubic metres. What is the value of k?"),
-      choices=["30", "60", "90", "120"], correct="C",
-      check="The volume of a cylinder is pi times the radius squared times the height, and "
-            "9(10) = 90."),
+      stem=("A rectangular reed store covers 84 square metres of ground and is 12 metres long. How "
+            "wide, in metres, is the store?"),
+      choices=["6", "6.5", "7", "8"], correct="C",
+      check="84/12 = 7."),
 
  dict(n="H2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("A square drying floor in a reed store has a perimeter of 36 metres. What is the "
-            "length, in metres, of one side of the floor?"),
-      answers=["9"],
-      check="A square has four equal sides, and 36/4 = 9."),
+      stem=("The gate to a hurdle maker's yard is a semicircle of radius 4 metres. The area of the "
+            "gate is \\(k\\pi\\) square metres. What is the value of k?"),
+      answers=["8"],
+      check="A whole circle of radius 4 has area 16 pi, and half of that is 8 pi."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("In a right triangle set out to square a lime kiln's flue, the side opposite angle A is "

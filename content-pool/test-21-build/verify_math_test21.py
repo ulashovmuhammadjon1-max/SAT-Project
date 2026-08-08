@@ -34,9 +34,9 @@ import re
 import sys
 from collections import Counter
 
-from sympy import (Eq, Rational, acos, ceiling, floor, cancel, diff, expand,
-                   latex, log, pi, simplify, sin, cos, solve, sqrt, symbols,
-                   sympify, tan)
+from sympy import (Abs, Eq, Rational, acos, ceiling, floor, cancel, diff,
+                   expand, latex, log, pi, simplify, sin, cos, solve, sqrt,
+                   symbols, sympify, tan, together)
 
 from math_test21 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
 
@@ -112,13 +112,14 @@ def h1_16():
 
 
 def h1_19():
-    xv = solve(Eq((2 * x + 15) + (3 * x - 10) + (x + 7), 180), x)[0]
-    return max([2 * xv + 15, 3 * xv - 10, xv + 7])
+    side = symbols("side")
+    equal = solve(Eq(2 * side + (side - 7), 71), side)[0]
+    return min([equal, equal - 7])
 
 
 def h1_20():
-    hyp = sqrt(24 ** 2 + 7 ** 2)
-    return simplify(24 / hyp)
+    hyp = sqrt(25 ** 2 + 60 ** 2)
+    return simplify(25 / hyp)
 
 
 def h1_21():
@@ -129,6 +130,22 @@ def h1_21():
 
 def h2e_05():
     return [z for z in (6, 7, 8, 9) if 3 * z - 8 > 16][0]
+
+
+def h2e_16():
+    rows = [("January", 14), ("February", 9), ("March", 17), ("April", 12)]
+    return len([nm for nm, cnt in rows if cnt > 12])
+
+
+def h2e_19():
+    mid_a = Rational(2 + 10, 2)
+    mid_b = Rational(-5 + 1, 2)
+    return mid_a + mid_b
+
+
+def h2e_22():
+    leg = symbols("leg", positive=True)
+    return solve(Eq(leg / 24, Rational(5, 12)), leg)[0]
 
 
 def h2e_10():
@@ -143,10 +160,6 @@ def h2e_11():
 def h2e_17():
     rows = [("Alder", 120, 7), ("Birch", 96, 11), ("Cedar", 140, 5), ("Dunn", 88, 9)]
     return max(rows, key=lambda row: row[2])[0]
-
-
-def h2e_18():
-    return sorted([38, 45, 41, 52, 39, 47, 44])[3]
 
 
 def h2h_01():
@@ -166,46 +179,59 @@ def h2h_03():
 
 
 def h2h_04():
-    return solve(Eq(Rational(20, 100) * 45 + Rational(50, 100) * x,
-                    Rational(32, 100) * (45 + x)), x)[0]
+    # 8 litres at 3 parts water to 1 part acid is 6 water and 2 acid
+    water, acid = symbols("water acid")
+    base = solve([Eq(water + acid, 8), Eq(water, 3 * acid)], [water, acid])
+    added = symbols("added")
+    return solve(Eq(base[water] + added, 5 * base[acid]), added)[0]
 
 
 def h2h_05():
     slope, inter = symbols("slope inter")
-    sol = solve([Eq(-4 * slope + inter, 21), Eq(6 * slope + inter, -9)], [slope, inter])
-    return sol[slope] + sol[inter]
+    sol = solve([Eq(3 * slope + inter, -2), Eq(9 * slope + inter, 16)], [slope, inter])
+    return solve(Eq(sol[slope] * x + sol[inter], 40), x)[0]
 
 
 def h2h_06():
-    xv = solve(Eq(2 * x + 3 * 2, 8), x)[0]
-    return solve(Eq(4 * xv + k * 2, 20), k)[0]
+    xr = symbols("xr", real=True)
+    return sum(solve(Eq(Abs(2 * xr - 9), 13), xr))
 
 
 def h2h_08():
-    fx = (x + 7) / 2
-    gx = x ** 2 - 1
-    return gx.subs(x, fx.subs(x, 11))
+    fx = 60 / (x + 3)
+    av = solve(Eq(fx, 5), x)[0]
+    return fx.subs(x, av - 6)
+
+
+def h2h_09():
+    hh, jj = symbols("hh jj")
+    diffpoly = expand(2 * x ** 2 - 12 * x + 23 - (2 * (x - hh) ** 2 + jj))
+    sol = solve([Eq(cf, 0) for cf in diffpoly.as_poly(x).all_coeffs()],
+                [hh, jj], dict=True)[0]
+    return sol[hh] + sol[jj]
+
+
+def h2h_10():
+    return max(solve(Eq(18 / x + x, 11), x))
+
+
+def h2h_13():
+    poly = x ** 2 - 8 * x + 21
+    return [z for z in solve(Eq(poly, poly.subs(x, 2)), x) if z != 2][0]
+
+
+def h2h_19():
+    mid = (Rational(-3 + 5, 2), Rational(2 + 8, 2))
+    return sqrt((mid[0] - 5) ** 2 + (mid[1] - 2) ** 2)
 
 
 def h2h_11():
     return solve(Eq(8 ** x / 4 ** (x - 3), 32), x)[0]
 
 
-def h2h_13():
-    pv, qv = symbols("pv qv")
-    poly = x ** 2 + pv * x + qv
-    sol = solve([Eq(diff(poly, x).subs(x, 5), 0), Eq(poly.subs(x, 5), -14)], [pv, qv])
-    return sol[pv] + sol[qv]
-
-
 def h2h_14():
     other = symbols("other")
     return solve(Eq(8 * 34 + 58 + other, 10 * Rational(392, 10)), other)[0]
-
-
-def h2h_19():
-    scale = Rational(9 + 6, 9)
-    return 12 * scale
 
 
 def h2h_20():
@@ -251,8 +277,8 @@ DERIVE = {
 
  "H2E-01": lambda: solve(Eq(6 * t + 14, 92), t)[0],
  "H2E-02": lambda: 45 * 16,
- "H2E-03": lambda: 12 * 6 + 35,
- "H2E-04": lambda: Rational(19 - 7, 6 - 2),
+ "H2E-03": lambda: 260 - 3 * s,
+ "H2E-04": lambda: (7 * x + 4).subs(x, 0),
  "H2E-05": h2e_05,
  "H2E-06": lambda: solve(Eq(320 - 24 * d, 152), d)[0],
  "H2E-07": lambda: 24 - 9,
@@ -260,17 +286,17 @@ DERIVE = {
  "H2E-09": lambda: expand(x ** 2 + 9 * x + 20),
  "H2E-10": h2e_10,
  "H2E-11": h2e_11,
- "H2E-12": lambda: 8 * 3 ** 3,
+ "H2E-12": lambda: Rational(36, 9),
  "H2E-13": lambda: simplify(XP ** 9 / XP ** 4),
  "H2E-14": lambda: Rational(78, 6),
  "H2E-15": lambda: Rational(2, 5) * 140,
- "H2E-16": lambda: 14 + 9 + 17 + 12,
+ "H2E-16": h2e_16,
  "H2E-17": h2e_17,
- "H2E-18": h2e_18,
- "H2E-19": lambda: sqrt((11 - 3) ** 2 + (4 - (-2)) ** 2),
- "H2E-20": lambda: pi * 6 ** 2,
- "H2E-21": lambda: 30 * 24 * 12,
- "H2E-22": lambda: Rational(8, 15),
+ "H2E-18": lambda: Rational(18, 45),
+ "H2E-19": h2e_19,
+ "H2E-20": lambda: pi * 4 ** 2 / 2,
+ "H2E-21": lambda: Rational(1, 2) * 26 * 9,
+ "H2E-22": h2e_22,
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -280,10 +306,10 @@ DERIVE = {
  "H2H-06": h2h_06,
  "H2H-07": lambda: floor(Rational(240 - 12 * 14, 6)),
  "H2H-08": h2h_08,
- "H2H-09": lambda: cancel((6 * x ** 2 + 7 * x - 3) / (2 * x + 3)),
- "H2H-10": lambda: solve(Eq(x ** 2 - 6 * x + 13, 2 * x - 3), x)[0],
+ "H2H-09": h2h_09,
+ "H2H-10": h2h_10,
  "H2H-11": h2h_11,
- "H2H-12": lambda: simplify((27 * XP ** 12) ** Rational(1, 3)),
+ "H2H-12": lambda: together(3 / XP + 2 / (XP + 1)),
  "H2H-13": h2h_13,
  "H2H-14": h2h_14,
  "H2H-15": lambda: Rational(84, 84 + 96 + 60),
@@ -575,26 +601,35 @@ for sc, aa, bb2 in pairs[:5]:
 # across that boundary shows the same scene twice in one sitting. Test 18 had
 # two Module 2 Easy items with distinct maths on a Module 1 item's setting.
 SETTING_KEYWORDS = [
-    "vineyard", "grape", "riesling", "pinot", "veraison", "must",
+    "vineyard", "grape", "riesling", "pinot", "veraison", "brix",
     "cart", "wheelwright", "dray", "spoke", "wheel",
-    "rain gauge", "weather station", "rainfall",
+    "rain gauge", "weather station", "rain",
     "tobacco", "curing", "flue",
-    "saddler", "harness", "strap", "billet",
+    "saddler", "harness", "strap", "billet", "gusset",
     "hay", "bale", "rick",
     "seed", "chaff", "germination",
-    "silk", "skein", "reeler", "reeling", "cocoon", "moth",
-    "spectacle", "lens", "optician", "grinder", "grinding",
+    "silk", "skein", "reeler", "reeling", "cocoon", "rearing",
+    "spectacle", "lens", "optician", "grinder", "grinding", "polisher",
     "observatory", "dome", "telescope", "astrograph", "coelostat",
-    "darkroom", "photographic", "plate", "contact sheet", "developer",
-    "exposure", "print",
-    "spring", "steel strip",
+    "darkroom", "photographic", "contact sheet", "developer", "hypo",
+    "plate", "exposure", "print",
+    "spring", "carriage", "steel strip",
 ]
 m1_text = " ".join(qq["stem"].lower() for qq in MODULE_1)
 m2_text = " ".join(qq["stem"].lower() for qq in MODULE_2_EASY + MODULE_2_HARD)
-shared = [kwd for kwd in SETTING_KEYWORDS if kwd in m1_text and kwd in m2_text]
+
+
+def has(kwd, text):
+    """Prefix match at a word boundary: "spring" catches "springs", but "print"
+    does not catch "footprint" and "moth" would not catch "months" — the kind
+    of silent over-match that the \\bpi\\b bug was made of."""
+    return re.search(r"\b" + re.escape(kwd), text) is not None
+
+
+shared = [kwd for kwd in SETTING_KEYWORDS if has(kwd, m1_text) and has(kwd, m2_text)]
 check(not shared, f"settings reused across Module 1 and a Module 2 branch: {shared}")
-in_m1 = [kwd for kwd in SETTING_KEYWORDS if kwd in m1_text]
-in_m2 = [kwd for kwd in SETTING_KEYWORDS if kwd in m2_text]
+in_m1 = [kwd for kwd in SETTING_KEYWORDS if has(kwd, m1_text)]
+in_m2 = [kwd for kwd in SETTING_KEYWORDS if has(kwd, m2_text)]
 print(f"   {len(in_m1)} setting keywords in Module 1, {len(in_m2)} in Module 2, "
       f"{len(shared)} shared")
 
