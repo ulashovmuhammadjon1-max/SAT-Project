@@ -239,10 +239,14 @@ MODULE_2_EASY = [
       check="2(8 + w) = 26 gives w = 5."),
 
  dict(n="C2E-07", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("In the xy-plane, a line passes through the point \\((0, 6)\\) and has a slope of "
-            "\\(-2\\). What is the value of y on this line when \\(x=3\\)?"),
-      choices=["-3", "0", "3", "12"], correct="B",
-      check="y = 6 - 2(3) = 0."),
+      stem=("A gardener's compost heap gains mass steadily, and \\(M(d)=12+0.8d\\) gives its "
+            "mass in kilograms d days after the heap is started. In this model, what does the "
+            "0.8 represent?"),
+      choices=["The mass, in kilograms, of the heap on the day it is started.",
+               "The number of kilograms by which the mass of the heap increases each day.",
+               "The number of days it takes the heap to gain 1 kilogram.",
+               "The mass, in kilograms, of the heap after 12 days."], correct="B",
+      check="In a linear model the coefficient of d is the change per day."),
 
  dict(n="C2E-08", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A triangular pennant has a base of x centimetres and a height of 6 centimetres. "
@@ -265,15 +269,18 @@ MODULE_2_EASY = [
       check="4(25) = 100."),
 
  dict(n="C2E-11", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A cube-shaped shipping crate has a volume of 64 cubic decimetres. What is the "
-            "length, in decimetres, of one edge of the crate?"),
-      choices=["4", "8", "16", "32"], correct="A",
-      check="The cube root of 64 is 4."),
+      stem=("A technician's calibration chart converts an input x into a display reading r by "
+            "the rule \\(r=\\sqrt{x+7}\\). Which input produces a display reading of 5?"),
+      choices=["18", "25", "32", "39"], correct="A",
+      check="x + 7 = 25 gives x = 18."),
 
  dict(n="C2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by \\(f(x)=3x^{2}-x\\). What is the value of \\(f(2)\\)?"),
-      choices=["4", "10", "11", "34"], correct="B",
-      check="3(4) - 2 = 10."),
+      stem=("When a drop of water lands in a still pond, the area covered by the spreading ripple "
+            "is modelled by \\(R(t)=t^{2}+3t\\) square centimetres, where t is the number of "
+            "seconds since the drop landed. What area does the model give 4 seconds after the "
+            "drop lands?"),
+      choices=["14", "28", "40", "49"], correct="B",
+      check="4^2 + 3(4) = 16 + 12 = 28."),
 
  dict(n="C2E-13", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("An archivist splits \\(x^{8}\\) scanned pages into \\(x^{3}\\) equally sized "
@@ -322,23 +329,23 @@ MODULE_2_EASY = [
       check="180 - 118 = 62."),
 
  dict(n="C2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A triangular sports banner has a base of 18 centimetres and a height of 11 "
-            "centimetres. What is the area of the banner, in square centimetres?"),
-      answers=["99"],
-      check="(1/2)(18)(11) = 99."),
+      stem=("A jeweller's gift box is a rectangular prism measuring 9 centimetres by 5 "
+            "centimetres by 4 centimetres. How many cubic centimetres of packing foam are needed "
+            "to fill the box completely?"),
+      answers=["180"],
+      check="9(5)(4) = 180."),
 
  dict(n="C2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("A rectangular shipping label measures 8 centimetres by 5 centimetres. What is the "
-            "perimeter of the label, in centimetres?"),
-      answers=["26"],
-      check="2(8 + 5) = 26."),
+      stem=("A cylindrical soup tin has a base of area 28 square centimetres and a height of 5 "
+            "centimetres. What is the volume of the tin, in cubic centimetres?"),
+      answers=["140"],
+      check="A prism-like solid has volume base area times height: 28(5) = 140."),
 
  dict(n="C2E-22", domain="GT", skill="GT-TR", type="FR",
-      stem=("A rectangular gate is 2.4 metres wide and 1.8 metres tall. A straight brace is "
-            "fitted from one corner of the gate to the corner diagonally opposite. How many "
-            "metres long is the brace?"),
-      answers=["3"],
-      check="sqrt(2.4^2 + 1.8^2) = sqrt(9) = 3."),
+      stem=("A loading ramp rises 5 metres vertically while running 12 metres horizontally. How "
+            "many metres long is the sloping surface of the ramp?"),
+      answers=["13"],
+      check="sqrt(5^2 + 12^2) = sqrt(169) = 13."),
 ]
 
 
@@ -466,11 +473,12 @@ MODULE_2_HARD = [
       check="The first-to-second rise is 2,760/18,400 = 15%, and 24,150(1.15) = 27,772.50."),
 
  dict(n="C2H-16", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC, point D lies on side AB and point E lies on side AC so that "
-            "segment DE is parallel to side BC. Given that \\(AD=6\\), \\(DB=9\\) and "
-            "\\(DE=8\\), what is the length of side BC?"),
-      choices=["12", "15", "20", "24"], correct="C",
-      check="AD:AB = 6:15 = 2:5, so BC = 8(5/2) = 20."),
+      stem=("A roof truss is an isosceles triangle whose two equal sides each measure 25 "
+            "centimetres and whose base measures 14 centimetres. A vertical strut runs from the "
+            "apex of the truss and meets the base at a right angle. What is the length of the "
+            "strut, in centimetres?"),
+      choices=["20", "22", "24", "26"], correct="C",
+      check="The strut bisects the base, so its length is sqrt(25^2 - 7^2) = 24."),
 
  dict(n="C2H-17", domain="GT", skill="GT-AV", type="MC",
       stem=("A solid metal cylinder of radius 3 centimetres and height 16 centimetres is melted "
@@ -480,11 +488,12 @@ MODULE_2_HARD = [
       check="Cylinder volume 144 pi = (1/3) pi (36) h, so h = 12."),
 
  dict(n="C2H-18", domain="GT", skill="GT-TR", type="MC",
-      stem=("In triangle ABC, angle C measures 90&deg; and \\(\\sin A=\\frac{20}{29}\\). What is "
-            "the value of \\(\\cos B\\)?"),
+      stem=("A surveyor's plot of land is a right triangle whose two acute corner angles measure "
+            "\\(x\\)&deg; and \\(y\\)&deg;. The surveyor's notes record that "
+            "\\(\\sin x^{\\circ}=\\frac{20}{29}\\). What is the value of \\(\\cos y^{\\circ}\\)?"),
       choices=["\\(\\frac{21}{29}\\)", "\\(\\frac{20}{21}\\)", "\\(\\frac{29}{20}\\)",
                "\\(\\frac{20}{29}\\)"], correct="D",
-      check="Angles A and B are complementary, so cos B = sin A = 20/29."),
+      check="The two acute angles are complementary, so cos y = sin x = 20/29."),
 
  dict(n="C2H-19", domain="ALG", skill="ALG-LI", type="MC",
       stem=("Volunteers at a food bank pack exactly 100 boxes. A standard box takes 4 minutes to "

@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T10:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A whale's ear canal fills with wax in layers, one pale and one dark for every year of the animal's life, and each layer traps the hormones that were circulating in its blood at the time. A single plug pulled from a stranded whale can therefore be read as a _____ of stress across the whole of that animal's life, decade by decade.",
+   "difficulty": "MEDIUM",
+   "why": "Layered, year-by-year, decade-by-decade evidence is a record kept over time. The 'summary' option loses exactly the sequence the annual layers preserve, which is what the sentence emphasises.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "chronicle",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "summary",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "forecast",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "symptom",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "No two gamelan orchestras in Java are tuned quite alike. A set of instruments is tuned as a group and to itself, and an instrument borrowed from a different set will sound wrong beside them however carefully it was made. Tuning is therefore _____ to each ensemble rather than fixed by any external standard.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence needs a word meaning belonging to that one ensemble alone, which 'peculiar to' expresses, and the contrast with 'fixed by any external standard' confirms it. The 'secondary to' option would rank tuning below the ensemble in importance, which is not the relation described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "indifferent",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "adjacent",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "secondary",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "peculiar",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Georgian villages have kept a three-voice singing tradition alive for centuries without written scores. Every part is learned by ear from other singers, and two villages a valley apart may harmonise the same song quite differently. The tradition is therefore not fixed but _____, shifting a little with each generation that carries it forward.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence sets the blank against 'not fixed' and then glosses it as shifting with each generation, so the word must mean liable to change. The 'uniform' option is ruled out by two villages harmonising the same song differently.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "static",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "mutable",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "obsolete",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "uniform",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Before the sealed glass Wardian case, plants shipped across an ocean died of salt spray and neglect within weeks, and a collector counted on losing almost every specimen. The case made survival almost _____: ferns packed in London in 1834 reached Sydney alive after eight months at sea, and the return shipment arrived in the same condition.",
+   "difficulty": "MEDIUM",
+   "why": "The example shows survival becoming the ordinary, expected outcome rather than a rarity. The 'miraculous' option points back to the earlier situation the case replaced instead of describing what it achieved.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "incidental",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "negotiable",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "routine",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "miraculous",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;capital&rdquo; most nearly mean?",
+   "passage": "The columns were roughed out in the quarry and finished on site. Each <u>capital</u> was cut last of all, partly because its acanthus leaves were the part most easily chipped in transport and partly because the carver wanted to see the shaft standing in place before deciding how deeply to undercut the stone.",
+   "difficulty": "MEDIUM",
+   "why": "The word names something cut from stone, carved with acanthus leaves and chipped in transport, which is the architectural sense. The financial sense is far more common in ordinary use but cannot be undercut by a carver.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A city that is the seat of a government.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Wealth used to produce further wealth.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The carved block at the top of a column.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "An uppercase letter.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "A skyscraper does not resist the wind by rigidity alone. Near the top of Taipei 101 hangs a polished steel sphere weighing 660 tonnes, suspended on cables and free to swing. When the tower leans in a gust the sphere lags behind and pulls against the motion. <u>Sway on the upper floors is cut by roughly forty per cent, which is the difference between a nuisance and an evacuation.</u>",
+   "difficulty": "MEDIUM",
+   "why": "The sentence supplies a figure for the reduction in sway and then says what that reduction means for the people inside, so it both measures and evaluates the damper. Nothing in it casts doubt on the design.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces a second engineering problem that the text goes on to solve.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It questions whether the sphere performs as its designers intended.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It explains the method by which the sphere is suspended.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It quantifies the effect of the device just described and indicates why that effect matters.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Ainu weavers make attush cloth from the inner bark of the elm. <u>The bark has to be stripped in early summer, while the sap is running, or it cannot be separated into usable fibre at all.</u> Once the strips have been soaked in a stream and split by hand, they are spun and woven on a body-tension loom, then dyed in patterns that also appear on Ainu woodcarving.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence states a timing requirement, early summer while the sap runs, and the consequence of missing it, which is a constraint on gathering. The resemblance to woodcarving appears only in the final sentence and is not what the underlined sentence accounts for.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It argues that elm bark is superior to other fibres used in weaving.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It explains why attush patterns resemble the patterns on Ainu woodcarving.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It contrasts two competing methods of preparing bark for the loom.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It identifies a constraint that governs when the raw material can be gathered.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why is radiolarian ooze useful to geologists?",
+   "passage": "Radiolarians are single-celled drifters that build intricate skeletons out of silica. When they die the skeletons sink, and over millions of years they pile up on the deep seafloor as a fine ooze. Because different radiolarian species lived in different intervals, and because the shape of a skeleton reflects the water the animal grew in, a core drilled through the ooze gives geologists both a calendar and a thermometer for ancient oceans.",
+   "difficulty": "MEDIUM",
+   "why": "The final sentence names both uses and their sources: a calendar from the succession of species, a thermometer from the shape of the skeletons. The text says the ooze piles up over millions of years, which rules out year-by-year resolution.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Silica skeletons can be dated more easily than carbonate ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It contains the only fossils that survive at great depth in the ocean.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Species turnover within it marks time while skeleton shape indicates past conditions.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It accumulates quickly enough to record events from one year to the next.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "N&uuml;shu, a script used by women in one corner of Hunan, was written on folding fans and embroidered handkerchiefs rather than on paper. Its characters are not the characters that boys learned in school; they are slanted, thinner in the stroke, and they record the local speech by sound rather than by meaning. Women who had never been taught to read the official script could nevertheless read one another.",
+   "difficulty": "MEDIUM",
+   "why": "The passage insists that the characters are not the school characters and that women with no schooling could still read each other, which together amount to independence from the official script. Nothing is said about a shortage of paper or about any prohibition.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "N&uuml;shu gave women a means of writing to each other independent of the official script.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "N&uuml;shu was written on cloth because paper was scarce in that part of Hunan.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Men in Hunan were forbidden from learning to read N&uuml;shu.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "N&uuml;shu was a decorative variant of the characters taught in Hunan schools.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Solheim's argument?",
+   "passage": "The Norse settlements in Greenland were abandoned during the fifteenth century. Historian Petra Solheim argues that the cause was economic: walrus ivory, effectively the colony's only export, lost its European market once elephant ivory became available again. Others point instead to a cooling climate that shortened the growing season for the colony's hay.",
+   "difficulty": "MEDIUM",
+   "why": "Normal hay yields remove the fodder failure that the climate account requires, and putting the price collapse before the departures gives the economic account the order of events it needs. The ice-core cooling supports the rival explanation instead.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Norse farmers in Iceland came through the same period without abandoning their farms.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Ice cores show that summers in southern Greenland grew colder from about 1350 onward.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Hay yields recorded at the settlements were normal in the years before abandonment, and the collapse in ivory prices preceded the departures.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The walrus hunting grounds lay several weeks' sail north of the settlements.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Novak's explanation over the alternative?",
+   "passage": "Great tits living in cities sing at a higher pitch than those in woodland a few kilometres away. Ornithologist Karel Novak argues that the shift is a response to low-frequency traffic noise, which would otherwise mask their songs. Others suggest that city birds are simply smaller on average, and that smaller birds sing higher.",
+   "difficulty": "MEDIUM",
+   "why": "The size of a bird's body cannot change within minutes, so a bird that lifts its pitch as the noise rises must be reacting to the noise itself. Traffic noise concentrated at low frequencies fits either account, since it does not show that the birds respond to it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "City great tits weigh slightly less on average than woodland great tits.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Individual birds raise the pitch of their song within minutes when nearby traffic noise increases.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Traffic noise in the cities studied is concentrated below two kilohertz.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Great tits in cities defend smaller territories than those in woodland.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly undermine the conservator's argument?",
+   "passage": "Large bronzes were usually cast in pieces and joined afterwards, since a single pour of that volume is difficult to control. A conservator argues that one particular figure was instead cast in a single pour, citing the complete absence of visible joins anywhere on its surface.",
+   "difficulty": "MEDIUM",
+   "why": "The argument runs from no visible joins to no joins at all, and that step collapses if joins were routinely hidden by finishing work. The separately cast base concerns a different element altogether and says nothing about the body.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The alloy composition of the figure is uniform throughout.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Casting a figure of this size in one pour was technically possible at the time it was made.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The figure stands on a base that was cast separately from the body.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "X-rays of comparable figures show that joins between separately cast parts were routinely filed down and disguised.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Moths caught at street lights were found to fly in tighter spirals than moths netted in unlit fields a kilometre away. The researchers are careful to note that they sampled only moths already gathered at the lights. If the moths that spiral tightly are also the ones drawn to lights in the first place, then the finding _____",
+   "difficulty": "MEDIUM",
+   "why": "The researchers' caution raises the possibility that the trait precedes the exposure, so the difference could be a sorting effect rather than an effect of the lighting. The option asserting that light alters flight over time states the causal reading the caution is putting in doubt.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "would be reversed if the lights were switched off for a whole season.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "applies only to the unlit fields that were sampled.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "shows that artificial light alters the flight of moths over time.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "may reflect which moths are drawn to lights rather than any effect of the light on flight.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Linear B was deciphered once someone guessed that the language behind it was an early form of Greek; the guess was confirmed when the readings produced sensible inventories of chariot wheels and sheep. Linear A uses many of the same signs, but applying the Linear B sound values to it yields no words in any language anyone has been able to identify. The signs of Linear A can therefore be pronounced, but the resulting text _____",
+   "difficulty": "MEDIUM",
+   "why": "Sound values carry across from the one script to the other while the words they generate match no known language, which is precisely what being pronounceable but unidentifiable means. The passage attaches the Greek reading to the deciphered script only, so the option claiming an early form of Greek for the undeciphered one contradicts it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "cannot be assigned to any language that scholars can recognise.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "has been shown to record an early form of Greek after all.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "is too badly damaged for the individual signs to be read.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "consists mostly of inventories like those written in Linear B.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A sourdough culture is a community of wild yeasts and bacteria rather than a single organism. Because the balance between those organisms responds to flour, water and room temperature _____ two starters divided from one jar and kept in different kitchens will drift apart in flavour within months.",
+   "difficulty": "MEDIUM",
+   "why": "The introductory clause opening with 'Because' is dependent and must be marked off from the main clause by a comma; both the semicolon and the colon require a complete sentence to stand in front of them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "room temperature; two starters divided",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "room temperature: two starters divided",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "room temperature and two starters divided",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "room temperature, two starters divided",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Volcanic ash settles across an ice sheet within days of an eruption and is then buried by the next winter's snow. Cores drilled at three sites in Greenland returned a series of thin ash layers _____ each of which can be matched to a dated eruption somewhere else in the world.",
+   "difficulty": "MEDIUM",
+   "why": "'each of which' opens a non-essential relative clause, which attaches to the main clause with a comma; the semicolon and the full stop both require an independent clause to follow them, and this one is not independent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "ash layers; each of which",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "ash layers: each of which",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "ash layers. each of which",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "ash layers, each of which",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Bronze needs tin, and tin is scarce almost everywhere in the eastern Mediterranean. Ingots recovered from a Bronze Age wreck off the Turkish coast have been traced by their trace elements to mines in Central Asia _____ the metal had travelled some three thousand kilometres before it ever reached a smith.",
+   "difficulty": "MEDIUM",
+   "why": "The blank joins two complete sentences with no coordinating conjunction between them, so the semicolon is the only option that avoids a comma splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Central Asia the metal had",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Central Asia: and the metal had",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Central Asia; the metal had",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Central Asia, the metal had",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The mill stood derelict for sixty years and has been grinding again since 2014. It fills its pond as the tide floods and works the stones as the tide ebbs _____ and the wheel turns for roughly five hours out of every twelve.",
+   "difficulty": "MEDIUM",
+   "why": "Two independent clauses joined by the coordinating conjunction 'and' take a comma in front of that conjunction; the semicolon and colon are not used before a coordinating conjunction, and omitting the punctuation altogether leaves the clauses unseparated.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "tide ebbs: and the wheel",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "tide ebbs and the wheel",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "tide ebbs, and the wheel",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "tide ebbs; and the wheel",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The telescope's mirror is not a single piece of glass but a mosaic of hexagons, each polished separately and aligned only once it is in place. Each of the observatory's four mirror segments _____ its own set of actuators, which adjust the surface as the instrument tilts.",
+   "difficulty": "MEDIUM",
+   "why": "'Each' is singular, and the prepositional phrase naming four segments does not change the number of the subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "has",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "having",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "were having",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The ridge running down the spine of the island splits it into a wet side and a dry one, and the two halves are farmed quite differently as a result. The annual rainfall recorded at the station on the windward slope is nearly three times _____ recorded at the station on the leeward side.",
+   "difficulty": "MEDIUM",
+   "why": "The pronoun stands in for the singular noun 'rainfall', so the singular form is required; the plural form would need a plural antecedent and there is none in the sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "that",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "those",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "it",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "which",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The heating pipes beneath the nave were replaced in 2011, and what had been booked as a fortnight of plumbing turned into a season of archaeology. Beneath the cathedral floor _____ the foundations of an earlier church, their outline cutting clean across the modern aisles.",
+   "difficulty": "MEDIUM",
+   "why": "The subject follows the verb in this inverted sentence, and that subject, 'the foundations', is plural, so the plural verb is required.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has lain",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "lies",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "lie",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "lying",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A body left in a peat bog can come out two thousand years later with its skin, hair and stomach contents intact. _____ the same acids that tan the skin dissolve the bones, so the bodies recovered are often oddly boneless.",
+   "difficulty": "MEDIUM",
+   "why": "The loss of the skeleton qualifies the impression of complete preservation given in the first sentence, so a contrastive transition is what is needed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Thus,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In fact,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A SQUID magnetometer exploits the way current behaves across a pair of junctions in a superconducting ring, and it registers magnetic fields a billion times fainter than the Earth's own. _____ it can pick up the field generated by the current running along a single human nerve.",
+   "difficulty": "MEDIUM",
+   "why": "The nerve measurement is an instance of the sensitivity claimed in the first sentence, which calls for an exemplifying transition.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For example,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Instead,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The first submarine telegraph cables had to lie on the seabed for years at a stretch, under pressure and in the dark, without their insulation cracking or dissolving away. _____ engineers wrapped the copper core in gutta-percha, a latex that stays flexible in cold salt water.",
+   "difficulty": "MEDIUM",
+   "why": "The choice of gutta-percha follows directly from the requirement stated before it, so the transition must express cause.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In summary,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For this reason,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By comparison,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what the new sewers changed and what followed from the change. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Thames was so foul in the summer of 1858 that Parliament hung lime-soaked curtains at its windows.</li><li>Joseph Bazalgette was authorised that year to build a system of intercepting sewers.</li><li>The sewers carried waste to outfalls downstream of the city instead of into the central Thames.</li><li>Cholera deaths in the districts they served fell sharply afterwards.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks for both the change and its consequence, and only the option pairing the diversion of the waste with the fall in cholera deaths supplies the two together. The authorisation option names the project without saying what it altered.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Parliament hung lime-soaked curtains at its windows during the summer of 1858.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The intercepting sewers carried waste to outfalls downstream of the city rather than into the central Thames, and cholera deaths in the districts they served fell sharply.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Joseph Bazalgette was authorised in 1858 to build a system of intercepting sewers.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The Thames was extremely foul during the summer of 1858.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise that the record was designed to be understood by a finder who shares no language with its makers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A gold-plated copper disc was fixed to each Voyager probe before launch in 1977.</li><li>It carries spoken greetings in 55 languages, music and 116 encoded images.</li><li>Instructions for playing it are etched on the cover as diagrams.</li><li>Both probes have now passed beyond the heliosphere.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "Only the option about the diagrammed instructions speaks to being understood without a shared language. Greetings in 55 human languages would be of no use whatever to a finder who speaks none of them, so that option works against the stated goal.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The Voyager probes each carry a gold-plated copper disc fixed to them before launch in 1977.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Since any finder would share no language with the record's makers, the instructions for playing it are etched on the cover as diagrams.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The record carries spoken greetings in 55 languages along with music and images.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Both Voyager probes have now passed beyond the heliosphere.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how a fog net produces water. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Fog nets are panels of fine mesh strung across ridges on the Chilean coast.</li><li>Fog blown against the mesh condenses on the threads and runs down into a gutter.</li><li>One large net can yield several hundred litres on a foggy day.</li><li>A village in the region has used the nets to supply a small brewery.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks for the mechanism, and only the option tracing fog to condensation to the gutter, with the resulting yield attached, describes how the water is actually produced. The brewery option reports a use rather than a mechanism.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Several hundred litres of water can be collected from a single net on a foggy day.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Fog nets are panels of fine mesh strung across ridges on the Chilean coast.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Fog blown against the mesh condenses on the threads and runs down into a gutter, so that one large net yields several hundred litres on a foggy day.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A village on the Chilean coast has used fog nets to supply a small brewery.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T10:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Cosmic-ray muons pass through solid stone, but they are absorbed at a rate that depends on how much stone lies along their path. Detectors set up in a chamber inside a pyramid record an excess of muons arriving from any direction in which the rock is thinner, and can therefore _____ a hidden void overhead without a single block being moved.",
+   "difficulty": "EASY",
+   "why": "The point of the sentence is that the void is found without any block being moved, so the verb has to be one of observation. The 'excavate' option flatly contradicts the closing clause.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "reinforce",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "date",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "excavate",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "detect",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The prehistoric salt workings at Hallstatt have given up wooden shovels, leather caps, lengths of rope and even fragments of woven clothing. Salt draws the water out of organic material and halts decay, so objects that would long ago have rotted away in ordinary ground were instead _____ underground for three thousand years.",
+   "difficulty": "EASY",
+   "why": "The sentence explains that salt halts decay and contrasts that with rotting, so the blank needs a word meaning kept intact. The 'buried' option is true of the objects but says nothing about the contrast with rotting that the sentence is drawing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "preserved",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "discarded",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "compressed",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "buried",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;draft&rdquo; most nearly mean?",
+   "passage": "The canal was cut for barges carrying coal, and its locks were built to the dimensions those barges required. A vessel of greater <u>draft</u> could not use the canal at all: below a certain depth the hull would ground on the silt of the bottom long before it reached the next lock, and the crew would have to unload to float it off again.",
+   "difficulty": "EASY",
+   "why": "The passage explains the term as it uses it, a hull grounding on the bottom in shallow water, so the sense required is the depth of water a vessel needs. The 'preliminary version' sense is a genuine meaning of the word but has nothing to do with hulls and silt.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A current of cold air.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The depth of water a vessel requires.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "A demand for payment.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A preliminary version of a document.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A tardigrade caught in drying moss expels almost all the water in its body, draws itself into a barrel shape and stops metabolising altogether. In this state it survives boiling, freezing and the vacuum of space, and a drop of water will revive it decades later. Its dormancy is therefore not sleep but a _____ of life itself.",
+   "difficulty": "EASY",
+   "why": "Metabolism stops entirely and then resumes decades later once water is added, which is a temporary halt. The 'prolongation' option says the opposite of a stop, and nothing in the passage is being rejected.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "suspension",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "repudiation",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "celebration",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "prolongation",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Patches of unusually dark and fertile soil scattered through the Amazon basin were for a long time assumed to be a natural formation. They are now understood to be _____, built up over centuries from the charcoal, fish bone and broken pottery that the people living there discarded around their settlements.",
+   "difficulty": "EASY",
+   "why": "Soil built up from charcoal, bone and pottery that people discarded was made by human activity. The 'sedimentary' option would simply restate the natural origin the sentence rejects.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "transient",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "anthropogenic",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "sedimentary",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "volcanic",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "passage": "A kgotla is a Tswana assembly held in the open, usually in the shade of a particular tree. Any adult present may speak, and speakers are heard in turn until nobody has anything further to add. The chief does not vote. He listens, and at the end he states the sense of the meeting; a chief who states it wrongly can expect to be corrected on the spot.",
+   "difficulty": "EASY",
+   "why": "The text names and defines the assembly, then describes the order of speaking, then narrows to what the chief may and may not do. No second institution is ever mentioned, so nothing is being compared.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It presents a chronological account of how the kgotla developed.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It raises a criticism of the kgotla and then rebuts that criticism.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It defines an institution, describes how its proceedings run, and specifies the limited role of its leader.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It compares two forms of assembly and argues that one of them is fairer.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Writing in Mesopotamia did not begin with poetry. The earliest tablets record quantities of barley, beer and livestock, and their signs descend from small clay tokens once sealed inside hollow clay envelopes to certify a debt. To show what an envelope held, the tokens were pressed into its outer surface before it was closed. Someone eventually noticed that the impressions made the tokens inside unnecessary.",
+   "difficulty": "EASY",
+   "why": "Every sentence concerns accounting: tallies of barley and livestock, tokens certifying a debt, and the step from impressed envelope to tablet. Literature is raised only in the opening sentence, and only in order to be set aside.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To explain the administrative origins of a writing system.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that Mesopotamian literature has been undervalued.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To describe how clay tablets were fired and then stored.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To compare Mesopotamian writing with the alphabets that followed it.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The warship Vasa capsized in Stockholm harbour in 1628, less than a mile from where she was launched. She lay in the mud for 333 years and came up with her carvings still crisp. The Baltic is too brackish for the shipworm that would have eaten an oak hull in open salt water, and the harbour mud sealed her timbers away from oxygen. What sank the ship is also what saved her.",
+   "difficulty": "EASY",
+   "why": "The closing sentence states the paradox the passage has been building: sinking into brackish, oxygen-poor mud is precisely what kept the hull whole. The passage mentions no other wreck, and no recarving of any kind.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Shipworms are the principal threat to wooden wrecks in all waters.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Stockholm harbour has preserved a number of seventeenth-century vessels.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The Vasa's carvings were recarved after the ship was raised.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The Vasa survives because the conditions that sank her also protected her wreck.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why did perfumers prize aged ambergris?",
+   "passage": "Ambergris forms in the gut of a sperm whale around the indigestible beaks of the squid it swallows. Expelled at sea, a lump may float for years, and sun and salt water alter it as it drifts: fresh ambergris smells foul, aged ambergris only faintly sweet. Perfumers prized the aged material because it held other scents on the skin for hours longer than they would otherwise last, not for any quality of its own smell.",
+   "difficulty": "EASY",
+   "why": "The last sentence separates the two possible reasons and picks one: the material held other scents on the skin, not that its own smell was valued. The passage calls fresh ambergris foul-smelling, so nothing supports prizing it for the strength of its odour.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because its own smell shifted over the course of a single day.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because it was the strongest-smelling material available to them.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Because it made other scents last longer rather than for its own odour.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Because it could be gathered fresh from beaches in large quantities.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Duarte's claim?",
+   "passage": "Two bells cast from the same bronze can sound quite unlike each other. Metallurgist Ines Duarte maintains that a bell's tone is set by the profile to which it is cast &mdash; the way the wall thickens from lip to crown &mdash; rather than by the small variations in tin content that distinguish one founder's alloy from another's.",
+   "difficulty": "EASY",
+   "why": "Holding the profile fixed while the tin content varies, and finding the tone unchanged, shows the alloy is not what sets the note, which is exactly the claim. Hardness and brittleness describe the metal's mechanical behaviour, not the pitch it sounds.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Bells cast to the same profile from alloys of differing tin content sound nearly identical.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Bells with a higher tin content are harder and more brittle than bells with less.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Founders have traditionally guarded their alloy recipes with great secrecy.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The largest bells take several days to cool once they have been cast.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Kaur's argument?",
+   "passage": "Membership of Britain's friendly societies, which pooled workers' contributions to pay sickness benefits, fell sharply after 1911. Sociologist Denis Kaur argues that the state insurance scheme introduced in that year displaced them. Others attribute the decline to workers moving into cities, where the societies' local ties counted for less.",
+   "difficulty": "EASY",
+   "why": "Where the migration did not happen the fall occurred anyway, which removes migration as the explanation and leaves the change of 1911. The slow decline from the 1890s fails to separate the two accounts, since either cause could have acted gradually.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The state scheme paid a smaller weekly benefit than most societies did.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Urban branches of the societies had always been smaller than rural ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In districts where movement into the cities was negligible, membership fell just as steeply after 1911.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Friendly societies had been losing members slowly since the 1890s.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Adeli's argument?",
+   "passage": "A qanat is a gently sloping tunnel that carries groundwater from a mountain aquifer to a village, and it silts up unless it is cleaned every few years. Historian Farah Adeli argues that the qanats of one Iranian valley stayed in use for eight centuries because of a customary law assigning each household a share of the maintenance in proportion to its share of the water, and not merely because the geology there was favourable.",
+   "difficulty": "EASY",
+   "why": "Same geology, different institution, different outcome isolates the custom as what kept the tunnels open. The spring recharge is a feature of the valley that the geological explanation could claim just as easily.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Neighbouring valleys with the same geology, but without such a customary law, saw their qanats abandoned within two centuries.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The valley's aquifer is recharged by snowmelt every spring.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The qanat tunnels in the valley are lined throughout with fired clay hoops.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The customary law was first written down in the nineteenth century.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A blue hole is a flooded sinkhole whose still, oxygen-starved bottom water allows fine sediment to settle in undisturbed annual layers. When a hurricane passes overhead, it washes coarse sand off the surrounding reef and into the hole, where the sand settles as a distinct band within the fine layers. Cores drilled from Bahamian blue holes therefore allow researchers to _____",
+   "difficulty": "EASY",
+   "why": "One coarse band per storm, set into a datable annual sequence, yields a tally of past storms, which is what the described mechanism delivers. Wind speed and rainfall are not encoded by the mere presence of a sand band, and nothing in the passage is predictive.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "determine how much rain fell during each of those storms.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "predict the track a hurricane will take before it makes landfall.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "count the storms that struck the area long before written records began.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "measure the wind speed of individual historical hurricanes.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Bristlecone pines at the treeline add so little wood in a year that a single ring can be thinner than a sheet of paper. What they do lay down is dense and heavily resinous, and a dead trunk may stand for a thousand years without rotting. Trees of the same species growing lower down the mountain, in deeper soil and out of the wind, grow far faster and _____",
+   "difficulty": "EASY",
+   "why": "The passage ties slow growth to dense resinous wood and to standing for a millennium after death, so faster-growing trees lower down should lack that durability and longevity. The option giving them denser wood reverses the relationship the passage has just set up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "do not live anything like as long as those at the treeline.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "resist decay for even longer once they have died.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "yield wood denser than that of the treeline trees.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "produce rings that are easier for researchers to count.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Russian universities were closed to women in her lifetime, so she was taught privately and then abroad. Sofia Kovalevskaya, the first woman appointed to a full professorship in mathematics in northern Europe _____ won the Bordin Prize in 1888 for her work on the rotation of a rigid body.",
+   "difficulty": "EASY",
+   "why": "The appositive beginning 'the first woman appointed...' was opened with a comma and has to be closed with a matching comma before the verb 'won'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "northern Europe won the Bordin",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "northern Europe, won the Bordin",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "northern Europe; won the Bordin",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "northern Europe: won the Bordin",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Timbuktu stood where the desert trade met the river trade, and its markets handled both. An inventory drawn up in 1591 lists the goods on which the town's wealth rested _____ salt cut from the desert mines, gold carried up from the south, and books copied by hand in the town itself.",
+   "difficulty": "EASY",
+   "why": "The words before the blank form a complete sentence, and the colon introduces the list that specifies the goods it refers to.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "wealth rested, but salt cut from",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "wealth rested and salt cut from",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "wealth rested: salt cut from",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "wealth rested; salt cut from",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Aurorae normally stay within a ring drawn around each magnetic pole. When the solar wind is strong enough to compress the Earth's magnetic field on the sunward side _____ they can be seen far to the south of the latitudes where they usually appear.",
+   "difficulty": "EASY",
+   "why": "The sentence opens with a dependent clause introduced by 'When', and a dependent clause placed before the main clause is followed by a comma.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "sunward side, they can be",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "sunward side; they can be",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "sunward side: they can be",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "sunward side and they can be",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Documents of this period are rarely dated, so scholars date them from their contents instead. Although the papyrus fragment carries no date of its own _____ the tax officials named on the back of it held office for only a few years, which fixes the document to within a decade.",
+   "difficulty": "EASY",
+   "why": "'Although' opens a dependent clause, and a dependent clause standing before the main clause is separated from it by a comma.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "its own; the tax officials",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "its own: the tax officials",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "its own and the tax officials",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "its own, the tax officials",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The inquiry ran for two years, took evidence from more than ninety witnesses, and produced a report that is unusually blunt. The inspectors faulted the shipyard for using undocumented welds and for _____ the results of the tests it did carry out.",
+   "difficulty": "EASY",
+   "why": "The two items joined by 'and' both follow the preposition 'for', so 'for using' requires a matching gerund; a finite clause or an infinitive breaks the parallel structure.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "having misreport",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to misreport",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "misreporting",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "it misreported",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Pumping ran for six weeks before anyone was allowed underground again, and the shaft was still dripping when the survey party went down. By the time the inspectors reached the tunnel in March, the water that flooded it in January _____ to a depth of barely two metres.",
+   "difficulty": "EASY",
+   "why": "The fall in the water level was complete before the inspectors arrived, and their arrival is itself in the past, so the past perfect is what places one past event before another.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "had fallen",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "is falling",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "falls",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "will fall",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Pressed specimens do not photograph well without lighting chosen for the purpose, and the cabinets holding them are opened as seldom as the curators can manage. The herbarium's collection of ferns, together with its several thousand lichen specimens, _____ digitised over the winter, sheet by sheet.",
+   "difficulty": "EASY",
+   "why": "The subject is the singular noun 'collection'; the interrupting phrase 'together with its several thousand lichen specimens' does not make a singular subject plural.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have been",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "were",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "are",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "was",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Aerogel is the lightest solid ever manufactured, and a slab of it a centimetre thick insulates about as well as a course of bricks. _____ it crumbles under the pressure of a thumbnail, which has kept it out of nearly every building application proposed for it.",
+   "difficulty": "EASY",
+   "why": "The fragility works against the advantages just listed, so the transition has to mark a contrast rather than a consequence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The eruption of Mount Tambora in 1815 was the largest anywhere in the past thousand years, and it threw enough ash and sulphur into the stratosphere to dim sunlight across the whole of the northern hemisphere. _____ farmers in New England recorded frost in every month of the following summer.",
+   "difficulty": "EASY",
+   "why": "The frosts follow from the dimming of sunlight described in the first sentence, which is a cause-and-effect relation and not a contrast.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Similarly,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Resurrection plants can lose almost all the water in their tissues and lie dormant for years, greening again within hours of a rain. _____ brine shrimp lay eggs that survive being dried out completely and hatch when a desert pool refills.",
+   "difficulty": "EASY",
+   "why": "The second sentence offers a parallel case of surviving complete desiccation in an unrelated organism, so the transition must signal comparison.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Similarly,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Consequently,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the 1769 expeditions had to be sent so far apart. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>In 1769 observers were sent to Tahiti, to Hudson Bay and to Lapland.</li><li>Each timed the passage of Venus across the face of the Sun.</li><li>The Sun's distance is calculated by comparing timings taken from widely separated places.</li><li>Transits of Venus come in pairs eight years apart and then not again for over a century.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The question is why the separation mattered, and only the option joining the method of calculation to the choice of stations answers it. The rarity of transits explains the urgency of the expeditions rather than their geography.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because the Sun's distance is calculated by comparing timings from widely separated places, observers were sent as far apart as Tahiti and Lapland.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Transits of Venus come in pairs eight years apart and then not again for more than a century.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Each observer timed the passage of Venus across the face of the Sun.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "In 1769 observers travelled to Tahiti, to Hudson Bay and to Lapland to watch the transit.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the replica was built. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The painted cave at Lascaux was opened to visitors in 1948.</li><li>Carbon dioxide and moisture from visitors' breath encouraged algae and crystal growth on the painted surfaces.</li><li>The cave was closed to the public in 1963.</li><li>A full-size replica opened a short distance away in 1983.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The reason lies in the damage done by visitors, and only the option carrying the damage, the closure and the replica together answers the question asked. Simply reporting that a replica opened supplies the fact without the reason.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Lascaux was open to visitors for fifteen years, between 1948 and 1963.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Algae and crystals grew over the painted surfaces inside the cave.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A full-size replica of the painted cave opened a short distance from Lascaux in 1983.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because moisture and carbon dioxide from visitors' breath were damaging the paintings, the cave was closed in 1963 and a full-size replica opened nearby in 1983.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to convey how effective the approach has proved. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Conventional paving sheds rainfall straight into storm drains.</li><li>Sponge city designs use permeable paving, constructed wetlands and rooftop planting.</li><li>These surfaces absorb rain where it falls and release it slowly.</li><li>Trial districts in Wuhan cut peak storm runoff by about half.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Effectiveness needs the measured outcome, and only the option reporting the halving of peak runoff in the Wuhan trial districts provides one. The other options describe the design without saying what it achieved.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "By absorbing rain where it falls, trial districts in Wuhan cut peak storm runoff by about half.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Conventional paving sheds rainfall straight into the storm drains.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Sponge city designs use permeable paving, constructed wetlands and rooftop planting.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Permeable surfaces absorb rain where it falls and then release it slowly.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T10:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The Nabataeans built Petra in a desert that receives less than fifteen centimetres of rain in a year. Channels cut into the sandstone caught whatever fell on the surrounding slopes and carried it to cisterns hollowed out beneath the streets, so that the city's water supply stayed _____ even through years in which no rain fell at all.",
+   "difficulty": "HARD",
+   "why": "The clause 'even through years in which no rain fell' says the supply held up when the rain failed, so the blank needs a word meaning reliable. The 'abundant' option describes quantity, which fifteen centimetres of rainfall caught and stored cannot promise.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "dependable",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "abundant",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "seasonal",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "intermittent",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Inca administrators kept their records on quipus, bundles of cords in which the type of knot and its position along the cord both carried meaning. Spanish officials who could not read them assumed the cords were ornamental. Modern study has shown the opposite: the quipu is a _____ system, capable of holding censuses, tribute rolls and dates with precision.",
+   "difficulty": "HARD",
+   "why": "Knot type and position encoding censuses and tribute precisely is a system of notation. The 'rudimentary' option contradicts the precision the sentence claims for it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "provisional",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "rudimentary",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "notational",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "ceremonial",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The retroreflectors left on the lunar surface by Apollo crews send a laser pulse straight back to whichever telescope fired it. Timing the round trip gives the Earth-Moon distance to within a few centimetres, and repeating that measurement for half a century has shown the Moon to be _____ from the Earth by about 3.8 centimetres a year.",
+   "difficulty": "HARD",
+   "why": "What the technique measures is a distance, so a steady change of 3.8 centimetres a year in that figure means the Moon is moving away. The 'contracting' option would be a change in the Moon's own size, which a distance measurement does not report.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "brightening",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "contracting",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "receding",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "wobbling",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Byssus is the fine thread a pen shell spins to anchor itself to the seabed. Gathered and combed, it was once woven into gloves light enough to be folded inside a walnut shell. Few weavers ever learned the technique, and today it is practised by a single family on Sardinia; the craft is thus all but _____.",
+   "difficulty": "HARD",
+   "why": "One family is all that remains, so 'all but ___' calls for a word meaning gone. The 'renowned' option describes reputation rather than survival, and nothing in the text says the craft is widely known.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "commercial",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "renowned",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "mechanised",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "extinct",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Making katsuobushi takes the better part of a year. The fish is simmered, then smoked over many separate firings, then deliberately inoculated with a mould that draws out the last of the moisture. The finished block is hard enough that it must be shaved with a plane, and the process is far too _____ to be hurried along by machinery.",
+   "difficulty": "HARD",
+   "why": "Months of simmering, repeated smoking and a controlled mould growth describe a demanding, precise process, which is what 'too ___ to be hurried' requires. The 'obscure' option says the method is little known, not that it resists being sped up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "recent",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "exacting",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "lucrative",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "obscure",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "Dating a violin used to mean trusting the label pasted inside it. Now a good photograph of the spruce top will often do: the growth rings visible in the wood can be matched against master chronologies assembled from thousands of Alpine trees. <u>An instrument cannot have been made before its youngest ring finished growing.</u> Several violins bearing eighteenth-century labels have turned out to contain wood felled a full century later.",
+   "difficulty": "HARD",
+   "why": "The underlined sentence gives the rule that ties a ring date to the earliest possible date of manufacture, and the closing sentence applies that rule to expose false labels. How the chronologies are assembled is covered by the sentence before it, not by this one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It offers an example of an instrument found to be mislabelled.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It states the principle that makes the dating method decisive.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It concedes a weakness in the ring-matching technique.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It describes how the master chronologies are assembled.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:S2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "For three decades in the nineteenth century the Chincha Islands off Peru supplied Europe with the most effective fertiliser then obtainable: seabird guano, laid down over millennia on rock that almost never sees rain. Ships waited months in the roadstead for a cargo, and two governments went to war over the trade. Then the deposits ran out. Nitrate mines and later synthetic ammonia took the market, and the islands are now visited mainly by ornithologists.",
+   "difficulty": "HARD",
+   "why": "The text moves from boom, through exhaustion and replacement, to the islands' present quiet, which is a rise-and-fall account. It never explains what makes guano effective, only asserts that it was.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To trace the rise and collapse of a trade and note what became of its source.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that synthetic ammonia was a more sustainable alternative to guano.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To describe the working conditions of the labourers on the Chincha Islands.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To explain the chemical properties that made guano so effective as a fertiliser.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Leafcutter ants do not eat the leaves they carry into the nest. They chew them into a mulch, and on that mulch they grow a fungus, and the fungus is what feeds the colony. The garden is vulnerable to a parasitic mould that would overrun it in days. On their bodies the ants carry a bacterium producing a compound that suppresses exactly that mould; remove the bacterium and the garden fails.",
+   "difficulty": "HARD",
+   "why": "The text says the fungus feeds the colony and that removing the bacterium makes the garden fail, so the colony rests on both partners. The claim that the ants eat the leaves is denied outright in the first sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Leafcutter ants feed on leaves that they first soften into a mulch.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The colony depends on a cultivated fungus, which a bacterium carried by the ants protects.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "A parasitic mould has caused the collapse of many leafcutter colonies.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The bacterium carried by the ants is the colony's principal source of food.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what is the vault's function?",
+   "passage": "The seed vault on Svalbard is cut into a mountainside above the permafrost line. Its purpose is not to collect seed in its own right but to hold duplicates of collections kept elsewhere, so that a gene bank destroyed by war, fire or accident can be restocked from the copies. Depositors keep ownership of their own boxes, and the vault has been drawn on only once, at the request of a collection displaced from Syria.",
+   "difficulty": "HARD",
+   "why": "The text states directly that the vault holds duplicates so a destroyed gene bank can be restocked, and the single withdrawal by a displaced Syrian collection illustrates the point. Ownership is said to stay with the depositors, which contradicts the transfer option.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To gather wild plant species that no other gene bank holds.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To keep backup copies for gene banks that may lose their own holdings.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "To distribute seed to farmers in the aftermath of natural disasters.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To hold seed whose ownership its depositors have signed over to Norway.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Waititi's argument over the rival one?",
+   "passage": "The sweet potato is native to South America, yet it was being grown across Polynesia well before any European ship reached the Pacific. Botanist Hine Waititi argues that Polynesian voyagers reached the American coast and carried the plant home with them. A rival account holds that seed capsules drifted across the ocean unaided and took root where they washed ashore.",
+   "difficulty": "HARD",
+   "why": "The shared name has to travel with people who speak it; a drifting seed capsule carries no vocabulary, so a matching word is evidence of contact rather than of drift. Viability in seawater would support the rival drift account instead.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Sweet potatoes grow well in the soils of several Pacific island groups.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Coastal peoples in South America cultivated a number of distinct sweet potato varieties.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Sweet potato seed capsules can remain viable in seawater for several weeks.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The Polynesian name for the plant closely resembles the name used for it on the South American coast.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Oyelaran's argument?",
+   "passage": "Many pterosaurs carried a bony crest on the skull, and in some species it projected backwards further than the length of the skull itself. Palaeontologist Marta Oyelaran argues that the crest served for display to other members of the species rather than as an aerodynamic rudder for steering in flight.",
+   "difficulty": "HARD",
+   "why": "Appearing only at maturity and differing between the sexes is the signature of a signal aimed at other individuals; a flight surface would be needed by juveniles too and would have no reason to differ by sex. Variation between species is compatible with either function.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Crest shape varies considerably from one species to another.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Crests are found only in adults, and are far larger in one sex than in the other.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Crested and uncrested pterosaur species occupied the same habitats.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The crest is built of dense bone and would have added little drag in flight.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Ferrer's proposal?",
+   "passage": "A shrub that grows on high Andean slopes fills its leaves with a bitter compound. Botanist Luis Ferrer proposes that the compound deters insect herbivores. A colleague argues instead that it screens the leaf against the intense ultraviolet light found at that altitude.",
+   "difficulty": "HARD",
+   "why": "The netting holds altitude and sunlight constant while removing insect access, and the plant then stops investing in the compound, which points to herbivory as the trigger. Strong ultraviolet absorbance and higher concentrations in the most exposed leaves both fit the light-screening account.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Leaves at the top of the shrub contain more of the compound than leaves lower down.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The compound is concentrated in the outermost cell layers of the leaf.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The compound absorbs strongly in the ultraviolet part of the spectrum.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Plants grown under insect-proof netting produce far less of the compound than exposed plants at the same altitude.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A coppiced hazel stool is cut back to the ground every seven years and throws up a fresh crop of straight poles from the surviving root, and it can be worked this way for centuries. Felling the same hazel outright yields considerably more wood at once, but the stool is then gone for good. A woodland manager who compared the two practices by the volume removed in a single year would therefore _____",
+   "difficulty": "HARD",
+   "why": "Single-year volume favours felling, while the facts the comparison leaves out, centuries of repeated cutting from a stool that stays alive, favour coppicing over the long term, so a one-year measure flatters felling. Coppicing yields less in the year in question, so calling it more productive contradicts the passage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "underestimate the volume that a felled hazel yields.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "overstate the long-run return from felling.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "find coppicing the more productive of the two in that year.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "conclude that a coppiced stool never regrows.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Giant tubeworms crowd around hydrothermal vents on the deep seafloor, far below any sunlight. An adult worm has neither mouth nor gut. What it has instead is a body cavity packed with bacteria that oxidise the hydrogen sulphide streaming out of the vent and build sugars from it. If the vent a colony sits on ceases to flow, the colony _____",
+   "difficulty": "HARD",
+   "why": "The worms have no gut and depend on bacteria that need vent sulphide, so a vent that stops flowing cuts off the input to the whole food chain inside the animal. Filtering and migration are abilities the passage never grants them, and no sunlight reaches the seafloor.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "can fall back on filtering particles from the surrounding water.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "loses the chemical supply on which its food production depends.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "migrates along the ridge to a vent that is still erupting.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "reverts to obtaining its energy from sunlight.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Rubbish pits tell an excavator more than temples do, because nobody arranges them for posterity. The pit behind the fort's granary produced three things the archaeologists had not expected _____ a child's leather shoe, a wooden writing tablet and the better part of a barrel of oysters.",
+   "difficulty": "HARD",
+   "why": "What comes before the blank is a complete sentence announcing 'three things', and the colon is the mark that introduces the list specifying them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "not expected: a child's leather",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "not expected; a child's leather",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "not expected, and a child's leather",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "not expected which are a child's leather",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "This is the only lock on the canal still worked entirely by hand, and the keeper lives in the cottage built beside it. He opened the upper paddles a little before dawn _____ the barge was through the lock and moored below the town by noon.",
+   "difficulty": "HARD",
+   "why": "Both halves are complete sentences and no conjunction joins them, so the semicolon is required; the colon would announce that the second half explains the first, whereas here it simply reports what happened next.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "before dawn; the barge was",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "before dawn, the barge was",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "before dawn: the barge was",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "before dawn the barge was",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The flight had been sold as a gentle hour over the valley, and for most of it that is what it was. The balloon rose steadily for forty minutes _____ then the burner went out and the basket dropped nearly a hundred metres before the pilot could relight it.",
+   "difficulty": "HARD",
+   "why": "'then' is an adverb rather than a coordinating conjunction, so joining these two complete sentences with nothing but a comma would produce a splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "forty minutes then the burner",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "forty minutes; then the burner",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "forty minutes, then the burner",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "forty minutes: then the burner",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Saturn's outermost ring is faint, enormously wide, and fed from a source outside the ring system altogether. Enceladus, a moon barely five hundred kilometres across _____ vents plumes of water vapour from fractures near its south pole, and a part of that vapour freezes into the ring.",
+   "difficulty": "HARD",
+   "why": "The appositive describing the moon's size opened with a comma, so it must be closed with a comma before the verb 'vents'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "kilometres across vents plumes of",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "kilometres across, vents plumes of",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "kilometres across; vents plumes of",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "kilometres across: vents plumes of",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The pottery closed in 1924, and because no catalogue of its output was ever printed, its wares are now identified by eye alone. Neither the glaze recipe nor the firing schedules _____ recorded anywhere in the workshop notebooks that survive.",
+   "difficulty": "HARD",
+   "why": "With 'neither ... nor', the verb agrees with the subject nearer to it, and 'the firing schedules' is plural.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "were",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "has been",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Work on the wreck is done in pairs at a depth of forty metres, in water cold enough to limit a single dive to twenty minutes. The surface team monitors all four _____ air supply continuously, and any diver whose gauge falls below a set pressure is called up at once.",
+   "difficulty": "HARD",
+   "why": "The air supply belongs to all four divers, so the noun has to be both plural and possessive, which puts the apostrophe after the plural ending. The singular possessive would credit the supply to one diver only.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "diver's",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "divers'",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "divers's",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "divers",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The bell tower at the corner of the square looks untouched from the piazza below, and the guidebooks still describe it as medieval. Having been rebuilt twice since the earthquake of 1908, the campanile _____ almost nothing of its original fabric above the foundations.",
+   "difficulty": "HARD",
+   "why": "The introductory participial phrase is not a clause, so what follows it must be a main clause with a finite verb; the participles and the infinitive leave the sentence without one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "to retain",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "having retained",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "retaining",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "retains",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Resurfacing the ring road took an entire summer and cut the number of reported potholes by four fifths within a year of the work being finished. _____ complaints from drivers about the condition of the road rose over the same period.",
+   "difficulty": "HARD",
+   "why": "Rising complaints are the opposite of what far fewer potholes would lead one to expect, so the transition has to mark the unexpected turn.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "That is,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Accordingly,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nonetheless,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Indeed,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Desalination plants along the Gulf coast now supply most of the region's drinking water. _____ the concentrated brine they return to the sea is denser than seawater and sinks, settling over the seabed and smothering the animals that live in the sediment.",
+   "difficulty": "HARD",
+   "why": "The damage done by the brine is a drawback of the solution just described, and the transition must mark it as an unwelcome complication. The exemplifying option would present the brine as an instance of the water supplied, which it is not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In summary,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Unfortunately,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:T8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Pollen survives in buried soil for millennia and identifies the plants that were in flower when the soil was sealed. Pollen taken from inside a Bronze Age burial mound comes almost entirely from meadowsweet and other plants that flower in high summer. _____ the burial was made somewhere between June and August.",
+   "difficulty": "HARD",
+   "why": "The pollen is the evidence and the season of the burial is the conclusion drawn from it, so the transition must introduce an inference.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Admittedly,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Conversely,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Thus,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to correct a common misunderstanding about the object. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Bayeux Tapestry is nearly 70 metres long.</li><li>It is embroidered in wool on linen rather than woven on a loom.</li><li>It depicts the events leading to the Norman conquest of England in 1066.</li><li>Halley's Comet, seen in that year, appears among the figures in its border.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The only misunderstanding the notes make available is the name itself, and just one option sets embroidery against weaving in order to correct it. The comet option is a striking detail but corrects nothing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Halley's Comet appears among the figures embroidered in the border of the tapestry.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The Norman conquest of England, the subject of the work, took place in 1066.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The Bayeux Tapestry is nearly 70 metres long and depicts the events leading to 1066.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Though it is called a tapestry, the object is embroidered in wool on linen rather than woven, so the name is inaccurate.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the three crops support one another. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Maize, beans and squash are planted together in a single mound.</li><li>The maize stalk gives the bean vine something to climb.</li><li>Bacteria on the bean roots add nitrogen to the soil.</li><li>Broad squash leaves shade the ground and suppress weeds.</li></ul>",
+   "difficulty": "HARD",
+   "why": "Mutual support requires all three contributions to appear, and only the option naming the stalk, the nitrogen and the shade shows each crop doing something for the others. The nitrogen option describes one contribution in isolation.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The broad leaves of the squash shade the ground around the mound.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Maize, beans and squash are all planted together in a single mound.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The maize gives the beans something to climb, the beans add nitrogen to the soil through their roots, and the squash leaves shade out the weeds.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Bacteria living on the roots of the bean plants add nitrogen to the soil.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T10:R1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how chinampas stay productive without irrigation. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Chinampas are narrow plots built up from lake mud in the shallow water at Xochimilco.</li><li>Willows planted along their edges hold the plots together with their roots.</li><li>Canals run between the plots on every side.</li><li>The soil stays wet without irrigation, and a chinampa can be cropped several times a year.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The stated goal names productivity without irrigation, and only the option that links the surrounding canals to permanently wet soil and then to repeated cropping supplies both halves of it. The willow option explains how the plot holds together instead.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because canals run between the plots on every side, the soil stays wet without irrigation, and a chinampa can be cropped several times a year.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Willows planted along the edges of a chinampa hold the plot together with their roots.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Plots at Xochimilco can be cropped several times in a single year.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Chinampas are narrow plots built up from lake mud in the shallow water at Xochimilco.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A beekeeper bottles a harvest in two jar sizes: a small jar holds 250 grams of honey and a large jar holds 450 grams. She fills 4 more small jars than large jars and uses exactly 6,600 grams of honey. How many large jars did she fill?",
+   "difficulty": "MEDIUM",
+   "check": "250(L+4) + 450L = 6,600 gives 700L = 5,600, so L = 8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A coastal ferry charges one fare for a car and a different fare for a bicycle. A crossing carrying 3 cars and 5 bicycles collected $97, and a crossing carrying 2 cars and 9 bicycles collected $93. What is the fare, in dollars, for one car?",
+   "difficulty": "MEDIUM",
+   "check": "3c+5b=97 and 2c+9b=93 give c = 24 and b = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A pillar candle is 30 centimetres tall when it is lit and burns down at a constant rate. Forty-five minutes after it is lit the candle is 26.4 centimetres tall. How many minutes after it is lit will the candle be 12 centimetres tall?",
+   "difficulty": "MEDIUM",
+   "check": "It burns 3.6 cm in 45 min, so 0.08 cm per minute; 18 cm takes 225 minutes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "180",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "200",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "225",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "250",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A hoist in a granary may lift a total mass of no more than 900 kilograms. The operator, whose mass is 78 kilograms, rides up with sacks of grain that each have a mass of 34 kilograms. What is the greatest number of sacks that can ride with the operator?",
+   "difficulty": "MEDIUM",
+   "check": "34s <= 822 gives s <= 24.17, so 24 sacks.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A climbing gym sets its monthly charge, in dollars, by the rule \\(C=29+k(v-3)\\), where v is the number of visits in the month and k is a constant. A member who visited 11 times was charged $69. How many dollars is a member charged for 20 visits in a month?",
+   "difficulty": "MEDIUM",
+   "check": "29 + 8k = 69 gives k = 5, so C = 29 + 5(17) = 114.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "99",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "104",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "109",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "114",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A harbour gauge records the water level falling at a constant rate on an outgoing tide. At 2:00 p.m. the level is 4.6 metres and at 5:00 p.m. it is 2.8 metres. If the level keeps falling at the same rate, how many hours after 5:00 p.m. will it reach 1.6 metres?",
+   "difficulty": "MEDIUM",
+   "check": "The level falls 0.6 m per hour; 2.8 - 1.6 = 1.2 m takes 2 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "1.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "2",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "3",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A potter's kiln heats at a constant rate. Its temperature is 18&deg;C when firing begins and 453&deg;C after 3 hours. The glaze on the pots matures at 1,033&deg;C. How many hours after firing begins does the kiln reach that temperature?",
+   "difficulty": "MEDIUM",
+   "check": "Rate = (453-18)/3 = 145 per hour; (1033-18)/145 = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "10",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A machinist writes the cost of finishing a batch of parts, in dollars, as \\(\\frac{6x^{2}+13x-5}{3x-1}\\), where x is the number of parts and \\(x>1\\). Which expression is equivalent to the machinist's cost?",
+   "difficulty": "MEDIUM",
+   "check": "6x^2+13x-5 factors as (3x-1)(2x+5), so the quotient is 2x+5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(2x-5\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3x+5\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(2x+1\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(2x+5\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A stunt kite is released from a cliff, and its height above the beach, in metres, t seconds after release is modelled by \\(h(t)=-0.5t^{2}+12t+3\\). What is the greatest height above the beach, in metres, that this model predicts?",
+   "difficulty": "MEDIUM",
+   "check": "Vertex at t = 12; h(12) = -72 + 144 + 3 = 75.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "51",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "69",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "75",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "147",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A photographer stacks identical grey filters in front of a lens. Each filter passes \\(\\frac{1}{3}\\) of the light that reaches it, so a stack of x filters passes \\(\\left(\\frac{1}{3}\\right)^{x}\\) of the light reaching the first filter. One stack passes \\(\\frac{1}{243}\\) of that light. How many filters are in the stack?",
+   "difficulty": "MEDIUM",
+   "check": "243 = 3^5, so x = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "81",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "243",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A drone crosses a canyon along a path modelled by \\(y=x^{2}-14x+40\\), where x is the horizontal distance in metres from the canyon's western rim and y is the height in metres relative to the rims. The drone is level with the rims at two horizontal positions. How many metres apart are those two positions?",
+   "difficulty": "MEDIUM",
+   "check": "x^2-14x+40 = 0 has roots 4 and 10, which are 6 apart.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A packaging engineer writes the surface area of a closed carton that has a square base of side s centimetres and a height of h centimetres as \\(A=2s^{2}+4sh\\) square centimetres. Which expression gives h in terms of A and s?",
+   "difficulty": "MEDIUM",
+   "check": "Subtract 2s^2 and divide by 4s.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{A-2s^{2}}{4s}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{A+2s^{2}}{4s}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{A-2s^{2}}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{A-s^{2}}{2s}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A jeweller models the mass of a hollow silver bead of outer radius x millimetres as \\(m(x)=\\frac{x^{3}}{4}-2\\) grams. A bead made to this design has a mass of 14 grams. What is its outer radius, in millimetres?",
+   "difficulty": "MEDIUM",
+   "check": "x^3/4 = 16 gives x^3 = 64 and x = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "64",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A wildlife trust holds $2,500 in a fund that grows by 4% of its value each year, with no money added or withdrawn. To the nearest dollar, how much will the fund hold 3 years from now?",
+   "difficulty": "MEDIUM",
+   "check": "2500(1.04)^3 = 2812.16, which rounds to 2,812.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$2,750",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$2,800",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$2,812",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "$2,900",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A newspaper press prints 1,250 sheets every 8 minutes. Working at that constant rate, how many minutes does the press take to print 21,875 sheets?",
+   "difficulty": "MEDIUM",
+   "check": "21,875/1,250 = 17.5 batches, and 17.5(8) = 140 minutes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "112",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "140",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "150",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "175",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A rucksack is marked down 20% in a sale, and a loyalty card then takes a further 15% off the sale price. A shopper using the card pays $102. What was the price of the rucksack, in dollars, before the sale?",
+   "difficulty": "MEDIUM",
+   "check": "(0.80)(0.85) = 0.68 and 102/0.68 = 150.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$127.50",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$135",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$142.50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$150",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the mass of paper, in kilograms, that a school collected for recycling in each of four weeks.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Week</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mass collected (kg)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">42</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">61</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">39</td></tr></table>The school had set a four-week goal of 250 kilograms. By what percent did the collected mass fall short of that goal?",
+   "difficulty": "MEDIUM",
+   "check": "Total 200 kg; the shortfall of 50 kg is 50/250 = 20% of the goal.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "10%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "15%",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "18%",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20%",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "The three angles of a triangular window pane measure \\((2x+10)\\)&deg;, \\((3x-5)\\)&deg; and \\((x+7)\\)&deg;. What is the measure, in degrees, of the largest of the three angles?",
+   "difficulty": "MEDIUM",
+   "check": "6x + 12 = 180 gives x = 28, so the angles are 66, 79 and 35.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "35",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "66",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "79",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "96",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A guy wire runs in a straight line from the top of a radio mast to a ground anchor, making an angle of 30&deg; with the level ground. The anchor is 24 metres from the foot of the mast. What is the length of the wire, in metres?",
+   "difficulty": "MEDIUM",
+   "check": "cos 30 = 24/L gives L = 48/sqrt(3) = 16 sqrt(3).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(12\\sqrt{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(16\\sqrt{3}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(24\\sqrt{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "48",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A rectangular swimming pool is 12 metres long and 5 metres wide, with a uniform depth of 1.6 metres. A pump delivers water at a constant 4 cubic metres per minute. How many minutes does the pump take to fill the empty pool to the brim?",
+   "difficulty": "MEDIUM",
+   "check": "Volume 12(5)(1.6) = 96 cubic metres; 96/4 = 24 minutes.",
+   "correctAnswerFR": "[\"24\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "In a survey of 240 randomly selected households in a lakeside town, 54 households reported owning a canoe. There are 8,000 households in the town. Based on this survey, what is the best estimate of the number of households in the town that own a canoe?",
+   "difficulty": "MEDIUM",
+   "check": "(54/240)(8,000) = 1,800.",
+   "correctAnswerFR": "[\"1800\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M1:C1-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A rectangular playing field measures 105 metres by 88 metres. A gravel path runs in a straight line from one corner of the field to the opposite corner. How many metres long is the path?",
+   "difficulty": "MEDIUM",
+   "check": "sqrt(105^2 + 88^2) = sqrt(18,769) = 137.",
+   "correctAnswerFR": "[\"137\"]"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A walking-tour guide collected $8 from every visitor on one tour and took in $192 altogether. How many visitors were on the tour?",
+   "difficulty": "EASY",
+   "check": "192/8 = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A baker divides 3.6 kilograms of dough equally among 8 loaf tins. What mass of dough, in kilograms, goes into each tin?",
+   "difficulty": "EASY",
+   "check": "3.6/8 = 0.45.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "0.35",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "0.45",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "0.50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "4.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A bike-share scheme charges $2 to unlock a bicycle plus $0.25 for each minute of the ride. Which equation gives the total charge C, in dollars, for a ride lasting m minutes?",
+   "difficulty": "EASY",
+   "check": "A fixed $2 plus $0.25 per minute.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(C=2+0.25m\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(C=2.25m\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(C=0.25+2m\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(C=2(0.25m)\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A tap is opened on a full water butt, and \\(v(t)=54-6t\\) gives the volume of water remaining, in litres, t minutes after the tap is opened. How many litres remain 5 minutes after the tap is opened?",
+   "difficulty": "EASY",
+   "check": "54 - 6(5) = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "30",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "48",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "54",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A goods lift may carry a total mass of no more than 600 kilograms. Which inequality gives all the possible values of the total mass m, in kilograms, that the lift may carry?",
+   "difficulty": "EASY",
+   "check": "No more than 600 means at most 600.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(m<600\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(m>600\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(m\\ge 600\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(m\\le 600\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A rectangular vegetable bed has a perimeter of 26 metres and a length of 8 metres. What is its width, in metres?",
+   "difficulty": "EASY",
+   "check": "2(8 + w) = 26 gives w = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A gardener's compost heap gains mass steadily, and \\(M(d)=12+0.8d\\) gives its mass in kilograms d days after the heap is started. In this model, what does the 0.8 represent?",
+   "difficulty": "EASY",
+   "check": "In a linear model the coefficient of d is the change per day.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The mass, in kilograms, of the heap on the day it is started.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The number of kilograms by which the mass of the heap increases each day.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The number of days it takes the heap to gain 1 kilogram.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The mass, in kilograms, of the heap after 12 days.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A triangular pennant has a base of x centimetres and a height of 6 centimetres. Which expression gives the area of the pennant, in square centimetres?",
+   "difficulty": "EASY",
+   "check": "(1/2)(x)(6) = 3x.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x+6\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{x}{6}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(3x\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(6x\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A tiler's cost for one row of a border is \\(5(2p+3)\\) dollars, where p is the number of patterned tiles in the row. Which expression is equivalent to the cost of one row?",
+   "difficulty": "EASY",
+   "check": "5(2p+3) = 10p + 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(10p+3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(7p+8\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(10p+8\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(10p+15\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A crochet pattern spirals outward, and \\(S(r)=4r^{2}\\) gives the number of stitches worked after r complete rounds. How many stitches have been worked after 5 rounds?",
+   "difficulty": "EASY",
+   "check": "4(25) = 100.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "100",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "400",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A technician's calibration chart converts an input x into a display reading r by the rule \\(r=\\sqrt{x+7}\\). Which input produces a display reading of 5?",
+   "difficulty": "EASY",
+   "check": "x + 7 = 25 gives x = 18.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "39",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "When a drop of water lands in a still pond, the area covered by the spreading ripple is modelled by \\(R(t)=t^{2}+3t\\) square centimetres, where t is the number of seconds since the drop landed. What area does the model give 4 seconds after the drop lands?",
+   "difficulty": "EASY",
+   "check": "4^2 + 3(4) = 16 + 12 = 28.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "28",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "49",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "An archivist splits \\(x^{8}\\) scanned pages into \\(x^{3}\\) equally sized batches, where \\(x>1\\). Which expression gives the number of pages in each batch?",
+   "difficulty": "EASY",
+   "check": "x^8 divided by x^3 is x^5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x^{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x^{11}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x^{24}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(5x\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A single yeast cell divides so that the number of cells present after n rounds of division is \\(h(n)=2^{n}\\). How many cells are present after 6 rounds?",
+   "difficulty": "EASY",
+   "check": "2^6 = 64.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "64",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "128",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A joiner uses 3 litres of varnish to cover 12 square metres of decking. At that rate, how many litres of varnish are needed to cover 40 square metres of decking?",
+   "difficulty": "EASY",
+   "check": "(3/12)(40) = 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "10",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A cinema screen has 250 seats, and 40% of them were occupied at one showing. How many seats were occupied at that showing?",
+   "difficulty": "EASY",
+   "check": "0.40(250) = 100.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "60",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "100",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "150",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "210",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of books borrowed from a library branch in each of three months.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Month</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Books borrowed</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">January</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">340</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">February</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">295</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">March</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">412</td></tr></table>How many books in total were borrowed from the branch over the three months?",
+   "difficulty": "EASY",
+   "check": "340 + 295 + 412 = 1,047.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "635",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "707",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "752",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "1,047",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The masses, in grams, of five posted letters are 12, 15, 15, 20 and 28. What is the median of these masses, in grams?",
+   "difficulty": "EASY",
+   "check": "The middle value of the ordered list is 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "15",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A straight fence post is driven into level ground, and the two angles that the post makes with the ground on either side of it add to 180&deg;. One of these angles measures 118&deg;. What is the measure, in degrees, of the other angle?",
+   "difficulty": "EASY",
+   "check": "180 - 118 = 62.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "62",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "118",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A jeweller's gift box is a rectangular prism measuring 9 centimetres by 5 centimetres by 4 centimetres. How many cubic centimetres of packing foam are needed to fill the box completely?",
+   "difficulty": "EASY",
+   "check": "9(5)(4) = 180.",
+   "correctAnswerFR": "[\"180\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A cylindrical soup tin has a base of area 28 square centimetres and a height of 5 centimetres. What is the volume of the tin, in cubic centimetres?",
+   "difficulty": "EASY",
+   "check": "A prism-like solid has volume base area times height: 28(5) = 140.",
+   "correctAnswerFR": "[\"140\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2E:C2E-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A loading ramp rises 5 metres vertically while running 12 metres horizontally. How many metres long is the sloping surface of the ramp?",
+   "difficulty": "EASY",
+   "check": "sqrt(5^2 + 12^2) = sqrt(169) = 13.",
+   "correctAnswerFR": "[\"13\"]"
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A supplier prints the same delivery charge on an invoice in two ways: as \\(\\frac{2}{3}(6x-9)\\) dollars and as \\(4x+c\\) dollars, where x is the number of pallets ordered and c is a constant. The two expressions give the same charge for every value of x. What is the value of c?",
+   "difficulty": "HARD",
+   "check": "(2/3)(6x-9) = 4x - 6, so c = -6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-6",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "-3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "An accountant values a machine by the linear model \\(V(t)=c-vt\\), where t is the number of years since purchase and c and v are positive constants. The machine is valued at $19,400 after 3 years and at $12,200 after 7 years. What was the purchase price of the machine, in dollars?",
+   "difficulty": "HARD",
+   "check": "v = 7,200/4 = 1,800 per year, so c = 19,400 + 3(1,800) = 24,800.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$21,800",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$23,000",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$24,800",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "$26,600",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A charity stall sells wristbands for $4 each and mugs for $11 each, and it will sell exactly 200 items in total. The stall must take in at least $1,500. What is the least number of mugs the stall must sell?",
+   "difficulty": "HARD",
+   "check": "4(200-g) + 11g >= 1,500 gives 7g >= 700, so g >= 100.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "96",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "100",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "105",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "112",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A rectangular courtyard is 3 metres longer than it is wide and has an area of 154 square metres. A stone path 1 metre wide is laid all the way around the outside of the courtyard. What is the area of the path, in square metres?",
+   "difficulty": "HARD",
+   "check": "w(w+3) = 154 gives w = 11 and length 14; the outer rectangle is 13 by 16, so the path is 208 - 154 = 54.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "44",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "48",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "54",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A laboratory's two conversion steps are modelled by \\(f(x)=x^{2}-4x\\) and \\(g(x)=x+3\\), applied in that order so that the reading g produces is fed into f. Which expression is equivalent to \\(f(g(x))\\)?",
+   "difficulty": "HARD",
+   "check": "(x+3)^2 - 4(x+3) = x^2 + 2x - 3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x^{2}+2x-3\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x^{2}-4x+3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x^{2}+2x+9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x^{2}-x-3\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "An engineer subtracts one flow rate from another and needs the result as a single quotient, for \\(x>1\\). Which expression is equivalent to \\(\\frac{3}{x+2}-\\frac{2}{x-1}\\)?",
+   "difficulty": "HARD",
+   "check": "[3(x-1) - 2(x+2)] / [(x+2)(x-1)] = (x-7)/(x^2+x-2).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{x+1}{x^{2}+x-2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{x-7}{x^{2}+x-2}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{x+1}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{5x-7}{x^{2}+x-2}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A runner covers 12 kilometres on Saturday at a constant speed of x kilometres per hour, then covers 12 kilometres on Sunday at a constant speed of \\(x+2\\) kilometres per hour. The two runs take 5 hours in total. What is the value of x?",
+   "difficulty": "HARD",
+   "check": "12/x + 12/(x+2) = 5 gives 5x^2 - 14x - 24 = 0, whose positive root is 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A materials scientist reduces the quantity \\(\\sqrt[3]{27x^{12}}\\cdot x^{-2}\\), where \\(x>0\\). Which expression is equivalent to that quantity?",
+   "difficulty": "HARD",
+   "check": "The cube root is 3x^4, and 3x^4 times x^-2 is 3x^2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(9x^{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3x^{6}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(3x^{10}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3x^{2}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A sealed radiator loses the same fraction of its coolant every hour, so the volume remaining is \\(A(t)=A_{0}r^{t}\\) litres after t hours, where \\(A_{0}\\) and r are constants. After 2 hours 72 litres remain, and after 4 hours 40.5 litres remain. What is the value of \\(A_{0}\\)?",
+   "difficulty": "HARD",
+   "check": "r^2 = 40.5/72 = 0.5625, so A0 = 72/0.5625 = 128.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "96",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "128",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "144",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "In the xy-plane, the line \\(y=2x+c\\) touches the curve \\(y=x^{2}-6x+11\\) at exactly one point, where c is a constant. What is the value of c?",
+   "difficulty": "HARD",
+   "check": "x^2-8x+(11-c) = 0 has a zero discriminant when 64 = 4(11-c), so c = -5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-5",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "-3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A workshop records the same batch of components in two ways, as \\(5x+2y=k\\) and as \\(15x+6y=48\\), where x and y are the numbers of two kinds of component and k is a constant. Every pair \\((x, y)\\) that satisfies one equation also satisfies the other. What is the value of k?",
+   "difficulty": "HARD",
+   "check": "Dividing the second equation by 3 gives 5x + 2y = 16, so k = 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A polling organisation surveyed 500 randomly selected adults in a city and reported a mean daily commute time of 27.4 minutes, with an associated margin of error of 1.8 minutes at the 95% confidence level. Which of the following is the most appropriate conclusion?",
+   "difficulty": "HARD",
+   "check": "A confidence interval bounds a plausible range for the population mean, not for individuals.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It is plausible that the mean daily commute time of all adults in the city is between 25.6 and 29.2 minutes.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Every adult in the city has a daily commute time between 25.6 and 29.2 minutes.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Exactly 95% of the adults surveyed have a daily commute time between 25.6 and 29.2 minutes.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The mean daily commute time of all adults in the city must be exactly 27.4 minutes.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A quality inspector weighs two batches of bearings. Batch A contains 30 bearings with a mean mass of 52 grams, and batch B contains 20 bearings with a mean mass of 62 grams. What is the mean mass, in grams, of all 50 bearings?",
+   "difficulty": "HARD",
+   "check": "(30(52) + 20(62))/50 = 2,800/50 = 56.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "55",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "56",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "57",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "58",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A foundry casts an alloy in which the ratio of the mass of copper to the mass of zinc is 3 to 5. The foundry has 84 kilograms of copper and 120 kilograms of zinc and no other source of either metal. What is the greatest mass of the alloy, in kilograms, that the foundry can cast?",
+   "difficulty": "HARD",
+   "check": "Copper allows 84(8/3) = 224 kg, zinc allows 120(8/5) = 192 kg; zinc is the limit.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "192",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "204",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "224",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "240",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives a bakery's revenue, in dollars, in each quarter of one year.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Quarter</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Revenue ($)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">First</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18,400</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Second</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21,160</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Third</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19,800</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Fourth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24,150</td></tr></table>Suppose revenue rises from the fourth quarter to the next quarter by the same percent as it rose from the first quarter to the second. What would the next quarter's revenue be, in dollars?",
+   "difficulty": "HARD",
+   "check": "The first-to-second rise is 2,760/18,400 = 15%, and 24,150(1.15) = 27,772.50.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$26,565.00",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$27,772.50",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "$28,175.00",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$29,000.00",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A roof truss is an isosceles triangle whose two equal sides each measure 25 centimetres and whose base measures 14 centimetres. A vertical strut runs from the apex of the truss and meets the base at a right angle. What is the length of the strut, in centimetres?",
+   "difficulty": "HARD",
+   "check": "The strut bisects the base, so its length is sqrt(25^2 - 7^2) = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "22",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "26",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A solid metal cylinder of radius 3 centimetres and height 16 centimetres is melted down and recast, with no loss of metal, as a solid cone of radius 6 centimetres. What is the height of the cone, in centimetres?",
+   "difficulty": "HARD",
+   "check": "Cylinder volume 144 pi = (1/3) pi (36) h, so h = 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A surveyor's plot of land is a right triangle whose two acute corner angles measure \\(x\\)&deg; and \\(y\\)&deg;. The surveyor's notes record that \\(\\sin x^{\\circ}=\\frac{20}{29}\\). What is the value of \\(\\cos y^{\\circ}\\)?",
+   "difficulty": "HARD",
+   "check": "The two acute angles are complementary, so cos y = sin x = 20/29.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{21}{29}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{20}{21}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{29}{20}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{20}{29}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "Volunteers at a food bank pack exactly 100 boxes. A standard box takes 4 minutes to pack and a family box takes 7 minutes, and the volunteers have at most 560 minutes of packing time. What is the greatest number of family boxes the volunteers can pack?",
+   "difficulty": "HARD",
+   "check": "4(100-f) + 7f <= 560 gives 3f <= 160, so f <= 53.3 and f = 53.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "45",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "48",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "53",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A courier's price for a delivery is a fixed booking fee plus a constant charge for each kilometre travelled. A 14-kilometre delivery costs $23.60 and a 22-kilometre delivery costs $32.40. What is the cost, in dollars, of a 35-kilometre delivery?",
+   "difficulty": "HARD",
+   "check": "Rate = 8.80/8 = 1.10 per km; fee = 23.60 - 15.40 = 8.20; 8.20 + 35(1.10) = 46.70.",
+   "correctAnswerFR": "[\"46.70\", \"46.7\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "In a quiz league a team gains 5 points for each correct answer and loses 2 points for each incorrect answer. One team attempted all 40 questions and finished with 137 points. How many questions did that team answer correctly?",
+   "difficulty": "HARD",
+   "check": "5c - 2(40-c) = 137 gives 7c = 217, so c = 31.",
+   "correctAnswerFR": "[\"31\"]"
+  },
+  {
+   "_ref": "AUTHORED/T7-MATH_M2H:C2H-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A grain silo is built as a cylinder of radius 4 metres and height 10 metres, topped by a cone of radius 4 metres and height 3 metres. The total volume of the silo can be written as \\(V\\pi\\) cubic metres. What is the value of V?",
+   "difficulty": "HARD",
+   "check": "160 pi from the cylinder plus 16 pi from the cone gives 176 pi.",
+   "correctAnswerFR": "[\"176\"]"
+  }
+ ]
+}

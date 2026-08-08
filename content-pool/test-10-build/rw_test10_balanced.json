@@ -464,7 +464,7 @@
  {
   "num": "E7",
   "skill": "Command of Evidence",
-  "passage": "Many pterosaurs carried a bony crest on the skull, some of them enormous. Palaeontologist Marta Oyelaran argues that the crest served for display to other members of the species rather than as an aerodynamic rudder.",
+  "passage": "Many pterosaurs carried a bony crest on the skull, and in some species it projected backwards further than the length of the skull itself. Palaeontologist Marta Oyelaran argues that the crest served for display to other members of the species rather than as an aerodynamic rudder for steering in flight.",
   "stem": "Which finding, if true, would most directly support Oyelaran's argument?",
   "choices": [
    "Crest shape varies considerably from one species to another.",
@@ -492,7 +492,7 @@
  {
   "num": "E9",
   "skill": "Command of Evidence",
-  "passage": "A conservator argues that a large bronze figure was cast in a single pour rather than assembled from separately cast limbs, citing the complete absence of visible joins anywhere on its surface.",
+  "passage": "Large bronzes were usually cast in pieces and joined afterwards, since a single pour of that volume is difficult to control. A conservator argues that one particular figure was instead cast in a single pour, citing the complete absence of visible joins anywhere on its surface.",
   "stem": "Which finding, if true, would most directly undermine the conservator's argument?",
   "choices": [
    "The alloy composition of the figure is uniform throughout.",
@@ -593,10 +593,10 @@
   "passage": "Bronze needs tin, and tin is scarce almost everywhere in the eastern Mediterranean. Ingots recovered from a Bronze Age wreck off the Turkish coast have been traced by their trace elements to mines in Central Asia _____ the metal had travelled some three thousand kilometres before it ever reached a smith.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   " ",
-   ": and",
-   "; ",
-   ", "
+   "Central Asia the metal had",
+   "Central Asia: and the metal had",
+   "Central Asia; the metal had",
+   "Central Asia, the metal had"
   ],
   "answer": "C",
   "why": "The blank joins two complete sentences with no coordinating conjunction between them, so the semicolon is the only option that avoids a comma splice."
@@ -607,10 +607,10 @@
   "passage": "A sourdough culture is a community of wild yeasts and bacteria rather than a single organism. Because the balance between those organisms responds to flour, water and room temperature _____ two starters divided from one jar and kept in different kitchens will drift apart in flavour within months.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   "; ",
-   ": ",
-   " and ",
-   ", "
+   "room temperature; two starters divided",
+   "room temperature: two starters divided",
+   "room temperature and two starters divided",
+   "room temperature, two starters divided"
   ],
   "answer": "D",
   "why": "The introductory clause opening with 'Because' is dependent and must be marked off from the main clause by a comma; both the semicolon and the colon require a complete sentence to stand in front of them."
@@ -621,10 +621,10 @@
   "passage": "Rubbish pits tell an excavator more than temples do, because nobody arranges them for posterity. The pit behind the fort's granary produced three things the archaeologists had not expected _____ a child's leather shoe, a wooden writing tablet and the better part of a barrel of oysters.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   ": ",
-   "; ",
-   ", and ",
-   " which are"
+   "not expected: a child's leather",
+   "not expected; a child's leather",
+   "not expected, and a child's leather",
+   "not expected which are a child's leather"
   ],
   "answer": "A",
   "why": "What comes before the blank is a complete sentence announcing 'three things', and the colon is the mark that introduces the list specifying them."
@@ -635,10 +635,10 @@
   "passage": "Russian universities were closed to women in her lifetime, so she was taught privately and then abroad. Sofia Kovalevskaya, the first woman appointed to a full professorship in mathematics in northern Europe _____ won the Bordin Prize in 1888 for her work on the rotation of a rigid body.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   " ",
-   ", ",
-   "; ",
-   ": "
+   "northern Europe won the Bordin",
+   "northern Europe, won the Bordin",
+   "northern Europe; won the Bordin",
+   "northern Europe: won the Bordin"
   ],
   "answer": "B",
   "why": "The appositive beginning 'the first woman appointed...' was opened with a comma and has to be closed with a matching comma before the verb 'won'."
@@ -646,13 +646,13 @@
  {
   "num": "B5",
   "skill": "Boundaries",
-  "passage": "The restored tidal mill fills its pond as the tide floods and grinds as it ebbs _____ and the wheel turns for roughly five hours out of every twelve.",
+  "passage": "The mill stood derelict for sixty years and has been grinding again since 2014. It fills its pond as the tide floods and works the stones as the tide ebbs _____ and the wheel turns for roughly five hours out of every twelve.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   ": ",
-   " ",
-   ", ",
-   "; "
+   "tide ebbs: and the wheel",
+   "tide ebbs and the wheel",
+   "tide ebbs, and the wheel",
+   "tide ebbs; and the wheel"
   ],
   "answer": "C",
   "why": "Two independent clauses joined by the coordinating conjunction 'and' take a comma in front of that conjunction; the semicolon and colon are not used before a coordinating conjunction, and omitting the punctuation altogether leaves the clauses unseparated."
@@ -663,10 +663,10 @@
   "passage": "Volcanic ash settles across an ice sheet within days of an eruption and is then buried by the next winter's snow. Cores drilled at three sites in Greenland returned a series of thin ash layers _____ each of which can be matched to a dated eruption somewhere else in the world.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   "; ",
-   ": ",
-   ". ",
-   ", "
+   "ash layers; each of which",
+   "ash layers: each of which",
+   "ash layers. each of which",
+   "ash layers, each of which"
   ],
   "answer": "D",
   "why": "'each of which' opens a non-essential relative clause, which attaches to the main clause with a comma; the semicolon and the full stop both require an independent clause to follow them, and this one is not independent."
@@ -677,10 +677,10 @@
   "passage": "Aurorae normally stay within a ring drawn around each magnetic pole. When the solar wind is strong enough to compress the Earth's magnetic field on the sunward side _____ they can be seen far to the south of the latitudes where they usually appear.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   ", ",
-   "; ",
-   ": ",
-   " and "
+   "sunward side, they can be",
+   "sunward side; they can be",
+   "sunward side: they can be",
+   "sunward side and they can be"
   ],
   "answer": "A",
   "why": "The sentence opens with a dependent clause introduced by 'When', and a dependent clause placed before the main clause is followed by a comma."
@@ -688,13 +688,13 @@
  {
   "num": "B8",
   "skill": "Boundaries",
-  "passage": "The flight had been sold as a gentle hour over the valley. The balloon rose steadily for forty minutes _____ then the burner went out and the basket dropped nearly a hundred metres before the pilot could relight it.",
+  "passage": "The flight had been sold as a gentle hour over the valley, and for most of it that is what it was. The balloon rose steadily for forty minutes _____ then the burner went out and the basket dropped nearly a hundred metres before the pilot could relight it.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   " ",
-   "; ",
-   ", ",
-   ": "
+   "forty minutes then the burner",
+   "forty minutes; then the burner",
+   "forty minutes, then the burner",
+   "forty minutes: then the burner"
   ],
   "answer": "B",
   "why": "'then' is an adverb rather than a coordinating conjunction, so joining these two complete sentences with nothing but a comma would produce a splice."
@@ -705,10 +705,10 @@
   "passage": "Timbuktu stood where the desert trade met the river trade, and its markets handled both. An inventory drawn up in 1591 lists the goods on which the town's wealth rested _____ salt cut from the desert mines, gold carried up from the south, and books copied by hand in the town itself.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   ", but ",
-   " and",
-   ": ",
-   "; "
+   "wealth rested, but salt cut from",
+   "wealth rested and salt cut from",
+   "wealth rested: salt cut from",
+   "wealth rested; salt cut from"
   ],
   "answer": "C",
   "why": "The words before the blank form a complete sentence, and the colon introduces the list that specifies the goods it refers to."
@@ -719,10 +719,10 @@
   "passage": "Documents of this period are rarely dated, so scholars date them from their contents instead. Although the papyrus fragment carries no date of its own _____ the tax officials named on the back of it held office for only a few years, which fixes the document to within a decade.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   "; ",
-   ": ",
-   " and ",
-   ", "
+   "its own; the tax officials",
+   "its own: the tax officials",
+   "its own and the tax officials",
+   "its own, the tax officials"
   ],
   "answer": "D",
   "why": "'Although' opens a dependent clause, and a dependent clause standing before the main clause is separated from it by a comma."
@@ -730,13 +730,13 @@
  {
   "num": "B11",
   "skill": "Boundaries",
-  "passage": "This is the only lock on the canal still worked entirely by hand. The keeper opened the upper paddles a little before dawn _____ the barge was through the lock and moored below the town by noon.",
+  "passage": "This is the only lock on the canal still worked entirely by hand, and the keeper lives in the cottage built beside it. He opened the upper paddles a little before dawn _____ the barge was through the lock and moored below the town by noon.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   "; ",
-   ", ",
-   ": ",
-   " "
+   "before dawn; the barge was",
+   "before dawn, the barge was",
+   "before dawn: the barge was",
+   "before dawn the barge was"
   ],
   "answer": "A",
   "why": "Both halves are complete sentences and no conjunction joins them, so the semicolon is required; the colon would announce that the second half explains the first, whereas here it simply reports what happened next."
@@ -744,13 +744,13 @@
  {
   "num": "B12",
   "skill": "Boundaries",
-  "passage": "Saturn's outermost ring is fed from an unexpected direction. Enceladus, a moon barely five hundred kilometres across _____ vents plumes of water vapour from fractures near its south pole, and a part of that vapour freezes into the ring.",
+  "passage": "Saturn's outermost ring is faint, enormously wide, and fed from a source outside the ring system altogether. Enceladus, a moon barely five hundred kilometres across _____ vents plumes of water vapour from fractures near its south pole, and a part of that vapour freezes into the ring.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
-   " ",
-   ", ",
-   "; ",
-   ": "
+   "kilometres across vents plumes of",
+   "kilometres across, vents plumes of",
+   "kilometres across; vents plumes of",
+   "kilometres across: vents plumes of"
   ],
   "answer": "B",
   "why": "The appositive describing the moon's size opened with a comma, so it must be closed with a comma before the verb 'vents'."
@@ -758,7 +758,7 @@
  {
   "num": "F1",
   "skill": "Form, Structure, and Sense",
-  "passage": "The pottery closed in 1924 and its wares are now identified by eye alone. Neither the glaze recipe nor the firing schedules _____ recorded anywhere in the workshop notebooks that survive.",
+  "passage": "The pottery closed in 1924, and because no catalogue of its output was ever printed, its wares are now identified by eye alone. Neither the glaze recipe nor the firing schedules _____ recorded anywhere in the workshop notebooks that survive.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "is",
@@ -772,7 +772,7 @@
  {
   "num": "F2",
   "skill": "Form, Structure, and Sense",
-  "passage": "Pressed specimens do not photograph well without lighting chosen for the purpose. The herbarium's collection of ferns, together with its several thousand lichen specimens, _____ digitised over the winter, sheet by sheet.",
+  "passage": "Pressed specimens do not photograph well without lighting chosen for the purpose, and the cabinets holding them are opened as seldom as the curators can manage. The herbarium's collection of ferns, together with its several thousand lichen specimens, _____ digitised over the winter, sheet by sheet.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "have been",
@@ -786,7 +786,7 @@
  {
   "num": "F3",
   "skill": "Form, Structure, and Sense",
-  "passage": "Pumping ran for six weeks before anyone was allowed underground again. By the time the inspectors reached the tunnel in March, the water that flooded it in January _____ to a depth of barely two metres.",
+  "passage": "Pumping ran for six weeks before anyone was allowed underground again, and the shaft was still dripping when the survey party went down. By the time the inspectors reached the tunnel in March, the water that flooded it in January _____ to a depth of barely two metres.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "had fallen",
@@ -800,7 +800,7 @@
  {
   "num": "F4",
   "skill": "Form, Structure, and Sense",
-  "passage": "The telescope's mirror is not a single piece of glass but a mosaic of hexagons. Each of the observatory's four mirror segments _____ its own set of actuators, which adjust the surface as the instrument tilts.",
+  "passage": "The telescope's mirror is not a single piece of glass but a mosaic of hexagons, each polished separately and aligned only once it is in place. Each of the observatory's four mirror segments _____ its own set of actuators, which adjust the surface as the instrument tilts.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "have",
@@ -814,7 +814,7 @@
  {
   "num": "F5",
   "skill": "Form, Structure, and Sense",
-  "passage": "The inquiry ran for two years and its report is blunt. The inspectors faulted the shipyard for using undocumented welds and for _____ the results of the tests it did carry out.",
+  "passage": "The inquiry ran for two years, took evidence from more than ninety witnesses, and produced a report that is unusually blunt. The inspectors faulted the shipyard for using undocumented welds and for _____ the results of the tests it did carry out.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "having misreport",
@@ -828,7 +828,7 @@
  {
   "num": "F6",
   "skill": "Form, Structure, and Sense",
-  "passage": "The bell tower at the corner of the square looks untouched from the piazza below. Having been rebuilt twice since the earthquake of 1908, the campanile _____ almost nothing of its original fabric above the foundations.",
+  "passage": "The bell tower at the corner of the square looks untouched from the piazza below, and the guidebooks still describe it as medieval. Having been rebuilt twice since the earthquake of 1908, the campanile _____ almost nothing of its original fabric above the foundations.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "to retain",
@@ -842,7 +842,7 @@
  {
   "num": "F7",
   "skill": "Form, Structure, and Sense",
-  "passage": "The ridge splits the island into a wet side and a dry one. The annual rainfall recorded at the station on the windward slope is nearly three times _____ recorded at the station on the leeward side.",
+  "passage": "The ridge running down the spine of the island splits it into a wet side and a dry one, and the two halves are farmed quite differently as a result. The annual rainfall recorded at the station on the windward slope is nearly three times _____ recorded at the station on the leeward side.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "that",
@@ -856,7 +856,7 @@
  {
   "num": "F8",
   "skill": "Form, Structure, and Sense",
-  "passage": "Work on the wreck is done in pairs at a depth of forty metres. The surface team monitors all four _____ air supply continuously, and any diver whose gauge falls below a set pressure is called up at once.",
+  "passage": "Work on the wreck is done in pairs at a depth of forty metres, in water cold enough to limit a single dive to twenty minutes. The surface team monitors all four _____ air supply continuously, and any diver whose gauge falls below a set pressure is called up at once.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "diver's",
@@ -870,7 +870,7 @@
  {
   "num": "F9",
   "skill": "Form, Structure, and Sense",
-  "passage": "The heating pipes beneath the nave were replaced in 2011, and the work turned into an excavation. Beneath the cathedral floor _____ the foundations of an earlier church, their outline cutting clean across the modern aisles.",
+  "passage": "The heating pipes beneath the nave were replaced in 2011, and what had been booked as a fortnight of plumbing turned into a season of archaeology. Beneath the cathedral floor _____ the foundations of an earlier church, their outline cutting clean across the modern aisles.",
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": [
    "has lain",
@@ -898,7 +898,7 @@
  {
   "num": "T2",
   "skill": "Transitions",
-  "passage": "The eruption of Mount Tambora in 1815 threw enough ash and sulphur into the stratosphere to dim sunlight across the northern hemisphere. _____ farmers in New England recorded frost in every month of the following summer.",
+  "passage": "The eruption of Mount Tambora in 1815 was the largest anywhere in the past thousand years, and it threw enough ash and sulphur into the stratosphere to dim sunlight across the whole of the northern hemisphere. _____ farmers in New England recorded frost in every month of the following summer.",
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": [
    "Consequently,",
@@ -926,7 +926,7 @@
  {
   "num": "T4",
   "skill": "Transitions",
-  "passage": "Resurfacing the ring road cut the number of reported potholes by four fifths within a year. _____ complaints from drivers about the condition of the road rose over the same period.",
+  "passage": "Resurfacing the ring road took an entire summer and cut the number of reported potholes by four fifths within a year of the work being finished. _____ complaints from drivers about the condition of the road rose over the same period.",
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": [
    "That is,",
@@ -954,7 +954,7 @@
  {
   "num": "T6",
   "skill": "Transitions",
-  "passage": "A SQUID magnetometer registers magnetic fields a billion times fainter than the Earth's own. _____ it can pick up the field generated by the current running along a single human nerve.",
+  "passage": "A SQUID magnetometer exploits the way current behaves across a pair of junctions in a superconducting ring, and it registers magnetic fields a billion times fainter than the Earth's own. _____ it can pick up the field generated by the current running along a single human nerve.",
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": [
    "For example,",
@@ -968,7 +968,7 @@
  {
   "num": "T7",
   "skill": "Transitions",
-  "passage": "The first submarine telegraph cables had to lie on the seabed for years without their insulation cracking or dissolving. _____ engineers wrapped the copper core in gutta-percha, a latex that stays flexible in cold salt water.",
+  "passage": "The first submarine telegraph cables had to lie on the seabed for years at a stretch, under pressure and in the dark, without their insulation cracking or dissolving away. _____ engineers wrapped the copper core in gutta-percha, a latex that stays flexible in cold salt water.",
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": [
    "In summary,",
@@ -982,7 +982,7 @@
  {
   "num": "T8",
   "skill": "Transitions",
-  "passage": "Pollen taken from inside a Bronze Age burial mound comes almost entirely from meadowsweet and other plants that flower in high summer. _____ the burial was made somewhere between June and August.",
+  "passage": "Pollen survives in buried soil for millennia and identifies the plants that were in flower when the soil was sealed. Pollen taken from inside a Bronze Age burial mound comes almost entirely from meadowsweet and other plants that flower in high summer. _____ the burial was made somewhere between June and August.",
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": [
    "Admittedly,",

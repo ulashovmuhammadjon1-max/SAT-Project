@@ -299,9 +299,9 @@ MODULE_2_EASY = [
       check="The two angles are supplementary: 180 - 118 = 62."),
 
  dict(n="B2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A triangular flag has a base of 30 centimetres and a height of 16 centimetres. What "
-            "is the area of the flag, in square centimetres?"),
-      answers=["240"], check="(30)(16)/2 = 240."),
+      stem=("A gift box in the shape of a rectangular prism measures 12 centimetres by 5 "
+            "centimetres by 4 centimetres. How many cubic centimetres does the box hold?"),
+      answers=["240"], check="12 times 5 times 4 = 240."),
 
  dict(n="B2E-21", domain="GT", skill="GT-AV", type="FR",
       stem=("A rectangular swimming pool measures 25 metres by 12 metres. What is the perimeter "

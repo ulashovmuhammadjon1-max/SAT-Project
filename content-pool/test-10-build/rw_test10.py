@@ -541,9 +541,10 @@ QUESTIONS = [
      "explanation could claim just as easily."),
 
  coe("E7",
-     "Many pterosaurs carried a bony crest on the skull, some of them enormous. Palaeontologist "
-     "Marta Oyelaran argues that the crest served for display to other members of the species "
-     "rather than as an aerodynamic rudder.",
+     "Many pterosaurs carried a bony crest on the skull, and in some species it projected backwards "
+     "further than the length of the skull itself. Palaeontologist Marta Oyelaran argues that the "
+     "crest served for display to other members of the species rather than as an aerodynamic "
+     "rudder for steering in flight.",
      "Which finding, if true, would most directly support Oyelaran's argument?",
      ["Crests are found only in adults, and are far larger in one sex than in the other.",
       "Crested and uncrested pterosaur species occupied the same habitats.",
@@ -571,9 +572,9 @@ QUESTIONS = [
      "separate the two accounts, since either cause could have acted gradually."),
 
  coe("E9",
-     "A conservator argues that a large bronze figure was cast in a single pour rather than "
-     "assembled from separately cast limbs, citing the complete absence of visible joins anywhere "
-     "on its surface.",
+     "Large bronzes were usually cast in pieces and joined afterwards, since a single pour of that "
+     "volume is difficult to control. A conservator argues that one particular figure was instead "
+     "cast in a single pour, citing the complete absence of visible joins anywhere on its surface.",
      "Which finding, if true, would most directly undermine the conservator's argument?",
      ["X-rays of comparable figures show that joins between separately cast parts were routinely filed down and disguised.",
       "The alloy composition of the figure is uniform throughout.",
@@ -715,8 +716,9 @@ QUESTIONS = [
      "be closed with a matching comma before the verb 'won'."),
 
  bnd("B5",
-     "The restored tidal mill fills its pond as the tide floods and grinds as it ebbs _____ and "
-     "the wheel turns for roughly five hours out of every twelve.",
+     "The mill stood derelict for sixty years and has been grinding again since 2014. It fills its "
+     "pond as the tide floods and works the stones as the tide ebbs _____ and the wheel turns for "
+     "roughly five hours out of every twelve.",
      [", ", "; ", ": ", " "], "A",
      "Two independent clauses joined by the coordinating conjunction 'and' take a comma in front "
      "of that conjunction; the semicolon and colon are not used before a coordinating "
@@ -741,7 +743,8 @@ QUESTIONS = [
      "placed before the main clause is followed by a comma."),
 
  bnd("B8",
-     "The flight had been sold as a gentle hour over the valley. The balloon rose steadily for "
+     "The flight had been sold as a gentle hour over the valley, and for most of it that is what it "
+     "was. The balloon rose steadily for "
      "forty minutes _____ then the burner went out and the basket dropped nearly a hundred metres "
      "before the pilot could relight it.",
      ["; ", ", ", ": ", " "], "A",
@@ -767,7 +770,8 @@ QUESTIONS = [
      "is separated from it by a comma."),
 
  bnd("B11",
-     "This is the only lock on the canal still worked entirely by hand. The keeper opened the "
+     "This is the only lock on the canal still worked entirely by hand, and the keeper lives in the "
+     "cottage built beside it. He opened the "
      "upper paddles a little before dawn _____ the barge was through the lock and moored below the "
      "town by noon.",
      ["; ", ", ", ": ", " "], "A",
@@ -776,7 +780,8 @@ QUESTIONS = [
      "simply reports what happened next."),
 
  bnd("B12",
-     "Saturn's outermost ring is fed from an unexpected direction. Enceladus, a moon barely five "
+     "Saturn's outermost ring is faint, enormously wide, and fed from a source outside the ring "
+     "system altogether. Enceladus, a moon barely five "
      "hundred kilometres across _____ vents plumes of water vapour from fractures near its south "
      "pole, and a part of that vapour freezes into the ring.",
      [", ", "; ", ": ", " "], "A",
@@ -785,7 +790,8 @@ QUESTIONS = [
 
  # ------------------------------------------------ Form, Structure, and Sense (9)
  fss("F1",
-     "The pottery closed in 1924 and its wares are now identified by eye alone. Neither the glaze "
+     "The pottery closed in 1924, and because no catalogue of its output was ever printed, its "
+     "wares are now identified by eye alone. Neither the glaze "
      "recipe nor the firing schedules _____ recorded anywhere in the workshop notebooks that "
      "survive.",
      ["was", "were", "has been", "is"], "B",
@@ -793,7 +799,8 @@ QUESTIONS = [
      "schedules' is plural."),
 
  fss("F2",
-     "Pressed specimens do not photograph well without lighting chosen for the purpose. The "
+     "Pressed specimens do not photograph well without lighting chosen for the purpose, and the "
+     "cabinets holding them are opened as seldom as the curators can manage. The "
      "herbarium's collection of ferns, together with its several thousand lichen specimens, _____ "
      "digitised over the winter, sheet by sheet.",
      ["are", "was", "have been", "were"], "B",
@@ -801,7 +808,8 @@ QUESTIONS = [
      "several thousand lichen specimens' does not make a singular subject plural."),
 
  fss("F3",
-     "Pumping ran for six weeks before anyone was allowed underground again. By the time the "
+     "Pumping ran for six weeks before anyone was allowed underground again, and the shaft was "
+     "still dripping when the survey party went down. By the time the "
      "inspectors reached the tunnel in March, the water that flooded it in January _____ to a "
      "depth of barely two metres.",
      ["falls", "will fall", "had fallen", "is falling"], "C",
@@ -809,7 +817,8 @@ QUESTIONS = [
      "itself in the past, so the past perfect is what places one past event before another."),
 
  fss("F4",
-     "The telescope's mirror is not a single piece of glass but a mosaic of hexagons. Each of the "
+     "The telescope's mirror is not a single piece of glass but a mosaic of hexagons, each polished "
+     "separately and aligned only once it is in place. Each of the "
      "observatory's four mirror segments _____ its own set of actuators, which adjust the surface "
      "as the instrument tilts.",
      ["have", "has", "having", "were having"], "B",
@@ -817,14 +826,16 @@ QUESTIONS = [
      "number of the subject."),
 
  fss("F5",
-     "The inquiry ran for two years and its report is blunt. The inspectors faulted the shipyard "
+     "The inquiry ran for two years, took evidence from more than ninety witnesses, and produced a "
+     "report that is unusually blunt. The inspectors faulted the shipyard "
      "for using undocumented welds and for _____ the results of the tests it did carry out.",
      ["misreporting", "it misreported", "having misreport", "to misreport"], "A",
      "The two items joined by 'and' both follow the preposition 'for', so 'for using' requires a "
      "matching gerund; a finite clause or an infinitive breaks the parallel structure."),
 
  fss("F6",
-     "The bell tower at the corner of the square looks untouched from the piazza below. Having "
+     "The bell tower at the corner of the square looks untouched from the piazza below, and the "
+     "guidebooks still describe it as medieval. Having "
      "been rebuilt twice since the earthquake of 1908, the campanile _____ almost nothing of its "
      "original fabric above the foundations.",
      ["retaining", "retains", "to retain", "having retained"], "B",
@@ -833,7 +844,8 @@ QUESTIONS = [
      "one."),
 
  fss("F7",
-     "The ridge splits the island into a wet side and a dry one. The annual rainfall recorded at "
+     "The ridge running down the spine of the island splits it into a wet side and a dry one, and "
+     "the two halves are farmed quite differently as a result. The annual rainfall recorded at "
      "the station on the windward slope is nearly three times _____ recorded at the station on the "
      "leeward side.",
      ["that", "those", "it", "which"], "A",
@@ -841,7 +853,8 @@ QUESTIONS = [
      "the plural form would need a plural antecedent and there is none in the sentence."),
 
  fss("F8",
-     "Work on the wreck is done in pairs at a depth of forty metres. The surface team monitors all "
+     "Work on the wreck is done in pairs at a depth of forty metres, in water cold enough to limit "
+     "a single dive to twenty minutes. The surface team monitors all "
      "four _____ air supply continuously, and any diver whose gauge falls below a set pressure is "
      "called up at once.",
      ["divers", "diver's", "divers'", "divers's"], "C",
@@ -850,8 +863,9 @@ QUESTIONS = [
      "supply to one diver only."),
 
  fss("F9",
-     "The heating pipes beneath the nave were replaced in 2011, and the work turned into an "
-     "excavation. Beneath the cathedral floor _____ the foundations of an earlier church, their "
+     "The heating pipes beneath the nave were replaced in 2011, and what had been booked as a "
+     "fortnight of plumbing turned into a season of archaeology. Beneath the cathedral floor "
+     "_____ the foundations of an earlier church, their "
      "outline cutting clean across the modern aisles.",
      ["lies", "lie", "lying", "has lain"], "B",
      "The subject follows the verb in this inverted sentence, and that subject, 'the "
@@ -867,8 +881,9 @@ QUESTIONS = [
      "contrast rather than a consequence."),
 
  trn("T2",
-     "The eruption of Mount Tambora in 1815 threw enough ash and sulphur into the stratosphere to "
-     "dim sunlight across the northern hemisphere. _____ farmers in New England recorded frost in "
+     "The eruption of Mount Tambora in 1815 was the largest anywhere in the past thousand years, "
+     "and it threw enough ash and sulphur into the stratosphere to dim sunlight across the whole "
+     "of the northern hemisphere. _____ farmers in New England recorded frost in "
      "every month of the following summer.",
      ["Nevertheless,", "Consequently,", "By contrast,", "Similarly,"], "B",
      "The frosts follow from the dimming of sunlight described in the first sentence, which is a "
@@ -883,7 +898,8 @@ QUESTIONS = [
      "organism, so the transition must signal comparison."),
 
  trn("T4",
-     "Resurfacing the ring road cut the number of reported potholes by four fifths within a year. "
+     "Resurfacing the ring road took an entire summer and cut the number of reported potholes by "
+     "four fifths within a year of the work being finished. "
      "_____ complaints from drivers about the condition of the road rose over the same period.",
      ["Accordingly,", "Nonetheless,", "Indeed,", "That is,"], "B",
      "Rising complaints are the opposite of what far fewer potholes would lead one to expect, so "
@@ -898,22 +914,25 @@ QUESTIONS = [
      "first sentence, so a contrastive transition is what is needed."),
 
  trn("T6",
-     "A SQUID magnetometer registers magnetic fields a billion times fainter than the Earth's own. "
+     "A SQUID magnetometer exploits the way current behaves across a pair of junctions in a superconducting "
+     "ring, and it registers magnetic fields a billion times fainter than the Earth's own. "
      "_____ it can pick up the field generated by the current running along a single human nerve.",
      ["Nevertheless,", "For example,", "In contrast,", "Instead,"], "B",
      "The nerve measurement is an instance of the sensitivity claimed in the first sentence, which "
      "calls for an exemplifying transition."),
 
  trn("T7",
-     "The first submarine telegraph cables had to lie on the seabed for years without their "
-     "insulation cracking or dissolving. _____ engineers wrapped the copper core in gutta-percha, "
+     "The first submarine telegraph cables had to lie on the seabed for years at a stretch, under "
+     "pressure and in the dark, without their insulation cracking or dissolving away. _____ "
+     "engineers wrapped the copper core in gutta-percha, "
      "a latex that stays flexible in cold salt water.",
      ["For this reason,", "Even so,", "By comparison,", "In summary,"], "A",
      "The choice of gutta-percha follows directly from the requirement stated before it, so the "
      "transition must express cause."),
 
  trn("T8",
-     "Pollen taken from inside a Bronze Age burial mound comes almost entirely from meadowsweet "
+     "Pollen survives in buried soil for millennia and identifies the plants that were in flower when "
+     "the soil was sealed. Pollen taken from inside a Bronze Age burial mound comes almost entirely from meadowsweet "
      "and other plants that flower in high summer. _____ the burial was made somewhere between "
      "June and August.",
      ["Conversely,", "Thus,", "Meanwhile,", "Admittedly,"], "B",
