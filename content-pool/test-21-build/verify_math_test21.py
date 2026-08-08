@@ -204,11 +204,16 @@ def h2h_08():
 
 
 def h2h_09():
-    hh, jj = symbols("hh jj")
-    diffpoly = expand(2 * x ** 2 - 12 * x + 23 - (2 * (x - hh) ** 2 + jj))
-    sol = solve([Eq(cf, 0) for cf in diffpoly.as_poly(x).all_coeffs()],
-                [hh, jj], dict=True)[0]
-    return sol[hh] + sol[jj]
+    kk = symbols("kk")
+    left = (4 * x ** 2 + 5 * x - 9) / (x + 2)
+    right = 4 * x - 3 + kk / (x + 2)
+    return solve(Eq(cancel(left - right), 0), kk)[0]
+
+
+def h2h_12():
+    av, bv = symbols("av bv", positive=True)
+    sol = solve(Eq(av / bv, Rational(5, 3)), av)[0]
+    return simplify((2 * sol + bv) / bv)
 
 
 def h2h_10():
@@ -286,7 +291,7 @@ DERIVE = {
  "H2E-09": lambda: expand(x ** 2 + 9 * x + 20),
  "H2E-10": h2e_10,
  "H2E-11": h2e_11,
- "H2E-12": lambda: Rational(36, 9),
+ "H2E-12": lambda: (x ** 2 - 5 * x).subs(x, -3),
  "H2E-13": lambda: simplify(XP ** 9 / XP ** 4),
  "H2E-14": lambda: Rational(78, 6),
  "H2E-15": lambda: Rational(2, 5) * 140,
@@ -294,8 +299,8 @@ DERIVE = {
  "H2E-17": h2e_17,
  "H2E-18": lambda: Rational(18, 45),
  "H2E-19": h2e_19,
- "H2E-20": lambda: pi * 4 ** 2 / 2,
- "H2E-21": lambda: Rational(1, 2) * 26 * 9,
+ "H2E-20": lambda: Rational(1, 3) * 12 ** 2 * 10,
+ "H2E-21": lambda: Rational(1, 2) * 8 * 15 * 40,
  "H2E-22": h2e_22,
 
  "H2H-01": h2h_01,
@@ -309,7 +314,7 @@ DERIVE = {
  "H2H-09": h2h_09,
  "H2H-10": h2h_10,
  "H2H-11": h2h_11,
- "H2H-12": lambda: together(3 / XP + 2 / (XP + 1)),
+ "H2H-12": h2h_12,
  "H2H-13": h2h_13,
  "H2H-14": h2h_14,
  "H2H-15": lambda: Rational(84, 84 + 96 + 60),

@@ -83,7 +83,7 @@ def load_rw_pool():
     pool = defaultdict(list)
     for q in rows:
         item = dict(q)
-        item["_ref"] = f"AUTHORED-T18:{q['num']}"
+        item["_ref"] = f"AUTHORED-T20:{q['num']}"
         pool[q["skill"]].append(item)
     for block in pool:
         random.shuffle(pool[block])

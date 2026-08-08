@@ -375,10 +375,11 @@ MODULE_2_EASY = [
       check="84/12 = 7."),
 
  dict(n="H2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("The gate to a hurdle maker's yard is a semicircle of radius 4 metres. The area of the "
-            "gate is \\(k\\pi\\) square metres. What is the value of k?"),
+      stem=("A hurdle maker's yard gate is a semicircle whose straight edge is 8 metres long. The "
+            "area of the gate is \\(k\\pi\\) square metres. What is the value of k?"),
       answers=["8"],
-      check="A whole circle of radius 4 has area 16 pi, and half of that is 8 pi."),
+      check="The straight edge is the diameter, so the radius is 4, a whole circle of radius 4 has "
+            "area 16 pi, and half of that is 8 pi."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("In a right triangle set out to square a lime kiln's flue, the side opposite angle A is "

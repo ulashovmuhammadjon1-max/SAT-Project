@@ -288,14 +288,14 @@ MODULE_2_EASY = [
  dict(n="H2E-11", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A grinder's design equation is \\((n-7)(n+2)=0\\), where n is a positive number of "
             "grinding passes. What is the value of n?"),
-      choices=["2", "5", "7", "9"], correct="C",
+      choices=["2", "7", "9", "14"], correct="B",
       check="The solutions are 7 and -2, and only 7 is positive."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("A spectacle maker's power rule is the function g defined by \\(g(x)=\\frac{36}{x}\\), "
-            "where x is a focal length in centimetres. What is the value of \\(g(9)\\)?"),
-      choices=["\\(\\frac{1}{4}\\)", "2", "3", "4"], correct="D",
-      check="36 divided by 9 is 4."),
+      stem=("A spring maker's deflection model is the function f defined by "
+            "\\(f(x)=x^{2}-5x\\). What is the value of \\(f(-3)\\)?"),
+      choices=["-24", "-6", "6", "24"], correct="D",
+      check="(-3) squared is 9, and 9 - 5(-3) = 9 + 15 = 24."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("An optician writes a magnification ratio as \\(\\frac{x^{9}}{x^{4}}\\), where "
@@ -349,16 +349,18 @@ MODULE_2_EASY = [
       check="The midpoint is (6, -2), and 6 + (-2) = 4."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("The shutter opening of an observatory dome is a semicircle of radius 4 metres. What is "
-            "the area of this opening, in square metres?"),
-      choices=["\\(8\\pi\\)", "\\(16\\pi\\)", "\\(32\\pi\\)", "\\(64\\pi\\)"], correct="A",
-      check="Half of pi times 4 squared is 8 pi."),
+      stem=("An observatory pier is finished with a stone cap in the shape of a pyramid whose "
+            "square base is 12 centimetres on a side and whose height is 10 centimetres. What is "
+            "the volume of the cap, in cubic centimetres?"),
+      choices=["160", "400", "480", "1,440"], correct="C",
+      check="A third of 12 times 12 times 10 is 480."),
 
  dict(n="H2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("A lens-grinding template is a triangle with a base of 26 centimetres and a height of 9 "
-            "centimetres. What is the area of this template, in square centimetres?"),
-      answers=["117"],
-      check="Half of 26 times 9 is 117."),
+      stem=("A plate-drying rack rests on a solid block in the shape of a prism 40 centimetres "
+            "long whose cross-section is a right triangle with legs of 8 centimetres and 15 "
+            "centimetres. What is the volume of the block, in cubic centimetres?"),
+      answers=["2400"],
+      check="The triangular face has area 60, and 60 times 40 is 2,400."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("A mounting bracket is a right triangle ABC with its right angle at C. In this bracket "
@@ -409,8 +411,9 @@ MODULE_2_HARD = [
       check="18 over 6 gives a slope of 3, and -2 + 3(x - 3) = 40 gives x = 17."),
 
  dict(n="H2H-06", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A darkroom thermometer's tolerance is described by \\(\\left|2x-9\\right|=13\\), an "
-            "equation with two solutions. What is the sum of those two solutions?"),
+      stem=("A darkroom thermometer's tolerance is described by "
+            "\\(\\left|2x-9\\right|=13\\). What is the sum of the values of x that satisfy this "
+            "equation?"),
       choices=["4", "9", "13", "22"], correct="B",
       check="The solutions are 11 and -2, which add to 9."),
 
@@ -429,10 +432,11 @@ MODULE_2_HARD = [
       check="60/(a+3) = 5 gives a = 9, and f(3) = 60/6 = 10."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A spectacle grinder's curvature model \\(2x^{2}-12x+23\\) is rewritten in the form "
-            "\\(2(x-h)^{2}+j\\), where h and j are constants. What is the value of \\(h+j\\)?"),
-      choices=["5", "8", "11", "14"], correct="B",
-      check="Completing the square gives 2(x-3)^2 + 5, so h = 3 and j = 5."),
+      stem=("A spectacle grinder writes \\(\\frac{4x^{2}+5x-9}{x+2}\\) in the form "
+            "\\(4x-3+\\frac{k}{x+2}\\), where k is a constant and \\(x\\ne -2\\). What is the "
+            "value of k?"),
+      choices=["-6", "-3", "3", "6"], correct="B",
+      check="(x+2)(4x-3) = 4x^2 + 5x - 6, which is 3 more than the numerator, so k = -3."),
 
  dict(n="H2H-10", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A telescope maker's focal relation is \\(\\frac{18}{x}+x=11\\), an equation with two "
@@ -447,12 +451,11 @@ MODULE_2_HARD = [
       check="In base 2 the left side is 2 raised to x+6, so x + 6 = 5 and x = -1."),
 
  dict(n="H2H-12", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A spring maker writes the compliance of a leaf spring as "
-            "\\(\\frac{3}{x}+\\frac{2}{x+1}\\), for \\(x>0\\). Which expression is equivalent to "
-            "this compliance?"),
-      choices=["\\(\\frac{5x+3}{x^{2}+x}\\)", "\\(\\frac{6}{x^{2}+x}\\)",
-               "\\(\\frac{5x+3}{2x+1}\\)", "\\(\\frac{5}{2x+1}\\)"], correct="A",
-      check="Over the common denominator x(x+1) the numerator is 3(x+1) + 2x = 5x + 3."),
+      stem=("The two leaf thicknesses a and b of a carriage spring satisfy "
+            "\\(\\frac{a}{b}=\\frac{5}{3}\\). What is the value of \\(\\frac{2a+b}{b}\\)?"),
+      choices=["\\(\\frac{8}{3}\\)", "\\(\\frac{10}{3}\\)", "\\(\\frac{13}{5}\\)",
+               "\\(\\frac{13}{3}\\)"], correct="D",
+      check="a = 5b/3, so (2a+b)/b = 10/3 + 1 = 13/3."),
 
  dict(n="H2H-13", domain="ADV", skill="ADV-NF", type="MC",
       stem=("An observatory dome's profile is modelled by \\(f(x)=x^{2}-8x+21\\). Exactly one value "
@@ -514,8 +517,8 @@ MODULE_2_HARD = [
       check="Two pi r squared equals 72 pi gives r = 6, and two thirds of pi times 216 is 144 pi."),
 
  dict(n="H2H-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle ABC the right angle is at B, and \\(\\cos A=\\frac{7}{25}\\). What "
-            "is the value of \\(\\sin C\\)?"),
+      stem=("A telescope's tube ring is cut as right triangle ABC, whose right angle is at B. In "
+            "this ring \\(\\cos A=\\frac{7}{25}\\). What is the value of \\(\\sin C\\)?"),
       choices=["\\(\\frac{7}{25}\\)", "\\(\\frac{7}{24}\\)", "\\(\\frac{24}{25}\\)",
                "\\(\\frac{25}{7}\\)"], correct="A",
       check="Angles A and C are complementary, so the sine of C equals the cosine of A."),
