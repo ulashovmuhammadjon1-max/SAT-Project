@@ -1,0 +1,1160 @@
+{
+ "MATH_M1": [
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "How many distinct real solutions does the equation \\(3x^{2}-12x+12=0\\) have?",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "B",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H12",
+   "verified": "the discriminant is 144 - 4(3)(12) = 0, so there is one repeated real root",
+   "order": 1
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A population of bacteria decreases by 15% each hour. At time t=0 hours the population is 8,000. Which function models the population P after t hours?",
+   "choices": [
+    "\\(P(t)=8{,}000(0.15)^{t}\\)",
+    "\\(P(t)=8{,}000-0.15t\\)",
+    "\\(P(t)=8{,}000(1.15)^{t}\\)",
+    "\\(P(t)=8{,}000(0.85)^{t}\\)"
+   ],
+   "correct": "D",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED:H8",
+   "verified": "a 15% decrease per hour multiplies by 1 - 0.15 = 0.85 each hour",
+   "order": 2
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "6x+2y=10<br/>9x+cy=4<br/>In the given system of equations, c is a constant. If the system has no solution, what is the value of c?",
+   "choices": [
+    "\\(\\frac{4}{3}\\)",
+    "3",
+    "6",
+    "12"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H1",
+   "verified": "no solution means the lines are parallel but distinct: 9/6 = c/2 gives c = 3, and 4/10 differs from 9/6",
+   "order": 3
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In a group of 30 students, the 18 students in the morning session scored a mean of 84 points on a test and the 12 students in the afternoon session scored a mean of 74 points. What is the mean score, in points, of all 30 students?",
+   "choices": [
+    "78",
+    "79",
+    "82",
+    "80"
+   ],
+   "correct": "D",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED:H14",
+   "verified": "(18*84 + 12*74)/30 = 2400/30 = 80",
+   "order": 4
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In right triangle XYZ, angle Z is a right angle. If \\(\\sin X=0.6\\), what is the value of \\(\\cos Y\\)?",
+   "choices": [
+    "0.4",
+    "0.6",
+    "0.8",
+    "1.6"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "sourceRef": "AUTHORED:H20",
+   "verified": "angles X and Y are complementary, and the cosine of an angle equals the sine of its complement",
+   "order": 5
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_BUS The table shows the number of passengers for several charter buses along with the number of cars in each bus&rsquo;s escort. Which equation best represents this linear relationship, where c is the number of cars and p is the number of passengers?",
+   "sourceRef": "march_intb_test1_math_m2:4",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "verified": "sympy: slope=(216-111)/(6-3)=35; p=35c+6 -> 35c-p=-6. Matches official key (A) and source's circled selection (A).",
+   "choices": [
+    "35c - p = -6",
+    "35c - p = 6",
+    "35c + p = -6",
+    "p - 35c = 6"
+   ],
+   "correct": "A",
+   "order": 6,
+   "table": {
+    "headers": [
+     "Number of cars, c",
+     "Number of passengers, p"
+    ],
+    "rows": [
+     [
+      "3",
+      "111"
+     ],
+     [
+      "6",
+      "216"
+     ],
+     [
+      "10",
+      "356"
+     ]
+    ]
+   },
+   "tableNote": "data moved out of the stem prose into a real table; no numbers changed"
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}-100=0\\]How many distinct real solutions does the given equation have?",
+   "sourceRef": "octusc_supplement:M2-Q2",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "x = 10 and x = -10, two distinct real solutions",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "C",
+   "order": 7
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has a radius of 10 inches. What is the length, in inches, of an arc intercepted by a central angle measuring 72&deg;?",
+   "choices": [
+    "\\(2\\pi\\)",
+    "\\(4\\pi\\)",
+    "\\(10\\pi\\)",
+    "\\(20\\pi\\)"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H19",
+   "verified": "(72/360) * 2*pi*10 = 4pi",
+   "order": 8
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A company has a customer loyalty program. In January 2018, there were 1,600 customers enrolled in the loyalty program. For the next 24 months after January 2018, the total number of customers enrolled in the loyalty program each month was 5% greater than the total number enrolled the previous month. Which equation gives the total number of customers, c, enrolled in the company's loyalty program m months after January 2018, where m <= 24?",
+   "sourceRef": "junev2_math_m1:12",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "verified": "logical: 5% growth per month -> multiply by 1.05 each month, matches B",
+   "choices": [
+    "c = 1,600(0.05)^m",
+    "c = 1,600(1.05)^m",
+    "c = 1,600(1.5)^m",
+    "c = 1,600(5)^m"
+   ],
+   "correct": "B",
+   "order": 9
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}+y^{2}-6x+8y=0\\]The given equation defines a circle in the xy-plane. What is the radius of the circle?",
+   "choices": [
+    "3",
+    "4",
+    "5",
+    "25"
+   ],
+   "correct": "C",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H17",
+   "verified": "completing the square gives (x-3)^2 + (y+4)^2 = 25, so the radius is 5",
+   "order": 10
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "An isosceles right triangle has a perimeter of 26 + 26*sqrt(2). What is the length of the hypotenuse of the triangle?",
+   "sourceRef": "march_intb_test1_math_m2:20",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "verified": "sympy: leg=x, hypotenuse=x*sqrt(2), perimeter=2x+x*sqrt(2)=x(2+sqrt(2))=26+26*sqrt(2)=26(1+sqrt(2)); solve x=26(1+sqrt(2))/(2+sqrt(2)) -> simplifies to x=13*sqrt(2), hypotenuse=x*sqrt(2)=26. Matches official key (C) and source's circled selection (C).",
+   "choices": [
+    "13",
+    "13*sqrt(2)",
+    "26",
+    "26*sqrt(2)"
+   ],
+   "correct": "C",
+   "order": 11
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = 250(5)^x. The function f is defined by the given equation. If g(x) = f(x-2), which of the following equations defines the function g?",
+   "sourceRef": "decintb_math_m1:21",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "sympy: g(x)=250*5^(x-2)=250*5^x/25=10*5^x",
+   "choices": [
+    "g(x) = 10(5)^x",
+    "g(x) = 125(5)^x",
+    "g(x) = 250(25)^x",
+    "g(x) = 250(10)^x"
+   ],
+   "correct": "A",
+   "order": 12
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation S=(n-2)(180) gives the sum S, in degrees, of the interior angle measures of a polygon with n sides. Which equation correctly expresses n in terms of S?",
+   "choices": [
+    "\\(n=\\frac{S}{180}+2\\)",
+    "\\(n=\\frac{S+2}{180}\\)",
+    "\\(n=\\frac{S}{180}-2\\)",
+    "\\(n=180S+2\\)"
+   ],
+   "correct": "A",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED:H4",
+   "verified": "divide both sides by 180 and add 2",
+   "order": 13
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The pressure of a certain gas in a sealed container doubles every 29 minutes. The initial pressure is 18 psi. Which equation gives the pressure y, in psi, of the gas x minutes after the initial measurement?",
+   "sourceRef": "march_intb_test1_math_m2:6",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "logical: doubling every 29 minutes -> exponent x/29. Matches official key (A) and source's circled selection (A).",
+   "choices": [
+    "y = 18(2)^(x/29)",
+    "y = 18(2)^(29x)",
+    "y = 29(2)^(x/18)",
+    "y = 18 + (2)^(x/29)"
+   ],
+   "correct": "A",
+   "order": 14
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Triangle ABC is similar to triangle DEF, where side AB corresponds to side DE. The length of AB is 9, the length of DE is 15, and the perimeter of triangle ABC is 24. What is the perimeter of triangle DEF?",
+   "choices": [
+    "30",
+    "36",
+    "45",
+    "40"
+   ],
+   "correct": "D",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED:H18",
+   "verified": "perimeters scale by the similarity ratio 15/9, so 24 * 15/9 = 40",
+   "order": 15
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the xy-plane, line m is perpendicular to the line \\(y=-\\frac{1}{3}x+5\\) and passes through the point (0,-2). Which equation defines line m?",
+   "choices": [
+    "\\(y=-\\frac{1}{3}x-2\\)",
+    "\\(y=\\frac{1}{3}x-2\\)",
+    "\\(y=3x-2\\)",
+    "\\(y=-3x-2\\)"
+   ],
+   "correct": "C",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED:H6",
+   "verified": "perpendicular slope is the negative reciprocal of -1/3, which is 3; the y-intercept is -2",
+   "order": 16
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The cost of renting a piece of construction equipment for up to 5 days is $230 for the first day and $115 for each additional day. Which of the following equations gives the cost y, in dollars, of renting the equipment for x days, where x is a positive integer and x <= 5?",
+   "sourceRef": "junev2_math_m2:20",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "verified": "sympy: y=230+115(x-1)=115x+115. Matches source's own circled selection (D).",
+   "choices": [
+    "y = 230x + 115",
+    "y = 230x - 115",
+    "y = 115x + 230",
+    "y = 115x + 115"
+   ],
+   "correct": "D",
+   "order": 17
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Line r in the xy-plane has a slope of -8 and passes through the point (0,60). Which equation defines line r?",
+   "sourceRef": "octintb_math_m1:1",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "verified": "slope-intercept: b=60 since the point is the y-intercept",
+   "choices": [
+    "y=-8x+60",
+    "y=-8x+52",
+    "y=-8x-52",
+    "y=-8x-60"
+   ],
+   "correct": "A",
+   "order": 18
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_FREQ The table shows the frequency of each value in a data set. What is the minimum value of the data set?",
+   "sourceRef": "may_inta_math_m1:8",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "verified": "logical: smallest value listed with nonzero frequency is 13",
+   "choices": [
+    "1",
+    "8",
+    "13",
+    "20"
+   ],
+   "correct": "C",
+   "order": 19,
+   "table": {
+    "headers": [
+     "Value",
+     "Frequency"
+    ],
+    "rows": [
+     [
+      "13",
+      "8"
+     ],
+     [
+      "20",
+      "1"
+     ],
+     [
+      "27",
+      "8"
+     ],
+     [
+      "34",
+      "6"
+     ]
+    ]
+   },
+   "tableNote": "data moved out of the stem prose into a real table; no numbers changed"
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "56x^2 + (56s + r)x + rs = 0. In the given equation, r and s are positive constants. The product of the solutions to the given equation is krs, where k is a constant. What is the value of k?",
+   "sourceRef": "decintb_math_m2:18",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "sympy: factors as (56x+r)(x+s)=0, roots -r/56 and -s; product = (-r/56)(-s) = rs/56, so k=1/56",
+   "correctAnswerFR": "[\"1/56\"]",
+   "order": 20
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "A science class studied the feeding behavior of the birds that visited a bird feeder each school day for a period of time. The table summarizes the number of birds the class observed visiting the bird feeder each school day during this period of time. What is the median number of birds the class observed visiting the bird feeder each school day during this period of time?",
+   "sourceRef": "octusb_math_m2:16",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "verified": "23 days total; median is the 12th value; cumulative counts 3,6,10,11,14,23 put the 12th in the 18-bird group",
+   "correctAnswerFR": "[\"18\"]",
+   "table": {
+    "headers": [
+     "Number of birds",
+     "Number of days"
+    ],
+    "rows": [
+     [
+      "14",
+      "3"
+     ],
+     [
+      "15",
+      "3"
+     ],
+     [
+      "16",
+      "4"
+     ],
+     [
+      "17",
+      "1"
+     ],
+     [
+      "18",
+      "3"
+     ],
+     [
+      "19",
+      "9"
+     ]
+    ]
+   },
+   "order": 21
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "22.5x + 26.75y = 242. Odalys ordered mulch and river rock, which cost a total of $242, for her home. The given equation represents the relationship between the number of cubic yards of mulch, x, and the number of tons of river rock, y, Odalys ordered. How much more, in dollars, did a ton of river rock cost Odalys than a cubic yard of mulch?",
+   "sourceRef": "march_intb_test1_math_m1:15",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "verified": "sympy: 26.75-22.5=4.25. NOTE parsed key showed 8/9 here -- likely a key-parsing misalignment given this is unambiguous arithmetic on clearly stated dollar amounts",
+   "correctAnswerFR": "[\"4.25\"]",
+   "order": 22
+  }
+ ],
+ "MATH_M2_EASY": [
+  {
+   "order": 1,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "At a bake sale, muffins cost $3 each. If Dara spent $27 on muffins, how many muffins did she buy?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "27 / 3 = 9",
+   "choices": [
+    "3",
+    "9",
+    "24",
+    "81"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 2,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A machine fills 45 bottles each minute. Which equation gives the number of bottles B the machine fills in m minutes?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "constant rate 45 per minute over m minutes gives 45m",
+   "choices": [
+    "B=45+m",
+    "B=45m",
+    "B=m/45",
+    "B=45-m"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 3,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of a line in the xy-plane passes through (0,-4) and has a slope of 3. What is the y-coordinate of the point on the line where x=2?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "y = 3x - 4; at x=2, y = 2",
+   "choices": [
+    "-1",
+    "2",
+    "6",
+    "10"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 4,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A delivery van can carry a load of at most 1,200 kilograms. The van is already carrying 750 kilograms. Which inequality gives the possible additional weight w, in kilograms, the van can carry?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "750 + w <= 1200 -> w <= 450",
+   "choices": [
+    "\\(w\\le 450\\)",
+    "\\(w\\ge 450\\)",
+    "\\(w\\le 1{,}950\\)",
+    "\\(w\\ge 1{,}200\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 5,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If 6a-b=20 and b=4, what is the value of a?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "6a - 4 = 20 -> 6a = 24 -> a = 4",
+   "choices": [
+    "3",
+    "4",
+    "16",
+    "24"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 6,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function p is defined by p(t)=120-8t. What is the value of t when p(t)=0?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "120-8t=0 -> t=15",
+   "choices": [
+    "8",
+    "12",
+    "15",
+    "112"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 7,
+   "type": "FREE_RESPONSE",
+   "stem": "If 7(k-2)=63, what is the value of k?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "k-2=9 -> k=11",
+   "correctAnswerFR": "[\"11\"]"
+  },
+  {
+   "order": 8,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which of the following is a solution to the inequality 5x-4&gt;16?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "5x>20 -> x>4; only 5 qualifies",
+   "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 9,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\((3m)^{3}\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "(3m)^3 = 3^3 * m^3 = 27m^3",
+   "choices": [
+    "\\(3m^{3}\\)",
+    "\\(9m^{3}\\)",
+    "\\(27m^{3}\\)",
+    "\\(27m\\)"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 10,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(4(2x-7)+6x\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "8x-28+6x = 14x-28",
+   "choices": [
+    "\\(14x-28\\)",
+    "\\(14x-7\\)",
+    "\\(8x-28\\)",
+    "\\(14x+28\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 11,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function g is defined by \\(g(x)=3x^{2}-5\\). What is the value of g(2)?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "3*4-5 = 7",
+   "choices": [
+    "1",
+    "7",
+    "13",
+    "31"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 12,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is a solution to the equation \\(x^{2}=49\\)?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "x = 7 or -7; 7 is listed",
+   "choices": [
+    "\\(\\frac{49}{2}\\)",
+    "24.5",
+    "7",
+    "2401"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 13,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the xy-plane, the graph of \\(y=(x-3)^{2}+5\\) has its lowest point at (3,k). What is the value of k?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "the squared term is zero at x=3, leaving y = 5",
+   "choices": [
+    "-5",
+    "3",
+    "5",
+    "9"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 14,
+   "type": "FREE_RESPONSE",
+   "stem": "What is the value of \\(\\frac{a^{8}}{a^{5}}\\) when a=3?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "a^3 = 27",
+   "correctAnswerFR": "[\"27\"]"
+  },
+  {
+   "order": 15,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A jacket originally priced at $80 is on sale for 25% off. What is the sale price, in dollars, of the jacket?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "80 * 0.75 = 60",
+   "choices": [
+    "20",
+    "55",
+    "60",
+    "75"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 16,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the median of the seven values in the list 3, 5, 5, 8, 11, 14, and 20?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "sorted, the 4th of 7 values is 8",
+   "choices": [
+    "5",
+    "8",
+    "9.4",
+    "11"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 17,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_A The table shows the number of hours four employees worked last week. What is the total number of hours the four employees worked?",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "32+28+41+19 = 120",
+   "choices": [
+    "109",
+    "110",
+    "120",
+    "128"
+   ],
+   "correct": "C",
+   "table": {
+    "headers": [
+     "Employee",
+     "Hours worked"
+    ],
+    "rows": [
+     [
+      "Nadia",
+      "32"
+     ],
+     [
+      "Owen",
+      "28"
+     ],
+     [
+      "Priya",
+      "41"
+     ],
+     [
+      "Quinn",
+      "19"
+     ]
+    ]
+   }
+  },
+  {
+   "order": 18,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A spinner has 8 equal sections numbered 1 through 8. What is the probability that one spin lands on a number greater than 6?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "numbers 7 and 8 qualify: 2/8 = 1/4",
+   "choices": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{3}{8}\\)",
+    "\\(\\frac{3}{4}\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 19,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Two angles are supplementary. One angle measures 47&deg;. What is the measure, in degrees, of the other angle?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "180-47 = 133",
+   "choices": [
+    "43",
+    "133",
+    "143",
+    "313"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 20,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A rectangle has a length of 14 centimeters and a width of 5 centimeters. What is the perimeter, in centimeters, of the rectangle?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "2(14+5) = 38",
+   "choices": [
+    "19",
+    "38",
+    "60",
+    "70"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 21,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has a radius of 6 inches. What is the circumference, in inches, of the circle?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "2*pi*6 = 12pi",
+   "choices": [
+    "\\(6\\pi\\)",
+    "\\(12\\pi\\)",
+    "\\(36\\pi\\)",
+    "\\(72\\pi\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 22,
+   "type": "FREE_RESPONSE",
+   "stem": "In a right triangle, one leg has length 9 and the other leg has length 12. What is the length of the hypotenuse?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "sqrt(81+144) = 15",
+   "correctAnswerFR": "[\"15\"]"
+  }
+ ],
+ "MATH_M2_HARD": [
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of the polynomial function f in the xy-plane, where y = f(x), has x-intercepts of (-5, 0) and (2, 0). Which of the following must be true?",
+   "sourceRef": "decintb_math_m2:5",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "logical: x-intercept (-5,0) means f(-5)=0",
+   "choices": [
+    "f(0) = -5",
+    "f(2) = -5",
+    "f(-5) = 0",
+    "f(-5) = 2"
+   ],
+   "correct": "C",
+   "order": 1
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[p(x)=x^{3}-4x^{2}+kx-6\\]In the given polynomial, k is a constant. If x-3 is a factor of p(x), what is the value of k?",
+   "choices": [
+    "-5",
+    "3",
+    "15",
+    "5"
+   ],
+   "correct": "D",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED:H11",
+   "verified": "p(3) = 27 - 36 + 3k - 6 = 0 gives 3k = 15, so k = 5",
+   "order": 2
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = sqrt(5x + 6). The function f is defined by the given equation. If f(a) = -5a, where a is a constant, what is the value of a?",
+   "sourceRef": "may_inta_math_m1:22",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "sympy: a=-2/5",
+   "choices": [
+    "3/5",
+    "2/5",
+    "-2/5",
+    "-3/5"
+   ],
+   "correct": "C",
+   "order": 3
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_H15 The table shows the number of students in each grade who selected each elective. If a student who selected chemistry is chosen at random, what is the probability that the student is a junior?",
+   "choices": [
+    "\\(\\frac{9}{20}\\)",
+    "\\(\\frac{3}{5}\\)",
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{2}{3}\\)"
+   ],
+   "correct": "A",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "AUTHORED:H15",
+   "verified": "36 juniors out of the 80 students who chose chemistry: 36/80 = 9/20",
+   "table": {
+    "headers": [
+     "Grade",
+     "Chemistry",
+     "Studio art",
+     "Total"
+    ],
+    "rows": [
+     [
+      "Juniors",
+      "36",
+      "24",
+      "60"
+     ],
+     [
+      "Seniors",
+      "44",
+      "16",
+      "60"
+     ],
+     [
+      "Total",
+      "80",
+      "40",
+      "120"
+     ]
+    ]
+   },
+   "order": 4
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation \\(2^{x+3}=32\\) is true for what value of x?",
+   "choices": [
+    "2",
+    "3",
+    "5",
+    "29"
+   ],
+   "correct": "A",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H9",
+   "verified": "32 = 2^5, so x+3 = 5 and x = 2",
+   "order": 5
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function f is defined by \\(f(x)=2x^{2}-12x+23\\). What is the minimum value of f(x)?",
+   "choices": [
+    "3",
+    "5",
+    "11",
+    "23"
+   ],
+   "correct": "B",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED:H7",
+   "verified": "vertex at x = 12/(2*2) = 3; f(3) = 18 - 36 + 23 = 5",
+   "order": 6
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\((x+4)^{2}-(x-4)^{2}\\)?",
+   "choices": [
+    "0",
+    "\\(2x^{2}\\)",
+    "16x",
+    "32"
+   ],
+   "correct": "C",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED:H22",
+   "verified": "expanding gives (x^2+8x+16) - (x^2-8x+16) = 16x",
+   "order": 7
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A store sells notebooks for $4 each and pens for $2 each. A customer buys 15 of these items and spends $46 in total. How many notebooks did the customer buy?",
+   "choices": [
+    "4",
+    "7",
+    "11",
+    "8"
+   ],
+   "correct": "D",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H3",
+   "verified": "4n + 2(15-n) = 46 gives 2n = 16, so n = 8",
+   "order": 8
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A gym charges a one-time joining fee of $40 plus $25 for each month of membership. Sam wants to spend no more than $340 in total. What is the greatest number of whole months of membership Sam can buy?",
+   "choices": [
+    "11",
+    "12",
+    "13",
+    "15"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED:H21",
+   "verified": "25m + 40 <= 340 gives m <= 12, so 12 whole months",
+   "order": 9
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The price of a jacket is increased by 20%. The new price is then decreased by 20%. The final price is what percent of the original price?",
+   "choices": [
+    "96%",
+    "98%",
+    "100%",
+    "104%"
+   ],
+   "correct": "A",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED:H13",
+   "verified": "1.20 * 0.80 = 0.96",
+   "order": 10
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A printer produces 45 pages per minute. At this rate, how many hours will it take the printer to produce 54,000 pages?",
+   "choices": [
+    "12",
+    "20",
+    "24",
+    "45"
+   ],
+   "correct": "B",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED:H16",
+   "verified": "54000/45 = 1200 minutes = 20 hours",
+   "order": 11
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which of the following is the solution set to the inequality \\(|x-4|&lt;6\\)?",
+   "choices": [
+    "\\(x&lt;10\\)",
+    "\\(-2&lt;x&lt;10\\)",
+    "\\(x&gt;-2\\)",
+    "\\(-10&lt;x&lt;2\\)"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED:H2",
+   "verified": "|x-4| < 6 unfolds to -6 < x-4 < 6, so -2 < x < 10",
+   "order": 12
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the solution to the equation \\(\\sqrt{3x+4}=x\\)?",
+   "choices": [
+    "-1",
+    "1",
+    "4",
+    "-1 and 4"
+   ],
+   "correct": "C",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H10",
+   "verified": "squaring gives x^2-3x-4=0 with roots 4 and -1; x = -1 is extraneous because a square root cannot equal a negative number",
+   "order": 13
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The mean of a list of 6 numbers is 21. When a seventh number is added to the list, the mean of the 7 numbers is 23. What is the seventh number?",
+   "choices": [
+    "25",
+    "29",
+    "33",
+    "35"
+   ],
+   "correct": "D",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED:H23",
+   "verified": "7*23 - 6*21 = 161 - 126 = 35",
+   "order": 14
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_RECT The table gives the areas and perimeters of two similar rectangles, where n is a constant. What is the value of n?",
+   "sourceRef": "decintb_math_m2:20",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "verified": "sympy: area ratio 5760/1440=4, linear scale factor = sqrt(4)=2, perimeter scales linearly: n=480*2=960",
+   "choices": [
+    "960",
+    "1,920",
+    "3,840",
+    "4,800"
+   ],
+   "correct": "A",
+   "order": 15,
+   "table": {
+    "headers": [
+     "Rectangle",
+     "Area (square inches)",
+     "Perimeter (inches)"
+    ],
+    "rows": [
+     [
+      "A",
+      "1,440",
+      "480"
+     ],
+     [
+      "B",
+      "5,760",
+      "n"
+     ]
+    ]
+   },
+   "tableNote": "data moved out of the stem prose into a real table; no numbers changed"
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A right circular cone has a radius of 6 centimeters and a height of 10 centimeters. What is the volume, in cubic centimeters, of the cone?",
+   "choices": [
+    "\\(60\\pi\\)",
+    "\\(120\\pi\\)",
+    "\\(240\\pi\\)",
+    "\\(360\\pi\\)"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H24",
+   "verified": "(1/3)*pi*6^2*10 = 120pi",
+   "order": 16
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "4x-6y=14<br/>-2x+3y=k<br/>In the given system of equations, k is a constant. If the system has infinitely many solutions, what is the value of k?",
+   "choices": [
+    "-7",
+    "-2",
+    "7",
+    "14"
+   ],
+   "correct": "A",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H5",
+   "verified": "multiplying the second equation by -2 gives 4x-6y=-2k, so -2k = 14 and k = -7",
+   "order": 17
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = k(1.84)^x. The function f is defined by the given equation, where k is a constant. The value of f(x) increases by p% for every increase of x by 1. For which of the following functions, where k is a constant, does the value of g(x) increase by p% for every increase of x by 4?",
+   "sourceRef": "may_inta_math_m1:21",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "algebra: need base^4=1.84 growth per 4 units -> g(x)=k*1.84^(x/4)=k*(1.84^x)^(1/4)",
+   "choices": [
+    "g(x) = k(1.84^x)^{1/4}",
+    "g(x) = k(1.84^x)^4",
+    "g(x) = k(1.84)^{x-4}",
+    "g(x) = k(1.84)^{x+4}"
+   ],
+   "correct": "A",
+   "order": 18
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has diameters AC and BD. The circumference of the circle is 84*pi, and the length of arc DA is 2 times the length of arc AB. What is the length of arc BC?",
+   "sourceRef": "may_inta_math_m2:15",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "verified": "sympy/geometry: arcAB=60deg, arcBC=120deg -> (120/360)*84pi=28pi",
+   "choices": [
+    "2\\pi",
+    "14\\pi",
+    "21\\pi",
+    "28\\pi"
+   ],
+   "correct": "D",
+   "order": 19
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "13x = 42 - x. What value of x is the solution to the given equation?",
+   "sourceRef": "may_inta_math_m1:1",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "verified": "sympy: x=3",
+   "correctAnswerFR": "[\"3\"]",
+   "order": 20
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "The function f(t) = 10,000(2)^(t/350) gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+   "sourceRef": "junev2_math_m1:13",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "sympy: doubling time = exponent's denominator = 350 minutes, since f(t+350)=2*f(t)",
+   "correctAnswerFR": "[\"350\"]",
+   "order": 21
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "The positive number a is 3,700% of the number c, and c is 20% of the number b. If \\(a-b=wc\\), where w is a constant, what is the value of w?",
+   "sourceRef": "octusb_math_m2:12",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "verified": "a=37c; c=0.2b so b=5c; a-b = 37c-5c = 32c -> w=32",
+   "correctAnswerFR": "[\"32\"]",
+   "order": 22
+  }
+ ]
+}

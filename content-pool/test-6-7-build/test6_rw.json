@@ -1,0 +1,1629 @@
+{
+ "test6|RW_M1": [
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-W4",
+   "sourceRef": "AUTHORED/RW:A-W4",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Critics initially dismissed the technique as a novelty, but its steady adoption by studios over the following decade _____ that assessment.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "confirmed",
+    "undermined",
+    "anticipated",
+    "restated"
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 1,
+   "why": "'But' signals that what followed worked against the dismissal, and steady adoption is evidence the technique was more than a novelty. 'Confirmed' and 'restated' would support the critics."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 6,
+   "sourceRef": "OctUSC/RW_M2:6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Although oil shocks&mdash;such as the 16% rise in oil prices from April to September of 1973&mdash;can strongly affect individual consumers, Gbadebo Oladosu and colleagues have shown that at the level of national economies, their effects are often quite _____. The effect of recent oil shocks on the gross domestic product of China, for example, was only slightly greater than zero.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "subdued",
+    "variable",
+    "beneficial",
+    "persistent"
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 2,
+   "why": "'Only slightly greater than zero' is the example the blank must summarise, and it is set against 'can strongly affect individual consumers'. 'Subdued' is the only choice meaning small in effect; 'variable' and 'persistent' describe a pattern over time, not a magnitude."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 3,
+   "sourceRef": "OctUSB/RW_M1:3",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Originating in the traditional stories of the <em>Kanaka Maoli</em>, the Native Hawaiian people, the literature of Hawaii has a rich history that was later brought to international prominence by writers such as Mary Kawena Pukui. Now, by producing acclaimed works, Gary Pak has _____ his place in that literary tradition.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "contemplated",
+    "subverted",
+    "solidified",
+    "extricated"
+   ],
+   "correct": "C",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 3,
+   "why": "Producing acclaimed works secures rather than questions his standing. 'Subverted' and 'extricated' reverse the sense; 'contemplated' does not fit 'his place'."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 2,
+   "sourceRef": "OctUSB/RW_M2:2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The fossil remains of the individual known as Denisova 8, discovered in Russia in 2010, can help paleoanthropologists not only _____ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally, revealing important details about the time in which Denisova 8 lived.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "yield",
+    "exploit",
+    "prioritize",
+    "discern"
+   ],
+   "correct": "D",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 4,
+   "why": "The 'not only... but also' pairing makes the blank parallel to 'illuminate', so it must mean to make out or perceive. The fossils reveal the steps rather than producing (A), using (B) or ranking (C) them."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 1,
+   "sourceRef": "OctUSC/RW_M1:1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Folk and traditional art can take a wide variety of forms, including arts as _____ one another as storytelling and quilting. The National Heritage Fellowship was created to honor people for their accomplishments in these diverse arts and includes among its winners the Puerto Rican stringed-instrument maker Diomedes Matos.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "confused with",
+    "humble about",
+    "useful to",
+    "different from"
+   ],
+   "correct": "D",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 5,
+   "why": "The frame is 'as ___ one another as', and the sentence stresses variety and diversity, so the blank must express unlikeness. Only 'different from' completes the comparison idiom."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 5,
+   "sourceRef": "OctUSC/RW_M1:5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The <em>San Pedro</em> is just one of approximately three million known historical shipwrecks spread throughout the world&rsquo;s oceans, and their impact on sea life and underwater ecosystems is of great interest to researchers. Leila Hamdan and colleagues were particularly curious about the effects of wooden shipwrecks on seafloor microbial communities. The researchers studied two wooden shipwrecks in the Gulf of Mexico by placing pieces of pine and oak between zero and 200 meters away from each shipwreck to collect samples of three kinds of microbes: bacteria, archaea, and fungi. They found that across the three microbial communities, peak diversity and richness was observed on pine and oak samples placed approximately 125 meters from the shipwrecks.</p>",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It introduces a study of microbial communities near shipwrecks that has received significant scholarly attention, summarizes the results of that study, and then describes a research team&rsquo;s reaction to the study.",
+    "It notes a general scientific interest in shipwrecks&rsquo; ecological effects, describes a specific study related to that interest, and then states one of the study&rsquo;s findings.",
+    "It states the number of known shipwrecks, describes the historical significance of one of those shipwrecks, and then comments on the various microbes found at the shipwreck site.",
+    "It names a famous historical shipwreck, describes the type of wood used to build that ship, and then explains how that wood type influences underwater microbial communities."
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 6,
+   "why": "General interest -> Hamdan's specific study and method -> the 125-metre finding. The text never gives the <em>San Pedro</em>'s history (C), its construction (D), or any scholarly reaction (A)."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 8,
+   "sourceRef": "OctIntB/RW_M1:8",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The following text is adapted from Jerome K. Jerome&rsquo;s 1889 novel <em>Three Men in a Boat (To Say Nothing of the Dog)</em>.</p><p>We [people] are creatures of the sun. We love light and life. That is why we crowd into the towns and cities, and the country grows more and more deserted every year. In the sunlight&mdash;in the daytime, when Nature is alive and busy all around us, we like the open hill-sides and the deep woods well enough: but in the night, when our Mother Earth has gone to sleep, and left us waking, oh! the world seems so lonesome, and we get frightened, like children in a silent house. Then we sit and sob, and long for the gas-lit streets, and the sound of human voices, and the answering throb of human life.</p>",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To convey that crowded areas can cause people to experience feelings of sadness",
+    "To caution people not to be so quick to dismiss the natural beauty that can be found in rural areas",
+    "To illustrate the idea that most people tend to prefer hillsides in the country to certain aspects of towns and cities",
+    "To address common traits that motivate many people to choose to live in urban environments"
+   ],
+   "correct": "D",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 7,
+   "why": "'That is why we crowd into the towns and cities' announces the purpose: explaining the shared traits \u2014 love of light, fear of night loneliness \u2014 behind urban living. C reverses the preference the passage describes."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 9,
+   "sourceRef": "OctUSB/RW_M1:9",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Roy McLendon&rsquo;s <em>Moonlit St. Lucie</em>, a riverscape featuring the silhouette of a single palm tree against the backdrop of shimmering water and a brilliant moonlit sky, is typical of paintings by the Florida Highwaymen, an informal collective of landscape artists mainly active in the 1950s and &rsquo;60s. Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography&mdash;placid inland rivers, windswept palm trees&mdash;that McLendon and colleagues perpetually revisited.</p>",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Although similar in its subject matter to many paintings by the Florida Highwaymen, <em>Moonlit St. Lucie</em> is now more highly regarded than other Florida Highwaymen paintings are.",
+    "Representative images found across many paintings by McLendon and other Florida Highwaymen came to be widely associated with Florida in part due to the Florida Highwaymen&rsquo;s influence.",
+    "Although paintings by the Florida Highwaymen were once celebrated for their depictions of Florida&rsquo;s natural environments, the popularity of these paintings waned after the 1960s.",
+    "The placid inland rivers and windswept palm trees that are typical of McLendon&rsquo;s works, which are otherwise indistinguishable from other Florida Highwaymen paintings, help to differentiate McLendon&rsquo;s paintings from those of his colleagues."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 8,
+   "why": "'Anticipating and amplifying cultural perceptions of Florida that became pervasive' is exactly B. The text never ranks McLendon above his colleagues (A, D \u2014 and D is self-contradictory), and never says popularity waned (C)."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 8,
+   "sourceRef": "OctUSB/RW_M1:8",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Superlubricity, the state of virtually no friction between materials, has desirable applications in many industries. For example, it can make aircraft engines more efficient. To produce a coating that achieves superlubricity, Chanaka Kumara and colleagues broke down carbon nanotubes into fragments of graphene to fully cover two surfaces that would rub together. Friction between pieces of graphene is generally extremely low, and when the researchers added a drop of oil as lubrication, that friction nearly vanished. This new coating may drastically lower friction-related energy costs.</p>",
+   "stem": "According to the text, what happened when the researchers added oil to the surfaces covered in graphene fragments?",
+   "choices": [
+    "All the pieces of graphene collected on just one of the two surfaces.",
+    "The low amount of friction between the surfaces became even lower.",
+    "Carbon nanotubes on the surfaces fractured into smaller pieces.",
+    "Friction between the surfaces did not noticeably change right away."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 9,
+   "why": "Stated directly: friction between graphene is 'generally extremely low', and with the oil it 'nearly vanished'. That is low becoming lower."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 11,
+   "sourceRef": "OctUSB/RW_M2:11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Honda&rsquo;s introduction of a walk-behind lawnmower in 1978 is an instance of brand extension&mdash;the company leveraged its brand recognition as an automobile manufacturer to enter a product category where it had not previously competed. To determine if perceived category similarity predicts consumers&rsquo; likelihood of purchasing brand extensions, Alicia Grasby et al. identified 30 extended-brand pairs (e.g., the same brand of hand lotion and mouthwash) in 52 weeks of purchases by approximately 60,000 households; for each pair, Grasby et al. had consumers rate the similarity of the product categories and calculated the change in probability of a brand in one category being purchased if the same brand was purchased in the other category.</p>",
+   "stem": "Which finding, if true, would provide evidence that the possibility Grasby et al. investigated does occur?",
+   "choices": [
+    "Consumers&rsquo; ratings and the changes in probability calculated by the researchers were both affected by level of brand recognition.",
+    "There was a strong positive correlation between consumers&rsquo; ratings and the changes in probability calculated by the researchers.",
+    "Consumers&rsquo; ratings varied substantially by category pair, whereas the changes in probability calculated by the researchers were broadly similar for each pair.",
+    "Consumers tended to purchase more products in categories in which extended-brand pairs are found than in categories in which extended-brand pairs are not found."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 10,
+   "why": "The possibility under test is that perceived category similarity (the ratings) predicts purchase likelihood (the probability change), so the evidence is the two moving together. C describes the opposite \u2014 ratings varying while probabilities do not \u2014 and A and D introduce brand recognition and category volume, neither of which is the relationship being tested."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 9,
+   "sourceRef": "AugUSE/RW:9",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><em>Poems</em> is an 1895 collection of poetry by Frances E.W. Harper. In one of Harper&rsquo;s poems, the speaker declares her intention to create art that has a universal appeal across generations, saying, _____</p>",
+   "stem": "Which quotation from <em>Poems</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;Our world, so worn and weary, / Needs music, pure and strong, / To hush the jangle and discords / Of sorrow, pain, and wrong.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+    "&ldquo;Let me make the songs for the people, / Songs for the old and young; / Songs to stir like a battle-cry / Wherever they are sung.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+    "&ldquo;God bless our native land, / Land of the newly free, / Oh may she ever stand / For truth and liberty.&rdquo; (from &ldquo;God Bless Our Native Land&rdquo;)",
+    "&ldquo;My mother&rsquo;s kiss, my mother&rsquo;s kiss, / I feel its impress now; / As in the bright and happy days / She pressed it on my brow.&rdquo; (from &ldquo;My Mother&rsquo;s Kiss&rdquo;)"
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 11,
+   "why": "B has all three parts of the claim: the speaker's intention ('Let me make'), the reach across generations ('the old and young'), and universality ('Wherever they are sung'). A describes what the world needs rather than her intention, and C and D are on other subjects entirely."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 10,
+   "sourceRef": "OctUSB/RW_M2:10",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The utilization of deceptive antipredator displays is well documented in the little ringed plover (<em>Charadrius dubius</em>) and other species of the avian order Charadriiformes. An extensive literature review conducted by L&eacute;na de Framond et al. revealed that this trait has evolved across a surprisingly large phylogenetic distribution of 13 Aves orders, including Caprimulgiformes and Gruiformes. Subsequent investigation of potential selection mechanisms prompted the researchers to conclude that independent of avian order, the prevalence of the trait is mediated by environmental variations associated with the absolute latitude of brooding sites.</p>",
+   "stem": "Which finding, if true, would most strongly support the researchers&rsquo; conclusion?",
+   "choices": [
+    "Across the orders in the study, approximately 54% of the bird species brood in ranges from 50&deg; to 80&deg; absolute latitude, but most of the birds that are known to use deceptive antipredator displays brood between 0&deg; and 30&deg; absolute latitude.",
+    "Deceptive antipredator displays are documented in Charadriiformes species across the entire range of absolute latitudes of brooding sites within that order, but in species from other orders, deceptive antipredator displays are documented only when brooding sites are at absolute latitudes 10&deg;&ndash;20&deg; higher than what is typical for those species.",
+    "The use of deceptive antipredator displays is widespread among Charadriiformes species independent of the absolute latitude of their breeding sites, but its prevalence in other avian orders is limited to species with brooding sites located in absolute latitudes of 0&deg;&ndash;30&deg;.",
+    "Across the orders in the study, deceptive antipredator displays are observed in approximately 34% of species with brooding ranges of 0&deg;&ndash;30&deg; absolute latitude and approximately 60% of species with brooding ranges of 50&deg;&ndash;80&deg; absolute latitude."
+   ],
+   "correct": "D",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 12,
+   "why": "The conclusion has two parts: prevalence tracks brooding latitude, and it does so regardless of order. Only D reports prevalence rising with latitude 'across the orders in the study'. B and C make the pattern order-dependent, which contradicts 'independent of avian order', and A compares where species brood rather than how prevalent the trait is."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 15,
+   "sourceRef": "OctUSC/RW_M1:15",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The jade hawkmoth, a large-bodied moth, defends itself against Brandt&rsquo;s myotis and other insect-eating bats, which use echolocation to hunt, by emitting ultrasonic clicks that can, for instance, signal the moths&rsquo; unpleasant taste. To investigate moths&rsquo; defensive ultrasound&mdash;which researchers had thought was exclusive to tiger moths, hawkmoths, and one species of geometer moths&mdash;Jesse R. Barber et al. recorded the responses of moths from 252 genera, representing most families of large-bodied moths, to audio playback of bat echolocation. The researchers found that 52 of the genera, including several genera belonging to the geometer family, produced defensive ultrasonic clicks. This result suggests that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "unlike the 52 moth genera that emit ultrasonic clicks, most moth genera have likely not developed defenses specifically against bat attacks.",
+    "some genera of large-bodied moths may use ultrasonic signaling for purposes other than avoiding capture by predators such as Brandt&rsquo;s myotis.",
+    "ultrasound production is only one of a diverse range of effective strategies moths employ to evade bat attacks.",
+    "anti-bat ultrasound production may be a more prevalent defense strategy among large-bodied moths than previously known to researchers."
+   ],
+   "correct": "D",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 13,
+   "why": "Researchers expected the behaviour in three narrow groups and found it in 52 genera, including several new geometer genera \u2014 the finding is that it is commoner than thought. B and C introduce other purposes and other strategies the study never examined, and A draws a negative conclusion the sampling cannot support."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 12,
+   "sourceRef": "OctIntB/RW_M2:12",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Scholars are increasingly exploring the communication and preservation of ecological knowledge through Indigenous songs (e.g., Kazakh songs about water and foraging quality and those of the O&rsquo;odham people about desert plants). In one study, ethnobiologist Dana Lepofsky et al. received insight from Kwaxsistalla Wathl&rsquo;thla, a song keeper for the Kwakwaka&rsquo;wakw people in Canada, into songs referencing the people&rsquo;s use of terraced gardens in intertidal zones along the Pacific Northwest coast for the cultivation of clams for consumption. Archaeological evidence of significant increases in clam size and abundance in that area concurrent with the documented past implementation of the method described in the songs supports the conclusion that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "non-Indigenous people around the Pacific Northwest coast adopted the practice developed by the Kwakwaka&rsquo;wakw people after observing its efficacy.",
+    "the practice used by ancestors of modern Kwakwaka&rsquo;wakw people not only effectively maintained a food source but also promoted its robustness.",
+    "there is greater corroboration in the archaeological record of ecological practices described in Kwakwaka&rsquo;wakw songs than of those described in Kazakh and O&rsquo;odham songs.",
+    "although contemporary Kwakwaka&rsquo;wakw people have a deep understanding of and appreciation for the fishing and farming practices used by their ancestors, they no longer implement those methods."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 14,
+   "why": "Clams were cultivated for consumption (a maintained food source) and both size and abundance rose (robustness) \u2014 the two halves of B. A, C and D reach for adoption by others, a cross-culture comparison and present-day abandonment, none of which the evidence touches."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-19",
+   "sourceRef": "AugUSE/RW:M2-19",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Joy Williams&rsquo;s essay on &ldquo;cenote,&rdquo; a term referring to a deep sinkhole containing a pool of water, is just one of many essays included in <em>Home Ground: A Guide to the American _____ by Barry Lopez and Debra Gwartney, the book celebrates the rich language used to describe the landscape of North America.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "<em>Landscape</em>, edited",
+    "<em>Landscape</em> edited",
+    "<em>Landscape</em>. Edited",
+    "<em>Landscape</em> and edited"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 15,
+   "why": "'Joy Williams's essay... is just one of many essays included in <em>Home Ground</em>' and 'the book celebrates the rich language...' are both independent clauses, so a sentence boundary is required; the second then opens with the participial phrase 'Edited by Barry Lopez and Debra Gwartney'. A, B and D all leave the two clauses spliced by the comma before 'the book'."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 18,
+   "sourceRef": "AugUSE/RW:18",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>As a behavioral economist, Ai Hisano of Kyoto University recognizes that people sometimes make irrational economic decisions. Hisano&rsquo;s research can thus address anomalies that neoclassical economic _____ assume that people are consistently rational decision-makers&mdash;cannot explain.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "models which&mdash;",
+    "models which",
+    "models&mdash;which",
+    "models, which"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 16,
+   "why": "A dash already closes the aside before 'cannot explain', so the blank must open it with the matching dash: 'anomalies that neoclassical economic models&mdash;which assume...&mdash;cannot explain'. A puts the dash on the wrong side of 'which', and B and D leave the closing dash unpaired."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 16,
+   "sourceRef": "OctIntB/RW_M1:16",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Works by Rafael Soriano and Rupert Garc&iacute;a were featured in the Smithsonian American Art Museum&rsquo;s exhibition <em>Our America: The Latino Presence in American Art</em>. This 2013 exhibition celebrated the diverse achievements _____ artists of Latin American descent.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "of;",
+    "of:",
+    "of,",
+    "of"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 17,
+   "why": "'The diverse achievements of artists of Latin American descent' is a single noun phrase; no punctuation belongs between a preposition and its object."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-B2",
+   "sourceRef": "AUTHORED/RW:A-B2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The axolotl&mdash;a salamander that keeps its larval features into _____ can regrow not only its limbs but also parts of its heart and brain.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "adulthood,",
+    "adulthood",
+    "adulthood&mdash;",
+    "adulthood:"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 18,
+   "why": "A dash opens the supplementary description of the axolotl, so a dash must close it. Swapping in a comma or a colon breaks the pair, and omitting the mark leaves the aside running into the verb."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-F1",
+   "sourceRef": "AUTHORED/RW:A-F1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The collection of woodblock prints donated to the museum by three separate families _____ views of the same mountain in every season.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "show",
+    "have shown",
+    "showing",
+    "shows"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 19,
+   "why": "The subject is the singular 'collection', not the plural nouns inside the modifier, so the singular 'shows' is required. 'Showing' supplies no finite verb at all."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-F2",
+   "sourceRef": "AUTHORED/RW:A-F2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Because the glaciers of the Southern Alps advance and retreat on different schedules, surveyors measure _____ individually rather than treating the range as a single system.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "it",
+    "that",
+    "this",
+    "them"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 20,
+   "why": "The antecedent is the plural 'glaciers', so the plural object pronoun 'them' is required."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-F6",
+   "sourceRef": "AUTHORED/RW:A-F6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>A restorer working on an oil painting must document the damage, stabilize the flaking paint, and _____ any varnish that has yellowed with age.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "removing",
+    "to remove",
+    "remove",
+    "removes"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 21,
+   "why": "The series is governed by 'must': document, stabilize, and remove. Only the bare infinitive keeps the three parallel."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 21,
+   "sourceRef": "OctIntB/RW_M2:21",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The prime meridian, the global indicator of zero degrees longitude established in 1884, was originally determined using astronomically derived coordinates. _____ as decades passed, new calculations would reveal increasingly precise coordinates, yet the prime meridian remained unchanged; it wasn&rsquo;t until the 1980s that, spurred by improved geodetic data, the prime meridian was officially moved&mdash;roughly one hundred meters east.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Specifically,",
+    "Again and again,",
+    "Granted,",
+    "To that end,"
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 22,
+   "why": "'As decades passed, new calculations would reveal increasingly precise coordinates' describes something happening repeatedly over time, which 'again and again' marks. 'Specifically' would require the clause to particularise the previous sentence, and it does not."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 23,
+   "sourceRef": "AugUSE/RW:23",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Firefly luciferase (Fluc) is a distinctly evolved enzyme that can oxidize a substrate called D-luciferin to induce bioluminescence and can act as a fatty acyl-CoA synthetase (ACS) enzyme, a class of enzyme present in all insects. _____ Fluc is a bifunctional enzyme whose presence indicates an insect is capable of emitting light; in contrast, the presence of ACS alone would be insufficient for determining bioluminescence.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In fact,",
+    "Moreover,",
+    "That is,",
+    "Nevertheless,"
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 23,
+   "why": "'Bifunctional' restates the two capabilities the first sentence has just listed, so the second sentence explains rather than adds (B), intensifies (A) or contrasts (D)."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-T4",
+   "sourceRef": "AUTHORED/RW:A-T4",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>To cast a bronze sculpture by the lost-wax method, an artist first builds a wax model and coats it in a heat-resistant shell. _____ the wax is melted out, leaving a cavity that molten bronze will fill.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In summary,",
+    "Next,",
+    "By comparison,",
+    "Regardless,"
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 24,
+   "why": "'First' in the preceding sentence sets up a sequence of steps, and melting the wax is the step that follows."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-27",
+   "sourceRef": "AugUSE/RW:M2-27",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>There are more than 500 National Wildlife Refuges (NWRs) across the United States.</li><li>The Crocodile Lake NWR is a 6,686-acre area in Florida, on the Atlantic coast.</li><li>It was established to protect the endangered American crocodile.</li><li>The Nestucca Bay NWR is a 457-acre area in Oregon, on the Pacific coast.</li><li>It was established to protect the endangered Aleutian Canada goose.</li></ul></p>",
+   "stem": "The student wants to provide an overview of the NWR program. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The US&rsquo;s more than 500 NWRs protect endangered species from coast to coast.",
+    "Both the Crocodile Lake NWR and the Nestucca Bay NWR were established to protect endangered species.",
+    "Oregon&rsquo;s Nestucca Bay NWR was established to protect the endangered Aleutian Canada goose.",
+    "One of more than 500 NWRs in the US, the Crocodile Lake NWR encompasses 6,686 acres in Florida."
+   ],
+   "correct": "A",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 25,
+   "why": "An overview needs the scale and the purpose of the whole program: A gives both, and 'from coast to coast' generalises the Atlantic and Pacific examples. B, C and D each stay at the level of individual refuges."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 26,
+   "sourceRef": "OctIntB/RW_M2:26",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Pattern analysis and contextual analysis are two approaches to art criticism.</li><li>Pattern analysis examines the repetition of visual elements in an artwork.</li><li>Such an analysis of Andy Warhol&rsquo;s <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.</li><li>Contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.</li><li>Such an analysis of Pablo Picasso&rsquo;s <em>Les Demoiselles d&rsquo;Avignon</em> might consider how the painting&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).</li></ul></p>",
+   "stem": "The student wants to present contextual analysis to an audience unfamiliar with the concept. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "A pattern analysis of <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.",
+    "<em>Les Demoiselles d&rsquo;Avignon</em>&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).",
+    "An approach to art criticism, contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.",
+    "Pattern analysis differs from contextual analysis in that pattern analysis examines the repetition of visual elements in an artwork."
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 26,
+   "why": "An unfamiliar audience needs the term defined, and C both places contextual analysis as an approach to art criticism and says what it does. A and D lead with pattern analysis, and B never names the concept at all."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-26",
+   "sourceRef": "AugUSE/RW:M2-26",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Ibn Sina was a Persian philosopher and physician.</li><li>His book <em>The Canon of Medicine</em> recorded the most advanced medical knowledge of his time.</li><li>It was published in the year 1025 CE.</li><li>It was used as a medical textbook in Middle Eastern and European universities for centuries.</li></ul></p>",
+   "stem": "The student wants to identify the year that <em>The Canon of Medicine</em> was published. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Ibn Sina recorded the most advanced medical knowledge of his time in his book <em>The Canon of Medicine</em>.",
+    "A Persian philosopher and physician wrote a medical textbook called <em>The Canon of Medicine</em>.",
+    "<em>The Canon of Medicine</em> was a medical textbook used by Middle Eastern and European universities for centuries.",
+    "Ibn Sina&rsquo;s book <em>The Canon of Medicine</em> was published in the year 1025 CE."
+   ],
+   "correct": "D",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 27,
+   "why": "D is the only choice that states a year at all."
+  }
+ ],
+ "test6|RW_M2_EASY": [
+  {
+   "source": "OctUSB",
+   "sourceNum": 2,
+   "sourceRef": "OctUSB/RW_M1:2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>As a member of Indigenous Photograph, artist Tshepiso Mabula ka Ndogngeni (Xhosa) can _____ her work more broadly than she could without the organization&rsquo;s reach. Photography editors around the world can search for Indigenous photographer members on the organization&rsquo;s website to find images that document and reflect the lives of Indigenous communities.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "empty",
+    "promote",
+    "alter",
+    "discover"
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 1,
+   "why": "The second sentence explains that editors worldwide can find her work through the organization, i.e. the membership helps her publicise it more widely. 'Promote' is the only choice that means making work more widely known."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 1,
+   "sourceRef": "OctUSB/RW_M1:1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The following text is adapted from John Matheus&rsquo;s 1925 short story &ldquo;Fog.&rdquo; A train has stopped at a station, where heavy fog has set in.</p><p>The little conductor stood on tiptoe in an effort to keep one hand on the signal rope, craning his neck in a vain and dissatisfied endeavor to pierce the miasma of the fog. The motorman chafed in his box, thinking of the drudging lot of the laboring man. He <u>registered</u> discontent.</p>",
+   "stem": "As used in the text, what does the word &ldquo;registered&rdquo; most nearly mean?",
+   "choices": [
+    "Bypassed",
+    "Enrolled",
+    "Valued",
+    "Displayed"
+   ],
+   "correct": "D",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 2,
+   "why": "The motorman is chafing and resentful; 'registered discontent' means he showed it. 'Enrolled' and 'valued' are the word's other senses and do not fit an emotion."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 1,
+   "sourceRef": "OctIntB/RW_M1:1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The following text is adapted from Mary Seacole&rsquo;s 1857 autobiography <em>Wonderful Adventures of Mrs. Seacole in Many Lands</em>.</p><p>That journey across the Isthmus [of Panama], insignificant in distance as it was, was by no means an easy one. It seemed as if nature had determined to throw every <u>conceivable</u> obstacle in the way of those who should seek to join the two great oceans of the world.</p>",
+   "stem": "As used in the text, what does the word &ldquo;conceivable&rdquo; most nearly mean?",
+   "choices": [
+    "Imaginable",
+    "Obvious",
+    "Reasonable",
+    "Dependable"
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 3,
+   "why": "'Every conceivable obstacle' means every obstacle that could be thought of. 'Obvious', 'reasonable' and 'dependable' are all senses the word does not carry here."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-W5",
+   "sourceRef": "AUTHORED/RW:A-W5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Because seed banks must remain viable for decades without power, engineers site them in permafrost, where the surrounding ground keeps temperatures low even if the cooling system fails&mdash;a design that is deliberately _____.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "redundant",
+    "temporary",
+    "compact",
+    "ornamental"
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 4,
+   "why": "Ground that holds the temperature when the cooling system fails is a backup for a function already provided, which is what a redundant design means. The others describe duration, size and appearance."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-W3",
+   "sourceRef": "AUTHORED/RW:A-W3",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The composer&rsquo;s late works are unusually _____: a single movement may quote a folk tune, a hymn, and a march within the space of two minutes.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "restrained",
+    "eclectic",
+    "repetitive",
+    "somber"
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 5,
+   "why": "Drawing on a folk tune, a hymn and a march at once is drawing from varied sources. 'Repetitive' would require the same material to return, which is the opposite of what the example shows."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 6,
+   "sourceRef": "OctUSB/RW_M1:6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Known for the albums <em>Someday My Prince Will Come</em> and <em>Milestones</em>, jazz trumpeter Miles Davis collaborated several times with pianist Gil Evans. Their 1958 adaptation of George Gershwin&rsquo;s opera <em>Porgy and Bess</em> bears little resemblance to the 1935 original. Davis and Evans felt no desire to please listeners expecting an exact duplication of the opera. <u>They omitted parts, such as the aria &ldquo;I Got Plenty of Nuthin&rsquo;,&rdquo; and sometimes made only brief gestures toward Gershwin&rsquo;s melodies.</u> But Davis and Evans&rsquo;s willingness to recompose Gershwin&rsquo;s work led to one of the most enduring albums in Davis&rsquo;s catalog.</p>",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It presents examples to support a claim made earlier in the text.",
+    "It shows how two artists benefited from ignoring certain conventions.",
+    "It proposes a reason why one work of art is widely thought to be more successful than another.",
+    "It undermines an assertion made later in the text."
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 6,
+   "why": "The omitted aria and the brief gestures are concrete instances of the earlier claim that the adaptation 'bears little resemblance to the 1935 original'. The benefit appears in the following sentence, not the underlined one."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 5,
+   "sourceRef": "AugUSE/RW:5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><em>The Last Report on the Miracles at Little No Horse</em> is a 2001 novel by Ojibwe writer Louise Erdrich. It explores how historical events affect families on a reservation in rural North Dakota. <em>The Last Report on the Miracles at Little No Horse</em> is typical of Erdrich&rsquo;s work. Her writing usually focuses on portrayals of everyday life in Ojibwe communities. Yet some of her novels have fantastical plots and take place outside Ojibwe communities. <u>For example, her 1991 novel <em>The Crown of Columbus</em> is essentially adventure fiction, and the thrilling events in its plot are set largely on a Caribbean island.</u></p>",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It recommends that readers avoid a particular novel by Erdrich.",
+    "It lists the many similarities between two novels by Erdrich.",
+    "It offers an example of a novel that differs from most of Erdrich&rsquo;s work.",
+    "It discusses what inspired Erdrich to write one of her novels."
+   ],
+   "correct": "C",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 7,
+   "why": "The underlined sentence begins 'For example' and follows 'Yet some of her novels have fantastical plots and take place outside Ojibwe communities' \u2014 it illustrates the exception, not similarities (B)."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 8,
+   "sourceRef": "AugUSE/RW:8",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Can field mustard plants grow on Mars? Can pea plants? You might think the answer to these questions is obviously no, but researchers in the Netherlands recently showed that the seeds of many common plant species can germinate in soil designed to simulate Martian conditions, as long as water is supplied. In fact, some species actually did <em>better</em> in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted in simulated Martian soil, compared with 4 percent that did when planted in soil from their home planet.</p>",
+   "stem": "According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+   "choices": [
+    "18 percent",
+    "30 percent",
+    "100 percent",
+    "5 percent"
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 8,
+   "why": "Stated directly. The 4 percent figure is the Earth-soil comparison, and the other two numbers do not appear."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 9,
+   "sourceRef": "OctIntB/RW_M1:9",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>&ldquo;Tomato&rdquo; is an example of a loanword&mdash;that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from <em>tomate</em>, the Spanish word for the widely cultivated plant. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word&rsquo;s original form is <em>tomatl</em>. &ldquo;Maize&rdquo; is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Ta&iacute;no, a language of the Caribbean islands, in which the word for the corn plant is <em>mah&iacute;s</em>.</p>",
+   "stem": "The author makes which point about the Spanish language?",
+   "choices": [
+    "It has borrowed words from Indigenous languages and contributed words to them.",
+    "Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+    "It has served as a medium through which Indigenous languages have influenced English.",
+    "It adopted Nahuatl and Ta&iacute;no words in approximately equal numbers."
+   ],
+   "correct": "C",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 9,
+   "why": "Both examples travel Indigenous language -> Spanish -> English, which is exactly the 'medium' role. The text never says Spanish gave words back to Indigenous languages (A) and offers no counts to support B or D."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 12,
+   "sourceRef": "OctUSC/RW_M1:12",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Auxins are a class of hormones that influence plant growth, including leaf orientation (the tendency of leaves to be larger on one side of their long central axis than the other). University of California, Berkeley biologist Ciera Martinez and colleagues noted that in certain plants in which leaves grow in pairs, auxins will typically be concentrated in opposite sides of each leaf in the pair (e.g., on the left side of one leaf in the pair and the right side of the other). Accordingly, they hypothesized that paired leaves should tend to show opposite-side orientation, and they tested their hypothesis by examining paired leaves from several species of grapevines.</p>",
+   "stem": "Which choice best describes data from the graph that support Martinez and colleagues&rsquo; hypothesis?",
+   "choices": [
+    "The number of leaf pairs showing opposite-side orientation is fairly high in the July grape, but not as high as it is in the graybark grape.",
+    "Although the number of leaf pairs showing same-side orientation is fairly high in the July grape, it is much lower in both the frost grape and graybark grape.",
+    "Although the exact ratio varies by species, the graybark grape, frost grape, and July grape all show more leaf pairs with opposite-side orientations than with same-side orientations.",
+    "In the graybark grape, frost grape, and July grape, all the leaf pairs show opposite-side orientation."
+   ],
+   "correct": "C",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 10,
+   "why": "The hypothesis is that paired leaves <em>tend</em> to show opposite-side orientation, so the support must be that opposite beats same in every species \u2014 which the chart shows (roughly 105 vs 48, 200 vs 100, 265 vs 90). A and B compare species instead of orientations, and D overstates it to 'all', which the same-side bars contradict.",
+   "figureFile": "figures/grapevine_leaf_orientation.png"
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 10,
+   "sourceRef": "OctIntB/RW_M2:10",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Early Earth is thought to have been characterized by a stagnant lid tectonic regime, in which the upper lithosphere (the outer rocky layer) was essentially immobile and there was no interaction between the lithosphere and the underlying mantle. Researchers investigated the timing of the transition from a stagnant lid regime to a tectonic plate regime, in which the lithosphere is fractured into dynamic plates that in turn allow lithospheric and mantle material to mix. Examining chemical data from lithospheric and mantle-derived rocks ranging from 285 million to 3.8 billion years old, the researchers dated the transition to 3.2 billion years ago.</p>",
+   "stem": "Which finding, if true, would most directly support the researchers&rsquo; conclusion?",
+   "choices": [
+    "There is a positive correlation between the age of lithospheric rocks and their chemical similarity to mantle-derived rocks, and that correlation increases significantly in strength at around 3.2 billion years old.",
+    "Mantle-derived rocks younger than 3.2 billion years contain some material that is not found in older mantle-derived rocks but is found in older and contemporaneous lithospheric rocks.",
+    "Mantle-derived rocks older than 3.2 billion years show significantly more compositional diversity than lithospheric rocks older than 3.2 billion years do.",
+    "Among rocks known to be older than 3.2 billion years, significantly more are mantle derived than lithospheric, but the opposite is true for the rocks younger than 3.2 billion years."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 11,
+   "why": "The conclusion is that mixing between lithosphere and mantle began 3.2 billion years ago. B is exactly that signature: lithospheric material starts turning up in mantle rocks only after that date. A has similarity rising with age, the wrong direction; C and D compare diversity and abundance, neither of which is evidence of mixing."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-C2",
+   "sourceRef": "AUTHORED/RW:A-C2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Average Time to Locate a Buried Food Cache</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Group</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Landmarks present (seconds)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Landmarks removed (seconds)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Adults</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">94</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Juveniles</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td></tr></tbody></table><p>Some birds that store food recover it months later, and researchers disagree about what guides the search. One proposal is that adult birds rely on landmarks near the cache while juveniles have not yet learned to use them. To test this, an experiment timed how long adults and juveniles took to locate a buried cache, first with nearby landmarks in place and then with those landmarks removed.</p>",
+   "stem": "Which choice best describes data from the table that support the proposal?",
+   "choices": [
+    "Juveniles took longer than adults did when landmarks were present.",
+    "Both groups took longer to locate the cache once the landmarks had been removed.",
+    "Removing the landmarks slowed adults from 31 to 94 seconds but slowed juveniles only from 38 to 45.",
+    "Adults located the cache faster than juveniles did when landmarks were present."
+   ],
+   "correct": "C",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 12,
+   "why": "If adults rely on landmarks and juveniles do not, removing the landmarks should cost adults far more \u2014 which is exactly the 63-second penalty against the juveniles' 7. A, B and D are all true of the table but say nothing about who depends on the landmarks."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 15,
+   "sourceRef": "OctIntB/RW_M1:15",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Pigments give paints and dyes their color. Ocher is a mineral-based pigment used to make several colors, including red. Red ocher gets its color from iron oxide. Pigments can also be plant-based; plant-based pigments contain a high level of carbon. In a 2023 study, archaeologists tested the red pigment on decorated beads made by members of the Natufian culture approximately 15,000 years ago. The test showed that the pigment found on several beads contained no iron but had a high level of carbon. This finding led the researchers to conclude that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the Natufian beadmakers used plant-based pigments rather than ocher to decorate some of the beads examined in the study.",
+    "the pigments used by the Natufian beadmakers likely came from plants because ocher was difficult to find.",
+    "the Natufian beadmakers preferred to use plant-based pigments because they are much brighter than mineral-based pigments are.",
+    "the Natufian beads examined in the study are the oldest surviving examples of the use of plant-based pigments for decorating beads."
+   ],
+   "correct": "A",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 13,
+   "why": "No iron rules out red ocher and high carbon points to a plant source \u2014 exactly A. B, C and D add claims about availability, brightness and record-setting age that the text never supports."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 15,
+   "sourceRef": "OctUSB/RW_M1:15",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>All stainless steel contains varying amounts of iron, carbon, and corrosion-inhibiting chromium. However, ferritic stainless steel, often used for induction cookers, contains a higher percentage of chromium (at least 10.5%) than does austenitic stainless steel as well as a higher concentration of iron. Unlike ferritic stainless steel, austenitic stainless steel has a face-centered cubic crystalline structure held stable by the presence of nickel and nitrogen. Austenitic stainless steel has two subtypes: the 200 series, often used for washing machines, and the 300 series, which has more nickel than the 200 series and is often used for storage containers or furnaces. Thus, stainless steel used to manufacture _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "furnaces and stainless steel used to manufacture washing machines will both have a chromium content of less than 10.5%.",
+    "washing machines will have a higher concentration of nickel in its composition than stainless steel used to manufacture furnaces will.",
+    "induction cookers will have a face-centered cubic crystalline structure, but stainless steel used to manufacture storage containers will not.",
+    "storage containers and stainless steel used to manufacture induction cookers will have a similar concentration of nitrogen in their compositions."
+   ],
+   "correct": "A",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 14,
+   "why": "Furnaces (300 series) and washing machines (200 series) are both austenitic, and austenitic has less chromium than ferritic's at-least-10.5%. B reverses the nickel comparison (the 300 series has more), C reverses the crystalline structure (cookers are ferritic, which is not face-centered cubic), and D is unsupported."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 19,
+   "sourceRef": "AugUSE/RW:19",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>During the decades-long movement to codify the rights of Latinos in the US, certain events were pivotal: the founding of labor rights group El Teatro Campesino in _____ <em>Serna v. Portales Schools</em> court decision in 1974, which affirmed the rights of Latino students, is another such event.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "1965, for one, the",
+    "1965, for one. The",
+    "1965 for one, the",
+    "1965. For one, the"
+   ],
+   "correct": "B",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 15,
+   "why": "'The founding... in 1965, for one' and 'The Serna v. Portales Schools court decision... is another such event' are both independent clauses and need a sentence boundary. A and C splice them, and D detaches 'for one' from the clause it qualifies and attaches it to the second sentence, where 'another such event' already does that work."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-B1",
+   "sourceRef": "AUTHORED/RW:A-B1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The Hall of Mirrors at the Palace of Versailles took six years to _____ its 357 mirrors were among the most expensive objects in seventeenth-century France.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "complete,",
+    "complete, and,",
+    "complete",
+    "complete;"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 16,
+   "why": "'The Hall of Mirrors took six years to complete' and 'its 357 mirrors were among the most expensive objects...' are both independent clauses, so only the semicolon can join them. The bare comma splices them, 'complete' alone runs them together, and 'and,' strands a comma after the conjunction."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 17,
+   "sourceRef": "OctIntB/RW_M2:17",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Recent analysis of 2010 BL4&mdash;an outer solar system object orbiting the Sun between Jupiter and Neptune&mdash;has determined its color to be gray, suggesting an icy composition. Such interpretations are ultimately _____ the object&rsquo;s gray coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "speculative, though;",
+    "speculative: however,",
+    "speculative; though",
+    "speculative, though"
+   ],
+   "correct": "A",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 17,
+   "why": "Both halves are independent clauses, so B's colon-plus-'however' and D's bare comma both fail, and C leaves 'though the object's coloration may be...' as a subordinate fragment. A keeps 'though' as a trailing adverb closing the first sentence (conceding against the previous sentence's suggestion) and starts the explanation after a semicolon."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-B5",
+   "sourceRef": "AUTHORED/RW:A-B5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The tuatara, a reptile found only on a few islands off New _____ is the sole surviving member of an order that otherwise died out roughly 60 million years ago.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Zealand",
+    "Zealand:",
+    "Zealand;",
+    "Zealand,"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 18,
+   "why": "'A reptile found only on a few islands off New Zealand' is a nonrestrictive appositive opened by a comma, so a comma must close it before the main verb 'is'. A semicolon or colon would break the sentence in two, and omitting the mark leaves the appositive unclosed."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 19,
+   "sourceRef": "OctIntB/RW_M1:19",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The Globe Theatre in London is a reconstruction of the famed venue where many of Shakespeare&rsquo;s plays were first performed. In 1613, a prop cannon _____ during a performance and ignited the Globe&rsquo;s thatched roof. No one was hurt, but in two hours the original Globe was gone.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "has malfunctioned",
+    "malfunctioned",
+    "will malfunction",
+    "malfunctions"
+   ],
+   "correct": "B",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 19,
+   "why": "'In 1613' fixes a completed past event, and the blank is coordinated with the simple past 'ignited'. Only 'malfunctioned' matches."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 18,
+   "sourceRef": "OctUSB/RW_M1:18",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The constitution of Spain, enacted in 1978, enshrines 60 total rights across 17,608 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, _____ 105th in a global ranking of the shortest constitutions.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "its",
+    "it&rsquo;s",
+    "they&rsquo;re",
+    "their"
+   ],
+   "correct": "B",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 20,
+   "why": "The clause needs a subject and a verb: 'it is 105th'. 'Its' and 'their' are possessives with no noun to attach to, and the singular antecedent (the constitution) rules out 'they're'."
+  },
+  {
+   "source": "AugUSE-USC",
+   "sourceNum": 20,
+   "sourceRef": "AugUSE-USC/RW:20",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In the late nineteenth and early twentieth centuries, automobiles were commonly referred to as horseless carriages after the older technology they still resembled. Known as the Brass Era, this period in automotive design is remembered for its grandeur and artistry, its vehicles _____ by collectors for their ornate detailing and gleaming brass fittings.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "highly prized",
+    "had been highly prized",
+    "are highly prized",
+    "were highly prized"
+   ],
+   "correct": "A",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 21,
+   "why": "'Its vehicles ___ by collectors' is an absolute phrase attached to the main clause by a comma, so it takes a participle. Any finite verb turns it into a second independent clause and makes the comma a splice."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 20,
+   "sourceRef": "OctIntB/RW_M2:20",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>When, in 2017, Cambridge University students Lucy Moss and Toby Marlow decided they wanted to develop a musical together, one of their goals was for their female actor friends to have good parts to play. _____ they created the show <em>Six</em>, a retelling of the history of King Henry VIII&rsquo;s wives in which each of the six queens has a starring role.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "To that end,",
+    "In summary,",
+    "For example,",
+    "In other words,"
+   ],
+   "correct": "A",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 22,
+   "why": "The first sentence states a goal and the second states what they did to achieve it, which is exactly what 'to that end' marks. The show is not an example of the goal (C) or a restatement of it (D)."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-T6",
+   "sourceRef": "AUTHORED/RW:A-T6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>A tidal bore forms when an incoming tide is funneled into a narrowing river channel and the water piles up faster than it can spread out. _____ the river briefly runs backward.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In other words,",
+    "Nonetheless,",
+    "For example,",
+    "Previously,"
+   ],
+   "correct": "A",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 23,
+   "why": "Running backward restates the piling-up description in plainer terms rather than adding an instance (C) or a contrast (B)."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 23,
+   "sourceRef": "OctIntB/RW_M1:23",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>When languages are no longer spoken, they are considered extinct. _____ the Umbrian language went extinct around the first century BCE, though it was once widely spoken in parts of central Italy.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Therefore,",
+    "Admittedly,",
+    "For example,",
+    "In conclusion,"
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 24,
+   "why": "Umbrian is one instance of the general definition in the first sentence \u2014 an illustration, not a consequence, concession or summary."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 27,
+   "sourceRef": "OctIntB/RW_M1:27",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Lighthouses send out crucial light signals to help ships and other watercraft navigate at night.</li><li>Before automation, lighthouses were run by lighthouse keepers.</li><li>Catherine A. Moore was the lighthouse keeper at Black Rock Harbor Light in Connecticut.</li><li>She held this position from 1817 to 1878.</li><li>Laura J. Hecox was the lighthouse keeper at Santa Cruz Light in California.</li><li>She held this position from 1883 to 1917.</li></ul></p>",
+   "stem": "The student wants to emphasize the order in which the two lighthouse keepers began their careers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Catherine A. Moore&rsquo;s career as a lighthouse keeper ended in 1878, whereas Laura J. Hecox&rsquo;s ended in 1917.",
+    "Laura J. Hecox began her career as a lighthouse keeper years after Catherine A. Moore did.",
+    "From 1817 to 1878, the nighttime waters of Connecticut were more navigable thanks to lighthouse keepers Laura J. Hecox and Catherine A. Moore.",
+    "Before automation, lighthouse keepers like Catherine A. Moore and Laura J. Hecox were crucial to ensuring safe navigation for watercraft."
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 25,
+   "why": "The goal is when each <em>began</em>: Moore in 1817, Hecox in 1883. B states that order. A compares end dates instead, C wrongly places Hecox in Connecticut, and D has no dates."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-R2",
+   "sourceRef": "AUTHORED/RW:A-R2",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Cuneiform and hieroglyphic writing were both used in the ancient world.</li><li>Cuneiform was written by pressing a reed stylus into wet clay.</li><li>Hieroglyphs were most often carved into stone or painted onto plaster.</li><li>Both systems were used for administrative records as well as religious texts.</li></ul></p>",
+   "stem": "The student wants to emphasize a difference between how the two scripts were produced. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Cuneiform and hieroglyphic writing were both used for administrative records as well as religious texts.",
+    "Cuneiform was pressed into wet clay with a reed stylus, whereas hieroglyphs were most often carved into stone or painted onto plaster.",
+    "Cuneiform and hieroglyphic writing were two writing systems of the ancient world.",
+    "Hieroglyphs served religious purposes in addition to administrative ones."
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 26,
+   "why": "B names the production method for each and marks the contrast with 'whereas'. A and C state what the two share, and D describes only one script's uses."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 25,
+   "sourceRef": "AugUSE/RW:25",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The Paralympic Games are a series of international sporting events involving athletes with an impairment.</li><li>Swimming has been an event at the Paralympics since 1960.</li><li>Mike Kenny competed as a Paralympic swimmer from 1976 to 1988.</li><li>He won eighteen medals.</li><li>Of these, sixteen were gold medals, which indicate a first-place finish.</li></ul></p>",
+   "stem": "Which choice most effectively uses information from the given sentences to emphasize the number of medals won by Kenny?",
+   "choices": [
+    "An accomplished Paralympian with multiple gold medal wins, Mike Kenny competed as a swimmer from 1976 to 1988.",
+    "During his career as a Paralympic swimmer, Mike Kenny earned a total of eighteen medals, sixteen of which were gold.",
+    "Swimming, a sport in which Mike Kenny took home sixteen gold medals, has been an event at the Paralympic Games since 1960.",
+    "Mike Kenny competed at the Paralympic Games, a series of international sporting events."
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 27,
+   "why": "Only B gives both counts and foregrounds them ('a total of eighteen medals, sixteen of which were gold'). A says 'multiple' without a number, C buries one figure inside a fact about the sport, and D gives none."
+  }
+ ],
+ "test6|RW_M2_HARD": [
+  {
+   "source": "OctIntB",
+   "sourceNum": 1,
+   "sourceRef": "OctIntB/RW_M2:1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Despite stated claims of global relevance, much major research on income inequality performed in the 2010s suffered from a myopic focus on a few countries in North America and Western Europe, partly due to limited data availability. Researchers would later _____ this shortcoming after gaining new access to banking records located in nations in Asia, such as China, and Eastern Europe, such as Hungary.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "mitigate",
+    "presuppose",
+    "validate",
+    "categorize"
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 1,
+   "why": "New data from the previously missing regions would reduce the narrow-focus problem. 'Validate' and 'presuppose' would mean accepting the shortcoming rather than easing it."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 4,
+   "sourceRef": "OctUSC/RW_M1:4",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>As with other river deltas, the Paran&aacute; River delta is _____: it is a constantly evolving network of channels and strips of land that change in size and shape as the river deposits new sedimentary particles where the river meets the waters of the Atlantic Ocean.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "dynamic",
+    "immutable",
+    "sustainable",
+    "unrivaled"
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 2,
+   "why": "The colon makes the rest of the sentence a definition of the blank: 'constantly evolving... change in size and shape'. 'Immutable' is the opposite."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-3",
+   "sourceRef": "AugUSE/RW:M2-3",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Authors like Laura Esquivel contributed to the outpouring of Mexican literature in the years following the Mexican Revolution, which lasted from 1910&ndash;1920. Works from this period make up an _____ proportion of what is considered the canon of Mexican literature, but nineteenth-century writers like Justo Sierra O&rsquo;Reilly should be considered just as integral to the Mexican literary canon.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "overlooked",
+    "outsized",
+    "unspecified",
+    "erratic"
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 3,
+   "why": "The 'but' sets up a corrective: post-Revolution works occupy more of the canon than their due, and earlier writers deserve equal standing. 'Overlooked' reverses it; the other two say nothing about proportion."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 4,
+   "sourceRef": "AugUSE/RW:4",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The discoverers of the minor planet 1227 Geranium named it after the plant genus that includes cranesbills. Most of the recently discovered minor planets, however, are given only an identification number, largely due to there being over 500,000 such bodies known at present, which makes the already challenging task of finding a unique name for each nearly _____.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "feasible",
+    "unnecessary",
+    "substantial",
+    "insurmountable"
+   ],
+   "correct": "D",
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV",
+   "skill": "Words in Context",
+   "order": 4,
+   "why": "'Already challenging' plus 500,000 bodies pushes the task past difficult, and 'nearly _____' wants a limit word. 'Feasible' reverses it and the other two do not describe a task's difficulty."
+  },
+  {
+   "source": "AugUSE-USC",
+   "sourceNum": 5,
+   "sourceRef": "AugUSE-USC/RW:5",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Pteropods are small swimming snails with thin, delicate calcium carbonate shells. These animals are thought to be especially vulnerable to ocean acidification due to calcium carbonate&rsquo;s susceptibility to dissolution at lower pH values. Victoria L. Peck and colleagues recently found that the periostracum (a protective coating on pteropods&rsquo; outer shells) prevents this dissolution when intact. Moreover, the team was surprised to discover that even when the periostracum is breached, pteropods can still mitigate damage by rebuilding the inner shell wall.</p>",
+   "stem": "Which choice best describes the main purpose of the text?",
+   "choices": [
+    "To call for additional research on biological mechanisms that improve pteropod survival rates",
+    "To present findings that suggest that a concern about the effects of ocean acidification on pteropod shells may be unwarranted",
+    "To address some of the ways ocean acidification has altered pteropod behavior over time",
+    "To discuss a conclusion drawn in a study of calcium carbonate&rsquo;s role in protecting the periostracum of pteropods"
+   ],
+   "correct": "B",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 5,
+   "why": "The text sets up the vulnerability, then supplies two findings against it \u2014 the periostracum prevents dissolution, and pteropods rebuild the inner wall even when it is breached. D reverses the relationship (the periostracum protects the shell, not the reverse), and no call for further research is made (A)."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 7,
+   "sourceRef": "OctIntB/RW_M1:7",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.</p>",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It introduces the topic of a scientific study, describes the study&rsquo;s importance, and then presents the study&rsquo;s results.",
+    "It argues for a new approach to scientific research, comments on the public&rsquo;s opinion about the approach, and then describes how that approach was applied in a certain study.",
+    "It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used.",
+    "It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects."
+   ],
+   "correct": "C",
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS",
+   "skill": "Text Structure and Purpose",
+   "order": 6,
+   "why": "Three sentences, three moves: name community science, list three benefits, cite the Merrill study. No results are given (A), no public opinion (B), and no future projects (D)."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 6,
+   "sourceRef": "OctIntB/RW_M2:6",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Text 1</strong></p><p>In parts of the Northwest Territories, Canada, the rough-legged hawk is a major predator of the collared lemming. Researcher Alice Kenney and colleagues found that when this predation pressure on collared lemmings was temporarily reduced, their numbers significantly increased. This finding illustrates a foundational ecological <u>principle</u>: predators control prey population numbers.</p><p><strong>Text 2</strong></p><p>Robert D. Hayes and colleagues found that excluding wolves from a site in Yukon, Canada, where they typically prey on Dall sheep had no significant effect on Dall sheep abundance. Many other predation relief studies show an increase in prey abundance, but those studies often focus on small, rapidly reproducing prey, like birds, lemmings, and rabbits, rather than large, slowly reproducing prey, like Dall sheep, which could account for the difference between those results and Hayes and colleagues&rsquo; results.",
+   "stem": "Based on the texts, the author of Text 2 would most likely agree with which statement about the &ldquo;principle&rdquo; mentioned in Text 1?",
+   "choices": [
+    "It has some evidential support, but it should not be regarded as universally applicable.",
+    "It has been challenged by some studies, but the findings of those studies have not been widely accepted.",
+    "It may be true for some predators but only because those predators share certain physical characteristics.",
+    "It is plausible, but many of the studies that support it have methodological flaws."
+   ],
+   "correct": "A",
+   "domainCode": "CAS",
+   "skillCode": "CAS-CT",
+   "skill": "Cross-Text Connections",
+   "order": 7,
+   "why": "Text 2 grants that 'many other predation relief studies show an increase in prey abundance' \u2014 evidential support \u2014 but proposes that prey life history (small and fast-reproducing versus large and slow) limits where the principle holds. It faults neither the studies' methods (D) nor their acceptance (B), and it points to prey traits, not predator traits (C)."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 7,
+   "sourceRef": "OctIntB/RW_M2:7",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Many artists associated with hyperpop, a movement in electronic music that emerged in the 2010s, conform to the model perfected by American musician Laura Les: bold synthesizer arrangements, propulsive beats, and electronically manipulated vocals. Yet the movement is hardly uniform: Venezuelan recording artist Arca incorporates Latin rhythms into the hyperpop sound, for example. Such stylistic diversity is encouraged in part by the music-streaming app Spotify, whose curated playlist of hyperpop songs balances cohesion with variety.</p>",
+   "stem": "Which statement about Arca is best supported by the text?",
+   "choices": [
+    "While some of her recordings conform to the model perfected by Laura Les, others reject it outright.",
+    "She developed her unique sound without being influenced by other artists on Spotify&rsquo;s hyperpop playlist.",
+    "Her music diverges from the typical hyperpop sound but doesn&rsquo;t abandon it.",
+    "Her inclusion on Spotify&rsquo;s hyperpop playlist inspired established artists to embrace stylistic experimentation."
+   ],
+   "correct": "C",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 8,
+   "why": "Arca appears as the example of a movement that 'is hardly uniform', and she 'incorporates Latin rhythms <em>into</em> the hyperpop sound' \u2014 a variation within the style, not a rejection of it (A). B and D make claims about influence the text never supports."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 9,
+   "sourceRef": "OctUSB/RW_M2:9",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Nicolas Dussex and colleagues relied on historical DNA (hDNA)&mdash;genomic data incidentally preserved in specimens housed in natural history collections&mdash;to investigate the evolutionary trajectory of the kakapo parrot (<em>Strigops habroptilus</em>). Although this approach offers unique benefits, such as the ability to sample genomic material from extinct species, it remains relatively underutilized because archival specimens are sometimes stored in ways that compromise DNA quality, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.</p>",
+   "stem": "What does the text most strongly suggest about specimens from natural history collections?",
+   "choices": [
+    "While they were used in a study that made an important scientific discovery, they are generally of marginal value as sources of genomic data.",
+    "Because of their often-deteriorated condition, they tend to yield genomic data that are time-consuming to extract and interpret.",
+    "They are primarily used as sources of genomic data by scientists studying organisms that have undergone major evolutionary change.",
+    "While they may contain valuable genomic data, not all of them can yield usable hDNA."
+   ],
+   "correct": "D",
+   "domainCode": "INI",
+   "skillCode": "INI-CI",
+   "skill": "Central Ideas and Details",
+   "order": 9,
+   "why": "The text pairs 'unique benefits' with storage that 'sometimes' compromises DNA quality and cannot easily be remedied \u2014 valuable in general, unusable in some cases. 'Sometimes' rules out A's blanket dismissal and B's 'often-deteriorated'."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 11,
+   "sourceRef": "OctIntB/RW_M1:11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><strong>Defensive Behavior and Reproductive Traits of Select Bird Species</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Scientific name</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Common name</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Performs broken-wing display?</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Length of incubation (days)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Incubation duty</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Maximum number of broods per year</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\"><em>Bucephala islandica</em></td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Barrow&rsquo;s goldeneye</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1 parent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\"><em>Numenius arquata</em></td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Eurasian curlew</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2 parents</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\"><em>Eremophila alpestris</em></td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">horned lark</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yes</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1 parent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\"><em>Zenaida asiatica</em></td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">white-winged dove</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yes</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2 parents</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td></tr></tbody></table><p>In an extensive review of existing literature, L&eacute;na de Framond and team cataloged the prevalence of broken-wing display&mdash;a defensive behavior observed in <em>Haematopus longirostris</em> (pied oystercatcher) and many other species&mdash;throughout the Aves class. Documentation of the display in 285 species across 52 families suggests the behavior likely evolved independently multiple times, prompting the team to consider ecological and life-history characteristics with hypothesized associations to the behavior&rsquo;s emergence, including traits related to reproduction investment and future reproduction potential. Based on their review of those traits, the team concluded that _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the conclusion?",
+   "choices": [
+    "capacity for multiple broods, number of parental incubators, and incubation duration are equally associated with the use of broken-wing display.",
+    "incubation duration and capacity for multiple broods are more strongly associated with the use of broken-wing display than the number of parental incubators is.",
+    "broken-wing display is most often observed in species with less opportunity to reproduce in a year due to longer incubation periods.",
+    "among species with more than one parental incubator, the use of broken-wing display is associated with greater incubation duration."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 10,
+   "why": "In the table the two display species have short incubation (12, 14) and multiple broods (3, 2) while the two non-display species have long incubation (34, 30) and one brood \u2014 both traits track the display perfectly. Incubation duty does not: each group contains one 1-parent and one 2-parent species. C reverses the incubation relationship, and D is false (among the 2-parent species the display one has the shorter incubation)."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 11,
+   "sourceRef": "AugUSE/RW:11",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><em>The Underdogs</em> is a 1915 novel by Mariano Azuela, originally written in Spanish. In the novel, Azuela depicts a traveling group of soldiers as having a renewed sense of agency and authority as they set off on a new stage of their journey: _____</p>",
+   "stem": "Which quotation from a translation of <em>The Underdogs</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;The sonorous, joyful bells rang again. From within the church, the honeyed voices of a female chorus rose melancholy and grave.&rdquo;",
+    "&ldquo;All day long [the soldiers] rode through the canyon, up and down the steep, round hills, dirty and bald as a man&rsquo;s head, hill after hill in endless succession. At last, late in the afternoon, they descried several stone church towers in the heart of a bluish ridge, and, beyond, the white road with its curling spirals of dust and its gray telegraph poles.&rdquo;",
+    "&ldquo;The men threw out their chests as if to breathe the widening horizon, the immensity of the sky, the blue from the mountains and the fresh air, redolent with the various odors of the sierra. They spurred their horses to a gallop as if in that mad race they laid claims of possession to the earth.&rdquo;",
+    "&ldquo;Before Juchipila was lost from sight, Valderrama got off his horse, bent down, kneeled, and gravely kissed the ground.&rdquo;"
+   ],
+   "correct": "C",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 11,
+   "why": "'Laid claims of possession to the earth' is the authority and 'spurred their horses to a gallop' the agency, both at the start of a new stretch of road. B describes the same journey but with no sense of renewal, and A and D are about other characters and moods."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 13,
+   "sourceRef": "OctIntB/RW_M1:13",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p><em>Cane</em> is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer establishes a contrast between the narrator&rsquo;s attitude toward life and the attitude of the narrator&rsquo;s love interest, Avey, writing, _____</p>",
+   "stem": "Which quotation from <em>Cane</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;Avey was as silent as those great trees whose tops we looked down upon. She has always been like that. At least, to me.&rdquo;",
+    "&ldquo;A band in one of the buildings a fair distance off was playing a march. I wished they would stop. Their playing was like a tin spoon in one&rsquo;s mouth.&rdquo;",
+    "&ldquo;[Avey would] smile appreciation, but it was an impersonal smile, never for me.&rdquo;",
+    "&ldquo;As time went on, [Avey&rsquo;s] indifference to things began to pique me; I was ambitious. I left [our small hometown] earlier than she did.&rdquo;"
+   ],
+   "correct": "D",
+   "domainCode": "INI",
+   "skillCode": "INI-CE",
+   "skill": "Command of Evidence",
+   "order": 12,
+   "why": "Only D names both attitudes and sets them against each other: Avey's indifference versus the narrator's ambition. A and C describe Avey alone, and B is about a band."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 14,
+   "sourceRef": "OctUSB/RW_M2:14",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The Clarion-Clipperton Zone (CCZ) is an expanse of abyssal plain and seamounts (underwater mountains) between Hawai&rsquo;i and Mexico in which mining is permitted, but the area&rsquo;s biodiversity is poorly understood. The vast majority of invertebrate species found in a recent survey of the CCZ were hitherto unknown to scientists, and sampling for animal life has been highly concentrated in the eastern part of the zone. Some species like <em>Ledella knudseni</em> were identified both morphologically and molecularly (using DNA analysis), whereas <em>Prionospio branchilucida</em> and other species for which molecular sampling was impracticable were identified solely based on physical morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify <em>Prionospio branchilucida</em>.",
+    "more frequently used for identifying species with physiological characteristics like those of <em>Ledella knudseni</em> than morphological analysis is.",
+    "better suited to distinguishing <em>Prionospio branchilucida</em> from morphologically similar species than to distinguishing <em>Ledella knudseni</em> from morphologically similar species.",
+    "capable of providing greater physiological detail about a species than is the method used for <em>Prionospio branchilucida</em>."
+   ],
+   "correct": "A",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 13,
+   "why": "The final clause is the premise: molecular analysis does not depend on subtle physiological differences, so it should outperform morphology-only identification (the method used for <em>Prionospio branchilucida</em>) precisely where species look alike. B is about frequency of use, C reverses the case that suits it, and D claims more physiological detail, which does not follow from needing less of it."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-13",
+   "sourceRef": "AugUSE/RW:M2-13",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Many Indian snack foods, such as bhatoora and paneer pakora, acquire their flavor from being fried in oil; some are also coated in batter beforehand. Chemists Marc A. Meyers and Andrew Grazela studied the mass and heat transfer processes that occur when foods are fried in batters containing hydrocolloids, polymers that become viscous or gel-like in water. During frying, water in the food evaporates, leaving voids that oil (a pure fat) can fill. As the process continues, water from the food&rsquo;s center moves to the crust as long as the crust remains permeable. However, hydrocolloids can create structures in the crust that reduce the transfer of moisture out of the food&rsquo;s core during frying. Therefore, a food fried without a hydrocolloid batter coating will likely _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "have a more viscous crust when frying is completed than it would have if it were fried with a coating of hydrocolloid batter.",
+    "have a higher fat content than it would have if it were fried with a coating of hydrocolloid batter.",
+    "need to be cooked more quickly at a higher temperature than it would need to be cooked if it were fried with a coating of hydrocolloid batter.",
+    "need to be cooked in a different oil than it would need to be cooked in if it were fried with a coating of hydrocolloid batter."
+   ],
+   "correct": "B",
+   "domainCode": "INI",
+   "skillCode": "INI-IE",
+   "skill": "Inferences",
+   "order": 14,
+   "why": "Follow the chain: no hydrocolloids means the crust stays permeable, so more water leaves, so more voids form, and oil \u2014 'a pure fat' \u2014 fills them. C and D are about cooking conditions the text never raises, and A attributes viscosity to the wrong case."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-B7",
+   "sourceRef": "AUTHORED/RW:A-B7",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Cochineal insects yield a red dye so vivid that it was once traded across three _____ synthetic alternatives had replaced it in most industries.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "continents, by 1900,",
+    "continents by 1900,",
+    "continents; by 1900,",
+    "continents by 1900"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 15,
+   "why": "'Cochineal insects yield a red dye...' and 'synthetic alternatives had replaced it...' are independent clauses, and 'by 1900' introduces the second. A semicolon is required; a comma splices them and the unpunctuated versions run on."
+  },
+  {
+   "source": "OctIntB",
+   "sourceNum": 17,
+   "sourceRef": "OctIntB/RW_M1:17",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>On December 2, 1992, the space shuttle <em>Discovery</em> blasted off into space, commencing Mission _____ seven days and seven hours, the mission ended when the shuttle landed at Edwards Air Force Base in California.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "STS-53, lasting",
+    "STS-53, it lasted",
+    "STS-53 lasting",
+    "STS-53. Lasting"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 16,
+   "why": "'...blasted off into space, commencing Mission STS-53' and 'the mission ended when the shuttle landed...' are both independent clauses, so a sentence boundary is required. A and C leave the second clause spliced on with a comma, and B splices two clauses outright."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 18,
+   "sourceRef": "OctUSB/RW_M2:18",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>The length of bird eggs varies widely across species, and an ecological _____ compared the lengths of eggs produced by different bird species found <em>Milvus migrans</em> eggs to be longer, on average, than <em>Gallinula chloropus</em> eggs.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "study, that",
+    "study, which",
+    "study",
+    "study that"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 17,
+   "why": "'That compared the lengths...' is a restrictive relative clause identifying which study, and 'found' is the main verb; restrictive clauses take no comma, so D. B would need a second comma before 'found' to close a nonrestrictive clause, and C leaves two finite verbs ('compared', 'found') with no conjunction."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 17,
+   "sourceRef": "OctUSB/RW_M2:17",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>When Fiji joined Interpol&mdash;the International Criminal Police _____ in 1971, the Fiji National Police Intelligence Bureau gained access to the combined resources of law enforcement agencies from around the globe.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Organization,",
+    "Organization&mdash;",
+    "Organization",
+    "Organization:"
+   ],
+   "correct": "B",
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS",
+   "skill": "Boundaries",
+   "order": 18,
+   "why": "A dash already opens the appositive that names Interpol in full, so the matching dash must close it. Mixing a dash with a comma or a colon, or omitting the closing mark entirely, leaves the aside unbounded."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": 17,
+   "sourceRef": "AugUSE/RW:17",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In her work as a sociocultural anthropologist, L&iacute;via Barbosa studies food and sociability in contemporary Brazil&mdash;namely, how common Brazilian foods like tareco (a disk-shaped biscuit) and coxinha (a stuffed fried dough) _____ as central mechanisms in building social relationships, values, and identities.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "is functioning",
+    "functions",
+    "has functioned",
+    "function"
+   ],
+   "correct": "D",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 19,
+   "why": "The subject of the blank is the plural 'foods like tareco and coxinha', and the surrounding verbs are simple present ('studies'), so the plural present 'function' is required."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 16,
+   "sourceRef": "OctUSB/RW_M1:16",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>An emulsifier is a type of compound that serves to stabilize an emulsion&mdash;a mixture of two or more liquids that otherwise would not easily blend together. In the cosmetics industry, emulsifiers such as stearyl alcohol _____ to blend oil and water into homogeneous formulations, like lotions and perfumes.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "employed",
+    "being employed",
+    "are employed",
+    "that they employ"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 20,
+   "why": "The sentence has no other main verb, so the blank must supply one for the plural subject 'emulsifiers'. Only 'are employed' is a finite plural verb; the rest leave a fragment."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-F3",
+   "sourceRef": "AUTHORED/RW:A-F3",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>In 1783, the Laki fissure in Iceland began an eruption that lasted eight months. Ash carried on the wind _____ harvests as far away as central Europe that year.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "damages",
+    "is damaging",
+    "damaged",
+    "will damage"
+   ],
+   "correct": "C",
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS",
+   "skill": "Form, Structure, and Sense",
+   "order": 21,
+   "why": "'In 1783' and 'that year' fix the event in the completed past, and the surrounding verbs ('began', 'lasted') are simple past."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-T7",
+   "sourceRef": "AUTHORED/RW:A-T7",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Green roofs reduce the volume of stormwater that reaches a city&rsquo;s drains, easing pressure on systems that were sized for a smaller population. _____ the soil layer insulates the building beneath it, lowering the energy needed to heat and cool the top floors.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In short,",
+    "Instead,",
+    "Moreover,",
+    "Until then,"
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 22,
+   "why": "Insulation is a second, separate benefit added to the stormwater benefit. 'Instead' would replace the first claim and 'in short' would summarise it."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-T1",
+   "sourceRef": "AUTHORED/RW:A-T1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Saffron must be harvested by hand, and each crocus flower yields only three usable stigmas. _____ a single kilogram of the spice represents the picking of roughly 150,000 flowers.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Nevertheless,",
+    "In contrast,",
+    "Similarly,",
+    "Consequently,"
+   ],
+   "correct": "D",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 23,
+   "why": "The flower count follows from the hand harvest and the three-stigma yield, so the relation is causal rather than contrastive or parallel."
+  },
+  {
+   "source": "AugUSE",
+   "sourceNum": "M2-23",
+   "sourceRef": "AugUSE/RW:M2-23",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>Joseph Goodrich was an outspoken abolitionist whose Wisconsin home was a stop on the underground railroad (the network of people and places that some enslaved people used to escape to freedom). _____ supporters of the railroad were secretive about their antislavery views. By and large, they were vocal abolitionists like Goodrich.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Occasionally,",
+    "For example,",
+    "Accordingly,",
+    "However,"
+   ],
+   "correct": "A",
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR",
+   "skill": "Transitions",
+   "order": 24,
+   "why": "The sentence that follows \u2014 'By and large, they were vocal abolitionists' \u2014 marks secrecy as the exception, so the blank must limit the claim's frequency. Goodrich was outspoken, so secrecy is neither an example of (B) nor a consequence of (C) the first sentence."
+  },
+  {
+   "source": "OctUSB",
+   "sourceNum": 27,
+   "sourceRef": "OctUSB/RW_M1:27",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Element abundance is a relative measure of the occurrence of a chemical element in a given environment.</li><li>An element&rsquo;s relative abundance can be expressed as a mass fraction, mole fraction, or volume fraction.</li><li>Mass fraction is the ratio of an element&rsquo;s mass to the combined mass of all elements in a given environment.</li><li>The mass fraction of calcium (Ca) is 17,100 parts per million (ppm), or 1.71%, on Earth.</li><li>The mass fraction of potassium (K) is 160 ppm, or 0.016%, on Earth.</li></ul></p>",
+   "stem": "The student wants to specify an element&rsquo;s relative abundance on Earth. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Mass fraction, mole fraction, and volume fraction can all be used to express an element&rsquo;s relative abundance in a given environment.",
+    "Expressed as a mass fraction, the relative abundance of potassium on Earth is 160 ppm, or 0.016%.",
+    "The relative abundance of the element potassium on Earth can be expressed in three different ways.",
+    "On Earth, the mass fraction of potassium is greater than that of calcium."
+   ],
+   "correct": "B",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 25,
+   "why": "Only B gives an actual figure for one element. A and C describe the available measures rather than specifying an abundance, and D is false (calcium's 17,100 ppm far exceeds potassium's 160 ppm)."
+  },
+  {
+   "source": "AUTHORED",
+   "sourceNum": "A-R1",
+   "sourceRef": "AUTHORED/RW:A-R1",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>A qanat is an underground channel that carries water from an aquifer to the surface by gravity alone.</li><li>Qanats have been built across arid regions of Asia and North Africa for more than 2,500 years.</li><li>The Qanat of Gonabad in Iran is about 33 kilometers long.</li><li>Its main well shaft reaches a depth of roughly 300 meters.</li><li>It still supplies water to farms today.</li></ul></p>",
+   "stem": "The student wants to emphasize the depth of the Qanat of Gonabad&rsquo;s main well shaft. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Qanat of Gonabad, which is about 33 kilometers long, is an underground channel in Iran.",
+    "Qanats have carried water across arid regions of Asia and North Africa for more than 2,500 years.",
+    "The main well shaft of the Qanat of Gonabad descends roughly 300 meters below the surface.",
+    "The Qanat of Gonabad still supplies water to farms today, using gravity alone."
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 26,
+   "why": "Only the 'descends roughly 300 meters' choice gives the shaft depth. One choice gives the 33-kilometer length instead, and the other two are about qanats generally and about present-day use."
+  },
+  {
+   "source": "OctUSC",
+   "sourceNum": 25,
+   "sourceRef": "OctUSC/RW_M1:25",
+   "type": "MULTIPLE_CHOICE",
+   "passageHtml": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The Wairakei geothermal power plant in New Zealand uses a flash steam system to generate electricity.</li><li>Flash steam technology requires geothermal reservoir temperatures above 180&deg;C.</li><li>The use of flash steam systems worldwide is limited because many geothermal reservoirs aren&rsquo;t hot enough.</li><li>The Traunreut geothermal power plant in Germany uses a binary cycle system.</li><li>Binary cycle technology can generate energy from lower-temperature (less than 180&deg;C) geothermal reservoirs.</li><li>Binary cycle systems involve higher maintenance costs than flash steam systems.</li></ul></p>",
+   "stem": "The student wants to compare the disadvantages of the geothermal systems used at the Wairakei and Traunreut plants. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Unlike the Traunreut plant, the Wairakei plant uses a flash steam system, which requires a less common resource: geothermal reservoirs with temperatures above 180&deg;C.",
+    "Compared with the system used at the Wairakei plant, the system used at the Traunreut plant has a notable disadvantage: its cost.",
+    "The system used at the Traunreut plant overcomes the temperature limitations of the Wairakei plant&rsquo;s system but is more costly to maintain.",
+    "The system at the Wairakei plant requires temperatures above 180&deg;C, while the system at the Traunreut plant can operate at lower temperatures."
+   ],
+   "correct": "C",
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS",
+   "skill": "Rhetorical Synthesis",
+   "order": 27,
+   "why": "The goal needs a drawback of <em>both</em> systems. C names Wairakei's temperature limitation and Traunreut's maintenance cost. A and B each give only one plant's disadvantage, and D gives a neutral capability comparison with no disadvantage at all."
+  }
+ ]
+}
