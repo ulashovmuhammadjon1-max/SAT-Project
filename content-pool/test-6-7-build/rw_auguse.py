@@ -102,6 +102,100 @@ QUESTIONS = [
        "gallop' the agency, both at the start of a new stretch of road. B describes the same journey "
        "but with no sense of renewal, and A and D are about other characters and moods."),
 
+ dict(num=12, skill="Command of Evidence",
+   needs_figure="AugUSE p013 bar chart, 'Average Overlap between Immature Orangutans' Diets (ID) and Their Mothers' Diets (MD)'",
+   figure_source=("AugUSE", "p013.jpeg"),
+   passage="Male orangutans typically disperse from the territory in which they were born when they "
+           "reach maturity, whereas females typically do not. Beatrice Ehmann and her colleagues showed "
+           "that this difference in life trajectory is reflected in the diets of immature orangutans, "
+           "with females&rsquo; diets overlapping more with their mothers&rsquo; diets than males&rsquo; "
+           "diets do. For example, on average, individual 9&rsquo;s mother shared approximately _____",
+   stem="Which choice most effectively uses data from the graph to complete the example?",
+   choices=["16% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 72% of its diet with individual 12&rsquo;s diet.",
+            "81% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 72% of its diet with individual 12&rsquo;s diet.",
+            "81% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 20% of its diet with individual 12&rsquo;s diet.",
+            "16% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 20% of its diet with individual 12&rsquo;s diet."],
+   answer="B",
+   why="Individual 9 is the female and 12 the male, and the claim is that females overlap more. The "
+       "'MD shared with ID' bars read about 81% for individual 9 and about 72% for individual 12, "
+       "which is B. The 16% and 20% figures come from the other pair of bars, 'ID not shared with MD'."),
+
+ dict(num=13, skill="Command of Evidence",
+   table=("Highest-Grossing Films in a Language Other than English at US Box Office",
+          ["Title", "Lifetime gross earnings", "Opening weekend box office gross earnings",
+           "US release date", "Director", "Oscar nominated?"],
+          [["<em>Instructions Not Included</em>", "$44,467,206", "$7,846,426", "August 30, 2013", "Eugenio Derbez", "No"],
+           ["<em>The Girl Who Played with Fire</em>", "$7,638,241", "$904,998", "July 9, 2010", "Daniel Alfredson", "No"],
+           ["<em>Am&eacute;lie</em>", "$33,225,499", "$136,470", "November 2, 2001", "Jean-Pierre Jeunet", "Yes"],
+           ["<em>All About My Mother</em>", "$8,272,296", "$50,362", "November 5, 1999", "Pedro Almod&oacute;var", "Yes"]]),
+   passage="Many films in a language other than English grow to be financially successful over the "
+           "course of their time in movie theaters in the United States, but some become immediate "
+           "successes in their opening weekends. A journalist claims that a film&rsquo;s reception can "
+           "greatly influence its long-term success. Indications that the film is of high quality, such "
+           "as an Oscar nomination, can dramatically boost public interest in the film and thus its "
+           "overall earnings, even with a relatively modest opening weekend performance: for example, _____",
+   stem="Which choice most effectively uses data from the table to complete the example?",
+   choices=["the opening weekend earnings for <em>Instructions Not Included</em> were $7,846,426 and $904,998 for <em>The Girl Who Played with Fire</em>.",
+            "<em>The Girl Who Played with Fire</em> earned more money in its opening weekend than <em>Am&eacute;lie</em> earned, but <em>Am&eacute;lie</em> had higher lifetime earnings.",
+            "both <em>Am&eacute;lie</em> and <em>All About My Mother</em> were recognized by the Oscars, but <em>Am&eacute;lie</em> had higher lifetime earnings.",
+            "<em>All About My Mother</em> was recognized by the Oscars, but <em>Instructions Not Included</em>, which was not recognized, had higher lifetime earnings."],
+   answer="B",
+   why="The example needs a modest opening weekend paired with high lifetime earnings for an "
+       "Oscar-nominated film. <em>Am&eacute;lie</em> opened at $136,470 — below <em>The Girl Who "
+       "Played with Fire</em>'s $904,998 — yet finished at $33,225,499 against $7,638,241, and it was "
+       "the nominated one. A gives opening figures with no lifetime comparison, C compares two "
+       "nominated films so the nomination explains nothing, and D runs against the claim."),
+
+ dict(num=14, skill="Inferences",
+   passage="Liverpool Football Club won more than half its home matches between 1947 and 2003, helping "
+           "to distinguish the team as a top British professional soccer club. Additionally, Liverpool, "
+           "whose home uniform color is mainly red, was more successful in home matches than was Watford "
+           "Football Club, whose home uniform color is not red. Research has shown that many people "
+           "associate the color red with power and dominance. Past experiences with red objects such as "
+           "stop signs can even cause people to respond to the color red with caution and hesitation. "
+           "These findings, if applicable in the context of athletic competitions, could suggest that in "
+           "matches played at Liverpool&rsquo;s home stadium, opponents may have _____",
+   stem="Which choice most logically completes the text?",
+   choices=["played more aggressively than they would have if their own uniforms were red.",
+            "been influenced by the color of Liverpool&rsquo;s uniforms.",
+            "been aware that Liverpool&rsquo;s uniform color affected their own performance.",
+            "been unaffected by the red clothing worn by fans in the stadium."],
+   answer="B",
+   why="Red signals dominance and prompts caution, and at Liverpool's home stadium the red belongs to "
+       "Liverpool's uniforms — so the inference is about opponents being affected by them. A reverses "
+       "the effect, C adds awareness the research never claims (the effect is described as automatic), "
+       "and D switches to the fans' clothing."),
+
+ dict(num="M2-3", skill="Words in Context",
+   passage="Authors like Laura Esquivel contributed to the outpouring of Mexican literature in the "
+           "years following the Mexican Revolution, which lasted from 1910&ndash;1920. Works from this "
+           "period make up an _____ proportion of what is considered the canon of Mexican literature, "
+           "but nineteenth-century writers like Justo Sierra O&rsquo;Reilly should be considered just as "
+           "integral to the Mexican literary canon.",
+   stem="Which choice completes the text with the most logical and precise word or phrase?",
+   choices=["overlooked", "outsized", "unspecified", "erratic"], answer="B",
+   why="The 'but' sets up a corrective: post-Revolution works occupy more of the canon than their due, "
+       "and earlier writers deserve equal standing. 'Overlooked' reverses it; the other two say nothing "
+       "about proportion."),
+
+ dict(num="M2-8", skill="Central Ideas and Details",
+   passage="The food industry has long used thermal technologies to preserve food in large batches. "
+           "Recent advancements in radiofrequency heating were made through research in Mexico on the "
+           "preservation of wheat flour. Radiofrequency heating is generally considered to be an "
+           "improvement over more conventional thermal preservation methods: whereas conventional "
+           "methods transfer energy from the surface of a food to its interior, radiofrequency heating "
+           "uses precisely controlled radio waves to generate heat within the food itself, thus reducing "
+           "industrial cooking times.",
+   stem="Based on the text, what is one disadvantage of some conventional thermal preservation methods?",
+   choices=["They require more energy than other methods do.",
+            "Their cooking times are longer than those of other methods.",
+            "They are only effective in heating foods that are lightweight and small in size.",
+            "They are especially vulnerable to technological breakdowns."],
+   answer="B",
+   why="The only comparison the text draws is that radiofrequency heating reduces cooking times "
+       "relative to conventional surface-to-interior heating. Energy use, food size and breakdowns are "
+       "never mentioned."),
+
  dict(num=17, skill="Form, Structure, and Sense",
    passage="In her work as a sociocultural anthropologist, L&iacute;via Barbosa studies food and "
            "sociability in contemporary Brazil&mdash;namely, how common Brazilian foods like tareco (a "
