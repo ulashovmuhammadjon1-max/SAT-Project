@@ -60,6 +60,10 @@ DERIVE = {
  "H18": lambda: 24 * Rational(15, 9),
  "H19": lambda: Rational(72, 360) * 2 * pi * 10,
  "H20": lambda: Rational(6, 10),
+ "H21": lambda: max(m for m in range(1, 40) if 25 * m + 40 <= 340),
+ "H22": lambda: expand((x + 4)**2 - (x - 4)**2),
+ "H23": lambda: 7 * 23 - 6 * 21,
+ "H24": lambda: Rational(1, 3) * pi * 6**2 * 10,
 }
 
 # Questions whose answer is a form rather than a number are checked by matching
@@ -114,7 +118,7 @@ for q in QUESTIONS:
     check(ok, f"{tag}: sympy got {got}, choice {q['correct']} is {txt!r}")
 
 # ------------------------------------------------------------------- shape
-check(len(QUESTIONS) == 20, f"{len(QUESTIONS)} authored MC, expected 20")
+check(len(QUESTIONS) == 24, f"{len(QUESTIONS)} authored MC, expected 24")
 for q in QUESTIONS:
     check(len(q['choices']) == 4, f"{q['n']}: needs 4 choices")
     check(len(set(q['choices'])) == 4, f"{q['n']}: duplicate choice")

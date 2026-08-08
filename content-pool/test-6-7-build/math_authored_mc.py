@@ -147,4 +147,32 @@ QUESTIONS = [
    "\\(\\cos Y\\)?",
    choices=["0.4", "0.6", "0.8", "1.6"], correct="B",
    check="angles X and Y are complementary, and the cosine of an angle equals the sine of its complement"),
+
+ # --- four more, replacing transcribed items whose figure exists only as a
+ # prose description in the transcript (a scatterplot, a dot plot, a labelled
+ # triangle and an exponential graph). Rule 3 forbids a description standing in
+ # for the picture, and the transcripts kept no source image to crop.
+ dict(n="H21", domain="ALG", skill="ALG-LI", stem=
+   "A gym charges a one-time joining fee of $40 plus $25 for each month of membership. Sam wants to "
+   "spend no more than $340 in total. What is the greatest number of whole months of membership Sam "
+   "can buy?",
+   choices=["11", "12", "13", "15"], correct="B",
+   check="25m + 40 <= 340 gives m <= 12, so 12 whole months"),
+
+ dict(n="H22", domain="ADV", skill="ADV-EQ", stem=
+   "Which expression is equivalent to \\((x+4)^{2}-(x-4)^{2}\\)?",
+   choices=["0", "\\(2x^{2}\\)", "16x", "32"], correct="C",
+   check="expanding gives (x^2+8x+16) - (x^2-8x+16) = 16x"),
+
+ dict(n="H23", domain="PSDA", skill="PSDA-ST", stem=
+   "The mean of a list of 6 numbers is 21. When a seventh number is added to the list, the mean of the "
+   "7 numbers is 23. What is the seventh number?",
+   choices=["25", "29", "33", "35"], correct="D",
+   check="7*23 - 6*21 = 161 - 126 = 35"),
+
+ dict(n="H24", domain="GT", skill="GT-AV", stem=
+   "A right circular cone has a radius of 6 centimeters and a height of 10 centimeters. What is the "
+   "volume, in cubic centimeters, of the cone?",
+   choices=["\\(60\\pi\\)", "\\(120\\pi\\)", "\\(240\\pi\\)", "\\(360\\pi\\)"],
+   correct="B", check="(1/3)*pi*6^2*10 = 120pi"),
 ]

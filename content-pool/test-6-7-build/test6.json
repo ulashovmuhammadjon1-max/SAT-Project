@@ -1,0 +1,2728 @@
+{
+ "RW_M1": [
+  {
+   "num": "A-W4",
+   "skill": "Words in Context",
+   "rule": "the blank must fit the argumentative move",
+   "passage": "Critics initially dismissed the technique as a novelty, but its steady adoption by studios over the following decade _____ that assessment.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "confirmed",
+    "undermined",
+    "anticipated",
+    "restated"
+   ],
+   "answer": "B",
+   "why": "'But' signals that what followed worked against the dismissal, and steady adoption is evidence the technique was more than a novelty. 'Confirmed' and 'restated' would support the critics.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-W4",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 6,
+   "skill": "Words in Context",
+   "passage": "Although oil shocks&mdash;such as the 16% rise in oil prices from April to September of 1973&mdash;can strongly affect individual consumers, Gbadebo Oladosu and colleagues have shown that at the level of national economies, their effects are often quite _____. The effect of recent oil shocks on the gross domestic product of China, for example, was only slightly greater than zero.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "subdued",
+    "variable",
+    "beneficial",
+    "persistent"
+   ],
+   "answer": "A",
+   "why": "'Only slightly greater than zero' is the example the blank must summarise, and it is set against 'can strongly affect individual consumers'. 'Subdued' is the only choice meaning small in effect; 'variable' and 'persistent' describe a pattern over time, not a magnitude.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M2:6",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 3,
+   "skill": "Words in Context",
+   "passage": "Originating in the traditional stories of the <em>Kanaka Maoli</em>, the Native Hawaiian people, the literature of Hawaii has a rich history that was later brought to international prominence by writers such as Mary Kawena Pukui. Now, by producing acclaimed works, Gary Pak has _____ his place in that literary tradition.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "contemplated",
+    "subverted",
+    "solidified",
+    "extricated"
+   ],
+   "answer": "C",
+   "why": "Producing acclaimed works secures rather than questions his standing. 'Subverted' and 'extricated' reverse the sense; 'contemplated' does not fit 'his place'.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:3",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 2,
+   "skill": "Words in Context",
+   "passage": "The fossil remains of the individual known as Denisova 8, discovered in Russia in 2010, can help paleoanthropologists not only _____ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally, revealing important details about the time in which Denisova 8 lived.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "yield",
+    "exploit",
+    "prioritize",
+    "discern"
+   ],
+   "answer": "D",
+   "why": "The 'not only... but also' pairing makes the blank parallel to 'illuminate', so it must mean to make out or perceive. The fossils reveal the steps rather than producing (A), using (B) or ranking (C) them.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:2",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 1,
+   "skill": "Words in Context",
+   "passage": "Folk and traditional art can take a wide variety of forms, including arts as _____ one another as storytelling and quilting. The National Heritage Fellowship was created to honor people for their accomplishments in these diverse arts and includes among its winners the Puerto Rican stringed-instrument maker Diomedes Matos.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "confused with",
+    "humble about",
+    "useful to",
+    "different from"
+   ],
+   "answer": "D",
+   "why": "The frame is 'as ___ one another as', and the sentence stresses variety and diversity, so the blank must express unlikeness. Only 'different from' completes the comparison idiom.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:1",
+   "order": 5,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 5,
+   "skill": "Text Structure and Purpose",
+   "passage": "The <em>San Pedro</em> is just one of approximately three million known historical shipwrecks spread throughout the world&rsquo;s oceans, and their impact on sea life and underwater ecosystems is of great interest to researchers. Leila Hamdan and colleagues were particularly curious about the effects of wooden shipwrecks on seafloor microbial communities. The researchers studied two wooden shipwrecks in the Gulf of Mexico by placing pieces of pine and oak between zero and 200 meters away from each shipwreck to collect samples of three kinds of microbes: bacteria, archaea, and fungi. They found that across the three microbial communities, peak diversity and richness was observed on pine and oak samples placed approximately 125 meters from the shipwrecks.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It introduces a study of microbial communities near shipwrecks that has received significant scholarly attention, summarizes the results of that study, and then describes a research team&rsquo;s reaction to the study.",
+    "It notes a general scientific interest in shipwrecks&rsquo; ecological effects, describes a specific study related to that interest, and then states one of the study&rsquo;s findings.",
+    "It states the number of known shipwrecks, describes the historical significance of one of those shipwrecks, and then comments on the various microbes found at the shipwreck site.",
+    "It names a famous historical shipwreck, describes the type of wood used to build that ship, and then explains how that wood type influences underwater microbial communities."
+   ],
+   "answer": "B",
+   "why": "General interest -> Hamdan's specific study and method -> the 125-metre finding. The text never gives the <em>San Pedro</em>'s history (C), its construction (D), or any scholarly reaction (A).",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:5",
+   "order": 6,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 8,
+   "skill": "Text Structure and Purpose",
+   "passage": "The following text is adapted from Jerome K. Jerome&rsquo;s 1889 novel <em>Three Men in a Boat (To Say Nothing of the Dog)</em>.</p><p>We [people] are creatures of the sun. We love light and life. That is why we crowd into the towns and cities, and the country grows more and more deserted every year. In the sunlight&mdash;in the daytime, when Nature is alive and busy all around us, we like the open hill-sides and the deep woods well enough: but in the night, when our Mother Earth has gone to sleep, and left us waking, oh! the world seems so lonesome, and we get frightened, like children in a silent house. Then we sit and sob, and long for the gas-lit streets, and the sound of human voices, and the answering throb of human life.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To convey that crowded areas can cause people to experience feelings of sadness",
+    "To caution people not to be so quick to dismiss the natural beauty that can be found in rural areas",
+    "To illustrate the idea that most people tend to prefer hillsides in the country to certain aspects of towns and cities",
+    "To address common traits that motivate many people to choose to live in urban environments"
+   ],
+   "answer": "D",
+   "why": "'That is why we crowd into the towns and cities' announces the purpose: explaining the shared traits \u2014 love of light, fear of night loneliness \u2014 behind urban living. C reverses the preference the passage describes.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:8",
+   "order": 7,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 9,
+   "skill": "Central Ideas and Details",
+   "passage": "Roy McLendon&rsquo;s <em>Moonlit St. Lucie</em>, a riverscape featuring the silhouette of a single palm tree against the backdrop of shimmering water and a brilliant moonlit sky, is typical of paintings by the Florida Highwaymen, an informal collective of landscape artists mainly active in the 1950s and &rsquo;60s. Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography&mdash;placid inland rivers, windswept palm trees&mdash;that McLendon and colleagues perpetually revisited.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Although similar in its subject matter to many paintings by the Florida Highwaymen, <em>Moonlit St. Lucie</em> is now more highly regarded than other Florida Highwaymen paintings are.",
+    "Representative images found across many paintings by McLendon and other Florida Highwaymen came to be widely associated with Florida in part due to the Florida Highwaymen&rsquo;s influence.",
+    "Although paintings by the Florida Highwaymen were once celebrated for their depictions of Florida&rsquo;s natural environments, the popularity of these paintings waned after the 1960s.",
+    "The placid inland rivers and windswept palm trees that are typical of McLendon&rsquo;s works, which are otherwise indistinguishable from other Florida Highwaymen paintings, help to differentiate McLendon&rsquo;s paintings from those of his colleagues."
+   ],
+   "answer": "B",
+   "why": "'Anticipating and amplifying cultural perceptions of Florida that became pervasive' is exactly B. The text never ranks McLendon above his colleagues (A, D \u2014 and D is self-contradictory), and never says popularity waned (C).",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:9",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 8,
+   "skill": "Central Ideas and Details",
+   "passage": "Superlubricity, the state of virtually no friction between materials, has desirable applications in many industries. For example, it can make aircraft engines more efficient. To produce a coating that achieves superlubricity, Chanaka Kumara and colleagues broke down carbon nanotubes into fragments of graphene to fully cover two surfaces that would rub together. Friction between pieces of graphene is generally extremely low, and when the researchers added a drop of oil as lubrication, that friction nearly vanished. This new coating may drastically lower friction-related energy costs.",
+   "stem": "According to the text, what happened when the researchers added oil to the surfaces covered in graphene fragments?",
+   "choices": [
+    "All the pieces of graphene collected on just one of the two surfaces.",
+    "The low amount of friction between the surfaces became even lower.",
+    "Carbon nanotubes on the surfaces fractured into smaller pieces.",
+    "Friction between the surfaces did not noticeably change right away."
+   ],
+   "answer": "B",
+   "why": "Stated directly: friction between graphene is 'generally extremely low', and with the oil it 'nearly vanished'. That is low becoming lower.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:8",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 11,
+   "skill": "Command of Evidence",
+   "passage": "Honda&rsquo;s introduction of a walk-behind lawnmower in 1978 is an instance of brand extension&mdash;the company leveraged its brand recognition as an automobile manufacturer to enter a product category where it had not previously competed. To determine if perceived category similarity predicts consumers&rsquo; likelihood of purchasing brand extensions, Alicia Grasby et al. identified 30 extended-brand pairs (e.g., the same brand of hand lotion and mouthwash) in 52 weeks of purchases by approximately 60,000 households; for each pair, Grasby et al. had consumers rate the similarity of the product categories and calculated the change in probability of a brand in one category being purchased if the same brand was purchased in the other category.",
+   "stem": "Which finding, if true, would provide evidence that the possibility Grasby et al. investigated does occur?",
+   "choices": [
+    "Consumers&rsquo; ratings and the changes in probability calculated by the researchers were both affected by level of brand recognition.",
+    "There was a strong positive correlation between consumers&rsquo; ratings and the changes in probability calculated by the researchers.",
+    "Consumers&rsquo; ratings varied substantially by category pair, whereas the changes in probability calculated by the researchers were broadly similar for each pair.",
+    "Consumers tended to purchase more products in categories in which extended-brand pairs are found than in categories in which extended-brand pairs are not found."
+   ],
+   "answer": "B",
+   "why": "The possibility under test is that perceived category similarity (the ratings) predicts purchase likelihood (the probability change), so the evidence is the two moving together. C describes the opposite \u2014 ratings varying while probabilities do not \u2014 and A and D introduce brand recognition and category volume, neither of which is the relationship being tested.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:11",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 9,
+   "skill": "Command of Evidence",
+   "passage": "<em>Poems</em> is an 1895 collection of poetry by Frances E.W. Harper. In one of Harper&rsquo;s poems, the speaker declares her intention to create art that has a universal appeal across generations, saying, _____",
+   "stem": "Which quotation from <em>Poems</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;Our world, so worn and weary, / Needs music, pure and strong, / To hush the jangle and discords / Of sorrow, pain, and wrong.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+    "&ldquo;Let me make the songs for the people, / Songs for the old and young; / Songs to stir like a battle-cry / Wherever they are sung.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+    "&ldquo;God bless our native land, / Land of the newly free, / Oh may she ever stand / For truth and liberty.&rdquo; (from &ldquo;God Bless Our Native Land&rdquo;)",
+    "&ldquo;My mother&rsquo;s kiss, my mother&rsquo;s kiss, / I feel its impress now; / As in the bright and happy days / She pressed it on my brow.&rdquo; (from &ldquo;My Mother&rsquo;s Kiss&rdquo;)"
+   ],
+   "answer": "B",
+   "why": "B has all three parts of the claim: the speaker's intention ('Let me make'), the reach across generations ('the old and young'), and universality ('Wherever they are sung'). A describes what the world needs rather than her intention, and C and D are on other subjects entirely.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:9",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 10,
+   "skill": "Command of Evidence",
+   "passage": "The utilization of deceptive antipredator displays is well documented in the little ringed plover (<em>Charadrius dubius</em>) and other species of the avian order Charadriiformes. An extensive literature review conducted by L&eacute;na de Framond et al. revealed that this trait has evolved across a surprisingly large phylogenetic distribution of 13 Aves orders, including Caprimulgiformes and Gruiformes. Subsequent investigation of potential selection mechanisms prompted the researchers to conclude that independent of avian order, the prevalence of the trait is mediated by environmental variations associated with the absolute latitude of brooding sites.",
+   "stem": "Which finding, if true, would most strongly support the researchers&rsquo; conclusion?",
+   "choices": [
+    "Across the orders in the study, approximately 54% of the bird species brood in ranges from 50&deg; to 80&deg; absolute latitude, but most of the birds that are known to use deceptive antipredator displays brood between 0&deg; and 30&deg; absolute latitude.",
+    "Deceptive antipredator displays are documented in Charadriiformes species across the entire range of absolute latitudes of brooding sites within that order, but in species from other orders, deceptive antipredator displays are documented only when brooding sites are at absolute latitudes 10&deg;&ndash;20&deg; higher than what is typical for those species.",
+    "The use of deceptive antipredator displays is widespread among Charadriiformes species independent of the absolute latitude of their breeding sites, but its prevalence in other avian orders is limited to species with brooding sites located in absolute latitudes of 0&deg;&ndash;30&deg;.",
+    "Across the orders in the study, deceptive antipredator displays are observed in approximately 34% of species with brooding ranges of 0&deg;&ndash;30&deg; absolute latitude and approximately 60% of species with brooding ranges of 50&deg;&ndash;80&deg; absolute latitude."
+   ],
+   "answer": "D",
+   "why": "The conclusion has two parts: prevalence tracks brooding latitude, and it does so regardless of order. Only D reports prevalence rising with latitude 'across the orders in the study'. B and C make the pattern order-dependent, which contradicts 'independent of avian order', and A compares where species brood rather than how prevalent the trait is.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:10",
+   "order": 12,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 15,
+   "skill": "Inferences",
+   "passage": "The jade hawkmoth, a large-bodied moth, defends itself against Brandt&rsquo;s myotis and other insect-eating bats, which use echolocation to hunt, by emitting ultrasonic clicks that can, for instance, signal the moths&rsquo; unpleasant taste. To investigate moths&rsquo; defensive ultrasound&mdash;which researchers had thought was exclusive to tiger moths, hawkmoths, and one species of geometer moths&mdash;Jesse R. Barber et al. recorded the responses of moths from 252 genera, representing most families of large-bodied moths, to audio playback of bat echolocation. The researchers found that 52 of the genera, including several genera belonging to the geometer family, produced defensive ultrasonic clicks. This result suggests that _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "unlike the 52 moth genera that emit ultrasonic clicks, most moth genera have likely not developed defenses specifically against bat attacks.",
+    "some genera of large-bodied moths may use ultrasonic signaling for purposes other than avoiding capture by predators such as Brandt&rsquo;s myotis.",
+    "ultrasound production is only one of a diverse range of effective strategies moths employ to evade bat attacks.",
+    "anti-bat ultrasound production may be a more prevalent defense strategy among large-bodied moths than previously known to researchers."
+   ],
+   "answer": "D",
+   "why": "Researchers expected the behaviour in three narrow groups and found it in 52 genera, including several new geometer genera \u2014 the finding is that it is commoner than thought. B and C introduce other purposes and other strategies the study never examined, and A draws a negative conclusion the sampling cannot support.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:15",
+   "order": 13,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": 12,
+   "skill": "Inferences",
+   "passage": "Scholars are increasingly exploring the communication and preservation of ecological knowledge through Indigenous songs (e.g., Kazakh songs about water and foraging quality and those of the O&rsquo;odham people about desert plants). In one study, ethnobiologist Dana Lepofsky et al. received insight from Kwaxsistalla Wathl&rsquo;thla, a song keeper for the Kwakwaka&rsquo;wakw people in Canada, into songs referencing the people&rsquo;s use of terraced gardens in intertidal zones along the Pacific Northwest coast for the cultivation of clams for consumption. Archaeological evidence of significant increases in clam size and abundance in that area concurrent with the documented past implementation of the method described in the songs supports the conclusion that _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "non-Indigenous people around the Pacific Northwest coast adopted the practice developed by the Kwakwaka&rsquo;wakw people after observing its efficacy.",
+    "the practice used by ancestors of modern Kwakwaka&rsquo;wakw people not only effectively maintained a food source but also promoted its robustness.",
+    "there is greater corroboration in the archaeological record of ecological practices described in Kwakwaka&rsquo;wakw songs than of those described in Kazakh and O&rsquo;odham songs.",
+    "although contemporary Kwakwaka&rsquo;wakw people have a deep understanding of and appreciation for the fishing and farming practices used by their ancestors, they no longer implement those methods."
+   ],
+   "answer": "B",
+   "why": "Clams were cultivated for consumption (a maintained food source) and both size and abundance rose (robustness) \u2014 the two halves of B. A, C and D reach for adoption by others, a cross-culture comparison and present-day abandonment, none of which the evidence touches.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:12",
+   "order": 14,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": "M2-19",
+   "skill": "Boundaries",
+   "passage": "Joy Williams&rsquo;s essay on &ldquo;cenote,&rdquo; a term referring to a deep sinkhole containing a pool of water, is just one of many essays included in <em>Home Ground: A Guide to the American _____ by Barry Lopez and Debra Gwartney, the book celebrates the rich language used to describe the landscape of North America.",
+   "choices_note": "The book title's closing italics fall inside the answer choices.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "<em>Landscape</em>, edited",
+    "<em>Landscape</em> edited",
+    "<em>Landscape</em>. Edited",
+    "<em>Landscape</em> and edited"
+   ],
+   "answer": "C",
+   "why": "'Joy Williams's essay... is just one of many essays included in <em>Home Ground</em>' and 'the book celebrates the rich language...' are both independent clauses, so a sentence boundary is required; the second then opens with the participial phrase 'Edited by Barry Lopez and Debra Gwartney'. A, B and D all leave the two clauses spliced by the comma before 'the book'.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-19",
+   "order": 15,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 18,
+   "skill": "Boundaries",
+   "passage": "As a behavioral economist, Ai Hisano of Kyoto University recognizes that people sometimes make irrational economic decisions. Hisano&rsquo;s research can thus address anomalies that neoclassical economic _____ assume that people are consistently rational decision-makers&mdash;cannot explain.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "models which&mdash;",
+    "models which",
+    "models&mdash;which",
+    "models, which"
+   ],
+   "answer": "C",
+   "why": "A dash already closes the aside before 'cannot explain', so the blank must open it with the matching dash: 'anomalies that neoclassical economic models&mdash;which assume...&mdash;cannot explain'. A puts the dash on the wrong side of 'which', and B and D leave the closing dash unpaired.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:18",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 16,
+   "skill": "Boundaries",
+   "passage": "Works by Rafael Soriano and Rupert Garc&iacute;a were featured in the Smithsonian American Art Museum&rsquo;s exhibition <em>Our America: The Latino Presence in American Art</em>. This 2013 exhibition celebrated the diverse achievements _____ artists of Latin American descent.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "of;",
+    "of:",
+    "of,",
+    "of"
+   ],
+   "answer": "D",
+   "why": "'The diverse achievements of artists of Latin American descent' is a single noun phrase; no punctuation belongs between a preposition and its object.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:16",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": "A-B2",
+   "skill": "Boundaries",
+   "rule": "a supplementary element takes a matched pair of marks",
+   "passage": "The axolotl&mdash;a salamander that keeps its larval features into _____ can regrow not only its limbs but also parts of its heart and brain.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "adulthood,",
+    "adulthood",
+    "adulthood&mdash;",
+    "adulthood:"
+   ],
+   "answer": "C",
+   "why": "A dash opens the supplementary description of the axolotl, so a dash must close it. Swapping in a comma or a colon breaks the pair, and omitting the mark leaves the aside running into the verb.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-B2",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": "A-F1",
+   "skill": "Form, Structure, and Sense",
+   "rule": "subject-verb agreement across a modifier",
+   "passage": "The collection of woodblock prints donated to the museum by three separate families _____ views of the same mountain in every season.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "show",
+    "have shown",
+    "showing",
+    "shows"
+   ],
+   "answer": "D",
+   "why": "The subject is the singular 'collection', not the plural nouns inside the modifier, so the singular 'shows' is required. 'Showing' supplies no finite verb at all.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-F1",
+   "order": 19,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": "A-F2",
+   "skill": "Form, Structure, and Sense",
+   "rule": "pronoun-antecedent agreement",
+   "passage": "Because the glaciers of the Southern Alps advance and retreat on different schedules, surveyors measure _____ individually rather than treating the range as a single system.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "it",
+    "that",
+    "this",
+    "them"
+   ],
+   "answer": "D",
+   "why": "The antecedent is the plural 'glaciers', so the plural object pronoun 'them' is required.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-F2",
+   "order": 20,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": "A-F6",
+   "skill": "Form, Structure, and Sense",
+   "rule": "parallel structure in a series",
+   "passage": "A restorer working on an oil painting must document the damage, stabilize the flaking paint, and _____ any varnish that has yellowed with age.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "removing",
+    "to remove",
+    "remove",
+    "removes"
+   ],
+   "answer": "C",
+   "why": "The series is governed by 'must': document, stabilize, and remove. Only the bare infinitive keeps the three parallel.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-F6",
+   "order": 21,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": 21,
+   "skill": "Transitions",
+   "passage": "The prime meridian, the global indicator of zero degrees longitude established in 1884, was originally determined using astronomically derived coordinates. _____ as decades passed, new calculations would reveal increasingly precise coordinates, yet the prime meridian remained unchanged; it wasn&rsquo;t until the 1980s that, spurred by improved geodetic data, the prime meridian was officially moved&mdash;roughly one hundred meters east.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Specifically,",
+    "Again and again,",
+    "Granted,",
+    "To that end,"
+   ],
+   "answer": "B",
+   "why": "'As decades passed, new calculations would reveal increasingly precise coordinates' describes something happening repeatedly over time, which 'again and again' marks. 'Specifically' would require the clause to particularise the previous sentence, and it does not.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:21",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": 23,
+   "skill": "Transitions",
+   "passage": "Firefly luciferase (Fluc) is a distinctly evolved enzyme that can oxidize a substrate called D-luciferin to induce bioluminescence and can act as a fatty acyl-CoA synthetase (ACS) enzyme, a class of enzyme present in all insects. _____ Fluc is a bifunctional enzyme whose presence indicates an insect is capable of emitting light; in contrast, the presence of ACS alone would be insufficient for determining bioluminescence.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In fact,",
+    "Moreover,",
+    "That is,",
+    "Nevertheless,"
+   ],
+   "answer": "C",
+   "why": "'Bifunctional' restates the two capabilities the first sentence has just listed, so the second sentence explains rather than adds (B), intensifies (A) or contrasts (D).",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:23",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": "A-T4",
+   "skill": "Transitions",
+   "rule": "sequence",
+   "passage": "To cast a bronze sculpture by the lost-wax method, an artist first builds a wax model and coats it in a heat-resistant shell. _____ the wax is melted out, leaving a cavity that molten bronze will fill.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In summary,",
+    "Next,",
+    "By comparison,",
+    "Regardless,"
+   ],
+   "answer": "B",
+   "why": "'First' in the preceding sentence sets up a sequence of steps, and melting the wax is the step that follows.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-T4",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": "M2-27",
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>There are more than 500 National Wildlife Refuges (NWRs) across the United States.</li><li>The Crocodile Lake NWR is a 6,686-acre area in Florida, on the Atlantic coast.</li><li>It was established to protect the endangered American crocodile.</li><li>The Nestucca Bay NWR is a 457-acre area in Oregon, on the Pacific coast.</li><li>It was established to protect the endangered Aleutian Canada goose.</li></ul>",
+   "stem": "The student wants to provide an overview of the NWR program. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The US&rsquo;s more than 500 NWRs protect endangered species from coast to coast.",
+    "Both the Crocodile Lake NWR and the Nestucca Bay NWR were established to protect endangered species.",
+    "Oregon&rsquo;s Nestucca Bay NWR was established to protect the endangered Aleutian Canada goose.",
+    "One of more than 500 NWRs in the US, the Crocodile Lake NWR encompasses 6,686 acres in Florida."
+   ],
+   "answer": "A",
+   "why": "An overview needs the scale and the purpose of the whole program: A gives both, and 'from coast to coast' generalises the Atlantic and Pacific examples. B, C and D each stay at the level of individual refuges.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-27",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": 26,
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>Pattern analysis and contextual analysis are two approaches to art criticism.</li><li>Pattern analysis examines the repetition of visual elements in an artwork.</li><li>Such an analysis of Andy Warhol&rsquo;s <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.</li><li>Contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.</li><li>Such an analysis of Pablo Picasso&rsquo;s <em>Les Demoiselles d&rsquo;Avignon</em> might consider how the painting&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).</li></ul>",
+   "stem": "The student wants to present contextual analysis to an audience unfamiliar with the concept. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "A pattern analysis of <em>Campbell&rsquo;s Soup Cans</em> might consider how the painting&rsquo;s repetition of images of soup cans emphasizes the excesses of consumer culture.",
+    "<em>Les Demoiselles d&rsquo;Avignon</em>&rsquo;s portrayal of fragmented human figures challenged conventions of beauty during a time of cultural upheaval (early twentieth century).",
+    "An approach to art criticism, contextual analysis considers the historical and cultural contexts of an artwork&rsquo;s time.",
+    "Pattern analysis differs from contextual analysis in that pattern analysis examines the repetition of visual elements in an artwork."
+   ],
+   "answer": "C",
+   "why": "An unfamiliar audience needs the term defined, and C both places contextual analysis as an approach to art criticism and says what it does. A and D lead with pattern analysis, and B never names the concept at all.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:26",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": "M2-26",
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>Ibn Sina was a Persian philosopher and physician.</li><li>His book <em>The Canon of Medicine</em> recorded the most advanced medical knowledge of his time.</li><li>It was published in the year 1025 CE.</li><li>It was used as a medical textbook in Middle Eastern and European universities for centuries.</li></ul>",
+   "stem": "The student wants to identify the year that <em>The Canon of Medicine</em> was published. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Ibn Sina recorded the most advanced medical knowledge of his time in his book <em>The Canon of Medicine</em>.",
+    "A Persian philosopher and physician wrote a medical textbook called <em>The Canon of Medicine</em>.",
+    "<em>The Canon of Medicine</em> was a medical textbook used by Middle Eastern and European universities for centuries.",
+    "Ibn Sina&rsquo;s book <em>The Canon of Medicine</em> was published in the year 1025 CE."
+   ],
+   "answer": "D",
+   "why": "D is the only choice that states a year at all.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-26",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  }
+ ],
+ "RW_M2E": [
+  {
+   "num": 2,
+   "skill": "Words in Context",
+   "passage": "As a member of Indigenous Photograph, artist Tshepiso Mabula ka Ndogngeni (Xhosa) can _____ her work more broadly than she could without the organization&rsquo;s reach. Photography editors around the world can search for Indigenous photographer members on the organization&rsquo;s website to find images that document and reflect the lives of Indigenous communities.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "empty",
+    "promote",
+    "alter",
+    "discover"
+   ],
+   "answer": "B",
+   "why": "The second sentence explains that editors worldwide can find her work through the organization, i.e. the membership helps her publicise it more widely. 'Promote' is the only choice that means making work more widely known.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:2",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 1,
+   "skill": "Words in Context",
+   "passage": "The following text is adapted from John Matheus&rsquo;s 1925 short story &ldquo;Fog.&rdquo; A train has stopped at a station, where heavy fog has set in.</p><p>The little conductor stood on tiptoe in an effort to keep one hand on the signal rope, craning his neck in a vain and dissatisfied endeavor to pierce the miasma of the fog. The motorman chafed in his box, thinking of the drudging lot of the laboring man. He <u>registered</u> discontent.",
+   "stem": "As used in the text, what does the word &ldquo;registered&rdquo; most nearly mean?",
+   "choices": [
+    "Bypassed",
+    "Enrolled",
+    "Valued",
+    "Displayed"
+   ],
+   "answer": "D",
+   "why": "The motorman is chafing and resentful; 'registered discontent' means he showed it. 'Enrolled' and 'valued' are the word's other senses and do not fit an emotion.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:1",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 1,
+   "skill": "Words in Context",
+   "passage": "The following text is adapted from Mary Seacole&rsquo;s 1857 autobiography <em>Wonderful Adventures of Mrs. Seacole in Many Lands</em>.</p><p>That journey across the Isthmus [of Panama], insignificant in distance as it was, was by no means an easy one. It seemed as if nature had determined to throw every <u>conceivable</u> obstacle in the way of those who should seek to join the two great oceans of the world.",
+   "stem": "As used in the text, what does the word &ldquo;conceivable&rdquo; most nearly mean?",
+   "choices": [
+    "Imaginable",
+    "Obvious",
+    "Reasonable",
+    "Dependable"
+   ],
+   "answer": "A",
+   "why": "'Every conceivable obstacle' means every obstacle that could be thought of. 'Obvious', 'reasonable' and 'dependable' are all senses the word does not carry here.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:1",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": "A-W5",
+   "skill": "Words in Context",
+   "rule": "the sentence's own gloss fixes the sense",
+   "passage": "Because seed banks must remain viable for decades without power, engineers site them in permafrost, where the surrounding ground keeps temperatures low even if the cooling system fails&mdash;a design that is deliberately _____.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "redundant",
+    "temporary",
+    "compact",
+    "ornamental"
+   ],
+   "answer": "A",
+   "why": "Ground that holds the temperature when the cooling system fails is a backup for a function already provided, which is what a redundant design means. The others describe duration, size and appearance.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-W5",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": "A-W3",
+   "skill": "Words in Context",
+   "rule": "the example constrains the blank",
+   "passage": "The composer&rsquo;s late works are unusually _____: a single movement may quote a folk tune, a hymn, and a march within the space of two minutes.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "restrained",
+    "eclectic",
+    "repetitive",
+    "somber"
+   ],
+   "answer": "B",
+   "why": "Drawing on a folk tune, a hymn and a march at once is drawing from varied sources. 'Repetitive' would require the same material to return, which is the opposite of what the example shows.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-W3",
+   "order": 5,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 6,
+   "skill": "Text Structure and Purpose",
+   "passage": "Known for the albums <em>Someday My Prince Will Come</em> and <em>Milestones</em>, jazz trumpeter Miles Davis collaborated several times with pianist Gil Evans. Their 1958 adaptation of George Gershwin&rsquo;s opera <em>Porgy and Bess</em> bears little resemblance to the 1935 original. Davis and Evans felt no desire to please listeners expecting an exact duplication of the opera. <u>They omitted parts, such as the aria &ldquo;I Got Plenty of Nuthin&rsquo;,&rdquo; and sometimes made only brief gestures toward Gershwin&rsquo;s melodies.</u> But Davis and Evans&rsquo;s willingness to recompose Gershwin&rsquo;s work led to one of the most enduring albums in Davis&rsquo;s catalog.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It presents examples to support a claim made earlier in the text.",
+    "It shows how two artists benefited from ignoring certain conventions.",
+    "It proposes a reason why one work of art is widely thought to be more successful than another.",
+    "It undermines an assertion made later in the text."
+   ],
+   "answer": "A",
+   "why": "The omitted aria and the brief gestures are concrete instances of the earlier claim that the adaptation 'bears little resemblance to the 1935 original'. The benefit appears in the following sentence, not the underlined one.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:6",
+   "order": 6,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 5,
+   "skill": "Text Structure and Purpose",
+   "passage": "<em>The Last Report on the Miracles at Little No Horse</em> is a 2001 novel by Ojibwe writer Louise Erdrich. It explores how historical events affect families on a reservation in rural North Dakota. <em>The Last Report on the Miracles at Little No Horse</em> is typical of Erdrich&rsquo;s work. Her writing usually focuses on portrayals of everyday life in Ojibwe communities. Yet some of her novels have fantastical plots and take place outside Ojibwe communities. <u>For example, her 1991 novel <em>The Crown of Columbus</em> is essentially adventure fiction, and the thrilling events in its plot are set largely on a Caribbean island.</u>",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It recommends that readers avoid a particular novel by Erdrich.",
+    "It lists the many similarities between two novels by Erdrich.",
+    "It offers an example of a novel that differs from most of Erdrich&rsquo;s work.",
+    "It discusses what inspired Erdrich to write one of her novels."
+   ],
+   "answer": "C",
+   "why": "The underlined sentence begins 'For example' and follows 'Yet some of her novels have fantastical plots and take place outside Ojibwe communities' \u2014 it illustrates the exception, not similarities (B).",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:5",
+   "order": 7,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 8,
+   "skill": "Central Ideas and Details",
+   "passage": "Can field mustard plants grow on Mars? Can pea plants? You might think the answer to these questions is obviously no, but researchers in the Netherlands recently showed that the seeds of many common plant species can germinate in soil designed to simulate Martian conditions, as long as water is supplied. In fact, some species actually did <em>better</em> in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted in simulated Martian soil, compared with 4 percent that did when planted in soil from their home planet.",
+   "stem": "According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+   "choices": [
+    "18 percent",
+    "30 percent",
+    "100 percent",
+    "5 percent"
+   ],
+   "answer": "B",
+   "why": "Stated directly. The 4 percent figure is the Earth-soil comparison, and the other two numbers do not appear.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:8",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 9,
+   "skill": "Central Ideas and Details",
+   "passage": "&ldquo;Tomato&rdquo; is an example of a loanword&mdash;that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from <em>tomate</em>, the Spanish word for the widely cultivated plant. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word&rsquo;s original form is <em>tomatl</em>. &ldquo;Maize&rdquo; is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Ta&iacute;no, a language of the Caribbean islands, in which the word for the corn plant is <em>mah&iacute;s</em>.",
+   "stem": "The author makes which point about the Spanish language?",
+   "choices": [
+    "It has borrowed words from Indigenous languages and contributed words to them.",
+    "Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+    "It has served as a medium through which Indigenous languages have influenced English.",
+    "It adopted Nahuatl and Ta&iacute;no words in approximately equal numbers."
+   ],
+   "answer": "C",
+   "why": "Both examples travel Indigenous language -> Spanish -> English, which is exactly the 'medium' role. The text never says Spanish gave words back to Indigenous languages (A) and offers no counts to support B or D.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:9",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 12,
+   "skill": "Command of Evidence",
+   "needs_figure": "OctUSC p009 bar chart, 'Orientation of Leaf Pairs in Grapevines'",
+   "figure_source": [
+    "OctUSC",
+    "p009.jpeg"
+   ],
+   "passage": "Auxins are a class of hormones that influence plant growth, including leaf orientation (the tendency of leaves to be larger on one side of their long central axis than the other). University of California, Berkeley biologist Ciera Martinez and colleagues noted that in certain plants in which leaves grow in pairs, auxins will typically be concentrated in opposite sides of each leaf in the pair (e.g., on the left side of one leaf in the pair and the right side of the other). Accordingly, they hypothesized that paired leaves should tend to show opposite-side orientation, and they tested their hypothesis by examining paired leaves from several species of grapevines.",
+   "stem": "Which choice best describes data from the graph that support Martinez and colleagues&rsquo; hypothesis?",
+   "choices": [
+    "The number of leaf pairs showing opposite-side orientation is fairly high in the July grape, but not as high as it is in the graybark grape.",
+    "Although the number of leaf pairs showing same-side orientation is fairly high in the July grape, it is much lower in both the frost grape and graybark grape.",
+    "Although the exact ratio varies by species, the graybark grape, frost grape, and July grape all show more leaf pairs with opposite-side orientations than with same-side orientations.",
+    "In the graybark grape, frost grape, and July grape, all the leaf pairs show opposite-side orientation."
+   ],
+   "answer": "C",
+   "why": "The hypothesis is that paired leaves <em>tend</em> to show opposite-side orientation, so the support must be that opposite beats same in every species \u2014 which the chart shows (roughly 105 vs 48, 200 vs 100, 265 vs 90). A and B compare species instead of orientations, and D overstates it to 'all', which the same-side bars contradict.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:12",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 10,
+   "skill": "Command of Evidence",
+   "passage": "Early Earth is thought to have been characterized by a stagnant lid tectonic regime, in which the upper lithosphere (the outer rocky layer) was essentially immobile and there was no interaction between the lithosphere and the underlying mantle. Researchers investigated the timing of the transition from a stagnant lid regime to a tectonic plate regime, in which the lithosphere is fractured into dynamic plates that in turn allow lithospheric and mantle material to mix. Examining chemical data from lithospheric and mantle-derived rocks ranging from 285 million to 3.8 billion years old, the researchers dated the transition to 3.2 billion years ago.",
+   "stem": "Which finding, if true, would most directly support the researchers&rsquo; conclusion?",
+   "choices": [
+    "There is a positive correlation between the age of lithospheric rocks and their chemical similarity to mantle-derived rocks, and that correlation increases significantly in strength at around 3.2 billion years old.",
+    "Mantle-derived rocks younger than 3.2 billion years contain some material that is not found in older mantle-derived rocks but is found in older and contemporaneous lithospheric rocks.",
+    "Mantle-derived rocks older than 3.2 billion years show significantly more compositional diversity than lithospheric rocks older than 3.2 billion years do.",
+    "Among rocks known to be older than 3.2 billion years, significantly more are mantle derived than lithospheric, but the opposite is true for the rocks younger than 3.2 billion years."
+   ],
+   "answer": "B",
+   "why": "The conclusion is that mixing between lithosphere and mantle began 3.2 billion years ago. B is exactly that signature: lithospheric material starts turning up in mantle rocks only after that date. A has similarity rising with age, the wrong direction; C and D compare diversity and abundance, neither of which is evidence of mixing.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:10",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": "A-C2",
+   "skill": "Command of Evidence",
+   "rule": "the hypothesis fixes which comparison counts",
+   "table": [
+    "Average Time to Locate a Buried Food Cache",
+    [
+     "Group",
+     "Landmarks present (seconds)",
+     "Landmarks removed (seconds)"
+    ],
+    [
+     [
+      "Adults",
+      "31",
+      "94"
+     ],
+     [
+      "Juveniles",
+      "38",
+      "45"
+     ]
+    ]
+   ],
+   "passage": "Some birds that store food recover it months later, and researchers disagree about what guides the search. One proposal is that adult birds rely on landmarks near the cache while juveniles have not yet learned to use them. To test this, an experiment timed how long adults and juveniles took to locate a buried cache, first with nearby landmarks in place and then with those landmarks removed.",
+   "stem": "Which choice best describes data from the table that support the proposal?",
+   "choices": [
+    "Juveniles took longer than adults did when landmarks were present.",
+    "Both groups took longer to locate the cache once the landmarks had been removed.",
+    "Removing the landmarks slowed adults from 31 to 94 seconds but slowed juveniles only from 38 to 45.",
+    "Adults located the cache faster than juveniles did when landmarks were present."
+   ],
+   "answer": "C",
+   "why": "If adults rely on landmarks and juveniles do not, removing the landmarks should cost adults far more \u2014 which is exactly the 63-second penalty against the juveniles' 7. A, B and D are all true of the table but say nothing about who depends on the landmarks.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-C2",
+   "order": 12,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 15,
+   "skill": "Inferences",
+   "passage": "Pigments give paints and dyes their color. Ocher is a mineral-based pigment used to make several colors, including red. Red ocher gets its color from iron oxide. Pigments can also be plant-based; plant-based pigments contain a high level of carbon. In a 2023 study, archaeologists tested the red pigment on decorated beads made by members of the Natufian culture approximately 15,000 years ago. The test showed that the pigment found on several beads contained no iron but had a high level of carbon. This finding led the researchers to conclude that _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the Natufian beadmakers used plant-based pigments rather than ocher to decorate some of the beads examined in the study.",
+    "the pigments used by the Natufian beadmakers likely came from plants because ocher was difficult to find.",
+    "the Natufian beadmakers preferred to use plant-based pigments because they are much brighter than mineral-based pigments are.",
+    "the Natufian beads examined in the study are the oldest surviving examples of the use of plant-based pigments for decorating beads."
+   ],
+   "answer": "A",
+   "why": "No iron rules out red ocher and high carbon points to a plant source \u2014 exactly A. B, C and D add claims about availability, brightness and record-setting age that the text never supports.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:15",
+   "order": 13,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": 15,
+   "skill": "Inferences",
+   "passage": "All stainless steel contains varying amounts of iron, carbon, and corrosion-inhibiting chromium. However, ferritic stainless steel, often used for induction cookers, contains a higher percentage of chromium (at least 10.5%) than does austenitic stainless steel as well as a higher concentration of iron. Unlike ferritic stainless steel, austenitic stainless steel has a face-centered cubic crystalline structure held stable by the presence of nickel and nitrogen. Austenitic stainless steel has two subtypes: the 200 series, often used for washing machines, and the 300 series, which has more nickel than the 200 series and is often used for storage containers or furnaces. Thus, stainless steel used to manufacture _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "furnaces and stainless steel used to manufacture washing machines will both have a chromium content of less than 10.5%.",
+    "washing machines will have a higher concentration of nickel in its composition than stainless steel used to manufacture furnaces will.",
+    "induction cookers will have a face-centered cubic crystalline structure, but stainless steel used to manufacture storage containers will not.",
+    "storage containers and stainless steel used to manufacture induction cookers will have a similar concentration of nitrogen in their compositions."
+   ],
+   "answer": "A",
+   "why": "Furnaces (300 series) and washing machines (200 series) are both austenitic, and austenitic has less chromium than ferritic's at-least-10.5%. B reverses the nickel comparison (the 300 series has more), C reverses the crystalline structure (cookers are ferritic, which is not face-centered cubic), and D is unsupported.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:15",
+   "order": 14,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": 19,
+   "skill": "Boundaries",
+   "passage": "During the decades-long movement to codify the rights of Latinos in the US, certain events were pivotal: the founding of labor rights group El Teatro Campesino in _____ <em>Serna v. Portales Schools</em> court decision in 1974, which affirmed the rights of Latino students, is another such event.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "1965, for one, the",
+    "1965, for one. The",
+    "1965 for one, the",
+    "1965. For one, the"
+   ],
+   "answer": "B",
+   "why": "'The founding... in 1965, for one' and 'The Serna v. Portales Schools court decision... is another such event' are both independent clauses and need a sentence boundary. A and C splice them, and D detaches 'for one' from the clause it qualifies and attaches it to the second sentence, where 'another such event' already does that work.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:19",
+   "order": 15,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": "A-B1",
+   "skill": "Boundaries",
+   "rule": "two independent clauses need more than a comma",
+   "passage": "The Hall of Mirrors at the Palace of Versailles took six years to _____ its 357 mirrors were among the most expensive objects in seventeenth-century France.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "complete,",
+    "complete, and,",
+    "complete",
+    "complete;"
+   ],
+   "answer": "D",
+   "why": "'The Hall of Mirrors took six years to complete' and 'its 357 mirrors were among the most expensive objects...' are both independent clauses, so only the semicolon can join them. The bare comma splices them, 'complete' alone runs them together, and 'and,' strands a comma after the conjunction.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-B1",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 17,
+   "skill": "Boundaries",
+   "passage": "Recent analysis of 2010 BL4&mdash;an outer solar system object orbiting the Sun between Jupiter and Neptune&mdash;has determined its color to be gray, suggesting an icy composition. Such interpretations are ultimately _____ the object&rsquo;s gray coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "speculative, though;",
+    "speculative: however,",
+    "speculative; though",
+    "speculative, though"
+   ],
+   "answer": "A",
+   "why": "Both halves are independent clauses, so B's colon-plus-'however' and D's bare comma both fail, and C leaves 'though the object's coloration may be...' as a subordinate fragment. A keeps 'though' as a trailing adverb closing the first sentence (conceding against the previous sentence's suggestion) and starts the explanation after a semicolon.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:17",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": "A-B5",
+   "skill": "Boundaries",
+   "rule": "a nonrestrictive clause is set off by commas on both sides",
+   "passage": "The tuatara, a reptile found only on a few islands off New _____ is the sole surviving member of an order that otherwise died out roughly 60 million years ago.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Zealand",
+    "Zealand:",
+    "Zealand;",
+    "Zealand,"
+   ],
+   "answer": "D",
+   "why": "'A reptile found only on a few islands off New Zealand' is a nonrestrictive appositive opened by a comma, so a comma must close it before the main verb 'is'. A semicolon or colon would break the sentence in two, and omitting the mark leaves the appositive unclosed.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-B5",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 19,
+   "skill": "Form, Structure, and Sense",
+   "passage": "The Globe Theatre in London is a reconstruction of the famed venue where many of Shakespeare&rsquo;s plays were first performed. In 1613, a prop cannon _____ during a performance and ignited the Globe&rsquo;s thatched roof. No one was hurt, but in two hours the original Globe was gone.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "has malfunctioned",
+    "malfunctioned",
+    "will malfunction",
+    "malfunctions"
+   ],
+   "answer": "B",
+   "why": "'In 1613' fixes a completed past event, and the blank is coordinated with the simple past 'ignited'. Only 'malfunctioned' matches.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:19",
+   "order": 19,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": 18,
+   "skill": "Form, Structure, and Sense",
+   "passage": "The constitution of Spain, enacted in 1978, enshrines 60 total rights across 17,608 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, _____ 105th in a global ranking of the shortest constitutions.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "its",
+    "it&rsquo;s",
+    "they&rsquo;re",
+    "their"
+   ],
+   "answer": "B",
+   "why": "The clause needs a subject and a verb: 'it is 105th'. 'Its' and 'their' are possessives with no noun to attach to, and the singular antecedent (the constitution) rules out 'they're'.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:18",
+   "order": 20,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": 20,
+   "skill": "Form, Structure, and Sense",
+   "passage": "In the late nineteenth and early twentieth centuries, automobiles were commonly referred to as horseless carriages after the older technology they still resembled. Known as the Brass Era, this period in automotive design is remembered for its grandeur and artistry, its vehicles _____ by collectors for their ornate detailing and gleaming brass fittings.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "highly prized",
+    "had been highly prized",
+    "are highly prized",
+    "were highly prized"
+   ],
+   "answer": "A",
+   "why": "'Its vehicles ___ by collectors' is an absolute phrase attached to the main clause by a comma, so it takes a participle. Any finite verb turns it into a second independent clause and makes the comma a splice.",
+   "_src": "AugUSE-USC",
+   "_ref": "AugUSE-USC/RW:20",
+   "order": 21,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": 20,
+   "skill": "Transitions",
+   "passage": "When, in 2017, Cambridge University students Lucy Moss and Toby Marlow decided they wanted to develop a musical together, one of their goals was for their female actor friends to have good parts to play. _____ they created the show <em>Six</em>, a retelling of the history of King Henry VIII&rsquo;s wives in which each of the six queens has a starring role.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "To that end,",
+    "In summary,",
+    "For example,",
+    "In other words,"
+   ],
+   "answer": "A",
+   "why": "The first sentence states a goal and the second states what they did to achieve it, which is exactly what 'to that end' marks. The show is not an example of the goal (C) or a restatement of it (D).",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:20",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": "A-T6",
+   "skill": "Transitions",
+   "rule": "restatement",
+   "passage": "A tidal bore forms when an incoming tide is funneled into a narrowing river channel and the water piles up faster than it can spread out. _____ the river briefly runs backward.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In other words,",
+    "Nonetheless,",
+    "For example,",
+    "Previously,"
+   ],
+   "answer": "A",
+   "why": "Running backward restates the piling-up description in plainer terms rather than adding an instance (C) or a contrast (B).",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-T6",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": 23,
+   "skill": "Transitions",
+   "passage": "When languages are no longer spoken, they are considered extinct. _____ the Umbrian language went extinct around the first century BCE, though it was once widely spoken in parts of central Italy.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Therefore,",
+    "Admittedly,",
+    "For example,",
+    "In conclusion,"
+   ],
+   "answer": "C",
+   "why": "Umbrian is one instance of the general definition in the first sentence \u2014 an illustration, not a consequence, concession or summary.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:23",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": 27,
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>Lighthouses send out crucial light signals to help ships and other watercraft navigate at night.</li><li>Before automation, lighthouses were run by lighthouse keepers.</li><li>Catherine A. Moore was the lighthouse keeper at Black Rock Harbor Light in Connecticut.</li><li>She held this position from 1817 to 1878.</li><li>Laura J. Hecox was the lighthouse keeper at Santa Cruz Light in California.</li><li>She held this position from 1883 to 1917.</li></ul>",
+   "stem": "The student wants to emphasize the order in which the two lighthouse keepers began their careers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Catherine A. Moore&rsquo;s career as a lighthouse keeper ended in 1878, whereas Laura J. Hecox&rsquo;s ended in 1917.",
+    "Laura J. Hecox began her career as a lighthouse keeper years after Catherine A. Moore did.",
+    "From 1817 to 1878, the nighttime waters of Connecticut were more navigable thanks to lighthouse keepers Laura J. Hecox and Catherine A. Moore.",
+    "Before automation, lighthouse keepers like Catherine A. Moore and Laura J. Hecox were crucial to ensuring safe navigation for watercraft."
+   ],
+   "answer": "B",
+   "why": "The goal is when each <em>began</em>: Moore in 1817, Hecox in 1883. B states that order. A compares end dates instead, C wrongly places Hecox in Connecticut, and D has no dates.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:27",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": "A-R2",
+   "skill": "Rhetorical Synthesis",
+   "rule": "the goal specifies which contrast to draw",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>Cuneiform and hieroglyphic writing were both used in the ancient world.</li><li>Cuneiform was written by pressing a reed stylus into wet clay.</li><li>Hieroglyphs were most often carved into stone or painted onto plaster.</li><li>Both systems were used for administrative records as well as religious texts.</li></ul>",
+   "stem": "The student wants to emphasize a difference between how the two scripts were produced. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Cuneiform and hieroglyphic writing were both used for administrative records as well as religious texts.",
+    "Cuneiform was pressed into wet clay with a reed stylus, whereas hieroglyphs were most often carved into stone or painted onto plaster.",
+    "Cuneiform and hieroglyphic writing were two writing systems of the ancient world.",
+    "Hieroglyphs served religious purposes in addition to administrative ones."
+   ],
+   "answer": "B",
+   "why": "B names the production method for each and marks the contrast with 'whereas'. A and C state what the two share, and D describes only one script's uses.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-R2",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": 25,
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>The Paralympic Games are a series of international sporting events involving athletes with an impairment.</li><li>Swimming has been an event at the Paralympics since 1960.</li><li>Mike Kenny competed as a Paralympic swimmer from 1976 to 1988.</li><li>He won eighteen medals.</li><li>Of these, sixteen were gold medals, which indicate a first-place finish.</li></ul>",
+   "stem": "Which choice most effectively uses information from the given sentences to emphasize the number of medals won by Kenny?",
+   "choices": [
+    "An accomplished Paralympian with multiple gold medal wins, Mike Kenny competed as a swimmer from 1976 to 1988.",
+    "During his career as a Paralympic swimmer, Mike Kenny earned a total of eighteen medals, sixteen of which were gold.",
+    "Swimming, a sport in which Mike Kenny took home sixteen gold medals, has been an event at the Paralympic Games since 1960.",
+    "Mike Kenny competed at the Paralympic Games, a series of international sporting events."
+   ],
+   "answer": "B",
+   "why": "Only B gives both counts and foregrounds them ('a total of eighteen medals, sixteen of which were gold'). A says 'multiple' without a number, C buries one figure inside a fact about the sport, and D gives none.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:25",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  }
+ ],
+ "RW_M2H": [
+  {
+   "num": 1,
+   "skill": "Words in Context",
+   "passage": "Despite stated claims of global relevance, much major research on income inequality performed in the 2010s suffered from a myopic focus on a few countries in North America and Western Europe, partly due to limited data availability. Researchers would later _____ this shortcoming after gaining new access to banking records located in nations in Asia, such as China, and Eastern Europe, such as Hungary.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "mitigate",
+    "presuppose",
+    "validate",
+    "categorize"
+   ],
+   "answer": "A",
+   "why": "New data from the previously missing regions would reduce the narrow-focus problem. 'Validate' and 'presuppose' would mean accepting the shortcoming rather than easing it.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:1",
+   "order": 1,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 4,
+   "skill": "Words in Context",
+   "passage": "As with other river deltas, the Paran&aacute; River delta is _____: it is a constantly evolving network of channels and strips of land that change in size and shape as the river deposits new sedimentary particles where the river meets the waters of the Atlantic Ocean.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "dynamic",
+    "immutable",
+    "sustainable",
+    "unrivaled"
+   ],
+   "answer": "A",
+   "why": "The colon makes the rest of the sentence a definition of the blank: 'constantly evolving... change in size and shape'. 'Immutable' is the opposite.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:4",
+   "order": 2,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": "M2-3",
+   "skill": "Words in Context",
+   "passage": "Authors like Laura Esquivel contributed to the outpouring of Mexican literature in the years following the Mexican Revolution, which lasted from 1910&ndash;1920. Works from this period make up an _____ proportion of what is considered the canon of Mexican literature, but nineteenth-century writers like Justo Sierra O&rsquo;Reilly should be considered just as integral to the Mexican literary canon.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "overlooked",
+    "outsized",
+    "unspecified",
+    "erratic"
+   ],
+   "answer": "B",
+   "why": "The 'but' sets up a corrective: post-Revolution works occupy more of the canon than their due, and earlier writers deserve equal standing. 'Overlooked' reverses it; the other two say nothing about proportion.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-3",
+   "order": 3,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 4,
+   "skill": "Words in Context",
+   "passage": "The discoverers of the minor planet 1227 Geranium named it after the plant genus that includes cranesbills. Most of the recently discovered minor planets, however, are given only an identification number, largely due to there being over 500,000 such bodies known at present, which makes the already challenging task of finding a unique name for each nearly _____.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "feasible",
+    "unnecessary",
+    "substantial",
+    "insurmountable"
+   ],
+   "answer": "D",
+   "why": "'Already challenging' plus 500,000 bodies pushes the task past difficult, and 'nearly _____' wants a limit word. 'Feasible' reverses it and the other two do not describe a task's difficulty.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:4",
+   "order": 4,
+   "domainCode": "CAS",
+   "skillCode": "CAS-WV"
+  },
+  {
+   "num": 5,
+   "skill": "Text Structure and Purpose",
+   "passage": "Pteropods are small swimming snails with thin, delicate calcium carbonate shells. These animals are thought to be especially vulnerable to ocean acidification due to calcium carbonate&rsquo;s susceptibility to dissolution at lower pH values. Victoria L. Peck and colleagues recently found that the periostracum (a protective coating on pteropods&rsquo; outer shells) prevents this dissolution when intact. Moreover, the team was surprised to discover that even when the periostracum is breached, pteropods can still mitigate damage by rebuilding the inner shell wall.",
+   "stem": "Which choice best describes the main purpose of the text?",
+   "choices": [
+    "To call for additional research on biological mechanisms that improve pteropod survival rates",
+    "To present findings that suggest that a concern about the effects of ocean acidification on pteropod shells may be unwarranted",
+    "To address some of the ways ocean acidification has altered pteropod behavior over time",
+    "To discuss a conclusion drawn in a study of calcium carbonate&rsquo;s role in protecting the periostracum of pteropods"
+   ],
+   "answer": "B",
+   "why": "The text sets up the vulnerability, then supplies two findings against it \u2014 the periostracum prevents dissolution, and pteropods rebuild the inner wall even when it is breached. D reverses the relationship (the periostracum protects the shell, not the reverse), and no call for further research is made (A).",
+   "_src": "AugUSE-USC",
+   "_ref": "AugUSE-USC/RW:5",
+   "order": 5,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 7,
+   "skill": "Text Structure and Purpose",
+   "passage": "Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It introduces the topic of a scientific study, describes the study&rsquo;s importance, and then presents the study&rsquo;s results.",
+    "It argues for a new approach to scientific research, comments on the public&rsquo;s opinion about the approach, and then describes how that approach was applied in a certain study.",
+    "It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used.",
+    "It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects."
+   ],
+   "answer": "C",
+   "why": "Three sentences, three moves: name community science, list three benefits, cite the Merrill study. No results are given (A), no public opinion (B), and no future projects (D).",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:7",
+   "order": 6,
+   "domainCode": "CAS",
+   "skillCode": "CAS-TS"
+  },
+  {
+   "num": 6,
+   "skill": "Cross-Text Connections",
+   "passage": "<p><strong>Text 1</strong></p><p>In parts of the Northwest Territories, Canada, the rough-legged hawk is a major predator of the collared lemming. Researcher Alice Kenney and colleagues found that when this predation pressure on collared lemmings was temporarily reduced, their numbers significantly increased. This finding illustrates a foundational ecological <u>principle</u>: predators control prey population numbers.</p><p><strong>Text 2</strong></p><p>Robert D. Hayes and colleagues found that excluding wolves from a site in Yukon, Canada, where they typically prey on Dall sheep had no significant effect on Dall sheep abundance. Many other predation relief studies show an increase in prey abundance, but those studies often focus on small, rapidly reproducing prey, like birds, lemmings, and rabbits, rather than large, slowly reproducing prey, like Dall sheep, which could account for the difference between those results and Hayes and colleagues&rsquo; results.",
+   "stem": "Based on the texts, the author of Text 2 would most likely agree with which statement about the &ldquo;principle&rdquo; mentioned in Text 1?",
+   "choices": [
+    "It has some evidential support, but it should not be regarded as universally applicable.",
+    "It has been challenged by some studies, but the findings of those studies have not been widely accepted.",
+    "It may be true for some predators but only because those predators share certain physical characteristics.",
+    "It is plausible, but many of the studies that support it have methodological flaws."
+   ],
+   "answer": "A",
+   "why": "Text 2 grants that 'many other predation relief studies show an increase in prey abundance' \u2014 evidential support \u2014 but proposes that prey life history (small and fast-reproducing versus large and slow) limits where the principle holds. It faults neither the studies' methods (D) nor their acceptance (B), and it points to prey traits, not predator traits (C).",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:6",
+   "order": 7,
+   "domainCode": "CAS",
+   "skillCode": "CAS-CT"
+  },
+  {
+   "num": 7,
+   "skill": "Central Ideas and Details",
+   "passage": "Many artists associated with hyperpop, a movement in electronic music that emerged in the 2010s, conform to the model perfected by American musician Laura Les: bold synthesizer arrangements, propulsive beats, and electronically manipulated vocals. Yet the movement is hardly uniform: Venezuelan recording artist Arca incorporates Latin rhythms into the hyperpop sound, for example. Such stylistic diversity is encouraged in part by the music-streaming app Spotify, whose curated playlist of hyperpop songs balances cohesion with variety.",
+   "stem": "Which statement about Arca is best supported by the text?",
+   "choices": [
+    "While some of her recordings conform to the model perfected by Laura Les, others reject it outright.",
+    "She developed her unique sound without being influenced by other artists on Spotify&rsquo;s hyperpop playlist.",
+    "Her music diverges from the typical hyperpop sound but doesn&rsquo;t abandon it.",
+    "Her inclusion on Spotify&rsquo;s hyperpop playlist inspired established artists to embrace stylistic experimentation."
+   ],
+   "answer": "C",
+   "why": "Arca appears as the example of a movement that 'is hardly uniform', and she 'incorporates Latin rhythms <em>into</em> the hyperpop sound' \u2014 a variation within the style, not a rejection of it (A). B and D make claims about influence the text never supports.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M2:7",
+   "order": 8,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 9,
+   "skill": "Central Ideas and Details",
+   "passage": "Nicolas Dussex and colleagues relied on historical DNA (hDNA)&mdash;genomic data incidentally preserved in specimens housed in natural history collections&mdash;to investigate the evolutionary trajectory of the kakapo parrot (<em>Strigops habroptilus</em>). Although this approach offers unique benefits, such as the ability to sample genomic material from extinct species, it remains relatively underutilized because archival specimens are sometimes stored in ways that compromise DNA quality, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.",
+   "stem": "What does the text most strongly suggest about specimens from natural history collections?",
+   "choices": [
+    "While they were used in a study that made an important scientific discovery, they are generally of marginal value as sources of genomic data.",
+    "Because of their often-deteriorated condition, they tend to yield genomic data that are time-consuming to extract and interpret.",
+    "They are primarily used as sources of genomic data by scientists studying organisms that have undergone major evolutionary change.",
+    "While they may contain valuable genomic data, not all of them can yield usable hDNA."
+   ],
+   "answer": "D",
+   "why": "The text pairs 'unique benefits' with storage that 'sometimes' compromises DNA quality and cannot easily be remedied \u2014 valuable in general, unusable in some cases. 'Sometimes' rules out A's blanket dismissal and B's 'often-deteriorated'.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:9",
+   "order": 9,
+   "domainCode": "INI",
+   "skillCode": "INI-CI"
+  },
+  {
+   "num": 11,
+   "skill": "Command of Evidence",
+   "table": [
+    "Defensive Behavior and Reproductive Traits of Select Bird Species",
+    [
+     "Scientific name",
+     "Common name",
+     "Performs broken-wing display?",
+     "Length of incubation (days)",
+     "Incubation duty",
+     "Maximum number of broods per year"
+    ],
+    [
+     [
+      "<em>Bucephala islandica</em>",
+      "Barrow&rsquo;s goldeneye",
+      "No",
+      "34",
+      "1 parent",
+      "1"
+     ],
+     [
+      "<em>Numenius arquata</em>",
+      "Eurasian curlew",
+      "No",
+      "30",
+      "2 parents",
+      "1"
+     ],
+     [
+      "<em>Eremophila alpestris</em>",
+      "horned lark",
+      "Yes",
+      "12",
+      "1 parent",
+      "3"
+     ],
+     [
+      "<em>Zenaida asiatica</em>",
+      "white-winged dove",
+      "Yes",
+      "14",
+      "2 parents",
+      "2"
+     ]
+    ]
+   ],
+   "passage": "In an extensive review of existing literature, L&eacute;na de Framond and team cataloged the prevalence of broken-wing display&mdash;a defensive behavior observed in <em>Haematopus longirostris</em> (pied oystercatcher) and many other species&mdash;throughout the Aves class. Documentation of the display in 285 species across 52 families suggests the behavior likely evolved independently multiple times, prompting the team to consider ecological and life-history characteristics with hypothesized associations to the behavior&rsquo;s emergence, including traits related to reproduction investment and future reproduction potential. Based on their review of those traits, the team concluded that _____",
+   "stem": "Which choice most effectively uses data from the table to complete the conclusion?",
+   "choices": [
+    "capacity for multiple broods, number of parental incubators, and incubation duration are equally associated with the use of broken-wing display.",
+    "incubation duration and capacity for multiple broods are more strongly associated with the use of broken-wing display than the number of parental incubators is.",
+    "broken-wing display is most often observed in species with less opportunity to reproduce in a year due to longer incubation periods.",
+    "among species with more than one parental incubator, the use of broken-wing display is associated with greater incubation duration."
+   ],
+   "answer": "B",
+   "why": "In the table the two display species have short incubation (12, 14) and multiple broods (3, 2) while the two non-display species have long incubation (34, 30) and one brood \u2014 both traits track the display perfectly. Incubation duty does not: each group contains one 1-parent and one 2-parent species. C reverses the incubation relationship, and D is false (among the 2-parent species the display one has the shorter incubation).",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:11",
+   "order": 10,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 11,
+   "skill": "Command of Evidence",
+   "passage": "<em>The Underdogs</em> is a 1915 novel by Mariano Azuela, originally written in Spanish. In the novel, Azuela depicts a traveling group of soldiers as having a renewed sense of agency and authority as they set off on a new stage of their journey: _____",
+   "stem": "Which quotation from a translation of <em>The Underdogs</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;The sonorous, joyful bells rang again. From within the church, the honeyed voices of a female chorus rose melancholy and grave.&rdquo;",
+    "&ldquo;All day long [the soldiers] rode through the canyon, up and down the steep, round hills, dirty and bald as a man&rsquo;s head, hill after hill in endless succession. At last, late in the afternoon, they descried several stone church towers in the heart of a bluish ridge, and, beyond, the white road with its curling spirals of dust and its gray telegraph poles.&rdquo;",
+    "&ldquo;The men threw out their chests as if to breathe the widening horizon, the immensity of the sky, the blue from the mountains and the fresh air, redolent with the various odors of the sierra. They spurred their horses to a gallop as if in that mad race they laid claims of possession to the earth.&rdquo;",
+    "&ldquo;Before Juchipila was lost from sight, Valderrama got off his horse, bent down, kneeled, and gravely kissed the ground.&rdquo;"
+   ],
+   "answer": "C",
+   "why": "'Laid claims of possession to the earth' is the authority and 'spurred their horses to a gallop' the agency, both at the start of a new stretch of road. B describes the same journey but with no sense of renewal, and A and D are about other characters and moods.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:11",
+   "order": 11,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 13,
+   "skill": "Command of Evidence",
+   "passage": "<em>Cane</em> is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer establishes a contrast between the narrator&rsquo;s attitude toward life and the attitude of the narrator&rsquo;s love interest, Avey, writing, _____",
+   "stem": "Which quotation from <em>Cane</em> most effectively illustrates the claim?",
+   "choices": [
+    "&ldquo;Avey was as silent as those great trees whose tops we looked down upon. She has always been like that. At least, to me.&rdquo;",
+    "&ldquo;A band in one of the buildings a fair distance off was playing a march. I wished they would stop. Their playing was like a tin spoon in one&rsquo;s mouth.&rdquo;",
+    "&ldquo;[Avey would] smile appreciation, but it was an impersonal smile, never for me.&rdquo;",
+    "&ldquo;As time went on, [Avey&rsquo;s] indifference to things began to pique me; I was ambitious. I left [our small hometown] earlier than she did.&rdquo;"
+   ],
+   "answer": "D",
+   "why": "Only D names both attitudes and sets them against each other: Avey's indifference versus the narrator's ambition. A and C describe Avey alone, and B is about a band.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:13",
+   "order": 12,
+   "domainCode": "INI",
+   "skillCode": "INI-CE"
+  },
+  {
+   "num": 14,
+   "skill": "Inferences",
+   "passage": "The Clarion-Clipperton Zone (CCZ) is an expanse of abyssal plain and seamounts (underwater mountains) between Hawai&rsquo;i and Mexico in which mining is permitted, but the area&rsquo;s biodiversity is poorly understood. The vast majority of invertebrate species found in a recent survey of the CCZ were hitherto unknown to scientists, and sampling for animal life has been highly concentrated in the eastern part of the zone. Some species like <em>Ledella knudseni</em> were identified both morphologically and molecularly (using DNA analysis), whereas <em>Prionospio branchilucida</em> and other species for which molecular sampling was impracticable were identified solely based on physical morphology. Since molecular analysis does not require distinguishing subtle physiological differences, it is _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify <em>Prionospio branchilucida</em>.",
+    "more frequently used for identifying species with physiological characteristics like those of <em>Ledella knudseni</em> than morphological analysis is.",
+    "better suited to distinguishing <em>Prionospio branchilucida</em> from morphologically similar species than to distinguishing <em>Ledella knudseni</em> from morphologically similar species.",
+    "capable of providing greater physiological detail about a species than is the method used for <em>Prionospio branchilucida</em>."
+   ],
+   "answer": "A",
+   "why": "The final clause is the premise: molecular analysis does not depend on subtle physiological differences, so it should outperform morphology-only identification (the method used for <em>Prionospio branchilucida</em>) precisely where species look alike. B is about frequency of use, C reverses the case that suits it, and D claims more physiological detail, which does not follow from needing less of it.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:14",
+   "order": 13,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": "M2-13",
+   "skill": "Inferences",
+   "passage": "Many Indian snack foods, such as bhatoora and paneer pakora, acquire their flavor from being fried in oil; some are also coated in batter beforehand. Chemists Marc A. Meyers and Andrew Grazela studied the mass and heat transfer processes that occur when foods are fried in batters containing hydrocolloids, polymers that become viscous or gel-like in water. During frying, water in the food evaporates, leaving voids that oil (a pure fat) can fill. As the process continues, water from the food&rsquo;s center moves to the crust as long as the crust remains permeable. However, hydrocolloids can create structures in the crust that reduce the transfer of moisture out of the food&rsquo;s core during frying. Therefore, a food fried without a hydrocolloid batter coating will likely _____",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "have a more viscous crust when frying is completed than it would have if it were fried with a coating of hydrocolloid batter.",
+    "have a higher fat content than it would have if it were fried with a coating of hydrocolloid batter.",
+    "need to be cooked more quickly at a higher temperature than it would need to be cooked if it were fried with a coating of hydrocolloid batter.",
+    "need to be cooked in a different oil than it would need to be cooked in if it were fried with a coating of hydrocolloid batter."
+   ],
+   "answer": "B",
+   "why": "Follow the chain: no hydrocolloids means the crust stays permeable, so more water leaves, so more voids form, and oil \u2014 'a pure fat' \u2014 fills them. C and D are about cooking conditions the text never raises, and A attributes viscosity to the wrong case.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-13",
+   "order": 14,
+   "domainCode": "INI",
+   "skillCode": "INI-IE"
+  },
+  {
+   "num": "A-B7",
+   "skill": "Boundaries",
+   "rule": "a conjunctive adverb between clauses needs a semicolon before it",
+   "passage": "Cochineal insects yield a red dye so vivid that it was once traded across three _____ synthetic alternatives had replaced it in most industries.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "continents, by 1900,",
+    "continents by 1900,",
+    "continents; by 1900,",
+    "continents by 1900"
+   ],
+   "answer": "C",
+   "why": "'Cochineal insects yield a red dye...' and 'synthetic alternatives had replaced it...' are independent clauses, and 'by 1900' introduces the second. A semicolon is required; a comma splices them and the unpunctuated versions run on.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-B7",
+   "order": 15,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 17,
+   "skill": "Boundaries",
+   "passage": "On December 2, 1992, the space shuttle <em>Discovery</em> blasted off into space, commencing Mission _____ seven days and seven hours, the mission ended when the shuttle landed at Edwards Air Force Base in California.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "STS-53, lasting",
+    "STS-53, it lasted",
+    "STS-53 lasting",
+    "STS-53. Lasting"
+   ],
+   "answer": "D",
+   "why": "'...blasted off into space, commencing Mission STS-53' and 'the mission ended when the shuttle landed...' are both independent clauses, so a sentence boundary is required. A and C leave the second clause spliced on with a comma, and B splices two clauses outright.",
+   "_src": "OctIntB",
+   "_ref": "OctIntB/RW_M1:17",
+   "order": 16,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 18,
+   "skill": "Boundaries",
+   "passage": "The length of bird eggs varies widely across species, and an ecological _____ compared the lengths of eggs produced by different bird species found <em>Milvus migrans</em> eggs to be longer, on average, than <em>Gallinula chloropus</em> eggs.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "study, that",
+    "study, which",
+    "study",
+    "study that"
+   ],
+   "answer": "D",
+   "why": "'That compared the lengths...' is a restrictive relative clause identifying which study, and 'found' is the main verb; restrictive clauses take no comma, so D. B would need a second comma before 'found' to close a nonrestrictive clause, and C leaves two finite verbs ('compared', 'found') with no conjunction.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:18",
+   "order": 17,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 17,
+   "skill": "Boundaries",
+   "passage": "When Fiji joined Interpol&mdash;the International Criminal Police _____ in 1971, the Fiji National Police Intelligence Bureau gained access to the combined resources of law enforcement agencies from around the globe.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Organization,",
+    "Organization&mdash;",
+    "Organization",
+    "Organization:"
+   ],
+   "answer": "B",
+   "why": "A dash already opens the appositive that names Interpol in full, so the matching dash must close it. Mixing a dash with a comma or a colon, or omitting the closing mark entirely, leaves the aside unbounded.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M2:17",
+   "order": 18,
+   "domainCode": "SEC",
+   "skillCode": "SEC-BS"
+  },
+  {
+   "num": 17,
+   "skill": "Form, Structure, and Sense",
+   "passage": "In her work as a sociocultural anthropologist, L&iacute;via Barbosa studies food and sociability in contemporary Brazil&mdash;namely, how common Brazilian foods like tareco (a disk-shaped biscuit) and coxinha (a stuffed fried dough) _____ as central mechanisms in building social relationships, values, and identities.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "is functioning",
+    "functions",
+    "has functioned",
+    "function"
+   ],
+   "answer": "D",
+   "why": "The subject of the blank is the plural 'foods like tareco and coxinha', and the surrounding verbs are simple present ('studies'), so the plural present 'function' is required.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:17",
+   "order": 19,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": 16,
+   "skill": "Form, Structure, and Sense",
+   "passage": "An emulsifier is a type of compound that serves to stabilize an emulsion&mdash;a mixture of two or more liquids that otherwise would not easily blend together. In the cosmetics industry, emulsifiers such as stearyl alcohol _____ to blend oil and water into homogeneous formulations, like lotions and perfumes.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "employed",
+    "being employed",
+    "are employed",
+    "that they employ"
+   ],
+   "answer": "C",
+   "why": "The sentence has no other main verb, so the blank must supply one for the plural subject 'emulsifiers'. Only 'are employed' is a finite plural verb; the rest leave a fragment.",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:16",
+   "order": 20,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": "A-F3",
+   "skill": "Form, Structure, and Sense",
+   "rule": "tense agreement with a fixed past time marker",
+   "passage": "In 1783, the Laki fissure in Iceland began an eruption that lasted eight months. Ash carried on the wind _____ harvests as far away as central Europe that year.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "damages",
+    "is damaging",
+    "damaged",
+    "will damage"
+   ],
+   "answer": "C",
+   "why": "'In 1783' and 'that year' fix the event in the completed past, and the surrounding verbs ('began', 'lasted') are simple past.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-F3",
+   "order": 21,
+   "domainCode": "SEC",
+   "skillCode": "SEC-FS"
+  },
+  {
+   "num": "A-T7",
+   "skill": "Transitions",
+   "rule": "addition",
+   "passage": "Green roofs reduce the volume of stormwater that reaches a city&rsquo;s drains, easing pressure on systems that were sized for a smaller population. _____ the soil layer insulates the building beneath it, lowering the energy needed to heat and cool the top floors.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In short,",
+    "Instead,",
+    "Moreover,",
+    "Until then,"
+   ],
+   "answer": "C",
+   "why": "Insulation is a second, separate benefit added to the stormwater benefit. 'Instead' would replace the first claim and 'in short' would summarise it.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-T7",
+   "order": 22,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": "A-T1",
+   "skill": "Transitions",
+   "rule": "cause and effect",
+   "passage": "Saffron must be harvested by hand, and each crocus flower yields only three usable stigmas. _____ a single kilogram of the spice represents the picking of roughly 150,000 flowers.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Nevertheless,",
+    "In contrast,",
+    "Similarly,",
+    "Consequently,"
+   ],
+   "answer": "D",
+   "why": "The flower count follows from the hand harvest and the three-stigma yield, so the relation is causal rather than contrastive or parallel.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-T1",
+   "order": 23,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": "M2-23",
+   "skill": "Transitions",
+   "passage": "Joseph Goodrich was an outspoken abolitionist whose Wisconsin home was a stop on the underground railroad (the network of people and places that some enslaved people used to escape to freedom). _____ supporters of the railroad were secretive about their antislavery views. By and large, they were vocal abolitionists like Goodrich.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Occasionally,",
+    "For example,",
+    "Accordingly,",
+    "However,"
+   ],
+   "answer": "A",
+   "why": "The sentence that follows \u2014 'By and large, they were vocal abolitionists' \u2014 marks secrecy as the exception, so the blank must limit the claim's frequency. Goodrich was outspoken, so secrecy is neither an example of (B) nor a consequence of (C) the first sentence.",
+   "_src": "AugUSE",
+   "_ref": "AugUSE/RW:M2-23",
+   "order": 24,
+   "domainCode": "EOI",
+   "skillCode": "EOI-TR"
+  },
+  {
+   "num": 27,
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>Element abundance is a relative measure of the occurrence of a chemical element in a given environment.</li><li>An element&rsquo;s relative abundance can be expressed as a mass fraction, mole fraction, or volume fraction.</li><li>Mass fraction is the ratio of an element&rsquo;s mass to the combined mass of all elements in a given environment.</li><li>The mass fraction of calcium (Ca) is 17,100 parts per million (ppm), or 1.71%, on Earth.</li><li>The mass fraction of potassium (K) is 160 ppm, or 0.016%, on Earth.</li></ul>",
+   "stem": "The student wants to specify an element&rsquo;s relative abundance on Earth. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Mass fraction, mole fraction, and volume fraction can all be used to express an element&rsquo;s relative abundance in a given environment.",
+    "Expressed as a mass fraction, the relative abundance of potassium on Earth is 160 ppm, or 0.016%.",
+    "The relative abundance of the element potassium on Earth can be expressed in three different ways.",
+    "On Earth, the mass fraction of potassium is greater than that of calcium."
+   ],
+   "answer": "B",
+   "why": "Only B gives an actual figure for one element. A and C describe the available measures rather than specifying an abundance, and D is false (calcium's 17,100 ppm far exceeds potassium's 160 ppm).",
+   "_src": "OctUSB",
+   "_ref": "OctUSB/RW_M1:27",
+   "order": 25,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": "A-R1",
+   "skill": "Rhetorical Synthesis",
+   "rule": "the goal names the one fact the sentence must foreground",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>A qanat is an underground channel that carries water from an aquifer to the surface by gravity alone.</li><li>Qanats have been built across arid regions of Asia and North Africa for more than 2,500 years.</li><li>The Qanat of Gonabad in Iran is about 33 kilometers long.</li><li>Its main well shaft reaches a depth of roughly 300 meters.</li><li>It still supplies water to farms today.</li></ul>",
+   "stem": "The student wants to emphasize the depth of the Qanat of Gonabad&rsquo;s main well shaft. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Qanat of Gonabad, which is about 33 kilometers long, is an underground channel in Iran.",
+    "Qanats have carried water across arid regions of Asia and North Africa for more than 2,500 years.",
+    "The main well shaft of the Qanat of Gonabad descends roughly 300 meters below the surface.",
+    "The Qanat of Gonabad still supplies water to farms today, using gravity alone."
+   ],
+   "answer": "C",
+   "why": "Only the 'descends roughly 300 meters' choice gives the shaft depth. One choice gives the 33-kilometer length instead, and the other two are about qanats generally and about present-day use.",
+   "_src": "AUTHORED",
+   "_ref": "AUTHORED/RW:A-R1",
+   "order": 26,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  },
+  {
+   "num": 25,
+   "skill": "Rhetorical Synthesis",
+   "passage": "While researching a topic, a student has taken the following notes:</p><ul><li>The Wairakei geothermal power plant in New Zealand uses a flash steam system to generate electricity.</li><li>Flash steam technology requires geothermal reservoir temperatures above 180&deg;C.</li><li>The use of flash steam systems worldwide is limited because many geothermal reservoirs aren&rsquo;t hot enough.</li><li>The Traunreut geothermal power plant in Germany uses a binary cycle system.</li><li>Binary cycle technology can generate energy from lower-temperature (less than 180&deg;C) geothermal reservoirs.</li><li>Binary cycle systems involve higher maintenance costs than flash steam systems.</li></ul>",
+   "stem": "The student wants to compare the disadvantages of the geothermal systems used at the Wairakei and Traunreut plants. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Unlike the Traunreut plant, the Wairakei plant uses a flash steam system, which requires a less common resource: geothermal reservoirs with temperatures above 180&deg;C.",
+    "Compared with the system used at the Wairakei plant, the system used at the Traunreut plant has a notable disadvantage: its cost.",
+    "The system used at the Traunreut plant overcomes the temperature limitations of the Wairakei plant&rsquo;s system but is more costly to maintain.",
+    "The system at the Wairakei plant requires temperatures above 180&deg;C, while the system at the Traunreut plant can operate at lower temperatures."
+   ],
+   "answer": "C",
+   "why": "The goal needs a drawback of <em>both</em> systems. C names Wairakei's temperature limitation and Traunreut's maintenance cost. A and B each give only one plant's disadvantage, and D gives a neutral capability comparison with no disadvantage at all.",
+   "_src": "OctUSC",
+   "_ref": "OctUSC/RW_M1:25",
+   "order": 27,
+   "domainCode": "EOI",
+   "skillCode": "EOI-RS"
+  }
+ ],
+ "MATH_M1": [
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "How many distinct real solutions does the equation \\(3x^{2}-12x+12=0\\) have?",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "B",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H12",
+   "verified": "the discriminant is 144 - 4(3)(12) = 0, so there is one repeated real root",
+   "order": 1
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A population of bacteria decreases by 15% each hour. At time t=0 hours the population is 8,000. Which function models the population P after t hours?",
+   "choices": [
+    "\\(P(t)=8{,}000(0.15)^{t}\\)",
+    "\\(P(t)=8{,}000-0.15t\\)",
+    "\\(P(t)=8{,}000(1.15)^{t}\\)",
+    "\\(P(t)=8{,}000(0.85)^{t}\\)"
+   ],
+   "correct": "D",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED:H8",
+   "verified": "a 15% decrease per hour multiplies by 1 - 0.15 = 0.85 each hour",
+   "order": 2
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "6x+2y=10<br/>9x+cy=4<br/>In the given system of equations, c is a constant. If the system has no solution, what is the value of c?",
+   "choices": [
+    "\\(\\frac{4}{3}\\)",
+    "3",
+    "6",
+    "12"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H1",
+   "verified": "no solution means the lines are parallel but distinct: 9/6 = c/2 gives c = 3, and 4/10 differs from 9/6",
+   "order": 3
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In a group of 30 students, the 18 students in the morning session scored a mean of 84 points on a test and the 12 students in the afternoon session scored a mean of 74 points. What is the mean score, in points, of all 30 students?",
+   "choices": [
+    "78",
+    "79",
+    "82",
+    "80"
+   ],
+   "correct": "D",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED:H14",
+   "verified": "(18*84 + 12*74)/30 = 2400/30 = 80",
+   "order": 4
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In right triangle XYZ, angle Z is a right angle. If \\(\\sin X=0.6\\), what is the value of \\(\\cos Y\\)?",
+   "choices": [
+    "0.4",
+    "0.6",
+    "0.8",
+    "1.6"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "sourceRef": "AUTHORED:H20",
+   "verified": "angles X and Y are complementary, and the cosine of an angle equals the sine of its complement",
+   "order": 5
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The table shows the number of passengers for several charter buses along with the number of cars in each bus's escort. Data points (cars, passengers): (3, 111), (6, 216), (10, 356). Which equation best represents this linear relationship, where c is the number of cars and p is the number of passengers?",
+   "sourceRef": "march_intb_test1_math_m2:4",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "verified": "sympy: slope=(216-111)/(6-3)=35; p=35c+6 -> 35c-p=-6. Matches official key (A) and source's circled selection (A).",
+   "choices": [
+    "35c - p = -6",
+    "35c - p = 6",
+    "35c + p = -6",
+    "p - 35c = 6"
+   ],
+   "correct": "A",
+   "order": 6
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}-100=0\\]How many distinct real solutions does the given equation have?",
+   "sourceRef": "octusc_supplement:M2-Q2",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "x = 10 and x = -10, two distinct real solutions",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "C",
+   "order": 7
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has a radius of 10 inches. What is the length, in inches, of an arc intercepted by a central angle measuring 72&deg;?",
+   "choices": [
+    "\\(2\\pi\\)",
+    "\\(4\\pi\\)",
+    "\\(10\\pi\\)",
+    "\\(20\\pi\\)"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H19",
+   "verified": "(72/360) * 2*pi*10 = 4pi",
+   "order": 8
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A company has a customer loyalty program. In January 2018, there were 1,600 customers enrolled in the loyalty program. For the next 24 months after January 2018, the total number of customers enrolled in the loyalty program each month was 5% greater than the total number enrolled the previous month. Which equation gives the total number of customers, c, enrolled in the company's loyalty program m months after January 2018, where m <= 24?",
+   "sourceRef": "junev2_math_m1:12",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "verified": "logical: 5% growth per month -> multiply by 1.05 each month, matches B",
+   "choices": [
+    "c = 1,600(0.05)^m",
+    "c = 1,600(1.05)^m",
+    "c = 1,600(1.5)^m",
+    "c = 1,600(5)^m"
+   ],
+   "correct": "B",
+   "order": 9
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}+y^{2}-6x+8y=0\\]The given equation defines a circle in the xy-plane. What is the radius of the circle?",
+   "choices": [
+    "3",
+    "4",
+    "5",
+    "25"
+   ],
+   "correct": "C",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H17",
+   "verified": "completing the square gives (x-3)^2 + (y+4)^2 = 25, so the radius is 5",
+   "order": 10
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "An isosceles right triangle has a perimeter of 26 + 26*sqrt(2). What is the length of the hypotenuse of the triangle?",
+   "sourceRef": "march_intb_test1_math_m2:20",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "verified": "sympy: leg=x, hypotenuse=x*sqrt(2), perimeter=2x+x*sqrt(2)=x(2+sqrt(2))=26+26*sqrt(2)=26(1+sqrt(2)); solve x=26(1+sqrt(2))/(2+sqrt(2)) -> simplifies to x=13*sqrt(2), hypotenuse=x*sqrt(2)=26. Matches official key (C) and source's circled selection (C).",
+   "choices": [
+    "13",
+    "13*sqrt(2)",
+    "26",
+    "26*sqrt(2)"
+   ],
+   "correct": "C",
+   "order": 11
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = 250(5)^x. The function f is defined by the given equation. If g(x) = f(x-2), which of the following equations defines the function g?",
+   "sourceRef": "decintb_math_m1:21",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "sympy: g(x)=250*5^(x-2)=250*5^x/25=10*5^x",
+   "choices": [
+    "g(x) = 10(5)^x",
+    "g(x) = 125(5)^x",
+    "g(x) = 250(25)^x",
+    "g(x) = 250(10)^x"
+   ],
+   "correct": "A",
+   "order": 12
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation S=(n-2)(180) gives the sum S, in degrees, of the interior angle measures of a polygon with n sides. Which equation correctly expresses n in terms of S?",
+   "choices": [
+    "\\(n=\\frac{S}{180}+2\\)",
+    "\\(n=\\frac{S+2}{180}\\)",
+    "\\(n=\\frac{S}{180}-2\\)",
+    "\\(n=180S+2\\)"
+   ],
+   "correct": "A",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED:H4",
+   "verified": "divide both sides by 180 and add 2",
+   "order": 13
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The pressure of a certain gas in a sealed container doubles every 29 minutes. The initial pressure is 18 psi. Which equation gives the pressure y, in psi, of the gas x minutes after the initial measurement?",
+   "sourceRef": "march_intb_test1_math_m2:6",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "logical: doubling every 29 minutes -> exponent x/29. Matches official key (A) and source's circled selection (A).",
+   "choices": [
+    "y = 18(2)^(x/29)",
+    "y = 18(2)^(29x)",
+    "y = 29(2)^(x/18)",
+    "y = 18 + (2)^(x/29)"
+   ],
+   "correct": "A",
+   "order": 14
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Triangle ABC is similar to triangle DEF, where side AB corresponds to side DE. The length of AB is 9, the length of DE is 15, and the perimeter of triangle ABC is 24. What is the perimeter of triangle DEF?",
+   "choices": [
+    "30",
+    "36",
+    "45",
+    "40"
+   ],
+   "correct": "D",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED:H18",
+   "verified": "perimeters scale by the similarity ratio 15/9, so 24 * 15/9 = 40",
+   "order": 15
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the xy-plane, line m is perpendicular to the line \\(y=-\\frac{1}{3}x+5\\) and passes through the point (0,-2). Which equation defines line m?",
+   "choices": [
+    "\\(y=-\\frac{1}{3}x-2\\)",
+    "\\(y=\\frac{1}{3}x-2\\)",
+    "\\(y=3x-2\\)",
+    "\\(y=-3x-2\\)"
+   ],
+   "correct": "C",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED:H6",
+   "verified": "perpendicular slope is the negative reciprocal of -1/3, which is 3; the y-intercept is -2",
+   "order": 16
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The cost of renting a piece of construction equipment for up to 5 days is $230 for the first day and $115 for each additional day. Which of the following equations gives the cost y, in dollars, of renting the equipment for x days, where x is a positive integer and x <= 5?",
+   "sourceRef": "junev2_math_m2:20",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "verified": "sympy: y=230+115(x-1)=115x+115. Matches source's own circled selection (D).",
+   "choices": [
+    "y = 230x + 115",
+    "y = 230x - 115",
+    "y = 115x + 230",
+    "y = 115x + 115"
+   ],
+   "correct": "D",
+   "order": 17
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Line r in the xy-plane has a slope of -8 and passes through the point (0,60). Which equation defines line r?",
+   "sourceRef": "octintb_math_m1:1",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "verified": "slope-intercept: b=60 since the point is the y-intercept",
+   "choices": [
+    "y=-8x+60",
+    "y=-8x+52",
+    "y=-8x-52",
+    "y=-8x-60"
+   ],
+   "correct": "A",
+   "order": 18
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The table shows the frequency of values in a data set: Value 13 freq 8; Value 20 freq 1; Value 27 freq 8; Value 34 freq 6. What is the minimum value of the data set?",
+   "sourceRef": "may_inta_math_m1:8",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "verified": "logical: smallest value listed with nonzero frequency is 13",
+   "choices": [
+    "1",
+    "8",
+    "13",
+    "20"
+   ],
+   "correct": "C",
+   "order": 19
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "56x^2 + (56s + r)x + rs = 0. In the given equation, r and s are positive constants. The product of the solutions to the given equation is krs, where k is a constant. What is the value of k?",
+   "sourceRef": "decintb_math_m2:18",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "sympy: factors as (56x+r)(x+s)=0, roots -r/56 and -s; product = (-r/56)(-s) = rs/56, so k=1/56",
+   "correctAnswerFR": "[\"1/56\"]",
+   "order": 20
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "A science class studied the feeding behavior of the birds that visited a bird feeder each school day for a period of time. The table summarizes the number of birds the class observed visiting the bird feeder each school day during this period of time. What is the median number of birds the class observed visiting the bird feeder each school day during this period of time?",
+   "sourceRef": "octusb_math_m2:16",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "verified": "23 days total; median is the 12th value; cumulative counts 3,6,10,11,14,23 put the 12th in the 18-bird group",
+   "correctAnswerFR": "[\"18\"]",
+   "table": {
+    "headers": [
+     "Number of birds",
+     "Number of days"
+    ],
+    "rows": [
+     [
+      "14",
+      "3"
+     ],
+     [
+      "15",
+      "3"
+     ],
+     [
+      "16",
+      "4"
+     ],
+     [
+      "17",
+      "1"
+     ],
+     [
+      "18",
+      "3"
+     ],
+     [
+      "19",
+      "9"
+     ]
+    ]
+   },
+   "order": 21
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "22.5x + 26.75y = 242. Odalys ordered mulch and river rock, which cost a total of $242, for her home. The given equation represents the relationship between the number of cubic yards of mulch, x, and the number of tons of river rock, y, Odalys ordered. How much more, in dollars, did a ton of river rock cost Odalys than a cubic yard of mulch?",
+   "sourceRef": "march_intb_test1_math_m1:15",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "verified": "sympy: 26.75-22.5=4.25. NOTE parsed key showed 8/9 here -- likely a key-parsing misalignment given this is unambiguous arithmetic on clearly stated dollar amounts",
+   "correctAnswerFR": "[\"4.25\"]",
+   "order": 22
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of the polynomial function f in the xy-plane, where y = f(x), has x-intercepts of (-5, 0) and (2, 0). Which of the following must be true?",
+   "sourceRef": "decintb_math_m2:5",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "logical: x-intercept (-5,0) means f(-5)=0",
+   "choices": [
+    "f(0) = -5",
+    "f(2) = -5",
+    "f(-5) = 0",
+    "f(-5) = 2"
+   ],
+   "correct": "C",
+   "order": 1
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[p(x)=x^{3}-4x^{2}+kx-6\\]In the given polynomial, k is a constant. If x-3 is a factor of p(x), what is the value of k?",
+   "choices": [
+    "-5",
+    "3",
+    "15",
+    "5"
+   ],
+   "correct": "D",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED:H11",
+   "verified": "p(3) = 27 - 36 + 3k - 6 = 0 gives 3k = 15, so k = 5",
+   "order": 2
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = sqrt(5x + 6). The function f is defined by the given equation. If f(a) = -5a, where a is a constant, what is the value of a?",
+   "sourceRef": "may_inta_math_m1:22",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "verified": "sympy: a=-2/5",
+   "choices": [
+    "3/5",
+    "2/5",
+    "-2/5",
+    "-3/5"
+   ],
+   "correct": "C",
+   "order": 3
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_H15 The table shows the number of students in each grade who selected each elective. If a student who selected chemistry is chosen at random, what is the probability that the student is a junior?",
+   "choices": [
+    "\\(\\frac{9}{20}\\)",
+    "\\(\\frac{3}{5}\\)",
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{2}{3}\\)"
+   ],
+   "correct": "A",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "AUTHORED:H15",
+   "verified": "36 juniors out of the 80 students who chose chemistry: 36/80 = 9/20",
+   "table": {
+    "headers": [
+     "Grade",
+     "Chemistry",
+     "Studio art",
+     "Total"
+    ],
+    "rows": [
+     [
+      "Juniors",
+      "36",
+      "24",
+      "60"
+     ],
+     [
+      "Seniors",
+      "44",
+      "16",
+      "60"
+     ],
+     [
+      "Total",
+      "80",
+      "40",
+      "120"
+     ]
+    ]
+   },
+   "order": 4
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The equation \\(2^{x+3}=32\\) is true for what value of x?",
+   "choices": [
+    "2",
+    "3",
+    "5",
+    "29"
+   ],
+   "correct": "A",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H9",
+   "verified": "32 = 2^5, so x+3 = 5 and x = 2",
+   "order": 5
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function f is defined by \\(f(x)=2x^{2}-12x+23\\). What is the minimum value of f(x)?",
+   "choices": [
+    "3",
+    "5",
+    "11",
+    "23"
+   ],
+   "correct": "B",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED:H7",
+   "verified": "vertex at x = 12/(2*2) = 3; f(3) = 18 - 36 + 23 = 5",
+   "order": 6
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\((x+4)^{2}-(x-4)^{2}\\)?",
+   "choices": [
+    "0",
+    "\\(2x^{2}\\)",
+    "16x",
+    "32"
+   ],
+   "correct": "C",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED:H22",
+   "verified": "expanding gives (x^2+8x+16) - (x^2-8x+16) = 16x",
+   "order": 7
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A store sells notebooks for $4 each and pens for $2 each. A customer buys 15 of these items and spends $46 in total. How many notebooks did the customer buy?",
+   "choices": [
+    "4",
+    "7",
+    "11",
+    "8"
+   ],
+   "correct": "D",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H3",
+   "verified": "4n + 2(15-n) = 46 gives 2n = 16, so n = 8",
+   "order": 8
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A gym charges a one-time joining fee of $40 plus $25 for each month of membership. Sam wants to spend no more than $340 in total. What is the greatest number of whole months of membership Sam can buy?",
+   "choices": [
+    "11",
+    "12",
+    "13",
+    "15"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED:H21",
+   "verified": "25m + 40 <= 340 gives m <= 12, so 12 whole months",
+   "order": 9
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The price of a jacket is increased by 20%. The new price is then decreased by 20%. The final price is what percent of the original price?",
+   "choices": [
+    "96%",
+    "98%",
+    "100%",
+    "104%"
+   ],
+   "correct": "A",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED:H13",
+   "verified": "1.20 * 0.80 = 0.96",
+   "order": 10
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A printer produces 45 pages per minute. At this rate, how many hours will it take the printer to produce 54,000 pages?",
+   "choices": [
+    "12",
+    "20",
+    "24",
+    "45"
+   ],
+   "correct": "B",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED:H16",
+   "verified": "54000/45 = 1200 minutes = 20 hours",
+   "order": 11
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which of the following is the solution set to the inequality \\(|x-4|&lt;6\\)?",
+   "choices": [
+    "\\(x&lt;10\\)",
+    "\\(-2&lt;x&lt;10\\)",
+    "\\(x&gt;-2\\)",
+    "\\(-10&lt;x&lt;2\\)"
+   ],
+   "correct": "B",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED:H2",
+   "verified": "|x-4| < 6 unfolds to -6 < x-4 < 6, so -2 < x < 10",
+   "order": 12
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the solution to the equation \\(\\sqrt{3x+4}=x\\)?",
+   "choices": [
+    "-1",
+    "1",
+    "4",
+    "-1 and 4"
+   ],
+   "correct": "C",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED:H10",
+   "verified": "squaring gives x^2-3x-4=0 with roots 4 and -1; x = -1 is extraneous because a square root cannot equal a negative number",
+   "order": 13
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The mean of a list of 6 numbers is 21. When a seventh number is added to the list, the mean of the 7 numbers is 23. What is the seventh number?",
+   "choices": [
+    "25",
+    "29",
+    "33",
+    "35"
+   ],
+   "correct": "D",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED:H23",
+   "verified": "7*23 - 6*21 = 161 - 126 = 35",
+   "order": 14
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The table gives the areas and perimeters of two similar rectangles, where n is a constant: Rectangle A area 1,440 sq in, perimeter 480 in; Rectangle B area 5,760 sq in, perimeter n in. What is the value of n?",
+   "sourceRef": "decintb_math_m2:20",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "verified": "sympy: area ratio 5760/1440=4, linear scale factor = sqrt(4)=2, perimeter scales linearly: n=480*2=960",
+   "choices": [
+    "960",
+    "1,920",
+    "3,840",
+    "4,800"
+   ],
+   "correct": "A",
+   "order": 15
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A right circular cone has a radius of 6 centimeters and a height of 10 centimeters. What is the volume, in cubic centimeters, of the cone?",
+   "choices": [
+    "\\(60\\pi\\)",
+    "\\(120\\pi\\)",
+    "\\(240\\pi\\)",
+    "\\(360\\pi\\)"
+   ],
+   "correct": "B",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED:H24",
+   "verified": "(1/3)*pi*6^2*10 = 120pi",
+   "order": 16
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "4x-6y=14<br/>-2x+3y=k<br/>In the given system of equations, k is a constant. If the system has infinitely many solutions, what is the value of k?",
+   "choices": [
+    "-7",
+    "-2",
+    "7",
+    "14"
+   ],
+   "correct": "A",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED:H5",
+   "verified": "multiplying the second equation by -2 gives 4x-6y=-2k, so -2k = 14 and k = -7",
+   "order": 17
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "f(x) = k(1.84)^x. The function f is defined by the given equation, where k is a constant. The value of f(x) increases by p% for every increase of x by 1. For which of the following functions, where k is a constant, does the value of g(x) increase by p% for every increase of x by 4?",
+   "sourceRef": "may_inta_math_m1:21",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "algebra: need base^4=1.84 growth per 4 units -> g(x)=k*1.84^(x/4)=k*(1.84^x)^(1/4)",
+   "choices": [
+    "g(x) = k(1.84^x)^{1/4}",
+    "g(x) = k(1.84^x)^4",
+    "g(x) = k(1.84)^{x-4}",
+    "g(x) = k(1.84)^{x+4}"
+   ],
+   "correct": "A",
+   "order": 18
+  },
+  {
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has diameters AC and BD. The circumference of the circle is 84*pi, and the length of arc DA is 2 times the length of arc AB. What is the length of arc BC?",
+   "sourceRef": "may_inta_math_m2:15",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "verified": "sympy/geometry: arcAB=60deg, arcBC=120deg -> (120/360)*84pi=28pi",
+   "choices": [
+    "2\\pi",
+    "14\\pi",
+    "21\\pi",
+    "28\\pi"
+   ],
+   "correct": "D",
+   "order": 19
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "13x = 42 - x. What value of x is the solution to the given equation?",
+   "sourceRef": "may_inta_math_m1:1",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "verified": "sympy: x=3",
+   "correctAnswerFR": "[\"3\"]",
+   "order": 20
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "The function f(t) = 10,000(2)^(t/350) gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+   "sourceRef": "junev2_math_m1:13",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "verified": "sympy: doubling time = exponent's denominator = 350 minutes, since f(t+350)=2*f(t)",
+   "correctAnswerFR": "[\"350\"]",
+   "order": 21
+  },
+  {
+   "type": "FREE_RESPONSE",
+   "stem": "The positive number a is 3,700% of the number c, and c is 20% of the number b. If \\(a-b=wc\\), where w is a constant, what is the value of w?",
+   "sourceRef": "octusb_math_m2:12",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "verified": "a=37c; c=0.2b so b=5c; a-b = 37c-5c = 32c -> w=32",
+   "correctAnswerFR": "[\"32\"]",
+   "order": 22
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "order": 1,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "At a bake sale, muffins cost $3 each. If Dara spent $27 on muffins, how many muffins did she buy?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "27 / 3 = 9",
+   "choices": [
+    "3",
+    "9",
+    "24",
+    "81"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 2,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A machine fills 45 bottles each minute. Which equation gives the number of bottles B the machine fills in m minutes?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "constant rate 45 per minute over m minutes gives 45m",
+   "choices": [
+    "B=45+m",
+    "B=45m",
+    "B=m/45",
+    "B=45-m"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 3,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The graph of a line in the xy-plane passes through (0,-4) and has a slope of 3. What is the y-coordinate of the point on the line where x=2?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "y = 3x - 4; at x=2, y = 2",
+   "choices": [
+    "-1",
+    "2",
+    "6",
+    "10"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 4,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A delivery van can carry a load of at most 1,200 kilograms. The van is already carrying 750 kilograms. Which inequality gives the possible additional weight w, in kilograms, the van can carry?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "750 + w <= 1200 -> w <= 450",
+   "choices": [
+    "\\(w\\le 450\\)",
+    "\\(w\\ge 450\\)",
+    "\\(w\\le 1{,}950\\)",
+    "\\(w\\ge 1{,}200\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 5,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "If 6a-b=20 and b=4, what is the value of a?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "6a - 4 = 20 -> 6a = 24 -> a = 4",
+   "choices": [
+    "3",
+    "4",
+    "16",
+    "24"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 6,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function p is defined by p(t)=120-8t. What is the value of t when p(t)=0?",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "120-8t=0 -> t=15",
+   "choices": [
+    "8",
+    "12",
+    "15",
+    "112"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 7,
+   "type": "FREE_RESPONSE",
+   "stem": "If 7(k-2)=63, what is the value of k?",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "k-2=9 -> k=11",
+   "correctAnswerFR": "[\"11\"]"
+  },
+  {
+   "order": 8,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which of the following is a solution to the inequality 5x-4&gt;16?",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "5x>20 -> x>4; only 5 qualifies",
+   "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": "D"
+  },
+  {
+   "order": 9,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\((3m)^{3}\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "(3m)^3 = 3^3 * m^3 = 27m^3",
+   "choices": [
+    "\\(3m^{3}\\)",
+    "\\(9m^{3}\\)",
+    "\\(27m^{3}\\)",
+    "\\(27m\\)"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 10,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Which expression is equivalent to \\(4(2x-7)+6x\\)?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "8x-28+6x = 14x-28",
+   "choices": [
+    "\\(14x-28\\)",
+    "\\(14x-7\\)",
+    "\\(8x-28\\)",
+    "\\(14x+28\\)"
+   ],
+   "correct": "A"
+  },
+  {
+   "order": 11,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "The function g is defined by \\(g(x)=3x^{2}-5\\). What is the value of g(2)?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "3*4-5 = 7",
+   "choices": [
+    "1",
+    "7",
+    "13",
+    "31"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 12,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is a solution to the equation \\(x^{2}=49\\)?",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "x = 7 or -7; 7 is listed",
+   "choices": [
+    "\\(\\frac{49}{2}\\)",
+    "24.5",
+    "7",
+    "2401"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 13,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "In the xy-plane, the graph of \\(y=(x-3)^{2}+5\\) has its lowest point at (3,k). What is the value of k?",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "the squared term is zero at x=3, leaving y = 5",
+   "choices": [
+    "-5",
+    "3",
+    "5",
+    "9"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 14,
+   "type": "FREE_RESPONSE",
+   "stem": "What is the value of \\(\\frac{a^{8}}{a^{5}}\\) when a=3?",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "a^3 = 27",
+   "correctAnswerFR": "[\"27\"]"
+  },
+  {
+   "order": 15,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A jacket originally priced at $80 is on sale for 25% off. What is the sale price, in dollars, of the jacket?",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "80 * 0.75 = 60",
+   "choices": [
+    "20",
+    "55",
+    "60",
+    "75"
+   ],
+   "correct": "C"
+  },
+  {
+   "order": 16,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "What is the median of the seven values in the list 3, 5, 5, 8, 11, 14, and 20?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "sorted, the 4th of 7 values is 8",
+   "choices": [
+    "5",
+    "8",
+    "9.4",
+    "11"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 17,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "TABLE_A The table shows the number of hours four employees worked last week. What is the total number of hours the four employees worked?",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "32+28+41+19 = 120",
+   "choices": [
+    "109",
+    "110",
+    "120",
+    "128"
+   ],
+   "correct": "C",
+   "table": {
+    "headers": [
+     "Employee",
+     "Hours worked"
+    ],
+    "rows": [
+     [
+      "Nadia",
+      "32"
+     ],
+     [
+      "Owen",
+      "28"
+     ],
+     [
+      "Priya",
+      "41"
+     ],
+     [
+      "Quinn",
+      "19"
+     ]
+    ]
+   }
+  },
+  {
+   "order": 18,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A spinner has 8 equal sections numbered 1 through 8. What is the probability that one spin lands on a number greater than 6?",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "numbers 7 and 8 qualify: 2/8 = 1/4",
+   "choices": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{3}{8}\\)",
+    "\\(\\frac{3}{4}\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 19,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Two angles are supplementary. One angle measures 47&deg;. What is the measure, in degrees, of the other angle?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "180-47 = 133",
+   "choices": [
+    "43",
+    "133",
+    "143",
+    "313"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 20,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A rectangle has a length of 14 centimeters and a width of 5 centimeters. What is the perimeter, in centimeters, of the rectangle?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "2(14+5) = 38",
+   "choices": [
+    "19",
+    "38",
+    "60",
+    "70"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 21,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "A circle has a radius of 6 inches. What is the circumference, in inches, of the circle?",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "2*pi*6 = 12pi",
+   "choices": [
+    "\\(6\\pi\\)",
+    "\\(12\\pi\\)",
+    "\\(36\\pi\\)",
+    "\\(72\\pi\\)"
+   ],
+   "correct": "B"
+  },
+  {
+   "order": 22,
+   "type": "FREE_RESPONSE",
+   "stem": "In a right triangle, one leg has length 9 and the other leg has length 12. What is the length of the hypotenuse?",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "sourceRef": "AUTHORED (Test 6 M2 Easy, sympy-verified)",
+   "verified": "sqrt(81+144) = 15",
+   "correctAnswerFR": "[\"15\"]"
+  }
+ ]
+}
