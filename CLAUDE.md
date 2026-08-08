@@ -1,5 +1,64 @@
 # Project memory
 
+## STANDING RULES FOR ALL NEW TESTS (set by the user — do not deviate)
+
+These are permanent instructions, not one-off preferences. Re-read them at the start of any
+test-building work.
+
+### 1. Test 1 and Test 2 Math are the quality reference. Test 3 and Test 4 are NOT.
+The user has inspected all four and reports Test 1/2 Math as error-free while Test 3/4 Math
+carry defects (LaTeX problems, text running together without spacing). Match Test 1/2's house
+style, and never copy Test 3/4's.
+
+What Test 1/2 actually do differently — verified by diffing live production stems:
+- **Stems are bare HTML, not wrapped in `<p>…</p>`.** Test 3/4 wrap every stem in `<p>`; Test
+  1/2 don't. Follow Test 1/2.
+- **Simple inline math stays plain text.** Test 1 writes `f(x)=6(2x+4)`, `17h+45=164`, `90°F`
+  as ordinary text. Reserve `\( … \)` for things that genuinely need typesetting — fractions,
+  exponents, radicals, subscripts. Wrapping everything is what makes Test 3/4 look inconsistent.
+- **Real `<table>` markup for every data table** (see the style block later in this file).
+- **`°` and similar go in as HTML entities** (`&deg;`), not raw glyphs.
+
+### 2. Never bulk auto-convert Math text to LaTeX. Type it by hand.
+`mathify.mjs` / `mathify2.py` are the root cause of every Test 3/4 Math defect. Each fixing
+round found a new edge case the regex didn't handle. Do not run them on new content, and do not
+write a replacement. Hand-write `\( \)` / `\frac{}{}` per question as it is transcribed.
+
+Specific LaTeX rules that a converter got wrong and a human must get right:
+- Function names are escaped: `\cos`, `\sin`, `\tan`, `\log`, `\ln`. Bare `cos(A)` inside math
+  mode renders as three italic variables `c·o·s`, not a function.
+- Always leave a space either side of an inline span: `… length of \(AB\) is …`, never
+  `…length of\(AB\)is…`.
+- Never wrap prose in math mode. KaTeX drops whitespace between bare tokens, so an answer
+  choice like `\(-1 and 4\)` renders as run-on text. Prose choices are plain `<p>` text.
+- Systems of equations get stacked with `<br/>`, never crammed onto one line with `"; "`.
+
+### 3. Every question needs a real figure, never a prose description of one.
+Test 3 shipped stems like "a line of best fit is shown, with points scattered around a mildly
+increasing trend from about (1,3) to (9,4.5)" — the description substitutes for the picture and
+leaks the answer. If a stem says table/graph/figure/shown/chart/plot, it must have a real
+`<table>` or an `imageUrl`. Build the figure (matplotlib → base64 PNG) from data already
+verified for that question; never invent numbers.
+
+### 4. Math Module 2 (Easy): write most questions ORIGINALLY, don't transcribe them.
+The user's explicit instruction. For every new test's Math Module 2 (Easy), author the
+questions rather than pulling them from a source PDF. Requirements:
+- Verify every answer programmatically with sympy before it ships. No exceptions.
+- Check each one against **every question already in the database** — not just the test being
+  built — and reject anything that repeats a problem *template* with only the numbers changed,
+  not just exact duplicates.
+- Keep them genuinely easy: Module 2 (Easy) is the lower branch of the adaptive split.
+- Still cap free-response at 3 per module.
+
+### 5. Standing content rules that already applied and still do
+- 6 modules per test: R&W 27/27/27 (Standard, M2 Easy, M2 Hard), Math 22/22/22. No undersized
+  modules.
+- ≤3 free-response per Math module; target exactly 3.
+- `correctAnswerFR` is a JSON-encoded array string: `'["40"]'`, never `'40'`.
+- Look Domain/Skill up by `code`, never by `name`.
+- Insert as `DRAFT`; the user publishes from the admin panel.
+- Verify in the real exam interface (`/exam/{attemptId}`), not just the admin preview.
+
 ## Efficient test-building playbook — read this before starting any new test work
 This section exists because Claude Code sessions do **not** carry memory between separate
 conversations — only what's committed to files in this repo persists. If a session ever says "I
