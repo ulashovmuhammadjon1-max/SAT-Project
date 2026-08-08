@@ -327,8 +327,9 @@ MODULE_2_EASY = [
       check="180 - 48 - 79 = 53."),
 
  dict(n="D2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A triangular flowerbed has a base of 14 metres and a height of 6 metres. What is the "
-            "area of the flowerbed, in square metres?"),
+      stem=("A gardener marks out a flowerbed shaped like a triangle whose base measures 14 metres "
+            "and whose height measures 6 metres. How many square metres of ground does the "
+            "flowerbed cover?"),
       answers=["42"],
       check="(1/2)(14)(6) = 42."),
 
