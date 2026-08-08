@@ -26,6 +26,13 @@ export interface Annotation {
   text: string;
   color: HighlightColor;
   note: string | null;
+  /**
+   * A highlight the student is composing but has not saved yet. Painted like a
+   * real one so they can see exactly which words they picked — the native
+   * selection disappears the moment focus moves into the note field, which
+   * otherwise leaves them choosing a colour for text they can no longer see.
+   */
+  pending?: boolean;
 }
 
 /** Region key for a question stem, kept in one place so both sides agree. */
@@ -150,6 +157,7 @@ function wrap(container: HTMLElement, annotation: Annotation) {
     mark.className = "sat-highlight";
     mark.dataset.annId = annotation.id;
     mark.dataset.color = annotation.color;
+    if (annotation.pending) mark.dataset.pending = "1";
     if (annotation.note) {
       mark.dataset.note = "1";
       mark.title = annotation.note;

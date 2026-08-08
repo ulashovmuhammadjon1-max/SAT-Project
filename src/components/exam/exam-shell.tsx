@@ -45,20 +45,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { CalculatorPanel } from "@/components/exam/calculator-panel";
+import { BreakScreen, ModuleOverScreen, PreparingScreen } from "@/components/exam/exam-interstitials";
 import { HighlightableContent } from "@/components/exam/highlightable-content";
 import { LineReader } from "@/components/exam/line-reader";
 import { QuestionGrid, QuestionLegend, QuestionPalette } from "@/components/exam/question-palette";
 import { ReferenceSheetDialog } from "@/components/exam/reference-sheet-dialog";
 import { MathContent, renderMathContent } from "@/components/shared/math-content";
+import { AnswerChoiceList, FreeResponseInput } from "@/components/testing/answer-choices";
+import { FOCUS_RING, NavButton, QuestionNumberChip, TestingBanner, ToolButton } from "@/components/testing/primitives";
 import { cn } from "@/lib/utils";
 import { stemRegionId, type Annotation } from "@/lib/exam/annotations";
 import { toPassageHtml } from "@/lib/exam/passage-html";
 import { useEscape } from "@/lib/exam/use-escape";
 import { autosaveResponses, submitModule } from "@/server/actions/student/attempts";
 import type { ExamModule, ExistingResponse, QuestionState } from "@/types/exam";
-
-const FOCUS_RING =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1";
 
 const DIRECTIONS: Record<ExamModule["subject"], string[]> = {
   READING_WRITING: [
@@ -105,6 +105,8 @@ function buildInitialStates(module: ExamModule, existing: ExistingResponse[]): Q
   });
 }
 
+type Phase = "preparing" | "testing" | "module-over" | "break";
+
 export function ExamShell({
   attemptId,
   studentName,
@@ -112,6 +114,7 @@ export function ExamShell({
   module,
   startedAt,
   existingResponses,
+  showPreparing = false,
 }: {
   attemptId: string;
   studentName: string;
@@ -119,9 +122,15 @@ export function ExamShell({
   module: ExamModule;
   startedAt: Date;
   existingResponses: ExistingResponse[];
+  /** First module of a fresh attempt — show the "preparing your test" curtain. */
+  showPreparing?: boolean;
 }) {
   const router = useRouter();
   const rootRef = useRef<HTMLDivElement>(null);
+  // Which whole-screen state the shell is in. Everything except "testing" is an
+  // interstitial that replaces the module entirely -- see exam-interstitials.
+  const [phase, setPhase] = useState<Phase>(showPreparing ? "preparing" : "testing");
+  const [pendingBreak, setPendingBreak] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [states, setStates] = useState<QuestionState[]>(() => buildInitialStates(module, existingResponses));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -412,6 +421,10 @@ export function ExamShell({
     // flight — guard here so that race can't submit the module twice.
     if (isSubmitting || submittingRef.current) return;
     submittingRef.current = true; // also silences the beforeunload guard
+    // Take the module off screen *before* the round-trip. Submitting is slow
+    // enough that leaving the questions up invites clicks on controls whose
+    // answers are already sealed.
+    setPhase("module-over");
     startSubmit(async () => {
       try {
         await persist();
@@ -423,16 +436,23 @@ export function ExamShell({
         }
         if (result.finished) {
           router.push(`/review/${attemptId}`);
-        } else {
-          toast.success("Module submitted. Starting the next module.");
-          router.push(`/exam/${attemptId}`);
-          router.refresh();
+          return;
         }
+        if (result.breakBefore) {
+          // Crossing into a new section: hold at the break and let the student
+          // start the next module's clock themselves.
+          setPendingBreak(result.nextSubjectLabel ?? "The next section");
+          setPhase("break");
+          return;
+        }
+        // Same section — move straight on, no student action needed.
+        router.refresh();
       } catch (error) {
         console.error("Failed to submit module", error);
         // Re-arm: the student is still in the module, so a stray reload should
         // warn again and a retry should be allowed.
         submittingRef.current = false;
+        setPhase("testing");
         toast.error("Couldn't submit the module — check your connection and try again.");
       }
     });
@@ -525,17 +545,33 @@ export function ExamShell({
     />
   );
 
+  // Interstitials own the whole screen: no header, no timer, no footer. They
+  // sit ahead of the module render so none of the testing chrome mounts behind
+  // them and keeps ticking.
+  if (phase === "preparing") {
+    return <PreparingScreen onDone={() => setPhase("testing")} />;
+  }
+  if (phase === "module-over") {
+    return <ModuleOverScreen />;
+  }
+  if (phase === "break") {
+    return (
+      <BreakScreen
+        studentName={studentName}
+        nextSectionTitle={pendingBreak ?? "The next section"}
+        onResume={() => {
+          setPhase("module-over");
+          router.refresh();
+        }}
+      />
+    );
+  }
+
   return (
     <div ref={rootRef} className="flex h-screen flex-col bg-exam-bg text-exam-text">
       {header}
 
-      {/* Practice banner. Sits under the header, inset from the edges, so it
-          reads as a notice about the content rather than app chrome. */}
-      <div className="shrink-0 px-4 pb-1 pt-2">
-        <p className="rounded-[3px] bg-exam-strip py-[5px] text-center text-[11px] font-semibold uppercase tracking-[0.09em] text-white">
-          This is a practice test
-        </p>
-      </div>
+      <TestingBanner>This is a practice test</TestingBanner>
 
       {/* Timer callouts, for hidden-timer and screen-reader users alike. */}
       <p aria-live="polite" className="sr-only">
@@ -758,58 +794,6 @@ export function ExamShell({
         </>
       )}
     </div>
-  );
-}
-
-/** Bluebook's Back/Next: matched blue pills, right-aligned on the bottom bar. */
-function NavButton({
-  children,
-  onClick,
-  disabled,
-}: {
-  children: ReactNode;
-  onClick: () => void;
-  disabled?: boolean;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className={cn(
-        "h-[34px] rounded-full bg-exam-blue px-5 text-[13px] font-medium text-white transition-colors hover:bg-exam-blueHover disabled:pointer-events-none disabled:opacity-50",
-        FOCUS_RING
-      )}
-    >
-      {children}
-    </button>
-  );
-}
-
-function ToolButton({
-  icon: Icon,
-  label,
-  onClick,
-  active,
-}: {
-  icon: ComponentType<{ className?: string }>;
-  label: string;
-  onClick: () => void;
-  active?: boolean;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        "flex h-[46px] min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none transition-colors",
-        active ? "bg-exam-hover text-exam-blue" : "text-exam-text hover:bg-exam-hover",
-        FOCUS_RING
-      )}
-    >
-      <Icon className="h-[18px] w-[18px]" />
-      <span className="whitespace-nowrap">{label}</span>
-    </button>
   );
 }
 
@@ -1319,12 +1303,7 @@ function QuestionBody({
       {/* Question header band — spans the panel width. */}
       <div className="shrink-0 border-b border-exam-border bg-exam-header px-6 py-1.5 lg:px-10">
         <div className={cn("flex items-center gap-3", innerClassName)}>
-          <span
-            className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-[3px] bg-exam-strip text-[13px] font-semibold text-white"
-            aria-hidden="true"
-          >
-            {index + 1}
-          </span>
+          <QuestionNumberChip n={index + 1} />
           <span className="sr-only">
             Question {index + 1} of {total}
           </span>
@@ -1388,82 +1367,19 @@ function QuestionBody({
           )}
 
           {question.type === "MULTIPLE_CHOICE" ? (
-            <div className="mt-5 space-y-3" role="radiogroup" aria-label="Answer choices">
-              {question.choices.map((choice) => {
-                const eliminated = state.eliminated.includes(choice.id);
-                const selected = state.selectedChoiceId === choice.id;
-                return (
-                  <div key={choice.id} className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      role="radio"
-                      aria-checked={selected}
-                      onClick={() => !eliminated && onSelect(choice.id)}
-                      // Selection is carried by the fill, the 2px border AND
-                      // the filled letter badge, so it never rests on color
-                      // alone; elimination adds a strike-through on top.
-                      className={cn(
-                        "flex flex-1 items-start gap-3 rounded-lg border-2 px-3.5 py-3 text-left text-[16px] leading-[1.5] transition-colors",
-                        FOCUS_RING,
-                        selected
-                          ? "border-exam-blue bg-exam-selected"
-                          : "border-exam-border bg-white hover:border-exam-disabled hover:bg-exam-hover",
-                        eliminated && "opacity-50"
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          "flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full border text-[13px] font-semibold leading-none transition-colors",
-                          selected
-                            ? "border-exam-blue bg-exam-blue text-white"
-                            : "border-exam-muted bg-white text-exam-text",
-                          eliminated && "line-through"
-                        )}
-                      >
-                        {choice.label}
-                      </span>
-                      <MathContent
-                        html={choice.content}
-                        className={cn("min-w-0 flex-1 text-exam-text", eliminated && "line-through")}
-                      />
-                    </button>
-
-                    {crossOutEnabled && (
-                      <button
-                        type="button"
-                        onClick={() => onToggleEliminate(choice.id)}
-                        aria-pressed={eliminated}
-                        aria-label={
-                          eliminated ? `Restore choice ${choice.label}` : `Cross out choice ${choice.label}`
-                        }
-                        title={eliminated ? "Undo cross out" : `Cross out ${choice.label}`}
-                        className={cn(
-                          "flex h-7 min-w-[28px] shrink-0 items-center justify-center rounded-full border border-exam-muted px-1.5 text-[12px] font-medium text-exam-text transition-colors hover:bg-exam-hover",
-                          FOCUS_RING
-                        )}
-                      >
-                        {eliminated ? "Undo" : <span className="line-through">{choice.label}</span>}
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
+            <div className="mt-5">
+              <AnswerChoiceList
+                choices={question.choices}
+                selectedId={state.selectedChoiceId}
+                eliminatedIds={state.eliminated}
+                crossOutEnabled={crossOutEnabled}
+                onSelect={onSelect}
+                onToggleEliminate={onToggleEliminate}
+              />
             </div>
           ) : (
-            <div className="mt-5 max-w-xs space-y-1.5">
-              <input
-                type="text"
-                value={state.freeResponseAnswer}
-                onChange={(e) => onFreeResponseChange(e.target.value)}
-                placeholder="Enter your answer"
-                className={cn(
-                  "w-full rounded border border-exam-disabled bg-white px-3 py-2 text-[16px] text-exam-text placeholder:text-exam-disabled focus:border-exam-blue",
-                  FOCUS_RING
-                )}
-              />
-              <p className="text-[12px] text-exam-muted">
-                Enter a numeric answer (fraction or decimal accepted).
-              </p>
+            <div className="mt-5">
+              <FreeResponseInput value={state.freeResponseAnswer} onChange={onFreeResponseChange} />
             </div>
           )}
         </div>

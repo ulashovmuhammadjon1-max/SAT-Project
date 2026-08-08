@@ -6,8 +6,12 @@ import { Bookmark, MapPin, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { QuestionState } from "@/types/exam";
 
-/** Legend shown above the grid, in both the Question Menu and the Review Page. */
-export function QuestionLegend() {
+/** Per-question outcome, once an answer has been graded. Practice tests never
+ *  grade mid-module, so this stays null there; the Question Bank sets it. */
+export type QuestionOutcome = "correct" | "incorrect" | null;
+
+/** Legend shown above the grid, in the Question Menu and the Review Page. */
+export function QuestionLegend({ showOutcomes = false }: { showOutcomes?: boolean }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1.5 text-[12px] text-exam-muted">
       <span className="flex items-center gap-1.5">
@@ -19,6 +23,16 @@ export function QuestionLegend() {
       <span className="flex items-center gap-1.5">
         <Bookmark className="h-3.5 w-3.5 fill-exam-flag text-exam-flag" /> For Review
       </span>
+      {showOutcomes && (
+        <>
+          <span className="flex items-center gap-1.5">
+            <span className="h-3.5 w-3.5 rounded-[2px] bg-exam-correct" /> Correct
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="h-3.5 w-3.5 rounded-[2px] bg-exam-incorrect" /> Incorrect
+          </span>
+        </>
+      )}
     </div>
   );
 }
@@ -32,11 +46,14 @@ export function QuestionGrid({
   currentIndex,
   states,
   onJump,
+  outcomes,
 }: {
   count: number;
   currentIndex: number;
   states: QuestionState[];
   onJump: (index: number) => void;
+  /** Graded results, when the surface grades as it goes (Question Bank). */
+  outcomes?: QuestionOutcome[];
 }) {
   return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(38px,1fr))] gap-x-2 gap-y-3">
@@ -44,6 +61,7 @@ export function QuestionGrid({
         const state = states[i];
         const answered = !!(state?.selectedChoiceId || state?.freeResponseAnswer);
         const current = i === currentIndex;
+        const outcome = outcomes?.[i] ?? null;
         return (
           <div key={i} className="relative flex justify-center pt-3">
             {current && (
@@ -57,7 +75,7 @@ export function QuestionGrid({
               // outline, pin, bookmark) mean nothing to a screen reader.
               aria-label={[
                 `Question ${i + 1}`,
-                answered ? "answered" : "unanswered",
+                outcome ?? (answered ? "answered" : "unanswered"),
                 state?.flagged ? "marked for review" : null,
                 current ? "current" : null,
               ]
@@ -65,9 +83,12 @@ export function QuestionGrid({
                 .join(", ")}
               className={cn(
                 "relative flex h-[38px] w-[38px] items-center justify-center rounded-[3px] text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1",
-                answered
-                  ? "bg-exam-blue text-white hover:bg-exam-blueHover"
-                  : "border border-dashed border-exam-disabled bg-white text-exam-text hover:bg-exam-hover",
+                outcome === "correct" && "bg-exam-correct text-white hover:opacity-90",
+                outcome === "incorrect" && "bg-exam-incorrect text-white hover:opacity-90",
+                !outcome && answered && "bg-exam-blue text-white hover:bg-exam-blueHover",
+                !outcome &&
+                  !answered &&
+                  "border border-dashed border-exam-disabled bg-white text-exam-text hover:bg-exam-hover",
                 // The pin alone is easy to miss in a grid of 27 — ring the
                 // current cell as well so it reads at a glance.
                 current && "ring-2 ring-exam-strip ring-offset-2"
@@ -98,6 +119,8 @@ export function QuestionPalette({
   states,
   onJump,
   onGoToReview,
+  outcomes,
+  reviewLabel = "Go to Review Page",
 }: {
   open: boolean;
   onOpenChange: (v: boolean) => void;
@@ -106,7 +129,10 @@ export function QuestionPalette({
   currentIndex: number;
   states: QuestionState[];
   onJump: (index: number) => void;
-  onGoToReview: () => void;
+  /** Omitted by surfaces with no end-of-module review page. */
+  onGoToReview?: () => void;
+  outcomes?: QuestionOutcome[];
+  reviewLabel?: string;
 }) {
   useEffect(() => {
     if (!open) return;
@@ -138,7 +164,7 @@ export function QuestionPalette({
             <X className="h-4 w-4" />
           </button>
           <div className="mt-2.5">
-            <QuestionLegend />
+            <QuestionLegend showOutcomes={!!outcomes} />
           </div>
         </div>
 
@@ -147,6 +173,7 @@ export function QuestionPalette({
             count={count}
             currentIndex={currentIndex}
             states={states}
+            outcomes={outcomes}
             onJump={(i) => {
               onJump(i);
               onOpenChange(false);
@@ -154,6 +181,7 @@ export function QuestionPalette({
           />
         </div>
 
+        {onGoToReview && (
         <div className="flex justify-center border-t border-exam-divider px-5 py-3">
           <button
             type="button"
@@ -163,9 +191,10 @@ export function QuestionPalette({
             }}
             className="rounded-full border border-exam-blue px-5 py-1.5 text-[13px] font-medium text-exam-blue transition-colors hover:bg-exam-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1"
           >
-            Go to Review Page
+            {reviewLabel}
           </button>
         </div>
+        )}
       </div>
     </>
   );

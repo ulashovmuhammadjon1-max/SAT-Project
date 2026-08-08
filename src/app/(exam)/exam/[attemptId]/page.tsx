@@ -66,9 +66,24 @@ export default async function ExamPage({ params }: { params: { attemptId: string
     })),
   };
 
+  // A fresh attempt: nothing answered anywhere yet, and this is the opening
+  // module. Only then does the student see the "preparing your test" curtain.
+  const priorModuleAttempts = await prisma.moduleAttempt.count({
+    where: { attemptId: attempt.id, id: { not: moduleAttempt.id } },
+  });
+  const showPreparing = priorModuleAttempts === 0 && existingResponses.length === 0;
+
   return (
+    // Keyed by the module attempt so that advancing to the next module
+    // *remounts* the shell. Without this the client component survives the
+    // server refetch and carries its old state across: the review page stays
+    // open, `currentIndex` points into the previous module, and the per-question
+    // state array is still sized for it — which is what forced the student to
+    // pick a question by hand after ending a module.
     <ExamShell
+      key={moduleAttempt.id}
       attemptId={attempt.id}
+      showPreparing={showPreparing}
       studentName={user.name ?? "Student"}
       moduleAttemptId={moduleAttempt.id}
       startedAt={moduleAttempt.startedAt}

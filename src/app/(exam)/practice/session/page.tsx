@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import type { QuestionDifficulty, Subject } from "@prisma/client";
 import { ArrowLeft } from "lucide-react";
 
@@ -37,6 +38,7 @@ export default async function PracticeSessionPage({
     status?: string;
     size?: string;
     mistakes?: string;
+    ids?: string;
   };
 }) {
   const user = await requireUser();
@@ -53,8 +55,21 @@ export default async function PracticeSessionPage({
     VALID_STATUSES.has(searchParams.status ?? "") ? searchParams.status : "ALL"
   ) as AttemptStatus;
 
-  const ids =
-    searchParams.mistakes === "1"
+  // The question set is pinned into the URL on first load.
+  //
+  // Calling any server action re-renders this page's server components, and
+  // `generateSession` is randomized — so without pinning, submitting an answer
+  // silently dealt a whole new set of questions underneath the running session
+  // while the client kept its old state. Resolving the ids once and redirecting
+  // makes every later re-render return the identical set.
+  const pinned = (searchParams.ids ?? "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean);
+
+  const ids = pinned.length
+    ? pinned
+    : searchParams.mistakes === "1"
       ? await generateMistakeSession(size, subject)
       : await generateSession(
           {
@@ -66,6 +81,15 @@ export default async function PracticeSessionPage({
           },
           size
         );
+
+  if (!pinned.length && ids.length > 0) {
+    const params = new URLSearchParams();
+    for (const [key, value] of Object.entries(searchParams)) {
+      if (typeof value === "string" && value) params.set(key, value);
+    }
+    params.set("ids", ids.join(","));
+    redirect(`/practice/session?${params.toString()}`);
+  }
 
   if (ids.length === 0) {
     return (
@@ -100,9 +124,11 @@ export default async function PracticeSessionPage({
         difficulty: true,
         stem: true,
         imageUrl: true,
-        domain: { select: { name: true } },
+        // Subject lives on the domain, not the question.
+        domain: { select: { name: true, subject: true } },
         skill: { select: { name: true } },
-        passage: { select: { title: true, content: true, imageUrl: true } },
+        // `id` is required: it is the region key highlights are anchored to.
+        passage: { select: { id: true, title: true, content: true, imageUrl: true } },
         // isCorrect deliberately not selected — grading happens server-side.
         choices: { select: { id: true, label: true, content: true }, orderBy: { order: "asc" } },
       },
@@ -125,6 +151,7 @@ export default async function PracticeSessionPage({
         id: q.id,
         ref: `Q-${q.id.slice(-6).toUpperCase()}`,
         type: q.type,
+        subject: q.domain.subject,
         difficulty: q.difficulty,
         domainName: q.domain.name,
         skillName: q.skill.name,
@@ -137,21 +164,8 @@ export default async function PracticeSessionPage({
     ];
   });
 
-  return (
-    <div className="space-y-5">
-      <div className="flex items-center justify-between">
-        <Link
-          href={backHref}
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" /> Exit session
-        </Link>
-        {searchParams.mistakes === "1" && (
-          <span className="text-sm text-muted-foreground">Practicing your mistakes</span>
-        )}
-      </div>
-
-      <PracticeSession questions={questions} backHref={backHref} />
-    </div>
-  );
+  // Rendered bare: PracticeSession owns the full viewport, the same way the
+  // exam shell does. Wrapping it in dashboard chrome is what made Question Bank
+  // practice read as a page with a quiz on it rather than a testing environment.
+  return <PracticeSession questions={questions} backHref={backHref} studentName={user.name ?? "Student"} />;
 }

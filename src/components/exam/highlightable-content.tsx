@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { Trash2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -58,20 +58,59 @@ export function HighlightableContent({
   ariaLabel?: string;
 }) {
   const bodyRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
   const [popup, setPopup] = useState<Popup | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
+  // Colour previewed under the cursor while choosing, so the passage shows the
+  // result before it is committed.
+  const [previewColor, setPreviewColor] = useState<HighlightColor>("yellow");
+
+  // While composing, paint the selection as a real highlight. The browser drops
+  // its own selection styling as soon as focus lands in the note textarea, so
+  // without this the student is picking a colour for an invisible range.
+  const painted = useMemo(() => {
+    if (popup?.mode !== "create") return annotations;
+    return [
+      ...annotations,
+      {
+        id: "__pending__",
+        regionId,
+        start: popup.start,
+        end: popup.end,
+        text: popup.text,
+        color: previewColor,
+        note: null,
+        pending: true,
+      } satisfies Annotation,
+    ];
+  }, [annotations, popup, previewColor, regionId]);
 
   // The subtree is owned by us, not React — repaint it from source HTML on
   // every change so annotation offsets are always applied to a clean tree
   // (see lib/exam/annotations.ts).
   useEffect(() => {
-    if (bodyRef.current) paintAnnotations(bodyRef.current, html, annotations);
-  }, [html, annotations]);
+    if (bodyRef.current) paintAnnotations(bodyRef.current, html, painted);
+  }, [html, painted]);
 
   // Close the popup when the student navigates to another region.
   useEffect(() => {
     setPopup(null);
   }, [regionId]);
+
+  // Dismiss on any mousedown outside the popup — but as a passive listener, not
+  // a full-screen catcher element. An overlay would eat the click entirely,
+  // which is what made "Next" and the toolbar feel dead while a popup was open:
+  // the first press only closed the popup and never reached the button.
+  useEffect(() => {
+    if (!popup) return;
+    function onDown(event: MouseEvent) {
+      if (popupRef.current?.contains(event.target as Node)) return;
+      setPopup(null);
+      setNoteDraft("");
+    }
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, [popup]);
 
   const editing = popup?.mode === "edit" ? annotations.find((a) => a.id === popup.id) ?? null : null;
 
@@ -133,9 +172,8 @@ export function HighlightableContent({
 
       {popup && (
         <>
-          {/* Click-away catcher; sits under the popup itself. */}
-          <div className="fixed inset-0 z-20" onMouseDown={closePopup} />
           <div
+            ref={popupRef}
             style={
               popup.top >= POPUP_HEIGHT_ESTIMATE
                 ? { left: popup.x, top: Math.max(popup.top - 8, 4) }
@@ -149,12 +187,16 @@ export function HighlightableContent({
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
                 {HIGHLIGHT_COLORS.map((color) => {
-                  const active = editing?.color === color;
+                  const active = editing ? editing.color === color : previewColor === color;
                   return (
                     <button
                       key={color}
                       type="button"
                       title={`${color} highlight`}
+                      aria-pressed={active}
+                      aria-label={`${color} highlight`}
+                      onMouseEnter={() => !editing && setPreviewColor(color)}
+                      onFocus={() => !editing && setPreviewColor(color)}
                       onClick={() => (editing ? onUpdate(editing.id, { color }) : createWith(color, null))}
                       style={{ backgroundColor: SWATCH[color] }}
                       className={cn(
@@ -204,7 +246,7 @@ export function HighlightableContent({
                     onUpdate(editing.id, { note });
                     closePopup();
                   } else {
-                    createWith("yellow", note);
+                    createWith(previewColor, note);
                   }
                 }}
                 className="rounded bg-exam-blue px-2.5 py-1 text-[13px] font-medium text-white hover:bg-exam-blueHover"

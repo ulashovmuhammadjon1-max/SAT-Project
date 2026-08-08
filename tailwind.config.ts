@@ -58,6 +58,11 @@ const config: Config = {
           flag: "hsl(var(--test-flag) / <alpha-value>)",
           warning: "hsl(var(--test-warning) / <alpha-value>)",
           error: "hsl(var(--test-error) / <alpha-value>)",
+          correct: "hsl(var(--test-correct) / <alpha-value>)",
+          correctSoft: "hsl(var(--test-correct-soft) / <alpha-value>)",
+          incorrect: "hsl(var(--test-incorrect) / <alpha-value>)",
+          incorrectSoft: "hsl(var(--test-incorrect-soft) / <alpha-value>)",
+          gold: "hsl(var(--test-gold) / <alpha-value>)",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",

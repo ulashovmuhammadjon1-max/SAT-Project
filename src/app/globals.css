@@ -147,6 +147,19 @@
   --test-flag: 37 91.3% 54.9%;           /* #F5A623 — marked for review   */
   --test-warning: 26 90.5% 37.1%;        /* #B45309 — timer running low   */
   --test-error: 4 76.5% 40%;             /* #B42318 — timer nearly out    */
+
+  /* Answer review — Question Bank feedback, and post-submission test review.
+     Deliberately darker than the marketing success/destructive hues: these sit
+     on answer choices as 1px borders and must stay legible against the
+     near-white question panel. */
+  --test-correct: 152 69.2% 24.5%;       /* #13683F — verified answer     */
+  --test-correct-soft: 150 55.6% 94.7%;  /* #EDF9F2 — its fill            */
+  --test-incorrect: 4 76.5% 40%;         /* #B42318 — the student's miss  */
+  --test-incorrect-soft: 5 85.7% 96.3%;  /* #FEEDEC — its fill            */
+
+  /* The break screen's resume action. The one warm accent in the test UI, and
+     only ever on the dark break background. */
+  --test-gold: 43 96.1% 56.3%;           /* #FBC02D                       */
 }
 
 /* Annotations: three highlighter swatches, as on the real test. */
@@ -164,6 +177,25 @@ mark.sat-highlight[data-color="pink"] {
 }
 mark.sat-highlight[data-color="blue"] {
   background-color: #BFDBFE;
+}
+
+/* The highlight being composed, before the student commits it. Underlined as
+   well as filled, so which words are about to be marked stays obvious even once
+   the browser has dropped its own selection styling (which it does the instant
+   focus moves into the note field). */
+mark.sat-highlight[data-pending] {
+  box-shadow: inset 0 -2px 0 0 hsl(var(--test-primary));
+  border-radius: 2px;
+}
+
+/* Dragging a selection across exam prose. The browser default is easy to lose
+   against the passage's off-white panel, and seeing the range as you drag is
+   the whole point of highlighting. */
+.exam-passage ::selection,
+.exam-passage::selection,
+.exam-stem ::selection,
+.exam-stem::selection {
+  background-color: hsl(var(--test-primary) / 0.24);
 }
 /* A highlight carrying a note gets an underline affordance. */
 mark.sat-highlight[data-note="1"] {

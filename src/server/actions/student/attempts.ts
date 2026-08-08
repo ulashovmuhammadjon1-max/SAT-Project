@@ -186,7 +186,15 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
           assignedModule2Level: difficulty,
         },
       });
-      return { nextModuleId: nextModule.id, nextModuleAttemptId: nextModuleAttempt.id, finished: false };
+      // Module 1 -> Module 2 of the same subject: no break, the student moves
+      // straight on, exactly as Bluebook does.
+      return {
+        nextModuleId: nextModule.id,
+        nextModuleAttemptId: nextModuleAttempt.id,
+        finished: false,
+        breakBefore: false,
+        nextSubjectLabel: null as string | null,
+      };
     }
   }
 
@@ -200,7 +208,15 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
   if (nextSubjectModule) {
     const nextModuleAttempt = await createOrGetModuleAttempt(attemptId, nextSubjectModule.id);
     await prisma.attempt.update({ where: { id: attemptId }, data: { currentModuleId: nextSubjectModule.id } });
-    return { nextModuleId: nextSubjectModule.id, nextModuleAttemptId: nextModuleAttempt.id, finished: false };
+    // Crossing into a new section (R&W -> Math) is the one point the real test
+    // gives the student a break before the next module's clock starts.
+    return {
+      nextModuleId: nextSubjectModule.id,
+      nextModuleAttemptId: nextModuleAttempt.id,
+      finished: false,
+      breakBefore: true,
+      nextSubjectLabel: (nextSubjectModule.subject === "MATH" ? "Math" : "Reading and Writing") as string | null,
+    };
   }
 
   return finalizeAttempt(attemptId);
@@ -234,5 +250,11 @@ async function finalizeAttempt(attemptId: string) {
     },
   });
 
-  return { finished: true, nextModuleId: null, nextModuleAttemptId: null };
+  return {
+    finished: true,
+    nextModuleId: null,
+    nextModuleAttemptId: null,
+    breakBefore: false,
+    nextSubjectLabel: null as string | null,
+  };
 }
