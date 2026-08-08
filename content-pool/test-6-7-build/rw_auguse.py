@@ -466,6 +466,25 @@ QUESTIONS = [
    choices=["though,", "fittingly,", "similarly,", "for example,"], answer="A",
    why="'Explicitly identifies' is the opposite of the 'typically... subtle' allusions just described, "
        "so the 2013 poem is an exception, not an illustration (D) or a parallel case (C)."),
+
+ dict(num="M2-15", skill="Inferences",
+   passage="Prolonged exposure to anthropogenic noise (sounds from human sources like traffic or mining) "
+           "can affect animals, as Graeme Shannon and colleagues found in a 2014 study of black-tailed "
+           "prairie dogs. Researchers conducted a meta-analysis of studies of how such noise affects "
+           "animals and found that, for every study, relevant traits or behaviors of the animals were "
+           "observably different between the exposed group and the otherwise similar but unexposed group. "
+           "Although, on average, studies of mammals showed larger differences than studies of fish did, "
+           "for every class of animals examined, there were individual studies showing differences well "
+           "above the average for mammals. Therefore, the results of the meta-analysis suggest that _____",
+   stem="Which choice most logically completes the text?",
+   choices=["some studies of fish found larger effects of exposure to anthropogenic noise than some studies of mammals did.",
+            "the differences that studies attribute to exposure to anthropogenic noise are likely to be more pronounced for fish than they are for mammals.",
+            "the difference found in the study conducted by Graeme Shannon and colleagues was likely larger than the average difference for studies of black-tailed prairie dogs included in the meta-analysis.",
+            "the studies in the meta-analysis that examined mammals were more likely than those that examined fish to specify whether the observed effects were detrimental."],
+   answer="A",
+   why="If every class — fish included — contains individual studies above the <em>mammal</em> "
+       "average, then some fish studies must exceed some mammal studies. B overreads that into a general "
+       "claim the stated averages contradict, and C and D go beyond what the meta-analysis reports."),
 ]
 
 DROPPED = {
@@ -487,3 +506,51 @@ DROPPED = {
 # p038, p040, p041, p045, p046, p047, p050, p051, p054, p055.
 SKIPPED_AS_DUPLICATE_PAGES = [2, 3, 7, 8, 16, 23, 25, 29, 30, 32, 33, 34, 35, 37, 38, 40, 41, 45,
                               46, 47, 50, 51, 54, 55]
+
+
+# --- August USC, Section 1 Reading & Writing --------------------------------
+# Same paper family. Six of its 13 captured pages duplicate a question already
+# live in production and were skipped without being read.
+AUGUSC = [
+ dict(num=5, skill="Text Structure and Purpose",
+   passage="Pteropods are small swimming snails with thin, delicate calcium carbonate shells. These "
+           "animals are thought to be especially vulnerable to ocean acidification due to calcium "
+           "carbonate&rsquo;s susceptibility to dissolution at lower pH values. Victoria L. Peck and "
+           "colleagues recently found that the periostracum (a protective coating on pteropods&rsquo; "
+           "outer shells) prevents this dissolution when intact. Moreover, the team was surprised to "
+           "discover that even when the periostracum is breached, pteropods can still mitigate damage by "
+           "rebuilding the inner shell wall.",
+   stem="Which choice best describes the main purpose of the text?",
+   choices=["To call for additional research on biological mechanisms that improve pteropod survival rates",
+            "To present findings that suggest that a concern about the effects of ocean acidification on pteropod shells may be unwarranted",
+            "To address some of the ways ocean acidification has altered pteropod behavior over time",
+            "To discuss a conclusion drawn in a study of calcium carbonate&rsquo;s role in protecting the periostracum of pteropods"],
+   answer="B",
+   why="The text sets up the vulnerability, then supplies two findings against it — the periostracum "
+       "prevents dissolution, and pteropods rebuild the inner wall even when it is breached. D reverses "
+       "the relationship (the periostracum protects the shell, not the reverse), and no call for further "
+       "research is made (A)."),
+
+ dict(num=15, skill="Form, Structure, and Sense",
+   passage="In 1989, Missouri _____ official fossil: the <em>Eperisocrinus missouriensis</em>, which is a "
+           "Carboniferous period marine animal.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["lawmaker&rsquo;s designated the states", "lawmakers designated the state&rsquo;s",
+            "lawmaker&rsquo;s designated the state&rsquo;s", "lawmakers designated the states"],
+   answer="B",
+   why="The subject is the plural 'lawmakers' with no possessive, and the official fossil belongs to the "
+       "state, so 'state&rsquo;s' is a possessive singular. A and C make the subject possessive, and D "
+       "leaves 'the states official fossil' without the apostrophe it needs."),
+
+ dict(num=20, skill="Form, Structure, and Sense",
+   passage="In the late nineteenth and early twentieth centuries, automobiles were commonly referred to "
+           "as horseless carriages after the older technology they still resembled. Known as the Brass "
+           "Era, this period in automotive design is remembered for its grandeur and artistry, its "
+           "vehicles _____ by collectors for their ornate detailing and gleaming brass fittings.",
+   stem="Which choice completes the text so that it conforms to the conventions of Standard English?",
+   choices=["highly prized", "had been highly prized", "are highly prized", "were highly prized"],
+   answer="A",
+   why="'Its vehicles ___ by collectors' is an absolute phrase attached to the main clause by a comma, so "
+       "it takes a participle. Any finite verb turns it into a second independent clause and makes the "
+       "comma a splice."),
+]
