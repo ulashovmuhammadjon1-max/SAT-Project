@@ -1,0 +1,33 @@
+{
+ "purpose": "Top-up R&W questions for Test 5, drawn from the October sources (which carry real answer keys). Only questions where MY independent reading agrees with the official key are accepted.",
+ "sourceKeys": {
+   "OctIntB_RW_M2": "1-5 ADDCC | 6-10 ACACC | 11-15 CDBAD | 16-20 BBBCC | 21-25 ACCAB | 26-27 CB"
+ },
+ "accepted": [
+  {"source":"OctIntB","module_raw":"RW_M2","num":18,"page":41,"type":"MULTIPLE_CHOICE",
+   "passage":"In the list &ldquo;Splendid Things&rdquo; from Sei Sh&#333;nagon&rsquo;s <em>Pillow Book</em>, the author delights in grape-colored fabric, wisteria vines around a tree, and a snow-covered garden. So shrewd an observer is Sh&#333;nagon, a lady-in-waiting to Empress Teishi, that her book&rsquo;s musings on tenth-century Japanese courtly life _____ readers a thousand years later.",
+   "stem":"Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices":[{"label":"A","content":"has fascinated"},{"label":"B","content":"fascinate"},
+              {"label":"C","content":"is fascinating"},{"label":"D","content":"fascinates"}],
+   "correct":"B","keyAgrees":true,
+   "domain":"Standard English Conventions","skill":"Form, Structure, and Sense",
+   "verified":"subject is the plural 'musings', so the plural verb 'fascinate' is required"},
+
+  {"source":"OctIntB","module_raw":"RW_M2","num":19,"page":42,"type":"MULTIPLE_CHOICE",
+   "passage":"The present-day city of Dushanbe, Tajikistan, was the capital of the Tajik Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Each of these republics _____ established along ethnolinguistic lines: most residents of the Tajik Republic spoke Persian, for example.",
+   "stem":"Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices":[{"label":"A","content":"have been"},{"label":"B","content":"are"},
+              {"label":"C","content":"was"},{"label":"D","content":"were"}],
+   "correct":"C","keyAgrees":true,
+   "domain":"Standard English Conventions","skill":"Form, Structure, and Sense",
+   "verified":"'Each' is singular and the surrounding narration is past tense, so 'was'"}
+ ],
+ "rejectedKeyConflicts": [
+  {"source":"OctIntB","num":17,"page":40,"keySays":"B",
+   "myAnswer":"A",
+   "why":"Choices are 'speculative, though;' / 'speculative, though,' / 'speculative; though' / 'speculative, though'. The two halves are both independent clauses, so B ('speculative, though,') is a comma splice and C leaves a fragment. A ('speculative, though;') punctuates it correctly. Rejected rather than shipped with a doubtful answer."},
+  {"source":"OctIntB","num":21,"page":44,"keySays":"A",
+   "myAnswer":"B",
+   "why":"Transition into 'as decades passed, new calculations would reveal increasingly precise coordinates'. 'Again and again' matches the repeated-over-time sense; 'Specifically' would require the clause to specify something in the prior sentence, and it does not. Rejected."}
+ ]
+}
