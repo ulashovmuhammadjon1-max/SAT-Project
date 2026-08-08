@@ -20,6 +20,88 @@ SOURCE = "AugUSE"
 MODULE = "RW"
 
 QUESTIONS = [
+ dict(num=3, skill="Words in Context",
+   passage="One way to _____ the importance of a scholar&rsquo;s research is to track how often other "
+           "scholars refer to that research. For example, Yale University economist Xiaohong Chen, who "
+           "studies statistical methods in economics, is among the world&rsquo;s most frequently cited "
+           "researchers in her field, indicating that her work has been quite significant.",
+   stem="Which choice completes the text with the most logical and precise word or phrase?",
+   choices=["increase", "measure", "diminish", "vary"], answer="B",
+   why="Citation counts are offered as a way of gauging importance, and the example ends by saying "
+       "the count 'indicat[es]' significance. Tracking citations does not change importance (A, C)."),
+
+ dict(num=4, skill="Words in Context",
+   passage="The discoverers of the minor planet 1227 Geranium named it after the plant genus that "
+           "includes cranesbills. Most of the recently discovered minor planets, however, are given "
+           "only an identification number, largely due to there being over 500,000 such bodies known at "
+           "present, which makes the already challenging task of finding a unique name for each nearly "
+           "_____.",
+   stem="Which choice completes the text with the most logical and precise word or phrase?",
+   choices=["feasible", "unnecessary", "substantial", "insurmountable"], answer="D",
+   why="'Already challenging' plus 500,000 bodies pushes the task past difficult, and 'nearly _____' "
+       "wants a limit word. 'Feasible' reverses it and the other two do not describe a task's "
+       "difficulty."),
+
+ dict(num=5, skill="Text Structure and Purpose",
+   passage="<em>The Last Report on the Miracles at Little No Horse</em> is a 2001 novel by Ojibwe "
+           "writer Louise Erdrich. It explores how historical events affect families on a reservation "
+           "in rural North Dakota. <em>The Last Report on the Miracles at Little No Horse</em> is "
+           "typical of Erdrich&rsquo;s work. Her writing usually focuses on portrayals of everyday life "
+           "in Ojibwe communities. Yet some of her novels have fantastical plots and take place outside "
+           "Ojibwe communities. <u>For example, her 1991 novel <em>The Crown of Columbus</em> is "
+           "essentially adventure fiction, and the thrilling events in its plot are set largely on a "
+           "Caribbean island.</u>",
+   stem="Which choice best describes the function of the underlined sentence in the text as a whole?",
+   choices=["It recommends that readers avoid a particular novel by Erdrich.",
+            "It lists the many similarities between two novels by Erdrich.",
+            "It offers an example of a novel that differs from most of Erdrich&rsquo;s work.",
+            "It discusses what inspired Erdrich to write one of her novels."],
+   answer="C",
+   why="The underlined sentence begins 'For example' and follows 'Yet some of her novels have "
+       "fantastical plots and take place outside Ojibwe communities' — it illustrates the exception, "
+       "not similarities (B)."),
+
+ dict(num=8, skill="Central Ideas and Details",
+   passage="Can field mustard plants grow on Mars? Can pea plants? You might think the answer to these "
+           "questions is obviously no, but researchers in the Netherlands recently showed that the "
+           "seeds of many common plant species can germinate in soil designed to simulate Martian "
+           "conditions, as long as water is supplied. In fact, some species actually did <em>better</em> "
+           "in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted "
+           "in simulated Martian soil, compared with 4 percent that did when planted in soil from their "
+           "home planet.",
+   stem="According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+   choices=["18 percent", "30 percent", "100 percent", "5 percent"], answer="B",
+   why="Stated directly. The 4 percent figure is the Earth-soil comparison, and the other two numbers "
+       "do not appear."),
+
+ dict(num=9, skill="Command of Evidence",
+   passage="<em>Poems</em> is an 1895 collection of poetry by Frances E.W. Harper. In one of "
+           "Harper&rsquo;s poems, the speaker declares her intention to create art that has a universal "
+           "appeal across generations, saying, _____",
+   stem="Which quotation from <em>Poems</em> most effectively illustrates the claim?",
+   choices=["&ldquo;Our world, so worn and weary, / Needs music, pure and strong, / To hush the jangle and discords / Of sorrow, pain, and wrong.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+            "&ldquo;Let me make the songs for the people, / Songs for the old and young; / Songs to stir like a battle-cry / Wherever they are sung.&rdquo; (from &ldquo;Songs for the People&rdquo;)",
+            "&ldquo;God bless our native land, / Land of the newly free, / Oh may she ever stand / For truth and liberty.&rdquo; (from &ldquo;God Bless Our Native Land&rdquo;)",
+            "&ldquo;My mother&rsquo;s kiss, my mother&rsquo;s kiss, / I feel its impress now; / As in the bright and happy days / She pressed it on my brow.&rdquo; (from &ldquo;My Mother&rsquo;s Kiss&rdquo;)"],
+   answer="B",
+   why="B has all three parts of the claim: the speaker's intention ('Let me make'), the reach across "
+       "generations ('the old and young'), and universality ('Wherever they are sung'). A describes "
+       "what the world needs rather than her intention, and C and D are on other subjects entirely."),
+
+ dict(num=11, skill="Command of Evidence",
+   passage="<em>The Underdogs</em> is a 1915 novel by Mariano Azuela, originally written in Spanish. In "
+           "the novel, Azuela depicts a traveling group of soldiers as having a renewed sense of agency "
+           "and authority as they set off on a new stage of their journey: _____",
+   stem="Which quotation from a translation of <em>The Underdogs</em> most effectively illustrates the claim?",
+   choices=["&ldquo;The sonorous, joyful bells rang again. From within the church, the honeyed voices of a female chorus rose melancholy and grave.&rdquo;",
+            "&ldquo;All day long [the soldiers] rode through the canyon, up and down the steep, round hills, dirty and bald as a man&rsquo;s head, hill after hill in endless succession. At last, late in the afternoon, they descried several stone church towers in the heart of a bluish ridge, and, beyond, the white road with its curling spirals of dust and its gray telegraph poles.&rdquo;",
+            "&ldquo;The men threw out their chests as if to breathe the widening horizon, the immensity of the sky, the blue from the mountains and the fresh air, redolent with the various odors of the sierra. They spurred their horses to a gallop as if in that mad race they laid claims of possession to the earth.&rdquo;",
+            "&ldquo;Before Juchipila was lost from sight, Valderrama got off his horse, bent down, kneeled, and gravely kissed the ground.&rdquo;"],
+   answer="C",
+   why="'Laid claims of possession to the earth' is the authority and 'spurred their horses to a "
+       "gallop' the agency, both at the start of a new stretch of road. B describes the same journey "
+       "but with no sense of renewal, and A and D are about other characters and moods."),
+
  dict(num=17, skill="Form, Structure, and Sense",
    passage="In her work as a sociocultural anthropologist, L&iacute;via Barbosa studies food and "
            "sociability in contemporary Brazil&mdash;namely, how common Brazilian foods like tareco (a "
