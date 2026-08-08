@@ -9,10 +9,18 @@ export const metadata: Metadata = {
   description: "Build your personalised Digital SAT study plan in about a minute.",
 };
 
-export default async function OnboardingPage() {
+export default async function OnboardingPage({
+  searchParams,
+}: {
+  searchParams: { ref?: string };
+}) {
   // Someone already signed in has no account to create — send them to work.
   const session = await auth();
   if (session?.user) redirect("/dashboard");
 
-  return <OnboardingWizard />;
+  // The referral code rides in on ?ref= and is handed to the wizard so it
+  // survives the multi-step flow and reaches account creation. It is never
+  // trusted here — attribution validates it server-side and ignores an
+  // unknown, malformed or self-referring code rather than failing the signup.
+  return <OnboardingWizard referralCode={searchParams.ref ?? null} />;
 }

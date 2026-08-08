@@ -10,6 +10,9 @@ import {
   Bookmark,
   BarChart3,
   CalendarCheck,
+  Coins,
+  Target,
+  UserPlus,
   Settings,
   GraduationCap,
 } from "lucide-react";
@@ -18,11 +21,14 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/plan", label: "My SAT Plan", icon: Target },
   { href: "/tests", label: "Practice Tests", icon: BookOpen },
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
   { href: "/bookmarks", label: "Bookmarks", icon: Bookmark },
   { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
+  { href: "/wallet", label: "Coins", icon: Coins },
+  { href: "/invite", label: "Invite Friends", icon: UserPlus },
   { href: "/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

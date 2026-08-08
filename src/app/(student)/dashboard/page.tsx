@@ -7,10 +7,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { StatCard } from "@/components/student/stat-card";
 import { PersonalizedHeader } from "@/components/student/personalized-header";
+import {
+  DashboardCoinsCard,
+  DashboardPlanCard,
+  DashboardSessionCard,
+} from "@/components/student/dashboard-plan-card";
 import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
+import { getPlanSummary } from "@/lib/plan/service";
+import { getSettings } from "@/lib/settings";
 import { readProfile } from "@/lib/onboarding/profile";
 import { asWeakArea } from "@/lib/validations/onboarding";
 import { formatDuration } from "@/lib/utils";
@@ -26,7 +33,18 @@ export default async function DashboardPage() {
   const todayUtc = new Date();
   todayUtc.setUTCHours(0, 0, 0, 0);
 
-  const [inProgress, recentAttempts, responses, submittedAttempts, profile, todayActivity] = await Promise.all([
+  const [
+    inProgress,
+    recentAttempts,
+    responses,
+    submittedAttempts,
+    profile,
+    todayActivity,
+    planSummary,
+    coinUser,
+    upcomingSession,
+    settings,
+  ] = await Promise.all([
     prisma.attempt.findFirst({
       where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
       include: { test: true },
@@ -52,6 +70,20 @@ export default async function DashboardPage() {
       where: { userId_date: { userId: user.id, date: todayUtc } },
       select: { questionsAnswered: true, minutesStudied: true },
     }),
+    getPlanSummary(user.id),
+    prisma.user.findUnique({
+      where: { id: user.id },
+      select: { coinBalance: true },
+    }),
+    prisma.booking.findFirst({
+      where: { userId: user.id, status: "UPCOMING" },
+      orderBy: { slot: { startsAt: "asc" } },
+      select: {
+        meetingUrl: true,
+        slot: { select: { startsAt: true, durationMinutes: true } },
+      },
+    }),
+    getSettings(),
   ]);
 
   const totalAnswered = responses.length;
@@ -114,6 +146,22 @@ export default async function DashboardPage() {
         weakestSkills={weakest.map((w) => w.domain)}
         onboarded={profile?.onboardedAt != null}
       />
+
+      <DashboardPlanCard plan={planSummary} />
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <DashboardCoinsCard
+          balance={coinUser?.coinBalance ?? 0}
+          referralReward={settings.referralRewardCoins}
+        />
+        {upcomingSession && (
+          <DashboardSessionCard
+            startsAt={upcomingSession.slot.startsAt}
+            durationMinutes={upcomingSession.slot.durationMinutes}
+            meetingUrl={upcomingSession.meetingUrl}
+          />
+        )}
+      </div>
 
       {inProgress && (
         <Card className="border-primary/50 bg-primary-50/50">

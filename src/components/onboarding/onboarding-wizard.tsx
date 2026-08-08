@@ -34,7 +34,7 @@ const STORAGE_KEY = "summit-onboarding";
 const TOTAL_STEPS = 12;
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export function OnboardingWizard() {
+export function OnboardingWizard({ referralCode = null }: { referralCode?: string | null }) {
   const router = useRouter();
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState<1 | -1>(1);
@@ -89,8 +89,8 @@ export function OnboardingWizard() {
   );
 
   const steps = useMemo(
-    () => buildSteps({ profile, patch, selectAndAdvance }),
-    [profile, patch, selectAndAdvance]
+    () => buildSteps({ profile, patch, selectAndAdvance, referralCode }),
+    [profile, patch, selectAndAdvance, referralCode]
   );
   const current = steps[step];
   const isAccountStep = step === TOTAL_STEPS - 1;
@@ -254,10 +254,12 @@ function buildSteps({
   profile,
   patch,
   selectAndAdvance,
+  referralCode,
 }: {
   profile: OnboardingProfile;
   patch: (p: Partial<OnboardingProfile>) => void;
   selectAndAdvance: (p: Partial<OnboardingProfile>) => void;
+  referralCode: string | null;
 }): Step[] {
   return [
     // 1 — Welcome / motivation
@@ -519,7 +521,7 @@ function buildSteps({
       title: "Your plan is ready",
       subtitle: "Create your account to save it and start your first module.",
       canContinue: true,
-      content: <AccountStep profile={profile} />,
+      content: <AccountStep profile={profile} referralCode={referralCode} />,
     },
   ];
 }
@@ -610,7 +612,14 @@ function DailyGoalStep({
 /* Step 12 — account creation                                                  */
 /* -------------------------------------------------------------------------- */
 
-function AccountStep({ profile }: { profile: OnboardingProfile }) {
+function AccountStep({
+  profile,
+  referralCode,
+}: {
+  profile: OnboardingProfile;
+  /** Carried from ?ref= on the onboarding URL. Validated server-side. */
+  referralCode: string | null;
+}) {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -623,7 +632,7 @@ function AccountStep({ profile }: { profile: OnboardingProfile }) {
     const password = String(formData.get("password") ?? "");
 
     startTransition(async () => {
-      const result = await registerWithOnboarding({ name, email, password, profile });
+      const result = await registerWithOnboarding({ name, email, password, profile, referralCode });
       if (result.error) {
         setError(result.error);
         return;

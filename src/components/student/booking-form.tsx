@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState, useTransition } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CalendarCheck, Check, Loader2 } from "lucide-react";
+import { CalendarCheck, Check, Coins, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -10,9 +11,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { CoinAmount } from "@/components/student/coin-badge";
 import { LocalTime, useLocalTimezone } from "@/components/shared/local-time";
 import { cn } from "@/lib/utils";
-import { createBooking, type OpenSlot } from "@/server/actions/student/bookings";
+import {
+  createBooking,
+  type BookingContext,
+  type OpenSlot,
+} from "@/server/actions/student/bookings";
 
 export interface BookingPrefill {
   name: string;
@@ -38,9 +44,22 @@ function groupByDay(slots: OpenSlot[]) {
   return [...map.entries()];
 }
 
-export function BookingForm({ slots, prefill }: { slots: OpenSlot[]; prefill: BookingPrefill }) {
+export function BookingForm({
+  slots,
+  prefill,
+  context,
+}: {
+  slots: OpenSlot[];
+  prefill: BookingPrefill;
+  context: BookingContext;
+}) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+
+  // Which community requirements the student has confirmed. Server-checked
+  // again on submit — this only drives the button state.
+  const [acked, setAcked] = useState<Set<string>>(new Set());
+  const allAcked = context.requirements.every((r) => acked.has(r.id));
 
   const [slotId, setSlotId] = useState<string | null>(null);
   const [name, setName] = useState(prefill.name);
@@ -80,13 +99,18 @@ export function BookingForm({ slots, prefill }: { slots: OpenSlot[]; prefill: Bo
         weakestArea: weakest || null,
         notes: notes || null,
         timezone,
+        acknowledgedRequirements: [...acked],
       });
       if (res.ok) {
         router.push(`/bookings?booked=${res.bookingId}`);
       } else {
         toast.error(res.error);
-        // A lost race means the slot list is stale — refresh it.
-        router.refresh();
+        // A lost race or a spent balance means what the page is showing is
+        // stale, so refetch rather than leaving the student looking at numbers
+        // that are no longer true.
+        if (res.reason === "slot_gone" || res.reason === "insufficient_coins") {
+          router.refresh();
+        }
       }
     });
   }
@@ -104,11 +128,103 @@ export function BookingForm({ slots, prefill }: { slots: OpenSlot[]; prefill: Bo
     );
   }
 
+  // Not enough coins is a dead end unless we show the way out of it, so this
+  // replaces the form entirely rather than letting them fill it in and fail.
+  if (!context.canAfford) {
+    return (
+      <Card className="border-warning/40 bg-warning/5">
+        <CardContent className="space-y-4 p-6">
+          <div className="flex items-start gap-3">
+            <Coins className="mt-0.5 h-5 w-5 shrink-0 text-warning" />
+            <div>
+              <p className="font-display text-lg font-semibold">Not enough coins yet</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                This session costs <strong className="text-foreground">{context.cost}</strong>{" "}
+                coins and you have <strong className="text-foreground">{context.balance}</strong>.
+                You need {context.shortfall} more.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-lg border border-border bg-card p-4">
+            <p className="text-sm font-medium">The fastest way to earn them</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Invite a friend and get {context.referralRewardCoins} coins the moment they join —
+              that&apos;s {Math.ceil(context.shortfall / Math.max(1, context.referralRewardCoins))}{" "}
+              {Math.ceil(context.shortfall / Math.max(1, context.referralRewardCoins)) === 1
+                ? "friend"
+                : "friends"}{" "}
+              away.
+            </p>
+            <Button asChild className="mt-3">
+              <Link href="/invite">Invite friends</Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <form onSubmit={submit} className="space-y-6">
+      {/* Requirements. Deliberately worded as a confirmation, not a check —
+          neither Instagram nor Telegram can be verified server-side for an
+          arbitrary user, and claiming otherwise would be a lie in the UI. */}
+      <section aria-labelledby="requirements">
+        <h2 id="requirements" className="font-display text-lg font-semibold">
+          1. Join the community
+        </h2>
+        <p className="mt-0.5 text-sm text-muted-foreground">
+          SATForge stays free because the community grows. Please do both before booking.
+        </p>
+        <div className="mt-4 space-y-2">
+          {context.requirements.map((r) => {
+            const checked = acked.has(r.id);
+            return (
+              <label
+                key={r.id}
+                className={cn(
+                  "flex cursor-pointer items-center gap-3 rounded-lg border p-3 transition-colors",
+                  checked ? "border-primary/50 bg-primary/5" : "border-border hover:bg-secondary/50",
+                )}
+              >
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={(e) => {
+                    setAcked((prev) => {
+                      const next = new Set(prev);
+                      if (e.target.checked) next.add(r.id);
+                      else next.delete(r.id);
+                      return next;
+                    });
+                  }}
+                  className="h-4 w-4 shrink-0 rounded border-input accent-primary"
+                />
+                <span className="min-w-0 flex-1 text-sm">
+                  <span className="font-medium">{r.label}</span>{" "}
+                  <a
+                    href={r.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-primary underline-offset-4 hover:underline"
+                  >
+                    {r.handle}
+                  </a>
+                </span>
+              </label>
+            );
+          })}
+        </div>
+        <p className="mt-2 text-xs text-muted-foreground">
+          We can&apos;t automatically check this, so we&apos;re trusting you. Please don&apos;t make
+          us add a verification step.
+        </p>
+      </section>
+
       <section aria-labelledby="pick-time">
         <h2 id="pick-time" className="font-display text-lg font-semibold">
-          1. Pick a time
+          2. Pick a time
         </h2>
         <p className="mt-0.5 text-sm text-muted-foreground">
           Times shown in your local timezone{timezone && ` (${timezone})`}.
@@ -152,7 +268,7 @@ export function BookingForm({ slots, prefill }: { slots: OpenSlot[]; prefill: Bo
       <section aria-labelledby="about-you" className="space-y-4">
         <div>
           <h2 id="about-you" className="font-display text-lg font-semibold">
-            2. About you
+            3. About you
           </h2>
           <p className="mt-0.5 text-sm text-muted-foreground">
             Prefilled from your profile where we already know the answer.
@@ -232,22 +348,70 @@ export function BookingForm({ slots, prefill }: { slots: OpenSlot[]; prefill: Bo
       </section>
 
       <Card>
-        <CardContent className="flex flex-wrap items-center justify-between gap-4 p-5">
-          <p className="text-sm" aria-live="polite">
-            {selected ? (
-              <>
-                <Check className="mr-1 inline h-4 w-4 text-success" />
-                <LocalTime iso={new Date(selected.startsAt).toISOString()} format="full" /> ·{" "}
-                {selected.durationMinutes} minutes
-              </>
-            ) : (
-              <span className="text-muted-foreground">Choose a time to continue.</span>
-            )}
-          </p>
-          <Button type="submit" disabled={!slotId || isPending}>
-            {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <CalendarCheck className="h-4 w-4" />}
-            Confirm booking
-          </Button>
+        <CardContent className="space-y-4 p-5">
+          {/* State the price and the resulting balance before they commit —
+              never let a student discover the cost from the receipt. */}
+          <dl className="grid gap-1.5 text-sm">
+            <div className="flex items-center justify-between">
+              <dt className="text-muted-foreground">Your balance</dt>
+              <dd>
+                <CoinAmount value={context.balance} size="sm" />
+              </dd>
+            </div>
+            <div className="flex items-center justify-between">
+              <dt className="text-muted-foreground">This session</dt>
+              <dd className="text-destructive">
+                <CoinAmount value={-context.cost} size="sm" />
+              </dd>
+            </div>
+            <div className="flex items-center justify-between border-t border-border pt-1.5 font-medium">
+              <dt>After booking</dt>
+              <dd>
+                <CoinAmount value={context.balance - context.cost} size="sm" />
+              </dd>
+            </div>
+          </dl>
+
+          {context.previousBookings > 0 && (
+            <p className="text-xs text-muted-foreground">
+              Your first session cost {context.cost - context.previousBookings * 5}. The price rises
+              by 5 coins each time so the free sessions reach as many students as possible.
+            </p>
+          )}
+
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p className="text-sm" aria-live="polite">
+              {selected ? (
+                <>
+                  <Check className="mr-1 inline h-4 w-4 text-success" />
+                  <LocalTime iso={new Date(selected.startsAt).toISOString()} format="full" /> ·{" "}
+                  {selected.durationMinutes} minutes
+                </>
+              ) : (
+                <span className="text-muted-foreground">Choose a time to continue.</span>
+              )}
+            </p>
+            <Button type="submit" disabled={!slotId || !allAcked || isPending}>
+              {isPending ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <CalendarCheck className="h-4 w-4" />
+              )}
+              Confirm booking · {context.cost} coins
+            </Button>
+          </div>
+
+          {!allAcked && (
+            <p className="text-xs text-muted-foreground">
+              Confirm the community steps above to enable booking.
+            </p>
+          )}
+
+          {context.refundHours !== null && (
+            <p className="text-xs text-muted-foreground">
+              Cancel at least {context.refundHours} hours before and your coins come back.
+            </p>
+          )}
         </CardContent>
       </Card>
     </form>

@@ -263,11 +263,35 @@ export async function generatePlan(inputs: PlanInputs): Promise<StudyPlanData> {
   };
 }
 
+/**
+ * Domains each onboarding "weakest area" answer points at.
+ *
+ * `User.weakestArea` holds an enum from the signup wizard (READING, WRITING,
+ * MATH, VOCABULARY, TIME_MANAGEMENT), not a skill name — so comparing it to
+ * skill text matches nothing and the cold-start hint silently does no work.
+ * Mapping it to real domain codes is what makes the answer count.
+ *
+ * TIME_MANAGEMENT is deliberately absent: pacing is not a content domain, and
+ * pretending it maps to one would push an arbitrary skill to the top.
+ */
+const WEAK_AREA_DOMAINS: Record<string, string[]> = {
+  READING: ["INI", "CAS"],
+  WRITING: ["SEC", "EOI"],
+  MATH: ["ALG", "ADV", "PSDA", "GT"],
+  VOCABULARY: ["CAS"],
+};
+
 function matchesWeakArea(signal: SkillSignal, hint: string): boolean {
+  const domains = WEAK_AREA_DOMAINS[hint.trim().toUpperCase()];
+  if (domains) {
+    // VOCABULARY is narrower than its domain — it means Words in Context.
+    if (hint.trim().toUpperCase() === "VOCABULARY") return signal.code === "CAS-WV";
+    return domains.includes(signal.domainCode);
+  }
+  // Free-text fallback for any legacy value that predates the enum.
+  const lower = hint.toLowerCase();
   return (
-    signal.name.toLowerCase().includes(hint) ||
-    signal.domainName.toLowerCase().includes(hint) ||
-    hint.includes(signal.domainName.toLowerCase())
+    signal.name.toLowerCase().includes(lower) || signal.domainName.toLowerCase().includes(lower)
   );
 }
 

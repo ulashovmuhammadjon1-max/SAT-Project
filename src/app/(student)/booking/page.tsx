@@ -7,7 +7,7 @@ import { BookingForm } from "@/components/student/booking-form";
 import { LocalTime } from "@/components/shared/local-time";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
-import { getOpenSlots } from "@/server/actions/student/bookings";
+import { getBookingContext, getOpenSlots } from "@/server/actions/student/bookings";
 
 export const metadata = { title: "Get Your Free SAT Plan" };
 export const dynamic = "force-dynamic";
@@ -25,7 +25,7 @@ const COVERED = [
 export default async function BookingPage() {
   const user = await requireUser();
 
-  const [profile, slots, existing] = await Promise.all([
+  const [profile, slots, bookingContext, existing] = await Promise.all([
     prisma.user.findUnique({
       where: { id: user.id },
       select: {
@@ -38,6 +38,7 @@ export default async function BookingPage() {
       },
     }),
     getOpenSlots(),
+    getBookingContext(),
     prisma.booking.findFirst({
       where: { userId: user.id, status: "UPCOMING" },
       include: { slot: true },
@@ -99,6 +100,7 @@ export default async function BookingPage() {
           satDate: profile?.satDate ? profile.satDate.toISOString().slice(0, 10) : null,
           weakestArea: profile?.weakestArea ?? null,
         }}
+        context={bookingContext}
       />
     </div>
   );
