@@ -43,20 +43,34 @@ export function QuestionGrid({
       {Array.from({ length: count }).map((_, i) => {
         const state = states[i];
         const answered = !!(state?.selectedChoiceId || state?.freeResponseAnswer);
+        const current = i === currentIndex;
         return (
           <div key={i} className="relative flex justify-center pt-3">
-            {i === currentIndex && (
+            {current && (
               <MapPin className="absolute left-1/2 top-0 h-3.5 w-3.5 -translate-x-1/2 fill-exam-blue text-exam-blue" />
             )}
             <button
               type="button"
               onClick={() => onJump(i)}
-              aria-label={`Question ${i + 1}${answered ? ", answered" : ", unanswered"}`}
+              aria-current={current ? "true" : undefined}
+              // Spell the whole state out: the visual cues (fill, dashed
+              // outline, pin, bookmark) mean nothing to a screen reader.
+              aria-label={[
+                `Question ${i + 1}`,
+                answered ? "answered" : "unanswered",
+                state?.flagged ? "marked for review" : null,
+                current ? "current" : null,
+              ]
+                .filter(Boolean)
+                .join(", ")}
               className={cn(
                 "relative flex h-[38px] w-[38px] items-center justify-center rounded-[3px] text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-exam-blue focus-visible:ring-offset-1",
                 answered
                   ? "bg-exam-blue text-white hover:bg-exam-blueHover"
-                  : "border border-dashed border-exam-disabled bg-white text-exam-text hover:bg-exam-hover"
+                  : "border border-dashed border-exam-disabled bg-white text-exam-text hover:bg-exam-hover",
+                // The pin alone is easy to miss in a grid of 27 — ring the
+                // current cell as well so it reads at a glance.
+                current && "ring-2 ring-exam-strip ring-offset-2"
               )}
             >
               {i + 1}

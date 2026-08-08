@@ -18,7 +18,12 @@ import katex from "katex";
 
 const MATH_DELIMITER = /\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)/g;
 
-function renderMathContent(raw: string): string {
+/**
+ * Exported so callers that need the *string* rather than a React element can
+ * reuse it — the exam's highlighter paints onto already-typeset HTML, so it
+ * has to own the container's `innerHTML` itself.
+ */
+export function renderMathContent(raw: string): string {
   if (!raw) return "";
   if (!raw.includes("\\(") && !raw.includes("\\[")) return raw;
 

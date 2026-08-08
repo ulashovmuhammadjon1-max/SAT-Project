@@ -12,7 +12,6 @@ import {
   type Annotation,
   type HighlightColor,
 } from "@/lib/exam/annotations";
-import { toPassageHtml } from "@/lib/exam/passage-html";
 
 const SWATCH: Record<HighlightColor, string> = {
   yellow: "#FFE9A6",
@@ -30,38 +29,49 @@ type Popup =
   | { mode: "create"; x: number; top: number; bottom: number; start: number; end: number; text: string }
   | { mode: "edit"; x: number; top: number; bottom: number; id: string };
 
-export function HighlightablePassage({
-  passageId,
-  content,
+/**
+ * A block of exam prose the student can highlight and annotate.
+ *
+ * `html` must already be final, render-ready markup: this component owns the
+ * container's `innerHTML` (React never manages the subtree) so that annotation
+ * offsets can be re-applied to a clean tree on every change. Callers pass
+ * passage HTML through `toPassageHtml` and stem HTML through
+ * `renderMathContent` before handing it over.
+ */
+export function HighlightableContent({
+  regionId,
+  html,
   annotations,
   onCreate,
   onUpdate,
   onRemove,
   className,
+  ariaLabel,
 }: {
-  passageId: string;
-  content: string;
+  regionId: string;
+  html: string;
   annotations: Annotation[];
   onCreate: (a: Omit<Annotation, "id">) => void;
   onUpdate: (id: string, patch: Partial<Pick<Annotation, "color" | "note">>) => void;
   onRemove: (id: string) => void;
   className?: string;
+  ariaLabel?: string;
 }) {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [popup, setPopup] = useState<Popup | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
 
-  // The passage subtree is owned by us, not React — repaint it from source
-  // HTML on every change so annotation offsets are always applied to a clean
-  // tree (see lib/exam/annotations.ts).
+  // The subtree is owned by us, not React — repaint it from source HTML on
+  // every change so annotation offsets are always applied to a clean tree
+  // (see lib/exam/annotations.ts).
   useEffect(() => {
-    if (bodyRef.current) paintAnnotations(bodyRef.current, toPassageHtml(content), annotations);
-  }, [content, annotations]);
+    if (bodyRef.current) paintAnnotations(bodyRef.current, html, annotations);
+  }, [html, annotations]);
 
-  // Close the popup when the student navigates to another passage.
+  // Close the popup when the student navigates to another region.
   useEffect(() => {
     setPopup(null);
-  }, [passageId]);
+  }, [regionId]);
 
   const editing = popup?.mode === "edit" ? annotations.find((a) => a.id === popup.id) ?? null : null;
 
@@ -98,7 +108,7 @@ export function HighlightablePassage({
 
   function createWith(color: HighlightColor, note: string | null) {
     if (popup?.mode !== "create") return;
-    onCreate({ passageId, start: popup.start, end: popup.end, text: popup.text, color, note });
+    onCreate({ regionId, start: popup.start, end: popup.end, text: popup.text, color, note });
     window.getSelection()?.removeAllRanges();
     setPopup(null);
     setNoteDraft("");
@@ -116,7 +126,9 @@ export function HighlightablePassage({
         ref={bodyRef}
         onMouseUp={handleMouseUp}
         onClick={handleClick}
-        className={cn("exam-passage select-text text-[16px] leading-[1.7] text-exam-text", className)}
+        role="region"
+        aria-label={ariaLabel}
+        className={cn("select-text text-exam-text", className)}
       />
 
       {popup && (

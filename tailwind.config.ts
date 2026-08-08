@@ -35,24 +35,29 @@ const config: Config = {
           900: "#1f2f88",
           950: "#161d4f",
         },
-        // Fixed (non-theme-reactive) palette matching Bluebook, used only by
-        // the exam/review screens — that UI has one consistent kiosk
-        // appearance regardless of the rest of the site's light/dark theme.
+        // Fixed (non-theme-reactive) testing palette, used only by the
+        // exam/review screens — that UI has one consistent kiosk appearance
+        // regardless of the rest of the site's light/dark theme. Backed by the
+        // `--test-*` tokens in globals.css; channel triplets rather than whole
+        // colors so `bg-exam-blue/15` and friends keep working.
         exam: {
-          bg: "#F5F5F3",
-          passage: "#F7F7F5",
-          question: "#FAFAF8",
-          header: "#F3F4F6",
-          strip: "#0E1728",
-          blue: "#2D6CDF",
-          blueHover: "#245FC9",
-          border: "#D9DEE5",
-          divider: "#E4E7EC",
-          text: "#1D2433",
-          muted: "#505866",
-          disabled: "#9BA3AF",
-          hover: "#F2F5FA",
-          flag: "#F5A623",
+          bg: "hsl(var(--test-background) / <alpha-value>)",
+          passage: "hsl(var(--test-passage) / <alpha-value>)",
+          question: "hsl(var(--test-surface) / <alpha-value>)",
+          header: "hsl(var(--test-panel) / <alpha-value>)",
+          strip: "hsl(var(--test-primary-dark) / <alpha-value>)",
+          blue: "hsl(var(--test-primary) / <alpha-value>)",
+          blueHover: "hsl(var(--test-primary-hover) / <alpha-value>)",
+          selected: "hsl(var(--test-selected) / <alpha-value>)",
+          border: "hsl(var(--test-border) / <alpha-value>)",
+          divider: "hsl(var(--test-divider) / <alpha-value>)",
+          text: "hsl(var(--test-text) / <alpha-value>)",
+          muted: "hsl(var(--test-muted) / <alpha-value>)",
+          disabled: "hsl(var(--test-disabled) / <alpha-value>)",
+          hover: "hsl(var(--test-hover) / <alpha-value>)",
+          flag: "hsl(var(--test-flag) / <alpha-value>)",
+          warning: "hsl(var(--test-warning) / <alpha-value>)",
+          error: "hsl(var(--test-error) / <alpha-value>)",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",

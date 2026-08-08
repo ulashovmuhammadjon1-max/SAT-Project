@@ -3,13 +3,17 @@
 import { useCallback, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ChevronsDownUp, ChevronsUpDown, X } from "lucide-react";
 
+import { useEscape } from "@/lib/exam/use-escape";
+
 /**
- * Bluebook's Line Reader: a movable clear band with the rest of the screen
- * masked, so the student can isolate a few lines of a passage at a time.
+ * Line Reader: a movable clear band with the rest of the screen masked, so the
+ * student can isolate a few lines of a passage at a time.
  */
 export function LineReader({ onClose }: { onClose: () => void }) {
   const [top, setTop] = useState(() => Math.round(window.innerHeight * 0.4));
   const [height, setHeight] = useState(72);
+
+  useEscape(true, onClose);
 
   const startDrag = useCallback(
     (event: ReactMouseEvent) => {

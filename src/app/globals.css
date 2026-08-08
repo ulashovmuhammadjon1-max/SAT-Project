@@ -109,12 +109,47 @@
 }
 
 /* ---------------------------------------------------------------------------
-   Exam (Bluebook) kiosk UI
-   These styles are scoped to the testing interface and deliberately do not
-   react to the site's light/dark theme — Bluebook has one fixed appearance.
-   --------------------------------------------------------------------------- */
+   Exam kiosk UI — design tokens
+   The testing interface has ONE fixed appearance regardless of the site's
+   light/dark theme, so these tokens live outside the themed :root block above
+   and are never redefined under .dark.
 
-/* Annotations: highlight colors match Bluebook's three swatches. */
+   Values are HSL channel triplets (not full colors) so Tailwind's opacity
+   modifiers keep working: the config consumes them as
+   `hsl(var(--test-x) / <alpha-value>)`, which is the same convention the
+   themed tokens above use. Reach for the Tailwind `exam-*` utilities in
+   components; use `hsl(var(--test-x))` only in raw CSS like the rules below.
+   --------------------------------------------------------------------------- */
+:root {
+  /* Surfaces, back to front */
+  --test-background: 60 9.1% 95.7%;      /* #F5F5F3 — app canvas          */
+  --test-passage: 60 11.1% 96.5%;        /* #F7F7F5 — reading panel       */
+  --test-surface: 60 16.7% 97.6%;        /* #FAFAF8 — question panel      */
+  --test-panel: 220 14.3% 95.9%;         /* #F3F4F6 — header / footer bar */
+
+  /* Brand */
+  --test-primary: 219 73.6% 52.5%;       /* #2D6CDF — actions, selection  */
+  --test-primary-hover: 219 69.6% 46.5%; /* #245FC9                       */
+  --test-primary-dark: 219 48.1% 10.6%;  /* #0E1728 — navy strip/chips    */
+
+  /* Lines */
+  --test-border: 215 18.8% 87.5%;        /* #D9DEE5 — structural 1px      */
+  --test-divider: 218 17.4% 91%;         /* #E4E7EC — lighter separators  */
+
+  /* Type */
+  --test-text: 221 27.5% 15.7%;          /* #1D2433                       */
+  --test-muted: 218 12.1% 35.7%;         /* #505866                       */
+  --test-disabled: 216 11.1% 64.7%;      /* #9BA3AF                       */
+
+  /* States */
+  --test-hover: 217 44.4% 96.5%;         /* #F2F5FA                       */
+  --test-selected: 218 82.6% 95.5%;      /* #EAF1FD — chosen answer fill  */
+  --test-flag: 37 91.3% 54.9%;           /* #F5A623 — marked for review   */
+  --test-warning: 26 90.5% 37.1%;        /* #B45309 — timer running low   */
+  --test-error: 4 76.5% 40%;             /* #B42318 — timer nearly out    */
+}
+
+/* Annotations: three highlighter swatches, as on the real test. */
 mark.sat-highlight {
   border-radius: 1px;
   padding: 0;
@@ -130,12 +165,12 @@ mark.sat-highlight[data-color="pink"] {
 mark.sat-highlight[data-color="blue"] {
   background-color: #BFDBFE;
 }
-/* A highlight carrying a note gets Bluebook's underline affordance. */
+/* A highlight carrying a note gets an underline affordance. */
 mark.sat-highlight[data-note="1"] {
-  border-bottom: 2px solid #505866;
+  border-bottom: 2px solid hsl(var(--test-muted));
 }
 mark.sat-highlight.is-active {
-  outline: 2px solid #2D6CDF;
+  outline: 2px solid hsl(var(--test-primary));
   outline-offset: 1px;
 }
 
@@ -167,7 +202,7 @@ mark.sat-highlight.is-active {
 }
 .exam-passage th,
 .exam-passage td {
-  border: 1px solid #D9DEE5;
+  border: 1px solid hsl(var(--test-border));
   padding: 0.35rem 0.6rem;
   text-align: left;
 }
@@ -203,6 +238,14 @@ mark.sat-highlight.is-active {
   background-clip: content-box;
 }
 .exam-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #9BA3AF;
+  background-color: hsl(var(--test-disabled));
   background-clip: content-box;
+}
+
+/* Answer choices and passages are read, not skimmed — never let a long
+   unbroken token (a URL, a long number) push the panel into a sideways
+   scroll. */
+.exam-stem,
+.exam-passage {
+  overflow-wrap: break-word;
 }

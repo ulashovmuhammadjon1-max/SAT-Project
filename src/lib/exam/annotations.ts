@@ -1,8 +1,9 @@
 /**
- * Text annotations (highlights + notes) for the exam passage panel.
+ * Text annotations (highlights + notes) for the exam's readable regions —
+ * the passage panel and the question stem.
  *
  * Annotations are stored as character offsets into the *plain text* of the
- * passage rather than as DOM mutations. That matters because the passage is
+ * region rather than as DOM mutations. That matters because the region is
  * rendered with `dangerouslySetInnerHTML` and gets re-created whenever the
  * student navigates between questions — anything written directly into the
  * DOM would be wiped. Offsets survive, so we re-apply them after every render.
@@ -13,7 +14,12 @@ export type HighlightColor = (typeof HIGHLIGHT_COLORS)[number];
 
 export interface Annotation {
   id: string;
-  passageId: string;
+  /**
+   * Which readable region this belongs to: a `Passage.id` for the reading
+   * panel, or `stem:<questionId>` for a question stem. Offsets are only ever
+   * meaningful within one region, so this scopes them.
+   */
+  regionId: string;
   start: number;
   end: number;
   /** The highlighted text itself, kept for the Highlights & Notes list. */
@@ -22,8 +28,31 @@ export interface Annotation {
   note: string | null;
 }
 
+/** Region key for a question stem, kept in one place so both sides agree. */
+export function stemRegionId(questionId: string): string {
+  return `stem:${questionId}`;
+}
+
+/**
+ * Text nodes of `container`, in document order, **excluding anything inside
+ * KaTeX output**. A rendered formula is a dense tree of positioned spans whose
+ * text nodes carry no meaning on their own ("x", "2", "+"), and splitting one
+ * to insert a `<mark>` visibly breaks the typesetting. Skipping the whole
+ * subtree means math simply isn't selectable for highlighting — and because
+ * the same filter runs when *measuring* a selection and when *painting* it,
+ * offsets stay consistent on both sides.
+ */
 function textNodes(container: Node): Text[] {
-  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        return (node as Element).classList?.contains("katex")
+          ? NodeFilter.FILTER_REJECT // skips the element *and* its descendants
+          : NodeFilter.FILTER_SKIP; // keep walking into it, but don't collect it
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
   const out: Text[] = [];
   let node: Node | null;
   while ((node = walker.nextNode())) out.push(node as Text);
@@ -61,10 +90,21 @@ export function selectionToRange(container: HTMLElement): { start: number; end: 
   const end = offsetOf(container, range.endContainer, range.endOffset);
   if (start === null || end === null || start >= end) return null;
 
-  const text = range.toString().trim();
+  // Read the label back out of the offsets rather than using
+  // `range.toString()`: the range may cross a KaTeX formula, which the offsets
+  // deliberately exclude, and the stored label should describe what actually
+  // gets painted.
+  const text = plainText(container).slice(start, end).trim();
   if (!text) return null;
 
   return { start, end, text };
+}
+
+/** The annotatable text of `container`, i.e. everything offsets are measured against. */
+function plainText(container: HTMLElement): string {
+  return textNodes(container)
+    .map((t) => t.data)
+    .join("");
 }
 
 /**
