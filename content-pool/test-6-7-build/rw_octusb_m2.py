@@ -157,6 +157,51 @@ QUESTIONS = [
        "purchase likelihood (the probability change), so the evidence is the two moving together. C "
        "describes the opposite — ratings varying while probabilities do not — and A and D introduce "
        "brand recognition and category volume, neither of which is the relationship being tested."),
+
+ dict(num=13, skill="Command of Evidence",
+   passage="Scholars cite <em>One Hundred Years of Solitude</em>, the 1967 novel by Colombian author "
+           "Gabriel Garc&iacute;a M&aacute;rquez, as a foundational text of magical realism, the Latin "
+           "American style of fiction in which antirealistic plot devices&mdash;often borrowed from the "
+           "folkloric traditions of Indigenous and colonial societies in the Americas&mdash;are "
+           "deployed in an otherwise realistic mode of representation typical of the modern novel. This "
+           "style has exerted a decisive influence on authors around the world, including Olga "
+           "Tokarczuk, <u>whose 1996 novel <em>Primeval and Other Times</em> resembles classic magical "
+           "realist novels in its juxtaposition of literary realism with folklore&mdash;namely, that of "
+           "Poland.</u>",
+   stem="Which quotation from a literary scholar would most directly support the claim in the "
+        "underlined portion of the text?",
+   choices=["&ldquo;Like many works in the Latin American magical realist tradition, <em>Primeval and Other Times</em> is indebted to antirealistic elements in the folkloric tradition of Poland.&rdquo;",
+            "&ldquo;The logic of the realistic plot of <em>Primeval and Other Times</em> is repeatedly and productively disrupted by the presence of imagery and situations drawn from Polish folklore.&rdquo;",
+            "&ldquo;While <em>Primeval and Other Times</em> alternates between realistic and antirealistic modes of representation, details suggesting the influence of Polish folklore nevertheless occur throughout the novel.&rdquo;",
+            "&ldquo;Although Polish folklore clearly informs the style and occasionally antirealistic plot of <em>Primeval and Other Times</em>, the novel also shows the inarguable influence of the magical realist tradition of Latin America.&rdquo;"],
+   answer="B",
+   why="The claim is a <em>juxtaposition</em> — folkloric material set inside an otherwise realistic "
+       "mode. B has both elements interacting: a realistic plot disrupted by Polish folklore. A names "
+       "only the folkloric debt, C has the two modes alternating rather than juxtaposed, and D shifts "
+       "to Latin American influence."),
+
+ dict(num=14, skill="Inferences",
+   passage="The Clarion-Clipperton Zone (CCZ) is an expanse of abyssal plain and seamounts (underwater "
+           "mountains) between Hawai&rsquo;i and Mexico in which mining is permitted, but the "
+           "area&rsquo;s biodiversity is poorly understood. The vast majority of invertebrate species "
+           "found in a recent survey of the CCZ were hitherto unknown to scientists, and sampling for "
+           "animal life has been highly concentrated in the eastern part of the zone. Some species like "
+           "<em>Ledella knudseni</em> were identified both morphologically and molecularly (using DNA "
+           "analysis), whereas <em>Prionospio branchilucida</em> and other species for which molecular "
+           "sampling was impracticable were identified solely based on physical morphology. Since "
+           "molecular analysis does not require distinguishing subtle physiological differences, it is "
+           "_____",
+   stem="Which choice most logically completes the text?",
+   choices=["more likely to properly distinguish between morphologically similar but distinct invertebrate species than is the method used to identify <em>Prionospio branchilucida</em>.",
+            "more frequently used for identifying species with physiological characteristics like those of <em>Ledella knudseni</em> than morphological analysis is.",
+            "better suited to distinguishing <em>Prionospio branchilucida</em> from morphologically similar species than to distinguishing <em>Ledella knudseni</em> from morphologically similar species.",
+            "capable of providing greater physiological detail about a species than is the method used for <em>Prionospio branchilucida</em>."],
+   answer="A",
+   why="The final clause is the premise: molecular analysis does not depend on subtle physiological "
+       "differences, so it should outperform morphology-only identification (the method used for "
+       "<em>Prionospio branchilucida</em>) precisely where species look alike. B is about frequency of "
+       "use, C reverses the case that suits it, and D claims more physiological detail, which does not "
+       "follow from needing less of it."),
 ]
 
 DROPPED = {
@@ -173,6 +218,19 @@ DROPPED = {
      "that make flight possible do less to limit top speeds than the features suitable for "
      "[swimming/running]', with the same four choices (a consequence / an objective / a repudiation "
      "/ an explanation) and the same answer. Only the animals and numbers differ.",
+ 12: "Same Iigaya painting-enjoyment chart as OctIntB M2 Q11 (different participant labels, same "
+     "study, same stem shape) and the same defect: the stem stipulates that a participant gave "
+     "equal ratings to two styles and asks what the model predicted, but the plotted quantity is a "
+     "within-style correlation, not a predicted rating.",
+ 15: "Same Kwakwaka'wakw intertidal clam-garden study as OctIntB M2 Q12, already transcribed for "
+     "this build — same song keeper (Kwaxsistalla Wathl'thla), same ethnobiologist (Dana Lepofsky "
+     "et al.), same archaeological finding about clam size and abundance, and the same Indigenous-"
+     "songs-as-ecological-knowledge framing.",
+ 16: "Same template as OctIntB M2 Q16, already transcribed for this build: 'X is a novelist from "
+     "[town, country] who has earned international acclaim in recent years. Writers of other "
+     "literary forms, such as poetry and drama, are less likely to be recognized beyond their "
+     "nations' borders, but many are still well _____ Y, for example, is a celebrated [form] from "
+     "[country].' Identical four choices, identical answer; only the names and countries differ.",
  21: "Already used as a Test 5 R&W top-up.",
  22: "Already used as a Test 5 R&W top-up.",
  23: "Already used as a Test 5 R&W top-up.",
