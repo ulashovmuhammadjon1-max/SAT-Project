@@ -1,44 +1,51 @@
-# Tests 6 and 7 — build in progress
+# Tests 6 and 7 — Test 6 PUBLISHED, Test 7 short on Math
 
 Target: two full tests, 147 questions each. R&W 27/27/27 + Math 22/22/22.
 
 ## Where this stands
 
-| Piece | Needed | Done | Where |
-|---|---|---|---|
-| R&W questions | 162 | **107** | `rw_*.py`, hand-transcribed and hand-answered |
-| Math M2 Easy (both tests) | 44 | **44 — complete and verified** | `math_m2easy.py`, `verify_math_m2easy.py` |
-| Math M1 + M2 Hard | 88 | 47 clean, already transcribed | `content-pool/new-source-transcripts/` leftovers |
+**Test 6 is live and PUBLISHED in production** — `b7cf096a-090d-4286-a128-9ec428e6de32`,
+147 questions, R&W 27/27/27 + Math 22/22/22. It lists on satforge.org/tests.
 
-**Resume here.** In order:
+| Piece | Needed | Status |
+|---|---|---|
+| R&W pool | 162 | **complete** — 128 transcribed + 34 authored, every answer derived here |
+| Math Module 2 (Easy), both tests | 44 | **complete** — authored, sympy-verified |
+| Math M1 + M2 Hard, Test 6 | 44 | **complete** — 14 transcribed MC + 24 authored MC + 6 FR |
+| Math M1 + M2 Hard, Test 7 | 44 | **38 MC short** — the only thing standing between here and Test 7 |
 
-1. **R&W is 55 short** — 25 reading, 30 writing. About 30 usable August pages
-   remain (listed below); the rest must be authored. Writing-domain items are the
-   ones to author, for the reason given in the supply section.
-2. **Math M1 / M2 Hard**: pull 88 from the 47 clean `new-source-transcripts`
-   leftovers plus the untranscribed October Math pages (Oct IntB M2 p073-p096,
-   Oct USB M1 p055-p075, unused Oct USC Math). Dedupe against production and
-   verify every answer with sympy — the October *Math* keys were reliable
-   (Oct IntB scored 22/22) unlike the R&W keys.
-3. **Assemble** with the block-ordering rule below, reusing
-   `../test-5-build/assemble_rw.py`'s rank-sort approach.
-4. **Insert locally, sweep the real exam interface, then insert to production
-   and publish** — the `insert_test5.mjs` / `seed_attempt.mjs` pair in
-   `../test-5-build/` generalises with only the title changed.
+### To finish Test 7
 
-### Math Module 2 (Easy) — done
+The R&W is already there: the pool holds 162 and Test 6 consumed 81, so
+`assemble_test6.py` re-run with a Test 7 seed and the leftover pool covers all
+three R&W modules. Math Module 2 (Easy) is `math_m2easy.TEST7`, done. Only
+Module 1 and Module 2 (Hard) need 38 more multiple-choice questions. Two ways to
+get them, in preference order:
 
-44 authored questions, 22 per test, 19 MC + 3 FR each, domain mix 8 ALG / 6 ADV
-/ 4 PSDA / 4 GT. `verify_math_m2easy.py` passes: sympy re-derives every answer
-independently, module shape and numbering check out, the Test 1/2 house style is
-enforced, and template dedupe runs against all 330 live production Math stems.
+1. **Author them**, as `math_authored_mc.py` did for Test 6 — fastest, and
+   sympy verification makes an authored item more trustworthy than a transcribed
+   one. Extend that file and its verifier.
+2. Transcribe the untouched October Math pages (Oct IntB M2 p073-p096, Oct USB M1
+   p055-p075, unused Oct USC Math p042-p083). Expect heavy loss to cross-paper
+   duplication — the October forms share questions, as recorded below.
 
-Nine first-draft questions were rewritten after the dedupe pass caught them
-repeating a live template — including one that had reproduced a production
-marble-jar question's exact 6/4/10 counts, and a factorable-quadratic item that
-repeated one authored for Test 5. The metric itself had to be fixed first: prose
-similarity alone scored exponential-evaluation against cubic-evaluation at 1.00.
-Details are in `math_m2easy.py`'s docstring.
+### Verification Test 6 passed
+
+- **Content**: 147 questions; every MC has 4 choices and exactly one key; all 9
+  free-response answers are JSON arrays; every R&W question has a passage; 8 real
+  `<table>` questions and 1 base64 figure; no stray placeholders.
+- **Ordering**: each R&W module is 14 reading + 13 writing with the writing block
+  opening at question 15, block sequence monotonic — enforced by sorting on block
+  rank, then re-checked.
+- **Rendering**: R&W Module 1 and Math Module 1 swept in the real exam interface
+  via Playwright — no raw markup, no console errors. Confirmed again on
+  satforge.org through a throwaway attempt, since deleted.
+- **Four visual gaps closed before publishing**: three Math tables that the
+  original transcription had flattened into stem prose were rebuilt as real
+  tables from those same numbers, and the grapevine bar chart was cropped from
+  the source page image. Four other transcribed Math questions were dropped
+  outright because their figure survived only as a prose description with no
+  source image kept, and four MC questions were authored to replace them.
 
 ## The two findings that shape this build
 
