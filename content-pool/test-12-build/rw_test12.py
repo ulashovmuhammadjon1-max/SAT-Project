@@ -958,17 +958,20 @@ QUESTIONS = [
      "joining it to them."),
 
  trn("T6",
-     "A written Chinese character gives a reader almost no guide to how the word is pronounced. "
-     "_____ an alphabetic spelling records the sound and leaves the meaning to be worked out from "
-     "the word itself.",
+     "A written Chinese character gives a reader almost no guide to how the word it stands for is "
+     "pronounced, which is why speakers of dialects that cannot understand one another in "
+     "conversation can read the same page. _____ an alphabetic spelling records the sound and "
+     "leaves the meaning to be worked out from the word itself.",
      ["By contrast,", "Accordingly,", "Similarly,", "In fact,"], "A",
      "The two writing systems are set against each other, one withholding sound and the other "
      "recording it. 'Similarly' would claim the systems behave alike, which is the reverse of what "
      "the sentences say."),
 
  trn("T7",
-     "Every surviving copy of the 1543 edition carries exactly the same misprint in the same place "
-     "on page ninety. _____ all of them were pulled from a single setting of the type.",
+     "Type was broken up and redistributed as soon as a print run finished, so a book reset for a "
+     "second printing almost never repeats the errors of the first. Every surviving copy of the "
+     "1543 edition carries exactly the same misprint in exactly the same place on page ninety. "
+     "_____ all of them were pulled from a single setting of the type.",
      ["Thus,", "Nevertheless,", "For example,", "Meanwhile,"], "A",
      "The second sentence draws a conclusion from the shared misprint, so the link marks an "
      "inference. 'For example' would make the single setting an instance of the misprint, which "
@@ -984,9 +987,9 @@ QUESTIONS = [
      "the same thing about the same material."),
 
  trn("T9",
-     "Until 1861 almost all the cotton spun in Lancashire came from a single source. _____ the "
-     "mills were buying from Egypt and India as well, and the trade never again rested on one "
-     "crop.",
+     "Until 1861 almost all the cotton spun in Lancashire came from a single source, and buyers in "
+     "Liverpool judged every other crop in the world against it. _____ the mills were buying from "
+     "Egypt and from India as well, and the trade never again rested on one country's harvest.",
      ["Thereafter,", "Likewise,", "In particular,", "Admittedly,"], "A",
      "'Until 1861' sets a boundary in time and the second sentence describes what happened after "
      "it, so the link is temporal. 'Likewise' would claim the later situation resembled the "

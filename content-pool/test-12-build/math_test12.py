@@ -63,7 +63,7 @@ MODULE_1 = [
 
  dict(n="E1-05", domain="ALG", skill="ALG-LF", type="MC",
       stem=("The temperature inside a wine cellar, in degrees Celsius, t hours after the chiller "
-            "is switched on is modelled by \\(T(t)=18-rt\\) , where r is a constant. The cellar "
+            "is switched on is modelled by \\(T(t)=18-rt\\), where r is a constant. The cellar "
             "is at 12.4&deg;C exactly 7 hours after the chiller is switched on. What temperature, "
             "in degrees Celsius, does the model predict 15 hours after the chiller is switched "
             "on?"),
@@ -88,7 +88,7 @@ MODULE_1 = [
 
  dict(n="E1-08", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A workshop that finishes wind-turbine blades models its profit for a day, in "
-            "dollars, as \\(P(b)=-25b^{2}+900b-3{,}200\\) , where b is the number of blades "
+            "dollars, as \\(P(b)=-25b^{2}+900b-3{,}200\\), where b is the number of blades "
             "finished that day. For how many blades finished does this model give the greatest "
             "profit for a day?"),
       choices=["16", "18", "20", "36"], correct="B",
@@ -103,7 +103,7 @@ MODULE_1 = [
 
  dict(n="E1-10", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A crystallographer needs the lattice factor \\(\\frac{(4a^{3}b)^{2}}{8ab^{4}}\\) "
-            "rewritten so that no exponent is negative, where \\(a>0\\) and \\(b>0\\) . Which "
+            "rewritten so that no exponent is negative, where \\(a>0\\) and \\(b>0\\). Which "
             "expression is equivalent to that lattice factor?"),
       choices=["\\(\\frac{2a^{5}}{b^{2}}\\)", "\\(\\frac{2a^{6}}{b^{2}}\\)",
                "\\(\\frac{a^{5}}{2b^{2}}\\)", "\\(2a^{5}b^{2}\\)"], correct="A",
@@ -119,7 +119,7 @@ MODULE_1 = [
 
  dict(n="E1-12", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A marmalade maker fixes the mass of peel, p kilograms, and the mass of sugar, s "
-            "kilograms, in one batch by the two conditions \\(p+s=30\\) and \\(ps=200\\) . The "
+            "kilograms, in one batch by the two conditions \\(p+s=30\\) and \\(ps=200\\). The "
             "batch contains more sugar than peel. How many kilograms of sugar does the batch "
             "contain?"),
       choices=["10", "15", "20", "25"], correct="C",
@@ -189,7 +189,7 @@ MODULE_1 = [
 
  dict(n="E1-21", domain="ADV", skill="ADV-NF", type="FR",
       stem=("A tram's stopping distance, in metres, is modelled by "
-            "\\(d(v)=\\frac{v^{2}}{20}+\\frac{v}{2}\\) , where v is the tram's speed in "
+            "\\(d(v)=\\frac{v^{2}}{20}+\\frac{v}{2}\\), where v is the tram's speed in "
             "kilometres per hour. What stopping distance, in metres, does this model give for a "
             "tram travelling at 30 kilometres per hour?"),
       answers=["60"],
@@ -220,7 +220,7 @@ MODULE_2_EASY = [
 
  dict(n="E2E-03", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A kayak outfitter's total charge, in dollars, for a rental lasting h hours is given "
-            "by \\(C=18+7h\\) . What is the total charge, in dollars, for a rental lasting 4 "
+            "by \\(C=18+7h\\). What is the total charge, in dollars, for a rental lasting 4 "
             "hours?"),
       choices=["25", "46", "72", "100"], correct="B",
       check="18 + 7(4) = 46."),
@@ -246,7 +246,7 @@ MODULE_2_EASY = [
       check="180/24 = 7.5."),
 
  dict(n="E2E-07", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A stagehand counts the lamps on a lighting bar as \\(4(3n-7)+5n\\) , where n is the "
+      stem=("A stagehand counts the lamps on a lighting bar as \\(4(3n-7)+5n\\), where n is the "
             "number of sections in the bar. Which expression is equivalent to the number of "
             "lamps?"),
       choices=["\\(8n-28\\)", "\\(12n-28\\)", "\\(17n-28\\)", "\\(17n-7\\)"], correct="C",
@@ -254,7 +254,7 @@ MODULE_2_EASY = [
 
  dict(n="E2E-08", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A greengrocer packs \\(x^{4}\\) plums into each layer of a crate and puts "
-            "\\(x^{2}\\) layers in the crate, where \\(x>1\\) . Which expression gives the number "
+            "\\(x^{2}\\) layers in the crate, where \\(x>1\\). Which expression gives the number "
             "of plums in the crate?"),
       choices=["\\(x^{2}\\)", "\\(x^{6}\\)", "\\(x^{8}\\)", "\\(2x^{6}\\)"], correct="B",
       check="x^4 times x^2 is x^6."),
@@ -275,7 +275,7 @@ MODULE_2_EASY = [
 
  dict(n="E2E-11", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A puzzle-box maker sets p pegs into each face of a box, and her design rule requires "
-            "\\(p^{2}-9=40\\) , where p is positive. How many pegs are set into each face?"),
+            "\\(p^{2}-9=40\\), where p is positive. How many pegs are set into each face?"),
       choices=["5", "7", "24.5", "49"], correct="B",
       check="p^2 = 49 and p is positive, so p = 7."),
 
@@ -329,7 +329,7 @@ MODULE_2_EASY = [
 
  dict(n="E2E-19", domain="GT", skill="GT-AV", type="MC",
       stem=("A circular lily pond has a radius of 6 metres. The area of the pond, in square "
-            "metres, can be written as \\(k\\pi\\) . What is the value of k?"),
+            "metres, can be written as \\(k\\pi\\). What is the value of k?"),
       choices=["6", "12", "24", "36"], correct="D",
       check="The area is pi times 6^2, so k = 36."),
 
@@ -340,17 +340,18 @@ MODULE_2_EASY = [
       check="4.5/6 = 0.75."),
 
  dict(n="E2E-21", domain="ADV", skill="ADV-NF", type="FR",
-      stem=("A model rocket's altitude, in metres, is given by \\(a(t)=5t^{2}\\) , where t is the "
+      stem=("A model rocket's altitude, in metres, is given by \\(a(t)=5t^{2}\\), where t is the "
             "number of seconds since it was launched. What is the rocket's altitude, in metres, "
             "6 seconds after it is launched?"),
       answers=["180"],
       check="5(6^2) = 180."),
 
  dict(n="E2E-22", domain="GT", skill="GT-TR", type="FR",
-      stem=("In right triangle \\(JKL\\) , angle \\(K\\) is the right angle, \\(JK=8\\) and "
-            "\\(KL=15\\) . What is the value of \\(\\tan J\\) ?"),
+      stem=("A rigger's turnbuckle sits at the right-angled corner \\(E\\) of a triangular stay "
+            "\\(DEF\\), whose leg \\(DE\\) measures 8 metres and whose leg \\(EF\\) measures 15 "
+            "metres. What is the value of \\(\\tan D\\)?"),
       answers=["15/8", "1.875"],
-      check="The tangent of J is the side opposite over the side adjacent, 15/8."),
+      check="The tangent of D is the leg opposite over the leg adjacent, 15/8."),
 ]
 
 
@@ -358,7 +359,7 @@ MODULE_2_EASY = [
 MODULE_2_HARD = [
  dict(n="E2H-01", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A cartographer draws two straight contour lines in the xy-plane. One is the graph of "
-            "\\(y=\\frac{3}{5}x-4\\) and the other is the graph of \\(3x-my=25\\) , where m is a "
+            "\\(y=\\frac{3}{5}x-4\\) and the other is the graph of \\(3x-my=25\\), where m is a "
             "constant. The two contour lines never meet. What is the value of m?"),
       choices=["-5", "3", "5", "9"], correct="C",
       check="The lines are parallel when 3/m = 3/5, so m = 5, and then they are distinct."),
@@ -366,7 +367,7 @@ MODULE_2_HARD = [
  dict(n="E2H-02", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A cable railway charges \\(F(d)=a+bd\\) francs for a journey of d kilometres, where "
             "a and b are constants. A 6-kilometre journey costs 27 francs and a 14-kilometre "
-            "journey costs 51 francs. What is the value of \\(a+b\\) ?"),
+            "journey costs 51 francs. What is the value of \\(a+b\\)?"),
       choices=["9", "12", "15", "21"], correct="B",
       check="b = 24/8 = 3 and a = 27 - 18 = 9, so a + b = 12."),
 
@@ -387,15 +388,15 @@ MODULE_2_HARD = [
 
  dict(n="E2H-05", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A dye works puts every skein through two treatments modelled by \\(p(x)=2x-5\\) and "
-            "\\(q(x)=x^{2}+1\\) , applied in that order so that the value p produces is fed into "
-            "q. Which expression is equivalent to \\(q(p(x))\\) ?"),
+            "\\(q(x)=x^{2}+1\\), applied in that order so that the value p produces is fed into "
+            "q. Which expression is equivalent to \\(q(p(x))\\)?"),
       choices=["\\(4x^{2}+26\\)", "\\(2x^{2}-3\\)", "\\(4x^{2}-20x+24\\)",
                "\\(4x^{2}-20x+26\\)"], correct="D",
       check="(2x-5)^2 + 1 = 4x^2 - 20x + 26."),
 
  dict(n="E2H-06", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A wind-tunnel scaling law is quoted as \\(\\left(\\frac{16x^{8}}{y^{-4}}\\right)"
-            "^{\\frac{3}{4}}\\) , where \\(x>0\\) and \\(y>0\\) , and an engineer must rewrite it "
+            "^{\\frac{3}{4}}\\), where \\(x>0\\) and \\(y>0\\), and an engineer must rewrite it "
             "so that no exponent is a fraction. Which expression is equivalent to that scaling "
             "law?"),
       choices=["\\(8x^{6}y^{3}\\)", "\\(12x^{6}y^{3}\\)", "\\(8x^{11}y^{3}\\)",
@@ -403,29 +404,29 @@ MODULE_2_HARD = [
       check="The bracket is 16x^8 y^4, and raising it to the 3/4 power gives 8x^6 y^3."),
 
  dict(n="E2H-07", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A bridge designer models the underside of an arch by \\(f(x)=2x^{2}+bx+18\\) , where "
+      stem=("A bridge designer models the underside of an arch by \\(f(x)=2x^{2}+bx+18\\), where "
             "b is a positive constant. The graph of \\(y=f(x)\\) meets the x-axis at exactly one "
             "point. What is the value of b?"),
       choices=["6", "9", "12", "18"], correct="C",
       check="The discriminant b^2 - 144 must be 0 and b is positive, so b = 12."),
 
  dict(n="E2H-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A brewer's blending ratio for a cask is \\(\\frac{x^{2}-9}{x^{2}+x-12}\\) , where "
-            "\\(x>4\\) . Which expression is equivalent to that blending ratio?"),
+      stem=("A brewer's blending ratio for a cask is \\(\\frac{x^{2}-9}{x^{2}+x-12}\\), where "
+            "\\(x>4\\). Which expression is equivalent to that blending ratio?"),
       choices=["\\(\\frac{x-3}{x-4}\\)", "\\(\\frac{3}{x+4}\\)", "\\(\\frac{x+3}{x+4}\\)",
                "\\(\\frac{x+3}{x-4}\\)"], correct="C",
       check="Both parts share the factor x - 3, leaving (x+3)/(x+4)."),
 
  dict(n="E2H-09", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The cross-section of a skate ramp is modelled by \\(y=a(x-4)^{2}-12\\) , where a is "
-            "a positive constant, and the modelled curve passes through the point \\((10,15)\\) . "
+      stem=("The cross-section of a skate ramp is modelled by \\(y=a(x-4)^{2}-12\\), where a is "
+            "a positive constant, and the modelled curve passes through the point \\((10,15)\\). "
             "What is the value of a?"),
       choices=["\\(\\frac{1}{2}\\)", "\\(\\frac{3}{4}\\)", "\\(\\frac{4}{3}\\)", "3"],
       correct="B",
       check="36a - 12 = 15 gives 36a = 27, so a = 3/4."),
 
  dict(n="E2H-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("In the xy-plane, the parabola \\(y=x^{2}-4x+7\\) and the line \\(y=2x+c\\) , where c "
+      stem=("In the xy-plane, the parabola \\(y=x^{2}-4x+7\\) and the line \\(y=2x+c\\), where c "
             "is a constant, cross at exactly two points. Which of the following could be the "
             "value of c?"),
       choices=["-5", "-3", "-2", "1"], correct="D",
@@ -433,7 +434,7 @@ MODULE_2_HARD = [
 
  dict(n="E2H-11", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A chemist records the contents of a reaction vessel twice, as \\(4x-3y=7\\) and as "
-            "\\(8x+ay=1\\) , where a is a constant. For exactly one value of a there is no pair "
+            "\\(8x+ay=1\\), where a is a constant. For exactly one value of a there is no pair "
             "\\((x,y)\\) satisfying both records. What is that value of a?"),
       choices=["-6", "-3", "3", "6"], correct="A",
       check="The two left sides are proportional when a/(-3) = 8/4, so a = -6."),
@@ -482,10 +483,10 @@ MODULE_2_HARD = [
 
  dict(n="E2H-16", domain="GT", skill="GT-LA", type="MC",
       stem=("A surveyor sights across a river and obtains two similar triangles \\(PQR\\) and "
-            "\\(PST\\) , where S lies on \\(\\overline{PQ}\\) , T lies on \\(\\overline{PR}\\) "
-            "and \\(\\overline{ST}\\) is parallel to \\(\\overline{QR}\\) . The measurements are "
+            "\\(PST\\), where S lies on \\(\\overline{PQ}\\), T lies on \\(\\overline{PR}\\) "
+            "and \\(\\overline{ST}\\) is parallel to \\(\\overline{QR}\\). The measurements are "
             "\\(PS=12\\) metres, \\(SQ=18\\) metres and \\(QR=45\\) metres. What is the length of "
-            "\\(\\overline{ST}\\) , in metres?"),
+            "\\(\\overline{ST}\\), in metres?"),
       choices=["15", "18", "20", "27"], correct="B",
       check="PS/PQ = 12/30 = 2/5, so ST = (2/5)(45) = 18."),
 
@@ -498,8 +499,8 @@ MODULE_2_HARD = [
 
  dict(n="E2H-18", domain="GT", skill="GT-TR", type="MC",
       stem=("A ship's radar plot forms a right triangle \\(XYZ\\) with the right angle at "
-            "\\(Y\\) . The leg \\(XY\\) measures 9 nautical miles and the leg \\(YZ\\) measures "
-            "40 nautical miles. What is the value of \\(\\cos X\\) ?"),
+            "\\(Y\\). The leg \\(XY\\) measures 9 nautical miles and the leg \\(YZ\\) measures "
+            "40 nautical miles. What is the value of \\(\\cos X\\)?"),
       choices=["\\(\\frac{41}{9}\\)", "\\(\\frac{9}{40}\\)", "\\(\\frac{40}{41}\\)",
                "\\(\\frac{9}{41}\\)"], correct="D",
       check="The hypotenuse XZ is 41, and cos X = XY/XZ = 9/41."),
