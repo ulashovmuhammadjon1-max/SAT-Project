@@ -63,12 +63,33 @@ different administration from the October set, so they should not carry the Octo
 cross-duplication — but they have not been checked yet, and the same dedupe pass is required
 against everything in this directory and against production.
 
-Best case that gets R&W to roughly 160 of the 162 needed, with no margin. The realistic
-expectation is a shortfall, concentrated in the writing domains. The fallback is the one
-`CLAUDE.md` already sanctions for Math and applies equally here: author original SAT-style
-questions rather than ship an undersized module or reuse content. Writing-domain items
-(Boundaries, Form/Structure/Sense, Transitions) are the safest to author, since correctness is
-decidable by grammar rather than by judgement.
+**The August papers overlap too, and the shortfall is now measured rather than guessed.** A
+lexical check of every August page against all 405 R&W questions live in production and all 95
+transcribed here (Jaccard similarity on content words, threshold 0.30) finds:
+
+- **August USE: 24 of 54 pages already exist** — 5 duplicate an October question transcribed in
+  this directory (Mary Seacole at 0.87, fruit-fly wing centroids at 0.66, "Tomato" loanwords at
+  0.59, Buenos Aires walkability at 0.50, Austronesian languages at 0.39) and 19 duplicate a
+  question already shipped in Tests 1–5 (Michelin Guide 0.70, Australian railroads 0.72,
+  Pleistocene 0.54, text corpora 0.59, Basquiat 0.40 …).
+- **August USC: 6 of 13 pages already exist**, including the Moran park-use study and the Cuaya
+  dog-language study, both already live in Test 5.
+
+So the EliteXSAT corpus as a whole recycles heavily — not just within the October administration
+but across administrations and into the material already shipped. Usable remainder is about **30
+August USE pages plus 7 August USC pages**, and some of those will still fail on capture quality
+or on template (rather than lexical) duplication.
+
+**Projected R&W total from source: about 128 of the 162 needed.** The shortfall of roughly 34 is
+concentrated in the writing domains, which is also where the October yield was weakest.
+
+The fallback is the one `CLAUDE.md` already sanctions and which Test 5's Math Module 2 already
+used: author original SAT-style questions rather than ship an undersized module or reuse
+content. Writing-domain items (Boundaries, Form/Structure/Sense, Transitions) are the right ones
+to author, because their correctness is decidable by grammar rather than by judgement — the same
+property that makes sympy verification work for Math. Each authored item must be checked against
+every question in production and in this directory for template repetition, not just for exact
+duplication.
 
 ## Module ordering requirement (from the user, restated)
 
