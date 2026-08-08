@@ -1,33 +1,243 @@
 {
  "purpose": "Top-up R&W questions for Test 5, drawn from the October sources (which carry real answer keys). Only questions where MY independent reading agrees with the official key are accepted.",
  "sourceKeys": {
-   "OctIntB_RW_M2": "1-5 ADDCC | 6-10 ACACC | 11-15 CDBAD | 16-20 BBBCC | 21-25 ACCAB | 26-27 CB"
+  "OctIntB_RW_M2": "1-5 ADDCC | 6-10 ACACC | 11-15 CDBAD | 16-20 BBBCC | 21-25 ACCAB | 26-27 CB",
+  "OctUSB_RW_M2": "1-5 BDABD | 6-10 CABDD | 11-15 BCBAD | 16-20 CBBDA | 21-27 ABDAA AD"
  },
  "accepted": [
-  {"source":"OctIntB","module_raw":"RW_M2","num":18,"page":41,"type":"MULTIPLE_CHOICE",
-   "passage":"In the list &ldquo;Splendid Things&rdquo; from Sei Sh&#333;nagon&rsquo;s <em>Pillow Book</em>, the author delights in grape-colored fabric, wisteria vines around a tree, and a snow-covered garden. So shrewd an observer is Sh&#333;nagon, a lady-in-waiting to Empress Teishi, that her book&rsquo;s musings on tenth-century Japanese courtly life _____ readers a thousand years later.",
-   "stem":"Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "choices":[{"label":"A","content":"has fascinated"},{"label":"B","content":"fascinate"},
-              {"label":"C","content":"is fascinating"},{"label":"D","content":"fascinates"}],
-   "correct":"B","keyAgrees":true,
-   "domain":"Standard English Conventions","skill":"Form, Structure, and Sense",
-   "verified":"subject is the plural 'musings', so the plural verb 'fascinate' is required"},
-
-  {"source":"OctIntB","module_raw":"RW_M2","num":19,"page":42,"type":"MULTIPLE_CHOICE",
-   "passage":"The present-day city of Dushanbe, Tajikistan, was the capital of the Tajik Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Each of these republics _____ established along ethnolinguistic lines: most residents of the Tajik Republic spoke Persian, for example.",
-   "stem":"Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "choices":[{"label":"A","content":"have been"},{"label":"B","content":"are"},
-              {"label":"C","content":"was"},{"label":"D","content":"were"}],
-   "correct":"C","keyAgrees":true,
-   "domain":"Standard English Conventions","skill":"Form, Structure, and Sense",
-   "verified":"'Each' is singular and the surrounding narration is past tense, so 'was'"}
+  {
+   "source": "OctIntB",
+   "module_raw": "RW_M2",
+   "num": 18,
+   "page": 41,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "In the list &ldquo;Splendid Things&rdquo; from Sei Sh&#333;nagon&rsquo;s <em>Pillow Book</em>, the author delights in grape-colored fabric, wisteria vines around a tree, and a snow-covered garden. So shrewd an observer is Sh&#333;nagon, a lady-in-waiting to Empress Teishi, that her book&rsquo;s musings on tenth-century Japanese courtly life _____ readers a thousand years later.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has fascinated"
+    },
+    {
+     "label": "B",
+     "content": "fascinate"
+    },
+    {
+     "label": "C",
+     "content": "is fascinating"
+    },
+    {
+     "label": "D",
+     "content": "fascinates"
+    }
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "verified": "subject is the plural 'musings', so the plural verb 'fascinate' is required"
+  },
+  {
+   "source": "OctIntB",
+   "module_raw": "RW_M2",
+   "num": 19,
+   "page": 42,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "The present-day city of Dushanbe, Tajikistan, was the capital of the Tajik Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Each of these republics _____ established along ethnolinguistic lines: most residents of the Tajik Republic spoke Persian, for example.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have been"
+    },
+    {
+     "label": "B",
+     "content": "are"
+    },
+    {
+     "label": "C",
+     "content": "was"
+    },
+    {
+     "label": "D",
+     "content": "were"
+    }
+   ],
+   "correct": "C",
+   "keyAgrees": true,
+   "domain": "Standard English Conventions",
+   "skill": "Form, Structure, and Sense",
+   "verified": "'Each' is singular and the surrounding narration is past tense, so 'was'"
+  },
+  {
+   "source": "OctIntB",
+   "module_raw": "RW_M2",
+   "num": 24,
+   "page": 47,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>A supercontinent is a single landmass made up of most or all of Earth&rsquo;s continents.</li><li>Over time, continents merge together to form supercontinents, which then break apart.</li><li>This process is believed to take hundreds of millions of years and is known as the supercontinent cycle.</li><li>Ur was a supercontinent that formed about 3.1 billion years ago.</li><li>Columbia was a supercontinent that formed about 1.8 billion years ago.</li></ul>",
+   "stem": "The student wants to emphasize the order in which the supercontinents were formed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The supercontinent Columbia formed long after the supercontinent Ur."
+    },
+    {
+     "label": "B",
+     "content": "Ur formed about 3.1 billion years ago but eventually broke apart."
+    },
+    {
+     "label": "C",
+     "content": "Forming and breaking apart over hundreds of millions of years, supercontinents are made up of most or all of Earth&rsquo;s continents."
+    },
+    {
+     "label": "D",
+     "content": "Ur and Columbia were both supercontinents, single landmasses made up of most or all of Earth&rsquo;s continents."
+    }
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "only A states the relative order (Columbia after Ur); the others give a single date, a definition, or a shared property"
+  },
+  {
+   "source": "OctIntB",
+   "module_raw": "RW_M2",
+   "num": 25,
+   "page": 48,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li><em>Catharsis, Conversion, Traumata</em> is a 1986 sculpture by American artist Joseph Kosuth.</li><li>It consists of a blue neon sign that spells out the title phrase.</li><li><em>Harvest Moon</em> is a 2013 sculpture by British/Pakistani artist Shezad Dawood.</li><li>It consists of a yellow neon sign that forms an abstract moon shape.</li><li>Neon signs became popular with advertisers in the 1920s and began to decline in popularity in the 1960s.</li><li>Neon signs became popular with artists in the 1960s and continue to be popular today.</li></ul>",
+   "stem": "The student wants to emphasize a difference between the two sculptures. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Molded into an evocative phrase in <em>Catharsis, Conversion, Traumata</em> (1986), an abstract form in <em>Harvest Moon</em> (2013), and an advertising tool in decades past, neon lighting has a number of different applications."
+    },
+    {
+     "label": "B",
+     "content": "While the sculptures share a common material, one spells out a phrase while the other is decidedly more abstract."
+    },
+    {
+     "label": "C",
+     "content": "Kosuth&rsquo;s sculpture was made in 1986 and Dawood&rsquo;s in 2013, both well after the advertising heyday of neon signs had passed."
+    },
+    {
+     "label": "D",
+     "content": "American artist Joseph Kosuth&rsquo;s and British/Pakistani artist Shezad Dawood&rsquo;s sculptures have employed neon signs in different ways, demonstrating the versatility of the popular material."
+    }
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "B contrasts the two sculptures directly; A and D emphasise neon's versatility and C points out a similarity"
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 22,
+   "page": 49,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "In 2015, geologist Peter Rogerson calculated that the geographic center of Kansas was a point 2.1 miles southeast of the municipality of Bushton Bend. Rogerson&rsquo;s calculation was more accurate than the one from 1920 by the US Geological Survey. _____ this earlier calculation was made using far more rudimentary equipment&mdash;only cardboard and string.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ultimately,"
+    },
+    {
+     "label": "B",
+     "content": "Of course,"
+    },
+    {
+     "label": "C",
+     "content": "Likewise,"
+    },
+    {
+     "label": "D",
+     "content": "To that end,"
+    }
+   ],
+   "correct": "B",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Transitions",
+   "verified": "the second sentence gives the unsurprising reason the older calculation was less accurate; 'Of course' marks that expectedness. Source also shows B selected."
+  },
+  {
+   "source": "OctUSB",
+   "module_raw": "RW_M2",
+   "num": 24,
+   "page": 51,
+   "type": "MULTIPLE_CHOICE",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Grimanesa Amoros is a Peruvian American artist well known for her LED light sculptures.</li><li>Her sculpture <em>Uros House</em> is made of smooth multicolored LED domes.</li><li>It occupies 250 cubic feet of space.</li><li>Her sculpture <em>Golden Waters</em> is made of entangled blue and white LED tubes.</li><li>It occupies 118,080 cubic feet of space.</li></ul>",
+   "stem": "The student wants to emphasize a similarity between <em>Uros House</em> and <em>Golden Waters</em>. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "<em>Uros House</em> is an LED light sculpture made by Grimanesa Amoros, as is <em>Golden Waters</em>."
+    },
+    {
+     "label": "B",
+     "content": "The smooth LED domes of Grimanesa Amoros&rsquo;s <em>Uros House</em> stand in contrast to the tangled LED tubes of <em>Golden Waters</em>."
+    },
+    {
+     "label": "C",
+     "content": "Grimanesa Amoros is the artist behind <em>Uros House</em>&mdash;a sculpture made of smooth multicolored LED domes."
+    },
+    {
+     "label": "D",
+     "content": "At 118,080 cubic feet in size, Grimanesa Amoros&rsquo;s <em>Golden Waters</em> cuts a larger figure than the 250-cubic-foot <em>Uros House</em>."
+    }
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "domain": "Expression of Ideas",
+   "skill": "Rhetorical Synthesis",
+   "verified": "only A states something both sculptures share; B and D draw contrasts and C describes one alone. Source also shows A selected."
+  }
  ],
  "rejectedKeyConflicts": [
-  {"source":"OctIntB","num":17,"page":40,"keySays":"B",
-   "myAnswer":"A",
-   "why":"Choices are 'speculative, though;' / 'speculative, though,' / 'speculative; though' / 'speculative, though'. The two halves are both independent clauses, so B ('speculative, though,') is a comma splice and C leaves a fragment. A ('speculative, though;') punctuates it correctly. Rejected rather than shipped with a doubtful answer."},
-  {"source":"OctIntB","num":21,"page":44,"keySays":"A",
-   "myAnswer":"B",
-   "why":"Transition into 'as decades passed, new calculations would reveal increasingly precise coordinates'. 'Again and again' matches the repeated-over-time sense; 'Specifically' would require the clause to specify something in the prior sentence, and it does not. Rejected."}
+  {
+   "source": "OctIntB",
+   "num": 17,
+   "page": 40,
+   "keySays": "B",
+   "myAnswer": "A",
+   "why": "Choices are 'speculative, though;' / 'speculative, though,' / 'speculative; though' / 'speculative, though'. The two halves are both independent clauses, so B ('speculative, though,') is a comma splice and C leaves a fragment. A ('speculative, though;') punctuates it correctly. Rejected rather than shipped with a doubtful answer."
+  },
+  {
+   "source": "OctIntB",
+   "num": 21,
+   "page": 44,
+   "keySays": "A",
+   "myAnswer": "B",
+   "why": "Transition into 'as decades passed, new calculations would reveal increasingly precise coordinates'. 'Again and again' matches the repeated-over-time sense; 'Specifically' would require the clause to specify something in the prior sentence, and it does not. Rejected."
+  },
+  {
+   "source": "OctIntB",
+   "num": 22,
+   "page": 45,
+   "keySays": "C",
+   "myAnswer": "D",
+   "why": "Goal is to emphasise the discovery of (19308) 1996 TO66 to an audience ALREADY FAMILIAR with Jane Luu. The key's choice opens 'Jane Luu is an astronomer famous for...', which introduces her to an audience that does not need introducing, and frames TO66 as merely one of many. D reports that discovery specifically. Rejected."
+  },
+  {
+   "source": "OctIntB",
+   "num": 20,
+   "page": 43,
+   "keySays": "C",
+   "myAnswer": "A",
+   "why": "A goal is stated ('one of their goals was for their female actor friends to have good parts to play'), then the action taken to achieve it. 'To that end' is the purpose transition; 'For example' would need the previous sentence to name a category, and it names a goal. Rejected."
+  },
+  {
+   "source": "OctUSB",
+   "num": 20,
+   "page": 47,
+   "keySays": "A",
+   "myAnswer": "B",
+   "why": "'...an approach to music instruction ___ to teach music..., emphasizes retaining...'. B ('that, aiming') gives 'that, aiming to teach ..., emphasizes ...', a relative clause with a participial aside -- grammatical. The key's A ('that, is aiming') puts a comma between the relative pronoun and its verb and leaves 'emphasizes' stranded. Source also shows B selected. Rejected."
+  }
  ]
 }
