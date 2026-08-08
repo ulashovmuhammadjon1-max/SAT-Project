@@ -73,8 +73,11 @@ const CHECKS = [
    "LaTeX macro outside math mode", "error"],
   // ASCII comparison operators that should be typeset
   [/(!=|<=|>=)/g, "ASCII comparison operator", "error"],
-  // degrees spelled out instead of the &deg; entity
-  [/\d\s*degrees?\b/gi, "'degrees' spelled out instead of &deg;", "style"],
+  // An angle written as "35 degrees" should be "35&deg;". A temperature that
+  // names its scale — "34 degrees Celsius" — is correct prose and is not an
+  // angle, so it is excluded rather than flagged.
+  [/\d\s*degrees?\b(?!\s*(?:Celsius|Fahrenheit|Kelvin|C\b|F\b))/gi,
+   "'degrees' spelled out instead of &deg;", "style"],
 ];
 
 // Contexts where a slash is legitimately prose, not a fraction.
