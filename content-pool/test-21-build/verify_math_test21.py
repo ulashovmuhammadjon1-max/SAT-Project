@@ -132,6 +132,12 @@ def h2e_05():
     return [z for z in (6, 7, 8, 9) if 3 * z - 8 > 16][0]
 
 
+def h2e_12():
+    model = -(x - 4) ** 2 + 29
+    top = solve(Eq(diff(model, x), 0), x)[0]
+    return model.subs(x, top)
+
+
 def h2e_16():
     rows = [("January", 14), ("February", 9), ("March", 17), ("April", 12)]
     return len([nm for nm, cnt in rows if cnt > 12])
@@ -145,7 +151,7 @@ def h2e_19():
 
 def h2e_22():
     leg = symbols("leg", positive=True)
-    return solve(Eq(leg / 24, Rational(5, 12)), leg)[0]
+    return solve(Eq(leg / 24, Rational(3, 4)), leg)[0]
 
 
 def h2e_10():
@@ -291,7 +297,7 @@ DERIVE = {
  "H2E-09": lambda: expand(x ** 2 + 9 * x + 20),
  "H2E-10": h2e_10,
  "H2E-11": h2e_11,
- "H2E-12": lambda: (x ** 2 - 5 * x).subs(x, -3),
+ "H2E-12": h2e_12,
  "H2E-13": lambda: simplify(XP ** 9 / XP ** 4),
  "H2E-14": lambda: Rational(78, 6),
  "H2E-15": lambda: Rational(2, 5) * 140,

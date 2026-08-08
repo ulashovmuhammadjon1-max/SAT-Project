@@ -235,7 +235,7 @@ questions — the top-up passes only harvested the writing tail. Test 6 needs ei
 source material or explicit OK to author original Math questions.
 
 
-## Tests 7-18 are built and PUBLISHED — 18 tests, 2,646 questions live
+## Tests 7-21 are built and PUBLISHED — 21 tests, 3,087 questions live
 Every test is 147 questions (R&W 27/27/27, Math 22/22/22 with 19 MC + 3 FR per module). All
 Math and, from Test 8 on, all R&W is **originally authored** — the transcribed source pools are
 spent. Per-test build directories are `content-pool/test-N-build/`.
@@ -258,17 +258,45 @@ With both in place, cross-sibling overlap came out at 0.56 for Math and 0.18 for
 against thresholds of 0.75 and 0.50 — no repair pass needed.
 
 ### A similarity threshold decides what to READ, not what to accept
-Test 18's Math pass found **nine** questions scoring *below* 0.75 that were still genuine
-template repeats once the nearest banked stem was actually read — a linear `f(x+3)−f(x)`, a
-guy-wire Pythagoras, a "no solution, find k" system, a circle-equation radius. Read every match
-above ~0.45. Conversely, two Test 18 items had perfectly distinct maths but **reused the setting
-of a Module 1 item**; since a student sees Module 1 plus one Module 2 branch, the Easy branch
-would have shown the same hop kiln twice. Check settings across modules, not just stems.
+This is the single most important rule for any future content build, and four independent agents
+have now reproduced it. Across Tests 18-21, **57 Math questions were rewritten as genuine
+template repeats, and all but three of them scored BELOW the 0.75 reject line.** The clearest
+cases: a Test 20 draft scoring 0.50 shared its *exact coefficients* `2x²−12x+23` with a Test 6
+item; a Test 19 draft shared the *same equation and constant* `x²+bx+45=0` with Test 7; a Test 21
+draft scoring **0.42** was the identical 20%/50% mixture as Test 7.
+
+Why the number cannot work: token-signature Jaccard measures vocabulary overlap, and a template
+repeat that changes the *setting words* while keeping the mathematics scores **low precisely
+because it changed the words**. Treat the threshold as triage — **read every match above ~0.45
+and judge it yourself.** Then pre-screen each replacement against the bank *before* writing it;
+past ~1,300 banked Math questions the ordinary skills are nearly exhausted and a first draft is
+more likely than not to collide.
+
+Separately, **check settings across modules, not just stems.** A student sees Module 1 plus one
+Module 2 branch, so a Module 2 item reusing a Module 1 setting shows the same scene twice to half
+the cohort. Tests 19-21 enforce this as a fourth verifier pass over setting keywords.
 
 ### R&W answer keys skew hard when hand-authored — always rebalance
 Raw distributions came in at A45/B22/C13/D1, A42/B29/C9/D1 and A70/B8/C3/D0. `balance_rw.py`
 rotates them to 21/20/20/20. It refuses to rotate any question whose rationale names an option
 **by letter**, so every `why` must name options by their content.
+
+### Word-boundary bugs in CHECKING code — the recurring own-goal
+Every build so far has produced at least one. `\bpi` never matched because a digit and a letter
+are both `\w`. `LETTER_REF` matched the article "A". Test 19's setting check matched the **"fen"
+inside "fence"**; Test 21's matched `must` (the modal) and `moth` (inside *months*); a
+tag-balance check counting `<u` matched `<ul` and reported nine false findings. Two lessons:
+use explicit lookarounds rather than `\b` around anything that can abut a digit, and remember
+that **a boundary-free substring match in a checker is worse than no check, because it trains
+you to ignore the output.** Also drop keywords that are ordinary English — "ground" is both the
+earth and the past tense of *grind*.
+
+### `latex_to_expr`: the rewrite order cannot be fixed by choosing an order
+A fraction can sit inside an exponent (`a^{\frac{7}{12}}`) as readily as an exponent inside a
+fraction (`\frac{4a^{3}}{b^{4}}`), and either fixed order fails one of them — alternate the two
+rewrites in a loop iterated to a fixed point. Also split any surviving multi-letter run into an
+implicit product, or `\frac{uv}{u+v}` parses as a symbol named `uv` and the key silently fails
+to match. `Abs()` needs a symbol declared `real=True`.
 
 ### The `LETTER_REF` bug, fixed — do not reintroduce it
 The old pattern matched any bare A-D followed by whitespace, which also matched the **article

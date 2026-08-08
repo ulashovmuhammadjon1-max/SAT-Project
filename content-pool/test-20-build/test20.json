@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T20:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A single wire between two cities could at first carry one message at a time in one direction. Duplex working balanced the sending instrument against an artificial line so that an operator's own signals cancelled at his own receiver and only the distant operator's reached it. The capacity of the wire was thereby _____ without a metre of new copper being strung.",
+   "difficulty": "MEDIUM",
+   "why": "The arrangement lets each end send while the other is sending, so one wire now carries two messages where it carried one, and no new line is built. The 'restored' option would mean the wire had lost a capacity it once held, which the passage never suggests.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "measured",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "protected",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "doubled",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "restored",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Buses on a frequent route do not stay evenly spaced. A bus running slightly late finds more passengers waiting at the next stop, which delays it further, while the bus behind it finds fewer and gains. Left alone the pattern is _____: small differences in spacing grow until vehicles arrive in pairs with a long gap behind them.",
+   "difficulty": "MEDIUM",
+   "why": "Each delay makes the next delay larger and the gap widens without anything further being done, so the blank names a process that feeds on itself. The 'self-correcting' option describes the opposite, a spacing that would recover on its own.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "self-correcting",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "imperceptible",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "seasonal",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "self-reinforcing",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A singer performing a long epic before an audience cannot pause to search for a phrase. The traditions that produced such poems supply ready-made word groups fitted to the recurring positions in the line, so that a hero can be given a name and a descriptive tag which together fill the measure exactly. Composition and performance are therefore _____ rather than successive.",
+   "difficulty": "MEDIUM",
+   "why": "The ready-made phrases let the singer build each line while he is delivering it, which puts the making and the performing at the same moment. The 'rehearsed' option would place the composing before the performance, the sequence the sentence rejects with 'rather than successive'.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "private",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "simultaneous",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "rehearsed",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "written",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;memory&rdquo; most nearly mean?",
+   "passage": "A first encounter with a pathogen leaves behind a population of long-lived cells specific to it. Those cells do nothing while the pathogen is absent, but on a second encounter they divide and produce antibody within days rather than the weeks the first response took. Immunological <u>memory</u> is what a vaccine is designed to establish without the illness that would otherwise establish it.",
+   "difficulty": "MEDIUM",
+   "why": "The passage defines the term through cells that lie dormant and then answer a repeat encounter in days instead of weeks, so it names a faster reaction on second exposure. The 'faculty by which past events are recalled' sense is the ordinary meaning of the word, but no recollection by a mind is involved.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "An account of past events written by a participant.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The faculty by which past events are recalled.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A capacity to respond more rapidly to something met before.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A device in which data are stored.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "An individual householder cannot say whether a fire will reach him, and the loss if it does may exceed everything he owns. An insurer writing ten thousand such houses cannot say either, but the proportion of them that burns in a year varies very little from one year to the next. The business rests on the fact that an event unpredictable singly becomes _____ in the aggregate.",
+   "difficulty": "MEDIUM",
+   "why": "The passage sets one house, about which nothing can be said, against ten thousand, whose yearly proportion barely moves, so the blank names steadiness across many cases. The 'impossible' option would deny that the losses occur, when the point is that their total is steady.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "invisible",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "costly",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "regular",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "impossible",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "A purified protein taken from a pathogen is far safer to inject than the whole organism and much less effective: the immune system meets it, finds nothing else amiss, and mounts little response. <u>Substances called adjuvants are added to such vaccines to produce a small local disturbance at the injection site, which draws in the cells that carry the protein to the rest of the system.</u> Aluminium salts have served this purpose since the 1920s, and the mechanism is still not fully understood.",
+   "difficulty": "MEDIUM",
+   "why": "A purified protein provokes little response, and the sentence names what is added in order to provoke one, so it supplies the answer to the problem just set out. Treating it as a restatement would miss that it brings in a new ingredient rather than rewording the difficulty.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces the remedy for the shortcoming described in the preceding sentence.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It restates the preceding sentence in more technical language.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It concedes that purified proteins cannot be used in vaccines.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It gives an example of a pathogen against which vaccination has failed.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Milman Parry had argued from the Greek text alone that the recurring descriptive tags of the <em>Iliad</em> were a poet's tools rather than his ornaments. In the 1930s he and Albert Lord took recording equipment into rural Yugoslavia and worked with singers who could perform epics of many thousands of lines without any written text. Those singers proved to use the same phrase in the same metrical position again and again, and no two performances of one song by one singer were identical.",
+   "difficulty": "MEDIUM",
+   "why": "The text opens with a claim made from the Greek alone and then reports fieldwork among living singers whose practice bore it out, which is an account of a test. The relative age of the two traditions is never raised anywhere in the passage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To argue that the Yugoslav epics are older than the Greek ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To explain the metre in which Greek epic was composed.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To describe the recording equipment available in the 1930s.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To describe how a claim about an ancient text was tested against a living practice.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A vine of the Cuban rainforest opens flowers whose nectar is taken almost entirely by bats. Above each flower stands a dish-shaped leaf, concave and unusually stiff, which returns a strong echo from a wide range of directions instead of the narrow one an ordinary leaf reflects. Bats trained to find a feeder among artificial foliage located it in about half the time when a similar dish was fixed above it. The plant appears to advertise in the medium its pollinators use.",
+   "difficulty": "MEDIUM",
+   "why": "The dish-shaped leaf returns a strong echo from many directions and halves the time bats need to find a feeder, so the shape works as a signal to animals that hunt by sound. The claim that stiff leaves reflect less sound reverses the passage, in which the stiff dish returns a stronger echo.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The nectar of the vine is richer than that of related species.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Stiff leaves reflect less sound than flexible ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A plant's leaf is shaped so as to be conspicuous to pollinators that navigate by echo.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Bats find flowers more easily at night than during the day.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why is a tool reheated after quenching?",
+   "passage": "Steel quenched from red heat into water comes out very hard and so brittle that a file will chip it and a blow will snap it. The structure formed by the sudden cooling is strained internally, and reheating the piece to a few hundred degrees lets part of that strain relax. The result is a little softer than the quenched steel and far less liable to break, which is why an edge tool is always tempered after hardening and never used straight from the quench.",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the reheating lets part of the strain relax and leaves the steel slightly softer but much less likely to snap, which is a trade of hardness for toughness. The option claiming greater hardness contradicts the statement that the tempered steel is softer than the quenched steel.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To allow a file to cut it during the final shaping.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To make it harder than quenching alone can make it.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To relieve internal strain at the cost of a little hardness.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "To restore a shape lost during the sudden cooling.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the conclusion that the second dose did more than restore the level the first dose had reached?",
+   "passage": "A trial measured antibody concentration in the blood of volunteers given a single dose of a vaccine and in volunteers given a second dose eight weeks after the first. Concentrations are in arbitrary units, and a level above 40 units is taken to indicate protection.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Weeks after first dose</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Single-dose group (units)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Two-dose group (units)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">88</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">88</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">52</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">51</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">210</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">140</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "Merely restoring the first dose's level would mean a return to about 88 units, and the figures recorded after the booster stand far above that mark for months. The identical week-4 readings were taken before the second dose was given and so say nothing about its effect.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Both groups recorded 88 units at week 4, before the second dose was given.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The single-dose group had fallen below 40 units by week 12.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The two-dose group's concentration fell between week 12 and week 24.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "At weeks 12 and 24 the two-dose group stood at 210 and 140 units, well above the 88 units the single-dose group reached at week 4.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the conclusion that steadier spacing shortened passenger waits even though buses ran slightly less often?",
+   "passage": "A transit agency compared two operating rules on one bus route over four weeks. Under the first, drivers ran to a published timetable; under the second, a driver held at a control point whenever the bus in front was less than three minutes ahead. Headway is the interval between successive buses at a stop.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Measure</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Timetable rule</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Holding rule</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mean headway (min)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8.0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8.4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Standard deviation of headway (min)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1.9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Buses arriving in pairs (%)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Mean passenger wait (min)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6.2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.7</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "The conclusion pairs a slightly longer interval between buses with a shorter wait, so the support has to report both figures moving in opposite directions. The fall in paired arrivals shows the spacing improving but says nothing about how long passengers waited.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Mean headway under the timetable rule was 8.0 minutes.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Mean headway rose from 8.0 to 8.4 minutes under the holding rule while mean passenger wait fell from 6.2 to 4.7 minutes.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The proportion of buses arriving in pairs fell from 21 per cent to 4 per cent.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The standard deviation of headway under the holding rule was 1.9 minutes.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the conclusion that the groyne redistributed sand rather than adding to the shore as a whole?",
+   "passage": "A groyne was completed in 1998 at a point midway along an eroding shore where sand moves steadily from north to south. Beach width was measured at four stations before construction and again ten years afterwards.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Station</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Beach width 1997 (m)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Beach width 2008 (m)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1 km north of groyne</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">41</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Immediately north</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">48</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Immediately south</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1 km south</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">33</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "Gains updrift matched by losses downdrift are what a redistribution looks like, and only the option reporting both directions at once shows that pattern. Naming the widest beach of 2008 gives a gain with no offsetting loss, which would be equally consistent with sand having been added to the coast.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The beach widened at both northern stations and narrowed at both southern ones over the same period.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The widest beach recorded in 2008 was the one immediately north of the groyne.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "All four stations measured between 30 and 34 metres in 1997.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The beach 1 km south of the groyne narrowed by 7 metres.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Current sent along a land telegraph line weakens with distance, and beyond a few hundred kilometres the receiving instrument no longer moves reliably. A relay is a sensitive instrument whose armature closes a second circuit fed by its own local battery, so that the feeble arriving current does no work except to operate a switch. A line fitted with relays at intervals can therefore be extended _____",
+   "difficulty": "MEDIUM",
+   "why": "Each relay starts the signal afresh from a local battery, so what limits the length is no longer the strength arriving at the far end but the provision of relays along the way. The option requiring an operator at every relay ignores that the relay is a switch worked by the arriving current itself.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "only for signals sent in a single direction.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "as far as relays and their batteries can be placed along it.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "only where an operator is stationed at each relay.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "at a lower cost per kilometre than a short line.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Sulphide minerals sit unaltered in a coal or metal deposit for as long as they are out of contact with air. Working the deposit exposes fresh sulphide surfaces in the roadways and in the waste heaps, and the pumping that keeps the workings dry admits air to them as well. When a mine closes and the pumps are stopped, water rises through those roadways and finds its way to the surface, so a closure is likely to be followed by _____",
+   "difficulty": "MEDIUM",
+   "why": "Closure floods roadways whose sulphide surfaces have been open to the air for years, and the rising water carries what has formed on them out to the surface. Predicting an immediate improvement ignores that the pumps had been keeping that water away from the streams all along.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "a discharge more acid than anything produced while the mine worked.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "the collapse of the roadways within a few weeks.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "a fall in the water table across the district.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "an immediate improvement in the streams nearby.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Heating coal out of contact with air drives off everything volatile in it and leaves coke behind. A nineteenth-century gasworks sold four things from that one _____ gas for lighting, coke for furnaces, tar for road dressing, and ammoniacal liquor for fertiliser.",
+   "difficulty": "MEDIUM",
+   "why": "The words before the blank make a complete statement announcing four products, and what follows is the list naming them, which the colon introduces. The semicolon would require another full sentence after it, and a run of noun phrases is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "operation; gas",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "operation, and gas",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "operation gas",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "operation: gas",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A sand mould is made in two boxes, and the pattern has to be drawn out of the sand before they are closed on one another. Anything that would lock the pattern in place &mdash; an undercut, a boss on the side of the casting, for _____ made as a separate piece of sand and set into the mould afterwards.",
+   "difficulty": "MEDIUM",
+   "why": "The interruption was opened with a dash and needs a matching dash to close it before the sentence resumes. Closing it with a comma leaves the opening dash without a partner and blurs where the interruption ends.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "instance; has to be",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "instance: has to be",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "instance &mdash; has to be",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "instance, has to be",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A bat in hibernation cools almost to the temperature of the cave and lives until spring on fat laid down in autumn. Rousing enough to fly costs several days' worth of that fat; a colony disturbed a few times over the winter may reach spring with nothing _____ the same disturbance in summer costs the animals very little.",
+   "difficulty": "MEDIUM",
+   "why": "Two complete statements meet at the blank, and the word joining them is an adverb rather than a conjunction, so the mark in front of it has to be a semicolon. A comma in that position leaves the two statements spliced together.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "left: however,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "left; however,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "left, however,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "left however,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Air is drawn through a colliery by a fan at the upcast shaft and finds its way to every working place through a system of doors and hanging cloth. A single door propped open short-circuits the current and leaves a whole district without _____ boys were once employed for no other purpose than to open a door for a tub and close it again.",
+   "difficulty": "MEDIUM",
+   "why": "Complete statements stand on both sides of the blank with no conjunction to join them, which is the semicolon's work. A comma alone between two full sentences leaves a splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "air young",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "air: and young",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "air; young",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "air, young",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Two alignments were put forward for the new tram route, one along the river and one over the hill. Of the two, the river alignment is the _____, though it serves fewer houses along the way.",
+   "difficulty": "MEDIUM",
+   "why": "Only two alignments are being compared, and a comparison between two takes the comparative form. The superlative would need at least three things to choose among.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "most short",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "shorter",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "shortest",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "more shorter",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The Post Office trained its telegraphists at a school in London and posted them wherever a circuit needed working. The two operators to _____ the night shift at Newcastle was given had each spent a year at that school.",
+   "difficulty": "MEDIUM",
+   "why": "The pronoun is the object of the preposition 'to', and the objective form is required after a preposition. The subjective form would be right only if the pronoun were doing the giving rather than receiving.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "whom",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "which",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "whose",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "who",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The two headings were driven towards each other from opposite banks and met four years after the first ground was broken. Surveyed from the surface every fortnight throughout the drive, _____",
+   "difficulty": "MEDIUM",
+   "why": "The opening phrase describes whatever was surveyed from the surface, and only the option beginning with the headings names something that could have been surveyed. Beginning with the engineers says that the engineers themselves were the object of the fortnightly survey.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "there was a difference of only fifty millimetres at the meeting.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "the engineers found the two headings only fifty millimetres apart at the meeting.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "the meeting showed the two headings only fifty millimetres apart.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the two headings proved to be only fifty millimetres apart at the meeting.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Steel contracts as it cools, and the outside of a quenched bar reaches the temperature of the bath long before the middle does. The core is still shrinking when the skin has stopped. _____ a section that changes thickness abruptly, or a sharp internal corner, is where a quench crack is most often found.",
+   "difficulty": "MEDIUM",
+   "why": "Cracks appearing where the section changes follow from the uneven shrinkage just described, which is a cause-and-effect relation. A contrastive transition would set the crack against the shrinkage when it is the shrinkage's result.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For this reason,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "An open pit can be worked with machines of a size no underground roadway would admit, and the cost of moving a tonne of rock in it is a fraction of the cost of moving one below ground. _____ every tonne of barren rock lying over the ore has to be moved as well, and the ratio of waste to ore climbs as the pit deepens and its walls step back.",
+   "difficulty": "MEDIUM",
+   "why": "The barren rock that must be shifted along with the ore works against the low cost per tonne just credited to open-pit working, so the transition marks a drawback. A consequence transition would make the rising waste ratio follow from the cheapness of moving rock rather than qualify it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The walls thrown across the landward approach to Constantinople in the fifth century stood in three lines, each higher than the one in front of it, with a flooded ditch beyond them all. An attacker who took the outer wall found himself in a narrow space commanded from above on both sides. _____ the city withstood every land assault brought against it for more than a thousand years, and fell at last to a besieger with cannon.",
+   "difficulty": "MEDIUM",
+   "why": "A thousand years of successful defence follows from the tiered walls and the trap between them, so the relation is cause and effect. A contrastive transition would set the record of the defence against the design that produced it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "As a result,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By contrast,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the heat-sensitive square changed what happens after a refrigerator failure. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Most vaccines lose potency if they are allowed to freeze or to rise above about eight degrees Celsius.</li><li>A dose that has lost potency looks exactly like one that has not.</li><li>Vials can carry a small square of heat-sensitive material that darkens irreversibly with cumulative exposure.</li><li>A health worker compares the square with a printed reference ring before giving the dose.</li><li>Millions of doses used to be discarded on suspicion after a refrigerator failure.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks what changed after a failure, and only the option joining the invisibility of spoilage to the saving of sound vials states the difference the indicator makes. Describing the square itself explains the device without saying what it altered in practice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because a spoiled dose is indistinguishable by eye from a sound one, a square that darkens with cumulative heat lets a worker keep the vials that are still good instead of discarding a whole batch on suspicion.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Vials can carry a small square of heat-sensitive material that darkens irreversibly with cumulative exposure.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A health worker compares the square with a printed reference ring before giving the dose.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Most vaccines lose potency if they are allowed to freeze or to rise above about eight degrees Celsius.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the shield succeeded where the earlier attempts under the river had failed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Marc Brunel watched a shipworm bore through timber behind a shell it pushed ahead of itself.</li><li>He patented a tunnelling shield in 1818: an iron frame divided into cells in which miners worked at the face.</li><li>The frame was pushed forward by screws and brickwork was built up immediately behind it.</li><li>The Thames Tunnel, driven with the shield, opened in 1843.</li><li>Earlier attempts to tunnel under the Thames had all been abandoned when the river broke in.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The earlier attempts ended when the river broke in, so the explanation has to show the ground never left unsupported, which only the option pairing the frame at the face with brickwork closing up behind it does. Naming the year the tunnel opened records the success without accounting for it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Marc Brunel watched a shipworm bore through timber behind a shell it pushed ahead of itself.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The Thames Tunnel, driven with the shield, opened in 1843.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "He patented a tunnelling shield in 1818: an iron frame divided into cells in which miners worked at the face.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because the iron frame held the ground at the face while brickwork closed up immediately behind it, no length of the bore was ever left open for the river to break into.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the grain size of the imported sand matters. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A nourishment scheme places sand dredged offshore onto an eroding beach.</li><li>The sand placed may be coarser or finer than the sand already there, depending on where it was dredged.</li><li>Waves carry finer sand offshore again within a season or two.</li><li>One beach given sand coarser than its own held its width for eleven years.</li><li>Nourishment does nothing to stop the process that removed the sand in the first place.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks why grain size matters, and only the option contrasting fine sand lost in a season with coarse sand holding for eleven years ties the size to the outcome. Observing that nourishment leaves the underlying process untouched is true whatever the grain size and so answers nothing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A nourishment scheme places sand dredged offshore onto an eroding beach.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Nourishment does nothing to stop the process that removed the sand in the first place.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The sand placed may be coarser or finer than the sand already there, depending on where it was dredged.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because waves carry fine sand offshore within a season or two while a beach given coarser sand held its width for eleven years, the size of the imported grains decides how long the work lasts.",
+     "isCorrect": true
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T20:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "In room-and-pillar working the men cut chambers out of a coal seam and leave a block of the seam standing at intervals to carry the roof. As much as half the coal in a panel may be locked up in those blocks, and they can be robbed on the retreat only where the roof is allowed to come down behind the men. Judged against the coal actually present, the method is therefore _____.",
+   "difficulty": "EASY",
+   "why": "Half the seam left standing in pillars, recoverable only where the roof is dropped, is coal the method never takes, so the blank names a cost in material left underground. The 'exhaustive' option claims the opposite, that the working removes everything the seam holds.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "wasteful",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "protective",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "exhaustive",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unpredictable",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A modern collider produces tens of millions of collisions a second, and no system could record them all. Fast electronics examine each event for a handful of coarse features and discard all but a few hundred, which are written to disk for later study. The physics such a detector can report is therefore limited by what its designers thought worth _____ in advance.",
+   "difficulty": "EASY",
+   "why": "The electronics throw nearly every event away and only the retained few hundred can ever be analysed, so the decision taken in advance is which events to save. The 'measuring' option misses that every event is examined briefly and only a few are preserved.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "keeping",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "measuring",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "funding",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "publishing",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A tunnel boring machine cuts rock at the head and erects a ring of concrete segments immediately behind it, so that the ground is supported before it has had time to move. Drill-and-blast advances in rounds, and the newly exposed rock stands bare until a lining crew reaches it. The machine's real advantage is thus not speed alone but the _____ of excavation and support.",
+   "difficulty": "EASY",
+   "why": "The machine places its lining directly behind the cutting head, so the two operations happen at the same moment rather than one after the other. The 'separation' option names the arrangement the passage attributes to the older method it is being contrasted with.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "novelty",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "simultaneity",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "separation",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "expense",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;resolve&rdquo; most nearly mean?",
+   "passage": "A bat hunting among foliage must separate the echo of a moth from the echoes of the leaves behind it, and the two return only a fraction of a millisecond apart. Species that hunt in dense cover emit very short calls of wide bandwidth, because a short call can <u>resolve</u> two echoes that a long one runs together. The cost is that a short call carries little energy and cannot be heard far away.",
+   "difficulty": "EASY",
+   "why": "The sentence contrasts a call that keeps two close echoes apart with one that runs them together, so the word names telling two returns apart. The 'firm decision' sense is a common meaning of the word, but the thing doing the work here is a call rather than a person.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To make a firm decision about a course of action.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To distinguish as separate.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "To break something down into simpler parts.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To settle a dispute between parties.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Waves arriving at an angle move sand along a beach in a series of small steps, and a timber groyne built across the beach halts that movement and piles sand up on its updrift side. The sand has not been created, only intercepted, and the beaches beyond the last groyne receive less than they did before. Works of this kind are therefore best judged _____.",
+   "difficulty": "EASY",
+   "why": "Sand held behind one groyne is sand withheld from the shore beyond it, so an assessment confined to the protected beach records only half the transaction. The option measuring the height of retained sand looks at exactly that protected beach and ignores the loss downdrift.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "by the height of the sand they retain",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "during the summer months only",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "by the cost of the timber used",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "over the whole stretch of coast they affect",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "The late Roman army in the east was paid in coin raised by taxation and quartered wherever it was needed. From the seventh century, with the wealthiest eastern provinces lost and the treasury much reduced, soldiers were instead settled on land in the provinces and drew their maintenance from it, serving when called. The districts so organised took their names from the units stationed in them, and their commanders came to hold civil as well as military authority.",
+   "difficulty": "EASY",
+   "why": "The passage moves from an army paid in cash to one settled on land and then notes that the districts were renamed and their commanders given civil powers, which is an account of a change together with its consequences. Nothing in it weighs the fighting quality of the two arrangements against each other.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To describe a change in how an army was supported and what that change did to provincial government.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that the seventh-century army was more effective than its predecessor.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To explain how taxes were assessed in the late Roman provinces.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To trace the career of a provincial commander.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "passage": "A stretch of coast can often be treated as a closed compartment: sand enters it from a river mouth or an eroding cliff, travels along it under the waves, and leaves it down a submarine canyon at the far end. Within such a compartment a loss at one place is usually a gain at another. Armouring a cliff protects the houses on top of it and at the same time cuts off the supply that fed the beaches downdrift, where the deficit appears some years later.",
+   "difficulty": "EASY",
+   "why": "The opening sentences describe the compartment as a balance sheet of sources and losses, and the last uses that balance to explain why armouring one cliff starves the beaches beyond it. No second method of protection is ever introduced for comparison.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It traces the history of coastal engineering in a single region.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It disputes the claim that sand travels along a coast.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It sets out a way of accounting for sand along a coast and then applies it to a particular intervention.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It compares two methods of protecting a cliff and recommends one of them.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "In several desert ant species certain workers never leave the nest. Nestmates feed them until the crop swells the abdomen to the size of a grape and the animal can no longer walk; it hangs from the ceiling of a deep chamber for months at a time. When forage fails, a worker strokes one of these swollen individuals and receives a drop of the stored liquid. The colony has in effect turned a run of good weeks into a store that neither dries out nor is carried off by others.",
+   "difficulty": "EASY",
+   "why": "The swollen workers are filled during plenty and drawn on when forage fails, and the closing sentence calls the arrangement a store, so the point is storage inside the bodies of nestmates. The claim that immobile ants are removed contradicts the passage, in which they are kept and fed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ant colonies in deserts are smaller than those in wetter regions.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Certain ants serve their colonies as living containers holding a surplus against lean periods.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Desert ants avoid foraging during the hottest part of the year.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Ants that can no longer walk are removed from the nest by their nestmates.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what makes the wanted mineral rise in a flotation cell?",
+   "passage": "Most metal ores contain a few per cent of the mineral wanted and a great deal of rock that resembles it. Flotation exploits a difference in wetting: the crushed ore is stirred into water with a reagent that clings to the mineral surface and makes it repel water, and air blown through the pulp carries those particles up in a froth that is skimmed off. The rock, still wetted, sinks. Ore bodies too poor for any earlier method became workable within a decade of the process being introduced.",
+   "difficulty": "EASY",
+   "why": "The text attributes the separation to a reagent that clings to the mineral and makes it repel water so that blown air lifts it, not to any difference in weight. The option about lightness names a property the passage never claims and would leave the reagent with nothing to do.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A reagent makes its surface repel water so that air bubbles carry it up.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It dissolves in the water and is drawn off with the froth.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The stirring throws the finer particles to the surface.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It is lighter than the rock that accompanies it.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from <em>The Ride of Marko</em> most effectively illustrates the scholar's claim?",
+   "passage": "In <em>The Ride of Marko</em>, an epic recorded from a village singer in 1934, the hero is given a small set of descriptive phrases that recur whenever his name falls at a particular place in the line. A scholar argues that these phrases are chosen for the space they fill rather than for what they say about the hero at that moment.",
+   "difficulty": "EASY",
+   "why": "The claim needs the same phrase attached to the hero when it has no bearing on what he is doing, and only the quotation calling him sharp-sworded while he sleeps and calls for wine shows that. The quotation in which he actually draws the sword makes the phrase fit the moment, which is what the claim denies.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;The singer asked for silence, and the hearth was banked before he began.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Marko's mother wept when the horse came home without him.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;Marko of the sharp sword slept until noon, and Marko of the sharp sword woke and called for wine.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;Marko drew his sharp sword, and the horsemen fell back from the ford.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Vandersteen's argument?",
+   "passage": "Workers in an ant colony switch between nursing, foraging and nest repair, and the proportions shift within hours when the colony's needs change. Entomologist Piet Vandersteen argues that no worker is directed to a task: each responds to a local cue once that cue crosses its own threshold, and the thresholds differ between individuals.",
+   "difficulty": "EASY",
+   "why": "Thresholds that differ between individuals predict that when the repairers are gone the gap is filled first by the workers least readily drawn to their previous job, which is what the finding reports. Faster repair in larger colonies follows from having more workers of every kind and is just as consistent with central direction.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Workers that forage are on average older than workers that nurse.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A queen removed from a colony stops laying within a day.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Removing the workers that repair the nest is followed by nurses taking up repair, beginning with those that had previously been slowest to nurse.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Colonies with more workers repair damage to the nest faster than colonies with few.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from <em>The Ledger of Small Risks</em> most effectively illustrates the critic's claim?",
+   "passage": "In the novel <em>The Ledger of Small Risks</em>, a clerk in a marine insurance office spends his days pricing voyages he will never make. A critic argues that the novel presents his work as an exercise of imagination rather than of calculation.",
+   "difficulty": "EASY",
+   "why": "The claim is that the pricing is an act of picturing, and only the quotation in which the clerk must see the plates, the master and an ice-strewn voyage that has not happened shows him doing so. The quotation about a rate unchanged for eleven years presents the work as the application of a settled figure, which is the calculation the claim is set against.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Before I set a rate I had first to see the ship: her plates, her master, the ice off Newfoundland in March, the whole of a voyage that had not yet happened.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;The premium was three and a half per cent, which was what the office had charged on that route for eleven years.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;I reached the office at nine and left it at six, and the ledgers were ruled in red and black.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;My chief said that a clerk who could not add had no business in an underwriting room.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "An infection spreads while an infectious person meets, on average, more than one susceptible person before recovering. Vaccination takes people out of the susceptible pool, and once that pool is small enough each case gives rise to fewer than one further case and the chain dies out. A disease that spreads readily needs a larger fraction of the population immune than one that spreads with difficulty, which means the proportion that must be vaccinated is fixed by _____",
+   "difficulty": "EASY",
+   "why": "The passage makes the required fraction rise with how readily the disease spreads, so the threshold follows from the infection's own transmissibility. Severity governs how much harm each case does but never enters the count of secondary cases the argument turns on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the number of people already vaccinated elsewhere.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "how long immunity from the vaccine lasts.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "how contagious the disease itself is.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "the severity of the illness it causes.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Power lost as heat in a transmission line falls as the square of the current carried, and the same power can be delivered at a lower current by raising the voltage. A transformer changes voltage with almost no loss and has no moving parts, but it will do nothing at all with a steady current. In the 1890s a scheme that generated at a moderate voltage, transmitted at a high one and delivered at a low one could therefore be built only with _____",
+   "difficulty": "EASY",
+   "why": "The transformer is what makes three different voltages possible in one scheme, and it does nothing with a steady current, so the supply has to be one that alternates. Large conductors would cut the loss without any change of voltage and so would leave the transformer, and the scheme described, unnecessary.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "insulation made from natural rubber.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "a supply whose current reverses many times a second.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "conductors of unusually large cross-section.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "generating stations placed close to the consumers.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "General average is the oldest rule in marine insurance and long predates the writing of policies. A loss deliberately incurred to save the whole _____ by every interest in it, in proportion to the value each has at stake.",
+   "difficulty": "EASY",
+   "why": "The words before the blank form the subject of the verb that follows, and no mark of punctuation separates a subject from its verb. The semicolon and the colon additionally require a complete sentence on the left, which a subject alone is not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "venture, is borne",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "venture; is borne",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "venture: is borne",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "venture is borne",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The jurists whose opinions Justinian's commissioners condensed had written across four centuries and disagreed with one another freely. The commissioners cut the excerpts to a fiftieth of their original _____ they gave the result the force of law and forbade any commentary on it.",
+   "difficulty": "EASY",
+   "why": "Two independent clauses joined by the coordinating conjunction 'and' take a comma in front of that conjunction. Neither the semicolon nor the colon is used before a coordinating conjunction, and omitting the comma leaves two full clauses unseparated.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "length, and",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "length; and",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "length: and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "length and",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A trail laid by a foraging ant evaporates within minutes unless it is walked again, which gives the colony a way of forgetting. A path to a source that has been emptied loses the one thing that keeps it in _____ the feet of ants that are still finding food at the end of it.",
+   "difficulty": "EASY",
+   "why": "The words in front of the blank make a complete statement, and what follows is a noun phrase naming the one thing just referred to, which is a colon's use. The semicolon would demand an independent clause after it, and a noun phrase is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "existence the",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "existence: the",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "existence; the",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "existence, and the",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A bubble chamber holds liquid hydrogen just below its boiling point, and dropping the pressure for a few milliseconds leaves it briefly ready to boil anywhere. Although the chamber has to be photographed and reset before another expansion can be _____ physicists worked through millions of such photographs in the 1960s and found several new particles among them.",
+   "difficulty": "EASY",
+   "why": "'Although' opens a clause that cannot stand alone, and such a clause placed in front of the main statement is separated from it by a comma. The semicolon would require an independent clause on both sides of it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "made: physicists",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "made and physicists",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "made, physicists",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "made; physicists",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A marine risk is rarely carried by one office alone. The underwriters on the slip, together with the broker who placed it, _____ a copy of every survey report as soon as it is issued.",
+   "difficulty": "EASY",
+   "why": "The subject is the plural 'underwriters', and the phrase beginning 'together with' neither adds to the subject nor changes its number. The singular verb would agree with the broker, who is named only inside that interrupting phrase.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "receive",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "has received",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "receives",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "is receiving",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The substation at the edge of the town was commissioned in 1961 and has been enlarged twice since. Since the aluminium works opened on the far side of the valley, demand on the feeder _____ in every year but one.",
+   "difficulty": "EASY",
+   "why": "The clause opening with 'Since' names a point in the past, and the counting runs from that point up to the present, which is what the present perfect expresses. The simple past would close the period off in the past and leave the present out of it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "had risen",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "rises",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "rose",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "has risen",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The counters that surround the target are replaced on a rolling schedule, since a counter left in the beam too long loses efficiency. A number of the counters in the forward array _____ changed during the shutdown last winter.",
+   "difficulty": "EASY",
+   "why": "'A number of' followed by a plural noun takes a plural verb, because the phrase means several of the counters rather than the count itself. The singular would be right only for 'the number of', which names a figure.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "were",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "is",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "An insurer that offers one price to everyone attracts most eagerly those who know themselves to be at greatest risk, while the healthy and the careful decide the cover is not worth its cost and stay out. The pool that remains is worse than the average the price was set for. _____ the price has to rise, which drives out the next healthiest group in turn.",
+   "difficulty": "EASY",
+   "why": "The rise in price follows from a pool that has become worse than the one the price was calculated for, which is cause and effect. A contrastive transition would set the increase against the deterioration when it is its direct outcome.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "As a result,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A boring machine assembled underground for one contract is built for a particular diameter and a particular kind of ground, and it can drive a bore far faster than any other method. _____ a machine that meets a fault zone it was not designed for can be held up for months while a chamber is dug by hand around its cutting head.",
+   "difficulty": "EASY",
+   "why": "Months lost to hand excavation stand against the speed just credited to the machine, so the transition concedes a drawback. Treating the second sentence as a restatement would be wrong, since it introduces a new circumstance rather than rephrasing the first.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Similarly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A detector can be made more sensitive by putting more material in the path of the beam, since a particle that crosses more matter is likelier to interact and be seen. _____ every extra layer also scatters the particles the experiment is trying to track, and the measurement of direction grows worse as the measurement of energy grows better.",
+   "difficulty": "EASY",
+   "why": "The scattering works against the sensitivity gained from the same material, so the transition marks a countervailing effect. A result transition would present the worse direction measurement as the purpose of adding material, when the passage sets it against the gain.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For this reason,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "In fact,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how such a tradition can be at once fixed and variable. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The epic of Sunjata is performed in Mande West Africa by hereditary specialists trained from childhood.</li><li>No two performances agree in length, and one may run from a single evening to a week.</li><li>Certain praise-names, genealogies and proverbs recur in the same wording in every version recorded.</li><li>Performers describe themselves as transmitting rather than composing.</li><li>Written versions published since the 1960s freeze one performance out of many.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal calls for the two properties to be reconciled, and only the option setting the varying length against the wording that never varies shows what stays constant and what does not. Noting that written versions freeze one performance describes what publication does rather than how the tradition itself works.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The epic of Sunjata is performed in Mande West Africa by hereditary specialists trained from childhood.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Written versions published since the 1960s freeze one performance out of many.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Although no two performances agree in length, the praise-names, genealogies and proverbs recur word for word in every version recorded, so what is fixed is the material rather than the whole.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Performers describe themselves as transmitting rather than composing.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what a pumped-storage station does for a grid despite the energy it loses. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Demand on a grid rises sharply in the early evening and falls away overnight.</li><li>Nuclear and large coal plant is slow and costly to start and to stop.</li><li>A pumped-storage station pumps water up to a high reservoir when demand is low.</li><li>It can release that water through turbines within about a minute when demand is high.</li><li>Roughly a quarter of the energy is lost over the round trip.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal requires the loss to be set against what is gained, and only the option connecting inflexible plant to output stored overnight and returned in a minute does that. Stating the size of the loss on its own names a cost with no benefit to weigh it against.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Roughly a quarter of the energy is lost over the round trip.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because large plant is slow and costly to start and stop, a station that stores cheap overnight output and returns it within a minute at the evening peak is worth the quarter of the energy the round trip costs.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Demand on a grid rises sharply in the early evening and falls away overnight.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A pumped-storage station pumps water up to a high reservoir when demand is low.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the courts moved against a method that was working so well. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Hydraulic mines in California turned water jets on gravel banks to wash out the gold they held.</li><li>A single nozzle could move more gravel in a day than a hundred men with shovels.</li><li>The washed gravel travelled down the rivers and settled across the farmland of the valleys below.</li><li>Riverbeds rose until towns that had never flooded were flooded in ordinary winters.</li><li>A federal court forbade the discharge of mining debris into the rivers in 1884.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal asks what drove the courts to act against an effective method, and only the option tracing the nozzle's output to raised riverbeds and flooded towns supplies the harm. Stating that a court forbade the discharge in 1884 reports the decision without the reason behind it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because a single nozzle shifted more gravel than a hundred men could, the debris it sent downstream raised the riverbeds until ordinary winters flooded towns that had never flooded before.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A federal court forbade the discharge of mining debris into the rivers in 1884.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A single nozzle could move more gravel in a day than a hundred men with shovels.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Hydraulic mines in California turned water jets on gravel banks to wash out the gold they held.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T20:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A generating station is built for the highest demand it will ever have to meet, and that peak may last an hour on a winter evening. For much of the rest of the year a good deal of the plant stands still. The cost of each unit sold therefore depends less on the price of fuel than on how _____ the machinery is, which is why utilities have long offered cheap night tariffs.",
+   "difficulty": "HARD",
+   "why": "Plant that stands still for most of the year spreads its cost over few units, and the cheap night tariff exists to keep it working, so the blank names how much of the time the machinery earns. The 'idle' option names the very condition the tariff is designed to reduce.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "widely admired",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "fully used",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "newly built",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "idle",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Hammering a copper sheet makes it harder and stiffer, and past a certain point it will crack rather than bend. Heating the sheet to a dull red and letting it cool allows the strained grain structure to re-form, and the metal becomes workable again. A coppersmith raising a bowl from a flat disc therefore has to _____ the hammering several times before the shape is finished.",
+   "difficulty": "HARD",
+   "why": "The metal can be worked again only after it has been heated and allowed to cool, so the hammering must stop and then resume, repeatedly. The 'abandon' option would leave the bowl unmade, whereas the passage has the work carried through to a finished shape.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "interrupt",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "abandon",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "conceal",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "accelerate",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "An army ant colony builds no nest. At the end of a day's march the workers link legs and hooked claws until the whole colony hangs as a mass the size of a football, with the queen and the brood inside it and galleries running through it. The structure goes up in an hour and comes down the next morning, so the colony's shelter is entirely _____.",
+   "difficulty": "HARD",
+   "why": "A shelter assembled in an hour out of the ants' own bodies and dismantled the following morning lasts no longer than the halt it serves. The 'underground' option is ruled out by a structure that hangs in the open air.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "underground",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "inherited",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "decorative",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "provisional",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;dominant&rdquo; most nearly mean?",
+   "passage": "In a game of this kind each player chooses without knowing what the other has chosen. Suppose that whatever the second player does, the first earns more by confessing than by keeping silent; confessing is then a <u>dominant</u> strategy for that player, and no reasoning about the other's likely choice is needed to justify it. Games in which both players hold such a strategy are the easiest to analyse and often the most discouraging to read.",
+   "difficulty": "HARD",
+   "why": "The sentence defines the term as it uses it: confessing pays more no matter what the other player picks, which is a comparison between two options rather than a rank. The 'highest position in a hierarchy' sense is the commonest meaning of the word, but nothing in the passage arranges the strategies in a hierarchy.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Better than the alternative whatever the other party does.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Occurring most frequently within a population.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Exercising control over another person.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Occupying the highest position in a hierarchy.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The incendiary the Byzantine fleet pumped at enemy ships burned on water and could not be put out with it. The recipe was held by a small number of families and never set down in full; one emperor advised his son to tell foreign envoys only that an angel had brought it. By the time the city fell the formula had been _____, and no later account reproduces it.",
+   "difficulty": "HARD",
+   "why": "A recipe kept within a few families and deliberately never written down complete is one that can be lost, and the passage adds that no later account reproduces it. The 'published' option contradicts the secrecy the rest of the text describes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "improved",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "translated",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "forgotten",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "published",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "passage": "Sinking a shaft through water-bearing gravel was for a long time impossible, because the ground flowed into the excavation as fast as it could be dug out. <u>Sealing the working chamber and raising the air pressure inside it until it balances the water outside holds the ground back and lets men work dry.</u> The men themselves paid for it: coming back to normal pressure too quickly left nitrogen coming out of solution in their blood, and the crippling pains that followed were common on such works until slow decompression was imposed.",
+   "difficulty": "HARD",
+   "why": "The pressurised chamber solves the inflowing-ground problem named first and is also what puts nitrogen into the men's blood, so the sentence stands between the difficulty and its cost. Calling it a concession that the ending removes reverses the structure, since the final sentence adds a harm rather than cancelling one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It concedes a limitation that the final sentence removes.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It presents the technique that answered the problem stated before it and produced the hazard described after it.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It offers evidence that water-bearing gravel cannot be excavated safely.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It defines a term introduced in the opening sentence.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Charles Wilson built a chamber in which moist air could be expanded suddenly, hoping to make clouds indoors. <u>A charged particle crossing the chamber strips electrons from the molecules it meets, and each ion left behind serves as a seed on which a droplet can form.</u> What the expanded air produced was not a cloud but a thin line of droplets marking the path of something invisible, and the instrument became the first to make a single particle's track visible.",
+   "difficulty": "HARD",
+   "why": "Ions left along the particle's path give droplets somewhere to condense, which is exactly what turns an invisible passage into the visible line the closing sentence reports. The text never puts the droplets in doubt; it presents them as the instrument's achievement.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It questions whether the droplets Wilson observed were genuine.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It describes the method Wilson used to expand the air in the chamber.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It states a conclusion that the rest of the text goes on to qualify.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It explains the mechanism by which the track described afterwards becomes visible.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The gold coin struck at Constantinople from the fourth century held its weight and its fineness almost unchanged for some seven hundred years, at a time when most western coinages were repeatedly debased. Merchants from Alexandria to the Baltic priced goods in it and took it without weighing. The advantage to the issuing state lay less in the metal than in the demand: a coin accepted on sight anywhere is one that foreigners will hold, and holding it is a loan to the state that issued it.",
+   "difficulty": "HARD",
+   "why": "The passage joins seven centuries of unchanged fineness to acceptance from Alexandria to the Baltic and then to the benefit the issuer drew from foreigners holding the coin. The claim about weighing is contradicted by the statement that merchants took it without weighing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The gold used in the coin was mined within the issuing state's own borders.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A coinage of constant fineness was accepted far beyond its issuer's territory and benefited the issuer accordingly.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Merchants of the period preferred to weigh coins rather than to count them.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Western rulers debased their coinages in order to imitate Constantinople.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Several firms bidding for the right to drill a tract each estimate what it holds, and their estimates scatter around the true value. The tract goes to whoever estimated highest, and the highest estimate in a scattered set is more likely to be too high than too low. A firm that bids what it believes the tract is worth will therefore tend to overpay on the occasions when it wins, and an experienced bidder shades its offer below its own estimate for that reason.",
+   "difficulty": "HARD",
+   "why": "The tract goes to the highest estimate, and the highest of a scattered set is likelier to be an overestimate, which is why the experienced bidder offers less than it believes the tract is worth. The claim that estimates are usually accurate is ruled out by the scatter the whole argument depends on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Firms bidding for drilling rights rarely have any information about the tract.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Auctions with many bidders raise more money than auctions with few.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A firm's estimate of what a tract holds is usually accurate.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Winning such an auction is itself a sign that the winner's estimate was too high, so bids should be shaded downward.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Okonkwo's argument?",
+   "passage": "A detector recorded more events of a particular kind than the accepted theory predicts. Physicist Ana Okonkwo argues that the excess arises in the apparatus itself rather than in the collisions.",
+   "difficulty": "HARD",
+   "why": "An excess produced by the collisions would show in any instrument watching that beam, so its absence in a differently built detector on the same beam points to the first apparatus as the source. A steady rate through the run is equally expected whether the cause lies in the instrument or in the collisions and separates nothing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The detector's calorimeter was rebuilt during a shutdown two years before the run.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A second detector of a different design, running on the same beam over the same period, recorded no excess of the same events.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The excess appeared in every month of the run at roughly the same rate.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The accepted theory has been confirmed to high precision in other experiments.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from <em>The Deep Seam</em> most effectively illustrates the critic's claim?",
+   "passage": "In the novel <em>The Deep Seam</em>, a young engineer is sent to manage a colliery where his father had worked at the face. A critic argues that the narrator's technical vocabulary functions in the book as a way of holding the place at a distance rather than of describing it.",
+   "difficulty": "HARD",
+   "why": "The claim requires the technical language to stand in the way of something the narrator will not say, and only the quotation setting a measured section against the years his father knelt in it does both at once. The plain description of the seam and the roof uses the same vocabulary with nothing being withheld.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;The seam ran forty inches of clean coal over a dirt band, and the roof above it was good.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;My father's boots were still standing by the door of the shed.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;The winding engine had been rebuilt twice since the pit was sunk.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;I recorded the section as forty inches of clean coal over a dirt band, and did not write down that my father had knelt in it for nineteen years.&rdquo;",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support Reinholt's argument?",
+   "passage": "A horseshoe bat's echoes return shifted upward in frequency because the animal is flying towards the target, and the size of the shift changes constantly. Neuroethologist Tomas Reinholt argues that the bat lowers the frequency of its outgoing call by exactly the amount of the shift, so that the returning echo always arrives in the narrow band its ear is best tuned to.",
+   "difficulty": "HARD",
+   "why": "Imposing an artificial shift and watching the animal cancel it with an equal drop in its own call is the direct test of a compensation being made, and the echo held steady is the predicted result. The width of the sensitive band establishes only that a narrow band exists, not that the bat keeps its echoes inside it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Horseshoe bats emit calls of longer duration than bats that hunt in the open.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The ear of a horseshoe bat is most sensitive within a band about two hundred hertz wide.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Horseshoe bats hunt insects that beat their wings rapidly.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A bat flown towards a loudspeaker that returned artificially raised echoes lowered its call by the amount of the artificial rise, holding the echo at a constant frequency.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A tunnel driven through sound rock needs no lining to hold the roof up: the rock above the opening will arch and carry itself, provided the blocks close to the surface of the excavation do not loosen and drop out first. Steel bolts grouted into holes drilled several metres into the roof clamp those blocks to the mass behind them. Support of this kind therefore works by _____",
+   "difficulty": "HARD",
+   "why": "The rock is described as arching and supporting itself once the loose blocks at the surface are held in place, and holding them is all the bolts do. The option about adding strength the rock lacks misstates the premise, since the rock is sound and already capable of carrying the load.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "helping the rock carry its own load rather than replacing it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "sealing the excavation against water.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "spreading the load onto the floor of the tunnel.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "adding strength that the rock itself lacks.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "In a matching scheme of this kind, applicants apply to their first choice; each institution provisionally holds the best applications it has so far and rejects the rest; and rejected applicants apply to their next choice, the process repeating until nobody is left to apply. An institution never has to commit before the end, and an applicant is never turned away by a place that would rather have had them. Applicants in such a scheme therefore have no reason to _____",
+   "difficulty": "HARD",
+   "why": "Because every holding is provisional and no applicant is rejected by a place that would prefer them, putting a likelier institution first can only forfeit the better outcome and can never protect it. Applying to several institutions is exactly what the procedure requires, so there is every reason to do it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "apply to more than one institution.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "accept the place they are finally offered.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "submit their applications early in the process.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "list a safer institution ahead of the one they most want.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "An immersed tube is not bored at all. Lengths of tunnel are built in a dry dock, floated out to the crossing with their ends sealed, and sunk into a trench dredged in the river _____ the joints are made underwater and the trench is backfilled over the finished tube.",
+   "difficulty": "HARD",
+   "why": "Two complete statements meet at the blank with no conjunction between them, and the semicolon is the mark that joins such a pair. The comma on its own produces a splice, and a conjunction after a colon puts one where that mark does not take it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "bed, the",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "bed the",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "bed: and the",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "bed; the",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The cars on the surviving San Francisco lines are pulled by a steel rope that runs in a slot beneath the street at a constant nine and a half miles an hour. The gripman, the member of the crew who works the lever closing a pair of jaws on that moving _____ the car by taking hold of the rope and stops it by letting go.",
+   "difficulty": "HARD",
+   "why": "The description beginning 'the member of the crew' was opened with a comma and must be closed with a matching comma before the verb belonging to the subject. Leaving the mark out runs the description straight into the predicate.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "rope starts",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "rope, starts",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "rope; starts",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "rope: starts",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A street fire-alarm box of the older kind held a clockwork mechanism and a handle and nothing else. Because pulling the handle set the clockwork tapping out that box's own number on a wire running to the central _____ the officer on duty learned which corner the alarm had come from without a word being spoken.",
+   "difficulty": "HARD",
+   "why": "The clause opening with 'Because' cannot stand on its own and is closed off with a comma before the main statement begins. Both the semicolon and the colon require a complete sentence in front of them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "station, the",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "station; the",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "station: the",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "station and the",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Faced with a sea wall that would have to be rebuilt every generation, an English estuary authority took a different course in 2002. Breaching the old embankment at a chosen point and letting the tide back onto two hundred hectares of former _____ the authority created a marsh that absorbs wave energy and needs no maintenance at all.",
+   "difficulty": "HARD",
+   "why": "The opening phrase runs from 'Breaching' to the blank and must be closed with a comma before the main statement begins. The semicolon and the colon each need a complete sentence in front of them, and a participial phrase is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "farmland, the",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "farmland; the",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "farmland: the",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "farmland and the",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A player who cooperates while the other defects does worst of the four possible outcomes, and the arithmetic of the game is what makes the trap. The payoff to a player who cooperates is in every case lower than _____",
+   "difficulty": "HARD",
+   "why": "The sentence compares one payoff with another, so the second term has to name a payoff rather than a person, and the pronoun standing in for 'the payoff' supplies it. Naming the player compares a payoff with a person, which is not a comparison the sentence can make.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "defecting.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "a player who defects.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "that of a player who defects.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "when a player defects.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Repair of a breach in the nest wall begins within minutes and stops as soon as the damage has been made good. Soil is carried to the gap a grain at a time in the _____ mandibles, and an opening the width of a hand can be closed over in an afternoon.",
+   "difficulty": "HARD",
+   "why": "Many ants are at work and the mandibles belong to those ants, so the plural noun takes an apostrophe after its s. The singular possessive would mean a single worker, and the plain plural cannot show possession at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "workers",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "worker's",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "workers'",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "workers's",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A hot-metal foundry runs to a timetable that nothing is allowed to disturb. Once the furnace is tapped, the metal has to be carried to the moulds without a pause, poured at a steady rate, and _____ before the boxes can be knocked out.",
+   "difficulty": "HARD",
+   "why": "The three things the metal must undergo all follow 'has to be', and the first two are past participles, so the third has to be one as well. The gerund and the infinitive both break the series the sentence has set up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "to cool slowly",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "cooling slowly",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "left to cool slowly",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "it cools slowly",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A flat fare is simple to collect and simple to explain, and it needs no equipment at the exit of a station. _____ it charges the same for a journey of two stops as for one across the whole system, and the short-distance passengers a network most wants to attract are the ones it overcharges.",
+   "difficulty": "HARD",
+   "why": "Overcharging the short-distance passenger works against the simplicity just praised, so the transition marks a drawback. A consequence transition would make the simplicity the cause of the mispricing, which the passage does not claim.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In short,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Likewise,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Every generator on an interconnected system turns in step with every other, and a machine that begins to fall behind draws power from the rest and is pulled back into step. The steadiness of any one region is thus a property of the whole network rather than of that region. _____ a disturbance large enough to break the lock in one place can travel across the interconnection in seconds, and operators in an undamaged region may find their own machines tripping.",
+   "difficulty": "HARD",
+   "why": "Machines held in step with one another are what allow a disturbance in one region to reach the machines of another, so the closing sentence states the outcome of what precedes it. A contrastive transition would set the spread of the disturbance against the coupling that carries it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "As a result,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:N3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "An overhead telegraph wire strung on poles could be repaired by a lineman with a ladder, and a fault was usually found within a day. _____ a fault in a buried cable gave no sign at all of where it lay, and the engineers had to measure the resistance from each end and calculate the distance before a spade was put into the ground.",
+   "difficulty": "HARD",
+   "why": "The buried cable behaves in the opposite way to the overhead wire that could simply be walked and inspected, so the two cases are being set against each other. Presenting the buried cable as an example would suggest it illustrates the ease just described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In addition,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Consequently,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the photograph showed the particle to be positive and light rather than a proton. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Carl Anderson photographed cosmic-ray tracks in a cloud chamber placed in a magnetic field in 1932.</li><li>The field bends a positive particle one way and a negative particle the other.</li><li>A lead plate across the middle of the chamber slowed any particle that passed through it.</li><li>One track curved as a positive particle would, and curved more sharply after the plate than before it.</li><li>The curvature was far too great for a proton of that energy.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks how the picture established both facts at once, and only the option using the plate to fix the direction and the tightness of the curve to exclude a proton does so. Stating that the field bends the two signs differently gives the principle without showing which way the particle was going.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Carl Anderson photographed cosmic-ray tracks in a cloud chamber placed in a magnetic field in 1932.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because the sharper curve after the lead plate fixed the direction of travel, the sense of the bending identified the charge as positive, while the tightness of the curve ruled out a proton of that energy.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The field bends a positive particle one way and a negative particle the other.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A lead plate across the middle of the chamber slowed any particle that passed through it.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how later designs cut the amount of equipment an automatic exchange needed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A manual exchange required an operator to look up or remember every subscriber's number.</li><li>Almon Strowger patented an automatic switch in 1891.</li><li>The switch stepped through a bank of contacts under pulses sent from the caller's own dial.</li><li>The earliest automatic exchanges gave every subscriber a switch of his own.</li><li>Most subscribers' lines are in use for only a few minutes in the day.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks how the equipment was reduced, and only the option joining idle lines to switches shared among subscribers states both the change and its justification. Giving the date of Strowger's patent identifies the invention without touching the later economy.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Almon Strowger patented an automatic switch in 1891.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The switch stepped through a bank of contacts under pulses sent from the caller's own dial.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Because most lines are in use for only a few minutes in the day, later designs shared a small number of switches among many subscribers instead of providing one for each.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A manual exchange required an operator to look up or remember every subscriber's number.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T20:R5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what Halley's table made possible that had not been possible before. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Life annuities in seventeenth-century Europe were commonly sold at one price whatever the buyer's age.</li><li>Edmond Halley obtained the register of births and burials kept at Breslau, which recorded age at death.</li><li>From it he built a table showing how many of a thousand people born survive to each year of age.</li><li>The table allowed the worth of payments continuing for the rest of a named person's life to be calculated.</li><li>Governments went on selling age-blind annuities for decades after the table was published.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks what became possible, and only the option joining the survivorship figures to the pricing of a lifelong stream of payments states a new capability. Noting that governments went on selling age-blind annuities reports what the table failed to change.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because the table showed how many of a thousand people born survive to each year of age, the worth of payments continuing for the rest of a named person's life could be calculated for the first time.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Life annuities in seventeenth-century Europe were commonly sold at one price whatever the buyer's age.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Edmond Halley obtained the register of births and burials kept at Breslau, which recorded age at death.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Governments went on selling age-blind annuities for decades after the table was published.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "At a coal face two teams fill tubs during one shift. The hewing team fills 3 more tubs than twice the number the packing team fills, and the two teams fill 84 tubs between them. Each tub holds 0.45 tonnes. How many tonnes does the hewing team fill during the shift?",
+   "difficulty": "MEDIUM",
+   "check": "p + (2p+3) = 84 gives p = 27, so the hewing team fills 57 tubs and 57 lots of 0.45 is 25.65 tonnes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12.15",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "24.30",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "25.65",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "37.80",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A scrap yard takes in a 15-tonne load made up only of cast iron and copper. Cast iron fetches $60 a tonne and copper fetches $130 a tonne, and the whole load fetched $1,180. The yard is charged $18 for every tonne of copper it has to sort out. How many dollars did the yard keep after that sorting charge?",
+   "difficulty": "MEDIUM",
+   "check": "60(15-u) + 130u = 1,180 gives u = 4 tonnes of copper, and 1,180 - 4(18) = 1,108.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$1,036",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$1,108",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "$1,162",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$1,180",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The charge for hiring a dockside crane is a linear function of the number of hours the crane is used. A 5-hour hire cost $310 and a 12-hour hire cost $618. For how many hours can the crane be hired for $750?",
+   "difficulty": "MEDIUM",
+   "check": "The hourly part is 308/7 = 44 and the standing part is 310 - 5(44) = 90, so (750-90)/44 = 15 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "17",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "22",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The distance a tunnelling shield has driven is a linear function of the number of lining rings erected behind it. After 40 rings the shield had driven 96 metres, and after 105 rings it had driven 252 metres. How many rings must be erected for the shield to have driven 420 metres?",
+   "difficulty": "MEDIUM",
+   "check": "156 metres over 65 rings is 2.4 metres a ring, and 40(2.4) = 96 leaves no constant, so 420/2.4 = 175.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "150",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "175",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "187",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "210",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A dockside crane may lift no more than 9.5 tonnes at one time. The lifting beam and chains together have a mass of 1,180 kilograms, and each bale of sorted scrap has a mass of 640 kilograms. What is the greatest number of bales the crane can lift at one time?",
+   "difficulty": "MEDIUM",
+   "check": "9,500 - 1,180 = 8,320 kilograms are left for bales, and 8,320/640 = 13 exactly.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A foundry pours wheel castings and pipe castings from a single melt. Each wheel casting takes 4 kilograms more iron than each pipe casting. A melt that filled 9 wheel moulds and 14 pipe moulds used 634 kilograms of iron. How many kilograms of iron does one wheel casting take?",
+   "difficulty": "MEDIUM",
+   "check": "9(q+4) + 14q = 634 gives 23q = 598 and q = 26, so a wheel casting takes 30 kilograms.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "30",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "34",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A pattern maker starts from a square board of side \\(2x-5\\) centimetres and cuts from it a square hole of side \\(x-8\\) centimetres. Which expression gives the area of the board that remains, in square centimetres?",
+   "difficulty": "MEDIUM",
+   "check": "(2x-5)^2 is 4x^2-20x+25 and (x-8)^2 is x^2-16x+64, and the difference is 3x^2-4x-39.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(3x^{2}-4x+89\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3x^{2}-36x+89\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(5x^{2}-36x+89\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3x^{2}-4x-39\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A scrap baler's daily output, in tonnes, when the machine is run at s strokes each minute is modelled by \\(T(s)=-2s^{2}+72s-160\\). What is the greatest daily output, in tonnes, that this model gives?",
+   "difficulty": "MEDIUM",
+   "check": "The greatest value is at s = 72/4 = 18 strokes, and -2(324) + 72(18) - 160 = 488.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "392",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "440",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "464",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "488",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The floor of a spoil skip at a tunnel heading is a rectangle whose length is 3 metres greater than its width, and its area is 54 square metres. What is the width of the floor, in metres?",
+   "difficulty": "MEDIUM",
+   "check": "w(w+3) = 54 gives w^2 + 3w - 54 = 0, whose positive root is 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "12",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A foundry sizes the runner that feeds a mould by the rule \\(d=14\\sqrt[3]{m}\\), where d is the diameter of the runner in millimetres and m is the mass of the casting in kilograms. A casting needs a runner 56 millimetres in diameter. What is the mass of that casting, in kilograms?",
+   "difficulty": "MEDIUM",
+   "check": "14 times the cube root of m is 56, so the cube root of m is 4 and m is 64.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "64",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "125",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "216",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A colliery's total output up to and including week n is modelled by \\(f(n)=n^{2}+6n\\) hundred tonnes. For which value of n does week n+1 by itself account for 39 hundred tonnes?",
+   "difficulty": "MEDIUM",
+   "check": "f(n+1) - f(n) works out to 2n + 7, and 2n + 7 = 39 gives n = 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A pattern maker's core allowance, in square centimetres, is written as \\((x+6)(x-2)-(x-3)(x+4)\\), where x is a length in centimetres. Which expression is equivalent to that allowance?",
+   "difficulty": "MEDIUM",
+   "check": "The first product is x^2+4x-12 and the second is x^2+x-12, so the squares and the constants both cancel.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(3x\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(3x-24\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(5x-24\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(2x^{2}+5x-24\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A scrap yard buys 240 tonnes of mixed steel at $46 a tonne. Baling drives off 12% of that mass as dirt and rust, and the baled steel sells at $62 a tonne. What is the yard's gain, in dollars, on the whole lot?",
+   "difficulty": "MEDIUM",
+   "check": "240(0.88) = 211.2 tonnes sell for 13,094.40, and the lot cost 240(46) = 11,040.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$2,054.40",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "$2,844.00",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$3,840.00",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$13,094.40",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Cast iron has a mass of 7.2 grams for each cubic centimetre, and a foundry buys iron at $0.44 a kilogram. What does the iron in a casting of volume 12,500 cubic centimetres cost?",
+   "difficulty": "MEDIUM",
+   "check": "12,500(7.2) = 90,000 grams, which is 90 kilograms, and 90(0.44) = 39.60.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$3.96",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$5.50",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$27.50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$39.60",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "A dock recorded the number of lifts each of its four cranes made in one day, together with the mean mass of a lift for that crane.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crane</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lifts made</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mean mass of a lift (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">46</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.2</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">52</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.0</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5.4</td></tr></table>Which crane moved the greatest total mass that day?",
+   "difficulty": "MEDIUM",
+   "check": "The four totals are 161, 159.6, 156 and 162 tonnes, and the greatest belongs to No. 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "No. 1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "No. 2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "No. 3",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "No. 4",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A scrap store holds 180 bales: 45 of copper, 63 of brass and the rest of lead. One bale is picked at random from the store. What is the probability that the bale picked is a lead bale?",
+   "difficulty": "MEDIUM",
+   "check": "180 - 45 - 63 = 72 lead bales, and 72/180 reduces to 2/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{7}{20}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{2}{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{3}{5}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A dockside crane's jib is 32 metres long and is pivoted 4 metres above the quay. When the jib is raised to 62&deg; above the horizontal, how high above the quay is the head of the jib, to the nearest metre?",
+   "difficulty": "MEDIUM",
+   "check": "32 times the sine of 62 degrees is about 28.3 metres above the pivot, and 28.3 + 4 rounds to 32.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "32",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "40",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A tunnel is lined with rings, and each ring is built from 8 identical segments that close up into a regular octagon. What is the measure, in degrees, of each interior angle of that octagon?",
+   "difficulty": "MEDIUM",
+   "check": "The interior angles of an 8-sided polygon sum to (8-2)(180) = 1,080 degrees, and 1,080/8 = 135.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "120",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "135",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "150",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A dockside crane's ballast box is an open-topped rectangular tank 3 metres long, 2 metres wide and 1.5 metres deep. How many square metres of steel sheet do its base and its four sides take together?",
+   "difficulty": "MEDIUM",
+   "check": "The base is 6 square metres, the two long sides are 9 and the two short sides are 6, giving 21.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "21",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of tubs drawn from each of four districts of a colliery in one week, together with the mean mass of a tub in that district.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">District</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tubs drawn</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mean mass of a tub (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bute</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">300</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.55</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Garth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.60</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Rhas</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">180</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.45</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Tir</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">260</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.50</td></tr></table>How many tonnes of coal were drawn from the four districts altogether that week?",
+   "difficulty": "MEDIUM",
+   "check": "165 + 144 + 81 + 130 = 520 tonnes.",
+   "correctAnswerFR": "[\"520\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A foundry's cupola burns 0.6 tonnes of coke to bring itself up to heat and then a further 1 tonne of coke for every 8 tonnes of iron it melts. One melt used 5.1 tonnes of coke altogether. How many tonnes of iron were melted?",
+   "difficulty": "MEDIUM",
+   "check": "0.6 tonnes goes on heating up, leaving 4.5 tonnes at 1 tonne per 8 tonnes of iron, so 8(4.5) = 36.",
+   "correctAnswerFR": "[\"36\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M1:H1-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A casting is a closed hollow box whose outside measurements are 40 centimetres by 30 centimetres by 20 centimetres. Its walls are 2.5 centimetres thick everywhere, including the top and the bottom. How many cubic centimetres of iron does the casting contain?",
+   "difficulty": "MEDIUM",
+   "check": "Outside 40(30)(20) = 24,000 and the cavity is 35(25)(15) = 13,125, leaving 10,875.",
+   "correctAnswerFR": "[\"10875\"]"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A gas works charges its 7 retorts with equal shares of 154 hundredweight of fuel. How many hundredweight of fuel go into each retort?",
+   "difficulty": "EASY",
+   "check": "154/7 = 22.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "22",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "28",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A tramway sold 468 tickets one morning. Of these, 129 were child tickets and the rest were adult tickets. How many adult tickets were sold?",
+   "difficulty": "EASY",
+   "check": "468 - 129 = 339.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "329",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "339",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "349",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "597",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A pumping engine's total discharge, in gallons, t minutes after it is started is given by p=250t+400. How many gallons has it discharged 6 minutes after it is started?",
+   "difficulty": "EASY",
+   "check": "250(6) + 400 = 1,900.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,000",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "1,650",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "1,900",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "3,900",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The cost of stringing overhead wire for a trolleybus route is modelled by c=1,450+380m, where c is the cost in dollars and m is the number of miles of route strung. What does 380 represent in this model?",
+   "difficulty": "EASY",
+   "check": "380 multiplies the number of miles, so it is the cost added by each further mile.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The total cost, in dollars, of stringing the whole route",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The number of miles of route that can be strung for $1,450",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The cost, in dollars, incurred before any wire is strung",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The cost, in dollars, of stringing each mile of route",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A tramway rule requires that the number n of cars running on the Canal Road route be at least 6 and no more than 11. Which inequality represents this rule?",
+   "difficulty": "EASY",
+   "check": "At least 6 allows 6 itself and no more than 11 allows 11 itself, so both ends are inclusive.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6\\le n\\le 11\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(6<n\\le 11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(6\\le n<11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(6<n<11\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A tram conductor's takings x, in dollars, satisfy \\(\\frac{x}{4}+7=19\\). What is the value of x?",
+   "difficulty": "EASY",
+   "check": "x/4 = 12, so x = 48.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "48",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "104",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "The time, in minutes, needed to clean x tram cars is given by \\(4(3x-7)+5x\\). Which expression is equivalent to it?",
+   "difficulty": "EASY",
+   "check": "4(3x-7) is 12x - 28, and adding 5x gives 17x - 28.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(17x-28\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(17x-7\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(12x-28\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(7x-28\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A gas works records a leakage allowance as \\((x+9)(x-9)\\). Which expression is equivalent to that allowance?",
+   "difficulty": "EASY",
+   "check": "The two middle terms are +9x and -9x, so they cancel and only x squared minus 81 is left.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x^{2}+81\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(x^{2}-18x-81\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x^{2}+18x-81\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x^{2}-81\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A wire-drawing bench's wear index is given by \\(h(x)=x^{2}-9\\), where x is the number of dies fitted. What is the value of \\(h(5)\\)?",
+   "difficulty": "EASY",
+   "check": "25 - 9 = 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "34",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The number of cars in service on a tramway is modelled by \\(T(y)=40(1.25)^{y}\\), where y is the number of years since the tramway opened. By what percent does the model say the number of cars increases each year?",
+   "difficulty": "EASY",
+   "check": "A yearly factor of 1.25 is an increase of 0.25, which is 25%.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1.25%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12.5%",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "25%",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "125%",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A gas works doubles its stock of fuel each hour, so that after y hours it holds \\(3\\cdot 2^{y}\\) tonnes. After how many hours does it hold 96 tonnes?",
+   "difficulty": "EASY",
+   "check": "96/3 = 32, and 32 is 2 to the fifth power, so y = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A tram signal cabin times its interlocking with the function f. The table gives four values of f.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">\\(f(x)\\)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-4</td></tr></table>What is the value of \\(f(1)\\)?",
+   "difficulty": "EASY",
+   "check": "The row for x = 1 gives -4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-4",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "-1",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "11",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Three tram cars take 21 litres of oil between them for a full greasing. At the same rate, how many litres are needed to grease 8 tram cars?",
+   "difficulty": "EASY",
+   "check": "21/3 = 7 litres a car, and 7(8) = 56.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "42",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "49",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "56",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A tram fare of $1.20 is raised by 25%. What is the new fare?",
+   "difficulty": "EASY",
+   "check": "1.20(1.25) = 1.50.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "$0.30",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "$1.25",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "$1.45",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "$1.50",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of cars kept at each of four tram depots.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Depot</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Cars kept</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Canal Road</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">48</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Marsh Lane</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">61</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Old Wharf</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">37</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bell Green</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">55</td></tr></table>How many more cars are kept at Marsh Lane than at Old Wharf?",
+   "difficulty": "EASY",
+   "check": "61 - 37 = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "37",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "61",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "98",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A tram signal cabin recorded the number of levers pulled in each of five hours: 22, 19, 25, 19 and 30. What is the range of these five numbers?",
+   "difficulty": "EASY",
+   "check": "30 - 19 = 11.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "11",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "22",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A trolleybus route runs in a straight line through three stops A, B and C, in that order. It is 14 kilometres from A to B and 37 kilometres from A to C. How many kilometres is it from B to C?",
+   "difficulty": "EASY",
+   "check": "37 - 14 = 23.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "23",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "37",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "51",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A gas holder's tank is a cylinder whose base has an area of 1,250 square metres. Gas fills the tank to a depth of 18 metres. How many cubic metres of gas does the tank hold?",
+   "difficulty": "EASY",
+   "check": "1,250(18) = 22,500.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4,500",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "11,250",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "22,500",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "45,000",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "On a setting-out plan a pumping engine's two holding-down bolts are at the points \\((-4,7)\\) and \\((10,1)\\). What are the coordinates of the point midway between the two bolts?",
+   "difficulty": "EASY",
+   "check": "The midpoint averages the coordinates: (-4+10)/2 = 3 and (7+1)/2 = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\((-7,3)\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\((3,-4)\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\((3,4)\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\((7,8)\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The number of coils of wire drawn on each of six days was 34, 41, 38, 45, 39 and 43. What is the median number of coils drawn per day?",
+   "difficulty": "EASY",
+   "check": "In order the six values are 34, 38, 39, 41, 43, 45, and the middle pair average to 40.",
+   "correctAnswerFR": "[\"40\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A wire-drawing bench drew 72 coils in one shift, and \\(\\frac{5}{8}\\) of them were of the finest gauge. How many coils of the finest gauge were drawn that shift?",
+   "difficulty": "EASY",
+   "check": "72 times 5/8 is 45.",
+   "correctAnswerFR": "[\"45\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2E:H2E-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A tramway crossover is set out as right triangle PQR with the right angle at R. The hypotenuse PQ measures 25 metres and side QR measures 7 metres. What is the value of \\(\\sin P\\)?",
+   "difficulty": "EASY",
+   "check": "The sine of P is the side opposite P over the hypotenuse, which is 7 over 25.",
+   "correctAnswerFR": "[\"7/25\", \"0.28\"]"
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A cable ship's manifest sets two conditions on the numbers x and y of the two sizes of cable drum carried:<br/>3x+5y=41<br/>5x+3y=39<br/>What is the value of x+y?",
+   "difficulty": "HARD",
+   "check": "Adding the two conditions gives 8x + 8y = 80, so x + y = 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "80",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "On a cable ship's plotting sheet a straight course is the set of points \\((x,y)\\) satisfying \\(y=mx+b\\), where m and b are constants. The course passes through \\((-2,9)\\) and \\((6,-7)\\). What is the value of \\(m+b\\)?",
+   "difficulty": "HARD",
+   "check": "The slope is -16/8 = -2, and 9 = -2(-2) + b gives b = 5, so m + b = 3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "7",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A mine ventilation fan must be run so that the air quantity q, in thousands of cubic feet each minute, satisfies both \\(3q-8\\ge 40\\) and \\(2q+5\\le 65\\). What is the greatest possible value of q?",
+   "difficulty": "HARD",
+   "check": "The first condition gives q at least 16 and the second gives q at most 30.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "30",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A boiler shop rivets seams in two patterns. Four metres of the double-riveted pattern together with seven metres of the single-riveted pattern take 63 rivets, while seven metres of the double-riveted pattern together with four metres of the single-riveted pattern take 69 rivets. How many rivets does one metre of the double-riveted pattern take?",
+   "difficulty": "HARD",
+   "check": "Adding the two conditions gives 11 metres of each pattern taking 132 rivets, and subtracting them gives 3 more rivets for 3 metres of double, so double is 7 and single is 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A telegraph company's charge for a new line is \\(C(n)=an+b\\) dollars for a line n miles long, where a and b are constants. A 30-mile line costs $1,290 and a 50-mile line costs $2,050. Which expression gives the charge, in dollars, for a line m miles long?",
+   "difficulty": "HARD",
+   "check": "760 dollars over 20 miles gives a = 38, and 1,290 - 30(38) = 150 gives b.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(38m+150\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(38m+43\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(41m+60\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(43m\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A cable ship pays out cable at a steady rate. Three hours after paying out began, 8.4 nautical miles of cable remained on the drum; seven hours after it began, 5.2 nautical miles remained. The ship must leave at least 1.2 nautical miles on the drum. For how many further hours after the seventh hour can the ship go on paying out?",
+   "difficulty": "HARD",
+   "check": "3.2 nautical miles over 4 hours is 0.8 an hour, and 4 nautical miles are still free, so 5 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6.5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A telegraph office converts a reading with \\(g(x)=2x-5\\) and then converts the result back with \\(f(x)=\\frac{x+5}{2}\\). Which expression is equivalent to \\(f(g(x))\\)?",
+   "difficulty": "HARD",
+   "check": "Substituting 2x-5 into f gives (2x-5+5)/2, which is x.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x-5\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x+5\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(4x-5\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A boiler shop writes the combined allowance of two riveted seams as \\(\\frac{1}{\\frac{1}{u}+\\frac{1}{v}}\\), where u and v are positive. Which expression is equivalent to that allowance?",
+   "difficulty": "HARD",
+   "check": "The denominator adds to (v+u)/(uv), and dividing 1 by that turns it upside down.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{u+v}{uv}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(u+v\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{u+v}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{uv}{u+v}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A telegraph repeater station's traffic is modelled by \\(M(t)=k\\cdot 4^{\\frac{t}{5}}\\) messages, where t is the number of hours since midnight and k is a constant. The model gives 1,728 messages at \\(t=15\\). How many messages does the model give at \\(t=0\\)?",
+   "difficulty": "HARD",
+   "check": "4 raised to 15/5 is 64, so k = 1,728/64 = 27, which is also the value at t = 0.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "27",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "432",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "864",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A boiler designer's two working stresses are the two solutions of \\(3x^{2}-12x-7=0\\). What is the sum of those two solutions?",
+   "difficulty": "HARD",
+   "check": "For a quadratic the two roots sum to minus the x coefficient over the leading coefficient, here 12/3 = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(-\\frac{7}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{7}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "12",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A ventilation gauge is out of true whenever \\(|2x-9|=15\\), where x is the reading in inches of water. What is the sum of the two values of x that satisfy this equation?",
+   "difficulty": "HARD",
+   "check": "Either 2x-9 is 15, giving x = 12, or it is -15, giving x = -3, and 12 + (-3) = 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "24",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A boiler designer writes a plate-strength ratio as \\(\\frac{a^{\\frac{3}{4}}}{a^{\\frac{1}{6}}}\\), where \\(a>1\\). Which expression is equivalent to that ratio?",
+   "difficulty": "HARD",
+   "check": "Dividing subtracts the exponents, and 3/4 - 1/6 = 9/12 - 2/12 = 7/12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(a^{\\frac{7}{12}}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(a^{\\frac{1}{2}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(a^{\\frac{11}{12}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(a^{\\frac{9}{2}}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A ventilation engineer measured the air quantity at 30 randomly chosen of the 400 working places in one mine and found a mean of 3,100 cubic feet each minute. To which group is it most appropriate to generalize this result?",
+   "difficulty": "HARD",
+   "check": "A random sample supports an inference about the population it was drawn from, which is the 400 working places in that one mine.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Only the 30 working places at which the air quantity was measured",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "All working places in every mine in the district",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "All ventilation fans in use in the district",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "All 400 working places in that mine",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table shows the results of a hydraulic test on 300 boiler plates, sorted by the thickness of the plate.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Result</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">12 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">16 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">20 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Passed</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Failed</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">100</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">120</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">80</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">300</td></tr></table>Of the plates that failed the test, what fraction were 16 millimetres thick?",
+   "difficulty": "HARD",
+   "check": "24 of the 60 plates that failed were 16 millimetres thick, and 24/60 reduces to 2/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{2}{25}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{1}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{2}{5}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A mine's ventilation fan was speeded up so that the air quantity rose by 15%. The fan drift was then widened so that the quantity rose by a further 20%. By what percent is the final air quantity greater than the quantity before either change?",
+   "difficulty": "HARD",
+   "check": "1.15 times 1.20 is 1.38, an increase of 38%.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "35%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "36%",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "38%",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "41%",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The mean thickness of 12 boiler plates was measured as 15.4 millimetres. When one plate was set aside, the mean thickness of the remaining 11 was 15.6 millimetres. What was the thickness, in millimetres, of the plate that was set aside?",
+   "difficulty": "HARD",
+   "check": "12(15.4) = 184.8 and 11(15.6) = 171.6, and the difference is 13.2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "11.6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "13.2",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "15.0",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "17.6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A boiler shop's templet is a right triangle \\(ABC\\) with the right angle at C. The shop's record gives \\(\\sin A=\\frac{7}{25}\\) and \\(BC=21\\) centimetres. What is the length of \\(AC\\), in centimetres?",
+   "difficulty": "HARD",
+   "check": "The sine of A is BC over AB, so AB is 75, and AC is the square root of 75 squared minus 21 squared, which is 72.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "54",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "72",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "75",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A boiler shell is a cylinder 10 feet long closed at each end by a hemisphere. The cylinder and both hemispheres have a radius of 3 feet. What is the total volume of the shell, in cubic feet?",
+   "difficulty": "HARD",
+   "check": "The cylinder holds 90 pi and the two hemispheres together hold 36 pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(108\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(126\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(144\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(162\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "Two telegraph wires are strung parallel to each other, and a straight stay wire crosses both. The angle the stay makes with the upper wire and the angle it makes with the lower wire are corresponding angles, and they measure \\((7x-4)\\)&deg; and \\((3x+24)\\)&deg;. What is the measure, in degrees, of each of those two angles?",
+   "difficulty": "HARD",
+   "check": "Corresponding angles are equal, so 7x - 4 = 3x + 24 gives x = 7 and each angle is 45.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "45",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "135",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A submarine cable is made up of three sections. The second section is twice as long as the first, and the third is 40 nautical miles longer than the second. The whole cable is 620 nautical miles long. How many nautical miles long is the third section?",
+   "difficulty": "HARD",
+   "check": "f + 2f + (2f+40) = 620 gives 5f = 580 and f = 116, so the third section is 272.",
+   "correctAnswerFR": "[\"272\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "In a riveted boiler seam the ratio of rivets accepted to rivets cut out is 23 to 2. A seam took 1,150 rivets altogether, and every rivet cut out cost the shop $3.40 in lost time. What was the total lost-time cost, in dollars, for that seam?",
+   "difficulty": "HARD",
+   "check": "1,150 splits into 25 parts of 46, so 2 parts is 92 rivets cut out, and 92(3.40) = 312.80.",
+   "correctAnswerFR": "[\"312.80\", \"312.8\"]"
+  },
+  {
+   "_ref": "AUTHORED/T20-MATH_M2H:H2H-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A ventilation drift is a rectangular airway 3.5 metres wide and 2.4 metres high, and air moves along it at 6 metres each second. How many cubic metres of air pass a point in the drift each minute?",
+   "difficulty": "HARD",
+   "check": "The cross-section is 8.4 square metres, 8.4(6) = 50.4 cubic metres a second, and 50.4(60) = 3,024.",
+   "correctAnswerFR": "[\"3024\"]"
+  }
+ ]
+}

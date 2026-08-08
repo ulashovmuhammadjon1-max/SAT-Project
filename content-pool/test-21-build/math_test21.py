@@ -292,10 +292,10 @@ MODULE_2_EASY = [
       check="The solutions are 7 and -2, and only 7 is positive."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("A spring maker's deflection model is the function f defined by "
-            "\\(f(x)=x^{2}-5x\\). What is the value of \\(f(-3)\\)?"),
-      choices=["-24", "-6", "6", "24"], correct="D",
-      check="(-3) squared is 9, and 9 - 5(-3) = 9 + 15 = 24."),
+      stem=("A silk-reeling machine's thread tension is modelled by "
+            "\\(f(x)=-(x-4)^{2}+29\\). What is the greatest value this model can take?"),
+      choices=["-29", "4", "25", "29"], correct="D",
+      check="A square is never negative, so f is greatest when x is 4, where it equals 29."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("An optician writes a magnification ratio as \\(\\frac{x^{9}}{x^{4}}\\), where "
@@ -364,10 +364,10 @@ MODULE_2_EASY = [
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("A mounting bracket is a right triangle ABC with its right angle at C. In this bracket "
-            "\\(\\tan A=\\frac{5}{12}\\) and AC=24 centimetres. What is the length of BC, in "
+            "\\(\\tan A=\\frac{3}{4}\\) and AC=24 centimetres. What is the length of BC, in "
             "centimetres?"),
-      choices=["5", "6", "10", "12"], correct="C",
-      check="The tangent of A is BC/AC, so BC = 24(5/12) = 10."),
+      choices=["8", "12", "18", "32"], correct="C",
+      check="The tangent of A is BC/AC, so BC = 24(3/4) = 18."),
 ]
 
 
