@@ -2,8 +2,11 @@
 
 import bcrypt from "bcryptjs";
 
+import { credit } from "@/lib/coins";
 import { prisma } from "@/lib/prisma";
 import { isMissingColumnError } from "@/lib/onboarding/profile";
+import { attributeReferral, qualifyReferral } from "@/lib/referrals";
+import { getSettings } from "@/lib/settings";
 import { onboardingSignupSchema, type OnboardingSignup } from "@/lib/validations/onboarding";
 
 export interface OnboardingSignupResult {
@@ -50,8 +53,10 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
 
   const base = { name, email, passwordHash, role: "STUDENT" as const };
 
+  let createdUserId: string | null = null;
+
   try {
-    await prisma.user.create({
+    const created = await prisma.user.create({
       data: {
         ...base,
         onboardingGoal: profile.goal,
@@ -68,7 +73,9 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
         dailyGoalValue: profile.dailyGoalValue,
         onboardedAt: new Date(),
       },
+      select: { id: true },
     });
+    createdUserId = created.id;
   } catch (error) {
     // If the deployed database predates the onboarding columns, still create
     // the account — being unable to save a target score is no reason to block
@@ -81,12 +88,59 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
 
     console.warn("[onboarding] Profile columns missing — creating account without the study plan.");
     try {
-      await prisma.user.create({ data: base });
+      const created = await prisma.user.create({ data: base, select: { id: true } });
+      createdUserId = created.id;
     } catch (fallbackError) {
       console.error("[onboarding] Fallback user creation failed", fallbackError);
       return { error: "We couldn't create your account. Please try again in a moment." };
     }
   }
 
+  // The account exists from here on. Everything below is additive, so any
+  // failure is logged and swallowed: a student must never be told their signup
+  // failed because a welcome bonus could not be written.
+  if (createdUserId) {
+    await grantSignupRewards(createdUserId, input.referralCode ?? null);
+  }
+
   return { success: true };
+}
+
+/**
+ * Welcome coins, plus the referral payout if the account arrived through an
+ * invite link.
+ *
+ * Both are idempotent — the signup bonus is keyed on the user id, the referral
+ * reward on the referral id — so a retried signup or a double-submitted form
+ * cannot mint extra coins.
+ */
+async function grantSignupRewards(userId: string, rawReferralCode: string | null) {
+  const settings = await getSettings();
+
+  try {
+    if (settings.signupBonusCoins > 0) {
+      await credit({
+        userId,
+        amount: settings.signupBonusCoins,
+        type: "SIGNUP_BONUS",
+        description: "Welcome to SATForge",
+        idempotencyKey: `signup:${userId}`,
+      });
+    }
+  } catch (error) {
+    console.error("[onboarding] signup bonus failed", error);
+  }
+
+  try {
+    const { outcome, referralId } = await attributeReferral(userId, rawReferralCode);
+    if (outcome === "attributed" && referralId) {
+      // Creating a real account is the qualifying event today. If that bar ever
+      // rises, `qualifyReferral` moves to wherever the new bar is met.
+      await qualifyReferral(referralId);
+    } else if (outcome !== "no_code") {
+      console.info(`[onboarding] referral not attributed: ${outcome}`);
+    }
+  } catch (error) {
+    console.error("[onboarding] referral attribution failed", error);
+  }
 }

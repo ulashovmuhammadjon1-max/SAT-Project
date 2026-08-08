@@ -10,6 +10,15 @@ export default {
     signIn: "/login",
   },
   providers: [],
+  trustHost: true,
+  // Must match auth.ts. The middleware builds its own NextAuth instance from
+  // this config, and a shorter lifetime here would make the edge runtime treat
+  // a token the server still considers valid as expired.
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
+    updateAge: 24 * 60 * 60,
+  },
   callbacks: {
     jwt({ token, user }) {
       if (user) {

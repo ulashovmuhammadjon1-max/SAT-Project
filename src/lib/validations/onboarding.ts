@@ -76,6 +76,12 @@ export const onboardingSignupSchema = z.object({
     .regex(/[A-Z]/, "Include one uppercase letter")
     .regex(/[0-9]/, "Include one number"),
   profile: onboardingProfileSchema,
+  /**
+   * Referral code carried in from `?ref=`. Optional and never trusted: an
+   * unknown, malformed or self-referring code is ignored at attribution time
+   * rather than failing the signup.
+   */
+  referralCode: z.string().trim().max(16).optional().nullable(),
 });
 
 export type OnboardingSignup = z.infer<typeof onboardingSignupSchema>;
