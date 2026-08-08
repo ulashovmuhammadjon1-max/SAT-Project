@@ -20,6 +20,7 @@ import {
   Star,
   Target,
   Timer,
+  Wallet,
   UserRound,
   Zap,
 } from "lucide-react";
@@ -148,7 +149,8 @@ function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:56px_56px] opacity-[0.35] [mask-image:radial-gradient(70%_50%_at_50%_0%,black,transparent)]" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-16">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-16">
         {/* ---------------------------------------------------------------- */}
         {/* Copy column                                                       */}
         {/* ---------------------------------------------------------------- */}
@@ -207,12 +209,9 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.32}>
-            <p className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground lg:justify-start">
-              {["Always free", "No credit card", "Setup in 60 seconds"].map((t) => (
-                <span key={t} className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-success" /> {t}
-                </span>
-              ))}
+            <p className="mt-5 flex items-center justify-center gap-1.5 text-[13px] text-muted-foreground lg:justify-start">
+              <CheckCircle2 className="h-3.5 w-3.5 text-success" />
+              No credit card — setup takes about a minute
             </p>
           </Reveal>
         </div>
@@ -249,8 +248,40 @@ function Hero() {
             <MentorshipCard className="sm:max-w-[380px] lg:max-w-none" />
           </Reveal>
         </motion.div>
+        </div>
+
+        {/* Value strip — spans both columns, so it reads as a summary of the
+            whole hero on desktop and lands last in the mobile stack. */}
+        <ValueStrip />
       </div>
     </section>
+  );
+}
+
+const VALUE_STRIP = [
+  { icon: Layers, title: "Adaptive Practice", body: "Full-length Digital SAT practice" },
+  { icon: Target, title: "Targeted Practice", body: "Work directly on your weaknesses" },
+  { icon: UserRound, title: "Personalized Guidance", body: "A plan built around your goals" },
+  { icon: Sparkles, title: "100% Free", body: "Core learning is free" },
+];
+
+function ValueStrip() {
+  return (
+    <Reveal delay={0.5}>
+      <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+        {VALUE_STRIP.map((v) => (
+          <li key={v.title} className="flex items-start gap-3">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <v.icon className="h-4 w-4" />
+            </span>
+            <div>
+              <p className="text-[15px] font-medium leading-snug">{v.title}</p>
+              <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground">{v.body}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
   );
 }
 
@@ -294,23 +325,32 @@ function MentorshipCard({ className }: { className?: string }) {
 /* -------------------------------------------------------------------------- */
 
 /**
- * What students can use today. Everything listed here is shipped and reachable
- * from the app — keep it that way, and move items up from PLANNED rather than
- * adding aspirational entries.
+ * The four pillars of the wider platform.
+ *
+ * `label` is a cadence/status badge and is the only claim each card makes about
+ * how established a programme is — no attendee counts, named professors or
+ * partnerships. Anything that hasn't launched must read "COMING SOON"; move a
+ * card to a real cadence only once it is actually running.
  */
-const AVAILABLE_NOW = [
-  { icon: MonitorPlay, title: "Adaptive practice tests", body: "Full-length mocks with real Module 1 → Module 2 routing." },
-  { icon: Layers, title: "SAT question bank", body: "Targeted drills by domain, skill and difficulty." },
-  { icon: BookOpen, title: "Vocabulary sets", body: "Gated word sets with passages and end-of-set quizzes." },
-  { icon: BarChart3, title: "Performance analytics", body: "See which skills are actually costing you points." },
-];
-
-/** Not built yet — labelled as such on the page, deliberately. */
-const PLANNED = [
-  { icon: Timer, title: "Weekly test analysis" },
-  { icon: LineChart, title: "Financial literacy classes" },
-  { icon: GraduationCap, title: "Guest university lectures" },
-  { icon: ClipboardList, title: "Research & academic guidance" },
+const PILLARS = [
+  {
+    icon: LineChart,
+    title: "Weekly SAT Analysis",
+    body: "Break down difficult questions, understand common mistakes, and learn how to approach the SAT more effectively.",
+    label: "Every week",
+  },
+  {
+    icon: Wallet,
+    title: "Financial Literacy",
+    body: "Learn how money, inflation, interest rates, banking, investing, and the economy actually affect your everyday life.",
+    label: "Monthly",
+  },
+  {
+    icon: GraduationCap,
+    title: "Learn From Experts",
+    body: "Guest lectures and conversations with university professors and other experts, bringing real academic perspectives directly to students.",
+    label: "Coming soon",
+  },
 ];
 
 function BeyondSat() {
@@ -320,109 +360,58 @@ function BeyondSat() {
         <SectionHeading
           label="More than SAT prep"
           icon={Sparkles}
-          title={
-            <>
-              The SAT is the starting point,{" "}
-              <span className="text-muted-foreground">not the destination</span>
-            </>
-          }
-          body="SATForge is being built as a free academic community for ambitious high-school students — starting with the tools that raise your score, and growing into the learning that outlasts the test."
+          title="Build skills that go beyond the test."
+          body="SATForge is building a free academic community where students can prepare for the SAT, learn about economics and financial literacy, analyze real practice tests, and learn directly from experienced mentors and professors."
         />
 
-        {/* Flagship differentiator: human guidance beside the software. */}
-        <Reveal delay={0.1}>
-          <div className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.07] via-card to-card shadow-panel">
-            <div className="grid gap-8 p-7 sm:p-10 lg:grid-cols-[1.35fr_1fr] lg:items-center">
-              <div>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-primary">
-                  <UserRound className="h-3.5 w-3.5" />
-                  Free 1-on-1 guidance
-                </span>
-
-                <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-                  Get a personalized SAT plan from a 1580 scorer
-                </h3>
-
-                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground text-balance">
-                  Software shows you the data. A conversation turns it into a plan. Book a free session to map your
-                  current level, target score, weak areas, test date and study time into a week-by-week schedule you
-                  can actually follow.
-                </p>
-
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <Button size="lg" className="group h-11 rounded-full px-6 text-[15px]" asChild>
-                    <Link href={PLAN_CTA_HREF}>
-                      Book a session
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
-                  </Button>
-                  <span className="text-[13px] text-muted-foreground">No cost, no catch.</span>
+        <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2" delay={0.05}>
+          {PILLARS.map((p) => (
+            <RevealItem key={p.title}>
+              <HoverLift className="flex h-full flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-soft">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-foreground/70">
+                    <p.icon className="h-[18px] w-[18px]" />
+                  </span>
+                  <span className="rounded-full border border-border/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                    {p.label}
+                  </span>
                 </div>
+                <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">{p.title}</h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{p.body}</p>
+              </HoverLift>
+            </RevealItem>
+          ))}
+
+          {/* Fourth card carries the differentiator, so it gets the primary
+              tint and the only CTA — enough to lead the eye without turning
+              the grid into an ad. */}
+          <RevealItem>
+            <HoverLift className="flex h-full flex-col rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/[0.06] to-card p-6 shadow-card">
+              <div className="flex items-center justify-between gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <UserRound className="h-[18px] w-[18px]" />
+                </span>
+                <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-primary">
+                  Free 1-on-1
+                </span>
               </div>
 
-              <RevealGroup className="grid gap-2.5" delay={0.15}>
-                {[
-                  "Where you stand right now",
-                  "The score your target schools need",
-                  "The weaknesses worth fixing first",
-                  "A study plan built around your test date",
-                ].map((t) => (
-                  <RevealItem key={t}>
-                    <div className="flex items-start gap-2.5 rounded-xl border border-border/60 bg-card/70 px-3.5 py-3 backdrop-blur">
-                      <Target className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                      <p className="text-[14px] leading-snug">{t}</p>
-                    </div>
-                  </RevealItem>
-                ))}
-              </RevealGroup>
-            </div>
-          </div>
-        </Reveal>
+              <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">Your Own SAT Plan</h3>
+              <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
+                Get personalized guidance from a 1580 SAT scorer and build a study plan around your score, target,
+                timeline, and weaknesses.
+              </p>
 
-        {/* Live now vs. planned — kept visibly separate so the roadmap never
-            reads as a list of things you can use today. */}
-        <div className="mx-auto mt-14 grid max-w-5xl gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-14">
-          <div>
-            <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-success" />
-              Available today
-            </p>
-
-            <RevealGroup className="mt-5 grid gap-3 sm:grid-cols-2">
-              {AVAILABLE_NOW.map((f) => (
-                <RevealItem key={f.title}>
-                  <HoverLift className="h-full rounded-2xl border border-border/70 bg-card p-4 shadow-soft">
-                    <f.icon className="h-5 w-5 text-primary" />
-                    <p className="mt-3 font-medium leading-snug">{f.title}</p>
-                    <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{f.body}</p>
-                  </HoverLift>
-                </RevealItem>
-              ))}
-            </RevealGroup>
-          </div>
-
-          <div>
-            <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-border" />
-              In development
-            </p>
-
-            <RevealGroup className="mt-5 space-y-2.5">
-              {PLANNED.map((f) => (
-                <RevealItem key={f.title}>
-                  <div className="flex items-center gap-3 rounded-xl border border-dashed border-border/80 bg-secondary/30 px-4 py-3">
-                    <f.icon className="h-4 w-4 shrink-0 text-muted-foreground" />
-                    <p className="text-[14px] text-muted-foreground">{f.title}</p>
-                  </div>
-                </RevealItem>
-              ))}
-            </RevealGroup>
-
-            <p className="mt-4 text-[12.5px] leading-relaxed text-muted-foreground">
-              Planned, not yet available. Everything on the left is live in the app today.
-            </p>
-          </div>
-        </div>
+              <Link
+                href={PLAN_CTA_HREF}
+                className="group mt-5 inline-flex w-fit items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[14px] font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                Get a Free Plan
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </HoverLift>
+          </RevealItem>
+        </RevealGroup>
       </div>
     </section>
   );
