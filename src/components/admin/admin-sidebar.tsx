@@ -15,6 +15,7 @@ import {
   ScrollText,
   GraduationCap,
   AlertTriangle,
+  CalendarCheck,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -26,6 +27,7 @@ const NAV = [
   { href: "/admin/questions", label: "Question Bank", icon: ListChecks },
   { href: "/admin/content-health", label: "Content Health", icon: AlertTriangle },
   { href: "/admin/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+  { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
   { href: "/admin/users", label: "Users", icon: Users },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/settings", label: "Adaptive Settings", icon: Sliders },

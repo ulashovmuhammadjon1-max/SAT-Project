@@ -1,162 +1,168 @@
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Calculator } from "lucide-react";
+import type { Subject } from "@prisma/client";
+import { Bookmark, History, Sparkles, Target, XCircle } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { prisma } from "@/lib/prisma";
+import { DomainProgressList, OverviewStats } from "@/components/student/qb-progress";
 import { cn } from "@/lib/utils";
+import {
+  getDomainProgress,
+  getQuestionBankOverview,
+} from "@/server/actions/student/question-bank";
 
 export const metadata = { title: "Question Bank" };
 export const dynamic = "force-dynamic";
 
-type Subject = "READING_WRITING" | "MATH";
-
-const SUBJECTS: { value: Subject; label: string; description: string; icon: typeof BookOpen }[] = [
-  { value: "READING_WRITING", label: "Reading & Writing", description: "EBRW — every domain and subtopic", icon: BookOpen },
-  { value: "MATH", label: "Math", description: "Every domain and subtopic", icon: Calculator },
+const SUBJECTS: { value: Subject; label: string }[] = [
+  { value: "READING_WRITING", label: "Reading & Writing" },
+  { value: "MATH", label: "Math" },
 ];
 
-export default async function PracticePage({
+export default async function QuestionBankPage({
   searchParams,
 }: {
-  searchParams: { subject?: string; skill?: string };
+  searchParams: { subject?: string };
 }) {
-  const subject = (searchParams.subject === "READING_WRITING" || searchParams.subject === "MATH"
-    ? searchParams.subject
-    : undefined) as Subject | undefined;
+  const subject: Subject =
+    searchParams.subject === "MATH" ? "MATH" : "READING_WRITING";
 
-  if (!subject) {
-    const [rwCount, mathCount] = await Promise.all([
-      prisma.question.count({ where: { isPublished: true, domain: { subject: "READING_WRITING" } } }),
-      prisma.question.count({ where: { isPublished: true, domain: { subject: "MATH" } } }),
-    ]);
-    const counts: Record<Subject, number> = { READING_WRITING: rwCount, MATH: mathCount };
-
-    return (
-      <div className="space-y-8">
-        <div>
-          <h1 className="font-display text-2xl font-semibold tracking-tight">Question Bank</h1>
-          <p className="text-sm text-muted-foreground">
-            Practice by domain and subtopic, untimed, with instant explanations.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          {SUBJECTS.map((s) => (
-            <Link key={s.value} href={`/practice?subject=${s.value}`}>
-              <Card className="h-full transition-colors hover:border-primary">
-                <CardContent className="flex items-start gap-4 p-6">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <s.icon className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-display text-lg font-semibold">{s.label}</p>
-                    <p className="text-sm text-muted-foreground">{s.description}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{counts[s.value]} questions</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  const domains = await prisma.domain.findMany({
-    where: { subject },
-    orderBy: { order: "asc" },
-    include: {
-      skills: {
-        orderBy: { order: "asc" },
-        include: { _count: { select: { questions: { where: { isPublished: true } } } } },
-      },
-    },
-  });
-
-  const selectedSkillId = searchParams.skill;
-  const selectedSkill = selectedSkillId
-    ? domains.flatMap((d) => d.skills.map((s) => ({ ...s, domainName: d.name }))).find((s) => s.id === selectedSkillId)
-    : undefined;
-
-  const questions = selectedSkillId
-    ? await prisma.question.findMany({
-        where: { isPublished: true, skillId: selectedSkillId },
-        take: 40,
-        include: { domain: true, skill: true },
-        orderBy: { createdAt: "desc" },
-      })
-    : [];
-
-  const subjectLabel = SUBJECTS.find((s) => s.value === subject)!.label;
+  const [overview, domains] = await Promise.all([
+    getQuestionBankOverview(subject),
+    getDomainProgress(subject),
+  ]);
 
   return (
     <div className="space-y-8">
-      <div>
-        <Link href="/practice" className="mb-2 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" /> All subjects
-        </Link>
-        <h1 className="font-display text-2xl font-semibold tracking-tight">{subjectLabel} Question Bank</h1>
-        <p className="text-sm text-muted-foreground">
-          Every domain and its subtopics are listed below — pick one to practice.
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        {domains.map((domain) => (
-          <Card key={domain.id} id={`domain-${domain.id}`}>
-            <CardContent className="space-y-3 p-5">
-              <p className="font-display text-base font-semibold">{domain.name}</p>
-              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                {domain.skills.map((skill) => (
-                  <Link key={skill.id} href={`/practice?subject=${subject}&skill=${skill.id}#domain-${domain.id}`}>
-                    <div
-                      className={cn(
-                        "flex items-center justify-between gap-2 rounded-lg border border-border p-3 text-sm transition-colors hover:border-primary hover:bg-accent",
-                        selectedSkillId === skill.id && "border-primary bg-accent"
-                      )}
-                    >
-                      <span className="line-clamp-1">{skill.name}</span>
-                      <Badge variant="outline" className="shrink-0">
-                        {skill._count.questions}
-                      </Badge>
-                    </div>
-                  </Link>
-                ))}
-                {domain.skills.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No subtopics defined for this domain yet.</p>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-        {domains.length === 0 && <p className="text-sm text-muted-foreground">No domains defined for this subject yet.</p>}
-      </div>
-
-      {selectedSkillId && (
-        <div className="space-y-3">
-          <h2 className="font-display text-lg font-semibold">
-            {selectedSkill ? `${selectedSkill.domainName} · ${selectedSkill.name}` : "Questions"}
-          </h2>
-          <div className="space-y-2">
-            {questions.map((q) => (
-              <Link key={q.id} href={`/practice/${q.id}`}>
-                <Card className="transition-colors hover:border-primary">
-                  <CardContent className="flex items-center justify-between gap-4 p-4">
-                    <p className="line-clamp-1 flex-1 text-sm" dangerouslySetInnerHTML={{ __html: q.stem }} />
-                    <div className="flex shrink-0 gap-2">
-                      <Badge variant="outline">{q.difficulty}</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-            {questions.length === 0 && (
-              <p className="text-sm text-muted-foreground">No published questions in this subtopic yet.</p>
-            )}
-          </div>
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl font-semibold tracking-tight">Question Bank</h1>
+          <p className="text-sm text-muted-foreground">Practice exactly what you need to improve.</p>
         </div>
-      )}
+        <div className="flex flex-wrap gap-2">
+          <Button asChild variant="outline" size="sm">
+            <Link href="/practice/history">
+              <History className="h-4 w-4" /> History
+            </Link>
+          </Button>
+          <Button asChild size="sm">
+            <Link href={`/practice/start?subject=${subject}`}>
+              <Target className="h-4 w-4" /> Start practice
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      {/* Subject switcher */}
+      <div
+        role="tablist"
+        aria-label="Subject"
+        className="inline-flex rounded-lg bg-secondary p-1"
+      >
+        {SUBJECTS.map((s) => {
+          const active = s.value === subject;
+          return (
+            <Link
+              key={s.value}
+              href={`/practice?subject=${s.value}`}
+              role="tab"
+              aria-selected={active}
+              className={cn(
+                "rounded-md px-4 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                active
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {s.label}
+            </Link>
+          );
+        })}
+      </div>
+
+      <OverviewStats overview={overview} />
+
+      {/* Quick entry points */}
+      <div className="grid gap-3 sm:grid-cols-3">
+        <QuickCard
+          href={`/practice/start?subject=${subject}&newOnly=1`}
+          icon={Sparkles}
+          title="New questions only"
+          body="Skip everything you've already answered."
+        />
+        <QuickCard
+          href={`/practice/start?subject=${subject}&mistakes=1`}
+          icon={XCircle}
+          title="Practice my mistakes"
+          body={
+            overview.incorrect > 0
+              ? `${overview.incorrect} question${overview.incorrect === 1 ? "" : "s"} to revisit.`
+              : "Nothing missed yet."
+          }
+          disabled={overview.incorrect === 0}
+        />
+        <QuickCard
+          href={`/practice/browse?subject=${subject}&status=SAVED`}
+          icon={Bookmark}
+          title="Saved questions"
+          body={
+            overview.saved > 0
+              ? `${overview.saved} saved for later.`
+              : "Bookmark questions to find them here."
+          }
+          disabled={overview.saved === 0}
+        />
+      </div>
+
+      <div>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-display text-lg font-semibold">Progress by topic</h2>
+          <Button asChild variant="ghost" size="sm">
+            <Link href={`/practice/browse?subject=${subject}`}>Browse all questions</Link>
+          </Button>
+        </div>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Click any subtopic to practice it directly.
+        </p>
+        <div className="mt-4">
+          <DomainProgressList domains={domains} subject={subject} />
+        </div>
+      </div>
     </div>
+  );
+}
+
+function QuickCard({
+  href,
+  icon: Icon,
+  title,
+  body,
+  disabled,
+}: {
+  href: string;
+  icon: typeof Sparkles;
+  title: string;
+  body: string;
+  disabled?: boolean;
+}) {
+  const inner = (
+    <Card className={cn("h-full", disabled ? "opacity-60" : "transition-colors hover:border-primary")}>
+      <CardContent className="flex items-start gap-3 p-4">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <Icon className="h-4 w-4" />
+        </span>
+        <div>
+          <p className="font-medium leading-snug">{title}</p>
+          <p className="mt-0.5 text-[13px] text-muted-foreground">{body}</p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  if (disabled) return <div aria-disabled>{inner}</div>;
+  return (
+    <Link href={href} className="rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+      {inner}
+    </Link>
   );
 }

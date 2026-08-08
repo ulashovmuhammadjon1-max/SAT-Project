@@ -9,6 +9,7 @@ import {
   SpellCheck2,
   Bookmark,
   BarChart3,
+  CalendarCheck,
   Settings,
   GraduationCap,
 } from "lucide-react";
@@ -21,6 +22,7 @@ const NAV = [
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
   { href: "/bookmarks", label: "Bookmarks", icon: Bookmark },
+  { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
   { href: "/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

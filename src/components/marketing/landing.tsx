@@ -40,12 +40,11 @@ import { cn } from "@/lib/utils";
 /**
  * Where the "Get My Free SAT Plan" / "Book a session" CTAs point.
  *
- * There is no booking or application route yet, so both currently scroll to
- * the mentorship block that explains the offer — an honest destination rather
- * than a dead link or a fake form. Once a real booking page exists, change
- * this single constant and every mentorship CTA on the page follows.
+ * `/booking` is behind auth, so a signed-out visitor lands on the login page
+ * and returns here afterwards — that's the intended funnel for a free service
+ * that needs an account anyway.
  */
-const PLAN_CTA_HREF = "#mentorship";
+const PLAN_CTA_HREF = "/booking";
 
 export function Landing() {
   return (
@@ -202,7 +201,7 @@ function Hero() {
                 className="h-12 rounded-full border-border/80 px-7 text-[15px] backdrop-blur"
                 asChild
               >
-                <a href={PLAN_CTA_HREF}>Get My Free SAT Plan</a>
+                <Link href={PLAN_CTA_HREF}>Get My Free SAT Plan</Link>
               </Button>
             </div>
           </Reveal>
@@ -278,13 +277,13 @@ function MentorshipCard({ className }: { className?: string }) {
           </p>
         </div>
 
-        <a
+        <Link
           href={PLAN_CTA_HREF}
           className="group inline-flex shrink-0 items-center gap-1 text-[13px] font-medium text-primary transition-colors hover:text-primary/80"
         >
           Book a session
           <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -352,10 +351,10 @@ function BeyondSat() {
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Button size="lg" className="group h-11 rounded-full px-6 text-[15px]" asChild>
-                    <a href={PLAN_CTA_HREF}>
+                    <Link href={PLAN_CTA_HREF}>
                       Book a session
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                    </a>
+                    </Link>
                   </Button>
                   <span className="text-[13px] text-muted-foreground">No cost, no catch.</span>
                 </div>

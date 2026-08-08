@@ -81,6 +81,8 @@ model User {
 
   attempts        Attempt[]
   bookmarks       Bookmark[]
+  questionAttempts QuestionAttempt[]
+  bookings        Booking[]
   vocabProgress   VocabProgress[]
   vocabSetProgress VocabDeckProgress[]
   studyActivities StudyActivity[]
@@ -286,10 +288,11 @@ model Question {
   domain  Domain   @relation(fields: [domainId], references: [id])
   skill   Skill    @relation(fields: [skillId], references: [id])
 
-  choices     AnswerChoice[]
-  explanation Explanation?
-  responses   Response[]
-  bookmarks   Bookmark[]
+  choices          AnswerChoice[]
+  explanation      Explanation?
+  responses        Response[]
+  bookmarks        Bookmark[]
+  questionAttempts QuestionAttempt[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -436,6 +439,88 @@ model Bookmark {
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([userId, questionId])
+  @@index([userId])
+}
+
+/// A single answer submitted in the Question Bank (untimed, outside a test).
+///
+/// Deliberately separate from `Response`, which is scoped to a test `Attempt`
+/// and `ModuleAttempt` and must keep its exam semantics. A student may answer
+/// the same question many times here, so rows accumulate — "attempted" means
+/// *distinct* questionIds, and Question Bank progress reads both this table
+/// and `Response` so work done inside a mock still counts.
+model QuestionAttempt {
+  id                 String   @id @default(cuid())
+  userId             String
+  questionId         String
+  selectedChoiceId   String?
+  freeResponseAnswer String?
+  isCorrect          Boolean
+  timeSpentSeconds   Int      @default(0)
+  createdAt          DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([userId, questionId])
+  @@index([userId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Free 1:1 mentorship booking
+// ---------------------------------------------------------------------------
+
+enum BookingStatus {
+  UPCOMING
+  COMPLETED
+  CANCELLED
+}
+
+/// A bookable slot published by a mentor/admin.
+///
+/// Stored as an absolute UTC instant; the student UI renders it in their own
+/// timezone. `isBlocked` lets an admin retire a slot without deleting history.
+model MentorSlot {
+  id              String   @id @default(cuid())
+  startsAt        DateTime
+  durationMinutes Int      @default(30)
+  isBlocked       Boolean  @default(false)
+  note            String?
+  createdAt       DateTime @default(now())
+
+  booking Booking?
+
+  @@unique([startsAt])
+  @@index([startsAt])
+}
+
+model Booking {
+  id     String        @id @default(cuid())
+  userId String
+  slotId String        @unique // one booking per slot — the double-booking guard
+  status BookingStatus @default(UPCOMING)
+
+  // Snapshot of what the student told us at booking time. Copied rather than
+  // read live off User so the mentor sees what was actually submitted.
+  name            String
+  email           String
+  currentScore    Int?
+  targetScore     Int?
+  satDate         DateTime?
+  studyHoursPerWeek Int?
+  weakestArea     String?
+  notes           String?   @db.Text
+  timezone        String? // IANA zone captured from the browser, for display
+
+  cancelledAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  slot MentorSlot @relation(fields: [slotId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([status])
 }
 
 // ---------------------------------------------------------------------------
