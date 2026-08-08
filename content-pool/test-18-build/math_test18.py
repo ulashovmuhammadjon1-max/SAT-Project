@@ -97,9 +97,9 @@ MODULE_1 = [
       check="g + b = 34 with 8g + 14b = 386 gives 6b = 114, so b = 19."),
 
  dict(n="H1-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A cooper chamfers both ends of a stave. The volume of oak taken off, in cubic "
-            "centimetres, is \\((2w+5)(w-3)-\\left(w^{2}-4w\\right)\\), where w is the width of "
-            "the stave in centimetres. Which expression is equivalent to that volume?"),
+      stem=("A cooper chamfers both ends of a stave. The oak taken off, in cubic centimetres, is "
+            "modelled by \\((2w+5)(w-3)-\\left(w^{2}-4w\\right)\\), where w is the width of the "
+            "stave in centimetres. Which expression is equivalent to that model?"),
       choices=["\\(w^{2}-5w-15\\)", "\\(3w^{2}-w-15\\)", "\\(w^{2}+3w+15\\)",
                "\\(w^{2}+3w-15\\)"], correct="D",
       check="(2w+5)(w-3) = 2w^2 - w - 15, and taking away w^2 - 4w leaves w^2 + 3w - 15."),
@@ -265,8 +265,9 @@ MODULE_2_EASY = [
       check="90 - 7d = 34 gives 7d = 56 and d = 8."),
 
  dict(n="H2E-07", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A sundial's shadow is 84 centimetres long at noon and lengthens by 6 centimetres in "
-            "each hour after noon. How long is the shadow, in centimetres, 5 hours after noon?"),
+      stem=("An airship has 84 metres of mooring cable let out at noon, and the ground crew lets "
+            "out 6 more metres in each hour after noon. How many metres of cable are let out 5 "
+            "hours after noon?"),
       choices=["90", "114", "120", "126"], correct="B",
       check="84 + 6(5) = 114."),
 
@@ -298,9 +299,9 @@ MODULE_2_EASY = [
       check="n + 7 = 25, so n = 18."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The moisture content of a bed of hops, in percent, is modelled by "
-            "\\(M(h)=81\\left(\\frac{1}{3}\\right)^{h}\\), where h is the number of hours since "
-            "the kiln was lit. What is the moisture content 2 hours after the kiln is lit?"),
+      stem=("The sugar left in a fermenting wort, in grams per litre, is modelled by "
+            "\\(S(d)=81\\left(\\frac{1}{3}\\right)^{d}\\), where d is the number of days since the "
+            "yeast was pitched. How many grams per litre of sugar are left 2 days after pitching?"),
       choices=["3", "9", "27", "54"], correct="B",
       check="81(1/9) = 9."),
 
@@ -350,7 +351,7 @@ MODULE_2_EASY = [
       stem=("A blacksmith scribes a straight line across the square corner of a plate, cutting "
             "that right angle into two smaller angles. One of the two measures 34&deg;. What is "
             "the measure, in degrees, of the other?"),
-      choices=["56", "66", "146", "326"], correct="A",
+      choices=["56", "66", "124", "146"], correct="A",
       check="The two angles make up a right angle, so 90 - 34 = 56."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="MC",
@@ -361,10 +362,11 @@ MODULE_2_EASY = [
       check="2(8)(5) + 2(8)(3) + 2(5)(3) = 80 + 48 + 30 = 158."),
 
  dict(n="H2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("A maltings has a square malting floor whose perimeter is 48 metres. What is the area "
-            "of that floor, in square metres?"),
-      answers=["144"],
-      check="Each side is 48/4 = 12 metres, and 12 squared is 144."),
+      stem=("A malting floor is L-shaped: a rectangle 12 metres by 5 metres joined along one edge "
+            "to a rectangle 4 metres by 3 metres. What is the total area of the floor, in square "
+            "metres?"),
+      answers=["72"],
+      check="12(5) = 60 and 4(3) = 12, and 60 + 12 = 72."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="FR",
       stem=("A smith bends a bracket into a right triangle in which one of the acute angles "
@@ -378,12 +380,11 @@ MODULE_2_EASY = [
 # ------------------------------------------------------------ Module 2 Hard
 MODULE_2_HARD = [
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A brewer's two blending constraints are written as \\(4x-6y=10\\) and "
-            "\\(kx+9y=-21\\), where k is a constant. This pair of constraints has no solution. "
-            "What is the value of k?"),
-      choices=["-6", "-4", "6", "9"], correct="A",
-      check="The coefficients must be proportional, so k = 4(9)/(-6) = -6, and the constants "
-            "10 and -21 are not in that same ratio, so there is indeed no solution."),
+      stem=("A maltings blends x tonnes of pale malt with y tonnes of crystal malt. The blend must "
+            "satisfy both of the following conditions.<br/>\\(x+3y=17\\)<br/>\\(3x+y=23\\)<br/>By "
+            "how many tonnes does the pale malt in the blend exceed the crystal malt?"),
+      choices=["3", "5", "10", "13"], correct="A",
+      check="Subtracting the first condition from the second gives 2x - 2y = 6, so x - y = 3."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A watch regulator's correction is a linear function f. In the xy-plane the graph of "
@@ -430,12 +431,11 @@ MODULE_2_HARD = [
       check="3,410/0.62 = 5,500, which is also at least 4,000."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("A watchmaker's regulator turns a dial setting x into a raw reading using "
-            "\\(g(x)=x^{2}+1\\), and then turns that raw reading into a corrected reading using "
-            "\\(f(x)=3x-4\\). Which expression gives the corrected reading in terms of x?"),
-      choices=["\\(3x^{2}+3\\)", "\\(3x^{2}-1\\)", "\\(9x^{2}-24x+17\\)", "\\(3x^{2}-4\\)"],
-      correct="B",
-      check="3(x^2+1) - 4 = 3x^2 - 1."),
+      stem=("A quarry's blast-vibration model is the function f defined by \\(f(x)=2x^{2}-5\\). "
+            "For a positive value a the model gives \\(f(a)=45\\). What is the value of "
+            "\\(f(a+1)\\)?"),
+      choices=["45", "67", "72", "95"], correct="B",
+      check="2a^2 - 5 = 45 gives a = 5, and f(6) = 2(36) - 5 = 67."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A stress index for a quarry drill is written as "
@@ -453,9 +453,9 @@ MODULE_2_HARD = [
 
  dict(n="H2H-11", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A hop-kiln timing rule is scaled so that its setting x satisfies "
-            "\\(9^{2x-1}=27^{x+3}\\). What is the value of x?"),
-      choices=["5", "7", "9", "11"], correct="D",
-      check="Writing both sides in base 3 gives 4x - 2 = 3x + 9, so x = 11."),
+            "\\(9^{x+4}=27^{x}\\). What is the value of x?"),
+      choices=["2", "4", "6", "8"], correct="D",
+      check="Writing both sides in base 3 gives 2x + 8 = 3x, so x = 8."),
 
  dict(n="H2H-12", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("The specification for a balloon fabric puts its strength ratio at "
@@ -532,11 +532,11 @@ MODULE_2_HARD = [
             "70 degrees, whose supplement is 110 degrees."),
 
  dict(n="H2H-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("The rim of a circular grindstone is modelled in the xy-plane by "
-            "\\(x^{2}+y^{2}-10x+6y=2\\), where x and y are measured in decimetres. What is the "
-            "radius of the rim, in decimetres?"),
-      choices=["2", "4", "6", "36"], correct="C",
-      check="Completing both squares gives (x-5)^2 + (y+3)^2 = 36, so the radius is 6."),
+      stem=("A bell founder casts an ingot of bell metal as a right circular cylinder whose height "
+            "is twice its radius. The ingot's volume is \\(128\\pi\\) cubic centimetres. What is "
+            "the radius of the ingot, in centimetres?"),
+      choices=["2", "3", "4", "8"], correct="C",
+      check="pi r^2 (2r) = 2 pi r^3 = 128 pi gives r^3 = 64, so r = 4."),
 
  dict(n="H2H-21", domain="GT", skill="GT-TR", type="MC",
       stem=("A forged bracket has the shape of a right triangle \\(RST\\), with its right angle at "

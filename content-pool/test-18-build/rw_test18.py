@@ -130,16 +130,15 @@ QUESTIONS = [
      "behaves in air."),
 
  wic("W2",
-     "Ale yeast ferments briskly at cellar temperature, while the yeast used for lager works slowly "
-     "in a cold cask and leaves a cleaner flavour behind it. For a long time the origin of the "
-     "lager organism remained _____: it is a hybrid, and although one parent was a familiar "
-     "brewing yeast, the other matched nothing known to science until a wild relative was found in "
-     "the beech forests of Patagonia.",
-     ["obscure", "disputed", "immaterial", "documented"], "A",
-     "The colon explains the blank: one parent was familiar and the other matched nothing known, so "
-     "where the yeast came from was simply not known. The 'disputed' option would require rival "
-     "accounts, and the text describes an absence of any account rather than an argument between "
-     "them."),
+     "Barley starch is not fermentable, and yeast can make nothing of it. Malting wakes the grain "
+     "just far enough to produce the enzymes that will break the starch down, and the maltster then "
+     "kills the sprout with heat before the seedling can consume what it has made. The whole "
+     "operation is a question of _____: halted too early it yields too little enzyme, and halted "
+     "too late it leaves the brewer nothing to work on.",
+     ["timing", "temperature", "cleanliness", "scale"], "A",
+     "The colon sets halting too early against halting too late, so the blank names the judgement "
+     "of when to stop. The 'temperature' option picks out the means by which the sprouting is "
+     "arrested rather than the thing the sentence identifies as decisive."),
 
  wic("W3",
      "A balance wheel swings back and forth against a flat spiral spring, and the rate of a watch "
@@ -627,9 +626,11 @@ QUESTIONS = [
      "shift is worse from the start without showing that its pattern follows the clock."),
 
  coe("E6",
-     "A twelfth-century copy of Boethius carries no colophon and has been assigned by successive "
-     "catalogues to three different houses. Palaeographer Aldo Ferrini argues that it was written "
-     "at the abbey of Saint-Amand rather than at any of the others that have been proposed.",
+     "A twelfth-century copy of Boethius carries no colophon, the note in which a scribe recorded "
+     "where and when he finished a book, and successive catalogues have assigned it to three "
+     "different houses in the Low Countries and northern France. Palaeographer Aldo Ferrini argues "
+     "that it was written at the abbey of Saint-Amand rather than at any of the others that have "
+     "been proposed for it.",
      "Which finding, if true, would most directly support Ferrini's argument?",
      ["The manuscript's ruling pattern, its unusual system of abbreviation and the shape of its ampersand all match dated books written at Saint-Amand within the same decade, and none of the three appears in books from the other houses proposed.",
       "Saint-Amand is known to have owned a copy of Boethius in the twelfth century.",
@@ -801,9 +802,10 @@ QUESTIONS = [
 
  # ------------------------------------------------------------- Boundaries (12)
  bnd("B1",
-     "A glider has no engine and sinks steadily through still air. A pilot crossing country flies "
-     "from one column of rising air to the _____ climbs in each column and gives most of that "
-     "height back on the glide to the next.",
+     "A glider has no engine and sinks steadily through still air, so a cross-country flight is "
+     "made entirely out of the height the air itself supplies. Warm ground releases columns of "
+     "rising air through the middle of the day, and a pilot flies from one column to the _____ "
+     "climbs in each of them and gives most of that height back on the glide to the next.",
      ["next; the aircraft", "next, the aircraft", "next the aircraft", "next: and the aircraft"],
      "A",
      "Two complete statements meet at the blank with no conjunction between them, and the semicolon "
@@ -921,6 +923,342 @@ QUESTIONS = [
      "with a matching comma before the verb that belongs to the subject. Any other mark breaks the "
      "sentence at a point where the subject has not yet reached its verb."),
 
+ # ------------------------------------------------ Form, Structure, and Sense (9)
+ fss("F1",
+     "An ejection seat has to clear the tail of the aircraft before the parachute opens, and the "
+     "whole sequence takes under two seconds from the moment the handle is pulled. Because nothing "
+     "in it can be tested twice, the seat's main charge, along with the drogue gun and the two "
+     "barostatic timers, _____ replaced after every live firing.",
+     ["are", "have been", "is", "were"], "C",
+     "The subject is the singular noun 'charge'; the interrupting phrase beginning 'along with' "
+     "does not make a singular subject plural, and the sentence states standing practice rather "
+     "than a completed past event."),
+
+ fss("F2",
+     "A washed-rind cheese is wiped with brine every few days as it matures, which favours one "
+     "group of bacteria on the surface over the moulds that would otherwise take hold. By the time "
+     "the cheesemaker cut into the first wheel of the new make, the rind _____ a deep orange that "
+     "the earlier batches had never reached.",
+     ["turns", "had turned", "will turn", "is turning"], "B",
+     "The colour change was complete before the wheel was cut, and the cutting is itself in the "
+     "past, so the past perfect is what places one past event before another."),
+
+ fss("F3",
+     "A dividing engine cuts the teeth of a wheel by indexing a blank round a master plate one step "
+     "at a time, and a worn plate spoils every wheel cut from it. Each of the three engines in the "
+     "workshop _____ its own master plate, its own worm and a spindle that has never been taken "
+     "out.",
+     ["have", "has", "having", "were having"], "B",
+     "'Each' is the subject of the sentence and is singular; the prepositional phrase naming three "
+     "engines does not change the number of the subject."),
+
+ fss("F4",
+     "A fruit tree will not break dormancy until it has spent enough hours below about seven "
+     "degrees, and a mild winter leaves the buds opening raggedly in spring. The number of such "
+     "hours a variety requires _____ from under three hundred in some Californian selections to "
+     "more than a thousand in the old northern kinds.",
+     ["range", "ranges", "have ranged", "are ranging"], "B",
+     "The subject is 'the number', which is singular, and the words following it name what is being "
+     "counted rather than replacing the subject. The plural verb would agree with 'hours', which "
+     "sits inside a modifying clause."),
+
+ fss("F5",
+     "Goitre was common through the Alps and around the American Great Lakes until iodine began to "
+     "be added to table salt in the 1920s. The health office's brief was to license the additive, "
+     "to persuade the salt companies to adopt it and _____ the result in schoolchildren over the "
+     "following decade.",
+     ["measuring", "to measure", "it measured", "having measured"], "B",
+     "The three items joined by 'and' all follow 'was to', and the first two are infinitives, so "
+     "the third has to be an infinitive as well. The gerund and the finite clause each break the "
+     "parallel structure."),
+
+ fss("F6",
+     "A binder working from a stack of loose gatherings needs to know which one follows which, and "
+     "the scribe supplies the answer at the foot of the last page: the opening word or two of the "
+     "gathering to come. Checking those catchwords against the first words of each gathering, "
+     "_____",
+     ["the order of the book was quickly established.",
+      "a misbound quire was found near the middle of the volume.",
+      "the cataloguer established the order of the book in an afternoon.",
+      "there turned out to be a quire out of place near the middle."],
+     "C",
+     "The opening participial phrase has to describe whoever did the checking, and only the version "
+     "beginning with the cataloguer supplies that subject. Beginning with the order of the book "
+     "says that the order was doing the checking."),
+
+ fss("F7",
+     "Two drives of the same model were opened after a decade in a server room, one from a bay with "
+     "a working fan and one from a bay whose fan had failed early. The wear on the bearings of the "
+     "hotter drive is roughly double _____ found on the drive that stayed cool.",
+     ["that", "those", "them", "which"], "A",
+     "The pronoun stands in for the singular noun 'wear', so the singular form is required; the "
+     "plural would need a plural antecedent and the sentence supplies none."),
+
+ fss("F8",
+     "A print is taken without a press: the printer lays the paper on the inked block and rubs the "
+     "back of the sheet with a disc of coiled cord wrapped in a bamboo sheath. The studio kept a "
+     "rack of six such discs and inspected all six _____ sheaths at the end of every week, since a "
+     "split sheath scores the paper.",
+     ["discs", "disc's", "discs'", "discs's"], "C",
+     "The sheaths belong to all six of the tools, so the noun has to be plural and possessive at "
+     "once, which puts the apostrophe after the plural ending. The singular possessive would credit "
+     "the sheaths to one disc only."),
+
+ fss("F9",
+     "A blade left in a tidal race gathers barnacles and weed within a season, and a fouled blade "
+     "loses efficiency long before it loses strength. The two turbines lifted for inspection last "
+     "autumn were among the few in the array that _____ never been cleaned in service.",
+     ["has", "have", "having", "is"], "B",
+     "The relative pronoun refers back to 'the few', which is plural, so the plural verb is "
+     "required; the singular would agree with a single turbine, which is not what the clause "
+     "describes."),
+
+ # -------------------------------------------------------------- Transitions (9)
+ trn("N1",
+     "A rivet head standing proud of a wing skin trips the airflow passing over it, and an aircraft "
+     "carries tens of thousands of rivets. Countersinking every hole so that the head sits flush "
+     "costs more to build and complicates every later repair. _____ every aircraft designed for "
+     "high speed is built that way, because the drag saved across thirty years of service dwarfs "
+     "the extra cost of assembly.",
+     ["Nonetheless,", "Consequently,", "Likewise,", "In short,"], "A",
+     "Flush riveting is adopted in spite of the costs just listed, so the transition has to concede "
+     "a contrast. Treating it as a consequence would make the extra expense the reason for choosing "
+     "the method."),
+
+ trn("N2",
+     "Limestone dissolves slowly in rainwater made faintly acid by the air, and a wall exposed to "
+     "driving rain is washed clean of the crust that forms on it. _____ the sheltered parts of the "
+     "same facade, under a cornice or behind a column, gather a black skin of gypsum and soot that "
+     "eats into the carving beneath.",
+     ["By contrast,", "Consequently,", "In addition,", "For example,"], "A",
+     "The sheltered surfaces behave in the opposite way to the washed ones just described, so the "
+     "transition sets the two against each other. Presenting the second as a consequence would make "
+     "the washing of exposed stone the cause of the crust elsewhere."),
+
+ trn("N3",
+     "A mobile dune advances by rolling sand over its crest, and marram or spinifex planted on the "
+     "windward face traps that sand before it reaches the top. _____ the planting holds only while "
+     "the roots survive, and a single season of drought on a stabilised dune can put it back in "
+     "motion within months.",
+     ["However,", "Therefore,", "Likewise,", "For instance,"], "A",
+     "The failure of the planting works against the effect just described, so the transition marks "
+     "a contrast rather than a consequence."),
+
+ trn("N4",
+     "The number of transistors on a chip doubled roughly every two years for four decades, and the "
+     "doubling was never a law of physics but a target the industry organised itself to meet. "
+     "Equipment makers, materials suppliers and circuit designers all planned to one published "
+     "schedule. _____ the pace was in large part a prediction that the industry arranged to "
+     "fulfil.",
+     ["In other words,", "Nevertheless,", "For instance,", "Meanwhile,"], "A",
+     "The closing sentence states in general terms what the coordinated planning just described "
+     "amounts to, which makes it a restatement. It is not a further instance, since it introduces "
+     "no new case."),
+
+ trn("N5",
+     "The internal clock is reset each morning by light, and without that daily correction it runs "
+     "on a cycle of its own, typically a little longer than twenty-four hours. _____ some people "
+     "with no light perception at all sleep well for a fortnight and badly for the next, in a cycle "
+     "that repeats indefinitely as their clock drifts through the calendar.",
+     ["Consequently,", "Nevertheless,", "Similarly,", "In contrast,"], "A",
+     "The drifting sleep pattern follows directly from a clock that never receives its daily "
+     "correction, which is a cause-and-effect relation. No contrast is being drawn between the two "
+     "sentences."),
+
+ trn("N6",
+     "Water is some eight hundred times denser than air, so a tidal turbine draws as much power "
+     "from a slow current as a wind turbine draws from a fast wind, and it does so with far smaller "
+     "blades. _____ that same density loads the blades much more heavily, and the machines have to "
+     "be built to a strength no wind turbine requires.",
+     ["However,", "For example,", "Similarly,", "As a result,"], "A",
+     "The heavy loading is a penalty set against the advantage just stated, so a contrastive "
+     "transition is what the relation calls for. Presenting it as a result would suggest the "
+     "smaller blades brought the loading about, whereas the passage traces both to the density of "
+     "water."),
+
+ trn("N7",
+     "A sheet that is to fold flat obeys a rule which can be checked before any folding is done: "
+     "around every interior vertex the mountain folds and the valley folds must differ in number by "
+     "exactly two. _____ a designer can draw a pattern of creases on a computer, test it against "
+     "the rule and know the sheet will lie flat without ever picking up paper.",
+     ["For this reason,", "By contrast,", "Even so,", "Similarly,"], "A",
+     "Being able to test a design without folding follows from having a rule that can be checked in "
+     "advance, so the transition marks a result. Nothing in the second sentence stands against the "
+     "first, which rules out the concessive and contrastive options."),
+
+ trn("N8",
+     "Seed in a bank does not keep indefinitely, and a packet that has lost its viability is worse "
+     "than useless, since the collection goes on listing it as secure. Banks guard against this by "
+     "testing rather than by trusting their storage conditions. _____ the national collection "
+     "samples every accession on a fixed cycle, sows the seed in trays and counts what comes up, "
+     "and any lot falling below about eighty-five per cent germination is grown out in a field and "
+     "replaced.",
+     ["For example,", "Nevertheless,", "In contrast,", "Consequently,"], "A",
+     "The sampling routine described is one instance of the stated policy of testing rather than "
+     "trusting, so the transition introduces an example. Nothing in the final sentence works "
+     "against what precedes it, which rules out the contrastive options."),
+
+ trn("N9",
+     "Running continuously at a moderate pace builds the heart and the capillary bed but leaves the "
+     "fastest muscle fibres barely used, since they are recruited only when the slower ones cannot "
+     "meet the demand. _____ a session of short repetitions run well above race pace recruits those "
+     "fibres on every repetition, at the cost of covering far less ground in the hour.",
+     ["By contrast,", "Consequently,", "In addition,", "For example,"], "A",
+     "The interval session engages the fibres the steady run leaves idle, so the two methods are "
+     "being set against each other. Presenting the second as a consequence would make the steady "
+     "running the cause of the interval work."),
+
+ # ------------------------------------------------------ Rhetorical Synthesis (9)
+ syn("R1",
+     ["Early parachutes were flat circular canopies of silk that descended straight down and could not be steered.",
+      "A ram-air canopy is a fabric wing built from cells that inflate through openings at the front.",
+      "The inflated cells give the canopy an aerofoil section, so it generates lift as well as drag.",
+      "A ram-air canopy descends more slowly and can be flown to a chosen landing point.",
+      "Sport parachutists adopted ram-air canopies through the 1970s."],
+     "explain how the newer canopy differs from the older one in the way it holds a jumper up.",
+     ["A ram-air canopy is built from cells that inflate through openings at the front, giving it an aerofoil section that generates lift, whereas the earlier flat circular canopy of silk produced only drag as it descended.",
+      "Sport parachutists adopted ram-air canopies through the 1970s, and the canopies used before then were made of silk.",
+      "A ram-air canopy descends more slowly than a flat circular canopy and can be flown to a chosen landing point.",
+      "Early parachutes were flat circular canopies of silk that descended straight down and could not be steered."],
+     "A",
+     "The goal asks about the mechanism, and only the response naming the inflated cells, the "
+     "aerofoil section and the lift they generate contrasts that with a canopy producing drag "
+     "alone. The note about slower descent and steering reports consequences without saying what "
+     "produces them."),
+
+ syn("R2",
+     ["Cabbage for kimchi is salted before the other ingredients are added.",
+      "Salting draws water out of the leaves and leaves a brine standing in the vessel.",
+      "Most of the soil bacteria carried on the leaves cannot grow in that brine.",
+      "Lactic acid bacteria tolerate salt and multiply in it, producing acid as they do.",
+      "The acid they produce lowers the pH far enough to keep spoilage organisms out later."],
+     "explain how the salting stage determines which organisms carry out the fermentation.",
+     ["Salting draws water from the leaves into a brine that most soil bacteria cannot grow in, while the salt-tolerant lactic acid bacteria multiply in it and acidify the vessel.",
+      "Cabbage for kimchi is salted in the vessel before any of the other ingredients are added.",
+      "Lactic acid bacteria produce acid that lowers the pH far enough to keep spoilage organisms out later.",
+      "Most of the bacteria found on cabbage leaves have come from the soil the plants grew in."],
+     "A",
+     "The goal asks how salting selects the fermenting organisms, and only the response pairing the "
+     "brine that excludes soil bacteria with the salt-tolerant ones that thrive in it answers it. "
+     "The note about pH describes what happens after the selection has already been made."),
+
+ syn("R3",
+     ["A quartz crystal cut to a particular shape vibrates at a nearly fixed frequency when a voltage is applied.",
+      "The frequency chosen for wristwatches is 32,768 hertz.",
+      "That number is two raised to the fifteenth power.",
+      "A chain of fifteen halving circuits reduces it to one pulse per second.",
+      "The balance of a mechanical watch beats about five times a second."],
+     "explain why that particular frequency was chosen.",
+     ["The frequency used in wristwatches, 32,768 hertz, is two raised to the fifteenth power, so a chain of fifteen halving circuits turns it into one pulse per second.",
+      "A quartz crystal cut to a particular shape vibrates at a nearly fixed frequency when a voltage is applied across it.",
+      "A quartz watch's crystal vibrates far faster than the balance of a mechanical watch, which beats about five times a second.",
+      "The frequency chosen for quartz wristwatches is 32,768 hertz, and a chain of circuits reduces it to one pulse per second."],
+     "A",
+     "Only the response identifying the frequency as a power of two, and connecting that to fifteen "
+     "successive halvings, explains why that number rather than another was picked. Mentioning a "
+     "chain of circuits without naming the power of two states the outcome and leaves the reason "
+     "out."),
+
+ syn("R4",
+     ["Flint occurs as nodules in chalk and has no naturally flat faces.",
+      "A knapper strikes a nodule to remove a slice, leaving one flat, glassy face.",
+      "In East Anglian churches the knapped faces are set outward in the wall.",
+      "The rest of each nodule stays rough and is bedded in the mortar behind.",
+      "Such a wall shows a flat glassy surface but is held together by the irregular backs of its stones."],
+     "explain how one operation on the stone accounts for both the wall's surface and its strength.",
+     ["The knapper strikes each nodule to leave one flat glassy face, and that face is set outward while the rough back of the same stone is bedded in the mortar that holds the wall together.",
+      "Flint occurs as nodules in chalk and has no naturally flat faces of its own.",
+      "In East Anglian churches the knapped faces of the flints are set outward in the wall.",
+      "A wall of knapped flint presents a flat glassy surface to anyone standing in front of it."],
+     "A",
+     "The goal asks for one operation accounting for two properties, and only the response "
+     "following a single nodule from the strike to the outward face and the mortared back does "
+     "that. Describing the outward faces alone gives the surface and says nothing about what holds "
+     "the wall up."),
+
+ syn("R5",
+     ["Commercial bananas are sterile and are propagated from suckers, so a plantation is a single genotype.",
+      "The Gros Michel variety dominated the export trade until the 1950s.",
+      "A soil fungus causing Panama disease spread through Gros Michel plantations and made the variety uncommercial.",
+      "Growers replaced it with Cavendish, which resisted the strain then circulating.",
+      "A newer strain of the same fungus now attacks Cavendish."],
+     "explain why the industry's answer to the first outbreak left it open to the second.",
+     ["Growers met Panama disease by replacing one sterile, sucker-propagated variety with another, so the Cavendish plantations that resisted the old strain are as uniform as the Gros Michel ones were, and a newer strain now spreads through them.",
+      "The Gros Michel variety dominated the export trade until a soil fungus made it uncommercial in the 1950s.",
+      "Commercial bananas are sterile and are propagated from suckers rather than grown from seed.",
+      "A newer strain of the fungus that causes Panama disease now attacks the Cavendish variety."],
+     "A",
+     "The goal asks why the remedy failed later, and only the response noting that the replacement "
+     "was itself a single clone connects the first fix to the second outbreak. Reporting that a new "
+     "strain attacks Cavendish states the outcome without giving the reason."),
+
+ syn("R6",
+     ["In 1951 Doll and Hill wrote to every doctor on the British medical register asking about smoking habits.",
+      "Some 34,000 replied and were then followed for decades.",
+      "Deaths among the respondents were matched to their stated habits as they occurred.",
+      "Earlier studies had asked patients already ill with lung cancer what they had smoked.",
+      "In the new design the habit was on record before any of the diseases appeared."],
+     "explain what the design of the 1951 study changed.",
+     ["Doll and Hill recorded the doctors' smoking habits in 1951 and matched deaths to them as they occurred over the following decades, so the habit was on record before any disease appeared, unlike earlier studies that asked patients already ill what they had smoked.",
+      "Doll and Hill wrote to every doctor on the British medical register in 1951, and some 34,000 of them replied.",
+      "Earlier studies of smoking had asked patients already ill with lung cancer to recall what they had smoked.",
+      "Deaths among the doctors who replied were matched to their stated habits as those deaths occurred."],
+     "A",
+     "The goal asks what the design changed, and only the response contrasting habits recorded in "
+     "advance with habits recalled after illness names that change. Describing the earlier studies "
+     "alone gives one side of the comparison and leaves the new design unstated."),
+
+ syn("R7",
+     ["A camel can lose a quarter of its body water without its blood thickening dangerously.",
+      "Its red cells are oval and stay flexible as the blood concentrates.",
+      "Its body temperature is allowed to rise several degrees through the day rather than being held constant by sweating.",
+      "The heat stored during the day is shed at night at no cost in water.",
+      "A camel can drink over a hundred litres in a few minutes once water is reached."],
+     "explain how the animal reduces the water it must spend on keeping cool.",
+     ["Rather than sweating to hold a constant temperature, a camel lets its body temperature rise several degrees through the day and sheds the stored heat at night, which costs it no water at all.",
+      "A camel can lose a quarter of its body water without its blood thickening dangerously.",
+      "A camel's red cells are oval and stay flexible as the blood concentrates.",
+      "A camel can drink over a hundred litres in a few minutes once water is reached."],
+     "A",
+     "The goal concerns the water spent on cooling, and only the response describing the daytime "
+     "rise in temperature and the night-time release explains how sweating is avoided. Tolerance of "
+     "water loss says how much the animal can afford to lose, not how it avoids losing it."),
+
+ syn("R8",
+     ["Songhai's rulers governed a territory stretching along more than a thousand miles of the Niger.",
+      "Askia Muhammad, who came to power in 1493, replaced hereditary provincial lords with appointed governors.",
+      "He created ministries for the treasury, for agriculture and for the fleet of river canoes.",
+      "Standard weights and measures were imposed on the markets of the trading towns.",
+      "The river fleet moved troops and grain between provinces in days rather than weeks."],
+     "explain how the reforms addressed the difficulty of governing a territory of that size.",
+     ["Askia Muhammad replaced hereditary provincial lords with appointed governors and built a river fleet that carried troops and grain between provinces in days rather than weeks, bringing a thousand miles of the Niger under one administration.",
+      "Songhai's rulers governed a territory stretching along more than a thousand miles of the Niger.",
+      "Askia Muhammad came to power in 1493 and created ministries for the treasury, for agriculture and for the fleet of river canoes.",
+      "Standard weights and measures were imposed on the markets of Songhai's trading towns."],
+     "A",
+     "The goal asks how distance was overcome, and only the response pairing appointed governors "
+     "with a fleet that moved men and grain in days speaks to the size of the territory. Listing "
+     "the new ministries records what was created without connecting it to the problem of "
+     "distance."),
+
+ syn("R9",
+     ["The ulnar collateral ligament resists the outward force on the elbow during a pitch.",
+      "High-speed measurement puts the peak torque at the elbow close to the ligament's measured failure strength on a single throw.",
+      "The ligament therefore has almost no margin at maximum effort.",
+      "Damage accumulates across many throws rather than occurring in one.",
+      "Leagues have adopted pitch counts and mandatory rest days rather than limits on velocity."],
+     "explain why the rules adopted target the number of throws rather than their speed.",
+     ["Since the peak torque of a single pitch already sits close to the ligament's failure strength, the damage that ends careers builds up across many throws, which is what pitch counts and mandatory rest days are designed to limit.",
+      "The ulnar collateral ligament is the structure that resists the outward force on the elbow during a pitch.",
+      "High-speed measurement puts the peak torque at the elbow close to the ligament's measured failure strength.",
+      "Leagues have adopted pitch counts and mandatory rest days rather than limits on velocity."],
+     "A",
+     "The goal asks for the reasoning behind the rules, and only the response linking the "
+     "accumulation of damage across throws to the counts and the rest days supplies it. Reporting "
+     "the peak torque alone establishes that one throw is demanding without explaining why the "
+     "limit falls on the number of throws."),
+
 ]
 
 DROPPED = {}
+

@@ -120,6 +120,11 @@ def h2h_03():
     return "\\(" + latex(lo) + "\\le x<" + latex(hi) + "\\)"
 
 
+def h2h_01():
+    sol = solve([Eq(x + 3 * y, 17), Eq(3 * x + y, 23)], [x, y])
+    return sol[x] - sol[y]
+
+
 def h2h_02():
     # slope read off 5x+2y=9, then the point (-2,13) fixes the intercept
     slope = solve(Eq(5 * x + 2 * y, 9), y)[0].coeff(x)
@@ -131,6 +136,11 @@ def h2h_05():
     rate, fee = symbols("rate fee")
     sol = solve([Eq(fee + 140 * rate, 1930), Eq(fee + 260 * rate, 3250)], [fee, rate])
     return sol[fee] + 400 * sol[rate]
+
+
+def h2h_08():
+    av = [z for z in solve(Eq(2 * x ** 2 - 5, 45), x) if z > 0][0]
+    return 2 * (av + 1) ** 2 - 5
 
 
 def h2h_13():
@@ -156,9 +166,8 @@ def h2h_19():
 
 
 def h2h_20():
-    hc = solve(diff(x ** 2 - 10 * x, x), x)[0]
-    kc = solve(diff(y ** 2 + 6 * y, y), y)[0]
-    return sqrt(2 + hc ** 2 + kc ** 2)
+    rad = symbols("rad", positive=True)
+    return solve(Eq(pi * rad ** 2 * (2 * rad), 128 * pi), rad)[0]
 
 
 def h2h_21():
@@ -210,10 +219,10 @@ DERIVE = {
  "H2E-18": lambda: Rational(82 + 95 + 74 + 110 + 88 + 91, 6),
  "H2E-19": lambda: 90 - 34,
  "H2E-20": lambda: 2 * (8 * 5) + 2 * (8 * 3) + 2 * (5 * 3),
- "H2E-21": lambda: solve(Eq(4 * v, 48), v)[0] ** 2,
+ "H2E-21": lambda: 12 * 5 + 4 * 3,
  "H2E-22": lambda: simplify(18 * sin(pi / 6)),
 
- "H2H-01": lambda: solve(Eq(4 * 9 - (-6) * k, 0), k)[0],
+ "H2H-01": h2h_01,
  "H2H-02": h2h_02,
  "H2H-03": h2h_03,
  "H2H-04": lambda: solve(Eq(Rational(12, 100) * 60,
@@ -221,10 +230,10 @@ DERIVE = {
  "H2H-05": h2h_05,
  "H2H-06": lambda: solve(Eq(c * m + 3 * c * n, T_), c)[0],
  "H2H-07": lambda: solve(Eq(Rational(62, 100) * m, 3410), m)[0],
- "H2H-08": lambda: expand(3 * (x ** 2 + 1) - 4),
+ "H2H-08": h2h_08,
  "H2H-09": lambda: cancel((x ** 2 - x - 12) / (x ** 2 - 16)),
  "H2H-10": lambda: solve(Eq(24 ** 2 - 4 * k * 16, 0), k)[0],
- "H2H-11": lambda: solve(Eq(9 ** (2 * x - 1), 27 ** (x + 3)), x)[0],
+ "H2H-11": lambda: solve(Eq(9 ** (x + 4), 27 ** x), x)[0],
  "H2H-12": lambda: simplify((16 * XP ** 8 / YP ** 4) ** Rational(3, 4)),
  "H2H-13": h2h_13,
  "H2H-14": h2h_14,
