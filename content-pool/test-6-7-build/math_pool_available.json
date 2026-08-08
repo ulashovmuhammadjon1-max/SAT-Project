@@ -1,0 +1,981 @@
+[
+ {
+  "src": "decintb_math_m1",
+  "num": 9,
+  "type": "FREE_RESPONSE",
+  "stem": "y = 4x + 8; y = 3x + 1. In the xy-plane, the graphs of the given equations intersect at (x, y). What is the value of x?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M1",
+   "num": 9,
+   "type": "FREE_RESPONSE",
+   "problem": "y = 4x + 8; y = 3x + 1. In the xy-plane, the graphs of the given equations intersect at (x, y). What is the value of x?",
+   "correct": "-7",
+   "verified": "sympy: 4x+8=3x+1 -> x=-7"
+  }
+ },
+ {
+  "src": "decintb_math_m1",
+  "num": 10,
+  "type": "FREE_RESPONSE",
+  "stem": "The equation 8p + 8w = 720 represents the number of purple tiles, p, and the number of white tiles, w, a designer needs to cover a 720-square-inch section of a wall. The designer needs 34 purple tiles for the wall. How many white tiles does she need?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M1",
+   "num": 10,
+   "type": "FREE_RESPONSE",
+   "problem": "The equation 8p + 8w = 720 represents the number of purple tiles, p, and the number of white tiles, w, a designer needs to cover a 720-square-inch section of a wall. The designer needs 34 purple tiles for the wall. How many white tiles does she need?",
+   "correct": "56",
+   "verified": "sympy: 8(34)+8w=720 -> 8w=448 -> w=56"
+  }
+ },
+ {
+  "src": "decintb_math_m1",
+  "num": 11,
+  "type": "FREE_RESPONSE",
+  "stem": "y = -6.5; y = x^2 + 8x + a. In the given system of equations, a is a positive integer constant. The system has no real solutions. What is the least possible value of a?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M1",
+   "num": 11,
+   "type": "FREE_RESPONSE",
+   "problem": "y = -6.5; y = x^2 + 8x + a. In the given system of equations, a is a positive integer constant. The system has no real solutions. What is the least possible value of a?",
+   "correct": "10",
+   "verified": "sympy: x^2+8x+(a+6.5)=0, discriminant 64-4(a+6.5)<0 -> a>9.5; least positive integer is 10"
+  }
+ },
+ {
+  "src": "decintb_math_m1",
+  "num": 21,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "f(x) = 250(5)^x. The function f is defined by the given equation. If g(x) = f(x-2), which of the following equations defines the function g?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M1",
+   "num": 21,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "f(x) = 250(5)^x. The function f is defined by the given equation. If g(x) = f(x-2), which of the following equations defines the function g?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "g(x) = 10(5)^x"
+    },
+    {
+     "label": "B",
+     "content": "g(x) = 125(5)^x"
+    },
+    {
+     "label": "C",
+     "content": "g(x) = 250(25)^x"
+    },
+    {
+     "label": "D",
+     "content": "g(x) = 250(10)^x"
+    }
+   ],
+   "correct": "A",
+   "verified": "sympy: g(x)=250*5^(x-2)=250*5^x/25=10*5^x"
+  }
+ },
+ {
+  "src": "decintb_math_m1",
+  "num": 22,
+  "type": "FREE_RESPONSE",
+  "stem": "ax^2 + 176x + c. In the given expression, a and c are positive constants. If px + q is a factor of the expression, where p and q are positive constants, what is the greatest possible value of ac?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M1",
+   "num": 22,
+   "type": "FREE_RESPONSE",
+   "problem": "ax^2 + 176x + c. In the given expression, a and c are positive constants. If px + q is a factor of the expression, where p and q are positive constants, what is the greatest possible value of ac?",
+   "correct": "7744",
+   "verified": "sympy/AM-GM: if ax^2+176x+c=(px+q)(rx+s) with p,q,r,s>0, then a=pr, c=qs, 176=ps+qr; by AM-GM ps+qr>=2*sqrt(ps*qr)=2*sqrt(pr*qs)=2*sqrt(ac), so 176>=2*sqrt(ac) -> ac<=88^2=7744, with equality achievable when ps=qr=88"
+  }
+ },
+ {
+  "src": "decintb_math_m2",
+  "num": 5,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The graph of the polynomial function f in the xy-plane, where y = f(x), has x-intercepts of (-5, 0) and (2, 0). Which of the following must be true?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M2",
+   "num": 5,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The graph of the polynomial function f in the xy-plane, where y = f(x), has x-intercepts of (-5, 0) and (2, 0). Which of the following must be true?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "f(0) = -5"
+    },
+    {
+     "label": "B",
+     "content": "f(2) = -5"
+    },
+    {
+     "label": "C",
+     "content": "f(-5) = 0"
+    },
+    {
+     "label": "D",
+     "content": "f(-5) = 2"
+    }
+   ],
+   "correct": "C",
+   "verified": "logical: x-intercept (-5,0) means f(-5)=0"
+  }
+ },
+ {
+  "src": "decintb_math_m2",
+  "num": 15,
+  "type": "FREE_RESPONSE",
+  "stem": "The function f is defined by f(x) = a^x + b, where a and b are constants. In the xy-plane, the graph of y = f(x) has an x-intercept at (2, 0) and a y-intercept at (0, -15). What is the value of b?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M2",
+   "num": 15,
+   "type": "FREE_RESPONSE",
+   "problem": "The function f is defined by f(x) = a^x + b, where a and b are constants. In the xy-plane, the graph of y = f(x) has an x-intercept at (2, 0) and a y-intercept at (0, -15). What is the value of b?",
+   "correct": "-16",
+   "verified": "sympy: f(0)=1+b=-15 -> b=-16 (a^2+b=0 with b=-16 gives a=4, consistent)"
+  }
+ },
+ {
+  "src": "decintb_math_m2",
+  "num": 18,
+  "type": "FREE_RESPONSE",
+  "stem": "56x^2 + (56s + r)x + rs = 0. In the given equation, r and s are positive constants. The product of the solutions to the given equation is krs, where k is a constant. What is the value of k?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M2",
+   "num": 18,
+   "type": "FREE_RESPONSE",
+   "problem": "56x^2 + (56s + r)x + rs = 0. In the given equation, r and s are positive constants. The product of the solutions to the given equation is krs, where k is a constant. What is the value of k?",
+   "correct": "1/56",
+   "verified": "sympy: factors as (56x+r)(x+s)=0, roots -r/56 and -s; product = (-r/56)(-s) = rs/56, so k=1/56"
+  }
+ },
+ {
+  "src": "decintb_math_m2",
+  "num": 20,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The table gives the areas and perimeters of two similar rectangles, where n is a constant: Rectangle A area 1,440 sq in, perimeter 480 in; Rectangle B area 5,760 sq in, perimeter n in. What is the value of n?",
+  "flagged": false,
+  "q": {
+   "source": "DecIntB",
+   "module": "MATH_M2",
+   "num": 20,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The table gives the areas and perimeters of two similar rectangles, where n is a constant: Rectangle A area 1,440 sq in, perimeter 480 in; Rectangle B area 5,760 sq in, perimeter n in. What is the value of n?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "960"
+    },
+    {
+     "label": "B",
+     "content": "1,920"
+    },
+    {
+     "label": "C",
+     "content": "3,840"
+    },
+    {
+     "label": "D",
+     "content": "4,800"
+    }
+   ],
+   "correct": "A",
+   "verified": "sympy: area ratio 5760/1440=4, linear scale factor = sqrt(4)=2, perimeter scales linearly: n=480*2=960"
+  }
+ },
+ {
+  "src": "junev2_math_m1",
+  "num": 6,
+  "type": "FREE_RESPONSE",
+  "stem": "The function g is defined by g(x) = x/2. For what value of x does g(x) = 624?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M1",
+   "num": 6,
+   "type": "FREE_RESPONSE",
+   "problem": "The function g is defined by g(x) = x/2. For what value of x does g(x) = 624?",
+   "correct": "1248",
+   "verified": "sympy: x/2=624 -> x=1248"
+  }
+ },
+ {
+  "src": "junev2_math_m1",
+  "num": 7,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The scatterplot shows the relationship between two variables, x and y, with points roughly at (1,7),(2,7),(3,5),(4.5,5),(6.5,4),(7,4),(8.5,1),(9.5,2), showing a downward trend. Which of the following equations is the most appropriate linear model for the data shown?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M1",
+   "num": 7,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The scatterplot shows the relationship between two variables, x and y, with points roughly at (1,7),(2,7),(3,5),(4.5,5),(6.5,4),(7,4),(8.5,1),(9.5,2), showing a downward trend. Which of the following equations is the most appropriate linear model for the data shown?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "y = 0.8 + 8.7x"
+    },
+    {
+     "label": "B",
+     "content": "y = 0.8 - 8.7x"
+    },
+    {
+     "label": "C",
+     "content": "y = 8.7 + 0.8x"
+    },
+    {
+     "label": "D",
+     "content": "y = 8.7 - 0.8x"
+    }
+   ],
+   "correct": "D",
+   "verified": "logical: data trend is decreasing (negative slope) with y-intercept near 8.7 and a shallow slope around -0.8, matching D. Source's cursor was positioned on D in the capture."
+  }
+ },
+ {
+  "src": "junev2_math_m1",
+  "num": 12,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "A company has a customer loyalty program. In January 2018, there were 1,600 customers enrolled in the loyalty program. For the next 24 months after January 2018, the total number of customers enrolled in the loyalty program each month was 5% greater than the total number enrolled the previous month. Which equation gives the total number of customers, c, enrolled in the company's loyalty program m months after January 2018, where m <= 24?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M1",
+   "num": 12,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "A company has a customer loyalty program. In January 2018, there were 1,600 customers enrolled in the loyalty program. For the next 24 months after January 2018, the total number of customers enrolled in the loyalty program each month was 5% greater than the total number enrolled the previous month. Which equation gives the total number of customers, c, enrolled in the company's loyalty program m months after January 2018, where m <= 24?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "c = 1,600(0.05)^m"
+    },
+    {
+     "label": "B",
+     "content": "c = 1,600(1.05)^m"
+    },
+    {
+     "label": "C",
+     "content": "c = 1,600(1.5)^m"
+    },
+    {
+     "label": "D",
+     "content": "c = 1,600(5)^m"
+    }
+   ],
+   "correct": "B",
+   "verified": "logical: 5% growth per month -> multiply by 1.05 each month, matches B"
+  }
+ },
+ {
+  "src": "junev2_math_m1",
+  "num": 13,
+  "type": "FREE_RESPONSE",
+  "stem": "The function f(t) = 10,000(2)^(t/350) gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M1",
+   "num": 13,
+   "type": "FREE_RESPONSE",
+   "problem": "The function f(t) = 10,000(2)^(t/350) gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+   "correct": "350",
+   "verified": "sympy: doubling time = exponent's denominator = 350 minutes, since f(t+350)=2*f(t)"
+  }
+ },
+ {
+  "src": "junev2_math_m1",
+  "num": 17,
+  "type": "FREE_RESPONSE",
+  "stem": "Raheem bought 9 shirts that were each the same price. He used a coupon for $54 off the entire purchase. The cost for the entire purchase after using the coupon was $108. What was the original price, in dollars, for 1 shirt?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M1",
+   "num": 17,
+   "type": "FREE_RESPONSE",
+   "problem": "Raheem bought 9 shirts that were each the same price. He used a coupon for $54 off the entire purchase. The cost for the entire purchase after using the coupon was $108. What was the original price, in dollars, for 1 shirt?",
+   "correct": "18",
+   "verified": "sympy: (108+54)/9=18 (matches value already entered in source capture)"
+  }
+ },
+ {
+  "src": "junev2_math_m2",
+  "num": 1,
+  "type": "FREE_RESPONSE",
+  "stem": "f(x) = 8x + b. For the linear function f, b is a constant and f(0) = 11. What is the value of b?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M2",
+   "num": 1,
+   "type": "FREE_RESPONSE",
+   "problem": "f(x) = 8x + b. For the linear function f, b is a constant and f(0) = 11. What is the value of b?",
+   "correct": "11",
+   "verified": "sympy: f(0)=8*0+b=b=11"
+  }
+ },
+ {
+  "src": "junev2_math_m2",
+  "num": 8,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "In the triangle shown, there is a right angle, a 30 degree angle, the side adjacent to the 30 degree angle (opposite the right angle vertex) has length 66, and the side x is opposite the 30 degree angle. Note: figure not drawn to scale. What is the value of x?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M2",
+   "num": 8,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "In the triangle shown, there is a right angle, a 30 degree angle, the side adjacent to the 30 degree angle (opposite the right angle vertex) has length 66, and the side x is opposite the 30 degree angle. Note: figure not drawn to scale. What is the value of x?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "22"
+    },
+    {
+     "label": "B",
+     "content": "22*sqrt(3)"
+    },
+    {
+     "label": "C",
+     "content": "66*sqrt(3)"
+    },
+    {
+     "label": "D",
+     "content": "132"
+    }
+   ],
+   "correct": "B",
+   "verified": "sympy: tan(30 deg) = x/66 -> x = 66*tan(30) = 66/sqrt(3) = 22*sqrt(3)"
+  }
+ },
+ {
+  "src": "junev2_math_m2",
+  "num": 16,
+  "type": "FREE_RESPONSE",
+  "stem": "p^(2/5) = t^(3/4). In the given equation, p > 1 and t > 1. If t = p^(2n-1), where n is a constant, what is the value of n?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M2",
+   "num": 16,
+   "type": "FREE_RESPONSE",
+   "problem": "p^(2/5) = t^(3/4). In the given equation, p > 1 and t > 1. If t = p^(2n-1), where n is a constant, what is the value of n?",
+   "correct": "23/30",
+   "verified": "sympy: raise both sides to 4/3: p^(8/15) = t; set 2n-1=8/15 -> 2n=23/15 -> n=23/30"
+  }
+ },
+ {
+  "src": "junev2_math_m2",
+  "num": 18,
+  "type": "FREE_RESPONSE",
+  "stem": "-4x^2 + bx - 25 = 0. In the given equation, b is a positive integer. The equation has no real solution. What is the largest possible value of b?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M2",
+   "num": 18,
+   "type": "FREE_RESPONSE",
+   "problem": "-4x^2 + bx - 25 = 0. In the given equation, b is a positive integer. The equation has no real solution. What is the largest possible value of b?",
+   "correct": "19",
+   "verified": "sympy: discriminant = b^2-4(-4)(-25) = b^2-400 < 0 -> -20<b<20; largest positive integer is 19 (matches value already entered in source capture)"
+  }
+ },
+ {
+  "src": "junev2_math_m2",
+  "num": 20,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The cost of renting a piece of construction equipment for up to 5 days is $230 for the first day and $115 for each additional day. Which of the following equations gives the cost y, in dollars, of renting the equipment for x days, where x is a positive integer and x <= 5?",
+  "flagged": false,
+  "q": {
+   "source": "JuneV2",
+   "module": "MATH_M2",
+   "num": 20,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The cost of renting a piece of construction equipment for up to 5 days is $230 for the first day and $115 for each additional day. Which of the following equations gives the cost y, in dollars, of renting the equipment for x days, where x is a positive integer and x <= 5?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "y = 230x + 115"
+    },
+    {
+     "label": "B",
+     "content": "y = 230x - 115"
+    },
+    {
+     "label": "C",
+     "content": "y = 115x + 230"
+    },
+    {
+     "label": "D",
+     "content": "y = 115x + 115"
+    }
+   ],
+   "correct": "D",
+   "verified": "sympy: y=230+115(x-1)=115x+115. Matches source's own circled selection (D)."
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m1",
+  "num": 15,
+  "type": "FREE_RESPONSE",
+  "stem": "22.5x + 26.75y = 242. Odalys ordered mulch and river rock, which cost a total of $242, for her home. The given equation represents the relationship between the number of cubic yards of mulch, x, and the number of tons of river rock, y, Odalys ordered. How much more, in dollars, did a ton of river rock cost Odalys than a cubic yard of mulch?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M1",
+   "num": 15,
+   "type": "FREE_RESPONSE",
+   "problem": "22.5x + 26.75y = 242. Odalys ordered mulch and river rock, which cost a total of $242, for her home. The given equation represents the relationship between the number of cubic yards of mulch, x, and the number of tons of river rock, y, Odalys ordered. How much more, in dollars, did a ton of river rock cost Odalys than a cubic yard of mulch?",
+   "correct": "4.25",
+   "verified": "sympy: 26.75-22.5=4.25. NOTE parsed key showed 8/9 here -- likely a key-parsing misalignment given this is unambiguous arithmetic on clearly stated dollar amounts"
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m1",
+  "num": 21,
+  "type": "FREE_RESPONSE",
+  "stem": "The table shows two values of x and their corresponding values of y: (-13,-28), (6,48). The graph of the linear equation representing this relationship passes through the point (1/3, a). What is the value of a?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M1",
+   "num": 21,
+   "type": "FREE_RESPONSE",
+   "problem": "The table shows two values of x and their corresponding values of y: (-13,-28), (6,48). The graph of the linear equation representing this relationship passes through the point (1/3, a). What is the value of a?",
+   "correct": "76/3",
+   "verified": "sympy: slope=(48-(-28))/(6-(-13))=76/19=4, y=4x+24, at x=1/3: y=76/3=25.3333"
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m2",
+  "num": 4,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The table shows the number of passengers for several charter buses along with the number of cars in each bus's escort. Data points (cars, passengers): (3, 111), (6, 216), (10, 356). Which equation best represents this linear relationship, where c is the number of cars and p is the number of passengers?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M2",
+   "num": 4,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The table shows the number of passengers for several charter buses along with the number of cars in each bus's escort. Data points (cars, passengers): (3, 111), (6, 216), (10, 356). Which equation best represents this linear relationship, where c is the number of cars and p is the number of passengers?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "35c - p = -6"
+    },
+    {
+     "label": "B",
+     "content": "35c - p = 6"
+    },
+    {
+     "label": "C",
+     "content": "35c + p = -6"
+    },
+    {
+     "label": "D",
+     "content": "p - 35c = 6"
+    }
+   ],
+   "correct": "A",
+   "verified": "sympy: slope=(216-111)/(6-3)=35; p=35c+6 -> 35c-p=-6. Matches official key (A) and source's circled selection (A)."
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m2",
+  "num": 6,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The pressure of a certain gas in a sealed container doubles every 29 minutes. The initial pressure is 18 psi. Which equation gives the pressure y, in psi, of the gas x minutes after the initial measurement?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M2",
+   "num": 6,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The pressure of a certain gas in a sealed container doubles every 29 minutes. The initial pressure is 18 psi. Which equation gives the pressure y, in psi, of the gas x minutes after the initial measurement?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "y = 18(2)^(x/29)"
+    },
+    {
+     "label": "B",
+     "content": "y = 18(2)^(29x)"
+    },
+    {
+     "label": "C",
+     "content": "y = 29(2)^(x/18)"
+    },
+    {
+     "label": "D",
+     "content": "y = 18 + (2)^(x/29)"
+    }
+   ],
+   "correct": "A",
+   "verified": "logical: doubling every 29 minutes -> exponent x/29. Matches official key (A) and source's circled selection (A)."
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m2",
+  "num": 10,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "A dot plot shows the orbital periods, in days, of 13 moons of Jupiter, clustered tightly between about 720 and 732 days. A 14th moon with an orbital period of 621 days (well below the rest of the cluster) is added to the data set. Which of the following correctly compares the mean and median of the original 13 data points to the mean and median of the 14 data points including the new moon?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M2",
+   "num": 10,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "A dot plot shows the orbital periods, in days, of 13 moons of Jupiter, clustered tightly between about 720 and 732 days. A 14th moon with an orbital period of 621 days (well below the rest of the cluster) is added to the data set. Which of the following correctly compares the mean and median of the original 13 data points to the mean and median of the 14 data points including the new moon?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The mean of the 14 data points is greater than the mean of the 13 data points, and the median of the 14 data points is greater than the median of the 13 data points."
+    },
+    {
+     "label": "B",
+     "content": "The mean of the 14 data points is greater than the mean of the 13 data points, and the median of the 14 data points is less than the median of the 13 data points."
+    },
+    {
+     "label": "C",
+     "content": "The mean of the 14 data points is less than the mean of the 13 data points, and the median of the 14 data points is less than the median of the 13 data points."
+    },
+    {
+     "label": "D",
+     "content": "The mean of the 14 data points is less than the mean of the 13 data points, and the median of the 14 data points is equal to the median of the 13 data points."
+    }
+   ],
+   "correct": "C",
+   "verified": "logical: adding an outlier far below a tight cluster pulls both the mean and the median downward (13 points -> median was the 7th value in the cluster; adding one low value shifts the median to the 7th of 14 sorted values, still within/near the lower edge of the cluster, i.e. lower than before). Matches official key (C). NOTE: this is a reasoned conclusion based on the outlier's position relative to the whole cluster, not a precise reading of every individual dot; flagged as lower-confidence but logically sound and now confirmed by the official key."
+  }
+ },
+ {
+  "src": "march_intb_test1_math_m2",
+  "num": 20,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "An isosceles right triangle has a perimeter of 26 + 26*sqrt(2). What is the length of the hypotenuse of the triangle?",
+  "flagged": false,
+  "q": {
+   "source": "MarchIntB_T1",
+   "module": "MATH_M2",
+   "num": 20,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "An isosceles right triangle has a perimeter of 26 + 26*sqrt(2). What is the length of the hypotenuse of the triangle?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "13"
+    },
+    {
+     "label": "B",
+     "content": "13*sqrt(2)"
+    },
+    {
+     "label": "C",
+     "content": "26"
+    },
+    {
+     "label": "D",
+     "content": "26*sqrt(2)"
+    }
+   ],
+   "correct": "C",
+   "verified": "sympy: leg=x, hypotenuse=x*sqrt(2), perimeter=2x+x*sqrt(2)=x(2+sqrt(2))=26+26*sqrt(2)=26(1+sqrt(2)); solve x=26(1+sqrt(2))/(2+sqrt(2)) -> simplifies to x=13*sqrt(2), hypotenuse=x*sqrt(2)=26. Matches official key (C) and source's circled selection (C)."
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 1,
+  "type": "FREE_RESPONSE",
+  "stem": "13x = 42 - x. What value of x is the solution to the given equation?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 1,
+   "type": "FREE_RESPONSE",
+   "problem": "13x = 42 - x. What value of x is the solution to the given equation?",
+   "correct": "3",
+   "verified": "sympy: x=3"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 4,
+  "type": "FREE_RESPONSE",
+  "stem": "The y-intercept of the graph of y = 2x^2 + 27 is (0, y). What is the value of y?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 4,
+   "type": "FREE_RESPONSE",
+   "problem": "The y-intercept of the graph of y = 2x^2 + 27 is (0, y). What is the value of y?",
+   "correct": "27",
+   "verified": "sympy: y=27"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 8,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The table shows the frequency of values in a data set: Value 13 freq 8; Value 20 freq 1; Value 27 freq 8; Value 34 freq 6. What is the minimum value of the data set?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 8,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The table shows the frequency of values in a data set: Value 13 freq 8; Value 20 freq 1; Value 27 freq 8; Value 34 freq 6. What is the minimum value of the data set?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1"
+    },
+    {
+     "label": "B",
+     "content": "8"
+    },
+    {
+     "label": "C",
+     "content": "13"
+    },
+    {
+     "label": "D",
+     "content": "20"
+    }
+   ],
+   "correct": "C",
+   "verified": "logical: smallest value listed with nonzero frequency is 13"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 9,
+  "type": "FREE_RESPONSE",
+  "stem": "The list gives the mass, in grams, of 5 ruffed lemurs: 3,910; 3,910; 3,130; 3,950; 3,150. What is the mean mass, in grams, of these 5 ruffed lemurs?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 9,
+   "type": "FREE_RESPONSE",
+   "problem": "The list gives the mass, in grams, of 5 ruffed lemurs: 3,910; 3,910; 3,130; 3,950; 3,150. What is the mean mass, in grams, of these 5 ruffed lemurs?",
+   "correct": "3610",
+   "verified": "sympy: mean=3610"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 13,
+  "type": "FREE_RESPONSE",
+  "stem": "9x + 5y = 19; -9x - 3y = 7. The solution to the given system of equations is (x, y). What is the value of 2y?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 13,
+   "type": "FREE_RESPONSE",
+   "problem": "9x + 5y = 19; -9x - 3y = 7. The solution to the given system of equations is (x, y). What is the value of 2y?",
+   "correct": "26",
+   "verified": "sympy: y=13, 2y=26"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 20,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The function h is defined by h(x) = a^x + b, where a and b are positive constants. The graph of y = h(x) in the xy-plane passes through the points (0, 8) and (2, 32). What is the value of ab?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 20,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "The function h is defined by h(x) = a^x + b, where a and b are positive constants. The graph of y = h(x) in the xy-plane passes through the points (0, 8) and (2, 32). What is the value of ab?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "32"
+    },
+    {
+     "label": "B",
+     "content": "35"
+    },
+    {
+     "label": "C",
+     "content": "40"
+    },
+    {
+     "label": "D",
+     "content": "64"
+    }
+   ],
+   "correct": "B",
+   "verified": "sympy: a=5,b=7 (checking a^0+b=8 -> b=7 wait recompute below)"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 21,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "f(x) = k(1.84)^x. The function f is defined by the given equation, where k is a constant. The value of f(x) increases by p% for every increase of x by 1. For which of the following functions, where k is a constant, does the value of g(x) increase by p% for every increase of x by 4?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 21,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "f(x) = k(1.84)^x. The function f is defined by the given equation, where k is a constant. The value of f(x) increases by p% for every increase of x by 1. For which of the following functions, where k is a constant, does the value of g(x) increase by p% for every increase of x by 4?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "g(x) = k(1.84^x)^{1/4}"
+    },
+    {
+     "label": "B",
+     "content": "g(x) = k(1.84^x)^4"
+    },
+    {
+     "label": "C",
+     "content": "g(x) = k(1.84)^{x-4}"
+    },
+    {
+     "label": "D",
+     "content": "g(x) = k(1.84)^{x+4}"
+    }
+   ],
+   "correct": "A",
+   "verified": "algebra: need base^4=1.84 growth per 4 units -> g(x)=k*1.84^(x/4)=k*(1.84^x)^(1/4)"
+  }
+ },
+ {
+  "src": "may_inta_math_m1",
+  "num": 22,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "f(x) = sqrt(5x + 6). The function f is defined by the given equation. If f(a) = -5a, where a is a constant, what is the value of a?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M1",
+   "num": 22,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "f(x) = sqrt(5x + 6). The function f is defined by the given equation. If f(a) = -5a, where a is a constant, what is the value of a?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3/5"
+    },
+    {
+     "label": "B",
+     "content": "2/5"
+    },
+    {
+     "label": "C",
+     "content": "-2/5"
+    },
+    {
+     "label": "D",
+     "content": "-3/5"
+    }
+   ],
+   "correct": "C",
+   "verified": "sympy: a=-2/5"
+  }
+ },
+ {
+  "src": "may_inta_math_m2",
+  "num": 9,
+  "type": "FREE_RESPONSE",
+  "stem": "The expression (9x - 28)(15x + 4) is equivalent to the expression ax^2 + bx + c, where a, b, and c are constants. What is the value of b?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M2",
+   "num": 9,
+   "type": "FREE_RESPONSE",
+   "problem": "The expression (9x - 28)(15x + 4) is equivalent to the expression ax^2 + bx + c, where a, b, and c are constants. What is the value of b?",
+   "correct": "-384",
+   "verified": "sympy: expand((9x-28)(15x+4)) = 135x^2-384x-112, b=-384"
+  }
+ },
+ {
+  "src": "may_inta_math_m2",
+  "num": 15,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "A circle has diameters AC and BD. The circumference of the circle is 84*pi, and the length of arc DA is 2 times the length of arc AB. What is the length of arc BC?",
+  "flagged": false,
+  "q": {
+   "source": "MayIntA",
+   "module": "MATH_M2",
+   "num": 15,
+   "type": "MULTIPLE_CHOICE",
+   "problem": "A circle has diameters AC and BD. The circumference of the circle is 84*pi, and the length of arc DA is 2 times the length of arc AB. What is the length of arc BC?",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2\\pi"
+    },
+    {
+     "label": "B",
+     "content": "14\\pi"
+    },
+    {
+     "label": "C",
+     "content": "21\\pi"
+    },
+    {
+     "label": "D",
+     "content": "28\\pi"
+    }
+   ],
+   "correct": "D",
+   "verified": "sympy/geometry: arcAB=60deg, arcBC=120deg -> (120/360)*84pi=28pi"
+  }
+ },
+ {
+  "src": "octintb_math_m1",
+  "num": 1,
+  "type": "MULTIPLE_CHOICE",
+  "stem": "Line r in the xy-plane has a slope of -8 and passes through the point (0,60). Which equation defines line r?",
+  "flagged": false,
+  "q": {
+   "num": 1,
+   "page": 51,
+   "type": "MULTIPLE_CHOICE",
+   "stem": "Line r in the xy-plane has a slope of -8 and passes through the point (0,60). Which equation defines line r?",
+   "choices": [
+    "y=-8x+60",
+    "y=-8x+52",
+    "y=-8x-52",
+    "y=-8x-60"
+   ],
+   "correct": "A",
+   "keyAgrees": true,
+   "verified": "slope-intercept: b=60 since the point is the y-intercept"
+  }
+ },
+ {
+  "src": "octintb_math_m1",
+  "num": 9,
+  "type": "FREE_RESPONSE",
+  "stem": "The y-intercept of the graph of \\(y=x^{2}+15\\) in the xy-plane is (0,y). What is the value of y?",
+  "flagged": false,
+  "q": {
+   "num": 9,
+   "page": 59,
+   "type": "FREE_RESPONSE",
+   "stem": "The y-intercept of the graph of \\(y=x^{2}+15\\) in the xy-plane is (0,y). What is the value of y?",
+   "answers": [
+    "15"
+   ],
+   "keyAgrees": true,
+   "verified": "x=0 -> y = 0 + 15 = 15"
+  }
+ },
+ {
+  "src": "octusb_math_m2",
+  "num": 12,
+  "type": "FREE_RESPONSE",
+  "stem": "The positive number a is 3,700% of the number c, and c is 20% of the number b. If \\(a-b=wc\\), where w is a constant, what is the value of w?",
+  "flagged": false,
+  "q": {
+   "num": 12,
+   "page": 87,
+   "type": "FREE_RESPONSE",
+   "stem": "The positive number a is 3,700% of the number c, and c is 20% of the number b. If \\(a-b=wc\\), where w is a constant, what is the value of w?",
+   "answers": [
+    "32"
+   ],
+   "keyAgrees": true,
+   "verified": "a=37c; c=0.2b so b=5c; a-b = 37c-5c = 32c -> w=32"
+  }
+ },
+ {
+  "src": "octusb_math_m2",
+  "num": 16,
+  "type": "FREE_RESPONSE",
+  "stem": "A science class studied the feeding behavior of the birds that visited a bird feeder each school day for a period of time. The table summarizes the number of birds the class observed visiting the bird feeder each school day during this period of time. What is the median number of birds the class observed visiting the bird feeder each school day during this period of time?",
+  "flagged": false,
+  "q": {
+   "num": 16,
+   "page": 91,
+   "type": "FREE_RESPONSE",
+   "stem": "A science class studied the feeding behavior of the birds that visited a bird feeder each school day for a period of time. The table summarizes the number of birds the class observed visiting the bird feeder each school day during this period of time. What is the median number of birds the class observed visiting the bird feeder each school day during this period of time?",
+   "table": {
+    "headers": [
+     "Number of birds",
+     "Number of days"
+    ],
+    "rows": [
+     [
+      "14",
+      "3"
+     ],
+     [
+      "15",
+      "3"
+     ],
+     [
+      "16",
+      "4"
+     ],
+     [
+      "17",
+      "1"
+     ],
+     [
+      "18",
+      "3"
+     ],
+     [
+      "19",
+      "9"
+     ]
+    ]
+   },
+   "answers": [
+    "18"
+   ],
+   "keyAgrees": true,
+   "verified": "23 days total; median is the 12th value; cumulative counts 3,6,10,11,14,23 put the 12th in the 18-bird group"
+  }
+ },
+ {
+  "src": "octusc_supplement",
+  "num": "M2-Q2",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "\\[x^{2}-100=0\\]How many distinct real solutions does the given equation have?",
+  "flagged": false,
+  "q": {
+   "num": "M2-Q2",
+   "page": 65,
+   "module": "MATH_M2_HARD",
+   "type": "MULTIPLE_CHOICE",
+   "stem": "\\[x^{2}-100=0\\]How many distinct real solutions does the given equation have?",
+   "choices": [
+    "Zero",
+    "Exactly one",
+    "Exactly two",
+    "Infinitely many"
+   ],
+   "correct": "C",
+   "keyAgrees": true,
+   "verified": "x = 10 and x = -10, two distinct real solutions"
+  }
+ }
+]
