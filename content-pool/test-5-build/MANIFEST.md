@@ -4,7 +4,7 @@
 | Module | Source | State |
 |---|---|---|
 | Math M2 **Easy** | **Original, authored here** | ✅ 22/22 written, sympy-verified, deduped |
-| Math M1 | Oct IntB PDF (p51–72) | ⬜ not transcribed |
+| Math M1 | Oct IntB PDF (p51–72) | ✅ 22/22 transcribed, 22/22 sympy-verified |
 | Math M2 Hard | Oct USB PDF (p76–97) | ⬜ not transcribed |
 | R&W M1 / M2E / M2H | `content-pool/test-3-4-5-reading-writing/` (74 banked) + Aug USC | ⬜ needs the HTML formatting pass |
 
@@ -32,6 +32,31 @@ repeats and were **replaced**:
   is the same sentence with 42° and 65°. Now an isosceles-triangle question.
 - Q9 was `x^7/x^3`, which reduces to `x^4` — the same concept *and the same answer* as
   Test 2 M2H Q11 (`x^-3 * x^7`). Now `12x^5/(4x^2)`, which also exercises the coefficient.
+
+## `octintb_math_m1.json` — 22 questions from the Oct IntB source
+Transcribed page by page from the screenshot images (the PDF has no text layer, and OCR mangles
+every expression — `y = -8x + 60` comes out as `y = —82 + 60` — so each page was read visually).
+
+**Verification: 22/22.** For every question the recorded answer, an independent sympy
+re-derivation, and the PDF's own official answer key all agree. That is a much better result
+than the earlier EliteXSAT sources, where one module had 10 of 22 answers conflicting with
+verification — this source's key is trustworthy.
+
+Transcribing also resolved an ambiguity in the key page: the entry `21.340.8` is Q21 = 340.8
+(the ramp question), not two separate values.
+
+**Figures.** Two questions carry a real figure, cropped from the source page rather than
+described in prose (`figures/q08_scatterplot.png`, `figures/q21_ramp.png`). The scatterplot
+crop independently confirms Q8's answer: the line runs from about (0,27) to (4,4), a slope of
+-5.75, closest to -6.
+
+**One flagged item.** Q17's choice D sits below the page fold and is not captured in the
+source. It is recorded as `0.50` because the arithmetic is forced (22/44) and the official key
+says D, but the `FLAG` field marks it for confirmation before publishing.
+
+**Free-response balance.** This source module has 6 FR and 16 MC. The standing rules cap a
+module at 3 FR (Test 1 ships 19 MC + 3 FR), so Test 5's Math M1 cannot be this module verbatim
+— drop 3 FR and top up with MC items from the Oct USB / Oct USC Math M1 pools.
 
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
