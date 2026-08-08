@@ -932,9 +932,9 @@ QUESTIONS = [
 
  fss("F5",
      "Two dyehouses worked the same weld and the same alum on cloth from the same weaver, and the "
-     "results were set side by side under a north light. The yellow obtained in the eastern house is "
-     "markedly stronger than _____ in the western one.",
-     ["the western house", "that obtained", "those obtained", "they obtained"], "B",
+     "finished pieces were hung side by side under a north light. The yellow struck in the eastern "
+     "house is markedly deeper than _____ in the western one.",
+     ["the western house", "that struck", "those struck", "they struck"], "B",
      "The comparison is between one yellow and another yellow, so the second term has to be a "
      "singular stand-in for the colour rather than for the house that produced it. Comparing a yellow "
      "with a house sets unlike things beside each other."),
