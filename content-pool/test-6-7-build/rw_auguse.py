@@ -309,6 +309,115 @@ QUESTIONS = [
 
  # --- Module 2 (pages p029-p055 hold Q1-Q27). `num` is prefixed to keep it
  # distinct from the Module 1 badges above.
+ dict(num="M2-10", skill="Central Ideas and Details",
+   passage="The following text is from Mick Herron&rsquo;s 2023 novel <em>The Secret Hours</em>. The "
+           "narrator is describing members of a government committee.</p><p>Finally, and adding "
+           "much-needed gravitas, was Sir Winston Day, whose features seemed moulded to adorn a bust, or "
+           "possibly a stamp, and whose forehead was so evidently bulging with grey matter that it would "
+           "have been impertinent to inquire too closely into the actual achievements his half century "
+           "of public service had produced. His recently published memoirs possibly cast light on this "
+           "enigma, but given that such details were not provided until after the thirty-page mark, they "
+           "might as well have remained state secrets.",
+   stem="Based on the text, which choice best describes Sir Winston Day?",
+   choices=["He looks like a person worthy of respect, but his memoirs reveal that some of his actions were dishonorable.",
+            "He has maintained a modest profile even though he has served the public capably for many years.",
+            "He has the appearance of a distinguished figure, but it is uncertain whether he has accomplished anything to earn distinction.",
+            "He would be a celebrated public figure if his achievements did not have to be kept secret."],
+   answer="C",
+   why="The look is settled — features fit for a bust, a forehead bulging with grey matter — while the "
+       "achievements are pointedly unexamined ('impertinent to inquire too closely') and the memoirs "
+       "bury them past page thirty. The narrator never says his actions were dishonorable (A) or "
+       "secret (D)."),
+
+ dict(num="M2-13", skill="Inferences",
+   passage="Many Indian snack foods, such as bhatoora and paneer pakora, acquire their flavor from being "
+           "fried in oil; some are also coated in batter beforehand. Chemists Marc A. Meyers and Andrew "
+           "Grazela studied the mass and heat transfer processes that occur when foods are fried in "
+           "batters containing hydrocolloids, polymers that become viscous or gel-like in water. During "
+           "frying, water in the food evaporates, leaving voids that oil (a pure fat) can fill. As the "
+           "process continues, water from the food&rsquo;s center moves to the crust as long as the crust "
+           "remains permeable. However, hydrocolloids can create structures in the crust that reduce the "
+           "transfer of moisture out of the food&rsquo;s core during frying. Therefore, a food fried "
+           "without a hydrocolloid batter coating will likely _____",
+   stem="Which choice most logically completes the text?",
+   choices=["have a more viscous crust when frying is completed than it would have if it were fried with a coating of hydrocolloid batter.",
+            "have a higher fat content than it would have if it were fried with a coating of hydrocolloid batter.",
+            "need to be cooked more quickly at a higher temperature than it would need to be cooked if it were fried with a coating of hydrocolloid batter.",
+            "need to be cooked in a different oil than it would need to be cooked in if it were fried with a coating of hydrocolloid batter."],
+   answer="B",
+   why="Follow the chain: no hydrocolloids means the crust stays permeable, so more water leaves, so "
+       "more voids form, and oil — 'a pure fat' — fills them. C and D are about cooking conditions the "
+       "text never raises, and A attributes viscosity to the wrong case."),
+
+ dict(num="M2-14", skill="Inferences",
+   passage="Zooarchaeologist Oph&eacute;lie Lebrasseur and her team examined a fox skeleton discovered in "
+           "1991 at an archaeological site alongside artifacts of human habitation (like spear points) in "
+           "central Argentina. Lebrasseur et al. determined that the fox was <em>Dusicyon avus</em>, an "
+           "extinct species resembling a jackal, and radiocarbon dating placed the fox at the site at the "
+           "same time as human inhabitants. (Indeed, the inhabitants may have deliberately buried the "
+           "fox.) In addition, while wild foxes have a diet entirely made of meat, isotopic signatures of "
+           "the skeleton&rsquo;s teeth indicated that the fox&rsquo;s diet, like that of the humans, was "
+           "partly composed of plant material. Lebrasseur et al. therefore concluded that _____",
+   stem="Which choice most logically completes the text?",
+   choices=["the humans who were alive at the same time as the fox most likely ate more meat than the fox did.",
+            "the fox had a diet more similar to that of jackals than to that of wild foxes.",
+            "the humans who were alive at the same time as the fox hunted using the spears whose points were also found at the site.",
+            "the fox may have been a companion animal of the humans who inhabited the site at the same time."],
+   answer="D",
+   why="Three strands converge on it: the fox lies among human artifacts, may have been deliberately "
+       "buried, and ate plant material as the humans did rather than the all-meat diet of wild foxes. B "
+       "invokes jackals, which the text mentions only as a resemblance in appearance."),
+
+ dict(num="M2-25", skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li><em>The Future of Nostalgia</em> is a scholarly book by literary theorist Svetlana Boym.</li>"
+           "<li>The book provides a multifaceted exploration of the concept of nostalgia.</li>"
+           "<li>Chapter 9 describes nostalgia in the city of St. Petersburg in Russia.</li>"
+           "<li>Chapter 17 discusses various skeptics&rsquo; takes on the concept of nostalgia.</li>"
+           "<li>In chapter 17, Boym writes, &ldquo;The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.&rdquo;</li></ul>",
+   stem="The student wants to provide a quotation from chapter 17. Which choice most effectively uses "
+        "relevant information from the notes to accomplish this goal?",
+   choices=["In a discussion of various skeptics&rsquo; takes on the concept of nostalgia, Svetlana Boym writes, &ldquo;The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.&rdquo;",
+            "Svetlana Boym&rsquo;s <em>The Future of Nostalgia</em> provides a multifaceted exploration of nostalgia.",
+            "Svetlana Boym describes nostalgia in the city of St. Petersburg in Russia in chapter 9 of her book.",
+            "After describing nostalgia in the city of St. Petersburg in Russia, Svetlana Boym goes on to discuss various skeptics&rsquo; takes on the concept of nostalgia."],
+   answer="A",
+   why="Only A actually quotes Boym, and it frames the quotation with chapter 17's subject. B, C and D "
+       "paraphrase without quoting, and C and D are about chapter 9."),
+
+ dict(num="M2-26", skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li>Ibn Sina was a Persian philosopher and physician.</li>"
+           "<li>His book <em>The Canon of Medicine</em> recorded the most advanced medical knowledge of his time.</li>"
+           "<li>It was published in the year 1025 CE.</li>"
+           "<li>It was used as a medical textbook in Middle Eastern and European universities for centuries.</li></ul>",
+   stem="The student wants to identify the year that <em>The Canon of Medicine</em> was published. Which "
+        "choice most effectively uses relevant information from the notes to accomplish this goal?",
+   choices=["Ibn Sina recorded the most advanced medical knowledge of his time in his book <em>The Canon of Medicine</em>.",
+            "A Persian philosopher and physician wrote a medical textbook called <em>The Canon of Medicine</em>.",
+            "<em>The Canon of Medicine</em> was a medical textbook used by Middle Eastern and European universities for centuries.",
+            "Ibn Sina&rsquo;s book <em>The Canon of Medicine</em> was published in the year 1025 CE."],
+   answer="D",
+   why="D is the only choice that states a year at all."),
+
+ dict(num="M2-27", skill="Rhetorical Synthesis",
+   passage="While researching a topic, a student has taken the following notes:</p><ul>"
+           "<li>There are more than 500 National Wildlife Refuges (NWRs) across the United States.</li>"
+           "<li>The Crocodile Lake NWR is a 6,686-acre area in Florida, on the Atlantic coast.</li>"
+           "<li>It was established to protect the endangered American crocodile.</li>"
+           "<li>The Nestucca Bay NWR is a 457-acre area in Oregon, on the Pacific coast.</li>"
+           "<li>It was established to protect the endangered Aleutian Canada goose.</li></ul>",
+   stem="The student wants to provide an overview of the NWR program. Which choice most effectively uses "
+        "relevant information from the notes to accomplish this goal?",
+   choices=["The US&rsquo;s more than 500 NWRs protect endangered species from coast to coast.",
+            "Both the Crocodile Lake NWR and the Nestucca Bay NWR were established to protect endangered species.",
+            "Oregon&rsquo;s Nestucca Bay NWR was established to protect the endangered Aleutian Canada goose.",
+            "One of more than 500 NWRs in the US, the Crocodile Lake NWR encompasses 6,686 acres in Florida."],
+   answer="A",
+   why="An overview needs the scale and the purpose of the whole program: A gives both, and 'from coast "
+       "to coast' generalises the Atlantic and Pacific examples. B, C and D each stay at the level of "
+       "individual refuges."),
+
  dict(num="M2-19", skill="Boundaries",
    passage="Joy Williams&rsquo;s essay on &ldquo;cenote,&rdquo; a term referring to a deep sinkhole "
            "containing a pool of water, is just one of many essays included in <em>Home Ground: A Guide "
