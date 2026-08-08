@@ -497,8 +497,8 @@ MODULE_2_HARD = [
             "month."
             + table(["Workshop", "Passed", "Failed"],
                     [["Osier Green", "168", "32"], ["Sedge Fen", "108", "42"]])
-            + "At the workshop with the greater proportion of hurdles failed, how many more hurdles "
-              "failed than at the other workshop?"),
+            + "How many more hurdles failed at the workshop with the greater proportion of "
+              "failures than at the other workshop?"),
       choices=["8", "10", "12", "14"], correct="B",
       check="Osier Green failed 32 of 200, which is 16%, and Sedge Fen failed 42 of 150, which is "
             "28%, so the greater proportion is Sedge Fen and 42 - 32 = 10."),
