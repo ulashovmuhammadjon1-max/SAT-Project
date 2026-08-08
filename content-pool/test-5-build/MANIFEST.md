@@ -6,7 +6,7 @@
 | Math M2 **Easy** | **Original, authored here** | ✅ 22/22 written, sympy-verified, deduped |
 | Math M1 | Oct IntB PDF (p51–72) | ✅ 22/22 transcribed, 22/22 sympy-verified |
 | Math M2 Hard | Oct USB PDF (p76–97) | ✅ 22 transcribed, 19 usable (3 rejected) |
-| R&W M1 / M2E / M2H | `content-pool/test-3-4-5-reading-writing/` (74 banked) + Aug USC | ⬜ needs the HTML formatting pass |
+| R&W M1 / M2E / M2H | banked pool + October top-ups | 🟡 formatted, 70 kept, 11 top-ups outstanding |
 
 ## `t5_math_m2easy.json` — 22 original questions
 Written by hand per the standing rules in `CLAUDE.md` (Test 1/2 house style, no
@@ -117,6 +117,34 @@ has one (6 figures cropped from the source pages, 4 real data tables).
 **Known deviation:** Math M2 Hard's domain mix is ALG 10 / ADV 7 / GT 3 / PSDA 2, more
 algebra-heavy than Test 1's ~8/6/4/4. That is what the verified hard-module supply allowed
 after the duplicate rejections; the other two modules match Test 1's proportions closely.
+
+## `format_rw.py` / `test5_rw_formatted.json` — the R&W formatting pass
+
+Converts the banked pool's raw text into the markup Test 1/2 use: bulleted student notes become
+real `<ul><li>`, data tables become real `<table>` with the standard style block,
+`[UNDERLINED: …]` becomes `<u>`, `*italics*` becomes `<em>`.
+
+**The five data tables are hand-written, not parsed.** The source stores them on a single line
+with implicit row breaks — `… | Fungi | Insects Lithuania | 8 | …`, where `Insects Lithuania` is
+the last header cell running straight into the first row label. No regex can split that
+reliably, so all five tables and the prose that follows them are written out explicitly and each
+one's answer was re-checked against the data (e.g. Poland is indeed the only country in the
+tree-threat table with more insect than fungus species).
+
+**Four questions dropped as unshippable**, with reasons recorded in `UNUSABLE`:
+- two Command-of-Evidence questions whose line graph exists only as a prose description because
+  the source PDF was not kept — shipping them would violate the no-prose-figures rule;
+- a Boundaries question whose choices A and B differ only by a comma that a watermark obscured;
+- a question whose choice D was hidden behind a cursor icon and transcribed by inference.
+
+**Ordering check:** none of the three modules leaks a reading-domain question after the writing
+block has started — the hard rule in CLAUDE.md holds. Within-block ordering is re-sorted to the
+mandated sequence at assembly time.
+
+**Still outstanding:** 11 top-up questions (4 / 6 / 1) to reach 27 per module. These will come
+from the October sources, which carry reliable answer keys, rather than the August PDFs, whose
+only answer marking is an inline highlight that appears to be the crossed-out state rather than
+the selected one.
 
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
