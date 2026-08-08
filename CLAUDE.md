@@ -208,6 +208,31 @@ questions — the top-up passes only harvested the writing tail. Test 6 needs ei
 source material or explicit OK to author original Math questions.
 
 
+## Test 6 is built and PUBLISHED; Test 7 needs 38 Math MC and nothing else
+`Test 6` (`b7cf096a-090d-4286-a128-9ec428e6de32`), 147 questions, live on satforge.org. Full
+detail in `content-pool/test-6-7-build/MANIFEST.md`.
+
+**The finding that matters most for any future build: the EliteXSAT corpus recycles heavily.**
+The three October papers (IntB, USB, USC) are parallel forms of one administration and share
+questions outright — Oct USC Module 2 is close to a straight clone of Oct USB Module 2. And the
+August papers overlap both the October set and the material already shipped: a lexical check
+found 30 of 67 August pages already live. 33 R&W questions were rejected as duplicates across
+this build. **Always dedupe a new paper against every other paper in the same batch, not just
+against production.**
+
+The practical consequence: the source PDFs supplied only 128 of the 162 R&W questions two tests
+need. The other 34 were authored (`rw_authored.py`), weighted to the writing domains because
+writing is always the binding constraint and because grammar items are the safest to author —
+correctness follows from a stated convention, the same property that makes sympy verification
+work for Math. Math Module 2 (Easy) for both tests is authored and sympy-verified
+(`math_m2easy.py`), and 24 medium/hard Math MC questions were authored too
+(`math_authored_mc.py`) because the transcribed pool yielded only 18 usable MC.
+
+Every verifier in that directory is runnable and passing: `verify_math_m2easy.py`,
+`verify_authored_rw.py`, `verify_math_authored_mc.py`, and `assemble_test6.py` itself, which
+enforces the R&W block order by sorting on block rank so the writing block opens at question 15
+in every module.
+
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 
 When building, reordering, or regenerating any Reading & Writing module (Module 1, Module 2
