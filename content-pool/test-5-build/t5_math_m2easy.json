@@ -1,0 +1,113 @@
+[
+{"n":1,"domain":"ALG","skill":"ALG-LE","type":"MULTIPLE_CHOICE",
+ "stem":"If 6x-5=31, what is the value of x?",
+ "choices":["4","5","6","7"],"correct":"C",
+ "check":"solve(Eq(6*x-5,31),x) == [6]"},
+
+{"n":2,"domain":"ALG","skill":"ALG-LE","type":"MULTIPLE_CHOICE",
+ "stem":"A gym charges a onetime registration fee of $30 plus $22 for each month of membership. Which equation gives the total cost C, in dollars, for m months of membership?",
+ "choices":["C=22m-30","C=22m+30","C=30m+22","C=30m-22"],"correct":"B",
+ "check":"total cost = 22 per month * m + 30 fixed"},
+
+{"n":3,"domain":"ALG","skill":"ALG-LF","type":"MULTIPLE_CHOICE",
+ "stem":"The function f is defined by f(x)=9x+4. What is the value of f(3)?",
+ "choices":["16","27","31","36"],"correct":"C",
+ "check":"9*3+4 == 31"},
+
+{"n":4,"domain":"ALG","skill":"ALG-LE","type":"MULTIPLE_CHOICE",
+ "stem":"3x+y=14<br/>y=2x-1<br/>The solution to the given system of equations is (x,y). What is the value of x?",
+ "choices":["2","3","4","5"],"correct":"B",
+ "check":"solve([Eq(3*x+y,14),Eq(y,2*x-1)],[x,y])[x] == 3"},
+
+{"n":5,"domain":"ALG","skill":"ALG-LF","type":"MULTIPLE_CHOICE",
+ "stem":"For the linear function g, g(0)=9 and g(1)=14. What is the value of g(4)?",
+ "choices":["19","23","29","36"],"correct":"C",
+ "check":"slope=(14-9)/1=5; g(4)=9+4*5=29"},
+
+{"n":6,"domain":"ALG","skill":"ALG-LI","type":"MULTIPLE_CHOICE",
+ "stem":"If 3n+2&le;17, what is the greatest possible integer value of n?",
+ "choices":["4","5","6","7"],"correct":"B",
+ "check":"3*n+2<=17 -> n<=5, greatest integer 5"},
+
+{"n":7,"domain":"ALG","skill":"ALG-LE","type":"FREE_RESPONSE",
+ "stem":"If 2(x+5)=34, what is the value of x?",
+ "answers":["12"],
+ "check":"solve(Eq(2*(x+5),34),x) == [12]"},
+
+{"n":8,"domain":"ALG","skill":"ALG-LF","type":"MULTIPLE_CHOICE",
+ "stem":"TABLE_G The table shows three values of x and their corresponding values of g(x), where g is a linear function. What is the slope of the graph of y=g(x) in the xy-plane?",
+ "table":{"headers":["x","g(x)"],"rows":[["1","5"],["2","9"],["3","13"]]},
+ "choices":["2","3","4","5"],"correct":"C",
+ "check":"(9-5)/(2-1) == 4 and (13-9)/(3-2) == 4"},
+
+{"n":9,"domain":"ADV","skill":"ADV-EQ","type":"MULTIPLE_CHOICE",
+ "stem":"Which expression is equivalent to \\(\\frac{12x^{5}}{4x^{2}}\\), where x&gt;0?",
+ "choices":["\\(3x^{3}\\)","\\(3x^{7}\\)","\\(8x^{3}\\)","\\(16x^{3}\\)"],"correct":"A",
+ "check":"simplify(12*x**5/(4*x**2)) == 3*x**3"},
+
+{"n":10,"domain":"ADV","skill":"ADV-EQ","type":"MULTIPLE_CHOICE",
+ "stem":"Which expression is equivalent to (3x+4)(x-2)?",
+ "choices":["\\(3x^{2}-2x-8\\)","\\(3x^{2}+2x-8\\)","\\(3x^{2}-10x-8\\)","\\(3x^{2}+10x+8\\)"],"correct":"A",
+ "check":"expand((3*x+4)*(x-2)) == 3*x**2-2*x-8"},
+
+{"n":11,"domain":"ADV","skill":"ADV-NF","type":"MULTIPLE_CHOICE",
+ "stem":"The function h is defined by \\(h(x)=x^{2}+6\\). What is the value of h(-4)?",
+ "choices":["-10","2","14","22"],"correct":"D",
+ "check":"(-4)**2+6 == 22"},
+
+{"n":12,"domain":"ADV","skill":"ADV-NE","type":"MULTIPLE_CHOICE",
+ "stem":"What are the solutions to the equation \\(x^{2}-9x+20=0\\)?",
+ "choices":["-4 and -5","-4 and 5","4 and 5","4 and -5"],"correct":"C",
+ "check":"sorted(solve(Eq(x**2-9*x+20,0),x)) == [4,5]"},
+
+{"n":13,"domain":"ADV","skill":"ADV-NF","type":"MULTIPLE_CHOICE",
+ "stem":"The function f is defined by \\(f(x)=2^{x}\\). What is the value of f(5)?",
+ "choices":["10","16","25","32"],"correct":"D",
+ "check":"2**5 == 32"},
+
+{"n":14,"domain":"ADV","skill":"ADV-NE","type":"FREE_RESPONSE",
+ "stem":"If \\(\\sqrt{x+7}=6\\), what is the value of x?",
+ "answers":["29"],
+ "check":"solve(Eq(sqrt(x+7),6),x) == [29]"},
+
+{"n":15,"domain":"PSDA","skill":"PSDA-RP","type":"MULTIPLE_CHOICE",
+ "stem":"A recipe calls for 3 cups of flour for every 2 cups of sugar. If 18 cups of flour are used, how many cups of sugar are needed?",
+ "choices":["9","12","24","27"],"correct":"B",
+ "check":"18*2/3 == 12"},
+
+{"n":16,"domain":"PSDA","skill":"PSDA-RP","type":"MULTIPLE_CHOICE",
+ "stem":"A car travels 240 miles in 4 hours at a constant speed. At this rate, how many miles will the car travel in 7 hours?",
+ "choices":["350","420","480","560"],"correct":"B",
+ "check":"240/4*7 == 420"},
+
+{"n":17,"domain":"PSDA","skill":"PSDA-ST","type":"MULTIPLE_CHOICE",
+ "stem":"What is the mean of the five values in the list 4, 8, 10, 12, and 16?",
+ "choices":["8","10","12","50"],"correct":"B",
+ "check":"(4+8+10+12+16)/5 == 10"},
+
+{"n":18,"domain":"PSDA","skill":"PSDA-DI","type":"MULTIPLE_CHOICE",
+ "stem":"TABLE_P The table shows the number of books each of four students read last month. How many more books did Priya read than Marcus?",
+ "table":{"headers":["Student","Books read"],"rows":[["Ana","7"],["Marcus","5"],["Priya","12"],["Devon","9"]]},
+ "choices":["3","5","7","12"],"correct":"C",
+ "check":"12-5 == 7"},
+
+{"n":19,"domain":"GT","skill":"GT-LA","type":"MULTIPLE_CHOICE",
+ "stem":"In an isosceles triangle, each of the two base angles measures 55&deg;. What is the measure, in degrees, of the third angle?",
+ "choices":["55","70","110","125"],"correct":"B",
+ "check":"180-2*55 == 70"},
+
+{"n":20,"domain":"GT","skill":"GT-AV","type":"MULTIPLE_CHOICE",
+ "stem":"A right circular cylinder has a radius of 3 inches and a height of 10 inches. What is the volume, in cubic inches, of the cylinder?",
+ "choices":["\\(30\\pi\\)","\\(60\\pi\\)","\\(90\\pi\\)","\\(300\\pi\\)"],"correct":"C",
+ "check":"pi*3**2*10 == 90*pi"},
+
+{"n":21,"domain":"GT","skill":"GT-AV","type":"FREE_RESPONSE",
+ "stem":"The area of a square is 81 square inches. What is the perimeter, in inches, of the square?",
+ "answers":["36"],
+ "check":"4*sqrt(81) == 36"},
+
+{"n":22,"domain":"GT","skill":"GT-TR","type":"MULTIPLE_CHOICE",
+ "stem":"In right triangle ABC, angle C is a right angle, the length of AB is 13, and the length of BC is 5. What is the value of \\(\\sin A\\)?",
+ "choices":["\\(\\frac{5}{13}\\)","\\(\\frac{12}{13}\\)","\\(\\frac{5}{12}\\)","\\(\\frac{13}{5}\\)"],"correct":"A",
+ "check":"sin A = opposite BC / hypotenuse AB = 5/13"}
+]
