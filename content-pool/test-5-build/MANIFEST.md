@@ -33,6 +33,12 @@ repeats and were **replaced**:
 - Q9 was `x^7/x^3`, which reduces to `x^4` — the same concept *and the same answer* as
   Test 2 M2H Q11 (`x^-3 * x^7`). Now `12x^5/(4x^2)`, which also exercises the coefficient.
 
+## Tooling kept here
+- `dump_existing_questions.mjs` — dumps every question already in production so new content can
+  be deduped against the whole database, not just the test being built. Reads the connection
+  string from `PRODDB` in the environment; the string is never written to a file.
+  `PRODDB='postgresql://...' node dump_existing_questions.mjs MATH out.json`
+
 ## Notes for the next session
 - Two questions (Q8, Q18) carry a `table` field that must be rendered with the standard
   `<table>` style block from `CLAUDE.md` at insert time, not as prose.
