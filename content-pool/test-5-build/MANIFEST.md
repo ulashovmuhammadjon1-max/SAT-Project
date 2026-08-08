@@ -5,7 +5,7 @@
 |---|---|---|
 | Math M2 **Easy** | **Original, authored here** | ✅ 22/22 written, sympy-verified, deduped |
 | Math M1 | Oct IntB PDF (p51–72) | ✅ 22/22 transcribed, 22/22 sympy-verified |
-| Math M2 Hard | Oct USB PDF (p76–97) | ⬜ not transcribed |
+| Math M2 Hard | Oct USB PDF (p76–97) | ✅ 22 transcribed, 19 usable (3 rejected) |
 | R&W M1 / M2E / M2H | `content-pool/test-3-4-5-reading-writing/` (74 banked) + Aug USC | ⬜ needs the HTML formatting pass |
 
 ## `t5_math_m2easy.json` — 22 original questions
@@ -57,6 +57,33 @@ says D, but the `FLAG` field marks it for confirmation before publishing.
 **Free-response balance.** This source module has 6 FR and 16 MC. The standing rules cap a
 module at 3 FR (Test 1 ships 19 MC + 3 FR), so Test 5's Math M1 cannot be this module verbatim
 — drop 3 FR and top up with MC items from the Oct USB / Oct USC Math M1 pools.
+
+## `octusb_math_m2.json` — 22 questions from the Oct USB source, **19 usable**
+
+Transcribed the same way (visual read per page). Unlike the Oct IntB module, this source's
+answer key is **not** fully reliable — three questions were rejected rather than shipped:
+
+- **Q4 (parallel lines cut by a transversal) — CONFLICT.** The key says A (26), which needs
+  y=61. Zooming the figure shows 61° at the **upper-right** angle of line q and y° at the
+  **upper-left** angle of line r. Those are supplementary, not equal, so y=119 and x=55
+  (choice C). The student who sat the test also chose C. Rejected.
+- **Q17 (graph of y = f(x)+2) — CONFLICT.** The key says D. Reading the plotted curve at four
+  lattice points gives y(0)=4, y(1)=3, y(2)=1, y(3)=-3, x-intercept ≈2.35 — exactly
+  `-2^x + 5`. Since the plotted curve *is* y=f(x)+2, f(x) = `-2^x + 3` (choice B). Choice D
+  would need a y-intercept of 6; the graph plainly shows 4. Rejected.
+- **Q10 (stamp-age frequency table) — INCOMPLETE.** The test-taker had scrolled, so only the
+  last table rows survive. The missing rows cannot be reconstructed, so the answer cannot be
+  verified. Rejected.
+
+The other 19 all verify: recorded answer, independent re-derivation, and the official key agree.
+
+**A resolution worth recording.** Q22's equation reads `1/(cx) = x/76 + 1/c`. At the capture's
+native resolution the 76 is indistinguishable from 70, and 70 would give c = -17.5 and appear
+to contradict the key. Zooming 7× showed 76, which gives exactly the key's -19. Every
+expression in these screenshot sources needs to be read at zoom, not at page scale.
+
+**Reliability note for future builds:** Oct IntB's key was 22/22 correct. Oct USB's key has at
+least two errors. Trust neither blindly — verify every answer independently.
 
 ## Tooling kept here
 - `dump_existing_questions.mjs` — dumps every question already in production so new content can
