@@ -235,6 +235,55 @@ questions — the top-up passes only harvested the writing tail. Test 6 needs ei
 source material or explicit OK to author original Math questions.
 
 
+## Tests 7-18 are built and PUBLISHED — 18 tests, 2,646 questions live
+Every test is 147 questions (R&W 27/27/27, Math 22/22/22 with 19 MC + 3 FR per module). All
+Math and, from Test 8 on, all R&W is **originally authored** — the transcribed source pools are
+spent. Per-test build directories are `content-pool/test-N-build/`.
+
+The pipeline that works, in order: `math_testN.py` + `verify_math_testN.py` → `rw_testN.py` →
+`balance_rw.py` → `assemble_testN.py` → `insert_test.mjs` (local) → `audit_math_rendering.mjs`
+→ `insert_test.mjs --publish`. Two shared dedupe corpora feed it: `rw_authored_corpus.json` at
+the `content-pool/` root (809 R&W passages, every authored and transcribed pool) and
+`prod_math_stems.json` per build directory (a snapshot of every live Math stem).
+
+### Authoring several tests in parallel: agents converge, and territory is the fix
+Subagents handed the same reference template independently write the **same question** — three
+once produced `f(x)=x²−4x` with `g(x)=3x+2`. It cost Tests 13 and 14 a repair pass each.
+Two things prevent it, and both are needed:
+1. **Assign each test a disjoint thematic territory** (Test 16 got maritime/textiles/printing/
+   glass, Test 17 surveying/railways/forestry/dairying, Test 18 aviation/brewing/watchmaking/
+   quarrying) and name the siblings' territories in each brief so they steer clear.
+2. **Point each agent at a different existing test as its structural template.**
+With both in place, cross-sibling overlap came out at 0.56 for Math and 0.18 for R&W passages,
+against thresholds of 0.75 and 0.50 — no repair pass needed.
+
+### A similarity threshold decides what to READ, not what to accept
+Test 18's Math pass found **nine** questions scoring *below* 0.75 that were still genuine
+template repeats once the nearest banked stem was actually read — a linear `f(x+3)−f(x)`, a
+guy-wire Pythagoras, a "no solution, find k" system, a circle-equation radius. Read every match
+above ~0.45. Conversely, two Test 18 items had perfectly distinct maths but **reused the setting
+of a Module 1 item**; since a student sees Module 1 plus one Module 2 branch, the Easy branch
+would have shown the same hop kiln twice. Check settings across modules, not just stems.
+
+### R&W answer keys skew hard when hand-authored — always rebalance
+Raw distributions came in at A45/B22/C13/D1, A42/B29/C9/D1 and A70/B8/C3/D0. `balance_rw.py`
+rotates them to 21/20/20/20. It refuses to rotate any question whose rationale names an option
+**by letter**, so every `why` must name options by their content.
+
+### The `LETTER_REF` bug, fixed — do not reintroduce it
+The old pattern matched any bare A-D followed by whitespace, which also matched the **article
+"A"** starting a sentence: "A complete sentence stands in front of the blank" read as a
+reference to option A and silently locked that question against rebalancing. It bit three
+builds before it was found. The pattern now requires an explicit marker (`Option B`, `(C)`) or a
+following verb. Same family of bug as the `\bpi\b` one below — a word-boundary check that looks
+right and silently under- or over-matches.
+
+### Per-question difficulty must be written through, not hardcoded
+`insert_test.mjs` writes `q.difficulty`; the older `insert_test6.mjs` hardcoded `'MEDIUM'`,
+which is why 392 questions across Tests 3-6 misreported their level in the Question Bank badge
+and filter. Backfilled by `content-pool/test-15-build/backfill_difficulty.mjs`; production now
+reads 882/882/882 across STANDARD/EASY/HARD with zero mismatches. Use the newer inserter.
+
 ## Test 6 is built and PUBLISHED; Test 7 needs 38 Math MC and nothing else
 `Test 6` (`b7cf096a-090d-4286-a128-9ec428e6de32`), 147 questions, live on satforge.org. Full
 detail in `content-pool/test-6-7-build/MANIFEST.md`.
