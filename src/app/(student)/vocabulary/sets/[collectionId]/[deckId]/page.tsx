@@ -7,14 +7,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VocabSetQuiz } from "@/components/vocabulary/vocab-set-quiz";
 import { getVocabSetDetail, getVocabSets } from "@/server/actions/student/vocab";
-import { VOCAB_SET_PASS_THRESHOLD } from "@/lib/vocab-constants";
+import { passThresholdFor } from "@/lib/vocab-constants";
 
 export const dynamic = "force-dynamic";
 
-export default async function VocabSetDetailPage({ params }: { params: { deckId: string } }) {
+export default async function VocabSetDetailPage({
+  params,
+}: {
+  params: { collectionId: string; deckId: string };
+}) {
   const [detail, sets] = await Promise.all([
     getVocabSetDetail(params.deckId).catch(() => null),
-    getVocabSets(),
+    getVocabSets(params.collectionId),
   ]);
 
   if (!detail) notFound();
@@ -26,7 +30,7 @@ export default async function VocabSetDetailPage({ params }: { params: { deckId:
     <div className="space-y-6">
       <div>
         <Link
-          href="/vocabulary/sets"
+          href={`/vocabulary/sets/${params.collectionId}`}
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="h-3.5 w-3.5" /> All sets
@@ -84,12 +88,19 @@ export default async function VocabSetDetailPage({ params }: { params: { deckId:
         </TabsContent>
 
         <TabsContent value="quiz" className="pt-4">
-          <VocabSetQuiz
-            deckId={detail.id}
-            nextSetId={nextSet?.id ?? null}
-            questions={detail.quiz}
-            passThreshold={VOCAB_SET_PASS_THRESHOLD}
-          />
+          {detail.quiz.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              This set&apos;s quiz isn&apos;t available yet.
+            </p>
+          ) : (
+            <VocabSetQuiz
+              deckId={detail.id}
+              nextSetHref={nextSet ? `/vocabulary/sets/${params.collectionId}/${nextSet.id}` : null}
+              setsListHref={`/vocabulary/sets/${params.collectionId}`}
+              questions={detail.quiz}
+              passThreshold={passThresholdFor(detail.quiz.length)}
+            />
+          )}
         </TabsContent>
       </Tabs>
     </div>

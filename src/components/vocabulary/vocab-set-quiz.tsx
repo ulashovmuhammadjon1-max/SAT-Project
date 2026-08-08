@@ -19,12 +19,14 @@ interface QuizQuestion {
 
 export function VocabSetQuiz({
   deckId,
-  nextSetId,
+  nextSetHref,
+  setsListHref,
   questions,
   passThreshold,
 }: {
   deckId: string;
-  nextSetId: string | null;
+  nextSetHref: string | null;
+  setsListHref: string;
   questions: QuizQuestion[];
   passThreshold: number;
 }) {
@@ -70,7 +72,9 @@ export function VocabSetQuiz({
         </p>
         <p className="text-sm text-muted-foreground">
           {result.passed
-            ? "Passed! The next set is now unlocked."
+            ? nextSetHref
+              ? "Passed! The next set is now unlocked."
+              : "Passed! That was the last set in this book."
             : `You need ${result.passThreshold}/${result.total} to unlock the next set.`}
         </p>
         <div className="flex gap-2">
@@ -79,13 +83,13 @@ export function VocabSetQuiz({
               <RotateCcw className="h-4 w-4" /> Try again
             </Button>
           )}
-          {result.passed && nextSetId ? (
+          {result.passed && nextSetHref ? (
             <Button asChild>
-              <Link href={`/vocabulary/sets/${nextSetId}`}>Next set</Link>
+              <Link href={nextSetHref}>Next set</Link>
             </Button>
           ) : (
             <Button asChild variant={result.passed ? "default" : "outline"}>
-              <Link href="/vocabulary/sets">Back to sets</Link>
+              <Link href={setsListHref}>Back to sets</Link>
             </Button>
           )}
         </div>

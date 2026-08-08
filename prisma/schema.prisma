@@ -459,19 +459,37 @@ enum VocabVisibility {
   PRIVATE // added by a student for their own personal study list
 }
 
+// A named source book/package (e.g. "College Panda 400 Words", "Ivy Global
+// 500 Words"). Each collection contains its own gated sequence of sets.
+model VocabCollection {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  order       Int?
+  createdAt   DateTime @default(now())
+
+  decks VocabDeck[]
+
+  @@index([order])
+}
+
 model VocabDeck {
   id           String   @id @default(cuid())
   name         String
   description  String?
-  order        Int? // sequence position for gated sets (e.g. "Set 1".."Set 16"); null = not part of a gated sequence
+  order        Int? // sequence position within its collection (e.g. "Set 1".."Set 16"); null = not part of a gated sequence
   passageTitle String?
   passage      String? @db.Text
   createdAt    DateTime @default(now())
+
+  collectionId String?
+  collection   VocabCollection? @relation(fields: [collectionId], references: [id], onDelete: SetNull)
 
   words         VocabDeckWord[]
   quizQuestions VocabSetQuizQuestion[]
   progress      VocabDeckProgress[]
 
+  @@unique([collectionId, order])
   @@index([order])
 }
 
