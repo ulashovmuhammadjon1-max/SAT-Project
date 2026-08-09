@@ -82,13 +82,18 @@ export default async function PracticeSessionPage({
           size
         );
 
+  // The canonical, fully-pinned link to this session. It is what the redirect
+  // below navigates to, and what the runner stores so the student can come back
+  // to this exact set of questions later.
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(searchParams)) {
+    if (typeof value === "string" && value) params.set(key, value);
+  }
+  params.set("ids", ids.join(","));
+  const sessionHref = `/practice/session?${params.toString()}`;
+
   if (!pinned.length && ids.length > 0) {
-    const params = new URLSearchParams();
-    for (const [key, value] of Object.entries(searchParams)) {
-      if (typeof value === "string" && value) params.set(key, value);
-    }
-    params.set("ids", ids.join(","));
-    redirect(`/practice/session?${params.toString()}`);
+    redirect(sessionHref);
   }
 
   if (ids.length === 0) {
@@ -167,5 +172,12 @@ export default async function PracticeSessionPage({
   // Rendered bare: PracticeSession owns the full viewport, the same way the
   // exam shell does. Wrapping it in dashboard chrome is what made Question Bank
   // practice read as a page with a quiz on it rather than a testing environment.
-  return <PracticeSession questions={questions} backHref={backHref} studentName={user.name ?? "Student"} />;
+  return (
+    <PracticeSession
+      questions={questions}
+      backHref={backHref}
+      sessionHref={sessionHref}
+      studentName={user.name ?? "Student"}
+    />
+  );
 }

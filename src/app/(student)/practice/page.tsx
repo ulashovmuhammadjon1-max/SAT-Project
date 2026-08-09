@@ -5,6 +5,7 @@ import { Bookmark, History, Sparkles, Target, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { DomainProgressList, OverviewStats } from "@/components/student/qb-progress";
+import { ResumeSessionCard } from "@/components/student/qb-resume-card";
 import { cn } from "@/lib/utils";
 import {
   getDomainProgress,
@@ -79,6 +80,8 @@ export default async function QuestionBankPage({
           );
         })}
       </div>
+
+      <ResumeSessionCard />
 
       <OverviewStats overview={overview} />
 

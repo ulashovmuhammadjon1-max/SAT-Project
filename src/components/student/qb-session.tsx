@@ -1,6 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition, type CSSProperties } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useTransition,
+  type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type MouseEvent as ReactMouseEvent,
+} from "react";
 import { useRouter } from "next/navigation";
 import {
   Bookmark,
@@ -32,6 +42,12 @@ import {
 } from "@/components/testing/primitives";
 import { stemRegionId, type Annotation } from "@/lib/exam/annotations";
 import { toPassageHtml } from "@/lib/exam/passage-html";
+import {
+  clearQbSession,
+  readQbSession,
+  sessionSignature,
+  writeQbSession,
+} from "@/lib/practice/qb-session-storage";
 import { cn } from "@/lib/utils";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
 import { submitQuestionAnswer, type SubmitAnswerResult } from "@/server/actions/student/question-bank";
@@ -81,18 +97,27 @@ const blank = (saved: boolean): QbState => ({
  * The rule that shapes the whole flow: submitting never moves the student on.
  * The question stays put, the outcome and explanation appear beneath it, and
  * only "Next Question" advances.
+ *
+ * The session also survives leaving: everything below is mirrored into
+ * `localStorage` under the pinned question set, so reopening `sessionHref`
+ * puts the student back on the question they were on with their answers,
+ * eliminations and revealed explanations intact.
  */
 export function PracticeSession({
   questions,
   backHref,
+  sessionHref,
   studentName,
 }: {
   questions: SessionQuestion[];
   backHref: string;
+  /** The pinned URL that reopens exactly this set of questions. */
+  sessionHref: string;
   studentName: string;
 }) {
   const router = useRouter();
   const rootRef = useRef<HTMLDivElement>(null);
+  const splitPaneRef = useRef<HTMLDivElement>(null);
 
   const [index, setIndex] = useState(0);
   const [states, setStates] = useState<QbState[]>(() => questions.map((q) => blank(q.saved)));
@@ -104,6 +129,9 @@ export function PracticeSession({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [finished, setFinished] = useState(false);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
+  const [passageWidthPct, setPassageWidthPct] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [restored, setRestored] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [isSaving, startSaving] = useTransition();
 
@@ -116,6 +144,104 @@ export function PracticeSession({
   const patch = useCallback((changes: Partial<QbState>) => {
     setStates((prev) => prev.map((s, i) => (i === index ? { ...s, ...changes } : s)));
   }, [index]);
+
+  // ---- Saving and resuming -------------------------------------------------
+  // The signature identifies this exact question set. Restoring is gated on it
+  // so a stored session can never paint one student's answers onto a different
+  // set of questions.
+  const signature = useMemo(() => sessionSignature(questions.map((x) => x.id)), [questions]);
+
+  // Restore runs exactly once, guarded by a ref rather than by effect
+  // dependencies. Every server action re-renders this page, which hands down a
+  // fresh `questions` array; a dependency-driven effect would re-read storage
+  // at that moment and could overwrite the answer that had just come back with
+  // the pre-submit snapshot.
+  const restoredRef = useRef(false);
+  useEffect(() => {
+    if (restoredRef.current) return;
+    restoredRef.current = true;
+
+    const stored = readQbSession();
+    if (stored && stored.signature === signature && stored.states.length === questions.length) {
+      // `marked` comes from the server on every load (bookmarks are real rows),
+      // so the freshly-fetched value wins over the stored one.
+      setStates(stored.states.map((s, i) => ({ ...s, marked: questions[i]?.saved ?? s.marked })));
+      setIndex(stored.index);
+      setPassageWidthPct(stored.splitPct);
+    }
+    setRestored(true);
+  }, [signature, questions]);
+
+  useEffect(() => {
+    if (!restored) return;
+    if (finished) {
+      clearQbSession(signature);
+      return;
+    }
+    // Debounced: the per-second timer touches `states` every tick, and there is
+    // no reason to serialise the whole session that often.
+    const id = setTimeout(() => {
+      writeQbSession({
+        version: 1,
+        signature,
+        href: sessionHref,
+        label: `${questions[0]?.subject === "MATH" ? "Math" : "Reading and Writing"} — ${
+          questions[0]?.domainName ?? "Question Bank"
+        }`,
+        index,
+        total: questions.length,
+        answered: states.filter((s) => s.result).length,
+        correct: states.filter((s) => s.result?.isCorrect).length,
+        splitPct: passageWidthPct,
+        savedAt: new Date().toISOString(),
+        states,
+      });
+    }, 400);
+    return () => clearTimeout(id);
+  }, [restored, finished, signature, sessionHref, questions, index, states, passageWidthPct]);
+
+  // ---- Split pane ----------------------------------------------------------
+  const SPLIT_MIN = 30;
+  const SPLIT_MAX = 70;
+  const SPLIT_DEFAULT = 55;
+
+  const startDragging = useCallback((startEvent: ReactMouseEvent) => {
+    startEvent.preventDefault();
+    setIsDragging(true);
+    function onMove(e: MouseEvent) {
+      const el = splitPaneRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const pct = ((e.clientX - rect.left) / rect.width) * 100;
+      setPassageWidthPct(Math.min(SPLIT_MAX, Math.max(SPLIT_MIN, pct)));
+    }
+    function onUp() {
+      setIsDragging(false);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    }
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+  }, []);
+
+  /** Arrow keys nudge the split, Home/End jump to the extremes — a drag handle
+   *  that only responds to a mouse is unusable for keyboard-only students. */
+  const nudgeSplit = useCallback((event: ReactKeyboardEvent) => {
+    const STEP = 2;
+    const current = passageWidthPct ?? SPLIT_DEFAULT;
+    let next: number | null = null;
+    if (event.key === "ArrowLeft") next = current - STEP;
+    else if (event.key === "ArrowRight") next = current + STEP;
+    else if (event.key === "Home") next = SPLIT_MIN;
+    else if (event.key === "End") next = SPLIT_MAX;
+    else if (event.key === "Enter" || event.key === " ") next = SPLIT_DEFAULT;
+    if (next === null) return;
+    event.preventDefault();
+    // Stop here rather than bubbling: ArrowLeft/ArrowRight are also the
+    // previous/next-question shortcuts.
+    event.stopPropagation();
+    setPassageWidthPct(Math.min(SPLIT_MAX, Math.max(SPLIT_MIN, next)));
+  }, [passageWidthPct]);
 
   // Time on the current question, used only to record how long each took.
   useEffect(() => {
@@ -243,6 +369,8 @@ export function PracticeSession({
       const target = e.target as HTMLElement | null;
       if (target && ["INPUT", "TEXTAREA"].includes(target.tagName)) return;
       if (menuOpen || helpOpen || finished) return;
+      // The split divider owns Arrow keys while focused (it resizes the panes).
+      if (target?.getAttribute("role") === "separator") return;
       if (e.key === "ArrowRight" && revealed) goTo(index + 1);
       else if (e.key === "ArrowLeft") goTo(index - 1);
       else if (e.key === "Enter" && !revealed) submit();
@@ -402,8 +530,12 @@ export function PracticeSession({
 
       <div className="flex-1 overflow-hidden">
         {q.subject === "READING_WRITING" && q.passage ? (
-          <div className="grid h-full grid-rows-[42vh_1fr] overflow-hidden lg:grid-cols-[55%_1fr] lg:grid-rows-1">
-            <div className="min-h-0 border-b border-exam-border bg-exam-passage lg:border-b-0 lg:border-r">
+          <div
+            ref={splitPaneRef}
+            className="grid h-full grid-rows-[42vh_auto_1fr] overflow-hidden lg:grid-cols-[var(--passage-w,55%)_auto_1fr] lg:grid-rows-1"
+            style={passageWidthPct ? ({ "--passage-w": `${passageWidthPct}%` } as CSSProperties) : undefined}
+          >
+            <div className="min-h-0 border-b border-exam-border bg-exam-passage lg:border-b-0">
               <div className="h-full overflow-y-auto exam-scroll px-6 pb-14 pt-8 lg:px-10">
                 <div className="max-w-[44rem]">
                   {q.passage.imageUrl && (
@@ -427,6 +559,39 @@ export function PracticeSession({
                 </div>
               </div>
             </div>
+
+            <div
+              onMouseDown={startDragging}
+              onKeyDown={nudgeSplit}
+              onDoubleClick={() => setPassageWidthPct(SPLIT_DEFAULT)}
+              role="separator"
+              tabIndex={0}
+              aria-orientation="vertical"
+              aria-label="Resize the passage and question panels"
+              aria-valuemin={SPLIT_MIN}
+              aria-valuemax={SPLIT_MAX}
+              aria-valuenow={Math.round(passageWidthPct ?? SPLIT_DEFAULT)}
+              title="Drag to resize — double-click to reset"
+              className={cn(
+                "group relative hidden lg:flex lg:h-full lg:w-[9px] lg:cursor-col-resize lg:items-center lg:justify-center",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-exam-blue",
+                isDragging ? "bg-exam-blue/15" : "bg-transparent"
+              )}
+            >
+              <span
+                className={cn(
+                  "absolute inset-y-0 left-1/2 w-px -translate-x-1/2",
+                  isDragging ? "bg-exam-blue" : "bg-exam-divider group-hover:bg-exam-disabled"
+                )}
+              />
+              <span
+                className={cn(
+                  "relative h-9 w-[5px] rounded-full transition-colors",
+                  isDragging ? "bg-exam-blue" : "bg-exam-divider group-hover:bg-exam-disabled"
+                )}
+              />
+            </div>
+
             <div className="min-h-0 bg-exam-question">{questionPanel}</div>
           </div>
         ) : (
@@ -626,6 +791,7 @@ function QbHeader({
           <button
             type="button"
             onClick={onExit}
+            title="Leave — your place in this session is kept"
             className={cn(
               "ml-1 rounded-full border border-exam-border bg-white px-3 py-1.5 text-[12px] font-medium text-exam-text transition-colors hover:bg-exam-hover",
               FOCUS_RING
@@ -671,6 +837,11 @@ function QbHelpDialog({ onClose }: { onClose: () => void }) {
           <li>Answer, then press <strong>Submit</strong>. The question stays on screen with the explanation.</li>
           <li><strong>Next Question</strong> moves on — nothing advances by itself.</li>
           <li>Drag across the passage or the question to highlight it.</li>
+          <li>Drag the divider between the two panels to resize them — double-click it to reset.</li>
+          <li>
+            Your place is saved as you go. Leaving and coming back to the Question Bank offers to{" "}
+            <strong>continue this session</strong>.
+          </li>
           <li>Math questions have <strong>Calculator</strong> (Desmos) and the <strong>Reference</strong> sheet.</li>
           <li>Keys: <strong>1–4</strong> pick a choice, <strong>Enter</strong> submits, <strong>←/→</strong> move.</li>
         </ul>
