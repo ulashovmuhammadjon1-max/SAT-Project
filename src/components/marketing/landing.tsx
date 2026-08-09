@@ -53,6 +53,13 @@ export function Landing() {
       <SiteNav />
       <main>
         <Hero />
+        {/* Streak and the "what it's for" band sit immediately under the hero,
+            so the first scroll shows the product working and the reason to
+            bother — before any feature copy. */}
+        <div className="space-y-4 pt-2 sm:space-y-5">
+          <StreakBand />
+          <OpensDoors />
+        </div>
         <BeyondSat />
         <Ecosystem />
         <Stats />
@@ -259,16 +266,17 @@ function Hero() {
 }
 
 const VALUE_STRIP = [
-  { icon: Layers, title: "Adaptive Practice", body: "Full-length Digital SAT practice" },
-  { icon: Target, title: "Targeted Practice", body: "Work directly on your weaknesses" },
-  { icon: UserRound, title: "Personalized Guidance", body: "A plan built around your goals" },
-  { icon: Sparkles, title: "100% Free", body: "Core learning is free" },
+  { icon: Layers, title: "Adaptive Practice", body: "Questions adjust to you in real time" },
+  { icon: Target, title: "Targeted Practice", body: "Focus on your weakest skills first" },
+  { icon: BarChart3, title: "Smart Analytics", body: "See exactly what to fix and why" },
+  { icon: UserRound, title: "Personalized Plan", body: "A study plan built around your goals" },
+  { icon: Sparkles, title: "100% Free", body: "Core learning features are always free" },
 ];
 
 function ValueStrip() {
   return (
     <Reveal delay={0.5}>
-      <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+      <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5">
         {VALUE_STRIP.map((v) => (
           <li key={v.title} className="flex items-start gap-3">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -282,6 +290,149 @@ function ValueStrip() {
         ))}
       </ul>
     </Reveal>
+  );
+}
+
+/**
+ * Streak preview.
+ *
+ * Shows what the daily-streak system looks like once a student is using it.
+ * The numbers are illustrative, so the card says so — the hero's score card
+ * already sets that precedent with "Sample data · product preview", and a
+ * landing page that displays an invented streak as though it were the
+ * visitor's own would be lying to them.
+ */
+const STREAK_DAYS = [
+  { label: "M", done: true },
+  { label: "T", done: true },
+  { label: "W", done: true },
+  { label: "T", done: true },
+  { label: "F", done: true },
+  { label: "S", done: true },
+  { label: "S", done: true, today: true },
+];
+
+function StreakBand() {
+  return (
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Reveal direction="up">
+        <div className="relative overflow-hidden rounded-2xl border border-primary/25 bg-card/95 shadow-panel backdrop-blur">
+          {/* Same corner glow language as the hero's mockup frame. */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-24 -top-24 h-56 w-56 rounded-full bg-primary/15 blur-3xl"
+          />
+
+          <div className="relative grid gap-6 p-6 sm:p-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center lg:gap-8">
+            {/* Streak + week dots */}
+            <div>
+              <p className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Zap className="h-5 w-5 text-warning" />
+                7 Day Streak
+              </p>
+              <p className="mt-0.5 text-sm text-muted-foreground">You&apos;re on fire — keep it up.</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {STREAK_DAYS.map((d, i) => (
+                  <li key={i} className="flex flex-col items-center gap-1">
+                    <span
+                      className={cn(
+                        "flex h-8 w-8 items-center justify-center rounded-full text-xs font-semibold",
+                        d.today
+                          ? "bg-warning/20 text-warning ring-2 ring-warning/40"
+                          : "bg-primary/15 text-primary",
+                      )}
+                    >
+                      {d.done ? <CheckCircle2 className="h-4 w-4" /> : d.label}
+                    </span>
+                    <span className="text-[11px] text-muted-foreground">{d.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Next milestone */}
+            <div className="lg:border-l lg:border-border/60 lg:pl-8">
+              <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                <Star className="h-4 w-4 text-warning" />
+                Next milestone
+              </p>
+              <p className="mt-1 font-display text-2xl font-semibold tabular-nums">14 days</p>
+              <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+                <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-primary to-[hsl(266_84%_60%)]" />
+              </div>
+              <p className="mt-1.5 text-xs tabular-nums text-muted-foreground">7 / 14 days</p>
+            </div>
+
+            {/* Why it matters + CTA */}
+            <div className="lg:border-l lg:border-border/60 lg:pl-8">
+              <p className="flex items-center gap-2 text-sm font-medium">
+                <LineChart className="h-4 w-4 text-success" />
+                Keep your streak alive
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Practising a little every day beats cramming the week before.
+              </p>
+              <Button asChild className="mt-4 w-full sm:w-auto">
+                <Link href="/practice">
+                  Continue practising <ArrowRight className="ml-1.5 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <p className="relative border-t border-border/60 px-6 py-2 text-[11px] text-muted-foreground sm:px-7">
+            Sample streak · product preview
+          </p>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
+/**
+ * "The SAT opens doors".
+ *
+ * Deliberately typeset names rather than university logos. Reproducing a
+ * university's wordmark on a commercial-looking page implies a partnership or
+ * endorsement that does not exist; naming them in a factual sentence about
+ * what SAT scores are used for does not. The caption is worded to make the
+ * claim about the test, never about SATForge.
+ */
+const UNIVERSITIES = [
+  "Harvard",
+  "Yale",
+  "Stanford",
+  "Columbia",
+  "NYU",
+  "Chicago",
+  "Penn",
+  "MIT",
+];
+
+function OpensDoors() {
+  return (
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Reveal direction="up">
+        <div className="rounded-2xl border border-border/60 bg-card/60 px-6 py-7 backdrop-blur sm:px-8">
+          <p className="text-center font-display text-lg font-semibold">The SAT opens doors.</p>
+          <p className="mx-auto mt-1 max-w-xl text-center text-sm text-muted-foreground">
+            A strong score is one of the few things a student anywhere in the world can control —
+            and it is read by admissions offices everywhere.
+          </p>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            {UNIVERSITIES.map((u) => (
+              <li
+                key={u}
+                className="font-display text-base font-semibold tracking-wide text-muted-foreground/80 transition-colors hover:text-foreground"
+              >
+                {u}
+              </li>
+            ))}
+            <li className="text-sm text-muted-foreground">+ many more</li>
+          </ul>
+        </div>
+      </Reveal>
+    </section>
   );
 }
 
