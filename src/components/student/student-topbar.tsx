@@ -1,5 +1,6 @@
 import { Flame } from "lucide-react";
 
+import { ThemeToggleCompact } from "@/components/shared/theme-toggle";
 import { UserMenu } from "@/components/shared/user-menu";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
@@ -21,6 +22,7 @@ export async function StudentTopbar() {
           <Flame className="h-4 w-4 text-warning" />
           {user?.currentStreak ?? 0} day streak
         </div>
+        <ThemeToggleCompact />
         <UserMenu name={user?.name} email={user?.email} image={user?.image} role={user?.role} />
       </div>
     </header>

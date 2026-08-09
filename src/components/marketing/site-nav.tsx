@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { GraduationCap, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { ThemeToggle, ThemeToggleCompact } from "@/components/shared/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
@@ -59,6 +60,7 @@ export function SiteNav() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
+          <ThemeToggleCompact />
           <Button variant="ghost" size="sm" asChild>
             <Link href="/login">Sign in</Link>
           </Button>
@@ -97,6 +99,12 @@ export function SiteNav() {
                   {l.label}
                 </a>
               ))}
+              {/* Full three-way switch on mobile: there is room for it here,
+                  and the cycling button is harder to understand on a phone. */}
+              <div className="flex items-center justify-between px-3 pt-2">
+                <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </div>
               <div className="flex gap-2 pt-2">
                 <Button variant="outline" className="flex-1" asChild>
                   <Link href="/login">Sign in</Link>

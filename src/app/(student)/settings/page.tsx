@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { StudyPlanForm } from "@/components/student/study-plan-form";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { readProfile } from "@/lib/onboarding/profile";
 import { requireUser } from "@/lib/session";
 import { initials } from "@/lib/utils";
@@ -54,6 +55,20 @@ export default async function StudentSettingsPage() {
             <p className="font-medium">{user.name}</p>
             <p className="text-sm text-muted-foreground">{user.email}</p>
           </div>
+        </CardContent>
+      </Card>
+
+      <Card className="max-w-lg">
+        <CardHeader>
+          <CardTitle className="text-base">Appearance</CardTitle>
+          <CardDescription>
+            SATForge is dark by default. Pick whatever is easiest on your eyes — the choice is
+            remembered on this device. The exam interface always keeps its own fixed appearance so
+            practice tests look like the real thing.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ThemeToggle />
         </CardContent>
       </Card>
 
