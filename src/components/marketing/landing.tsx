@@ -1237,6 +1237,20 @@ function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border/60 pt-6">
+          <p className="mb-3 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+            <Link href="/terms" className="text-muted-foreground hover:text-foreground">
+              Terms of Use
+            </Link>
+            <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
+              Privacy Policy
+            </Link>
+            <a
+              href="mailto:satforge.org@gmail.com"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              Contact
+            </a>
+          </p>
           <p className="text-xs leading-relaxed text-muted-foreground">
             &copy; {new Date().getFullYear()} SATForge. SAT&reg; is a trademark registered by the College Board, which
             is not affiliated with and does not endorse this platform. Bluebook&trade; is a trademark of the College

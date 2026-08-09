@@ -93,6 +93,13 @@ const settingsSchema = z.object({
   bookingBaseCost: z.coerce.number().int().min(0).max(1000),
   bookingCostIncrement: z.coerce.number().int().min(0).max(1000),
   eventCost: z.coerce.number().int().min(0).max(1000),
+  contactEmail: z
+    .string()
+    .trim()
+    .max(200)
+    .refine((v) => v === "" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v), "Enter a valid email address")
+    .default(""),
+  operatorName: z.string().trim().min(1).max(120).default("SATForge"),
   bookingRefundHours: z.coerce.number().int().min(0).max(720).nullable(),
   instagramHandle: z.string().trim().min(1).max(64),
   telegramHandle: z.string().trim().min(1).max(64),

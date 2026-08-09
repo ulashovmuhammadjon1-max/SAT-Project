@@ -5,6 +5,8 @@ import { Prisma, type SessionType } from "@prisma/client";
 
 import { checkRequirements, getCommunityRequirements, type CommunityRequirement } from "@/lib/community";
 import { InsufficientCoinsError, credit, debit } from "@/lib/coins";
+import { button, layout, para, sendEmail } from "@/lib/email";
+import { EVENT_TYPE_LABELS } from "@/lib/events";
 import { createMeetingSafely } from "@/lib/meeting";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
@@ -380,8 +382,21 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
       .catch((e) => console.error("[booking] could not attach meeting link", e));
   }
 
+  // Best-effort confirmation. A booking that exists and is paid for must not
+  // be reported as failed because a mail provider is down.
+  void sendBookingConfirmation({
+    to: snapshot.email,
+    name: snapshot.name,
+    startsAt: slot.startsAt,
+    durationMinutes: slot.durationMinutes,
+    sessionType: slot.sessionType,
+    meetingUrl: meeting.url,
+    coinsSpent,
+  });
+
   revalidatePath("/bookings");
   revalidatePath("/booking");
+  revalidatePath("/events");
   revalidatePath("/wallet");
   revalidatePath("/dashboard");
   return { ok: true, bookingId, coinsSpent, balance };
@@ -450,4 +465,52 @@ export async function getMyBookings() {
       slot: { select: { startsAt: true, durationMinutes: true, sessionType: true } },
     },
   });
+}
+
+
+/**
+ * Confirmation email.
+ *
+ * Times are written in UTC with the offset spelled out, because the server has
+ * no reliable way to render the student's local clock in an email and a wrong
+ * time is worse than an explicit one they convert themselves.
+ */
+async function sendBookingConfirmation(args: {
+  to: string;
+  name: string;
+  startsAt: Date;
+  durationMinutes: number;
+  sessionType: SessionType;
+  meetingUrl: string | null;
+  coinsSpent: number;
+}) {
+  const label = EVENT_TYPE_LABELS[args.sessionType];
+  const when = args.startsAt.toUTCString();
+  const firstName = args.name.trim().split(/\s+/)[0] || "there";
+
+  await sendEmail({
+    to: args.to,
+    subject: `Confirmed: ${label}`,
+    text:
+      `Hi ${firstName},\n\n` +
+      `Your ${label} is booked.\n\n` +
+      `When: ${when}\n` +
+      `Duration: ${args.durationMinutes} minutes\n` +
+      (args.meetingUrl ? `Join: ${args.meetingUrl}\n` : `A join link will be sent before the session.\n`) +
+      (args.coinsSpent > 0 ? `Coins used: ${args.coinsSpent}\n` : "") +
+      `\nRemember to follow @satforge_org on Instagram and join the Telegram channel — ` +
+      `volunteers check this before each session.\n\n` +
+      `Need to cancel? Do it from My Sessions on satforge.org.`,
+    html: layout(
+      para(`Hi ${firstName},`) +
+        para(`Your <strong style="color:#ffffff;">${label}</strong> is booked.`) +
+        para(`<strong style="color:#ffffff;">${when}</strong><br/>${args.durationMinutes} minutes`) +
+        (args.meetingUrl
+          ? button(args.meetingUrl, "Join the session")
+          : para("A join link will be sent before the session starts.")) +
+        para(
+          `<span style="color:#8a97b1;font-size:13px;">Volunteers check your Instagram and Telegram subscription before each session. Need to cancel? Do it from My Sessions.</span>`,
+        ),
+    ),
+  }).catch((e) => console.error("[booking] confirmation email failed", e));
 }

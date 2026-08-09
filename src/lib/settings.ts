@@ -47,6 +47,14 @@ export interface PlatformSettings {
    * 0 makes events free while still requiring the community steps.
    */
   eventCost: number;
+  /**
+   * Public contact address, shown on the Terms and Privacy pages and used for
+   * data requests. A legal page has to name a reachable contact; when this is
+   * empty the pages fall back to the Telegram channel.
+   */
+  contactEmail: string;
+  /** Legal/operating entity or person named in the Terms. */
+  operatorName: string;
 }
 
 export const DEFAULT_SETTINGS: PlatformSettings = {
@@ -60,6 +68,8 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   meetingProvider: "manual",
   staticMeetingUrl: "",
   eventCost: 0,
+  contactEmail: "",
+  operatorName: "SATForge",
 };
 
 export type SettingKey = keyof PlatformSettings;
@@ -84,7 +94,7 @@ function coerce<K extends SettingKey>(key: K, raw: unknown): PlatformSettings[K]
   if (typeof fallback === "string") {
     // staticMeetingUrl legitimately defaults to empty, so an empty stored value
     // must be preserved rather than bounced back to the default.
-    if (key === "staticMeetingUrl") {
+    if (key === "staticMeetingUrl" || key === "contactEmail") {
       return (typeof raw === "string" ? raw.trim() : fallback) as PlatformSettings[K];
     }
     return (typeof raw === "string" && raw.trim() ? raw.trim() : fallback) as PlatformSettings[K];
