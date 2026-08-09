@@ -1,7 +1,13 @@
 import { SlotCreator, SlotTable, type AdminSlotRow } from "@/components/admin/booking-admin";
+import {
+  NextSessionPanel,
+  RoomLinkCard,
+  type NextSessionInfo,
+} from "@/components/admin/next-session-panel";
 import { Card, CardContent } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
+import { getSettings } from "@/lib/settings";
 
 export const metadata = { title: "Sessions" };
 export const dynamic = "force-dynamic";
@@ -9,10 +15,35 @@ export const dynamic = "force-dynamic";
 export default async function AdminBookingsPage() {
   await requireAdmin();
 
-  const slots = await prisma.mentorSlot.findMany({
-    orderBy: { startsAt: "asc" },
-    include: { booking: true },
-  });
+  const [slots, settings] = await Promise.all([
+    prisma.mentorSlot.findMany({ orderBy: { startsAt: "asc" }, include: { booking: true } }),
+    getSettings(),
+  ]);
+
+  // The room the mentor joins when there is no per-booking link.
+  const roomUrl = settings.staticMeetingUrl || process.env.MEETING_STATIC_URL || null;
+
+  const nextSlot = slots.find(
+    (s) => s.booking?.status === "UPCOMING" && s.startsAt > new Date(),
+  );
+  const nextSession: NextSessionInfo | null =
+    nextSlot && nextSlot.booking
+      ? {
+          bookingId: nextSlot.booking.id,
+          startsAt: nextSlot.startsAt.toISOString(),
+          durationMinutes: nextSlot.durationMinutes,
+          name: nextSlot.booking.name,
+          email: nextSlot.booking.email,
+          currentScore: nextSlot.booking.currentScore,
+          targetScore: nextSlot.booking.targetScore,
+          weakestArea: nextSlot.booking.weakestArea,
+          notes: nextSlot.booking.notes,
+          timezone: nextSlot.booking.timezone,
+          // Bookings made before a provider existed have no link of their own;
+          // fall back to the standing room rather than showing nothing.
+          meetingUrl: nextSlot.booking.meetingUrl ?? roomUrl,
+        }
+      : null;
 
   const upcoming = slots.filter(
     (s) => s.booking?.status === "UPCOMING" && s.startsAt > new Date()
@@ -51,6 +82,10 @@ export default async function AdminBookingsPage() {
           Publish availability and manage free 1-on-1 bookings.
         </p>
       </div>
+
+      <NextSessionPanel session={nextSession} />
+
+      <RoomLinkCard url={roomUrl} provider={settings.meetingProvider} />
 
       <div className="grid gap-3 sm:grid-cols-3">
         <Stat label="Upcoming sessions" value={upcoming} />
