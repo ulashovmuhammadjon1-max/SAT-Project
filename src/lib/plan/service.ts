@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { generatePlan } from "@/lib/plan/generate";
 import type { StudyPlanData } from "@/lib/plan/types";
-import { estimateScaledScore } from "@/lib/scoring/estimate";
+import { estimateScaledScore, estimateTotalScore } from "@/lib/scoring/estimate";
 
 /**
  * Reading and refreshing a student's plan.
@@ -64,7 +64,10 @@ async function planInputsFor(userId: string) {
       // fires for attempts that were never scored properly, and it is clearly
       // labelled as an estimate wherever it surfaces.
       const accuracy = Math.round((correct / total) * 100);
-      estimatedScore = estimateScaledScore(accuracy) * 2;
+      estimatedScore = estimateTotalScore(
+        estimateScaledScore(accuracy, "READING_WRITING"),
+        estimateScaledScore(accuracy, "MATH"),
+      );
     }
   }
 

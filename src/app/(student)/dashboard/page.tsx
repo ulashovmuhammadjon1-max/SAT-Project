@@ -103,9 +103,9 @@ export default async function DashboardPage() {
     : 0;
 
   const latestFullLength = submittedAttempts.at(-1);
-  const rwEstimate = latestFullLength?.rwScaledScore ?? (rwResponses.length ? estimateScaledScore(rwAccuracy) : null);
+  const rwEstimate = latestFullLength?.rwScaledScore ?? (rwResponses.length ? estimateScaledScore(rwAccuracy, "READING_WRITING") : null);
   const mathEstimate =
-    latestFullLength?.mathScaledScore ?? (mathResponses.length ? estimateScaledScore(mathAccuracy) : null);
+    latestFullLength?.mathScaledScore ?? (mathResponses.length ? estimateScaledScore(mathAccuracy, "MATH") : null);
   const totalEstimate =
     latestFullLength?.totalScaledScore ?? (rwEstimate && mathEstimate ? rwEstimate + mathEstimate : null);
 

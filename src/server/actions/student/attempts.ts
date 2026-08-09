@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { determineModule2Difficulty, SUBJECT_ORDER } from "@/lib/adaptive/engine";
-import { estimateScaledScore } from "@/lib/scoring/estimate";
+import { estimateScaledScore, estimateTotalScore, sectionScoreForRaw } from "@/lib/scoring/estimate";
 
 function moduleSortKey(subject: string, order: number) {
   return SUBJECT_ORDER.indexOf(subject as (typeof SUBJECT_ORDER)[number]) * 10 + order;
@@ -153,7 +153,14 @@ export async function submitModule(attemptId: string, moduleAttemptId: string) {
   }
 
   const totalCount = moduleAttempt.module.questions.length;
-  const scaledScore = estimateScaledScore(totalCount ? (correctCount / totalCount) * 100 : 0);
+  // Indicative only, and never summed into a section score — the section is
+  // converted once from both modules' combined raw score in `finalizeAttempt`.
+  // A single module is half a section, so this is "what this pace is worth",
+  // not a result.
+  const scaledScore = estimateScaledScore(
+    totalCount ? (correctCount / totalCount) * 100 : 0,
+    moduleAttempt.module.subject === "MATH" ? "MATH" : "READING_WRITING",
+  );
 
   await prisma.moduleAttempt.update({
     where: { id: moduleAttemptId },
@@ -228,15 +235,22 @@ async function finalizeAttempt(attemptId: string) {
     include: { module: true },
   });
 
-  const rwScores = moduleAttempts.filter((m) => m.module.subject === "READING_WRITING" && m.scaledScore != null);
-  const mathScores = moduleAttempts.filter((m) => m.module.subject === "MATH" && m.scaledScore != null);
+  // A section score comes from the raw score across BOTH of its modules,
+  // converted once. The previous version scored each module on its own and
+  // averaged the two, which compresses every result toward the middle — it
+  // could not produce a 200 or an 800 from a blank or a perfect paper.
+  const sectionScore = (subject: "READING_WRITING" | "MATH"): number | null => {
+    const taken = moduleAttempts.filter((m) => m.module.subject === subject && m.submittedAt != null);
+    if (!taken.length) return null;
+    const rawCorrect = taken.reduce((sum, m) => sum + (m.correctCount ?? 0), 0);
+    const questionCount = taken.reduce((sum, m) => sum + (m.totalCount ?? 0), 0);
+    if (questionCount <= 0) return null;
+    return sectionScoreForRaw(subject, rawCorrect, questionCount);
+  };
 
-  const avg = (arr: typeof moduleAttempts) =>
-    arr.length ? Math.round(arr.reduce((sum, m) => sum + (m.scaledScore ?? 0), 0) / arr.length) : null;
-
-  const rwScaledScore = avg(rwScores);
-  const mathScaledScore = avg(mathScores);
-  const totalScaledScore = rwScaledScore != null && mathScaledScore != null ? rwScaledScore + mathScaledScore : null;
+  const rwScaledScore = sectionScore("READING_WRITING");
+  const mathScaledScore = sectionScore("MATH");
+  const totalScaledScore = estimateTotalScore(rwScaledScore, mathScaledScore);
 
   await prisma.attempt.update({
     where: { id: attemptId },

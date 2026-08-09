@@ -13,7 +13,9 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "check:scoring": "tsx scripts/check-scoring.ts",
+    "scores:recompute": "tsx scripts/recompute-scores.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
