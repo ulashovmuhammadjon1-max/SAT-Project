@@ -6,6 +6,7 @@ import { credit } from "@/lib/coins";
 import { prisma } from "@/lib/prisma";
 import { isMissingColumnError } from "@/lib/onboarding/profile";
 import { attributeReferral, qualifyReferral } from "@/lib/referrals";
+import { TERMS_VERSION } from "@/lib/legal";
 import { getSettings } from "@/lib/settings";
 import { onboardingSignupSchema, type OnboardingSignup } from "@/lib/validations/onboarding";
 
@@ -33,6 +34,7 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   }
 
   const { name, email, password, profile } = parsed.data;
+  const termsAcceptedAt = new Date();
 
   let existing: { id: string } | null;
   try {
@@ -51,7 +53,14 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // comparisons in the admin panel don't drift with the viewer's timezone.
   const satDate = profile.satMonth ? new Date(`${profile.satMonth}-01T00:00:00.000Z`) : null;
 
-  const base = { name, email, passwordHash, role: "STUDENT" as const };
+  const base = {
+    name,
+    email,
+    passwordHash,
+    role: "STUDENT" as const,
+    termsAcceptedAt,
+    termsVersion: TERMS_VERSION,
+  };
 
   let createdUserId: string | null = null;
 

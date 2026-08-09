@@ -623,6 +623,7 @@ function AccountStep({
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   function onSubmit(formData: FormData) {
@@ -632,7 +633,14 @@ function AccountStep({
     const password = String(formData.get("password") ?? "");
 
     startTransition(async () => {
-      const result = await registerWithOnboarding({ name, email, password, profile, referralCode });
+      const result = await registerWithOnboarding({
+        name,
+        email,
+        password,
+        profile,
+        referralCode,
+        acceptedTerms: acceptedTerms as true,
+      });
       if (result.error) {
         setError(result.error);
         return;
@@ -687,7 +695,45 @@ function AccountStep({
           </motion.p>
         )}
 
-        <Button type="submit" size="lg" disabled={isPending} className="h-12 w-full rounded-full text-[15px] shadow-soft">
+        {/* Consent gate. The button below stays disabled until this is ticked,
+            and the server rejects the request outright without it — so the
+            disabled state is a courtesy, not the enforcement. */}
+        <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-border/70 bg-secondary/40 p-3.5 text-left">
+          <input
+            type="checkbox"
+            checked={acceptedTerms}
+            onChange={(e) => setAcceptedTerms(e.target.checked)}
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-input accent-primary"
+          />
+          <span className="text-[13px] leading-relaxed text-muted-foreground">
+            I agree to the{" "}
+            <Link
+              href="/terms"
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Terms of Use
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/privacy"
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+            . If you are under 18, please check with a parent or guardian first.
+          </span>
+        </label>
+
+        <Button
+          type="submit"
+          size="lg"
+          disabled={isPending || !acceptedTerms}
+          className="h-12 w-full rounded-full text-[15px] shadow-soft"
+        >
           {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
           Create my account
         </Button>

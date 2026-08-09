@@ -82,6 +82,14 @@ export const onboardingSignupSchema = z.object({
    * rather than failing the signup.
    */
   referralCode: z.string().trim().max(16).optional().nullable(),
+  /**
+   * Terms + Privacy acceptance. `literal(true)` rather than a boolean: the
+   * request is rejected outright if it is missing or false, so the disabled
+   * button is a courtesy rather than the actual enforcement.
+   */
+  acceptedTerms: z.literal(true, {
+    errorMap: () => ({ message: "Please accept the Terms and Privacy Policy to continue." }),
+  }),
 });
 
 export type OnboardingSignup = z.infer<typeof onboardingSignupSchema>;

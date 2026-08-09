@@ -76,6 +76,14 @@ model User {
   dailyGoalValue     Int?
   onboardedAt        DateTime?
 
+  // --- Legal ------------------------------------------------------------
+  /// When this account accepted the Terms and Privacy Policy, and which
+  /// version. A checkbox nobody records proves nothing later, so the
+  /// acceptance is stored rather than merely enforced in the form.
+  /// Null on accounts created before the checkbox existed.
+  termsAcceptedAt DateTime?
+  termsVersion    String?
+
   // --- SATForge Coins ---------------------------------------------------
   // Cached balance for fast reads. The CoinTransaction ledger is the record
   // of truth; this column is only ever written inside the same transaction
