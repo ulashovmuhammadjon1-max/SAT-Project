@@ -32,6 +32,13 @@ export interface PlatformSettings {
   telegramHandle: string;
   /** Which meeting provider to use. See lib/meeting/index.ts. */
   meetingProvider: string;
+  /**
+   * Join link used by the `static` provider — one room reused for every
+   * session. Stored here rather than in an env var so it can be changed from
+   * the admin panel without a redeploy, which matters because a Meet room link
+   * is the kind of thing that gets regenerated.
+   */
+  staticMeetingUrl: string;
 }
 
 export const DEFAULT_SETTINGS: PlatformSettings = {
@@ -43,6 +50,7 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   instagramHandle: "satforge_org",
   telegramHandle: "satforgeorg",
   meetingProvider: "manual",
+  staticMeetingUrl: "",
 };
 
 export type SettingKey = keyof PlatformSettings;
@@ -65,6 +73,11 @@ function coerce<K extends SettingKey>(key: K, raw: unknown): PlatformSettings[K]
     return (Number.isFinite(n) ? n : fallback) as PlatformSettings[K];
   }
   if (typeof fallback === "string") {
+    // staticMeetingUrl legitimately defaults to empty, so an empty stored value
+    // must be preserved rather than bounced back to the default.
+    if (key === "staticMeetingUrl") {
+      return (typeof raw === "string" ? raw.trim() : fallback) as PlatformSettings[K];
+    }
     return (typeof raw === "string" && raw.trim() ? raw.trim() : fallback) as PlatformSettings[K];
   }
   // bookingRefundHours with a real value

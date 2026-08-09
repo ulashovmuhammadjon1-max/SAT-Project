@@ -167,10 +167,26 @@ export function EconomySettingsForm({
             <option value="static">Static link — one room for every session</option>
             <option value="google_meet">Google Meet — needs credentials</option>
           </select>
+          {form.meetingProvider === "static" && (
+            <div className="space-y-1.5">
+              <Label htmlFor="staticMeetingUrl">Meeting room link</Label>
+              <Input
+                id="staticMeetingUrl"
+                placeholder="https://meet.google.com/abc-defg-hij"
+                value={form.staticMeetingUrl}
+                onChange={(e) => set("staticMeetingUrl", e.target.value)}
+              />
+              <p className="text-xs text-muted-foreground">
+                One room reused for every session. Students only see it 10 minutes before their
+                session starts, and you admit them from the Meet waiting room — so a shared link
+                does not let anyone drop into someone else&apos;s session.
+              </p>
+            </div>
+          )}
           <p className="text-xs text-muted-foreground">
-            &ldquo;Static&rdquo; needs <code>MEETING_STATIC_URL</code>. Google Meet needs a service
-            account and is not implemented yet — selecting it falls back to manual rather than
-            failing a booking.
+            Google Meet needs a service account <em>and</em> Google Workspace domain-wide
+            delegation; a personal Gmail cannot create Meet links that way. If either is missing it
+            falls back to manual rather than failing a booking.
           </p>
         </CardContent>
       </Card>

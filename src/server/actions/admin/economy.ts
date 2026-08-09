@@ -96,6 +96,14 @@ const settingsSchema = z.object({
   instagramHandle: z.string().trim().min(1).max(64),
   telegramHandle: z.string().trim().min(1).max(64),
   meetingProvider: z.enum(["manual", "static", "google_meet"]),
+  // Empty is valid (no room configured yet); anything else must be a real URL,
+  // because a malformed link becomes a dead "Join session" button.
+  staticMeetingUrl: z
+    .string()
+    .trim()
+    .max(500)
+    .refine((v) => v === "" || /^https?:\/\/\S+$/.test(v), "Enter a full https:// link")
+    .default(""),
 });
 
 export type SettingsResult = { ok: true } | { ok: false; error: string };

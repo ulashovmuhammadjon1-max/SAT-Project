@@ -46,15 +46,17 @@ const manualProvider: MeetingProvider = {
  */
 const staticLinkProvider: MeetingProvider = {
   id: "static",
-  isConfigured: () => Boolean(process.env.MEETING_STATIC_URL),
+  // Configured-ness is decided by resolveProvider, which can await the
+  // settings row; this only reports the env fallback.
+  isConfigured: () => true,
   async createMeeting() {
-    return {
-      url: process.env.MEETING_STATIC_URL ?? null,
-      provider: "static",
-      externalId: null,
-    };
+    const settings = await getSettings();
+    const url = settings.staticMeetingUrl || process.env.MEETING_STATIC_URL || null;
+    return { url, provider: "static", externalId: null };
   },
-  async cancelMeeting() {},
+  async cancelMeeting() {
+    /* a permanent room is not cancelled */
+  },
 };
 
 const PROVIDERS: Record<string, MeetingProvider> = {
@@ -69,6 +71,11 @@ export async function resolveProvider(): Promise<MeetingProvider> {
   const chosen = PROVIDERS[settings.meetingProvider];
   if (!chosen) {
     console.warn(`[meeting] unknown provider "${settings.meetingProvider}", using manual`);
+    return manualProvider;
+  }
+  // The static provider needs a link from either source before it is useful.
+  if (chosen.id === "static" && !(settings.staticMeetingUrl || process.env.MEETING_STATIC_URL)) {
+    console.warn("[meeting] static provider selected but no room link is set, using manual");
     return manualProvider;
   }
   if (!chosen.isConfigured()) {
