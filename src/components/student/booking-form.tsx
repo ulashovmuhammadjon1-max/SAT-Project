@@ -222,10 +222,9 @@ export function BookingForm({
             spend a coin. */}
         <div className="mt-3 rounded-lg border border-warning/40 bg-warning/5 p-3">
           <p className="text-xs text-muted-foreground">
-            <strong className="text-foreground">Please note:</strong> we can&apos;t check this
-            automatically, so a SATForge volunteer verifies it by hand before each session. If
-            you&apos;re not following on Instagram and Telegram when they check, your session will
-            be cancelled — and your coins returned.
+            <strong className="text-foreground">Please note:</strong> your subscription will be
+            checked by volunteers, and if there is no subscription your session will be cancelled.
+            Your coins will be returned if that happens.
           </p>
         </div>
       </section>
