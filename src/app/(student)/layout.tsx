@@ -1,9 +1,9 @@
-import { requireUser } from "@/lib/session";
+import { requireVerifiedUser } from "@/lib/session";
 import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 
 export default async function StudentLayout({ children }: { children: React.ReactNode }) {
-  await requireUser();
+  await requireVerifiedUser();
 
   return (
     <div className="flex min-h-screen bg-secondary/30">

@@ -12,6 +12,9 @@ const PUBLIC_ROUTES = [
   "/onboarding",
   "/forgot-password",
   "/reset-password",
+  // Public because the link in the email must work whether or not the browser
+  // that opens it is signed in — a student often clicks it on their phone.
+  "/verify-email",
   "/terms",
   "/privacy",
 ];

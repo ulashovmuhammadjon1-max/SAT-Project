@@ -646,8 +646,9 @@ function AccountStep({
         return;
       }
 
-      // Sign straight in so the student lands on a personalised dashboard
-      // rather than being bounced to a login form they just created.
+      // Sign straight in so the student is already authenticated when they come
+      // back from confirming their email — the link then lands them on their
+      // own dashboard rather than on a login form.
       const signInResult = await signIn("credentials", { email, password, redirect: false });
       try {
         window.sessionStorage.removeItem(STORAGE_KEY);
@@ -659,7 +660,9 @@ function AccountStep({
         router.push("/login?registered=1");
         return;
       }
-      router.push("/dashboard");
+      // Straight to the waiting screen: the dashboard would only redirect here
+      // anyway, and an unexplained bounce reads as a bug.
+      router.push("/verify-email");
       router.refresh();
     });
   }

@@ -5,7 +5,8 @@ import bcrypt from "bcryptjs";
 import { credit } from "@/lib/coins";
 import { prisma } from "@/lib/prisma";
 import { isMissingColumnError } from "@/lib/onboarding/profile";
-import { attributeReferral, qualifyReferral } from "@/lib/referrals";
+import { attributeReferral } from "@/lib/referrals";
+import { sendVerificationEmail } from "@/server/actions/auth/email-verification";
 import { TERMS_VERSION } from "@/lib/legal";
 import { getSettings } from "@/lib/settings";
 import { onboardingSignupSchema, type OnboardingSignup } from "@/lib/validations/onboarding";
@@ -110,18 +111,31 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // failed because a welcome bonus could not be written.
   if (createdUserId) {
     await grantSignupRewards(createdUserId, input.referralCode ?? null);
+
+    try {
+      await sendVerificationEmail({ email, name });
+    } catch (error) {
+      // The account exists and the student can ask for the link again from the
+      // waiting screen. Failing the signup over an undelivered email would be
+      // the worse outcome by a distance.
+      console.error("[onboarding] verification email failed", error);
+    }
   }
 
   return { success: true };
 }
 
 /**
- * Welcome coins, plus the referral payout if the account arrived through an
- * invite link.
+ * Welcome coins, and attribution of the referral if the account arrived through
+ * an invite link.
  *
- * Both are idempotent — the signup bonus is keyed on the user id, the referral
- * reward on the referral id — so a retried signup or a double-submitted form
- * cannot mint extra coins.
+ * The referral is only *recorded* here. It pays out when the new account
+ * confirms its email address (`verifyEmail`), which is what makes inventing
+ * accounts to farm invite coins cost a working inbox each.
+ *
+ * The signup bonus is keyed on the user id and the referral reward on the
+ * referral id, so a retried signup or a double-submitted form cannot mint extra
+ * coins.
  */
 async function grantSignupRewards(userId: string, rawReferralCode: string | null) {
   const settings = await getSettings();
@@ -141,12 +155,8 @@ async function grantSignupRewards(userId: string, rawReferralCode: string | null
   }
 
   try {
-    const { outcome, referralId } = await attributeReferral(userId, rawReferralCode);
-    if (outcome === "attributed" && referralId) {
-      // Creating a real account is the qualifying event today. If that bar ever
-      // rises, `qualifyReferral` moves to wherever the new bar is met.
-      await qualifyReferral(referralId);
-    } else if (outcome !== "no_code") {
+    const { outcome } = await attributeReferral(userId, rawReferralCode);
+    if (outcome !== "attributed" && outcome !== "no_code") {
       console.info(`[onboarding] referral not attributed: ${outcome}`);
     }
   } catch (error) {

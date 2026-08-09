@@ -59,15 +59,21 @@ export default async function TermsPage() {
         </p>
       </Section>
 
-      <Section title="The content belongs to us">
+      <Section title="Practice content">
         <p>
-          The practice questions, explanations and materials on SATForge are ours. You may use them
-          to study, personally, as much as you like. You may not republish them, sell them, feed
-          them into another product, or scrape the site in bulk.
+          The practice questions, explanations and materials on SATForge come from a mix of sources.
+          Some we write ourselves; some are drawn from or adapted from other study material. We do
+          not claim ownership of everything on the site, and nothing here transfers any rights to
+          you either.
         </p>
         <p>
-          This matters more than it sounds: the questions are original and take a long time to
-          write. Redistributing them is the fastest way to make a free platform stop being free.
+          Use the material to study, personally, as much as you like. Please do not republish it,
+          sell it, feed it into another product, or scrape the site in bulk — that is the fastest
+          way to make a free platform stop being free.
+        </p>
+        <p>
+          If you believe something on SATForge is yours and should not be here, tell us and we will
+          take it down. Contact details are at the bottom of this page.
         </p>
       </Section>
 
