@@ -294,23 +294,15 @@ function ValueStrip() {
 }
 
 /**
- * Streak preview.
+ * The streak goal.
  *
- * Shows what the daily-streak system looks like once a student is using it.
- * The numbers are illustrative, so the card says so — the hero's score card
- * already sets that precedent with "Sample data · product preview", and a
- * landing page that displays an invented streak as though it were the
- * visitor's own would be lying to them.
+ * Framed as something to reach, not something the visitor already has. A
+ * logged-out student has no streak, so "7 Day Streak! You're on fire!" would
+ * be describing a stranger — and "Continue practising" would be inviting them
+ * to continue something they never started. Everything here is written in the
+ * second person future: this is what you are aiming at.
  */
-const STREAK_DAYS = [
-  { label: "M", done: true },
-  { label: "T", done: true },
-  { label: "W", done: true },
-  { label: "T", done: true },
-  { label: "F", done: true },
-  { label: "S", done: true },
-  { label: "S", done: true, today: true },
-];
+const STREAK_DAYS = ["M", "T", "W", "T", "F", "S", "S"];
 
 function StreakBand() {
   return (
@@ -324,65 +316,58 @@ function StreakBand() {
           />
 
           <div className="relative grid gap-6 p-6 sm:p-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center lg:gap-8">
-            {/* Streak + week dots */}
+            {/* The goal, with an empty week to fill in */}
             <div>
               <p className="flex items-center gap-2 font-display text-lg font-semibold">
                 <Zap className="h-5 w-5 text-warning" />
-                7 Day Streak
+                Build a 7-day streak
               </p>
-              <p className="mt-0.5 text-sm text-muted-foreground">You&apos;re on fire — keep it up.</p>
+              <p className="mt-0.5 text-sm text-muted-foreground">
+                Seven days in a row is where the habit starts.
+              </p>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {STREAK_DAYS.map((d, i) => (
+                {STREAK_DAYS.map((label, i) => (
                   <li key={i} className="flex flex-col items-center gap-1">
-                    <span
-                      className={cn(
-                        "flex h-8 w-8 items-center justify-center rounded-full text-xs font-semibold",
-                        d.today
-                          ? "bg-warning/20 text-warning ring-2 ring-warning/40"
-                          : "bg-primary/15 text-primary",
-                      )}
-                    >
-                      {d.done ? <CheckCircle2 className="h-4 w-4" /> : d.label}
+                    {/* Outlined, not filled: nothing has been earned yet. */}
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-dashed border-primary/40 text-xs font-semibold text-primary/60">
+                      {label}
                     </span>
-                    <span className="text-[11px] text-muted-foreground">{d.label}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Next milestone */}
+            {/* What comes after */}
             <div className="lg:border-l lg:border-border/60 lg:pl-8">
               <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
                 <Star className="h-4 w-4 text-warning" />
-                Next milestone
+                Then aim for
               </p>
               <p className="mt-1 font-display text-2xl font-semibold tabular-nums">14 days</p>
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
-                <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-primary to-[hsl(266_84%_60%)]" />
+                <div className="h-full w-0 rounded-full bg-gradient-to-r from-primary to-[hsl(266_84%_60%)]" />
               </div>
-              <p className="mt-1.5 text-xs tabular-nums text-muted-foreground">7 / 14 days</p>
+              <p className="mt-1.5 text-xs tabular-nums text-muted-foreground">
+                Your streak starts on your first day of practice
+              </p>
             </div>
 
             {/* Why it matters + CTA */}
             <div className="lg:border-l lg:border-border/60 lg:pl-8">
               <p className="flex items-center gap-2 text-sm font-medium">
                 <LineChart className="h-4 w-4 text-success" />
-                Keep your streak alive
+                Why streaks work
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Practising a little every day beats cramming the week before.
+                Twenty minutes a day beats cramming the week before the test.
               </p>
               <Button asChild className="mt-4 w-full sm:w-auto">
-                <Link href="/practice">
-                  Continue practising <ArrowRight className="ml-1.5 h-4 w-4" />
+                <Link href="/onboarding">
+                  Start your streak <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
-
-          <p className="relative border-t border-border/60 px-6 py-2 text-[11px] text-muted-foreground sm:px-7">
-            Sample streak · product preview
-          </p>
         </div>
       </Reveal>
     </section>

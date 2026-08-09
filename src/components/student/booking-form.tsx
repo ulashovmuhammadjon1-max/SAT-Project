@@ -216,10 +216,18 @@ export function BookingForm({
             );
           })}
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">
-          We can&apos;t automatically check this, so we&apos;re trusting you. Please don&apos;t make
-          us add a verification step.
-        </p>
+        {/* Stated plainly: the check is human and it happens after booking.
+            A student who finds out only when their session is cancelled has
+            been treated unfairly, so the consequence is on screen before they
+            spend a coin. */}
+        <div className="mt-3 rounded-lg border border-warning/40 bg-warning/5 p-3">
+          <p className="text-xs text-muted-foreground">
+            <strong className="text-foreground">Please note:</strong> we can&apos;t check this
+            automatically, so a SATForge volunteer verifies it by hand before each session. If
+            you&apos;re not following on Instagram and Telegram when they check, your session will
+            be cancelled — and your coins returned.
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="pick-time">

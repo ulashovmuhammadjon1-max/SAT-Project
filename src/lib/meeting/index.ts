@@ -1,3 +1,4 @@
+import { googleMeetProvider } from "@/lib/meeting/google";
 import { getSettings } from "@/lib/settings";
 
 /**
@@ -15,29 +16,12 @@ import { getSettings } from "@/lib/settings";
  * variables are present.
  */
 
-export interface MeetingRequest {
-  bookingId: string;
-  startsAt: Date;
-  durationMinutes: number;
-  studentName: string;
-  studentEmail: string;
-  title: string;
-}
-
-export interface MeetingResult {
-  /** Null means "no link yet" — a valid, non-error outcome. */
-  url: string | null;
-  provider: string;
-  externalId?: string | null;
-}
-
-export interface MeetingProvider {
-  id: string;
-  /** False when required credentials are absent. */
-  isConfigured(): boolean;
-  createMeeting(req: MeetingRequest): Promise<MeetingResult>;
-  cancelMeeting(externalId: string): Promise<void>;
-}
+export type {
+  MeetingProvider,
+  MeetingRequest,
+  MeetingResult,
+} from "@/lib/meeting/types";
+import type { MeetingProvider, MeetingRequest, MeetingResult } from "@/lib/meeting/types";
 
 /**
  * No integration. The mentor sends a link out of band, or an admin pastes one
@@ -71,37 +55,6 @@ const staticLinkProvider: MeetingProvider = {
     };
   },
   async cancelMeeting() {},
-};
-
-/**
- * Google Calendar + Meet.
- *
- * Not implemented yet, and deliberately not faked. It needs a service account
- * with domain-wide delegation, or a stored OAuth refresh token for the mentor's
- * calendar:
- *
- *   GOOGLE_CALENDAR_ID
- *   GOOGLE_SERVICE_ACCOUNT_EMAIL
- *   GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY
- *
- * Until those exist, `isConfigured()` is false and `resolveProvider` falls back
- * to manual rather than throwing at booking time — a missing integration must
- * never cost a student their booking.
- */
-const googleMeetProvider: MeetingProvider = {
-  id: "google_meet",
-  isConfigured: () =>
-    Boolean(
-      process.env.GOOGLE_CALENDAR_ID &&
-        process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
-        process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY,
-    ),
-  async createMeeting() {
-    throw new Error("Google Meet provider is not implemented yet");
-  },
-  async cancelMeeting() {
-    throw new Error("Google Meet provider is not implemented yet");
-  },
 };
 
 const PROVIDERS: Record<string, MeetingProvider> = {
