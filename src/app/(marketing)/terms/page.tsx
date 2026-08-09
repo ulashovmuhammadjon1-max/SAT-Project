@@ -23,9 +23,9 @@ export default async function TermsPage() {
     <LegalLayout title="Terms of Use" updated="9 August 2026">
       <Section title="The short version">
         <p>
-          SATForge is free. Use it to study, don&apos;t abuse it, don&apos;t redistribute the
-          questions, and be decent to the people running it. That&apos;s essentially all of it — the
-          rest is detail.
+          SATForge is free. Use it to study, don&apos;t abuse it, don&apos;t redistribute what is on
+          it, and be decent to the people running it. That&apos;s essentially all of it — the rest is
+          detail.
         </p>
       </Section>
 
@@ -41,12 +41,7 @@ export default async function TermsPage() {
         </p>
       </Section>
 
-      <Section title="What we provide, and what we don&apos;t promise">
-        <p>
-          SATForge provides practice tests, a question bank, vocabulary sets, a personalized study
-          plan, and free sessions with a mentor. We work hard to make the content accurate and the
-          score estimates useful.
-        </p>
+      <Section title="What we don&apos;t promise">
         <p>
           We do <strong className="text-foreground">not</strong> promise a particular SAT score. No
           preparation platform honestly can — your score depends on your work. Estimates shown in
@@ -59,21 +54,11 @@ export default async function TermsPage() {
         </p>
       </Section>
 
-      <Section title="Practice content">
+      <Section title="Using the material">
         <p>
-          The practice questions, explanations and materials on SATForge come from a mix of sources.
-          Some we write ourselves; some are drawn from or adapted from other study material. We do
-          not claim ownership of everything on the site, and nothing here transfers any rights to
-          you either.
-        </p>
-        <p>
-          Use the material to study, personally, as much as you like. Please do not republish it,
-          sell it, feed it into another product, or scrape the site in bulk — that is the fastest
-          way to make a free platform stop being free.
-        </p>
-        <p>
-          If you believe something on SATForge is yours and should not be here, tell us and we will
-          take it down. Contact details are at the bottom of this page.
+          Everything on SATForge is here for you to study with, personally, as much as you like.
+          Please do not republish it, sell it, feed it into another product, or scrape the site in
+          bulk — that is the fastest way to make a free platform stop being free.
         </p>
       </Section>
 
@@ -86,9 +71,9 @@ export default async function TermsPage() {
         </p>
         <p>
           You get {settings.signupBonusCoins} when you sign up and {settings.referralRewardCoins}{" "}
-          when a friend joins through your link. A friend counts once, and only when they actually
-          create an account — referring yourself, or making extra accounts, does not work and will
-          cost you the coins you gained that way.
+          when a friend joins through your link and confirms their email address. A friend counts
+          once — referring yourself, or making extra accounts, does not work and will cost you the
+          coins you gained that way.
         </p>
         <p>
           We may adjust balances to correct a mistake or reverse abuse. Every adjustment is recorded
@@ -118,7 +103,7 @@ export default async function TermsPage() {
       <Section title="Things you must not do">
         <ul className="list-disc space-y-1.5 pl-5">
           <li>Create multiple accounts, including to farm referral coins.</li>
-          <li>Scrape, bulk-download, or republish the questions.</li>
+          <li>Scrape, bulk-download, or republish material from the site.</li>
           <li>Try to break, overload, or find your way around the site&apos;s security.</li>
           <li>Harass or abuse mentors, volunteers or other students, in sessions or anywhere else.</li>
           <li>Share your account with someone else.</li>

@@ -61,9 +61,9 @@ export default async function PrivacyPage() {
             plan yours; without it everyone gets the same generic advice.
           </li>
           <li>
-            <strong className="text-foreground">Your practice</strong> — which questions you
-            answered, whether you got them right, how long each took, your test scores, bookmarks
-            and streaks. This is what the plan adapts to.
+            <strong className="text-foreground">Your activity</strong> — which questions you
+            answered, whether you got them right, how long each took, your scores, bookmarks and
+            streaks. This is what the plan adapts to.
           </li>
           <li>
             <strong className="text-foreground">Sessions</strong> — when you book, what you asked
