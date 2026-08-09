@@ -1,4 +1,5 @@
 import { SlotCreator, SlotTable, type AdminSlotRow } from "@/components/admin/booking-admin";
+import { EventCreator } from "@/components/admin/event-creator";
 import {
   NextSessionPanel,
   RoomLinkCard,
@@ -16,7 +17,10 @@ export default async function AdminBookingsPage() {
   await requireAdmin();
 
   const [slots, settings] = await Promise.all([
-    prisma.mentorSlot.findMany({ orderBy: { startsAt: "asc" }, include: { booking: true } }),
+    prisma.mentorSlot.findMany({
+      orderBy: { startsAt: "asc" },
+      include: { bookings: { where: { status: { not: "CANCELLED" } } } },
+    }),
     getSettings(),
   ]);
 
@@ -24,32 +28,33 @@ export default async function AdminBookingsPage() {
   const roomUrl = settings.staticMeetingUrl || process.env.MEETING_STATIC_URL || null;
 
   const nextSlot = slots.find(
-    (s) => s.booking?.status === "UPCOMING" && s.startsAt > new Date(),
+    (s) => s.bookings.some((b) => b.status === "UPCOMING") && s.startsAt > new Date(),
   );
+  const nextBooking = nextSlot?.bookings.find((b) => b.status === "UPCOMING") ?? null;
   const nextSession: NextSessionInfo | null =
-    nextSlot && nextSlot.booking
+    nextSlot && nextBooking
       ? {
-          bookingId: nextSlot.booking.id,
+          bookingId: nextBooking.id,
           startsAt: nextSlot.startsAt.toISOString(),
           durationMinutes: nextSlot.durationMinutes,
-          name: nextSlot.booking.name,
-          email: nextSlot.booking.email,
-          currentScore: nextSlot.booking.currentScore,
-          targetScore: nextSlot.booking.targetScore,
-          weakestArea: nextSlot.booking.weakestArea,
-          notes: nextSlot.booking.notes,
-          timezone: nextSlot.booking.timezone,
+          name: nextBooking.name,
+          email: nextBooking.email,
+          currentScore: nextBooking.currentScore,
+          targetScore: nextBooking.targetScore,
+          weakestArea: nextBooking.weakestArea,
+          notes: nextBooking.notes,
+          timezone: nextBooking.timezone,
           // Bookings made before a provider existed have no link of their own;
           // fall back to the standing room rather than showing nothing.
-          meetingUrl: nextSlot.booking.meetingUrl ?? roomUrl,
+          meetingUrl: nextBooking.meetingUrl ?? roomUrl,
         }
       : null;
 
   const upcoming = slots.filter(
-    (s) => s.booking?.status === "UPCOMING" && s.startsAt > new Date()
+    (s) => s.bookings.some((b) => b.status === "UPCOMING") && s.startsAt > new Date()
   ).length;
   const open = slots.filter(
-    (s) => !s.isBlocked && s.startsAt > new Date() && (!s.booking || s.booking.status === "CANCELLED")
+    (s) => !s.isBlocked && s.startsAt > new Date() && s.bookings.length < s.capacity
   ).length;
 
   const rows: AdminSlotRow[] = slots.map((s) => ({
@@ -57,19 +62,19 @@ export default async function AdminBookingsPage() {
     startsAt: s.startsAt.toISOString(),
     durationMinutes: s.durationMinutes,
     isBlocked: s.isBlocked,
-    booking: s.booking
+    booking: s.bookings[0]
       ? {
-          id: s.booking.id,
-          status: s.booking.status,
-          name: s.booking.name,
-          email: s.booking.email,
-          currentScore: s.booking.currentScore,
-          targetScore: s.booking.targetScore,
-          satDate: s.booking.satDate ? s.booking.satDate.toISOString() : null,
-          studyHoursPerWeek: s.booking.studyHoursPerWeek,
-          weakestArea: s.booking.weakestArea,
-          notes: s.booking.notes,
-          timezone: s.booking.timezone,
+          id: s.bookings[0].id,
+          status: s.bookings[0].status,
+          name: s.bookings[0].name,
+          email: s.bookings[0].email,
+          currentScore: s.bookings[0].currentScore,
+          targetScore: s.bookings[0].targetScore,
+          satDate: s.bookings[0].satDate ? s.bookings[0].satDate.toISOString() : null,
+          studyHoursPerWeek: s.bookings[0].studyHoursPerWeek,
+          weakestArea: s.bookings[0].weakestArea,
+          notes: s.bookings[0].notes,
+          timezone: s.bookings[0].timezone,
         }
       : null,
   }));
@@ -86,6 +91,8 @@ export default async function AdminBookingsPage() {
       <NextSessionPanel session={nextSession} />
 
       <RoomLinkCard url={roomUrl} provider={settings.meetingProvider} />
+
+      <EventCreator />
 
       <div className="grid gap-3 sm:grid-cols-3">
         <Stat label="Upcoming sessions" value={upcoming} />

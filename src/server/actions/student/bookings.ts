@@ -10,6 +10,37 @@ import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { bookingCostFor, getSettings } from "@/lib/settings";
 
+/** Thrown inside the booking transaction when the last seat went. */
+class SlotFullError extends Error {
+  constructor() {
+    super("Slot full");
+    this.name = "SlotFullError";
+  }
+}
+
+/**
+ * What a slot costs this student.
+ *
+ * 1-on-1 keeps the escalating ladder, counted over 1-on-1 bookings only — a
+ * student who attended three group lectures has not consumed any of the
+ * mentor's exclusive time and should not be charged as if they had.
+ *
+ * Group events use a flat price, because the scarcity the ladder exists to
+ * ration does not apply to a room that holds thirty people.
+ */
+async function costForSlot(
+  tx: Prisma.TransactionClient,
+  userId: string,
+  sessionType: SessionType,
+  settings: Awaited<ReturnType<typeof getSettings>>,
+): Promise<number> {
+  if (sessionType !== "ONE_ON_ONE_SAT") return Math.max(0, settings.eventCost);
+  const previous = await tx.booking.count({
+    where: { userId, sessionType: "ONE_ON_ONE_SAT" },
+  });
+  return bookingCostFor(previous, settings);
+}
+
 export interface OpenSlot {
   id: string;
   startsAt: Date;
@@ -20,18 +51,25 @@ export interface OpenSlot {
 /** Future slots that are published, not blocked, and not already taken. */
 export async function getOpenSlots(): Promise<OpenSlot[]> {
   await requireUser();
+  // The booking page is the 1-on-1 funnel; group events live on /events.
   const slots = await prisma.mentorSlot.findMany({
-    where: {
-      isBlocked: false,
-      startsAt: { gt: new Date() },
-      // A cancelled booking frees its slot again.
-      OR: [{ booking: null }, { booking: { status: "CANCELLED" } }],
-    },
+    where: { isBlocked: false, startsAt: { gt: new Date() }, sessionType: "ONE_ON_ONE_SAT" },
     orderBy: { startsAt: "asc" },
     take: 200,
-    select: { id: true, startsAt: true, durationMinutes: true, sessionType: true },
+    select: {
+      id: true,
+      startsAt: true,
+      durationMinutes: true,
+      sessionType: true,
+      capacity: true,
+      _count: { select: { bookings: { where: { status: { not: "CANCELLED" } } } } },
+    },
   });
-  return slots;
+  // A cancelled booking frees its seat again, which is why this filters on the
+  // live count rather than on "has any booking row".
+  return slots
+    .filter((s) => s._count.bookings < s.capacity)
+    .map(({ _count, capacity, ...rest }) => rest);
 }
 
 export interface BookingContext {
@@ -66,9 +104,9 @@ export async function getBookingContext(): Promise<BookingContext> {
     }),
     // Cancelled bookings count: the ladder prices the mentor's time being
     // reserved, and a cancel/rebook cycle must not reset the price.
-    prisma.booking.count({ where: { userId: user.id } }),
+    prisma.booking.count({ where: { userId: user.id, sessionType: "ONE_ON_ONE_SAT" } }),
     prisma.booking.findFirst({
-      where: { userId: user.id, status: "UPCOMING" },
+      where: { userId: user.id, status: "UPCOMING", sessionType: "ONE_ON_ONE_SAT" },
       select: { id: true },
     }),
     getCommunityRequirements(),
@@ -163,7 +201,9 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
 
   const slot = await prisma.mentorSlot.findUnique({
     where: { id: input.slotId },
-    include: { booking: { select: { id: true, status: true } } },
+    include: {
+      bookings: { where: { status: { not: "CANCELLED" } }, select: { id: true, userId: true } },
+    },
   });
   if (!slot) return { ok: false, error: "That time slot no longer exists.", reason: "slot_gone" };
   if (slot.isBlocked) {
@@ -172,30 +212,37 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
   if (slot.startsAt <= new Date()) {
     return { ok: false, error: "That time slot is in the past.", reason: "slot_gone" };
   }
-  if (slot.booking && slot.booking.status !== "CANCELLED") {
+  if (slot.bookings.some((b) => b.userId === user.id)) {
+    return { ok: false, error: "You're already registered for this one.", reason: "already_booked" };
+  }
+  if (slot.bookings.length >= slot.capacity) {
     return {
       ok: false,
-      error: "Someone just booked that slot. Please pick another time.",
+      error:
+        slot.capacity === 1
+          ? "Someone just booked that slot. Please pick another time."
+          : "This session is full. Please pick another one.",
       reason: "slot_gone",
     };
   }
 
-  // One active session per student keeps the free offer fair while the mentor
-  // is a single person.
-  const existing = await prisma.booking.findFirst({
-    where: { userId: user.id, status: "UPCOMING" },
-    select: { id: true },
-  });
-  if (existing) {
-    return {
-      ok: false,
-      error: "You already have an upcoming session booked.",
-      reason: "already_booked",
-    };
+  // One active 1-on-1 per student keeps the free offer fair while the mentor
+  // is a single person. Group events are not scarce in the same way, so they
+  // are deliberately outside this rule — a student may attend the weekly
+  // review and still hold a 1-on-1.
+  if (slot.sessionType === "ONE_ON_ONE_SAT") {
+    const existing = await prisma.booking.findFirst({
+      where: { userId: user.id, status: "UPCOMING", sessionType: "ONE_ON_ONE_SAT" },
+      select: { id: true },
+    });
+    if (existing) {
+      return {
+        ok: false,
+        error: "You already have an upcoming 1-on-1 session booked.",
+        reason: "already_booked",
+      };
+    }
   }
-
-  const revivableBookingId =
-    slot.booking?.status === "CANCELLED" ? slot.booking.id : null;
 
   const snapshot = {
     name: input.name.trim(),
@@ -217,10 +264,20 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
 
   try {
     const result = await prisma.$transaction(async (tx) => {
+      // Lock the slot row for the rest of the transaction. Capacity cannot be
+      // enforced by a unique index once a slot holds many attendees, and a
+      // plain count-then-insert races: two students can both read "9 of 10"
+      // and both insert. SELECT ... FOR UPDATE serialises them on the slot.
+      await tx.$queryRaw`SELECT id FROM "MentorSlot" WHERE id = ${slot.id} FOR UPDATE`;
+
+      const taken = await tx.booking.count({
+        where: { slotId: slot.id, status: { not: "CANCELLED" } },
+      });
+      if (taken >= slot.capacity) throw new SlotFullError();
+
       // Price is derived here, inside the transaction, from the authoritative
       // booking count. Nothing the client sent influences it.
-      const previousBookings = await tx.booking.count({ where: { userId: user.id } });
-      const cost = bookingCostFor(previousBookings, settings);
+      const cost = await costForSlot(tx, user.id, slot.sessionType, settings);
 
       // Throws InsufficientCoinsError, which rolls the transaction back before
       // any booking row exists.
@@ -234,30 +291,22 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
         tx,
       );
 
-      const booking = revivableBookingId
-        ? await tx.booking.update({
-            where: { id: revivableBookingId },
-            data: {
-              userId: user.id,
-              status: "UPCOMING",
-              cancelledAt: null,
-              coinCost: cost,
-              meetingUrl: null,
-              meetingProvider: null,
-              meetingExternalId: null,
-              ...snapshot,
-            },
-            select: { id: true },
-          })
-        : await tx.booking.create({
-            data: {
-              userId: user.id,
-              slotId: slot.id,
-              coinCost: cost,
-              ...snapshot,
-            },
-            select: { id: true },
-          });
+      // A previously cancelled booking by this same student occupies the
+      // [slotId, userId] pair, so reuse it rather than colliding.
+      const booking = await tx.booking.upsert({
+        where: { slotId_userId: { slotId: slot.id, userId: user.id } },
+        create: { userId: user.id, slotId: slot.id, coinCost: cost, ...snapshot },
+        update: {
+          status: "UPCOMING",
+          cancelledAt: null,
+          coinCost: cost,
+          meetingUrl: null,
+          meetingProvider: null,
+          meetingExternalId: null,
+          ...snapshot,
+        },
+        select: { id: true },
+      });
 
       // Backfill the ledger row now that the booking has an id, so the wallet
       // can link a spend to the session it paid for.
@@ -282,6 +331,13 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
         required: error.required,
         available: error.available,
         error: `You need ${error.required} coins for this session and have ${error.available}.`,
+      };
+    }
+    if (error instanceof SlotFullError) {
+      return {
+        ok: false,
+        error: "That session filled up while you were booking. Please pick another.",
+        reason: "slot_gone",
       };
     }
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {

@@ -92,6 +92,7 @@ const settingsSchema = z.object({
   referralRewardCoins: z.coerce.number().int().min(0).max(1000),
   bookingBaseCost: z.coerce.number().int().min(0).max(1000),
   bookingCostIncrement: z.coerce.number().int().min(0).max(1000),
+  eventCost: z.coerce.number().int().min(0).max(1000),
   bookingRefundHours: z.coerce.number().int().min(0).max(720).nullable(),
   instagramHandle: z.string().trim().min(1).max(64),
   telegramHandle: z.string().trim().min(1).max(64),

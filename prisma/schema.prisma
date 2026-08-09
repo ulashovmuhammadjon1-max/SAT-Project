@@ -528,8 +528,11 @@ model MentorSlot {
   sessionType SessionType @default(ONE_ON_ONE_SAT)
   /// Seats. 1 keeps the existing 1-on-1 semantics; a lecture can open many.
   capacity    Int         @default(1)
+  /// Shown on the events page. Null for plain 1-on-1 slots, which need no name.
+  title       String?
+  description String?     @db.Text
 
-  booking Booking?
+  bookings Booking[]
 
   @@unique([startsAt])
   @@index([startsAt])
@@ -538,7 +541,7 @@ model MentorSlot {
 model Booking {
   id     String        @id @default(cuid())
   userId String
-  slotId String        @unique // one booking per slot — the double-booking guard
+  slotId String
   status BookingStatus @default(UPCOMING)
 
   // Snapshot of what the student told us at booking time. Copied rather than
@@ -580,8 +583,14 @@ model Booking {
 
   coinTransactions CoinTransaction[]
 
+  /// A student can hold at most one booking per slot. This replaces the old
+  /// `slotId @unique`, which capped every slot at one attendee and made group
+  /// events impossible. Capacity is now enforced inside the booking
+  /// transaction under a row lock on the slot — see createBooking.
+  @@unique([slotId, userId])
   @@index([userId, status])
   @@index([status])
+  @@index([slotId, status])
   @@index([sessionType, status])
 }
 

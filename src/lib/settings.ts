@@ -39,6 +39,14 @@ export interface PlatformSettings {
    * is the kind of thing that gets regenerated.
    */
   staticMeetingUrl: string;
+  /**
+   * Flat cost of a group event (weekly review, lecture, workshop).
+   *
+   * Not the escalating ladder: that exists to ration one mentor's exclusive
+   * time, and a room that holds thirty people is not scarce in the same way.
+   * 0 makes events free while still requiring the community steps.
+   */
+  eventCost: number;
 }
 
 export const DEFAULT_SETTINGS: PlatformSettings = {
@@ -51,6 +59,7 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   telegramHandle: "satforgeorg",
   meetingProvider: "manual",
   staticMeetingUrl: "",
+  eventCost: 0,
 };
 
 export type SettingKey = keyof PlatformSettings;
