@@ -17,6 +17,7 @@ import {
   GraduationCap,
   AlertTriangle,
   CalendarCheck,
+  TrendingUp,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -32,6 +33,7 @@ const NAV = [
   { href: "/admin/users", label: "Users", icon: Users },
   { href: "/admin/economy", label: "Economy", icon: Coins },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
+  { href: "/admin/statistics", label: "Statistics", icon: TrendingUp },
   { href: "/admin/settings", label: "Adaptive Settings", icon: Sliders },
   { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
   { href: "/admin/logs", label: "System Logs", icon: ScrollText },
