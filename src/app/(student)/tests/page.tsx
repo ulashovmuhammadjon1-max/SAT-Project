@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { StartTestButton } from "@/components/student/start-test-button";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { sortTests } from "@/lib/tests/order";
 
 export const metadata = { title: "Practice Tests" };
 export const dynamic = "force-dynamic";
@@ -14,11 +15,10 @@ export const dynamic = "force-dynamic";
 export default async function TestsPage() {
   const user = await requireUser();
 
-  const [tests, myAttempts] = await Promise.all([
+  const [published, myAttempts] = await Promise.all([
     prisma.test.findMany({
       where: { status: "PUBLISHED" },
       include: { modules: { include: { _count: { select: { questions: true } } } } },
-      orderBy: { createdAt: "desc" },
     }),
     prisma.attempt.findMany({
       where: { userId: user.id },
@@ -26,6 +26,10 @@ export default async function TestsPage() {
       include: { test: true },
     }),
   ]);
+
+  // Test 1 first, Test 31 last — a student works through these in order, so
+  // the list has to read in that order too.
+  const tests = sortTests(published);
 
   return (
     <div className="space-y-8">

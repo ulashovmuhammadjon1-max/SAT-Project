@@ -5,15 +5,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { DeleteTestButton } from "@/components/admin/delete-test-button";
 import { prisma } from "@/lib/prisma";
+import { sortTests } from "@/lib/tests/order";
 
 export const metadata = { title: "Tests & Modules" };
 export const dynamic = "force-dynamic";
 
 export default async function AdminTestsPage() {
-  const tests = await prisma.test.findMany({
-    orderBy: { createdAt: "desc" },
-    include: { modules: { include: { _count: { select: { questions: true } } } }, _count: { select: { attempts: true } } },
-  });
+  const tests = sortTests(
+    await prisma.test.findMany({
+      include: { modules: { include: { _count: { select: { questions: true } } } }, _count: { select: { attempts: true } } },
+    })
+  );
 
   return (
     <div className="space-y-6">

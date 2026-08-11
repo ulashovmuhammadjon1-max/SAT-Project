@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ExtractionReview } from "@/components/admin/extraction-review";
 import { ReprocessButton } from "@/components/admin/reprocess-button";
 import { prisma } from "@/lib/prisma";
+import { sortTests } from "@/lib/tests/order";
 import type { TestExtractionResult, VocabExtractionResult } from "@/lib/ai/types";
 
 export const dynamic = "force-dynamic";
@@ -27,7 +28,7 @@ export default async function UploadDetailPage({
   if (!upload) notFound();
   const job = upload.jobs[0];
 
-  const [domains, existingTests] = await Promise.all([
+  const [domains, unorderedTests] = await Promise.all([
     prisma.domain.findMany({
       orderBy: { name: "asc" },
       include: { skills: { orderBy: { name: "asc" } } },
@@ -35,9 +36,10 @@ export default async function UploadDetailPage({
     prisma.test.findMany({
       where: { type: "FULL_LENGTH" },
       select: { id: true, title: true, modules: { select: { subject: true, order: true, difficulty: true } } },
-      orderBy: { createdAt: "desc" },
     }),
   ]);
+
+  const existingTests = sortTests(unorderedTests);
 
   return (
     <div className="space-y-6">
