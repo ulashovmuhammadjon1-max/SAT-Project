@@ -33,9 +33,10 @@ import re
 import sys
 from collections import Counter
 
-from sympy import (Abs, Eq, Rational, ceiling, cancel, diff, discriminant,
-                   expand, log, pi, simplify, sin, cos, solve, sqrt, symbols,
+from sympy import (Abs, Eq, Ge, Gt, Le, Lt, Rational, cancel, ceiling, expand,
+                   floor, log, pi, simplify, sin, cos, solve, sqrt, symbols,
                    sympify, tan, together)
+from sympy.core.relational import Relational
 
 from math_test28 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
 
@@ -64,53 +65,78 @@ def check(cond, msg):
 
 
 # ---------------------------------------------------------------- derivations
+# Every entry below re-derives its answer from the QUESTION, never from the
+# `check` note: a wrong note and a wrong key agree with each other, and only an
+# independent derivation separates them. Where the answer is a form rather than
+# a number the derivation still starts from the question's own quantities and
+# builds the expression or relation with sympy, so the comparison is against
+# something computed rather than something copied.
+
+def _greatest_int_strictly_below(bound):
+    """Largest whole number strictly less than `bound`."""
+    return bound - 1 if bound == int(bound) else floor(bound)
+
+
+# ---- Module 1
 def h1_01():
-    sp, ax = symbols("sp ax")
-    sol = solve([Eq(6 * sp + 5 * ax, 71), Eq(4 * sp + 9 * ax, 87)], [sp, ax])
-    return sol[sp] + sol[ax]
+    tk = symbols("tk")
+    return solve(Eq(tk - Rational(2, 5) * tk - 7, 53), tk)[0]
 
 
 def h1_02():
-    per, base = symbols("per base")
+    base, per = symbols("base per")
     sol = solve([Eq(base + 4 * per, 1486), Eq(base + 9 * per, 1861)], [base, per])
     return sol[base]
 
 
 def h1_03():
-    pax = symbols("pax")
-    outgo = 264 + 3 * 5 * 4
-    bound = solve(Eq(9 * pax - outgo, 150), pax)[0]
-    return ceiling(bound) if bound != int(bound) else bound + 1
+    got = symbols("got")
+    first_five = [12, 18, 9, 16, 14]
+    bound = solve(Eq(Rational(1, 6) * (sum(first_five) + got), 15), got)[0]
+    return ceiling(bound)
 
 
 def h1_04():
-    # the choice text is an equation, so the derivation returns lhs - rhs
-    wv = solve(Eq(C_, 14 * L_ + 9 * w + 60), w)[0]
-    return w - wv
+    tot = symbols("tot")
+    # three eighths went at the head office, so five eighths were still unsold
+    return solve(Eq((1 - Rational(3, 8)) * tot, 20 + 5), tot)[0]
 
 
 def h1_05():
-    dv = symbols("dv", real=True)
-    return max(solve(Eq(Abs(2 * dv - 104), Rational(16, 10)), dv))
+    part = symbols("part")
+    unit = solve(Eq(5 * part - 2 * part, 18), part)[0]
+    return (2 + 3 + 5) * unit
 
 
 def h1_06():
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(3 * slope + inter, 11), Eq(8 * slope + inter, 26)], [slope, inter])
-    stages = symbols("stages")
-    return solve(Eq(sol[slope] * stages + sol[inter], 38), stages)[0]
+    lights = symbols("lights")
+    return solve(Eq(54 + 3 * lights, 30 + 5 * lights), lights)[0]
 
 
 def h1_08():
+    # the choice is an equation, so return lhs - rhs of the model itself
     return T_ - (-2 * f ** 2 + 36 * f + 40)
 
 
-def h1_09():
-    return solve(Eq((18 * n + 540) / n, 33), n)[0]
+def h1_10():
+    kk = solve(Eq(2 * 4 ** 2 - 11 * 4 + k, 0), k)[0]
+    roots = solve(Eq(2 * x ** 2 - 11 * x + kk, 0), x)
+    other = [rt for rt in roots if rt != 4]
+    assert len(other) == 1, "the equation should have exactly one other root"
+    return other[0]
+
+
+def h1_11():
+    # the question asks for a product of three factors; the correct choice is
+    # checked for equivalence to the allowance, and separately for being a
+    # three-factor product
+    return expand(4 * x ** 3 + 6 * x ** 2 - 10 * x)
 
 
 def h1_12():
-    return solve(Eq(320 * Rational(3, 4) ** q, 135), q)[0]
+    days = symbols("days")
+    # inverse variation: horses times days is constant
+    return solve(Eq(40 * days, 24 * 15), days)[0]
 
 
 def h1_14():
@@ -120,18 +146,23 @@ def h1_14():
 
 
 def h1_15():
-    rest = symbols("rest")
-    return solve(Eq(5 * 11 + 4 * rest, 9 * 14), rest)[0]
+    brass, japanned = 28, 63 - 28
+    return Rational(Rational(3, 4) * brass + Rational(2, 5) * japanned, 63)
 
 
 def h1_16():
-    pints = Rational(96, 4) * 7
-    return ceiling(Rational(pints, 12))
+    sq_yards = Rational(288, 9)
+    return sq_yards / 4
+
+
+def h1_17():
+    counts = {"chaise": 24, "barouche": 15, "landau": 36, "brougham": 45}
+    return Rational(counts["landau"] + counts["barouche"], sum(counts.values()))
 
 
 def h1_19():
-    xv = solve(Eq(3 * x + 14, 5 * x - 26), x)[0]
-    return 180 - (3 * xv + 14)
+    xv = solve(Eq(4 * x + 2 * (x + 30), 180), x)[0]
+    return 4 * xv
 
 
 def h1_21():
@@ -139,24 +170,34 @@ def h1_21():
     return sqrt(82 ** 2 - rise ** 2)
 
 
+# ---- Module 2 Easy
+def h2e_02():
+    return s - solve(Eq(N_, 8 * s), s)[0]
+
+
 def h2e_05():
+    rows = [(2, 26), (5, 50), (8, 74)]
     slope, inter = symbols("slope inter")
-    sol = solve([Eq(inter, 13), Eq(4 * slope + inter, 41)], [slope, inter])
-    return sol[slope] * 2 + sol[inter]
+    sol = solve([Eq(rows[0][0] * slope + inter, rows[0][1]),
+                 Eq(rows[1][0] * slope + inter, rows[1][1])], [slope, inter])
+    for hv, cv in rows:
+        assert sol[slope] * hv + sol[inter] == cv, "the table is not exactly linear"
+    return sol[slope]
 
 
 def h2e_06():
-    return [z for z in (5, 6, 7, 8) if 4 * z - 7 > 21][0]
+    hits = [z for z in (5, 6, 7, 8) if 4 * z - 7 > 21]
+    assert len(hits) == 1, "exactly one listed value should satisfy the inequality"
+    return hits[0]
 
 
 def h2e_07():
-    sv = symbols("sv")
-    return "s<=" + str(solve(Eq(156 + sv, 240), sv)[0])
+    # 3 pence a head plus 20 pence for the pen, and at most 140 pence to spend
+    return Le(3 * h + 20, 140)
 
 
 def h2e_11():
-    rows = [(2, 7), (3, 0), (4, -5), (5, -8)]
-    return [xv for xv, fv in rows if fv == 0][0]
+    return solve(Eq(x - 4, 0), x)[0]
 
 
 def h2e_12():
@@ -164,8 +205,8 @@ def h2e_12():
 
 
 def h2e_14():
-    rows = {"Ashfield": 148, "Barlow": 96, "Colne": 132, "Dell": 87}
-    return rows["Colne"] - rows["Barlow"]
+    rows = {"Ashfield": 90, "Barlow": 60, "Colne": 120, "Dell": 30}
+    return Rational(rows["Colne"], sum(rows.values()))
 
 
 def h2e_15():
@@ -173,15 +214,28 @@ def h2e_15():
     return max(rows, key=lambda row: row[1])[0]
 
 
-def h2e_16():
-    vals = sorted([9, 12, 7, 12, 15])
-    return vals[len(vals) // 2]
+def h2e_17():
+    vals = [5, 8, 5, 12, 9, 5, 11]
+    tally = Counter(vals).most_common()
+    assert tally[0][1] > tally[1][1], "the list should have a single most common value"
+    return tally[0][0]
 
 
+def h2e_21():
+    return solve(Eq(2 * x + (3 * x + 30), 180), x)[0]
+
+
+def h2e_22():
+    legs = (20, 21)
+    hyp = sqrt(legs[0] ** 2 + legs[1] ** 2)
+    return Rational(legs[0], 1) / hyp
+
+
+# ---- Module 2 Hard
 def h2h_01():
-    kk = symbols("kk")
-    # infinitely many solutions <=> the coefficient triples are proportional
-    return solve(Eq(Rational(3, 9), kk / 12), kk)[0]
+    xv, yv, av, bv = symbols("xv yv av bv")
+    sol = solve([Eq(xv + 2 * yv, av), Eq(3 * xv - yv, bv)], [xv, yv])
+    return sol[xv].subs({av: a, bv: b})
 
 
 def h2h_02():
@@ -191,38 +245,42 @@ def h2h_02():
 
 
 def h2h_03():
-    return 20 + (11 - 3) * (-7)
+    cv = symbols("cv")
+    return solve(Eq(cv * 8 - 4 * 0, 56), cv)[0]
 
 
 def h2h_04():
-    mv = solve(Eq(52 * m - 96, 40 * m + 180), m)[0]
-    return ceiling(mv) - 1
+    bound = solve(Eq(52 * m - 96, 40 * m + 180), m)[0]
+    return _greatest_int_strictly_below(bound)
 
 
 def h2h_05():
-    first, second = symbols("first second")
-    sol = solve([Eq(first, 2 * second + 35), Eq(first + second, 470)], [first, second])
-    return sol[first]
+    cv = symbols("cv")
+    lhs = expand(4 * (x - cv))
+    rhs = expand(4 * x - 20)
+    # an identity in x: the two sides must agree coefficient by coefficient
+    return solve(Eq(lhs - rhs, 0), cv)[0]
 
 
 def h2h_06():
-    av, bv = symbols("av bv")
-    sol = solve([Eq(-2 * av + bv, 11), Eq(4 * av + bv, -7)], [av, bv])
-    return sol[av] + sol[bv]
+    fx = lambda z: 3 * z + 7
+    return expand(fx(x - 4))
 
 
-def h2h_07():
-    lo = solve(Eq(2 - 5 * x, 17), x)[0]
-    hi = solve(Eq(2 - 5 * x, -3), x)[0]
-    return f"{lo}<=x<={hi}"
+def h2h_08():
+    hv = symbols("hv")
+    # f takes equal values at points equidistant from the axis of symmetry
+    return solve(Eq((2 - hv) ** 2, (10 - hv) ** 2), hv)[0]
 
 
 def h2h_09():
-    return together(1 / a + 1 / (a + 3))
+    xv = symbols("xv", positive=True)
+    return simplify((1 / xv + Rational(1, 3)) / (xv + 3)).subs(xv, x)
 
 
 def h2h_10():
-    return sum(solve(Eq(12 / (x - 2), x + 3), x))
+    xs = solve(Eq(x ** 2 + 2 * x - 3, 2 * x + 6), x)
+    return sum(2 * xv + 6 for xv in xs)
 
 
 def h2h_11():
@@ -230,55 +288,60 @@ def h2h_11():
     return solve(Eq(2 ** (tv / 6), 8), tv)[0]
 
 
+def h2h_12():
+    return cancel((6 * x + 13) / (x + 2))
+
+
 def h2h_13():
-    av = symbols("av")
-    hv = lambda z: (5 * z - 3) / 2
-    root = solve(Eq(hv(av), 16), av)[0]
-    return hv(root + 4)
+    hv = lambda z: Rational(24, 1) / (z - 2)
+    xv = symbols("xv")
+    return solve(Eq(24 / (xv - 2), hv(10) + 1), xv)[0]
 
 
 def h2h_14():
     rows = {"Waggon": (42, 78), "Gig": (55, 25), "Cart": (90, 60)}
-    single, ticket = rows["Waggon"]
-    return Rational(ticket, single + ticket)
+    total = sum(sum(v) for v in rows.values())
+    return Rational(rows["Gig"][0], total)
 
 
 def h2h_15():
-    rows = {1826: 640, 1827: 704, 1828: 792, 1829: 848}
-    return Rational(rows[1829] - rows[1826], rows[1826]) * 100
+    known = {"Monday": 34, "Tuesday": 29, "Wednesday": 41, "Friday": 46}
+    thu = symbols("thu")
+    return solve(Eq(sum(known.values()) + thu, 187), thu)[0]
 
 
 def h2h_16():
-    mix = Rational(6 * 8, 5)
+    stone, gravel = 5, 3
+    mix = Rational(6 * (stone + gravel), stone)
     return mix / Rational(24, 10)
 
 
 def h2h_17():
-    lo, hi = 860 - 45, 860 + 45
-    centre = Rational(lo + hi, 2)
-    rad = Rational(hi - lo, 2)
-    return f"|c-{centre}|<={rad}"
+    cv = symbols("cv", real=True)
+    return Le(Abs(cv - 860), 45).subs(cv, c)
 
 
 def h2h_18():
-    rows = [(1, 6), (2, 10), (3, 14), (4, 18)]
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(rows[0][0] * slope + inter, rows[0][1]),
-                 Eq(rows[1][0] * slope + inter, rows[1][1])], [slope, inter])
-    for hv, tv in rows:
-        assert sol[slope] * hv + sol[inter] == tv, "table is not exactly linear"
-    return sol[slope] * 7 + sol[inter]
+    rows = {"Ancaster": 96, "Bewdley": 60, "Cranfield": 144, "Dunmow": 100}
+    return Rational(rows["Cranfield"], sum(rows.values())) * 100
+
+
+def h2h_19():
+    return _greatest_int_strictly_below(9 + 14)
 
 
 def h2h_20():
     rv, hv = symbols("rv hv", positive=True)
-    return simplify((pi * (2 * rv) ** 2 * (hv / 2)) / (pi * rv ** 2 * hv))
+    base = pi * rv ** 2
+    curved = 2 * pi * rv * hv
+    return (base + curved).subs({rv: r, hv: h})
 
 
 def h2h_21():
-    bc = 27 * Rational(2, 3)
-    ac = sqrt(27 ** 2 - bc ** 2)
-    return simplify(Rational(1, 2) * bc * ac)
+    mv = symbols("mv", positive=True)
+    ac = 12 * mv
+    bc = ac * Rational(5, 12)          # tan A = BC / AC
+    return simplify(sqrt(ac ** 2 + bc ** 2)).subs(mv, m)
 
 
 DERIVE = {
@@ -290,44 +353,43 @@ DERIVE = {
  "H1-06": h1_06,
  "H1-07": lambda: solve(Eq(8 * u + 5 * (51 - u), 333), u)[0],
  "H1-08": h1_08,
- "H1-09": h1_09,
- "H1-10": lambda: solve(Eq(discriminant(x ** 2 - 14 * x + k, x), 0), k)[0],
- "H1-11": lambda: simplify((4 * POS_LOCALS["a"] ** 3 * POS_LOCALS["b"]) ** 2
-                           / (8 * POS_LOCALS["a"] ** 2 * POS_LOCALS["b"] ** 5)),
+ "H1-09": lambda: solve(Eq((18 * n + 540) / n, 33), n)[0],
+ "H1-10": h1_10,
+ "H1-11": h1_11,
  "H1-12": h1_12,
- "H1-13": lambda: solve(Eq(sqrt(2 * x + 11), x - 2), x)[0],
+ "H1-13": lambda: [z for z in solve(Eq(60 / x - 60 / (x + 5), 1), x) if z > 0][0],
  "H1-14": h1_14,
  "H1-15": h1_15,
  "H1-16": h1_16,
- "H1-17": lambda: Rational(36 + 15, 24 + 15 + 36 + 45),
+ "H1-17": h1_17,
  "H1-18": lambda: Rational(675, 100) / 3 * 7,
  "H1-19": h1_19,
  "H1-20": lambda: 4 * Rational(58 + 74, 2) * 40,
  "H1-21": h1_21,
- "H1-22": lambda: Rational(96 * 54 - 24 * 18, 144),
+ "H1-22": lambda: Rational(48 * 24 * 18 + 24 * 24 * 12, 1728),
 
- "H2E-01": lambda: solve(Eq(7 * n + 12, 96), n)[0],
- "H2E-02": lambda: solve(Eq(x / 5 + 4, 13), x)[0],
- "H2E-03": lambda: solve(Eq(8 * p, 5 * p + 51), p)[0],
+ "H2E-01": lambda: 9 * b + 4 * f,
+ "H2E-02": h2e_02,
+ "H2E-03": lambda: solve(Eq(240, 15 * h), h)[0],
  "H2E-04": lambda: (900 - 45 * d).subs(d, 12),
  "H2E-05": h2e_05,
  "H2E-06": h2e_06,
  "H2E-07": h2e_07,
- "H2E-08": lambda: expand(5 * (2 * x + 7) - 3 * x),
- "H2E-09": lambda: expand((x + 6) * (x - 2)),
- "H2E-10": lambda: (x ** 2 - 5).subs(x, 4),
+ "H2E-08": lambda: expand(8 * a ** 2 * b - 12 * a * b ** 2),
+ "H2E-09": lambda: expand((x - 5) ** 2),
+ "H2E-10": lambda: (5 * 3 ** x).subs(x, 0),
  "H2E-11": h2e_11,
  "H2E-12": h2e_12,
- "H2E-13": lambda: solve(Eq(sqrt(x), 12), x)[0],
+ "H2E-13": lambda: [z for z in solve(Eq(n ** 2 + 3 * n, 54), n) if z > 0][0],
  "H2E-14": h2e_14,
  "H2E-15": h2e_15,
- "H2E-16": h2e_16,
- "H2E-17": lambda: Rational(8 + 11 + 5 + 12, 4),
- "H2E-18": lambda: Rational(32, 4) * 28,
- "H2E-19": lambda: 45 * 28,
- "H2E-20": lambda: 6 * 2 * Rational(15, 10),
- "H2E-21": lambda: 180 - 43 - 68,
- "H2E-22": lambda: Rational(7, 25),
+ "H2E-16": lambda: Rational(80 - 24, 80),
+ "H2E-17": h2e_17,
+ "H2E-18": lambda: Rational(4 * 63, 12),
+ "H2E-19": lambda: solve(Eq(2 * 45 + 2 * w, 146), w)[0],
+ "H2E-20": lambda: solve(Eq(6 * 2 * d, 18), d)[0],
+ "H2E-21": h2e_21,
+ "H2E-22": h2e_22,
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -335,22 +397,22 @@ DERIVE = {
  "H2H-04": h2h_04,
  "H2H-05": h2h_05,
  "H2H-06": h2h_06,
- "H2H-07": h2h_07,
- "H2H-08": lambda: expand((2 * x - 5) ** 2 + 3),
+ "H2H-07": lambda: Lt(x, (b + c) / a),
+ "H2H-08": h2h_08,
  "H2H-09": h2h_09,
  "H2H-10": h2h_10,
  "H2H-11": h2h_11,
- "H2H-12": lambda: cancel((x ** 2 - 9) / (x ** 2 + x - 12)),
+ "H2H-12": h2h_12,
  "H2H-13": h2h_13,
  "H2H-14": h2h_14,
  "H2H-15": h2h_15,
  "H2H-16": h2h_16,
  "H2H-17": h2h_17,
  "H2H-18": h2h_18,
- "H2H-19": lambda: 8 * Rational(6 + 9, 6),
+ "H2H-19": h2h_19,
  "H2H-20": h2h_20,
  "H2H-21": h2h_21,
- "H2H-22": lambda: Rational(24 + 30, 2) * Rational(10, 12),
+ "H2H-22": lambda: 13 ** 2 - 5 ** 2,
 }
 
 # Nothing in Test 28 resists a symbolic derivation: every answer is a value, an
@@ -405,7 +467,19 @@ def latex_to_expr(text):
         if word in ("sqrt", "pi", "Abs", "theta", "sin", "cos", "tan", "log"):
             return word
         return "*".join(word)
-    t = re.sub(r"(?<![\\A-Za-z])[a-zA-Z]{2,}(?![A-Za-z(])", split_run, t)
+    t = re.sub(r"(?<![\\A-Za-z])[a-zA-Z]{2,}(?![A-Za-z])", split_run, t)
+    # split_run may have just produced "a*b(" out of "ab(", so the
+    # symbol-before-a-bracket rule has to run once more. Function names are
+    # multi-letter, and this rule needs a letter with no letter before it, so
+    # the "s(" of "Abs(" and the "t(" of "sqrt(" are both out of reach.
+    t = re.sub(r"(?<![a-zA-Z])([a-zA-Z])\s*\(", r"\1*(", t)
+    # Two more implicit products that only show up once LaTeX is gone. KaTeX
+    # writes a product as juxtaposition, so "\pi r^{2}h" becomes "pi r**(2)h" —
+    # a space between two atoms and a closing paren butted against a symbol are
+    # both multiplications, and Python parses neither. Both rules require an
+    # atom character on each side, so "<= 45" and " + 4" are untouched.
+    t = re.sub(r"\)(?=[A-Za-z0-9])", ")*", t)
+    t = re.sub(r"(?<=[A-Za-z0-9)])\s+(?=[A-Za-z0-9(])", "*", t)
     return re.sub(r"\s+", " ", t).strip()
 
 
@@ -432,6 +506,17 @@ def as_expr(text):
 
 
 def same(expr, got):
+    # An inequality is not a number: subtracting one from another raises, and a
+    # relation with the wrong direction must never compare equal to the key.
+    if isinstance(got, Relational) or isinstance(expr, Relational):
+        if not (isinstance(got, Relational) and isinstance(expr, Relational)):
+            return False
+        if got.rel_op != expr.rel_op:
+            return False
+        try:
+            return simplify((got.lhs - got.rhs) - (expr.lhs - expr.rhs)) == 0
+        except Exception:
+            return False
     try:
         if simplify(expr - got) == 0:
             return True
@@ -477,15 +562,18 @@ for qz in ALL:
     text = qz["choices"]["ABCD".index(qz["correct"])]
 
     if isinstance(got, str):
-        # A form, an inequality or a named row: the derivation builds the exact
-        # string out of sympy-computed values, so this is still a comparison
-        # against a derived result, not against the author's note.
-        norm = lambda z: latex_to_expr(z).replace(" ", "")
-        check(norm(text) == got.replace(" ", ""),
-              f"{tag}: derived {got!r} but choice {qz['correct']} normalises to {norm(text)!r}")
+        # A named table row. The derivation picks the row out of the printed
+        # data with a comparison, so this is still a check against a computed
+        # result. Compare the choice text itself: pushing a proper name through
+        # latex_to_expr splits it into an implicit product of its own letters
+        # ("Bramber" -> "B*r*a*m*b*e*r") and nothing ever matches.
+        forms = lambda z: {z.strip(), latex_to_expr(z).replace(" ", "")}
+        want = got.strip()
+        check(want in forms(text),
+              f"{tag}: derived {got!r} but choice {qz['correct']} is {text!r}")
         for i, alt in enumerate(qz["choices"]):
             if i != "ABCD".index(qz["correct"]):
-                check(norm(alt) != got.replace(" ", ""),
+                check(want not in forms(alt),
                       f"{tag}: distractor {'ABCD'[i]} ({alt!r}) equals the key")
         continue
 
@@ -595,8 +683,12 @@ for qq in ALL:
 
     if re.search(r"\btables?\b", qq["stem"], re.I):
         check("<table" in qq["stem"], f"{tag}: mentions a table but has no <table> markup")
-    if re.search(r"\b(shown|the figure|following (?:graph|figure|chart|table|plot)|"
-                 r"graph above|chart|plot)\b", qq["stem"], re.I):
+    # "plot" is a piece of ground at least as often as it is a graph, and
+    # "chart" is a sea chart; a boundary-free keyword in a checker is worse than
+    # no check, so every alternative here has to name a visual explicitly.
+    if re.search(r"(?<![A-Za-z])(shown|the figure|the graph above|scatterplot|"
+                 r"the following (?:graph|figure|chart|table|plot))(?![A-Za-z])",
+                 qq["stem"], re.I):
         check("<table" in qq["stem"] or "<img" in qq["stem"],
               f"{tag}: refers to a visual it does not contain")
 

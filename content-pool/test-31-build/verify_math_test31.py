@@ -77,12 +77,20 @@ def m1_03():
 
 
 def m1_04():
-    stacks = Rational(96 - 12, 1) / Rational(3, 4)
-    return stacks * 30
+    # the machine is cheaper when 246 + 0.04t < 90 + 0.16t; solve the EQUALITY
+    # and then step up, so the boundary case (equal cost) is not silently
+    # counted as "less than".
+    tie = solve(Eq(Rational(246) + Rational(4, 100) * t,
+                   Rational(90) + Rational(16, 100) * t), t)[0]
+    return min(i for i in range(1, 4000)
+               if Rational(246) + Rational(4, 100) * i
+               < Rational(90) + Rational(16, 100) * i and i > tie - 1)
 
 
 def m1_05():
-    return solve(Eq(d / 5 + d / 3, Rational(128, 60)), d)[0]
+    # second house s, first 4s; after moving 210 the first is twice the second
+    sv = solve(Eq(4 * s - 210, 2 * (s + 210)), s)[0]
+    return 4 * sv
 
 
 def m1_06():
@@ -92,13 +100,19 @@ def m1_06():
 
 
 def m1_07():
-    lo, hi = 1046 - 12, 1046 + 12
-    return min(i for i in range(1, 60) if lo <= 1079 - 7 * i <= hi)
+    # 30 Medium eggs, each 53 <= m < 63: exactly one of the four printed values
+    # lies in the scaled interval, and the derivation picks it rather than
+    # confirming it.
+    lo, hi = 30 * 53, 30 * 63
+    good = [v for v in (1540, 1585, 1760, 1920) if lo <= v < hi]
+    assert len(good) == 1
+    return Integer(good[0])
 
 
 def m1_08():
-    width = [z for z in solve(Eq(w * (w + 8), 105), w) if z > 0][0]
-    return 2 * (width + (width + 8))
+    # width w, length w+14, diagonal 26  ->  area
+    width = [z for z in solve(Eq(w ** 2 + (w + 14) ** 2, 26 ** 2), w) if z > 0][0]
+    return width * (width + 14)
 
 
 def m1_09():
@@ -107,7 +121,11 @@ def m1_09():
 
 
 def m1_11():
-    return solve(Eq(2 ** (3 * x - 1), 32 ** (x - 2)), x)[0]
+    # b and c are recovered by requiring x^2+bx+c to vanish at BOTH stated
+    # roots, not by quoting Vieta's formulas from the check note.
+    sol = solve([Eq(3 ** 2 + b * 3 + c, 0), Eq((-11) ** 2 + b * (-11) + c, 0)],
+                [b, c], dict=True)[0]
+    return sol[c] - sol[b]
 
 
 def m1_12():
@@ -116,10 +134,7 @@ def m1_12():
 
 
 def m1_13():
-    # x^2 - 14x + 40 == (x-h)^2 + k for every x
-    poly = expand((x - h) ** 2 + k - (x ** 2 - 14 * x + 40))
-    sol = solve(poly.as_poly(x).all_coeffs(), [h, k], dict=True)[0]
-    return sol[h] + sol[k]
+    return simplify((1 / x - Rational(1, 4)) / (x - 4))
 
 
 def m1_14():
@@ -127,8 +142,42 @@ def m1_14():
     return share * 1200
 
 
-def m1_16():
-    return Rational(11 * 63 - 53, 10)
+P_MASSES = [58, 60, 62, 64, 66]
+Q_MASSES = [52, 57, 62, 67, 72]
+
+
+def _mean(vals):
+    return Rational(sum(vals), len(vals))
+
+
+def _var(vals):
+    mu = _mean(vals)
+    return Rational(sum((Rational(z) - mu) ** 2 for z in vals), len(vals))
+
+
+def m1_16_letter():
+    """M1-16 keys a prose statement, so the derivation evaluates all four.
+
+    Each choice is written out here as a predicate over quantities sympy
+    computes from the two printed lists; exactly one must come out true, and
+    that one must be the keyed letter. Nothing is read off the check note.
+    """
+    mp, mq = _mean(P_MASSES), _mean(Q_MASSES)
+    vp, vq = _var(P_MASSES), _var(Q_MASSES)
+    truth = [
+        mp == mq and vp < vq,      # A
+        mp == mq and vp > vq,      # B
+        mp > mq and vp == vq,      # C
+        mp < mq and vp > vq,       # D
+    ]
+    assert sum(1 for z in truth if z) == 1, truth
+    return "ABCD"[truth.index(True)]
+
+
+def m1_17():
+    counts = [268, 291, 274, 302, 285, 264]
+    mu = Rational(sum(counts), len(counts))
+    return Integer(sum(1 for z in counts if Rational(z) > mu))
 
 
 def m1_18():
@@ -136,7 +185,7 @@ def m1_18():
 
 
 def m1_19():
-    return Rational(150, 360) * 2 * pi * 12
+    return 14 * 12 + Rational(1, 2) * pi * 6 ** 2
 
 
 def m1_20():
@@ -145,18 +194,52 @@ def m1_20():
 
 
 def m1_21():
-    bc = solve(Eq(v / 36, Rational(5, 12)), v)[0]
-    return sqrt(Integer(36) ** 2 + bc ** 2)
+    # sin A = BC/AB = 20/29 with BC = 60
+    ab = solve(Eq(Rational(60, 1) / v, Rational(20, 29)), v)[0]
+    ac = sqrt(ab ** 2 - Integer(60) ** 2)
+    return simplify(60 + ac + ab)
 
 
 def m2h_01():
-    # no solution <=> the coefficient rows are proportional but the constants
-    # are not; solve for the proportionality directly and then assert the
-    # constants really do disagree.
-    lam = Rational(6, 2)
-    kv = lam * 3
-    assert lam * 12 != 30
-    return kv
+    # smaller s, larger 2s+16, total 148; the question asks for the difference
+    sv = solve(Eq(s + (2 * s + 16), 148), s)[0]
+    return (2 * sv + 16) - sv
+
+
+def m2h_06_letter():
+    """M2H-06 keys an ordered pair, so every printed pair is tested.
+
+    The two conditions are x + y <= 60 and x >= 2y. Exactly one of the four
+    pairs must satisfy both.
+    """
+    pairs = [(24, 14), (30, 20), (40, 18), (44, 20)]
+    ok = [xv + yv <= 60 and xv >= 2 * yv for xv, yv in pairs]
+    assert sum(1 for z in ok if z) == 1, ok
+    return "ABCD"[ok.index(True)]
+
+
+def m2h_09():
+    # recover k from the stated solution, then solve the resulting equation
+    kv = solve(Eq(2 * 5 ** 2 + k * 5 - 30, 0), k)[0]
+    roots = solve(Eq(2 * x ** 2 + kv * x - 30, 0), x)
+    other = [z for z in roots if z != 5]
+    assert len(other) == 1 and 5 in roots
+    return other[0]
+
+
+def m2h_16():
+    rows = [(9, 3), (10, 5), (11, 7), (12, 6), (13, 4)]
+    data = [val for val, freq in rows for _ in range(freq)]
+    assert len(data) == 25
+    return Integer(sorted(data)[len(data) // 2])
+
+
+def m2h_19():
+    return Rational(3, 2) ** 2 * Rational(8, 10) * 100
+
+
+def m2h_20():
+    return solve(Eq(180 - Rational(360, 1) / n, 156), n)[0]
 
 
 def m2h_02():
@@ -182,10 +265,6 @@ def m2h_05():
     return solve(Eq(M_SYM, K_SYM * n / (n + C_SYM)), n)[0]
 
 
-def m2h_06():
-    return max(i for i in range(200) if 12 * 28 + 7 * i <= 600)
-
-
 def m2h_07():
     return solve(Eq(x / 4 + x / 6, (x - 14) / 2), x)[0]
 
@@ -196,15 +275,10 @@ def m2h_08():
     return sol[c]
 
 
-def m2h_09():
-    return max(solve(Eq(k ** 2 - 4 * 2 * 18, 0), k))
-
-
 def m2h_10():
-    roots = solve(Eq(sqrt(2 * x + 3), x - 6), x)
-    real = [z for z in roots if z.is_real and 2 * z + 3 >= 0 and z - 6 >= 0]
-    assert len(real) == 1
-    return real[0]
+    roots = [z for z in solve(Eq(2 * (x - 3) ** 3, 54), x) if z.is_real]
+    assert len(roots) == 1
+    return roots[0]
 
 
 def m2h_11():
@@ -212,13 +286,12 @@ def m2h_11():
 
 
 def m2h_12():
-    return simplify(1 / (x - 2) - 3 / (x + 1))
+    return simplify(5 / (x ** 2 - 4) - 1 / (x - 2))
 
 
 def m2h_13():
-    # minimum of 3(x-4)^2 - 11: the square is least where it vanishes
-    av = solve(Eq(x - 4, 0), x)[0]
-    return av + (3 * (av - 4) ** 2 - 11)
+    fn = lambda z: z ** 2 + 3 * z
+    return Rational(fn(5) - fn(2), 5 - 2)
 
 
 def m2h_14():
@@ -232,10 +305,6 @@ def m2h_15():
     return max(rows, key=lambda z: Rational(z[1] - z[2], z[1]))[0]
 
 
-def m2h_16():
-    return Rational(40 * 28 + 60 * 13, 10 * 100)
-
-
 def m2h_17():
     return Rational(binomial(7, 3), binomial(12, 3))
 
@@ -243,15 +312,6 @@ def m2h_17():
 def m2h_18():
     per = Rational(1120, 320)
     return solve(Eq(per * n, 1540), n)[0] / 22
-
-
-def m2h_19():
-    return pi * 2 ** 2 * 5 + Rational(1, 3) * pi * 2 ** 2 * 3
-
-
-def m2h_20():
-    qc = solve(Eq(Rational(6, 9), 8 / v), v)[0]
-    return 8 + qc
 
 
 def m2h_21():
@@ -264,6 +324,30 @@ def m2h_22():
     return 96 * Rational(5, 2) ** 3
 
 
+def m2e_12():
+    rows = [(1, 7), (2, 11), (3, 15), (4, 19)]
+    # fit g(x) = mx + q to the printed table and assert every row fits, so a
+    # table that is not actually linear would fail here rather than be assumed
+    mv, qv = symbols("mv qv")
+    sol = solve([Eq(mv * xi + qv, yi) for xi, yi in rows[:2]], [mv, qv], dict=True)[0]
+    for xi, yi in rows:
+        assert sol[mv] * xi + sol[qv] == yi
+    return sol[mv] * 7 + sol[qv]
+
+
+def m2e_13():
+    smaller = [z for z in solve(Eq(n * (n + 1), 210), n) if z > 0][0]
+    return smaller + 1
+
+
+def m2e_22():
+    # right angle at Y, so XZ is the hypotenuse; check the triple closes before
+    # reading any ratio off it
+    xy, yz, xz = 9, 40, 41
+    assert xy ** 2 + yz ** 2 == xz ** 2
+    return Rational(yz, xz)
+
+
 DERIVE = {
  "M1-01": m1_01,
  "M1-02": lambda: "day " + str(m1_02()),
@@ -274,14 +358,13 @@ DERIVE = {
  "M1-07": m1_07,
  "M1-08": m1_08,
  "M1-09": m1_09,
- "M1-10": lambda: simplify((6 * x ** 2 + 7 * x - 20) / (2 * x + 5)),
+ "M1-10": lambda: expand(12 * x ** 3 - 27 * x),
  "M1-11": m1_11,
  "M1-12": m1_12,
  "M1-13": m1_13,
  "M1-14": m1_14,
  "M1-15": lambda: solve(Eq(6 * 45, 10 * t), t)[0],
- "M1-16": m1_16,
- "M1-17": lambda: Rational(33, 60),
+ "M1-17": m1_17,
  "M1-18": m1_18,
  "M1-19": m1_19,
  "M1-20": m1_20,
@@ -290,33 +373,32 @@ DERIVE = {
 
  "M2E-01": lambda: solve(Eq(5 * p + 18, 63), p)[0],
  "M2E-02": lambda: 24 * 6 + 15,
- "M2E-03": lambda: solve(Eq(4 * x - 9, 27), x)[0] + 5,
+ "M2E-03": lambda: solve(Eq(7 * n - 12, 4 * n + 27), n)[0],
  "M2E-04": lambda: Rational(7, 10) * 40 + 12,
  "M2E-05": lambda: max(i for i in range(200) if 3 * i + 14 <= 71),
  "M2E-06": lambda: 3 * solve(Eq(3 * v + v, 96), v)[0],
  "M2E-07": lambda: "15 < d <= 40",
- "M2E-08": lambda: expand(4 * (2 * x - 5) + 3 * x),
- "M2E-09": lambda: (2 * x ** 2 - 5).subs(x, -3),
+ "M2E-08": lambda: expand((x + 9) * (x - 4)),
+ "M2E-09": lambda: solve(Eq(x + 6, 0), x)[0],
  "M2E-10": lambda: sum(solve(Eq((x - 4) * (x + 9), 0), x)),
- "M2E-11": lambda: simplify(18 * x ** 7 / (3 * x ** 2)),
- "M2E-12": lambda: solve(Eq(3 * x + 1, 22), x)[0],
- "M2E-13": lambda: solve(Eq(sqrt(x + 7), 5), x)[0],
+ "M2E-11": lambda: simplify(7 * a + 3 * b - 2 * a + 5 * b),
+ "M2E-12": m2e_12,
+ "M2E-13": m2e_13,
  "M2E-14": lambda: Rational(35, 100) * 240,
  "M2E-15": lambda: solve(Eq(7 * n, 245), n)[0],
  "M2E-16": lambda: Rational(24 + 31 + 28 + 36 + 31, 50),
  "M2E-17": lambda: Integer(sorted([23, 31, 18, 27, 24])[2]),
  "M2E-18": lambda: 134 - 88,
  "M2E-19": lambda: 18 * 25,
- "M2E-20": lambda: 180 - 118,
+ "M2E-20": lambda: 360 - (95 + 128 + 62),
  "M2E-21": lambda: pi * 3 ** 2 * 10,
- "M2E-22": lambda: Rational(8, 15),
+ "M2E-22": m2e_22,
 
  "M2H-01": m2h_01,
  "M2H-02": m2h_02,
  "M2H-03": m2h_03,
  "M2H-04": m2h_04,
  "M2H-05": m2h_05,
- "M2H-06": m2h_06,
  "M2H-07": m2h_07,
  "M2H-08": m2h_08,
  "M2H-09": m2h_09,
@@ -335,11 +417,22 @@ DERIVE = {
  "M2H-22": m2h_22,
 }
 
-# Nothing in this build is outside sympy's reach. Two answers are strings
-# rather than values — a named table row (M2H-15) and an inequality written in
-# words as well as symbols (M2E-07, M1-02) — but each of those strings is still
-# built from a sympy-computed result rather than copied from the author's note,
-# so they are derived, not asserted.
+# Two questions key something that is not a number or an expression at all: a
+# prose statement comparing two data sets (M1-16) and an ordered pair chosen
+# from four (M2H-06). For those the derivation evaluates the CLAIM each printed
+# choice makes and returns the letter of the one that is true, asserting on the
+# way that exactly one of the four is. That is still an independent derivation
+# — the predicate is computed from the printed data, not read off the key.
+LETTER_DERIVE = {
+ "M1-16": m1_16_letter,
+ "M2H-06": m2h_06_letter,
+}
+
+# Nothing in this build is outside sympy's reach. Three answers are strings
+# rather than values — a named table row (M2H-15), an inequality written in
+# words as well as symbols (M2E-07) and a day number (M1-02) — but each of
+# those strings is built from a sympy-computed result rather than copied from
+# the author's note, so they are derived, not asserted.
 MANUAL = {}
 
 
@@ -435,6 +528,17 @@ for qz in ALL:
     tag = qz["n"]
     if tag in MANUAL:
         continue
+
+    if tag in LETTER_DERIVE:
+        # the derivation evaluates each printed choice's claim and returns the
+        # letter of the single true one
+        derived += 1
+        want_letter = LETTER_DERIVE[tag]()
+        check(qz["correct"] == want_letter,
+              f"{tag}: exactly one choice is true and it is {want_letter}, "
+              f"but the key says {qz['correct']}")
+        continue
+
     check(tag in DERIVE, f"{tag}: no derivation and not listed in MANUAL")
     if tag not in DERIVE:
         continue
@@ -457,14 +561,27 @@ for qz in ALL:
         # A named table row, or an inequality written partly in words. The
         # string is assembled from sympy-computed values inside the derivation,
         # so this is still a comparison against a derived result.
-        norm = lambda z: re.sub(r"[\s\\]|\\le|\\lt", "", z).replace("\\", "")
-        want = norm(got).replace("<=", "\u2264")
-        have = norm(latex_to_expr(text)).replace("<=", "\u2264")
-        check(want == have,
+        #
+        # NOTE: do NOT push these through latex_to_expr. That function splits
+        # any multi-letter run into an implicit product, which is right for
+        # "\frac{Mc}{k-M}" and catastrophic for a row name: it turned the
+        # derived "day 10" into "d*a*y10" and reported a mismatch between two
+        # strings that were in fact identical. Both sides are normalised as
+        # plain text here instead.
+        def norm(z):
+            z = re.sub(r"\\\(|\\\)|\\\[|\\\]", " ", z)
+            z = (z.replace("\\le", "\u2264").replace("\\ge", "\u2265")
+                  .replace("\\lt", "<").replace("\\gt", ">")
+                  .replace("<=", "\u2264").replace(">=", "\u2265"))
+            z = re.sub(r"<[^>]+>", " ", z)
+            return re.sub(r"[\s,]+", "", z).lower()
+
+        want = norm(got)
+        check(want == norm(text),
               f"{tag}: derived {got!r} but choice {qz['correct']} is {text!r}")
         for i, alt in enumerate(qz["choices"]):
             if i != "ABCD".index(qz["correct"]):
-                check(norm(latex_to_expr(alt)).replace("<=", "\u2264") != want,
+                check(norm(alt) != want,
                       f"{tag}: distractor {'ABCD'[i]} ({alt!r}) equals the key")
         continue
 

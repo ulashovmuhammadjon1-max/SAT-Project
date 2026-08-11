@@ -32,8 +32,8 @@ import os
 import re
 
 from sympy import (Abs, Eq, Rational, atan, ceiling, floor, cancel, expand,
-                   factor, nsimplify, pi, simplify, sin, solve, sqrt, symbols,
-                   sympify, together)
+                   factor, limit, nsimplify, oo, pi, simplify, sin, solve, sqrt,
+                   symbols, sympify, together)
 
 from math_test27 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
 
@@ -62,14 +62,14 @@ def check(cond, msg):
 
 # ---------------------------------------------------------------- derivations
 def h1_01():
-    west = symbols("west")
-    wv = solve(Eq(west + (2 * west + 260), 4160), west)[0]
-    return 2 * wv + 260
+    # six pans of p kilograms and a seventh of p - 140, 4,060 in all
+    pan = symbols("pan")
+    return solve(Eq(6 * pan + (pan - 140), 4060), pan)[0]
 
 
 def h1_02():
-    blocks = symbols("blocks")
-    return solve(Eq(48 + Rational(60, 100) * blocks, Rational(135, 100) * blocks), blocks)[0]
+    mass = symbols("mass")
+    return solve(Eq(mass - 260, Rational(3, 5) * mass), mass)[0]
 
 
 def h1_03():
@@ -103,11 +103,11 @@ def h1_07():
 
 def h1_09():
     npos = symbols("n", positive=True)
-    return simplify((8 * npos ** 6 / 27) ** Rational(2, 3))
+    return simplify(sqrt(72 * npos ** 5))
 
 
 def h1_10():
-    return [z for z in solve(Eq(h ** 2 - 18 * h + 96, 24), h) if 0 <= z <= 9][0]
+    return [z for z in solve(Eq((2 * x - 7) ** 2, 81), x) if z > 0][0]
 
 
 def h1_11():
@@ -116,8 +116,8 @@ def h1_11():
 
 
 def h1_12():
-    dep = symbols("dep", positive=True)
-    return solve(Eq(9 * sqrt(dep), 63), dep)[0]
+    hh = symbols("hh", positive=True)
+    return limit(11 - 8 * Rational(1, 2) ** hh, hh, oo)
 
 
 def h1_13():
@@ -132,10 +132,20 @@ def h1_14():
 
 
 def h1_15():
-    rows = [(14, 5), (15, 9), (16, 12), (17, 8), (18, 7)]
-    vals = [thick for thick, days in rows for _ in range(days)]
-    assert len(vals) % 2 == 1
-    return vals[len(vals) // 2]
+    # the table gives RUNNING totals, so one week alone is a difference
+    running = {1: 96, 2: 214, 3: 305, 4: 372}
+    return Rational(running[3] - running[2])
+
+
+def h1_17():
+    """Two five-place samples with a common mean; the answer is the gap between
+    their ranges. sympy also re-derives the stem's own claim that the means
+    agree, so a wrong claim in the stem cannot pass unnoticed."""
+    mill = [13, 15, 17, 19, 21]
+    nether = [16, 16, 17, 18, 18]
+    check(Rational(sum(mill), len(mill)) == Rational(sum(nether), len(nether)),
+          "H1-17: the stem claims equal means but the two lists disagree")
+    return Rational((max(mill) - min(mill)) - (max(nether) - min(nether)))
 
 
 def h1_16():
@@ -153,7 +163,10 @@ def h1_20():
 
 
 def h1_22():
-    return simplify(sin(atan(Rational(7, 24))))
+    # right angle at C, leg BC = 8, area 60 -> AC = 15, tan A = BC/AC
+    ac = symbols("ac", positive=True)
+    acv = solve(Eq(Rational(1, 2) * ac * 8, 60), ac)[0]
+    return Rational(8, 1) / acv
 
 
 def h2e_02():
@@ -163,7 +176,7 @@ def h2e_02():
 
 def h2e_11():
     xr = symbols("xr", real=True)
-    return [z for z in solve(Eq(xr ** 3, 125), xr) if z.is_real][0]
+    return [z for z in solve(Eq(5 ** xr, 625), xr) if z.is_real][0]
 
 
 def h2e_13():
@@ -216,15 +229,19 @@ def h2h_06():
 
 
 def h2h_07():
-    mack = symbols("mack")
-    exact = solve(Eq(Rational(4, 10) * 300 + Rational(7, 10) * mack, 280), mack)[0]
-    return floor(exact)
+    """(5x-3)/4 >= x+2. Solve the boundary, then settle the DIRECTION by
+    testing a point rather than by reading the sign off the stem — a sign flip
+    is exactly the step a hand-written key gets wrong."""
+    bound = solve(Eq((5 * x - 3) / 4, x + 2), x)[0]
+    above = ((5 * (bound + 1) - 3) / 4) >= ((bound + 1) + 2)
+    check(bool(above), "H2H-07: the solution set is not the upper ray")
+    return "\\(x\\ge %d\\)" % int(bound)
 
 
 def h2h_08():
-    apos = symbols("ap", positive=True)
-    av = solve(Eq(2 * apos ** 2 - 5, 45), apos)[0]
-    return 2 * (2 * av) ** 2 - 5
+    # y=f(x) has zeros at -4 and 6; g(x)=f(x+2) has zeros where x+2 is a zero
+    zeros = sorted(solve(Eq(x + 2, z), x)[0] for z in (-4, 6))
+    return max(zeros)
 
 
 def h2h_09():
@@ -239,7 +256,7 @@ def h2h_10():
 
 
 def h2h_11():
-    return simplify(3 ** Rational(20, 5))
+    return simplify(6 * 9 ** (t / 2))
 
 
 def h2h_12():
@@ -268,10 +285,10 @@ def h2h_15():
 
 def h2h_16():
     rows = [("3.0 to 3.4", 12), ("3.5 to 3.9", 23), ("4.0 to 4.4", 31), ("4.5 to 4.9", 14)]
-    vals = [name for name, cnt in rows for _ in range(cnt)]
-    lo, hi = vals[len(vals) // 2 - 1], vals[len(vals) // 2]
-    assert lo == hi, (lo, hi)
-    return lo
+    total = sum(cnt for _, cnt in rows)
+    check(total == 80, f"H2H-16: the table totals {total}, not the 80 the stem states")
+    heavy = sum(cnt for name, cnt in rows if float(name.split()[0]) >= 4.0)
+    return Rational(heavy, total) * 100
 
 
 def h2h_20():
@@ -286,8 +303,10 @@ def h2h_21():
 
 
 def h2h_22():
-    bc = symbols("bc", positive=True)
-    return simplify(bc / (3 * bc))
+    # right angle at C, so cos A = AC/AB; AB = 87 and cos A = 20/29
+    acv = Rational(20, 29) * 87
+    bcv = sqrt(87 ** 2 - acv ** 2)
+    return simplify(87 + acv + bcv)
 
 
 DERIVE = {
@@ -307,18 +326,19 @@ DERIVE = {
  "H1-14": h1_14,
  "H1-15": h1_15,
  "H1-16": h1_16,
- "H1-17": lambda: Rational(168, 210),
+ "H1-17": h1_17,
  "H1-18": lambda: Rational(46000 * 1840, 1472),
  "H1-19": h1_19,
  "H1-20": h1_20,
- "H1-21": lambda: Rational(6 * 45 * 4, 10 * 10) / Rational(9, 10),
+ "H1-21": lambda: [z for z in solve(Eq((12 + symbols("wd")) ** 2 - 12 ** 2, 52),
+                                     symbols("wd")) if z > 0][0],
  "H1-22": h1_22,
 
  "H2E-01": lambda: 340 - 12 * 9,
  "H2E-02": h2e_02,
  "H2E-03": lambda: Rational(153, 9),
  "H2E-04": lambda: Rational(46, 10) - Rational(5, 100) * 12,
- "H2E-06": lambda: floor(Rational(45, 3)),
+ "H2E-06": lambda: floor(solve(Eq(5 * x + 8, 43), x)[0]),
  "H2E-07": lambda: 7 * 22 + 40,
  "H2E-08": lambda: factor(15 * p + 35),
  "H2E-09": lambda: simplify(sqrt(81 * symbols("b", positive=True) ** 4)),
@@ -331,10 +351,10 @@ DERIVE = {
  "H2E-16": lambda: Rational(25, 10) * 14,
  "H2E-17": lambda: Rational(36, 36 + 27 + 17),
  "H2E-18": lambda: 46 + 38 + 52 + 29,
- "H2E-19": lambda: Rational(1, 2) * 4 * Rational(15, 10) * 6,
+ "H2E-19": lambda: 120 * 45 - 15 ** 2,
  "H2E-20": h2e_20,
  "H2E-21": lambda: Rational(9, 10) ** 2 * 7,
- "H2E-22": lambda: 18 * sin(pi / 6),
+ "H2E-22": lambda: sqrt(9 ** 2 + 9 ** 2),
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,

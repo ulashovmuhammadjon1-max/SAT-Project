@@ -35,12 +35,54 @@ an exponential of the form a*b^t). The egg-grading table here asks a proportion
 carried to a second, larger day's grading, and the dovecote items are linear or
 proportional throughout.
 
-Templates deliberately chosen because the bank barely uses them (counts from
-content-pool/prod_math_stems.json, 1,386 live stems): arc length of a sector
-(0), interquartile/quartile statistics, a two-way table conditional probability
-(0 stems contain "two-way"), inverse proportion (0), a weighted average (0),
-completing the square (0), a radical equation with an extraneous root, and a
-combined-rate emptying problem.
+TWENTY-EIGHT of these 66 questions were rewritten after the first-ever
+verification pass, and the reason is recorded here because it is the single most
+transferable finding of this build. Only seven of the twenty-eight were caught
+by the token-Jaccard screen. The other twenty-one were caught by
+mechanism_search.py, which asks what mathematical MOVE a question makes and
+counts how many banked stems make the same move, ignoring the setting words
+entirely. The clearest cases, none of which the Jaccard screen would have
+rejected:
+
+  * a radical equation drafted as sqrt(x+7)=5 against Test 5 M2E Q14's
+    sqrt(x+7)=6 — the same radicand, scoring 0.80 against an unrelated stem and
+    never compared with the one it actually repeated;
+  * a parallel-segment triangle drafted with AP=6, PB=9, AQ=8 against Test 15
+    M2H Q19 and Test 17 M2H Q19, which use 6, 9 and 8;
+  * tan A = 5/12 against Test 11 M2H Q18's tan A = 5/12;
+  * a weighted mean of 40 carp and 60 tench against Test 15 M2H Q15's 14 salmon
+    in one tank and 6 in another;
+  * a cylinder-plus-cone hopper against Test 13 M2H Q17 and Test 15 M2H Q20,
+    both of which are a "grain hopper" of a cylinder plus a cone;
+  * a two-speed round trip against Test 14 M2H Q21, the only banked instance of
+    that mechanism and an exact template match.
+
+Two internal repeats were also mechanism-only findings: the draft's M1-02 and
+M1-07 were both a hawk losing a fixed weight per day, in the same module; and
+M1-04 and M1-22 both divided a volume by a volume and multiplied by 30.
+
+Every replacement was pre-screened by mechanism BEFORE it was written, and the
+mechanism chosen from the low-count end of the bank. Counts at the time of
+writing, from content-pool/prod_math_stems.json (1,386 live stems): a cost
+crossover inequality (0), a transfer between two groups (0), a scaled compound
+inequality (0), a Pythagorean quadratic from a diagonal (0), factoring out a
+common monomial completely (0), a quadratic recovered from its two roots (0), a
+compound fraction (1), a standard-deviation comparison (1), counting values
+above the mean (0), a rectangle-plus-semicircle composite area (1), a
+quadrilateral angle sum (0), a value that makes a function undefined (0),
+collecting like terms in two variables (0), a linear function extended from a
+table (1), an ordered pair satisfying two inequalities (1), a line meeting a
+parabola (2), a cube equation (3), a rational sum over a factorable quadratic
+denominator (0), an average rate of change (0), a median from a frequency table
+(0), a volume under percentage scaling of two dimensions (0), and a regular
+polygon recovered from its interior angle (1).
+
+Three trigonometry items sit in three different modules, and because a student
+sees Module 1 plus ONE Module 2 branch they are differentiated by both their
+given and their ask: M2E-22 gives all three sides and asks for a ratio, M1-21
+gives a ratio and a leg and asks for the perimeter, M2H-21 gives a ratio and the
+hypotenuse and asks for the area. Their Pythagorean triples are also disjoint —
+9-40-41, 20-21-29 and 8-15-17 — so no two share a number.
 
 House style follows Test 1/2 (see CLAUDE.md): stems are bare HTML, simple
 inline math stays plain text, every data table is real <table> markup, degree
@@ -91,21 +133,23 @@ MODULE_1 = [
             "4(17) + 5(12) = 128 dollars."),
 
  dict(n="M1-04", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("The cold room at a packing station has 96 cubic metres of usable space, of which 12 "
-            "cubic metres must be left clear as a walkway. Eggs are stored in stacks that each "
-            "occupy 0.75 cubic metres and each hold 30 trays. What is the greatest number of trays "
-            "the cold room can hold?"),
-      choices=["3,120", "3,240", "3,300", "3,360"], correct="D",
-      check="The space available for stacks is 96 - 12 = 84 cubic metres, so 84/0.75 = 112 stacks "
-            "fit and 112(30) = 3,360 trays."),
+      stem=("A packing station can grade a day's eggs by hand at a cost of $90 for the day plus 16 "
+            "cents for every tray graded, or hire a grading machine at a cost of $246 for the day "
+            "plus 4 cents for every tray graded. What is the least number of trays graded in a day "
+            "for which the machine costs less than grading by hand?"),
+      choices=["1,299", "1,300", "1,310", "1,301"], correct="D",
+      check="The machine is cheaper when 246 + 0.04t < 90 + 0.16t, that is 156 < 0.12t, so "
+            "t > 1,300; at exactly 1,300 trays the two costs are equal, so the least whole number "
+            "of trays is 1,301."),
 
  dict(n="M1-05", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A falconer walks from the mews out to the flying ground at 5 kilometres per hour and "
-            "walks back along the same path at 3 kilometres per hour. The round trip takes 2 hours "
-            "and 8 minutes. How many kilometres is the flying ground from the mews?"),
-      choices=["4", "5", "6", "8"], correct="A",
-      check="With d the one-way distance, d/5 + d/3 = 32/15 hours, so 8d/15 = 32/15 and d = 4 "
-            "kilometres."),
+      stem=("Two pullet houses hold a farm's laying birds. At the start of the season the first "
+            "house holds four times as many birds as the second. After 210 birds are moved from "
+            "the first house to the second, the first holds twice as many birds as the second. How "
+            "many birds did the first house hold at the start of the season?"),
+      choices=["840", "1,050", "1,260", "1,680"], correct="C",
+      check="With s birds in the second house the first holds 4s, and 4s - 210 = 2(s + 210) gives "
+            "2s = 630, so s = 315 and the first house held 4(315) = 1,260 birds."),
 
  dict(n="M1-06", domain="ALG", skill="ALG-LF", type="MC",
       stem=("In the xy-plane, line k passes through the points (2, 9) and (8, 3). Line m is "
@@ -116,21 +160,22 @@ MODULE_1 = [
             "x = 10 the y-coordinate is 11."),
 
  dict(n="M1-07", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A hawk may be flown only when its weight is within 12 grams of its flying weight of "
-            "1,046 grams. The hawk weighs 1,079 grams today and loses 7 grams a day. After how "
-            "many whole days will the hawk first be at an acceptable weight?"),
-      choices=["2", "3", "4", "5"], correct="B",
-      check="An acceptable weight satisfies 1,034 <= w <= 1,058, so 1079 - 7d <= 1058 needs "
-            "7d >= 21 and d = 3; at d = 3 the weight is 1,058 grams, which is still at or above "
-            "1,034."),
+      stem=("At a packing station an egg is graded Medium when its mass m, in grams, satisfies "
+            "\\( 53 \\le m \\lt 63 \\) . A tray is filled with 30 eggs, every one of them graded "
+            "Medium. Which of the following could be the total mass, in grams, of the 30 eggs on "
+            "that tray?"),
+      choices=["1,540", "1,585", "1,760", "1,920"], correct="C",
+      check="Thirty Medium eggs have a total mass T with 30(53) <= T < 30(63), that is "
+            "1,590 <= T < 1,890. Of the four values only 1,760 lies in that interval."),
 
  dict(n="M1-08", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A rectangular weathering ground where hawks are put out on their blocks is 8 metres "
-            "longer than it is wide, and its area is 105 square metres. What is the perimeter of "
-            "the weathering ground, in metres?"),
-      choices=["38", "40", "44", "52"], correct="C",
-      check="w(w+8) = 105 factors as (w+15)(w-7) = 0, so w = 7 and the length is 15; the perimeter "
-            "is 2(7+15) = 44 metres."),
+      stem=("A rectangular egg store is 14 metres longer than it is wide, and the distance from "
+            "one corner of the store to the opposite corner is 26 metres. What is the area of the "
+            "store, in square metres?"),
+      choices=["240", "120", "168", "260"], correct="A",
+      check="With w the width, w^2 + (w+14)^2 = 26^2 gives 2w^2 + 28w - 480 = 0, that is "
+            "w^2 + 14w - 240 = (w+24)(w-10) = 0, so w = 10 and the length is 24; the area is "
+            "10(24) = 240 square metres."),
 
  dict(n="M1-09", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A falconer swings a lure upward from the hand. Its height above the ground, in metres, "
@@ -141,16 +186,20 @@ MODULE_1 = [
             "1 < t < 3 and the lure is above 17 metres for 2 seconds."),
 
  dict(n="M1-10", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which of the following expressions is equivalent to \\( \\frac{6x^{2}+7x-20}{2x+5} \\) "
-            "for all x for which the expression is defined?"),
-      choices=["2x - 4", "3x + 4", "6x - 4", "3x - 4"], correct="D",
-      check="(2x+5)(3x-4) = 6x^2 + 7x - 20, so the quotient is 3x - 4 wherever 2x + 5 is not 0."),
+      stem=("A packing plan gives the usable volume of an egg store, in cubic metres, as "
+            "\\( 12x^{3}-27x \\) , where x is a length in metres. Which expression is equivalent "
+            "to that volume, written as a product of factors that cannot be factored further?"),
+      choices=["\\( 3x(2x-3)(2x+3) \\)", "\\( 3x(4x-9)(x+1) \\)",
+               "\\( 3x(2x-9)(2x+3) \\)", "\\( 9x(x-3)(x+3) \\)"], correct="A",
+      check="Taking out 3x leaves 3x(4x^2 - 9), and 4x^2 - 9 is a difference of two squares, so "
+            "the full factorisation is 3x(2x-3)(2x+3)."),
 
  dict(n="M1-11", domain="ADV", skill="ADV-NE", type="FR",
-      stem=("What value of x satisfies the equation \\( 2^{3x-1} = 32^{x-2} \\) ?"),
-      answers=["4.5", "9/2"],
-      check="32 = 2^5, so the equation is 2^(3x-1) = 2^(5x-10); equating exponents gives "
-            "3x - 1 = 5x - 10 and x = 9/2."),
+      stem=("The solutions to the equation \\( x^{2}+bx+c=0 \\) are 3 and -11, where b and c are "
+            "constants. What is the value of c - b?"),
+      answers=["-41"],
+      check="The two solutions sum to -b, so -b = 3 + (-11) = -8 and b = 8; they multiply to c, "
+            "so c = 3(-11) = -33. Hence c - b = -33 - 8 = -41."),
 
  dict(n="M1-12", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The functions f and g satisfy f(x) = 4x - 7 and f(g(x)) = 8x + 5 for every value of x. "
@@ -159,10 +208,13 @@ MODULE_1 = [
       check="4g(x) - 7 = 8x + 5 gives g(x) = (8x+12)/4 = 2x + 3, so g(3) = 9."),
 
  dict(n="M1-13", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("The expression \\( x^{2}-14x+40 \\) can be written in the form \\( (x-h)^{2}+k \\) , "
-            "where h and k are constants. What is the value of h + k?"),
-      choices=["-2", "2", "9", "16"], correct="A",
-      check="x^2 - 14x + 40 = (x-7)^2 - 49 + 40 = (x-7)^2 - 9, so h = 7, k = -9 and h + k = -2."),
+      stem=("A grading line's timing rule reduces to "
+            "\\( \\frac{\\frac{1}{x}-\\frac{1}{4}}{x-4} \\) , where x is a positive number other "
+            "than 4. Which expression is equal to that rule?"),
+      choices=["\\( \\frac{1}{4x} \\)", "\\( \\frac{1}{4x(x-4)} \\)",
+               "\\( -\\frac{4}{x(x-4)} \\)", "\\( -\\frac{1}{4x} \\)"], correct="D",
+      check="The numerator is 1/x - 1/4 = (4-x)/(4x). Dividing by x - 4 gives "
+            "(4-x)/(4x(x-4)) = -(x-4)/(4x(x-4)) = -1/(4x)."),
 
  dict(n="M1-14", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the number of eggs placed in each weight class by a packing station on "
@@ -181,31 +233,36 @@ MODULE_1 = [
       stem=("The time needed to lift and empty the eel traps on a stretch of river is inversely "
             "proportional to the number of workers doing it. Six workers need 45 minutes. How many "
             "minutes would ten workers need?"),
-      choices=["22.5", "27", "30", "75"], correct="B",
+      choices=["27", "22.5", "30", "75"], correct="A",
       check="Inverse proportion means nt is constant, and 6(45) = 270, so ten workers need "
             "270/10 = 27 minutes."),
 
  dict(n="M1-16", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The mean mass of eleven eggs in a tray is 63 grams. One egg, with a mass of 53 grams, "
-            "is taken out of the tray. What is the mean mass, in grams, of the ten eggs that "
-            "remain?"),
-      choices=["62", "63.5", "64", "65"], correct="C",
-      check="The eleven eggs have total mass 11(63) = 693 grams; removing 53 leaves 640 grams "
-            "across ten eggs, a mean of 64 grams."),
+      stem=("Two graders each weighed five eggs, in grams, and recorded these results.<br/>"
+            "Grader P: 58, 60, 62, 64, 66<br/>Grader Q: 52, 57, 62, 67, 72<br/>"
+            "Which statement correctly compares the two sets of five masses?"),
+      choices=["The two means are equal, and the standard deviation of Grader P's masses is "
+               "less than the standard deviation of Grader Q's masses.",
+               "The two means are equal, and the standard deviation of Grader P's masses is "
+               "greater than the standard deviation of Grader Q's masses.",
+               "The mean of Grader P's masses is greater, and the two standard deviations are "
+               "equal.",
+               "The mean of Grader P's masses is less, and the standard deviation of Grader P's "
+               "masses is greater."], correct="A",
+      check="Both sets total 310 grams, so both means are 62 grams. Grader P's masses lie within "
+            "4 grams of 62 while Grader Q's lie within 10 grams of 62, so Grader P's masses are "
+            "less spread out and have the smaller standard deviation."),
 
  dict(n="M1-17", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The table records the hawks kept at a mews during one season and whether each was "
-            "flown at quarry."
-            + table(["", "Flown", "Not flown", "Total"],
-                    [["Goshawks", "27", "13", "40"],
-                     ["Peregrines", "33", "27", "60"],
-                     ["Total", "60", "40", "100"]])
-            + "One of the hawks that were flown at quarry is selected at random. What is the "
-              "probability that the selected hawk is a peregrine?"),
-      choices=["\\( \\frac{11}{20} \\)", "\\( \\frac{3}{5} \\)", "\\( \\frac{33}{100} \\)",
-               "\\( \\frac{11}{40} \\)"], correct="A",
-      check="Sixty hawks were flown and 33 of them were peregrines, so the probability is "
-            "33/60 = 11/20."),
+      stem=("The table gives the number of eggs collected from a laying flock on each of six days."
+            + table(["Day", "Eggs collected"],
+                    [["Monday", "268"], ["Tuesday", "291"], ["Wednesday", "274"],
+                     ["Thursday", "302"], ["Friday", "285"], ["Saturday", "264"]])
+            + "On how many of these six days was the number of eggs collected greater than the "
+              "mean number collected per day?"),
+      choices=["2", "3", "4", "5"], correct="B",
+      check="The six counts total 1,684 eggs, so the mean is 1,684/6, about 280.7. The counts "
+            "above that mean are 291, 302 and 285, which is three days."),
 
  dict(n="M1-18", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A grading line handles 45 trays of eggs every 4 minutes, and each tray holds 30 eggs. "
@@ -214,13 +271,15 @@ MODULE_1 = [
       check="45/4 trays a minute is 675 trays an hour, and 675(30) = 20,250 eggs."),
 
  dict(n="M1-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A hawk is flown on a creance, a light line 12 metres long held at a fixed point. The "
-            "hawk flies a circular arc about that point, turning through 150&deg; . What is the "
-            "length, in metres, of the arc the hawk flies?"),
-      choices=["\\( 10\\pi \\)", "\\( 12\\pi \\)", "\\( 20\\pi \\)", "\\( 24\\pi \\)"],
-      correct="A",
-      check="The full circle has circumference 24pi, and 150/360 of it is (5/12)(24pi) = 10pi "
-            "metres."),
+      stem=("A weathering ground where hawks are put out on their blocks is a rectangle 14 metres "
+            "long and 12 metres wide, with a semicircular bay of diameter 12 metres built out "
+            "along one of the 12-metre sides. What is the total area of the weathering ground, in "
+            "square metres?"),
+      choices=["\\( 168+9\\pi \\)", "\\( 168+18\\pi \\)", "\\( 168+36\\pi \\)",
+               "\\( 168+72\\pi \\)"],
+      correct="B",
+      check="The rectangle has area 14(12) = 168 square metres. The bay is a semicircle of radius "
+            "6, with area (1/2)pi(6^2) = 18pi, so the total is 168 + 18pi."),
 
  dict(n="M1-20", domain="GT", skill="GT-LA", type="MC",
       stem=("In triangle ABC, the measure of angle A is 40&deg; , and the measure of angle B is "
@@ -231,10 +290,12 @@ MODULE_1 = [
             "exterior angle at B is 180 - 105 = 75&deg;."),
 
  dict(n="M1-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle ABC, the right angle is at vertex B, side AB has length 36, and "
-            "\\( \\tan A = \\frac{5}{12} \\) . What is the length of side AC?"),
-      choices=["15", "36", "39", "42"], correct="C",
-      check="tan A = BC/AB = 5/12 gives BC = 15, and AC = sqrt(36^2 + 15^2) = sqrt(1521) = 39."),
+      stem=("A falconer's flying lawn PQR is a triangle whose corner at R is a right angle. The "
+            "side QR measures 60 metres, and \\( \\sin P = \\frac{20}{29} \\) . The lawn is to be "
+            "fenced all the way round. How many metres of fencing are needed?"),
+      choices=["150", "189", "210", "273"], correct="C",
+      check="sin P = QR/PQ = 20/29 with QR = 60 gives PQ = 87, and "
+            "PR = sqrt(87^2 - 60^2) = sqrt(3969) = 63; the perimeter is 60 + 63 + 87 = 210."),
 
  dict(n="M1-22", domain="GT", skill="GT-AV", type="FR",
       stem=("An egg crate is a rectangular box measuring 60 centimetres by 40 centimetres by 30 "
@@ -264,9 +325,10 @@ MODULE_2_EASY = [
       check="24(6) + 15 = 144 + 15 = 159."),
 
  dict(n="M2E-03", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("If 4x - 9 = 27, what is the value of x + 5?"),
-      answers=["14"],
-      check="4x = 36 gives x = 9, so x + 5 = 14."),
+      stem=("A loft keeper counting his birds writes 7n - 12 = 4n + 27, where n is the number of "
+            "pigeons in the loft. What is the value of n?"),
+      answers=["13"],
+      check="Subtracting 4n from both sides gives 3n - 12 = 27, so 3n = 39 and n = 13."),
 
  dict(n="M2E-04", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A tank used to carry carp from a stew pond has a total mass, in kilograms, given by "
@@ -297,15 +359,18 @@ MODULE_2_EASY = [
             "40, giving 15 < d <= 40."),
 
  dict(n="M2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to 4(2x - 5) + 3x?"),
-      choices=["5x - 20", "8x - 20", "11x - 5", "11x - 20"], correct="D",
-      check="4(2x-5) = 8x - 20, and 8x - 20 + 3x = 11x - 20."),
+      stem=("A dovecote's floor plan gives an area, in square metres, of \\( (x+9)(x-4) \\) , "
+            "where x is a length in metres. Which expression is equivalent to that area?"),
+      choices=["\\( x^{2}+5x-36 \\)", "\\( x^{2}-5x-36 \\)", "\\( x^{2}+13x-36 \\)",
+               "\\( x^{2}+5x+36 \\)"], correct="A",
+      check="(x+9)(x-4) = x^2 - 4x + 9x - 36 = x^2 + 5x - 36."),
 
  dict(n="M2E-09", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by \\( f(x) = 2x^{2} - 5 \\) . What is the value of "
-            "f(-3)?"),
-      choices=["13", "23", "31", "41"], correct="A",
-      check="2(-3)^2 - 5 = 18 - 5 = 13."),
+      stem=("A loft keeper's feed rule is modelled by the function h defined by "
+            "\\( h(x) = \\frac{9}{x+6} \\) . For what value of x is h(x) undefined?"),
+      choices=["-9", "-6", "6", "9"], correct="B",
+      check="A quotient is undefined only where its denominator is 0, and x + 6 = 0 when "
+            "x = -6."),
 
  dict(n="M2E-10", domain="ADV", skill="ADV-NE", type="MC",
       stem=("The equation (x - 4)(x + 9) = 0 has two solutions. What is the sum of those two "
@@ -314,21 +379,25 @@ MODULE_2_EASY = [
       check="The solutions are 4 and -9, and 4 + (-9) = -5."),
 
  dict(n="M2E-11", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\( \\frac{18x^{7}}{3x^{2}} \\) for x not equal to "
-            "0?"),
-      choices=["\\( 15x^{5} \\)", "\\( 6x^{9} \\)", "\\( 21x^{5} \\)", "\\( 6x^{5} \\)"],
-      correct="D",
-      check="18/3 = 6 and x^7 divided by x^2 is x^5, giving 6x^5."),
+      stem=("Which expression is equivalent to 7a + 3b - 2a + 5b?"),
+      choices=["9a + 2b", "13ab", "5a + 2b", "5a + 8b"], correct="D",
+      check="Collecting the a terms gives 7a - 2a = 5a and collecting the b terms gives "
+            "3b + 5b = 8b, so the expression is 5a + 8b."),
 
  dict(n="M2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by f(x) = 3x + 1. For what value of x is f(x) = 22?"),
-      choices=["7", "11", "21", "67"], correct="A",
-      check="3x + 1 = 22 gives 3x = 21 and x = 7."),
+      stem=("The table gives four values of the linear function g."
+            + table(["x", "1", "2", "3", "4"],
+                    [["g(x)", "7", "11", "15", "19"]])
+            + "What is the value of g(7)?"),
+      choices=["23", "27", "31", "35"], correct="C",
+      check="Each step of 1 in x raises g by 4, so g(x) = 4x + 3 and g(7) = 28 + 3 = 31."),
 
  dict(n="M2E-13", domain="ADV", skill="ADV-NE", type="FR",
-      stem=("What is the solution to the equation \\( \\sqrt{x+7} = 5 \\) ?"),
-      answers=["18"],
-      check="Squaring gives x + 7 = 25, so x = 18, and sqrt(25) = 5 confirms it."),
+      stem=("The product of two consecutive positive integers is 210. What is the greater of the "
+            "two integers?"),
+      answers=["15"],
+      check="With n the smaller integer, n(n+1) = 210 gives n^2 + n - 210 = (n+15)(n-14) = 0, so "
+            "the positive solution is n = 14 and the greater integer is 15."),
 
  dict(n="M2E-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A decoy pond took 240 wildfowl in one season, and 35% of them were teal. How many "
@@ -371,25 +440,26 @@ MODULE_2_EASY = [
       check="18(25) = 450 square metres."),
 
  dict(n="M2E-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("Two angles are supplementary, and one of them measures 118&deg; . What is the measure, "
-            "in degrees, of the other angle?"),
-      choices=["22", "62", "118", "242"], correct="B",
-      check="Supplementary angles sum to 180&deg;, so the other is 180 - 118 = 62&deg;."),
+      stem=("Three of the four interior angles of a quadrilateral measure 95&deg; , 128&deg; , and "
+            "62&deg; . What is the measure, in degrees, of the fourth interior angle?"),
+      choices=["75", "85", "105", "115"], correct="A",
+      check="The four interior angles of a quadrilateral sum to 360&deg;, and "
+            "95 + 128 + 62 = 285, so the fourth angle measures 360 - 285 = 75&deg;."),
 
  dict(n="M2E-21", domain="GT", skill="GT-AV", type="MC",
       stem=("A cylindrical grain bin for a pigeon loft has a radius of 3 feet and a height of 10 "
             "feet. What is its volume, in cubic feet?"),
-      choices=["\\( 30\\pi \\)", "\\( 90\\pi \\)", "\\( 180\\pi \\)", "\\( 900\\pi \\)"],
-      correct="B",
+      choices=["\\( 30\\pi \\)", "\\( 180\\pi \\)", "\\( 900\\pi \\)", "\\( 90\\pi \\)"],
+      correct="D",
       check="The volume is pi(3^2)(10) = 90pi cubic feet."),
 
  dict(n="M2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle XYZ, the right angle is at vertex Y, side XY has length 8, side YZ "
-            "has length 15, and side XZ has length 17. What is the value of \\( \\tan Z \\) ?"),
-      choices=["\\( \\frac{8}{17} \\)", "\\( \\frac{15}{17} \\)", "\\( \\frac{8}{15} \\)",
-               "\\( \\frac{15}{8} \\)"], correct="C",
-      check="From vertex Z the opposite side is XY = 8 and the adjacent side is YZ = 15, so "
-            "tan Z = 8/15."),
+      stem=("In right triangle XYZ, the right angle is at vertex Y, side XY has length 9, side YZ "
+            "has length 40, and side XZ has length 41. What is the value of \\( \\sin X \\) ?"),
+      choices=["\\( \\frac{9}{41} \\)", "\\( \\frac{40}{41} \\)", "\\( \\frac{9}{40} \\)",
+               "\\( \\frac{41}{40} \\)"], correct="B",
+      check="From vertex X the opposite side is YZ = 40 and the hypotenuse is XZ = 41, so "
+            "sin X = 40/41."),
 ]
 
 
@@ -397,12 +467,13 @@ MODULE_2_EASY = [
 MODULE_2_HARD = [
 
  dict(n="M2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("In the system of equations below, k is a constant.<br/>2x + 3y = 12<br/>6x + ky = 30"
-            "<br/>The system has no solution. What is the value of k?"),
-      choices=["9", "12", "18", "24"], correct="A",
-      check="No solution means the two lines are parallel but distinct: multiplying the first "
-            "equation by 3 gives 6x + 9y = 36, so k = 9, and 36 is not 30, so the lines really are "
-            "distinct."),
+      stem=("Two dovecotes yielded 148 squabs between them in one season. The larger dovecote "
+            "yielded 16 more than twice as many squabs as the smaller. How many more squabs did "
+            "the larger dovecote yield than the smaller?"),
+      choices=["44", "60", "88", "104"], correct="B",
+      check="With s squabs from the smaller dovecote the larger yielded 2s + 16, so "
+            "s + 2s + 16 = 148 gives 3s = 132 and s = 44; the larger yielded 104, which is 60 "
+            "more than 44."),
 
  dict(n="M2H-02", domain="ALG", skill="ALG-LF", type="MC",
       stem=("In the xy-plane, the line through the points (a, 3) and (7, 15) has slope 4. What is "
@@ -436,12 +507,13 @@ MODULE_2_HARD = [
       check="M(n+c) = kn gives Mn + Mc = kn, so n(k - M) = Mc and n = Mc/(k - M)."),
 
  dict(n="M2H-06", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A wildfowler has $600 to spend. Decoys cost $28 each and cartridges cost $7 each. She "
-            "must buy at least 12 decoys, and she wants as many cartridges as possible. What is "
-            "the greatest number of cartridges she can buy?"),
-      choices=["37", "38", "40", "42"], correct="A",
-      check="Twelve decoys cost 12(28) = 336 dollars, leaving 264 dollars; 264/7 is about 37.7, so "
-            "37 cartridges is the greatest whole number affordable."),
+      stem=("A wildfowler sets x teal decoys and y wigeon decoys on a pond. The pond takes no more "
+            "than 60 decoys altogether, and she always sets at least twice as many teal decoys as "
+            "wigeon decoys. Which ordered pair (x, y) satisfies both of these conditions?"),
+      choices=["(24, 14)", "(30, 20)", "(40, 18)", "(44, 20)"], correct="C",
+      check="The conditions are x + y <= 60 and x >= 2y. For (24, 14), 24 < 28; for (30, 20), "
+            "30 < 40; for (44, 20), 64 > 60. Only (40, 18) satisfies both, since 58 <= 60 and "
+            "40 >= 36."),
 
  dict(n="M2H-07", domain="ALG", skill="ALG-LE", type="FR",
       stem=("What value of x satisfies \\( \\frac{x}{4} + \\frac{x}{6} = \\frac{x-14}{2} \\) ?"),
@@ -455,18 +527,17 @@ MODULE_2_HARD = [
       check="Expanding gives 9x^2 + 6kx + k^2, so 6k = 42 and k = 7, and c = k^2 = 49."),
 
  dict(n="M2H-09", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("The equation \\( 2x^{2}+kx+18=0 \\) has exactly one real solution, and k is positive. "
-            "What is the value of k?"),
-      choices=["6", "9", "12", "24"], correct="C",
-      check="Exactly one real solution means k^2 - 4(2)(18) = 0, so k^2 = 144 and the positive "
-            "value is k = 12."),
+      stem=("One solution to the equation \\( 2x^{2}+kx-30=0 \\) is x = 5, where k is a constant. "
+            "What is the other solution to that equation?"),
+      choices=["-6", "3", "-3", "6"], correct="C",
+      check="Substituting x = 5 gives 50 + 5k - 30 = 0, so k = -4 and the equation is "
+            "2x^2 - 4x - 30 = 0, that is x^2 - 2x - 15 = (x-5)(x+3) = 0; the other solution is "
+            "x = -3."),
 
  dict(n="M2H-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("What is the solution to the equation \\( \\sqrt{2x+3} = x-6 \\) ?"),
-      choices=["3", "7", "8", "11"], correct="D",
-      check="Squaring gives 2x + 3 = x^2 - 12x + 36, so x^2 - 14x + 33 = 0 and x = 3 or x = 11. At "
-            "x = 3 the right side is -3 while a square root is not negative, so 3 is extraneous and "
-            "11 is the only solution."),
+      stem=("In the equation \\( 2(x-3)^{3} = 54 \\) , what is the value of x?"),
+      choices=["4", "6", "9", "12"], correct="B",
+      check="Dividing by 2 gives (x-3)^3 = 27, so x - 3 = 3 and x = 6."),
 
  dict(n="M2H-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The functions f and g are defined by f(x) = ax + 3 and g(x) = x + a, where a is a "
@@ -476,25 +547,26 @@ MODULE_2_HARD = [
             "and a = 3 or a = -5; only a = 3 is positive."),
 
  dict(n="M2H-12", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\( \\frac{1}{x-2} - \\frac{3}{x+1} \\) for all x "
-            "for which the expression is defined?"),
-      choices=["\\( \\frac{-2x-5}{(x-2)(x+1)} \\)", "\\( \\frac{-2x+7}{(x-2)(x+1)} \\)",
-               "\\( \\frac{4x-5}{(x-2)(x+1)} \\)", "\\( \\frac{-2}{(x-2)(x+1)} \\)"],
-      correct="B",
-      check="Over the common denominator (x-2)(x+1) the numerator is (x+1) - 3(x-2) = -2x + 7."),
+      stem=("Which single fraction is equal to \\( \\frac{5}{x^{2}-4} - \\frac{1}{x-2} \\) , where "
+            "\\( x \\gt 2 \\) ?"),
+      choices=["\\( \\frac{3-x}{x^{2}-4} \\)", "\\( \\frac{4}{x^{2}-4} \\)",
+               "\\( \\frac{x+7}{x^{2}-4} \\)", "\\( \\frac{5-x}{x^{2}-4} \\)"],
+      correct="A",
+      check="Factoring the first denominator as (x-2)(x+2) shows the common denominator is "
+            "x^2 - 4, over which the numerator is 5 - (x+2) = 3 - x."),
 
  dict(n="M2H-13", domain="ADV", skill="ADV-NF", type="FR",
-      stem=("The function h is defined by \\( h(x) = 3(x-4)^{2} - 11 \\) . The minimum value of h "
-            "occurs at x = a and that minimum value is b. What is the value of a + b?"),
-      answers=["-7"],
-      check="The squared term is least when x = 4, where h(4) = -11, so a = 4, b = -11 and "
-            "a + b = -7."),
+      stem=("The function f is defined by \\( f(x) = x^{2}+3x \\) . What is the average rate of "
+            "change of f from x = 2 to x = 5?"),
+      answers=["10"],
+      check="f(2) = 4 + 6 = 10 and f(5) = 25 + 15 = 40, so the average rate of change is "
+            "(40 - 10)/(5 - 2) = 30/3 = 10."),
 
  dict(n="M2H-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A stew pond can be emptied by a large pipe alone in 6 hours or by a small pipe alone "
             "in 9 hours. Both pipes are opened together, and after 2 hours the large pipe is shut. "
             "How many more hours does the small pipe need to finish emptying the pond?"),
-      choices=["2", "3", "4", "5"], correct="C",
+      choices=["4", "2", "3", "5"], correct="A",
       check="In 2 hours the two pipes empty 2(1/6 + 1/9) = 5/9 of the pond, leaving 4/9; the small "
             "pipe empties 1/9 of the pond an hour, so it needs 4 more hours."),
 
@@ -511,12 +583,14 @@ MODULE_2_HARD = [
             "Stew lost the greatest percentage."),
 
  dict(n="M2H-16", domain="PSDA", skill="PSDA-ST", type="FR",
-      stem=("A stew pond holds 40 carp and 60 tench. The mean mass of the carp is 2.8 kilograms and "
-            "the mean mass of the tench is 1.3 kilograms. What is the mean mass, in kilograms, of "
-            "all 100 fish in the pond?"),
-      answers=["1.9", "19/10"],
-      check="The carp weigh 40(2.8) = 112 kilograms and the tench 60(1.3) = 78 kilograms, so the "
-            "mean is 190/100 = 1.9 kilograms."),
+      stem=("The table gives the number of nest holes in a dovecote that yielded each number of "
+            "squabs during one season. The dovecote has 25 nest holes in all."
+            + table(["Squabs from the hole", "Number of nest holes"],
+                    [["9", "3"], ["10", "5"], ["11", "7"], ["12", "6"], ["13", "4"]])
+            + "What is the median number of squabs yielded by a nest hole?"),
+      answers=["11"],
+      check="With 25 nest holes the median is the 13th value in order. The running totals are 3, "
+            "8, 15, 21 and 25, so the 13th value falls in the group that yielded 11 squabs."),
 
  dict(n="M2H-17", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("A basket holds 5 wigeon and 7 teal. Three birds are taken from the basket at random, "
@@ -535,21 +609,19 @@ MODULE_2_HARD = [
             "440/22 = 20 tiers."),
 
  dict(n="M2H-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A grain hopper for a dovecote is a cylinder of radius 2 feet and height 5 feet with a "
-            "cone of the same radius and of height 3 feet joined below it, point downward. What is "
-            "the total volume of the hopper, in cubic feet?"),
-      choices=["\\( 12\\pi \\)", "\\( 20\\pi \\)", "\\( 24\\pi \\)", "\\( 32\\pi \\)"],
-      correct="C",
-      check="The cylinder holds pi(4)(5) = 20pi and the cone (1/3)pi(4)(3) = 4pi, so the total is "
-            "24pi cubic feet."),
+      stem=("A cylindrical tank used to carry carp from a stew pond is replaced by a cylindrical "
+            "tank whose radius is 50% greater and whose height is 20% less. The volume of the new "
+            "tank is what percent of the volume of the old tank?"),
+      choices=["120%", "150%", "180%", "225%"], correct="C",
+      check="Volume is proportional to the square of the radius times the height, so the new "
+            "volume is (1.5)^2(0.8) = 2.25(0.8) = 1.8 times the old volume, or 180 percent of it."),
 
  dict(n="M2H-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC, point P lies on side AB and point Q lies on side AC, and segment PQ "
-            "is parallel to side BC. The length of AP is 6, the length of PB is 9, and the length "
-            "of AQ is 8. What is the length of side AC?"),
-      choices=["12", "20", "24", "27"], correct="B",
-      check="PQ parallel to BC gives AP/PB = AQ/QC, so 6/9 = 8/QC and QC = 12; then "
-            "AC = 8 + 12 = 20."),
+      stem=("The floor of a dovecote is a regular polygon, and each of its interior angles "
+            "measures 156&deg; . How many sides does the polygon have?"),
+      choices=["12", "14", "15", "18"], correct="C",
+      check="Each exterior angle measures 180 - 156 = 24&deg;, and the exterior angles of any "
+            "polygon sum to 360&deg;, so the polygon has 360/24 = 15 sides."),
 
  dict(n="M2H-21", domain="GT", skill="GT-TR", type="MC",
       stem=("In right triangle ABC, the right angle is at vertex C, the hypotenuse AB has length "
@@ -561,7 +633,7 @@ MODULE_2_HARD = [
  dict(n="M2H-22", domain="GT", skill="GT-AV", type="MC",
       stem=("Two conical feed hoppers are similar in shape, and their heights are in the ratio 2 to "
             "5. The smaller hopper holds 96 litres. How many litres does the larger hopper hold?"),
-      choices=["240", "600", "1,500", "6,000"], correct="C",
+      choices=["240", "600", "6,000", "1,500"], correct="D",
       check="Volumes of similar solids scale as the cube of the ratio, so the larger holds "
             "96(5/2)^3 = 96(125/8) = 1,500 litres."),
 ]

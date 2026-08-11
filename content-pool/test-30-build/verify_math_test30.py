@@ -82,22 +82,75 @@ def h1_03():
 
 
 def h1_06():
-    pts = [(20, 148), (35, 253), (50, 358)]
-    slope = Rational(pts[1][1] - pts[0][1], pts[1][0] - pts[0][0])
-    inter = pts[0][1] - slope * pts[0][0]
-    # the third row must lie on the same line, or the item is not linear
-    check(slope * pts[2][0] + inter == pts[2][1], "H1-06: table is not linear")
-    return f"V = {slope}m + {inter}"
+    pts = [(2, 190), (6, 350)]
+    second = Rational(pts[1][1] - pts[0][1], pts[1][0] - pts[0][0])
+    return second - 35
+
+
+def h1_08():
+    xp = symbols("x", positive=True)
+    return simplify(sqrt(72 * xp ** 5))
+
+
+def h1_10():
+    ends = sorted(solve(Eq(-2 * t ** 2 + 24 * t, 64), t))
+    check(len(ends) == 2, f"H1-10: expected two crossings, got {ends}")
+    # the parabola opens downward, so the model is at or above 64 between the roots
+    mid = (ends[0] + ends[1]) / 2
+    check((-2 * mid ** 2 + 24 * mid) >= 64, "H1-10: the interval between the roots is not the at-least region")
+    return ends[1] - ends[0]
+
+
+def h1_09():
+    ap, bp = symbols("a b", positive=True)
+    return simplify(18 * ap ** 6 * bp ** 2 / (6 * ap ** 2 * bp ** 5))
+
+
+def h1_18():
+    masses = [40, 55, 35, 70]
+    per_kg = Rational(600, sum(masses))
+    return per_kg * masses[2]
+
+
+def h1_20():
+    return Rational(150, 360) * Integer(12) ** 2
+
+
+def h2e_13():
+    roots = [z for z in solve(Eq(x ** 3, 343), x) if z.is_real]
+    check(len(roots) == 1, f"H2E-13: expected one real cube root, got {roots}")
+    return roots[0]
+
+
+def h2e_16():
+    vals = [12, 9, 14, 9, 11, 9, 15]
+    top = Counter(vals).most_common()
+    check(top[0][1] > top[1][1], "H2E-16: the list has no single mode")
+    return Integer(top[0][0])
+
+
+def h2e_17():
+    vals = [148, 155, 139, 162, 151, 144]
+    return Integer(max(vals) - min(vals))
+
+
+def h2h_01():
+    return solve(Eq((x + 3) / 4 + (x - 1) / 2, 7), x)[0]
+
+
+def h2h_10():
+    roots = solve(Eq(x ** 3 - 2 * x ** 2 - 15 * x, 0), x)
+    return Integer(len(set(roots)))
+
+
+def h2h_12():
+    sols = sorted(solve(Eq(x + Rational(18, 1) / x, 11), x))
+    check(len(sols) == 2, f"H2H-12: expected two solutions, got {sols}")
+    return sols[1] - sols[0]
 
 
 def h1_07():
     return min(i for i in range(1, 400) if 150 + 2 * i < 6 * i)
-
-
-def h1_10():
-    model = Rational(1, 4) * t ** 2 - 8 * t + 102
-    top = solve(Eq(diff(model, t), 0), t)[0]
-    return model.subs(t, top)
 
 
 def h1_11():
@@ -139,28 +192,16 @@ def h1_17():
 
 
 def h1_19():
-    ht = symbols("ht", positive=True)
-    return solve(Eq(Rational(1, 3) * pi * 15 ** 2 * ht, 1125 * pi), ht)[0]
+    return Integer(45) * Integer(3) ** 3
 
 
 def h1_22():
-    scale = 29 / sqrt(Integer(20) ** 2 + Integer(21) ** 2)
-    return simplify(Rational(1, 2) * (20 * scale) * (21 * scale))
-
-
-def h2e_16():
-    vals = sorted([24, 31, 28, 35, 27])
-    return Integer(vals[len(vals) // 2])
+    return 1 - Rational(2, 7) ** 2
 
 
 def h2e_18():
     rows = [("Alder", 45), ("Bryony", 62), ("Comfrey", 38), ("Dittany", 57)]
     return Integer(max(z[1] for z in rows) - min(z[1] for z in rows))
-
-
-def h2h_01():
-    xr = symbols("xr", real=True)
-    return sum(solve(Eq(Abs(3 * xr - 8), xr + 4), xr))
 
 
 def h2h_02():
@@ -179,8 +220,8 @@ def h2h_04():
 
 
 def h2h_05():
-    slope = Rational(3 - 9, 8 - (-4))
-    return -5 + slope * (14 - 2)
+    # f is linear and f(2) exceeds f(9) by 21, so the rise over the run 9-2 is -21.
+    return Rational(-21, 9 - 2)
 
 
 def h2h_06():
@@ -200,25 +241,11 @@ def h2h_09():
     return expand((3 * x - 7).subs(x, x + 4))
 
 
-def h2h_10():
-    av = symbols("av")
-    # a/(x+2) = x  ->  x^2 + 2x - a = 0, one real solution when the discriminant is 0
-    quad = expand(x * (x + 2) - av)
-    disc = quad.coeff(x, 1) ** 2 - 4 * quad.coeff(x, 2) * quad.coeff(x, 0)
-    return solve(Eq(disc, 0), av)[0]
-
-
 def h2h_11():
     bv, cv = symbols("bv cv")
     bb = solve(Eq(1 + bv + cv, 81 + 9 * bv + cv), bv)[0]
     axis = -bb / 2
     return solve(Eq(axis ** 2 + bb * axis + cv, -7), cv)[0]
-
-
-def h2h_12():
-    sols = solve(Eq(sqrt(2 * x + 11), x - 2), x)
-    check(len(sols) == 1, f"H2H-12: sympy returned {sols}, expected a single valid solution")
-    return sols[0]
 
 
 def h2h_13():
@@ -235,12 +262,6 @@ def h2h_18():
     rows = [("Aldworth", 250, 200), ("Bramfield", 320, 272),
             ("Culworth", 180, 144), ("Denshaw", 400, 312)]
     return max(rows, key=lambda row: Rational(row[2], row[1]))[0]
-
-
-def h2h_19():
-    rad = symbols("rad", positive=True)
-    rv = solve(Eq(2 * pi * rad * (2 * rad), 100 * pi), rad)[0]
-    return pi * rv ** 2 * (2 * rv)
 
 
 def h2h_20():
@@ -262,8 +283,8 @@ DERIVE = {
  "H1-05": lambda: solve(Eq(9 * t + 45, 4 * (9 * 0 + 45)), t)[0],
  "H1-06": h1_06,
  "H1-07": h1_07,
- "H1-08": lambda: expand((2 * x + 7) ** 2 - (2 * x - 7) ** 2),
- "H1-09": lambda: simplify((x ** 2 - 49) / (x ** 2 - 11 * x + 28)),
+ "H1-08": h1_08,
+ "H1-09": h1_09,
  "H1-10": h1_10,
  "H1-11": h1_11,
  "H1-12": h1_12,
@@ -272,9 +293,9 @@ DERIVE = {
  "H1-15": lambda: (Rational(34, 8) - Rational(60, 15)) * 100,
  "H1-16": h1_16,
  "H1-17": h1_17,
- "H1-18": lambda: Rational(120, 320) * 100,
+ "H1-18": h1_18,
  "H1-19": h1_19,
- "H1-20": lambda: Rational(3 * 12 * 4, 10 * 10) / Rational(6, 100),
+ "H1-20": h1_20,
  "H1-21": lambda: Rational(180 - 44, 2) / 2,
  "H1-22": h1_22,
 
@@ -282,24 +303,25 @@ DERIVE = {
  "H2E-02": lambda: 15 * 24,
  "H2E-03": lambda: Rational(480, 24),
  "H2E-04": lambda: (190 - 8 * d).subs(d, 12),
- "H2E-05": lambda: (9 * x + 40).subs(x, 7),
+ "H2E-05": lambda: solve(Eq(5 * p + 4 * 9, 96), p)[0],
  "H2E-06": lambda: 640 - 8 * 45,
  "H2E-07": lambda: [z for z in (5, 6, 7, 8) if 5 * z + 3 > 38][0],
- "H2E-08": lambda: expand(6 * (2 * k - 5) + 3 * k),
+ "H2E-08": lambda: expand((4 * k ** 2 + 7 * k - 5) + (2 * k ** 2 - 7 * k + 9)),
  "H2E-09": lambda: expand((x + 6) * (x + 4)),
  "H2E-10": lambda: expand((3 * m ** 4) ** 2),
- "H2E-11": lambda: (18 - d ** 2 / 4).subs(d, 6),
- "H2E-12": lambda: (-h ** 2 + 12 * h).subs(h, 5),
- "H2E-13": lambda: [z for z in solve(Eq(x ** 2 + 3, 52), x) if z > 0][0],
+ "H2E-11": lambda: sqrt(Integer(49) + 15),
+ "H2E-12": lambda: [z for z in solve(Eq(Abs(symbols("xr", real=True) - 19), 6),
+                                     symbols("xr", real=True)) if z > 19][0],
+ "H2E-13": h2e_13,
  "H2E-14": lambda: 7 * 60,
  "H2E-15": lambda: Rational(2400, 16),
  "H2E-16": h2e_16,
- "H2E-17": lambda: Rational(96 - 36, 96),
+ "H2E-17": h2e_17,
  "H2E-18": h2e_18,
- "H2E-19": lambda: 50 * 30 * 6,
- "H2E-20": lambda: 2 * (42 + 26),
- "H2E-21": lambda: 180 - 43 - 68,
- "H2E-22": lambda: Rational(12, 37),
+ "H2E-19": lambda: Rational(30 + 42, 2) * 16,
+ "H2E-20": lambda: Integer(40 // 8) * (24 // 8) * (16 // 8),
+ "H2E-21": lambda: Rational(126, 2),
+ "H2E-22": lambda: Rational(7, 10) * 180,
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -319,7 +341,7 @@ DERIVE = {
  "H2H-16": lambda: (Rational(85, 100) * 240 + Rational(70, 100) * 160) / 400 * 100,
  "H2H-17": lambda: (Rational(380, 400) - Rational(260, 400)) * 100,
  "H2H-18": h2h_18,
- "H2H-19": h2h_19,
+ "H2H-19": lambda: Integer(20) ** 2 - pi * (Integer(20) // 2) ** 2,
  "H2H-20": h2h_20,
  "H2H-21": h2h_21,
  "H2H-22": lambda: 1 / symbols("k", positive=True),
@@ -360,6 +382,11 @@ def latex_to_expr(text):
     tt = re.sub(r"(\d)\s*([a-zA-Z(])", r"\1*\2", tt)
     tt = re.sub(r"\)\s*\(", ")*(", tt)
     tt = re.sub(r"(?<![a-zA-Z])([a-zA-Z])\s*\(", r"\1*(", tt)
+    # A closing paren abutting a letter is an implicit product too. Without this
+    # 6x^{2}\sqrt{2x} rewrites to 6*x**(2)sqrt(2*x) — a syntax error, so the
+    # comparison silently falls through to the string fallback and never matches.
+    # Same family as the multi-letter-run split below.
+    tt = re.sub(r"\)\s*([a-zA-Z])", r")*\1", tt)
 
     # A surviving multi-letter run is an implicit product, not a symbol:
     # without this \frac{uv}{u+v} parses as one symbol named uv and the key

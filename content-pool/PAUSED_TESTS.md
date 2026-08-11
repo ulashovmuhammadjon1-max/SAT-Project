@@ -1,4 +1,4 @@
-# Tests 23 and 25–31 — paused mid-build
+# Tests 28–31 — paused mid-build
 
 Eight builds were stopped deliberately part-way through. This file records exactly where each
 one stopped, so the work can be resumed without re-deriving what state it is in.
@@ -65,3 +65,28 @@ Territories and structural templates as originally assigned:
 | 29 | Test 17 | brickworks and kilns, tile making, plasterwork, stonemasonry, scaffolding and hoists |
 | 30 | Test 18 | physic gardens, essential-oil distilling, apothecary dispensing, herbaria, seed drying |
 | 31 | Test 19 | poultry and egg grading, dovecotes, falconry, decoy ponds, eel traps, fish ponds |
+
+---
+
+# Second pass: Tests 27–31 (11 August)
+
+Five agents resumed these; all five were killed by an account session limit, not by
+an error in the work. Test 27 was finished and **published**. The rest stopped at
+these points.
+
+| test | Math | R&W | assembled | state |
+|---|---|---|---|---|
+| 27 | 66 | 81 | yes | **PUBLISHED.** Its agent believed the Math key `D=9/57` was worse than any shipped test; it is not — Test 17 ships `A=9` and Test 25 `D=10`, spreads of 9 against Test 27's 8. No change was needed. |
+| 28 | 66 | 81 | yes | **Held. Do not publish as-is.** Its agent reported finding a real key error in the writing items and was fixing that plus "several weak Boundaries items" when it died. Reading six Boundaries items found one confirmed defect: `RW_M2E Q16` choice C is `"quarter; yet the"` against a passage continuing `"the custom was never written"`, giving **"yet the the custom"**. The whole writing block needs a correctness pass before this ships. |
+| 29 | 66 | ~partial (458 lines) | no | R&W barely started — it had just begun the first chunk. |
+| 30 | 66 | 81 drafted (1,223 lines) | no | R&W drafted but never balanced or assembled. |
+| 31 | 66 | 81 drafted (1,288 lines) | no | R&W drafted, not assembled. **Its Math has still never been fully verified**, and its agent was fixing a self-contradictory rationale on item `F4` when it stopped. |
+
+Note the assembled JSON for a paused build can be **older than its source** — Test 28's was
+written 2m16s before its last source edit, so it did not contain the final fixes. Re-run the
+assembler before trusting any `testN.json` from an interrupted build.
+
+Each directory also now carries the mechanism-search helper its agent wrote
+(`mechanism.py`, `bankgrep.py`, `mechanism_search.py`, `mechanism_scan.py`) — searching the
+banked stems by mechanism rather than vocabulary is what found the repeats Jaccard missed, and
+those are worth keeping.

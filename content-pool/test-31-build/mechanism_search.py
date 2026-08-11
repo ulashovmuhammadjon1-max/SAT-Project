@@ -26,6 +26,14 @@ Two rules learned the hard way and enforced here:
     checker is worse than no check, because it trains you to ignore the output.
   * **Probes run on the stripped text.** `<img>` first (a base64 payload
     matches nearly anything), then all remaining tags, then entities.
+  * **A probe must spell out every verb the same move can be written with.**
+    The line-meets-a-parabola probe originally required the word *intersect*
+    and reported 2 hits. Eleven banked stems make that move; the other nine say
+    **meet**, **meets** or **crosses**. A Test 31 draft using `y=x^2-4x+7` and
+    a line sailed through both that probe and the Jaccard screen (0.47) —
+    against Test 12 M2H Q10, which uses `y=x^2-4x+7` and a line. Same family of
+    failure as a missing word boundary: the check looked right and silently
+    under-matched. When a mechanism has synonyms, enumerate them.
 
 Usage
     python3 mechanism_search.py              # every mechanism, with counts
@@ -124,6 +132,13 @@ MECHANISMS = {
     "discriminant zero: exactly one real solution":
         r"(?<![A-Za-z])exactly one(?![A-Za-z])[\s\S]{0,40}"
         r"(?<![A-Za-z])(real )?solution",
+    "a line meets a parabola (intersect / meet / cross)":
+        r"x\^\{?2[\s\S]{0,220}(?<![A-Za-z])"
+        r"(intersects?|meets?|crosses|cross)(?![A-Za-z])"
+        r"|(?<![A-Za-z])(intersects?|meets?|crosses|cross)(?![A-Za-z])"
+        r"[\s\S]{0,220}x\^\{?2",
+    "recover a coefficient from one stated solution, then find the other":
+        r"(?<![A-Za-z])[Oo]ne solution to(?![A-Za-z])",
     "radical equation, reject the extraneous root":
         r"\\sqrt\{[^{}]*\} *=",
     "same-base exponential equation, equate exponents":
@@ -210,6 +225,60 @@ MECHANISMS = {
         r"\\cos|\\sin",
     "count identical boxes that fill a larger box":
         r"(?<![A-Za-z])(filled completely|no space left|fills? the)(?![A-Za-z])",
+    'cost crossover: for what count is one linear cost below the other':
+        '(?<![A-Za-z])(less expensive|cheaper|costs? less|same (?:total )?cost|costs? the same)(?![A-Za-z])',
+    'transfer between two groups changes their ratio':
+        '(?<![A-Za-z])(moved from|transferred|moved out of)(?![A-Za-z])',
+    'scale a stated range and pick a value inside it':
+        '(?<![A-Za-z])[Ww]hich of the following could be the total(?![A-Za-z])',
+    'Pythagorean quadratic: diagonal plus a side relation':
+        '(?<![A-Za-z])(diagonal|corner to the opposite corner)(?![A-Za-z])',
+    'factor out a common monomial, then a difference of squares':
+        '(?<![A-Za-z])(factor(?:ed|s)? further|factored completely|common factor)(?![A-Za-z])',
+    'recover b and c from the two stated roots':
+        '(?<![A-Za-z])[Tt]he solutions to the equation(?![A-Za-z])[\\s\\S]{0,120}(?<![A-Za-z])are(?![A-Za-z])',
+    'simplify a compound (stacked) fraction':
+        '\\\\frac\\{\\\\frac\\{',
+    'compare the means and spreads of two data sets':
+        '(?<![A-Za-z])standard deviation(?![A-Za-z])',
+    'count the values in a table above their own mean':
+        '(?<![A-Za-z])greater than the mean(?![A-Za-z])',
+    'composite area: rectangle plus a semicircle':
+        '(?<![A-Za-z])semicircle|semicircular(?![A-Za-z])',
+    'recover the perimeter from a sine ratio and one leg':
+        '\\\\sin[\\s\\S]{0,160}(?<![A-Za-z])(perimeter|all the way round|fencing)(?![A-Za-z])',
+    'solve a linear equation with the variable on both sides':
+        '\\d+ *[a-z] *[-+] *\\d+ *= *\\d+ *[a-z]',
+    'expand a product of two binomials':
+        '(?<![A-Za-z])equivalent to(?![A-Za-z])[\\s\\S]{0,30}\\\\?\\(?\\( *x *[-+] *\\d+ *\\) *\\( *x *[-+] *\\d+ *\\)',
+    'the value that makes a rational function undefined':
+        '(?<![A-Za-z])undefined(?![A-Za-z])',
+    'collect like terms in two variables':
+        '(?<![A-Za-z])equivalent to(?![A-Za-z])[\\s\\S]{0,40}\\d+ *a *[-+] *\\d+ *b',
+    'extend a linear function given four table values':
+        '(?<![A-Za-z])table gives (?:four )?values of the linear function(?![A-Za-z])',
+    'consecutive integers with a given product':
+        '(?<![A-Za-z])consecutive(?![A-Za-z])[\\s\\S]{0,80}(?<![A-Za-z])product|(?<![A-Za-z])product of two consecutive(?![A-Za-z])',
+    'interior angle sum of a quadrilateral':
+        '(?<![A-Za-z])quadrilateral(?![A-Za-z])',
+    'compute a ratio from all three given sides':
+        '(?<![A-Za-z])side [A-Z]{2} has length(?![A-Za-z])[\\s\\S]{0,200}(?<![A-Za-z])side [A-Z]{2} has length',
+    'sum and multiple of two quantities, solved by substitution':
+        '(?<![A-Za-z])more than twice as many(?![A-Za-z])',
+    'which ordered pair satisfies two inequalities':
+        '(?<![A-Za-z])[Ww]hich ordered pair(?![A-Za-z])',
+    'solve a cube equation':
+        '\\) *\\^ *\\{?3\\}?|\\)\\^\\{3\\}',
+    'rational sum over a factorable quadratic denominator':
+        '\\\\frac\\{\\d+\\}\\{x\\^\\{?2\\}? *- *\\d+\\}',
+    'average rate of change of a function over an interval':
+        '(?<![A-Za-z])average rate of change(?![A-Za-z])',
+    'median from a frequency table':
+        '(?<![A-Za-z])median(?![A-Za-z])[\\s\\S]{0,200}(?<![A-Za-z])number of(?![A-Za-z])|(?<![A-Za-z])table gives the number of(?![A-Za-z])[\\s\\S]{0,300}(?<![A-Za-z])median',
+    'volume under a percentage change of two dimensions':
+        '(?<![A-Za-z])(radius|height)(?![A-Za-z])[\\s\\S]{0,80}\\d+ *(?:%|percent)[\\s\\S]{0,120}(?<![A-Za-z])(volume|percent of the volume)(?![A-Za-z])',
+    'regular polygon: interior angle gives the number of sides':
+        '(?<![A-Za-z])regular polygon(?![A-Za-z])',
     "area of a rectangle from two given sides":
         r"(?<![A-Za-z])area(?![A-Za-z])[\s\S]{0,140}"
         r"(?<![A-Za-z])(rectangle|rectangular)(?![A-Za-z])|"
@@ -223,69 +292,69 @@ OURS = {
     "M1-01": "recover slope+intercept from two (input, cost) pairs",
     "M1-02": "least/greatest integer satisfying a linear inequality",
     "M1-03": "solve a 2x2 linear system by elimination",
-    "M1-04": "count identical boxes that fill a larger box",
-    "M1-05": "two speeds out and back, total time given",
+    "M1-04": "cost crossover: for what count is one linear cost below the other",
+    "M1-05": "transfer between two groups changes their ratio",
     "M1-06": "perpendicular line through a point",
-    "M1-07": "least/greatest integer satisfying a linear inequality",
-    "M1-08": "quadratic word problem: area gives a side, then perimeter",
+    "M1-07": "scale a stated range and pick a value inside it",
+    "M1-08": "Pythagorean quadratic: diagonal plus a side relation",
     "M1-09": "interval on which a quadratic exceeds a level",
-    "M1-10": "divide a quadratic by a linear factor",
-    "M1-11": "same-base exponential equation, equate exponents",
+    "M1-10": "factor out a common monomial, then a difference of squares",
+    "M1-11": "recover b and c from the two stated roots",
     "M1-12": "compose two functions / recover the inner function",
-    "M1-13": "complete the square to vertex form",
+    "M1-13": "simplify a compound (stacked) fraction",
     "M1-14": "carry a table proportion to a larger total",
     "M1-15": "inverse proportion (constant product)",
-    "M1-16": "mean recovered after one value is removed",
-    "M1-17": "conditional probability from a two-way table",
+    "M1-16": "compare the means and spreads of two data sets",
+    "M1-17": "count the values in a table above their own mean",
     "M1-18": "scale a rate up to a longer period",
-    "M1-19": "arc length of a sector from a central angle",
+    "M1-19": "composite area: rectangle plus a semicircle",
     "M1-20": "exterior angle of a triangle",
-    "M1-21": "recover a side from a tangent ratio",
+    "M1-21": "recover the perimeter from a sine ratio and one leg",
     "M1-22": "count identical boxes that fill a larger box",
 
     "M2E-01": "solve a one-step linear equation in context",
     "M2E-02": "evaluate a linear model at a given input",
-    "M2E-03": "solve a linear equation then evaluate an expression",
+    "M2E-03": "solve a linear equation with the variable on both sides",
     "M2E-04": "evaluate a linear model at a given input",
     "M2E-05": "least/greatest integer satisfying a linear inequality",
     "M2E-06": "solve a one-step linear equation in context",
     "M2E-07": "translate words into an inequality (which inequality represents)",
-    "M2E-08": "expand and collect a linear expression",
-    "M2E-09": "evaluate a quadratic function at a given number",
+    "M2E-08": "expand a product of two binomials",
+    "M2E-09": "the value that makes a rational function undefined",
     "M2E-10": "sum or product of the roots of a factored quadratic",
-    "M2E-11": "quotient of powers with a numeric coefficient",
-    "M2E-12": "solve f(x) = k for the input x",
-    "M2E-13": "radical equation, reject the extraneous root",
+    "M2E-11": "collect like terms in two variables",
+    "M2E-12": "extend a linear function given four table values",
+    "M2E-13": "consecutive integers with a given product",
     "M2E-14": "percent of a given total",
     "M2E-15": "scale a rate up to a longer period",
     "M2E-16": "mean of a short explicit list",
     "M2E-17": "median of a short explicit list",
     "M2E-18": "read two cells of a table and subtract",
     "M2E-19": "area of a rectangle from two given sides",
-    "M2E-20": "supplementary angles",
+    "M2E-20": "interior angle sum of a quadrilateral",
     "M2E-21": "volume of a cylinder",
-    "M2E-22": "recover a side from a tangent ratio",
+    "M2E-22": "compute a ratio from all three given sides",
 
-    "M2H-01": "value of k making a linear system inconsistent",
+    "M2H-01": "sum and multiple of two quantities, solved by substitution",
     "M2H-02": "recover a missing coordinate from a stated slope",
     "M2H-03": "solve a compound (double) inequality",
     "M2H-04": "solve a 2x2 linear system by elimination",
     "M2H-05": "rearrange a literal formula for a named variable",
-    "M2H-06": "greatest whole count affordable within a budget",
+    "M2H-06": "which ordered pair satisfies two inequalities",
     "M2H-07": "clear denominators in a single-variable rational equation",
     "M2H-08": "match coefficients in an identity true for every x",
-    "M2H-09": "discriminant zero: exactly one real solution",
-    "M2H-10": "radical equation, reject the extraneous root",
+    "M2H-09": "recover a coefficient from one stated solution, then find the other",
+    "M2H-10": "solve a cube equation",
     "M2H-11": "compose two functions / recover the inner function",
-    "M2H-12": "combine two rational expressions over a common denominator",
-    "M2H-13": "minimum/maximum of a quadratic in vertex form",
+    "M2H-12": "rational sum over a factorable quadratic denominator",
+    "M2H-13": "average rate of change of a function over an interval",
     "M2H-14": "combined work rate, one worker leaves partway",
     "M2H-15": "compare percentage change across table rows",
-    "M2H-16": "weighted mean of two groups of different sizes",
+    "M2H-16": "median from a frequency table",
     "M2H-17": "probability of a run of draws without replacement",
     "M2H-18": "unit yield recovered, then scaled and divided",
-    "M2H-19": "volume of a cylinder plus a cone (composite solid)",
-    "M2H-20": "side ratio from parallel segment in a triangle",
+    "M2H-19": "volume under a percentage change of two dimensions",
+    "M2H-20": "regular polygon: interior angle gives the number of sides",
     "M2H-21": "recover a side or area from a cosine/sine ratio",
     "M2H-22": "volume ratio of similar solids (cube of the scale factor)",
 }

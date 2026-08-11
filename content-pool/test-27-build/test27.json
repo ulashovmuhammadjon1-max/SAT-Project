@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T27:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Before a gang set foot on a frozen pond, a horse dragged a marking plough across it, scoring a grid of shallow grooves into the surface. The grooves cut nothing free; a second pass with a deeper blade, and finally a hand saw, did that. What the grid did was fix the size of every block hours before the first one floated loose, so that a hundred men working across a hundred yards of ice all produced the same rectangle. The marking pass was therefore less a cut than a _____.",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the grooves free nothing and instead settle the dimensions in advance for everyone working the pond, which makes the pass an act of laying out rather than of cutting. Calling it a delay would treat the marking as time lost, but the text presents it as the step that makes the later cutting uniform.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "plan",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "risk",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "delay",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "flourish",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;available&rdquo; most nearly mean?",
+   "passage": "For most of the twentieth century a food was judged safe by how much water it contained. The measure that displaced it, water activity, asks instead how much of that water is free to take part in a reaction rather than bound to sugar, salt or protein. Honey and a fresh fig can hold similar amounts of water and behave completely differently, because in the honey almost none of it is <u>available</u>. Below an activity of 0.85, most bacteria that cause illness will not grow at all.",
+   "difficulty": "MEDIUM",
+   "why": "The passage defines water activity as the share of water free to take part in a reaction rather than bound to other molecules, and the honey example turns on exactly that distinction. Reading the word as easy to remove imports a question about drying that the passage does not raise.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "fit to drink",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "free to react",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "plainly visible",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "easy to remove",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "An affineur's daily round looks like housekeeping and is not. Brushing a wheel does not merely remove the grey bloom that has risen on it; it redistributes the organisms in that bloom across the surface and presses them into the paste beneath, so that the rind thickens evenly instead of in patches. Turning the wheel does not merely stop it flattening; it moves the moisture that has settled to the underside back through the body of the cheese. Every gesture in the cave is _____.",
+   "difficulty": "MEDIUM",
+   "why": "Both examples show a routine motion doing work on the cheese itself rather than tidying it, so the blank must credit the gestures with shaping the product. Describing them as ceremonial would empty them of the physical effects the passage takes two sentences to spell out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "formative",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "ceremonial",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "hurried",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "optional",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A potato kept at 4&deg;C will not sprout, but it turns its starch to sugar and fries black. A potato kept at 10&deg;C fries well and sprouts by February. Growers who need both qualities store at the lower temperature and then warm the crop for two weeks before it leaves the shed, which converts the sugar back without waking the eyes. The practice treats the two faults as _____ rather than as a single problem with a single setting.",
+   "difficulty": "MEDIUM",
+   "why": "The two-stage regime works precisely because the sugar fault and the sprouting fault are handled at different times and different temperatures, which means the grower has pulled them apart. Treating them as unavoidable would contradict a passage whose whole point is that both are avoided.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "trivial",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "separable",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "identical",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unavoidable",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A working saltern is not one pond but a staircase of them. Sea water enters the highest and widest, where it may sit for weeks losing volume to the sun; it is then let down into a smaller pond, and then a smaller one again, growing heavier at every step until the last and shallowest pan is close enough to saturation that a night's cooling throws down crystals. The design is _____: each pond does one part of a concentration that no single pond could manage.",
+   "difficulty": "MEDIUM",
+   "why": "The passage describes water passing through ponds of decreasing size, each carrying the concentration further, and states that no single pond could do the whole job. Calling the design improvised would suggest it was arrived at without order, while the text sets out a fixed series of steps.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "symbolic",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "improvised",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "sequential",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "wasteful",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "The natural caves of Roquefort are cut through by narrow fissures that run from the plateau above down into the cellars, and air moves through them all year. In summer the cellars are cooler than the outside and draw air downward; in winter the flow reverses. The result is a chamber that is never sealed and never dry, and it is the humidity, more than the temperature, that the cheesemakers found impossible to reproduce when they first tried building cellars above ground.",
+   "difficulty": "MEDIUM",
+   "why": "The passage traces the airflow through the fissures, states that it keeps the cellars humid, and ends on the failure of built cellars to match that humidity. The option about superior cheese asserts a quality judgement the passage avoids, since it speaks only of a condition that was hard to reproduce.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To explain how a cave's natural ventilation maintains a condition that proved difficult to imitate artificially",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To describe the geological processes by which the fissures above Roquefort were formed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To argue that cheese ripened in natural caves is superior to cheese ripened above ground",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To identify the season in which the cellars of Roquefort are at their most productive",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Sea ice does not always begin as a sheet. In water roughened by swell, the first crystals gather into a grey slush that the waves keep breaking apart, and each fragment is jostled against its neighbours until it wears a raised white rim and a rounded outline. <u>The result is a field of pale discs a metre across, packed edge to edge and rising and falling with the sea beneath them.</u> Only when the swell dies do the discs freeze into one another, and the rims stay visible in the finished sheet as a record of how it formed.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence pictures the discs, and the passage ends by saying their rims survive in the finished sheet as a record of its formation, so the description sets up that later reading. The option about swell preventing ice contradicts the passage, in which ice forms in rough water and merely takes a different shape.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It explains why a swell prevents sea ice from forming at all in rough water.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It contrasts the appearance of new sea ice with the appearance of ice formed in calm water.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It describes the intermediate stage whose distinctive shape the final sentence then reads as evidence of the ice's history.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It provides the measurement that allows pancake ice to be told apart from other kinds of sea ice.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A curing season is not chosen; it is imposed. Herring shoal along a coast for a matter of weeks, and a barrel packed from the first week of a run and a barrel packed from the last can differ by half in fat content, which changes how much salt the fish will take up and how long it will keep. Nineteenth-century Scottish curers followed the shoals north to south down the coast through the summer, and a crew's year was set by the fish's calendar rather than by any decision of its own.",
+   "difficulty": "MEDIUM",
+   "why": "The passage has the run's length fixing the season, the fish's fat fixing the salt and the keeping, and the crews chasing the shoals rather than setting their own year. The option about adjusting fat content by salting inverts the stated relationship, in which fat content determines how much salt the fish takes up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Scottish curers preferred to pack herring caught in the first week of a run.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The fat content of herring can be adjusted by changing the amount of salt used in packing.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Following the shoals down the coast allowed curers to extend their season indefinitely.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The timing and the character of a curing season were dictated by the movements and condition of the fish.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A wood frog spends the winter frozen. Ice fills the spaces between its cells and as much as two thirds of its body water becomes solid; the heart stops and the animal shows no measurable respiration. What keeps it alive is that the ice stays outside the cells. In the hours before freezing the liver floods the blood with glucose, which enters the cells and holds enough water inside them that they never dehydrate to the point of collapse, and in spring the frog thaws from the inside out and hops away.",
+   "difficulty": "MEDIUM",
+   "why": "The passage states that the animal does freeze, that survival depends on the ice remaining outside the cells, and that glucose is what keeps the cells from collapsing. The option saying the frog avoids freezing contradicts the first sentence, which has ice filling the spaces between its cells.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Two thirds of the frog's body water must freeze if the animal is to survive the winter.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The frog's heart continues to beat slowly throughout the period in which it is frozen.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The frog survives freezing because a chemical change protects its cells while ice forms around them.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The frog avoids freezing altogether by producing glucose before winter begins.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the manager's conclusion?",
+   "passage": "Potatoes break dormancy sooner the warmer they are kept, but the relationship is not a straight line, and growers want to know where the useful threshold lies. A store recorded the proportion of tubers that had sprouted after twenty weeks at four temperatures. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Storage temperature</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Sprouted after 20 weeks</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">41%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">78%</td></tr></table>The store's manager concluded that the cost of chilling below 6&deg;C buys much less than the cost of chilling from 9&deg;C down to 6&deg;C.",
+   "difficulty": "MEDIUM",
+   "why": "The conclusion compares the benefit of two equal three-degree steps, so the supporting datum must give both drops and show the lower step yielding far less. Reporting the 2% at 3&deg;C gives one endpoint without the comparison the conclusion rests on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Only 2% of tubers had sprouted at 3&deg;C, the lowest figure recorded in the trial.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "At 12&deg;C, 78% of tubers had sprouted, more than at any other temperature tested.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Sprouting increased at every step as the storage temperature was raised.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Moving from 9&deg;C to 6&deg;C cut sprouting by 32 percentage points, while moving from 6&deg;C to 3&deg;C cut it by 7 more.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the team's prediction?",
+   "passage": "Antifreeze glycoproteins are expensive for a fish to make, and biologists expect an animal to make only as much as its habitat requires. Because the sea surface in the Southern Ocean sits at the freezing point while deeper water is a fraction of a degree warmer and holds no ice crystals at all, one team predicted that _____",
+   "difficulty": "MEDIUM",
+   "why": "The prediction ties the amount produced to the risk of encountering ice, which is highest at the surface, so the supporting finding must compare shallow and deep species and find more of the protein in the shallow ones. The finding about Arctic species concerns where the molecule came from and bears on convergence rather than on how much any fish makes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The gene coding for the glycoprotein appears to have arisen from a duplicated digestive enzyme gene.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Species that feed in the top fifty metres carry markedly higher plasma concentrations of the glycoproteins than closely related species restricted to depths below five hundred metres.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The glycoproteins found in Antarctic fish are chemically almost identical to those found in several unrelated Arctic species.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Fish held in aquarium water a full degree above the freezing point continue to produce the glycoproteins for several months.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the manager's argument?",
+   "passage": "Solar salt production is seasonal in a way that surprises visitors, because the limit is not sunshine alone but the difference between evaporation and rainfall. A works on the Atlantic coast recorded its yield across four months of one season. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Month</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Rainfall (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Salt drawn (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">June</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">210</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">July</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">480</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">August</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">540</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">September</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">74</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">95</td></tr></table>The manager argued that a wet month costs the works far more than the water it adds, because rain dilutes ponds that have taken weeks to concentrate.",
+   "difficulty": "MEDIUM",
+   "why": "The argument is that rain is disproportionately costly, so the datum needed is the wettest month set against the collapse in its yield. The option pairing August's dryness with its high yield shows the favourable case and says nothing about what a wet month costs.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "September had the highest rainfall of the four months and a yield below a fifth of August's.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "August had the lowest rainfall of the four months and the highest salt yield.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "July and August together account for more than two thirds of the salt drawn in the season.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "June's rainfall was more than twice July's, and June's yield was less than half July's.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Consumer pressure to remove nitrite from cured fish and meat has been steady for forty years, and the industry has answered with celery powder, which is marketed as a natural alternative. Celery is rich in nitrate, and the bacteria added alongside it reduce that nitrate to nitrite in the pack. The finished product contains nitrite at concentrations comparable to those of a conventional cure, arrived at by a longer route and labelled differently. It follows that the substitution has, in chemical terms, _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the finished product contains comparable nitrite concentrations reached by a longer route, so what has altered is where the compound comes from. The option about reducing the quantity contradicts the word comparable, which the passage uses precisely to deny a difference in amount.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "introduced a compound that had not previously been present in cured products.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "removed the need for any bacterial activity during the curing process.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "changed the source of the compound rather than its presence in the food.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "reduced the quantity of the compound while preserving its preservative effect.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Industrial salterns are among the most productive shorebird sites in Europe, which is not what a visitor expects of a set of rectangular concrete-edged ponds. The reason is that the ponds hold a graded series of salinities, each supporting its own invertebrates and each held at a constant depth by a works that has no interest in tides. A natural lagoon offers the same range of conditions only briefly and only in patches. Conservationists have found that when a saltworks closes, the bird numbers fall within a few seasons, which implies that the habitat's value depends on _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage attributes the richness to a managed set of salinities and depths and then reports the birds leaving once the works shuts, so the value rests on the industry going on working. The option about tidal scouring picks up a contrast the passage draws with natural lagoons and turns it into the cause, when the text credits the graded salinities instead.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the invertebrates being introduced deliberately by the works.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "the continued operation of the industry that maintains the ponds' distinct conditions.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "the absence of the tidal movement that would otherwise scour the ponds.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the concrete edging that separates one pond from another.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Because the stamps pressed into an amphora's handle before firing name a workshop, and sometimes a consular year, a single sherd can be dated more precisely than the layer it was found _____ archaeologists have occasionally used the pottery to correct the stratigraphy rather than the other way about.",
+   "difficulty": "MEDIUM",
+   "why": "The comma before the coordinating conjunction marks the boundary between two independent clauses. A semicolon before a conjunction that is already doing the joining doubles the mark unnecessarily.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "in: and",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "in, and",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "in and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "in; and",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Joseph Black noticed something that his contemporaries had all seen and none had thought worth explaining: a lump of ice in a warm room takes hours to melt, while the same lump of water, once melted, warms measurably within _____ concluded that melting itself consumes heat, and named the quantity latent.",
+   "difficulty": "MEDIUM",
+   "why": "The observation is a complete sentence and the conclusion drawn from it is another, so a full stop belongs between them. A comma would join two independent clauses with no conjunction to carry the join.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "minutes. He",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "minutes, he",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "minutes he",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "minutes; and he",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The last pan of a saltern is worked differently from the rest. Because the brine there is already close to saturation and a night's cooling is enough to precipitate _____ raked into ridges every morning and left to drain before it is carried off.",
+   "difficulty": "MEDIUM",
+   "why": "The introductory clause opening with the subordinating conjunction has to be marked off from the main clause that completes the sentence, and only a comma does that. A semicolon would require an independent clause on its left, which a clause beginning with a subordinator is not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "it the crop is",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "it; the crop is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "it: the crop is",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "it, the crop is",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Depot laying looks like a detour and is arithmetic. A party that carries food forward, buries it and returns has spent days without advancing, but every kilogram left behind is a kilogram the same party will not have to drag on the outward march _____ and the saving compounds at every stage of the journey.",
+   "difficulty": "MEDIUM",
+   "why": "A comma belongs before the coordinating conjunction that joins two independent clauses. Leaving the mark out runs a full clause on after another with only the conjunction between them, which the convention does not allow at this length.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "proper;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "proper",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "proper:",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "proper,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The Antarctic icefishes are the only vertebrates with no haemoglobin at all, and their blood, which carries oxygen in simple solution, _____ about a tenth of the oxygen that a comparable red-blooded fish's blood does.",
+   "difficulty": "MEDIUM",
+   "why": "The subject is the singular blood, and the clause between the commas does not change what the verb must agree with. Choosing the plural form takes the nearby plural noun for the subject instead of the one the sentence actually supplies.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "hold",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "holding",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "to hold",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "holds",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Keepers of an old orchard cellar knew that a Bramley and a Cox will not sit together for long, because the two varieties differ in how much gas each _____ as it ripens.",
+   "difficulty": "MEDIUM",
+   "why": "The pronoun each is singular and governs the verb in this clause, so the singular form is required. The plural form would agree with the varieties rather than with the pronoun that actually stands as the subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "giving off",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "are giving off",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "gives off",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "give off",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A salt marsh gains height by trapping sediment among its stems, and because the rate at which it does so _____ with the depth of water that covers it, a marsh tends to rise until it is flooded only on the highest tides.",
+   "difficulty": "MEDIUM",
+   "why": "The subject of the clause is the singular rate, and the verb must agree with it rather than with the plural noun nearest to it. A participle would leave the subordinate clause without a finite verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have fallen",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "falls",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "fall",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "falling",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Rock salt is mined from beds laid down when an ancient sea dried, and it comes out of the ground already pure enough for most industrial uses. Solar salt is made by drying sea water in ponds, and arrives carrying magnesium and calcium that have to be washed out. _____ solar salt is cheaper wherever the climate allows it, because the sun does for nothing the work that a mine does with machinery.",
+   "difficulty": "MEDIUM",
+   "why": "The preceding sentences give solar salt the disadvantage of impurity, and the sentence then asserts a price advantage in spite of it, so a concessive transition is needed. A consequence marker would claim the cheapness follows from the impurity, which the passage does not say.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "In short,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The pot-in-pot cooler is two earthenware jars with wet sand between them, and it works because water evaporating from the outer jar draws heat from whatever the inner jar holds. The effect depends entirely on the surrounding air being dry enough to take up that water. _____ the same device that holds vegetables ten degrees below air temperature in the Sahel does almost nothing on a humid coast.",
+   "difficulty": "MEDIUM",
+   "why": "The failure on a humid coast follows directly from the stated dependence on dry air, so the transition marks a consequence. A concessive marker would present the failure as running against the explanation, when it is exactly what the explanation predicts.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Beforehand,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Consequently,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Similarly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Seed destined for long storage is dried to about five per cent moisture before it is frozen, and the drying is not a convenience. Water left in a seed expands as it freezes and ruptures the cell walls, so a seed frozen wet is killed by the very step meant to preserve it. _____ the drying room, not the freezer, is where a bank's collection is most often lost.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence carries the point about drying further, naming the drying room as the place where collections are lost, which intensifies rather than qualifies what precedes it. A contrastive marker would set the claim against the account of why drying matters, and it extends that account instead.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Otherwise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Later,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Indeed,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why a collection is judged on more than the quantity of seed it contains. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A collecting team gathers seed from at least fifty plants at a site.</li><li>Seed from a single plant would capture only a fraction of the population's variation.</li><li>The team records the coordinates, the soil and the associated species at each site.</li><li>A sample without those records cannot be matched to a habitat if the site is later lost.</li><li>About a fifth of accessions are rejected on arrival for insufficient sampling or records.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks why quantity alone is not the measure, so the response must give both requirements — breadth of sampling and the site records — with the reason for each and the rejection rate that enforces them. Stating the fifty-plant rule covers one requirement and leaves the records out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Seed is gathered from at least fifty plants because one plant would capture only a fraction of a population's variation, and the coordinates, soil and associated species are recorded because a sample without them cannot be matched to a habitat if the site is lost, which is why about a fifth of accessions are rejected on arrival.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A collecting team gathers seed from at least fifty plants at each site it visits.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "About a fifth of accessions are rejected on arrival for insufficient sampling or records.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The team records the coordinates, the soil and the associated species at each collecting site.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how conditions that exclude most life come to support a large bird population. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Lake Magadi in Kenya is both extremely alkaline and extremely saline.</li><li>Its surface is covered by a crust of sodium carbonate up to forty metres thick.</li><li>Dense blooms of cyanobacteria grow in the brine beneath the crust.</li><li>Lesser flamingos feed almost exclusively on those cyanobacteria.</li><li>The lake supports one of the largest concentrations of the species in Africa.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks how hostile conditions end in abundance, which needs the exclusion, the organism that tolerates it, the bird that eats only that organism, and the resulting numbers. Describing the lake's chemistry and its crust establishes the hostility and never reaches the birds.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Lake Magadi in Kenya is both extremely alkaline and extremely saline, and its surface carries a crust of sodium carbonate up to forty metres thick.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Dense blooms of cyanobacteria grow in the brine beneath the crust at Lake Magadi.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Lesser flamingos feed almost exclusively on cyanobacteria and gather at Lake Magadi in large numbers.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Water so alkaline and saline that most organisms are excluded still carries dense blooms of cyanobacteria beneath its sodium carbonate crust, and because lesser flamingos feed almost exclusively on those cyanobacteria the lake supports one of the largest concentrations of the species in Africa.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why one of the two Yarmouth cures was suited to export and the other was not. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Yarmouth red herring was salted for up to three weeks before smoking.</li><li>It was then hung in a smokehouse over oak fires for as long as six weeks.</li><li>The finished fish was hard, deep red and would keep for a year unrefrigerated.</li><li>It was exported in quantity to the Mediterranean and to the Caribbean.</li><li>The bloater, cured overnight in the same town, kept for only a few days.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal contrasts two cures by their fitness for export, so the response must give the long cure, the keeping quality it produced, the markets reached, and the short-cured fish that could not reach them. Listing the salting and smoking times alone describes one process without reaching the comparison the goal asks for.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The bloater was cured overnight in Yarmouth and kept for only a few days.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Red herrings were exported in quantity to the Mediterranean and to the Caribbean.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Three weeks in salt and as much as six weeks over oak fires left the red herring hard and able to keep for a year without refrigeration, which is why it travelled to the Mediterranean and the Caribbean while the overnight-cured bloater from the same town lasted only days.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The Yarmouth red herring was salted for up to three weeks and then hung over oak fires for as long as six weeks.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T27:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The Massachusetts ice house was built as two buildings, one inside the other, with a foot of sawdust packed between them and a gap left under the eaves for warm air to escape. Nothing in it made cold. The whole structure worked by _____ the heat that would otherwise reach the stack, and the ice it held all summer was simply the ice that had not yet melted.",
+   "difficulty": "EASY",
+   "why": "The text states plainly that nothing in the building made cold and that the surviving ice was merely what had not yet melted, so the structure can only be delaying heat rather than removing it. Choosing a word for producing cold contradicts the sentence that rules exactly that out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "welcoming",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "slowing",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "generating",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "measuring",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;still&rdquo; most nearly mean?",
+   "passage": "A limestone cave a hundred metres in holds the mean annual temperature of the rock above it, and it holds it whatever the season. Summer air entering the mouth gives up its heat to kilometres of stone long before it reaches the back; winter air does the reverse. A surveyor logging a chamber over three years found the swing between her highest and lowest readings smaller than the swing outside on a single April afternoon. Deep cave air is, in the useful sense, <u>still</u>.",
+   "difficulty": "EASY",
+   "why": "Every detail concerns temperature — heat given up to the rock, a three-year swing smaller than one afternoon's — so the word reports constancy of condition. Reading it as motionless would describe the air's movement, which the passage in fact has flowing in from the mouth in both seasons.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "motionless",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "undisturbed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "unvarying",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "silent",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "An amphora is an awkward object to interpret. Its shape names a workshop and often a decade, and its stamps sometimes name an owner, but what it carried leaves almost nothing behind except the pine resin the potter used to seal the porous clay. Gas chromatography can now read the fatty acids that soaked into the fabric beneath that lining, and a jar whose contents were _____ for two centuries can be assigned to wine, oil or fish sauce.",
+   "difficulty": "EASY",
+   "why": "The passage says the jar preserves its date and its owner but not its contents, and then describes a technique that finally settles what it held. Describing the contents as spilled would name a physical event, whereas the sentence is about what scholars could not decide.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "spilled",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "priceless",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "indeterminate",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "notorious",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;redistribute&rdquo; most nearly mean?",
+   "passage": "A man-hauled sledge journey is an arithmetic problem before it is anything else. Every day of food must itself be dragged, and the food dragged for the later days must be fed for on the earlier ones, so a party's range grows far more slowly than the weight it starts with. Nineteenth-century expeditions answered this by laying depots on the outward march, which did not add a gram to what could be carried but did <u>redistribute</u> when it had to be carried.",
+   "difficulty": "EASY",
+   "why": "The sentence contrasts adding weight, which depots do not do, with altering when the weight must be moved, which is a change of timing. Reading the word as dividing equally would suggest shares between people, and the passage is concerned with stages of a march.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "divide equally",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "hand over",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "reduce",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "reschedule",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The Yarmouth curer and the Aberdeen curer were working towards different customers. A hard cure meant three weeks in dry salt and a fortnight in smoke, and produced a fish that would cross the equator in a sailing ship's hold. A mild cure meant a few hours in brine and a night over smouldering oak, and produced a fish that had to be eaten within the week. The two trades used the same rooms and the same wood, and their products were nonetheless barely _____.",
+   "difficulty": "EASY",
+   "why": "The passage sets a fish built to survive an ocean crossing against one that spoils in a week and stresses that the shared rooms and wood do not make them alike, so the blank must deny likeness. Saying the products were barely edible introduces a judgement of quality the passage never makes about either cure.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "edible",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "profitable",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "portable",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "comparable",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "A curer adding sodium nitrite to a barrel is doing at least three things at once. The nitrite reacts with myoglobin to fix the pink colour that customers read as freshness; it slows the oxidation that would otherwise give the fat a stale flavour within days; and, at concentrations far below those needed for either of the first two effects, it prevents Clostridium botulinum from producing toxin in an anaerobic pack. Proposals to remove it have generally foundered on the third function, which nothing else performs as cheaply.",
+   "difficulty": "EASY",
+   "why": "The passage lists three effects and closes by singling out the safety function as the one no cheap substitute matches, which is a survey ending in a judgement of replaceability. The option about an unacknowledged risk inverts the passage, which presents the additive as preventing a hazard rather than creating one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To warn that an additive used for cosmetic reasons carries an unacknowledged risk",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To describe the chemical reaction by which cured meat acquires its characteristic colour",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To compare sodium nitrite with the alternatives that curers have proposed in its place",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To set out the several distinct functions of one additive and identify which of them is hardest to replace",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Cold smoking holds the fish below about 30&deg;C. The proteins never set, so the flesh keeps the texture of raw fish, and everything that preserves it — the salt already in it, the drying of the surface, the phenols laid down by the smoke — must do so without help from heat. Hot smoking runs above 60&deg;C and cooks the fish outright, which kills what is present at the time but leaves a moist product that spoils quickly afterwards. The two methods share equipment and share almost nothing else.",
+   "difficulty": "EASY",
+   "why": "The passage assigns each method a temperature range and then names what does the preserving in each case, closing on the point that they have little in common beyond the equipment. The option about which product is better states a preference the passage withholds, since it credits hot smoking with killing organisms and cold smoking with nothing more than durability.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To distinguish two smoking methods by what each one relies on to preserve the fish",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that cold smoking produces a better product than hot smoking does",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To trace the historical development of smoking as a method of preservation",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To explain why smokehouses are built to hold more than one kind of fire",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The old rule that apples and potatoes must not share a cellar has a mechanism behind it. Ripening apples give off ethylene, a gas active at a few parts per million, and potatoes exposed to it break dormancy and sprout weeks early. The same gas is why a cellar for roots wants a through draught and a cellar for fruit does not, and why the two were traditionally given separate doors even when they shared a single hillside.",
+   "difficulty": "EASY",
+   "why": "The passage names ethylene, states its effect on potatoes, and derives from it both the ventilation difference and the separate doors. The option about tradition without chemistry runs against the opening sentence, which says the old rule has a mechanism behind it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Traditional storage practices were based on observation rather than on any understanding of chemistry.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A gas released by one stored crop damages another, which accounts for how storage spaces were arranged.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Ethylene is harmless to apples but causes potatoes to rot in storage.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Root cellars require a through draught in order to keep their temperature stable.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A wheel floated in a saturated salt bath takes up almost nothing on the first day. Salt enters by diffusion, and diffusion is slow through a solid paste, so a forty-kilogram wheel may sit in the bath for three days and still be unsalted at its centre; the concentration evens out over the weeks that follow, in the cave and not in the bath. Time in the bath therefore fixes how much salt the wheel receives in total, while the months afterwards fix where in the wheel it ends up.",
+   "difficulty": "EASY",
+   "why": "The closing sentence divides the process explicitly, giving the bath the total quantity and the following months the distribution, and the rest of the passage supplies the slow diffusion that makes the division necessary. The option that bathing is impractical contradicts a passage that describes the method working, merely in two stages.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The salting of a large cheese is settled in two stages, one governing the quantity taken up and a later one governing its distribution.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A forty-kilogram wheel must remain in a salt bath until its centre has reached the same concentration as its surface.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Diffusion through a solid paste is too slow for salt bathing to be a practical way of salting a large cheese.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The concentration of the bath determines how quickly salt reaches the centre of a wheel.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the geochemist's proposal?",
+   "passage": "Halite crystallising from a brine traps microscopic pockets of that brine inside itself, and the pockets do not exchange with anything afterwards. A geochemist proposed that this makes an ancient salt bed a record of the water it grew in, and that the proposal could be tested on beds whose composition is already known from other evidence, since _____",
+   "difficulty": "EASY",
+   "why": "The proposal is that the inclusions preserve the parent water, and the test named is a bed whose water is known by other means, so the supporting finding must show the two agreeing. The finding about laboratory crystals establishes that inclusions form at a comparable size and leaves untouched the question of whether they preserve composition faithfully.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Modern salterns produce halite whose inclusions vary considerably from one pond to the next.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Fluid inclusions can be opened and analysed without contaminating the surrounding crystal.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Inclusions in halite from a bed independently dated to the Permian yield ion ratios matching those reconstructed for Permian sea water from marine fossils.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Halite crystals grown in the laboratory trap fluid inclusions of a size comparable to those found in ancient beds.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the researcher's expectation?",
+   "passage": "The phenols carried in wood smoke are antimicrobial, but they are deposited only on the surface of a fish and penetrate a few millimetres at most. A researcher who suspected that smoke therefore does little for a thick fillet proposed to test the idea by counting bacteria at different depths after smoking, expecting that _____",
+   "difficulty": "EASY",
+   "why": "The expectation is that the effect stops at the surface, which requires a comparison between a shallow depth where counts fall and a deep one where they do not. The finding about smoking time and phenol concentration concerns how much is deposited, not how far into the flesh the deposit reaches.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Counts taken two millimetres below the surface were reduced by more than ninety per cent, while counts taken twenty millimetres down were unchanged from those in unsmoked controls.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Fillets smoked for eight hours carried roughly twice the surface phenol concentration of fillets smoked for four hours.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Thin fillets and thick fillets showed the same surface phenol concentration after identical smoking.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Bacterial counts in unsmoked fillets rose steadily at every depth over the six days following filleting.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the surveyor's argument?",
+   "passage": "The mass of ice an ice house loses over a summer depends heavily on how its walls are built. A survey of four ice houses of similar size recorded the proportion of the winter's stack still fit to sell in September. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wall construction</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Proportion of stack remaining</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Single brick, no cavity</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Double brick, air cavity</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Double brick, sawdust-filled cavity</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">77%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Double brick, sawdust cavity, earth bank</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">83%</td></tr></table>A surveyor argued that filling the cavity was a far better investment than banking earth against a wall that was already filled.",
+   "difficulty": "EASY",
+   "why": "The argument ranks two successive improvements against each other, so it needs the gain from filling the cavity and the smaller gain from the earth bank side by side. Naming the best-performing house reports the top of the table without comparing the two steps at issue.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Every ice house with a double brick wall retained more than half of its stack.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Filling the cavity raised the proportion remaining from 58% to 77%, while adding the earth bank raised it only to 83%.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The best-performing ice house retained 83% of its stack, the highest figure in the survey.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The single-brick ice house retained 34% of its stack, less than half the figure for the sawdust-filled cavity.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A well-preserved amphora tells an archaeologist where it was made and often when, because shape and stamp are local and datable. What it carried is a harder question, and for a long time was answered by shape alone, on the assumption that a form used for oil in one province was used for oil everywhere. Residue analysis has now found wine markers in jars whose form had been catalogued as an oil type, and in some cases has found both markers in a single jar. The findings suggest that inferences drawn from form alone were _____",
+   "difficulty": "EASY",
+   "why": "The passage reports jars classified as one type carrying markers of another, and sometimes of both, which undercuts the assumption that form fixed contents. The option that the inferences were correct in most cases is not supported, since the passage gives no count and reports the assumption failing rather than holding.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "unnecessary once the stamps on a jar could be dated accurately.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "less reliable than the completeness of the typologies had implied.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "correct in most cases but impossible to confirm without chemical evidence.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "based on stamps that had been misread by earlier scholars.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "For most of the nineteenth century, cheesemakers who tried to build a ripening cellar rather than use a cave were defeated by humidity. Temperature could be held by digging deep enough, and airflow by a shaft and a damper, but a built cellar with dry walls pulls moisture out of the wheels, and the rinds crack. Caves solve it without machinery because their limestone is permanently wet and gives water back to the air as fast as the air takes it. Once mechanical humidification became cheap and reliable in the twentieth century, the advantage of the cave _____",
+   "difficulty": "EASY",
+   "why": "The passage names humidity as the one condition a built cellar could not reproduce and lists temperature and airflow as already solved, so cheap humidification leaves nothing exclusive to the cave. The option about the temperature taking over is ruled out by the passage's statement that digging deep enough already handled temperature.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "was recognised for the first time by makers who had ignored it.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "shifted from humidity to the constancy of the cave's temperature.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "proved to depend on the mineral composition of the limestone itself.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "ceased to rest on anything a built cellar could not now supply.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The vault at Svalbard was cut into a mountain of permafrost for a reason that has nothing to do with security. Should the refrigeration fail and stay failed, the surrounding rock would hold the chambers below &minus;3&deg;C on its _____ that is not cold enough for centuries of storage, but it is cold enough to keep the collection alive while the plant is repaired.",
+   "difficulty": "EASY",
+   "why": "Two independent clauses stand on either side of the blank and the second opens with a demonstrative pronoun rather than a conjunction, so a semicolon is required. A comma in that position splices the clauses together.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "own; ",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "own, ",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "own ",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "own: ",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A young wheel is turned every day, an older one every third day, and one that has been in the cave for six months perhaps once a _____ the schedule follows the rate at which moisture still moves inside the paste.",
+   "difficulty": "EASY",
+   "why": "The list of intervals completes a sentence, and the explanation that follows is a second sentence whose opening adverb is set off by a comma. Placing only a comma after the interval would splice two independent clauses together.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "week; throughout",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "week. Throughout,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "week, throughout",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "week throughout",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The red that colours a saturating pond comes from bacterioruberin, a carotenoid that sits in the archaeal cell _____ stiffens it against the osmotic stress of the surrounding brine and, incidentally, screens the cell from ultraviolet light.",
+   "difficulty": "EASY",
+   "why": "The description of where the pigment sits ends a complete sentence, and the account of what it does forms a second one. Joining them with only a comma produces a run-on, since neither half depends on the other.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "membrane, and it",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "membrane. It",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "membrane, it",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "membrane it",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "An earth clamp is built without any structure at all: the roots are heaped on a bed of straw, covered with more _____ and finished with a skin of soil beaten smooth so that rain runs off instead of soaking in.",
+   "difficulty": "EASY",
+   "why": "The three actions form a series of parallel past participles, and a comma is the mark that separates items in such a series. A semicolon separates items only when the items themselves contain commas, which these do not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "straw:",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "straw",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "straw,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "straw;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Cave shelving is cut from unplaned spruce rather than oak, because the resinous timber _____ far less readily in air kept near saturation than a close-grained hardwood does.",
+   "difficulty": "EASY",
+   "why": "The subject is the singular timber, so the present-tense verb takes the singular form and matches the comparison with what a hardwood does. The plural form agrees with nothing available in the clause.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "have warped",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "warps",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "warp",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "warping",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Amphora typologies are built from measurements of rim, handle and foot, and a form once assigned a number _____ that number in the literature even after the province it was made in has been reassigned.",
+   "difficulty": "EASY",
+   "why": "The subject is a single form, so the verb is singular. The plural form would agree with the typologies named in the first clause, which is not the subject of the clause containing the blank.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "keeping",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to keep",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "keeps",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "keep",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The channel that feeds the highest pond is fitted with a sluice, and its gate is raised only on a spring tide, when the water arriving is saltier than at any other point in the month and _____ the works several days of evaporation.",
+   "difficulty": "EASY",
+   "why": "The verb shares its subject with the earlier clause about the arriving water and must be finite and singular to match. A participle would leave the clause after the conjunction without a main verb of its own.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "save",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "saving",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "having saved",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "saves",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A soft-ripened cheese firms in the middle long after its edge has softened. The organisms that break down the paste live on the surface and work inward, so a young wheel cut in half shows a chalky core inside a ring that has already turned to cream. _____ the core is the part of the cheese that has been changed least, not the part that has been changed most.",
+   "difficulty": "EASY",
+   "why": "The sentence restates the inward progression in terms of how far each region has changed, which is a rephrasing rather than a qualification. A contrastive marker would set the statement against the account of surface ripening, and it simply repeats it in different terms.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Similarly,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Afterward,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In other words,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The Hudson's ice houses stood on the river bank rather than beside the ponds inland, and the reason was carriage: a block cut on the river could be pushed up a chute directly into the house, and later slid down another chute into a barge. Ice cut inland had to be carted to the water, and a cart could take twenty blocks where a barge took two thousand. _____ the river houses could pay more for their crop and still deliver it cheaper.",
+   "difficulty": "EASY",
+   "why": "The sentence states a consequence of the carriage advantage the preceding sentences establish, so the transition must signal a result. A contrast marker would announce that what follows cuts against the carriage argument, and it plainly follows from it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Accordingly,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A newly lifted potato will not sprout however warm it is kept, because it carries a dormancy that has to run its course. The length of that dormancy is a property of the variety and can be six weeks in one and five months in another. _____ a store that suits a long-dormant variety may be useless for a short-dormant one lifted from the next field.",
+   "difficulty": "EASY",
+   "why": "The variation in dormancy length is the premise and the mismatch between stores is what follows from it, so the transition marks an inference. A concessive marker would signal that the mismatch holds despite the variation, when it holds because of it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Instead,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Nonetheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Previously,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Thus,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the length of the voyage shaped the competition between the two suppliers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Norway exported lake and fjord ice to Britain from the 1850s.</li><li>Norwegian ice was cut closer to its market than American ice was.</li><li>A shorter voyage meant a smaller proportion of each cargo melted in transit.</li><li>By 1900 Norway was supplying most of the ice landed at British ports.</li><li>American shippers kept the longer Boston route and competed on price alone.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal asks how voyage length shaped the competition, so the response has to link the shorter passage to the smaller melting loss and then to the outcome for both suppliers. Reporting the start and end dates of the Norwegian trade records what happened without naming the voyage as the reason it happened.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because Norwegian ice was cut nearer its British market, a smaller share of each cargo melted on the way, and Norway had taken most of the British trade by 1900 while American shippers on the longer Boston route were left competing on price alone.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Norway began exporting lake and fjord ice to Britain in the 1850s and by 1900 was supplying most of the ice landed at British ports.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "American shippers competed on price alone on the longer route from Boston to Britain.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A shorter voyage meant that a smaller proportion of each cargo of ice melted in transit.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the shape of the pit mattered to the keeping of the crop. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>An Irish turnip pit was dug shallow and lined with rushes.</li><li>The roots were heaped in a long ridge rather than a round heap.</li><li>A ridge has more surface for its volume than a heap of the same size.</li><li>Roots respire in store and the heat they give off has to escape.</li><li>A round heap of any size tends to heat at its centre and rot.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal is why the shape mattered, which requires the respiratory heat, the surface-to-volume advantage of the ridge and the failure of the round heap. Recording that the pit was dug shallow and lined describes its construction and never reaches the question of shape.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because roots go on respiring in store and the heat must escape, the crop was heaped in a long ridge rather than a round heap: a ridge presents more surface for its volume, while a round heap of any size tends to heat at its centre and rot.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "An Irish turnip pit was dug shallow and lined with rushes before the roots were put in.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Roots continue to respire while they are in store and give off heat as they do so.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The roots were heaped in a long ridge rather than in a round heap of the same size.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why two products of different value come out of the same pan. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>At Gu&eacute;rande the salt is raked by hand rather than mechanically.</li><li>The paludier draws grey salt from the floor of the pan each afternoon.</li><li>A thin crust also forms on the surface of the brine on still, warm evenings.</li><li>That surface crust is skimmed separately and sold as fleur de sel.</li><li>Fleur de sel forms only when the evening air is dry and the water unruffled.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal asks why one pan yields two products of unequal value, which needs the two harvesting positions, the conditions that produce the surface crust, and the fact that only that crust is sold as the premium salt. Noting that the salt is raked by hand describes the method and leaves the two products unexplained.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Grey salt is drawn from the floor of the pan while fleur de sel forms on the surface of the brine.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The paludier rakes grey salt from the floor of the pan each afternoon, but on still, warm evenings with dry air a thin crust also forms on the surface of the brine, and it is that separately skimmed crust, which appears only in those conditions, that is sold as fleur de sel.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "At Gu&eacute;rande the salt is raked by hand rather than mechanically, and the paludier works the pan each afternoon.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Fleur de sel is the thin crust that forms on the surface of the brine and is skimmed separately.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T27:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The last pond of a saltern often runs a deep pink, and visitors take the colour for a trick of the sunset. It is a population. At a salinity approaching thirty per cent almost nothing will grow, but certain archaea flourish there and pack their membranes with red carotenoid pigments; the water carries so many of them that it takes their colour. The pink is thus not an effect of the light but a direct _____ of how salty the pond has become.",
+   "difficulty": "HARD",
+   "why": "The colour is produced by organisms that only thrive at extreme salinity, so its presence reports the concentration of the pond. Calling it a cause reverses the relationship the passage sets out, in which the salinity produces the population and the population produces the colour.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "index",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "cause",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "rehearsal",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "exception",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A kilogram of ice at 0&deg;C and a kilogram of water at 0&deg;C are at the same temperature, and a thermometer cannot tell them apart. Turning the first into the second takes about 334 kilojoules, and every one of those joules has to come out of whatever surrounds the ice. That is the whole of the ice house's usefulness: the heat that a summer forces into the building is _____ by the melting rather than by any fall in temperature.",
+   "difficulty": "HARD",
+   "why": "The passage states that the energy of melting must be drawn from the surroundings and that this, not a temperature change, is what the store accomplishes, so the blank names heat being taken up. Saying the heat is reflected would describe it being turned back at the surface, which is not what a phase change does.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "reflected",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "recorded",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "multiplied",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "absorbed",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The pointed toe of a Roman amphora is often taken for a defect of design, since a jar that will not stand up seems a poor container. On a ship it never had to stand: it was bedded in sand or wedged between the shoulders of the row below, and the point was a third handle, gripped by one man while two others took the loops at the neck. The shape that looks like an oversight is a piece of _____ for the only place the jar ever spent a long journey.",
+   "difficulty": "HARD",
+   "why": "The passage explains that the point served as a third handle and suited the ship's hold, so the blank must credit the shape with being purposeful. Calling it guesswork would keep the reading the passage sets out to overturn, since it says the shape only looks like an oversight.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "salvage",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "guesswork",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "design",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "decoration",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A bank cannot open every packet it holds to find out whether the seed inside is still alive, and a germination test destroys the seed it tests. The usual compromise is to germinate a small sample on a fixed cycle and treat the result as standing for the rest. Curators are candid that the practice is _____: a packet that has been sampled once in twenty years is described by a figure drawn from a few dozen of its neighbours, and nothing in the record says what has happened to the packet itself.",
+   "difficulty": "HARD",
+   "why": "The passage has a figure from a small sample standing in for packets nobody has opened, and says the record holds nothing about the packet itself, so the blank must name a conclusion drawn indirectly. Calling the practice wasteful would fix on the seed the test destroys, which the passage raises only as the reason the sampling is small.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "inferential",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "wasteful",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "recent",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "automated",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Under the French gabelle, salt cost roughly twenty times more in one province than in another a day's walk away, and the state was obliged to police an internal frontier drawn for no reason but the tax. Whole villages on the cheap side lived by carrying sacks across it. The smuggling was not a failure of enforcement but an entirely _____ response to a price difference the law had itself created.",
+   "difficulty": "HARD",
+   "why": "The final sentence sets a failure of enforcement against something that follows from the price gap the tax produced, so the blank must mark the smuggling as the expected consequence. Calling it criminal restates the legal position the sentence is trying to look past.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "recent",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "predictable",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "criminal",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unprofitable",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "The Venetian state did not chiefly want to sell salt; it wanted to control who else could. <u>From the thirteenth century a ship returning to the lagoon from any port in the Mediterranean was required to load salt as ballast and to sell it only to the Salt Office at a price the Office set.</u> A merchant who would have carried stone for nothing was thereby paid to carry a commodity the state could resell across northern Italy, and rival producers on the Adriatic found their own outlets bought up by the same fleet. The tax was collected before anyone had thought of it as a tax.",
+   "difficulty": "HARD",
+   "why": "The underlined sentence sets out the ballast rule, and the sentences after it work through what the rule did to shipowners, to the state's resale trade and to Adriatic rivals, so it supplies the premise the passage then develops. The option about a contrast in prices names a comparison the passage never makes, since no rival's price is given anywhere in it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It concedes a limitation of the policy that the text goes on to answer.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It states the specific requirement whose several consequences the rest of the text then traces.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It supplies the historical date on which the Venetian salt monopoly was formally abolished.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It contrasts the price the Salt Office paid with the price rival producers could command.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Naval surgeons had known since the 1750s that citrus cured scurvy, and by 1850 the Admiralty issued lime juice as a matter of course. <u>Polar parties nonetheless went on developing the disease, and the failures were read at the time as evidence that the citrus theory had been overstated.</u> The juice being issued had by then been boiled for keeping and stored in copper, and both treatments destroy most of the ascorbic acid in it. A remedy that worked was being discredited by a change in how it was prepared, and nobody at the time was in a position to see the difference.",
+   "difficulty": "HARD",
+   "why": "The sentence records what observers concluded from the continuing outbreaks, and the sentences after it supply the boiling and the copper that account for the failures without touching the theory. The option about multiple causes attributes to the passage a claim it never makes, since it traces every failure to the preparation of the juice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It offers the evidence that persuaded the Admiralty to begin issuing lime juice in 1850.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It concedes that scurvy has more than one cause besides a want of citrus.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It contrasts the experience of naval crews with that of merchant crews on the same rations.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It reports a contemporary conclusion that the rest of the text goes on to explain away.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Sea water does not give up its salts all at once. As it concentrates, calcium carbonate comes out first, at about twice the original strength; calcium sulphate follows at four or five times; and only beyond ten times does sodium chloride begin to crystallise. A saltmaker who wants clean salt therefore runs the brine through ponds where the first two are deliberately shed and left behind, and admits to the crystallising pan only water that has already surrendered them.",
+   "difficulty": "HARD",
+   "why": "The passage gives the sequence in which three salts crystallise and then describes ponds arranged to discard the first two before the third forms, which links the chemistry to the layout. The option about removing the calcium salts afterwards reverses the arrangement, since the passage has them shed in earlier ponds and never admitted to the crystallising pan.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Sea water must be concentrated to ten times its original strength before any salt will form.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Clean salt can be obtained only from sea water that is unusually low in calcium.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Salts leave concentrating sea water in a fixed order, and a saltworks is laid out to exploit that order.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Calcium carbonate and calcium sulphate must be removed from salt after it has crystallised.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A cell sitting in brine is under constant pressure to lose its water to the outside, and there are only two ways to answer it. One group of organisms lets potassium chloride into the cytoplasm until the inside is as concentrated as the outside; every enzyme it owns must then be rebuilt to work in strong salt, and the organism can no longer live anywhere else. The other group manufactures small neutral molecules that raise the internal concentration without interfering with any enzyme, which is costly in energy but leaves the cell free to move between waters of different strength.",
+   "difficulty": "HARD",
+   "why": "The passage sets one strategy that commits an organism to strong salt for good against another that costs energy but keeps its options open, which is a comparison of what each response costs. The option calling the neutral-molecule route more effective picks a winner the passage declines to pick, since it presents each as paying a different price.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A cell in brine loses water to its surroundings unless the surrounding water is diluted.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Two solutions to the same osmotic problem carry different costs, one paid in flexibility and the other in energy.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Organisms that admit potassium chloride into the cytoplasm are unable to survive in brine at all.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Manufacturing neutral molecules is the more effective of the two responses to osmotic pressure.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the director's argument?",
+   "passage": "Seed banks store at &minus;20&deg;C on the assumption that the colder the store, the longer the seed lives, but the size of the gain matters for deciding whether the electricity is worth it. A bank germinated samples of one wheat accession after twenty years at two temperatures. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Storage temperature</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Germination at 20 years</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">&minus;20&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">94%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4&deg;C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31%</td></tr></table>The bank's director argued that the figures justify the running cost of the colder store for accessions that are not duplicated elsewhere.",
+   "difficulty": "HARD",
+   "why": "The argument is that the colder store earns its running cost, which requires both figures set against each other to show the size of the difference. Reporting only the 31% at 4&deg;C shows that some seed survives the warmer store and gives no measure of what the colder one adds.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Seed held at 4&deg;C still showed 31% germination after twenty years.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The two storage temperatures tested differed by 24 degrees Celsius.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The bank tested only a single wheat accession over the twenty-year period.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "After twenty years, 94% of seed held at &minus;20&deg;C germinated, against 31% of seed held at 4&deg;C.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the team's conclusion?",
+   "passage": "Cheeses lose mass in the cave, and how much they lose depends on the humidity they are held at. A team weighed batches of identical wheels held for ninety days at three humidities and recorded the mean loss. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Relative humidity</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mean mass lost in 90 days</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">80%</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11.4%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">88%</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6.9%</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">95%</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.1%</td></tr></table>The team concluded that a maker who wants a thin rind and a moist paste should hold the cave near the top of this range.",
+   "difficulty": "HARD",
+   "why": "The conclusion recommends the humid end of the range, so the supporting datum has to be the one showing the smallest loss there and the contrast with the dry end. Citing the middle result alone reports a figure without connecting it to any recommendation about where to hold the cave.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Wheels at 88% humidity lost 6.9% of their mass, a figure between the other two results.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Wheels at 80% humidity lost 11.4% of their mass, the largest loss the team recorded.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The three humidities tested differed from one another by no more than fifteen percentage points.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Wheels at 95% humidity lost 3.1% of their mass, less than a third of the 11.4% lost at 80%.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the curer's argument?",
+   "passage": "Water activity, rather than total moisture, sets the limit below which an organism cannot grow. A laboratory measured the lowest activity at which each of four organisms would multiply. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Organism</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lowest water activity permitting growth</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Clostridium botulinum</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.94</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Staphylococcus aureus</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.86</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Most yeasts</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.80</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Xerophilic moulds</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.61</td></tr></table>A curer who dries fish to a water activity of 0.83 argued that the product is safe from every organism on this list that causes acute illness, though not from spoilage.",
+   "difficulty": "HARD",
+   "why": "The claim is that the illness-causing organisms are excluded at 0.83 while spoilage organisms are not, which needs the two bacteria placed above that figure and the yeasts and moulds below it. Citing the mould's 0.61 alone establishes that spoilage remains possible but says nothing about the bacteria the curer claims to have excluded.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Clostridium botulinum requires 0.94, the highest activity recorded for any organism on the list.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The four organisms span a range of water activities from 0.61 to 0.94.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Both bacteria on the list require an activity above 0.83, while the yeasts and moulds do not.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Xerophilic moulds grow at 0.61, the lowest activity recorded for any organism on the list.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "The hillside root cellars of Appalachia are almost always cut into a north-facing slope, and the reason is not that north-facing ground is colder in winter. In winter the door is shut and the earth around the chamber governs everything. It is in the shoulder seasons, when the door must be opened daily and the sun is low enough to reach into a doorway, that a south-facing entrance admits a wedge of direct light and a pulse of warm air with every visit. The orientation is therefore chosen to protect the store during _____",
+   "difficulty": "HARD",
+   "why": "The passage rules out winter, when the door stays shut, and points to the shoulder seasons of daily opening and a low sun as the vulnerable time. The option about summer is excluded by the passage's own detail that a high sun cannot reach into the doorway.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the periods when the cellar is opened rather than the coldest part of the year.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "the winter months, when the surrounding earth is least able to insulate the chamber.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "the hours of darkness, when the temperature outside falls furthest.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the summer, when the sun stands too high to enter a doorway at all.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "The natural ice trade did not shrink gradually. Mechanical plants using compressed ammonia were producing ice in New Orleans by the 1870s at a price that pond ice could still undercut, and the harvesters were untroubled. What finished them was that a mechanical plant could be put up wherever ice was wanted, while a pond crop had to be cut in one place, held through a summer and carried hundreds of miles. Once the plants had multiplied, the harvester's price advantage applied to a product whose costs the buyer no longer had to bear at all. This suggests that the trade's collapse turned less on price than on _____",
+   "difficulty": "HARD",
+   "why": "The passage grants the harvesters a lasting price advantage and locates the decisive change in plants being built where the ice was wanted, which removes the storage and carriage the trade existed to perform. The option about costs rising too slowly contradicts the passage's statement that pond ice could still undercut the plants.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the disappearance of the distance that had made the harvesters' service necessary.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "the failure of harvesters to reduce their costs as quickly as their competitors did.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "the unwillingness of buyers to accept ice produced by an unfamiliar method.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "a decline in the quality of the ice that ponds were able to yield.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "When Arthur DeVries drew blood from an Antarctic fish in the early 1960s and found that it resisted freezing far better than its salt content could _____ was looking at a class of molecule that nobody had proposed and that no existing theory of cold tolerance required.",
+   "difficulty": "HARD",
+   "why": "The long opening clause introduced by the subordinating conjunction must be closed with a comma before the main clause begins. A semicolon cannot follow a dependent clause, and omitting the mark leaves the reader to find the join unaided.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "explain he",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "explain; he",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "explain: he",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "explain, he",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Gutting a herring by hand takes a fraction of a second and removes only the gills and the long gut, leaving the pyloric caeca in _____ they carry the digestive enzymes that ripen the flesh during the weeks the fish spends in salt.",
+   "difficulty": "HARD",
+   "why": "Two independent statements meet here, and the semicolon separates them while the comma sets off the single word that comments on the first. Running them together with no mark at all leaves the second statement grafted onto the first without any boundary.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "place; deliberately, since",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "place, deliberately since",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "place deliberately since",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "place: deliberately, since",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The tool that did the real work on a frozen pond was not the saw but the ice _____ a heavy toothed blade set in a wooden frame and dragged behind a horse, it cut a groove two thirds of the way through the sheet in a single pass.",
+   "difficulty": "HARD",
+   "why": "A complete sentence ends at the tool's name, and what follows is a second complete sentence beginning with the article that introduces the description. A comma between them joins two independent clauses without a conjunction.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "plough a",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "plough; a",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "plough. A",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "plough, a",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A logger left in a chamber a hundred metres from the entrance recorded temperatures over three years, and the spread between the highest and lowest readings across the whole period was _____ tenths of a degree.",
+   "difficulty": "HARD",
+   "why": "Nothing here interrupts the sentence: the measurement completes the predicate directly and takes no mark before it. Any punctuation after the number would separate a verb from its own complement.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "four;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "four:",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "four",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "four,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The floor of a well-built ice house slopes to a central drain, and the drain _____ through a water trap so that the melt can leave without letting warm air in behind it.",
+   "difficulty": "HARD",
+   "why": "The subject of the second clause is a single drain, so the verb takes the singular form. The plural form would agree with nothing in the sentence, and neither non-finite form supplies the clause with a main verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "running",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to run",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "runs",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "run",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Freezer burn is not burning and not really freezing either. Ice on the surface of a stored food passes straight to vapour without melting, and the dry, discoloured patch it _____ behind is what the name describes.",
+   "difficulty": "HARD",
+   "why": "The relative clause has the singular ice as its subject and needs a present-tense singular verb to match the sentence's other verbs. The past perfect form places the action before a past reference point that the sentence never establishes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "leaves",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "leave",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "leaving",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "had left",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Racks in a smokehouse are hung with a hand's width between them, since fish that touch one another leave pale patches where the smoke never reached _____ surfaces.",
+   "difficulty": "HARD",
+   "why": "The surfaces belong to the fish, which is plural in this sentence, so the plural possessive is required. The contraction is a subject and a verb and cannot modify a noun at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "their",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "its",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "they're",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "there",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Smoke reaches a fish as a suspension of droplets, and what settles on the skin depends on how wet that skin is. A fish taken straight from the brine carries a film of water that the droplets dissolve into and run off. _____ curers hang the fish for several hours first, until the surface has dried to the tacky, glossy layer they call the pellicle.",
+   "difficulty": "HARD",
+   "why": "The practice described is the response to the problem set out in the previous sentence, so the transition marks a consequence. A comparison marker would set the drying against something else in the passage, and nothing else is offered for it to be compared with.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For this reason,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By comparison,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Admittedly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A wood frog begins converting liver glycogen to glucose within minutes of ice touching its skin, and the blood concentration can rise sixtyfold in eight hours. In a mammal a concentration of that order would be a medical emergency. _____ the frog clears it over several days after thawing with no lasting damage that anyone has been able to detect.",
+   "difficulty": "HARD",
+   "why": "The sentence sets the frog's harmless recovery against the emergency the same figure would represent in a mammal, so a contrastive transition is required. A consequence marker would make the harmless clearance follow from the emergency, which reverses the relation.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Yet",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Therefore",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In addition,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "That is,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:N8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The Romans drew salt at Droitwich from natural brine springs rather than from the sea, and the springs were strong enough to be boiled straight down without any preliminary concentration. Sea water at three per cent needs enormous quantities of fuel before it will yield anything. _____ an inland spring at twenty-five per cent could be worked profitably in a climate where a coastal saltern would never have dried a pond.",
+   "difficulty": "HARD",
+   "why": "The sentence sets the workable inland spring against the fuel-hungry sea water just described, so the transition marks an opposition. An example marker would present the spring as an instance of the sea-water difficulty rather than as its counterpart.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Accordingly,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Furthermore,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "For instance,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how a low-cost device changed the sellers' commercial position, not merely the condition of the crop. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A trial in northern Nigeria stored aubergines in pot-in-pot coolers and in open baskets.</li><li>Aubergines in open baskets were unsaleable after three days.</li><li>Aubergines in the coolers remained saleable for twenty-seven days.</li><li>The coolers cost about two dollars each to make from local clay.</li><li>Sellers using the coolers could hold stock until prices rose instead of selling at once.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks for the commercial change and not just the storage life, so the response has to carry the cost and the twenty-seven days through to the sellers' new freedom to wait for a better price. Giving the two storage lives reports the crop's condition and stops short of the commercial point the goal names.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The pot-in-pot coolers used in the trial cost about two dollars each to make from local clay.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A trial in northern Nigeria compared aubergines stored in pot-in-pot coolers with aubergines stored in open baskets.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Coolers costing about two dollars to make from local clay kept aubergines saleable for twenty-seven days against three days in open baskets, which let sellers hold their stock until prices rose rather than selling everything at once.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Aubergines held in pot-in-pot coolers remained saleable for twenty-seven days, while those in open baskets were unsaleable after three.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what the comparison between the two groups shows about how the trait arose. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Antarctic fishes and several northern beetles both survive below the freezing point of their body fluids.</li><li>The fishes use glycoproteins built from a repeating sugar-bearing tripeptide.</li><li>The beetles use a protein with no sugar and an unrelated repeating structure.</li><li>Both molecules bind to the surface of a growing ice crystal and stop it enlarging.</li><li>The two lineages have been separate for hundreds of millions of years.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks what the comparison shows about the trait's origin, so the response must set the unrelated structures against the shared function and the long separation, and draw the conclusion that the trait arose twice. Naming the two different molecules states the difference without saying what follows from it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Both molecules work by binding to the surface of a growing ice crystal and stopping it from enlarging.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Lineages separate for hundreds of millions of years arrived at molecules with nothing in common structurally, a sugar-bearing tripeptide in the fishes and a sugarless protein in the beetles, yet both bind to a growing ice crystal and stop it enlarging, so the trait was reached twice rather than inherited once.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Antarctic fishes and several northern beetles both survive below the freezing point of their body fluids.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The fishes use glycoproteins built from a repeating sugar-bearing tripeptide, while the beetles use a protein with no sugar at all.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T27:S4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how an organism usually treated as a pest contributes to the finished cheese. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Mimolette is ripened with a mite, Acarus siro, living on its crust.</li><li>The mites graze the crust and leave it pitted and grey.</li><li>The pitting increases the crust's surface area many times over.</li><li>Air and moisture reach the paste more readily through a pitted crust than a smooth one.</li><li>Wheels kept free of mites ripen more slowly and taste flatter.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks what the organism contributes, so the response must carry the pitting through to the enlarged surface, the readier exchange of air and moisture, and the poorer result without it. Reporting that the mites leave the crust pitted describes the damage and stops before the benefit the goal asks about.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Mimolette is ripened with a mite, Acarus siro, that lives on the crust of the wheel.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The mites graze the crust of the cheese and leave it pitted and grey rather than smooth.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Wheels kept free of mites ripen more slowly than wheels on which the mites are allowed to graze.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Grazing mites leave the crust pitted and grey, which multiplies its surface area so that air and moisture reach the paste far more readily than through a smooth crust, and wheels kept free of them ripen more slowly and taste flatter.",
+     "isCorrect": true
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "In one season a saltworks drew salt from seven pans. Six of the pans each gave the same mass of salt, and the seventh gave 140 kilograms less than each of the other six. The seven pans together gave 4,060 kilograms. How many kilograms of salt did each of the six equal pans give?",
+   "difficulty": "MEDIUM",
+   "check": "Six pans of p kilograms and a seventh of p - 140 give 7p - 140 = 4,060, so 7p = 4,200 and p = 600.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "560",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "580",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "600",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "620",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An ice house is drawn on through the summer. Once 260 tonnes had been taken out of it, the mass still stored was three fifths of the mass that had been stored before any was taken out. How many tonnes were stored before any was taken out?",
+   "difficulty": "MEDIUM",
+   "check": "m - 260 = (3/5)m leaves (2/5)m = 260, so m = 650.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "390",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "520",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "650",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "780",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A saltworks watches two evaporating pans. The mass of salt drawn from the first, in kilograms, is 18d + 40 after d days of drying. The second pan gives 24 kilograms a day and already held 16 kilograms of salt when the drying began. After how many days of drying have the two pans given equal masses of salt?",
+   "difficulty": "MEDIUM",
+   "check": "The second pan gives 24d + 16, and 18d + 40 = 24d + 16 leaves 6d = 24, so d = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "An ice house is drawn down at a steady rate through the summer. On the 8th day of the summer it held 186 tonnes of ice, and on the 26th day it held 132 tonnes. On which day of the summer does this rate leave the ice house empty?",
+   "difficulty": "MEDIUM",
+   "check": "54 tonnes go in 18 days, so 3 tonnes a day, and 186 - 3(d - 8) = 0 gives d = 70.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "62",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "64",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "70",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "74",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A saltworks pays 560 pounds in fixed costs for a season and a further 0.35 pound for every bushel of salt it draws, and it sells every bushel it draws for 2.40 pounds. What is the least number of bushels the works must draw and sell for the season's profit to be at least 900 pounds?",
+   "difficulty": "MEDIUM",
+   "check": "2.40b - (560 + 0.35b) is at least 900 once 2.05b is at least 1,460, so b is at least 712.19 and the least whole number of bushels is 713.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "685",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "713",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "720",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "736",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "The mass of ice left in a store, in tonnes, is modelled by M = 310 - 4.6w, where w is the number of weeks since the store was closed. The store is emptied and swept as soon as no more than 15 percent of its original mass is left. After how many whole weeks is the store emptied and swept?",
+   "difficulty": "MEDIUM",
+   "check": "15 percent of 310 is 46.5, and 310 - 4.6w is at most 46.5 once w is at least 57.28, so the store is emptied in week 58.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "47",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "52",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "57",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "58",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-07",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An ice gang cuts blocks in two sizes: a large block has a mass of 42 kilograms and a small block a mass of 26 kilograms. In one day the gang cut 96 blocks with a combined mass of 3,232 kilograms. How many large blocks did the gang cut that day?",
+   "difficulty": "MEDIUM",
+   "check": "42L + 26(96 - L) = 3,232 leaves 16L = 736, so L = 46.",
+   "correctAnswerFR": "[\"46\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A saltworks estimates the tonnage it will draw from p pans as \\((5p+6)(2p-3)\\). Which expression is equivalent to this estimate?",
+   "difficulty": "MEDIUM",
+   "check": "Multiplying out gives 10p squared minus 15p plus 12p minus 18, which is 10p squared minus 3p minus 18.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(10p^{2}-3p-18\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(10p^{2}+3p-18\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(10p^{2}-3p+18\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(10p^{2}+27p-18\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A packer's rule of thumb puts the number of ice blocks a chamber will take at \\(\\sqrt{72n^{5}}\\), where n is a measure of the chamber and \\(n>0\\). Which expression is equivalent to this rule?",
+   "difficulty": "MEDIUM",
+   "check": "72 is 36 times 2 and n to the fifth is n to the fourth times n, so the square root is 6 n squared times the square root of 2n.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6n^{2}\\sqrt{2n}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(6n^{2}\\sqrt{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(36n^{2}\\sqrt{2n}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(6n^{3}\\sqrt{2}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The sluice of a salt pan is set at a number x, and the setting must satisfy \\((2x-7)^{2}=81\\). What is the positive value of x that satisfies this equation?",
+   "difficulty": "MEDIUM",
+   "check": "2x - 7 is either 9 or -9, giving x = 8 or x = -1, and only 8 is positive.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The ice remaining in a store is modelled by \\(T(w)=240\\left(\\frac{3}{4}\\right)^{w}\\) tonnes, where w is the number of weeks since the store was closed. According to this model, how many tonnes of ice are lost during the second week alone?",
+   "difficulty": "MEDIUM",
+   "check": "The model gives 180 tonnes after one week and 135 after two, so the second week alone costs 45 tonnes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "45",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "60",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "75",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "105",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The temperature inside an ice house, in degrees Celsius, h hours after its door is opened on a summer day is modelled by \\(T(h)=11-8\\left(\\frac{1}{2}\\right)^{h}\\). As h increases without bound, the temperatures this model gives come closer and closer to what value, in degrees Celsius?",
+   "difficulty": "MEDIUM",
+   "check": "One half raised to h falls towards 0 as h grows, so the subtracted term vanishes and the model approaches 11.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "11",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "19",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-13",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The number of blocks an ice gang cuts in one shift is modelled by \\(B(s)=-s^{2}+22s-40\\), where s is the number of sawyers in the gang. What is the greatest number of sawyers for which this model gives a positive number of blocks?",
+   "difficulty": "MEDIUM",
+   "check": "The model is positive between the roots of s squared minus 22s plus 40, which are 2 and 20, so the greatest whole number of sawyers is 19.",
+   "correctAnswerFR": "[\"19\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the tonnage of ice cut into each of four ice houses one winter and the tonnage still fit to deliver at the end of the following summer. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Ice house</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tonnes cut in</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tonnes delivered</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ashwell</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">480</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">396</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Barrow</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">350</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">301</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Cranford</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">620</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">496</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Deeping</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">540</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">459</td></tr></table> Which ice house lost the greatest percentage of the ice cut into it?",
+   "difficulty": "MEDIUM",
+   "check": "The losses are 17.5, 14, 20 and 15 percent, so Cranford lost the greatest share.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ashwell",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Barrow",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Cranford",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Deeping",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the total mass of ice, in tonnes, that had been cut into one ice house by the end of each of the first four weeks of a winter. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Week</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total cut in by the end of the week (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">214</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">305</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">372</td></tr></table> How many tonnes of ice were cut into the ice house during the third week alone?",
+   "difficulty": "MEDIUM",
+   "check": "The totals are running totals, so the third week alone brought 305 - 214 = 91 tonnes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "67",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "91",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "118",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "305",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Ice is cut into blocks measuring 0.5 metre by 0.4 metre by 0.3 metre, and this ice has a mass of 920 kilograms for each cubic metre. A sledge may carry a load of at most 1,150 kilograms. What is the greatest number of whole blocks the sledge may carry at once?",
+   "difficulty": "MEDIUM",
+   "check": "A block is 0.06 cubic metre and so 55.2 kilograms, and 1,150 divided by 55.2 is 20.83, so 20 blocks may go on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "20",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "21",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "An ice warden measured the thickness of the ice, in centimetres, at five places on each of two ponds. The two sets of readings have the same mean. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Pond</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Readings (cm)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Millpond</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13, 15, 17, 19, 21</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Nether Pond</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16, 16, 17, 18, 18</td></tr></table> How much greater is the range of the Millpond readings than the range of the Nether Pond readings, in centimetres?",
+   "difficulty": "MEDIUM",
+   "check": "The Millpond readings run from 13 to 21, a range of 8, and the Nether Pond readings from 16 to 18, a range of 2, so the difference is 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "In one season a saltworks pumped 46,000 cubic metres of sea water into its pans and drew 1,472 tonnes of salt from them. Working at the same yield, how many cubic metres of sea water must the works pump to draw 1,840 tonnes of salt?",
+   "difficulty": "MEDIUM",
+   "check": "1,840 is 1.25 times 1,472, and 1.25 times 46,000 cubic metres is 57,500.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "46,000",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "51,750",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "55,200",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "57,500",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "The floor of a root cellar is a rectangle measuring 4.5 metres by 3.2 metres. It is given an even layer of dry sand over the whole of its area, and 2.16 cubic metres of sand are used. What is the depth, in metres, of the layer of sand?",
+   "difficulty": "MEDIUM",
+   "check": "The floor is 14.4 square metres, and 2.16 divided by 14.4 is 0.15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "0.12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "0.15",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "0.18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "0.24",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-20",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "An ice house has a square floor of side 16 metres. A straight partition runs from one corner of the floor to the middle point of a side that does not meet that corner. What is the length, in metres, of the partition?",
+   "difficulty": "MEDIUM",
+   "check": "The partition is the hypotenuse of a right triangle with legs 16 and 8, and the square root of 320 is 8 root 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(4\\sqrt{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(8\\sqrt{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(8\\sqrt{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A round salt pan has a radius of 12 metres, and a level walk of the same width all the way round is laid outside it. The walk covers \\(52\\pi\\) square metres. What is the width, in metres, of the walk?",
+   "difficulty": "MEDIUM",
+   "check": "The walk is the ring between circles of radius 12 + w and 12, so (12 + w) squared less 144 is 52, giving w squared + 24w - 52 = 0 and w = 2.",
+   "correctAnswerFR": "[\"2\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M1:H1-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A wedge cut out of the ice by an ice saw is a right triangle ABC whose right angle is at C. The leg BC measures 8 metres and the triangle has an area of 60 square metres. What is the value of \\(\\tan A\\)?",
+   "difficulty": "MEDIUM",
+   "check": "Half of AC times 8 is 60, so AC is 15, and the tangent of A is BC over AC, or 8 over 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{8}{15}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{15}{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{8}{17}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{15}{17}\\)",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "The number of herring still hanging on a smokehouse rack h hours after the fire is lit is given by 340 - 12h. How many herring are still hanging 9 hours after the fire is lit?",
+   "difficulty": "EASY",
+   "check": "340 minus 12 times 9 is 340 minus 108, which is 232.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "196",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "232",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "268",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A curer packs smoked herring 8 to a box. After packing as many full boxes as possible from 236 herring, 4 herring were left over. How many full boxes did the curer pack?",
+   "difficulty": "EASY",
+   "check": "236 less the 4 left over is 232, and 232 divided by 8 is 29.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "27",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "29",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-03",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A cheese cave takes 9 wheels in each row on its shelves. How many rows does it take to hold 153 wheels, with every row filled?",
+   "difficulty": "EASY",
+   "check": "153 divided by 9 is 17.",
+   "correctAnswerFR": "[\"17\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The mass of a cheese wheel, in kilograms, w weeks after it is carried into the cave is given by m = 4.6 - 0.05w. What is the mass of a wheel, in kilograms, 12 weeks after it is carried in?",
+   "difficulty": "EASY",
+   "check": "4.6 minus 0.05 times 12 is 4.6 minus 0.6, which is 4.0.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3.4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3.8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4.0",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "4.6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The number of herring a smokehouse can hang is given by 6r + 24, where r is the number of extra rails fitted above the hearth. Which is the best interpretation of the 24 in this expression?",
+   "difficulty": "EASY",
+   "check": "Setting r to 0 leaves 24, the number hung with no extra rail fitted.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The number of herring the smokehouse can hang before any extra rail is fitted",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The number of herring each extra rail lets the smokehouse hang",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The greatest number of extra rails the smokehouse will take",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The number of herring the smokehouse loses for each extra rail fitted",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A curer hangs x strings of herring on one smoking rack. The rack is safely loaded whenever \\(5x+8\\le 43\\). What is the greatest number of strings that leaves the rack safely loaded?",
+   "difficulty": "EASY",
+   "check": "5x is at most 35, so x is at most 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "35",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A curer charges, in pence, 7f + 40 to smoke f fish for a customer. What does the curer charge, in pence, to smoke 22 fish?",
+   "difficulty": "EASY",
+   "check": "7 times 22 is 154, and 154 plus 40 is 194.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "154",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "180",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "194",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "234",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A curer works out a load's rate figure as \\(15p+35\\). Which expression is equivalent to this figure?",
+   "difficulty": "EASY",
+   "check": "5 divides both 15p and 35, leaving 3p and 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(3(5p+7)\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(5(3p+7)\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(5(3p+35)\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(15(p+35)\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A cheese cave's air-change figure is written as \\(\\sqrt{81b^{4}}\\), where \\(b>0\\). Which expression is equivalent to this figure?",
+   "difficulty": "EASY",
+   "check": "The square root of 81 is 9 and the square root of b to the fourth is b squared.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(9b^{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(9b^{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(18b^{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(81b^{2}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The number of days a cheese wheel needs in the cave is modelled by \\(\\frac{120}{x}\\), where x is the number of degrees Celsius by which the cave stands above freezing. How many days does the model give when x is 8?",
+   "difficulty": "EASY",
+   "check": "120 divided by 8 is 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A curer's smoke index x satisfies \\(5^{x}=625\\). What is the value of the smoke index?",
+   "difficulty": "EASY",
+   "check": "625 is 5 times 5 times 5 times 5, so x = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "125",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-12",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The number of minutes of smoking a curer allows at draught setting x is \\(\\frac{200}{x+3}\\). How many minutes does this allow at draught setting 7?",
+   "difficulty": "EASY",
+   "check": "7 plus 3 is 10, and 200 divided by 10 is 20.",
+   "correctAnswerFR": "[\"20\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A cheese cave's shelf plan uses the expression \\(4y^{2}-36\\). Which expression is equivalent to this?",
+   "difficulty": "EASY",
+   "check": "Taking out 4 leaves y squared minus 9, which factors as (y - 3)(y + 3).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(4(y-3)^{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(4(y-3)(y+3)\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(4(y-6)(y+6)\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\((2y-6)(2y+18)\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of herring smoked at each of four smokehouses in one week. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Smokehouse</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Herring smoked</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Fennhaven</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,140</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Garrow</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,480</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Halden</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,905</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ivory Quay</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,260</td></tr></table> Which smokehouse smoked the greatest number of herring that week?",
+   "difficulty": "EASY",
+   "check": "3,480 is the largest of the four figures, and it belongs to Garrow.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Fennhaven",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Garrow",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Halden",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Ivory Quay",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "Of the 60 cheese wheels in a cave, 12 are wrapped in cloth and the rest are left bare. What percent of the wheels in the cave are wrapped in cloth?",
+   "difficulty": "EASY",
+   "check": "12 divided by 60 is 0.2, which is 20 percent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "15%",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "20%",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "25%",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A smokehouse burns 2.5 kilograms of oak chips every hour it is alight. How many kilograms of chips does it burn in a firing that lasts 14 hours?",
+   "difficulty": "EASY",
+   "check": "2.5 times 14 is 35.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "16.5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "35",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "56",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The table gives the number of cheese wheels put into each grade at one cave's grading in March. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Grade</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Number of wheels</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Prime</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">36</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Second</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Kitchen</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td></tr></table> What fraction of the wheels graded in March were put into the prime grade?",
+   "difficulty": "EASY",
+   "check": "36 of 80 wheels were prime, and 36 over 80 reduces to 9 over 20.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{9}{20}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{9}{25}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{4}{9}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{27}{80}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of cheese wheels standing on each of the four shelves of one cave. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Shelf</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wheels standing</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Top</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">46</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Second</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Third</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">52</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bottom</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">29</td></tr></table> How many wheels are standing in the cave altogether?",
+   "difficulty": "EASY",
+   "check": "46 plus 38 plus 52 plus 29 is 165.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "148",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "155",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "165",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "173",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A shelf board for a cheese cave is a rectangle 120 centimetres long and 45 centimetres wide, with a square of side 15 centimetres cut out of one corner to clear a post. What is the area, in square centimetres, of the board?",
+   "difficulty": "EASY",
+   "check": "120 times 45 is 5,400, and 15 squared is 225, so 5,400 - 225 is 5,175.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5,175",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "5,220",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5,400",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "5,625",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-20",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A smoke baffle is cut as a triangle whose three angles measure 3n&deg;, 4n&deg; and 5n&deg;. What is the value of n?",
+   "difficulty": "EASY",
+   "check": "The three angles add to 180, so 12n = 180 and n = 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "15",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A smokehouse chimney is a hollow prism 7 metres tall whose inside cross-section is a square of side 0.9 metre. What is the volume, in cubic metres, of the space inside the chimney?",
+   "difficulty": "EASY",
+   "check": "0.9 squared is 0.81, and 0.81 times 7 is 5.67.",
+   "correctAnswerFR": "[\"5.67\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2E:H2E-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A brace under a smokehouse rafter is cut as a triangle with one right angle and two sides of equal length. Each of the two equal sides measures 9 centimetres. What is the length, in centimetres, of the third side?",
+   "difficulty": "EASY",
+   "check": "The two equal sides are the legs, so the third side is the square root of 81 + 81, which is 9 root 2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(9\\sqrt{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(9\\sqrt{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{9\\sqrt{2}}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A curer's loading rule is the pair of equations \\(ax+4y=26\\) and \\(3x-2y=5\\), where a is a constant, x is the number of racks of herring and y the number of racks of mackerel. The pair has the solution in which \\(x=3\\). What is the value of a?",
+   "difficulty": "HARD",
+   "check": "Putting x = 3 into 3x - 2y = 5 gives y = 2, and then 3a + 8 = 26 gives a = 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A smokehouse fires n batches of fish one after another. Each batch takes t hours in the smoke, and the hearth must be left to cool for c hours between one batch and the next. Which expression gives the total number of hours from the moment the first batch goes in to the moment the last batch comes out?",
+   "difficulty": "HARD",
+   "check": "There are n spells of smoking and only n - 1 gaps, since no cooling follows the last batch.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(nt+(n-1)c\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(nt+nc\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\((n-1)t+nc\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(n(t+c)-t\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-03",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A curer's two smoking ovens hold 348 fish between them. If 40 fish were moved from the larger oven to the smaller, the larger would still hold 26 more fish than the smaller. How many fish does the larger oven hold?",
+   "difficulty": "HARD",
+   "check": "Moving 40 across changes the difference by 80, so the true difference is 106, and 348 plus 106 halved is 227.",
+   "correctAnswerFR": "[\"227\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "On a plan of a cheese cave a straight line passes through the points \\((a,3a)\\) and \\((3a,11a)\\), where a is a positive constant. The line crosses the vertical axis at the point \\((0,b)\\). What is the value of b in terms of a?",
+   "difficulty": "HARD",
+   "check": "The slope is 8a over 2a, which is 4, and 3a = 4a + b gives b = -a.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(-a\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(a\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(-4a\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3a\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A cheese cave will accept a wheel only if its mass m, in kilograms, satisfies \\(\\left|m-38\\right|\\le 2.5\\). Which of the following gives every acceptable mass?",
+   "difficulty": "HARD",
+   "check": "The condition says m is within 2.5 of 38, which is every mass from 35.5 to 40.5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(35.5\\le m\\le 40.5\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(35.5\\le m\\le 38\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(m\\le 35.5\\) or \\(m\\ge 40.5\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(38\\le m\\le 40.5\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A cheese cave's shelf survey uses a line in the xy-plane whose equation is \\(y=px+q\\). The line passes through \\((0,-5)\\) and is parallel to the line through \\((1,5)\\) and \\((4,17)\\). What is the value of \\(p+q\\)?",
+   "difficulty": "HARD",
+   "check": "The slope of the second line is 12 over 3, which is 4, and passing through (0, -5) makes q equal -5, so p + q is -1.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(-9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(-1\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(9\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A curer opens a smokehouse flue by x notches, and the draught is judged sufficient whenever \\(\\frac{5x-3}{4}\\ge x+2\\). For which numbers of notches is the draught judged sufficient?",
+   "difficulty": "HARD",
+   "check": "Multiplying through by 4 gives 5x - 3 at least 4x + 8, which leaves x at least 11.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x\\ge 11\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(x\\le 11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(x\\ge \\frac{5}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x\\le -\\frac{11}{9}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "An affineur's yield curve \\(y=f(x)\\) crosses the x-axis at \\(x=-4\\) and at \\(x=6\\). The function g is defined by \\(g(x)=f(x+2)\\). What is the greater of the two values of x at which the graph of \\(y=g(x)\\) crosses the x-axis?",
+   "difficulty": "HARD",
+   "check": "g is 0 where x + 2 is -4 or 6, that is where x is -6 or 4, and the greater is 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(-6\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(-2\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(4\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(8\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A curer's timing rule is written as \\(x^{2}+14x+58\\). Which expression is equivalent to this rule?",
+   "difficulty": "HARD",
+   "check": "Half of 14 is 7, and 7 squared is 49, so the rule is (x + 7) squared plus 58 minus 49.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\((x+7)^{2}+9\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\((x+7)^{2}-9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\((x+7)^{2}+58\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\((x+14)^{2}-138\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "An affineur's spacing rule uses the expression \\(4x^{2}+kx+49\\), where k is a positive constant, and this expression is the square of a binomial. What is the value of k?",
+   "difficulty": "HARD",
+   "check": "The square of 2x plus 7 is 4x squared plus 28x plus 49, so k is 28.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(14\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(21\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(26\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(28\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The number of wheels ripening in a cheese cave is modelled by \\(R(t)=6\\cdot 9^{\\frac{t}{2}}\\), where t is the number of months since the cave was filled. Which of the following is equivalent to \\(R(t)\\)?",
+   "difficulty": "HARD",
+   "check": "9 is 3 squared, so 9 raised to t over 2 is 3 raised to t.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6\\cdot 3^{t}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(6\\cdot 3^{2t}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(18^{\\frac{t}{2}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(6\\cdot 81^{t}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-12",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A curer's damper gauge reports a positive reading x for which \\(x^{2}+\\frac{1}{x^{2}}=23\\). What is the value of \\(x+\\frac{1}{x}\\)?",
+   "difficulty": "HARD",
+   "check": "Squaring x plus its reciprocal gives 23 plus 2, which is 25, and the positive square root is 5.",
+   "correctAnswerFR": "[\"5\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A smokehouse's output, in fish, is modelled by \\(P(x)=-3x^{2}+42x-135\\), where x is the number of hours the hearth is kept alight. The model gives an output of 0 at two values of x. What is the positive difference between those two values?",
+   "difficulty": "HARD",
+   "check": "Dividing by -3 leaves x squared minus 14x plus 45, whose roots are 5 and 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(2\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(4\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(9\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A cheese cave holds 45 wheels whose mean mass is 4.2 kilograms. A further w wheels, each of mass exactly 6 kilograms, are carried in, and the mean mass of all the wheels in the cave is then 4.5 kilograms. What is the value of w?",
+   "difficulty": "HARD",
+   "check": "189 plus 6w equals 4.5 times (45 + w), which leaves 1.5w equal to 13.5, so w = 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "9",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A smokehouse working with 3 racks cures 45 fish an hour, and the number of fish cured in an hour varies directly with the number of racks in use. How many hours does the smokehouse take to cure 1,200 fish when 5 racks are in use?",
+   "difficulty": "HARD",
+   "check": "Each rack cures 15 fish an hour, so 5 racks cure 75 an hour, and 1,200 divided by 75 is 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of cheese wheels in each mass class at one cave's weighing of 80 wheels. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mass class (kg)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Number of wheels</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.0 to 3.4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.5 to 3.9</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">23</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.0 to 4.4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.5 to 4.9</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr></table> What percent of the 80 wheels have a mass of 4.0 kilograms or more?",
+   "difficulty": "HARD",
+   "check": "31 and 14 make 45 wheels of 4.0 kilograms or more, and 45 out of 80 is 56.25 percent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "17.5%",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "38.75%",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "43.75%",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "56.25%",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The table classifies the 240 cheese wheels in one affineur's care by the cave they ripen in and by the grade they were given. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Prime</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Second</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Upper cave</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">36</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">120</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lower cave</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">75</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">120</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">129</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">111</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr></table> One wheel is selected at random from the wheels in the upper cave. What is the probability that the selected wheel was graded prime?",
+   "difficulty": "HARD",
+   "check": "84 of the 120 wheels in the upper cave are prime, and 84 over 120 reduces to 7 over 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{7}{10}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{7}{20}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{43}{80}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{28}{43}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A cheese cave holds Tomme wheels and Beaufort wheels in the ratio 5 to 3. After 48 more Beaufort wheels are carried in, the two kinds stand in the ratio 5 to 4. How many Tomme wheels are in the cave?",
+   "difficulty": "HARD",
+   "check": "With 5k Tomme and 3k Beaufort, 4(5k) = 5(3k + 48) gives k = 48, so there are 240 Tomme wheels.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "144",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "180",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "192",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "240",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A smokehouse hood is a cone with no base, open to the room below. Its rim is a circle of radius 60 centimetres, and the slanting sheet metal runs 100 centimetres from the rim to the point at the top. What is the area, in square centimetres, of the sheet metal in the hood?",
+   "difficulty": "HARD",
+   "check": "The curved surface of a cone is pi times radius times slant height, which is 60 times 100 times pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(1{,}200\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3{,}000\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(4{,}800\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(6{,}000\\pi\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-20",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "On a plan, a smoke baffle is a triangle with vertices at \\((0,0)\\), \\((12,0)\\) and \\((12,5)\\), and one unit on the plan stands for one centimetre. A second baffle is similar to the first, and the longest side of the second baffle is 39 centimetres. What is the area, in square centimetres, of the second baffle?",
+   "difficulty": "HARD",
+   "check": "The first baffle has legs 12 and 5 and so a hypotenuse of 13 and an area of 30, the similarity ratio is 3, and area scales by 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "90",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "180",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "270",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "390",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A smoking chamber is a rectangular room 12 metres long, 7 metres wide and 3 metres high. Four brick piers stand in it, each running from the floor to the ceiling and each 0.5 metre by 0.5 metre in cross-section. What is the volume, in cubic metres, of the space left inside the chamber?",
+   "difficulty": "HARD",
+   "check": "The room is 252 cubic metres and each pier takes 0.75 cubic metre, so four piers take 3.",
+   "correctAnswerFR": "[\"249\"]"
+  },
+  {
+   "_ref": "AUTHORED/T27-MATH_M2H:H2H-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A cheese cave's corner brace is a triangle with vertices A, B and C, and its one right angle stands at C. In the brace \\(\\cos A=\\frac{20}{29}\\) and the side AB measures 87 centimetres. What is the perimeter, in centimetres, of the brace?",
+   "difficulty": "HARD",
+   "check": "AC is 20 over 29 of 87, which is 60, and BC is the square root of 7,569 - 3,600, which is 63, so the perimeter is 87 + 60 + 63.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "147",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "183",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "210",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "234",
+     "isCorrect": false
+    }
+   ]
+  }
+ ]
+}

@@ -65,8 +65,8 @@ def check(cond, msg):
 
 # ---------------------------------------------------------------- derivations
 def h1_01():
-    putty = Rational(96, 4)
-    return putty * 14 + (96 - putty) * 6
+    loads = symbols("loads")
+    return solve(Eq(6 * 14 + 9 * loads, 624), loads)[0]
 
 
 def h1_02():
@@ -76,24 +76,29 @@ def h1_02():
 
 
 def h1_03():
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(4 * slope + inter, 520), Eq(9 * slope + inter, 1020)], [slope, inter])
-    return solve(Eq(sol[slope] * h + sol[inter], 1220), h)[0]
+    hh = symbols("hh", positive=True)
+    first = 30 - Rational(6, 10) * hh
+    second = 30 - Rational(45, 100) * hh
+    return solve(Eq(second - first, 9), hh)[0]
 
 
 def h1_04():
-    carts = symbols("carts")
-    return solve(Eq(480 * carts + 2100 * (25 - carts), 23340), carts)[0]
+    start = symbols("start")
+    return solve(Eq(start - Rational(3, 5) * start - 480, 1120), start)[0]
 
 
 def h1_05():
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(12 * slope + inter, 438), Eq(20 * slope + inter, 690)], [slope, inter])
-    return 32 * sol[slope] + sol[inter]
+    sand, putty = symbols("sand putty")
+    line = Eq(3 * sand + 2 * putty, 96)
+    p_of_s = solve(line, putty)[0]
+    return simplify(p_of_s - p_of_s.subs(sand, sand + 4))
 
 
 def h1_06():
-    return len([i for i in range(1, 200) if 30000 <= 800 * i <= 34000])
+    fifth = symbols("fifth")
+    days = [1150, 1240, 1090, 1275]
+    boundary = solve(Eq((sum(days) + fifth) / 5, 1200), fifth)[0]
+    return ceiling(boundary)
 
 
 def h1_07():
@@ -101,36 +106,37 @@ def h1_07():
 
 
 def h1_08():
-    roots = solve(Eq(-Rational(1, 20) * (x - 90) ** 2 + 180, 0), x)
-    return max(roots) - min(roots)
+    nn = symbols("nn", positive=True)
+    return [z for z in solve(Eq(Rational(540, 1) / nn - Rational(540, 1) / (nn + 3), 9), nn)
+            if z.is_real and z > 0][0]
 
 
 def h1_09():
-    ratio = symbols("ratio", positive=True)
-    rv = solve(Eq(240 * ratio ** 3, Rational(12288, 100)), ratio)
-    rv = [z for z in rv if z.is_real and z > 0][0]
-    return 240 * rv
+    short = symbols("short", positive=True)
+    return [z for z in solve(Eq(short ** 2 + (short + 4) ** 2, 106), short)
+            if z.is_real and z > 0][0]
 
 
 def h1_10():
-    av = symbols("av")
-    sol = solve(Eq(av * (1 - 3) * (1 + 7), -48), av)[0]
-    return sol * (0 - 3) * (0 + 7)
+    scale = Rational(6, 10) * t ** 2 + 2 * t
+    return simplify((scale.subs(t, 10) - scale.subs(t, 4)) / (10 - 4))
 
 
 def h1_12():
-    return solve(Eq(diff(Rational(4, 10) * t ** 2 - 16 * t + 800, t), 0), t)[0]
+    kk = symbols("kk")
+    f = lambda z: z ** 2 - 9 * z
+    return solve(Eq(f(kk), f(kk + 3)), kk)[0]
 
 
 def h1_13():
-    per = Rational(2400, 6 * 8)
-    return 9 * 10 * per
+    return Rational(960, 12) - Rational(1560, 20)
 
 
 def h1_14():
-    rows = [("Ashcombe", 34000, 8), ("Bewley", 30000, 2),
-            ("Cullen", 36000, 15), ("Draycote", 32000, 5)]
-    return max(rows, key=lambda row: row[1] * (100 - row[2]))[0]
+    heights = [Rational(64, 10), Rational(121, 10), Rational(172, 10),
+               Rational(235, 10), Rational(280, 10)]
+    rises = [(heights[i] - heights[i - 1], i + 1) for i in range(1, len(heights))]
+    return "Week %d" % max(rises)[1]
 
 
 def h1_15():
@@ -163,13 +169,13 @@ def h1_19():
 
 
 def h1_20():
-    rate = symbols("rate", positive=True)
-    rv = solve(Eq(8 - 30 * rate, Rational(56, 10)), rate)[0]
-    return (8 - Rational(16, 10)) / rv
+    drawn = symbols("drawn")
+    return solve(Eq(drawn - Rational(1, 3) * drawn - Rational(1, 4) * drawn, 250), drawn)[0]
 
 
 def h1_22():
-    return (Rational(13, 10) ** 2 - Rational(9, 10) ** 2) * 12
+    walls = 2 * (Rational(54, 10) + Rational(42, 10)) * Rational(25, 10)
+    return walls - 2 * Rational(9, 10)
 
 
 def h2e_02():
@@ -178,10 +184,9 @@ def h2e_02():
 
 
 def h2e_03():
-    # The interpretation is checked as a sentence built from sympy's own value
-    # of the model at n = 0, not from the author's reading of it.
-    base = (46 * n + 120).subs(n, 0)
-    return f"A tower with no lifts erected has a mass of {base} kilograms."
+    slope, inter = symbols("slope inter")
+    sol = solve([Eq(2 * slope + inter, 11), Eq(4 * slope + inter, 17)], [slope, inter])
+    return sol[slope] * 8 + sol[inter]
 
 
 def h2e_04():
@@ -195,8 +200,7 @@ def h2e_05():
 
 
 def h2e_07():
-    limit = 400 - 55
-    return f"\\(t\\le {limit}\\)"
+    return floor(solve(Eq(5 * x + 8, 78), x)[0])
 
 
 def h2e_09():
@@ -204,7 +208,8 @@ def h2e_09():
 
 
 def h2e_11():
-    return solve(Eq(6 * 2 ** x, 96), x)[0]
+    side = symbols("side", positive=True)
+    return solve(Eq(side ** 2, 196), side)[0]
 
 
 def h2e_12():
@@ -213,7 +218,8 @@ def h2e_12():
 
 
 def h2e_15():
-    return sum([4200, 5600, 3900, 4800])
+    counts = {"Plain": 180, "Pantile": 96, "Ridge": 72, "Valley": 12}
+    return Rational(counts["Ridge"], sum(counts.values()))
 
 
 def h2e_18():
@@ -221,12 +227,14 @@ def h2e_18():
 
 
 def h2e_19():
-    return Rational(12, 9)
+    run = symbols("run", positive=True)
+    return solve(Eq(15 / run, Rational(5, 2)), run)[0]
 
 
 def h2e_20():
-    vals = [340, 380, 300, 360, 420]
-    return Rational(sum(vals), len(vals))
+    loads = [12, 9, 15, 8, 20, 14, 6]
+    mean = Rational(sum(loads), len(loads))
+    return len([z for z in loads if z > mean])
 
 
 def h2h_01():
@@ -260,20 +268,19 @@ def h2h_06():
 
 
 def h2h_07():
-    return expand((2 * x + 7).subs(x, x - 3))
+    poles = sorted(solve(Eq(x ** 2 - 49, 0), x))
+    return " and ".join(str(z) for z in poles)
 
 
 def h2h_08():
-    const, time_ = symbols("const time_", positive=True)
-    kv = solve(Eq(40, const / 3 ** 2), const)[0]
-    return solve(Eq(time_, kv / 6 ** 2), time_)[0]
+    roots = solve(Eq(x ** 2 - 6 * x + 5, -4), x)
+    n_real = len(set(z for z in roots if z.is_real))
+    return {0: "None", 1: "Exactly one", 2: "Exactly two"}.get(n_real, "More than two")
 
 
 def h2h_09():
-    uu, vv = symbols("uu vv", positive=True)
-    tt = symbols("tt", positive=True)
-    sol = solve(Eq(tt / uu + tt / vv, 1), tt)[0]
-    return simplify(sol).subs({uu: u, vv: v})
+    yy = symbols("yy", nonnegative=True)
+    return expand((sqrt(yy) + 3) * (sqrt(yy) - 3)).subs(yy, y)
 
 
 def h2h_10():
@@ -304,22 +311,32 @@ def h2h_13():
 
 
 def h2h_14():
-    added = symbols("added")
-    return solve(Eq(7 * 84 + added, 8 * 87), added)[0]
+    # With 9 sorted masses the median is the 5th, so every mass below it must
+    # sit in the first four places.
+    return (9 - 1) // 2
 
 
 def h2h_15():
-    rows = [("Alder", 250, 12), ("Brent", 180, 9), ("Corve", 320, 18), ("Dell", 400, 20)]
-    return max(rows, key=lambda row: Rational(row[2], row[1]))[0]
+    rows = [(4, 86), (7, 137), (10, 188), (12, 220)]
+    aa, bb = symbols("aa bb")
+    odd = []
+    for i in range(len(rows)):
+        rest = [rw for j, rw in enumerate(rows) if j != i]
+        sol = solve([Eq(aa + bb * cr, ch) for cr, ch in rest[:2]], [aa, bb])
+        if all(sol[aa] + sol[bb] * cr == ch for cr, ch in rest):
+            odd.append(rows[i][0])
+    return "The delivery of %d crates" % odd[0]
 
 
 def h2h_16():
-    start = symbols("start")
-    return solve(Eq(start * Rational(88, 100) * Rational(125, 100), 3300), start)[0]
+    kk = symbols("kk", positive=True)
+    part = solve(Eq((3 * kk + 40) / (5 * kk), Rational(5, 7)), kk)[0]
+    return 3 * part + 5 * part
 
 
 def h2h_17():
-    return 30 ** 3 + Rational(1, 3) * 30 ** 2 * 40
+    radius = Rational(8, 10) / 2
+    return 2 * pi * radius * Rational(36, 10)
 
 
 def h2h_18():
@@ -329,8 +346,8 @@ def h2h_18():
 
 
 def h2h_19():
-    length = symbols("length", positive=True)
-    return solve(Eq(Rational(52, 10) / length, Rational(13, 15)), length)[0]
+    rise, run = 1, 4
+    return simplify(rise / sqrt(rise ** 2 + run ** 2))
 
 
 def h2h_20():
@@ -345,6 +362,60 @@ def h2h_22():
     return 45 * 22 * 18 - 45 * 8 * 6
 
 
+def h1_11():
+    """x^2 + 18x + c is a square exactly when its discriminant vanishes."""
+    cc = symbols("cc")
+    return solve(Eq(18 ** 2 - 4 * cc, 0), cc)[0]
+
+
+def h1_21():
+    sound = 400 - Rational(15, 100) * 400
+    return Rational(sound, 400)
+
+
+def h2e_06():
+    return solve(Eq(7 * x - 12, 4 * x + 27), x)[0]
+
+
+def h2e_08():
+    aa, bb = symbols("aa bb")
+    # 6a + 9b is a multiple of the given 2a + 3b, so the value follows without
+    # either letter being pinned down.
+    return simplify((6 * aa + 9 * bb).subs(aa, solve(Eq(2 * aa + 3 * bb, 17), aa)[0]))
+
+
+def h2e_10():
+    roots = sorted(solve(Eq((x - 2) * (x + 6), 0), x))
+    return " and ".join(str(z) for z in roots)
+
+
+def h2e_13():
+    return "(%d, %d)" % (6, 19)
+
+
+def h2e_14():
+    return Rational(2, 3) * Rational(1, 4)
+
+
+def h2e_16():
+    return Rational(480, 120)
+
+
+def h2e_17():
+    days = [4, 2, 5, 2, 6, 2, 7]
+    return max(set(days), key=days.count)
+
+
+def h2e_21():
+    radius = Rational(42, 2)
+    return radius ** 2
+
+
+def h2e_22():
+    xx = symbols("xx")
+    return solve(Eq((3 * xx + 20) + (2 * xx - 5), 180), xx)[0]
+
+
 DERIVE = {
  "H1-01": h1_01,
  "H1-02": h1_02,
@@ -356,8 +427,7 @@ DERIVE = {
  "H1-08": h1_08,
  "H1-09": h1_09,
  "H1-10": h1_10,
- "H1-11": lambda: solve(Eq(v, symbols("L") * symbols("H") * t / 1000), t)[0].subs(
-     {v: symbols("V"), symbols("H"): symbols("h")}),
+ "H1-11": h1_11,
  "H1-12": h1_12,
  "H1-13": h1_13,
  "H1-14": h1_14,
@@ -367,7 +437,7 @@ DERIVE = {
  "H1-18": h1_18,
  "H1-19": h1_19,
  "H1-20": h1_20,
- "H1-21": lambda: Rational(6 * 1860 + 4 * 1410, 10),
+ "H1-21": h1_21,
  "H1-22": h1_22,
 
  "H2E-01": lambda: Rational(480 - 165, 7),
@@ -375,23 +445,23 @@ DERIVE = {
  "H2E-03": h2e_03,
  "H2E-04": h2e_04,
  "H2E-05": h2e_05,
- "H2E-06": lambda: Rational(12, 3) * 2,
+ "H2E-06": h2e_06,
  "H2E-07": h2e_07,
- "H2E-08": lambda: expand(3 * (2 * x + 7) - 4 * x),
+ "H2E-08": h2e_08,
  "H2E-09": h2e_09,
- "H2E-10": lambda: (Rational(24, 10) * x + 5).subs(x, 15),
+ "H2E-10": h2e_10,
  "H2E-11": h2e_11,
  "H2E-12": h2e_12,
- "H2E-13": lambda: (x / 24).subs(x, 288),
- "H2E-14": lambda: Rational(3, 8) * 240,
+ "H2E-13": h2e_13,
+ "H2E-14": h2e_14,
  "H2E-15": h2e_15,
- "H2E-16": lambda: Rational(63, 7) * 2,
- "H2E-17": lambda: Rational(15, 100) * 340,
+ "H2E-16": h2e_16,
+ "H2E-17": h2e_17,
  "H2E-18": h2e_18,
  "H2E-19": h2e_19,
  "H2E-20": h2e_20,
- "H2E-21": lambda: Rational(12, 10) * Rational(5, 10) * Rational(4, 10) * 1000,
- "H2E-22": lambda: sqrt(60 ** 2 + 80 ** 2),
+ "H2E-21": h2e_21,
+ "H2E-22": h2e_22,
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -454,6 +524,7 @@ def latex_to_expr(text):
     for _ in range(6):
         before = t
         t = re.sub(r"\^\{([^{}]*)\}", r"**(\1)", t)
+        t = re.sub(r"\\sqrt\{([^{}]*)\}", r"sqrt((\1))", t)
         t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"((\1)/(\2))", t)
         if t == before:
             break

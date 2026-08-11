@@ -92,15 +92,15 @@ MODULE_1 = [
       check="The model gives 45 grams at t = 0, and 9t + 45 = 180 gives t = 15."),
 
  dict(n="H1-06", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("The table gives the volume of oil an alembic yielded from each of three charges of "
-            "lavender. The volume of oil is a linear function of the mass of the charge. Which "
-            "equation gives the volume V, in millilitres, of oil yielded by a charge of mass m "
-            "kilograms?"
-            + table(["Mass of charge (kilograms)", "Oil yielded (millilitres)"],
-                    [["20", "148"], ["35", "253"], ["50", "358"]])),
-      choices=["V = 8m + 7", "V = 7m + 8", "V = 7m - 8", "V = 6m + 28"], correct="B",
-      check="The volume rises 105 millilitres over 15 kilograms, so 7 per kilogram, and "
-            "148 - 7(20) = 8."),
+      stem=("A physic garden raises young plants in two frames, and the number ready in each "
+            "frame rises at a constant rate. The number ready in the first frame w weeks after "
+            "sowing is given by n=35w+120. The table gives the number ready in the second frame. "
+            "How many more plants does the second frame add each week than the first frame adds?"
+            + table(["Weeks after sowing", "Plants ready in the second frame"],
+                    [["2", "190"], ["6", "350"]])),
+      choices=["3", "5", "8", "15"], correct="B",
+      check="The second frame adds (350 - 190)/(6 - 2) = 40 a week and the first adds 35, "
+            "a difference of 5."),
 
  dict(n="H1-07", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A physic garden can obtain a plant in either of two ways. Buying one in costs $6. "
@@ -111,27 +111,29 @@ MODULE_1 = [
       check="150 + 2n < 6n gives n > 37.5, so the least whole number is 38."),
 
  dict(n="H1-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A collar of oiled cloth is cut for the neck of a retort, and the area of cloth it "
-            "takes, in square centimetres, is \\((2x+7)^{2}-(2x-7)^{2}\\), where x is a length in "
-            "centimetres. Which expression gives that same area for every value of x?"),
-      choices=["\\(28x\\)", "\\(98\\)", "\\(8x^{2}+98\\)", "\\(56x\\)"], correct="D",
-      check="(2x+7)^2 = 4x^2 + 28x + 49 and (2x-7)^2 = 4x^2 - 28x + 49, and the difference is 56x."),
+      stem=("The length of oiled cord taken to bind a bundle of cut stems is "
+            "\\(\\sqrt{72x^{5}}\\) centimetres, where x is a positive length in centimetres. "
+            "Which expression gives that same length for every positive value of x?"),
+      choices=["\\(6x^{2}\\sqrt{2x}\\)", "\\(6x^{2}\\sqrt{2}\\)", "\\(36x^{2}\\sqrt{2x}\\)",
+               "\\(8x^{2}\\sqrt{3x}\\)"], correct="A",
+      check="72x^5 = 36x^4 times 2x, and the square root of 36x^4 is 6x^2, leaving "
+            "6x^2 times the square root of 2x."),
 
  dict(n="H1-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A physic garden's planting index is \\(\\frac{x^{2}-49}{x^{2}-11x+28}\\), where x is "
-            "the number of beds in a quarter and \\(x\\ne 4\\) and \\(x\\ne 7\\). Which "
-            "expression gives that same index?"),
-      choices=["\\(\\frac{x+7}{x-4}\\)", "\\(\\frac{x-7}{x+4}\\)", "\\(\\frac{x+7}{x+4}\\)",
-               "\\(\\frac{x-4}{x+7}\\)"], correct="A",
-      check="The numerator is (x-7)(x+7) and the denominator is (x-7)(x-4), leaving (x+7)/(x-4)."),
+      stem=("A physic garden's planting index is \\(\\frac{18a^{6}b^{2}}{6a^{2}b^{5}}\\), where a "
+            "and b are positive numbers of beds and of quarters. Which expression gives that "
+            "same index?"),
+      choices=["\\(\\frac{3a^{4}}{b^{3}}\\)", "\\(3a^{4}b^{3}\\)", "\\(\\frac{3a^{8}}{b^{7}}\\)",
+               "\\(\\frac{12a^{4}}{b^{3}}\\)"], correct="A",
+      check="18/6 = 3, a^(6-2) = a^4 and b^(2-5) = b^(-3), so the index is 3a^4 over b^3."),
 
  dict(n="H1-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The temperature of a water bath under an alembic, in degrees Celsius, t minutes "
-            "after the burner is turned down is modelled by "
-            "\\(T(t)=\\frac{1}{4}t^{2}-8t+102\\). What is the least temperature, in degrees "
-            "Celsius, that this model gives?"),
-      choices=["22", "38", "54", "70"], correct="B",
-      check="The vertex is at t = 8/(2 times 1/4) = 16, and T(16) = 64 - 128 + 102 = 38."),
+      stem=("The mass of oil standing in a receiver under an alembic, in grams, t minutes after "
+            "collection begins is modelled by \\(m(t)=-2t^{2}+24t\\). For how many minutes "
+            "together does this model give a mass of at least 64 grams?"),
+      choices=["2", "4", "6", "8"], correct="B",
+      check="-2t^2 + 24t = 64 gives t^2 - 12t + 32 = 0, so t = 4 and t = 8, and the model is at "
+            "or above 64 grams between them, a stretch of 8 - 4 = 4 minutes."),
 
  dict(n="H1-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("In the xy-plane the graph of y=f(x) passes through the point (3, 10). Which point "
@@ -189,30 +191,31 @@ MODULE_1 = [
             "the second list's do."),
 
  dict(n="H1-18", domain="PSDA", skill="PSDA-DI", type="FR",
-      stem=("The table summarises the plants a physic garden raised in one season, by the way "
-            "each plant was propagated and by whether it flowered in its first year. What "
-            "percentage of all the plants in the table did not flower in their first year?"
-            + table(["", "Flowered in first year", "Did not flower", "Total"],
-                    [["Raised from cuttings", "120", "80", "200"],
-                     ["Raised by division", "80", "40", "120"],
-                     ["Total", "200", "120", "320"]])),
-      answers=["37.5"],
-      check="120 of the 320 plants did not flower, and 120/320 = 0.375."),
+      stem=("The table gives the mass of lavender in each of four charges put through an alembic "
+            "in one week. The four charges together yielded 600 millilitres of oil, and every "
+            "charge yielded the same volume of oil for each kilogram of lavender. How many "
+            "millilitres of oil did the third charge yield?"
+            + table(["Charge", "Mass of lavender (kilograms)"],
+                    [["First", "40"], ["Second", "55"], ["Third", "35"], ["Fourth", "70"]])),
+      answers=["105"],
+      check="The four charges take 200 kilograms in all, so the yield is 600/200 = 3 millilitres "
+            "a kilogram, and the third charge yields 3(35) = 105."),
 
  dict(n="H1-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("The head of an alembic is a right circular cone whose base has a radius of 15 "
-            "centimetres. The head encloses \\(1{,}125\\pi\\) cubic centimetres. What is the "
-            "height of the head, in centimetres?"),
-      choices=["9", "15", "25", "45"], correct="B",
-      check="(1/3)pi(15^2)h = 75 pi h = 1,125 pi gives h = 15."),
+      stem=("Two copper heads for an alembic have exactly the same shape, and every length on "
+            "the larger head is 3 times the matching length on the smaller head. The smaller "
+            "head encloses 45 cubic centimetres. How many cubic centimetres does the larger "
+            "head enclose?"),
+      choices=["135", "405", "1,215", "3,645"], correct="C",
+      check="Volume scales as the cube of the scale factor, so the larger head encloses "
+            "45 times 3^3 = 45(27) = 1,215 cubic centimetres."),
 
  dict(n="H1-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A raised bed in a physic garden is a rectangular box 3 metres long, 1.2 metres wide "
-            "and 0.4 metres deep, and it is filled level to the brim with compost. Compost is "
-            "sold in bags each holding 0.06 cubic metres. How many bags are needed to fill the "
-            "bed?"),
-      answers=["24"],
-      check="3(1.2)(0.4) = 1.44 cubic metres, and 1.44/0.06 = 24."),
+      stem=("A circular herb bed in a physic garden has a radius of 12 metres. A gravel walk "
+            "covers the sector of the bed cut off by a central angle of 150&deg;, and the area "
+            "of that sector is \\(k\\pi\\) square metres. What is the value of k?"),
+      answers=["60"],
+      check="The sector is 150/360 of the bed, so its area is (150/360)(12^2)pi = 60 pi."),
 
  dict(n="H1-21", domain="GT", skill="GT-LA", type="MC",
       stem=("A triangular corner bed PQR in a physic garden has PQ equal in length to PR, and "
@@ -224,11 +227,10 @@ MODULE_1 = [
 
  dict(n="H1-22", domain="GT", skill="GT-TR", type="MC",
       stem=("A brace cut for a cold frame is a right triangle ABC with its right angle at C. In "
-            "this brace \\(\\tan A=\\frac{20}{21}\\) and the hypotenuse AB is 29 centimetres "
-            "long. What is the area, in square centimetres, of the brace?"),
-      choices=["105", "210", "290", "420"], correct="B",
-      check="The legs are in the ratio 20 to 21 and 20-21-29 is a right triangle, so the legs "
-            "are 20 and 21 and the area is (1/2)(20)(21) = 210."),
+            "this brace \\(\\sin A=\\frac{2}{7}\\). What is the value of \\(\\cos^{2}A\\)?"),
+      choices=["\\(\\frac{45}{49}\\)", "\\(\\frac{5}{49}\\)", "\\(\\frac{4}{49}\\)",
+               "\\(\\frac{5}{7}\\)"], correct="A",
+      check="Since sin^2 A + cos^2 A = 1, cos^2 A = 1 - (2/7)^2 = 1 - 4/49 = 45/49."),
 ]
 
 
@@ -244,7 +246,7 @@ MODULE_2_EASY = [
  dict(n="H2E-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("Each drawer of a herbarium cabinet holds 24 mounted sheets. How many mounted sheets "
             "do 15 such drawers hold altogether?"),
-      choices=["320", "340", "360", "380"], correct="C",
+      choices=["360", "384", "408", "432"], correct="A",
       check="15(24) = 360."),
 
  dict(n="H2E-03", domain="ALG", skill="ALG-LE", type="MC",
@@ -260,12 +262,11 @@ MODULE_2_EASY = [
       choices=["86", "94", "102", "110"], correct="B",
       check="190 - 8(12) = 190 - 96 = 94."),
 
- dict(n="H2E-05", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A seed merchant's packing rule gives the number of seeds in a packet as f(g)=9g+40, "
-            "where g is the grade number of the seed. How many seeds does this rule give for a "
-            "packet of grade 7?"),
-      choices=["63", "96", "103", "110"], correct="C",
-      check="9(7) + 40 = 63 + 40 = 103."),
+ dict(n="H2E-05", domain="ALG", skill="ALG-LE", type="MC",
+      stem=("An apothecary's packing rule is 5p+4q=96, where p is the number of pill boxes and q "
+            "is the number of jars packed into one crate. If q=9, what is the value of p?"),
+      choices=["6", "8", "10", "12"], correct="D",
+      check="4(9) = 36, so 5p = 96 - 36 = 60 and p = 12."),
 
  dict(n="H2E-06", domain="ALG", skill="ALG-LF", type="FR",
       stem=("A seed store holds 640 packets and sends out 45 packets in each week. How many "
@@ -281,11 +282,12 @@ MODULE_2_EASY = [
       check="5n + 3 > 38 gives n > 7, and 8 is the only listed value greater than 7."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("The number of grains of powder an apothecary needs for a parcel of k doses is "
-            "\\(6(2k-5)+3k\\). Which expression gives that same number of grains for every "
-            "value of k?"),
-      choices=["\\(15k-30\\)", "\\(9k-30\\)", "\\(15k-5\\)", "\\(12k-30\\)"], correct="A",
-      check="6(2k-5) = 12k - 30, and 12k - 30 + 3k = 15k - 30."),
+      stem=("A parcel made up by an apothecary holds \\(4k^{2}+7k-5\\) grains of one powder and "
+            "\\(2k^{2}-7k+9\\) grains of another, where k is a whole number. Which expression "
+            "gives the total number of grains in the parcel?"),
+      choices=["\\(6k^{2}+4\\)", "\\(6k^{2}+14k+4\\)", "\\(6k^{4}+4\\)", "\\(6k^{2}-4\\)"],
+      correct="A",
+      check="The k terms cancel, 7k - 7k = 0, and 4k^2 + 2k^2 = 6k^2 with -5 + 9 = 4."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A herbarium case holds \\((x+6)(x+4)\\) mounted sheets. Which expression gives that "
@@ -297,34 +299,31 @@ MODULE_2_EASY = [
  dict(n="H2E-10", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A seed counter reports a lot size as \\(\\left(3m^{4}\\right)^{2}\\) seeds, where m "
             "is a positive whole number. Which expression gives that same lot size?"),
-      choices=["\\(6m^{8}\\)", "\\(9m^{6}\\)", "\\(9m^{8}\\)", "\\(3m^{8}\\)"], correct="C",
+      choices=["\\(6m^{8}\\)", "\\(9m^{8}\\)", "\\(9m^{6}\\)", "\\(3m^{8}\\)"], correct="B",
       check="Squaring gives 3^2 = 9 and m^(4 times 2) = m^8, so 9m^8."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The moisture content of a seed lot, in percent, is modelled by "
-            "\\(M(d)=18-\\frac{d^{2}}{4}\\), where d is the number of days the lot has spent in "
-            "the drying room. What moisture content, in percent, does this model give after 6 "
-            "days?"),
-      choices=["3", "9", "12", "15"], correct="B",
-      check="6^2/4 = 9, and 18 - 9 = 9."),
+      stem=("A seed store's settling rule uses the function g defined by "
+            "\\(g(p)=\\sqrt{p+15}\\). What is the value of g(49)?"),
+      choices=["7", "8", "32", "64"], correct="B",
+      check="49 + 15 = 64, and the square root of 64 is 8."),
 
- dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The number of specimens a herbarium clerk mounts in a session is modelled by "
-            "\\(N(h)=-h^{2}+12h\\), where h is the number of hours the session lasts. How many "
-            "specimens does this model give for a session of 5 hours?"),
-      choices=["20", "25", "30", "35"], correct="D",
-      check="-(5^2) + 12(5) = -25 + 60 = 35."),
+ dict(n="H2E-12", domain="ADV", skill="ADV-NE", type="MC",
+      stem=("A herbarium's mounting rule is \\(\\left|x-19\\right|=6\\), where the gauge reading "
+            "x is greater than 19. What is the value of x?"),
+      choices=["13", "19", "25", "31"], correct="C",
+      check="x - 19 = 6 gives x = 25 and x - 19 = -6 gives x = 13, and only 25 is greater "
+            "than 19."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("An apothecary's balance number x is positive and satisfies \\(x^{2}+3=52\\). What "
-            "is the value of x?"),
-      choices=["5", "7", "17", "49"], correct="B",
-      check="x^2 = 49, and the positive solution is x = 7."),
+      stem=("A seed grader's index x satisfies \\(x^{3}=343\\). What is the value of x?"),
+      choices=["7", "9", "21", "49"], correct="A",
+      check="7 times 7 times 7 = 343, so x = 7."),
 
  dict(n="H2E-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("An apothecary weighs powders with a set of weights in which 1 drachm is 60 grains. "
             "How many grains are there in 7 drachms?"),
-      choices=["360", "400", "420", "480"], correct="C",
+      choices=["360", "380", "400", "420"], correct="D",
       check="7(60) = 420."),
 
  dict(n="H2E-15", domain="PSDA", skill="PSDA-RP", type="MC",
@@ -334,18 +333,16 @@ MODULE_2_EASY = [
       check="2,400/16 = 150."),
 
  dict(n="H2E-16", domain="PSDA", skill="PSDA-ST", type="FR",
-      stem=("The masses, in grams, of five parcels of dried leaf held in a store are 24, 31, 28, "
-            "35 and 27. What is the median of these five masses, in grams?"),
-      answers=["28"],
-      check="In order the masses are 24, 27, 28, 31, 35, and the middle value is 28."),
+      stem=("An apothecary recorded the number of doses made up on each of seven days as 12, 9, "
+            "14, 9, 11, 9 and 15. What is the mode of these seven numbers?"),
+      answers=["9"],
+      check="9 appears three times and every other number appears once, so the mode is 9."),
 
  dict(n="H2E-17", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("A herbarium case holds 96 mounted sheets, of which 36 are grasses and 24 are sedges; "
-            "the rest are ferns. One sheet is drawn from the case at random. What is the "
-            "probability that the sheet drawn is not a grass?"),
-      choices=["\\(\\frac{5}{8}\\)", "\\(\\frac{3}{8}\\)", "\\(\\frac{1}{4}\\)",
-               "\\(\\frac{3}{4}\\)"], correct="A",
-      check="96 - 36 = 60 sheets are not grasses, and 60/96 = 5/8."),
+      stem=("The numbers of seeds counted in each of six packets were 148, 155, 139, 162, 151 "
+            "and 144. What is the range of these six numbers?"),
+      choices=["11", "14", "23", "46"], correct="C",
+      check="The greatest count is 162 and the least is 139, and 162 - 139 = 23."),
 
  dict(n="H2E-18", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the number of grains in each of four doses an apothecary made up. "
@@ -357,32 +354,35 @@ MODULE_2_EASY = [
       check="The greatest is 62 and the least is 38, and 62 - 38 = 24."),
 
  dict(n="H2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A seed drying tray is an open rectangular box 50 centimetres long, 30 centimetres "
-            "wide and 6 centimetres deep, and it is filled level to the brim. What is the volume "
-            "of seed in the tray, in cubic centimetres?"),
-      choices=["900", "1,500", "9,000", "90,000"], correct="C",
-      check="50(30)(6) = 9,000."),
+      stem=("The base of a seed drying tray is a trapezium whose two parallel sides are 30 "
+            "centimetres and 42 centimetres long and whose perpendicular height is 16 "
+            "centimetres. What is the area of that base, in square centimetres?"),
+      choices=["288", "480", "576", "1,152"], correct="C",
+      check="Half of (30 + 42) is 36, and 36 times 16 = 576."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A herbarium mounting sheet is a rectangle 42 centimetres long and 26 centimetres "
-            "wide. What is the perimeter of the sheet, in centimetres?"),
-      answers=["136"],
-      check="2(42 + 26) = 2(68) = 136."),
+      stem=("A seed drying tray is a rectangular box 40 centimetres long, 24 centimetres wide "
+            "and 16 centimetres deep. Cubical seed boxes whose edges are 8 centimetres long are "
+            "packed into the tray so that the tray is completely filled. How many of those boxes "
+            "does the tray hold?"),
+      answers=["30"],
+      check="The tray takes 40/8 = 5 boxes along its length, 24/8 = 3 across its width and "
+            "16/8 = 2 up its depth, and 5(3)(2) = 30."),
 
  dict(n="H2E-21", domain="GT", skill="GT-LA", type="MC",
-      stem=("An apothecary's folding weight rest has the shape of a triangle in which two of the "
-            "angles measure 43&deg; and 68&deg;. What is the measure, in degrees, of the third "
-            "angle of that triangle?"),
-      choices=["49", "59", "62", "69"], correct="D",
-      check="180 - 43 - 68 = 69."),
+      stem=("An apothecary's folding weight rest has the shape of a triangle. An exterior angle "
+            "at one of its vertices measures 126&deg;, and the two interior angles that are not "
+            "adjacent to that exterior angle are equal in measure. What is the measure, in "
+            "degrees, of each of those two interior angles?"),
+      choices=["63", "72", "117", "126"], correct="A",
+      check="An exterior angle equals the sum of the two non-adjacent interior angles, so each "
+            "of the two equal angles is 126/2 = 63 degrees."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("A herbarium pressing gauge is a right triangle KLM with its right angle at L. In "
-            "this gauge KM is 37 centimetres long and LM is 12 centimetres long. What is the "
-            "value of \\(\\cos M\\)?"),
-      choices=["\\(\\frac{12}{37}\\)", "\\(\\frac{35}{37}\\)", "\\(\\frac{12}{35}\\)",
-               "\\(\\frac{37}{12}\\)"], correct="A",
-      check="LM is the leg adjacent to M and KM is the hypotenuse, so cos M = 12/37."),
+      stem=("A herbarium pressing screw turns through an angle of \\(\\frac{7\\pi}{10}\\) "
+            "radians. What is the measure of that angle, in degrees?"),
+      choices=["63", "108", "126", "252"], correct="C",
+      check="pi radians is 180 degrees, so (7/10)(180) = 126 degrees."),
 ]
 
 
@@ -390,11 +390,10 @@ MODULE_2_EASY = [
 # Apothecary dispensing and weights, herbarium pressing, seed drying and storage.
 MODULE_2_HARD = [
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("An apothecary's tolerance rule is \\(\\left|3x-8\\right|=x+4\\), where x is a "
-            "gauge reading. What is the sum of all values of x that satisfy this rule?"),
-      answers=["7"],
-      check="3x - 8 = x + 4 gives x = 6 and 3x - 8 = -(x+4) gives x = 1; both satisfy the rule, "
-            "and 6 + 1 = 7."),
+      stem=("An apothecary's dispensing rule sets \\(\\frac{x+3}{4}+\\frac{x-1}{2}=7\\), where x "
+            "is the number of grains in a dose. What is the value of x?"),
+      answers=["9"],
+      check="Multiplying through by 4 gives (x+3) + 2(x-1) = 28, so 3x + 1 = 28 and x = 9."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("An apothecary's day book fixes two quantities x and y by y=4x-7 and 2x+3y=35. What "
@@ -419,11 +418,10 @@ MODULE_2_HARD = [
       check="5,400 - rw = 3,000 - (r/3)w gives 2,400 = (2r/3)w, so w = 3,600/r."),
 
  dict(n="H2H-05", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("On a herbarium mounting plan a straight line passes through the points (-4, 9) and (8, 3). A "
-            "second straight line is parallel to the first and passes through (2, -5). What is "
-            "the y-coordinate of the point on the second line whose x-coordinate is 14?"),
-      choices=["-11", "-8", "-2", "1"], correct="A",
-      check="The slope is (3-9)/(8+4) = -1/2, and -5 - (1/2)(14-2) = -5 - 6 = -11."),
+      stem=("A herbarium's shrinkage rule is a linear function f, and the rule gives f(2) as 21 "
+            "greater than f(9). What is the slope of the graph of y=f(x) in the xy-plane?"),
+      choices=["-3", "\\(-\\frac{7}{3}\\)", "3", "21"], correct="A",
+      check="f(9) - f(2) = -21 over a run of 9 - 2 = 7, so the slope is -21/7 = -3."),
 
  dict(n="H2H-06", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A seed grader accepts a reading x whenever "
@@ -456,10 +454,12 @@ MODULE_2_HARD = [
       check="f(x+4) = 3(x+4) - 7 = 3x + 12 - 7 = 3x + 5."),
 
  dict(n="H2H-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by \\(f(x)=\\frac{a}{x+2}\\), where a is a constant, and "
-            "the equation f(x)=x has exactly one real solution. What is the value of a?"),
-      choices=["-4", "-1", "1", "4"], correct="B",
-      check="a/(x+2) = x gives x^2 + 2x - a = 0, whose discriminant 4 + 4a is zero when a = -1."),
+      stem=("A seed store's wastage model is the function f defined by "
+            "\\(f(x)=x^{3}-2x^{2}-15x\\). How many distinct x-intercepts does the graph of "
+            "y=f(x) have in the xy-plane?"),
+      choices=["1", "2", "3", "4"], correct="C",
+      check="x^3 - 2x^2 - 15x = x(x-5)(x+3), whose zeros are 0, 5 and -3, so there are 3 "
+            "distinct x-intercepts."),
 
  dict(n="H2H-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The function f is defined by \\(f(x)=x^{2}+bx+c\\), where b and c are constants. "
@@ -468,11 +468,12 @@ MODULE_2_HARD = [
       check="f(1) = f(9) puts the axis at x = 5, so b = -10, and 25 - 50 + c = -7 gives c = 18."),
 
  dict(n="H2H-12", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A seed physiologist's calibration satisfies \\(\\sqrt{2x+11}=x-2\\). What is the "
-            "value of x?"),
-      choices=["-1", "3", "7", "9"], correct="C",
-      check="Squaring gives x^2 - 6x - 7 = 0, so x = 7 or x = -1, and x = -1 makes the right "
-            "side negative, so only x = 7 works."),
+      stem=("A seed physiologist's calibration satisfies \\(x+\\frac{18}{x}=11\\), where x is "
+            "positive. What is the positive difference between the two values of x that satisfy "
+            "this equation?"),
+      choices=["5", "7", "9", "11"], correct="B",
+      check="Multiplying through by x gives x^2 - 11x + 18 = 0, so x = 2 or x = 9, and "
+            "9 - 2 = 7."),
 
  dict(n="H2H-13", domain="ADV", skill="ADV-NE", type="MC",
       stem=("A germination index x is positive and satisfies \\(x^{4}-13x^{2}+36=0\\). What is "
@@ -527,14 +528,13 @@ MODULE_2_HARD = [
       check="The rates are 80, 85, 80 and 78 percent, and Bramfield's 85 percent is the greatest."),
 
  dict(n="H2H-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A dispensing bottle is a right circular cylinder whose height is equal to the "
-            "diameter of its base, and the curved surface of the bottle has an area of "
-            "\\(100\\pi\\) square centimetres. What is the volume of the bottle, in cubic "
-            "centimetres?"),
-      choices=["\\(125\\pi\\)", "\\(250\\pi\\)", "\\(500\\pi\\)", "\\(1{,}000\\pi\\)"],
-      correct="B",
-      check="With h = 2r the curved area is 2 pi r(2r) = 4 pi r^2 = 100 pi, so r = 5 and h = 10, "
-            "and the volume is pi(25)(10) = 250 pi."),
+      stem=("A circular herbarium seal of the largest size that will fit is cut from a square "
+            "sheet of paper whose sides are 20 centimetres long. What is the area, in square "
+            "centimetres, of the paper left over once the seal has been cut out?"),
+      choices=["\\(400-100\\pi\\)", "\\(400-400\\pi\\)", "\\(400-20\\pi\\)",
+               "\\(100-100\\pi\\)"], correct="A",
+      check="The largest circle that fits has a diameter of 20, so a radius of 10 and an area "
+            "of 100 pi, and the square's area is 20^2 = 400."),
 
  dict(n="H2H-20", domain="GT", skill="GT-AV", type="FR",
       stem=("A rectangular seed drying tray has a perimeter of 210 centimetres, and the tray is "

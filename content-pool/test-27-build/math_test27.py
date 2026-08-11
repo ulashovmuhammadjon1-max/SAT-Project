@@ -63,20 +63,20 @@ def table(headers, rows):
 # ---------------------------------------------------------------- Module 1
 MODULE_1 = [
  dict(n="H1-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A saltworks draws its salt from an east pan and a west pan. In one season the two "
-            "pans together gave 4,160 kilograms of salt, and the east pan gave 260 kilograms more "
-            "than twice what the west pan gave. How many kilograms of salt did the east pan give "
-            "that season?"),
-      choices=["1,300", "1,560", "2,600", "2,860"], correct="D",
-      check="w + (2w + 260) = 4,160 gives w = 1,300, so the east pan gave 2(1,300) + 260 = 2,860."),
+      stem=("In one season a saltworks drew salt from seven pans. Six of the pans each gave the "
+            "same mass of salt, and the seventh gave 140 kilograms less than each of the other "
+            "six. The seven pans together gave 4,060 kilograms. How many kilograms of salt did "
+            "each of the six equal pans give?"),
+      choices=["560", "580", "600", "620"], correct="C",
+      check="Six pans of p kilograms and a seventh of p - 140 give 7p - 140 = 4,060, so 7p = 4,200 "
+            "and p = 600."),
 
  dict(n="H1-02", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("An ice merchant may hire a horse sledge for the whole season at 48 pounds and then "
-            "pay 0.60 pound for each block it carries, or pay a jobbing carter 1.35 pounds a block "
-            "with no hire to pay. For how many blocks carried in a season would the two "
-            "arrangements cost the same?"),
-      choices=["36", "48", "52", "64"], correct="D",
-      check="48 + 0.60b = 1.35b leaves 0.75b = 48, so b = 64."),
+      stem=("An ice house is drawn on through the summer. Once 260 tonnes had been taken out of "
+            "it, the mass still stored was three fifths of the mass that had been stored before "
+            "any was taken out. How many tonnes were stored before any was taken out?"),
+      choices=["390", "520", "650", "780"], correct="C",
+      check="m - 260 = (3/5)m leaves (2/5)m = 260, so m = 650."),
 
  dict(n="H1-03", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A saltworks watches two evaporating pans. The mass of salt drawn from the first, in "
@@ -128,20 +128,18 @@ MODULE_1 = [
 
  dict(n="H1-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A packer's rule of thumb puts the number of ice blocks a chamber will take at "
-            "\\(\\left(\\frac{8n^{6}}{27}\\right)^{\\frac{2}{3}}\\), where n is a measure of the "
-            "chamber. Which expression is equivalent to this rule for \\(n>0\\)?"),
-      choices=["\\(\\frac{4n^{4}}{9}\\)", "\\(\\frac{4n^{9}}{9}\\)", "\\(\\frac{16n^{4}}{9}\\)",
-               "\\(\\frac{4n^{4}}{3}\\)"], correct="A",
-      check="The cube root of 8 is 2 and of 27 is 3, each squared gives 4 over 9, and n to the "
-            "sixth raised to two thirds is n to the fourth."),
+            "\\(\\sqrt{72n^{5}}\\), where n is a measure of the chamber and \\(n>0\\). Which "
+            "expression is equivalent to this rule?"),
+      choices=["\\(6n^{2}\\sqrt{2n}\\)", "\\(6n^{2}\\sqrt{2}\\)", "\\(36n^{2}\\sqrt{2n}\\)",
+               "\\(6n^{3}\\sqrt{2}\\)"], correct="A",
+      check="72 is 36 times 2 and n to the fifth is n to the fourth times n, so the square root is "
+            "6 n squared times the square root of 2n."),
 
  dict(n="H1-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("The mass of salt left undissolved on the floor of a pan, in kilograms, is modelled by "
-            "\\(S(h)=h^{2}-18h+96\\), where h is the number of hours since the brine was let in "
-            "and \\(0\\le h\\le 9\\). After how many hours does this model give 24 kilograms?"),
-      choices=["4", "6", "8", "12"], correct="B",
-      check="h squared minus 18h plus 72 equals 0 factors as (h - 6)(h - 12), and only h = 6 lies "
-            "in the interval given."),
+      stem=("The sluice of a salt pan is set at a number x, and the setting must satisfy "
+            "\\((2x-7)^{2}=81\\). What is the positive value of x that satisfies this equation?"),
+      choices=["4", "8", "11", "16"], correct="B",
+      check="2x - 7 is either 9 or -9, giving x = 8 or x = -1, and only 8 is positive."),
 
  dict(n="H1-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The ice remaining in a store is modelled by "
@@ -153,11 +151,14 @@ MODULE_1 = [
             "costs 45 tonnes."),
 
  dict(n="H1-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The number of hours a pan of brine takes to dry out is modelled by "
-            "\\(t=9\\sqrt{d}\\), where d is the depth of the brine in centimetres. A pan takes 63 "
-            "hours to dry out. What is the depth, in centimetres, of brine in that pan?"),
-      choices=["7", "42", "49", "56"], correct="C",
-      check="9 times the square root of d equals 63 gives a square root of 7, so d = 49."),
+      stem=("The temperature inside an ice house, in degrees Celsius, h hours after its door is "
+            "opened on a summer day is modelled by "
+            "\\(T(h)=11-8\\left(\\frac{1}{2}\\right)^{h}\\). As h increases without bound, the "
+            "temperatures this model gives come closer and closer to what value, in degrees "
+            "Celsius?"),
+      choices=["3", "8", "11", "19"], correct="C",
+      check="One half raised to h falls towards 0 as h grows, so the subtracted term vanishes and "
+            "the model approaches 11."),
 
  dict(n="H1-13", domain="ADV", skill="ADV-NE", type="FR",
       stem=("The number of blocks an ice gang cuts in one shift is modelled by "
@@ -177,15 +178,15 @@ MODULE_1 = [
       choices=["Ashwell", "Barrow", "Cranford", "Deeping"], correct="C",
       check="The losses are 17.5, 14, 20 and 15 percent, so Cranford lost the greatest share."),
 
- dict(n="H1-15", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("An ice warden measured the thickness of the ice on a pond on each of 41 days one "
-            "winter and recorded the number of days at each thickness. "
-            + table(["Thickness (cm)", "Number of days"],
-                    [["14", "5"], ["15", "9"], ["16", "12"], ["17", "8"], ["18", "7"]])
-            + " What is the median of the 41 recorded thicknesses, in centimetres?"),
-      choices=["15", "16", "17", "18"], correct="B",
-      check="With 41 days the median is the 21st value, and the running totals 5, 14 and 26 put "
-            "the 21st value at 16 centimetres."),
+ dict(n="H1-15", domain="PSDA", skill="PSDA-DI", type="MC",
+      stem=("The table gives the total mass of ice, in tonnes, that had been cut into one ice "
+            "house by the end of each of the first four weeks of a winter. "
+            + table(["Week", "Total cut in by the end of the week (tonnes)"],
+                    [["1", "96"], ["2", "214"], ["3", "305"], ["4", "372"]])
+            + " How many tonnes of ice were cut into the ice house during the third week alone?"),
+      choices=["67", "91", "118", "305"], correct="B",
+      check="The totals are running totals, so the third week alone brought 305 - 214 = 91 "
+            "tonnes."),
 
  dict(n="H1-16", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("Ice is cut into blocks measuring 0.5 metre by 0.4 metre by 0.3 metre, and this ice "
@@ -197,16 +198,16 @@ MODULE_1 = [
             "20.83, so 20 blocks may go on."),
 
  dict(n="H1-17", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The table classifies the 300 crates held in a root cellar in April by what they hold "
-            "and by whether the roots in them are still sound. "
-            + table(["", "Sound", "Sprouted", "Total"],
-                    [["Potatoes", "168", "42", "210"], ["Turnips", "63", "27", "90"],
-                     ["Total", "231", "69", "300"]])
-            + " One crate is selected at random from the crates of potatoes. What is the "
-              "probability that the roots in the selected crate are still sound?"),
-      choices=["\\(\\frac{4}{5}\\)", "\\(\\frac{7}{10}\\)", "\\(\\frac{77}{100}\\)",
-               "\\(\\frac{14}{25}\\)"], correct="A",
-      check="168 of the 210 crates of potatoes are sound, and 168 over 210 reduces to 4 over 5."),
+      stem=("An ice warden measured the thickness of the ice, in centimetres, at five places on "
+            "each of two ponds. The two sets of readings have the same mean. "
+            + table(["Pond", "Readings (cm)"],
+                    [["Millpond", "13, 15, 17, 19, 21"],
+                     ["Nether Pond", "16, 16, 17, 18, 18"]])
+            + " How much greater is the range of the Millpond readings than the range of the "
+              "Nether Pond readings, in centimetres?"),
+      choices=["2", "4", "6", "8"], correct="C",
+      check="The Millpond readings run from 13 to 21, a range of 8, and the Nether Pond readings "
+            "from 16 to 18, a range of 2, so the difference is 6."),
 
  dict(n="H1-18", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("In one season a saltworks pumped 46,000 cubic metres of sea water into its pans and "
@@ -232,20 +233,21 @@ MODULE_1 = [
             "root of 320 is 8 root 5."),
 
  dict(n="H1-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("A root cellar is roofed over and then covered with a layer of earth 0.4 metre thick "
-            "spread evenly over a rectangular area 6 metres by 4.5 metres. The earth is brought up "
-            "in carts, and one cart holds 0.9 cubic metre. How many cartloads of earth does the "
-            "covering take?"),
-      answers=["12"],
-      check="6 times 4.5 times 0.4 is 10.8 cubic metres, and 10.8 divided by 0.9 is 12."),
+      stem=("A round salt pan has a radius of 12 metres, and a level walk of the same width all "
+            "the way round is laid outside it. The walk covers \\(52\\pi\\) square metres. What is "
+            "the width, in metres, of the walk?"),
+      answers=["2"],
+      check="The walk is the ring between circles of radius 12 + w and 12, so (12 + w) squared "
+            "less 144 is 52, giving w squared + 24w - 52 = 0 and w = 2."),
 
  dict(n="H1-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("An ice saw is set into the ice at an acute angle A to the surface of the pond, and "
-            "the setting gauge gives \\(\\tan A=\\frac{7}{24}\\). What is the value of "
-            "\\(\\sin A\\)?"),
-      choices=["\\(\\frac{7}{25}\\)", "\\(\\frac{24}{25}\\)", "\\(\\frac{25}{24}\\)",
-               "\\(\\frac{7}{24}\\)"], correct="A",
-      check="A right triangle with legs 7 and 24 has hypotenuse 25, so the sine of A is 7 over 25."),
+      stem=("A wedge cut out of the ice by an ice saw is a right triangle ABC whose right angle is "
+            "at C. The leg BC measures 8 metres and the triangle has an area of 60 square metres. "
+            "What is the value of \\(\\tan A\\)?"),
+      choices=["\\(\\frac{8}{15}\\)", "\\(\\frac{15}{8}\\)", "\\(\\frac{8}{17}\\)",
+               "\\(\\frac{15}{17}\\)"], correct="A",
+      check="Half of AC times 8 is 60, so AC is 15, and the tangent of A is BC over AC, or 8 over "
+            "15."),
 ]
 
 # ---------------------------------------------------------- Module 2 (Easy)
@@ -289,11 +291,11 @@ MODULE_2_EASY = [
       check="Setting r to 0 leaves 24, the number hung with no extra rail fitted."),
 
  dict(n="H2E-06", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A smoking rack may carry a load of at most 45 kilograms. Herring are hung on it in "
-            "strings, and each string has a mass of 3 kilograms. What is the greatest number of "
-            "strings the rack may carry?"),
-      choices=["9", "12", "14", "15"], correct="D",
-      check="45 divided by 3 is 15."),
+      stem=("A curer hangs x strings of herring on one smoking rack. The rack is safely loaded "
+            "whenever \\(5x+8\\le 43\\). What is the greatest number of strings that leaves the "
+            "rack safely loaded?"),
+      choices=["5", "7", "9", "35"], correct="B",
+      check="5x is at most 35, so x is at most 7."),
 
  dict(n="H2E-07", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A curer charges, in pence, 7f + 40 to smoke f fish for a customer. What does the "
@@ -322,10 +324,10 @@ MODULE_2_EASY = [
       check="120 divided by 8 is 15."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A curer's smoke index x satisfies \\(x^{3}=125\\). What is the value of the smoke "
+      stem=("A curer's smoke index x satisfies \\(5^{x}=625\\). What is the value of the smoke "
             "index?"),
-      choices=["5", "25", "41", "375"], correct="A",
-      check="The cube root of 125 is 5."),
+      choices=["3", "4", "5", "125"], correct="B",
+      check="625 is 5 times 5 times 5 times 5, so x = 4."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="FR",
       stem=("The number of minutes of smoking a curer allows at draught setting x is "
@@ -382,11 +384,11 @@ MODULE_2_EASY = [
       check="46 plus 38 plus 52 plus 29 is 165."),
 
  dict(n="H2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("The roof space of a smokehouse is a prism 6 metres long whose end is a triangle with "
-            "a base of 4 metres and a height of 1.5 metres. What is the volume, in cubic metres, "
-            "of the roof space?"),
-      choices=["18", "24", "27", "36"], correct="A",
-      check="The triangle is 3 square metres, and 3 times 6 is 18."),
+      stem=("A shelf board for a cheese cave is a rectangle 120 centimetres long and 45 "
+            "centimetres wide, with a square of side 15 centimetres cut out of one corner to clear "
+            "a post. What is the area, in square centimetres, of the board?"),
+      choices=["5,175", "5,220", "5,400", "5,625"], correct="A",
+      check="120 times 45 is 5,400, and 15 squared is 225, so 5,400 - 225 is 5,175."),
 
  dict(n="H2E-20", domain="GT", skill="GT-LA", type="MC",
       stem=("A smoke baffle is cut as a triangle whose three angles measure 3n&deg;, 4n&deg; and "
@@ -402,11 +404,13 @@ MODULE_2_EASY = [
       check="0.9 squared is 0.81, and 0.81 times 7 is 5.67."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("A cheese cave's ramp is the hypotenuse of a right triangle, and it is 18 metres long. "
-            "The ramp makes an angle of 30&deg; with the level floor. What is the length, in "
-            "metres, of the side opposite the 30&deg; angle?"),
-      choices=["6", "9", "12", "15"], correct="B",
-      check="The side opposite a 30 degree angle is half the hypotenuse, and half of 18 is 9."),
+      stem=("A brace under a smokehouse rafter is cut as a triangle with one right angle and two "
+            "sides of equal length. Each of the two equal sides measures 9 centimetres. What is "
+            "the length, in centimetres, of the third side?"),
+      choices=["\\(9\\sqrt{2}\\)", "\\(9\\sqrt{3}\\)", "\\(\\frac{9\\sqrt{2}}{2}\\)", "18"],
+      correct="A",
+      check="The two equal sides are the legs, so the third side is the square root of 81 + 81, "
+            "which is 9 root 2."),
 ]
 
 # ---------------------------------------------------------- Module 2 (Hard)
@@ -460,18 +464,19 @@ MODULE_2_HARD = [
             "makes q equal -5, so p + q is -1."),
 
  dict(n="H2H-07", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Hanging one herring in a smokehouse takes 0.4 minute and hanging one mackerel takes "
-            "0.7 minute. A curer will spend no more than 280 minutes hanging fish, and must hang "
-            "at least 300 herring. What is the greatest number of mackerel the curer can hang?"),
-      choices=["212", "228", "240", "400"], correct="B",
-      check="300 herring take 120 minutes, leaving at most 160 minutes, and 160 divided by 0.7 is "
-            "228.57, so 228 mackerel."),
+      stem=("A curer opens a smokehouse flue by x notches, and the draught is judged sufficient "
+            "whenever \\(\\frac{5x-3}{4}\\ge x+2\\). For which numbers of notches is the draught "
+            "judged sufficient?"),
+      choices=["\\(x\\ge 11\\)", "\\(x\\le 11\\)", "\\(x\\ge \\frac{5}{4}\\)",
+               "\\(x\\le -\\frac{11}{9}\\)"], correct="A",
+      check="Multiplying through by 4 gives 5x - 3 at least 4x + 8, which leaves x at least 11."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("An affineur's turning schedule uses the function \\(f(x)=2x^{2}-5\\). For a positive "
-            "constant a it is known that \\(f(a)=45\\). What is the value of \\(f(2a)\\)?"),
-      choices=["\\(90\\)", "\\(175\\)", "\\(180\\)", "\\(195\\)"], correct="D",
-      check="2a squared minus 5 equal to 45 gives a = 5, and f(10) is 200 minus 5, which is 195."),
+      stem=("An affineur's yield curve \\(y=f(x)\\) crosses the x-axis at \\(x=-4\\) and at "
+            "\\(x=6\\). The function g is defined by \\(g(x)=f(x+2)\\). What is the greater of "
+            "the two values of x at which the graph of \\(y=g(x)\\) crosses the x-axis?"),
+      choices=["\\(-6\\)", "\\(-2\\)", "\\(4\\)", "\\(8\\)"], correct="C",
+      check="g is 0 where x + 2 is -4 or 6, that is where x is -6 or 4, and the greater is 4."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A curer's timing rule is written as \\(x^{2}+14x+58\\). Which expression is "
@@ -488,12 +493,12 @@ MODULE_2_HARD = [
       check="The square of 2x plus 7 is 4x squared plus 28x plus 49, so k is 28."),
 
  dict(n="H2H-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The number of wheels ripening in a cave is modelled by "
-            "\\(N(t)=N_{0}\\cdot 3^{\\frac{t}{5}}\\), where \\(N_{0}\\) is the number at the start "
-            "and t is the number of days since then. According to this model, by what factor is "
-            "the number multiplied over a stretch of 20 days?"),
-      choices=["\\(12\\)", "\\(27\\)", "\\(60\\)", "\\(81\\)"], correct="D",
-      check="20 days is 4 stretches of 5 days, so the factor is 3 to the fourth, which is 81."),
+      stem=("The number of wheels ripening in a cheese cave is modelled by "
+            "\\(R(t)=6\\cdot 9^{\\frac{t}{2}}\\), where t is the number of months since the cave "
+            "was filled. Which of the following is equivalent to \\(R(t)\\)?"),
+      choices=["\\(6\\cdot 3^{t}\\)", "\\(6\\cdot 3^{2t}\\)", "\\(18^{\\frac{t}{2}}\\)",
+               "\\(6\\cdot 81^{t}\\)"], correct="A",
+      check="9 is 3 squared, so 9 raised to t over 2 is 3 raised to t."),
 
  dict(n="H2H-12", domain="ADV", skill="ADV-EQ", type="FR",
       stem=("A curer's damper gauge reports a positive reading x for which "
@@ -530,10 +535,10 @@ MODULE_2_HARD = [
             + table(["Mass class (kg)", "Number of wheels"],
                     [["3.0 to 3.4", "12"], ["3.5 to 3.9", "23"],
                      ["4.0 to 4.4", "31"], ["4.5 to 4.9", "14"]])
-            + " Which mass class contains the median mass of the 80 wheels?"),
-      choices=["3.0 to 3.4", "3.5 to 3.9", "4.0 to 4.4", "4.5 to 4.9"], correct="C",
-      check="The median lies between the 40th and 41st wheels, and the running totals 12, 35 and "
-            "66 put both of them in the class from 4.0 to 4.4."),
+            + " What percent of the 80 wheels have a mass of 4.0 kilograms or more?"),
+      choices=["17.5%", "38.75%", "43.75%", "56.25%"], correct="D",
+      check="31 and 14 make 45 wheels of 4.0 kilograms or more, and 45 out of 80 is 56.25 "
+            "percent."),
 
  dict(n="H2H-17", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("The table classifies the 240 cheese wheels in one affineur's care by the cave they "
@@ -585,13 +590,12 @@ MODULE_2_HARD = [
             "3."),
 
  dict(n="H2H-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("A cheese cave's corner brace is a right triangle ABC whose right angle is at C. In "
-            "this brace the length of AC is 3 times the length of BC. What is the value of "
-            "\\(\\tan A\\)?"),
-      choices=["\\(\\frac{1}{3}\\)", "\\(3\\)", "\\(\\frac{1}{\\sqrt{10}}\\)",
-               "\\(\\frac{3}{\\sqrt{10}}\\)"], correct="A",
-      check="The tangent of A is the side opposite over the side adjacent, which is BC over AC, "
-            "or one third."),
+      stem=("A cheese cave's corner brace is a triangle with vertices A, B and C, and its one "
+            "right angle stands at C. In the brace \\(\\cos A=\\frac{20}{29}\\) and the side AB "
+            "measures 87 centimetres. What is the perimeter, in centimetres, of the brace?"),
+      choices=["147", "183", "210", "234"], correct="C",
+      check="AC is 20 over 29 of 87, which is 60, and BC is the square root of 7,569 - 3,600, "
+            "which is 63, so the perimeter is 87 + 60 + 63."),
 ]
 
 ALL = MODULE_1 + MODULE_2_EASY + MODULE_2_HARD

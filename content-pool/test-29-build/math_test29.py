@@ -54,12 +54,11 @@ def table(headers, rows):
 # Brickworks, brick kilns and firing; plasterwork, lath and rendering.
 MODULE_1 = [
  dict(n="H1-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A plasterer gauges a coarse mix from lime putty and sand in the proportion of 1 barrow "
-            "of putty to every 3 barrows of sand. A ceiling took 96 barrows of the gauged mix "
-            "altogether. Lime putty costs $14 a barrow and sand costs $6 a barrow. What was the "
-            "cost, in dollars, of the material for that ceiling?"),
-      choices=["576", "768", "960", "1,152"], correct="B",
-      check="One barrow in four is putty, so 24 barrows at 14 and 72 at 6 give 336 + 432 = 768."),
+      stem=("A carter is paid $14 for every day he works at a brickyard and, on top of that, $9 for "
+            "every load of green bricks he carries to the kilns. In a week in which he worked 6 days "
+            "he was paid $624 altogether. How many loads did he carry that week?"),
+      choices=["60", "66", "69", "72"], correct="A",
+      check="The 6 days are worth 84 dollars, leaving 540 dollars at 9 a load, so 60 loads."),
 
  dict(n="H1-02", domain="ALG", skill="ALG-LI", type="MC",
       stem=("The number of green bricks still standing in a drying shed d days after the moulding "
@@ -69,34 +68,36 @@ MODULE_1 = [
       check="15,400 - 620d < 4,000 gives d > 18.38, so the first whole day is day 19."),
 
  dict(n="H1-03", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("During the early part of a firing the temperature inside a brick kiln rises as a linear "
-            "function of the number of hours since the fires were lit. The temperature was "
-            "520&deg;C after 4 hours and 1,020&deg;C after 9 hours. After how many hours does that "
-            "model give a temperature of 1,220&deg;C?"),
-      choices=["10", "11", "12", "13"], correct="B",
-      check="500 degrees over 5 hours is 100 an hour, so the model is 100h + 120 and 1,220 gives h = 11."),
+      stem=("Two kilns are lit on the same morning, each with 30 tonnes of coal at its mouth. The "
+            "first burns coal steadily at 0.6 tonnes an hour and the second steadily at 0.45 tonnes "
+            "an hour. After how many hours of burning does the first kiln have 9 tonnes less coal "
+            "left than the second?"),
+      choices=["40", "45", "50", "60"], correct="D",
+      check="The two amounts left are 30 - 0.6h and 30 - 0.45h, whose difference 0.15h equals 9 at h = 60."),
 
  dict(n="H1-04", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A brickyard sends out bricks in carts and in lorries. Every cart carries 480 bricks and "
-            "every lorry carries 2,100 bricks. On one day 25 vehicles left the yard and they carried "
-            "23,340 bricks between them. How many of those vehicles were carts?"),
-      choices=["7", "9", "14", "18"], correct="D",
-      check="480c + 2,100(25 - c) = 23,340 gives 1,620c = 29,160 and c = 18 carts."),
+      stem=("Three fifths of the green bricks standing in a drying shed were set in a kiln. Then 480 "
+            "of the bricks still in the shed were carted to a second shed, and 1,120 green bricks "
+            "were left standing in the first. How many green bricks were standing in the shed before "
+            "any were moved?"),
+      choices=["4,000", "4,800", "5,200", "6,400"], correct="A",
+      check="Two fifths of the start, less 480, is 1,120, so two fifths is 1,600 and the start is 4,000."),
 
  dict(n="H1-05", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A plasterer's price for running a cornice is a linear function of the length of the run. "
-            "A run of 12 metres is priced at $438 and a run of 20 metres at $690. At the same rates, "
-            "what is the price, in dollars, of a run of 32 metres?"),
-      choices=["1,008", "1,044", "1,068", "1,104"], correct="C",
-      check="252 dollars over 8 metres is 31.50 a metre, leaving 438 - 378 = 60 fixed; 32(31.5) + 60 = 1,068."),
+      stem=("A plasterer gauges every batch of coarse stuff so that 3s + 2p = 96, where s is the "
+            "number of barrows of sand and p the number of barrows of lime putty in the batch. One "
+            "batch is gauged with 4 more barrows of sand than another batch. How many fewer barrows "
+            "of lime putty does that batch use?"),
+      choices=["2", "3", "6", "8"], correct="C",
+      check="Raising s by 4 raises 3s by 12, so 2p must fall by 12 and p falls by 6."),
 
  dict(n="H1-06", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Green bricks are set in a kiln in bungs of 800 bricks each, and every bung must be "
-            "complete. A firing is worth lighting only if the kiln holds at least 30,000 bricks, and "
-            "the kiln cannot hold more than 34,000. How many different whole numbers of bungs meet "
-            "both of those conditions?"),
-      choices=["4", "5", "6", "8"], correct="B",
-      check="800b lies between 30,000 and 34,000 for b from 37.5 to 42.5, so b is 38, 39, 40, 41 or 42."),
+      stem=("A moulder is held to an output that averages at least 1,200 green bricks a day over a "
+            "five-day week. On the first four days of one week he moulded 1,150, 1,240, 1,090 and "
+            "1,275 bricks. What is the least number of green bricks he can mould on the fifth day "
+            "and still meet that condition?"),
+      choices=["1,200", "1,225", "1,245", "1,260"], correct="C",
+      check="Five days at a mean of 1,200 need 6,000 altogether, and the first four came to 4,755."),
 
  dict(n="H1-07", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("At a brickyard the cost of firing n thousand bricks is \\(0.5n^{2}+13n\\) dollars, and "
@@ -106,60 +107,57 @@ MODULE_1 = [
       check="Subtracting the cost from the money taken cancels the squared terms and leaves 18n - 54."),
 
  dict(n="H1-08", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("The head of a kiln doorway is cut to a parabola. Its height above the floor, in "
-            "centimetres, is \\(h(x)=-\\frac{1}{20}(x-90)^{2}+180\\), where x is the horizontal "
-            "distance in centimetres from one jamb. How wide is the doorway at floor level, in "
-            "centimetres?"),
-      choices=["60", "90", "110", "120"], correct="D",
-      check="h = 0 gives (x-90)^2 = 3,600, so x = 30 or x = 150 and the width is 120."),
+      stem=("A moulding gang has 540 thousand green bricks to mould for a contract. If the gang "
+            "moulded 3 thousand more bricks each day than it now plans to, it would finish the "
+            "contract 9 days earlier than it now plans to. How many thousand bricks a day does the "
+            "gang now plan to mould?"),
+      choices=["9", "12", "15", "18"], correct="B",
+      check="540/n - 540/(n+3) = 9 clears to n^2 + 3n - 180 = 0, whose positive root is 12."),
 
  dict(n="H1-09", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("Each day in a drying shed removes the same fraction of whatever water a stack of green "
-            "bricks still holds. One stack held 240 kilograms of water when it was set down and "
-            "122.88 kilograms at the end of the third day. How many kilograms of water did it hold "
-            "at the end of the first day?"),
-      choices=["120", "153.6", "192", "216"], correct="C",
-      check="240r^3 = 122.88 gives r^3 = 0.512 and r = 0.8, so after one day 240(0.8) = 192."),
+      stem=("Two brick piers stand on the same footing. One is 4 metres taller than the other, and "
+            "the sum of the squares of their two heights, each in metres, is 106. How many metres "
+            "tall is the shorter pier?"),
+      choices=["3", "5", "6", "7"], correct="B",
+      check="x^2 + (x+4)^2 = 106 gives x^2 + 4x - 45 = 0, whose positive root is 5."),
 
  dict(n="H1-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The waste from a kiln is modelled by the function g, where \\(g(x)=a(x-3)(x+7)\\) and a "
-            "is a constant. If \\(g(1)=-48\\), what is the value of \\(g(0)\\) ?"),
-      choices=["-63", "-21", "21", "63"], correct="A",
-      check="g(1) = a(-2)(8) = -16a = -48 gives a = 3, and g(0) = 3(-3)(7) = -63."),
+      stem=("The depth of scale on the inside of a brick flue, in millimetres, is modelled by "
+            "\\(s(t)=0.6t^{2}+2t\\), where t is the number of years since the flue was built. What "
+            "is the average rate of change of this model, in millimetres a year, from the fourth "
+            "year to the tenth year?"),
+      choices=["8.4", "9.6", "10.4", "12.2"], correct="C",
+      check="s(10) = 80 and s(4) = 17.6, and their difference over 6 years is 10.4 a year."),
 
  dict(n="H1-11", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A plasterer works out the volume of finishing coat for a wall from "
-            "\\(V=\\frac{Lht}{1000}\\), where V is in cubic metres, L and h are the length and "
-            "height of the wall in metres, and t is the thickness of the coat in millimetres. Which "
-            "expression gives t in terms of the other quantities?"),
-      choices=["\\(\\frac{1000V}{Lh}\\)", "\\(\\frac{Lh}{1000V}\\)", "\\(\\frac{V}{1000Lh}\\)",
-               "\\(\\frac{VLh}{1000}\\)"], correct="A",
-      check="Multiplying by 1,000 and dividing by Lh gives t = 1000V/(Lh)."),
+      stem=("A plasterer's estimating rule gives the number of laths a panel takes as "
+            "\\(x^{2}+18x+c\\), where x is the width of the panel in feet and c is a constant. That "
+            "expression is the square of a binomial for every value of x. What is the value of c ?"),
+      choices=["9", "36", "72", "81"], correct="D",
+      check="(x+9)^2 = x^2 + 18x + 81 is the only square with an 18x term, so c = 81."),
 
  dict(n="H1-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The fuel bill for a kiln firing that runs for t hours is \\(0.4t^{2}-16t+800\\) dollars. "
-            "For what number of hours is that fuel bill least?"),
-      choices=["10", "16", "20", "25"], correct="C",
-      check="The least value of a quadratic with a positive leading coefficient is at t = 16/(2(0.4)) = 20."),
+      stem=("A plasterer's drying model is the function f defined by \\(f(x)=x^{2}-9x\\), where x "
+            "is the number of hours since the coat was laid. The model takes the same value at k "
+            "hours as it does at k+3 hours. What is the value of k ?"),
+      choices=["2", "3", "4.5", "6"], correct="B",
+      check="f(k+3) - f(k) = 6k - 18, which is 0 only at k = 3."),
 
  dict(n="H1-13", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("Six moulders working an 8-hour day moulded 2,400 green bricks. Working at that same "
-            "rate for each moulder, how many green bricks would nine moulders mould in a 10-hour "
-            "day?"),
-      choices=["3,600", "4,500", "5,400", "6,000"], correct="B",
-      check="2,400/(6 times 8) = 50 bricks per moulder-hour, and 9(10)(50) = 4,500."),
+      stem=("A brickyard buys its coal either in loads of 12 tonnes costing $960 or in loads of 20 "
+            "tonnes costing $1,560. How many dollars less does a tonne of coal cost in the larger "
+            "load than in the smaller?"),
+      choices=["2", "3", "4", "6"], correct="A",
+      check="960/12 = 80 a tonne and 1,560/20 = 78 a tonne, a difference of 2."),
 
  dict(n="H1-14", domain="PSDA", skill="PSDA-DI", type="MC",
-      stem=("The table gives the number of bricks drawn from each of four kilns after one firing and "
-            "the percentage of those bricks that were wasters. For which kiln was the number of "
-            "sound bricks greatest?"
-            + table(["Kiln", "Bricks drawn", "Wasters"],
-                    [["Ashcombe", "34,000", "8%"],
-                     ["Bewley", "30,000", "2%"],
-                     ["Cullen", "36,000", "15%"],
-                     ["Draycote", "32,000", "5%"]])),
-      choices=["Ashcombe", "Bewley", "Cullen", "Draycote"], correct="A",
-      check="The sound bricks are 31,280, 29,400, 30,600 and 30,400, so Ashcombe is greatest."),
+      stem=("A chimney stack was measured at the end of each week while it was being built, and the "
+            "table gives the height reached. During which week did the stack rise by the greatest "
+            "number of metres?"
+            + table(["End of week", "Height of stack (m)"],
+                    [["1", "6.4"], ["2", "12.1"], ["3", "17.2"], ["4", "23.5"], ["5", "28.0"]])),
+      choices=["Week 2", "Week 3", "Week 4", "Week 5"], correct="C",
+      check="The weekly rises are 5.7, 5.1, 6.3 and 4.5 metres, and the greatest is in week 4."),
 
  dict(n="H1-15", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A firing drew 24,000 bricks. Of those, 6 per cent were wasters and were thrown out. Of "
@@ -200,26 +198,25 @@ MODULE_1 = [
       check="The box holds 9(4)(3) = 108 and the half-cylinder (1/2)pi(2^2)(9) = 18 pi."),
 
  dict(n="H1-20", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("A firing began with 8 tonnes of coal at the kiln, burned at a steady rate. After 30 "
-            "hours of firing, 5.6 tonnes were left. The firing must be stopped while 1.6 tonnes are "
-            "still in reserve. For how many hours in total can the firing run?"),
-      answers=["80"],
-      check="2.4 tonnes in 30 hours is 0.08 an hour, and 6.4/0.08 = 80 hours."),
+      stem=("Of the bricks drawn from one kiln, one third were graded commons and one quarter were "
+            "graded facings. The remaining 250 bricks were graded seconds. How many bricks were "
+            "drawn from the kiln?"),
+      answers=["600"],
+      check="Commons and facings take 7/12 of the draw, so the 250 seconds are 5/12 of it and the draw is 600."),
 
  dict(n="H1-21", domain="PSDA", skill="PSDA-ST", type="FR",
-      stem=("At a brickyard the day gang moulded a mean of 1,860 green bricks a day over 6 days, and "
-            "the night gang moulded a mean of 1,410 a day over 4 days. What is the mean number of "
-            "green bricks moulded a day over all 10 of those days?"),
-      answers=["1680"],
-      check="6(1,860) + 4(1,410) = 11,160 + 5,640 = 16,800, and 16,800/10 = 1,680."),
+      stem=("Of the 400 bricks drawn from a kiln, 15 per cent were wasters and the rest were sound. "
+            "One of those 400 bricks is picked at random. What is the probability that the brick "
+            "picked is not a waster?"),
+      answers=["0.85", "17/20", ".85"],
+      check="340 of the 400 bricks are sound, and 340/400 = 0.85."),
 
  dict(n="H1-22", domain="GT", skill="GT-AV", type="FR",
-      stem=("A brick flue shaft is a hollow square-section column 12 metres high. Its outside "
-            "cross-section is a square of side 1.3 metres and the flue running up the middle of it "
-            "is a square of side 0.9 metres, both of them the whole height of the shaft. How many "
-            "cubic metres of brickwork does the shaft contain?"),
-      answers=["10.56"],
-      check="(1.3^2 - 0.9^2)(12) = (1.69 - 0.81)(12) = 0.88(12) = 10.56."),
+      stem=("A room is 5.4 metres long, 4.2 metres wide and 2.5 metres high, and its four walls are "
+            "to be plastered. A doorway 2 metres high and 0.9 metres wide is cut in one of the "
+            "walls and is not plastered. How many square metres of plastering does the room take?"),
+      answers=["46.2"],
+      check="The four walls are 2(5.4+4.2)(2.5) = 48 square metres, less the 1.8 of the doorway."),
 ]
 
 
@@ -240,14 +237,12 @@ MODULE_2_EASY = [
       check="3t + 8 = 71 gives 3t = 63 and t = 21."),
 
  dict(n="H2E-03", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A scaffold tower built n lifts high has a total mass, in kilograms, of 46n + 120. Which "
-            "of the following is the best interpretation of the number 120 in this context?"),
-      choices=["Each lift adds 120 kilograms to the mass of the tower.",
-               "A tower 120 lifts high has a mass of 46 kilograms.",
-               "A tower with no lifts erected has a mass of 120 kilograms.",
-               "The mass of the tower rises by 120 kilograms for every 46 lifts."],
-      correct="C",
-      check="Setting n = 0 leaves 120 kilograms, which is the tower before any lift is erected."),
+      stem=("The table gives three values of the linear function h, which a tiler uses to work out "
+            "the number of battens a roof takes."
+            + table(["x", "h(x)"], [["2", "11"], ["4", "17"], ["6", "23"]])
+            + " What is the value of h(8) ?"),
+      choices=["26", "27", "29", "31"], correct="C",
+      check="h rises by 6 for every rise of 2 in x, so h(8) = 23 + 6 = 29."),
 
  dict(n="H2E-04", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A hoist raises a load at a constant speed. The load was 9 metres above the ground 2 "
@@ -263,24 +258,23 @@ MODULE_2_EASY = [
       check="22s > 300 gives s > 13.6, so 14 stones is the least whole number."),
 
  dict(n="H2E-06", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("On a drawing of a tracery window, 3 centimetres represents 2 metres. A mullion drawn 12 "
-            "centimetres long represents an actual length of how many metres?"),
-      choices=["4", "6", "8", "18"], correct="C",
-      check="12/3 = 4 lots of 3 centimetres, and 4(2) = 8 metres."),
+      stem=("A tiler's rule for the number x of tiles in one row makes 7x - 12 = 4x + 27 true. "
+            "What is the value of x ?"),
+      choices=["5", "9", "13", "15"], correct="C",
+      check="Taking 4x from both sides gives 3x - 12 = 27, so 3x = 39 and x = 13."),
 
  dict(n="H2E-07", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A hoist may raise a total load of at most 400 kilograms, and the cradle it lifts has a "
-            "mass of 55 kilograms. Which inequality gives the possible total mass t, in kilograms, "
-            "of the tiles placed in the cradle?"),
-      choices=["\\(t\\le 345\\)", "\\(t\\ge 345\\)", "\\(t\\le 455\\)", "\\(t\\ge 455\\)"],
-      correct="A",
-      check="The tiles and the cradle together must not exceed 400, so t is at most 400 - 55 = 345."),
+      stem=("The number of tiles x that may be sent up in one lift of a hoist satisfies "
+            "\\(5x+8\\le 78\\). What is the greatest number of tiles that may be sent up in one "
+            "lift?"),
+      choices=["14", "15", "16", "17"], correct="A",
+      check="5x is at most 70, so x is at most 14."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A scaffolder's charge for a job, in dollars, is 3(2x + 7) - 4x, where x is the number "
-            "of lifts erected. Which expression is equivalent to that charge?"),
-      choices=["2x+21", "2x+7", "6x+21", "10x+21"], correct="A",
-      check="6x + 21 - 4x = 2x + 21."),
+      stem=("On a mason's cutting list the numbers a and b of two sizes of stone satisfy "
+            "2a + 3b = 17. What is the value of 6a + 9b ?"),
+      choices=["17", "34", "51", "68"], correct="C",
+      check="6a + 9b is 3 times 2a + 3b, so it is 3(17) = 51."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("At a tileworks the number of sound tiles left after sorting is 7x - 2(x - 4), where x "
@@ -290,16 +284,17 @@ MODULE_2_EASY = [
       check="7x - 2x + 8 = 5x + 8, so a = 5."),
 
  dict(n="H2E-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("At a tileworks the mass, in kilograms, of a stack of x quarry tiles is given by "
-            "\\(m(x)=2.4x+5\\). What is the mass, in kilograms, of a stack of 15 quarry tiles?"),
-      choices=["36", "38", "41", "45"], correct="C",
-      check="2.4(15) + 5 = 36 + 5 = 41."),
+      stem=("The function h is defined by \\(h(x)=(x-2)(x+6)\\). For which values of x is "
+            "\\(h(x)=0\\) ?"),
+      choices=["-6 and -2", "-6 and 2", "-2 and 6", "2 and 6"], correct="B",
+      check="A product is zero only when a factor is, so x - 2 = 0 or x + 6 = 0."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("A pallet of tiles is built up in layers, and after x layers it holds \\(6(2)^{x}\\) "
-            "tiles. If the pallet holds 96 tiles, how many layers have been laid?"),
-      choices=["3", "4", "5", "16"], correct="B",
-      check="6(2)^x = 96 gives 2^x = 16, so x = 4."),
+      stem=("Tiles are stacked in a square, x tiles along each side, so that the stack holds "
+            "\\(x^{2}\\) tiles altogether. One such stack holds 196 tiles. How many tiles are there "
+            "along each side of it?"),
+      choices=["12", "14", "16", "98"], correct="B",
+      check="x^2 = 196 and x is positive, so x = 14."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The function p gives the price, in dollars, of n ridge tiles, and \\(p(n)=1.75n\\). "
@@ -312,37 +307,39 @@ MODULE_2_EASY = [
       check="p takes a number of tiles and returns a price, so p(40) = 70 prices 40 tiles at $70."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("At a tileworks the number of crates needed to pack x tiles is given by "
-            "\\(c(x)=\\frac{x}{24}\\). How many crates are needed to pack 288 tiles?"),
-      choices=["12", "24", "264", "312"], correct="A",
-      check="288/24 = 12."),
+      stem=("The function f gives the number of minutes a hoist takes to raise x crates of tiles, "
+            "and \\(f(6)=19\\). Which point must lie on the graph of \\(y=f(x)\\) in the xy-plane?"),
+      choices=["(0, 19)", "(19, 0)", "(19, 6)", "(6, 19)"], correct="D",
+      check="f(6) = 19 says the input 6 is paired with the output 19, which is the point (6, 19)."),
 
  dict(n="H2E-14", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("At a tileworks, 3 of every 8 tiles made are pantiles. In a batch of 240 tiles, how many "
-            "are pantiles?"),
-      choices=["90", "96", "120", "150"], correct="A",
-      check="Three eighths of 240 is 90."),
+      stem=("Two thirds of the tiles on a pallet are plain tiles, and one quarter of the plain tiles "
+            "on that pallet are graded seconds. What fraction of all the tiles on the pallet are "
+            "plain tiles graded seconds?"),
+      choices=["\\(\\frac{1}{12}\\)", "\\(\\frac{1}{8}\\)", "\\(\\frac{1}{6}\\)",
+               "\\(\\frac{5}{12}\\)"], correct="C",
+      check="A quarter of two thirds is one sixth."),
 
  dict(n="H2E-15", domain="PSDA", skill="PSDA-DI", type="MC",
-      stem=("The table gives the number of tiles drawn from the presses at four tileworks in one "
-            "week. According to the table, how many tiles altogether were drawn that week?"
-            + table(["Tileworks", "Tiles drawn"],
-                    [["Kelby", "4,200"], ["Marlow", "5,600"], ["Penhale", "3,900"],
-                     ["Rowan", "4,800"]])),
-      choices=["14,600", "17,900", "18,500", "19,400"], correct="C",
-      check="4,200 + 5,600 + 3,900 + 4,800 = 18,500."),
+      stem=("The table gives the number of tiles of each kind stacked on one pallet. What fraction "
+            "of the tiles on the pallet are ridge tiles?"
+            + table(["Kind of tile", "Number on the pallet"],
+                    [["Plain", "180"], ["Pantile", "96"], ["Ridge", "72"], ["Valley", "12"]])),
+      choices=["\\(\\frac{1}{12}\\)", "\\(\\frac{1}{8}\\)", "\\(\\frac{1}{6}\\)",
+               "\\(\\frac{1}{5}\\)"], correct="D",
+      check="The pallet holds 360 tiles and 72 of them are ridge tiles, so the fraction is 1/5."),
 
  dict(n="H2E-16", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("On a pallet the ratio of plain tiles to ridge tiles is 7 to 2. If the pallet holds 63 "
-            "plain tiles, how many ridge tiles does it hold?"),
-      choices=["14", "18", "22", "28"], correct="B",
-      check="63/7 = 9 lots of the ratio, and 9(2) = 18 ridge tiles."),
+      stem=("A pallet holds 480 plain tiles and 120 ridge tiles and no others. The number of plain "
+            "tiles on the pallet is how many times the number of ridge tiles?"),
+      choices=["2", "3", "4", "5"], correct="C",
+      check="480/120 = 4."),
 
- dict(n="H2E-17", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("Of the 340 tiles carried up a scaffold in one morning, 15 per cent were broken. How "
-            "many of those tiles were broken?"),
-      choices=["34", "44", "48", "51"], correct="D",
-      check="0.15(340) = 51."),
+ dict(n="H2E-17", domain="PSDA", skill="PSDA-ST", type="MC",
+      stem=("On seven working days a hoist gang broke 4, 2, 5, 2, 6, 2 and 7 tiles. Which number of "
+            "broken tiles was recorded on more of those days than any other?"),
+      choices=["2", "4", "5", "7"], correct="A",
+      check="2 appears on three of the seven days and every other figure appears once."),
 
  dict(n="H2E-18", domain="GT", skill="GT-AV", type="MC",
       stem=("A hoist rope is wound on a drum whose radius is 25 centimetres. How far, in "
@@ -351,34 +348,33 @@ MODULE_2_EASY = [
       check="One turn winds on the circumference, 2 pi (25) = 50 pi."),
 
  dict(n="H2E-19", domain="GT", skill="GT-TR", type="MC",
-      stem=("A scaffold standard rises vertically 9 metres from the ground, and a ledger runs "
-            "horizontally 12 metres from the foot of that standard. A brace is fixed from the top of "
-            "the standard to the far end of the ledger. What is the tangent of the angle the brace "
-            "makes with the standard?"),
-      choices=["\\(\\frac{3}{4}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{4}{5}\\)",
-               "\\(\\frac{4}{3}\\)"], correct="D",
-      check="At the top of the standard the opposite side is the 12-metre ledger and the adjacent side the 9-metre standard, so the tangent is 12/9 = 4/3."),
+      stem=("A guy rope runs in a straight line from the head of a hoist mast to a peg in level "
+            "ground. The head of the mast is 15 metres above the ground, and the tangent of the "
+            "angle the rope makes with the ground is \\(\\frac{5}{2}\\). How many metres from the "
+            "foot of the mast is the peg?"),
+      choices=["6", "7.5", "12", "37.5"], correct="A",
+      check="The tangent is the 15-metre rise over the distance, so the distance is 15 divided by 5/2, or 6."),
 
  dict(n="H2E-20", domain="PSDA", skill="PSDA-ST", type="FR",
-      stem=("Five loads of stone brought to a mason's yard had masses of 340, 380, 300, 360 and 420 "
-            "kilograms. What is the mean mass, in kilograms, of a load?"),
-      answers=["360"],
-      check="The five masses total 1,800, and 1,800/5 = 360."),
+      stem=("On seven days a mason's yard received 12, 9, 15, 8, 20, 14 and 6 loads of stone. How "
+            "many of those seven figures are greater than the mean of the seven?"),
+      answers=["3"],
+      check="The seven loads total 84, so the mean is 12, and 15, 20 and 14 stand above it."),
 
  dict(n="H2E-21", domain="GT", skill="GT-AV", type="FR",
-      stem=("The inside of a stone cistern is a rectangular box 1.2 metres long, 0.5 metres wide and "
-            "0.4 metres deep. Given that 1 cubic metre is 1,000 litres, how many litres does the "
-            "cistern hold when it is full?"),
-      answers=["240"],
-      check="1.2(0.5)(0.4) = 0.24 cubic metres, and 0.24(1,000) = 240 litres."),
+      stem=("A circular sinking is cut in the top face of a stone plinth, and the sinking measures "
+            "42 centimetres across. The area of the sinking is \\(k\\pi\\) square centimetres. "
+            "What is the value of k ?"),
+      answers=["441"],
+      check="The radius is 21 centimetres, so the area is 21 squared times pi."),
 
  dict(n="H2E-22", domain="GT", skill="GT-LA", type="FR",
-      stem=("A mason checks whether the corner of a stone plinth is square by measuring 60 "
-            "centimetres from the corner along one edge and 80 centimetres from the corner along "
-            "the other. If the corner is exactly square, how many centimetres apart are the two "
-            "marks?"),
-      answers=["100"],
-      check="sqrt(60^2 + 80^2) = sqrt(10,000) = 100."),
+      stem=("A straight joint runs across the top of a stone plinth. On one side of the joint the "
+            "angle between the joint and a set square measures \\((3x+20)\\)&deg;, and on the other "
+            "side the angle between them measures \\((2x-5)\\)&deg;. The two angles together make a "
+            "straight line. What is the value of x ?"),
+      answers=["33"],
+      check="(3x+20) + (2x-5) = 180 gives 5x + 15 = 180 and x = 33."),
 ]
 
 
@@ -428,27 +424,24 @@ MODULE_2_HARD = [
       check="With pallet p the total is 5p = m, so the stone, 4p, is 4m/5."),
 
  dict(n="H2H-07", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f gives the height, in centimetres, of a scaffold platform after x lifts "
-            "have been erected, and \\(f(x)=2x+7\\). A second function g is defined by "
-            "\\(g(x)=f(x-3)\\). Which expression defines g ?"),
-      choices=["2x-3", "2x+1", "2x+4", "2x+13"], correct="B",
-      check="f(x-3) = 2(x-3) + 7 = 2x - 6 + 7 = 2x + 1."),
+      stem=("A tileworks writes its press-wear index as the function f defined by "
+            "\\(f(x)=\\frac{2x+5}{x^{2}-49}\\). For which values of x is f not defined?"),
+      choices=["-7 and 7", "-7 only", "7 only", "\\(-\\frac{5}{2}\\) only"], correct="A",
+      check="f is undefined exactly where the denominator vanishes, at x = 7 and x = -7."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The time a winch takes to raise a stone varies inversely as the square of the gear "
-            "ratio set on it. At a gear ratio of 3 the winch takes 40 seconds to raise a "
-            "particular stone. How many seconds does it take to raise that same stone at a gear "
-            "ratio of 6 ?"),
-      choices=["10", "20", "80", "160"], correct="A",
-      check="Time times the square of the ratio is constant at 40(9) = 360, and 360/36 = 10 seconds."),
+      stem=("A tileworks models the bow of a pressed tile by the function f defined by "
+            "\\(f(x)=x^{2}-6x+5\\). For how many values of x does \\(f(x)=-4\\) ?"),
+      choices=["None", "Exactly one", "Exactly two", "More than two"], correct="B",
+      check="f(x) + 4 = (x-3)^2, which is zero only at x = 3, so there is exactly one value."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A winch working alone raises a stone to the top of a tower in u minutes, and a second "
-            "winch working alone raises the same stone in v minutes. Working together at those "
-            "rates, the two winches raise the stone in how many minutes?"),
-      choices=["\\(\\frac{uv}{u+v}\\)", "\\(\\frac{u+v}{uv}\\)", "\\(\\frac{u+v}{2}\\)",
-               "\\(\\frac{2}{u+v}\\)"], correct="A",
-      check="The combined rate is 1/u + 1/v = (u+v)/(uv), and the time is its reciprocal."),
+      stem=("A mason's setting-out rule gives an offset as \\((\\sqrt{y}+3)(\\sqrt{y}-3)\\), "
+            "where y is a measured length and \\(y\\ge 0\\). Which expression is equivalent to "
+            "that offset?"),
+      choices=["\\(y+9\\)", "\\(y-6\\)", "\\(y-6\\sqrt{y}+9\\)", "\\(y-9\\)"],
+      correct="D",
+      check="The two factors are conjugates, so their product is y - 9."),
 
  dict(n="H2H-10", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A tileworks models the waste from a press by \\(f(x)=x^{2}-6x+c\\), where c is a "
@@ -477,35 +470,38 @@ MODULE_2_HARD = [
       check="Twice the masons for three times the days is six times the work, or 6b blocks."),
 
  dict(n="H2H-14", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The mean mass of 7 dressed blocks is 84 kilograms. When one more block is added to the "
-            "set, the mean mass of the 8 blocks is 87 kilograms. What is the mass, in kilograms, of "
-            "the block that was added?"),
-      choices=["87", "96", "108", "120"], correct="C",
-      check="8(87) - 7(84) = 696 - 588 = 108."),
+      stem=("The masses of the 9 dressed blocks in one load were recorded, and the median of the 9 "
+            "masses was 84 kilograms. At most how many of those 9 masses could have been less than "
+            "84 kilograms?"),
+      choices=["3", "4", "5", "8"], correct="B",
+      check="The median is the 5th of the 9 sorted masses, so at most the 4 below it can be smaller."),
 
  dict(n="H2H-15", domain="PSDA", skill="PSDA-DI", type="MC",
-      stem=("The table gives the number of stones cut and the number rejected at four banker shops "
-            "in one month. At which shop was the greatest percentage of the stones cut rejected?"
-            + table(["Banker shop", "Stones cut", "Stones rejected"],
-                    [["Alder", "250", "12"], ["Brent", "180", "9"],
-                     ["Corve", "320", "18"], ["Dell", "400", "20"]])),
-      choices=["Alder", "Brent", "Corve", "Dell"], correct="C",
-      check="The rejection rates are 4.8, 5, 5.625 and 5 per cent, so Corve is the greatest."),
+      stem=("A tileworks charges for a delivery by a rule of the form \\(C=a+bn\\), where n is the "
+            "number of crates delivered, C is the charge in dollars, and a and b are constants. The "
+            "table gives what four deliveries were charged, and exactly one of them was not charged "
+            "by that rule. Which delivery was not?"
+            + table(["Crates delivered", "Charge ($)"],
+                    [["4", "86"], ["7", "137"], ["10", "188"], ["12", "220"]])),
+      choices=["The delivery of 4 crates", "The delivery of 7 crates",
+               "The delivery of 10 crates", "The delivery of 12 crates"], correct="D",
+      check="The first three sit on C = 18 + 17n, which gives 222 for 12 crates, not 220."),
 
  dict(n="H2H-16", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("The number of tiles a press turned out in a week fell by 12 per cent from one week to "
-            "the next, and then rose by 25 per cent in the week after that, ending at 3,300 tiles. "
-            "How many tiles did the press turn out in the first of those three weeks?"),
-      choices=["2,904", "3,000", "3,300", "3,750"], correct="B",
-      check="0.88(1.25) = 1.10, and 3,300/1.10 = 3,000."),
+      stem=("In a mason's yard the ratio of dressed stones to rough stones is 3 to 5. After 40 more "
+            "dressed stones are brought into the yard, and no rough stones are brought in or taken "
+            "away, that ratio becomes 5 to 7. How many stones were in the yard before the 40 were "
+            "brought in?"),
+      choices=["280", "420", "560", "640"], correct="C",
+      check="(3k+40)/(5k) = 5/7 gives k = 70, so the yard held 3(70) + 5(70) = 560."),
 
  dict(n="H2H-17", domain="GT", skill="GT-AV", type="MC",
-      stem=("A stone finial is made of a cube of edge 30 centimetres with a right pyramid set "
-            "squarely on its top face. The pyramid's base is that whole top face and its apex "
-            "stands 40 centimetres above it. What is the total volume of the finial, in cubic "
-            "centimetres?"),
-      choices=["21,000", "27,000", "36,000", "39,000"], correct="D",
-      check="27,000 for the cube plus (1/3)(900)(40) = 12,000 for the pyramid gives 39,000."),
+      stem=("A stone column is a right circular cylinder 3.6 metres tall whose base is 0.8 metres "
+            "across. Its curved surface, but neither of its flat ends, is to be tooled. How many "
+            "square metres of surface is that?"),
+      choices=["\\(1.44\\pi\\)", "\\(2.88\\pi\\)", "\\(5.76\\pi\\)", "\\(11.52\\pi\\)"],
+      correct="B",
+      check="The curved surface is 2 pi r h with r = 0.4 and h = 3.6, which is 2.88 pi."),
 
  dict(n="H2H-18", domain="GT", skill="GT-LA", type="MC",
       stem=("A two-centred head for a tracery light is struck with two circular arcs, each of radius "
@@ -517,12 +513,12 @@ MODULE_2_HARD = [
       check="The two springings and the apex form an equilateral triangle of side 2.4, whose height is 1.2 sqrt(3)."),
 
  dict(n="H2H-19", domain="GT", skill="GT-TR", type="MC",
-      stem=("A hoist gantry has a horizontal jib 5.2 metres long. A straight tie runs from the outer "
-            "end of the jib to a point on the vertical mast above the root of the jib, and the tie "
-            "makes an angle with the jib whose cosine is \\(\\frac{13}{15}\\). What is the length of "
-            "the tie, in metres?"),
-      choices=["4.5", "5.2", "5.8", "6"], correct="D",
-      check="The jib is the adjacent side, so 5.2/L = 13/15 and L = 5.2(15)/13 = 6."),
+      stem=("A raking shore is propped against a wall so that it rises 1 metre for every 4 metres it "
+            "runs out from the foot of the wall. What is the sine of the angle the shore makes with "
+            "the level ground?"),
+      choices=["\\(\\frac{1}{4}\\)", "\\(\\frac{4}{17}\\)", "\\(\\frac{\\sqrt{17}}{17}\\)",
+               "\\(\\frac{4\\sqrt{17}}{17}\\)"], correct="C",
+      check="The shore is the hypotenuse of a 1 by 4 right triangle, of length sqrt(17), so the sine is 1/sqrt(17)."),
 
  dict(n="H2H-20", domain="PSDA", skill="PSDA-ST", type="FR",
       stem=("A set of 12 measurements taken at a tileworks has a mean of 25. Every measurement in "
