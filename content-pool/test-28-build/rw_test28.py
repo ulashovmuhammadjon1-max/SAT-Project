@@ -983,14 +983,14 @@ QUESTIONS = [
      "has just announced."),
 
  trn("T6",
-     "No single proprietor could keep horses along two hundred miles of road. A line was therefore "
+     "No single proprietor could keep horses along two hundred miles of road. A line was instead "
      "divided, and each proprietor undertook to horse so many miles of it and to take that share of "
      "the receipts. _____ a coach that ran from one end to the other was in a real sense several "
      "businesses in succession, and a dispute between any two of them stopped the whole service.",
      ["Thus,", "Nevertheless,", "In contrast,", "For instance,"], "A",
-     "The description of the coach as several businesses is a restatement of the arrangement just set "
-     "out, so a consequence marker fits. A concessive word would set the conclusion against the "
-     "premise that supports it."),
+     "Being several businesses in succession follows directly from the line having been split among "
+     "proprietors who each took a share, so a consequence marker fits. A concessive word would set "
+     "the conclusion against the premise that supports it."),
 
  trn("T7",
      "A nail driven through the wall of the hoof comes out on the outside a little above the ground. "

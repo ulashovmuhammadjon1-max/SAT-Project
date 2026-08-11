@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T30:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Living plants shipped from the tropics in the eighteenth century usually arrived dead: salt spray, darkness below deck and a sailor's grudging ration of fresh water killed almost every consignment. Nathaniel Ward's sealed glazed box changed the arithmetic. Water transpired by the leaves condensed on the glass and ran back to the soil, so a case needed no attention at all for months, and survival on the long voyages became the _____ rather than the exception.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence sets what happened after the case against the word exception, so the blank names the ordinary outcome, and the passage has just explained why consignments now lived. The hazard option reverses the sense, since a hazard is what the sealed case removed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "argument",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "rule",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "hazard",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "expense",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A specimen laid in a press is not simply squeezed. Sheets of blotting paper drink the water out of the leaves, corrugated ventilators let a current of warm air run between the layers, and the blotters are changed daily until nothing more comes out. Pressure alone would give a flat brown specimen; it is the steady removal of water that leaves the colour _____.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence sets the brown result of pressure alone against what drying achieves, so the blank names colour that has been kept. The faded option restates the bad outcome the sentence is contrasting with.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "uniform",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "faded",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "intact",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "muted",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A drying room can be brought to a low humidity with refrigeration and heat, but the machinery is expensive and stops when the current does. A tin of self-indicating silica gel does the same work for a small quantity of seed: the gel takes up water vapour until the air in the sealed tin is very dry, and its colour shows when it has taken all it can. For a collector working far from a laboratory the tin's chief merit is its _____.",
+   "difficulty": "MEDIUM",
+   "why": "The passage sets the gel against machinery that is expensive and stops with the current, and praises it for a collector working far from a laboratory, so the merit is that it needs nothing else to work. The capacity option points to how much water the gel holds, which the passage treats as limited rather than as its advantage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "durability",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "self-sufficiency",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "capacity",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "precision",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The oldest way of taking oil from a plant was to boil the material in water over a direct fire, but anything resting on the bottom of the vessel scorched, and burnt notes carried through into the distillate. Passing steam up through a loosely packed charge instead keeps the plant material off the heated metal altogether. The change was made not to raise the yield but to _____ a fault that no later rectification could remove.",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the burnt character could not be removed once it had passed into the distillate, so the point of the new method is to stop the fault arising at all. The disguise option would mean covering up a fault that had already occurred, which is exactly what the text says cannot be done afterwards.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "tolerate",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "disguise",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "forestall",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "diagnose",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A pressed plant with no label is a curiosity; a pressed plant with a full label is evidence. The slip glued to the corner of the sheet gives the collector, the number, the day, the parish and the ground the plant was standing in, and every later use of the specimen &mdash; mapping a range, dating a flowering, matching a name &mdash; draws on that slip rather than on the plant. The plant, on this accounting, is an _____ to its label.",
+   "difficulty": "MEDIUM",
+   "why": "The passage says every later use draws on the slip rather than on the plant, which inverts the expected relation and leaves the plant hanging off the record rather than carrying it. The alternative option would make the plant something a worker could consult in the label's place, but the text says the later uses go to the slip instead of the plant.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "objection",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "improvement",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "alternative",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "appendage",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Botanic gardens have exchanged seed by printed list for more than two centuries. Each garden issues a catalogue of what it has ripened that year and may request from any other garden's catalogue in return, with no money passing in either direction. <u>The arrangement survives because a garden's surplus costs it nothing and its wants cost it nothing either.</u> A curator with a spare hundred seeds of a plant nobody else grows loses no advantage by sending ninety of them away.",
+   "difficulty": "MEDIUM",
+   "why": "The underlined sentence gives the reason the arrangement survives, and the sentence after it illustrates that reason with the curator who loses nothing. Nothing in the passage sets the exchange against a commercial trade, so the comparison option describes a move the text never makes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It concedes a weakness in the exchange that later gardens had to correct.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It compares the exchange with the commercial seed trade of the same period.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It questions whether the catalogues accurately describe what is offered.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It identifies the feature of the exchange that accounts for its persistence.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text?",
+   "passage": "A germination cabinet held at a steady temperature will fail to sprout seed that germinates readily in a seedbed. Many species respond instead to the swing between a warm day and a cool night, and cabinets are therefore run on a cycle, sixteen hours at one temperature and eight at another. <u>The seed is not measuring warmth; it is measuring change.</u> A constant twenty degrees carries no information about whether the seed is buried deep or lying near the surface, and a daily swing does.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence names what the seed is responding to, and the sentences on either side give the cabinet cycle and the depth signal as instances of it. It agrees with the first sentence rather than contradicting it, since the failure at a steady temperature is exactly what the principle predicts.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It states the principle that the surrounding sentences illustrate.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It acknowledges a limitation of germination cabinets that the text goes on to accept.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It reports a finding that contradicts the claim made in the first sentence.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It defines a term that the rest of the passage uses in a specialised sense.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why was confusion between the two systems particularly serious in dispensing?",
+   "passage": "Two systems of weight were in daily use in an English shop. Goods over the counter were sold by the avoirdupois ounce, of which there are sixteen to the pound; drugs were compounded by the troy ounce, of which there are twelve. The troy ounce is the heavier of the two, so an ounce of a drug and an ounce of sugar were different quantities, and a dispenser who reached for the wrong set of weights made an error that no arithmetic later in the prescription would reveal.",
+   "difficulty": "MEDIUM",
+   "why": "The final clause says no arithmetic later in the prescription would reveal the error, which is what makes the confusion dangerous. The passage states that the troy ounce is the heavier of the two, so the option calling them too close for a balance contradicts the text.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The troy system was being withdrawn while the avoirdupois system remained in use.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Drugs were sold over the counter in the same shop as ordinary goods.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The two kinds of ounce were so close in weight that a balance could not tell them apart.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The mistake left no trace that the rest of the calculation would expose.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A nineteenth-century botanist who found an interesting plant in quantity would press fifty or a hundred sheets of it, number them identically, and post sets to institutions across Europe. The recipients bound them into their own collections, so a single afternoon's collecting is now represented on shelves in a dozen countries. The practice has an unintended value: when one herbarium burned, as several did in the twentieth century, the sheets it held were seldom unique.",
+   "difficulty": "MEDIUM",
+   "why": "The passage describes a distribution practice and then calls its protective effect unintended, which is precisely an incidental benefit. The option making protection the chief motive is ruled out by the word unintended.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Distributing identical sets of specimens widely had the incidental effect of protecting the material against loss.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Botanists distributed duplicate specimens chiefly in order to guard against fires in herbaria.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Herbarium fires in the twentieth century destroyed most of the specimens collected in the nineteenth.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A specimen is valuable only when the herbarium holding it can show that no copy exists elsewhere.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the claim that winnowing removed material that screening had left behind?",
+   "passage": "Seed arriving from the field carries chaff, dust and broken seed, and a cleaner removes them in stages. A merchant weighed a thousand seeds drawn at random from the same lot after each stage.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Stage of cleaning</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Weight of 1,000 seeds (grams)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">As received</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27.4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">After screening</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31.9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">After winnowing</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35.6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">After gravity table</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">36.1</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "A thousand-seed weight rises as light rubbish is taken out, so a rise across the winnowing stage in particular shows that stage removing something, and the figures either side of it give that rise. Reporting that the weight rose at every stage attributes nothing to winnowing rather than to the other stages.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The weight of a thousand seeds rose at every stage of cleaning.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The weight of a thousand seeds rose from 31.9 grams to 35.6 grams across the winnowing stage.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The weight of a thousand seeds was lowest, at 27.4 grams, in the lot as received.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The weight of a thousand seeds rose by only 0.5 grams across the gravity table.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the claim that most of a lavender charge's oil comes over early in the run?",
+   "passage": "Distillers of lavender disagree about how long a charge should be run. A grower kept the still going for four hours on one charge and recorded the oil collected in each hour separately, obtaining the results shown.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Hour of the run</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Oil collected in that hour (millilitres)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">First</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">310</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Second</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Third</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Fourth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "The claim is about the share of the total taken early, so the support must weigh the first hour against the rest, and 310 against a remaining 129 does exactly that. Noting that the fourth hour was smallest describes the shape of the decline without showing that the early part dominates the whole.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The fourth hour yielded 9 millilitres, the smallest quantity recorded in the run.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The oil collected fell in every hour of the run after the first.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The second hour yielded 96 millilitres, which is more than the third and fourth hours together.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The first hour yielded 310 millilitres, more than twice the total collected in the remaining three hours.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the chemist's proposal?",
+   "passage": "Oil of peppermint has long been diluted with cheaper material before sale. A pure oil rotates the plane of polarised light through a characteristic angle, and mixtures do not, so a polarimeter reading has been used as a check on purity since the nineteenth century. A chemist proposes that the reading cannot by itself establish that a sample is unadulterated.",
+   "difficulty": "MEDIUM",
+   "why": "The proposal is that a normal reading does not prove purity, and a pair of diluents that cancel each other's effect on the rotation produces exactly that situation. The finding about adulterated samples reading far outside the expected range shows the test working, which is the opposite of what the chemist claims.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Some adulterated samples show a rotation far outside the range expected of pure oil.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Two different diluents, added together in the right proportions, leave the sample's rotation unchanged from that of the pure oil.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The rotation of pure peppermint oil varies slightly with the temperature at which it is measured.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Polarimeters manufactured before 1900 were less precise than modern instruments.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A herbarium sheet records the day a plant was in flower at a named place, and collectors have been writing that date on labels for two hundred years. Researchers comparing the flowering dates on old sheets with dates recorded today have found the two sets separated by a fortnight or more for many species. The comparison works only because the collectors were not thinking about the question at all: a date written down to identify a specimen carries none of the expectations that would attach to a date written down to _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the comparison works because the collectors were not thinking about the question, which is the question of shifting flowering dates, so the contrast is with a date recorded in order to show a shift. A date written to tell two species apart is not the expectation the passage has just raised.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "demonstrate that flowering had shifted.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "distinguish one species from another.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "record the locality where the plant grew.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "establish who had collected the specimen.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Every pure essential oil bends a ray of light passing through it by a fixed amount at a given temperature, and the instrument that measures this takes a single drop and reads in seconds. The figure it returns will not name what has been added to a sample, and two different adulterants may push the reading in opposite directions. A refractometer reading is therefore best understood as a way of _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage says the reading is fast and takes one drop but names nothing and can be pushed either way, which fits a first sort rather than a verdict. The option about identifying the added substance is ruled out by the sentence saying the figure will not name what has been added.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "identifying precisely which substance has been added to a sample.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "measuring the proportion of adulterant present in a sample.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "confirming that a sample has not been adulterated at all.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "deciding quickly which samples deserve a fuller examination.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Lavender cut before the flowers open yields little oil, and lavender cut after they have faded yields oil of a coarser _____ growers watch the field daily through the fortnight in between.",
+   "difficulty": "MEDIUM",
+   "why": "The material before the break is a complete sentence with two coordinated clauses, and the material after it is a complete sentence about the growers, so the two need a semicolon. Adding a comma alone leaves the second sentence spliced to the first.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "character,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "character",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "character and which",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "character;",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The shoot that will bear the fruit is called the _____ the root it is joined to is called the stock, and the two may come from quite different plants.",
+   "difficulty": "MEDIUM",
+   "why": "The clause naming the scion and the clause naming the stock are each complete, and a semicolon holds them together as the closely paired definitions they are. A comma alone cannot join two independent clauses.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "scion and",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "scion;",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "scion,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "scion",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Sheets of a single genus are gathered into a stiff folder, the folders are stacked in _____ and the fascicles are shelved in the order the classification prescribes.",
+   "difficulty": "MEDIUM",
+   "why": "Three clauses are strung together in a single sentence joined by <em>and</em> before the last, so the break before that conjunction takes a comma. A semicolon there would be inconsistent with the comma used earlier in the same series.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "fascicles,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "fascicles;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "fascicles.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "fascicles",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Beetles that eat dried plant tissue can empty a cabinet in a season, so every incoming sheet is sealed in a bag and held at twenty degrees below _____ for four days before it goes to the shelf.",
+   "difficulty": "MEDIUM",
+   "why": "The phrase naming the temperature runs straight into the phrase naming the period, and no punctuation belongs between a modifier and the phrase it modifies. Inserting a comma separates elements that form one continuous description.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "freezing:",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "freezing",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "freezing,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "freezing;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A label written in ink on wood lasts a season, while one struck into lead or zinc _____ the life of the plant it names, which is why the older gardens ordered them by the hundred.",
+   "difficulty": "MEDIUM",
+   "why": "The clause introduced by <em>while</em> needs a finite verb of its own to carry the contrast, and the present tense matches <em>lasts</em> in the first clause. The participial form leaves that clause without a main verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "outlasting",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to outlast",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "having outlasted",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "outlasts",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A layer of bark or straw spread over a bed does not feed the soil beneath it; what it does _____ slow the loss of water from the surface through a dry summer.",
+   "difficulty": "MEDIUM",
+   "why": "The subject is the noun clause <em>what it does</em>, which takes a singular verb, and the sentence needs a finite verb to complete the contrast. The plural form disagrees with that singular subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "is",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "are",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "being",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "to be",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Crude turpentine tapped from a pine is a thick resin; distilling it drives off the volatile oil and leaves the hard rosin behind, and the two products _____ sold into quite different trades.",
+   "difficulty": "MEDIUM",
+   "why": "The subject <em>the two products</em> is plural, and the sentence is describing a standing practice, so the plural present verb is required. The participle without a helping verb leaves the final clause incomplete.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "are",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "was being",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "being",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Steam ruins the oil in a citrus peel, which is why citrus is one of the few crops whose oil is not distilled at all. The peel is instead pricked and squeezed, and the oil runs out cold. _____ a cold-pressed lemon oil contains waxes and pigments that no distilled oil carries.",
+   "difficulty": "MEDIUM",
+   "why": "The presence of waxes and pigments is a consequence of pressing rather than distilling, since nothing is left behind in a still. The restatement marker would claim the sentence says the same thing again, but it adds a new fact.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because of this,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "In spite of this,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A closure that a child cannot work must be one that requires two motions at once, since a small hand can supply force but not co-ordination. The same two motions defeat a good many arthritic adults. _____ the design that protects one household most reliably is the design that some households cannot use at all.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence states the outcome that follows from the two preceding observations taken together, so a marker of consequence is required. The alternative marker would introduce something done in place of the design, which is not what the sentence does.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Instead,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Previously,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Thus,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Otherwise,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A trained nose can tell a good oil from a poor one and will often detect an adulterant that an instrument misses. It cannot say what the adulterant is, or how much of it is present. _____ a gas chromatograph separates a sample into its components and reports the size of each.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence sets the instrument's ability to name and quantify components against the nose's inability to do either, so the relation is one of opposition. A marker of similarity would claim the chromatograph shares the limitation just described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In short,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By contrast,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a general audience what the garden added to the students' textbooks. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Medical students in the sixteenth century learned drugs from written descriptions.</li><li>A description could be matched to more than one plant growing in the field.</li><li>University physic gardens grew named plants in labelled beds for students to see.</li><li>A demonstrator walked the beds with the class and named each plant aloud.</li><li>Students who had walked the beds could recognise the plants when they later prescribed them.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal is what the garden supplied that books did not, and only the choice that names the ambiguity of a written description and then the direct acquaintance the beds provided draws that contrast. The choice describing the beds and the demonstrator reports the garden's arrangements without saying what they remedied.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "University physic gardens grew named plants in labelled beds, and a demonstrator walked the beds with the class and named each plant aloud.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Medical students in the sixteenth century learned drugs from written descriptions, and students who had walked the beds could recognise the plants later.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A description could be matched to more than one plant growing in the field, and students learned drugs from written descriptions.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because a written description could fit more than one plant growing in the field, the labelled beds and the demonstrator who named each plant aloud gave students a direct acquaintance with the drug plants that they could carry into practice.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a general audience how a loan benefits the lending herbarium. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A herbarium lends specimens to researchers at other institutions.</li><li>Loans travel between institutions rather than to individuals.</li><li>The borrowing institution takes responsibility for the sheets while they are held.</li><li>A specialist revising a group may borrow several hundred sheets at once.</li><li>Sheets returned from loan often carry a new determination slip added by the specialist.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal concerns what the lender gains, and only the choice that connects the returned determination slips to expert naming the lender did not pay for states a benefit. The choice about institutional responsibility describes how loans are governed rather than what the lender gets out of them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A specialist revising a group may borrow several hundred sheets at once and often returns them with a new determination slip attached, so the lending herbarium gets its material named by an expert it does not employ.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Loans travel between institutions rather than to individuals, and the borrowing institution takes responsibility for the sheets while they are held.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A herbarium lends specimens to researchers at other institutions, and a specialist may borrow several hundred sheets at once.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Sheets returned from loan often carry a new determination slip added by the specialist, and loans travel between institutions rather than to individuals.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a general audience why the envelope is worth the trouble of attaching. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Loose seeds, fallen petals and broken fragments cannot be glued to a sheet.</li><li>A small paper envelope is fixed to a corner of the sheet to hold them.</li><li>The envelope carries the same number as the specimen.</li><li>Material from the envelope can be examined under a microscope and returned.</li><li>Seeds from such envelopes have been germinated a century after collection.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks what makes the envelope worth attaching, and only the choice that names both the repeated examination it permits and the century-old germination shows the return on the trouble. The choice describing what cannot be glued explains why an envelope is used at all without saying what is gained by it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Material from the envelope can be examined under a microscope and returned, and the envelope carries the same number as the specimen.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The envelope keeps loose seeds and fragments with the specimen that produced them, and because material can be taken out, examined under a microscope and put back, seeds from such envelopes have even been germinated a century after collection.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "A small paper envelope is fixed to a corner of the sheet and carries the same number as the specimen.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Loose seeds, fallen petals and broken fragments cannot be glued to a sheet, so a small paper envelope is fixed to a corner.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T30:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Early herbals held that a plant's use could be read from its appearance: a leaf shaped like a liver treated the liver, and a root with the look of a joint treated joints. The rule made the pharmacopoeia easy to teach and easy to remember, which is a great deal of its attraction, but it offered no way of finding out that it was wrong. Any failure could be charged to the preparation or the practitioner, so the doctrine was in practice _____.",
+   "difficulty": "EASY",
+   "why": "The passage says any failure could be blamed on something other than the rule, which leaves no observation that could count against it. The unpopular option contradicts the sentence crediting the doctrine with a great deal of attraction.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "unpopular",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "unwritten",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "unremarkable",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "untestable",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "What runs from the condenser is not oil but a mixture: a small volume of oil and a much larger volume of water that came over with it. The two are collected in a narrow vessel with an outlet at the neck and another at the foot, so that the lighter layer can be drawn from the top while the heavier is bled away below. The vessel performs no chemistry whatever; its whole function is _____.",
+   "difficulty": "EASY",
+   "why": "The vessel is described as drawing off one layer at the top and the other at the foot, which is the dividing of a mixture into its parts. The purification option overstates what the text allows, since the passage insists the vessel performs no chemistry.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "purification",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "measurement",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "storage",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "separation",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The garden laid out at Padua in 1545 was walled and planted in geometric quarters, and its beds were arranged so that a student could walk the paths and meet the plants of a lecture in the order the lecturer treated them. Nothing about the design was ornamental in intention. The layout was a piece of _____, built so that the ground itself would hold the lesson together.",
+   "difficulty": "EASY",
+   "why": "The passage says the beds follow the order of a lecture so the ground holds the lesson together, which makes the garden an instrument for instruction. The civic-display option is ruled out by the sentence denying that anything in the design was ornamental in intention.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "teaching apparatus",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "civic display",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "private recreation",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "commercial nursery",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Nineteenth-century pharmacies kept their most dangerous preparations in bottles moulded with deep vertical ribs, and often in a distinctive dark blue as well. The ribbing was not decorative. A hand reaching along a dark shelf at night meets the ridges before it lifts the bottle, so the container announces its contents by _____ before anyone has read a word of the label.",
+   "difficulty": "EASY",
+   "why": "The passage describes a hand meeting the ridges in the dark, which is recognition through feel. The colour option is mentioned in the passage but cannot be what the sentence means, since the situation described is one in which nothing can be seen.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "smell",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "touch",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "colour",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "weight",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "It takes something in the region of three tonnes of petals to make a kilogram of rose oil, and the petals must be picked before the sun is high and distilled the same day. No amount of skill at the still alters that ratio, which is fixed by how little oil a rose flower contains. The price of the oil is therefore governed less by the distiller's art than by _____.",
+   "difficulty": "EASY",
+   "why": "The passage fixes the ratio in the flower and then denies that skill at the still can change it, leaving the three tonnes of hand-picked petals as the governing cost. The design of the still is ruled out by the sentence saying no amount of skill at the still alters the ratio.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the cost of the fuel",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "the labour of the harvest",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "the design of the still",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the length of the season",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "When a botanist publishes a new species, one pressed specimen is designated as the permanent point of reference for the name. Later workers who disagree about what the name covers do not argue from descriptions, which are always incomplete, but go back to that sheet. The specimen settles nothing about how wide the species should be drawn; it settles only which plant the name is anchored to, which is a smaller question and a far more answerable one.",
+   "difficulty": "EASY",
+   "why": "The text describes the specimen as the anchor for a name and then explicitly separates the question it settles from the one it does not. Incomplete descriptions are mentioned only as the reason for going back to the sheet, so criticism of botanists is not the point being made.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To describe how a specimen is pressed, mounted and stored for reference",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To recommend that more than one specimen be designated for each name",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To explain what the designated specimen does and does not decide",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "To criticise botanists for publishing incomplete species descriptions",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "passage": "A paper packet lets water vapour through, slowly but without limit, so seed stored in paper eventually comes to the humidity of the room around it however dry it was when it went in. A laminate of aluminium foil between two plastic films does not, and a seam heat-sealed across it does not either. The packet does not dry the seed. It fixes whatever dryness the seed already had at the moment it was closed.",
+   "difficulty": "EASY",
+   "why": "The first two sentences set paper against foil laminate, and the last two say what the laminate does, which is to hold a dryness rather than create one. No figures appear anywhere in the passage, so the option about supplying data misdescribes it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It describes a sequence of steps in the order a seed store performs them.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It presents a claim about packaging and then supplies data that qualify it.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It defines a technical term and then traces how its meaning has changed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It contrasts two packaging materials and then states precisely what the better one achieves.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A brick wall running east and west does more for the garden on its southern side than block the wind. It takes in heat all day and gives it back through the night, so the air within a few feet of it never falls as far as the air in the open ground beyond. Gardeners planted apricots and figs against such walls in counties where those trees will not set fruit otherwise, and the plants were not hardier there; the frost simply reached them later and left them sooner.",
+   "difficulty": "EASY",
+   "why": "The passage attributes the success of the fruit to heat released at night and then states directly that the plants were not hardier. The option calling the plants hardier is the reading the last clause was written to rule out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Gardeners in cold counties abandoned tender fruit once open-ground varieties became available.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A wall extends the growing season next to it by moderating night temperatures rather than by altering the plants.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Apricots and figs grown against walls are hardier than the same varieties grown in open ground.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The chief benefit of a garden wall is the shelter it provides from prevailing winds.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why do herbaria not preserve all their material in spirit?",
+   "passage": "A pressed orchid flower is a brown smear, and a pressed fungus is worse. Herbaria therefore keep a second, wet collection: the flower or the fruiting body goes whole into a jar of spirit, where it holds its shape and something of its colour indefinitely. The jars take a hundred times the shelf space of a sheet and cannot be posted, so nothing goes into spirit that would survive the press, and the two collections between them cover what neither could cover alone.",
+   "difficulty": "EASY",
+   "why": "The passage gives two reasons in one clause, a hundred times the shelf space and the impossibility of posting, and draws the restriction from them. The option about colour reverses the text, which says spirit holds something of the colour indefinitely.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The cost of spirit rose beyond what most herbaria could afford.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Pressed sheets record collecting data that jars have no room to carry.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Spirit collections demand far more space and cannot be sent through the post.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Specimens kept in spirit lose their colour more quickly than pressed ones do.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the researcher's proposal?",
+   "passage": "The leaves of a plant take up some of what is in the air around them, and a pressed leaf keeps that burden for as long as the sheet survives. A researcher proposes that herbarium collections can be read as a record of air quality in the districts where the plants were gathered.",
+   "difficulty": "EASY",
+   "why": "The proposal requires the sheets themselves to distinguish between places, and same-species, same-year sheets differing by district according to what was upwind of them is that distinction. The finding about atmospheric sulphur falling comes from measurements of the air rather than from any specimen, so it leaves the sheets untested.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Sheets gathered downwind of coal-burning towns carry markedly more sulphur than sheets of the same species gathered the same year in remote uplands.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Herbarium sheets from the nineteenth century are more likely than modern ones to carry a full locality on the label.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The species most often collected in the nineteenth century were those easiest to press and mount.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Sulphur in the atmosphere over Britain fell sharply after coal burning declined.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice best describes data from the table that support the claim that the benefit of further drying falls away at the dry end of the range?",
+   "passage": "A store dried one seed lot to several different moisture contents, sealed each portion, held them all at the same temperature for ten years and then tested them. The results are shown.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Moisture content at sealing</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Seeds germinating after ten years</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11 per cent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18 per cent</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9 per cent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">54 per cent</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7 per cent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">88 per cent</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5 per cent</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">91 per cent</td></tr></table>",
+   "difficulty": "EASY",
+   "why": "The claim concerns how much each further step of drying buys, so the support must compare the size of successive gains, and 34 points against 3 points does that. Reporting that the driest portion germinated best shows drying helping without saying anything about diminishing returns.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Germination was lowest, at 18 per cent, in the portion sealed at 11 per cent moisture.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Germination rose at every step as the moisture content at sealing was reduced.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Germination rose by 34 points between 9 and 7 per cent moisture but by only 3 points between 7 and 5 per cent.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Germination was highest, at 91 per cent, in the portion sealed at 5 per cent moisture.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from the register most effectively supports the historian's argument?",
+   "passage": "An apothecary in a market town kept a register in which every prescription dispensed was copied out with the date, the prescriber and the patient. A historian argues that the register was kept as a defence against later dispute rather than as a stock record.",
+   "difficulty": "EASY",
+   "why": "The historian's claim is about protection in a dispute, and the entry that keeps the prescriber's written order pinned in place and has a witness to the dispensing is a record built for exactly that. The entry recording a quantity made up and shelved is stock-keeping, which is the alternative the historian rejects.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Six ounces of syrup of poppies made up this morning and set upon the second shelf.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Received of the wholesaler two pounds of senna and one of jalap.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;The mortar cracked in use and a new one is bespoke from Bristol.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;Sent this day to Mrs Havering, per Dr Ellis's order of the 4th, which order I have pinned within and witnessed by my apprentice.&rdquo;",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Leaves of foxglove gathered from two hillsides may differ several-fold in the strength of the drug they yield, and the difference cannot be seen or tasted. Before a way of assaying the strength was adopted, a physician prescribing a dose by weight of leaf was in effect prescribing an unknown quantity of the active substance. The adoption of an assay changed what a prescription could mean, because it made the dose _____",
+   "difficulty": "EASY",
+   "why": "The passage contrasts prescribing by weight of leaf, which left the active quantity unknown, with what an assay makes possible, so the dose comes to specify the drug itself. The option about cost introduces a matter the passage never raises.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "easier for a physician to write down without error.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "less dependent on the season in which leaves were gathered.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "a statement about the drug rather than about the leaf.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "cheaper for the patient to obtain from an apothecary.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A weevil laid in a bean in the field completes its development in the store, and a single generation can be followed by several more among seed that never leaves the sack. Cold slows the insects long before it slows the seed, and at the temperature a long-term store is held the beetles do not breed at all. A store built to keep seed alive for decades therefore controls its insects _____",
+   "difficulty": "EASY",
+   "why": "The passage says the beetles stop breeding at the temperature the store already holds for the seed's sake, so no separate measure is needed. The fumigation option introduces a treatment the passage never mentions.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "only in the first season after the seed is taken in.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "as a by-product of the conditions it maintains anyway.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "by fumigating each sack before it is placed on the shelf.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "at the cost of shortening the life of the seed itself.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The Society of Apothecaries leased four acres beside the Thames at Chelsea in 1673 and planted them for the instruction of its _____ the ground is still a garden today.",
+   "difficulty": "EASY",
+   "why": "Two complete sentences stand on either side of the break, one about the leasing and planting and one about the ground today, so they need a mark that can join independent clauses. Placing only a comma between them runs the two sentences together.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "apprentices",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "apprentices and",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "apprentices;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "apprentices,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Vapour leaving the still head passes into a copper pipe coiled inside a tub of running _____ by the time it reaches the foot of the coil it has condensed to a liquid.",
+   "difficulty": "EASY",
+   "why": "A complete sentence about the vapour entering the pipe is followed by another complete sentence about what has happened by the foot of the coil, so a semicolon is required. A comma between two independent clauses is a comma splice.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "water",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "water but",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "water;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "water,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Heat from a brick flue running under the floor of the orangery kept the tubs of citrus above freezing through the _____ the smoke was carried out through the far wall.",
+   "difficulty": "EASY",
+   "why": "Two independent clauses are joined here, so the coordinating conjunction needs a comma before it. Dropping the comma before <em>and</em> between two full clauses leaves the join unmarked.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "winter",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "winter, and",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "winter and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "winter,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Marble absorbs oils and stains, glass chips under a hard drug, and porcelain, which resists both, became the usual material for a dispensing _____ tainted acid preparations and fell out of use.",
+   "difficulty": "EASY",
+   "why": "The words after the break form a complete sentence of their own about iron, and the words before it form another about porcelain, so a full stop separates them cleanly. Joining them with only a comma produces a run-on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "mortar. Iron",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "mortar, iron",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "mortar; and iron",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "mortar and iron",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The water that comes over with the oil is not a waste product: it holds a little of the same scent in solution, and bottling it _____ a saleable article out of what a distiller once poured on the ground.",
+   "difficulty": "EASY",
+   "why": "The subject of the final clause is the gerund phrase <em>bottling it</em>, which is singular, so the verb takes the singular present form. The plural verb would agree with nothing in the sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "to make",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "makes",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "make",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "making",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Sealed jars of dried seed are stood on open racks rather than packed into a cupboard, and the _____ nearest the door are checked first for the condensation a cold draught can start.",
+   "difficulty": "EASY",
+   "why": "The word names more than one blotter and owns nothing, so the plain plural is what the sentence needs. An apostrophe would make the noun possessive, and nothing in the clause belongs to the blotters.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "jars'",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "jar",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "jars",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "jar's",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The small weights of an apothecary's set _____ kept in a fitted case, and the smallest of them are lifted with forceps so that the warmth and grease of a finger never reach the pan.",
+   "difficulty": "EASY",
+   "why": "The subject is the plural <em>weights</em>, and the phrase beginning <em>of an apothecary's set</em> does not change that, so the verb must be plural and present to match the present-tense verb later in the sentence. The singular form agrees with the nearest noun instead of with the true subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "are",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "is",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A tender shrub moved straight from a heated house to open ground in April is often killed by a wind that would not have troubled it in June. Gardeners therefore stand the pots outside for a few hours a day, extending the period over a fortnight before planting. _____ the plant's tissues harden while it is still able to be brought back in.",
+   "difficulty": "EASY",
+   "why": "The sentence explains how the practice just described achieves its effect, which is what a marker of means signals. A contrastive marker would set the hardening against the practice rather than presenting it as its result.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Beforehand,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "In this way,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Seeds rich in oil go stale in the way that a nut goes stale, and the process runs faster in warm damp air. Cold dry storage slows it, as it slows everything else that shortens a seed's life. _____ an oily seed kept under the same conditions as a starchy one will still fail first.",
+   "difficulty": "EASY",
+   "why": "The sentence concedes that the remedy just described does not equalise the two kinds of seed, so it stands against the expectation the previous sentence raises. A marker of consequence would suggest the earlier failure follows from cold dry storage, which is the opposite of what is meant.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In addition,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nonetheless,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Therefore,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Distillers divide a run into three portions and judge each separately. The first and last are set aside or redistilled, and only the middle portion is bottled as it stands. _____ the three portions of a single run may be sold at three different prices.",
+   "difficulty": "EASY",
+   "why": "The different prices follow directly from the practice of treating the three portions differently, so the sentence draws a consequence. A concessive marker would suggest the prices hold in spite of the practice, which reverses the relation.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "As a result,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Similarly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to an audience unfamiliar with perfumery why clary sage became a field crop. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Clary sage yields an oil containing sclareol.</li><li>Sclareol can be converted into a substance with the fixing properties of ambergris.</li><li>Ambergris comes from sperm whales and was scarce and costly.</li><li>A fixative slows the evaporation of the lighter parts of a perfume.</li><li>Clary sage is grown as a field crop in France, Russia and the United States.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal asks why the crop is grown at scale, and only the choice that runs from sclareol through the ambergris substitute to what a fixative does supplies that chain. The choice naming the growing countries alongside the oil's content states the fact to be explained without explaining it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Clary sage is grown as a field crop in France, Russia and the United States, and its oil contains sclareol.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Ambergris comes from sperm whales and was scarce and costly, and a fixative slows the evaporation of the lighter parts of a perfume.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Sclareol can be converted into a substance with the fixing properties of ambergris, which comes from sperm whales.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Clary sage is grown on a field scale because its oil contains sclareol, which can be converted into a substitute for the scarce and costly whale product ambergris, a fixative that slows the evaporation of a perfume's lighter parts.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to an audience unfamiliar with propagation why layering succeeds with difficult species. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Layering roots a shoot while it is still attached to the parent plant.</li><li>A shoot is bent to the ground, wounded on its underside and pegged under soil.</li><li>The parent continues to supply the shoot with water until roots form.</li><li>A cutting, by contrast, is severed first and must survive on its own reserves.</li><li>Layering is slower than taking cuttings but succeeds with species that root poorly.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The goal asks why the method works with difficult species, and only the choice that links the continuing water supply from the parent to the absence of any demand on the shoot's own reserves supplies that reason. The choice pairing the slowness of layering with the mechanics of pegging a shoot down reports two notes without connecting either to success.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because a layered shoot stays attached to its parent and goes on being supplied with water while it roots, it is not thrown onto its own reserves as a severed cutting is, which is why layering succeeds with species that root poorly.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Layering is slower than taking cuttings, and a shoot is bent to the ground, wounded on its underside and pegged under soil.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A cutting is severed first and must survive on its own reserves, while a layered shoot is bent to the ground and pegged under soil.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Species that root poorly are propagated by layering, a method in which a shoot is wounded on its underside before being pegged down.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to present a balanced account of the abbreviated Latin used on prescriptions. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Prescriptions were written in abbreviated Latin until well into the twentieth century.</li><li>The abbreviations covered the drug, the quantity, the form and the timing of a dose.</li><li>A dispenser anywhere in Europe could read a prescription written in another country.</li><li>A patient reading the same prescription could not.</li><li>Some of the abbreviations were similar enough to be confused with one another.</li></ul>",
+   "difficulty": "EASY",
+   "why": "A balanced account needs both the advantage and the drawbacks, and only the choice that pairs the cross-border legibility with the patient's exclusion and the risk of confusion gives both. The choice listing only the similar abbreviations and the patient's exclusion presents the drawbacks alone.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The abbreviations gave the drug, the quantity, the form and the timing compactly enough that a dispenser anywhere in Europe could read a prescription written abroad, though the patient could not and some of the abbreviations were similar enough to be confused.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Prescriptions were written in abbreviated Latin until well into the twentieth century, and the abbreviations covered the drug, the quantity, the form and the timing of a dose.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Some of the abbreviations were similar enough to be confused with one another, and a patient reading a prescription could not understand it.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A dispenser anywhere in Europe could read a prescription written in another country, because prescriptions were written in abbreviated Latin.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T30:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A tincture can be made by steeping the drug in spirit for days and then straining, or by letting spirit trickle slowly down through a packed column of it. Steeping stops when the liquid and the drug reach a balance and no more will come out. Percolation never reaches that balance, because fresh spirit is always arriving at the top, and the difference in strength between the two products is therefore _____ rather than accidental.",
+   "difficulty": "HARD",
+   "why": "The passage traces the difference to the way each method works &mdash; one reaches a balance and one cannot &mdash; so it follows from the arrangement itself. The slight option is contradicted by the passage treating the difference as something to be explained.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "structural",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "slight",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "temporary",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "disputed",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Most seeds can be dried to a few per cent of their weight in water and stored for decades. The seeds of oaks, horse chestnuts and many rainforest trees cannot: dry them below about a quarter of their fresh weight and they die outright, so a store that would preserve wheat for a century destroys an acorn in a fortnight. For these species the standard method of conservation is not merely ineffective but _____.",
+   "difficulty": "HARD",
+   "why": "The passage says drying kills these seeds outright and that the store destroys an acorn, so the method does harm rather than simply failing. The costly option introduces expense, which the passage never raises.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "actively destructive",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "unusually costly",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "widely misunderstood",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "difficult to arrange",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "An apothecary's scale ran in grains, twenty grains to the scruple and three scruples to the drachm, and a dispenser weighing out a powerful drug worked at the bottom of that ladder. A difference of two or three grains in a dose meant nothing in a mild preparation and a great deal in a strong one, so the same balance and the same weights were used with a care that looked _____ to anyone who did not know which drug was on the pan.",
+   "difficulty": "HARD",
+   "why": "The sentence contrasts what an outsider sees with what the dispenser knows, and the outsider does not know that a few grains matter, so the care looks like more than the job requires. The habitual option describes a settled routine rather than the mismatch of appearances the sentence is built on.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "excessive",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "careless",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "habitual",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "inexpensive",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Sowing a sample and counting the seedlings answers the question of viability in a fortnight or more, and for a species that must first be chilled it can take a season. Soaking a cut seed in a colourless salt of tetrazolium answers it in a few hours instead: living tissue reduces the salt to a red dye and dead tissue stays pale, so the embryo reports its own condition. The test does not improve on sowing for accuracy; what it offers is _____.",
+   "difficulty": "HARD",
+   "why": "The passage measures the two methods against each other in time, a fortnight or a season set against a few hours, and then denies any gain in accuracy. The certainty option is ruled out by the sentence saying the stain does not improve on sowing for accuracy.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "simplicity",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "certainty",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "speed",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "cheapness",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Seed of many northern trees will not germinate when it is sown fresh, however warm and moist the ground. It must first pass some weeks cold and damp, a condition the seed meets under snow and the nurseryman supplies in a box of moist sand in a cold shed. The delay is not a defect in the seed but a _____: it keeps a seed shed in autumn from sprouting into the winter that would kill it.",
+   "difficulty": "HARD",
+   "why": "The colon explains that the delay stops autumn-shed seed from sprouting into a killing winter, which makes it a protection. The consequence option names the delay as a result of something rather than as something that does work for the seed, which is the contrast the sentence draws with the word defect.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "measurement",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "coincidence",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "safeguard",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "consequence",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text?",
+   "passage": "The tall waisted jar of tin-glazed earthenware that stood on an apothecary's shelf is now prized for its painted decoration, but the panel that matters is the plain band across its belly. On it the contents were written in abbreviated Latin, and because the glaze could be scraped and repainted the band could be rewritten when the jar was given to another drug. <u>The jar was designed to outlast any particular thing put into it.</u>",
+   "difficulty": "HARD",
+   "why": "The sentence follows the account of a band that could be scraped and repainted and states what that feature shows about the jar's purpose, which is a conclusion drawn from the evidence given. It offers no example of the Latin, so the example option describes something the sentence does not contain.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It shifts the discussion from the jar's decoration to its manufacture.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It draws a conclusion from the rewritable label the passage has just described.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It introduces an objection to the value collectors place on the jars.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It provides an example of the abbreviated Latin used on the band.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Rose petals give up their oil grudgingly, and a first distillation leaves much of the most fragrant material dissolved in the water that comes over with it. Distillers therefore return that water to the still and pass it through a second time, sometimes with a fresh charge of petals in it. The practice recovers oil that would otherwise be poured away, and it also concentrates the water itself into the rose water sold as a product in its own right.",
+   "difficulty": "HARD",
+   "why": "The passage describes returning the distillation water to the still and then names two results, recovered oil and a saleable rose water. The claim that rose water is worth more than the oil is never made; the text presents both as gains from the same step.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To explain a step in rose distilling and identify the two benefits it yields",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that rose water is more valuable than the oil recovered alongside it",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To trace the history of rose distilling from its origins to the present day",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To compare the yields obtained by distillers working in different regions",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what is the practical value of the two rules?",
+   "passage": "Two rules of thumb have guided seed storage since the 1960s. Each one per cent reduction in the moisture content of a seed roughly doubles the time it will remain alive, and so does each fall of about five degrees Celsius in the storage temperature. The rules hold only within limits &mdash; below about five per cent moisture further drying stops helping and may harm &mdash; but within those limits they let a store predict the effect of a change before making it.",
+   "difficulty": "HARD",
+   "why": "The last clause says the rules let a store predict the effect of a change before making it. The option about drying being always beneficial contradicts the passage's statement that below about five per cent further drying may harm.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "They show that drying seed is beneficial no matter how far it is taken.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "They allow the effect of a change in storage conditions to be estimated in advance.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "They identify the single storage condition that matters more than any other.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "They establish the exact number of years a given seed lot will remain alive.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what is the consequence of cutting a peppermint crop early?",
+   "passage": "The peppermint plant makes its oil in glands on the leaf, and the composition of that oil changes as the season advances. Early in flowering the oil is high in menthone, which smells sharp and slightly bitter; as flowering proceeds the menthone is progressively converted to menthol, which gives the cooling character the crop is grown for. A grower who cuts too early loses nothing in weight of oil and a great deal in what buyers will pay for it.",
+   "difficulty": "HARD",
+   "why": "The last sentence says an early cut costs nothing in weight but a great deal in price, and the sentence before it explains that menthol accumulates at menthone's expense as flowering proceeds. The option about a smaller quantity is contradicted by the statement that nothing is lost in weight of oil.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The plants regrow more slowly and yield less at the following cutting.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The oil obtained contains no menthol at all and cannot be sold.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The oil obtained is worth less because less of its menthone has become menthol.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The oil obtained is smaller in quantity because the glands are not yet full.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from the daily book most effectively illustrates the historians' claim?",
+   "passage": "The head gardener of a physic garden kept a daily book through the winter of 1837, recording the temperature of each glasshouse at seven in the morning together with what he had done to the flues the night before. Historians of horticulture have used the book to argue that he was managing the houses to a target rather than simply keeping them from freezing.",
+   "difficulty": "HARD",
+   "why": "The claim is that the gardener worked to a target, and the quotation naming a figure he wants, measuring the departure from it and adjusting the flue accordingly shows exactly that. The entry about firing late on a bitter night shows a response to cold without any target being named.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Stove at 62 this morning, three degrees above what I want it; damped the flue at ten last night and shall damp it earlier tonight.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Hard frost again, and the water in the tank frozen an inch thick by morning.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;The new house is finished, and the glazier has left his ladder against the orangery.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;Fired the stove late, the wind being in the east and the night bitter.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from the journal most effectively supports that argument?",
+   "passage": "A collector sent to south-west China in the 1900s was instructed to bring back living plants as well as pressed specimens. His field journal has been used to argue that he chose what to collect by what he judged would survive the journey rather than by what was botanically novel.",
+   "difficulty": "HARD",
+   "why": "The argument is that survival governed his choices, and the entry in which he takes seed rather than roots because roots would not last the journey states that reasoning outright. The entry about four unnameable species records novelty without saying what he decided to collect.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;This valley holds four species I cannot name from any book I carry.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;The headman has lent me two men and a mule for the week, on the usual terms.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;Passed a slope of the finest new primula I have seen, and took seed only; the roots would never have kept three months in a mule pannier.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;The rain has not stopped for nine days and the presses are all full of mouldering paper.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the botanist's proposal?",
+   "passage": "A plant now confined to a few sites in the north of England is listed in county floras of the 1850s from parishes where it has not been seen since. A botanist proposes that herbarium sheets can settle whether the plant has genuinely retreated or was simply misidentified by the earlier recorders.",
+   "difficulty": "HARD",
+   "why": "The proposal is that the sheets can decide between retreat and misidentification, and sheets from the disputed parishes that prove correctly named and precisely localised do decide it. The fact that the plant is hard to tell apart in the field states the problem rather than showing that the sheets can resolve it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The county floras of the 1850s were compiled by recorders who rarely travelled outside their own parishes.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The plant is difficult to distinguish in the field from a commoner relative.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Modern surveys of the northern sites find the plant in smaller numbers each decade.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Sheets collected in those southern parishes in the 1850s, re-examined today, are correctly named and carry full locality data.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Jasmine and tuberose give almost nothing to a still. The compounds that carry their scent are destroyed at the temperature distillation requires, and what survives smells little like the flower. Perfumers therefore laid the blossoms on trays of purified fat, which absorbs the scent as the flowers continue to give it off, renewing the flowers daily for weeks before washing the fat with spirit. The method is laborious and was kept in use for as long as it was because, for these flowers, it _____",
+   "difficulty": "HARD",
+   "why": "The passage explains that the scent compounds are destroyed at distillation temperatures, so the reason for keeping a laborious cold method is that it avoids the heat. The option about a larger quantity is not supported, since the passage measures the method against fidelity of scent rather than against volume.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "allowed the flowers to be stored before processing.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "preserved a scent that heat would have ruined.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "produced a larger quantity of oil than distillation.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "required less skilled labour than distillation did.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Plants from high mountains die in ordinary garden soil more often from wet than from cold. In their own ground they spend the winter under snow, dry at the neck, with meltwater draining instantly away through broken rock. A bed built for them is therefore made mostly of stone chippings with very little soil among them, an arrangement that looks starved and is in fact chosen because it _____",
+   "difficulty": "HARD",
+   "why": "The passage identifies wet rather than cold as the killer and describes meltwater draining instantly through broken rock, so a chippings bed is chosen for drainage. The warmth option addresses cold, which the first sentence sets aside as the lesser danger.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "lets water leave the root as fast as it arrives.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "holds warmth around the root through the winter.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "supplies the minerals such plants take from rock.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "prevents the plants from growing beyond their natural size.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A pharmacopoeia monograph fixes what a preparation must contain and how it is to be tested for _____ it does not tell a dispenser when the preparation should be used.",
+   "difficulty": "HARD",
+   "why": "Both halves are complete sentences, one about what the monograph fixes and one about what it does not do, and the contrast between them is best carried by a semicolon. A comma alone joins two independent clauses incorrectly.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "strength;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "strength,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "strength",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "strength which",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A pill mass was rolled into a rope on a flat slab of glazed earthenware and then cut on a brass machine with parallel grooves, which divided the rope into equal _____ each of them ready to be rounded between the palms.",
+   "difficulty": "HARD",
+   "why": "What follows the break has no subject and no finite verb; it is a phrase describing the lengths, so it attaches to the main clause with a comma. A semicolon would announce a second independent clause that never arrives.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "lengths;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "lengths.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "lengths and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "lengths,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Warm air dries seed quickly but can damage the embryo, so a vacuum drier lowers the pressure instead, letting water leave at a temperature the seed can _____ tolerate for the many hours the process takes.",
+   "difficulty": "HARD",
+   "why": "The adverb belongs directly to the verb it modifies, and nothing should stand between them. A comma at that point cuts the verb phrase in half.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "safely,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "safely;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "safely:",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "safely",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "An apprentice was bound to a master for seven years, was examined at the end of that term in Latin and in the compounding of preparations, and could not open a shop of his own until he had _____ the Society kept the register of everyone who had.",
+   "difficulty": "HARD",
+   "why": "A three-part series ends the first sentence, and a second complete sentence about the register follows, so the two sentences must be divided by a mark that can stand between independent clauses. A comma would splice them, and the sentence already uses commas within its series.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "passed",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "passed and",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "passed;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "passed,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Each collector keeps a single running series of numbers across a whole career, so a specimen labelled with that collector's name and a number _____ to a field notebook entry decades afterwards.",
+   "difficulty": "HARD",
+   "why": "The clause needs a finite verb, and the passive form built on a modal supplies one while keeping the specimen as the thing matched. The bare participle leaves the clause after <em>so</em> with no finite verb at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "can be matching",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "being matched",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "to be matched",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "can be matched",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The coats of many legume seeds are impermeable when ripe, and a nurseryman who wants an even stand _____ them with sandpaper or hot water before sowing.",
+   "difficulty": "HARD",
+   "why": "The relative clause <em>who wants an even stand</em> ends before the blank, leaving the singular subject <em>a nurseryman</em> in need of a main verb in the present tense. A participle leaves the second half of the sentence with no finite verb at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "having scratched",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "scratches",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "scratching",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "to scratch",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A simple is a preparation made from one plant only, and a syrup is a preparation carried in sugar; neither term _____ anything about how strong the medicine is.",
+   "difficulty": "HARD",
+   "why": "The subject <em>neither term</em> is singular, so the verb takes the singular present form. The plural verb agrees with the plural noun beside it rather than with the singular determiner that governs the subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "saying",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to say",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "says",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "say",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A specimen fixed to its sheet with glue cannot be lifted for dissection without damage. One held down by narrow paper straps can be released and replaced as often as a worker needs. _____ many herbaria that once glued everything now strap the specimens they expect to be studied most.",
+   "difficulty": "HARD",
+   "why": "The change in practice follows from the advantage of straps that the previous sentence states, so the sentence draws a consequence. A contrastive marker would present the change as running against that advantage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Accordingly,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "However,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Beforehand,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Admittedly,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The lightest components of an essential oil are terpenes, which boil low and come over first. The compounds that carry most of the characteristic odour are heavier and boil higher, and they arrive later in the run. _____ a distillate collected only from the beginning of a run smells thin, however clean the material that went into the still.",
+   "difficulty": "HARD",
+   "why": "The sentence states a result that follows from the two facts before it: if the odour-bearing compounds arrive late, an early cut must lack them. A contrast marker would signal that the sentence opposes what precedes it, which it does not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Consequently,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:R7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Arranging a herbarium alphabetically by genus lets anyone find a name without knowing any botany. Arranging it by classification puts related plants side by side, so that a worker comparing a doubtful specimen with its relatives finds them all in one bay. _____ the alphabetical arrangement serves the visitor and the systematic one serves the specialist.",
+   "difficulty": "HARD",
+   "why": "The sentence condenses the two arrangements just described into a single summarising statement, which is what a marker of summary signals. A concessive marker would set the sentence against the preceding material rather than gathering it up.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Afterwards,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In short,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For instance,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a general audience why provenance data must be recorded in the field. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A wild-collected seed lot is recorded with the exact place, altitude and habitat of collection.</li><li>Two lots of the same species from different valleys may differ in cold tolerance.</li><li>A lot without collection data cannot be matched to a site for reintroduction.</li><li>Provenance data are recorded at the moment of collection and cannot be recovered later.</li><li>Some older collections in store carry only a country name.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks why the recording must happen in the field, and only the choice that states the data cannot be recovered afterwards answers the question of timing. The choice about valleys and reintroduction explains why the data matter but says nothing about when they have to be taken.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Two lots of the same species from different valleys may differ in cold tolerance, and a lot without collection data cannot be matched to a site for reintroduction.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A wild-collected seed lot is recorded with the exact place, altitude and habitat of collection, and provenance data are recorded at the moment of collection.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Provenance data cannot be recovered once the collector has left the site, and without the exact place, altitude and habitat a lot cannot be matched to a site for reintroduction &mdash; which matters because two lots of one species from different valleys may differ in cold tolerance.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Some older collections in store carry only a country name, and a wild-collected seed lot is recorded with the exact place, altitude and habitat of collection.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a general audience why double flowers support fewer insects. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A garden planted only with showy double-flowered varieties supports few insects.</li><li>Double flowers have extra petals in place of the parts that make pollen and nectar.</li><li>Single-flowered forms of the same species carry both.</li><li>A survey of one garden found four times as many bee visits to single-flowered beds.</li><li>Many gardeners now keep a proportion of single-flowered forms for this reason.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal asks for the reason, and only the choice that says the extra petals replace the pollen- and nectar-bearing parts explains what the insects are missing. The choice pairing the survey with the gardeners' response reports the effect and the reaction without giving the cause at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Gardens planted only with showy double-flowered varieties support few insects, and many gardeners now keep a proportion of single-flowered forms.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Single-flowered forms of a species carry both pollen and nectar, and double flowers have extra petals.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Double flowers carry extra petals in place of the parts that produce pollen and nectar, so they offer insects nothing to collect; one garden survey counted four times as many bee visits to beds of single-flowered forms, which retain both.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A survey of one garden found four times as many bee visits to single-flowered beds, and many gardeners now keep a proportion of single-flowered forms.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T30:S2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise how a distiller turns a disposal cost into something useful. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The plant material left in a still at the end of a run is called the spent charge.</li><li>It holds no more oil, but it is bulky and wet, and a works must move it daily.</li><li>Lavender stalks are spread to dry and then burnt under the boiler.</li><li>Spent rose petals are carted back to the fields and ploughed in.</li><li>A works that has no use for the spent charge pays a contractor to take it away.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The goal names both a cost and a use, and only the choice that sets the contractor's charge against the burning and the ploughing puts the two together. The choice listing the stalks and the petals gives the uses but never says what expense they save.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A works that has no use for the spent charge pays a contractor to take it away, and the spent charge must be moved daily.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Rather than pay a contractor to take away a bulky wet material that holds no more oil, a distiller dries the lavender stalks and burns them under the boiler and ploughs the spent rose petals back into the fields.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The plant material left in a still at the end of a run is called the spent charge, and it holds no more oil but is bulky and wet.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Lavender stalks are spread to dry and then burnt under the boiler, and spent rose petals are carted back to the fields and ploughed in.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "In a physic garden 40 percent of the beds are given to plants grown for ointments and the rest to plants grown for infusions. The garden has 33 more infusion beds than ointment beds. How many beds does the physic garden have altogether?",
+   "difficulty": "MEDIUM",
+   "check": "Infusion beds less ointment beds is 0.6b - 0.4b = 0.2b, and 0.2b = 33 gives b = 165.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "165",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "198",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "220",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "264",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A gardener sets young plants out in rows, putting the same number in every row. Setting out 9 rows would leave 14 plants over, and setting out 11 rows would need 8 more plants than the gardener has. How many plants does the gardener have?",
+   "difficulty": "MEDIUM",
+   "check": "9r + 14 = 11r - 8 gives r = 11, so the gardener has 9(11) + 14 = 113 plants.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "103",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "113",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "121",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "128",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A charge of peppermint and a charge of lavender put through an alembic on the same day weigh 91 kilograms together. The peppermint charge weighs 14 kilograms less than twice the lavender charge. How many kilograms does the peppermint charge weigh?",
+   "difficulty": "MEDIUM",
+   "check": "p + l = 91 with p = 2l - 14 gives 3l = 105, so l = 35 and p = 56.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "35",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "49",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "56",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "63",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A distiller's records show that the volume of oil an alembic yields rises by 3 millilitres for every extra kilogram of plant material in the charge, and that a charge of 40 kilograms yields 268 millilitres. According to this relationship, how many millilitres of oil does a charge of 65 kilograms yield?",
+   "difficulty": "MEDIUM",
+   "check": "65 - 40 = 25 extra kilograms at 3 millilitres each is 75, and 268 + 75 = 343.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "313",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "322",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "335",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "343",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-05",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The mass of oil in a receiver, in grams, t minutes after collection begins is modelled by m(t)=9t+45. According to this model, how many minutes after collection begins does the receiver hold 4 times as much oil as it held at the moment collection began?",
+   "difficulty": "MEDIUM",
+   "check": "The model gives 45 grams at t = 0, and 9t + 45 = 180 gives t = 15.",
+   "correctAnswerFR": "[\"15\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A physic garden raises young plants in two frames, and the number ready in each frame rises at a constant rate. The number ready in the first frame w weeks after sowing is given by n=35w+120. The table gives the number ready in the second frame. How many more plants does the second frame add each week than the first frame adds?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Weeks after sowing</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Plants ready in the second frame</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">190</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">350</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "check": "The second frame adds (350 - 190)/(6 - 2) = 40 a week and the first adds 35, a difference of 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A physic garden can obtain a plant in either of two ways. Buying one in costs $6. Raising them from cuttings instead costs $150 for the frame together with $2 for each cutting struck. What is the least number of plants for which raising them from cuttings costs less than buying them in?",
+   "difficulty": "MEDIUM",
+   "check": "150 + 2n < 6n gives n > 37.5, so the least whole number is 38.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "38",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "45",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "The length of oiled cord taken to bind a bundle of cut stems is \\(\\sqrt{72x^{5}}\\) centimetres, where x is a positive length in centimetres. Which expression gives that same length for every positive value of x?",
+   "difficulty": "MEDIUM",
+   "check": "72x^5 = 36x^4 times 2x, and the square root of 36x^4 is 6x^2, leaving 6x^2 times the square root of 2x.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6x^{2}\\sqrt{2x}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(6x^{2}\\sqrt{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(36x^{2}\\sqrt{2x}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(8x^{2}\\sqrt{3x}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A physic garden's planting index is \\(\\frac{18a^{6}b^{2}}{6a^{2}b^{5}}\\), where a and b are positive numbers of beds and of quarters. Which expression gives that same index?",
+   "difficulty": "MEDIUM",
+   "check": "18/6 = 3, a^(6-2) = a^4 and b^(2-5) = b^(-3), so the index is 3a^4 over b^3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{3a^{4}}{b^{3}}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(3a^{4}b^{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{3a^{8}}{b^{7}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{12a^{4}}{b^{3}}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The mass of oil standing in a receiver under an alembic, in grams, t minutes after collection begins is modelled by \\(m(t)=-2t^{2}+24t\\). For how many minutes together does this model give a mass of at least 64 grams?",
+   "difficulty": "MEDIUM",
+   "check": "-2t^2 + 24t = 64 gives t^2 - 12t + 32 = 0, so t = 4 and t = 8, and the model is at or above 64 grams between them, a stretch of 8 - 4 = 4 minutes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "In the xy-plane the graph of y=f(x) passes through the point (3, 10). Which point must lie on the graph of y=f(x-2)+5 ?",
+   "difficulty": "MEDIUM",
+   "check": "Replacing x by x - 2 moves the graph 2 to the right and adding 5 moves it 5 up, carrying (3, 10) to (5, 15).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "(1, 5)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "(1, 15)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "(5, 15)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "(5, 5)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A distiller's timing rule is \\(x^{2}-kx+108=0\\), where k is a positive constant. One solution of the rule is 3 times the other solution. What is the value of k?",
+   "difficulty": "MEDIUM",
+   "check": "With solutions r and 3r the product is 3r^2 = 108, so r = 6 and k = r + 3r = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "24",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "Two strengths of an infusion are set equal by the equation \\(\\frac{5}{x-2}=\\frac{3}{x+4}\\). What value of x satisfies this equation?",
+   "difficulty": "MEDIUM",
+   "check": "Cross-multiplying gives 5x + 20 = 3x - 6, so 2x = -26 and x = -13.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-13",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "-7",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "13",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "The mass of lavender charged into an alembic and the mass of water charged in with it are always in the ratio 3 to 8. One charge uses 220 kilograms more water than lavender. How many kilograms of lavender does that charge use?",
+   "difficulty": "MEDIUM",
+   "check": "The difference is 5 parts, so one part is 44 kilograms and the lavender is 3(44) = 132.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "88",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "132",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "176",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "352",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Lavender for distilling is sold either in trusses of 8 kilograms costing $34 each or in trusses of 15 kilograms costing $60 each. How many cents less is a kilogram of lavender bought in the larger truss than in the smaller truss?",
+   "difficulty": "MEDIUM",
+   "check": "34/8 = 4.25 dollars a kilogram and 60/15 = 4.00, a difference of 0.25 dollars.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "25",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "30",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The oil yields, in millilitres, of the first five charges of a season were 34, 41, 47, 52 and 58. A sixth charge was then distilled, and the median of all six yields was 49.5 millilitres. Which of the following could be the yield, in millilitres, of the sixth charge?",
+   "difficulty": "MEDIUM",
+   "check": "For six values the median is the mean of the third and fourth, and only a sixth value of at least 52 leaves those two as 47 and 52, whose mean is 49.5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "38",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "44",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "55",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "Two lists each record six oil yields in millilitres, and the two lists have the same mean. The first list is 40, 44, 48, 52, 56, 60 and the second list is 46, 47, 49, 51, 53, 54. Which statement about the standard deviations of the two lists is true?",
+   "difficulty": "MEDIUM",
+   "check": "Both lists have a mean of 50, and the first list's values sit further from 50 than the second list's do.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The standard deviation of the first list is greater than the standard deviation of the second list.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The standard deviation of the second list is greater than the standard deviation of the first list.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The two lists have the same standard deviation.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The standard deviation of each list is zero.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-18",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the mass of lavender in each of four charges put through an alembic in one week. The four charges together yielded 600 millilitres of oil, and every charge yielded the same volume of oil for each kilogram of lavender. How many millilitres of oil did the third charge yield?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Charge</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mass of lavender (kilograms)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">First</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">40</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Second</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">55</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Third</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Fourth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">70</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "check": "The four charges take 200 kilograms in all, so the yield is 600/200 = 3 millilitres a kilogram, and the third charge yields 3(35) = 105.",
+   "correctAnswerFR": "[\"105\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "Two copper heads for an alembic have exactly the same shape, and every length on the larger head is 3 times the matching length on the smaller head. The smaller head encloses 45 cubic centimetres. How many cubic centimetres does the larger head enclose?",
+   "difficulty": "MEDIUM",
+   "check": "Volume scales as the cube of the scale factor, so the larger head encloses 45 times 3^3 = 45(27) = 1,215 cubic centimetres.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "135",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "405",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "1,215",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "3,645",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A circular herb bed in a physic garden has a radius of 12 metres. A gravel walk covers the sector of the bed cut off by a central angle of 150&deg;, and the area of that sector is \\(k\\pi\\) square metres. What is the value of k?",
+   "difficulty": "MEDIUM",
+   "check": "The sector is 150/360 of the bed, so its area is (150/360)(12^2)pi = 60 pi.",
+   "correctAnswerFR": "[\"60\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-21",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A triangular corner bed PQR in a physic garden has PQ equal in length to PR, and the angle at P measures 44&deg;. A gravel walk runs from Q to a point S on \\(\\overline{PR}\\) and bisects the angle at Q. What is the measure, in degrees, of angle PQS?",
+   "difficulty": "MEDIUM",
+   "check": "The two base angles are each (180 - 44)/2 = 68 degrees, and half of 68 is 34.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "34",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "44",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "68",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "90",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M1:H1-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A brace cut for a cold frame is a right triangle ABC with its right angle at C. In this brace \\(\\sin A=\\frac{2}{7}\\). What is the value of \\(\\cos^{2}A\\)?",
+   "difficulty": "MEDIUM",
+   "check": "Since sin^2 A + cos^2 A = 1, cos^2 A = 1 - (2/7)^2 = 1 - 4/49 = 45/49.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{45}{49}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{5}{49}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{4}{49}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{5}{7}\\)",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An apothecary divides a 111-gram stock of a powder equally among 8 identical jars and finds 15 grams left over. How many grams of the powder does each jar hold?",
+   "difficulty": "EASY",
+   "check": "111 - 15 = 96 grams shared among 8 jars is 12 grams each.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Each drawer of a herbarium cabinet holds 24 mounted sheets. How many mounted sheets do 15 such drawers hold altogether?",
+   "difficulty": "EASY",
+   "check": "15(24) = 360.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "360",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "384",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "408",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "432",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An apothecary's drawer holds 480 pills at the start of a month, and 24 pills are taken from it each day. After how many days is the drawer empty?",
+   "difficulty": "EASY",
+   "check": "480/24 = 20.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "20",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "22",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The number of specimens still waiting to be mounted in a herbarium is given by n=190-8d, where d is the number of days since mounting began. How many specimens are still waiting after 12 days?",
+   "difficulty": "EASY",
+   "check": "190 - 8(12) = 190 - 96 = 94.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "86",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "94",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "102",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "110",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An apothecary's packing rule is 5p+4q=96, where p is the number of pill boxes and q is the number of jars packed into one crate. If q=9, what is the value of p?",
+   "difficulty": "EASY",
+   "check": "4(9) = 36, so 5p = 96 - 36 = 60 and p = 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "12",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-06",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A seed store holds 640 packets and sends out 45 packets in each week. How many packets are left in the store after 8 weeks?",
+   "difficulty": "EASY",
+   "check": "640 - 8(45) = 640 - 360 = 280.",
+   "correctAnswerFR": "[\"280\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A seed lot is accepted for storage only if its cleanliness number n satisfies 5n+3&gt;38. Which of the following could be the cleanliness number of an accepted lot?",
+   "difficulty": "EASY",
+   "check": "5n + 3 > 38 gives n > 7, and 8 is the only listed value greater than 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A parcel made up by an apothecary holds \\(4k^{2}+7k-5\\) grains of one powder and \\(2k^{2}-7k+9\\) grains of another, where k is a whole number. Which expression gives the total number of grains in the parcel?",
+   "difficulty": "EASY",
+   "check": "The k terms cancel, 7k - 7k = 0, and 4k^2 + 2k^2 = 6k^2 with -5 + 9 = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6k^{2}+4\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(6k^{2}+14k+4\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(6k^{4}+4\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(6k^{2}-4\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A herbarium case holds \\((x+6)(x+4)\\) mounted sheets. Which expression gives that same number of sheets for every value of x?",
+   "difficulty": "EASY",
+   "check": "(x+6)(x+4) = x^2 + 4x + 6x + 24 = x^2 + 10x + 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x^{2}+24x+10\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(x^{2}+10x+24\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(x^{2}+10x+10\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x^{2}+24\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A seed counter reports a lot size as \\(\\left(3m^{4}\\right)^{2}\\) seeds, where m is a positive whole number. Which expression gives that same lot size?",
+   "difficulty": "EASY",
+   "check": "Squaring gives 3^2 = 9 and m^(4 times 2) = m^8, so 9m^8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(6m^{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(9m^{8}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(9m^{6}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3m^{8}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A seed store's settling rule uses the function g defined by \\(g(p)=\\sqrt{p+15}\\). What is the value of g(49)?",
+   "difficulty": "EASY",
+   "check": "49 + 15 = 64, and the square root of 64 is 8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "64",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A herbarium's mounting rule is \\(\\left|x-19\\right|=6\\), where the gauge reading x is greater than 19. What is the value of x?",
+   "difficulty": "EASY",
+   "check": "x - 19 = 6 gives x = 25 and x - 19 = -6 gives x = 13, and only 25 is greater than 19.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "25",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "31",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A seed grader's index x satisfies \\(x^{3}=343\\). What is the value of x?",
+   "difficulty": "EASY",
+   "check": "7 times 7 times 7 = 343, so x = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "49",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "An apothecary weighs powders with a set of weights in which 1 drachm is 60 grains. How many grains are there in 7 drachms?",
+   "difficulty": "EASY",
+   "check": "7(60) = 420.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "360",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "380",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "400",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "420",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A lot of 2,400 seeds is divided equally among 16 packets. How many seeds go into each packet?",
+   "difficulty": "EASY",
+   "check": "2,400/16 = 150.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "100",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "120",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "140",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "150",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-16",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "An apothecary recorded the number of doses made up on each of seven days as 12, 9, 14, 9, 11, 9 and 15. What is the mode of these seven numbers?",
+   "difficulty": "EASY",
+   "check": "9 appears three times and every other number appears once, so the mode is 9.",
+   "correctAnswerFR": "[\"9\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The numbers of seeds counted in each of six packets were 148, 155, 139, 162, 151 and 144. What is the range of these six numbers?",
+   "difficulty": "EASY",
+   "check": "The greatest count is 162 and the least is 139, and 162 - 139 = 23.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "23",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "46",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of grains in each of four doses an apothecary made up. What is the difference between the greatest and the least of these numbers of grains?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Dose</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Grains</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Alder</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bryony</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Comfrey</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Dittany</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">57</td></tr></table>",
+   "difficulty": "EASY",
+   "check": "The greatest is 62 and the least is 38, and 62 - 38 = 24.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "24",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "45",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "62",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "The base of a seed drying tray is a trapezium whose two parallel sides are 30 centimetres and 42 centimetres long and whose perpendicular height is 16 centimetres. What is the area of that base, in square centimetres?",
+   "difficulty": "EASY",
+   "check": "Half of (30 + 42) is 36, and 36 times 16 = 576.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "288",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "480",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "576",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "1,152",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A seed drying tray is a rectangular box 40 centimetres long, 24 centimetres wide and 16 centimetres deep. Cubical seed boxes whose edges are 8 centimetres long are packed into the tray so that the tray is completely filled. How many of those boxes does the tray hold?",
+   "difficulty": "EASY",
+   "check": "The tray takes 40/8 = 5 boxes along its length, 24/8 = 3 across its width and 16/8 = 2 up its depth, and 5(3)(2) = 30.",
+   "correctAnswerFR": "[\"30\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-21",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "An apothecary's folding weight rest has the shape of a triangle. An exterior angle at one of its vertices measures 126&deg;, and the two interior angles that are not adjacent to that exterior angle are equal in measure. What is the measure, in degrees, of each of those two interior angles?",
+   "difficulty": "EASY",
+   "check": "An exterior angle equals the sum of the two non-adjacent interior angles, so each of the two equal angles is 126/2 = 63 degrees.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "63",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "72",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "117",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "126",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2E:H2E-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A herbarium pressing screw turns through an angle of \\(\\frac{7\\pi}{10}\\) radians. What is the measure of that angle, in degrees?",
+   "difficulty": "EASY",
+   "check": "pi radians is 180 degrees, so (7/10)(180) = 126 degrees.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "63",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "126",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "252",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-01",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An apothecary's dispensing rule sets \\(\\frac{x+3}{4}+\\frac{x-1}{2}=7\\), where x is the number of grains in a dose. What is the value of x?",
+   "difficulty": "HARD",
+   "check": "Multiplying through by 4 gives (x+3) + 2(x-1) = 28, so 3x + 1 = 28 and x = 9.",
+   "correctAnswerFR": "[\"9\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An apothecary's day book fixes two quantities x and y by y=4x-7 and 2x+3y=35. What is the value of the product xy?",
+   "difficulty": "HARD",
+   "check": "2x + 3(4x-7) = 35 gives 14x = 56, so x = 4 and y = 9, and 4(9) = 36.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "36",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A seed store sent out 620 packets, each either small or large. 30 percent of the small packets and 45 percent of the large packets came back unopened, and 231 packets in all came back. How many large packets were sent out?",
+   "difficulty": "HARD",
+   "check": "With s + l = 620, 0.30(620 - l) + 0.45l = 231 gives 186 + 0.15l = 231, so l = 300.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "260",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "300",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "320",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "380",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "Two seed stores are drawn down at constant rates. The first begins with 5,400 packets and sends out r packets each week, and the second begins with 3,000 packets and sends out \\(\\frac{r}{3}\\) packets each week. In terms of r, after how many weeks do the two stores hold the same number of packets?",
+   "difficulty": "HARD",
+   "check": "5,400 - rw = 3,000 - (r/3)w gives 2,400 = (2r/3)w, so w = 3,600/r.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1{,}200}{r}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{2{,}400}{r}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{3{,}600}{r}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{7{,}200}{r}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A herbarium's shrinkage rule is a linear function f, and the rule gives f(2) as 21 greater than f(9). What is the slope of the graph of y=f(x) in the xy-plane?",
+   "difficulty": "HARD",
+   "check": "f(9) - f(2) = -21 over a run of 9 - 2 = 7, so the slope is -21/7 = -3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-3",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(-\\frac{7}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "21",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A seed grader accepts a reading x whenever \\(\\frac{2x-7}{3}\\le\\frac{x+1}{2}\\). Which of the following gives all the readings the grader accepts?",
+   "difficulty": "HARD",
+   "check": "Multiplying by 6 gives 2(2x-7) <= 3(x+1), so 4x - 14 <= 3x + 3 and x <= 17.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(x\\le 11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(x\\le 17\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(x\\ge 11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(x\\ge 17\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A dispensing tolerance is written \\(ax+12&gt;5x-8\\), where a is a constant, and the readings x that satisfy it are exactly those with \\(x&lt;5\\). What is the value of a?",
+   "difficulty": "HARD",
+   "check": "(a-5)x > -20 reverses only when a - 5 is negative, and -20/(a-5) = 5 gives a - 5 = -4, so a = 1.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "-1",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "0",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "1",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A herbarium records a pressing rate as \\(\\frac{1}{a}-\\frac{1}{b}\\), where a and b are positive constants. Which expression gives that same rate?",
+   "difficulty": "HARD",
+   "check": "Over the common denominator ab the difference is (b - a)/(ab).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{a-b}{ab}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{b-a}{ab}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{a-b}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{ab}{b-a}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A seed store's dispatch model uses the function f defined by f(x)=3x-7, and a second function g is defined by g(x)=f(x+4). Which expression gives g(x) for every value of x?",
+   "difficulty": "HARD",
+   "check": "f(x+4) = 3(x+4) - 7 = 3x + 12 - 7 = 3x + 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(3x-11\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(3x-3\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(3x+12\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(3x+5\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A seed store's wastage model is the function f defined by \\(f(x)=x^{3}-2x^{2}-15x\\). How many distinct x-intercepts does the graph of y=f(x) have in the xy-plane?",
+   "difficulty": "HARD",
+   "check": "x^3 - 2x^2 - 15x = x(x-5)(x+3), whose zeros are 0, 5 and -3, so there are 3 distinct x-intercepts.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "4",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The function f is defined by \\(f(x)=x^{2}+bx+c\\), where b and c are constants. f(1)=f(9), and the least value f takes is -7. What is the value of c?",
+   "difficulty": "HARD",
+   "check": "f(1) = f(9) puts the axis at x = 5, so b = -10, and 25 - 50 + c = -7 gives c = 18.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "43",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A seed physiologist's calibration satisfies \\(x+\\frac{18}{x}=11\\), where x is positive. What is the positive difference between the two values of x that satisfy this equation?",
+   "difficulty": "HARD",
+   "check": "Multiplying through by x gives x^2 - 11x + 18 = 0, so x = 2 or x = 9, and 9 - 2 = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "11",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A germination index x is positive and satisfies \\(x^{4}-13x^{2}+36=0\\). What is the sum of all the possible values of x?",
+   "difficulty": "HARD",
+   "check": "Writing u = x^2 gives u = 4 or u = 9, so the positive x are 2 and 3, and 2 + 3 = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "25",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A seed store held 3,600 packets. During the first year it dispatched 40 percent of them and then took in 600 new packets, and during the second year it dispatched 25 percent of whatever it held at the start of that year. How many packets did the store hold at the end of the second year?",
+   "difficulty": "HARD",
+   "check": "3,600(0.6) = 2,160, then 2,160 + 600 = 2,760, and 2,760(0.75) = 2,070.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,890",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2,070",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "2,160",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "2,340",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Four clerks working together mount 3 herbarium sheets every 5 minutes. Working at that same rate for each clerk, how many clerks are needed to mount 63 sheets in 35 minutes?",
+   "difficulty": "HARD",
+   "check": "Four clerks mount 21 sheets in 35 minutes, and 63 is 3 times 21, so 3(4) = 12 clerks are needed.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "12",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-16",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "In one germination trial 240 seeds of a first variety and 160 seeds of a second variety were sown. 85 percent of the first variety's seeds and 70 percent of the second variety's seeds germinated. What percent of all the seeds sown in the trial germinated?",
+   "difficulty": "HARD",
+   "check": "0.85(240) = 204 and 0.70(160) = 112, and 316/400 = 0.79.",
+   "correctAnswerFR": "[\"79\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The table gives the results of a germination trial in which 800 seeds were sown, half of them stored beforehand at the lower moisture content and half at the higher. By how many percentage points was the germination rate of the seeds stored at the lower moisture content greater than that of the seeds stored at the higher moisture content?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Storage</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Germinated</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Failed to germinate</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Lower moisture content</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">380</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">400</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Higher moisture content</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">260</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">140</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">400</td></tr></table>",
+   "difficulty": "HARD",
+   "check": "380/400 = 95 percent and 260/400 = 65 percent, a difference of 30 percentage points.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "30",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "35",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives, for each of four seed lots, the number of seeds sown in a trial and the number of those seeds that germinated. For which lot did the greatest percentage of the seeds sown germinate?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lot</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Seeds sown</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Seeds germinated</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Aldworth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">250</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">200</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bramfield</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">320</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">272</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Culworth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">180</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">144</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Denshaw</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">400</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">312</td></tr></table>",
+   "difficulty": "HARD",
+   "check": "The rates are 80, 85, 80 and 78 percent, and Bramfield's 85 percent is the greatest.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Aldworth",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Bramfield",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Culworth",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Denshaw",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A circular herbarium seal of the largest size that will fit is cut from a square sheet of paper whose sides are 20 centimetres long. What is the area, in square centimetres, of the paper left over once the seal has been cut out?",
+   "difficulty": "HARD",
+   "check": "The largest circle that fits has a diameter of 20, so a radius of 10 and an area of 100 pi, and the square's area is 20^2 = 400.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(400-100\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(400-400\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(400-20\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(100-100\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A rectangular seed drying tray has a perimeter of 210 centimetres, and the tray is twice as long as it is wide. What is the area of the tray, in square centimetres?",
+   "difficulty": "HARD",
+   "check": "2(w + 2w) = 210 gives w = 35 and a length of 70, and 35(70) = 2,450.",
+   "correctAnswerFR": "[\"2450\"]"
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-21",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "In the xy-plane a circular herbarium label has its centre at the point (4, -3) and passes through the point (16, 2). What is the area of the label, in square units?",
+   "difficulty": "HARD",
+   "check": "The radius is the distance from (4,-3) to (16,2), which is the square root of 144 + 25 = 169, so 13, and the area is 169 pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(26\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(84\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(169\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(338\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T30-MATH_M2H:H2H-22",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "An apothecary's set square is a right triangle ABC with its right angle at B, and \\(\\tan A=k\\) for some positive constant k. Which expression gives \\(\\tan C\\) in terms of k?",
+   "difficulty": "HARD",
+   "check": "tan A is BC/AB and tan C is AB/BC, so tan C is the reciprocal of k.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{k}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(-k\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(k^{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(1-k\\)",
+     "isCorrect": false
+    }
+   ]
+  }
+ ]
+}

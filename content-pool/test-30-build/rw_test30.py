@@ -827,13 +827,14 @@ QUESTIONS = [
      "separates elements that form one continuous description."),
 
  bnd("B9",
-     "Screening takes out what is larger or smaller than the seed, winnowing takes out what is "
-     "lighter, and a gravity table takes out what is the same size and the same weight but less "
-     "_____ each machine answers a different question about the sample.",
-     ["dense;", "dense,", "dense", "dense but"], "A",
+     "An apprentice was bound to a master for seven years, was examined at the end of that term in "
+     "Latin and in the compounding of preparations, and could not open a shop of his own until he "
+     "had _____ the Society kept the register of everyone who had.",
+     ["passed;", "passed,", "passed", "passed and"], "A",
      "A three-part series ends the first sentence, and a second complete sentence about the "
-     "machines follows, so the two sentences must be divided by a semicolon or a full stop. A "
-     "comma would splice them, and the sentence already uses commas within its series."),
+     "register follows, so the two sentences must be divided by a mark that can stand between "
+     "independent clauses. A comma would splice them, and the sentence already uses commas "
+     "within its series."),
 
  bnd("B10",
      "Warm air dries seed quickly but can damage the embryo, so a vacuum drier lowers the pressure "
