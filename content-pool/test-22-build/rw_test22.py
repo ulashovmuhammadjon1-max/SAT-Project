@@ -59,6 +59,28 @@ What is left, and what this file is built from:
     the boiling stages, invert sugar and graining, the plaited wick, wax bloom,
     the spermaceti standard candle, and Faraday on the structure of a flame.
 
+A second screen, run once the file was complete, compared every passage here
+against every other passage HERE rather than against the corpus. That is the
+check a corpus screen cannot make, and it found this file's real defect: all
+nine Rhetorical Synthesis items had been built by restating a reading passage
+that already appears earlier in the same file (the bee space behind S1, soil
+tare behind S2, seeding behind W5, and so on), and Command of Evidence item E8
+was a second treatment of W12's subject. Six of those pairs scored 0.35-0.53 in
+passage Jaccard, where Tests 16-21 have no self-pair above 0.24 — and whichever
+module a pair landed in would have shown one student the same topic twice.
+
+All ten were rewritten onto mechanisms used nowhere else in the test:
+
+    the solar wax extractor and slumgum, the clearer board, orientation flights
+    and the rule for moving a hive, robbing and the reduced entrance, the
+    rushlight against tallow and beeswax, the wax seal and its matrix, monogerm
+    beet seed and singling, caramelisation as distinct from melting, wax moth in
+    stored comb, and boiling-point elevation as the confectioner's thermometer.
+
+The highest self-pair afterwards is 0.25 and the highest against the corpus is
+0.16. The lesson generalises: a corpus screen catches what other tests already
+cover, and nothing but a self-screen catches a test quietly plagiarising itself.
+
 Block counts (fixed by the assembler's quota, 3 modules x 27):
     Words in Context 15, Text Structure and Purpose 6,
     Central Ideas and Details 6, Command of Evidence 9, Inferences 6,
@@ -142,6 +164,26 @@ def syn(num, notes, goal, choices, answer, why):
         passage=f"While researching a topic, a student has taken the following notes:<ul>{bullets}</ul>",
         stem=f"The student wants to {goal} Which choice most effectively uses relevant "
              "information from the notes to accomplish this goal?",
+        choices=choices, answer=answer, why=why)
+
+
+def given(num, sentences, goal, choices, answer, why):
+    """The second real shape of a Rhetorical Synthesis item.
+
+    The College Board writes this domain two ways: notes taken while
+    researching, asked about as "information from the notes", and drafted
+    sentences, asked about as "information from the given sentences".
+    CLAUDE.md records that a classifier matching only the first phrasing
+    silently misfiled every question of the second kind — in Test 1 as well as
+    Test 2 — so a test containing only one shape can never surface that bug.
+    Three of the nine items here use this shape.
+    """
+    bullets = "".join(f"<li>{s}</li>" for s in sentences)
+    return dict(
+        num=num, skill="Rhetorical Synthesis",
+        passage=f"While working on a paragraph, a student has written the following sentences:<ul>{bullets}</ul>",
+        stem=f"The student wants to {goal} Which choice most effectively uses "
+             "information from the given sentences to accomplish this goal?",
         choices=choices, answer=answer, why=why)
 
 
@@ -626,19 +668,24 @@ QUESTIONS = [
      "finding that outer bees are cooler than inner ones is consistent with either explanation and "
      "so distinguishes nothing."),
 
+ # Rewritten. The first draft of this item was a second passage about acid
+ # inverting sucrose to stop graining, which is already W12's subject and N3's;
+ # its passage scored 0.28 against W12, the highest self-pair left in the file.
+ # Boiling-point elevation is a mechanism nothing else here touches.
  coe("E8",
-     "Confectioners add a little acid to a sugar syrup during the boil, and sweets made that way "
-     "resist graining. One confectioner claims that the acid works by converting part of the "
-     "sucrose into simpler sugars, not by making the syrup acidic as such.",
+     "A boiling sugar syrup climbs steadily in temperature as it boils, and a confectioner stops "
+     "the boil at a stated figure on a thermometer. One confectioner claims that the figure really "
+     "reports how much water is left in the syrup rather than how much heat has gone into it.",
      "Which finding, if true, would most directly support the confectioner's claim?",
-     ["Sweets boiled with an acid that does not split sucrose grain as quickly as sweets boiled with no acid at all.",
-      "Sweets boiled with acid taste slightly sharper than sweets boiled without it.",
-      "Acid is normally added towards the end of the boil rather than at the beginning.",
-      "Boiled sweets of every kind grain more quickly in damp weather than in dry."],
+     ["Two syrups holding the same proportion of water boil at the same temperature whether they were driven hard over a fierce flame or brought up slowly over a low one.",
+      "A syrup boiled in a wide, shallow pan reaches a given temperature sooner than the same syrup boiled in a deep, narrow one.",
+      "Sweets boiled to a higher temperature set harder than sweets boiled to a lower one.",
+      "A confectioner without a thermometer judges a boil by dropping a little syrup into cold water and feeling the ball it forms."],
      "A",
-     "An acid that acidifies the syrup but leaves the sucrose intact, and that fails to prevent "
-     "graining, isolates the splitting as the effective step. The finding about damp weather "
-     "concerns storage rather than what the acid does during the boil."),
+     "Holding the water constant while the heating is varied is the only way to show that the "
+     "reading follows the water rather than the fire, and one finding does exactly that. The "
+     "finding about a wide pan reports how quickly water leaves a syrup, not what the reading on "
+     "the thermometer is measuring."),
 
  coe("E9",
      "The pollen in a jar of honey is sometimes used to say where the honey was made. A laboratory "
@@ -808,8 +855,9 @@ QUESTIONS = [
      "though it could stand alone."),
 
  bnd("B8",
-     "Three of the four sugars in honey are simple ones &mdash; glucose, fructose and a trace of "
-     "_____ and the fourth, sucrose, survives only in the smallest amounts.",
+     "Only a handful of sugars are left in ripened honey &mdash; glucose and fructose in quantity, "
+     "with a trace of _____ and the sucrose the bees began with survives in the smallest amounts "
+     "of all.",
      ["maltose &mdash;", "maltose,", "maltose;", "maltose"], "A",
      "A dash already opens the inserted list of sugars, so a matching dash has to close it before "
      "the sentence resumes. Ending the insertion with a comma or a semicolon leaves the opening "
@@ -858,8 +906,8 @@ QUESTIONS = [
 
  fss("F2",
      "Marggraf showed in 1747 that the sugar in beet was the same substance as the sugar in cane, "
-     "but nobody _____ a way of extracting it cheaply until his pupil Achard opened a factory fifty "
-     "years afterwards.",
+     "but nobody _____ a way of extracting it cheaply until his pupil Achard opened a factory half "
+     "a century afterwards.",
      ["had found", "finds", "will find", "is finding"], "A",
      "The clause describes a state of affairs that lasted up to a later past event, so the past "
      "perfect is what fits alongside the two past-tense verbs around it. The present and future "
@@ -1003,149 +1051,165 @@ QUESTIONS = [
      "required. A result marker would present the limitation as something the printed scale brings "
      "about, when it is a condition the scale quietly assumes."),
 
+
  # ------------------------------------------------- Rhetorical Synthesis (9)
+ #
+ # Every one of these nine was rewritten. The first draft built its notes by
+ # restating a reading passage that already appears earlier in this same file —
+ # the bee space behind S1, the soil tare behind S2, seeding behind W5, and so
+ # on — which put two versions of one topic inside a single 27-question module
+ # for whichever module the pair landed in. Measured as passage Jaccard, six of
+ # those pairs scored 0.35-0.53 where Tests 16-21 have no self-pair above 0.24.
+ # The nine below are on mechanisms that appear nowhere else in the test.
+ #
+ # Three use the "given sentences" wording rather than "the notes". Both shapes
+ # are real and CLAUDE.md records that a classifier keyed only on "the notes"
+ # silently misfiled every question of the other kind; a test that contains only
+ # one shape can never expose that.
+
  syn("R1",
-     ["Before 1851 comb was fastened to the walls of a hive and had to be cut out.",
-      "Lorenzo Langstroth measured the gap bees leave clear as they build: about 8 millimetres.",
-      "A gap wider than that is filled with comb; a narrower one is sealed shut.",
-      "Langstroth hung his frames so that a gap of that width surrounded each of them.",
-      "The comb then attached only to the frame, and a hive could be opened without damage."],
-     "explain how Langstroth's measurement made a hive openable.",
-     ["Because bees leave a gap of about 8 millimetres clear, Langstroth hung his frames with a gap of that width all round them, so comb attached only to the frame and a hive could be opened without damage.",
-      "Langstroth measured the gap that bees leave clear as they build and found it to be about 8 millimetres.",
-      "A gap wider than 8 millimetres is filled with comb, while a gap narrower than that is sealed shut.",
-      "Before 1851, comb was fastened to the walls of a hive and had to be cut out whenever a beekeeper wanted it."],
+     ["Cappings sliced from a comb during extraction are almost pure wax.",
+      "A solar extractor is a glazed box holding a sloping metal tray.",
+      "Sunlight through the glass lifts the tray above the melting point of wax.",
+      "Melted wax runs down the tray and through a strainer into a mould beneath.",
+      "Cocoons and other debris stay on the strainer as a residue called slumgum."],
+     "explain how a solar extractor separates wax from what is mixed with it.",
+     ["Sunlight through the glass lifts the tray past the melting point, so the wax runs down it and through a strainer into a mould while cocoons and other debris are held back as slumgum.",
+      "The cappings sliced from a comb during extraction consist of almost pure wax.",
+      "A solar extractor is a glazed box with a sloping metal tray inside it.",
+      "The residue left behind on the strainer of a solar extractor is called slumgum."],
      "A",
-     "The goal asks for the route from a measurement to an openable hive, and only the choice that "
-     "carries the gap through to the frames and then to the undamaged opening covers it. The choice "
-     "reporting the measurement on its own stops before the frames and so never reaches the hive."),
+     "Separation is what the goal asks about, so the answer has to carry the melted wax through "
+     "the strainer and say what stays behind. The note naming the residue supplies the term "
+     "without any account of how the two parts came to be apart."),
 
  syn("R2",
-     ["A lorry of beet is weighed as it arrives at the factory.",
-      "A sample is drawn from the load, washed and reweighed.",
-      "The difference is the soil tare and is deducted from the grower's payment.",
-      "In a wet lifting season soil can be a fifth of a load's weight.",
-      "A factory that paid for the soil would also pay to haul it and to wash it."],
-     "explain to an audience unfamiliar with the trade why the deduction is made.",
-     ["Because soil can be a fifth of a load's weight in a wet season, and a factory would otherwise pay to buy it, haul it and wash it, each load is sampled and the soil found is deducted from the payment.",
-      "A lorry of beet is weighed on arrival, and a sample is then drawn from the load, washed and reweighed.",
-      "The difference between the weight of the sample and the weight of the washed sample is called the soil tare.",
-      "In a wet lifting season, the soil that comes in with a load of beet can be a fifth of its weight."],
+     ["A honey super has to be emptied of bees before it can be carried away.",
+      "A clearer board is laid between the super and the brood box below.",
+      "The escape set into the board passes bees in one direction only.",
+      "Bees drift down through it overnight and cannot climb back.",
+      "The super is nearly free of bees by the following morning."],
+     "explain how a clearer board empties a super without smoke or brushing.",
+     ["Laid between the super and the brood box, a clearer board carries an escape that passes bees one way only, so they drift down overnight, cannot climb back, and leave the super nearly empty by morning.",
+      "A honey super has to be emptied of its bees before it can be carried away from the hive.",
+      "The escape set into a clearer board allows bees to pass through it in one direction only.",
+      "A super left over a clearer board is nearly free of bees by the following morning."],
      "A",
-     "The goal is to justify the deduction, so the answer has to give both the size of the problem "
-     "and the costs a factory would carry, and one choice does. The choice describing the weighing "
-     "and washing sets out the procedure without ever saying why anyone bothers."),
+     "The goal asks how the board does the work, so the answer must join the one-way escape to the "
+     "overnight drift and the empty super. The note reporting that the super is empty by morning "
+     "gives the outcome and leaves out the mechanism that produced it."),
 
  syn("R3",
-     ["Honey holds more sugar than water at room temperature can keep dissolved.",
-      "Glucose comes out of the solution as crystals sooner or later.",
-      "A few large crystals feel gritty; many small crystals feel smooth.",
-      "Packers stir a little finely crystallised honey into the batch as a seed.",
-      "A seeded batch sets smooth within about a fortnight."],
-     "explain how packers control the texture of set honey.",
-     ["Since glucose will crystallise out of honey whatever a packer does, packers stir in finely crystallised honey as a seed so that many small crystals form instead of a few large ones and the batch sets smooth.",
-      "Honey holds more sugar than water at room temperature can keep dissolved, so glucose comes out of it as crystals.",
-      "A honey with a few large crystals in it feels gritty, while a honey with many small crystals feels smooth.",
-      "Packers stir a little finely crystallised honey into a batch, and the batch sets within about a fortnight."],
+     ["A young bee's first flights are made facing the hive and in widening arcs.",
+      "A forager afterwards returns to a remembered position rather than to the hive itself.",
+      "A hive shifted two metres leaves its foragers clustered where it used to stand.",
+      "A hive shifted less than about a metre is found by the returning bees anyway.",
+      "A hive taken more than about three kilometres away is learned afresh on arrival."],
+     "explain to a beekeeper why a hive should be moved either a very short distance or a very long one.",
+     ["Because a forager returns to a remembered position rather than to the hive itself, a shift under about a metre is still found and a move beyond about three kilometres is learned afresh, while anything in between leaves the foragers clustered where the hive stood.",
+      "A young bee makes her first flights facing the hive and in arcs that grow wider.",
+      "A hive shifted two metres leaves its returning foragers clustered where it used to stand.",
+      "A hive carried more than about three kilometres away is learned afresh when it arrives."],
      "A",
-     "Control is the point of the goal, so the answer must join the inevitability of crystallising "
-     "to the seeding that decides the crystal size, and only one choice does both. The choice about "
-     "gritty and smooth honey gives the standard being aimed at but not the means of hitting it."),
+     "Both ends of the rule have to be accounted for by the same fact about remembered positions, "
+     "and only one choice states that fact and then applies it to all three distances. The note "
+     "about a two-metre shift gives the failure case alone and so explains neither end of the rule."),
 
  syn("R4",
-     ["Spinning a massecuite throws out crystals and leaves a darker syrup behind.",
-      "That syrup still contains sugar.",
-      "It is boiled and spun again, and the process can be repeated.",
-      "Each round recovers less sugar than the one before it at much the same cost.",
-      "The last syrup is sold as molasses."],
-     "explain why refiners stop recovering sugar before the syrup is free of it.",
-     ["Each boiling and spinning recovers less sugar than the last at much the same cost, so refiners stop once the sugar still in the syrup is worth less than recovering it, and sell what is left as molasses.",
-      "Spinning a massecuite throws out crystals and leaves behind a darker syrup that still contains sugar.",
-      "A syrup left after spinning can be boiled and spun again, and the process can be repeated several times.",
-      "The syrup that remains at the end of the process is sold as molasses rather than discarded."],
+     ["When little nectar is coming in, colonies attempt to take stores from one another.",
+      "Guard bees challenge every arrival at the entrance.",
+      "A weak colony has too few bees to guard a wide entrance.",
+      "Robbing spreads once it has begun, because successful robbers bring others.",
+      "In a dearth an entrance is reduced to roughly the width of one bee."],
+     "explain why beekeepers narrow entrances in a dearth.",
+     ["Since a weak colony has too few guards for a wide entrance and robbing recruits more robbers once it starts, cutting the entrance to about one bee's width in a dearth stops the raid before it can begin.",
+      "Colonies attempt to take stores from one another when little nectar is coming in.",
+      "Guard bees challenge each bee that arrives at the entrance of a colony.",
+      "In a dearth a beekeeper reduces a colony's entrance to roughly the width of a single bee."],
      "A",
-     "The goal asks why the recovery stops, which requires the falling yield at a steady cost, and "
-     "only one choice states that trade-off. The choice noting that the syrup still contains sugar "
-     "sets up the puzzle without answering it."),
+     "The goal asks for the reason behind the practice, which needs both the shortage of guards and "
+     "the way robbing feeds on itself. The note stating that entrances are narrowed in a dearth "
+     "repeats the practice being asked about instead of accounting for it."),
 
- syn("R5",
-     ["A wick that stands upright in a flame chars into a stub that smokes.",
-      "Snuffers were used to cut the stub off every few minutes.",
-      "A plaited wick curls out towards the tip of the flame.",
-      "The tip of a flame is its hottest part and the part best supplied with air.",
-      "A wick that curls out to the tip burns away completely."],
-     "explain to an audience unfamiliar with candles how the plaited wick did away with snuffing.",
-     ["A plaited wick curls out to the tip of the flame, the hottest and best-aired part, where it burns away completely instead of charring into the smoking stub that snuffers had to cut off.",
-      "Snuffers were used every few minutes to cut off the charred stub that formed on an upright wick.",
-      "The tip of a candle flame is its hottest part and the part best supplied with air.",
-      "A wick that is plaited rather than laid straight curls outward as the candle burns."],
+ given("R5",
+     ["A rushlight is a rush peeled of all but one strip of its skin.",
+      "The strip that is left holds the pith stiff enough to handle.",
+      "The rush is drawn through the fat left over from cooking.",
+      "A rushlight two feet long burns for roughly an hour.",
+      "Tallow candles had to be bought, and beeswax candles cost more again."],
+     "explain to readers unfamiliar with the period why poor households burned rushlights.",
+     ["A rush peeled to a single supporting strip and drawn through leftover cooking fat gave roughly an hour of light for two feet of its length, at no cost to a household that had to buy tallow candles and could not reach beeswax at all.",
+      "A rushlight is made from a rush peeled of all but one strip of its skin.",
+      "The strip of skin left on a rush holds its pith stiff enough to be handled.",
+      "Tallow candles had to be bought, and beeswax candles cost more again."],
      "A",
-     "The goal names both the mechanism and the outcome, so the answer must carry the curl to the "
-     "hot tip and then to the disappearance of the stub. The choice describing the snuffers gives "
-     "only the practice that was abandoned."),
+     "Cheapness is the point of the goal, so the answer has to set what the rushlight was made from "
+     "against what the alternatives cost. The sentence about the strip of skin explains how the "
+     "rushlight held together and says nothing about why it was chosen."),
 
  syn("R6",
-     ["Brood diseases spread from larvae that die sealed inside their cells.",
-      "Some colonies uncap such cells and remove the contents within two days.",
-      "The removal behaviour is heritable.",
-      "Breeders test for it by killing a patch of brood with liquid nitrogen.",
-      "The proportion of the patch cleared in 48 hours is the colony's score."],
-     "explain how a breeder measures the behaviour.",
-     ["A breeder kills a patch of brood with liquid nitrogen and records what proportion of it the colony uncaps and clears within 48 hours, which scores the heritable removal behaviour.",
-      "Brood diseases spread through a colony from larvae that have died sealed inside their cells.",
-      "Some colonies contain bees that uncap a cell holding a dead larva and remove the contents within two days.",
-      "The behaviour by which a colony removes dead brood from sealed cells is passed from one generation to the next."],
+     ["A seal matrix is a design cut in reverse into metal.",
+      "Warm beeswax pressed onto it takes the design and hardens holding it.",
+      "The impression cannot be produced again without that matrix.",
+      "A seal is set across the fold of a folded letter.",
+      "The wax has to be broken before the letter can be opened."],
+     "explain how a single wax seal did two jobs at once.",
+     ["Because the hardened wax carries an impression that no one without the matrix could produce, and because it is set across the fold so that opening the letter breaks it, one seal both showed whose matrix had made it and whether the letter had been read.",
+      "A seal matrix carries a design that has been cut in reverse into metal.",
+      "Warm beeswax pressed onto a matrix takes its design and hardens while holding it.",
+      "A seal is placed across the fold of a folded letter so that the letter cannot be opened without breaking it."],
      "A",
-     "Measurement is what the goal asks for, so the answer has to name the frozen patch and the "
-     "proportion cleared in a fixed time. The choice stating that the behaviour is heritable gives "
-     "the reason for measuring it and not the method."),
+     "Two jobs are asked for, so the answer must give both the impression that cannot be forged and "
+     "the breakage that betrays opening. The sentence about the seal across the fold covers the "
+     "second job and leaves the first out."),
 
- syn("R7",
-     ["Beet molasses holds sugar that will not crystallise.",
-      "Raffinose is a three-part sugar present in beet.",
-      "Its shape is close to that of sucrose.",
-      "It can take a place at the growing face of a sucrose crystal.",
-      "The next layer of sucrose cannot then sit cleanly on top of it."],
-     "explain why a small proportion of raffinose has a large effect.",
-     ["Raffinose is close enough to sucrose in shape to take a place at the growing face of a crystal but different enough that the next layer cannot sit cleanly on it, so even a little of it disrupts crystallisation.",
-      "Raffinose is a three-part sugar found in beet, and beet molasses holds sugar that will not crystallise.",
-      "The shape of a raffinose molecule is close to the shape of a sucrose molecule.",
-      "A raffinose molecule can occupy a place at the growing face of a sucrose crystal."],
+ given("R7",
+     ["What is sown as a beet seed is naturally a cluster of several fused fruits.",
+      "Several seedlings therefore come up together at one point in the row.",
+      "All but one had to be taken out by hand, a job known as singling.",
+      "A plant bearing single-fruit seed was found in 1948.",
+      "Seed bred from that plant can be drilled straight to its final stand."],
+     "explain how one discovery removed a large part of the hand labour in the crop.",
+     ["Because a natural beet seed is a cluster of fused fruits that puts several seedlings up at one point, rows had to be singled by hand until seed bred from a single-fruit plant found in 1948 allowed the crop to be drilled straight to its final stand.",
+      "What is sown as a beet seed is naturally a cluster of several fruits fused together.",
+      "Taking out all but one of the seedlings that come up at one point is a job known as singling.",
+      "A plant bearing seed with only one fruit in it was found in 1948."],
      "A",
-     "The effect the goal asks about comes from the two-sided resemblance, so the answer must give "
-     "both the fit and the failure of the next layer. The choice noting only that the shapes are "
-     "close leaves out the mismatch that does the damage."),
+     "The goal turns on a before and an after, so the answer has to name the hand work the fused "
+     "cluster forced and the drilling the single-fruit seed allowed. The sentence recording the "
+     "1948 discovery gives the turning point with neither the labour before it nor the practice "
+     "after it."),
 
- syn("R8",
-     ["Drones from many colonies gather at the same few places each afternoon.",
-      "The same places are used year after year.",
-      "No drone lives long enough to have visited one in a previous year.",
-      "Queens fly to these places on their mating flights.",
-      "A queen there meets drones from colonies other than her own."],
-     "emphasise what remains unexplained about the gathering places.",
-     ["The same gathering places are used year after year even though no drone lives long enough to have visited one before, so how each generation finds them is unaccounted for.",
-      "Drones from many colonies gather at the same few places each afternoon, and queens fly to those places on their mating flights.",
-      "A queen that flies to a gathering place meets drones from colonies other than her own.",
-      "Queens make their mating flights to places where drones from many colonies have gathered."],
+ given("R8",
+     ["Sugar heated past its melting point does not simply melt.",
+      "Its molecules break apart into smaller fragments.",
+      "Those fragments recombine into hundreds of new compounds.",
+      "The new compounds are coloured and slightly bitter.",
+      "Caramel colouring is boiled well past the point at which any sweetness survives."],
+     "explain why caramel is not merely melted sugar.",
+     ["Heating sugar past its melting point breaks its molecules into fragments that recombine into hundreds of coloured and slightly bitter compounds, which is why a caramel colouring boiled far enough keeps no sweetness at all.",
+      "Sugar heated past its melting point does not simply melt but breaks apart.",
+      "The compounds produced when sugar is heated past its melting point are coloured and slightly bitter.",
+      "Caramel colouring is boiled well past the point at which any sweetness would survive."],
      "A",
-     "The goal singles out the unexplained part, which is the persistence of the sites across "
-     "generations that cannot have learned them, and only one choice puts those two notes together. "
-     "The choice about a queen meeting drones from other colonies reports the arrangement's purpose "
-     "rather than its mystery."),
+     "The goal asks what makes caramel a different substance, so the answer must run from the "
+     "breaking of the molecules to the new compounds and the loss of sweetness. The sentence "
+     "reporting that the compounds are coloured and bitter describes the product without saying "
+     "where it came from."),
 
  syn("R9",
-     ["Honey fresh from the comb contains no HMF.",
-      "HMF accumulates as honey is stored, and faster the warmer it is kept.",
-      "Regulations set a ceiling on the HMF in honey sold as honey.",
-      "The ceiling applies to the blend that is sold, not to its components.",
-      "Blending mixes honeys of different ages and histories."],
-     "explain to a packer why blending calls for care.",
-     ["Because HMF rises with age and warmth and the legal ceiling applies to the blend rather than to its components, a single old or warm-stored honey can carry a whole batch past the limit.",
-      "Honey that has just been taken from the comb contains no HMF at all.",
-      "HMF accumulates in honey as it is stored, and it accumulates faster the warmer the honey is kept.",
-      "Regulations set a ceiling on how much HMF honey sold as honey may contain."],
+     ["Wax moth larvae tunnel through stored comb.",
+      "They feed on the cocoons and pollen left in it rather than on clean wax.",
+      "Comb that has never held brood is largely left alone.",
+      "The larvae do not survive a spell below freezing.",
+      "Supers are stored in light and a draught, or else frozen, before being put away."],
+     "explain why some stored comb has to be protected and some does not.",
+     ["Because the larvae feed on the cocoons and pollen that brood leaves behind rather than on clean wax, comb that has never held brood is largely left alone, while brood comb has to be frozen or stored in light and a draught.",
+      "The larvae of the wax moth tunnel their way through comb that is being stored.",
+      "Wax moth larvae do not survive a spell of temperatures below freezing.",
+      "Supers are stored in light and a draught, or else frozen, before they are put away."],
      "A",
-     "The warning the goal asks for depends on the ceiling applying to the finished blend, so the "
-     "answer must combine that with the way the compound accumulates. The choice stating how the "
-     "compound accumulates omits the rule that turns one bad component into a spoiled batch."),
+     "The goal asks for a distinction, so the answer must say what the larvae actually eat and then "
+     "sort the two kinds of comb by it. The sentence about storing supers in light and a draught "
+     "gives one of the remedies without the reason only some comb needs it."),
 ]

@@ -21,6 +21,7 @@ import os
 import re
 import sys
 from collections import Counter
+from itertools import combinations
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -113,6 +114,32 @@ def tag_counts(html: str, tag: str):
     opens = len(re.findall(rf"<{tag}(?=[\s/>])", html, re.I))
     closes = len(re.findall(rf"</{tag}\s*>", html, re.I))
     return opens, closes
+
+
+_PASSAGE_STOP = {
+    "the", "a", "an", "of", "and", "or", "to", "in", "is", "are", "was", "were", "be", "been",
+    "for", "on", "at", "by", "with", "as", "that", "this", "these", "those", "it", "its",
+    "from", "which", "what", "how", "if", "then", "than", "each", "per", "not", "but",
+    "they", "their", "them", "he", "she", "his", "her", "who", "when", "where", "while",
+    "has", "have", "had", "can", "could", "would", "will", "may", "might", "more", "most",
+    "one", "two", "three", "other", "such", "only", "also", "into", "out", "up", "down",
+}
+
+
+def _passage_tokens(html: str) -> frozenset:
+    words = re.findall(r"[a-z]+", re.sub(r"<[^>]+>", " ", html).lower())
+    return frozenset(w for w in words if len(w) > 3 and w not in _PASSAGE_STOP)
+
+
+def _passage_jaccard(a: str, b: str) -> float:
+    ta, tb = _passage_tokens(a), _passage_tokens(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+# See the calibration note at the use site.
+SAME_SUBJECT_THRESHOLD = 0.24
 
 
 def question_html(q: dict) -> str:
@@ -285,6 +312,40 @@ def validate(num: int, path: str, problems: list):
     for passage, n in rw_passages.items():
         if n > 2 and passage:
             bad(f"an R&W passage is reused {n} times: {passage[:80]!r}")
+
+    # Two passages on the same subject, inside one test, that a single student
+    # would see. Exact duplicates were already caught above; this catches the
+    # commoner case of a topic being restated — a reading passage reappearing
+    # behind a Transitions or Rhetorical Synthesis item.
+    #
+    # Scoped to pairs a student can actually meet: they take Module 1 plus ONE
+    # Module 2 branch, so an M2E-to-M2H pair is never seen by the same person
+    # and is not a defect.
+    #
+    # The threshold is calibrated against both ends, not guessed. Under this
+    # tokenizer the six shipped tests 16-21 top out at 0.207, while a pair read
+    # and confirmed as a genuine repeat — Test 24's fungal threads reaching
+    # into soil pores, asked once in Module 1 and again in Module 2 Hard —
+    # scores 0.278. 0.24 sits between them: above everything six shipped tests
+    # do, below a defect confirmed by reading.
+    visible_pairs = []
+    for (ka, ia, qa), (kb, ib, qb) in combinations(
+        [(k, i, q) for k, i, q in all_qs if k in RW_MODULES], 2
+    ):
+        if {ka, kb} == {"RW_M2E", "RW_M2H"}:
+            continue
+        pa, pb = (qa.get("passage") or "").strip(), (qb.get("passage") or "").strip()
+        if not pa or not pb or pa == pb:
+            continue
+        score = _passage_jaccard(pa, pb)
+        if score >= SAME_SUBJECT_THRESHOLD:
+            visible_pairs.append((score, f"{ka} Q{ia}", f"{kb} Q{ib}"))
+
+    visible_pairs.sort(reverse=True)
+    for score, a, b in visible_pairs[:12]:
+        bad(f"{a} and {b} cover the same subject ({score:.2f}) and one student sees both")
+    if len(visible_pairs) > 12:
+        bad(f"…and {len(visible_pairs) - 12} more same-subject passage pairs")
 
 
 def main():
