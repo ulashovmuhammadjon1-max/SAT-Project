@@ -13,22 +13,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "intact.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
-     "content": "chilled.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "sorted.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "weighed.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "intact.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "chilled.",
      "isCorrect": false
     }
    ]
@@ -46,22 +46,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "cushions.",
+     "content": "colours.",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "cushions.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "seals.",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "hardens.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "colours.",
+     "content": "hardens.",
      "isCorrect": false
     }
    ]
@@ -112,22 +112,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "seasonal.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "inescapable.",
      "isCorrect": true
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "measurable.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "gentler.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "seasonal.",
      "isCorrect": false
     }
    ]
@@ -145,23 +145,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "be rehooded.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "regrow it.",
-     "isCorrect": true
-    },
-    {
-     "label": "C",
      "content": "be manned.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "put on weight.",
      "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "be rehooded.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "regrow it.",
+     "isCorrect": true
     }
    ]
   },
@@ -211,23 +211,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "It gives the reason graders prefer fresh eggs to stale ones.",
+     "content": "It explains why a large egg spreads further than a small one.",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "It reports a disagreement about how freshness should be judged.",
+     "content": "It gives the reason graders prefer fresh eggs to stale ones.",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "It describes the step that converted a visible difference into a measurement.",
-     "isCorrect": true
+     "content": "It reports a disagreement about how freshness should be judged.",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "It explains why a large egg spreads further than a small one.",
-     "isCorrect": false
+     "content": "It describes the step that converted a visible difference into a measurement.",
+     "isCorrect": true
     }
    ]
   },
@@ -244,22 +244,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The belief that tench heal other fish disappeared once it was tested.",
+     "content": "Tench were stocked in muddy ponds because they were believed to cure other fish.",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "The belief that tench heal other fish disappeared once it was tested.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "The tench's healing reputation is unsupported, and probably arose from its ability to live in water where other fish could not.",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "Tench secrete a slime that has been shown to heal injuries in other fish.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "Tench were stocked in muddy ponds because they were believed to cure other fish.",
+     "content": "Tench secrete a slime that has been shown to heal injuries in other fish.",
      "isCorrect": false
     }
    ]
@@ -277,23 +277,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Written messages could be read by anyone who intercepted the bird.",
+     "content": "Pigeons released from Paris were unable to find their way home.",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "Paper despatches were damaged by rain during the flight.",
+     "content": "Written messages could be read by anyone who intercepted the bird.",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "The weight a bird could carry limited how much could be sent.",
-     "isCorrect": true
+     "content": "Paper despatches were damaged by rain during the flight.",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "Pigeons released from Paris were unable to find their way home.",
-     "isCorrect": false
+     "content": "The weight a bird could carry limited how much could be sent.",
+     "isCorrect": true
     }
    ]
   },
@@ -310,23 +310,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Numbers below the weir also rose over the two years in question.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "Elver numbers along the whole coast were higher in those two years than in the preceding decade.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "The pass was inspected each month and was found to be undamaged.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "Numbers above the weir rose by far more than numbers above unaltered weirs on neighbouring rivers over the same two years.",
      "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Numbers below the weir also rose over the two years in question.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Elver numbers along the whole coast were higher in those two years than in the preceding decade.",
+     "isCorrect": false
     }
    ]
   },
@@ -376,22 +376,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The 10-hour house recorded fewer than three eggs per hen per week.",
+     "content": "The 16-hour house recorded the highest rate of lay of the four.",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "The 10-hour house recorded fewer than three eggs per hen per week.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "The rate rises by 2.8 eggs per hen per week between the 10-hour and 14-hour houses but by only 0.2 between the 14-hour and 16-hour houses.",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "The rate rises steadily by about the same amount for each two-hour increase in day length.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "The 16-hour house recorded the highest rate of lay of the four.",
+     "content": "The rate rises steadily by about the same amount for each two-hour increase in day length.",
      "isCorrect": false
     }
    ]
@@ -409,22 +409,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "to deny climbing animals a route to the nests.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
-     "content": "to allow the keeper to sweep the floor more easily.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "to strengthen the wall at the point of greatest load.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "to leave room for the potence to swing.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "to deny climbing animals a route to the nests.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "to allow the keeper to sweep the floor more easily.",
      "isCorrect": false
     }
    ]
@@ -442,22 +442,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "the bird's having been released at that site before.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "the bird's having kept track of the outward journey.",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "the bird's ability to see the ground below it.",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "the distance at which the release takes place.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "the bird's having been released at that site before.",
+     "content": "the distance at which the release takes place.",
      "isCorrect": false
     }
    ]
@@ -475,23 +475,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "outlet:",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "outlet,",
-     "isCorrect": true
-    },
-    {
-     "label": "C",
      "content": "outlet",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "outlet;",
      "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "outlet:",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "outlet,",
+     "isCorrect": true
     }
    ]
   },
@@ -541,23 +541,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "club;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "club,",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "club",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "club: which",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "club;",
-     "isCorrect": true
     }
    ]
   },
@@ -607,23 +607,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "is",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "are",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "have been",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "were being",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "is",
+     "isCorrect": true
     }
    ]
   },
@@ -640,23 +640,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "have fallen",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "fell",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "falls",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "had fallen",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "have fallen",
-     "isCorrect": true
     }
    ]
   },
@@ -673,22 +673,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "falconers",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "falconers's",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "falconers'",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "falconer's",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "falconers",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "falconers's",
      "isCorrect": false
     }
    ]
@@ -706,23 +706,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "Therefore,",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "Similarly,",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "In addition,",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "However,",
-     "isCorrect": true
     }
    ]
   },
@@ -739,22 +739,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "In particular,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "Accordingly,",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "By contrast,",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "Meanwhile,",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "In particular,",
+     "content": "Meanwhile,",
      "isCorrect": false
     }
    ]
@@ -772,22 +772,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "Afterwards,",
+     "content": "In contrast,",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "Afterwards,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "Crucially,",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "Otherwise,",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "In contrast,",
+     "content": "Otherwise,",
      "isCorrect": false
     }
    ]
@@ -805,22 +805,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The first ponds of this type in England were built in the 1660s by Dutch builders.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "Entering English as the name of the pond itself, the word had by 1800 spread to the wooden birds, which the seventeenth century had called stales.",
      "isCorrect": true
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "The wooden birds were called &ldquo;stales&rdquo; in the seventeenth century.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "The word came into English from the Dutch <em>eendenkooi</em>, a duck cage.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The first ponds of this type in England were built in the 1660s by Dutch builders.",
      "isCorrect": false
     }
    ]
@@ -838,22 +838,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The date of the passage shifts by up to three weeks from year to year.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "Wildfowl using the same flyway pass a given estuary within a few weeks each autumn.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "Because the passage shifts by up to three weeks with the weather, a single fixed date can miss it altogether, so the site now counts on five dates across six weeks and takes the highest.",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "Counts at one site are made on five dates spread across six weeks.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The date of the passage shifts by up to three weeks from year to year.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Wildfowl using the same flyway pass a given estuary within a few weeks each autumn.",
      "isCorrect": false
     }
    ]
@@ -906,23 +906,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "hidden.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "delayed.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "shared.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "reversible.",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "hidden.",
+     "isCorrect": true
     }
    ]
   },
@@ -939,23 +939,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "restricted.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "wooded.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "shifting.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "different.",
      "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "restricted.",
+     "isCorrect": false
     }
    ]
   },
@@ -1005,22 +1005,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "cold.",
+     "content": "hidden.",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "cold.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "ready.",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "cheap.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "hidden.",
+     "content": "cheap.",
      "isCorrect": false
     }
    ]
@@ -1038,22 +1038,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "rehearsal.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "record.",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "ceremony.",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "levy.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "rehearsal.",
+     "content": "levy.",
      "isCorrect": false
     }
    ]
@@ -1071,22 +1071,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "It introduces a disagreement among falconers about which bird is best.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "It states the second of two extremes between which the text's preferred option sits.",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "It explains how an adult hawk is trapped.",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "It gives the reason a nestling is easier to handle than an adult.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "It introduces a disagreement among falconers about which bird is best.",
+     "content": "It gives the reason a nestling is easier to handle than an adult.",
      "isCorrect": false
     }
    ]
@@ -1137,22 +1137,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "Domestic chickens and junglefowl can be told apart easily from their bones.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "Dating the domestication of the chicken has been difficult because the bones themselves are ambiguous and can move between layers.",
      "isCorrect": true
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "The red junglefowl is no longer thought to be the ancestor of the domestic chicken.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "Direct dating of bones has confirmed that chickens were domesticated very early.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Domestic chickens and junglefowl can be told apart easily from their bones.",
      "isCorrect": false
     }
    ]
@@ -1170,22 +1170,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "The word was borrowed a second time from French with its modern sense.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "The name stayed with a site whose use changed from housing hawks to housing horses.",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "The word has always meant a building in which animals of any kind are kept.",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "Hawks and horses were kept together in the same buildings for centuries.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "The word was borrowed a second time from French with its modern sense.",
+     "content": "Hawks and horses were kept together in the same buildings for centuries.",
      "isCorrect": false
     }
    ]
@@ -1203,23 +1203,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "&ldquo;Nothing moved and nothing was fired at; wind south and soft, the birds lying out on the tide all day, which is the whole of the entry and the whole of the lesson.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "&ldquo;Eleven wigeon and a brace of teal, the best morning since the frost set in.&rdquo;",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "&ldquo;The punt was recaulked at Michaelmas and the gun sent to Colchester to be rebreeched.&rdquo;",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "&ldquo;My father shot over these same saltings for forty years before me.&rdquo;",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "&ldquo;Nothing moved and nothing was fired at; wind south and soft, the birds lying out on the tide all day, which is the whole of the entry and the whole of the lesson.&rdquo;",
-     "isCorrect": true
     }
    ]
   },
@@ -1236,22 +1236,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The counts in 2017 and 2019 were within about ten thousand of each other.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "The average of the four counts is about 140 thousand elvers.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "The count roughly doubled from 2017 to 2018 and then fell by more than half from 2018 to 2019.",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "The count in 2018 was the highest of the four seasons recorded.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The counts in 2017 and 2019 were within about ten thousand of each other.",
      "isCorrect": false
     }
    ]
@@ -1269,22 +1269,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The number of wildfowl counted on the ponds was highest in the coldest months.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "Decoymen worked longer hours in winter than at any other time of year.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "In seasons when bird numbers at the ponds were unchanged, catches still rose sharply during periods of frost.",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "Catches at coastal ponds were consistently higher than catches at inland ponds.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The number of wildfowl counted on the ponds was highest in the coldest months.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Decoymen worked longer hours in winter than at any other time of year.",
      "isCorrect": false
     }
    ]
@@ -1302,23 +1302,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "cheaper than the fishery had ever been at its most profitable.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "the responsibility of the river authority rather than the fisherman.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "a means of measuring the flow of water through the weir.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "a condition of holding the site rather than a cost of catching fish.",
      "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "cheaper than the fishery had ever been at its most profitable.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the responsibility of the river authority rather than the fisherman.",
+     "isCorrect": false
     }
    ]
   },
@@ -1368,22 +1368,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "cadger, and",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
-     "content": "cadger and",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "cadger; and",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "cadger and,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "cadger, and",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "cadger and",
      "isCorrect": false
     }
    ]
@@ -1401,23 +1401,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "road;",
+     "content": "road,",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "road:",
+     "content": "road;",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "road",
-     "isCorrect": true
+     "content": "road:",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "road,",
-     "isCorrect": false
+     "content": "road",
+     "isCorrect": true
     }
    ]
   },
@@ -1434,23 +1434,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "one.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "one",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "one;",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "one,",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "one.",
+     "isCorrect": true
     }
    ]
   },
@@ -1467,22 +1467,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "them",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "them; and",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "them:",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "them,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "them",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "them; and",
      "isCorrect": false
     }
    ]
@@ -1533,22 +1533,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "Lying flat on his back, and paddling with his hands",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "Lying flat on his back and paddling with his hands,",
      "isCorrect": true
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "Lying flat on his back and paddling with his hands",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "By lying flat on his back and paddling with his hands",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Lying flat on his back, and paddling with his hands",
      "isCorrect": false
     }
    ]
@@ -1566,23 +1566,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "are",
+     "content": "have",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "were",
+     "content": "are",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "has",
-     "isCorrect": true
+     "content": "were",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "have",
-     "isCorrect": false
+     "content": "has",
+     "isCorrect": true
     }
    ]
   },
@@ -1599,22 +1599,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "In short,",
+     "content": "For instance,",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "In short,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "On the other hand,",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "As a result,",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "For instance,",
+     "content": "As a result,",
      "isCorrect": false
     }
    ]
@@ -1632,23 +1632,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "For this reason,",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "Nonetheless,",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "Earlier,",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "By comparison,",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For this reason,",
+     "isCorrect": true
     }
    ]
   },
@@ -1665,23 +1665,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Even so,",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "Beforehand,",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "Similarly,",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "As a result,",
      "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Beforehand,",
+     "isCorrect": false
     }
    ]
   },
@@ -1698,23 +1698,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Most large monastic houses and many manors held at least one such pond.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "Sea fish could not be brought inland fresh before the railways.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "Meat was forbidden on about a third of the days of the medieval year.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "A steady demand for fish on the many meatless days could not be met inland with sea fish before the railways, so a stocked pond supplied fresh fish at any season.",
      "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Most large monastic houses and many manors held at least one such pond.",
+     "isCorrect": false
     }
    ]
   },
@@ -1731,22 +1731,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "Before the 1840s a breed of poultry had no written description.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "Publishing a point-by-point description of each breed moved judging from comparison with the other birds on the bench to comparison with a fixed written account, and independent judges now reach much the same placings.",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "Exhibitors and judges disagreed constantly about what a breed should look like.",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "The first published standards described each breed point by point.",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "Before the 1840s a breed of poultry had no written description.",
+     "content": "The first published standards described each breed point by point.",
      "isCorrect": false
     }
    ]
@@ -1832,23 +1832,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "approach.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "loading.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "aftermath.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "bargain.",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "approach.",
+     "isCorrect": true
     }
    ]
   },
@@ -1865,23 +1865,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "custom",
+     "content": "rehearsal",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "profession",
+     "content": "custom",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "procedure",
-     "isCorrect": true
+     "content": "profession",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "rehearsal",
-     "isCorrect": false
+     "content": "procedure",
+     "isCorrect": true
     }
    ]
   },
@@ -1898,23 +1898,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "irrelevant.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "familiar.",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "quieter.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "smaller.",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "irrelevant.",
-     "isCorrect": true
     }
    ]
   },
@@ -1964,23 +1964,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "It explains how the nest holes inside a dovecote were arranged.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "It establishes the century in which the first dovecotes were built.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "It contrasts the diet of pigeons with the diet of other farm animals.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "It identifies the cost that the rest of the text shows falling on people other than the owner.",
      "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It explains how the nest holes inside a dovecote were arranged.",
+     "isCorrect": false
     }
    ]
   },
@@ -1997,22 +1997,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "To trace the history of the fyke net from its earliest use.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "To explain how a net catches fish without confining them by force.",
      "isCorrect": true
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "To argue that fyke nets should be used in place of other traps.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "To describe the materials from which a fyke net is made.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To trace the history of the fyke net from its earliest use.",
      "isCorrect": false
     }
    ]
@@ -2030,23 +2030,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Elver passes are built as a series of pools that allow the fish to leap in stages.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "Elvers are strong swimmers that can pass most weirs without assistance.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "Weirs have little effect on elvers compared with their effect on larger fish.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "Elvers are stopped by weirs because the surfaces are smooth rather than because they are high, so passes give them something to climb.",
      "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Elver passes are built as a series of pools that allow the fish to leap in stages.",
+     "isCorrect": false
     }
    ]
   },
@@ -2063,22 +2063,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "It replaces the calcium that the hen is unable to absorb from her feed.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "It forms the innermost layer of the shell before the egg is laid.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "It is a store of calcium that is emptied overnight and refilled during the day.",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "It strengthens the long bones against the strain of daily laying.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It replaces the calcium that the hen is unable to absorb from her feed.",
      "isCorrect": false
     }
    ]
@@ -2129,22 +2129,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "The total mass of shell material per egg was found to be almost unchanged from the first year of lay to the third, while egg weight rose steadily.",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
-     "content": "Older hens were found to crack more eggs during handling than younger hens.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "Adding calcium to the feed of older hens did not restore shell thickness to the level seen in young birds.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "Shell thickness was found to fall more slowly in flocks kept in cooler houses.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The total mass of shell material per egg was found to be almost unchanged from the first year of lay to the third, while egg weight rose steadily.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Older hens were found to crack more eggs during handling than younger hens.",
      "isCorrect": false
     }
    ]
@@ -2162,23 +2162,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "In each of the three winters, teal and wigeon together account for more than eighty per cent of the birds taken.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "Teal were the most numerous species taken in each of the three winters.",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "Pintail were the least numerous species taken in each of the three winters.",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "The total number of birds taken was greatest in the winter of 2020-21.",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "In each of the three winters, teal and wigeon together account for more than eighty per cent of the birds taken.",
-     "isCorrect": true
     }
    ]
   },
@@ -2294,23 +2294,23 @@
    "choices": [
     {
      "label": "A",
+     "content": "confined.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
      "content": "confined",
      "isCorrect": false
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "confined;",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "D",
      "content": "confined,",
      "isCorrect": false
-    },
-    {
-     "label": "D",
-     "content": "confined.",
-     "isCorrect": true
     }
    ]
   },
@@ -2327,23 +2327,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "cycle;",
-     "isCorrect": true
-    },
-    {
-     "label": "B",
      "content": "cycle,",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "cycle",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "cycle: and",
      "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "cycle;",
+     "isCorrect": true
     }
    ]
   },
@@ -2360,22 +2360,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "first;",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "first,",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "first.",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "first",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "first;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "first,",
      "isCorrect": false
     }
    ]
@@ -2393,22 +2393,22 @@
    "choices": [
     {
      "label": "A",
+     "content": "decoyman",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
      "content": "decoyman's",
      "isCorrect": true
     },
     {
-     "label": "B",
+     "label": "C",
      "content": "decoymans",
      "isCorrect": false
     },
     {
-     "label": "C",
-     "content": "decoymans'",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "decoyman",
+     "content": "decoymans'",
      "isCorrect": false
     }
    ]
@@ -2426,22 +2426,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "have been",
+     "content": "were",
      "isCorrect": false
     },
     {
      "label": "B",
+     "content": "have been",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
      "content": "is",
      "isCorrect": true
     },
     {
-     "label": "C",
-     "content": "are",
-     "isCorrect": false
-    },
-    {
      "label": "D",
-     "content": "were",
+     "content": "are",
      "isCorrect": false
     }
    ]
@@ -2459,23 +2459,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "has",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "will have",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "would be having",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "had",
      "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "has",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "will have",
+     "isCorrect": false
     }
    ]
   },
@@ -2492,23 +2492,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Likewise,",
+     "content": "Even so,",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "Previously,",
+     "content": "Likewise,",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "Thus,",
-     "isCorrect": true
+     "content": "Previously,",
+     "isCorrect": false
     },
     {
      "label": "D",
-     "content": "Even so,",
-     "isCorrect": false
+     "content": "Thus,",
+     "isCorrect": true
     }
    ]
   },
@@ -2558,22 +2558,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "Similarly,",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
      "content": "In other words,",
      "isCorrect": false
     },
     {
-     "label": "C",
+     "label": "B",
      "content": "Nevertheless,",
      "isCorrect": true
     },
     {
-     "label": "D",
+     "label": "C",
      "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Similarly,",
      "isCorrect": false
     }
    ]
@@ -2657,23 +2657,23 @@
    "choices": [
     {
      "label": "A",
-     "content": "Flocks kept for eggs are often replaced rather than carried through a moult.",
-     "isCorrect": false
-    },
-    {
-     "label": "B",
-     "content": "Laying stops almost entirely while a hen is moulting.",
-     "isCorrect": false
-    },
-    {
-     "label": "C",
      "content": "A moult lasts between six and twelve weeks.",
      "isCorrect": false
     },
     {
-     "label": "D",
+     "label": "B",
      "content": "Growing feathers and making egg white both draw on the protein in a hen's feed, and a moulting hen cannot supply both, so laying stops almost entirely until the new feathers are grown.",
      "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Flocks kept for eggs are often replaced rather than carried through a moult.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Laying stops almost entirely while a hen is moulting.",
+     "isCorrect": false
     }
    ]
   }

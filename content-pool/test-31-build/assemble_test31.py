@@ -98,6 +98,47 @@ def load_rw_pool():
     return pool, set()
 
 
+def rebalance_module(items):
+    """Even the answer key out WITHIN one module, which is what a student sees.
+
+    balance_rw.py evens out the 81-item pool, but the assembler then deals that
+    pool into three modules at random, and an even pool deals into uneven
+    modules: this build's first deal put B on 12 of Module 1's 27 questions
+    (44%) and A on 10 of Module 2 Easy's, against a worst case of 9 anywhere in
+    Tests 19, 20, 21 and 30. A student takes ONE module, so the module is the
+    unit that has to be balanced.
+
+    Rotating a question's choices moves its key without touching its content.
+    That is only safe because no rationale in rw_test31.py names an option by
+    letter — verify_rw_test31.py checks that with the same pattern balance_rw.py
+    uses, and the assertion below re-checks that the key still sits on the same
+    option text after every rotation.
+
+    The target letters are shuffled rather than dealt in order: dealing A, B, C,
+    D round-robin balances perfectly and produces a visible repeating pattern
+    down the answer key, which is worse than the imbalance it fixes. Runs of
+    four or more of the same letter are rejected for the same reason.
+    """
+    letters = "ABCD"
+    n = len(items)
+    target = [letters[i % 4] for i in range(n)]      # 7/7/7/6 over 27
+    for _ in range(2000):
+        random.shuffle(target)
+        if not any(target[i] == target[i + 1] == target[i + 2] == target[i + 3]
+                   for i in range(n - 3)):
+            break
+    out = []
+    for item, want in zip(items, target):
+        cur = letters.index(item["answer"])
+        shift = (cur - letters.index(want)) % 4
+        moved = dict(item)
+        moved["choices"] = item["choices"][shift:] + item["choices"][:shift]
+        moved["answer"] = want
+        assert moved["choices"][letters.index(want)] == item["choices"][cur], item["num"]
+        out.append(moved)
+    return out
+
+
 def build_rw(pool):
     """Deal the quota per module, then sort each module on block rank."""
     out = {}
@@ -112,7 +153,7 @@ def build_rw(pool):
             picked += [have.pop() for _ in range(take)]
         # Block rank first, then a stable shuffle inside the block.
         picked.sort(key=lambda q: RANK[q["skill"]])
-        out[mod] = picked
+        out[mod] = rebalance_module(picked)
     return out, shortfall
 
 
@@ -213,6 +254,15 @@ def report(test):
     if wordless:
         print(f"  !! {len(wordless)} answer choices render as empty: {wordless[:6]}")
         ok = False
+
+    for mod in MODULES:
+        keys = Counter(c["label"] for q in test[mod]
+                       for c in q["choices"] if c["isCorrect"])
+        spread = dict(sorted(keys.items()))
+        worst = max(keys.values())
+        print(f"  {mod} key spread {spread}"
+              f"{'' if worst <= 9 else '   <-- one letter dominates'}")
+        ok &= worst <= 9
 
     refs = [q["_ref"] for mod in test for q in test[mod]]
     dupes = [r for r, n in Counter(refs).items() if n > 1]
