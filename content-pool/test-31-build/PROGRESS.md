@@ -16,11 +16,11 @@ eel traps and fish ponds. Structural template: `content-pool/test-19-build/`.
 | `verify_rw_test31.py` — 5 passes (NEW this run) | PASSING |
 | F4 | verified correct; its rationale was already consistent |
 | `balance_rw.py` | DONE — A21/B20/C20/D20 |
-| `assemble_test31.py` | DONE (written from ../test-19-build/) |
+| `assemble_test31.py` | DONE — also re-balances each module's key to 7/7/7/6 |
 | `test31.json` | DONE — 147 questions |
 | `../validate_tests.py 31` | PASSING — zero problems |
-| local DB insert + `audit_math_rendering.mjs` | in progress |
-| `MANIFEST.md` | pending |
+| local DB insert + `audit_math_rendering.mjs` | DONE — 147 rows, audit clean |
+| `MANIFEST.md` | DONE |
 
 ## Decisions a successor would otherwise have to re-derive
 
@@ -60,3 +60,9 @@ eel traps and fish ponds. Structural template: `content-pool/test-19-build/`.
 - Numbers worth keeping: highest Math Jaccard vs production 0.73; highest inside
   Test 31, 0.54. Highest R&W corpus similarity 0.21; highest same-subject pair
   inside the test 0.16 (validate_tests.py rejects at 0.24).
+
+## Complete
+
+Every step above passes. Nothing is outstanding. Full write-up in `MANIFEST.md`.
+Not done and not attempted: opening the questions in `/exam/{attemptId}`.
+Production untouched; no git commit.
