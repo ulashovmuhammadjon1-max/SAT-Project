@@ -77,10 +77,36 @@ def strip_html(s: str) -> str:
     return TAG.sub(" ", s or "")
 
 
+# Mathematical tokens: LaTeX macros, single-letter variables, and operators.
+# Numbers collapse to `#` so a template repeat with fresh numbers still matches.
+MATH_TOKEN = re.compile(r"\\[A-Za-z]+|\d[\d,\.]*|[a-z](?![a-z])|[\^=+\-*/<>()]")
+
+# Operators so common they carry almost no information — the stopwords of
+# mathematics. Two unrelated one-line stems both contain "=", "(", ")" and a
+# number, which alone was enough to push a pair of short stems to 0.78.
+MATH_STOP = {"#", "=", "+", "-", "*", "/", "(", ")", "<", ">"}
+
+
 def word_sig(text: str) -> frozenset:
-    """Content words. Measures vocabulary overlap — the classic signal."""
-    return frozenset(w for w in WORD.findall(strip_html(text).lower())
-                     if len(w) > 2 and w not in STOP)
+    """Content words PLUS the mathematics.
+
+    Words alone are not enough for a Math stem. `[a-z]{3,}` discards every
+    digit, operator and exponent, so two questions whose only shared text is
+    the boilerplate wrapper — "the expression … is equivalent to … where c is
+    a constant. What is the value of c?" — scored a perfect 1.00 against each
+    other while one was difference-of-squares factoring and the other was
+    exponent rules. That is not near-duplication, it is the same sentence
+    around completely different mathematics.
+
+    Including LaTeX macros, variables and operators makes the signature
+    actually about the question. Numbers are masked, so changing only the
+    numbers still counts as a repeat.
+    """
+    plain = strip_html(text).lower()
+    words = {w for w in WORD.findall(plain) if len(w) > 2 and w not in STOP}
+    maths = {("#" if t[0].isdigit() else t) for t in MATH_TOKEN.findall(plain)}
+    maths -= MATH_STOP
+    return frozenset(words | {f"m:{t}" for t in maths})
 
 
 def shape_sig(text: str) -> frozenset:
@@ -123,6 +149,17 @@ def shape_is_meaningful(a: frozenset, b: frozenset) -> bool:
     return len(a) >= SHAPE_MIN_TRIGRAMS and len(b) >= SHAPE_MIN_TRIGRAMS
 
 
+# A one-line stem yields so few tokens that Jaccard is dominated by whichever
+# handful they happen to share. Below this, a high score is reported for
+# reading but never treated as an automatic reject — the same rule `shape`
+# already follows, applied consistently.
+WORD_MIN_TOKENS = 14
+
+
+def word_is_conclusive(a: frozenset, b: frozenset) -> bool:
+    return len(a) >= WORD_MIN_TOKENS and len(b) >= WORD_MIN_TOKENS
+
+
 def load_items(nums):
     """(label, text, kind) for every Math stem and R&W passage in the new tests."""
     math, rw = [], []
@@ -148,7 +185,7 @@ def load_items(nums):
 def report(pairs, reject, title, limit=25):
     """Prints the worst matches. Returns the count at or above the reject line."""
     pairs.sort(key=lambda r: -max(r[0], r[1]))
-    over = [p for p in pairs if max(p[0], p[1]) >= reject]
+    over = [p for p in pairs if max(p[0], p[1]) >= reject and p[4]]
     print(f"\n{title}")
     print(f"  reject at {reject:.2f}; read everything at or above {REVIEW:.2f}")
     shown = [p for p in pairs if max(p[0], p[1]) >= REVIEW][:limit]
@@ -158,7 +195,7 @@ def report(pairs, reject, title, limit=25):
     else:
         for w, sh, a, b, ok in shown:
             flag = "REJECT" if max(w, sh) >= reject else "read  "
-            note = "" if ok else "  (stem too short for shape)"
+            note = "" if ok else "  (stem too short to judge — read it)"
             print(f"  {flag} word {w:.2f} shape {sh:.2f}  {a}  vs  {b}{note}")
     return len(over)
 
@@ -185,8 +222,9 @@ def main():
         if na == nb:
             continue  # each agent already checked itself
         ok = shape_is_meaningful(m_shape[la], m_shape[lb])
+        conclusive = word_is_conclusive(m_word[la], m_word[lb]) and ok
         cross.append((jaccard(m_word[la], m_word[lb]),
-                      jaccard(m_shape[la], m_shape[lb]) if ok else 0.0, la, lb, ok))
+                      jaccard(m_shape[la], m_shape[lb]) if ok else 0.0, la, lb, conclusive))
     failures += report(cross, MATH_REJECT, "MATH — new tests against each other")
 
     cross_rw = []
@@ -213,7 +251,7 @@ def main():
             w = jaccard(m_word[lab], bw)
             sh = jaccard(m_shape[lab], bs) if ok else 0.0
             if max(w, sh) > max(best[0], best[1]):
-                best = (w, sh, bl, ok)
+                best = (w, sh, bl, word_is_conclusive(m_word[lab], bw) or ok)
         vs_bank.append((best[0], best[1], lab, f"bank: {best[2]}", best[3]))
     failures += report(vs_bank, MATH_REJECT, f"MATH — new tests against {len(bank)} banked stems")
 

@@ -271,15 +271,16 @@ QUESTIONS = [
          "not fit a mesh under a falling weight."),
 
  meaning("M2",
-         "A hoist's safety brake does not depend on the driver noticing anything. Weights on the "
-         "cage press outward as it descends, and beyond a set speed they swing far enough to bite "
-         "into the guide rails. The whole arrangement <u>engages</u> without a signal from anyone "
-         "and cannot be talked out of acting.",
-         "engages",
-         ["takes hold", "occupies", "promises", "attracts"], "A",
-         "The weights are described biting into the rails, so the word names the brake gripping. "
-         "The 'promises' sense belongs to an engagement between people and has nothing to do with "
-         "a mechanism catching."),
+         "A book sewn on cords opens flat only if the thread is drawn just tight enough to close "
+         "each gathering without cinching it. A binder who pulls harder than that produces a spine "
+         "that <u>resists</u> the reader, and the leaves have to be held down by hand for as long "
+         "as the book is open.",
+         "resists",
+         ["works against", "endures", "declines to accept", "survives damage from"], "A",
+         "The spine is described as something the reader has to overcome by holding the leaves "
+         "down, so the word names an opposing force. The 'survives damage from' sense of the word "
+         "describes a material standing up to attack, which is not what the spine is doing to the "
+         "reader."),
 
  # ------------------------------------------------- Text Structure & Purpose (6)
  tsp("T1",
@@ -1089,43 +1090,42 @@ QUESTIONS = [
      "matters without saying what either partner receives."),
 
  syn("R6",
-     ["Braille cells contain at most six dots.",
-      "A fingertip can take in a whole cell without moving.",
-      "Earlier raised alphabets copied the shapes of printed letters.",
-      "Those shapes had to be traced curve by curve.",
-      "Braille was adopted in most schools by the late nineteenth century."],
-     "explain to an audience unfamiliar with the subject why braille replaced earlier raised "
-     "alphabets.",
-     ["Braille's six-dot cell can be taken in by a fingertip at rest, while the earlier raised "
-      "alphabets copied printed letters that had to be traced curve by curve.",
-      "Braille cells contain at most six dots, and braille was adopted in most schools by the late "
-      "nineteenth century.",
-      "Earlier raised alphabets copied the shapes of printed letters used by sighted readers.",
-      "Braille was adopted in most schools by the late nineteenth century, and a fingertip can take "
-      "in a whole cell without moving."],
+     ["The contracted braille code has signs for common groups of letters.",
+      "It takes longer to learn than the uncontracted code.",
+      "Experienced readers of the contracted code read about half as fast again.",
+      "A reader who begins uncontracted must later drop the habit of tracking every letter.",
+      "Most schools now begin with the contracted code."],
+     "explain to an audience unfamiliar with the subject why most schools begin with the "
+     "contracted code.",
+     ["Although the contracted code takes longer to learn, experienced readers of it read about "
+      "half as fast again, and a reader who begins with the other code must later drop a habit.",
+      "The contracted braille code has signs for common groups of letters and takes longer to "
+      "learn than the uncontracted code.",
+      "Most schools now begin with the contracted code rather than with the uncontracted one.",
+      "A reader who begins with the uncontracted code must later drop the habit of tracking every "
+      "letter."],
      "A",
-     "The reason for the replacement is the contrast between reading a cell at rest and tracing a "
-     "letter's curves, and only one sentence sets the two side by side. The date of adoption "
-     "records the outcome rather than the cause."),
+     "The schools' choice is explained only by setting the extra learning time against the reading "
+     "speed and the habit that has to be unlearned. Reporting that most schools begin with the "
+     "contracted code restates the practice the student was asked to account for."),
 
  syn("R7",
-     ["A lava flow forms a solid crust within minutes of reaching the surface.",
-      "The crust insulates the lava beneath it.",
-      "Insulated lava can stay fluid for weeks.",
-      "Flows advancing in tubes have travelled tens of kilometres.",
-      "Uninsulated flows commonly stop within a few hundred metres."],
-     "explain to an audience unfamiliar with volcanology why some flows travel so much further "
-     "than others.",
-     ["A crust forms within minutes and insulates the lava beneath it, which stays fluid and "
-      "advances tens of kilometres where an uninsulated flow stops within a few hundred metres.",
-      "A lava flow forms a solid crust within minutes of reaching the surface, and that crust "
-      "insulates the lava beneath it.",
-      "Flows advancing in tubes have travelled tens of kilometres from the vent that produced them.",
-      "Uninsulated flows commonly stop within a few hundred metres of the vent."],
+     ["A hoist's safety brake is worked by weights mounted on the cage.",
+      "The weights press outward as the cage descends.",
+      "Past a set speed they swing far enough to bite into the guide rails.",
+      "No signal from the driver or from any electrical circuit is involved.",
+      "Elisha Otis demonstrated an early version of such a brake in 1854."],
+     "explain to an audience unfamiliar with lifts why the brake acts even when nothing else "
+     "does.",
+     ["Weights mounted on the cage press outward as it descends and, past a set speed, bite into "
+      "the guide rails, so no signal from the driver or from any circuit is involved.",
+      "Elisha Otis demonstrated an early version of the hoist safety brake in 1854.",
+      "A hoist's safety brake is worked by weights that are mounted on the cage itself.",
+      "The weights press outward as the cage descends, which is what Elisha Otis demonstrated."],
      "A",
-     "The question is why the distances differ, so the answer needs the insulation and both "
-     "distances in one statement. Giving the tube distance alone leaves the comparison, and "
-     "therefore the explanation, unmade."),
+     "Acting when nothing else does is explained by the weights doing the work unaided, so the "
+     "answer must join the mechanism to the absence of any signal. Naming the 1854 demonstration "
+     "dates the device without saying what makes it independent."),
 
  syn("R8",
      ["Making a resistance protein costs a bacterium energy.",
