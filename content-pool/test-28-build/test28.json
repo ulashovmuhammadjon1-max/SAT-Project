@@ -7,9 +7,9 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "A keeper had to see a vehicle in time to be at the bar before it, and a house set square to one road showed him nothing along the other. The usual answer was a room thrown forward on a shallow angle with a window in each face, so that a man sitting at his table looked up both approaches without rising. The shape was not a fashion but a _____ .",
+   "passage": "A keeper had to see a vehicle in time to be at the bar before it, and a house set square to one road showed him nothing along the other. The usual answer was a room thrown forward on a shallow angle with a window in each face, so that nothing could reach the bar from either road without having been seen from that window. The shape was not a fashion but a _____.",
    "difficulty": "MEDIUM",
-   "why": "The keeper must reach the bar before the vehicle does, and the angled room is presented as the usual answer to that necessity, closing on a contrast with fashion. Calling it a convenience makes the shape optional, which the need to be at the bar in time does not allow.",
+   "why": "The keeper must reach the bar before the vehicle does, and the angled room is the only arrangement that lets him see both roads at all, so the shape is forced on the house. Calling it a convenience makes it an easing of work the keeper could have done another way, and the square house is said to show him nothing.",
    "choices": [
     {
      "label": "A",
@@ -40,7 +40,7 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "On a frosted road a smooth plate of iron is worse than no plate at all. Smiths turned the heel of the shoe down into a short spur and drove one or two nails with a raised head at the toe, so that the foot bit instead of sliding. The additions cost the horse a little in the evenness of its tread and returned to it a great deal in _____ .",
+   "passage": "On a frosted road a smooth plate of iron is worse than no plate at all. Smiths turned the heel of the shoe down into a short spur and drove one or two nails with a raised head at the toe, so that the foot bit instead of sliding. The additions cost the horse a little in the evenness of its tread and returned to it a great deal in _____.",
    "difficulty": "MEDIUM",
    "why": "The problem stated is sliding on frost and the fix makes the foot bite, so what is returned is purchase on the road. Comfort is what the sentence says is given up, since the tread is no longer even.",
    "choices": [
@@ -106,9 +106,9 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "A trust rarely collected its own money. Once a year the right to take the money at a named gate for the twelve months following was cried in an inn parlour and knocked down to whoever bid highest, and the bidder paid the sum he had promised whether the year proved good or bad. The arrangement handed the trust a figure it could count on and handed the bidder the whole of the _____ .",
+   "passage": "A trust rarely collected its own money. Once a year the right to take the money at a named gate for the twelve months following was cried in an inn parlour and knocked down to whoever bid highest, and the bidder paid the sum he had promised whether the year proved good or bad. A wet season that kept the wagons off the road fell on him and not on the trust, so the arrangement handed the trust a figure it could count on and handed the bidder the whole of the _____.",
    "difficulty": "MEDIUM",
-   "why": "The trust receives a fixed sum whatever happens and the bidder is bound to his promise in a bad year as well as a good one, so what passes to him is the uncertainty. He does keep any surplus, but the sentence is built on the good-or-bad contrast rather than on the surplus alone.",
+   "why": "The sentence before the blank puts a bad season squarely on the bidder and not on the trust, so what the arrangement transfers to him is the uncertainty. Naming the surplus he keeps in a good year answers a clause about a wet one, and leaves the contrast the sentence is built on unexplained.",
    "choices": [
     {
      "label": "A",
@@ -471,7 +471,7 @@
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
    "passage": "Snow altered a timetable before it stopped one. The proprietors' winter bills lengthened the allowance between changes by a quarter of an hour and dropped one stage altogether on the highest _____ was published in October, weeks before any snow fell.",
    "difficulty": "MEDIUM",
-   "why": "A comma with the coordinating conjunction joins two complete statements correctly. Running them together with no punctuation at all leaves a comma splice of a different kind, and a colon cannot be followed by a conjunction.",
+   "why": "A comma with the coordinating conjunction joins two complete statements correctly. Dropping the conjunction leaves the comma splicing them on its own, running them together with no punctuation at all fuses them, and a colon cannot be followed by a conjunction.",
    "choices": [
     {
      "label": "A",
@@ -480,7 +480,7 @@
     },
     {
      "label": "B",
-     "content": "ground; the amended bill and",
+     "content": "ground, the amended bill",
      "isCorrect": false
     },
     {
@@ -502,28 +502,28 @@
    "skill": "SEC-BS",
    "block": "Boundaries",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "A drove road was not a road at all in the sense a surveyor would have recognised. It was a right of way forty or fifty yards wide between banks, with grass over the whole of it, and the width was the point: two hundred beasts moving abreast at a walk fed as they went and did not trample a single _____",
+   "passage": "A drove road was not a road at all in the sense a surveyor would have recognised. It was a right of way forty or fifty yards wide between banks, with grass over the whole of _____ the width was the point, since two hundred beasts moving abreast at a walk fed as they went instead of trampling a single line.",
    "difficulty": "MEDIUM",
-   "why": "The passage closes here and the sentence is complete, so a full stop is required. A comma or a semicolon would promise a continuation that never comes.",
+   "why": "A comma before the coordinating conjunction joins the two complete statements properly. Leaving the comma out fuses them, and a conjunction does not follow a semicolon or a colon here.",
    "choices": [
     {
      "label": "A",
-     "content": "line",
+     "content": "it and",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "line,",
+     "content": "it; and",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "line;",
+     "content": "it: and",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "line.",
+     "content": "it, and",
      "isCorrect": true
     }
    ]
@@ -568,28 +568,28 @@
    "skill": "SEC-BS",
    "block": "Boundaries",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "Iron heated to a bright red and plunged into water comes out too hard to file and too brittle to trust. The smith therefore brightened a face of the cooled tool and warmed it again slowly, watching the colours run across it: straw, then brown, then a clear _____ and quenched it a second time at the shade he wanted.",
+   "passage": "Iron heated to a bright red and plunged into water comes out too hard to file and too brittle to trust. The smith therefore brightens a face of the cooled tool and warms it a second time, watching for straw, then brown, then blue. The colour that runs across a brightened face of quenched _____ tells him its temperature more exactly than any thermometer he could have owned.",
    "difficulty": "MEDIUM",
-   "why": "The list of colours ends before a second verb joined to the first by the conjunction, so a comma closes the series correctly. A semicolon or a colon would break the sentence in front of a conjunction that belongs to it.",
+   "why": "Nothing should separate this subject from its verb, so the blank takes no punctuation at all. A comma, a semicolon or a colon would each cut the sentence between the thing described and what it does.",
    "choices": [
     {
      "label": "A",
-     "content": "blue:",
+     "content": "steel:",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "blue,",
+     "content": "steel",
      "isCorrect": true
     },
     {
      "label": "C",
-     "content": "blue",
+     "content": "steel,",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "blue;",
+     "content": "steel;",
      "isCorrect": false
     }
    ]
@@ -766,9 +766,9 @@
    "skill": "EOI-TR",
    "block": "Transitions",
    "stem": "Which choice completes the text with the most logical transition?",
-   "passage": "No single proprietor could keep horses along two hundred miles of road. A line was therefore divided, and each proprietor undertook to horse so many miles of it and to take that share of the receipts. _____ a coach that ran from one end to the other was in a real sense several businesses in succession, and a dispute between any two of them stopped the whole service.",
+   "passage": "No single proprietor could keep horses along two hundred miles of road. A line was instead divided, and each proprietor undertook to horse so many miles of it and to take that share of the receipts. _____ a coach that ran from one end to the other was in a real sense several businesses in succession, and a dispute between any two of them stopped the whole service.",
    "difficulty": "MEDIUM",
-   "why": "The description of the coach as several businesses is a restatement of the arrangement just set out, so a consequence marker fits. A concessive word would set the conclusion against the premise that supports it.",
+   "why": "Being several businesses in succession follows directly from the line having been split among proprietors who each took a share, so a consequence marker fits. A concessive word would set the conclusion against the premise that supports it.",
    "choices": [
     {
      "label": "A",
@@ -999,7 +999,7 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "A body slung on long leather braces swings as it goes and the swing takes much of the shock, but the leather stretches with use and has to be taken up again and again. Steel laid up in leaves and bent to an ellipse gives at a blow and returns to its shape, and it does not lengthen over a season. Builders who changed to the steel gave up a soft motion in return for one that stayed _____ .",
+   "passage": "A body slung on long leather braces swings as it goes and the swing takes much of the shock, but the leather stretches with use and has to be taken up again and again. Steel laid up in leaves and bent to an ellipse gives at a blow and returns to its shape, and it does not lengthen over a season. Builders who changed to the steel gave up a soft motion in return for one that stayed _____.",
    "difficulty": "EASY",
    "why": "The leather is faulted for stretching and needing to be taken up, while the steel is said not to lengthen over a season, so what is gained is a setting that does not drift. Choosing the gentler motion contradicts the sentence, which gives up softness to get this quality.",
    "choices": [
@@ -1032,7 +1032,7 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "A drover who had sold his beasts at a fair three hundred miles from home could go back by any means he liked, but he could not afford to feed a dog on the way. The dogs were turned loose at the fair and made their own way north, calling at the same inns the droves had used, where a meal was put down for them against the master's account at the next passing. The arrangement worked because the route was _____ .",
+   "passage": "A drover who had sold his beasts at a fair three hundred miles from home could go back by any means he liked, but he could not afford to feed a dog on the way. The dogs were turned loose at the fair and made their own way north, calling at the same inns the droves had used, where a meal was put down for them against the master's account at the next passing. The arrangement worked because the route was _____.",
    "difficulty": "EASY",
    "why": "The dogs are said to call at the same inns the droves had used and to be fed on account until the next passing, which only works on a road travelled again and again in the same way. Saying the route was guarded introduces protection that nothing in the passage supplies.",
    "choices": [
@@ -1362,28 +1362,28 @@
    "skill": "SEC-BS",
    "block": "Boundaries",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "A boy went to a smith at fourteen and was bound for seven years. He learned to make a shoe in the first two and spent the remaining five learning feet, because the making was the smaller half of the trade; the company that examined him at the end asked him about the foot and hardly at all about the _____",
+   "passage": "A boy went to a smith at fourteen and was bound for seven years. He learned to make a shoe in the first two _____ remaining five went on the foot itself, and the company that examined him at the end asked him about the foot and hardly at all about the iron.",
    "difficulty": "EASY",
-   "why": "The sentence and the passage both end here, so it takes a full stop. A comma or a colon would leave the statement open.",
+   "why": "Two complete statements stand on either side of the blank with no conjunction between them, which calls for a semicolon. The comma on its own splices them, and a colon is not followed by a conjunction.",
    "choices": [
     {
      "label": "A",
-     "content": "iron:",
+     "content": "years: and the",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "iron.",
+     "content": "years; the",
      "isCorrect": true
     },
     {
      "label": "C",
-     "content": "iron",
+     "content": "years, the",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "iron,",
+     "content": "years the",
      "isCorrect": false
     }
    ]
@@ -1397,7 +1397,7 @@
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
    "passage": "A coachman's wage was small and everybody knew it. What he lived on was the shilling each passenger handed him at the end of a stage, and a man who drove a fashionable road could take more in a week that way than the proprietor paid him in a _____ the custom was never written into any agreement.",
    "difficulty": "EASY",
-   "why": "A comma before the coordinating conjunction correctly joins two complete statements. Omitting the comma runs them together, and a colon is not used before a conjunction of this kind.",
+   "why": "A comma before the coordinating conjunction correctly joins two complete statements. Omitting the comma runs them together, an adverb fenced by commas splices them instead of joining them, and a colon is not used before a conjunction of this kind.",
    "choices": [
     {
      "label": "A",
@@ -1411,7 +1411,7 @@
     },
     {
      "label": "C",
-     "content": "quarter; yet the",
+     "content": "quarter, however,",
      "isCorrect": false
     },
     {
@@ -1461,28 +1461,28 @@
    "skill": "SEC-BS",
    "block": "Boundaries",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "An inn stable kept two kinds of standing. In the narrow stalls a horse stood tied and faced the wall, and in the loose boxes at the far end it could turn and lie down; the ostler put a tired team into the boxes and the pair that would go out again in an hour into the _____",
+   "passage": "An inn stable kept two kinds of standing. In the narrow stalls a horse stood tied and faced the _____ the loose boxes at the far end it could turn and lie down, which is where the ostler put a team that had just come in.",
    "difficulty": "EASY",
-   "why": "The passage ends here, so the sentence needs a full stop. Leaving the mark out or closing with a comma or a semicolon would leave the sentence unfinished.",
+   "why": "Two complete statements meet at the blank with no conjunction between them, which is what a semicolon is for. The comma alone splices them, and a colon does not take a conjunction after it.",
    "choices": [
     {
      "label": "A",
-     "content": "stalls.",
+     "content": "wall; in",
      "isCorrect": true
     },
     {
      "label": "B",
-     "content": "stalls",
+     "content": "wall, in",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "stalls,",
+     "content": "wall in",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "stalls;",
+     "content": "wall: and in",
      "isCorrect": false
     }
    ]
@@ -1494,28 +1494,28 @@
    "skill": "SEC-FS",
    "block": "Form, Structure, and Sense",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "Where a drove road met water there was seldom a bridge. At low water the beasts were walked over a gravel bar the drovers knew by eye, and where the channel was too deep for that, the herd _____ across behind a boat with a rope on the leading animal.",
+   "passage": "Where a drove road met water there was seldom a bridge. At low water the beasts were walked over a gravel bar the drovers knew by eye; where the channel was too deep for that, a boat took a rope from the leading animal and the rest of the herd _____ behind it.",
    "difficulty": "EASY",
-   "why": "'Herd' is treated as a single unit here and takes the singular verb, matching the singular 'the herd' as the subject. The plural form would agree with the individual beasts, which the sentence has stopped talking about by this point.",
+   "why": "The clause needs a finite verb in the past tense to stand beside 'took' in the same sentence. The participle would leave the second half of the clause without any verb of its own.",
    "choices": [
     {
      "label": "A",
-     "content": "swimming",
+     "content": "follows",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "was swum",
+     "content": "followed",
      "isCorrect": true
     },
     {
      "label": "C",
-     "content": "were swum",
+     "content": "following",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "have swum",
+     "content": "to follow",
      "isCorrect": false
     }
    ]
@@ -1529,26 +1529,26 @@
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
    "passage": "Plate glass in a door made a coach lighter inside and heavier to hang. Neither the glass itself nor the brass channels it slid in _____ cheap, and a pane broken by a careless passenger pulling on the strap cost more than the whole trimming of the seat beneath it.",
    "difficulty": "EASY",
-   "why": "With 'neither ... nor', the verb agrees with the subject standing nearer to it, and 'the brass channels it slid in' is the further subject, while 'the glass itself' is nearer. The plural forms would agree with the channels, which are not the nearer of the two.",
+   "why": "With 'neither ... nor', the verb agrees with whichever subject stands nearer to it, and 'the brass channels it slid in' is both nearer and plural. Every other option is singular and would agree with the glass, which is the further of the two subjects.",
    "choices": [
     {
      "label": "A",
-     "content": "have been",
+     "content": "has been",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "are",
+     "content": "is",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "was",
+     "content": "were",
      "isCorrect": true
     },
     {
      "label": "D",
-     "content": "were",
+     "content": "was",
      "isCorrect": false
     }
    ]
@@ -1793,7 +1793,7 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "A drove could not be halted anywhere convenient for the night. Cattle turned loose on a farmer's grass ate a shilling's worth in an hour, so the men made instead for enclosures kept beside the road and let by the night. A drover planned his day's march around where these enclosures lay rather than around the distance he would have liked to _____ .",
+   "passage": "A drove could not be halted anywhere convenient for the night. Cattle turned loose on a farmer's grass ate a shilling's worth in an hour, so the men made instead for enclosures kept beside the road and let by the night. A drover planned his day's march around where these enclosures lay rather than around the distance he would have liked to _____.",
    "difficulty": "HARD",
    "why": "The passage contrasts where the enclosures lie with the distance the drover would otherwise choose, so the missing word is about getting a day's march done. Measuring the distance is something a surveyor does and has nothing to do with the choice the passage describes.",
    "choices": [
@@ -1826,7 +1826,7 @@
    "skill": "CAS-WV",
    "block": "Words in Context",
    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-   "passage": "Ash cut in the spring and worked the same year moves as it dries, and a frame built of it opens at every joint within a twelvemonth. Builders therefore stacked their timber in open sheds with laths between the boards and left it for as many years as the plank was inches thick. The delay was the one part of the process that could not be _____ .",
+   "passage": "Ash cut in the spring and worked the same year moves as it dries, and a frame built of it opens at every joint within a twelvemonth. Builders therefore stacked their timber in open sheds with laths between the boards and left it for as many years as the plank was inches thick. The delay was the one part of the process that could not be _____.",
    "difficulty": "HARD",
    "why": "A rule of one year for each inch of thickness is given as the cost of avoiding joints that open, so what the timber demands is time that cannot be cut short. The work certainly could be handed to a yardman, so being delegated is not what the sentence denies.",
    "choices": [
@@ -2288,28 +2288,28 @@
    "skill": "SEC-BS",
    "block": "Boundaries",
    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-   "passage": "A trust could borrow, but only against one thing. Lenders advanced money on the security of what the gates would take, and the interest was a first charge on those receipts; if the road carried less than the promoters had promised, the lenders and not the parish bore the _____",
+   "passage": "A trust could borrow, but only against one thing. Lenders advanced money on the security of what the gates would _____ the interest on it was a first charge on those receipts, so a road that carried less than the promoters had promised left the lenders short and the parish untouched.",
    "difficulty": "HARD",
-   "why": "This is the end of the passage and of the sentence, so a full stop is required. A comma or a colon would announce that something follows, and nothing does.",
+   "why": "A comma with the coordinating conjunction correctly joins two complete statements. Dropping the comma fuses them, and neither a semicolon nor a colon is followed by a conjunction here.",
    "choices": [
     {
      "label": "A",
-     "content": "shortfall:",
+     "content": "take: and",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "shortfall.",
+     "content": "take, and",
      "isCorrect": true
     },
     {
      "label": "C",
-     "content": "shortfall",
+     "content": "take and",
      "isCorrect": false
     },
     {
      "label": "D",
-     "content": "shortfall,",
+     "content": "take; and",
      "isCorrect": false
     }
    ]
@@ -2327,22 +2327,22 @@
    "choices": [
     {
      "label": "A",
-     "content": "street unfortunately",
+     "content": "space unfortunately",
      "isCorrect": false
     },
     {
      "label": "B",
-     "content": "street: and unfortunately",
+     "content": "space: and unfortunately",
      "isCorrect": false
     },
     {
      "label": "C",
-     "content": "street; unfortunately",
+     "content": "space; unfortunately",
      "isCorrect": true
     },
     {
      "label": "D",
-     "content": "street, unfortunately",
+     "content": "space, unfortunately",
      "isCorrect": false
     }
    ]

@@ -447,19 +447,19 @@ MODULE_2_EASY = [
             "95 + 128 + 62 = 285, so the fourth angle measures 360 - 285 = 75&deg;."),
 
  dict(n="M2E-21", domain="GT", skill="GT-AV", type="MC",
-      stem=("A cylindrical grain bin for a pigeon loft has a radius of 3 feet and a height of 10 "
-            "feet. What is its volume, in cubic feet?"),
-      choices=["\\( 30\\pi \\)", "\\( 90\\pi \\)", "\\( 180\\pi \\)", "\\( 900\\pi \\)"],
-      correct="B",
-      check="The volume is pi(3^2)(10) = 90pi cubic feet."),
+      stem=("A decoy pond is shaped like a trapezium whose two parallel sides measure 14 metres "
+            "and 22 metres and whose perpendicular width is 9 metres. What is the area of the "
+            "pond, in square metres?"),
+      choices=["126", "162", "198", "324"], correct="B",
+      check="The area of a trapezium is half the sum of the parallel sides times the "
+            "perpendicular width, so it is (1/2)(14 + 22)(9) = 18(9) = 162 square metres."),
 
  dict(n="M2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle XYZ, the right angle is at vertex Y, side XY has length 9, side YZ "
-            "has length 40, and side XZ has length 41. What is the value of \\( \\sin X \\) ?"),
-      choices=["\\( \\frac{9}{41} \\)", "\\( \\frac{9}{40} \\)", "\\( \\frac{40}{41} \\)",
-               "\\( \\frac{41}{40} \\)"], correct="C",
-      check="From vertex X the opposite side is YZ = 40 and the hypotenuse is XZ = 41, so "
-            "sin X = 40/41."),
+      stem=("In right triangle ABC, the right angle is at vertex C, the hypotenuse AB has length "
+            "74, and \\( \\cos A = \\frac{35}{37} \\) . What is the length of side AC?"),
+      choices=["24", "35", "70", "74"], correct="C",
+      check="cos A is the side adjacent to A over the hypotenuse, that is AC/AB, so "
+            "AC = 74(35/37) = 70."),
 ]
 
 
@@ -470,7 +470,7 @@ MODULE_2_HARD = [
       stem=("Two dovecotes yielded 148 squabs between them in one season. The larger dovecote "
             "yielded 16 more than twice as many squabs as the smaller. How many more squabs did "
             "the larger dovecote yield than the smaller?"),
-      choices=["44", "60", "88", "104"], correct="B",
+      choices=["60", "88", "104", "148"], correct="A",
       check="With s squabs from the smaller dovecote the larger yielded 2s + 16, so "
             "s + 2s + 16 = 148 gives 3s = 132 and s = 44; the larger yielded 104, which is 60 "
             "more than 44."),
@@ -523,7 +523,7 @@ MODULE_2_HARD = [
  dict(n="M2H-08", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("For a constant k, \\( (3x+k)^{2} = 9x^{2}+42x+c \\) for every value of x, where c is a "
             "constant. What is the value of c?"),
-      choices=["14", "49", "84", "441"], correct="B",
+      choices=["14", "42", "49", "441"], correct="C",
       check="Expanding gives 9x^2 + 6kx + k^2, so 6k = 42 and k = 7, and c = k^2 = 49."),
 
  dict(n="M2H-09", domain="ADV", skill="ADV-NE", type="MC",
@@ -609,12 +609,14 @@ MODULE_2_HARD = [
             "440/22 = 20 tiers."),
 
  dict(n="M2H-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A cylindrical tank used to carry carp from a stew pond is replaced by a cylindrical "
-            "tank whose radius is 50% greater and whose height is 20% less. The volume of the new "
-            "tank is what percent of the volume of the old tank?"),
-      choices=["120%", "150%", "180%", "225%"], correct="C",
-      check="Volume is proportional to the square of the radius times the height, so the new "
-            "volume is (1.5)^2(0.8) = 2.25(0.8) = 1.8 times the old volume, or 180 percent of it."),
+      stem=("A rectangular tank measuring 60 centimetres by 40 centimetres holds water to a depth "
+            "of 15 centimetres. A basket of carp is lowered in and sinks completely, raising the "
+            "water to a depth of 22 centimetres. Given that 1 litre is 1,000 cubic centimetres, "
+            "what is the volume, in litres, of the basket and its carp together?"),
+      choices=["7", "16.8", "36", "52.8"], correct="B",
+      check="The water rises 22 - 15 = 7 centimetres over a base of 60(40) = 2,400 square "
+            "centimetres, so the basket and carp displace 2,400(7) = 16,800 cubic centimetres, "
+            "which is 16.8 litres."),
 
  dict(n="M2H-20", domain="GT", skill="GT-LA", type="MC",
       stem=("The floor of a dovecote is a regular polygon, and each of its interior angles "
@@ -624,11 +626,11 @@ MODULE_2_HARD = [
             "polygon sum to 360&deg;, so the polygon has 360/24 = 15 sides."),
 
  dict(n="M2H-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle ABC, the right angle is at vertex C, the hypotenuse AB has length "
-            "51, and \\( \\cos A = \\frac{8}{17} \\) . What is the area of triangle ABC?"),
-      choices=["540", "612", "1,080", "1,224"], correct="A",
-      check="cos A = AC/AB = 8/17 gives AC = 24, and BC = sqrt(51^2 - 24^2) = 45, so the area is "
-            "(1/2)(24)(45) = 540."),
+      stem=("In right triangle JKL, the right angle is at vertex L. The leg KL has length 33, and "
+            "\\( \\tan J = \\frac{33}{56} \\) . What is the length of JK?"),
+      choices=["56", "65", "89", "112"], correct="B",
+      check="tan J is the side opposite J over the side adjacent to J, that is KL/JL, so "
+            "JL = 56. JK is the hypotenuse, and sqrt(33^2 + 56^2) = sqrt(4225) = 65."),
 
  dict(n="M2H-22", domain="GT", skill="GT-AV", type="MC",
       stem=("Two conical feed hoppers are similar in shape, and their heights are in the ratio 2 to "

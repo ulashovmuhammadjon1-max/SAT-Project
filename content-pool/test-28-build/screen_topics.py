@@ -232,7 +232,10 @@ def keyword_screen():
 
 def final_screen():
     sys.path.insert(0, HERE)
-    from rw_test16 import QUESTIONS
+    # Retargeted: this file was copied from ../test-16-build and its `final`
+    # mode still imported that build's questions, so it screened Test 16
+    # against the corpus no matter which directory it was run from.
+    from rw_test28 import QUESTIONS
     corpus = load_corpus()
     mine = [(q["num"], (q["passage"] or "") + " " + q["stem"]) for q in QUESTIONS]
     mine = [(n, t, tokens(t)) for n, t in mine]

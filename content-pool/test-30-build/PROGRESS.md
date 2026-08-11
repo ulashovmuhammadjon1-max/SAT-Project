@@ -1,45 +1,30 @@
 # Test 30 — build progress
 
-Updated: session start + inventory.
+**STATUS: COMPLETE.** Everything in the brief has been run and passes. See `MANIFEST.md` for
+the full record; this file is the short checkpoint.
 
 ## Done
-- `math_test30.py` — 66 questions. `verify_math_test30.py` **passes** (highest Jaccard vs
-  production 0.55; within-test 0.53; key M1 A7/B4/C5/D3, M2E 5/5/5/4, M2H 5/6/4/4).
-- `rw_test30.py` — 81 items present, all 4-choice, unique `num`s, block counts match the
-  assembler quota exactly (WiC 15, TSP 6, CID 6, CoE 9, Inf 6, Bnd 12, FSS 9, Trn 9, Syn 9).
-  Every key is currently `A` (author wrote correct-first); `balance_rw.py` rotates.
-- `assemble_test30.py` already exists and is correctly de-Test-18'd (refs `AUTHORED-T30:` /
-  `AUTHORED/T30-`, seed 300030, reads `rw_test30_balanced.json`, writes `test30.json`).
+- `math_test30.py` (inherited, unchanged) — `verify_math_test30.py` **ALL CHECKS PASSED**.
+- `rw_test30.py` — 81 items finished and checked. Nine defects found in the inherited draft and
+  fixed (R5 double subject in every choice; F5 duplicated W7's subject; F6 nonsense distractors;
+  B2 ambiguous participle; B3 non sequitur; B9 duplicated E7's subject; S2 duplicated
+  `rw_test15:R4`'s camera lucida; W8 awkward frame; R7 two defensible transitions).
+- Corpus dedupe: highest Jaccard vs `../rw_authored_corpus.json` **0.180**; nothing at 0.45.
+- Within-test same-subject: worst pair **0.156**, threshold 0.24, zero pairs at or above it.
+- `balance_rw.py` — key A81/B0/C0/D0 → **A21/B20/C20/D20**, 0 items locked.
+- `assemble_test30.py` → `test30.json`, 147 questions, block order monotonic, writing at Q15.
+- `python3 ../validate_tests.py 30` → **PASS**, zero problems.
+- Local insert OK: `Test 30` = `230d1be8-1529-4741-bb7b-e9f910fe64f3`, DRAFT.
+- `audit_math_rendering.mjs` (local) → 1,782 Math questions, **0 errors**.
+- No `T18` string anywhere in the deliverables.
 
-## Done (cont.)
-- Writing correctness pass finished (Boundaries 12, FSS 9, Transitions 9). Defects fixed:
-  - B2: trailing absolute phrase "each of them then rounded" could be read as a finite clause,
-    making the semicolon defensible → now "each of them ready to be rounded".
-  - B3: "Iron was less easily broken" was a non sequitur after the porcelain sentence →
-    "Iron tainted acid preparations and fell out of use".
-  - F5: choices were stay/stays/staying/to stay on a **press/blotter/ventilator** passage that
-    duplicated W7's subject → rewritten as a plural-vs-possessive item on seed jars on racks.
-  - F6: distractors "canned"/"could have"/"having" against a tail "be matched" were nonsense →
-    blank now takes the whole verb phrase (can be matched / can be matching / being matched /
-    to be matched).
-  - **R5 (real defect)**: every choice began "A chromatograph, …" while the sentence continued
-    "a gas chromatograph separates …" — double subject in all four. Choices are now bare
-    transitions (By contrast / Likewise / For instance / In short).
-  - R7: "By comparison," was arguably defensible next to the keyed "In short," → replaced with
-    "For instance,".
-  - W8: "The specimen is the label's attachment" read awkwardly → "The plant, on this
-    accounting, is an _____ to its label" (appendage / objection / improvement / alternative).
-  - S2: camera lucida duplicated `rw_test15:R4` (same device, 5 shared 5-grams) → retargeted to
-    the spent charge left in a still.
-- Corpus dedupe: highest Jaccard vs `rw_authored_corpus.json` now **0.180** (S1 ~ rw_test8:R4),
-  zero flags at the 0.50/5-gram screen. Nothing reached the 0.45 read line.
-- Within-test same-subject scan with `validate_tests._passage_jaccard`: worst pair **0.179**
-  (E7/B9), zero pairs at or above the 0.24 threshold.
+## Not done, deliberately
+- No production write, no git commit, no publish. Test 30 is DRAFT in local dev only.
+- Not screenshot-verified in `/exam/{attemptId}`; the rendering audit and the validator were
+  the checks run instead.
 
-## Left
-- Reading-item correctness pass (W done, C/E/I/S outstanding); balance; assemble; validate;
-  local insert; math audit; MANIFEST.md.
-
-## Decisions a successor would have to re-derive
-- Reading per module = 14 of 27, writing opens at Q15. Fixed by the quota, do not change.
-- Rationales must not name an option by letter or `balance_rw.py` locks the item at `A`.
+## If you have to redo anything
+Order is: `verify_math_test30.py` → `balance_rw.py` → `assemble_test30.py` →
+`../validate_tests.py 30` → `insert_test.mjs` → `../test-6-7-build/audit_math_rendering.mjs`.
+Re-run `balance_rw.py` **and** `assemble_test30.py` after any edit to `rw_test30.py`, or
+`test30.json` goes stale against the source.
