@@ -38,6 +38,38 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     attempt.moduleAttempts.map((ma) => [ma.id, ma.module.subject])
   );
 
+  // Review order. Two things were wrong here and both had to be fixed.
+  //
+  // `Response.order` is `@default(0)` and `autosaveResponses` never set it, so
+  // every row held 0 and the `orderBy` above sorted nothing — questions came
+  // back in raw database order. That is now populated on write, but the column
+  // cannot be trusted for attempts submitted before then, so the ordering here
+  // is derived from `Question.order` instead, which the inserter guarantees is
+  // contiguous from 1 in every module.
+  //
+  // Even with a correct value, sorting on it alone is not enough: it is the
+  // position *within a module*, so Module 1 and Module 2 interleave and Reading
+  // and Writing reads 1, 1, 2, 2, … instead of 1 through 54. The module the
+  // student sat first has to come first. `moduleAttempts` is already ordered by
+  // `startedAt`, which is that real sequence; the subject rank keeps Reading
+  // and Writing ahead of Math even if timestamps tie.
+  const moduleSequence = new Map(
+    attempt.moduleAttempts.map((ma, index) => [ma.id, index] as const)
+  );
+  const subjectRank = (subject: string) => (subject === "READING_WRITING" ? 0 : 1);
+  const sequenceOf = (moduleAttemptId: string) =>
+    moduleSequence.get(moduleAttemptId) ?? Number.MAX_SAFE_INTEGER;
+
+  responses.sort((a, b) => {
+    const bySubject =
+      subjectRank(subjectByModuleAttemptId[a.moduleAttemptId] ?? "READING_WRITING") -
+      subjectRank(subjectByModuleAttemptId[b.moduleAttemptId] ?? "READING_WRITING");
+    if (bySubject !== 0) return bySubject;
+    const byModule = sequenceOf(a.moduleAttemptId) - sequenceOf(b.moduleAttemptId);
+    if (byModule !== 0) return byModule;
+    return a.question.order - b.question.order;
+  });
+
   const items = responses.map((r) => ({
     responseId: r.id,
     questionId: r.questionId,

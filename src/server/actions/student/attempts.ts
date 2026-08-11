@@ -55,13 +55,29 @@ export async function autosaveResponses(attemptId: string, moduleAttemptId: stri
   const attempt = await prisma.attempt.findUniqueOrThrow({ where: { id: attemptId } });
   if (attempt.userId !== user.id) throw new Error("Not authorized.");
 
+  // `Response.order` defaults to 0 and was never written, so every row held 0
+  // and anything sorting by it — the review page did — got raw database order
+  // instead of question order. One lookup keyed by question id fixes that for
+  // the whole batch; it is also written on update, so rows created before this
+  // are corrected the next time the student touches the question.
+  const questionOrder = new Map(
+    (
+      await prisma.question.findMany({
+        where: { id: { in: responses.map((r) => r.questionId) } },
+        select: { id: true, order: true },
+      })
+    ).map((q) => [q.id, q.order] as const)
+  );
+
   for (const r of responses) {
+    const order = questionOrder.get(r.questionId) ?? 0;
     await prisma.response.upsert({
       where: { attemptId_questionId: { attemptId, questionId: r.questionId } },
       create: {
         attemptId,
         moduleAttemptId,
         questionId: r.questionId,
+        order,
         selectedChoiceId: r.selectedChoiceId,
         freeResponseAnswer: r.freeResponseAnswer,
         timeSpentSeconds: r.timeSpentSeconds,
@@ -71,6 +87,7 @@ export async function autosaveResponses(attemptId: string, moduleAttemptId: stri
         answeredAt: r.selectedChoiceId || r.freeResponseAnswer ? new Date() : null,
       },
       update: {
+        order,
         selectedChoiceId: r.selectedChoiceId,
         freeResponseAnswer: r.freeResponseAnswer,
         timeSpentSeconds: r.timeSpentSeconds,
