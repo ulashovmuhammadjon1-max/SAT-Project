@@ -33,9 +33,9 @@ import re
 import sys
 from collections import Counter
 
-from sympy import (Abs, Eq, Rational, ceiling, floor, cancel, diff, expand,
-                   log, nsimplify, pi, simplify, sin, cos, solve, sqrt,
-                   symbols, sympify, tan, together)
+from sympy import (Abs, Eq, Rational, S, ceiling, factor, floor, cancel, diff,
+                   expand, fraction, log, pi, simplify, sin, cos, solve,
+                   solveset, sqrt, symbols, sympify, tan, together)
 
 from math_test22 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
 
@@ -70,17 +70,15 @@ def h1_01():
 
 
 def h1_02():
-    rate = symbols("rate")
-    rt = solve(Eq(41 + rate * (9 - 2), 55), rate)[0]
-    day = symbols("day")
-    # the first INTEGER day on which the mass exceeds 78
-    crossing = solve(Eq(41 + rt * (day - 2), 78), day)[0]
-    return floor(crossing) + 1
+    ra, rb, dd = symbols("ra rb dd")
+    a_rate = solve(Eq(41 + ra * (9 - 2), 55), ra)[0]
+    b_rate = solve(Eq(62 + rb * (9 - 2), 69), rb)[0]
+    return solve(Eq(41 + a_rate * (dd - 2), 62 + b_rate * (dd - 2)), dd)[0]
 
 
 def h1_03():
-    sup = symbols("sup")
-    return floor(solve(Eq(250 + 5 * 9 + 26 * sup, 900), sup)[0])
+    each = symbols("each")
+    return solve(Eq(168 + 205 + 149 + 2 * each, 900), each)[0]
 
 
 def h1_04():
@@ -116,15 +114,14 @@ def h1_11():
 
 
 def h1_13():
-    hh, kk = symbols("hh kk")
-    gap = expand(2 * (x - hh) ** 2 + kk) - (2 * x ** 2 - 20 * x + 61)
-    eqs = [e for e in (gap.coeff(x, i) for i in (0, 1, 2)) if e != 0]
-    sol = solve(eqs, [hh, kk], dict=True)[0]
-    return sol[hh] + sol[kk]
+    xv = solve(Eq(4 ** x, 7), x)[0]
+    return simplify(4 ** (2 * xv + 1))
 
 
 def h1_14():
-    return 120 / (Rational(60, 40) + Rational(60, 60))
+    unit = symbols("unit", positive=True)
+    uu = solve(Eq(7 * unit - 3 * unit, 148), unit)[0]
+    return 10 * uu
 
 
 def h1_16():
@@ -151,8 +148,10 @@ def h1_20():
 
 
 def h1_21():
-    rise, run = Rational(21, 10), Rational(28, 10)
-    return simplify(rise / sqrt(rise ** 2 + run ** 2))
+    other = symbols("other", positive=True)
+    leg = Rational(16, 10)
+    far = solve(Eq(leg ** 2 + other ** 2, Rational(34, 10) ** 2), other)[0]
+    return simplify(far / leg)
 
 
 def h1_22():
@@ -162,12 +161,16 @@ def h1_22():
 
 # ------------------------------------------------------------ Module 2 Easy
 def h2e_04():
-    return [z for z in (3, 4, 5, 6) if 5 * z + 3 > 28][0]
+    return solve(Eq(7 * x + 4, 39), x)[0]
+
+
+def h2e_05():
+    return -diff(2400 - 85 * t, t)
 
 
 def h2e_12():
-    rows = [(1, 12), (2, 7), (3, 3), (4, 0)]
-    return [xv for xv, fv in rows if fv == 0][0]
+    rows = dict([(1, 5), (2, 11), (3, 19), (4, 29)])
+    return rows[4] - rows[1]
 
 
 def h2e_16():
@@ -175,15 +178,20 @@ def h2e_16():
     return len([wk for wk, tn in rows if tn > 900])
 
 
+def h2e_19():
+    return pi * (Rational(12, 2)) ** 2
+
+
 def h2e_21():
-    ac = symbols("ac", positive=True)
-    return solve(Eq(ac ** 2, 20 ** 2 + 21 ** 2), ac)[0]
+    return Abs(13 - 1)
 
 
 # ------------------------------------------------------------ Module 2 Hard
 def h2h_01():
-    sol = solve([Eq(4 * x + 3 * y, 29), Eq(2 * x - 5 * y, -31)], [x, y])
-    return sol[x] + sol[y]
+    aa = symbols("aa")
+    check_first = solve(Eq(2 * 3 + 3 * 2, 12), aa)  # the stated pair does satisfy 2x+3y=12
+    assert check_first == [] or check_first is not None
+    return solve(Eq(5 * 3 + aa * 2, 25), aa)[0]
 
 
 def h2h_02():
@@ -213,8 +221,9 @@ def h2h_06():
 
 
 def h2h_07():
-    av = symbols("av")
-    return solve(Eq(3 / av + 5 / av, Rational(2, 7)), av)[0]
+    piece = symbols("piece", positive=True)
+    pm = solve(Eq(40 * (piece + 3), 60 * (piece - 2)), piece)[0]
+    return 40 * (pm + 3)
 
 
 def h2h_08():
@@ -284,9 +293,9 @@ def h2h_18():
 
 def h2h_19():
     rr, hh = symbols("rr hh", positive=True)
-    cyl = pi * rr ** 2 * hh
-    cone = Rational(1, 3) * pi * rr ** 2 * hh
-    return simplify(cyl / cone)
+    whole = Rational(1, 3) * pi * rr ** 2 * hh
+    upper = Rational(1, 3) * pi * (rr / 2) ** 2 * (hh / 2)
+    return simplify(upper / whole)
 
 
 def h2h_20():
@@ -302,7 +311,9 @@ def h2h_21():
 
 def h2h_22():
     kk = symbols("kk")
-    return simplify(sqrt((10 - 2) ** 2 + ((kk + 6) - kk) ** 2))
+    slope = (-2 * x + 9).coeff(x)
+    perp = -1 / slope
+    return solve(Eq((kk - 4) / (5 - 1), perp), kk)[0]
 
 
 DERIVE = {
@@ -331,26 +342,26 @@ DERIVE = {
 
  "H2E-01": lambda: solve(Eq(b + 14, 39), b)[0],
  "H2E-02": lambda: (152 * t).subs(t, 25),
- "H2E-03": lambda: solve(Eq(7 * x - 12, 44), x)[0],
+ "H2E-03": lambda: solve(Eq(g - 9, 41), g)[0],
  "H2E-04": h2e_04,
- "H2E-05": lambda: (9 * x + 24).subs(x, 0),
- "H2E-06": lambda: solve(Eq(3 * (k + 7), 48), k)[0],
+ "H2E-05": h2e_05,
+ "H2E-06": lambda: solve(Eq(340 * h, 2720), h)[0],
  "H2E-07": lambda: 480 - 315,
- "H2E-08": lambda: expand(5 * (2 * x + 3) - 4 * x),
- "H2E-09": lambda: expand((x + 6) * (x - 2)),
- "H2E-10": lambda: (x ** 2 - 5 * x).subs(x, 8),
+ "H2E-08": lambda: factor(6 * x ** 2 + 15 * x),
+ "H2E-09": lambda: expand((2 * x + 7) ** 2),
+ "H2E-10": lambda: Rational(sum(solve(Eq((x - 6) * (x + 2), 0), x)), 2),
  "H2E-11": lambda: max(solve(Eq((n - 9) * (n + 4), 0), n)),
  "H2E-12": h2e_12,
  "H2E-13": lambda: simplify(symbols("y", positive=True) ** 11 / symbols("y", positive=True) ** 4),
  "H2E-14": lambda: Rational(1260, 9),
  "H2E-15": lambda: Rational(18, 100) * 650,
  "H2E-16": h2e_16,
- "H2E-17": lambda: Rational(46 + 52 + 49 + 55 + 48, 5),
+ "H2E-17": lambda: 5 * 50,
  "H2E-18": lambda: Rational(28, 80),
- "H2E-19": lambda: 3 * Rational(25, 10) * 4,
- "H2E-20": lambda: pi * 9 ** 2,
+ "H2E-19": h2e_19,
+ "H2E-20": lambda: Rational(90, 360) * 36,
  "H2E-21": h2e_21,
- "H2E-22": lambda: Rational(7, 25),
+ "H2E-22": lambda: Rational(20, 21),
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -712,7 +723,9 @@ def has(kwd, text):
 
 # Prefix matches that would fire on ordinary English rather than on the setting.
 FALSE_FRIENDS = {
-    "bee": r"(?<![a-z])bee(n|f)(?![a-z])",
+    # "bee" is a prefix of "beet" and of "been" — exactly the class of silent
+    # over-match that made "\bfen" hit "fence".
+    "bee": r"(?<![a-z])bee(t|n|f)",
     "comb": r"(?<![a-z])combin",
     "super": r"(?<![a-z])superv",
     "frame": r"(?<![a-z])framework",

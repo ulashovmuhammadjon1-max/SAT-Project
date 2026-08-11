@@ -207,12 +207,13 @@ MODULE_1 = [
       check="Two right triangles give hypotenuses of 26 and 10 feet, and 26 + 10 = 36."),
 
  dict(n="H1-20", domain="GT", skill="GT-TR", type="MC",
-      stem=("A straight stay 41 feet long runs from a stake in level ground to a point 40 feet up "
-            "a vertical post. What is the sine of the angle the stay makes with the ground?"),
-      choices=["\\(\\frac{40}{41}\\)", "\\(\\frac{40}{9}\\)", "\\(\\frac{9}{41}\\)",
-               "\\(\\frac{9}{40}\\)"], correct="A",
-      check="The side opposite that angle is the 40-foot rise and the hypotenuse is 41, so the "
-            "sine is 40/41."),
+      stem=("A ropewalk's drying frame is braced by a diagonal that turns the frame into a right "
+            "triangle whose legs measure 24 feet and 7 feet. What is the cosine of the angle "
+            "between the 24-foot leg and the diagonal?"),
+      choices=["\\(\\frac{24}{25}\\)", "\\(\\frac{7}{25}\\)", "\\(\\frac{7}{24}\\)",
+               "\\(\\frac{25}{24}\\)"], correct="A",
+      check="The diagonal is the hypotenuse, 25 feet, and the leg adjacent to that angle is 24, "
+            "so the cosine is 24/25."),
 
  dict(n="H1-21", domain="GT", skill="GT-AV", type="MC",
       stem=("Twine is wound onto a bobbin whose barrel is a right circular cylinder 9 centimetres "
@@ -223,13 +224,11 @@ MODULE_1 = [
       check="9(pi)(5^2 - 2^2) = 9(pi)(21) = 189 pi."),
 
  dict(n="H1-22", domain="GT", skill="GT-LA", type="MC",
-      stem=("Two straight rails of a ropewalk are parallel to one another, and a single straight "
-            "stay crosses both of them. The angle the stay makes with the first rail measures "
-            "(4x + 15)&deg;, and the corresponding angle it makes with the second rail measures "
-            "(6x - 25)&deg;. What is the measure, in degrees, of the supplement of that angle?"),
-      choices=["65", "75", "85", "95"], correct="C",
-      check="Corresponding angles are equal, so 4x + 15 = 6x - 25 gives x = 20 and an angle of 95 "
-            "degrees, whose supplement is 85 degrees."),
+      stem=("A hemp-drying trestle is built as an isosceles triangle. Its apex angle measures "
+            "(4x + 2)&deg; and each of its two equal base angles measures (3x - 6)&deg;. What is "
+            "the measure, in degrees, of the apex angle?"),
+      choices=["57", "63", "78", "102"], correct="C",
+      check="(4x+2) + 2(3x-6) = 180 gives 10x = 190 and x = 19, so the apex is 4(19)+2 = 78."),
 ]
 
 # ============================================================== Module 2 (Easy)
@@ -237,10 +236,10 @@ MODULE_1 = [
 # canvas and tarpaulin, rigging and thimbles.
 MODULE_2_EASY = [
  dict(n="H2E-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A net maker uses the equation 8n + 17 = 121 to find the number n of meshes in one row "
-            "of a net. What is the value of n?"),
+      stem=("A rigger cuts a 121-foot coil of line into 8 lanyards of equal length and is left "
+            "with 17 feet of line over. What is the length, in feet, of each lanyard?"),
       choices=["9", "11", "12", "13"], correct="D",
-      check="8n = 104, so n = 13."),
+      check="121 - 17 = 104 feet go into the lanyards, and 104/8 = 13."),
 
  dict(n="H2E-02", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A net maker knots 26 meshes each hour. At that rate, how many meshes does the net "
@@ -256,10 +255,11 @@ MODULE_2_EASY = [
       check="The coefficient of d is the number knotted each day, which is 32."),
 
  dict(n="H2E-04", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("A sailmaker uses the equation 5(t - 3) = 40 to find the number t of tabling strips "
-            "cut from a roll of canvas. What is the value of t?"),
-      answers=["11"],
-      check="t - 3 = 8, so t = 11."),
+      stem=("A tarpaulin costs $7 for each square yard of canvas in it, plus a flat charge of $19 "
+            "for the eyelets. One tarpaulin cost $103 in all. How many square yards of canvas are "
+            "in that tarpaulin?"),
+      answers=["12"],
+      check="7y + 19 = 103 gives 7y = 84 and y = 12."),
 
  dict(n="H2E-05", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A sailmaker will use a needle of gauge w only if \\(4w+5<33\\). Which of the following "
@@ -282,12 +282,15 @@ MODULE_2_EASY = [
       check="(96 - 11)/4 = 21.25, so 21 whole square metres."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to 3(2k + 7) - 5k ?"),
-      choices=["k + 21", "k + 7", "11k + 21", "11k + 7"], correct="A",
-      check="6k + 21 - 5k = k + 21."),
+      stem=("A sail loft writes the number of stitches in a panel as the product "
+            "\\((3m^{2})(4m^{5})\\). Which expression is equivalent to that product?"),
+      choices=["\\(12m^{7}\\)", "\\(7m^{7}\\)", "\\(12m^{10}\\)", "\\(7m^{10}\\)"],
+      correct="A",
+      check="Multiply the coefficients and add the exponents: 12 m^(2+5) = 12 m^7."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to (x + 6)(x + 4) ?"),
+      stem=("A net maker writes the number of meshes in a rectangular panel as the product "
+            "(x + 6)(x + 4). Which expression is equivalent to that product?"),
       choices=["\\(x^{2}+24\\)", "\\(x^{2}+10x+10\\)", "\\(x^{2}+24x+10\\)",
                "\\(x^{2}+10x+24\\)"], correct="D",
       check="x^2 + 4x + 6x + 24 = x^2 + 10x + 24."),
@@ -299,22 +302,24 @@ MODULE_2_EASY = [
       check="The solutions are 9 and -5, and 9 is the positive one."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The table gives four values of x and the corresponding values of the function f. " +
-            table(["x", "f(x)"],
-                  [["1", "15"], ["2", "8"], ["3", "0"], ["4", "-6"]]) +
-            " For which value of x in the table is f(x) equal to 0 ?"),
-      choices=["1", "2", "3", "4"], correct="C",
-      check="The table pairs x = 3 with f(x) = 0."),
+      stem=("The function h gives the number of meshes a net maker has knotted after d days of "
+            "work, where h(d) = 45d + 120. How many meshes has the net maker knotted after 6 "
+            "days?"),
+      choices=["270", "345", "390", "1,110"], correct="C",
+      check="45(6) + 120 = 270 + 120 = 390."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="FR",
-      stem=("The function f is defined by f(x) = 7x - 6. What is the value of f(4)?"),
-      answers=["22"],
-      check="7(4) - 6 = 22."),
+      stem=("A sailmaker works a square patch of side x inches, and the function g given by "
+            "\\(g(x)=x^{2}+2x\\) gives the number of stitches the patch takes. One patch took "
+            "63 stitches. What is the value of x for that patch?"),
+      answers=["7"],
+      check="x^2 + 2x = 63 gives (x+9)(x-7) = 0, and only x = 7 is a possible side length."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("For y > 0, which expression is equivalent to \\(\\frac{y^{11}}{y^{4}}\\)?"),
-      choices=["\\(y^{3}\\)", "\\(y^{7}\\)", "\\(y^{15}\\)", "\\(y^{44}\\)"], correct="B",
-      check="Subtracting exponents gives y^(11-4) = y^7."),
+      stem=("A canvas merchant writes the cost of a bolt as 12x + 30 dollars. Which expression is "
+            "equivalent to that cost?"),
+      choices=["3(4x + 15)", "6(2x + 5)", "6(2x + 30)", "12(x + 30)"], correct="B",
+      check="6 is the greatest common factor of 12 and 30, and 12x + 30 = 6(2x + 5)."),
 
  dict(n="H2E-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A net contains 96 meshes arranged in 8 rows, with the same number of meshes in each "
@@ -337,35 +342,38 @@ MODULE_2_EASY = [
       check="51 is the greatest of the four counts, and it belongs to Kingsdown."),
 
  dict(n="H2E-17", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("A sailmaker measured the width, in inches, of five strips of canvas: 14, 18, 11, 20, "
-            "and 17. What is the mean of these five widths?"),
-      choices=["13", "14", "15", "16"], correct="D",
-      check="The five widths total 80, and 80/5 = 16."),
+      stem=("A sailmaker counted the cringles worked into each of seven covers and recorded 6, 9, "
+            "4, 9, 7, 9, and 5. What is the mode of these seven counts?"),
+      choices=["7", "9", "5", "4"], correct="B",
+      check="9 appears three times, more often than any other count."),
 
  dict(n="H2E-18", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("A box holds 45 sail needles, and 18 of them are bone. One needle is drawn from the "
-            "box at random. What is the probability that the needle drawn is bone?"),
-      choices=["\\(\\frac{2}{5}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{2}{9}\\)",
-               "\\(\\frac{18}{27}\\)"], correct="A",
-      check="18/45 = 2/5."),
+      stem=("A sailmaker's case holds 8 steel needles and 12 bone needles and no others. One "
+            "needle is taken from the case at random. What is the probability that the needle "
+            "taken is bone?"),
+      choices=["\\(\\frac{2}{5}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{2}{3}\\)",
+               "\\(\\frac{3}{8}\\)"], correct="B",
+      check="There are 20 needles in all and 12 of them are bone, so 12/20 = 3/5."),
 
  dict(n="H2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A tarpaulin is a rectangle 14 feet long and 9 feet wide. What is its area, in square "
-            "feet?"),
-      choices=["23", "46", "126", "252"], correct="C",
-      check="14(9) = 126."),
+      stem=("A triangular storm sail has sides measuring 13 feet, 14 feet, and 15 feet. What is "
+            "the perimeter, in feet, of the sail?"),
+      choices=["27", "29", "42", "84"], correct="C",
+      check="13 + 14 + 15 = 42."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A net is stowed in a chest in the shape of a rectangular box 4 feet long, 3 feet "
-            "wide, and 2 feet deep. What is the volume of the chest, in cubic feet?"),
-      answers=["24"],
-      check="4(3)(2) = 24."),
+      stem=("A tarpaulin is cut as a trapezoid whose two parallel edges measure 10 feet and 14 "
+            "feet and whose height is 6 feet. What is the area, in square feet, of the "
+            "tarpaulin?"),
+      answers=["72"],
+      check="Half of (10 + 14) is 12, and 12(6) = 72."),
 
  dict(n="H2E-21", domain="GT", skill="GT-LA", type="MC",
-      stem=("A triangular sail has one corner measuring 38&deg; and a second corner measuring "
-            "64&deg; . What is the measure, in degrees, of the third corner?"),
-      choices=["78", "82", "102", "116"], correct="A",
-      check="180 - 38 - 64 = 78."),
+      stem=("Two straight ropes cross each other at a single point, forming four angles. One of "
+            "those four angles measures 118&deg;. What is the measure, in degrees, of the angle "
+            "vertically opposite it?"),
+      choices=["62", "72", "118", "152"], correct="C",
+      check="Vertically opposite angles are equal, so the angle measures 118 degrees."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("A right triangular sail has legs of length 8 feet and 15 feet and a hypotenuse of "
@@ -382,11 +390,11 @@ MODULE_2_EASY = [
 # blocks and thimbles, net making.
 MODULE_2_HARD = [
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("In the system of equations below, a is a constant.<br/>ax + 6y = 15<br/>4x + 3y = 9"
-            "<br/>If the system has no solution, what is the value of a ?"),
-      choices=["-8", "2", "4", "8"], correct="D",
-      check="No solution needs equal coefficient ratios with unequal constants: a/4 = 6/3 gives "
-            "a = 8, and 15/9 is not 2."),
+      stem=("One rope in a sail loft is 3 times as long as a second rope. When 8 feet is cut from "
+            "each of the two ropes, the piece left from the first is 5 times as long as the piece "
+            "left from the second. How many feet long was the first rope before the cutting?"),
+      choices=["16", "24", "40", "48"], correct="D",
+      check="3s - 8 = 5(s - 8) gives 2s = 32 and s = 16, so the first rope was 48 feet."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LF", type="MC",
       stem=("In a sail loft's cutting plan, a straight edge passes through the points (-2, 11) and "
@@ -426,13 +434,10 @@ MODULE_2_HARD = [
             "33.7."),
 
  dict(n="H2H-07", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A rigger buys blocks and thimbles, paying the same price for every block and the same "
-            "price for every thimble. An order of 5 blocks and 8 thimbles costs $137, and an order "
-            "of 8 blocks and 5 thimbles costs $149. What is the total cost, in dollars, of one "
-            "block together with one thimble?"),
-      choices=["22", "24", "26", "44"], correct="A",
-      check="Adding the two orders gives 13 blocks and 13 thimbles for $286, so one of each is "
-            "286/13 = 22."),
+      stem=("In the system of equations below, k is a constant.<br/>4x + 3y = k<br/>x - y = 2"
+            "<br/>The solution to the system has y = 6. What is the value of k ?"),
+      choices=["32", "44", "50", "56"], correct="C",
+      check="y = 6 gives x = 8, and 4(8) + 3(6) = 50."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The functions f and g satisfy f(x) = 2x + 7 and f(g(x)) = 6x - 1 for every value of "
@@ -501,11 +506,11 @@ MODULE_2_HARD = [
             "27/43."),
 
  dict(n="H2H-17", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A second rectangular sail is cut so that its length is 20 percent greater than the "
-            "length of a first sail and its width is 15 percent less than the width of the first "
-            "sail. The area of the second sail is what percent of the area of the first sail?"),
-      choices=["95", "98", "102", "105"], correct="C",
-      check="1.20(0.85) = 1.02, which is 102 percent."),
+      stem=("The number of days needed to rig a set of shrouds varies inversely with the number of "
+            "riggers put on the work. Six riggers would finish the work in 15 days. How many "
+            "riggers are needed to finish the same work in 9 days?"),
+      choices=["5", "9", "10", "12"], correct="C",
+      check="6(15) = 90 rigger-days, and 90/9 = 10 riggers."),
 
  dict(n="H2H-18", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the finished length L, in inches, of a seam sewn with n stitches, for "
@@ -526,11 +531,11 @@ MODULE_2_HARD = [
       check="The volume scales by 2^2 for the radius and by 1/3 for the length, giving 4/3."),
 
  dict(n="H2H-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC, point D lies on side AB and point E lies on side AC, and segment DE "
-            "is parallel to side BC. The length of AD is 6, the length of DB is 9, and the length "
-            "of DE is 8. What is the length of BC ?"),
-      choices=["12", "16", "20", "24"], correct="C",
-      check="AB/AD = 15/6 = 2.5, and the triangles are similar, so BC = 2.5(8) = 20."),
+      stem=("A four-sided canvas cover is cut so that the measures of its four angles are in the "
+            "ratio 2 to 3 to 4 to 6. What is the measure, in degrees, of its largest angle?"),
+      choices=["96", "120", "144", "160"], correct="C",
+      check="The four angles total 360 degrees over 15 equal parts, so one part is 24 and the "
+            "largest is 6(24) = 144."),
 
  dict(n="H2H-21", domain="GT", skill="GT-TR", type="MC",
       stem=("A straight stay makes an acute angle \\(\\theta\\) with level ground, and "

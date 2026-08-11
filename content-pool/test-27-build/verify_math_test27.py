@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Verify the 66 originally-authored Math questions for Test 23.
+Verify the 66 originally-authored Math questions for Test 27.
 
 Four passes, because each has caught a different class of defect in earlier
 builds:
@@ -9,42 +9,36 @@ builds:
     off the `check` note. A wrong `check` and a wrong key agree with each
     other; only an independent derivation catches that. The pass also asserts
     that no distractor equals the derived value. Anything genuinely outside
-    sympy's reach would go in MANUAL with a written justification — Test 23
-    has none: every answer is a value, an algebraic form, an equation built
-    out of sympy-computed coefficients, or a named table row selected by a
-    comparison over the printed data.
- 2. House style on the final HTML — the Test 1/2 rules in CLAUDE.md plus the
-    DB-wide rendering checks (no bare `^`, `sqrt(`, `*`-as-multiply, slash
-    fractions, ASCII comparison operators or LaTeX macros outside a math
-    span). `<img>` tags are stripped first; a base64 payload matches every
-    pattern below.
- 3. Template dedupe against every Math stem live in production. 0.75 fails
-    outright, and every match at or above 0.45 is PRINTED so the nearest
-    banked stem can be read and judged: across Tests 18-21, 57 genuine
-    template repeats were found and all but three scored below 0.75. The
-    threshold decides what to read, not what to accept.
- 4. Self-collision among Test 23's own 66 stems, plus the cross-module setting
-    check — a student sees Module 1 and exactly one Module 2 branch, so no
-    setting keyword may appear in both.
+    sympy's reach goes in MANUAL with a written justification.
+ 2. House style is enforced on the final HTML — the Test 1/2 rules in
+    CLAUDE.md, plus the DB-wide rendering checks (no bare `^`, `sqrt(`,
+    `*`-as-multiply, slash fractions, ASCII comparison operators or LaTeX
+    macros outside a math span).
+ 3. Template dedupe against every Math stem live in production. NOTE: this
+    reads the ROOT corpus ../prod_math_stems.json (1,386 stems), not a copy
+    inside this directory. 0.75 fails outright, and every match at or above
+    0.45 is printed so the nearest banked stem can actually be READ — the
+    Test 18-21 finding is that a threshold decides what to read, not what to
+    accept: 57 genuine template repeats across those four builds all but three
+    scored BELOW 0.75.
+ 4. Self-collision among Test 27's own 66 stems, plus a setting check: a
+    student sees Module 1 and one Module 2 branch, so no setting keyword may
+    appear in both Module 1 and a Module 2 module.
 
-Run:  python3 verify_math_test23.py
-      (no DATABASE_URL needed — pass 3 reads ../prod_math_stems.json, the
-      snapshot of the 1,386 Math stems live in production; note it is the
-      corpus at the content-pool ROOT, not a local copy)
+Run:  python3 verify_math_test27.py
 """
 import json
 import os
 import re
-import sys
-from collections import Counter
 
-from sympy import (Abs, Eq, Rational, asin, ceiling, floor, cancel, diff,
-                   expand, latex, log, pi, simplify, sin, cos, solve, sqrt,
-                   symbols, sympify, tan, together)
+from sympy import (Abs, Eq, Rational, atan, ceiling, floor, cancel, expand,
+                   factor, nsimplify, pi, simplify, sin, solve, sqrt, symbols,
+                   sympify, together)
 
-from math_test23 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
+from math_test27 import MODULE_1, MODULE_2_EASY, MODULE_2_HARD, ALL
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
 
 # Symbols. Never name one S, E, I, N, O, Q, beta, gamma or zeta and then hand
 # it to sympify bare: sympify("S") returns the SingletonRegistry and the
@@ -56,7 +50,7 @@ a, b, g, r, s, u, v, p, q = symbols("a b g r s u v p q")
 BASE_LOCALS = {ch: symbols(ch) for ch in
                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"}
 POS_LOCALS = dict(BASE_LOCALS)
-POS_LOCALS.update({nm: symbols(nm, positive=True) for nm in ("a", "b", "u", "v", "x", "y")})
+POS_LOCALS.update({nm: symbols(nm, positive=True) for nm in ("a", "b", "n", "x", "y")})
 
 FAIL = []
 
@@ -68,239 +62,232 @@ def check(cond, msg):
 
 # ---------------------------------------------------------------- derivations
 def h1_01():
-    lift = symbols("lift")
-    base = solve(Eq(12 * lift + 4 * (lift + 2), 72), lift)[0]
-    return base + 2
+    west = symbols("west")
+    wv = solve(Eq(west + (2 * west + 260), 4160), west)[0]
+    return 2 * wv + 260
 
 
 def h1_02():
-    days = symbols("days")
-    return solve(Eq(18 * 210 + 90 * days, 4500), days)[0]
+    blocks = symbols("blocks")
+    return solve(Eq(48 + Rational(60, 100) * blocks, Rational(135, 100) * blocks), blocks)[0]
 
 
 def h1_03():
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(2 * slope + inter, 31), Eq(5 * slope + inter, 43)], [slope, inter])
-    return sol[inter]
+    days = symbols("days")
+    return solve(Eq(18 * days + 40, 24 * days + 16), days)[0]
 
 
 def h1_04():
-    ok = [i for i in range(0, 60)
-          if Rational(120, 100) <= Rational(162, 100) - Rational(4, 100) * i <= Rational(150, 100)]
-    return max(ok)
+    rate = symbols("rate")
+    # 186 tonnes on day 8, 132 on day 26
+    rv = solve(Eq(186 + rate * (26 - 8), 132), rate)[0]
+    return solve(Eq(186 + rv * (d - 8), 0), d)[0]
 
 
 def h1_05():
-    short = symbols("short")
-    sv = solve(Eq(short + (short + 400) + 2 * short, 6000), short)[0]
-    return 2 * sv
+    bu = symbols("bu")
+    exact = solve(Eq(Rational(240, 100) * bu - (560 + Rational(35, 100) * bu), 900), bu)[0]
+    return ceiling(exact)
 
 
 def h1_06():
-    rate, fixed, vol = symbols("rate fixed vol")
-    sol = solve([Eq(900 * rate + fixed, 6150), Eq(1500 * rate + fixed, 9750)], [rate, fixed])
-    return solve(Eq(sol[rate] * vol + sol[fixed], 10950), vol)[0]
+    wk = symbols("wk")
+    exact = solve(Eq(310 - Rational(46, 10) * wk, Rational(15, 100) * 310), wk)[0]
+    return ceiling(exact)
 
 
 def h1_07():
-    roots = solve(Eq(-Rational(5, 100) * (t - 14) ** 2 + Rational(32, 10), 3), t)
-    return max(roots) - min(roots)
-
-
-def h1_08():
-    return solve(Eq(180 * Rational(1, 2) ** (t / 9), Rational(45, 2)), t)[0]
+    large = symbols("large")
+    return solve(Eq(42 * large + 26 * (96 - large), 3232), large)[0]
 
 
 def h1_09():
-    return solve(Eq(v, sqrt(2 * g * h)), h)[0]
+    npos = symbols("n", positive=True)
+    return simplify((8 * npos ** 6 / 27) ** Rational(2, 3))
 
 
 def h1_10():
-    return [z for z in solve(Eq(d ** 2 + 6 * d, 91), d) if z > 0][0]
+    return [z for z in solve(Eq(h ** 2 - 18 * h + 96, 24), h) if 0 <= z <= 9][0]
 
 
 def h1_11():
-    av, bv = symbols("av bv")
-    sol = solve([Eq(av - bv, 7), Eq(av + bv, 13)], [av, bv])
-    return simplify(sol[av] ** 2 - sol[bv] ** 2)
+    model = lambda wk: 240 * Rational(3, 4) ** wk
+    return model(1) - model(2)
 
 
 def h1_12():
-    hours = symbols("hours")
-    return solve(Eq(480 * hours, 2400 * 12 * Rational(15, 100)), hours)[0]
+    dep = symbols("dep", positive=True)
+    return solve(Eq(9 * sqrt(dep), 63), dep)[0]
 
 
 def h1_13():
-    return Rational(40 * Rational(115, 10) + (24 - 4) + (31 - 1), 40)
+    lo, hi = sorted(solve(Eq(-s ** 2 + 22 * s - 40, 0), s))
+    return max(i for i in range(-50, 200) if lo < i < hi)
 
 
 def h1_14():
-    rows = [("Ashby Cut", 1344, 28), ("Brindle Reach", 1530, 34),
-            ("Croxall Reach", 2014, 38), ("Dunwater Cut", 1196, 26)]
-    return max(rows, key=lambda row: Rational(row[1], row[2]))[0]
+    rows = [("Ashwell", 480, 396), ("Barrow", 350, 301),
+            ("Cranford", 620, 496), ("Deeping", 540, 459)]
+    return max(rows, key=lambda row: Rational(row[1] - row[2], row[1]))[0]
 
 
 def h1_15():
-    return Rational(36, 36 + 15)
+    rows = [(14, 5), (15, 9), (16, 12), (17, 8), (18, 7)]
+    vals = [thick for thick, days in rows for _ in range(days)]
+    assert len(vals) % 2 == 1
+    return vals[len(vals) // 2]
 
 
 def h1_16():
-    rows = [(20, 5), (25, 12), (30, 9), (35, 4)]
-    return Rational(sum(val * cnt for val, cnt in rows), sum(cnt for _, cnt in rows))
-
-
-def h1_17():
-    apex = symbols("apex")
-    return solve(Eq(apex + 18 + 18, 180), apex)[0]
-
-
-def h1_18():
-    return pi * 1 ** 2 * 45
+    block = Rational(5, 10) * Rational(4, 10) * Rational(3, 10) * 920
+    return floor(1150 / block)
 
 
 def h1_19():
-    run, rise = Rational(56, 10), Rational(42, 10)
-    return simplify(run / sqrt(run ** 2 + rise ** 2))
+    dep = symbols("dep")
+    return solve(Eq(Rational(45, 10) * Rational(32, 10) * dep, Rational(216, 100)), dep)[0]
 
 
 def h1_20():
-    spring = symbols("spring")
-    sv = solve(Eq(spring + (spring + 250), 800), spring)[0]
-    return sv + 250
-
-
-def h1_21():
-    return [z for z in solve(Eq(5400 - 2 * t ** 2 - 40 * t, 4800), t) if z > 0][0]
+    return sqrt(16 ** 2 + Rational(16, 2) ** 2)
 
 
 def h1_22():
-    return Rational(35, 10) * Rational(12, 10) * Rational(5, 10) * 60
+    return simplify(sin(atan(Rational(7, 24))))
 
 
-def h2e_03():
-    dd, hh = symbols("dd hh")
-    expr = solve(Eq(dd, 4 * hh), dd)[0]          # 4*hh
-    return "d = " + str(expr).replace("*", "").replace("hh", "h")
-
-
-def h2e_04():
-    room = symbols("room")
-    bound = solve(Eq(17 + room, 26), room)[0]
-    return "\\(t \\le " + str(bound) + "\\)"
-
-
-def h2e_09():
-    side = symbols("side", positive=True)
-    return solve(Eq(side ** 2, 196), side)[0]
+def h2e_02():
+    boxes = symbols("boxes")
+    return solve(Eq(8 * boxes + 4, 236), boxes)[0]
 
 
 def h2e_11():
-    return simplify((8 * t + 20) / 4)
+    xr = symbols("xr", real=True)
+    return [z for z in solve(Eq(xr ** 3, 125), xr) if z.is_real][0]
 
 
 def h2e_13():
-    tolls = [34, 47, 12, 29, 41, 22, 38]
-    return max(tolls) - min(tolls)
+    return factor(4 * y ** 2 - 36)
 
 
-def h2e_19():
-    # the component along the canal is the pull times the cosine of the angle
-    return 400 * Rational(94, 100)
+def h2e_14():
+    rows = [("Fennhaven", 2140), ("Garrow", 3480), ("Halden", 2905), ("Ivory Quay", 3260)]
+    return max(rows, key=lambda row: row[1])[0]
+
+
+def h2e_20():
+    nn = symbols("nn")
+    return solve(Eq(3 * nn + 4 * nn + 5 * nn, 180), nn)[0]
 
 
 def h2h_01():
-    tons = symbols("tons")
-    return solve(Eq(3 * 20 + 2 * (tons - 20), 94), tons)[0]
+    yv = solve(Eq(3 * 3 - 2 * y, 5), y)[0]
+    av = symbols("av")
+    return solve(Eq(av * 3 + 4 * yv, 26), av)[0]
 
 
 def h2h_02():
-    sol = solve([Eq(3 * x + 2 * y, 19), Eq(5 * x - 4 * y, 17)], [x, y])
-    return sol[x] + sol[y]
+    return n * t + (n - 1) * c
 
 
 def h2h_03():
-    tons = symbols("tons")
-    return solve(Eq(40 + 7 * tons, 96 + 3 * tons), tons)[0]
+    large, small = symbols("large small")
+    return solve([Eq(large + small, 348),
+                  Eq((large - 40) - (small + 40), 26)], [large, small])[large]
 
 
 def h2h_04():
-    return max(i for i in range(-50, 50) if 5 - 2 * i >= 3 * (i - 4))
+    apos = symbols("a", positive=True)
+    slope = (11 * apos - 3 * apos) / (3 * apos - apos)
+    inter = symbols("inter")
+    return simplify(solve(Eq(3 * apos, slope * apos + inter), inter)[0])
 
 
 def h2h_05():
-    kv = symbols("kv")
-    return solve(Eq(expand(3 * (2 * x - 5) + kv - (6 * x + 7)), 0), kv)[0]
+    mm = symbols("mm", real=True)
+    lo, hi = sorted(solve(Eq(Abs(mm - 38), Rational(5, 2)), mm))
+    return "\\(%s\\le m\\le %s\\)" % (float(lo), float(hi))
 
 
 def h2h_06():
-    load = symbols("load")
-    return solve(Eq(d, 46 + Rational(3, 5) * load), load)[0]
+    slope = Rational(17 - 5, 4 - 1)
+    inter = -5          # the line passes through (0, -5)
+    return slope + inter
 
 
 def h2h_07():
-    fx = (x + 5) / 2
-    return simplify(fx.subs(x, 4 * x - 3))
+    mack = symbols("mack")
+    exact = solve(Eq(Rational(4, 10) * 300 + Rational(7, 10) * mack, 280), mack)[0]
+    return floor(exact)
 
 
 def h2h_08():
-    xv = solve(Eq(x + 1 / x, 5), x)[0]
-    return simplify(xv ** 2 + 1 / xv ** 2)
+    apos = symbols("ap", positive=True)
+    av = solve(Eq(2 * apos ** 2 - 5, 45), apos)[0]
+    return 2 * (2 * av) ** 2 - 5
 
 
 def h2h_09():
-    return cancel((6 * x ** 2 - x - 15) / (2 * x + 3))
+    bb, cc = 14, 58
+    return (x + Rational(bb, 2)) ** 2 + (cc - Rational(bb, 2) ** 2)
 
 
 def h2h_10():
-    return (1 - Rational(85, 100) ** 2) * 100
+    kk = symbols("kk", positive=True)
+    # the square of a binomial <=> the discriminant vanishes
+    return solve(Eq(kk ** 2 - 4 * 4 * 49, 0), kk)[0]
 
 
 def h2h_11():
-    up, vp = symbols("u v", positive=True)
-    return together(1 / up - 1 / vp)
+    return simplify(3 ** Rational(20, 5))
+
+
+def h2h_12():
+    xp = symbols("xp", positive=True)
+    vals = {simplify(z + 1 / z) for z in solve(Eq(xp ** 2 + 1 / xp ** 2, 23), xp)
+            if z.is_real and z > 0}
+    assert len(vals) == 1, vals
+    return vals.pop()
 
 
 def h2h_13():
-    per_barge = Rational(4 * 9, 6)
-    return per_barge * 10 / 6
+    lo, hi = sorted(solve(Eq(-3 * x ** 2 + 42 * x - 135, 0), x))
+    return hi - lo
+
+
+def h2h_14():
+    ww = symbols("ww")
+    return solve(Eq(45 * Rational(42, 10) + 6 * ww,
+                    Rational(45, 10) * (45 + ww)), ww)[0]
 
 
 def h2h_15():
-    mass = symbols("mass")
-    return solve(Eq(Rational(40, 100) * mass, Rational(25, 100) * (mass + 6)), mass)[0]
+    per_rack = Rational(45, 3)
+    return Rational(1200, 1) / (per_rack * 5)
 
 
 def h2h_16():
-    vals = [12] * 4 + [15] * 7 + [18] * 6 + [20] * 3
-    vals.sort()
-    return Rational(vals[9] + vals[10], 2)
-
-
-def h2h_18():
-    rad = symbols("rad", positive=True)
-    rv = solve(Eq(pi * rad ** 2, 400 * pi), rad)[0]
-    return 2 * rv - 21
-
-
-def h2h_19():
-    ang_a = asin(Rational(5, 13))
-    return simplify(tan(pi / 2 - ang_a))
+    rows = [("3.0 to 3.4", 12), ("3.5 to 3.9", 23), ("4.0 to 4.4", 31), ("4.5 to 4.9", 14)]
+    vals = [name for name, cnt in rows for _ in range(cnt)]
+    lo, hi = vals[len(vals) // 2 - 1], vals[len(vals) // 2]
+    assert lo == hi, (lo, hi)
+    return lo
 
 
 def h2h_20():
-    load = symbols("load")
-    return solve(Eq(Rational(5, 4) * (load + 8), 60), load)[0]
+    # right triangle with legs 12 and 5 -> hypotenuse 13, area 30
+    hyp = sqrt(12 ** 2 + 5 ** 2)
+    ratio = Rational(39, 1) / hyp
+    return Rational(1, 2) * 12 * 5 * ratio ** 2
 
 
 def h2h_21():
-    xp, yp = symbols("xp yp", positive=True)
-    sol = solve([Eq(xp ** 2 + yp ** 2, 58), Eq(xp * yp, 21)], [xp, yp])
-    return simplify(sol[0][0] + sol[0][1])
+    return 12 * 7 * 3 - 4 * (Rational(1, 2) * Rational(1, 2) * 3)
 
 
 def h2h_22():
-    ht = symbols("ht", positive=True)
-    return solve(Eq(pi * 2 ** 2 * 9, pi * 3 ** 2 * ht), ht)[0]
+    bc = symbols("bc", positive=True)
+    return simplify(bc / (3 * bc))
 
 
 DERIVE = {
@@ -311,7 +298,7 @@ DERIVE = {
  "H1-05": h1_05,
  "H1-06": h1_06,
  "H1-07": h1_07,
- "H1-08": h1_08,
+ "H1-08": lambda: expand((5 * p + 6) * (2 * p - 3)),
  "H1-09": h1_09,
  "H1-10": h1_10,
  "H1-11": h1_11,
@@ -320,35 +307,34 @@ DERIVE = {
  "H1-14": h1_14,
  "H1-15": h1_15,
  "H1-16": h1_16,
- "H1-17": h1_17,
- "H1-18": h1_18,
+ "H1-17": lambda: Rational(168, 210),
+ "H1-18": lambda: Rational(46000 * 1840, 1472),
  "H1-19": h1_19,
  "H1-20": h1_20,
- "H1-21": h1_21,
+ "H1-21": lambda: Rational(6 * 45 * 4, 10 * 10) / Rational(9, 10),
  "H1-22": h1_22,
 
- "H2E-01": lambda: solve(Eq(8 * t + 45, 165), t)[0],
- "H2E-02": lambda: solve(Eq(m + 3 * m, 48), m)[0],
- "H2E-03": h2e_03,
- "H2E-04": h2e_04,
- "H2E-05": lambda: (3 * t + 11).subs(t, 0),
- "H2E-06": lambda: solve(Eq(5 * b - 12, 43), b)[0],
- "H2E-07": lambda: expand(4 * (2 * t + 5) - 3 * t),
- "H2E-08": lambda: (120 - 8 * n).subs(n, 9),
- "H2E-09": h2e_09,
- "H2E-10": lambda: 6 * (g + h),
+ "H2E-01": lambda: 340 - 12 * 9,
+ "H2E-02": h2e_02,
+ "H2E-03": lambda: Rational(153, 9),
+ "H2E-04": lambda: Rational(46, 10) - Rational(5, 100) * 12,
+ "H2E-06": lambda: floor(Rational(45, 3)),
+ "H2E-07": lambda: 7 * 22 + 40,
+ "H2E-08": lambda: factor(15 * p + 35),
+ "H2E-09": lambda: simplify(sqrt(81 * symbols("b", positive=True) ** 4)),
+ "H2E-10": lambda: Rational(120, 8),
  "H2E-11": h2e_11,
- "H2E-12": lambda: Rational(25, 100) * 32,
+ "H2E-12": lambda: Rational(200, 7 + 3),
  "H2E-13": h2e_13,
- "H2E-14": lambda: 815 - 470,
- "H2E-15": lambda: Rational(141, 3),
- "H2E-16": lambda: Rational(24, 60),
- "H2E-17": lambda: 18 * 2 * Rational(15, 10),
- "H2E-18": lambda: Rational(180 - 40, 2),
- "H2E-19": h2e_19,
- "H2E-20": lambda: solve(Eq(4 * t, 92), t)[0],
- "H2E-21": lambda: solve(Eq(4 ** x, 64), x)[0],
- "H2E-22": lambda: 2 * (26 + 14),
+ "H2E-14": h2e_14,
+ "H2E-15": lambda: Rational(12, 60) * 100,
+ "H2E-16": lambda: Rational(25, 10) * 14,
+ "H2E-17": lambda: Rational(36, 36 + 27 + 17),
+ "H2E-18": lambda: 46 + 38 + 52 + 29,
+ "H2E-19": lambda: Rational(1, 2) * 4 * Rational(15, 10) * 6,
+ "H2E-20": h2e_20,
+ "H2E-21": lambda: Rational(9, 10) ** 2 * 7,
+ "H2E-22": lambda: 18 * sin(pi / 6),
 
  "H2H-01": h2h_01,
  "H2H-02": h2h_02,
@@ -361,86 +347,97 @@ DERIVE = {
  "H2H-09": h2h_09,
  "H2H-10": h2h_10,
  "H2H-11": h2h_11,
- "H2H-12": lambda: Rational(18, 80) * 1200,
+ "H2H-12": h2h_12,
  "H2H-13": h2h_13,
- "H2H-14": lambda: Rational(45, 45 + 30) * 100,
+ "H2H-14": h2h_14,
  "H2H-15": h2h_15,
  "H2H-16": h2h_16,
- "H2H-17": lambda: 96 * Rational(15, 10) ** 3,
- "H2H-18": h2h_18,
- "H2H-19": h2h_19,
+ "H2H-17": lambda: Rational(84, 120),
+ "H2H-18": lambda: 5 * solve(Eq(4 * 5 * k, 5 * (3 * k + 48)), k)[0],
+ "H2H-19": lambda: pi * 60 * 100,
  "H2H-20": h2h_20,
  "H2H-21": h2h_21,
  "H2H-22": h2h_22,
 }
 
-# Nothing in Test 23 resists a symbolic derivation, so MANUAL is empty and
-# pass 1 covers all 66. (An item that did would be listed here with a written
-# justification, not quietly skipped.)
-MANUAL = {}
+# The one item whose answer is a sentence rather than a value. sympy still does
+# the arithmetic that decides it — 6r + 24 evaluated at r = 0 is 24, so the
+# constant term is the count with no extra rail fitted — but choosing which of
+# four English sentences says that is a reading judgement, not a computation,
+# so it is recorded here rather than pretended into pass 1.
+MANUAL = {
+ "H2E-05": ("Interpretation of the constant term of 6r + 24. sympy confirms "
+            "(6*r + 24).subs(r, 0) == 24 and that the coefficient of r is 6, which "
+            "makes 24 the number hung before any extra rail is fitted and 6 the "
+            "number each rail adds; matching that to the keyed sentence is a "
+            "reading step. Verified below by an explicit substitution check."),
+}
 
-FUNCS = ("sqrt", "sin", "cos", "tan", "log", "ln", "pi", "Abs")
+
+def manual_h2e_05():
+    """The arithmetic behind the keyed interpretation, done by sympy."""
+    rr = symbols("rr")
+    expr = 6 * rr + 24
+    check(expr.subs(rr, 0) == 24, "H2E-05: constant term is not 24")
+    check(expr.coeff(rr) == 6, "H2E-05: coefficient of r is not 6")
+    q = [z for z in ALL if z["n"] == "H2E-05"][0]
+    keyed = q["choices"]["ABCD".index(q["correct"])]
+    check("before any extra rail" in keyed,
+          f"H2E-05: keyed choice is not the constant-term reading: {keyed!r}")
 
 
-def _split_letter_runs(text):
-    """Turn a surviving multi-letter run into an implicit product.
+FUNCTION_NAMES = {"sqrt", "pi", "sin", "cos", "tan", "log", "ln", "exp", "Abs"}
 
-    Without this `\\frac{v-u}{uv}` parses as a symbol literally named "uv" and
-    the comparison silently fails to match a correct key. Known function and
-    constant names are protected first, or "sqrt" would become s*q*r*t.
+
+def split_runs(text):
+    """Split a run of two or more letters into an implicit product.
+
+    Without this `\\frac{uv}{u+v}` parses as a symbol named `uv` and the key
+    silently fails to match — the failure mode recorded in CLAUDE.md. Function
+    and constant names are exempt, or `sqrt` becomes s*q*r*t.
     """
-    out, i = [], 0
-    while i < len(text):
-        for fn in FUNCS:
-            if text.startswith(fn, i) and not (i and text[i - 1].isalpha()):
-                out.append(fn)
-                i += len(fn)
-                break
-        else:
-            mm = re.match(r"[A-Za-z]{2,}", text[i:])
-            if mm:
-                out.append("*".join(mm.group(0)))
-                i += len(mm.group(0))
-            else:
-                out.append(text[i])
-                i += 1
-    return "".join(out)
+    def repl(mo):
+        run = mo.group(0)
+        if run in FUNCTION_NAMES:
+            return run
+        return "*".join(run)
+    return re.sub(r"[A-Za-z]{2,}", repl, text)
 
 
 def latex_to_expr(text):
     """Turn one answer choice into something sympify can read."""
-    tt = text.replace("&deg;", "").replace("&gt;", ">").replace("&lt;", "<")
-    tt = re.sub(r"\\left|\\right", "", tt)
-    tt = re.sub(r"\\\((.*?)\\\)", r"\1", tt, flags=re.S)
-    # The rewrite order cannot be fixed by choosing an order: a fraction can sit
-    # inside an exponent (a^{\frac{7}{12}}) as readily as an exponent inside a
-    # fraction (\frac{4a^{3}}{b^{4}}), and either fixed order fails one of them.
-    # Alternate the two rewrites until nothing changes.
-    for _ in range(12):
-        before = tt
-        tt = re.sub(r"\^\{([^{}]*)\}", r"**(\1)", tt)
-        tt = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"((\1)/(\2))", tt)
-        tt = re.sub(r"_\{([^{}]*)\}", r"\1", tt)
-        if tt == before:
+    t = text.replace("&deg;", "").replace("&gt;", ">").replace("&lt;", "<")
+    t = re.sub(r"\\left|\\right", "", t)
+    t = re.sub(r"\\\((.*?)\\\)", r"\1", t, flags=re.S)
+    # Exponents and fractions nest either way round — a fraction can sit inside
+    # an exponent as readily as an exponent inside a fraction — so neither
+    # rewrite can simply go first. Alternate them to a fixed point.
+    for _ in range(6):
+        before = t
+        t = re.sub(r"\^\{([^{}]*)\}", r"**(\1)", t)
+        t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"((\1)/(\2))", t)
+        if t == before:
             break
-    tt = tt.replace("^{\\circ}", "").replace("\\circ", "")
-    tt = tt.replace("\\pi", "pi").replace("\\cdot", "*").replace("\\sqrt", "sqrt")
-    tt = tt.replace("{,}", "").replace(",", "").replace("$", "").replace("%", "")
-    tt = tt.replace("^", "**").replace("{", "(").replace("}", ")")
-    tt = _split_letter_runs(tt)
+    t = t.replace("\\pi", "pi").replace("\\cdot", "*").replace("\\sqrt", "sqrt")
+    t = t.replace("\\le", "<=").replace("\\ge", ">=").replace("\\ne", "!=")
+    t = t.replace("{,}", "").replace(",", "").replace("$", "").replace("%", "")
+    t = t.replace("^", "**").replace("{", "(").replace("}", ")")
+    t = split_runs(t)
     # implicit multiplication: after a digit, after a closing paren, and after a
     # lone symbol — \(x(x+7)\) parses to nonsense without the last of the three,
     # and the lookbehind keeps sqrt( / cos( from being mangled.
-    tt = re.sub(r"(\d)\s*([a-zA-Z(])", r"\1*\2", tt)
-    tt = re.sub(r"\)\s*\(", ")*(", tt)
-    tt = re.sub(r"(?<![a-zA-Z])([a-zA-Z])\s*\(", r"\1*(", tt)
-    return tt.strip()
+    t = re.sub(r"(\d)\s*([a-zA-Z(])", r"\1*\2", t)
+    t = re.sub(r"\)\s*\(", ")*(", t)
+    t = re.sub(r"\)\s*([a-zA-Z])", r")*\1", t)
+    t = re.sub(r"(?<![a-zA-Z*])([a-zA-Z])\s*\(", r"\1*(", t)
+    t = t.replace("**(", "@@(").replace("*(", "*(").replace("@@(", "**(")
+    return t.strip()
 
 
 def as_expr(text):
     """Parse a choice, trying the plain and the positive-assumption reading.
 
-    symbols("v", positive=True) is a different Symbol from symbols("v"), so a
+    symbols("y", positive=True) is a different Symbol from symbols("y"), so a
     single parse can miss a match that is really there, whichever side of the
     comparison happens to carry the assumption.
     """
@@ -499,7 +496,7 @@ for qz in ALL:
     text = qz["choices"]["ABCD".index(qz["correct"])]
 
     if isinstance(got, str):
-        # A form, an equation or a named row: the derivation builds the exact
+        # A form, an interval or a named row: the derivation builds the exact
         # string out of sympy-computed values, so this is still a comparison
         # against a derived result, not against the author's note.
         norm = lambda z: z.replace(" ", "")
@@ -520,7 +517,9 @@ for qz in ALL:
         bad = any(same(expr, got) for expr in as_expr(alt))
         check(not bad, f"{tag}: distractor {'ABCD'[i]} ({alt!r}) equals the key")
 
-print(f"   {derived} of {len(ALL)} re-derived with sympy; {len(MANUAL)} in MANUAL")
+manual_h2e_05()
+print(f"   {derived} of {len(ALL)} re-derived with sympy; "
+      f"{len(MANUAL)} in MANUAL (each with a written justification)")
 
 # ---------------------------------------------------------------- shape rules
 print("== pass 2: shape and house style")
@@ -533,11 +532,16 @@ for name, mod in (("M1", MODULE_1), ("M2E", MODULE_2_EASY), ("M2H", MODULE_2_HAR
     mc = [qq for qq in mod if qq["type"] == "MC"]
     check(len(fr) == 3, f"{name}: {len(fr)} free-response, the target is exactly 3")
     check(len(mc) == 19, f"{name}: {len(mc)} multiple-choice, expected 19")
-    dom = Counter(qq["domain"] for qq in mod)
-    check(dom["ALG"] == 7 and dom["ADV"] == 6 and dom["PSDA"] == 5 and dom["GT"] == 4,
-          f"{name}: domain mix is {dict(dom)}, wanted 7 ALG / 6 ADV / 5 PSDA / 4 GT")
-    bal = Counter(qq["correct"] for qq in mc)
-    check(max(bal.values()) <= 7, f"{name}: answer key unbalanced {dict(bal)}")
+    dom = {}
+    for qq in mod:
+        dom[qq["domain"]] = dom.get(qq["domain"], 0) + 1
+    check(dom.get("ALG") == 7 and dom.get("ADV") == 6 and dom.get("PSDA") == 5
+          and dom.get("GT") == 4,
+          f"{name}: domain mix is {dom}, wanted 7 ALG / 6 ADV / 5 PSDA / 4 GT")
+    bal = {}
+    for qq in mc:
+        bal[qq["correct"]] = bal.get(qq["correct"], 0) + 1
+    check(max(bal.values()) <= 7, f"{name}: answer key unbalanced {bal}")
     trig = sum(1 for qq in mod if qq["skill"] == "GT-TR")
     check(1 <= trig <= 2, f"{name}: {trig} GT-TR questions, wanted 1 or 2")
 
@@ -559,8 +563,6 @@ for qq in ALL:
     check(qq["skill"] in VALID_SKILLS[qq["domain"]],
           f"{tag}: skill {qq['skill']} is not a {qq['domain']} skill")
     check(bool(qq.get("check")), f"{tag}: no check note")
-    check("T17" not in json.dumps(qq) and "T21" not in json.dumps(qq),
-          f"{tag}: a scaffolding tag from the reference template survived")
 
     blocks = [qq["stem"]] + list(qq.get("choices") or [])
     styled += 1
@@ -573,14 +575,15 @@ for qq in ALL:
 
     for blk in blocks:
         bare = re.sub(r"<img[^>]*>", " ", blk)  # base64 payloads match every rule below
-        check(not bare.strip().startswith("<p>"), f"{tag}: stem is <p>-wrapped")
+        bare = re.sub(r"<[^>]+>", " ", bare)    # table markup carries no math
+        check(not blk.strip().startswith("<p>"), f"{tag}: stem is <p>-wrapped")
         check("\u00b0" not in bare, f"{tag}: raw degree glyph, use &deg;")
         spans = [mm.span() for mm in SPAN.finditer(bare)]
         inside = lambda i: any(aa <= i < bb for aa, bb in spans)
 
         for mm in re.finditer(r"\^", bare):
             check(inside(mm.start()), f"{tag}: caret outside math mode")
-        for mm in re.finditer(r"(?<![A-Za-z\\])sqrt\s*\(", bare):
+        for mm in re.finditer(r"\bsqrt\s*\(", bare):
             check(False, f"{tag}: plain-text sqrt(")
         for mm in re.finditer(r"[\dA-Za-z)]\s*\*\s*[\dA-Za-z(]", bare):
             check(inside(mm.start()), f"{tag}: asterisk multiplication outside math mode")
@@ -617,6 +620,11 @@ for qq in ALL:
         check("<table" in qq["stem"] or "<img" in qq["stem"],
               f"{tag}: refers to a visual it does not contain")
 
+    # provenance: nothing from the structural template may survive
+    for blk in blocks + [qq.get("check", "")]:
+        check("T21" not in blk and "Test 21" not in blk,
+              f"{tag}: Test 21 provenance string survived into the content")
+
 print(f"   {styled} of {len(ALL)} questions style-checked (stems and every choice)")
 
 # ------------------------------------------------------------------- dedupe
@@ -645,13 +653,11 @@ def jaccard(aa, bb):
 
 
 READ_THRESHOLD = 0.45
-# The corpus lives at the content-pool ROOT and is read-only: 1,386 Math stems,
-# every one live in production.
-prod_path = os.path.join(HERE, "..", "prod_math_stems.json")
+prod_path = os.path.join(ROOT, "prod_math_stems.json")   # ROOT corpus, read only
 worst_prod = 0.0
 if os.path.exists(prod_path):
     prod = json.load(open(prod_path))
-    print(f"   comparing against {len(prod)} live Math stems")
+    print(f"   comparing against {len(prod)} live Math stems ({prod_path})")
     others = [(pq["label"], sig(re.sub(r"<img[^>]*>", " ", pq["stem"]))) for pq in prod]
     worst = []
     for qq in ALL:
@@ -669,7 +675,7 @@ if os.path.exists(prod_path):
     for sc, tag, lab in [row for row in worst if row[0] < READ_THRESHOLD][:8]:
         print(f"     {sc:.2f}  {tag}  vs {lab}")
 else:
-    check(False, "../prod_math_stems.json is missing — the dedupe pass cannot run")
+    check(False, f"{prod_path} is missing — the dedupe pass cannot run")
 
 # ------------------------------------------------------------ self-collision
 print("== pass 4: self-collision and cross-module settings")
@@ -688,31 +694,38 @@ for sc, aa, bb2 in pairs[:5]:
 # A student sees Module 1 and exactly one Module 2 branch, so a setting reused
 # across that boundary shows the same scene twice in one sitting.
 #
-# Every keyword below is a canal-specific noun that cannot collide with an
-# ordinary English word once the boundary is respected. Generic labour words
-# ("gang", "crew", "clerk") are deliberately NOT keywords: they are not
-# settings, and including them would flag a false positive and train the
-# reader to ignore the output. "pound" is kept precisely because it is
-# ambiguous — the canal sense belongs to Module 1, so a weight or a currency
-# in Module 2 SHOULD fail this check.
+# Every keyword below is a term that cannot carry an everyday sense in this
+# content. Deliberately NOT used as keywords: "salt", "ice", "cure", "rind",
+# "cave", "block" and "wheel" on their own — each is either ordinary English or
+# a word whose other sense would fire on the wrong module, which is the same
+# family of bug as \bfen matching "fence" and \bpi never matching at all. Where
+# a bare word is unavoidable it is anchored to its compound ("ice house",
+# "cheese cave").
 SETTING_KEYWORDS = [
-    # Module 1's half of the territory
-    "lock", "pound", "aqueduct", "sluice", "paddle", "cill", "silt", "dredg",
-    "feeder", "trough", "boat", "cutting", "flight", "spring", "chamber",
-    # Module 2's half
-    "barge", "towpath", "wharf", "quay", "toll", "warehouse", "tally",
-    "gauged", "cargo", "crate", "sack", "hopper", "draught", "grain",
-    "salt", "gravel", "apron", "horse", "berth", "tonnage",
+    # Module 1 territory
+    "saltworks", "salt pan", "evaporating pan", "brine", "bushel", "sea water",
+    "ice house", "ice gang", "ice saw", "ice merchant", "ice warden", "sledge",
+    "root cellar", "cartload", "potato", "turnip", "sprouted",
+    # Module 2 territory
+    "smokehouse", "smoking", "smoke", "herring", "mackerel", "curer",
+    "hearth", "rack", "flue", "draught", "chimney",
+    "cheese", "affineur", "ripening", "truckle", "baffle", "moulds",
 ]
 m1_text = " ".join(qq["stem"].lower() for qq in MODULE_1)
 m2_text = " ".join(qq["stem"].lower() for qq in MODULE_2_EASY + MODULE_2_HARD)
 
 
 def has(kwd, text):
-    """Prefix match at a word boundary: "lock" catches "locks" and "lockings",
-    but does not catch "block", and "spring" would not catch "offspring" — the
-    kind of silent over-match that the \\bpi\\b and \\bfen bugs were made of."""
-    return re.search(r"\b" + re.escape(kwd), text) is not None
+    """Prefix match anchored at a word boundary on the LEFT and, for anything
+    that could be a prefix of an unrelated word, a boundary on the right too.
+
+    "smoking" must catch "smokings" but "rack" must not catch "bracket" and
+    "moth" must not catch "months" — the silent over-match the \\bpi\\b bug was
+    made of. A left-only \\b is safe here because every keyword is either a
+    whole word or a compound whose continuation is a plural or an inflection.
+    """
+    return re.search(r"\b" + re.escape(kwd) + r"(?![a-z])" if kwd in ("rack", "smoke")
+                     else r"\b" + re.escape(kwd), text) is not None
 
 
 shared = [kwd for kwd in SETTING_KEYWORDS if has(kwd, m1_text) and has(kwd, m2_text)]
@@ -723,6 +736,7 @@ print(f"   {len(in_m1)} setting keywords in Module 1, {len(in_m2)} in Module 2, 
       f"{len(shared)} shared")
 
 # ------------------------------------------------------------------- report
+from collections import Counter
 print()
 print(f"questions: {len(ALL)}   M1 domains: {dict(Counter(qq['domain'] for qq in MODULE_1))}")
 print(f"                    M2E domains: {dict(Counter(qq['domain'] for qq in MODULE_2_EASY))}")
@@ -731,7 +745,7 @@ print(f"skills: {dict(sorted(Counter(qq['skill'] for qq in ALL).items()))}")
 print(f"answer key M1:  {dict(sorted(Counter(qq['correct'] for qq in MODULE_1 if qq['type']=='MC').items()))}")
 print(f"answer key M2E: {dict(sorted(Counter(qq['correct'] for qq in MODULE_2_EASY if qq['type']=='MC').items()))}")
 print(f"answer key M2H: {dict(sorted(Counter(qq['correct'] for qq in MODULE_2_HARD if qq['type']=='MC').items()))}")
-print(f"highest Jaccard vs production: {worst_prod:.2f}   within Test 23: {worst_self:.2f}")
+print(f"highest Jaccard vs production: {worst_prod:.2f}   within Test 27: {worst_self:.2f}")
 
 if FAIL:
     print(f"\n{len(FAIL)} FAILURES:")

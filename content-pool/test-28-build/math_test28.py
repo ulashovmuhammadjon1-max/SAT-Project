@@ -10,8 +10,9 @@ Difficulty, per the standing rule that Module 1 routes students:
   MODULE_2_EASY genuinely one-step: one operation, no recovery step. This is
                 the lower branch of the adaptive split.
   MODULE_2_HARD parameters instead of numbers, symbolic and structural answer
-                choices, a composed function, conditioned systems, a two-way
-                table, and geometry that chains two relationships.
+                choices, a composed function, a symbolic system, a symbolic
+                inequality, a two-way table, and geometry that chains two
+                relationships.
 
 Thematic territory assigned to Test 28: coaching routes and stage timetables,
 farriery and horseshoeing, coach building (bodies, springs, axles, lamps,
@@ -33,6 +34,21 @@ Distance-rate-time is the most heavily banked SAT template there is and a
 coaching route invites it at every turn; it is deliberately absent from this
 file. The journey items turn on fares, weights, timetable stages and loading
 instead.
+
+Every stem was screened against the 1,386 live production Math stems BEFORE it
+was drafted, and again afterwards by verify_math_test28.py. Templates rejected
+at the screening stage because the bank already holds them, rather than written
+and later discovered: a rectangle "n metres longer than it is wide" with a
+given area (Test 15 M2H Q11 is the same rectangle with the same 330); a
+capacity item of the form "spend a fixed sum, charge per unit, least number of
+units to clear it" (Test 9 M1S Q4); "rate per unit, sold only in packs of k,
+least number of packs" (Test 19 M1S Q15); a sample scaled up to a population
+(Tests 9, 15 and 16); the mean of a set after one value is added or removed
+(Tests 11, 12, 14 and 16); the mean of two groups pooled (Tests 10, 13 and 15);
+a parallel-beam transversal with (3x+10) and (5x-30) degrees (Test 18 M2H Q19);
+1/(1/u + 1/v) (Test 20 M2H Q8); "how many integer values satisfy both
+inequalities" (Test 21 M2H Q3); and a cylinder compared with one of twice the
+radius and half the height (Test 9 M1S Q18).
 
 House style follows Test 1/2 (see CLAUDE.md): stems are bare HTML, simple
 inline math stays plain text, every data table is real <table> markup, and all
@@ -74,13 +90,13 @@ MODULE_1 = [
             "1,486 - 4(75) = 1,186 kg."),
 
  dict(n="H1-03", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A coach proprietor pays &pound;264 a week for the keep of his horses and a further "
-            "&pound;3 every time a fresh team is put to. The coach runs 5 journeys a week and "
-            "takes a fresh team 4 times on each journey. Every passenger pays &pound;9. How many "
-            "passengers must be carried in a week for the week's takings to exceed the week's "
-            "outgoings by more than &pound;150?"),
-      choices=["52", "53", "54", "55"], correct="B",
-      check="Outgoings are 264 + 3(20) = 324, and 9p - 324 > 150 gives p > 52.6..., so 53."),
+      stem=("A coach guard is required to average at least 15 parcels a journey over the six "
+            "journeys he works in a week. On the first five journeys of one week he carried 12, "
+            "18, 9, 16 and 14 parcels. What is the least number of parcels he must carry on the "
+            "sixth journey to meet the requirement?"),
+      choices=["19", "20", "21", "22"], correct="C",
+      check="Six journeys averaging 15 need 90 parcels in all, and the first five come to 69, "
+            "so the sixth must carry at least 21."),
 
  dict(n="H1-04", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A coachbuilder estimates the cost C, in pounds, of a new body as C = 14L + 9w + 60, "
@@ -90,12 +106,13 @@ MODULE_1 = [
                "\\(w=\\frac{C+14L-60}{9}\\)", "\\(w=\\frac{C-60}{9}-14L\\)"], correct="A",
       check="Subtracting 14L and 60 from both sides gives 9w = C - 14L - 60."),
 
- dict(n="H1-05", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A gauge in a coachbuilder's shop passes an axle-arm only when its diameter d, in "
-            "millimetres, satisfies \\(|2d-104|\\le 1.6\\). What is the greatest diameter, in "
-            "millimetres, that the gauge passes?"),
-      choices=["51.2", "52.4", "52.8", "53.6"], correct="C",
-      check="The condition is equivalent to 51.2 <= d <= 52.8, so the greatest is 52.8."),
+ dict(n="H1-05", domain="ALG", skill="ALG-LE", type="MC",
+      stem=("At a posting house the number of horses kept is three times the number of grooms "
+            "employed, and the number of grooms is 4 more than the number of postboys. Counted "
+            "together, the horses, the grooms and the postboys come to 71. How many postboys are "
+            "employed there?"),
+      choices=["9", "11", "13", "15"], correct="B",
+      check="With p postboys there are p+4 grooms and 3p+12 horses, and 5p+16 = 71 gives p = 11."),
 
  dict(n="H1-06", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A booking office charges a fare that is a linear function of the number of stages "
@@ -130,17 +147,21 @@ MODULE_1 = [
       check="18n + 540 = 33n gives 15n = 540 and n = 36."),
 
  dict(n="H1-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("In the equation \\(x^{2}-14x+k=0\\), k is a constant. The equation has exactly one "
-            "real solution. What is the value of k?"),
-      choices=["7", "14", "49", "196"], correct="C",
-      check="One real solution needs 14^2 - 4k = 0, so k = 49."),
+      stem=("A booking office sold 20 places on a coach, some of them inside places and the rest "
+            "outside places. The number of inside places multiplied by the number of outside "
+            "places is 96, and more places were sold inside than outside. How many inside places "
+            "were sold?"),
+      choices=["8", "10", "12", "16"], correct="C",
+      check="The two counts are roots of t^2 - 20t + 96 = 0, namely 12 and 8, and the larger is "
+            "12."),
 
  dict(n="H1-11", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{(4a^{3}b)^{2}}{8a^{2}b^{5}}\\), where a "
-            "and b are positive?"),
-      choices=["\\(\\frac{2a^{4}}{b^{3}}\\)", "\\(\\frac{2a^{4}}{b^{4}}\\)",
-               "\\(\\frac{a^{4}}{2b^{3}}\\)", "\\(\\frac{2a^{6}}{b^{3}}\\)"], correct="A",
-      check="The numerator is 16a^6 b^2, and dividing by 8a^2 b^5 leaves 2a^4 over b^3."),
+      stem=("A coachbuilder's timber allowance for a body is given by the expression "
+            "\\(4x^{3}+6x^{2}-10x\\). Which of the following expresses that allowance as a "
+            "product of three factors?"),
+      choices=["\\(2x(2x+5)(x-1)\\)", "\\(2x(2x-5)(x+1)\\)",
+               "\\(2x(x+5)(2x-1)\\)", "\\(2x(2x+1)(x-5)\\)"], correct="A",
+      check="Taking out 2x leaves 2x(2x^2+3x-5), and 2x^2+3x-5 factors as (2x+5)(x-1)."),
 
  dict(n="H1-12", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A coachyard's stock of seasoned ash for door pillars is modelled by "
@@ -151,10 +172,11 @@ MODULE_1 = [
       check="135/320 = 27/64, which is (3/4)^3, so q = 3."),
 
  dict(n="H1-13", domain="ADV", skill="ADV-NE", type="FR",
-      stem=("What is the solution to the equation \\(\\sqrt{2x+11}=x-2\\)?"),
-      answers=["7"],
-      check="Squaring gives x^2 - 6x - 7 = 0, whose roots are 7 and -1; only 7 makes x-2 "
-            "non-negative."),
+      stem=("A coachyard has 60 lamps to japan. If it japanned 5 more lamps each day than it "
+            "actually does, it would finish the whole 60 one day sooner than it will. How many "
+            "lamps a day does the yard japan?"),
+      answers=["15"],
+      check="60/x - 60/(x+5) = 1 gives x^2 + 5x - 300 = 0, whose positive root is 15."),
 
  dict(n="H1-14", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table records, for one week, the number of places booked at each of four "
@@ -168,21 +190,23 @@ MODULE_1 = [
       check="The proportions are 0.775, 0.800, 0.770 and 0.780, so Bramber is highest."),
 
  dict(n="H1-15", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("Over 9 journeys a coach carried a mean of 14 parcels a journey. Over the first 5 of "
-            "those journeys it carried a mean of 11 parcels a journey. What was the mean number "
-            "of parcels a journey over the remaining 4 journeys?"),
-      choices=["17", "17.5", "17.75", "18"], correct="C",
-      check="The total is 126 and the first five account for 55, so the remaining four average "
-            "71/4 = 17.75."),
+      stem=("A coachyard keeps 45 lamps, of which 18 are brass and the rest are japanned. Two "
+            "thirds of the brass lamps and one third of the japanned lamps were repaired this "
+            "season. One of the 45 lamps is selected at random. What is the probability that it "
+            "was repaired this season?"),
+      choices=["\\(\\frac{1}{3}\\)", "\\(\\frac{2}{5}\\)",
+               "\\(\\frac{4}{9}\\)", "\\(\\frac{7}{15}\\)"], correct="D",
+      check="12 of the 18 brass lamps and 9 of the 27 japanned lamps were repaired, so 21 of 45, "
+            "or 7/15."),
 
  dict(n="H1-16", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A coachbuilder's shop uses 7 pints of body varnish for every 4 door panels it "
-            "finishes. Varnish is bought only in casks holding 12 pints. What is the smallest "
-            "number of casks that must be bought to finish 96 door panels?"),
-      choices=["11", "12", "13", "14"], correct="D",
-      check="96 panels need 24 lots of 7 pints, or 168 pints, and 168/12 = 14 casks exactly."),
+      stem=("A coachbuilder's body varnish covers 4 square yards of panelling for every pint "
+            "used. One coach body presents 288 square feet of panelling, and there are 9 square "
+            "feet in a square yard. How many pints of varnish are needed for one body?"),
+      choices=["2", "4", "6", "8"], correct="D",
+      check="288 square feet is 32 square yards, and 32/4 = 8 pints."),
 
- dict(n="H1-17", domain="PSDA", skill="PSDA-ST", type="MC",
+ dict(n="H1-17", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table records the number of carriages of each build that one coachyard delivered "
             "in a year."
             + table(["Build", "Number delivered"],
@@ -202,13 +226,12 @@ MODULE_1 = [
       check="6.75/3 = 2.25 and 2.25(7) = 15.75 feet."),
 
  dict(n="H1-19", domain="GT", skill="GT-LA", type="MC",
-      stem=("Two straight iron stays cross one another inside a coach body. One of the four "
-            "angles they make measures \\((3x+14)^{\\circ}\\) and the angle vertically opposite "
-            "to it measures \\((5x-26)^{\\circ}\\). What is the measure of an angle adjacent to "
-            "these two?"),
-      choices=["64&deg;", "74&deg;", "96&deg;", "106&deg;"], correct="D",
-      check="3x + 14 = 5x - 26 gives x = 20 and an angle of 74 degrees, so an adjacent angle is "
-            "180 - 74 = 106 degrees."),
+      stem=("The front boot of a coach is braced by an isosceles triangle in which the two equal "
+            "sides meet at an angle measuring \\((4x)^{\\circ}\\) and each of the two base angles "
+            "measures \\((x+30)^{\\circ}\\). What is the measure of the angle at which the two "
+            "equal sides meet?"),
+      choices=["50&deg;", "60&deg;", "80&deg;", "100&deg;"], correct="C",
+      check="4x + 2(x+30) = 180 gives x = 20, so the apex angle is 4(20) = 80 degrees."),
 
  dict(n="H1-20", domain="GT", skill="GT-AV", type="MC",
       stem=("The side panel of a coach body is a trapezium whose two parallel edges, the roof "
@@ -248,14 +271,17 @@ MODULE_2_EASY = [
       check="7n + 12 = 96 gives 7n = 84 and n = 12."),
 
  dict(n="H2E-02", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("What value of x satisfies the equation \\(\\frac{x}{5}+4=13\\)?"),
-      choices=["30", "35", "40", "45"], correct="D",
-      check="x/5 = 9, so x = 45."),
+      stem=("A farrier reckons the number of nails N needed for s horseshoes as N = 8s. Which "
+            "equation gives s in terms of N?"),
+      choices=["\\(s=8N\\)", "\\(s=N-8\\)", "\\(s=\\frac{N}{8}\\)", "\\(s=N+8\\)"], correct="C",
+      check="Dividing both sides of N = 8s by 8 gives s = N/8."),
 
  dict(n="H2E-03", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("What value of p satisfies the equation 8p = 5p + 51?"),
-      answers=["17"],
-      check="3p = 51, so p = 17."),
+      stem=("A farrier's forge burned 240 pounds of coal in one day at a steady 15 pounds an "
+            "hour, so that the number of hours h the forge burned satisfies 240 = 15h. What is "
+            "the value of h?"),
+      answers=["16"],
+      check="Dividing 240 by 15 gives h = 16."),
 
  dict(n="H2E-04", domain="ALG", skill="ALG-LF", type="MC",
       stem=("The number N of horseshoe nails left in a farrier's keg after d days of work is "
@@ -264,14 +290,17 @@ MODULE_2_EASY = [
       check="900 - 45(12) = 900 - 540 = 360."),
 
  dict(n="H2E-05", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("For a linear function f, f(0) = 13 and f(4) = 41. What is the value of f(2)?"),
-      choices=["24", "27", "30", "34"], correct="B",
-      check="f rises 28 over 4 units, so f(2) = 13 + 2(7) = 27."),
+      stem=("A farrier charges 5 shillings for the iron plus a further 2 shillings for each shoe "
+            "he fits. Which equation gives the charge A, in shillings, for fitting s shoes?"),
+      choices=["A = 2s - 5", "A = 5s + 2", "A = 7s", "A = 2s + 5"], correct="D",
+      check="The fixed 5 shillings is added to 2 shillings for each of s shoes, so A = 2s + 5."),
 
  dict(n="H2E-06", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Which of the following values of x satisfies the inequality 4x - 7 &gt; 21?"),
+      stem=("A farrier's rule for the number h of horses he will undertake to shoe in one day is "
+            "that h must satisfy 4h - 7 &gt; 21. Which of the following values of h satisfies "
+            "that inequality?"),
       choices=["5", "6", "7", "8"], correct="D",
-      check="4x > 28 gives x > 7, and 8 is the only listed value greater than 7."),
+      check="4h > 28 gives h > 7, and 8 is the only listed value greater than 7."),
 
  dict(n="H2E-07", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A stance beside a drovers' road holds no more than 240 sheep, and 156 sheep have "
@@ -282,37 +311,43 @@ MODULE_2_EASY = [
       check="156 + s <= 240 gives s <= 84."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to 5(2x + 7) - 3x?"),
-      choices=["7x + 35", "7x + 7", "13x + 35", "10x + 4"], correct="A",
-      check="5(2x+7) = 10x + 35, and 10x + 35 - 3x = 7x + 35."),
+      stem=("A farrier writes the weight of a set of shoes, in pounds, as \\(6x+15\\). Which "
+            "expression is equivalent to that weight?"),
+      choices=["\\(2(3x+5)\\)", "\\(3(2x+5)\\)", "\\(3(2x+15)\\)", "\\(6(x+15)\\)"], correct="B",
+      check="3 divides both 6x and 15, leaving 3(2x+5)."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to (x + 6)(x - 2)?"),
+      stem=("A drover reckons the area of a rectangular fold, in square yards, as (x + 6)(x - 2). "
+            "Which expression is equivalent to that area?"),
       choices=["\\(x^{2}-12\\)", "\\(x^{2}+8x-12\\)", "\\(x^{2}-4x-12\\)",
                "\\(x^{2}+4x-12\\)"], correct="D",
       check="The product is x^2 - 2x + 6x - 12 = x^2 + 4x - 12."),
 
  dict(n="H2E-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by \\(f(x)=x^{2}-5\\). What is the value of f(4)?"),
-      choices=["3", "11", "16", "27"], correct="B",
-      check="4^2 - 5 = 11."),
+      stem=("A farrier's charge for each horse falls when several are brought together, and is "
+            "modelled by \\(c(n)=\\frac{120}{n}\\) shillings a horse when n horses are brought. "
+            "What is the value of c(8)?"),
+      choices=["8", "12", "15", "20"], correct="C",
+      check="120 divided by 8 is 15."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The table gives four values of x and the corresponding values of the function f."
             + table(["x", "f(x)"], [["2", "7"], ["3", "0"], ["4", "-5"], ["5", "-8"]])
-            + "For which value of x in the table is f(x) equal to 0?"),
-      choices=["2", "3", "4", "5"], correct="B",
-      check="The row with f(x) = 0 is the row for x = 3."),
+            + "What is the value of f(5) - f(2)?"),
+      choices=["-15", "-1", "1", "15"], correct="A",
+      check="f(5) is -8 and f(2) is 7, so the difference is -15."),
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("If (n - 9)(n + 4) = 0 and n is positive, what is the value of n?"),
+      stem=("A farrier's gauge setting n satisfies (n - 9)(n + 4) = 0, and n is positive. What is "
+            "the value of n?"),
       choices=["4", "5", "9", "36"], correct="C",
       check="The solutions are 9 and -4, and only 9 is positive."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-NE", type="FR",
-      stem=("If \\(\\sqrt{x}=12\\), what is the value of x?"),
-      answers=["144"],
-      check="Squaring both sides gives x = 144."),
+      stem=("The length n, in yards, of one side of a drove pen satisfies \\(n^{2}+3n=54\\), and "
+            "n is positive. What is the value of n?"),
+      answers=["6"],
+      check="n^2 + 3n - 54 = (n+9)(n-6), whose positive root is 6."),
 
  dict(n="H2E-14", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table records the number of horseshoes made at four forges in one month."
@@ -334,10 +369,11 @@ MODULE_2_EASY = [
       check="231 is the largest of the four counts, and it belongs to Hartrigg."),
 
  dict(n="H2E-16", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("On five days a farrier shod 9, 12, 7, 12 and 15 horses. What is the median of these "
-            "five numbers?"),
-      choices=["7", "11", "12", "15"], correct="C",
-      check="In order the values are 7, 9, 12, 12, 15, and the middle value is 12."),
+      stem=("A farrier's keg holds 40 fore shoes and 60 hind shoes and nothing else. One shoe is "
+            "taken out of the keg at random. What is the probability that it is a fore shoe?"),
+      choices=["\\(\\frac{1}{40}\\)", "\\(\\frac{2}{5}\\)",
+               "\\(\\frac{3}{5}\\)", "\\(\\frac{2}{3}\\)"], correct="B",
+      check="40 of the 100 shoes are fore shoes, and 40/100 = 2/5."),
 
  dict(n="H2E-17", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("A drover recorded the number of sheep lost on four separate droves as 8, 11, 5 and "
@@ -352,29 +388,32 @@ MODULE_2_EASY = [
       check="32/4 = 8 nails a shoe, and 8(28) = 224."),
 
  dict(n="H2E-19", domain="GT", skill="GT-AV", type="FR",
-      stem=("A stance beside a drovers' road is a rectangle 45 yards long and 28 yards wide. What "
-            "is its area, in square yards?"),
-      answers=["1260"],
-      check="45(28) = 1,260 square yards."),
+      stem=("A rectangular drove pen is 45 yards long, and the fence right round it measures 146 "
+            "yards. How wide is the pen, in yards?"),
+      answers=["28"],
+      check="146 - 2(45) = 56 for the two widths, so each width is 28 yards."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("A watering trough at a forge is a rectangular box 6 feet long, 2 feet wide and 1.5 "
-            "feet deep. What is its volume, in cubic feet?"),
-      choices=["9", "12", "18", "24"], correct="C",
-      check="6(2)(1.5) = 18 cubic feet."),
+      stem=("A watering trough at a forge is a rectangular box 6 feet long and 2 feet wide, and "
+            "it holds 18 cubic feet of water when it is full to the brim. How deep is the trough, "
+            "in feet?"),
+      choices=["1", "1.25", "1.5", "2"], correct="C",
+      check="18 divided by 6(2) = 12 gives a depth of 1.5 feet."),
 
  dict(n="H2E-21", domain="GT", skill="GT-LA", type="MC",
-      stem=("In a triangle, two of the angles measure 43&deg; and 68&deg;. What is the measure of "
-            "the third angle?"),
-      choices=["59&deg;", "69&deg;", "79&deg;", "111&deg;"], correct="B",
-      check="180 - 43 - 68 = 69 degrees."),
+      stem=("A farrier lays three bars flat on one side of a straight edge so that they all meet "
+            "it at the same point. The three angles they make with the straight edge and with "
+            "one another measure 38&deg;, 65&deg; and x&deg;, and together they make up the "
+            "straight angle. What is the value of x?"),
+      choices=["67", "77", "87", "103"], correct="B",
+      check="180 - 38 - 65 = 77."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("In a right triangle, the leg opposite one of the acute angles is 7 units long and "
-            "the hypotenuse is 25 units long. What is the sine of that acute angle?"),
-      choices=["\\(\\frac{7}{25}\\)", "\\(\\frac{24}{25}\\)",
-               "\\(\\frac{7}{24}\\)", "\\(\\frac{25}{7}\\)"], correct="A",
-      check="The sine is the opposite leg over the hypotenuse, or 7/25."),
+      stem=("A right triangle is set out on a forge floor. Its two legs measure 9 units and 40 "
+            "units. What is the tangent of the angle opposite the shorter leg?"),
+      choices=["\\(\\frac{9}{40}\\)", "\\(\\frac{40}{9}\\)",
+               "\\(\\frac{9}{41}\\)", "\\(\\frac{40}{41}\\)"], correct="A",
+      check="The tangent is the opposite leg over the adjacent leg, or 9/40."),
 ]
 
 
@@ -383,15 +422,17 @@ MODULE_2_EASY = [
 MODULE_2_HARD = [
 
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("In the system of equations below, k is a constant and the system has infinitely many "
-            "solutions.<br/>\\(3x+ky=18\\)<br/>\\(9x+12y=54\\)<br/>What is the value of k?"),
-      choices=["3", "4", "6", "12"], correct="B",
-      check="The second equation is 3 times 3x + 4y = 18, so k must be 4."),
+      stem=("In the system of equations below, a and b are constants."
+            "<br/>\\(x+2y=a\\)<br/>\\(3x-y=b\\)<br/>"
+            "What is x in terms of a and b?"),
+      choices=["\\(\\frac{a+2b}{7}\\)", "\\(\\frac{a-2b}{7}\\)",
+               "\\(\\frac{3a+b}{7}\\)", "\\(\\frac{a+2b}{5}\\)"], correct="A",
+      check="Doubling the second equation and adding gives 7x = a + 2b."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("In the equation \\(\\frac{x}{a}-\\frac{x}{3a}=8\\), a is a positive constant. What "
             "is x in terms of a?"),
-      choices=["\\(12a\\)", "\\(6a\\)", "\\(24a\\)", "\\(\\frac{a}{12}\\)"], correct="A",
+      choices=["\\(6a\\)", "\\(12a\\)", "\\(24a\\)", "\\(\\frac{a}{12}\\)"], correct="B",
       check="The left side is 2x/(3a), so 2x = 24a and x = 12a."),
 
  dict(n="H2H-03", domain="ALG", skill="ALG-LF", type="MC",
@@ -416,55 +457,55 @@ MODULE_2_HARD = [
       check="With s the second rent, (2s + 35) + s = 470 gives s = 145 and the first rent is 325."),
 
  dict(n="H2H-06", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("In the xy-plane, the line \\(y=ax+b\\) passes through the points \\((-2,11)\\) and "
-            "\\((4,-7)\\), where a and b are constants. What is the value of a + b?"),
-      choices=["-2", "1", "2", "8"], correct="C",
-      check="The slope is -18/6 = -3 and the intercept is 11 - (-3)(-2) = 5, so a + b = 2."),
+      stem=("The function f is linear, f(2) is three times f(0), and f(4) = 25. What is the value "
+            "of f(0)?"),
+      choices=["3", "4", "5", "6"], correct="C",
+      check="With f = mx + b, 2m + b = 3b makes m = b, so f(4) = 5b = 25 and b = 5."),
 
  dict(n="H2H-07", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Which of the following describes all values of x that satisfy "
-            "\\(-3\\le 2-5x\\le 17\\)?"),
-      choices=["\\(-3\\le x\\le 1\\)", "\\(-1\\le x\\le 3\\)",
-               "\\(1\\le x\\le 5\\)", "\\(-3\\le x\\le 5\\)"], correct="A",
-      check="Subtracting 2 gives -5 <= -5x <= 15, and dividing by -5 reverses both signs to "
-            "-3 <= x <= 1."),
+      stem=("In the inequality ax - b &gt; c, the constant a is negative. Which of the following "
+            "describes all values of x that satisfy the inequality?"),
+      choices=["\\(x>\\frac{b+c}{a}\\)", "\\(x<\\frac{c-b}{a}\\)",
+               "\\(x<\\frac{b+c}{a}\\)", "\\(x>\\frac{b-c}{a}\\)"], correct="C",
+      check="ax > b + c, and dividing by a negative a reverses the sign to x < (b+c)/a."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The functions f and g are defined by \\(f(x)=2x-5\\) and \\(g(x)=x^{2}+3\\). Which "
             "expression is equivalent to g(f(x))?"),
-      choices=["\\(2x^{2}+1\\)", "\\(4x^{2}+28\\)", "\\(4x^{2}-20x+28\\)",
-               "\\(4x^{2}-20x+22\\)"], correct="C",
+      choices=["\\(2x^{2}+1\\)", "\\(4x^{2}+28\\)", "\\(4x^{2}-20x+22\\)",
+               "\\(4x^{2}-20x+28\\)"], correct="D",
       check="g(f(x)) = (2x-5)^2 + 3 = 4x^2 - 20x + 25 + 3."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{1}{a}+\\frac{1}{a+3}\\), where a is "
-            "positive?"),
-      choices=["\\(\\frac{2a+3}{a^{2}+3a}\\)", "\\(\\frac{2}{a^{2}+3a}\\)",
-               "\\(\\frac{1}{2a+3}\\)", "\\(\\frac{2a+3}{a+3}\\)"], correct="A",
-      check="Over the common denominator a(a+3) the numerator is (a+3) + a = 2a + 3."),
+      stem=("Which expression is equivalent to \\(\\sqrt{18x^{5}}\\), where x is positive?"),
+      choices=["\\(2x^{2}\\sqrt{3x}\\)", "\\(3x^{2}\\sqrt{2x}\\)",
+               "\\(9x^{2}\\sqrt{2x}\\)", "\\(3x^{2}\\sqrt{2}\\)"], correct="B",
+      check="18x^5 = 9x^4 times 2x, and the square root of 9x^4 is 3x^2."),
 
  dict(n="H2H-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("What is the sum of the solutions to the equation \\(\\frac{12}{x-2}=x+3\\)?"),
-      choices=["-3", "-1", "1", "3"], correct="B",
-      check="Clearing the denominator gives x^2 + x - 18 = 0, whose two solutions sum to -1."),
+      stem=("In the equation \\(x^{2}+kx+36=0\\), k is a positive integer and the equation has "
+            "two distinct real solutions. What is the least possible value of k?"),
+      choices=["12", "13", "18", "37"], correct="B",
+      check="Two distinct real solutions need k^2 - 144 > 0, so k > 12 and the least integer is "
+            "13."),
 
  dict(n="H2H-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("A quantity is modelled by \\(N=N_{0}(2)^{\\frac{t}{6}}\\), where \\(N_{0}\\) is a "
             "positive constant and t is measured in years. What is the least positive value of t "
             "for which the model gives N equal to eight times \\(N_{0}\\)?"),
-      choices=["12", "18", "24", "48"], correct="B",
+      choices=["18", "24", "36", "48"], correct="A",
       check="2^(t/6) = 8 = 2^3 gives t/6 = 3 and t = 18."),
 
  dict(n="H2H-12", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{x^{2}-9}{x^{2}+x-12}\\), where "
-            "\\(x\\ne 3\\) and \\(x\\ne -4\\)?"),
-      choices=["\\(\\frac{x-3}{x+4}\\)", "\\(\\frac{x+3}{x-4}\\)",
-               "\\(\\frac{x-3}{x-4}\\)", "\\(\\frac{x+3}{x+4}\\)"], correct="D",
-      check="The numerator is (x-3)(x+3) and the denominator is (x-3)(x+4), leaving (x+3)/(x+4)."),
+      stem=("Which expression is equivalent to \\(\\frac{2}{x-3}-\\frac{5}{x+2}\\), where "
+            "\\(x\\ne 3\\) and \\(x\\ne -2\\)?"),
+      choices=["\\(\\frac{-3}{x^{2}-x-6}\\)", "\\(\\frac{19-3x}{x^{2}+x-6}\\)",
+               "\\(\\frac{3x-19}{x^{2}-x-6}\\)", "\\(\\frac{19-3x}{x^{2}-x-6}\\)"], correct="D",
+      check="Over the common denominator (x-3)(x+2) the numerator is 2(x+2) - 5(x-3) = 19 - 3x."),
 
  dict(n="H2H-13", domain="ADV", skill="ADV-NF", type="FR",
-      stem=("The function h is defined by \\(h(x)=\\frac{5x-3}{2}\\). If h(a) = 16, what is the "
-            "value of h(a + 4)?"),
+      stem=("A turnpike trust's clerk works out a gate's rent with the function h defined by "
+            "\\(h(x)=\\frac{5x-3}{2}\\). If h(a) = 16, what is the value of h(a + 4)?"),
       answers=["26"],
       check="5a - 3 = 32 gives a = 7, and h(11) = (55-3)/2 = 26."),
 
@@ -516,23 +557,26 @@ MODULE_2_HARD = [
       check="The toll rises 4 pence a horse from a base of 2 pence, so 4(7) + 2 = 30."),
 
  dict(n="H2H-19", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC, point D lies on side AB and point E lies on side AC so that segment "
-            "DE is parallel to side BC. The length of AD is 6, the length of DB is 9, and the "
-            "length of DE is 8. What is the length of BC?"),
-      choices=["12", "14", "18", "20"], correct="D",
-      check="AD/AB = 6/15 = 2/5, so BC = 8(5/2) = 20."),
+      stem=("A turnpike trust's plot of ground is right triangle ABC, with the right angle at B, "
+            "the side AB measuring 9 rods and the side BC measuring 12 rods. Point D lies on side "
+            "AC so that the segment BD meets AC at a right angle. What is the length, in rods, of "
+            "BD?"),
+      choices=["6", "7.2", "7.5", "8"], correct="B",
+      check="The area is 54 square rods and AC is 15 rods, so BD = 2(54)/15 = 7.2 rods."),
 
  dict(n="H2H-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("A toll house has a rainwater cistern in the shape of a right circular cylinder of "
-            "radius r and height h. A second cistern is a right circular cylinder whose radius is "
-            "twice r and whose height is half of h. The volume of the second cistern is how many "
-            "times the volume of the first?"),
-      choices=["1", "2", "4", "8"], correct="B",
-      check="The ratio is (2r)^2(h/2) divided by r^2 h, which is 4 times one half, or 2."),
+      stem=("A toll house's rainwater cistern is a right circular cylinder of radius r and height "
+            "h, open at the top. Which expression gives the combined area of the base of the "
+            "cistern and its curved side?"),
+      choices=["\\(\\pi r^{2}h\\)", "\\(\\pi r^{2}+\\pi rh\\)",
+               "\\(2\\pi r^{2}+2\\pi rh\\)", "\\(\\pi r^{2}+2\\pi rh\\)"], correct="D",
+      check="The base is a circle of area pi r^2 and the curved side unrolls to a rectangle of "
+            "area 2 pi r h."),
 
  dict(n="H2H-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle ABC, the right angle is at C, the length of hypotenuse AB is 27, "
-            "and \\(\\sin A=\\frac{2}{3}\\). What is the area of triangle ABC?"),
+      stem=("A turnpike surveyor sets out a right-angled triangular plot ABC in which the right "
+            "angle is at C, the hypotenuse AB measures 27 rods, and \\(\\sin A=\\frac{2}{3}\\). "
+            "What is the area of the plot, in square rods?"),
       choices=["\\(81\\sqrt{5}\\)", "\\(162\\sqrt{5}\\)",
                "\\(81\\sqrt{3}\\)", "\\(243\\)"], correct="A",
       check="BC = 27(2/3) = 18 and AC = sqrt(729-324) = 9 sqrt(5), so the area is 81 sqrt(5)."),

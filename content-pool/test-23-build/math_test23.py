@@ -121,18 +121,17 @@ MODULE_1 = [
       check="Squaring gives v^2 = 2gh, so h = v^2/(2g)."),
 
  dict(n="H1-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("The floor of a lock chamber is a rectangle whose length is 4 metres more than 3 times "
-            "its width, and its area is 175 square metres. What is the width of the floor, in "
-            "metres?"),
-      choices=["5", "7", "21", "25"], correct="B",
-      check="w(3w+4) = 175 gives 3w^2 + 4w - 175 = 0 and the positive root w = 7."),
+      stem=("The number of boats waiting to pass a lock when the flight reopens after a stoppage "
+            "of d days is modelled by \\(w(d)=d^{2}+6d\\). After how many days' stoppage does this "
+            "model give 91 boats waiting?"),
+      choices=["5", "7", "9", "13"], correct="B",
+      check="d^2 + 6d - 91 = 0 factors as (d+13)(d-7), and only d = 7 is possible."),
 
  dict(n="H1-11", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{6a^{2}b^{3}}{(3ab)^{2}}\\), where a and b "
-            "are positive?"),
-      choices=["\\(\\frac{2b}{3}\\)", "\\(\\frac{3b}{2}\\)", "\\(\\frac{2b^{5}}{3}\\)",
-               "\\(\\frac{2}{3b}\\)"], correct="A",
-      check="(3ab)^2 = 9a^2b^2, and 6a^2b^3 divided by that is 2b/3."),
+      stem=("Two feeder streams delivered a cubic metres and b cubic metres of water in an hour, "
+            "where a - b = 7 and a + b = 13. What is the value of \\(a^{2}-b^{2}\\)?"),
+      choices=["20", "49", "84", "91"], correct="D",
+      check="a^2 - b^2 is (a+b)(a-b) = 13(7) = 91, without solving for either amount."),
 
  dict(n="H1-12", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A pound 2,400 metres long and 12 metres wide must be raised 15 centimetres before the "
@@ -188,11 +187,12 @@ MODULE_1 = [
       check="The triangle's other two angles are 18 each, so the angle at the meeting point is 180 - 36 = 144."),
 
  dict(n="H1-18", domain="GT", skill="GT-AV", type="MC",
-      stem=("The cross-section of a canal is a trapezium 9 metres wide at the water surface, 5 "
-            "metres wide at the bed, and 1.6 metres deep, and the cross-section is the same all "
-            "along. How many cubic metres of water does a 250-metre length of the canal hold?"),
-      choices=["1,800", "2,240", "2,800", "3,600"], correct="C",
-      check="The area is (9+5)/2 times 1.6 = 11.2 square metres, and 11.2(250) = 2,800."),
+      stem=("A culvert that carries a stream under a canal embankment is a cylinder 2 metres in "
+            "diameter and 45 metres long. How many cubic metres of water does the culvert contain "
+            "when it is running full?"),
+      choices=["\\(22.5\\pi\\)", "\\(45\\pi\\)", "\\(90\\pi\\)", "\\(180\\pi\\)"],
+      correct="B",
+      check="The radius is 1 metre, so the volume is pi(1)^2(45) = 45 pi cubic metres."),
 
  dict(n="H1-19", domain="GT", skill="GT-TR", type="MC",
       stem=("The bank of a cutting rises 4.2 metres for every 5.6 metres measured horizontally. A "
@@ -265,33 +265,36 @@ MODULE_2_EASY = [
       check="5b = 55, so b = 11."),
 
  dict(n="H2E-07", domain="ADV", skill="ADV-EQ", type="MC",
-      stem="Which expression is equivalent to 5(2x + 3) - 4x?",
-      choices=["6x + 15", "6x + 3", "10x + 15", "14x + 15"], correct="A",
-      check="10x + 15 - 4x = 6x + 15."),
+      stem=("The toll on a barge carrying t tonnes of salt is 4(2t + 5) dollars, and the gauging "
+            "fee on the same barge is 3t dollars. Which expression is equivalent to "
+            "4(2t + 5) - 3t?"),
+      choices=["5t + 20", "5t + 5", "8t + 20", "11t + 20"], correct="A",
+      check="8t + 20 - 3t = 5t + 20."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The number of sacks a tally clerk checks in x hours is given by \\(f(x)=7x-2\\). What "
-            "is the value of f(4)?"),
-      choices=["24", "26", "28", "30"], correct="B",
-      check="7(4) - 2 = 26."),
+      stem=("The number of sacks left in a warehouse after n barges have been loaded from it is "
+            "given by \\(w(n)=120-8n\\). How many sacks are left after 9 barges have been loaded?"),
+      choices=["40", "48", "56", "112"], correct="B",
+      check="120 - 8(9) = 120 - 72 = 48."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-NE", type="MC",
-      stem="What is the positive solution to the equation (n - 6)(n + 4) = 0?",
-      choices=["-6", "-4", "4", "6"], correct="D",
-      check="The solutions are 6 and -4, and 6 is the positive one."),
+      stem=("Sacks of grain on a quay are stacked in a square, with the same number of sacks along "
+            "each side of the square, and the stack holds 196 sacks in all. How many sacks are "
+            "there along each side?"),
+      choices=["14", "39", "49", "98"], correct="A",
+      check="The side length is the square root of 196, which is 14."),
 
  dict(n="H2E-10", domain="ADV", skill="ADV-EQ", type="MC",
-      stem="Which expression is equivalent to (x + 3)(x + 8)?",
-      choices=["\\(x^{2}+5x+24\\)", "\\(x^{2}+11x+11\\)", "\\(x^{2}+11x+24\\)",
-               "\\(x^{2}+24x+11\\)"], correct="C",
-      check="The product is x^2 + 8x + 3x + 24 = x^2 + 11x + 24."),
+      stem=("A barge pays 6g dollars in toll on its gravel and 6h dollars in toll on its grain. "
+            "Which expression is equivalent to 6g + 6h?"),
+      choices=["6gh", "12(g + h)", "36gh", "6(g + h)"], correct="D",
+      check="6 is a factor of both terms, so 6g + 6h = 6(g + h)."),
 
- dict(n="H2E-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The table gives the value of the function f at four values of x."
-            + table(["x", "f(x)"], [["1", "9"], ["2", "4"], ["3", "-1"], ["4", "-6"]])
-            + "For which value of x in the table does f(x) equal -1?"),
-      choices=["1", "2", "3", "4"], correct="C",
-      check="The table pairs x = 3 with f(x) = -1."),
+ dict(n="H2E-11", domain="ADV", skill="ADV-EQ", type="MC",
+      stem=("A gang shares a load of 8t + 20 sacks equally between 4 barges. Which expression "
+            "gives the number of sacks put into each barge?"),
+      choices=["2t + 5", "2t + 20", "4t + 10", "8t + 5"], correct="A",
+      check="(8t + 20)/4 = 2t + 5."),
 
  dict(n="H2E-12", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A barge is carrying 32 tonnes of cargo, and 25% of that cargo is salt. How many tonnes "
@@ -300,10 +303,10 @@ MODULE_2_EASY = [
       check="0.25(32) = 8."),
 
  dict(n="H2E-13", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The masses, in kilograms, of the five crates standing on a quay are 14, 9, 21, 17, and "
-            "12. What is the median of these masses?"),
-      choices=["9", "12", "14", "17"], correct="C",
-      check="In order the masses are 9, 12, 14, 17, 21, and the middle one is 14."),
+      stem=("The tolls collected at one toll house on the seven days of a week were, in dollars, "
+            "34, 47, 12, 29, 41, 22, and 38. What is the range of these seven amounts, in dollars?"),
+      choices=["29", "35", "41", "47"], correct="B",
+      check="The greatest is 47 and the least is 12, so the range is 35."),
 
  dict(n="H2E-14", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the tolls collected at each of four toll houses in one week."
@@ -334,17 +337,19 @@ MODULE_2_EASY = [
       check="18(2)(1.5) = 54."),
 
  dict(n="H2E-18", domain="GT", skill="GT-LA", type="MC",
-      stem=("A triangular apron of paving at the corner of a quay has two angles measuring 34&deg; "
-            "and 79&deg;. What is the measure, in degrees, of its third angle?"),
-      choices=["57", "67", "77", "113"], correct="B",
-      check="180 - 34 - 79 = 67."),
+      stem=("A triangular gusset plate on a barge has two sides of equal length, and the angle "
+            "between those two sides measures 40&deg;. What is the measure, in degrees, of each of "
+            "the plate's other two angles?"),
+      choices=["40", "50", "70", "140"], correct="C",
+      check="The two angles opposite the equal sides are equal, and (180 - 40)/2 = 70."),
 
  dict(n="H2E-19", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle DEF, the right angle is at F, DF = 7, EF = 24, and DE = 25. What is "
-            "the value of \\(\\sin E\\)?"),
-      choices=["\\(\\frac{7}{24}\\)", "\\(\\frac{7}{25}\\)", "\\(\\frac{24}{25}\\)",
-               "\\(\\frac{25}{7}\\)"], correct="B",
-      check="The side opposite E is DF = 7 and the hypotenuse is DE = 25, so sin E = 7/25."),
+      stem=("A barge horse pulls on a towline that makes an angle of 20&deg; with the line of the "
+            "canal, and the pull along the towline is 400 newtons. Taking "
+            "\\(\\cos 20^{\\circ}=0.94\\), what is the part of that pull acting along the line of "
+            "the canal, in newtons?"),
+      choices=["136", "146", "376", "426"], correct="C",
+      check="The component along the canal is 400 cos 20 degrees, which is 400(0.94) = 376."),
 
  dict(n="H2E-20", domain="ALG", skill="ALG-LE", type="FR",
       stem=("A toll of $4 is charged for every tonne of cargo carried on a barge. The toll on one "
@@ -353,24 +358,27 @@ MODULE_2_EASY = [
       check="92/4 = 23."),
 
  dict(n="H2E-21", domain="ADV", skill="ADV-NE", type="FR",
-      stem="What is the value of x in the equation \\(4^{x}=64\\)?",
+      stem=("A chute delivers \\(4^{x}\\) sacks of grain into a barge in x minutes. After how many "
+            "minutes has the chute delivered 64 sacks?"),
       answers=["3"],
       check="64 is 4 cubed, so x = 3."),
 
  dict(n="H2E-22", domain="GT", skill="GT-AV", type="FR",
-      stem=("A rectangular apron of a quay measures 40 metres by 7 metres. What is its area, in "
-            "square metres?"),
-      answers=["280"],
-      check="40(7) = 280."),
+      stem=("A rectangular grain store on a quay measures 26 metres by 14 metres. A fence is to be "
+            "built all the way round the outside of the store. How many metres of fencing does "
+            "that take?"),
+      answers=["80"],
+      check="The perimeter is 2(26 + 14) = 80 metres."),
 ]
 
 # ---------------------------------------------------------- Module 2 (Hard)
 MODULE_2_HARD = [
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("In the system of equations below, a is a constant.<br/>ax + 6y = 18<br/>4x + 3y = 7"
-            "<br/>The system has no solution. What is the value of a?"),
-      choices=["8", "9", "12", "24"], correct="A",
-      check="No solution needs the coefficients proportional but the constants not, so a/4 = 6/3 and a = 8."),
+      stem=("A toll house charges $3 a tonne on the first 20 tonnes a barge carries and $2 a tonne "
+            "on every tonne it carries above 20. One barge paid $94 in toll. How many tonnes was "
+            "that barge carrying?"),
+      choices=["25", "31", "34", "37"], correct="D",
+      check="The first 20 tonnes cost $60, and the remaining $34 buys 17 tonnes, so 20 + 17 = 37."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A tally clerk's two rules for a barge's papers give the system below.<br/>"
@@ -379,11 +387,12 @@ MODULE_2_HARD = [
       check="Doubling the first and adding gives 11x = 55, so x = 5, y = 2 and x + y = 7."),
 
  dict(n="H2H-03", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("In the xy-plane, line k passes through the points (-2, 9) and (6, -7). Which equation "
-            "defines line k?"),
-      choices=["y = 2x + 13", "y = -2x + 5", "y = -2x + 13",
-               "\\(y=-\\frac{1}{2}x+8\\)"], correct="B",
-      check="The slope is (-7-9)/(6+2) = -2, and 9 = -2(-2) + b gives b = 5."),
+      stem=("Two haulage firms quote for towing the same barge. One charges $40 and a further $7 "
+            "for each tonne carried; the other charges $96 and a further $3 for each tonne "
+            "carried. For loads heavier than how many tonnes is the first firm's charge the "
+            "greater of the two?"),
+      choices=["12", "14", "18", "22"], correct="B",
+      check="40 + 7t exceeds 96 + 3t when 4t > 56, that is for loads above 14 tonnes."),
 
  dict(n="H2H-04", domain="ALG", skill="ALG-LI", type="MC",
       stem=("What is the greatest integer value of x for which \\(5-2x \\ge 3(x-4)\\)?"),
@@ -391,10 +400,10 @@ MODULE_2_HARD = [
       check="5 - 2x >= 3x - 12 gives 17 >= 5x, so x is at most 3.4 and the greatest integer is 3."),
 
  dict(n="H2H-05", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("The equation 4(kx - 3) = 12x + 8, where k is a constant, has no solution. What is the "
-            "value of k?"),
-      choices=["2", "3", "4", "5"], correct="B",
-      check="4kx - 12 = 12x + 8 has no solution only when 4k = 12, that is k = 3, since -12 is not 8."),
+      stem=("In the equation 3(2x - 5) + k = 6x + 7, k is a constant, and the equation is true for "
+            "every value of x. What is the value of k?"),
+      choices=["22", "27", "32", "37"], correct="A",
+      check="6x - 15 + k = 6x + 7 for every x only when k - 15 = 7, so k = 22."),
 
  dict(n="H2H-06", domain="ALG", skill="ALG-LF", type="MC",
       stem=("The draught of a barge rises steadily with the load it carries: an empty barge of one "
@@ -412,13 +421,15 @@ MODULE_2_HARD = [
       check="f(4x-3) = (4x-3+5)/2 = (4x+2)/2 = 2x + 1."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("If \\(x+\\frac{1}{x}=5\\), what is the value of \\(x^{2}+\\frac{1}{x^{2}}\\)?"),
+      stem=("In a toll clerk's gauging rule the positive number x satisfies "
+            "\\(x+\\frac{1}{x}=5\\). What is the value of \\(x^{2}+\\frac{1}{x^{2}}\\)?"),
       choices=["21", "23", "25", "27"], correct="B",
       check="Squaring gives x^2 + 2 + 1/x^2 = 25, so x^2 + 1/x^2 = 23."),
 
  dict(n="H2H-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{6x^{2}-x-15}{2x+3}\\), where "
-            "\\(2x+3 \\ne 0\\)?"),
+      stem=("A tender divides a total charge of \\(6x^{2}-x-15\\) dollars equally among 2x + 3 "
+            "barges, where \\(2x+3 \\ne 0\\). Which expression gives the charge, in dollars, for "
+            "each barge?"),
       choices=["2x - 5", "3x + 5", "3x - 5", "\\(3x^{2}-5\\)"], correct="C",
       check="6x^2 - x - 15 factors as (2x+3)(3x-5), so the quotient is 3x - 5."),
 
@@ -457,7 +468,7 @@ MODULE_2_HARD = [
             + table(["Cargo", "Hatton toll house", "Napton toll house"],
                     [["Salt", "24", "16"], ["Grain", "45", "30"], ["Gravel", "31", "54"]])
             + "What percentage of the barges carrying grain were gauged at Hatton toll house?"),
-      choices=["40", "45", "60", "75"], correct="C",
+      choices=["45", "60", "75", "80"], correct="B",
       check="45 of the 75 barges carrying grain were gauged at Hatton, and 45/75 = 0.60."),
 
  dict(n="H2H-15", domain="PSDA", skill="PSDA-RP", type="MC",
@@ -484,10 +495,11 @@ MODULE_2_HARD = [
       check="Volumes of similar solids scale by 1.5 cubed = 3.375, and 96(3.375) = 324."),
 
  dict(n="H2H-18", domain="GT", skill="GT-LA", type="MC",
-      stem=("In the xy-plane, a circle has the equation \\(x^{2}+y^{2}-10x+6y=2\\). What is the "
-            "radius of the circle?"),
-      choices=["2", "6", "18", "36"], correct="B",
-      check="Completing both squares gives (x-5)^2 + (y+3)^2 = 36, so the radius is 6."),
+      stem=("A winding hole, the widened place in a canal where a barge is turned round, is a "
+            "circle of area \\(400\\pi\\) square metres. By how many metres is the diameter of the "
+            "winding hole greater than the length of a barge 21 metres long?"),
+      choices=["9", "19", "29", "39"], correct="B",
+      check="The radius is 20 metres, so the diameter is 40 and 40 - 21 = 19."),
 
  dict(n="H2H-19", domain="GT", skill="GT-TR", type="MC",
       stem=("In right triangle ABC the right angle is at B, and \\(\\sin A=\\frac{5}{13}\\). What "
@@ -497,22 +509,23 @@ MODULE_2_HARD = [
       check="With BC = 5k and AC = 13k, AB = 12k, and tan C = AB/BC = 12/5."),
 
  dict(n="H2H-20", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("In the system of equations below, k is a constant.<br/>2x + y = k<br/>6x + 3y = 21"
-            "<br/>The system has infinitely many solutions. What is the value of k?"),
-      answers=["7"],
-      check="Dividing the second equation by 3 gives 2x + y = 7, so k = 7."),
+      stem=("The toll, in dollars, on a barge carrying a load of L tonnes is given by "
+            "\\(T=\\frac{5(L+8)}{4}\\). What load, in tonnes, is charged a toll of $60?"),
+      answers=["40"],
+      check="5(L+8) = 240 gives L + 8 = 48 and L = 40."),
 
  dict(n="H2H-21", domain="ADV", skill="ADV-NE", type="FR",
-      stem="What is the solution to the equation \\(\\sqrt{2x+3}=x-6\\)?",
-      answers=["11"],
-      check="Squaring gives x^2 - 14x + 33 = 0, whose roots are 11 and 3; only 11 satisfies the original equation."),
+      stem=("In a gauging rule the positive numbers x and y satisfy \\(x^{2}+y^{2}=58\\) and "
+            "xy = 21. What is the value of x + y?"),
+      answers=["10"],
+      check="(x+y)^2 = x^2 + y^2 + 2xy = 58 + 42 = 100, and x + y is positive, so it is 10."),
 
  dict(n="H2H-22", domain="GT", skill="GT-AV", type="FR",
-      stem=("The floor of a warehouse on a quay is a rectangle whose length is 4 metres more than "
-            "twice its width, and its perimeter is 128 metres. What is the area of the floor, in "
-            "square metres?"),
-      answers=["880"],
-      check="2(w + 2w + 4) = 128 gives w = 20 and length 44, so the area is 880."),
+      stem=("Two cylindrical hoppers on a wharf hold the same volume of gravel when full. The "
+            "first has a base of radius 2 metres and a height of 9 metres, and the second has a "
+            "base of radius 3 metres. What is the height of the second hopper, in metres?"),
+      answers=["4"],
+      check="pi(4)(9) = pi(9)h gives h = 4."),
 ]
 
 ALL = MODULE_1 + MODULE_2_EASY + MODULE_2_HARD

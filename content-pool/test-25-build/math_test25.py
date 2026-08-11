@@ -123,10 +123,11 @@ MODULE_1 = [
       check="The reams bring 40(9) = 360 dollars, so 0.6q >= 540 - 360 = 180 and q >= 300."),
 
  dict(n="M1-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{6x^{2}+13x-5}{2x+5}\\) for "
-            "\\(x\\ne-\\frac{5}{2}\\)?"),
-      choices=["2x - 1", "3x - 5", "3x - 1", "3x + 1"], correct="C",
-      check="6x^2 + 13x - 5 factors as (2x+5)(3x-1), and cancelling 2x+5 leaves 3x-1."),
+      stem=("A square sheet has an area of \\(x^{2}-14x+49\\) square centimetres, where x is greater "
+            "than 7. Which expression gives the perimeter of the sheet, in centimetres?"),
+      choices=["2x - 14", "4x - 14", "4x - 28", "4x + 28"], correct="C",
+      check="The area is the perfect square (x-7)^2, so each side is x-7 and the perimeter is "
+            "4(x-7) = 4x-28."),
 
  dict(n="M1-09", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The table gives four values of a quadratic function f."
@@ -145,12 +146,11 @@ MODULE_1 = [
             "(v-16)(v+4) = 0. Only v = 16 is a possible speed."),
 
  dict(n="M1-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The table gives five values of the function f."
-            + table(["x", "f(x)"],
-                    [["1", "12"], ["2", "19"], ["3", "27"], ["4", "36"], ["5", "46"]])
-            + "The function g is defined by g(x) = f(x + 2) - 5. What is the value of g(1)?"),
-      choices=["7", "14", "22", "31"], correct="C",
-      check="g(1) = f(3) - 5 = 27 - 5 = 22."),
+      stem=("In the xy-plane the graph of \\(y=(x-3)(x+11)\\) crosses the x-axis at two points. What "
+            "is the distance between those two points?"),
+      choices=["8", "11", "14", "22"], correct="C",
+      check="The graph crosses where (x-3)(x+11) = 0, that is at x = 3 and x = -11, and the "
+            "distance between those points is 3 - (-11) = 14."),
 
  dict(n="M1-12", domain="ADV", skill="ADV-EQ", type="FR",
       stem=("If \\(x^{\\frac{3}{2}}=216\\) for a positive number x, what is the value of x?"),
@@ -228,10 +228,12 @@ MODULE_1 = [
             "altitude to the diagonal is 2(54)/15 = 7.2."),
 
  dict(n="M1-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle PQR the right angle is at Q and \\(\\tan P=\\frac{20}{21}\\). The "
-            "length of side PQ is 63 centimetres. What is the length of side PR, in centimetres?"),
-      choices=["60", "65", "87", "105"], correct="C",
-      check="tan P = QR/PQ, so QR = 63(20/21) = 60, and PR = sqrt(63^2 + 60^2) = sqrt(7569) = 87."),
+      stem=("A bindery's set square is cut as a right triangle KLM with its right angle at L. The "
+            "length of KL is 63 millimetres and \\(\\tan K=\\frac{20}{21}\\). What is the perimeter "
+            "of the set square, in millimetres?"),
+      choices=["150", "183", "210", "246"], correct="C",
+      check="tan K = LM/KL, so LM = 63(20/21) = 60 and KM = sqrt(63^2 + 60^2) = 87. The perimeter "
+            "is 63 + 60 + 87 = 210."),
 
  dict(n="M1-22", domain="GT", skill="GT-AV", type="FR",
       stem=("A guillotine trims a rectangular sheet by removing 12 millimetres from the fore-edge and "
@@ -293,43 +295,48 @@ MODULE_2_EASY = [
       check="3q = 34 - 7 = 27, so q = 9."),
 
  dict(n="M2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to 5(2x + 3) - 4x?"),
-      choices=["6x + 3", "6x + 15", "14x + 3", "14x + 15"], correct="B",
-      check="5(2x+3) = 10x + 15, and 10x + 15 - 4x = 6x + 15."),
+      stem=("A colourman's slab holds \\(2x^{3}\\) grams of pigment in each of \\(5x^{4}\\) parcels "
+            "set out on the slab. Which expression gives the total mass of pigment, in grams?"),
+      choices=["\\(7x^{7}\\)", "\\(10x^{7}\\)", "\\(7x^{12}\\)", "\\(10x^{12}\\)"], correct="B",
+      check="The total is 2x^3 times 5x^4, which is 10x^7 because the exponents add."),
 
  dict(n="M2E-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to (x + 4)(x + 9)?"),
-      choices=["\\(x^{2}+13x+36\\)", "\\(x^{2}+13x+13\\)", "\\(x^{2}+36x+13\\)",
-               "\\(x^{2}+5x+36\\)"], correct="A",
-      check="The outer and inner products give 9x + 4x = 13x, and 4(9) = 36."),
+      stem=("A marbler records a morning's total, in grams, as 4a + 9b - a + 2b. Which expression is "
+            "equivalent to that total?"),
+      choices=["3a + 11b", "3a + 7b", "5a + 11b", "14ab"], correct="A",
+      check="4a - a = 3a and 9b + 2b = 11b, so the total is 3a + 11b."),
 
  dict(n="M2E-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The table gives four values of the function f."
-            + table(["x", "f(x)"], [["1", "9"], ["2", "4"], ["3", "0"], ["4", "-3"]])
-            + "For which value of x in the table is f(x) equal to 0?"),
-      choices=["1", "2", "3", "4"], correct="C",
-      check="The table pairs x = 3 with f(x) = 0."),
+      stem=("In the xy-plane the graph of \\(y=x^{2}+k\\) passes through the point (3, 14), where k "
+            "is a constant. What is the value of k?"),
+      choices=["-5", "3", "5", "9"], correct="C",
+      check="Substituting the point gives 14 = 3^2 + k, so k = 14 - 9 = 5."),
 
  dict(n="M2E-11", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("If (n - 9)(n + 4) = 0 and n is positive, what is the value of n?"),
-      choices=["4", "9", "13", "36"], correct="B",
-      check="The solutions are 9 and -4, and only 9 is positive."),
+      stem=("The number of skeins a dyer can hang on a drying frame is given by \\(x^{2}+5\\), where "
+            "x is the number of rails in the frame. One frame holds 41 skeins. How many rails does "
+            "that frame have?"),
+      choices=["4", "6", "9", "36"], correct="B",
+      check="x^2 + 5 = 41 gives x^2 = 36, and the positive solution is x = 6."),
 
  dict(n="M2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The function f is defined by \\(f(x)=x^{2}+2x\\). What is the value of f(5)?"),
-      choices=["17", "27", "35", "45"], correct="C",
-      check="5^2 + 2(5) = 25 + 10 = 35."),
+      stem=("A colour dropped on a marbling bath spreads so that the area it covers is given by "
+            "\\(A(t)=4(3)^{t}\\) square centimetres t seconds after it is dropped. What area, in "
+            "square centimetres, does it cover 2 seconds after it is dropped?"),
+      choices=["12", "24", "36", "144"], correct="C",
+      check="A(2) = 4(3)^2 = 4(9) = 36 square centimetres."),
 
- dict(n="M2E-13", domain="ADV", skill="ADV-EQ", type="FR",
-      stem=("If \\(3^{x}=81\\), what is the value of x?"),
-      answers=["4"],
-      check="81 = 3^4, so x = 4."),
+ dict(n="M2E-13", domain="ADV", skill="ADV-NE", type="FR",
+      stem=("A cake of dry pigment is a cube whose side length is s centimetres, and "
+            "\\(s^{3}=125\\). What is the value of s?"),
+      answers=["5"],
+      check="125 = 5^3, so s = 5."),
 
  dict(n="M2E-14", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A dyer's mordant liquor is made with 6 grams of alum for every litre of water. How many "
-            "grams of alum are needed for 15 litres of water?"),
-      choices=["24", "45", "60", "90"], correct="D",
-      check="6(15) = 90 grams."),
+      stem=("An ink recipe calls for 7 parts varnish to 3 parts lampblack by mass. How many kilograms "
+            "of lampblack are needed to make 40 kilograms of that ink?"),
+      choices=["3", "7", "10", "12"], correct="D",
+      check="Lampblack is 3 of the 10 parts, so it is (3/10)(40) = 12 kilograms."),
 
  dict(n="M2E-15", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("72 grams of ultramarine costs $54.00. At that rate, what is the cost of 20 grams of "
@@ -342,9 +349,9 @@ MODULE_2_EASY = [
             + table(["Day", "Skeins dyed"],
                     [["Monday", "23"], ["Tuesday", "31"], ["Wednesday", "18"],
                      ["Thursday", "26"], ["Friday", "31"]])
-            + "What is the median of the five values?"),
-      choices=["23", "25.8", "26", "31"], correct="C",
-      check="In order the values are 18, 23, 26, 31, 31, and the middle one is 26."),
+            + "What is the range of the five values?"),
+      choices=["5", "8", "13", "18"], correct="C",
+      check="The greatest value is 31 and the least is 18, so the range is 31 - 18 = 13."),
 
  dict(n="M2E-17", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the amount of each of four pigments held in a colourman's store."
@@ -356,17 +363,19 @@ MODULE_2_EASY = [
       check="46 - 17 = 29 kilograms."),
 
  dict(n="M2E-18", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("A box holds 40 cakes of watercolour, of which 9 are scarlet. If one cake is chosen at "
-            "random from the box, what is the probability that it is scarlet?"),
-      choices=["\\(\\frac{9}{40}\\)", "\\(\\frac{9}{31}\\)", "\\(\\frac{31}{40}\\)",
-               "\\(\\frac{40}{9}\\)"], correct="A",
-      check="9 of the 40 cakes are scarlet, so the probability is 9/40."),
+      stem=("A dyer's tally for one morning shows 18 skeins dyed indigo and 27 skeins dyed madder. If "
+            "one of those skeins is chosen at random, what is the probability that it was dyed "
+            "indigo?"),
+      choices=["\\(\\frac{2}{5}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{2}{3}\\)",
+               "\\(\\frac{3}{2}\\)"], correct="A",
+      check="18 of the 18 + 27 = 45 skeins were dyed indigo, and 18/45 = 2/5."),
 
  dict(n="M2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("The floor of a rectangular marbling trough measures 90 centimetres by 60 centimetres. "
-            "What is the area of the floor, in square centimetres?"),
-      choices=["150", "300", "1,500", "5,400"], correct="D",
-      check="90(60) = 5,400 square centimetres."),
+      stem=("A rectangular block of dry pigment measures 8 centimetres by 5 centimetres by 3 "
+            "centimetres. What is the total surface area of the block, in square centimetres?"),
+      choices=["62", "79", "120", "158"], correct="D",
+      check="The three pairs of faces have areas 8(5) = 40, 8(3) = 24 and 5(3) = 15, so the total "
+            "is 2(40 + 24 + 15) = 158 square centimetres."),
 
  dict(n="M2E-20", domain="GT", skill="GT-AV", type="FR",
       stem=("A rectangular dye tank has a base measuring 50 centimetres by 40 centimetres and is "
@@ -376,17 +385,20 @@ MODULE_2_EASY = [
       check="50(40)(30) = 60,000 cubic centimetres."),
 
  dict(n="M2E-21", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC the measure of angle A is 47&deg; and the measure of angle B is 68&deg;. "
-            "What is the measure of angle C?"),
-      choices=["65&deg;", "75&deg;", "115&deg;", "133&deg;"], correct="A",
-      check="The three angles total 180&deg;, so angle C measures 180 - 47 - 68 = 65 degrees."),
+      stem=("A marbling comb carries 24 teeth set in a straight line with all the gaps between "
+            "neighbouring teeth equal. The distance from the first tooth to the last is 46 "
+            "centimetres. What is the distance, in centimetres, between one tooth and the next?"),
+      choices=["2", "23", "24", "46"], correct="A",
+      check="24 teeth leave 23 gaps between them, and 46/23 = 2 centimetres."),
 
  dict(n="M2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle XYZ the right angle is at Y. The length of XZ is 25 and the length of "
-            "YZ is 7. What is the value of \\(\\sin X\\)?"),
-      choices=["\\(\\frac{7}{25}\\)", "\\(\\frac{7}{24}\\)", "\\(\\frac{24}{25}\\)",
-               "\\(\\frac{25}{7}\\)"], correct="A",
-      check="XZ is the hypotenuse and YZ is opposite angle X, so sin X = 7/25."),
+      stem=("A marbler's set square is a right triangle in which one of the acute angles measures "
+            "45&deg; and the leg adjacent to that angle measures 9 centimetres. What is the length of "
+            "the hypotenuse, in centimetres?"),
+      choices=["\\(\\frac{9}{2}\\)", "\\(9\\sqrt{2}\\)", "\\(9\\sqrt{3}\\)", "18"],
+      correct="B",
+      check="The cosine of 45 degrees is the adjacent leg over the hypotenuse, so the hypotenuse is "
+            "9 divided by cos 45, which is 9 times the square root of 2."),
 ]
 
 
@@ -402,12 +414,10 @@ MODULE_2_HARD = [
             "x + y = 8."),
 
  dict(n="M2H-02", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("In the xy-plane the system of equations below has no solution, where a is a constant."
-            "<br/>ax + 3y = 12<br/>4x + 6y = 25<br/>"
-            "What is the value of a?"),
-      choices=["0.5", "2", "6", "8"], correct="B",
-      check="No solution means the two lines are parallel and distinct, so a/4 = 3/6 and a = 2. "
-            "With a = 2 the left sides are in the ratio 1 to 2 while 12 and 25 are not."),
+      stem=("A dye works' costing rule leads to the equation \\(4(x-c)=3x+8\\), where c is a "
+            "constant. The solution to this equation is x = 20. What is the value of c?"),
+      choices=["2", "3", "7", "12"], correct="B",
+      check="Substituting x = 20 gives 4(20 - c) = 68, so 80 - 4c = 68 and c = 3."),
 
  dict(n="M2H-03", domain="ALG", skill="ALG-LF", type="MC",
       stem=("In the xy-plane a line passes through the points (p, 2p) and (3p, 8p), where p is a "
@@ -416,10 +426,11 @@ MODULE_2_HARD = [
       check="The slope is (8p - 2p)/(3p - p) = 6p/2p = 3, and p cancels."),
 
  dict(n="M2H-04", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("How many integer values of x satisfy both \\(2x-7>-3\\) and \\(2x-7\\le 9\\)?"),
-      choices=["5", "6", "7", "8"], correct="B",
-      check="The two conditions give 2 < x <= 8, and the integers 3, 4, 5, 6, 7, 8 satisfy both, "
-            "which is 6 values."),
+      stem=("The inequality \\(3x-a>12\\), where a is a constant, is satisfied by exactly those "
+            "values of x that are greater than 9. What is the value of a?"),
+      choices=["9", "15", "21", "27"], correct="B",
+      check="The inequality rearranges to x > (12+a)/3, so (12+a)/3 = 9 gives 12 + a = 27 and "
+            "a = 15."),
 
  dict(n="M2H-05", domain="ALG", skill="ALG-LE", type="FR",
       stem=("The equation \\(2(6x+a)=3(4x-5)+11\\) is true for every value of x, where a is a "
@@ -449,20 +460,18 @@ MODULE_2_HARD = [
       check="2x - 1 = 7 gives x = 4, so f(7) = 6(4) + 5 = 29."),
 
  dict(n="M2H-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{2x^{2}-x-15}{x^{2}-9}\\) for x greater than "
-            "3?"),
-      choices=["\\(\\frac{2x-5}{x+3}\\)", "\\(\\frac{2x+5}{x+3}\\)", "\\(\\frac{2x+5}{x-3}\\)",
-               "\\(\\frac{x-5}{x+3}\\)"], correct="B",
-      check="The numerator factors as (2x+5)(x-3) and the denominator as (x-3)(x+3), and cancelling "
-            "x-3 leaves (2x+5)/(x+3)."),
+      stem=("The expression \\((3x-4)^{2}-(2x-4)(2x+4)\\) is equivalent to \\(ax^{2}+bx+c\\), "
+            "where a, b and c are constants. What is the value of a+b+c?"),
+      choices=["-11", "13", "21", "29"], correct="B",
+      check="(3x-4)^2 = 9x^2 - 24x + 16 and (2x-4)(2x+4) = 4x^2 - 16, so the difference is "
+            "5x^2 - 24x + 32 and a + b + c = 5 - 24 + 32 = 13."),
 
  dict(n="M2H-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("The solutions of \\(3x^{2}-12x+7=0\\) are p and q. What is the value of "
-            "\\(p^{2}+q^{2}\\)?"),
-      choices=["\\(\\frac{22}{3}\\)", "\\(\\frac{26}{3}\\)", "\\(\\frac{32}{3}\\)",
-               "\\(\\frac{34}{3}\\)"], correct="D",
-      check="The sum of the solutions is 4 and their product is 7/3, so "
-            "p^2 + q^2 = 4^2 - 2(7/3) = 16 - 14/3 = 34/3."),
+      stem=("In the xy-plane the graph of \\(y=x^{2}+bx+c\\) passes through the point (0, 12) and "
+            "has its vertex on the line x = 5, where b and c are constants. What is the value of b?"),
+      choices=["-25", "-20", "-12", "-10"], correct="D",
+      check="The vertex of y = x^2 + bx + c lies at x = -b/2, so -b/2 = 5 and b = -10. The point "
+            "(0, 12) fixes c = 12 but does not affect b."),
 
  dict(n="M2H-11", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The mass of pigment still too coarse to use after t hours under the muller is modelled "
@@ -472,17 +481,17 @@ MODULE_2_HARD = [
       check="0.8^4 = 0.4096, and A(0.4096) = 204.8 gives A = 500."),
 
  dict(n="M2H-12", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\(\\frac{3}{x}-\\frac{2}{x+1}\\), where x is "
-            "positive?"),
-      choices=["\\(\\frac{x+3}{x^{2}+x}\\)", "\\(\\frac{1}{x^{2}+x}\\)",
-               "\\(\\frac{5x+3}{x^{2}+x}\\)", "\\(\\frac{x-3}{x^{2}+x}\\)"], correct="A",
-      check="Over the common denominator x(x+1) the numerator is 3(x+1) - 2x = x + 3."),
+      stem=("The expression (x+a)(x+b) is equal to \\(x^{2}+11x+30\\) for every value of x, where a "
+            "and b are constants and a is greater than b. What is the value of a-b?"),
+      choices=["1", "5", "6", "11"], correct="A",
+      check="a and b multiply to 30 and add to 11, so they are 6 and 5, and a - b = 1."),
 
  dict(n="M2H-13", domain="ADV", skill="ADV-NE", type="FR",
-      stem=("If \\(\\sqrt{2x+11}=x-2\\), what is the value of x?"),
-      answers=["7"],
-      check="Squaring gives 2x + 11 = x^2 - 4x + 4, so x^2 - 6x - 7 = 0 and x = 7 or x = -1. "
-            "Only x = 7 makes x - 2 non-negative, so -1 is extraneous."),
+      stem=("One solution of the equation \\(x^{2}-kx+18=0\\) is 3, where k is a constant. What is "
+            "the other solution?"),
+      answers=["6"],
+      check="The two solutions multiply to 18, so the other is 18/3 = 6. (Their sum is then 9, "
+            "which makes k = 9.)"),
 
  dict(n="M2H-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A dye recipe calls for madder and alum in the ratio 5 to 2 by mass. A dyer holds 30 "
@@ -493,11 +502,11 @@ MODULE_2_HARD = [
             "7 kilograms each can be made, a total of 42 kilograms."),
 
  dict(n="M2H-15", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The mean of twelve readings is 46. Two of the readings, 31 and 39, are then discarded. "
-            "What is the mean of the remaining ten readings?"),
-      choices=["48.2", "49.0", "51.5", "55.2"], correct="A",
-      check="The twelve total 552 and the two discarded total 70, so the remaining ten total 482 and "
-            "average 48.2."),
+      stem=("The mean of a set of 7 readings is 24. Each reading is multiplied by 3, and then 5 is "
+            "subtracted from each product. What is the mean of the resulting set of 7 values?"),
+      choices=["67", "72", "77", "82"], correct="A",
+      check="Multiplying every value by 3 multiplies the mean by 3, and subtracting 5 from every "
+            "value subtracts 5 from the mean, so the new mean is 3(24) - 5 = 67."),
 
  dict(n="M2H-16", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the number of skeins dyed in each of three colours at two dye works "
@@ -509,21 +518,22 @@ MODULE_2_HARD = [
       check="The old works dyed 81 + 54 + 45 = 180 skeins, and 81/180 = 0.45, or 45%."),
 
  dict(n="M2H-17", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A price is first increased by p percent and then decreased by p percent, where p is a "
-            "positive constant. The final price is 4 percent less than the original price. What is "
-            "the value of p?"),
-      choices=["2", "4", "16", "20"], correct="D",
-      check="The two changes multiply the price by (1 + p/100)(1 - p/100) = 1 - p^2/10,000, which "
-            "must equal 0.96, so p^2 = 400 and p = 20."),
+      stem=("Two grades of ink are blended. One costs $18 a kilogram and the other costs $30 a "
+            "kilogram, and the blend costs $22 a kilogram. What fraction of the blend, by mass, is "
+            "the dearer grade?"),
+      choices=["\\(\\frac{1}{4}\\)", "\\(\\frac{1}{3}\\)", "\\(\\frac{1}{2}\\)",
+               "\\(\\frac{2}{3}\\)"], correct="B",
+      check="If a fraction f of the blend is the dearer grade, 30f + 18(1-f) = 22 gives 12f = 4 and "
+            "f = 1/3."),
 
  dict(n="M2H-18", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("A box holds 5 cakes of vermilion and 7 cakes of ochre. Two cakes are taken from the box "
             "at random, one after the other and without replacement. What is the probability that "
-            "both are ochre?"),
-      choices=["\\(\\frac{35}{132}\\)", "\\(\\frac{7}{22}\\)", "\\(\\frac{49}{144}\\)",
-               "\\(\\frac{7}{12}\\)"], correct="B",
-      check="The first cake is ochre with probability 7/12 and the second with probability 6/11, and "
-            "(7/12)(6/11) = 42/132 = 7/22."),
+            "the two cakes taken are of different pigments?"),
+      choices=["\\(\\frac{35}{132}\\)", "\\(\\frac{7}{22}\\)", "\\(\\frac{35}{66}\\)",
+               "\\(\\frac{7}{12}\\)"], correct="C",
+      check="Vermilion then ochre has probability (5/12)(7/11) and ochre then vermilion the same, "
+            "so the total is 2(35/132) = 35/66."),
 
  dict(n="M2H-19", domain="GT", skill="GT-AV", type="MC",
       stem=("A cylindrical can of radius r and height h is completely full of ink. All the ink is "
@@ -535,20 +545,19 @@ MODULE_2_HARD = [
             "h/4."),
 
  dict(n="M2H-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC, point D lies on side AB and point E lies on side AC, and segment DE is "
-            "parallel to side BC. The length of AD is 6, the length of DB is 9, and the length of DE "
-            "is 8. What is the length of BC?"),
-      choices=["12", "20", "24", "30"], correct="B",
-      check="Triangle ADE is similar to triangle ABC with ratio AD/AB = 6/15 = 2/5, so "
-            "BC = 8(5/2) = 20."),
+      stem=("In the xy-plane a circle has its centre at (3, -2) and passes through the point "
+            "(11, 4). What is the length of the radius of the circle?"),
+      choices=["6", "10", "14", "20"], correct="B",
+      check="The radius is the distance from (3,-2) to (11,4), which is sqrt(8^2 + 6^2) = "
+            "sqrt(100) = 10."),
 
  dict(n="M2H-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("In right triangle ABC the right angle is at C, and \\(\\tan A=\\frac{40}{9}\\). What is "
-            "the value of \\(\\cos B\\)?"),
-      choices=["\\(\\frac{9}{41}\\)", "\\(\\frac{9}{40}\\)", "\\(\\frac{40}{41}\\)",
-               "\\(\\frac{41}{40}\\)"], correct="C",
-      check="Angles A and B are complementary, so cos B = sin A. With legs 40 and 9 the hypotenuse "
-            "is 41, so sin A = 40/41."),
+      stem=("A marbler's comb blank is cut as a right triangle ABC with its right angle at C. The "
+            "length of AB is 20 centimetres and \\(\\sin A=\\frac{3}{5}\\). What is the area of the "
+            "blank, in square centimetres?"),
+      choices=["48", "60", "96", "120"], correct="C",
+      check="sin A = BC/AB gives BC = 20(3/5) = 12, so AC = sqrt(400-144) = 16 and the area is "
+            "(1/2)(12)(16) = 96."),
 
  dict(n="M2H-22", domain="GT", skill="GT-AV", type="FR",
       stem=("A conical heap of dry pigment has a base of radius 30 centimetres and a height of 40 "

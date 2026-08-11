@@ -66,23 +66,24 @@ MODULE_1 = [
       check="9a+5b=1930 and 6a+11b=2176 give a=150 and b=116, so one of each earns 266."),
 
  dict(n="H1-02", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A hive standing on a weighing platform gains mass at a constant rate while a nectar "
-            "flow lasts. The table gives the mass recorded on three days of one flow."
-            + table(["Day of the flow", "Mass of the hive (kg)"],
-                    [["2", "41"], ["5", "47"], ["9", "55"]])
-            + "The beekeeper adds another super on the first day the hive's mass is more than 78 "
-              "kilograms. On which day of the flow is that?"),
-      choices=["18", "19", "21", "22"], correct="C",
-      check="The rate is (55-41)/(9-2) = 2 kg per day, so the mass is 2d+37; 2d+37 > 78 gives "
-            "d > 20.5, and the first such day is day 21."),
+      stem=("Two hives stand on weighing platforms, and each gains mass at its own constant rate "
+            "while a nectar flow lasts. The table gives the mass of each hive on three days of one "
+            "flow."
+            + table(["Day of the flow", "Mass of hive A (kg)", "Mass of hive B (kg)"],
+                    [["2", "41", "62"], ["5", "47", "65"], ["9", "55", "69"]])
+            + "If both hives keep gaining at these rates, on which day of the flow do the two "
+              "hives have the same mass?"),
+      choices=["21", "22", "23", "24"], correct="C",
+      check="Hive A gains 2 kg a day and hive B gains 1 kg a day, so their masses are 2d+37 and "
+            "d+60; 2d+37 = d+60 gives d = 23."),
 
  dict(n="H1-03", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A trailer has a mass of 250 kilograms when empty and must not exceed 900 kilograms "
-            "when loaded. Five empty crates of 9 kilograms each are already on it, and every full "
-            "super the beekeeper adds has a mass of 26 kilograms. What is the greatest number of "
-            "full supers that can be added?"),
-      choices=["20", "21", "22", "23"], correct="D",
-      check="250 + 45 + 26s <= 900 gives 26s <= 605 and s <= 23.26, so 23 supers."),
+      stem=("A beekeeper must extract at least 900 kilograms of honey during a five-day week. "
+            "On the first three days 168, 205 and 149 kilograms were extracted. If an equal mass "
+            "is extracted on each of the last two days, at least how many kilograms must be "
+            "extracted on each of those two days?"),
+      choices=["165", "172", "181", "189"], correct="D",
+      check="522 kg have been extracted, so 2e >= 900 - 522 = 378 and e >= 189 kilograms."),
 
  dict(n="H1-04", domain="ALG", skill="ALG-LE", type="FR",
       stem=("The number of frames a brood box holds is 1 more than twice the number a shallow "
@@ -149,17 +150,17 @@ MODULE_1 = [
       check="Cross-multiplying gives 6(x-4) = 4(x-2), so 2x = 16 and x = 8."),
 
  dict(n="H1-13", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("The expression \\(2x^{2}-20x+61\\) can be rewritten in the form \\(2(x-h)^{2}+k\\), "
-            "where h and k are constants. What is the value of h+k?"),
-      choices=["11", "16", "21", "56"], correct="B",
-      check="2(x-5)^2 = 2x^2-20x+50, so h = 5 and k = 61-50 = 11, giving h+k = 16."),
+      stem=("A beekeeper's forage index x for one season satisfies \\(4^{x}=7\\), where x is a "
+            "constant. For that same season, what is the value of \\(4^{2x+1}\\)?"),
+      choices=["28", "196", "392", "784"], correct="B",
+      check="4^(2x+1) = (4^x)^2 times 4 = 49 times 4 = 196."),
 
  dict(n="H1-14", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A beekeeper drives 60 kilometres to an out-apiary at an average of 40 kilometres per "
-            "hour and returns along the same road at an average of 60 kilometres per hour. What is "
-            "the average speed, in kilometres per hour, for the whole journey?"),
-      choices=["45", "48", "50", "52"], correct="B",
-      check="The journey is 120 km in 1.5 + 1 = 2.5 hours, so the average speed is 48 km per hour."),
+      stem=("One extraction run separates a colony's crop into light honey and dark honey in the "
+            "ratio 7 to 3 by mass. The run yielded 148 kilograms more light honey than dark honey. "
+            "What was the total mass, in kilograms, of the crop?"),
+      choices=["296", "370", "444", "518"], correct="B",
+      check="With 7u and 3u kilograms, 4u = 148 gives u = 37, so the crop is 10u = 370 kilograms."),
 
  dict(n="H1-15", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("Honey runs from a settling tank through a tap at 4.5 litres per minute, and this "
@@ -203,21 +204,21 @@ MODULE_1 = [
       check="The cross-section has area (6+10)/2 times 3.5 = 28 m^2, and 28(12) = 336 m^3."),
 
  dict(n="H1-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("A rectangular apiary plot measures 24 metres by 45 metres, and a straight path runs "
-            "from one corner of the plot to the opposite corner. Fencing costs $14 per metre, and "
+      stem=("A rectangular apiary enclosure measures 24 metres by 45 metres, and a straight path "
+            "runs from one corner of the enclosure to the opposite corner. Fencing costs $14 per metre, and "
             "the whole perimeter and the path are to be fenced. What is the total cost?"),
       choices=["$1,932", "$2,646", "$2,730", "$3,024"], correct="B",
       check="The diagonal is the square root of 24^2+45^2 = 2601, which is 51; the perimeter is "
             "138, so 189(14) = 2,646 dollars."),
 
  dict(n="H1-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("A ramp runs from level ground up to the door of a honey house, rising 2.1 metres over "
-            "a horizontal distance of 2.8 metres. What is the sine of the angle that the ramp "
-            "makes with the ground?"),
-      choices=["\\(\\frac{3}{5}\\)", "\\(\\frac{2}{3}\\)", "\\(\\frac{3}{4}\\)",
-               "\\(\\frac{4}{5}\\)"], correct="A",
-      check="The ramp is the square root of 2.1^2+2.8^2 = 12.25, which is 3.5 m long, so the sine "
-            "is 2.1/3.5 = 3/5."),
+      stem=("In a right triangle, the hypotenuse is 3.4 metres long and one of the legs is 1.6 "
+            "metres long. What is the tangent of the angle formed by the hypotenuse and that "
+            "leg?"),
+      choices=["\\(\\frac{8}{17}\\)", "\\(\\frac{15}{17}\\)", "\\(\\frac{15}{8}\\)",
+               "\\(\\frac{17}{8}\\)"], correct="C",
+      check="The other leg is the square root of 3.4^2-1.6^2 = 9, which is 3, so the tangent is "
+            "3/1.6 = 15/8."),
 
  dict(n="H1-22", domain="GT", skill="GT-AV", type="FR",
       stem=("A settling tank is a cylinder of radius 25 centimetres standing on its base. Honey "
@@ -245,25 +246,29 @@ MODULE_2_EASY = [
       check="152(25) = 3,800 kilograms."),
 
  dict(n="H2E-03", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("If 7x-12=44, what is the value of x?"),
-      choices=["8", "12", "32", "56"], correct="A",
-      check="7x = 56, so x = 8."),
+      stem=("A weighbridge subtracts a fixed tare of 9 kilograms from the gross mass of every "
+            "sack of beet pulp to give its net mass. One sack has a net mass of 41 kilograms. "
+            "What is that sack's gross mass, in kilograms?"),
+      choices=["32", "41", "50", "59"], correct="C",
+      check="The gross mass g satisfies g - 9 = 41, so g = 50 kilograms."),
 
  dict(n="H2E-04", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Which value of n satisfies the inequality 5n+3&gt;28?"),
-      choices=["3", "4", "5", "6"], correct="D",
-      check="5n > 25 gives n > 5, and 6 is the only listed value greater than 5."),
+      stem=("The solutions of the inequality \\(7x+4\\le39\\) are exactly the values of x that "
+            "are at most k. What is the value of k?"),
+      choices=["4", "5", "6", "7"], correct="B",
+      check="7x <= 35 gives x <= 5, so k = 5."),
 
  dict(n="H2E-05", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("The line y=9x+24 is drawn in the xy-plane. What is the y-coordinate of the point at "
-            "which the line crosses the y-axis?"),
-      choices=["9", "24", "33", "42"], correct="B",
-      check="At x = 0 the equation gives y = 24."),
+      stem=("A refinery's stock of raw sugar, in tonnes, t days after a shipment arrives is given "
+            "by S(t)=2,400-85t. By how many tonnes does the stock fall each day?"),
+      choices=["85", "340", "2,315", "2,400"], correct="A",
+      check="The coefficient of t is -85, so the stock falls by 85 tonnes a day."),
 
  dict(n="H2E-06", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("If 3(k+7)=48, what is the value of k?"),
-      answers=["9"],
-      check="k + 7 = 16, so k = 9."),
+      stem=("A refinery's evaporators burn 340 litres of fuel oil for every hour they run. For "
+            "how many hours do they run to burn 2,720 litres of fuel oil?"),
+      answers=["8"],
+      check="340h = 2,720 gives h = 8 hours."),
 
  dict(n="H2E-07", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A refinery must process at least 480 tonnes of beet this week and has already "
@@ -273,20 +278,25 @@ MODULE_2_EASY = [
       check="480 - 315 = 165 tonnes."),
 
  dict(n="H2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to 5(2x+3)-4x?"),
-      choices=["6x+3", "6x-15", "6x+15", "14x+15"], correct="C",
-      check="10x + 15 - 4x = 6x + 15."),
+      stem=("A rectangular filter bed has an area, in square metres, of \\(6x^{2}+15x\\). Which "
+            "expression gives that area written as a product of two factors?"),
+      choices=["\\(3x(2x+15)\\)", "\\(6x(x+5)\\)", "\\(3x(2x+5)\\)", "\\(3(2x+5)\\)"],
+      correct="C",
+      check="3x divides both terms, and 6x^2+15x = 3x(2x+5)."),
 
  dict(n="H2E-09", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("Which expression is equivalent to \\((x+6)(x-2)\\)?"),
-      choices=["\\(x^{2}+4x-12\\)", "\\(x^{2}-4x-12\\)", "\\(x^{2}+8x-12\\)",
-               "\\(x^{2}+4x+12\\)"], correct="A",
-      check="x^2 - 2x + 6x - 12 = x^2 + 4x - 12."),
+      stem=("A square screen used to grade sugar crystals has sides of length \\(2x+7\\) "
+            "centimetres. Which expression gives the area of the screen, in square centimetres?"),
+      choices=["\\(4x^{2}+49\\)", "\\(2x^{2}+14x+49\\)", "\\(4x^{2}+28x+49\\)",
+               "\\(4x^{2}+14x+49\\)"], correct="C",
+      check="(2x+7)^2 = 4x^2 + 28x + 49."),
 
  dict(n="H2E-10", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("For the function \\(f(x)=x^{2}-5x\\), what is the value of f(8)?"),
-      choices=["-24", "24", "39", "64"], correct="B",
-      check="64 - 40 = 24."),
+      stem=("The graph of \\(y=(x-6)(x+2)\\) in the xy-plane is a parabola. What is the "
+            "x-coordinate of the vertex of that parabola?"),
+      choices=["-2", "2", "4", "6"], correct="B",
+      check="The parabola meets the x-axis at 6 and -2, and its vertex sits midway between them, "
+            "at x = 2."),
 
  dict(n="H2E-11", domain="ADV", skill="ADV-NE", type="MC",
       stem=("What is the positive solution of the equation \\((n-9)(n+4)=0\\)?"),
@@ -295,13 +305,14 @@ MODULE_2_EASY = [
 
  dict(n="H2E-12", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The table gives four values of x and the corresponding values of the function f."
-            + table(["x", "f(x)"], [["1", "12"], ["2", "7"], ["3", "3"], ["4", "0"]])
-            + "For which value of x in the table is f(x)=0?"),
-      choices=["1", "2", "3", "4"], correct="D",
-      check="The row with f(x) = 0 is the row for x = 4."),
+            + table(["x", "f(x)"], [["1", "5"], ["2", "11"], ["3", "19"], ["4", "29"]])
+            + "What is the value of f(4)-f(1)?"),
+      choices=["14", "18", "24", "29"], correct="C",
+      check="f(4) = 29 and f(1) = 5, so the difference is 24."),
 
  dict(n="H2E-13", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("For y&gt;0, which expression is equivalent to \\(\\frac{y^{11}}{y^{4}}\\)?"),
+      stem=("For y&gt;0, the expression \\(\\frac{y^{11}}{y^{4}}\\) is equal to which of the "
+            "following?"),
       choices=["\\(y^{7}\\)", "\\(y^{15}\\)", "\\(y^{44}\\)", "\\(y^{3}\\)"], correct="A",
       check="Dividing powers of the same base subtracts the exponents: 11 - 4 = 7."),
 
@@ -326,10 +337,10 @@ MODULE_2_EASY = [
       check="Only weeks 2 and 3 exceed 900 tonnes, so the answer is 2."),
 
  dict(n="H2E-17", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The masses, in kilograms, of five sacks of refined sugar are 46, 52, 49, 55 and 48. "
-            "What is the mean of these masses, in kilograms?"),
-      choices=["48", "50", "51", "52"], correct="B",
-      check="The total is 250, and 250/5 = 50 kilograms."),
+      stem=("Five sacks of refined sugar were weighed, and their mean mass was 50 kilograms. What "
+            "is the total mass, in kilograms, of the five sacks?"),
+      choices=["150", "200", "250", "300"], correct="C",
+      check="The total is 5 times the mean, which is 250 kilograms."),
 
  dict(n="H2E-18", domain="PSDA", skill="PSDA-ST", type="FR",
       stem=("Of 80 syrup samples tested at a refinery, 28 were graded fine. What fraction of the "
@@ -338,29 +349,29 @@ MODULE_2_EASY = [
       check="28/80 simplifies to 7/20, which is 0.35."),
 
  dict(n="H2E-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A rectangular storage vessel has a base measuring 3 metres by 2.5 metres and is 4 "
-            "metres deep. What is the volume, in cubic metres, of the vessel?"),
-      choices=["24", "27", "30", "36"], correct="C",
-      check="3(2.5)(4) = 30 cubic metres."),
+      stem=("A circular filter bed has a diameter of 12 metres. What is the area, in square "
+            "metres, of the filter bed?"),
+      choices=["\\(6\\pi\\)", "\\(12\\pi\\)", "\\(24\\pi\\)", "\\(36\\pi\\)"], correct="D",
+      check="The radius is 6 metres, so the area is 36 pi square metres."),
 
  dict(n="H2E-20", domain="GT", skill="GT-AV", type="MC",
-      stem=("A circular filter bed has a radius of 9 metres. What is the area, in square metres, "
-            "of the filter bed?"),
-      choices=["\\(9\\pi\\)", "\\(18\\pi\\)", "\\(36\\pi\\)", "\\(81\\pi\\)"], correct="D",
-      check="The area of a circle is pi r^2, which is 81 pi square metres."),
+      stem=("The rim of a circular juice vat is 36 metres round. What is the length, in metres, "
+            "of the part of that rim cut off by a central angle of 90&deg;?"),
+      choices=["9", "12", "18", "24"], correct="A",
+      check="A central angle of 90 degrees cuts off a quarter of the rim, which is 9 metres."),
 
  dict(n="H2E-21", domain="GT", skill="GT-LA", type="MC",
-      stem=("In triangle ABC the angle at B is a right angle, AB=20 and BC=21. What is the length "
-            "of AC?"),
-      choices=["25", "28", "29", "41"], correct="C",
-      check="400 + 441 = 841, whose square root is 29."),
+      stem=("In the xy-plane, the endpoints of a segment are the points (4, 1) and (4, 13). What "
+            "is the length of the segment?"),
+      choices=["6", "8", "10", "12"], correct="D",
+      check="The endpoints share an x-coordinate, so the length is 13 - 1 = 12."),
 
  dict(n="H2E-22", domain="GT", skill="GT-TR", type="MC",
-      stem=("In a right triangle, the side opposite the angle x is 7 units long and the hypotenuse "
-            "is 25 units long. What is the value of \\(\\sin x\\)?"),
-      choices=["\\(\\frac{7}{25}\\)", "\\(\\frac{24}{25}\\)", "\\(\\frac{7}{24}\\)",
-               "\\(\\frac{25}{7}\\)"], correct="A",
-      check="The sine is the opposite side over the hypotenuse, which is 7/25."),
+      stem=("In a right triangle, the leg opposite the angle x is 20 units long and the leg "
+            "adjacent to the angle x is 21 units long. What is the value of \\(\\tan x\\)?"),
+      choices=["\\(\\frac{20}{21}\\)", "\\(\\frac{21}{20}\\)", "\\(\\frac{20}{29}\\)",
+               "\\(\\frac{21}{29}\\)"], correct="A",
+      check="The tangent is the opposite leg over the adjacent leg, which is 20/21."),
 ]
 
 
@@ -369,9 +380,10 @@ MODULE_2_EASY = [
 # answers and chained relationships.
 MODULE_2_HARD = [
  dict(n="H2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("If 4x+3y=29 and 2x-5y=-31, what is the value of x+y?"),
-      choices=["9", "11", "14", "16"], correct="A",
-      check="The system gives x = 2 and y = 7, so x+y = 9."),
+      stem=("The solution to the system of equations 2x+3y=12 and 5x+ay=25, where a is a "
+            "constant, is the ordered pair (3, 2). What is the value of a?"),
+      choices=["5", "7", "10", "15"], correct="A",
+      check="Substituting (3, 2) into 5x+ay=25 gives 15 + 2a = 25, so a = 5."),
 
  dict(n="H2H-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("The cost C, in dollars, of boiling one batch of sweets is C=an+b, where n is the "
@@ -408,9 +420,13 @@ MODULE_2_HARD = [
       check="2x-5 >= 3x-18 gives 13 >= x, that is x <= 13."),
 
  dict(n="H2H-07", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("If \\(\\frac{3}{a}+\\frac{5}{a}=\\frac{2}{7}\\), what is the value of a?"),
-      answers=["28"],
-      check="The left side is 8/a, and 8/a = 2/7 gives a = 28."),
+      stem=("A slab of boiled sugar is cut into equal pieces of the same mass. If every piece "
+            "were 3 grams heavier, the slab would make exactly 40 pieces; if every piece were 2 "
+            "grams lighter, it would make exactly 60 pieces. What is the mass, in grams, of the "
+            "whole slab?"),
+      answers=["600"],
+      check="With a piece of p grams, 40(p+3) = 60(p-2) gives p = 12, and the slab is 40(15) = "
+            "600 grams."),
 
  dict(n="H2H-08", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The function f is defined by f(x)=3x-2. If \\(f(g(x))=6x+7\\) for every value of x, "
@@ -425,7 +441,8 @@ MODULE_2_HARD = [
       check="The solutions add to 14 and differ by 6, so they are 10 and 4 and q = 40."),
 
  dict(n="H2H-10", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("For a&gt;0, which expression is equivalent to \\(\\frac{1}{a}-\\frac{1}{a+3}\\)?"),
+      stem=("Which single fraction is equal to \\(\\frac{1}{a}-\\frac{1}{a+3}\\) when a is a "
+            "positive constant?"),
       choices=["\\(\\frac{-3}{a(a+3)}\\)", "\\(\\frac{3}{a(a+3)}\\)", "\\(\\frac{1}{3}\\)",
                "\\(\\frac{2a+3}{a(a+3)}\\)"], correct="B",
       check="The common denominator gives ((a+3)-a)/(a(a+3)) = 3/(a(a+3))."),
@@ -444,8 +461,8 @@ MODULE_2_HARD = [
       check="Completing the square gives (x-5)^2 = 7, so k = 7."),
 
  dict(n="H2H-13", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("For a&gt;0, which expression is equivalent to "
-            "\\(\\frac{\\sqrt{50a^{5}}}{\\sqrt{2a}}\\)?"),
+      stem=("The quotient \\(\\frac{\\sqrt{50a^{5}}}{\\sqrt{2a}}\\), where a is a positive "
+            "constant, is equal to which of the following?"),
       choices=["\\(25a^{4}\\)", "\\(5a^{3}\\)", "\\(5a^{2}\\)", "\\(10a^{2}\\)"], correct="C",
       check="The quotient of the radicals is the square root of 25a^4, which is 5a^2 for a > 0."),
 
@@ -493,15 +510,16 @@ MODULE_2_HARD = [
       check="42 sweets failed and 24 of them are bars, so the probability is 24/42 = 4/7."),
 
  dict(n="H2H-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A solid cylindrical candle of radius r and height h is melted down without loss and "
-            "recast into solid cones, each of radius r and height h. How many such cones are "
-            "made?"),
-      choices=["3", "4", "6", "9"], correct="A",
-      check="A cone of the same radius and height has one third of the cylinder's volume, so three "
-            "cones are made."),
+      stem=("A solid wax cone is cut through by a plane that is parallel to its base and lies "
+            "halfway between the base and the apex. The piece above the cut is itself a cone. "
+            "What fraction of the whole cone's volume does that upper piece hold?"),
+      choices=["\\(\\frac{1}{8}\\)", "\\(\\frac{1}{6}\\)", "\\(\\frac{1}{4}\\)",
+               "\\(\\frac{1}{2}\\)"], correct="A",
+      check="The upper cone is similar to the whole cone with every length halved, so its volume "
+            "is (1/2)^3 = 1/8 of the whole."),
 
  dict(n="H2H-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A rectangular slab of beeswax measures 30 centimetres by 24 centimetres by 5 "
+      stem=("A rectangular slab of wax measures 30 centimetres by 24 centimetres by 5 "
             "centimetres. It is melted down without loss and cast into cubes of edge 4 "
             "centimetres. What is the greatest number of whole cubes that can be cast?"),
       answers=["56"],
@@ -516,11 +534,11 @@ MODULE_2_HARD = [
       check="The remaining leg is 12, so the tangent is 5/12."),
 
  dict(n="H2H-22", domain="GT", skill="GT-LA", type="MC",
-      stem=("In the xy-plane, a segment has endpoints (2, k) and (10, k+6), where k is a constant. "
-            "What is the length of the segment?"),
-      choices=["6", "8", "10", "14"], correct="C",
-      check="The horizontal and vertical separations are 8 and 6 whatever k is, so the length is "
-            "10."),
+      stem=("In the xy-plane, the line through the points (1, 4) and (5, k), where k is a "
+            "constant, is perpendicular to the line y=-2x+9. What is the value of k?"),
+      choices=["2", "4", "6", "8"], correct="C",
+      check="A line perpendicular to a line of slope -2 has slope 1/2, so (k-4)/(5-1) = 1/2 and "
+            "k = 6."),
 ]
 
 ALL = MODULE_1 + MODULE_2_EASY + MODULE_2_HARD

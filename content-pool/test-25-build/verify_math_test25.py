@@ -35,7 +35,7 @@ import re
 import sys
 from collections import Counter
 
-from sympy import (Abs, Eq, Rational, atan, ceiling, floor, cancel, expand,
+from sympy import (Abs, Eq, Rational, atan, ceiling, diff, floor, cancel, expand,
                    nsimplify, pi, simplify, sin, cos, solve, sqrt, symbols,
                    sympify, tan, together)
 
@@ -118,9 +118,16 @@ def m1_10():
     return [z for z in solve(Eq(Rational(1, 4) * v ** 2 - 3 * v + 90, 106), v) if z > 0][0]
 
 
+def m1_08():
+    side = symbols("side")
+    roots = solve(Eq(side ** 2, x ** 2 - 14 * x + 49), side)
+    # for x > 7 the side length is the root with a positive x-coefficient
+    return 4 * [rt for rt in roots if rt.coeff(x) > 0][0]
+
+
 def m1_11():
-    rows = dict([(1, 12), (2, 19), (3, 27), (4, 36), (5, 46)])
-    return rows[1 + 2] - 5
+    roots = solve(Eq((x - 3) * (x + 11), 0), x)
+    return max(roots) - min(roots)
 
 
 def m1_16():
@@ -147,8 +154,9 @@ def m1_20():
 
 
 def m1_21():
-    qr = 63 * Rational(20, 21)
-    return sqrt(63 ** 2 + qr ** 2)
+    lm = 63 * Rational(20, 21)
+    km = sqrt(63 ** 2 + lm ** 2)
+    return 63 + lm + km
 
 
 def m2e_05():
@@ -156,17 +164,23 @@ def m2e_05():
 
 
 def m2e_10():
-    rows = [(1, 9), (2, 4), (3, 0), (4, -3)]
-    return [xv for xv, fv in rows if fv == 0][0]
+    kk = symbols("kk")
+    return solve(Eq(3 ** 2 + kk, 14), kk)[0]
 
 
 def m2e_11():
-    return [z for z in solve(Eq((n - 9) * (n + 4), 0), n) if z > 0][0]
+    rails = symbols("rails", positive=True)
+    return solve(Eq(rails ** 2 + 5, 41), rails)[0]
+
+
+def m2e_13():
+    ss = symbols("ss", positive=True)
+    return solve(Eq(ss ** 3, 125), ss)[0]
 
 
 def m2e_16():
-    vals = sorted([23, 31, 18, 26, 31])
-    return Rational(vals[len(vals) // 2])
+    vals = [23, 31, 18, 26, 31]
+    return max(vals) - min(vals)
 
 
 def m2h_01():
@@ -175,8 +189,8 @@ def m2h_01():
 
 
 def m2h_02():
-    # no solution <=> the two left sides are proportional (and the constants are not)
-    return solve(Eq(a * 6 - 3 * 4, 0), a)[0]
+    cc = symbols("cc")
+    return solve(Eq(4 * (20 - cc), 3 * 20 + 8), cc)[0]
 
 
 def m2h_03():
@@ -185,7 +199,9 @@ def m2h_03():
 
 
 def m2h_04():
-    return len([i for i in range(-100, 200) if 2 * i - 7 > -3 and 2 * i - 7 <= 9])
+    # 3x - a > 12  <=>  x > (12+a)/3 ; that boundary is stated to be 9
+    aa = symbols("aa")
+    return solve(Eq(Rational(1, 3) * (12 + aa), 9), aa)[0]
 
 
 def m2h_05():
@@ -210,12 +226,15 @@ def m2h_08():
 
 
 def m2h_09():
-    return cancel((2 * x ** 2 - x - 15) / (x ** 2 - 9))
+    # a+b+c is the value of the expanded quadratic at x = 1
+    return expand((3 * x - 4) ** 2 - (2 * x - 4) * (2 * x + 4)).subs(x, 1)
 
 
 def m2h_10():
-    roots = solve(Eq(3 * x ** 2 - 12 * x + 7, 0), x)
-    return simplify(sum(z ** 2 for z in roots))
+    bb, cc = symbols("bb cc")
+    cval = solve(Eq(0 ** 2 + bb * 0 + cc, 12), cc)[0]          # the point (0, 12)
+    axis = solve(Eq(diff(x ** 2 + bb * x + cval, x), 0), x)[0]  # vertex abscissa
+    return solve(Eq(axis, 5), bb)[0]
 
 
 def m2h_11():
@@ -224,12 +243,17 @@ def m2h_11():
 
 
 def m2h_12():
-    return cancel(together(3 / x - 2 / (x + 1)))
+    aa, bb = symbols("aa bb")
+    sols = solve([Eq(aa + bb, 11), Eq(aa * bb, 30)], [aa, bb], dict=True)
+    hi, lo = max(sols[0][aa], sols[0][bb]), min(sols[0][aa], sols[0][bb])
+    return hi - lo
 
 
 def m2h_13():
-    xr = symbols("xr", real=True)
-    return [z for z in solve(Eq(sqrt(2 * xr + 11), xr - 2), xr)][0]
+    kk, other = symbols("kk other")
+    # 3 is a root, so k follows; the other root then follows from k
+    kval = solve(Eq(3 ** 2 - kk * 3 + 18, 0), kk)[0]
+    return [z for z in solve(Eq(x ** 2 - kval * x + 18, 0), x) if z != 3][0]
 
 
 def m2h_14():
@@ -238,7 +262,9 @@ def m2h_14():
 
 
 def m2h_15():
-    return Rational(12 * 46 - 31 - 39, 10)
+    vals = symbols("v0:7")
+    total = solve(Eq(sum(vals) / 7, 24), vals[0])[0] + sum(vals[1:])
+    return simplify(sum(3 * vv - 5 for vv in vals).subs(vals[0], total - sum(vals[1:])) / 7)
 
 
 def m2h_16():
@@ -247,8 +273,8 @@ def m2h_16():
 
 
 def m2h_17():
-    pp = symbols("pp", positive=True)
-    return solve(Eq((1 + pp / 100) * (1 - pp / 100), Rational(96, 100)), pp)[0]
+    f = symbols("f")
+    return solve(Eq(30 * f + 18 * (1 - f), 22), f)[0]
 
 
 def m2h_19():
@@ -259,13 +285,13 @@ def m2h_19():
 
 
 def m2h_20():
-    bc = symbols("bc", positive=True)
-    return solve(Eq(Rational(6, 6 + 9), 8 / bc), bc)[0]
+    return sqrt((11 - 3) ** 2 + (4 - (-2)) ** 2)
 
 
 def m2h_21():
-    ang_a = atan(Rational(40, 9))
-    return simplify(cos(pi / 2 - ang_a))
+    bc = 20 * Rational(3, 5)                 # sin A = BC/AB
+    ac = sqrt(20 ** 2 - bc ** 2)
+    return Rational(1, 2) * bc * ac
 
 
 DERIVE = {
@@ -276,7 +302,7 @@ DERIVE = {
  "M1-05": m1_05,
  "M1-06": m1_06,
  "M1-07": m1_07,
- "M1-08": lambda: cancel((6 * x ** 2 + 13 * x - 5) / (2 * x + 5)),
+ "M1-08": m1_08,
  "M1-09": m1_09,
  "M1-10": m1_10,
  "M1-11": m1_11,
@@ -299,21 +325,21 @@ DERIVE = {
  "M2E-05": m2e_05,
  "M2E-06": lambda: solve(Eq(2 * (68 + w), 224), w)[0],
  "M2E-07": lambda: solve(Eq(3 * q + 7, 34), q)[0],
- "M2E-08": lambda: expand(5 * (2 * x + 3) - 4 * x),
- "M2E-09": lambda: expand((x + 4) * (x + 9)),
+ "M2E-08": lambda: expand(2 * x ** 3 * 5 * x ** 4),
+ "M2E-09": lambda: expand(4 * a + 9 * b - a + 2 * b),
  "M2E-10": m2e_10,
  "M2E-11": m2e_11,
- "M2E-12": lambda: (x ** 2 + 2 * x).subs(x, 5),
- "M2E-13": lambda: solve(Eq(3 ** x, 81), x)[0],
- "M2E-14": lambda: 6 * 15,
+ "M2E-12": lambda: (4 * 3 ** t).subs(t, 2),
+ "M2E-13": m2e_13,
+ "M2E-14": lambda: Rational(3, 10) * 40,
  "M2E-15": lambda: Rational(54, 72) * 20,
  "M2E-16": m2e_16,
  "M2E-17": lambda: 46 - 17,
- "M2E-18": lambda: Rational(9, 40),
- "M2E-19": lambda: 90 * 60,
+ "M2E-18": lambda: Rational(18, 18 + 27),
+ "M2E-19": lambda: 2 * (8 * 5 + 8 * 3 + 5 * 3),
  "M2E-20": lambda: 50 * 40 * 30,
- "M2E-21": lambda: 180 - 47 - 68,
- "M2E-22": lambda: Rational(7, 25),
+ "M2E-21": lambda: Rational(46, 24 - 1),
+ "M2E-22": lambda: simplify(9 / cos(pi / 4)),
 
  "M2H-01": m2h_01,
  "M2H-02": m2h_02,
@@ -332,7 +358,7 @@ DERIVE = {
  "M2H-15": m2h_15,
  "M2H-16": m2h_16,
  "M2H-17": m2h_17,
- "M2H-18": lambda: Rational(7, 12) * Rational(6, 11),
+ "M2H-18": lambda: 2 * Rational(5, 12) * Rational(7, 11),
  "M2H-19": m2h_19,
  "M2H-20": m2h_20,
  "M2H-21": m2h_21,
