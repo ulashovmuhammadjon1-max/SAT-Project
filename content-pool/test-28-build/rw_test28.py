@@ -149,7 +149,7 @@ QUESTIONS = [
      "but the leather stretches with use and has to be taken up again and again. Steel laid up in "
      "leaves and bent to an ellipse gives at a blow and returns to its shape, and it does not "
      "lengthen over a season. Builders who changed to the steel gave up a soft motion in return for "
-     "one that stayed _____ .",
+     "one that stayed _____.",
      ["constant", "gentle", "silent", "cheap"], "A",
      "The leather is faulted for stretching and needing to be taken up, while the steel is said not "
      "to lengthen over a season, so what is gained is a setting that does not drift. Choosing the "
@@ -159,7 +159,7 @@ QUESTIONS = [
      "A drove could not be halted anywhere convenient for the night. Cattle turned loose on a "
      "farmer's grass ate a shilling's worth in an hour, so the men made instead for enclosures kept "
      "beside the road and let by the night. A drover planned his day's march around where these "
-     "enclosures lay rather than around the distance he would have liked to _____ .",
+     "enclosures lay rather than around the distance he would have liked to _____.",
      ["cover", "avoid", "measure", "shorten"], "A",
      "The passage contrasts where the enclosures lie with the distance the drover would otherwise "
      "choose, so the missing word is about getting a day's march done. Measuring the distance is "
@@ -168,13 +168,14 @@ QUESTIONS = [
  wic("W5",
      "A trust rarely collected its own money. Once a year the right to take the money at a named gate "
      "for the twelve months following was cried in an inn parlour and knocked down to whoever bid "
-     "highest, and the bidder paid the sum he had promised whether the year proved good or bad. The "
-     "arrangement handed the trust a figure it could count on and handed the bidder the whole of the "
-     "_____ .",
+     "highest, and the bidder paid the sum he had promised whether the year proved good or bad. A wet "
+     "season that kept the wagons off the road fell on him and not on the trust, so the arrangement "
+     "handed the trust a figure it could count on and handed the bidder the whole of the _____.",
      ["risk", "profit", "labour", "authority"], "A",
-     "The trust receives a fixed sum whatever happens and the bidder is bound to his promise in a bad "
-     "year as well as a good one, so what passes to him is the uncertainty. He does keep any surplus, "
-     "but the sentence is built on the good-or-bad contrast rather than on the surplus alone."),
+     "The sentence before the blank puts a bad season squarely on the bidder and not on the trust, so "
+     "what the arrangement transfers to him is the uncertainty. Naming the surplus he keeps in a good "
+     "year answers a clause about a wet one, and leaves the contrast the sentence is built on "
+     "unexplained."),
 
  wic("W6",
      "Between the priming and the finish a body took a dozen coats, and every one of them was rubbed "
@@ -211,18 +212,19 @@ QUESTIONS = [
  wic("W9",
      "A keeper had to see a vehicle in time to be at the bar before it, and a house set square to one "
      "road showed him nothing along the other. The usual answer was a room thrown forward on a "
-     "shallow angle with a window in each face, so that a man sitting at his table looked up both "
-     "approaches without rising. The shape was not a fashion but a _____ .",
+     "shallow angle with a window in each face, so that nothing could reach the bar from either road "
+     "without having been seen from that window. The shape was not a fashion but a _____.",
      ["requirement", "compromise", "decoration", "convenience"], "A",
-     "The keeper must reach the bar before the vehicle does, and the angled room is presented as the "
-     "usual answer to that necessity, closing on a contrast with fashion. Calling it a convenience "
-     "makes the shape optional, which the need to be at the bar in time does not allow."),
+     "The keeper must reach the bar before the vehicle does, and the angled room is the only "
+     "arrangement that lets him see both roads at all, so the shape is forced on the house. Calling "
+     "it a convenience makes it an easing of work the keeper could have done another way, and the "
+     "square house is said to show him nothing."),
 
  wic("W10",
      "Ash cut in the spring and worked the same year moves as it dries, and a frame built of it "
      "opens at every joint within a twelvemonth. Builders therefore stacked their timber in open "
      "sheds with laths between the boards and left it for as many years as the plank was inches "
-     "thick. The delay was the one part of the process that could not be _____ .",
+     "thick. The delay was the one part of the process that could not be _____.",
      ["hastened", "recorded", "priced", "delegated"], "A",
      "A rule of one year for each inch of thickness is given as the cost of avoiding joints that "
      "open, so what the timber demands is time that cannot be cut short. The work certainly could be "
@@ -232,7 +234,7 @@ QUESTIONS = [
      "On a frosted road a smooth plate of iron is worse than no plate at all. Smiths turned the heel "
      "of the shoe down into a short spur and drove one or two nails with a raised head at the toe, so "
      "that the foot bit instead of sliding. The additions cost the horse a little in the evenness of "
-     "its tread and returned to it a great deal in _____ .",
+     "its tread and returned to it a great deal in _____.",
      ["grip", "speed", "comfort", "appearance"], "A",
      "The problem stated is sliding on frost and the fix makes the foot bite, so what is returned is "
      "purchase on the road. Comfort is what the sentence says is given up, since the tread is no "
@@ -243,7 +245,7 @@ QUESTIONS = [
      "means he liked, but he could not afford to feed a dog on the way. The dogs were turned loose at "
      "the fair and made their own way north, calling at the same inns the droves had used, where a "
      "meal was put down for them against the master's account at the next passing. The arrangement "
-     "worked because the route was _____ .",
+     "worked because the route was _____.",
      ["habitual", "shorter", "guarded", "level"], "A",
      "The dogs are said to call at the same inns the droves had used and to be fed on account until "
      "the next passing, which only works on a road travelled again and again in the same way. Saying "
@@ -748,14 +750,14 @@ QUESTIONS = [
      "allowance between changes by a quarter of an hour and dropped one stage altogether on the "
      "highest _____ was published in October, weeks before any snow fell.",
      ["ground, and the amended bill", "ground and the amended bill",
-      "ground; the amended bill and", "ground: and the amended bill"], "A",
-     "A comma with the coordinating conjunction joins two complete statements correctly. Running them "
-     "together with no punctuation at all leaves a comma splice of a different kind, and a colon "
-     "cannot be followed by a conjunction."),
+      "ground, the amended bill", "ground: and the amended bill"], "A",
+     "A comma with the coordinating conjunction joins two complete statements correctly. Dropping the "
+     "conjunction leaves the comma splicing them on its own, running them together with no "
+     "punctuation at all fuses them, and a colon cannot be followed by a conjunction."),
 
  bnd("B3",
      "An inn stable kept two kinds of standing. In the narrow stalls a horse stood tied and faced the "
-     "_____ in the loose boxes at the far end it could turn and lie down, which is where the ostler "
+     "_____ the loose boxes at the far end it could turn and lie down, which is where the ostler "
      "put a team that had just come in.",
      ["wall; in", "wall, in", "wall in", "wall: and in"], "A",
      "Two complete statements meet at the blank with no conjunction between them, which is what a "
@@ -796,9 +798,10 @@ QUESTIONS = [
      "passenger handed him at the end of a stage, and a man who drove a fashionable road could take "
      "more in a week that way than the proprietor paid him in a _____ the custom was never written "
      "into any agreement.",
-     ["quarter, yet", "quarter yet", "quarter; yet the", "quarter: yet"], "A",
+     ["quarter, yet", "quarter yet", "quarter, however,", "quarter: yet"], "A",
      "A comma before the coordinating conjunction correctly joins two complete statements. Omitting "
-     "the comma runs them together, and a colon is not used before a conjunction of this kind."),
+     "the comma runs them together, an adverb fenced by commas splices them instead of joining them, "
+     "and a colon is not used before a conjunction of this kind."),
 
  bnd("B8",
      "Iron heated to a bright red and plunged into water comes out too hard to file and too brittle "
@@ -839,7 +842,7 @@ QUESTIONS = [
 
  bnd("B12",
      "A boy went to a smith at fourteen and was bound for seven years. He learned to make a shoe in "
-     "the first two _____ the remaining five went on the foot itself, and the company that examined "
+     "the first two _____ remaining five went on the foot itself, and the company that examined "
      "him at the end asked him about the foot and hardly at all about the iron.",
      ["years; the", "years, the", "years the", "years: and the"], "A",
      "Two complete statements stand on either side of the blank with no conjunction between them, "
@@ -851,10 +854,10 @@ QUESTIONS = [
      "Plate glass in a door made a coach lighter inside and heavier to hang. Neither the glass itself "
      "nor the brass channels it slid in _____ cheap, and a pane broken by a careless passenger "
      "pulling on the strap cost more than the whole trimming of the seat beneath it.",
-     ["were", "was", "have been", "is"], "A",
+     ["were", "was", "has been", "is"], "A",
      "With 'neither ... nor', the verb agrees with whichever subject stands nearer to it, and 'the "
-     "brass channels it slid in' is both nearer and plural. The singular forms would agree with the "
-     "glass, which is the further of the two subjects."),
+     "brass channels it slid in' is both nearer and plural. Every other option is singular and would "
+     "agree with the glass, which is the further of the two subjects."),
 
  fss("F2",
      "A shoe is not pulled off. The smith first cuts through the clenched ends of the nails where "

@@ -221,12 +221,12 @@ QUESTIONS = [
      "The slip glued to the corner of the sheet gives the collector, the number, the day, the "
      "parish and the ground the plant was standing in, and every later use of the specimen &mdash; "
      "mapping a range, dating a flowering, matching a name &mdash; draws on that slip rather than "
-     "on the plant. The specimen is the label's _____.",
-     ["attachment", "author", "duplicate", "successor"], "A",
+     "on the plant. The plant, on this accounting, is an _____ to its label.",
+     ["appendage", "objection", "improvement", "alternative"], "A",
      "The passage says every later use draws on the slip rather than on the plant, which inverts "
-     "the expected relation and makes the plant the thing that comes with the record. The author "
-     "option would make the plant the source of the label's information, which is the ordinary "
-     "relation the sentence is deliberately reversing."),
+     "the expected relation and leaves the plant hanging off the record rather than carrying it. "
+     "The alternative option would make the plant something a worker could consult in the label's "
+     "place, but the text says the later uses go to the slip instead of the plant."),
 
  wic("W9",
      "Most seeds can be dried to a few per cent of their weight in water and stored for decades. "
@@ -769,7 +769,7 @@ QUESTIONS = [
  bnd("B2",
      "A pill mass was rolled into a rope on a flat slab of glazed earthenware and then cut on a "
      "brass machine with parallel grooves, which divided the rope into equal _____ each of them "
-     "then rounded between the palms.",
+     "ready to be rounded between the palms.",
      ["lengths,", "lengths;", "lengths.", "lengths and"], "A",
      "What follows the break has no subject and no finite verb; it is a phrase describing the "
      "lengths, so it attaches to the main clause with a comma. A semicolon would announce a second "
@@ -777,7 +777,8 @@ QUESTIONS = [
 
  bnd("B3",
      "Marble absorbs oils and stains, glass chips under a hard drug, and porcelain, which resists "
-     "both, became the usual material for a dispensing _____ was less easily broken.",
+     "both, became the usual material for a dispensing _____ tainted acid preparations and fell "
+     "out of use.",
      ["mortar. Iron", "mortar, iron", "mortar; and iron", "mortar and iron"], "A",
      "The words after the break form a complete sentence of their own about iron, and the words "
      "before it form another about porcelain, so a full stop separates them cleanly. Joining them "
@@ -895,21 +896,21 @@ QUESTIONS = [
      "nothing in the sentence."),
 
  fss("F5",
-     "Corrugated aluminium ventilators are set between the layers of a press so that warm air can "
-     "run through the stack; without them the blotters nearest the middle _____ damp for days.",
-     ["stay", "stays", "staying", "to stay"], "A",
-     "The subject is the plural <em>blotters</em>, and the clause needs a finite verb to complete "
-     "it, so the plural present form is correct. The singular form disagrees with the plural "
-     "subject."),
+     "Sealed jars of dried seed are stood on open racks rather than packed into a cupboard, and "
+     "the _____ nearest the door are checked first for the condensation a cold draught can start.",
+     ["jars", "jar's", "jars'", "jar"], "A",
+     "The word names more than one blotter and owns nothing, so the plain plural is what the "
+     "sentence needs. An apostrophe would make the noun possessive, and nothing in the clause "
+     "belongs to the blotters."),
 
  fss("F6",
      "Each collector keeps a single running series of numbers across a whole career, so a specimen "
-     "labelled with that collector's name and a number _____ be matched to a field notebook "
-     "entry decades afterwards.",
-     ["can", "canned", "could have", "having"], "A",
-     "The clause needs a modal followed by the bare infinitive <em>be</em>, and the present modal "
-     "matches the present tense of <em>keeps</em> earlier in the sentence. The perfect form would "
-     "place the matching in a past that the sentence does not establish."),
+     "labelled with that collector's name and a number _____ to a field notebook entry decades "
+     "afterwards.",
+     ["can be matched", "can be matching", "being matched", "to be matched"], "A",
+     "The clause needs a finite verb, and the passive form built on a modal supplies one while "
+     "keeping the specimen as the thing matched. The bare participle leaves the clause after "
+     "<em>so</em> with no finite verb at all."),
 
  fss("F7",
      "A layer of bark or straw spread over a bed does not feed the soil beneath it; what it does "
@@ -980,8 +981,7 @@ QUESTIONS = [
      "an instrument misses. It cannot say what the adulterant is, or how much of it is present. "
      "_____ a gas chromatograph separates a sample into its components and reports the size of "
      "each.",
-     ["A chromatograph, by contrast,", "A chromatograph, likewise,",
-      "A chromatograph, for instance,", "A chromatograph, in short,"], "A",
+     ["By contrast,", "Likewise,", "For instance,", "In short,"], "A",
      "The sentence sets the instrument's ability to name and quantify components against the "
      "nose's inability to do either, so the relation is one of opposition. A marker of similarity "
      "would claim the chromatograph shares the limitation just described."),
@@ -1001,7 +1001,7 @@ QUESTIONS = [
      "botany. Arranging it by classification puts related plants side by side, so that a worker "
      "comparing a doubtful specimen with its relatives finds them all in one bay. _____ the "
      "alphabetical arrangement serves the visitor and the systematic one serves the specialist.",
-     ["In short,", "Even so,", "By comparison,", "Afterwards,"], "A",
+     ["In short,", "Even so,", "For instance,", "Afterwards,"], "A",
      "The sentence condenses the two arrangements just described into a single summarising "
      "statement, which is what a marker of summary signals. A concessive marker would set the "
      "sentence against the preceding material rather than gathering it up."),
@@ -1050,26 +1050,24 @@ QUESTIONS = [
      "mechanics of pegging a shoot down reports two notes without connecting either to success."),
 
  syn("S2",
-     ["A camera lucida is a prism on a stand that superimposes a view of an object on the paper "
-      "below.",
-      "The draughtsman sees the object and the pencil point in the same visual field.",
-      "Outlines can be traced at a fixed scale without measuring.",
-      "The device does not record anything by itself; the drawing is still made by hand.",
-      "Botanical artists used it for the outline and then worked up detail by eye."],
-     "emphasise what the device did and did not do for a botanical artist.",
-     ["The camera lucida let a botanical artist trace an outline at a fixed scale without "
-      "measuring, because object and pencil point appeared in the same visual field; it recorded "
-      "nothing by itself, and the detail was still worked up by eye.",
-      "The camera lucida is a prism on a stand, and botanical artists used it to trace outlines "
-      "before working up the detail by eye.",
-      "Because the draughtsman sees the object and the pencil point in the same visual field, "
-      "outlines can be traced at a fixed scale without measuring.",
-      "Botanical artists worked up detail by eye, and the camera lucida did not record anything by "
-      "itself."], "A",
-     "The goal is a two-sided statement, and only the choice that both names the tracing the "
-     "device made possible and states that it recorded nothing on its own covers both sides. The "
-     "choice about the shared visual field gives only the enabling half and never says what the "
-     "device failed to do."),
+     ["The plant material left in a still at the end of a run is called the spent charge.",
+      "It holds no more oil, but it is bulky and wet, and a works must move it daily.",
+      "Lavender stalks are spread to dry and then burnt under the boiler.",
+      "Spent rose petals are carted back to the fields and ploughed in.",
+      "A works that has no use for the spent charge pays a contractor to take it away."],
+     "emphasise how a distiller turns a disposal cost into something useful.",
+     ["Rather than pay a contractor to take away a bulky wet material that holds no more oil, a "
+      "distiller dries the lavender stalks and burns them under the boiler and ploughs the spent "
+      "rose petals back into the fields.",
+      "The plant material left in a still at the end of a run is called the spent charge, and it "
+      "holds no more oil but is bulky and wet.",
+      "Lavender stalks are spread to dry and then burnt under the boiler, and spent rose petals "
+      "are carted back to the fields and ploughed in.",
+      "A works that has no use for the spent charge pays a contractor to take it away, and the "
+      "spent charge must be moved daily."], "A",
+     "The goal names both a cost and a use, and only the choice that sets the contractor's charge "
+     "against the burning and the ploughing puts the two together. The choice listing the stalks "
+     "and the petals gives the uses but never says what expense they save."),
 
  syn("S3",
      ["A garden planted only with showy double-flowered varieties supports few insects.",

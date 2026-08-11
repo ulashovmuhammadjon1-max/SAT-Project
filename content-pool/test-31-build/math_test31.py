@@ -110,7 +110,7 @@ MODULE_1 = [
             "for every tray of eggs graded. A grader who graded 240 trays was paid $318 for the "
             "week, and a grader who graded 380 trays was paid $402. How many trays must a grader "
             "grade in a week to be paid $450?"),
-      choices=["420", "440", "460", "480"], correct="C",
+      choices=["400", "420", "440", "460"], correct="D",
       check="The rate per tray is (402-318)/(380-240) = 0.6 dollars and the fixed amount is "
             "318 - 0.6(240) = 174 dollars, so 174 + 0.6t = 450 gives t = 460 trays."),
 
@@ -137,7 +137,7 @@ MODULE_1 = [
             "cents for every tray graded, or hire a grading machine at a cost of $246 for the day "
             "plus 4 cents for every tray graded. What is the least number of trays graded in a day "
             "for which the machine costs less than grading by hand?"),
-      choices=["1,299", "1,300", "1,310", "1,301"], correct="D",
+      choices=["1,299", "1,300", "1,301", "1,310"], correct="C",
       check="The machine is cheaper when 246 + 0.04t < 90 + 0.16t, that is 156 < 0.12t, so "
             "t > 1,300; at exactly 1,300 trays the two costs are equal, so the least whole number "
             "of trays is 1,301."),
@@ -164,7 +164,7 @@ MODULE_1 = [
             "\\( 53 \\le m \\lt 63 \\) . A tray is filled with 30 eggs, every one of them graded "
             "Medium. Which of the following could be the total mass, in grams, of the 30 eggs on "
             "that tray?"),
-      choices=["1,540", "1,585", "1,760", "1,920"], correct="C",
+      choices=["1,760", "1,890", "1,920", "1,980"], correct="A",
       check="Thirty Medium eggs have a total mass T with 30(53) <= T < 30(63), that is "
             "1,590 <= T < 1,890. Of the four values only 1,760 lies in that interval."),
 
@@ -172,7 +172,7 @@ MODULE_1 = [
       stem=("A rectangular egg store is 14 metres longer than it is wide, and the distance from "
             "one corner of the store to the opposite corner is 26 metres. What is the area of the "
             "store, in square metres?"),
-      choices=["240", "120", "168", "260"], correct="A",
+      choices=["240", "260", "288", "336"], correct="A",
       check="With w the width, w^2 + (w+14)^2 = 26^2 gives 2w^2 + 28w - 480 = 0, that is "
             "w^2 + 14w - 240 = (w+24)(w-10) = 0, so w = 10 and the length is 24; the area is "
             "10(24) = 240 square metres."),
@@ -204,7 +204,7 @@ MODULE_1 = [
  dict(n="M1-12", domain="ADV", skill="ADV-NF", type="MC",
       stem=("The functions f and g satisfy f(x) = 4x - 7 and f(g(x)) = 8x + 5 for every value of x. "
             "What is the value of g(3)?"),
-      choices=["5", "9", "11", "13"], correct="B",
+      choices=["5", "6", "9", "13"], correct="C",
       check="4g(x) - 7 = 8x + 5 gives g(x) = (8x+12)/4 = 2x + 3, so g(3) = 9."),
 
  dict(n="M1-13", domain="ADV", skill="ADV-EQ", type="MC",
@@ -233,7 +233,7 @@ MODULE_1 = [
       stem=("The time needed to lift and empty the eel traps on a stretch of river is inversely "
             "proportional to the number of workers doing it. Six workers need 45 minutes. How many "
             "minutes would ten workers need?"),
-      choices=["27", "22.5", "30", "75"], correct="A",
+      choices=["22.5", "27", "30", "75"], correct="B",
       check="Inverse proportion means nt is constant, and 6(45) = 270, so ten workers need "
             "270/10 = 27 minutes."),
 
@@ -408,7 +408,7 @@ MODULE_2_EASY = [
  dict(n="M2E-15", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A dovecote yields 7 squabs a year from each nest hole. How many nest holes are needed "
             "to yield 245 squabs a year at that rate?"),
-      choices=["21", "28", "35", "42"], correct="C",
+      choices=["14", "21", "28", "35"], correct="D",
       check="245/7 = 35 nest holes."),
 
  dict(n="M2E-16", domain="PSDA", skill="PSDA-ST", type="MC",
@@ -449,15 +449,15 @@ MODULE_2_EASY = [
  dict(n="M2E-21", domain="GT", skill="GT-AV", type="MC",
       stem=("A cylindrical grain bin for a pigeon loft has a radius of 3 feet and a height of 10 "
             "feet. What is its volume, in cubic feet?"),
-      choices=["\\( 30\\pi \\)", "\\( 180\\pi \\)", "\\( 900\\pi \\)", "\\( 90\\pi \\)"],
-      correct="D",
+      choices=["\\( 30\\pi \\)", "\\( 90\\pi \\)", "\\( 180\\pi \\)", "\\( 900\\pi \\)"],
+      correct="B",
       check="The volume is pi(3^2)(10) = 90pi cubic feet."),
 
  dict(n="M2E-22", domain="GT", skill="GT-TR", type="MC",
       stem=("In right triangle XYZ, the right angle is at vertex Y, side XY has length 9, side YZ "
             "has length 40, and side XZ has length 41. What is the value of \\( \\sin X \\) ?"),
-      choices=["\\( \\frac{9}{41} \\)", "\\( \\frac{40}{41} \\)", "\\( \\frac{9}{40} \\)",
-               "\\( \\frac{41}{40} \\)"], correct="B",
+      choices=["\\( \\frac{9}{41} \\)", "\\( \\frac{9}{40} \\)", "\\( \\frac{40}{41} \\)",
+               "\\( \\frac{41}{40} \\)"], correct="C",
       check="From vertex X the opposite side is YZ = 40 and the hypotenuse is XZ = 41, so "
             "sin X = 40/41."),
 ]
@@ -529,14 +529,14 @@ MODULE_2_HARD = [
  dict(n="M2H-09", domain="ADV", skill="ADV-NE", type="MC",
       stem=("One solution to the equation \\( 2x^{2}+kx-30=0 \\) is x = 5, where k is a constant. "
             "What is the other solution to that equation?"),
-      choices=["-6", "3", "-3", "6"], correct="C",
+      choices=["-6", "-3", "3", "6"], correct="B",
       check="Substituting x = 5 gives 50 + 5k - 30 = 0, so k = -4 and the equation is "
             "2x^2 - 4x - 30 = 0, that is x^2 - 2x - 15 = (x-5)(x+3) = 0; the other solution is "
             "x = -3."),
 
  dict(n="M2H-10", domain="ADV", skill="ADV-NE", type="MC",
       stem=("In the equation \\( 2(x-3)^{3} = 54 \\) , what is the value of x?"),
-      choices=["4", "6", "9", "12"], correct="B",
+      choices=["6", "9", "12", "30"], correct="A",
       check="Dividing by 2 gives (x-3)^3 = 27, so x - 3 = 3 and x = 6."),
 
  dict(n="M2H-11", domain="ADV", skill="ADV-NF", type="MC",
@@ -549,9 +549,9 @@ MODULE_2_HARD = [
  dict(n="M2H-12", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("Which single fraction is equal to \\( \\frac{5}{x^{2}-4} - \\frac{1}{x-2} \\) , where "
             "\\( x \\gt 2 \\) ?"),
-      choices=["\\( \\frac{3-x}{x^{2}-4} \\)", "\\( \\frac{4}{x^{2}-4} \\)",
-               "\\( \\frac{x+7}{x^{2}-4} \\)", "\\( \\frac{5-x}{x^{2}-4} \\)"],
-      correct="A",
+      choices=["\\( \\frac{4}{x^{2}-4} \\)", "\\( \\frac{x+7}{x^{2}-4} \\)",
+               "\\( \\frac{5-x}{x^{2}-4} \\)", "\\( \\frac{3-x}{x^{2}-4} \\)"],
+      correct="D",
       check="Factoring the first denominator as (x-2)(x+2) shows the common denominator is "
             "x^2 - 4, over which the numerator is 5 - (x+2) = 3 - x."),
 
@@ -566,7 +566,7 @@ MODULE_2_HARD = [
       stem=("A stew pond can be emptied by a large pipe alone in 6 hours or by a small pipe alone "
             "in 9 hours. Both pipes are opened together, and after 2 hours the large pipe is shut. "
             "How many more hours does the small pipe need to finish emptying the pond?"),
-      choices=["4", "2", "3", "5"], correct="A",
+      choices=["2", "3", "4", "5"], correct="C",
       check="In 2 hours the two pipes empty 2(1/6 + 1/9) = 5/9 of the pond, leaving 4/9; the small "
             "pipe empties 1/9 of the pond an hour, so it needs 4 more hours."),
 
@@ -596,7 +596,7 @@ MODULE_2_HARD = [
       stem=("A basket holds 5 wigeon and 7 teal. Three birds are taken from the basket at random, "
             "one after another and without replacement. What is the probability that none of the "
             "three is a wigeon?"),
-      choices=["\\( \\frac{7}{44} \\)", "\\( \\frac{5}{44} \\)", "\\( \\frac{35}{144} \\)",
+      choices=["\\( \\frac{7}{44} \\)", "\\( \\frac{35}{144} \\)", "\\( \\frac{5}{12} \\)",
                "\\( \\frac{7}{12} \\)"], correct="A",
       check="The probability is (7/12)(6/11)(5/10) = 210/1320 = 7/44."),
 
@@ -619,7 +619,7 @@ MODULE_2_HARD = [
  dict(n="M2H-20", domain="GT", skill="GT-LA", type="MC",
       stem=("The floor of a dovecote is a regular polygon, and each of its interior angles "
             "measures 156&deg; . How many sides does the polygon have?"),
-      choices=["12", "14", "15", "18"], correct="C",
+      choices=["15", "18", "20", "24"], correct="A",
       check="Each exterior angle measures 180 - 156 = 24&deg;, and the exterior angles of any "
             "polygon sum to 360&deg;, so the polygon has 360/24 = 15 sides."),
 
@@ -633,7 +633,7 @@ MODULE_2_HARD = [
  dict(n="M2H-22", domain="GT", skill="GT-AV", type="MC",
       stem=("Two conical feed hoppers are similar in shape, and their heights are in the ratio 2 to "
             "5. The smaller hopper holds 96 litres. How many litres does the larger hopper hold?"),
-      choices=["240", "600", "6,000", "1,500"], correct="D",
+      choices=["240", "600", "1,500", "6,000"], correct="C",
       check="Volumes of similar solids scale as the cube of the ratio, so the larger holds "
             "96(5/2)^3 = 96(125/8) = 1,500 litres."),
 ]

@@ -4,6 +4,8 @@ import { AlertTriangle, CheckCircle2, TrendingUp, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DistributionChart, TrendAreaChart } from "@/components/charts/trend-chart";
 import { getAdminStatistics, type QuestionOutlier } from "@/lib/admin/statistics";
+import { EVENT_TYPE_LABELS } from "@/lib/events";
+import type { SessionType } from "@prisma/client";
 import { cn } from "@/lib/utils";
 
 export const metadata = { title: "Statistics" };
@@ -20,7 +22,10 @@ export default async function AdminStatisticsPage() {
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight">Statistics</h1>
         <p className="text-sm text-muted-foreground">
-          How the platform is being used, and which questions are behaving oddly.
+          How the platform is being used, and which questions are behaving oddly.{" "}
+          <Link href="/admin/statistics/students" className="text-primary underline-offset-4 hover:underline">
+            See each student individually →
+          </Link>
         </p>
       </div>
 
@@ -153,6 +158,85 @@ export default async function AdminStatisticsPage() {
               <Empty>No test has been started yet.</Empty>
             </div>
           )}
+        </CardContent>
+      </Card>
+
+      {/* ---- sessions ----------------------------------------------------- */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center justify-between gap-3">
+            <span>Sessions</span>
+            <Link
+              href="/admin/bookings"
+              className="text-sm font-normal text-primary underline-offset-4 hover:underline"
+            >
+              Manage bookings
+            </Link>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="-mt-2 text-sm text-muted-foreground">
+            <strong>Different students</strong> is the number that matters here, not bookings —
+            ten bookings could be ten people who came once or one person who came ten times, and
+            those are opposite outcomes for the thing the platform is built around.
+          </p>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Metric
+              icon={Users}
+              label="Different students booked"
+              value={stats.sessions.uniqueStudentsBooked}
+              sub={`${stats.sessions.totalBookings} booking${stats.sessions.totalBookings === 1 ? "" : "s"} in total`}
+            />
+            <Metric
+              icon={CheckCircle2}
+              label="Different students attended"
+              value={stats.sessions.uniqueStudentsAttended}
+              sub={`${stats.sessions.completedBookings} session${stats.sessions.completedBookings === 1 ? "" : "s"} marked completed`}
+            />
+            <Metric
+              icon={TrendingUp}
+              label="Sessions per student"
+              value={stats.sessions.repeatRate ?? "—"}
+              sub={stats.sessions.repeatRate ? "average among those who attended" : "nobody has attended yet"}
+            />
+            <Metric
+              icon={AlertTriangle}
+              label="Upcoming / cancelled"
+              value={`${stats.sessions.upcomingBookings} / ${stats.sessions.cancelledBookings}`}
+              sub="still to happen · called off"
+            />
+          </div>
+
+          {stats.sessions.byType.length ? (
+            <div className="overflow-x-auto rounded-lg border">
+              <table className="w-full text-sm">
+                <thead className="border-b bg-secondary/40 text-left text-xs uppercase tracking-wide text-muted-foreground">
+                  <tr>
+                    <Th className="pl-4">Session type</Th>
+                    <Th right>Bookings</Th>
+                    <Th right className="pr-4">Different students</Th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.sessions.byType.map((t) => (
+                    <tr key={t.type} className="border-b last:border-0">
+                      <Td className="pl-4">{EVENT_TYPE_LABELS[t.type as SessionType] ?? t.type}</Td>
+                      <Td right>{t.bookings}</Td>
+                      <Td right className="pr-4">{t.uniqueStudents}</Td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <Empty>Nobody has booked a session yet. Publish some slots first.</Empty>
+          )}
+
+          <p className="text-xs text-muted-foreground">
+            &ldquo;Attended&rdquo; means a booking someone marked <strong>completed</strong> after
+            the fact. Nothing here observes whether a student actually joined the call.
+          </p>
         </CardContent>
       </Card>
 

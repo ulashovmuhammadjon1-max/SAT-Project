@@ -455,4 +455,311 @@ QUESTIONS = [
      "were enlarging bricks before it, which treats Text 1's account as partial rather than wrong. "
      "The option calling the explanation untestable is ruled out by Text 2's own appeal to bricks "
      "moulded before 1784."),
+
+ # ------------------------------------------------ Central Ideas and Details (6)
+ cid("C1",
+     "A clamp is not a building but a stack. The green bricks are built into a heap with breeze "
+     "or small coal spread between the courses, the outside is daubed over with clay, and the "
+     "whole is lit at the bottom and left to burn itself out across several weeks. The heat is "
+     "never the same in two parts of the heap. Bricks drawn from the middle come out hard, dark "
+     "and sometimes fused along one edge; those from the outer skin come out pale, soft and so "
+     "porous that a winter would ruin them in a wall. A clamp therefore yields not a batch of "
+     "bricks but a graded range of them, and the yard's first task once the fire has died is to "
+     "sort the heap into qualities and price each quality separately.",
+     "Which choice best states the main idea of the text?",
+     ["Because a clamp heats its contents unevenly, its output has to be sorted into several "
+      "qualities rather than sold as one product.",
+      "Bricks taken from the middle of a clamp are unusable because the heat has fused them.",
+      "Daubing the outside of a clamp with clay keeps the heat even throughout the heap.",
+      "A clamp is cheaper to fire than a kiln because its fuel is built into the stack."],
+     "A",
+     "The passage builds to the statement that a clamp yields a graded range and that the heap "
+     "must be sorted and priced by quality, which is the point every earlier sentence supports. "
+     "The claim that daubing keeps the heat even contradicts the sentence saying the heat is "
+     "never the same in two parts of the heap."),
+
+ cid("C2",
+     "Lath split from the log along its own grain follows the run of the fibres, so each strip "
+     "keeps long unbroken lines of wood from one end to the other and will bend a long way before "
+     "it snaps. A lath sawn to the same dimensions cuts straight through those fibres wherever the "
+     "grain wanders, and every such crossing is a place where the strip can break under a nail or "
+     "under the pressure of the plasterer's trowel. Sawn lath is the cheaper article, since it can "
+     "be machined out of any part of the log, and it is even in width in a way split lath never "
+     "is. Where a ceiling has come down in an old house, though, it is nearly always the sawn lath "
+     "that has gone and the split lath in the next room that has held.",
+     "According to the text, what is the chief advantage of split lath over sawn lath?",
+     ["It can be produced from any part of the log.",
+      "It is more even in width along its length.",
+      "Its fibres run unbroken from end to end, so it resists breaking.",
+      "It is cheaper to produce in quantity."],
+     "C",
+     "The text opens by saying split lath keeps long unbroken lines of wood and will bend far "
+     "before snapping, and closes with split lath outlasting sawn lath in fallen ceilings. Being "
+     "cheap and being even in width are both credited to the sawn article, not the split one."),
+
+ cid("C3",
+     "The earliest traceried windows were made by cutting shapes through a slab of stone: two "
+     "lights with a circle above them, pierced in the thickness of the wall much as one might "
+     "pierce a sheet of paper. What such a window can be is limited by how much a solid panel will "
+     "give up before it falls, and the openings stay small. Bar tracery reverses the thinking. The "
+     "pattern is set out first as a system of lines, and every line is then cut as a separate "
+     "moulded bar and jointed to its neighbours. Once the stonework is understood as a frame put "
+     "together from parts rather than as a panel with holes in it, the glass can grow until the "
+     "space between one buttress and the next is very nearly all window.",
+     "Which choice best states the main idea of the text?",
+     ["Windows made by piercing a slab were structurally unsound and often collapsed.",
+      "Bar tracery treats a window as a frame assembled from separate members, which allowed far "
+      "larger openings than a pierced slab could.",
+      "Moulded bars proved cheaper to cut and fit than a pierced slab of the same size.",
+      "The buttresses beside a window had to be enlarged once bar tracery came into use."],
+     "B",
+     "The passage contrasts a panel that can only lose so much material with a pattern of jointed "
+     "bars, and ends with the glass growing to fill the bay, so the change in method and the "
+     "resulting size are the point. Nothing in the text says pierced windows collapsed; it says "
+     "only that the size of their openings was limited."),
+
+ cid("C4",
+     "Ox hair beaten into the coarse stuff of a plasterer's first coat is not there to make the "
+     "hardened wall stronger, and a set coat carries its own weight perfectly well without any. "
+     "The hair does its work in the hours before the coat has set at all. Wet stuff pressed onto "
+     "lath is a heavy mass hanging on a row of thin strips, and it shrinks as the water leaves it. "
+     "With no fibre in it the shrinking coat tears itself apart and opens a crack over every gap "
+     "between the laths; with fibre, the shrinkage is taken up across many thousands of hairs and "
+     "shared along the whole coat. Plasterers who now beat in glass fibre instead of hair are "
+     "answering the same difficulty in a newer material.",
+     "Which choice best states the main idea of the text?",
+     ["Plaster laid on lath will not set at all unless a fibre has been beaten into it.",
+      "Glass fibre has entirely displaced ox hair in modern plastering.",
+      "The first coat of plaster is stronger than any of the coats laid over it.",
+      "Fibre in a plaster coat controls the shrinkage that happens before setting rather than "
+      "strengthening the coat afterwards."],
+     "D",
+     "The first sentence denies that the hair strengthens the hardened wall and the rest of the "
+     "passage describes what it does during shrinkage, so the contrast between the two is the "
+     "idea. The claim that plaster will not set without fibre is contradicted by the opening "
+     "statement that a set coat carries its own weight without any."),
+
+ cid("C5",
+     "The clay lying under Fletton in Huntingdonshire behaves unlike the clays worked anywhere "
+     "else. It comes out of the ground so nearly dry that it can be ground to a powder and pressed "
+     "into shape in a machine, instead of being tempered with water and then left in the open for "
+     "weeks to give that water back. It also holds a quantity of oil distributed through its whole "
+     "substance, so that once the setting has been raised to a certain heat the bricks go on "
+     "burning from within and call for very little further coal. Two of the heaviest charges on an "
+     "ordinary yard were therefore largely absent, and by the 1930s one district was supplying "
+     "something like a fifth of all the bricks laid in the country.",
+     "According to the text, what made the Fletton clay unusually cheap to work?",
+     ["It required neither a long drying stage nor much fuel once the setting was alight.",
+      "It could be moulded by hand faster than any other clay.",
+      "It produced a brick that needed no sorting after burning.",
+      "It lay close to the districts where most of the bricks were laid."],
+     "A",
+     "The passage names exactly two savings, a drying stage the clay does not need and coal the "
+     "oil in the clay replaces, and then calls those the two heaviest charges on an ordinary yard. "
+     "Nothing is said about sorting, which the text never raises."),
+
+ cid("C6",
+     "A bamboo scaffold on a Hong Kong tower is not a survival that modernisation has somehow "
+     "failed to reach. Steel tube arrives by lorry and has to be craned to the working level; "
+     "bamboo goes up on a worker's shoulder along the scaffold already standing, and a crew can "
+     "raise several storeys of it in a day without asking the site crane for anything. The poles "
+     "are lashed with nylon strip, so a joint is made in seconds and can be made at any point "
+     "along a pole rather than only where a fitting will grip. Set against that, a bamboo scaffold "
+     "cannot be given a designed and certified capacity as a tube scaffold can, and it is passed "
+     "fit by people who have learned to read it rather than by a calculation on paper.",
+     "Which choice best states the main idea of the text?",
+     ["Hong Kong builders use bamboo because steel tube cannot be obtained there.",
+      "Nylon lashings have made bamboo scaffolds as strong as scaffolds of steel tube.",
+      "Bamboo scaffolding survives because it goes up quickly without a crane, though its capacity "
+      "cannot be certified by calculation as steel's can.",
+      "A bamboo pole will carry more weight than a steel tube of the same diameter."],
+     "C",
+     "The passage sets a practical advantage, erection without the crane and a lashing made "
+     "anywhere along a pole, against a stated drawback about certification, and opens by refusing "
+     "to call the practice a survival. The option about steel being unobtainable is an explanation "
+     "the text never offers and its first sentence rules out."),
+
+ # ------------------------------------------------- Command of Evidence (9)
+ coe("E1",
+     "A plain tile roof is set out so that every part of it lies under at least two thicknesses of "
+     "tile. How far apart the battens are fixed &mdash; the gauge &mdash; therefore depends both "
+     "on the length of the tile and on the lap, which is the distance a tile is carried down over "
+     "the head of the tile two courses below it. A roofer working out a roof reads the figures off "
+     "a table:"
+     + table(["Tile length (mm)", "Lap (mm)", "Gauge (mm)"],
+             [["265", "65", "100"], ["265", "85", "90"],
+              ["337", "65", "136"], ["337", "85", "126"]]),
+     "Which choice most effectively uses data from the table to complete the statement?",
+     ["For a tile of a given length, increasing the lap reduces the gauge, so more courses are "
+      "needed to cover the same roof.",
+      "For a tile of a given length, increasing the lap increases the gauge, so fewer courses are "
+      "needed to cover the same roof.",
+      "The gauge depends only on the length of the tile and is unaffected by the lap.",
+      "A longer tile is laid to a smaller gauge than a shorter one at every lap."],
+     "A",
+     "Holding the length at 265 mm, the gauge falls from 100 mm to 90 mm as the lap rises from 65 "
+     "mm to 85 mm, and a smaller gauge means the battens sit closer and more courses fill the "
+     "roof. The claim that a longer tile takes a smaller gauge is reversed by the 337 mm rows, "
+     "where the gauge is larger at both laps."),
+
+ coe("E2",
+     "Rain running down the face of a brick wall gathers at the joints, and how much of it is "
+     "driven into the wall depends on the shape the bricklayer has left the mortar in. A "
+     "weather-struck joint is pressed back at the top and left flush at the bottom, so the face of "
+     "the mortar slopes outward and throws water clear of the brick beneath. A joint raked back "
+     "square behind the face of the brickwork leaves a small level ledge on the top edge of every "
+     "brick instead. Kelsey Otieno argues that on a solid wall the profile the bricklayer forms "
+     "matters more than what the mortar itself is made of in deciding how wet the wall becomes.",
+     "Which finding, if true, would most strongly support Otieno's argument?",
+     ["Raked joints appear more often on twentieth-century buildings than on earlier ones.",
+      "A bricklayer can form a weather-struck joint faster than a raked one.",
+      "Two walls of identical brick and identical mortar, one weather-struck and one raked back, "
+      "took up water at rates differing by a factor of three under the same driving rain.",
+      "Walls pointed in a strong mortar took up less water than walls pointed in a weak one."],
+     "C",
+     "Otieno's claim is that profile outweighs composition, and only the paired walls hold the "
+     "brick and the mortar constant so that the profile is the sole difference. The comparison of "
+     "strong against weak mortar varies composition instead, which is the factor Otieno says "
+     "matters less."),
+
+ coe("E3",
+     "A raking shore is a heavy timber set on a slant against a wall that has begun to lean, its "
+     "foot on the ground well out from the building and its head pressed against the masonry. In a "
+     "builder's manual of 1873, Josiah Verner insisted that whether such a shore does any good "
+     "depends entirely on the level at which its head meets the wall, and not at all on how big a "
+     "timber has been used.",
+     "Which quotation from Verner's manual most effectively illustrates the claim?",
+     ["&ldquo;Bring the head of your rake to bear at the level of a floor, where the joists may "
+      "take the thrust; a shore that lands between two floors pushes upon the plaster and nothing "
+      "besides.&rdquo;",
+      "&ldquo;A shore of nine inches square will answer for a wall of three storeys, and one of "
+      "eleven inches square for a wall of four.&rdquo;",
+      "&ldquo;The foot must stand upon a sole piece bedded on firm ground, and never upon made "
+      "earth, which will give under the thrust.&rdquo;",
+      "&ldquo;Let no shore be left standing beyond the season, for the timber shrinks and the wall "
+      "settles down upon it.&rdquo;"],
+     "A",
+     "Verner's claim is about the level at which the head bears, and the quotation about landing "
+     "at a floor rather than between floors is the only one that turns on that level. The "
+     "quotation giving timber sizes for walls of three and four storeys is about the size of the "
+     "shore, which is exactly what Verner said does not matter."),
+
+ coe("E4",
+     "Good plasterwork on lath is built up in three coats, each thinner than the one before it and "
+     "each left to dry back before the next is laid, since a coat spread on ground that is still "
+     "moving will craze as the ground shrinks under it. A specification of the 1890s sets out the "
+     "work:"
+     + table(["Coat", "Thickness (mm)", "Days before the next coat"],
+             [["First, pressed through the lath", "9", "7"],
+              ["Floating", "6", "10"],
+              ["Setting", "3", "final coat"]]),
+     "Which choice most effectively uses data from the table to complete the statement?",
+     ["Each coat is thicker than the one before it, and the wait between coats shortens as the "
+      "work goes on.",
+      "The coats grow thinner as the work goes on, and the longest wait falls immediately before "
+      "the thinnest coat of all.",
+      "The three coats are of equal thickness, and only the waiting time changes.",
+      "The thickest coat is laid last, after the longest wait."],
+     "B",
+     "The thicknesses fall from 9 mm to 6 mm to 3 mm, and the ten-day wait, the longer of the two, "
+     "comes before the 3 mm setting coat. The option putting the thickest coat last reverses the "
+     "order the table gives."),
+
+ coe("E5",
+     "When a lath-and-plaster ceiling fails it usually comes away in one piece, laths and all. The "
+     "usual explanation blames the key: the ribbons of wet plaster squeezed through the gaps "
+     "between the laths, which hook over the wood and hold the ceiling up, and which are said to "
+     "grow brittle and crumble away with age. Ravi Anand proposes a different starting point, "
+     "arguing that the failure begins at the nails fixing the laths to the joists, which rust "
+     "until the head no longer holds the lath.",
+     "Which finding, if true, would most strongly support Anand's proposal?",
+     ["Ceilings in rooms subject to damp come down more often than ceilings in dry rooms.",
+      "Plaster mixed without any fibre in it cracks more readily than plaster mixed with fibre.",
+      "In fallen ceilings the keys were found whole and still hooked over their laths, while the "
+      "nail holes in the joists were enlarged and stained with rust.",
+      "Ceilings fixed less than fifty years ago have rarely been known to fall."],
+     "C",
+     "Anand needs the key to be sound and the fixing to have gone, and the ceilings whose keys are "
+     "still hooked over the laths beside rust-stained nail holes give exactly that pattern. Damp "
+     "rooms failing more often fits the crumbling-key account just as comfortably, so it "
+     "distinguishes nothing."),
+
+ coe("E6",
+     "Scaffold boards do not rest on the standards but on the transoms, the short members laid "
+     "across the scaffold at working level, and a board carried too far between two of them "
+     "springs underfoot and eventually splits. A working rule sets the greatest distance a board "
+     "of each thickness may be carried:"
+     + table(["Board thickness (mm)", "Greatest span between transoms (m)"],
+             [["38", "1.5"], ["50", "2.6"], ["63", "3.2"]]),
+     "Which choice most effectively uses data from the table to complete the statement?",
+     ["A thicker board may be carried further between transoms, so a lift boarded with thick "
+      "boards needs fewer transoms than one boarded with thin.",
+      "A thinner board may be carried further between transoms, so thin boards call for fewer "
+      "transoms.",
+      "The greatest span doubles with every increase in board thickness listed.",
+      "Board thickness makes no difference to the distance a board may be carried."],
+     "A",
+     "The permitted span rises from 1.5 m to 2.6 m to 3.2 m as the board thickens from 38 mm to 63 "
+     "mm, and transoms set further apart means fewer of them along a lift. The span does not "
+     "double at either step, since 2.6 is well short of twice 1.5 and 3.2 is well short of twice "
+     "2.6."),
+
+ coe("E7",
+     "A lewis is a lifting device of three iron pieces dropped into a slot cut in the top of a "
+     "block. The two outer pieces are splayed and the slot is cut wider at its base to match them, "
+     "so that when the middle piece is driven down between them the whole assembly wedges, and the "
+     "harder the crane pulls the tighter the iron grips. It leaves behind a small tapered slot "
+     "that is out of sight the moment the block is bedded. Priya Raman argues that a certain "
+     "twelfth-century tower was raised with lewises rather than with slings passed underneath the "
+     "blocks.",
+     "Which finding, if true, would most strongly support Raman's argument?",
+     ["Blocks lifted out of the tower during a repair were found to carry a tapered slot cut in "
+      "their upper beds.",
+      "The tower's blocks are heavier than those used in neighbouring buildings of the same date.",
+      "Worked iron of twelfth-century date has been recovered from the ground around the tower.",
+      "The accounts of the estate record payments to masons working at the tower."],
+     "A",
+     "The slot is the one trace a lewis leaves and a sling leaves none, so finding the slot in the "
+     "upper beds of the tower's own blocks distinguishes the two methods. Iron found in the ground "
+     "nearby is consistent with any ironwork on the site and says nothing about how the blocks "
+     "were lifted."),
+
+ coe("E8",
+     "A cathedral's fabric roll records what the building account paid out week by week. Marta "
+     "Lund argues that the roll draws a working distinction between labour whose product could be "
+     "counted and labour whose product could not, and pays each accordingly.",
+     "Which quotation from the fabric roll most effectively illustrates Lund's argument?",
+     ["&ldquo;Paid for two hundred of lath and one load of sand, delivered at the west door.&rdquo;",
+      "&ldquo;To the smith, for sharpening and setting the masons' tools throughout the year, "
+      "thirteen shillings.&rdquo;",
+      "&ldquo;To the four setters, for eleven weeks about the tower, at two shillings the week; "
+      "and to William the mason, for ninety mullion stones cut at the bench, at threepence the "
+      "stone.&rdquo;",
+      "&ldquo;To William the mason, for ninety mullion stones cut at the bench, at threepence the "
+      "stone.&rdquo;"],
+     "C",
+     "Lund's argument is about a distinction, so the illustration has to show both halves of it, "
+     "and only the entry pairing setters paid by the week with a bench mason paid by the stone "
+     "does that. The entry giving the mullion stones alone shows countable work being paid by the "
+     "piece but supplies nothing to contrast it with."),
+
+ coe("E9",
+     "A plain tile roof carries two thicknesses of tile everywhere and three at the head of every "
+     "course, and the weight of all that clay has to be carried by the rafters. A pantile is "
+     "moulded to a shallow S so that each tile laps only the tile beside it and the course below, "
+     "and a roof of pantiles is therefore a single thickness over most of its area and a good deal "
+     "lighter. Idris Ferreira argues that pantiles spread through the eastern counties in the "
+     "seventeenth century chiefly because of that lightness rather than because they were the "
+     "cheaper covering.",
+     "Which finding, if true, would most strongly support Ferreira's argument?",
+     ["Pantiles were brought in from the Low Countries for some years before they were made in "
+      "England.",
+      "Surviving accounts show pantiles costing about the same as plain tiles for a given area of "
+      "roof, while the rafters under pantiled roofs were consistently of lighter scantling.",
+      "Pantiles were made in a wider range of colours than plain tiles were.",
+      "Many roofs first covered in pantiles have since been stripped and covered in slate."],
+     "B",
+     "Ferreira has to rule out price and establish weight, and the accounts showing equal cost "
+     "beside consistently lighter rafters do both at once. Importation from the Low Countries "
+     "speaks to where the tiles came from and leaves the reason for their spread untouched."),
 ]

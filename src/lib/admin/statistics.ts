@@ -54,6 +54,36 @@ export interface ScoreBucket {
   value: number;
 }
 
+export interface SessionStats {
+  /** Distinct students who have ever booked, whatever the outcome. */
+  uniqueStudentsBooked: number;
+  /** Distinct students with at least one booking marked COMPLETED. */
+  uniqueStudentsAttended: number;
+  /** Bookings, not people — the gap between the two is the repeat rate. */
+  totalBookings: number;
+  completedBookings: number;
+  cancelledBookings: number;
+  upcomingBookings: number;
+  /** Bookings per attending student, which says whether people come back. */
+  repeatRate: number | null;
+  byType: { type: string; bookings: number; uniqueStudents: number }[];
+}
+
+export interface StudentActivityRow {
+  userId: string;
+  name: string | null;
+  email: string | null;
+  joinedAt: Date;
+  lastActiveAt: Date | null;
+  questionsAnswered: number;
+  daysActive: number;
+  testsCompleted: number;
+  bestScore: number | null;
+  accuracyPct: number | null;
+  sessionsBooked: number;
+  sessionsAttended: number;
+}
+
 export interface AdminStatistics {
   funnel: FunnelStep[];
   signupsByWeek: TrendPoint[];
@@ -66,6 +96,7 @@ export interface AdminStatistics {
   activeLast7: number;
   activeLast30: number;
   questionsAnsweredAllTime: number;
+  sessions: SessionStats;
 }
 
 const asNumber = (v: unknown): number => (v == null ? 0 : Number(v));
@@ -285,6 +316,129 @@ async function questionOutliers(minAttempts: number): Promise<{
 }
 
 /**
+ * Session uptake.
+ *
+ * The number that matters is **distinct students**, not bookings: ten bookings
+ * could be ten people who each came once or one person who came ten times, and
+ * those are opposite outcomes for a platform whose whole differentiator is the
+ * 1-on-1. Both are reported, and the ratio between them is the repeat rate.
+ *
+ * "Attended" means a booking marked COMPLETED. That is an operator's judgement
+ * recorded after the session, not automatic attendance — nothing here observes
+ * whether anyone actually joined the call.
+ */
+async function sessionStats(): Promise<SessionStats> {
+  const [rows, byTypeRows] = await Promise.all([
+    prisma.$queryRaw<
+      {
+        unique_booked: bigint;
+        unique_attended: bigint;
+        total: bigint;
+        completed: bigint;
+        cancelled: bigint;
+        upcoming: bigint;
+      }[]
+    >`
+      SELECT COUNT(DISTINCT "userId")::bigint AS unique_booked,
+             COUNT(DISTINCT "userId") FILTER (WHERE status = 'COMPLETED')::bigint AS unique_attended,
+             COUNT(*)::bigint AS total,
+             COUNT(*) FILTER (WHERE status = 'COMPLETED')::bigint AS completed,
+             COUNT(*) FILTER (WHERE status = 'CANCELLED')::bigint AS cancelled,
+             COUNT(*) FILTER (WHERE status = 'UPCOMING')::bigint  AS upcoming
+        FROM "Booking"
+    `,
+    prisma.$queryRaw<{ type: string; bookings: bigint; students: bigint }[]>`
+      SELECT "sessionType"::text AS type,
+             COUNT(*)::bigint AS bookings,
+             COUNT(DISTINCT "userId")::bigint AS students
+        FROM "Booking"
+       GROUP BY "sessionType"
+       ORDER BY COUNT(*) DESC
+    `,
+  ]);
+
+  const r = rows[0];
+  const attended = asNumber(r?.unique_attended);
+  const completed = asNumber(r?.completed);
+
+  return {
+    uniqueStudentsBooked: asNumber(r?.unique_booked),
+    uniqueStudentsAttended: attended,
+    totalBookings: asNumber(r?.total),
+    completedBookings: completed,
+    cancelledBookings: asNumber(r?.cancelled),
+    upcomingBookings: asNumber(r?.upcoming),
+    repeatRate: attended ? Math.round((completed / attended) * 10) / 10 : null,
+    byType: byTypeRows.map((t) => ({
+      type: t.type,
+      bookings: asNumber(t.bookings),
+      uniqueStudents: asNumber(t.students),
+    })),
+  };
+}
+
+/**
+ * One row per student, so an operator can look at people rather than totals.
+ *
+ * Assembled from four sources in a single query — the study log, graded test
+ * attempts, pooled answers, and bookings — because doing it per student would
+ * be one query per row and this list is meant to be read at a glance.
+ */
+export async function getStudentActivity(limit = 200): Promise<StudentActivityRow[]> {
+  const rows = await prisma.$queryRaw<
+    {
+      id: string;
+      name: string | null;
+      email: string | null;
+      createdat: Date;
+      lastactive: Date | null;
+      answered: bigint;
+      daysactive: bigint;
+      testscompleted: bigint;
+      bestscore: number | null;
+      correct: bigint;
+      attempted: bigint;
+      booked: bigint;
+      attended: bigint;
+    }[]
+  >`
+    SELECT u.id, u.name, u.email, u."createdAt" AS createdat,
+           (SELECT MAX(sa.date) FROM "StudyActivity" sa WHERE sa."userId" = u.id) AS lastactive,
+           COALESCE((SELECT SUM(sa."questionsAnswered") FROM "StudyActivity" sa WHERE sa."userId" = u.id), 0)::bigint AS answered,
+           (SELECT COUNT(*) FROM "StudyActivity" sa WHERE sa."userId" = u.id AND sa."questionsAnswered" > 0)::bigint AS daysactive,
+           (SELECT COUNT(*) FROM "Attempt" a WHERE a."userId" = u.id AND a.status = 'SUBMITTED')::bigint AS testscompleted,
+           (SELECT MAX(a."totalScaledScore") FROM "Attempt" a WHERE a."userId" = u.id) AS bestscore,
+           (SELECT COUNT(*) FROM "QuestionAttempt" qa WHERE qa."userId" = u.id AND qa."isCorrect")::bigint AS correct,
+           (SELECT COUNT(*) FROM "QuestionAttempt" qa WHERE qa."userId" = u.id)::bigint AS attempted,
+           (SELECT COUNT(*) FROM "Booking" b WHERE b."userId" = u.id)::bigint AS booked,
+           (SELECT COUNT(*) FROM "Booking" b WHERE b."userId" = u.id AND b.status = 'COMPLETED')::bigint AS attended
+      FROM "User" u
+     WHERE u.role = 'STUDENT'
+     ORDER BY u."createdAt" DESC
+     LIMIT ${limit}
+  `;
+
+  return rows.map((r) => {
+    const attempted = asNumber(r.attempted);
+    return {
+      userId: r.id,
+      name: r.name,
+      email: r.email,
+      joinedAt: r.createdat,
+      lastActiveAt: r.lastactive,
+      questionsAnswered: asNumber(r.answered),
+      daysActive: asNumber(r.daysactive),
+      testsCompleted: asNumber(r.testscompleted),
+      bestScore: r.bestscore == null ? null : Number(r.bestscore),
+      // Only from Question Bank answers, where a graded row always exists.
+      accuracyPct: attempted ? Math.round((asNumber(r.correct) / attempted) * 100) : null,
+      sessionsBooked: asNumber(r.booked),
+      sessionsAttended: asNumber(r.attended),
+    };
+  });
+}
+
+/**
  * Everything the statistics page needs, in one round of parallel queries.
  *
  * `minAttempts` guards the outlier tables: with two or three answers a question
@@ -302,6 +456,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
     activeLast7,
     activeLast30,
     answeredAgg,
+    sessions,
   ] = await Promise.all([
     buildFunnel(),
     signupsByWeek(),
@@ -324,6 +479,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
       })
       .then((r) => r.length),
     prisma.studyActivity.aggregate({ _sum: { questionsAnswered: true } }),
+    sessionStats(),
   ]);
 
   return {
@@ -338,5 +494,6 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
     activeLast7,
     activeLast30,
     questionsAnsweredAllTime: answeredAgg._sum.questionsAnswered ?? 0,
+    sessions,
   };
 }

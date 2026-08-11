@@ -104,7 +104,7 @@ def m1_07():
     # lies in the scaled interval, and the derivation picks it rather than
     # confirming it.
     lo, hi = 30 * 53, 30 * 63
-    good = [v for v in (1540, 1585, 1760, 1920) if lo <= v < hi]
+    good = [v for v in (1760, 1890, 1920, 1980) if lo <= v < hi]
     assert len(good) == 1
     return Integer(good[0])
 
@@ -624,6 +624,32 @@ VALID_SKILLS = {
 
 SPAN = re.compile(r"\\\((.*?)\\\)|\\\[(.*?)\\\]", re.S)
 
+
+def choice_value(text):
+    """Numeric value of one answer choice, or None if it is not purely numeric.
+
+    Handles a plain number (with thousands commas, a leading $ or a trailing
+    %), a bare fraction and a multiple of pi, which is as far as a comparison
+    of magnitudes is meaningful. Anything symbolic, an ordered pair, an
+    inequality or prose returns None and is exempt from the ordering rule,
+    because those have no canonical increasing order.
+    """
+    tz = re.sub(r"\\\(|\\\)|\\\[|\\\]|\\left|\\right|\s", "", text)
+    tz = tz.replace(",", "").replace("$", "").replace("%", "")
+    sign = 1
+    if tz.startswith("-") and ("\\frac" in tz or "\\pi" in tz):
+        sign, tz = -1, tz[1:]
+    mo = re.fullmatch(r"\\frac\{(-?\d+)\}\{(-?\d+)\}", tz)
+    if mo:
+        return sign * float(mo.group(1)) / float(mo.group(2))
+    mo = re.fullmatch(r"(-?\d*)\\pi", tz)
+    if mo:
+        return sign * float(mo.group(1) or 1) * 3.141592653589793
+    try:
+        return float(tz)
+    except ValueError:
+        return None
+
 seen_ids = set()
 styled = 0
 for qq in ALL:
@@ -642,6 +668,17 @@ for qq in ALL:
         check(len(qq["choices"]) == 4, f"{tag}: needs exactly 4 choices")
         check(len(set(qq["choices"])) == 4, f"{tag}: duplicate answer choice")
         check(qq["correct"] in "ABCD", f"{tag}: bad answer label")
+        # Numeric choices are listed in increasing order on the real test, and
+        # in every sibling build (Tests 19 and 21: 85 purely numeric MC items,
+        # zero out of order). This build shipped NINE scrambled sets — 1,299 /
+        # 1,300 / 1,310 / 1,301 among them — because the key letter was being
+        # chosen for balance and the choices left where they fell. Balance is
+        # bought by choosing distractor VALUES, never by scrambling the order.
+        vals = [choice_value(cz) for cz in qq["choices"]]
+        if all(vz is not None for vz in vals):
+            check(vals == sorted(vals),
+                  f"{tag}: numeric choices are not in increasing order: "
+                  f"{qq['choices']}")
     else:
         check(bool(qq.get("answers")), f"{tag}: free response with no accepted answer")
 
