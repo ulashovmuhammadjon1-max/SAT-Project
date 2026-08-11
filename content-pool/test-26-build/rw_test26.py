@@ -865,3 +865,582 @@ QUESTIONS += [
                "the case the passage describes as leaving almost no time to act.",
     },
 ]
+
+# -------------------------------------------------------------------- Boundaries
+# Which punctuation mark differs between the four options is the only signal that
+# separates a Boundaries item from a Form/Structure/Sense one, so each item below
+# is classified from its CHOICES, not from its stem. Every option repeats the
+# words on both sides of the blank, so no choice renders as an empty row.
+QUESTIONS += [
+    {
+        "num": "B1", "skill": "Boundaries",
+        "passage": "Three things are lowered into the pit before the metal is _____ core, the cope, and "
+                   "the iron case that holds them together against the outward pressure of the pour.",
+        "stem": CONV_STEM,
+        "choices": ["poured: the", "poured, the", "poured the", "poured; the"],
+        "answer": "A",
+        "why": "A complete statement stands in front of the blank and a bare list of three noun phrases "
+               "follows it, which is the colon's work. The semicolon option fails because what comes "
+               "after it would have to be a complete statement of its own and is only a list.",
+    },
+    {
+        "num": "B2", "skill": "Boundaries",
+        "passage": "When the last row has been rung and the method is _____ band still has to lower the "
+                   "bells, and the final pulls of a long peal are the ones most likely to go wrong.",
+        "stem": CONV_STEM,
+        "choices": ["complete, the", "complete the", "complete; the", "complete: the"],
+        "answer": "A",
+        "why": "Everything before the blank begins with \"When\" and cannot stand alone, so it is an "
+               "introductory clause and takes a comma before the main statement. The semicolon option "
+               "would need complete statements on both sides and has one only on the right.",
+    },
+    {
+        "num": "B3", "skill": "Boundaries",
+        "passage": "The organist at a large instrument sits with the console turned away from the "
+                   "pipework and hears it a fraction of a second late. Recordings, though, are made out "
+                   "in the nave and not from the _____ balance the player hears is not the balance the "
+                   "microphone finds.",
+        "stem": CONV_STEM,
+        "choices": ["bench. The", "bench, the", "bench the", "bench and the"],
+        "answer": "A",
+        "why": "Two complete statements meet at the blank with no joining word, so a full stop between "
+               "them is the clean solution. The comma option leaves a splice, and adding \"and\" without "
+               "a comma still runs one statement into the next.",
+    },
+    {
+        "num": "B4", "skill": "Boundaries",
+        "passage": "The small nicks a voicer files into the edge of the _____ the sheet of air and take "
+                   "the chiff out of a pipe's attack.",
+        "stem": CONV_STEM,
+        "choices": ["languid steady", "languid, steady", "languid; steady", "languid: steady"],
+        "answer": "A",
+        "why": "The blank falls between a subject and its verb, and nothing may be inserted there, so "
+               "the sentence runs on unpunctuated. The comma option separates the thing doing the "
+               "steadying from the steadying itself.",
+    },
+    {
+        "num": "B5", "skill": "Boundaries",
+        "passage": "The _____ largest bell in the instrument and the one that fixes a carillon's nominal "
+                   "pitch, hangs at the bottom of the frame and is struck only a few times in a piece.",
+        "stem": CONV_STEM,
+        "choices": ["bourdon, the", "bourdon the", "bourdon: the", "bourdon; the"],
+        "answer": "A",
+        "why": "A description of the bourdon is dropped into the middle of the sentence and is already "
+               "closed by a comma before \"hangs\", so the same mark has to open it. The colon option "
+               "cannot pair with that closing comma, and a colon this early would cut the subject off "
+               "from its verb.",
+    },
+    {
+        "num": "B6", "skill": "Boundaries",
+        "passage": "A tuner setting a well temperament works through the octave in a fixed order: C to G, "
+                   "a narrow fifth; G to D, narrower _____ to A, narrower again, and so on round until "
+                   "the circle closes.",
+        "stem": CONV_STEM,
+        "choices": ["still; D", "still, D", "still D", "still: D"],
+        "answer": "A",
+        "why": "The list is of items that already contain commas inside them, so the items themselves "
+               "have to be divided by the heavier mark, as the earlier pair in the sentence already is. "
+               "A comma here would leave the reader unable to tell where one item ends and the next "
+               "begins.",
+    },
+    {
+        "num": "B7", "skill": "Boundaries",
+        "passage": "The trouble a hall of this shape gives is easy enough to _____ ceiling returns a "
+                   "strong reflection to the middle of the stalls and almost none to the seats along the "
+                   "sides.",
+        "stem": CONV_STEM,
+        "choices": ["state: the", "state, the", "state the", "state and the"],
+        "answer": "A",
+        "why": "A complete statement announces a difficulty and what follows spells out what that "
+               "difficulty is, which is the colon's ordinary use. Joining the two with \"and\" and no "
+               "comma runs two complete statements together.",
+    },
+    {
+        "num": "B8", "skill": "Boundaries",
+        "passage": "The alum-and-rosin _____ was adopted because it let a mill work faster, is the reason "
+                   "so many nineteenth-century books can no longer be opened.",
+        "stem": CONV_STEM,
+        "choices": ["size, which", "size which", "size that", "size, that"],
+        "answer": "A",
+        "why": "A comma already closes the inserted description before \"is\", so the description is a "
+               "supplement and needs both an opening comma and the relative word that can carry one. "
+               "The option with \"that\" fails because that word introduces a description the sentence "
+               "cannot spare, and such a description takes no commas at all.",
+    },
+    {
+        "num": "B9", "skill": "Boundaries",
+        "passage": "Everything about a medieval window that a modern eye reads as _____ heavy lead lines, "
+                   "the small panes, the abrupt changes of colour &mdash; began as a limitation of the "
+                   "material.",
+        "stem": CONV_STEM,
+        "choices": ["design &mdash; the", "design, the", "design the", "design: the"],
+        "answer": "A",
+        "why": "A dash already closes the inserted list before \"began\", so the mark that opens it has "
+               "to match. Opening with a comma or a colon leaves the pair mismatched and the reader "
+               "unsure where the interruption started.",
+    },
+    {
+        "num": "B10", "skill": "Boundaries",
+        "passage": "When the owner of a store is watching _____ jackdaw will leave the food where it lies "
+                   "and come back for it once the other bird has gone.",
+        "stem": CONV_STEM,
+        "choices": ["watching, a", "watching a", "watching; a", "watching: a"],
+        "answer": "A",
+        "why": "The opening clause begins with \"When\" and cannot stand on its own, so it is marked off "
+               "from the main statement by a comma. The semicolon option needs a complete statement in "
+               "front of it and does not have one.",
+    },
+    {
+        "num": "B11", "skill": "Boundaries",
+        "passage": "The old definition tied the unit to a single object in a single _____ the constant "
+                   "that has replaced it can be realised in any laboratory able to build the apparatus.",
+        "stem": CONV_STEM,
+        "choices": ["vault; however,", "vault, however,", "vault however,", "vault: however,"],
+        "answer": "A",
+        "why": "Two complete statements meet here, and the connecting word between them is not a "
+               "conjunction that can join them, so the heavier mark is needed in front of it. A comma in "
+               "that position leaves the two statements spliced together.",
+    },
+    {
+        "num": "B12", "skill": "Boundaries",
+        "passage": "The school had no signing adults on its staff when it _____ the children arrived with "
+                   "nothing in common but the handful of gestures each had improvised at home.",
+        "stem": CONV_STEM,
+        "choices": ["opened, and", "opened and", "opened; and", "opened: and"],
+        "answer": "A",
+        "why": "Two complete statements are joined by a coordinating conjunction, which takes a comma in "
+               "front of it. Using the conjunction with the heavier mark instead doubles up two ways of "
+               "doing the same job.",
+    },
+]
+
+# ------------------------------------------------------- Form, Structure, and Sense
+QUESTIONS += [
+    {
+        "num": "F1", "skill": "Form, Structure, and Sense",
+        "passage": "Founders were never bound to one recipe. In the bells that survive from the Middle "
+                   "Ages, the proportion of tin in the alloy _____ from about one part in six to nearly "
+                   "one part in four.",
+        "stem": CONV_STEM,
+        "choices": ["ranges", "range", "are ranging", "ranging"],
+        "answer": "A",
+        "why": "The thing that ranges is the proportion, a single quantity, so the verb is singular; the "
+               "plural noun nearest the blank belongs to the phrase describing which proportion is "
+               "meant. Leaving the verb in its bare participle form gives the sentence no main verb at "
+               "all.",
+    },
+    {
+        "num": "F2", "skill": "Form, Structure, and Sense",
+        "passage": "Hung mouth upward on its stay before each pull, _____",
+        "stem": CONV_STEM,
+        "choices": [
+            "a bell of half a tonne can be moved by the ringer with one hand.",
+            "the ringer can move a bell of half a tonne with one hand.",
+            "moving a bell of half a tonne needs only one hand.",
+            "one hand is enough to move a bell of half a tonne.",
+        ],
+        "answer": "A",
+        "why": "The opening phrase describes something hung on a stay, and the only thing in the sentence "
+               "that can be so hung is the bell, so the bell has to be the subject that follows. The "
+               "version that starts with the ringer says the ringer was hung mouth upward.",
+    },
+    {
+        "num": "F3", "skill": "Form, Structure, and Sense",
+        "passage": "Neither the reeds nor the great mixture _____ well in a dry room, and the builder "
+                   "asked for the heating to be turned down a week before the recital.",
+        "stem": CONV_STEM,
+        "choices": ["speaks", "speak", "have spoken", "are speaking"],
+        "answer": "A",
+        "why": "With subjects paired by \"neither ... nor\" the verb agrees with the one closest to it, "
+               "and that one is the singular mixture. The plural forms would agree with the reeds "
+               "instead, which stand on the far side of the pairing.",
+    },
+    {
+        "num": "F4", "skill": "Form, Structure, and Sense",
+        "passage": "The voicer's whole morning went in opening the mouths of the smallest pipes, filing "
+                   "their languids and _____ each one on the wind chest until it spoke without a chiff.",
+        "stem": CONV_STEM,
+        "choices": ["testing", "to test", "tested", "the testing of"],
+        "answer": "A",
+        "why": "Two items in the series are already in the same form, opening and filing, so the third "
+               "has to match them. Switching to an infinitive or a past form breaks the pattern the "
+               "sentence has set up.",
+    },
+    {
+        "num": "F5", "skill": "Form, Structure, and Sense",
+        "passage": "Each of the forty-seven bells has a clapper wire of its own, and _____ has to be "
+                   "taken up separately whenever the frame settles.",
+        "stem": CONV_STEM,
+        "choices": ["it", "they", "them", "these"],
+        "answer": "A",
+        "why": "The pronoun stands for the wire belonging to each single bell, which the sentence has "
+               "already treated as singular in \"has a clapper wire of its own\". The plural forms would "
+               "point at the whole set at once and contradict the word \"separately\".",
+    },
+    {
+        "num": "F6", "skill": "Form, Structure, and Sense",
+        "passage": "By the time the cathedral organ was rebuilt in 1904, equal temperament _____ the "
+                   "standard tuning in England for two generations.",
+        "stem": CONV_STEM,
+        "choices": ["had been", "has been", "was", "would be"],
+        "answer": "A",
+        "why": "The tuning was already established before the rebuilding, and both events are in the "
+               "past, so the earlier one needs the form that places it further back. The present perfect "
+               "form would tie the situation to the present day rather than to 1904.",
+    },
+    {
+        "num": "F7", "skill": "Form, Structure, and Sense",
+        "passage": "The number of annual layers counted in the upper part of the core _____ close to the "
+                   "number of years given by the volcanic ash horizons, and the two records were "
+                   "accepted as agreeing.",
+        "stem": CONV_STEM,
+        "choices": ["was", "were", "have been", "are"],
+        "answer": "A",
+        "why": "The subject is the number itself, one quantity, so the verb is singular and past to match "
+               "the second half of the sentence. The plural options agree with the layers, which are "
+               "part of the phrase saying which number is meant.",
+    },
+    {
+        "num": "F8", "skill": "Form, Structure, and Sense",
+        "passage": "A flying weight is not a fixed figure but a range, and two _____ ranges may differ by "
+                   "fifty grams even when the birds are of the same species and sex.",
+        "stem": CONV_STEM,
+        "choices": ["hawks'", "hawks", "hawk's", "hawks's"],
+        "answer": "A",
+        "why": "Two birds are meant and the ranges belong to them, so the plural noun takes the "
+               "apostrophe after its s. The singular possessive would give the ranges to one bird, and "
+               "the plain plural cannot show possession at all.",
+    },
+    {
+        "num": "F9", "skill": "Form, Structure, and Sense",
+        "passage": "The fibres in a sheet of rag paper are longer than _____, which is why the older "
+                   "sheet tears across in one piece instead of crumbling.",
+        "stem": CONV_STEM,
+        "choices": [
+            "those in a sheet made from wood pulp",
+            "wood pulp",
+            "a sheet made from wood pulp",
+            "in wood pulp",
+        ],
+        "answer": "A",
+        "why": "Fibres have to be compared with fibres, and only the version naming the ones in the other "
+               "sheet supplies them. Comparing fibres with a sheet, or with wood pulp, sets a part "
+               "against a whole.",
+    },
+]
+
+# ------------------------------------------------------------------- Transitions
+QUESTIONS += [
+    {
+        "num": "N1", "skill": "Transitions",
+        "passage": "A founder can calculate the note a bell will sound from its diameter and the "
+                   "thickness of its wall, and the arithmetic is not difficult. _____ no calculation "
+                   "survives the pour: the metal shrinks unevenly as it cools, and the casting that "
+                   "comes out of the pit is always a little off the note intended.",
+        "stem": TRANS_STEM,
+        "choices": ["However,", "Therefore,", "Similarly,", "For instance,"],
+        "answer": "A",
+        "why": "The first sentence credits the calculation and the second says the pour defeats it, so "
+               "the transition marks a reversal. A consequence transition would make the failure of the "
+               "arithmetic follow from the arithmetic being easy.",
+    },
+    {
+        "num": "N2", "skill": "Transitions",
+        "passage": "The number of rows a method has to work through climbs steeply with the number of "
+                   "bells: six bells give 720 rows, eight give 40,320. _____ a full extent on eight "
+                   "bells has never been rung in a single performance, since it would take close to "
+                   "nineteen hours.",
+        "stem": TRANS_STEM,
+        "choices": ["Consequently,", "Nevertheless,", "In contrast,", "Meanwhile,"],
+        "answer": "A",
+        "why": "The impossibility of ringing the extent follows directly from the number of rows just "
+               "quoted, so the transition marks a result. A concessive transition would set the nineteen "
+               "hours against the row count rather than deriving it from them.",
+    },
+    {
+        "num": "N3", "skill": "Transitions",
+        "passage": "A tracker action tells the player what the pipework is doing, and organists who have "
+                   "had one seldom want anything else. _____ a tracker cannot be run round a corner or "
+                   "across a gallery without losing that feel, so where the console has to stand away "
+                   "from the pipes another action is chosen.",
+        "stem": TRANS_STEM,
+        "choices": ["Even so,", "As a result,", "Likewise,", "Finally,"],
+        "answer": "A",
+        "why": "Organists' preference is granted and then set against a limitation that overrides it in "
+               "certain buildings, which is a concession. A result transition would make the awkwardness "
+               "over long distances a consequence of players liking the action.",
+    },
+    {
+        "num": "N4", "skill": "Transitions",
+        "passage": "A pipe voiced to speak promptly on the bench can sound harsh once it is standing in a "
+                   "stone church, where every hard edge in its attack is thrown back by the walls. "
+                   "_____ the voicer takes the whole instrument down a little after it is installed, "
+                   "softening attacks that had seemed exactly right in the workshop.",
+        "stem": TRANS_STEM,
+        "choices": ["For this reason,", "By contrast,", "Nonetheless,", "In addition,"],
+        "answer": "A",
+        "why": "Softening the attacks is what the harshness in the building calls for, so the second "
+               "sentence gives the response to the problem the first sets out. A contrastive transition "
+               "would present the softening as unrelated to, or at odds with, the harshness.",
+    },
+    {
+        "num": "N5", "skill": "Transitions",
+        "passage": "A carillon's clappers hang inside the bells and are drawn against them by wires "
+                   "running down from the clavier. _____ the frame has to be stiff enough that the pull "
+                   "moves the clapper and not the bell.",
+        "stem": TRANS_STEM,
+        "choices": ["Accordingly,", "Nevertheless,", "For example,", "Similarly,"],
+        "answer": "A",
+        "why": "The stiffness required of the frame is a consequence of pulling a clapper against a bell "
+               "from a wire, so the transition marks what follows from the arrangement described. A "
+               "concessive transition would put the stiff frame in tension with that arrangement instead "
+               "of arising from it.",
+    },
+    {
+        "num": "N6", "skill": "Transitions",
+        "passage": "Equal temperament spread because it freed players from retuning between one piece and "
+                   "the next. _____ the freedom was bought at a price: the differences of colour between "
+                   "keys, which composers had chosen among, went out with the older tunings.",
+        "stem": TRANS_STEM,
+        "choices": ["However,", "Therefore,", "Similarly,", "For instance,"],
+        "answer": "A",
+        "why": "A benefit is stated and then a cost is set against it, which calls for a transition of "
+               "opposition. A consequence transition would make the loss of key colour follow from "
+               "players no longer having to retune, which is not the relation the sentence draws.",
+    },
+    {
+        "num": "N7", "skill": "Transitions",
+        "passage": "Absorbent material on the rear wall of a hall shortens the reverberation and sharpens "
+                   "the spoken word. _____ it removes the reflected energy that had been carrying a "
+                   "quiet singer to the back row, and a hall treated for speech is seldom a good hall "
+                   "for music.",
+        "stem": TRANS_STEM,
+        "choices": ["At the same time,", "Accordingly,", "In other words,", "For example,"],
+        "answer": "A",
+        "why": "The same treatment produces a gain and a loss together, so the transition has to hold "
+               "both at once. A restating transition would present the loss of reflected energy as "
+               "another way of saying that speech is sharpened, which it is not.",
+    },
+    {
+        "num": "N8", "skill": "Transitions",
+        "passage": "Ash from a large eruption falls across a whole hemisphere within weeks and settles "
+                   "into the snow as a thin layer of glass shards. _____ one eruption can be found in "
+                   "cores drilled thousands of kilometres apart, and the two records can be locked "
+                   "together at that depth.",
+        "stem": TRANS_STEM,
+        "choices": ["As a result,", "Even so,", "By comparison,", "Instead,"],
+        "answer": "A",
+        "why": "Finding the same ash in distant cores is what follows from ash spreading over a "
+               "hemisphere in weeks, so the transition marks a consequence. A concessive transition "
+               "would set the shared layer against the wide fall of ash rather than deriving it from it.",
+    },
+    {
+        "num": "N9", "skill": "Transitions",
+        "passage": "A unit defined by an object can be realised in one place only, and every other "
+                   "laboratory has to work from a copy of it. _____ a unit defined by a constant of "
+                   "nature can be realised anywhere the apparatus can be built, and no copy stands "
+                   "between a laboratory and the unit itself.",
+        "stem": TRANS_STEM,
+        "choices": ["By contrast,", "Consequently,", "In addition,", "For example,"],
+        "answer": "A",
+        "why": "Two kinds of definition are set opposite each other, one confined to a single vault and "
+               "the other available everywhere, so the transition marks the opposition. An additive "
+               "transition would present the second kind as a further feature of the first.",
+    },
+]
+
+# ----------------------------------------------------------- Rhetorical Synthesis
+# Both real stem shapes appear: six items draw on "the notes" and three on
+# "the given sentences".
+QUESTIONS += [
+    {
+        "num": "R1", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "The core of a bell mould is built of loam over brick and dried by a fire lit inside it.",
+            "The outer cope is shaped by sweeping a board cut to the bell's profile.",
+            "The finished mould is buried in packed sand in a pit before the pour.",
+            "The sand resists the outward pressure of several tonnes of molten metal.",
+            "A mould that lifts or bursts during the pour destroys both the casting and the pit.",
+        ]),
+        "stem": "The student wants to explain why the mould is buried in sand. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "The finished mould is buried in packed sand because the sand resists the outward pressure of several tonnes of molten metal, which would otherwise burst the mould and destroy the casting.",
+            "The core of a bell mould is built of loam over brick and dried by a fire lit inside it.",
+            "The outer cope is shaped by sweeping a board cut to the bell's profile around a spindle.",
+            "A mould that lifts or bursts during the pour destroys both the casting and the pit.",
+        ],
+        "answer": "A",
+        "why": "The goal asks for a reason, and only the option that connects the packed sand to the "
+               "outward pressure and then to the burst mould gives one. Reporting that a burst mould "
+               "destroys the casting states the danger without saying what the sand has to do with it.",
+    },
+    {
+        "num": "R2", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "English towers hang their bells so that each swings through a full circle.",
+            "A bell hung that way comes to rest mouth upward between one stroke and the next.",
+            "The ringer can hold it there and delay its next blow.",
+            "Towers elsewhere in Europe usually hang bells to swing through a much smaller arc.",
+            "A bell swinging through a small arc cannot be held, and the order of the bells cannot be altered at will.",
+        ]),
+        "stem": "The student wants to explain why change ringing developed in England rather than elsewhere. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "Because a bell hung to swing full circle rests mouth upward between strokes and can be held there, an English ringer can delay a bell and so alter the order in which the bells sound, which the smaller arc used elsewhere does not allow.",
+            "English towers hang their bells so that each swings through a full circle.",
+            "Towers elsewhere in Europe usually hang bells to swing through a much smaller arc.",
+            "A bell hung to swing full circle comes to rest mouth upward between one stroke and the next.",
+        ],
+        "answer": "A",
+        "why": "The goal needs the English arrangement, the control it allows and the contrast with the "
+               "smaller arc, and only one option carries all three through to the ability to change the "
+               "order. Stating that English towers hang bells full circle gives the arrangement without "
+               "saying what it makes possible.",
+    },
+    {
+        "num": "R3", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "In a tracker action a wooden strip runs from each key straight to the valve under its pipe.",
+            "The organist feels the valve break free of its seat under the finger.",
+            "In an electric action the key closes a circuit and a magnet opens the valve.",
+            "An electric key feels the same however many stops have been drawn.",
+        ], lead=SENTENCES),
+        "stem": "The student wants to emphasise a difference between the two actions. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+        "choices": [
+            "A tracker organist feels the valve break free under the finger, whereas an electric key feels the same however many stops have been drawn.",
+            "In a tracker action a wooden strip runs from each key straight to the valve under its pipe.",
+            "In an electric action the key closes a circuit, and a magnet opens the valve.",
+            "The organist feels the valve break free of its seat under the finger.",
+        ],
+        "answer": "A",
+        "why": "Emphasising a difference takes both actions in one sentence with the point of contrast "
+               "made explicit, which only the option setting the felt valve against the unchanging key "
+               "does. Describing the wooden strip covers one action alone and leaves the other unsaid.",
+    },
+    {
+        "num": "R4", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "A flue pipe's dimensions are set on the drawing board before it is made.",
+            "Two pipes made to the same drawing do not sound alike.",
+            "The voicer alters the mouth, the upper lip and the nicks in the languid by hand and by ear.",
+            "None of those alterations is written back on to the drawing.",
+            "A pipe replaced fifty years later has to be voiced by ear to match its neighbours.",
+        ]),
+        "stem": "The student wants to explain why a replacement pipe cannot simply be made from the original drawing. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "Because the alterations that give a pipe its sound are made by hand at the mouth and the languid and are never written back on to the drawing, a pipe replaced fifty years later has to be voiced by ear to match its neighbours.",
+            "A flue pipe's dimensions are set on the drawing board before the pipe is made.",
+            "Two pipes made to the same drawing do not sound alike.",
+            "A pipe replaced fifty years later has to be voiced by ear to match its neighbours.",
+        ],
+        "answer": "A",
+        "why": "The explanation asked for turns on the drawing being an incomplete record, so the answer "
+               "has to say both that the decisive work is done by hand and that it goes unrecorded. "
+               "Noting that a replacement is voiced by ear repeats the outcome rather than accounting "
+               "for it.",
+    },
+    {
+        "num": "R5", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "A carillon has at least twenty-three bells hung dead in a frame.",
+            "Each bell is struck by a clapper drawn against it by a wire from a baton clavier.",
+            "In a tall tower those wires may be twenty metres long.",
+            "A wire stretches under load, so a heavy bell sounds slightly after its baton is struck.",
+            "Players learn the delay of each bell and strike early by that much.",
+        ]),
+        "stem": "The student wants to explain a difficulty peculiar to playing a carillon. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "Because the wires linking clavier to clappers stretch under load, a heavy bell sounds slightly after its baton is struck, and the player has to strike early by an amount learned bell by bell.",
+            "A carillon has at least twenty-three bells hung dead in a frame.",
+            "Each bell is struck by a clapper drawn against it by a wire from a baton clavier.",
+            "In a tall tower the wires from the clavier may be twenty metres long.",
+        ],
+        "answer": "A",
+        "why": "A difficulty needs a cause and the demand it makes of the player, and only one option "
+               "carries the stretching wire through to striking early bell by bell. Giving the length of "
+               "the wires supplies a fact from which the difficulty follows but never states the "
+               "difficulty.",
+    },
+    {
+        "num": "R6", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "Equal temperament divides the octave into twelve identical steps.",
+            "In equal temperament every key is equally usable and equally out of tune.",
+            "In an unequal temperament the steps differ in size and each key has a quality of its own.",
+            "Composers before the nineteenth century chose keys partly for those qualities.",
+        ], lead=SENTENCES),
+        "stem": "The student wants to explain what was lost when equal temperament became standard. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+        "choices": [
+            "Because equal temperament makes all twelve steps identical, the qualities that had once distinguished one key from another, and that composers had chosen a key for, no longer exist.",
+            "Equal temperament divides the octave into twelve identical steps.",
+            "In an unequal temperament the steps differ in size and each key has a quality of its own.",
+            "In equal temperament every key is equally usable and equally out of tune.",
+        ],
+        "answer": "A",
+        "why": "The goal is to name a loss, which takes the identical steps, the qualities they abolish "
+               "and the use composers made of those qualities in one statement. Reporting that equal "
+               "temperament makes the steps identical gives the cause and stops short of the loss.",
+    },
+    {
+        "num": "R7", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "Air is sealed into an ice sheet tens of metres down, not at the surface.",
+            "Until it is sealed, the air in the pores exchanges with the atmosphere above.",
+            "The gas in a bubble is therefore younger than the ice around it.",
+            "The gap is widest where snow accumulates slowly.",
+            "Comparing the gas record with the ice record from one core requires the gap to be estimated.",
+        ]),
+        "stem": "The student wants to explain why the gas record and the ice record from a single core cannot be read off directly against each other. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "Since air goes on exchanging with the atmosphere until it is sealed in tens of metres down, a bubble's gas is younger than the ice enclosing it, and that gap has to be estimated before the two records can be set side by side.",
+            "Air is sealed into an ice sheet tens of metres down rather than at the surface.",
+            "The gap between gas and ice is widest where snow accumulates slowly.",
+            "Until it is sealed, the air in the pores exchanges with the atmosphere above.",
+        ],
+        "answer": "A",
+        "why": "The explanation has to reach the estimate the comparison depends on, and only one option "
+               "travels from continued exchange through the age difference to that requirement. Saying "
+               "where the gap is widest addresses a different question, namely which sites are worst "
+               "affected.",
+    },
+    {
+        "num": "R8", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "Medieval glaziers could not make large sheets of glass.",
+            "A window was assembled from small pieces held in grooved strips of lead.",
+            "The glaziers ran those strips along the folds of drapery and the outlines of faces.",
+            "Nineteenth-century restorers, working with larger sheets, used far fewer lead lines.",
+            "Restored panels of that period are often criticised as flat.",
+        ]),
+        "stem": "The student wants to explain why medieval windows look more strongly drawn than nineteenth-century restorations of them. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "choices": [
+            "Medieval glaziers, unable to make large sheets, ran the lead holding their small pieces along folds and faces, so their windows carry a drawn line that restorers working with larger sheets and fewer leads could not reproduce.",
+            "Medieval glaziers could not make large sheets of glass.",
+            "Nineteenth-century restorers, working with larger sheets, used far fewer lead lines.",
+            "A window was assembled from small pieces held in grooved strips of lead.",
+        ],
+        "answer": "A",
+        "why": "The comparison in the goal needs the medieval constraint, the use made of it and the later "
+               "loss, all of which one option carries. Stating that restorers used fewer leads names the "
+               "difference without explaining why fewer leads should look weaker.",
+    },
+    {
+        "num": "R9", "skill": "Rhetorical Synthesis",
+        "passage": notes([
+            "A hawk is flown at a weight held within a few grams.",
+            "Above that range the bird is indifferent to the falconer and may drift away.",
+            "Below it the bird is weak and unfit to fly.",
+            "The falconer weighs the bird before every flight.",
+        ], lead=SENTENCES),
+        "stem": "The student wants to explain why the bird is weighed before every flight. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+        "choices": [
+            "The bird is weighed before every flight because the range at which it will fly is only a few grams wide, with indifference above it and weakness below.",
+            "A hawk is flown at a weight held within a few grams.",
+            "Above that range the bird is indifferent to the falconer and may drift away.",
+            "The falconer weighs the bird before every flight.",
+        ],
+        "answer": "A",
+        "why": "The reason for weighing is the narrowness of the range and what goes wrong on each side "
+               "of it, which only one option assembles. Repeating that the falconer weighs the bird "
+               "restates the practice the goal asks to have explained.",
+    },
+]
