@@ -934,20 +934,435 @@ QUESTIONS = [
      "Fibrous plaster is cast flat in a mould on the bench, backed with canvas and thin laths "
      "while it is still wet, and carried up to the ceiling as a finished panel. A run of ornament "
      "that would have taken a modeller weeks overhead can be turned out in a day on the _____ "
-     "however, is only as good as the joint where one panel meets the next.",
-     ["bench, the result", "bench; however the result", "bench the result",
-      "bench; the result"], "D",
-     "Two complete sentences meet at the blank and a semicolon separates them, the transitional "
-     "word opening the second being followed by the comma the passage already supplies. Joining "
-     "them with a comma alone splices two sentences together."),
+     "is only as good as the joint where one panel meets the next.",
+     ["bench, however, the result", "bench however the result", "bench; however the result",
+      "bench; however, the result"], "D",
+     "Two complete sentences meet at the blank, so a semicolon separates them and the "
+     "transitional word opening the second takes a comma after it. Joining the two with a comma "
+     "alone splices them together, however the sentence is punctuated after that."),
 
  bnd("B9",
      "The lodge was the shed built against the wall of a cathedral under construction, where the "
      "banker masons worked under cover and where their tools were kept. It gave its name to the "
-     "customs that governed the trade, so that the _____ rules on hours, on wages and on who might "
-     "be taught the work outlasted the buildings they were framed for.",
+     "customs that governed the trade, so that the _____ on hours, on wages and on who might be "
+     "taught the work outlasted the buildings they were framed for.",
      ["masons rules", "masons's rules", "mason's rules", "masons' rules"], "D",
      "The rules belong to the masons of the lodge, more than one of them, so the plural noun "
      "already ending in s takes an apostrophe after it. The singular possessive would put the "
      "whole body of custom down to one man."),
+
+ bnd("B10",
+     "The three members of a tube scaffold are named for what each of them does: standards, the "
+     "uprights that carry the load down to the _____ the horizontal tubes running the length of "
+     "the scaffold; and transoms, the short tubes crossing it that pick up the boards.",
+     ["ground, ledgers,", "ground: ledgers,", "ground; ledgers,", "ground; ledgers;"], "C",
+     "The items of this list contain commas inside themselves, so the items have to be divided "
+     "from one another by semicolons instead. Dividing them by commas leaves a reader unable to "
+     "tell where one member ends and the next begins."),
+
+ bnd("B11",
+     "Between the two corners of a course a bricklayer stretches a line and beds every brick "
+     "along it. On a long run the line sags of its own weight in the middle, so a small tin plate "
+     "_____ is hooked over it halfway along and held down by a spare brick until the course "
+     "reaches it.",
+     ["&mdash; a tingle &mdash;", "&mdash; a tingle,", ", a tingle &mdash;",
+      "&mdash; a tingle"], "A",
+     "The name of the plate interrupts the sentence and is set off with a dash at each end of it. "
+     "Opening the interruption with a dash and closing it with a comma mixes two kinds of "
+     "punctuation across a single break."),
+
+ bnd("B12",
+     "Quarry tiles are unglazed floor tiles pressed from a dense clay and burned hard enough to "
+     "stand the traffic of a dairy or a scullery. The burning closes the pores of the _____ "
+     "leaves a surface that a wet cloth will not soak into.",
+     ["clay, and", "clay and", "clay; and", "clay. And"], "B",
+     "One subject governs both verbs here, so nothing separates the pair of them. A semicolon or "
+     "a full stop would each demand a complete sentence afterwards, and a verb standing on its "
+     "own is not one."),
+
+ # --------------------------------------------- Form, Structure, and Sense (9)
+ fss("F1",
+     "A brick with holes through it uses less clay, dries faster and burns more evenly, since no "
+     "part of it lies far from a surface. The rows of perforations pressed through the bed face of "
+     "a modern brick also _____ the mortar to squeeze up into the brick and lock the course "
+     "together.",
+     ["allows", "has allowed", "is allowing", "allow"], "D",
+     "The subject of the verb is the rows, which is plural; the words about perforations and about "
+     "a modern brick sit between the subject and its verb without changing what the subject is. "
+     "The singular form agrees with the nearest noun rather than with the one doing the allowing."),
+
+ fss("F2",
+     "Brick nogging is brickwork built into the panels of a timber frame, and it is often a good "
+     "deal later than the frame that holds it. Surveyors examining a Suffolk farmhouse found "
+     "nogging in every panel of the north wall; the timbers behind it, though, still carried the "
+     "empty mortices and grooves of the wattle staves that _____ there before any brick was "
+     "thought of.",
+     ["have been", "had been", "are", "will have been"], "B",
+     "The surveyors' discovery is already in the past, and the staves were in the panels earlier "
+     "still, so the earlier of the two needs the tense that places it further back. The present "
+     "tense would put the staves in the panels now, when the passage says brick has replaced "
+     "them."),
+
+ fss("F3",
+     "A scaffold standing on made ground settles unless its weight is spread out. Every standard "
+     "is footed on a base plate, and on soft ground each plate in turn stands on a timber sole "
+     "board that spreads _____ load across a wider area of soil.",
+     ["their", "it's", "its'", "its"], "D",
+     "The load belongs to a single plate, since the sentence speaks of each plate in turn, so the "
+     "singular possessive is called for. The form with an apostrophe before the s is the "
+     "contraction of it is, which makes nonsense of the sentence."),
+
+ fss("F4",
+     "A cornice is run in place rather than cast: a zinc profile is screwed to a wooden horse, and "
+     "the plasterer slides that horse along a rule while an assistant feeds fresh stuff in ahead "
+     "of it. Sliding the mould along the rule for the twentieth time, _____ finally stood clean "
+     "and sharp along the whole length of the room.",
+     ["the plasterer found that the moulding", "the moulding", "it was the moulding that",
+      "the moulding's profile"], "A",
+     "Whoever is sliding the mould has to be named directly after the opening phrase, and the only "
+     "option that names a person there is the one beginning with the plasterer. Beginning with the "
+     "moulding says that the moulding slid itself along the rule."),
+
+ fss("F5",
+     "Tuck pointing gives a wall of rough bricks the appearance of fine gauged work without any of "
+     "its cost. The bricklayer stains the mortar to the colour of the brick, presses it flush with "
+     "the face, and _____ a narrow ribbon of white putty along the middle of every joint.",
+     ["setting", "then setting", "to set", "sets"], "D",
+     "The blank is the third item in a list of things the bricklayer does, and the first two are "
+     "stains and presses, so the third has to take the same form. A participle in that position "
+     "leaves the third action with no subject of its own."),
+
+ fss("F6",
+     "An arch is built of wedge-shaped blocks and the block at the crown goes in last of all. "
+     "Until that block is driven home the ring is not an arch but two half-arches leaning on the "
+     "timber beneath; the keystone closes the ring, and _____ arrival is what allows the timber to "
+     "be taken away.",
+     ["it's", "its", "their", "its'"], "B",
+     "The arrival belongs to the keystone, one block, so the possessive form without an apostrophe "
+     "is wanted. The plural possessive would have to refer to more than one block, and the "
+     "sentence names a single one."),
+
+ fss("F7",
+     "The small points projecting inwards from the edge of a traceried opening are the cusps, and "
+     "the curved spaces they leave between them are the foils. In a trefoil _____ three foils and "
+     "three cusps; in a quatrefoil there are four of each.",
+     ["there is", "there was", "there has been", "there are"], "D",
+     "What follows the verb is three foils and three cusps, which is plural, and in a sentence "
+     "opening with the word there it is that following phrase which settles the form of the verb. "
+     "The singular verb would need a single thing after it."),
+
+ fss("F8",
+     "A gargoyle is a water spout. The gutter behind a parapet is led out through a carved throat "
+     "so that rainwater is thrown clear of the wall below instead of running down its face. "
+     "Neither the wings nor the head carved on the outside _____ any part in throwing the water; "
+     "both are dressing on what is really a length of stone gutter.",
+     ["play", "plays", "have played", "are playing"], "B",
+     "When two subjects are joined by neither and nor the verb follows the one standing nearest to "
+     "it, and the head is singular. The plural form would agree with the wings, which is the "
+     "further of the two subjects from the verb."),
+
+ fss("F9",
+     "Gauged brickwork is cut and rubbed to shape from soft bricks and bedded in joints of putty "
+     "barely thicker than a sheet of paper. The joints of a gauged arch over a doorway are "
+     "therefore far finer than _____ in the ordinary brickwork of the wall around it.",
+     ["that", "them", "it", "those"], "D",
+     "The comparison is between one set of joints and another set of joints, so the word standing "
+     "in for the second set has to be plural. The singular form would compare a group of joints "
+     "with a single joint."),
+
+ # --------------------------------------------------------- Transitions (9)
+ trn("N1",
+     "A cavity wall is two leaves of brickwork with an air gap between them. Rain that crosses the "
+     "outer leaf runs down the inside face of it and out again through weep holes at the bottom, "
+     "so it never reaches the inner leaf at all. _____ the two leaves have to act as one against "
+     "the wind, and they are pinned to each other by metal ties laid across the gap at regular "
+     "intervals.",
+     ["Even so,", "For example,", "As a result,", "Likewise,"], "A",
+     "The gap is what keeps the water out, and the sentence after the blank says the two leaves "
+     "must nonetheless be joined, which sets a requirement against the separation just described. "
+     "A phrase announcing a result would say the tying follows from the gap, when it works against "
+     "it."),
+
+ trn("N2",
+     "Bricks stood on end over a window opening cannot arch in the ordinary way, because their "
+     "joints run straight down instead of radiating from a centre, and nothing in the "
+     "arrangement turns the load sideways into the wall. _____ a flat arch of this kind is almost "
+     "always carried on a steel angle hidden behind it, and the brickwork does no more than face "
+     "the beam.",
+     ["Nevertheless,", "For instance,", "Consequently,", "In contrast,"], "C",
+     "The first sentence explains why the brickwork cannot carry itself and the second gives what "
+     "builders therefore do about it, which is a consequence. A word signalling contrast would "
+     "make the hidden steel a surprise rather than the remedy."),
+
+ trn("N3",
+     "Scagliola is plaster gauged with glue and stained through its whole thickness with pigment, "
+     "then ground down and polished until it takes a shine. A column finished in it can be told "
+     "from marble by little except its warmth to the hand. _____ it can be run as a single "
+     "unbroken shaft, where a marble column has to be built up in drums with a joint at every "
+     "one.",
+     ["Nevertheless,", "Moreover,", "By contrast,", "For example,"], "B",
+     "The sentence before the blank credits the material with looking like marble and the one "
+     "after it adds a second advantage over marble, so the two points run the same way. A word "
+     "signalling contrast would set the two advantages against each other."),
+
+ trn("N4",
+     "A builder's hoist is a platform running up a tower of light steel sections bolted back to "
+     "the scaffold and worked by a winch at the foot. The shaft it runs in stands open at every "
+     "floor it serves, and anyone stepping into it while the platform was elsewhere would fall the "
+     "whole height of the tower. _____ each landing is closed by a gate that cannot be opened "
+     "unless the platform is standing at that level.",
+     ["Even so,", "Accordingly,", "For example,", "Similarly,"], "B",
+     "The open shaft is a hazard and the interlocked gate is what is done about it, so the second "
+     "sentence follows from the first. A concessive opening would suggest the gate is fitted in "
+     "spite of the danger rather than because of it."),
+
+ trn("N5",
+     "The ribbed ceilings of Jacobean houses look like stone vaulting and are nothing of the sort. "
+     "Every rib is a length of plaster run flat on a bench with a mould, cut into short pieces and "
+     "bedded onto the ceiling, and the patterns loop back on themselves in ways no vault could "
+     "actually be built. Such a pattern carries nothing whatever. _____ it can run straight across "
+     "a beam, or take no notice of the shape of the room below, as ribs bearing a load never "
+     "could.",
+     ["Nevertheless,", "For instance,", "For that reason,", "In addition,"], "C",
+     "Carrying no load is the reason the pattern is free to ignore the structure beneath it, so "
+     "the second statement follows from the first. A word signalling contrast would set the "
+     "freedom against the very fact that permits it."),
+
+ trn("N6",
+     "A flying buttress is not a prop leaning on a wall. It is an arch that carries the outward "
+     "push of a high vault over the aisle beneath and delivers it to a pier standing clear of the "
+     "building, and the pinnacle loaded on top of that pier turns the push downward inside the "
+     "masonry. _____ the buttress is not holding the wall up; it is holding the vault in.",
+     ["Nevertheless,", "In other words,", "For example,", "Meanwhile,"], "B",
+     "The final sentence restates in plain terms what the description before it has just set out "
+     "in detail, which is what a restating phrase signals. A word announcing an example would "
+     "promise a particular case, and none follows."),
+
+ trn("N7",
+     "Tiles on an old roof were often pointed from underneath with a haired mortar spread along "
+     "the edge of every batten, a practice called torching. It kept snow from driving up between "
+     "the tiles and stopped them chattering in a gale. _____ mortar in that position also holds "
+     "water against the battens and the nails, and where torching survives the timber under it is "
+     "usually the first to rot.",
+     ["Therefore,", "However,", "Likewise,", "In short,"], "B",
+     "The sentence before the blank lists what torching does well and the one after it names the "
+     "harm the same mortar does, so the two run against each other. A word signalling a "
+     "consequence would make the rot follow from the benefits just described."),
+
+ trn("N8",
+     "Ashlar is stone worked to a true face and a true bed and laid in courses with joints a few "
+     "millimetres wide. Rubble walling takes the stone much as it comes, packed out with small "
+     "pieces and a great deal more mortar. A block of ashlar spends hours at the bench that a "
+     "rubble stone never sees, and the wall costs accordingly. _____ a great many buildings are "
+     "ashlar only where they are looked at, and rubble behind the face and around the back.",
+     ["Even so,", "For example,", "Unsurprisingly,", "Instead,"], "C",
+     "The cost of working ashlar makes the practice of using it only where it shows exactly what "
+     "a reader would expect, which is what the chosen opening signals. A concessive opening would "
+     "present that practice as going against the cost, when it follows from it."),
+
+ trn("N9",
+     "A roof does not finish itself at the top. The two slopes stop a hand's breadth short of the "
+     "apex and leave a gap running the length of the building, and a half-round tile bedded in "
+     "mortar across that gap is what closes it. _____ that bed of mortar is the one part of the "
+     "covering held on by nothing but its grip on two tiles, at the very line where the wind is "
+     "strongest.",
+     ["Consequently,", "For example,", "In short,", "At the same time,"], "D",
+     "The sentence before the blank credits the ridge tile with closing the roof and the one after "
+     "it points out the weakness of the same detail, so the two hold side by side. A word "
+     "announcing a consequence would make the weakness follow from the closing, which it does "
+     "not."),
+
+ # ------------------------------------------------- Rhetorical Synthesis (9)
+ syn("S1",
+     ["A hand brickmaking gang worked as a team of four or five.",
+      "The temperer cut and worked the clay ready at the heap.",
+      "The moulder threw a clot of clay into a sanded wooden mould at the bench.",
+      "The off-bearer carried filled moulds out to the drying ground and returned the empties.",
+      "A gang of this kind turned out between four and five thousand bricks in a working day."],
+     "emphasise the scale of a hand gang's daily output.",
+     ["A hand brickmaking gang divided its work between a temperer, a moulder and an off-bearer.",
+      "The moulder threw a clot of clay into a sanded wooden mould at the bench, and the "
+      "off-bearer carried the filled mould away.",
+      "Sharing the clay, the mould and the barrow between them, a gang of four or five men turned "
+      "out four to five thousand bricks in a working day.",
+      "The temperer's task was to have clay worked and waiting before the moulder needed it."],
+     "C",
+     "Only the option giving four to five thousand bricks from four or five men states any "
+     "quantity, and a quantity is what a claim about scale requires. The option naming the three "
+     "jobs describes how the gang was organised and leaves the output unmentioned."),
+
+ syn("S2",
+     ["A Roman roof was covered with tiles of two different shapes.",
+      "The tegula is a flat tile with a raised flange running along each of its long edges.",
+      "Tegulae were laid side by side so that the flanges of neighbouring tiles stood in pairs.",
+      "The imbrex is a half-round tile laid over each pair of flanges.",
+      "Water running across the flat of a tegula cannot climb the flange at its edge."],
+     "explain to a reader unfamiliar with Roman roofing how the two tiles worked together.",
+     ["Roman roofs were covered with tiles of two shapes, one of them flat and the other curved.",
+      "Water running across the flat of a tegula could not climb over the flange along its edge.",
+      "The tegula is a flat tile with raised edges and the imbrex is a half-round one.",
+      "Tegulae were laid side by side so that their raised flanges met in pairs, and a half-round "
+      "imbrex was bedded over each pair to cover the joint the flanges left."],
+     "D",
+     "The reader needs both how the flat tiles were arranged and what the curved tile did about "
+     "the join, and only the option describing flanges meeting in pairs under an imbrex supplies "
+     "both. Naming one tile flat and the other curved identifies the pieces without saying how "
+     "either works."),
+
+ syn("S3",
+     ["An enrichment is a repeated ornament cast separately and fixed onto a plain plaster ground.",
+      "A reverse mould was taken from a modelled original in gelatine.",
+      "Gelatine could be poured warm and peeled away even from an ornament cut back underneath.",
+      "One gelatine mould yielded a few dozen casts before it softened and lost its sharpness.",
+      "The same modelled rose could therefore appear in a hundred houses along one street."],
+     "emphasise why identical ornament turns up in house after house.",
+     ["An enrichment is a repeated ornament cast on its own and then fixed to a plain ground.",
+      "Because one gelatine mould gave several dozen casts before it softened, a single modelled "
+      "rose could be repeated through a hundred houses in one street.",
+      "Gelatine was chosen for reverse moulds because it could be peeled away from an undercut.",
+      "Plaster casts for a ceiling were taken from a reverse mould made over a modelled original."],
+     "B",
+     "The goal asks why the ornament repeats, and only the option joining the number of casts per "
+     "mould to the hundred houses gives the cause and the consequence together. The option about "
+     "gelatine peeling off an undercut explains the choice of material and not the repetition."),
+
+ syn_given("S4",
+     ["A punch leaves a face covered in small pits, a claw chisel leaves parallel grooves in "
+      "bands, and a boaster leaves broad flat strokes.",
+      "Claw tooling is rare on English work before about 1180 and common after 1200.",
+      "A wall may contain stone reused from an earlier building on the same site.",
+      "A face that has been recut at any date carries no marks from its first working."],
+     "caution a reader against dating a wall from its tooling alone.",
+     ["A punch leaves a pitted face, a claw chisel parallel grooves, and a boaster broad flat "
+      "strokes.",
+      "Claw tooling is rare on English work before about 1180 and becomes common after 1200.",
+      "A face that has been recut carries no marks from the time when it was first worked.",
+      "Tooling is a guide to date, but a wall may hold stone reused from an earlier building, and "
+      "a recut face keeps no marks of its first working at all."],
+     "D",
+     "A caution has to name what can go wrong, and only the option raising both reused stone and "
+     "recut faces gives two ways the evidence can mislead. The sentence about claw tooling before "
+     "and after 1200 is the dating rule itself rather than a warning about using it."),
+
+ syn("S5",
+     ["A working platform more than two metres above the ground must be guarded.",
+      "A guard rail runs about a metre above the boards.",
+      "A toe board about 150 mm high is fixed along the edge of the platform.",
+      "Material kicked off a platform injures people standing below it.",
+      "A worker who overbalances at the edge falls from the platform himself."],
+     "explain why a platform needs a toe board as well as a guard rail.",
+     ["Any working platform more than two metres above the ground has to be guarded.",
+      "The rail stops the worker going over the edge, while the board along the boards stops tools "
+      "and material being kicked off onto the people below.",
+      "A guard rail stands about a metre above the boards and a toe board about 150 mm above them.",
+      "Falling material and falling workers are both hazards wherever a platform is in use."],
+     "B",
+     "The question is why two devices are needed, so the answer has to attach a different hazard "
+     "to each, which only the option separating the worker going over the edge from material "
+     "kicked off it does. Giving the heights of the two describes them without saying what either "
+     "is for."),
+
+ syn("S6",
+     ["A groin vault is built as one continuous shell of masonry over a whole bay.",
+      "A rib vault is built first as a skeleton of stone arches.",
+      "The webs are the thin panels that fill the spaces between the ribs.",
+      "Centring for a groin vault has to hold up the whole bay at once.",
+      "Centring for a rib vault has to hold up the ribs only."],
+     "explain the practical advantage of a rib vault to a reader who knows nothing of vaulting.",
+     ["A rib vault is built as a skeleton of stone arches with thin panels filled in between them.",
+      "The webs of a rib vault are the panels lying between one rib and the next.",
+      "Because the ribs go up first and then carry the webs, the timber centring beneath a rib "
+      "vault need only hold the arches, where a groin vault's centring must hold the whole bay.",
+      "A groin vault is a single continuous shell of masonry thrown over a whole bay."],
+     "C",
+     "An advantage is a comparison, and only the option setting centring for the ribs against "
+     "centring for a whole bay says what the builder actually gains. Describing the skeleton and "
+     "its panels defines a rib vault without weighing it against anything."),
+
+ syn("S7",
+     ["A hypocaust heated a Roman room by passing hot gas beneath a raised floor.",
+      "Box flue tiles are hollow rectangular tiles built into the wall of the room.",
+      "Gas from under the floor rose through the flue tiles and left the building at the eaves.",
+      "The outer face of a flue tile was scored all over with a comb.",
+      "Wall plaster grips a scored face that it would slide off a smooth one."],
+     "explain how one tile served two purposes at once.",
+     ["Box flue tiles are hollow rectangular tiles built into the walls of a heated room.",
+      "Gas that had passed beneath the raised floor rose through the flue tiles and left at the "
+      "eaves.",
+      "The outer face of each flue tile was scored all over with a comb before it was fired.",
+      "The hollow tile carried the hot gas up inside the wall, while the comb-scored face it "
+      "presented outwards gave the wall plaster something to grip."],
+     "D",
+     "Two purposes have to appear in the answer, and only the option pairing the gas inside the "
+     "tile with the plaster gripping its scored face names both. The sentence about gas leaving at "
+     "the eaves covers the heating alone."),
+
+ syn_given("S8",
+     ["Soot and sulphur form a black crust on limestone in a city.",
+      "The crust is largely gypsum, formed out of the surface of the stone itself.",
+      "Abrasive cleaning takes off more of the surface than a chemical poultice does.",
+      "Tooling marks and carved detail removed with a crust cannot be put back."],
+     "emphasise what cleaning costs a building's surviving surface.",
+     ["Soot and sulphur together form a black crust on limestone in a city.",
+      "The black crust on a city building is largely gypsum rather than dirt lying on top of it.",
+      "Because the crust is made partly out of the stone's own surface, taking it off takes "
+      "original material with it, and the tooling lost that way cannot be put back.",
+      "Abrasive cleaning removes more of the surface of a stone than a chemical poultice does."],
+     "C",
+     "The cost to the surface is the point, and only the option linking a crust formed from the "
+     "stone itself to tooling that cannot be recovered states a loss. Comparing abrasives with "
+     "poultices ranks two methods without saying what either one costs."),
+
+ syn_given("S9",
+     ["A computer-controlled saw can cut a block to a moulded profile in a few hours.",
+      "The sawn surface is covered in fine parallel ridges.",
+      "A banker mason takes that surface down by hand with a chisel.",
+      "Hand tooling is what makes new work sit quietly beside weathered old work.",
+      "A block left as the saw finished it reads as new against an old wall."],
+     "explain why hand work survives in a shop that owns such a saw.",
+     ["A computer-controlled saw will cut a block to a moulded profile within a few hours.",
+      "The saw does the cutting in hours, but only a surface taken down by hand leaves new work "
+      "sitting quietly beside the weathered stone around it.",
+      "A block left exactly as the saw finished it reads as new against an old wall.",
+      "The surface a saw leaves behind is covered in fine parallel ridges."],
+     "B",
+     "The goal asks why the hand work is still done, so the answer must set what the machine does "
+     "against what only the chisel achieves, which is what the option contrasting hours of sawing "
+     "with a hand-finished surface does. Noting that a sawn block reads as new gives the symptom "
+     "without saying what is done about it."),
 ]
+
+# ---------------------------------------------------------------------------
+# DROPPED — topics screened and abandoned rather than paraphrased around.
+#
+# Against the bank (screen_topics.py pass 1):
+#   face bedding      A block set on edge rather than on its natural bed
+#                     delaminates. rw_test18:W4 is already Portland limestone
+#                     BEDS and a block cut from the wrong one, and shares
+#                     bed / mason / chisel / cornice wholesale. Dropped before
+#                     a passage was written.
+#   lime mortar       rw_test19 owns the whole argument (C3 soft mortar as the
+#                     sacrificial part of a wall, F4 a parish specifying lime,
+#                     B1 slaking, R6 the burning). Nothing here burns, slakes
+#                     or argues about lime; B12 and E2 stay on the profile and
+#                     the burning of the unit instead.
+#   slip-casting      rw_test16:B1 is a plaster mould drawing water out of
+#                     liquid clay. Plaster here is always a wall or ceiling
+#                     finish, never a mould for clay.
+#   glazed wall tile  rw_test16 owns glaze faults and tin opacifying. B12's
+#                     quarry tiles are unglazed and are described by their
+#                     fired density, not by any coating.
+#   tunnel brickwork  rw_test20:R4 builds brick rings behind a shield.
+#
+# Against this file itself (pass 2, limit 0.24):
+#   centring          B11 was first written as the timber former struck from
+#                     under a closed arch. It scored 0.286 against F6, which
+#                     needs the keystone to carry a singular possessive, and
+#                     both described one arch. B11 was rewritten to the line
+#                     and the tingle; the pair now sits at 0.07.
+#   snapped headers   A face bonded to look tied through when it is not. W7 is
+#                     already headers crossing a wall to stop it splitting;
+#                     dropped without drafting.
+#   treadwheel crane  T4 has the great wheel in a church roof, so the hoisting
+#                     items went to the gin wheel (I6), the hoist tower (N4)
+#                     and the lewis (E7) instead.

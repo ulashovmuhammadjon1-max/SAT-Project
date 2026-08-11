@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T29:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;dressed&rdquo; most nearly mean?",
+   "passage": "A block comes to the mason's bench sawn to a rough rectangle and no more. He squares one face with a chisel, works the next square to it, and only then cuts the mouldings, checking each stage against a zinc template. A block <u>dressed</u> in that order can be set in the wall as it stands, because every later measurement has been taken from a face already known to be true.",
+   "difficulty": "MEDIUM",
+   "why": "The passage describes squaring faces and cutting mouldings with a chisel, so the word names the shaping of the stone. The clothing sense belongs to the ordinary use of the word and not to a block of stone under a chisel.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "arranged",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "bandaged",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "clothed",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "worked",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Clay taken straight from the heap is a mixture rather than a material: stiff lumps, soft lumps, grit and pockets of air lie side by side in it. The pug mill drives the whole mass through a barrel fitted with knives, and what comes out at the far end is the same clay throughout, with nothing left in it that would tear a moulded shape as it dried. The mill's purpose is not to soften the clay but to make it _____.",
+   "difficulty": "MEDIUM",
+   "why": "What comes out is described as the same clay throughout, which is a matter of consistency from one part to the next. The option about softening is the very purpose the last sentence sets aside.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "colourful",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "uniform",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "abundant",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "watertight",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;marks&rdquo; most nearly mean?",
+   "passage": "New brickwork often shows a white bloom across its face within a few months. Salts already present in the brick and in the mortar dissolve in the water the wall took in during building; as the wall dries, that water travels to the surface and evaporates there, leaving the salt behind as a crust. The bloom therefore <u>marks</u> the end of the drying rather than the beginning of decay, and it is usually brushed off once and does not return.",
+   "difficulty": "MEDIUM",
+   "why": "The bloom is being read as a sign that drying has finished, so the verb reports what the bloom shows. The sense of leaving a stain would describe the crust itself rather than the information it gives.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "scores",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "celebrates",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "stains",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "indicates",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A plain roofing tile hangs on a horizontal batten by a small projection moulded on its back near the head. Nothing but that projection and the tile's own weight holds it in place, which is why a tiled roof can be stripped and reset by hand and why a single broken tile can be lifted out and another slid in. The whole covering is thus _____ rather than fixed.",
+   "difficulty": "MEDIUM",
+   "why": "Each tile rests on a batten by a projection and its own weight, which is the arrangement the blank has to name and which the passage contrasts with being fixed. Nothing in the passage describes a seal, and a covering that could be sealed could not be lifted tile by tile.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "hung",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "sealed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "welded",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "buried",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "The great wheel still standing in the roof of more than one English church is some five metres across, and two men walked inside it to turn it. A man's weight is a poor engine, but a wheel of that diameter turning a drum a fifth as wide multiplies what he can pull by five, and a man walking can push against the boards for hours without the jerks a team of haulers gives. What such a wheel offered a medieval builder was not power so much as steady power under close control, which is exactly what a stone hanging over a finished vault requires.",
+   "difficulty": "MEDIUM",
+   "why": "The text sets the wheel's small power against the steadiness and control it gave, and closes by matching that steadiness to the job of landing a stone over a vault. The option about tracing the machine's spread describes a history the passage never touches.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To trace the spread of the great wheel from one country to another.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To argue that medieval builders lacked any better source of power.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To describe the churches in which such wheels survive.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To explain why a machine of modest power suited the work it was built for.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "In the older sort of kiln the flame rises from the fire mouths straight up through the setting and out at a hole in the crown, and the ware at the top of the chamber is always hotter than the ware at the bottom. <u>A gas will travel wherever the draught takes it, regardless of whether that path leads upward or downward.</u> The down-draught kiln closes the crown, carries the flame up the side walls and lets it fall through the setting to flues in the floor, which are joined to a chimney tall enough to pull it there.",
+   "difficulty": "MEDIUM",
+   "why": "Pulling flame downward through a setting only makes sense once the reader accepts that gas follows the draught rather than simply rising, which is what the sentence establishes. The option about conceding a weakness misreads a statement that enables the later design into an objection to it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It states the principle that makes the arrangement described afterwards possible.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It concedes a weakness in the down-draught kiln described afterwards.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It defines a technical term introduced in the preceding sentence.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It questions whether the older kiln behaved as the first sentence claims.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:X3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Based on the texts, the author of Text 2 would most likely characterise the explanation offered in Text 1 as",
+   "passage": "<p><strong>Text 1</strong></p><p>The duty laid on bricks in 1784 was charged by the thousand, and makers answered it in the obvious way: they made the brick bigger. Bricks a third larger than the old size appear in the yards within a few years of the duty, and the Act of 1803 that taxed large bricks at a higher rate reads as an admission that the first duty had been evaded exactly so.</p><p><strong>Text 2</strong></p><p>Bricks larger than the old size were being moulded in several counties before 1784, and the largest of all come from yards that lay outside the duty altogether. Size followed the clay and the kiln: a heavy brick made from a lean clay could be burned through, while the same brick in a fat clay warped. The duty may have hurried a change along, but a maker who enlarged his brick after 1784 was doing what his clay had already allowed his neighbour to do before it.</p>",
+   "difficulty": "MEDIUM",
+   "why": "Text 2 allows that the duty may have hurried the change while insisting that clay and kiln were enlarging bricks before it, which treats Text 1's account as partial rather than wrong. The option calling the explanation untestable is ruled out by Text 2's own appeal to bricks moulded before 1784.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "plausible but incomplete, since it overlooks a cause already at work.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "impossible to test, because no bricks of the period survive.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "mistaken about the date at which the duty was first charged.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "correct in every respect but too narrowly focused on a single county.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what made the Fletton clay unusually cheap to work?",
+   "passage": "The clay lying under Fletton in Huntingdonshire behaves unlike the clays worked anywhere else. It comes out of the ground so nearly dry that it can be ground to a powder and pressed into shape in a machine, instead of being tempered with water and then left in the open for weeks to give that water back. It also holds a quantity of oil distributed through its whole substance, so that once the setting has been raised to a certain heat the bricks go on burning from within and call for very little further coal. Two of the heaviest charges on an ordinary yard were therefore largely absent, and by the 1930s one district was supplying something like a fifth of all the bricks laid in the country.",
+   "difficulty": "MEDIUM",
+   "why": "The passage names exactly two savings, a drying stage the clay does not need and coal the oil in the clay replaces, and then calls those the two heaviest charges on an ordinary yard. Nothing is said about sorting, which the text never raises.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It lay close to the districts where most of the bricks were laid.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It required neither a long drying stage nor much fuel once the setting was alight.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It could be moulded by hand faster than any other clay.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It produced a brick that needed no sorting after burning.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A bamboo scaffold on a Hong Kong tower is not a survival that modernisation has somehow failed to reach. Steel tube arrives by lorry and has to be craned to the working level; bamboo goes up on a worker's shoulder along the scaffold already standing, and a crew can raise several storeys of it in a day without asking the site crane for anything. The poles are lashed with nylon strip, so a joint is made in seconds and can be made at any point along a pole rather than only where a fitting will grip. Set against that, a bamboo scaffold cannot be given a designed and certified capacity as a tube scaffold can, and it is passed fit by people who have learned to read it rather than by a calculation on paper.",
+   "difficulty": "MEDIUM",
+   "why": "The passage sets a practical advantage, erection without the crane and a lashing made anywhere along a pole, against a stated drawback about certification, and opens by refusing to call the practice a survival. The option about steel being unobtainable is an explanation the text never offers and its first sentence rules out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Hong Kong builders use bamboo because steel tube cannot be obtained there.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Nylon lashings have made bamboo scaffolds as strong as scaffolds of steel tube.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Bamboo scaffolding survives because it goes up quickly without a crane, though its capacity cannot be certified by calculation as steel's can.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A bamboo pole will carry more weight than a steel tube of the same diameter.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "passage": "A plain tile roof is set out so that every part of it lies under at least two thicknesses of tile. How far apart the battens are fixed &mdash; the gauge &mdash; therefore depends both on the length of the tile and on the lap, which is the distance a tile is carried down over the head of the tile two courses below it. A roofer working out a roof reads the figures off a table:<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tile length (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lap (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Gauge (mm)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">265</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">65</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">100</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">265</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">85</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">90</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">337</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">65</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">136</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">337</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">85</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">126</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "why": "Holding the length at 265 mm, the gauge falls from 100 mm to 90 mm as the lap rises from 65 mm to 85 mm, and a smaller gauge means the battens sit closer and more courses fill the roof. The claim that a longer tile takes a smaller gauge is reversed by the 337 mm rows, where the gauge is larger at both laps.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For a tile of a given length, increasing the lap increases the gauge, so fewer courses are needed to cover the same roof.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The gauge depends only on the length of the tile and is unaffected by the lap.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A longer tile is laid to a smaller gauge than a shorter one at every lap.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For a tile of a given length, increasing the lap reduces the gauge, so more courses are needed to cover the same roof.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most strongly support Anand's proposal?",
+   "passage": "When a lath-and-plaster ceiling fails it usually comes away in one piece, laths and all. The usual explanation blames the key: the ribbons of wet plaster squeezed through the gaps between the laths, which hook over the wood and hold the ceiling up, and which are said to grow brittle and crumble away with age. Ravi Anand proposes a different starting point, arguing that the failure begins at the nails fixing the laths to the joists, which rust until the head no longer holds the lath.",
+   "difficulty": "MEDIUM",
+   "why": "Anand needs the key to be sound and the fixing to have gone, and the ceilings whose keys are still hooked over the laths beside rust-stained nail holes give exactly that pattern. Damp rooms failing more often fits the crumbling-key account just as comfortably, so it distinguishes nothing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ceilings fixed less than fifty years ago have rarely been known to fall.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Ceilings in rooms subject to damp come down more often than ceilings in dry rooms.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Plaster mixed without any fibre in it cracks more readily than plaster mixed with fibre.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "In fallen ceilings the keys were found whole and still hooked over their laths, while the nail holes in the joists were enlarged and stained with rust.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most strongly support Otieno's argument?",
+   "passage": "Rain running down the face of a brick wall gathers at the joints, and how much of it is driven into the wall depends on the shape the bricklayer has left the mortar in. A weather-struck joint is pressed back at the top and left flush at the bottom, so the face of the mortar slopes outward and throws water clear of the brick beneath. A joint raked back square behind the face of the brickwork leaves a small level ledge on the top edge of every brick instead. Kelsey Otieno argues that on a solid wall the profile the bricklayer forms matters more than what the mortar itself is made of in deciding how wet the wall becomes.",
+   "difficulty": "MEDIUM",
+   "why": "Otieno's claim is that profile outweighs composition, and only the paired walls hold the brick and the mortar constant so that the profile is the sole difference. The comparison of strong against weak mortar varies composition instead, which is the factor Otieno says matters less.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Two walls of identical brick and identical mortar, one weather-struck and one raked back, took up water at rates differing by a factor of three under the same driving rain.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Walls pointed in a strong mortar took up less water than walls pointed in a weak one.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Raked joints appear more often on twentieth-century buildings than on earlier ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A bricklayer can form a weather-struck joint faster than a raked one.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Water rises through the fine pores of a brick much as it rises through blotting paper, and in a wall standing on wet ground it climbs until evaporation from the face carries it away as fast as the pores deliver it. Two courses of slate bedded near the foot of the wall break the run of pores, and nothing passes them. It follows that damp found on such a wall well above the slate _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage states that nothing passes the slate, so ground water cannot be the source of damp appearing above it and some other route is required. The option about damp being carried up through the slate contradicts the sentence that says nothing passes it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "must have reached the wall by some route other than the ground beneath it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "shows that the slate has been bedded at the wrong height in the wall.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "proves that the wall was built with no slate in it at all.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "has been carried up through the slate by the rise that carries it through brick.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A gin wheel is a single pulley lashed to the head of a scaffold pole, with a rope over it and a hook on the end. It changes the direction in which a man pulls, so that he can hang his weight on the fall instead of lifting with his back, but the rope comes down one side and goes up the other and no force whatever is gained: the pull on the rope equals the load on the hook. A labourer who can raise two bags of sand on a gin wheel and no more _____",
+   "difficulty": "MEDIUM",
+   "why": "The passage states outright that the pull on the rope equals the load on the hook, so the only limit left is the man's own pull. Doubling the diameter of the wheel changes the direction of the rope and nothing else, since the equality between pull and load does not depend on the size of the pulley.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "could raise the same load with half the pull if the rope were longer.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "is limited by what he himself can pull, since the wheel multiplies his effort not at all.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "would raise four bags if the wheel were made twice the diameter.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "is being stopped by friction in the wheel rather than by the weight of the bags.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Quarry tiles are unglazed floor tiles pressed from a dense clay and burned hard enough to stand the traffic of a dairy or a scullery. The burning closes the pores of the _____ leaves a surface that a wet cloth will not soak into.",
+   "difficulty": "MEDIUM",
+   "why": "One subject governs both verbs here, so nothing separates the pair of them. A semicolon or a full stop would each demand a complete sentence afterwards, and a verb standing on its own is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "clay, and",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "clay and",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "clay; and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "clay. And",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Fibrous plaster is cast flat in a mould on the bench, backed with canvas and thin laths while it is still wet, and carried up to the ceiling as a finished panel. A run of ornament that would have taken a modeller weeks overhead can be turned out in a day on the _____ is only as good as the joint where one panel meets the next.",
+   "difficulty": "MEDIUM",
+   "why": "Two complete sentences meet at the blank, so a semicolon separates them and the transitional word opening the second takes a comma after it. Joining the two with a comma alone splices them together, however the sentence is punctuated after that.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "bench; however the result",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "bench; however, the result",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "bench, however, the result",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "bench however the result",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The three members of a tube scaffold are named for what each of them does: standards, the uprights that carry the load down to the _____ the horizontal tubes running the length of the scaffold; and transoms, the short tubes crossing it that pick up the boards.",
+   "difficulty": "MEDIUM",
+   "why": "The items of this list contain commas inside themselves, so the items have to be divided from one another by semicolons instead. Dividing them by commas leaves a reader unable to tell where one member ends and the next begins.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "ground; ledgers;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "ground, ledgers,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "ground: ledgers,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "ground; ledgers,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Pargeting is plaster combed, stamped or modelled into a pattern while it is still soft. The ornament is not laid over the weathering coat but worked into the face of the coat _____ therefore comes away altogether if the front is ever scraped back to the brick.",
+   "difficulty": "MEDIUM",
+   "why": "The clause introduced by the relative pronoun adds something about the coat rather than picking out which coat is meant, so a comma introduces it. Starting a fresh sentence with that pronoun leaves a fragment with no main verb of its own.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "itself; which",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "itself which",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "itself. Which",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "itself, which",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Brick nogging is brickwork built into the panels of a timber frame, and it is often a good deal later than the frame that holds it. Surveyors examining a Suffolk farmhouse found nogging in every panel of the north wall; the timbers behind it, though, still carried the empty mortices and grooves of the wattle staves that _____ there before any brick was thought of.",
+   "difficulty": "MEDIUM",
+   "why": "The surveyors' discovery is already in the past, and the staves were in the panels earlier still, so the earlier of the two needs the tense that places it further back. The present tense would put the staves in the panels now, when the passage says brick has replaced them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "are",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "will have been",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "have been",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "had been",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Tuck pointing gives a wall of rough bricks the appearance of fine gauged work without any of its cost. The bricklayer stains the mortar to the colour of the brick, presses it flush with the face, and _____ a narrow ribbon of white putty along the middle of every joint.",
+   "difficulty": "MEDIUM",
+   "why": "The blank is the third item in a list of things the bricklayer does, and the first two are stains and presses, so the third has to take the same form. A participle in that position leaves the third action with no subject of its own.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "then setting",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "to set",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "sets",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "setting",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Gauged brickwork is cut and rubbed to shape from soft bricks and bedded in joints of putty barely thicker than a sheet of paper. The joints of a gauged arch over a doorway are therefore far finer than _____ in the ordinary brickwork of the wall around it.",
+   "difficulty": "MEDIUM",
+   "why": "The comparison is between one set of joints and another set of joints, so the word standing in for the second set has to be plural. The singular form would compare a group of joints with a single joint.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "them",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "it",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "those",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "that",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Scagliola is plaster gauged with glue and stained through its whole thickness with pigment, then ground down and polished until it takes a shine. A column finished in it can be told from marble by little except its warmth to the hand. _____ it can be run as a single unbroken shaft, where a marble column has to be built up in drums with a joint at every one.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence before the blank credits the material with looking like marble and the one after it adds a second advantage over marble, so the two points run the same way. A word signalling contrast would set the two advantages against each other.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Moreover,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For example,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Bricks stood on end over a window opening cannot arch in the ordinary way, because their joints run straight down instead of radiating from a centre, and nothing in the arrangement turns the load sideways into the wall. _____ a flat arch of this kind is almost always carried on a steel angle hidden behind it, and the brickwork does no more than face the beam.",
+   "difficulty": "MEDIUM",
+   "why": "The first sentence explains why the brickwork cannot carry itself and the second gives what builders therefore do about it, which is a consequence. A word signalling contrast would make the hidden steel a surprise rather than the remedy.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For instance,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A roof does not finish itself at the top. The two slopes stop a hand's breadth short of the apex and leave a gap running the length of the building, and a half-round tile bedded in mortar across that gap is what closes it. _____ that bed of mortar is the one part of the covering held on by nothing but its grip on two tiles, at the very line where the wind is strongest.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence before the blank credits the ridge tile with closing the roof and the one after it points out the weakness of the same detail, so the two hold side by side. A word announcing a consequence would make the weakness follow from the closing, which it does not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In short,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "At the same time,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why hand work survives in a shop that owns such a saw. Which choice most effectively uses relevant information from the given sentences to accomplish this goal?",
+   "passage": "While working on an assignment, a student has written the following sentences:<ul><li>A computer-controlled saw can cut a block to a moulded profile in a few hours.</li><li>The sawn surface is covered in fine parallel ridges.</li><li>A banker mason takes that surface down by hand with a chisel.</li><li>Hand tooling is what makes new work sit quietly beside weathered old work.</li><li>A block left as the saw finished it reads as new against an old wall.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks why the hand work is still done, so the answer must set what the machine does against what only the chisel achieves, which is what the option contrasting hours of sawing with a hand-finished surface does. Noting that a sawn block reads as new gives the symptom without saying what is done about it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The saw does the cutting in hours, but only a surface taken down by hand leaves new work sitting quietly beside the weathered stone around it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A block left exactly as the saw finished it reads as new against an old wall.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The surface a saw leaves behind is covered in fine parallel ridges.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A computer-controlled saw will cut a block to a moulded profile within a few hours.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to caution a reader against dating a wall from its tooling alone. Which choice most effectively uses relevant information from the given sentences to accomplish this goal?",
+   "passage": "While working on an assignment, a student has written the following sentences:<ul><li>A punch leaves a face covered in small pits, a claw chisel leaves parallel grooves in bands, and a boaster leaves broad flat strokes.</li><li>Claw tooling is rare on English work before about 1180 and common after 1200.</li><li>A wall may contain stone reused from an earlier building on the same site.</li><li>A face that has been recut at any date carries no marks from its first working.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "A caution has to name what can go wrong, and only the option raising both reused stone and recut faces gives two ways the evidence can mislead. The sentence about claw tooling before and after 1200 is the dating rule itself rather than a warning about using it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A punch leaves a pitted face, a claw chisel parallel grooves, and a boaster broad flat strokes.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Claw tooling is rare on English work before about 1180 and becomes common after 1200.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A face that has been recut carries no marks from the time when it was first worked.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Tooling is a guide to date, but a wall may hold stone reused from an earlier building, and a recut face keeps no marks of its first working at all.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise why identical ornament turns up in house after house. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>An enrichment is a repeated ornament cast separately and fixed onto a plain plaster ground.</li><li>A reverse mould was taken from a modelled original in gelatine.</li><li>Gelatine could be poured warm and peeled away even from an ornament cut back underneath.</li><li>One gelatine mould yielded a few dozen casts before it softened and lost its sharpness.</li><li>The same modelled rose could therefore appear in a hundred houses along one street.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The goal asks why the ornament repeats, and only the option joining the number of casts per mould to the hundred houses gives the cause and the consequence together. The option about gelatine peeling off an undercut explains the choice of material and not the repetition.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Plaster casts for a ceiling were taken from a reverse mould made over a modelled original.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "An enrichment is a repeated ornament cast on its own and then fixed to a plain ground.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Because one gelatine mould gave several dozen casts before it softened, a single modelled rose could be repeated through a hundred houses in one street.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Gelatine was chosen for reverse moulds because it could be peeled away from an undercut.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T29:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A machine that squeezes a column of clay through a die and cuts it with a wire will turn out in an hour what a moulder turns out in a day, and every brick it makes is the same size to within a hair. Builders who wanted the soft, sanded face of a moulded brick complained that the wire-cut article looked as though it had been sliced from a loaf, and for the fronts of houses they went on paying for the slower work. The machine's regularity was, to that trade, less a merit than a _____.",
+   "difficulty": "EASY",
+   "why": "The buyers of fronts objected to the sliced look and paid more to avoid it, so the evenness counted against the machine brick with them. Calling it a bargain would reverse the complaint the sentence has just reported.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "mystery",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "bargain",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "liability",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "necessity",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A painted pattern on a floor tile wears away under boots within a generation. The medieval tiler instead stamped the pattern into the soft clay to the depth of a finger-nail, filled the hollow with a white clay of a different colour and fired the two together, so that the design ran through the thickness of the tile rather than lying on top of it. Wear on such a floor is _____ the pattern, because the same pattern appears again at every level.",
+   "difficulty": "EASY",
+   "why": "The design runs through the thickness and reappears at every level, so wearing the surface away cannot remove it. Saying wear is fatal to the pattern would contradict the reason the closing clause supplies.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "invisible on",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "powerless against",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "fatal to",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "responsible for",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;raise&rdquo; most nearly mean?",
+   "passage": "Green bricks leave the moulder soft enough to take a thumbprint, and they cannot go into the fire until the water has left them. They are set out in long open stacks called hacks, laid on edge with a finger's gap between them so that air passes on every side, and a light roof of straw or boards is drawn over the top against rain and hard sun. A shower on unprotected bricks will <u>raise</u> the faces and lose the whole row.",
+   "difficulty": "EASY",
+   "why": "The sentence ends with the whole row being lost, so what the shower does to the faces must be harm. The everyday sense of lifting something up does not fit a face of a brick that is being ruined by rain.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "collect",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "lift up",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "cultivate",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "damage",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Clay dug in the autumn was not used at once. It was spread in a heap a spade deep and left through the winter, where water taken into the fine cracks froze and split the lumps apart night after night. By spring the heap could be turned with a fork instead of broken with a hammer. The season of exposure did work the yard would otherwise have paid men to do, so the frost served the brickmaker as a _____.",
+   "difficulty": "EASY",
+   "why": "The sentence says the frost did work the yard would otherwise have paid men for, so the blank has to name a worker. Calling the frost a rival would set it against the brickmaker, and the passage has it doing the yard's own work.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "labourer",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "customer",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "witness",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "rival",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Square holes appear in the faces of many old walls, often in regular rows a metre or so apart and at intervals up the height of the building. <u>The horizontal poles that carried the working platforms were bedded in the wall as it rose and cut off when it was finished.</u> An archaeologist can therefore read from the empty holes how high the builders went in a season, where they stopped and started again, and which parts of the front were being worked at the same time.",
+   "difficulty": "EASY",
+   "why": "The final sentence can read building seasons off the holes only once the holes are known to be the sockets of the working platform, which the underlined sentence supplies. The option calling it a summary of the archaeologist's conclusions puts it after the reasoning when it comes before it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It disputes the claim about spacing made in the first sentence.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It summarises the conclusions the archaeologist reaches.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It offers the explanation of the holes that lets the closing sentence treat them as evidence.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It gives an example of a wall in which such holes can be seen.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "passage": "For centuries a brick was whatever size a local mould happened to be, and a bricklayer moving twenty miles found the courses of a wall no longer met his rule. The change came from the counting house rather than the trade: once bricks were taxed by the thousand, a maker who enlarged his brick paid the same tax for more wall, and once they were sold by the thousand at a distance, a buyer needed to know what a thousand would build. The size that settled out of that argument is very nearly the size still made.",
+   "difficulty": "EASY",
+   "why": "The text opens on the difficulty of unequal bricks, turns to the tax and the distant trade that forced a standard, and ends with the size that survives, which is a problem followed by its resolution. The option about two competing theories describes a shape the passage never takes, since it settles on one account.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It follows one bricklayer through a single day's work.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It presents a problem, identifies the pressures that resolved it, and notes the result.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "It describes a tool and then lists the trades that used it.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It sets out two competing theories and endorses neither.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:X2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Which choice best describes the relationship between the two texts?",
+   "passage": "<p><strong>Text 1</strong></p><p>Scored into the plaster floor of a chamber high in the cathedral are full-size curves, circles and mouldings, cut with a compass and a straightedge and overlaid one on another. The lines are working drawings. A mason setting out a window needed the shapes at their true size, and the floor was the only surface large enough to carry them; a zinc or board template could then be cut directly from the line on the floor and carried down to the bench.</p><p><strong>Text 2</strong></p><p>The floor carries far more lines than any one window can account for, and some of the curves belong to no opening in the building. Read as a record of jobs, that is waste. Read as a place where apprentices were taught the geometry of a traceried head by drawing it out under a master's eye, the crowding is exactly what one would expect, and the few lines that match built windows are the exercises that happened to be used.</p>",
+   "difficulty": "EASY",
+   "why": "Both texts are about the same scored floor, and the second reads the crowded lines as teaching exercises where the first reads them as working drawings, which is a rival explanation of one body of evidence. The option about a second cathedral introduces a building neither text mentions.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Text 2 supplies the measurements that Text 1 says are missing.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Text 2 questions whether the lines on the floor exist at all.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Text 2 applies Text 1's conclusion to a second cathedral.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Text 2 offers a different account of the same evidence that Text 1 explains.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what is the chief advantage of split lath over sawn lath?",
+   "passage": "Lath split from the log along its own grain follows the run of the fibres, so each strip keeps long unbroken lines of wood from one end to the other and will bend a long way before it snaps. A lath sawn to the same dimensions cuts straight through those fibres wherever the grain wanders, and every such crossing is a place where the strip can break under a nail or under the pressure of the plasterer's trowel. Sawn lath is the cheaper article, since it can be machined out of any part of the log, and it is even in width in a way split lath never is. Where a ceiling has come down in an old house, though, it is nearly always the sawn lath that has gone and the split lath in the next room that has held.",
+   "difficulty": "EASY",
+   "why": "The text opens by saying split lath keeps long unbroken lines of wood and will bend far before snapping, and closes with split lath outlasting sawn lath in fallen ceilings. Being cheap and being even in width are both credited to the sawn article, not the split one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It can be produced from any part of the log.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It is more even in width along its length.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Its fibres run unbroken from end to end, so it resists breaking.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It is cheaper to produce in quantity.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A clamp is not a building but a stack. The green bricks are built into a heap with breeze or small coal spread between the courses, the outside is daubed over with clay, and the whole is lit at the bottom and left to burn itself out across several weeks. The heat is never the same in two parts of the heap. Bricks drawn from the middle come out hard, dark and sometimes fused along one edge; those from the outer skin come out pale, soft and so porous that a winter would ruin them in a wall. A clamp therefore yields not a batch of bricks but a graded range of them, and the yard's first task once the fire has died is to sort the heap into qualities and price each quality separately.",
+   "difficulty": "EASY",
+   "why": "The passage builds to the statement that a clamp yields a graded range and that the heap must be sorted and priced by quality, which is the point every earlier sentence supports. The claim that daubing keeps the heat even contradicts the sentence saying the heat is never the same in two parts of the heap.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A clamp is cheaper to fire than a kiln because its fuel is built into the stack.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because a clamp heats its contents unevenly, its output has to be sorted into several qualities rather than sold as one product.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Bricks taken from the middle of a clamp are unusable because the heat has fused them.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Daubing the outside of a clamp with clay keeps the heat even throughout the heap.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from the fabric roll most effectively illustrates Lund's argument?",
+   "passage": "A cathedral's fabric roll records what the building account paid out week by week. Marta Lund argues that the roll draws a working distinction between labour whose product could be counted and labour whose product could not, and pays each accordingly.",
+   "difficulty": "EASY",
+   "why": "Lund's argument is about a distinction, so the illustration has to show both halves of it, and only the entry pairing setters paid by the week with a bench mason paid by the stone does that. The entry giving the mullion stones alone shows countable work being paid by the piece but supplies nothing to contrast it with.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Paid for two hundred of lath and one load of sand, delivered at the west door.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;To the smith, for sharpening and setting the masons' tools throughout the year, thirteen shillings.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;To the four setters, for eleven weeks about the tower, at two shillings the week; and to William the mason, for ninety mullion stones cut at the bench, at threepence the stone.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;To William the mason, for ninety mullion stones cut at the bench, at threepence the stone.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most strongly support Raman's argument?",
+   "passage": "A lewis is a lifting device of three iron pieces dropped into a slot cut in the top of a block. The two outer pieces are splayed and the slot is cut wider at its base to match them, so that when the middle piece is driven down between them the whole assembly wedges, and the harder the crane pulls the tighter the iron grips. It leaves behind a small tapered slot that is out of sight the moment the block is bedded. Priya Raman argues that a certain twelfth-century tower was raised with lewises rather than with slings passed underneath the blocks.",
+   "difficulty": "EASY",
+   "why": "The slot is the one trace a lewis leaves and a sling leaves none, so finding the slot in the upper beds of the tower's own blocks distinguishes the two methods. Iron found in the ground nearby is consistent with any ironwork on the site and says nothing about how the blocks were lifted.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The accounts of the estate record payments to masons working at the tower.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Blocks lifted out of the tower during a repair were found to carry a tapered slot cut in their upper beds.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The tower's blocks are heavier than those used in neighbouring buildings of the same date.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Worked iron of twelfth-century date has been recovered from the ground around the tower.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "passage": "Scaffold boards do not rest on the standards but on the transoms, the short members laid across the scaffold at working level, and a board carried too far between two of them springs underfoot and eventually splits. A working rule sets the greatest distance a board of each thickness may be carried:<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Board thickness (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Greatest span between transoms (m)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1.5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">63</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.2</td></tr></table>",
+   "difficulty": "EASY",
+   "why": "The permitted span rises from 1.5 m to 2.6 m to 3.2 m as the board thickens from 38 mm to 63 mm, and transoms set further apart means fewer of them along a lift. The span does not double at either step, since 2.6 is well short of twice 1.5 and 3.2 is well short of twice 2.6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A thicker board may be carried further between transoms, so a lift boarded with thick boards needs fewer transoms than one boarded with thin.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A thinner board may be carried further between transoms, so thin boards call for fewer transoms.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The greatest span doubles with every increase in board thickness listed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Board thickness makes no difference to the distance a board may be carried.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Stucco spread over a rough brick front was ruled into rectangles with a jointing tool while it was still soft, and the lines were run to the proportions of a handsome ashlar wall rather than to anything actually behind them. A block of dressed stone is as deep as it is broad; a rectangle scored in stucco is a groove a few millimetres deep. Anyone judging such a front from the pavement therefore _____",
+   "difficulty": "EASY",
+   "why": "The lines are said to follow the proportions of a handsome wall rather than anything behind them, so they carry no information about the construction they cover. The option about the lines following the brickwork joint for joint is the opposite of what the passage says they were set out to do.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "learns nothing from the ruled lines about how the wall behind them is built.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "can count the courses and so arrive at the thickness of the wall.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "can be certain that the wall behind is of brick rather than of rubble.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "will find the lines set out to follow the brickwork joint for joint.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Clay does not leave the kiln at the size it entered the mould. It gives up water in the drying and gives up more in the burning, and it contracts through both. A moulder therefore cuts his mould larger than the brick he intends to sell, by an allowance established for that particular clay by trial. Because the allowance belongs to the clay rather than to the mould, a yard that opens a pit in new ground _____",
+   "difficulty": "EASY",
+   "why": "If the allowance is a property of the clay, a mould cut to the old allowance is only correct for the old clay, so the new contraction has to be found before the moulds can be trusted. Expecting the same allowance to carry over is precisely what the sentence about the allowance belonging to the clay rules out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "can expect the new clay to contract by exactly the allowance already in use.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "cannot keep using moulds cut for the old clay until the new contraction has been measured.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "will find that the new clay needs no drying before it is burned.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "must burn the new clay at a lower heat than the old to hold the size.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Where two slopes of a roof meet at an outward angle, no ordinary tile can be cut to cover the joint, so the tiler reaches for a tile shaped for that one _____ moulded to sit astride the angle like a small saddle and bedded solid in mortar.",
+   "difficulty": "EASY",
+   "why": "A complete sentence stands in front of the blank and what follows it names the tile that sentence has just promised, which is the work a colon does. Putting a semicolon after the word purpose demands a second complete sentence, and a moulded, bedded tile is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "purpose: a bonnet,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "purpose a bonnet,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "purpose; a bonnet,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "purpose, a bonnet;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The lead-lined gutter that used to be laid where two slopes of a roof meet at an inward _____ a joint every few feet, and every one of those joints was somewhere for water to find its way underneath.",
+   "difficulty": "EASY",
+   "why": "Everything in front of the blank is one long subject, and the verb belonging to it must not be cut away from it by punctuation. A semicolon there would need a complete sentence on each side, and the words in front of the blank are not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "angle, had",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "angle had",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "angle; had",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "angle: had",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A mason works the block on a _____ at about waist height, and drives the chisel downwards with the weight of his arm behind it rather than with the strength of his wrist.",
+   "difficulty": "EASY",
+   "why": "The description of the bench is a supplementary element dropped into the middle of the sentence and needs a comma at both ends of it. Opening it with a comma and never closing it leaves the phrase running straight into the words that follow.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "banker a low bench of stone or heavy timber set",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "banker, a low bench of stone or heavy timber set",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "banker; a low bench of stone or heavy timber; set",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "banker, a low bench of stone or heavy timber, set",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Wood lath was displaced in the 1920s by a sheet of steel slit into rows of short cuts and then pulled open into a mesh. Because that mesh has no gaps of a fixed width and no grain to split _____ can be pressed into it anywhere along its length rather than only where a gap happens to fall.",
+   "difficulty": "EASY",
+   "why": "The sentence opens with a long subordinate clause, and a comma has to close that clause before the main statement begins. A semicolon in the same place would require a complete sentence in front of it, and a clause opening with the word because is not one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "along, the first coat",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "along; the first coat",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "along the first coat",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "along: the first coat",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The small points projecting inwards from the edge of a traceried opening are the cusps, and the curved spaces they leave between them are the foils. In a trefoil _____ three foils and three cusps; in a quatrefoil there are four of each.",
+   "difficulty": "EASY",
+   "why": "What follows the verb is three foils and three cusps, which is plural, and in a sentence opening with the word there it is that following phrase which settles the form of the verb. The singular verb would need a single thing after it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "there are",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "there is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "there was",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "there has been",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A gargoyle is a water spout. The gutter behind a parapet is led out through a carved throat so that rainwater is thrown clear of the wall below instead of running down its face. Neither the wings nor the head carved on the outside _____ any part in throwing the water; both are dressing on what is really a length of stone gutter.",
+   "difficulty": "EASY",
+   "why": "When two subjects are joined by neither and nor the verb follows the one standing nearest to it, and the head is singular. The plural form would agree with the wings, which is the further of the two subjects from the verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "play",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "plays",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "have played",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "are playing",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A scaffold standing on made ground settles unless its weight is spread out. Every standard is footed on a base plate, and on soft ground each plate in turn stands on a timber sole board that spreads _____ load across a wider area of soil.",
+   "difficulty": "EASY",
+   "why": "The load belongs to a single plate, since the sentence speaks of each plate in turn, so the singular possessive is called for. The form with an apostrophe before the s is the contraction of it is, which makes nonsense of the sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "its",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "their",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "it's",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "its'",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Tiles on an old roof were often pointed from underneath with a haired mortar spread along the edge of every batten, a practice called torching. It kept snow from driving up between the tiles and stopped them chattering in a gale. _____ mortar in that position also holds water against the battens and the nails, and where torching survives the timber under it is usually the first to rot.",
+   "difficulty": "EASY",
+   "why": "The sentence before the blank lists what torching does well and the one after it names the harm the same mortar does, so the two run against each other. A word signalling a consequence would make the rot follow from the benefits just described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "In short,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A builder's hoist is a platform running up a tower of light steel sections bolted back to the scaffold and worked by a winch at the foot. The shaft it runs in stands open at every floor it serves, and anyone stepping into it while the platform was elsewhere would fall the whole height of the tower. _____ each landing is closed by a gate that cannot be opened unless the platform is standing at that level.",
+   "difficulty": "EASY",
+   "why": "The open shaft is a hazard and the interlocked gate is what is done about it, so the second sentence follows from the first. A concessive opening would suggest the gate is fitted in spite of the danger rather than because of it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Similarly,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Accordingly,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "For example,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The ribbed ceilings of Jacobean houses look like stone vaulting and are nothing of the sort. Every rib is a length of plaster run flat on a bench with a mould, cut into short pieces and bedded onto the ceiling, and the patterns loop back on themselves in ways no vault could actually be built. Such a pattern carries nothing whatever. _____ it can run straight across a beam, or take no notice of the shape of the room below, as ribs bearing a load never could.",
+   "difficulty": "EASY",
+   "why": "Carrying no load is the reason the pattern is free to ignore the structure beneath it, so the second statement follows from the first. A word signalling contrast would set the freedom against the very fact that permits it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In addition,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For that reason,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain to a reader unfamiliar with Roman roofing how the two tiles worked together. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A Roman roof was covered with tiles of two different shapes.</li><li>The tegula is a flat tile with a raised flange running along each of its long edges.</li><li>Tegulae were laid side by side so that the flanges of neighbouring tiles stood in pairs.</li><li>The imbrex is a half-round tile laid over each pair of flanges.</li><li>Water running across the flat of a tegula cannot climb the flange at its edge.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The reader needs both how the flat tiles were arranged and what the curved tile did about the join, and only the option describing flanges meeting in pairs under an imbrex supplies both. Naming one tile flat and the other curved identifies the pieces without saying how either works.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The tegula is a flat tile with raised edges and the imbrex is a half-round one.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Tegulae were laid side by side so that their raised flanges met in pairs, and a half-round imbrex was bedded over each pair to cover the joint the flanges left.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Roman roofs were covered with tiles of two shapes, one of them flat and the other curved.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Water running across the flat of a tegula could not climb over the flange along its edge.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how one tile served two purposes at once. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A hypocaust heated a Roman room by passing hot gas beneath a raised floor.</li><li>Box flue tiles are hollow rectangular tiles built into the wall of the room.</li><li>Gas from under the floor rose through the flue tiles and left the building at the eaves.</li><li>The outer face of a flue tile was scored all over with a comb.</li><li>Wall plaster grips a scored face that it would slide off a smooth one.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Two purposes have to appear in the answer, and only the option pairing the gas inside the tile with the plaster gripping its scored face names both. The sentence about gas leaving at the eaves covers the heating alone.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Gas that had passed beneath the raised floor rose through the flue tiles and left at the eaves.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The outer face of each flue tile was scored all over with a comb before it was fired.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The hollow tile carried the hot gas up inside the wall, while the comb-scored face it presented outwards gave the wall plaster something to grip.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Box flue tiles are hollow rectangular tiles built into the walls of a heated room.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise what cleaning costs a building's surviving surface. Which choice most effectively uses relevant information from the given sentences to accomplish this goal?",
+   "passage": "While working on an assignment, a student has written the following sentences:<ul><li>Soot and sulphur form a black crust on limestone in a city.</li><li>The crust is largely gypsum, formed out of the surface of the stone itself.</li><li>Abrasive cleaning takes off more of the surface than a chemical poultice does.</li><li>Tooling marks and carved detail removed with a crust cannot be put back.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The cost to the surface is the point, and only the option linking a crust formed from the stone itself to tooling that cannot be recovered states a loss. Comparing abrasives with poultices ranks two methods without saying what either one costs.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Abrasive cleaning removes more of the surface of a stone than a chemical poultice does.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Soot and sulphur together form a black crust on limestone in a city.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The black crust on a city building is largely gypsum rather than dirt lying on top of it.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because the crust is made partly out of the stone's own surface, taking it off takes original material with it, and the tooling lost that way cannot be put back.",
+     "isCorrect": true
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T29:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The hollow pressed into the bed face of a brick is called the frog, and it is not there to save clay. Mortar spread on the course below is pushed up into the hollow as the brick is bedded, and when it sets it forms a block of mortar keyed into the brick itself, which a sliding force must break before the joint will give way. The hollow makes the finished joint _____ against movement along the bed.",
+   "difficulty": "HARD",
+   "why": "A block of mortar keyed into the brick has to be broken before the joint can slide, which is a gain in resistance. Nothing in the passage concerns the cost of the brick, which is the explanation the first sentence rules out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "smoother",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "stiffer",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "thinner",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "cheaper",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A wall two bricks thick can be built as two separate walls standing side by side, and such a wall will split along its length under load. Laying some bricks across the thickness rather than along it, so that a single brick reaches from one face through to the other, binds the two together into one member. The pattern of these crossing bricks in the face of a wall is therefore not ornament but _____.",
+   "difficulty": "HARD",
+   "why": "Bricks reaching through the thickness are said to bind the two leaves into one member, which is a load-carrying function. The option naming decoration is what the closing phrase explicitly denies.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "repair",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "measurement",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "structure",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "decoration",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "In an ordinary kiln the fire is lit, the ware is burned, the whole chamber is allowed to cool, and only then is it emptied and refilled. A continuous kiln is built instead as a ring of chambers, and the fire is walked round it from one to the next: the chamber behind the fire is cooling, the chamber ahead of it is being warmed by the gases drawn through, and men are emptying and filling chambers further round the ring at the same time. Nothing in the building ever goes cold, so the heat of a burned chamber is not lost but _____.",
+   "difficulty": "HARD",
+   "why": "The gases drawn on from a chamber that has been fired are what warm the chamber next in line, so the heat passes forward to the following chamber. The option about discarding names what the ring kiln is built to prevent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "inherited",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "discarded",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "concealed",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "measured",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Along the south coast whole terraces that appear to be built of brick are in fact timber houses hung with tiles shaped so that the exposed part of each is the size and colour of a brick face, its lower edge thickened to throw a shadow like a joint. Only at a corner, or where a tile has fallen, does the arrangement become _____ to a passer-by.",
+   "difficulty": "HARD",
+   "why": "The whole point of the covering is that it passes for brickwork, so a corner or a gap is where the truth of it can be seen. An option about the covering becoming profitable would have nothing to do with what a passer-by notices.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "profitable",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "traditional",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "apparent",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "acceptable",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Cut into the faces of many medieval churches are small incised figures, a few strokes each, repeated on stone after stone. They are not decoration: the same mark appears on blocks in quite different parts of a building and never twice in one course by accident. Where a cathedral's accounts survive alongside its walls, the marks can sometimes be matched to the men named in them as paid by the piece. The marks are, in short, the record a paymaster needed of who had worked which stone.",
+   "difficulty": "HARD",
+   "why": "The text moves from what the marks look like to what the paymaster needed them for, so it sets out to account for their purpose. The option calling them a decorative scheme names the reading the second sentence rejects outright.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To argue that the marks were a decorative scheme that later builders abandoned.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To explain what the incised marks on medieval church stones were for.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "To compare the accounts of two cathedrals with one another.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To describe the tools with which the marks were made.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "Terracotta blocks were pressed in moulds from a fine clay and fired hard enough to shed water, and a Victorian architect could order a whole cornice by the yard. <u>Every block was made hollow, with thin webs of clay across the void.</u> A solid block of that size would have taken weeks to dry and would have cracked in the fire; hollow, it dried evenly, weighed little enough for one man to set, and could be filled with mortar once it was in place.",
+   "difficulty": "HARD",
+   "why": "Everything after the underlined sentence gives reasons the blocks were made hollow, so the sentence names the feature to be accounted for. Reading it as an admitted defect misses that hollowness is presented throughout as the advantage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces the feature that the rest of the text explains the reasons for.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It admits a defect that the closing sentence proposes a remedy for.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It repeats in other words the claim made in the first sentence.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It supplies a measurement needed for the calculation that follows.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:X1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that the variation of handmade tiles is simply a failure to hold a size?",
+   "passage": "<p><strong>Text 1</strong></p><p>A tile pressed by machine is the same weight and the same thickness as the last, and a roof laid with such tiles lies flat and takes fewer of them to the square yard. The handmade tile was admired for a variation that was, in plain terms, a failure to hold a size. Nobody who has stripped a two-hundred-year-old roof and found a third of the tiles cracked at the nib will mourn the loss of that irregularity.</p><p><strong>Text 2</strong></p><p>Handmade tiles vary in thickness by a few millimetres, and the variation is what gives an old roof its broken surface and its changing colour under a low sun. It also does work: a roof of slightly uneven tiles drains along many small channels rather than lying in one plane, and it tolerates a rafter that has moved. Machine tiles laid over the same old timber must either be bedded on packing or be allowed to ride, and the roofer's answer is usually to renew the timber instead.</p>",
+   "difficulty": "HARD",
+   "why": "Text 2 credits the uneven tiles with draining along many channels and tolerating a moved rafter, which treats the variation as useful rather than as a mere defect. The option denying that handmade tiles vary contradicts Text 2's own opening sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "By denying that handmade tiles vary in thickness at all.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By agreeing that the variation is a fault but arguing that buyers have grown fond of it.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "By pointing out that the variation has practical uses on an old roof that a uniform tile does not serve.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "By noting that machine tiles crack at the nib as often as handmade ones do.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The earliest traceried windows were made by cutting shapes through a slab of stone: two lights with a circle above them, pierced in the thickness of the wall much as one might pierce a sheet of paper. What such a window can be is limited by how much a solid panel will give up before it falls, and the openings stay small. Bar tracery reverses the thinking. The pattern is set out first as a system of lines, and every line is then cut as a separate moulded bar and jointed to its neighbours. Once the stonework is understood as a frame put together from parts rather than as a panel with holes in it, the glass can grow until the space between one buttress and the next is very nearly all window.",
+   "difficulty": "HARD",
+   "why": "The passage contrasts a panel that can only lose so much material with a pattern of jointed bars, and ends with the glass growing to fill the bay, so the change in method and the resulting size are the point. Nothing in the text says pierced windows collapsed; it says only that the size of their openings was limited.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Moulded bars proved cheaper to cut and fit than a pierced slab of the same size.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The buttresses beside a window had to be enlarged once bar tracery came into use.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Windows made by piercing a slab were structurally unsound and often collapsed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Bar tracery treats a window as a frame assembled from separate members, which allowed far larger openings than a pierced slab could.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "Ox hair beaten into the coarse stuff of a plasterer's first coat is not there to make the hardened wall stronger, and a set coat carries its own weight perfectly well without any. The hair does its work in the hours before the coat has set at all. Wet stuff pressed onto lath is a heavy mass hanging on a row of thin strips, and it shrinks as the water leaves it. With no fibre in it the shrinking coat tears itself apart and opens a crack over every gap between the laths; with fibre, the shrinkage is taken up across many thousands of hairs and shared along the whole coat. Plasterers who now beat in glass fibre instead of hair are answering the same difficulty in a newer material.",
+   "difficulty": "HARD",
+   "why": "The first sentence denies that the hair strengthens the hardened wall and the rest of the passage describes what it does during shrinkage, so the contrast between the two is the idea. The claim that plaster will not set without fibre is contradicted by the opening statement that a set coat carries its own weight without any.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Fibre in a plaster coat controls the shrinkage that happens before setting rather than strengthening the coat afterwards.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Plaster laid on lath will not set at all unless a fibre has been beaten into it.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Glass fibre has entirely displaced ox hair in modern plastering.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The first coat of plaster is stronger than any of the coats laid over it.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most strongly support Ferreira's argument?",
+   "passage": "A plain tile roof carries two thicknesses of tile everywhere and three at the head of every course, and the weight of all that clay has to be carried by the rafters. A pantile is moulded to a shallow S so that each tile laps only the tile beside it and the course below, and a roof of pantiles is therefore a single thickness over most of its area and a good deal lighter. Idris Ferreira argues that pantiles spread through the eastern counties in the seventeenth century chiefly because of that lightness rather than because they were the cheaper covering.",
+   "difficulty": "HARD",
+   "why": "Ferreira has to rule out price and establish weight, and the accounts showing equal cost beside consistently lighter rafters do both at once. Importation from the Low Countries speaks to where the tiles came from and leaves the reason for their spread untouched.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Pantiles were made in a wider range of colours than plain tiles were.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Many roofs first covered in pantiles have since been stripped and covered in slate.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Pantiles were brought in from the Low Countries for some years before they were made in England.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Surviving accounts show pantiles costing about the same as plain tiles for a given area of roof, while the rafters under pantiled roofs were consistently of lighter scantling.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from Verner's manual most effectively illustrates the claim?",
+   "passage": "A raking shore is a heavy timber set on a slant against a wall that has begun to lean, its foot on the ground well out from the building and its head pressed against the masonry. In a builder's manual of 1873, Josiah Verner insisted that whether such a shore does any good depends entirely on the level at which its head meets the wall, and not at all on how big a timber has been used.",
+   "difficulty": "HARD",
+   "why": "Verner's claim is about the level at which the head bears, and the quotation about landing at a floor rather than between floors is the only one that turns on that level. The quotation giving timber sizes for walls of three and four storeys is about the size of the shore, which is exactly what Verner said does not matter.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Let no shore be left standing beyond the season, for the timber shrinks and the wall settles down upon it.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Bring the head of your rake to bear at the level of a floor, where the joists may take the thrust; a shore that lands between two floors pushes upon the plaster and nothing besides.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;A shore of nine inches square will answer for a wall of three storeys, and one of eleven inches square for a wall of four.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;The foot must stand upon a sole piece bedded on firm ground, and never upon made earth, which will give under the thrust.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "passage": "Good plasterwork on lath is built up in three coats, each thinner than the one before it and each left to dry back before the next is laid, since a coat spread on ground that is still moving will craze as the ground shrinks under it. A specification of the 1890s sets out the work:<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Coat</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Thickness (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Days before the next coat</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">First, pressed through the lath</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Floating</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Setting</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">final coat</td></tr></table>",
+   "difficulty": "HARD",
+   "why": "The thicknesses fall from 9 mm to 6 mm to 3 mm, and the ten-day wait, the longer of the two, comes before the 3 mm setting coat. The option putting the thickest coat last reverses the order the table gives.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The thickest coat is laid last, after the longest wait.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Each coat is thicker than the one before it, and the wait between coats shortens as the work goes on.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The coats grow thinner as the work goes on, and the longest wait falls immediately before the thinnest coat of all.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The three coats are of equal thickness, and only the waiting time changes.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Blocks in a cornice or a parapet are held to one another by iron cramps, and the pocket cut for the cramp is run full of molten lead so that no water can stand against the metal. Where the lead has been skimped, or left with a channel down one side, rain reaches the iron and it rusts. Rust occupies several times the volume of the metal it replaces and has nowhere to go but into the stone around it, so in such a building the stone that fails first _____",
+   "difficulty": "HARD",
+   "why": "The expansion described has nowhere to go but into the stone enclosing the pocket, which places the damage at the pockets and not in the open face. The option about the softest bed introduces a cause the passage never mentions and it does not follow from the rusting described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "is whichever block happens to have been cut from the softest bed.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "is the stone standing furthest from any joint.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "shows no crack at all until the iron has rusted entirely away.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "is the stone immediately around the cramp pockets rather than the stone in the open face.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A bare scaffold lets the wind blow through between its poles and its boards, and the ties fastening it back to the building have little to hold beyond the frame's own weight and the men working on it. Sheeting the same scaffold in plastic to keep the weather off the work turns that open frame into a wall standing in the wind. A designer handed a scaffold already standing and asked to sheet it _____",
+   "difficulty": "HARD",
+   "why": "The passage turns on sheeting converting an open frame into a wall in the wind, which is a new sideways load on the very fastenings that were sized without it. The option about sheeting weighing almost nothing answers a point the passage never made, since the load described is wind rather than weight.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "may leave the ties as they are, since sheeting weighs almost nothing.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "should take out some of the ties so that the sheeting can move freely.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "has to calculate the ties afresh, because the frame will now gather a load it was never tied to resist.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "will find that a sheeted scaffold needs no ties at all.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Between the two corners of a course a bricklayer stretches a line and beds every brick along it. On a long run the line sags of its own weight in the middle, so a small tin plate _____ is hooked over it halfway along and held down by a spare brick until the course reaches it.",
+   "difficulty": "HARD",
+   "why": "The name of the plate interrupts the sentence and is set off with a dash at each end of it. Opening the interruption with a dash and closing it with a comma mixes two kinds of punctuation across a single break.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&mdash; a tingle &mdash;",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "&mdash; a tingle,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": ", a tingle &mdash;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&mdash; a tingle",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A brick burned in a kiln full of air comes out red, because the iron in the clay has taken up oxygen. Shut the air off towards the end of the firing and the same clay yields a dense grey-blue skin instead, which is why the engineering bricks of south Staffordshire are _____ colour is the whole record of how the fire was run.",
+   "difficulty": "HARD",
+   "why": "Two complete sentences stand either side of the blank, so they need a full stop between them rather than a comma. Setting a comma before the word however leaves the same two sentences spliced together with no joining word between them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "blue the",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "blue, however the",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "blue. The",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "blue, the",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Tiles were left to dry under an open-sided shed rather than in the sun, since a face that dries faster than its back will curl away from the flat. The shed cost the yard nothing to _____ week of still weather under it did more for a tile than any amount of care at the mould.",
+   "difficulty": "HARD",
+   "why": "Two complete sentences are being joined at the blank, which calls for a comma together with the joining word. Leaving the comma out runs the two together, and a comma with no joining word splices them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "run, a",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "run; and a",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "run, and a",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "run and a",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The lodge was the shed built against the wall of a cathedral under construction, where the banker masons worked under cover and where their tools were kept. It gave its name to the customs that governed the trade, so that the _____ on hours, on wages and on who might be taught the work outlasted the buildings they were framed for.",
+   "difficulty": "HARD",
+   "why": "The rules belong to the masons of the lodge, more than one of them, so the plural noun already ending in s takes an apostrophe after it. The singular possessive would put the whole body of custom down to one man.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "masons's rules",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "mason's rules",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "masons' rules",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "masons rules",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A cornice is run in place rather than cast: a zinc profile is screwed to a wooden horse, and the plasterer slides that horse along a rule while an assistant feeds fresh stuff in ahead of it. Sliding the mould along the rule for the twentieth time, _____ finally stood clean and sharp along the whole length of the room.",
+   "difficulty": "HARD",
+   "why": "Whoever is sliding the mould has to be named directly after the opening phrase, and the only option that names a person there is the one beginning with the plasterer. Beginning with the moulding says that the moulding slid itself along the rule.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the moulding's profile",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "the plasterer found that the moulding",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "the moulding",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "it was the moulding that",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "A brick with holes through it uses less clay, dries faster and burns more evenly, since no part of it lies far from a surface. The rows of perforations pressed through the bed face of a modern brick also _____ the mortar to squeeze up into the brick and lock the course together.",
+   "difficulty": "HARD",
+   "why": "The subject of the verb is the rows, which is plural; the words about perforations and about a modern brick sit between the subject and its verb without changing what the subject is. The singular form agrees with the nearest noun rather than with the one doing the allowing.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has allowed",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "is allowing",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "allow",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "allows",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "An arch is built of wedge-shaped blocks and the block at the crown goes in last of all. Until that block is driven home the ring is not an arch but two half-arches leaning on the timber beneath; the keystone closes the ring, and _____ arrival is what allows the timber to be taken away.",
+   "difficulty": "HARD",
+   "why": "The arrival belongs to the keystone, one block, so the possessive form without an apostrophe is wanted. The plural possessive would have to refer to more than one block, and the sentence names a single one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "their",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "its'",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "it's",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "its",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A flying buttress is not a prop leaning on a wall. It is an arch that carries the outward push of a high vault over the aisle beneath and delivers it to a pier standing clear of the building, and the pinnacle loaded on top of that pier turns the push downward inside the masonry. _____ the buttress is not holding the wall up; it is holding the vault in.",
+   "difficulty": "HARD",
+   "why": "The final sentence restates in plain terms what the description before it has just set out in detail, which is what a restating phrase signals. A word announcing an example would promise a particular case, and none follows.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In other words,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A cavity wall is two leaves of brickwork with an air gap between them. Rain that crosses the outer leaf runs down the inside face of it and out again through weep holes at the bottom, so it never reaches the inner leaf at all. _____ the two leaves have to act as one against the wind, and they are pinned to each other by metal ties laid across the gap at regular intervals.",
+   "difficulty": "HARD",
+   "why": "The gap is what keeps the water out, and the sentence after the blank says the two leaves must nonetheless be joined, which sets a requirement against the separation just described. A phrase announcing a result would say the tying follows from the gap, when it works against it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "As a result,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Even so,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:N8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Ashlar is stone worked to a true face and a true bed and laid in courses with joints a few millimetres wide. Rubble walling takes the stone much as it comes, packed out with small pieces and a great deal more mortar. A block of ashlar spends hours at the bench that a rubble stone never sees, and the wall costs accordingly. _____ a great many buildings are ashlar only where they are looked at, and rubble behind the face and around the back.",
+   "difficulty": "HARD",
+   "why": "The cost of working ashlar makes the practice of using it only where it shows exactly what a reader would expect, which is what the chosen opening signals. A concessive opening would present that practice as going against the cost, when it follows from it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Unsurprisingly,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Instead,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why a platform needs a toe board as well as a guard rail. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A working platform more than two metres above the ground must be guarded.</li><li>A guard rail runs about a metre above the boards.</li><li>A toe board about 150 mm high is fixed along the edge of the platform.</li><li>Material kicked off a platform injures people standing below it.</li><li>A worker who overbalances at the edge falls from the platform himself.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The question is why two devices are needed, so the answer has to attach a different hazard to each, which only the option separating the worker going over the edge from material kicked off it does. Giving the heights of the two describes them without saying what either is for.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The rail stops the worker going over the edge, while the board along the boards stops tools and material being kicked off onto the people below.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A guard rail stands about a metre above the boards and a toe board about 150 mm above them.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Falling material and falling workers are both hazards wherever a platform is in use.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Any working platform more than two metres above the ground has to be guarded.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain the practical advantage of a rib vault to a reader who knows nothing of vaulting. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A groin vault is built as one continuous shell of masonry over a whole bay.</li><li>A rib vault is built first as a skeleton of stone arches.</li><li>The webs are the thin panels that fill the spaces between the ribs.</li><li>Centring for a groin vault has to hold up the whole bay at once.</li><li>Centring for a rib vault has to hold up the ribs only.</li></ul>",
+   "difficulty": "HARD",
+   "why": "An advantage is a comparison, and only the option setting centring for the ribs against centring for a whole bay says what the builder actually gains. Describing the skeleton and its panels defines a rib vault without weighing it against anything.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The webs of a rib vault are the panels lying between one rib and the next.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because the ribs go up first and then carry the webs, the timber centring beneath a rib vault need only hold the arches, where a groin vault's centring must hold the whole bay.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "A groin vault is a single continuous shell of masonry thrown over a whole bay.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A rib vault is built as a skeleton of stone arches with thin panels filled in between them.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T29:S1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the scale of a hand gang's daily output. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A hand brickmaking gang worked as a team of four or five.</li><li>The temperer cut and worked the clay ready at the heap.</li><li>The moulder threw a clot of clay into a sanded wooden mould at the bench.</li><li>The off-bearer carried filled moulds out to the drying ground and returned the empties.</li><li>A gang of this kind turned out between four and five thousand bricks in a working day.</li></ul>",
+   "difficulty": "HARD",
+   "why": "Only the option giving four to five thousand bricks from four or five men states any quantity, and a quantity is what a claim about scale requires. The option naming the three jobs describes how the gang was organised and leaves the output unmentioned.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Sharing the clay, the mould and the barrow between them, a gang of four or five men turned out four to five thousand bricks in a working day.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The temperer's task was to have clay worked and waiting before the moulder needed it.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A hand brickmaking gang divided its work between a temperer, a moulder and an off-bearer.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The moulder threw a clot of clay into a sanded wooden mould at the bench, and the off-bearer carried the filled mould away.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A carter is paid $14 for every day he works at a brickyard and, on top of that, $9 for every load of green bricks he carries to the kilns. In a week in which he worked 6 days he was paid $624 altogether. How many loads did he carry that week?",
+   "difficulty": "MEDIUM",
+   "check": "The 6 days are worth 84 dollars, leaving 540 dollars at 9 a load, so 60 loads.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "60",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "66",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "69",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "72",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "The number of green bricks still standing in a drying shed d days after the moulding gang stopped work is 15,400 - 620d. On which day does the shed first hold fewer than 4,000 green bricks?",
+   "difficulty": "MEDIUM",
+   "check": "15,400 - 620d < 4,000 gives d > 18.38, so the first whole day is day 19.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "17",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "19",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "Two kilns are lit on the same morning, each with 30 tonnes of coal at its mouth. The first burns coal steadily at 0.6 tonnes an hour and the second steadily at 0.45 tonnes an hour. After how many hours of burning does the first kiln have 9 tonnes less coal left than the second?",
+   "difficulty": "MEDIUM",
+   "check": "The two amounts left are 30 - 0.6h and 30 - 0.45h, whose difference 0.15h equals 9 at h = 60.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "45",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "60",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Three fifths of the green bricks standing in a drying shed were set in a kiln. Then 480 of the bricks still in the shed were carted to a second shed, and 1,120 green bricks were left standing in the first. How many green bricks were standing in the shed before any were moved?",
+   "difficulty": "MEDIUM",
+   "check": "Two fifths of the start, less 480, is 1,120, so two fifths is 1,600 and the start is 4,000.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4,000",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "4,800",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5,200",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6,400",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A plasterer gauges every batch of coarse stuff so that 3s + 2p = 96, where s is the number of barrows of sand and p the number of barrows of lime putty in the batch. One batch is gauged with 4 more barrows of sand than another batch. How many fewer barrows of lime putty does that batch use?",
+   "difficulty": "MEDIUM",
+   "check": "Raising s by 4 raises 3s by 12, so 2p must fall by 12 and p falls by 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A moulder is held to an output that averages at least 1,200 green bricks a day over a five-day week. On the first four days of one week he moulded 1,150, 1,240, 1,090 and 1,275 bricks. What is the least number of green bricks he can mould on the fifth day and still meet that condition?",
+   "difficulty": "MEDIUM",
+   "check": "Five days at a mean of 1,200 need 6,000 altogether, and the first four came to 4,755.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,200",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "1,225",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "1,245",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "1,260",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "At a brickyard the cost of firing n thousand bricks is \\(0.5n^{2}+13n\\) dollars, and the money taken for them is \\(0.5n^{2}+31n-54\\) dollars. Which expression gives the brickyard's profit, in dollars, on n thousand bricks?",
+   "difficulty": "MEDIUM",
+   "check": "Subtracting the cost from the money taken cancels the squared terms and leaves 18n - 54.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18n-54",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "18n+54",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(n^{2}+18n-54\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "44n-54",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A moulding gang has 540 thousand green bricks to mould for a contract. If the gang moulded 3 thousand more bricks each day than it now plans to, it would finish the contract 9 days earlier than it now plans to. How many thousand bricks a day does the gang now plan to mould?",
+   "difficulty": "MEDIUM",
+   "check": "540/n - 540/(n+3) = 9 clears to n^2 + 3n - 180 = 0, whose positive root is 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "Two brick piers stand on the same footing. One is 4 metres taller than the other, and the sum of the squares of their two heights, each in metres, is 106. How many metres tall is the shorter pier?",
+   "difficulty": "MEDIUM",
+   "check": "x^2 + (x+4)^2 = 106 gives x^2 + 4x - 45 = 0, whose positive root is 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "7",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The depth of scale on the inside of a brick flue, in millimetres, is modelled by \\(s(t)=0.6t^{2}+2t\\), where t is the number of years since the flue was built. What is the average rate of change of this model, in millimetres a year, from the fourth year to the tenth year?",
+   "difficulty": "MEDIUM",
+   "check": "s(10) = 80 and s(4) = 17.6, and their difference over 6 years is 10.4 a year.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8.4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "9.6",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "10.4",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "12.2",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A plasterer's estimating rule gives the number of laths a panel takes as \\(x^{2}+18x+c\\), where x is the width of the panel in feet and c is a constant. That expression is the square of a binomial for every value of x. What is the value of c ?",
+   "difficulty": "MEDIUM",
+   "check": "(x+9)^2 = x^2 + 18x + 81 is the only square with an 18x term, so c = 81.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "72",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "81",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A plasterer's drying model is the function f defined by \\(f(x)=x^{2}-9x\\), where x is the number of hours since the coat was laid. The model takes the same value at k hours as it does at k+3 hours. What is the value of k ?",
+   "difficulty": "MEDIUM",
+   "check": "f(k+3) - f(k) = 6k - 18, which is 0 only at k = 3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "4.5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A brickyard buys its coal either in loads of 12 tonnes costing $960 or in loads of 20 tonnes costing $1,560. How many dollars less does a tonne of coal cost in the larger load than in the smaller?",
+   "difficulty": "MEDIUM",
+   "check": "960/12 = 80 a tonne and 1,560/20 = 78 a tonne, a difference of 2.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "A chimney stack was measured at the end of each week while it was being built, and the table gives the height reached. During which week did the stack rise by the greatest number of metres?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">End of week</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Height of stack (m)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6.4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12.1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17.2</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">23.5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">28.0</td></tr></table>",
+   "difficulty": "MEDIUM",
+   "check": "The weekly rises are 5.7, 5.1, 6.3 and 4.5 metres, and the greatest is in week 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Week 2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Week 3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Week 4",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Week 5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A firing drew 24,000 bricks. Of those, 6 per cent were wasters and were thrown out. Of the bricks that remained, one in every eight was graded a second and the rest were graded first quality. How many bricks were graded first quality?",
+   "difficulty": "MEDIUM",
+   "check": "24,000(0.94) = 22,560 sound bricks, and seven eighths of 22,560 is 19,740.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18,048",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "19,200",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "19,560",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "19,740",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "Six firings at a brickyard used 14, 17, 12, 19, 15 and 21 tonnes of coal. A seventh firing then used 16 tonnes. By how many tonnes did the median of the list change when the seventh figure was added to it?",
+   "difficulty": "MEDIUM",
+   "check": "The first six sort to 12, 14, 15, 17, 19, 21 with median 16; adding 16 keeps the median at 16.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "0",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "0.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "1.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A lath is nailed diagonally across the corner of a rectangular door opening. It meets the jamb at a point 45 centimetres below the head and meets the head at a point 108 centimetres from that jamb. The lath is cut 6 centimetres longer at each end so that it can be nailed. What is the length, in centimetres, of the piece of lath cut?",
+   "difficulty": "MEDIUM",
+   "check": "The diagonal is sqrt(45^2 + 108^2) = 117, and 117 + 6 + 6 = 129.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "117",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "121",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "125",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "129",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "The two sloping sides of a brick gable are equal, and each makes an angle with the horizontal whose tangent is \\(\\frac{7}{24}\\). The gable is 14.4 metres wide at its base. How long, in metres, is each of its sloping sides?",
+   "difficulty": "MEDIUM",
+   "check": "Half the base is 7.2, the rise is 7.2(7/24) = 2.1, and sqrt(7.2^2 + 2.1^2) = 7.5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6.9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7.5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "8.4",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "9.6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "The inside of a brick kiln is a rectangular box 9 metres long, 4 metres wide and 3 metres high to the springing, and above that sits a crown in the form of half a cylinder of the same 9-metre length whose diameter is the 4-metre width. What is the total volume inside the kiln, in cubic metres?",
+   "difficulty": "MEDIUM",
+   "check": "The box holds 9(4)(3) = 108 and the half-cylinder (1/2)pi(2^2)(9) = 18 pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(108+9\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(108+12\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(108+18\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(108+36\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Of the bricks drawn from one kiln, one third were graded commons and one quarter were graded facings. The remaining 250 bricks were graded seconds. How many bricks were drawn from the kiln?",
+   "difficulty": "MEDIUM",
+   "check": "Commons and facings take 7/12 of the draw, so the 250 seconds are 5/12 of it and the draw is 600.",
+   "correctAnswerFR": "[\"600\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "Of the 400 bricks drawn from a kiln, 15 per cent were wasters and the rest were sound. One of those 400 bricks is picked at random. What is the probability that the brick picked is not a waster?",
+   "difficulty": "MEDIUM",
+   "check": "340 of the 400 bricks are sound, and 340/400 = 0.85.",
+   "correctAnswerFR": "[\"0.85\", \"17/20\", \".85\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M1:H1-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A room is 5.4 metres long, 4.2 metres wide and 2.5 metres high, and its four walls are to be plastered. A doorway 2 metres high and 0.9 metres wide is cut in one of the walls and is not plastered. How many square metres of plastering does the room take?",
+   "difficulty": "MEDIUM",
+   "check": "The four walls are 2(5.4+4.2)(2.5) = 48 square metres, less the 1.8 of the doorway.",
+   "correctAnswerFR": "[\"46.2\"]"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A pallet held 480 plain tiles. Seven equal barrow loads were taken off it and 165 tiles were left on it. How many tiles were in each barrow load?",
+   "difficulty": "EASY",
+   "check": "480 - 165 = 315, and 315/7 = 45.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "35",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "45",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "55",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "63",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "An empty crate has a mass of 8 kilograms, and each ridge tile packed into it has a mass of 3 kilograms. The full crate has a mass of 71 kilograms. How many ridge tiles are in the crate?",
+   "difficulty": "EASY",
+   "check": "3t + 8 = 71 gives 3t = 63 and t = 21.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "21",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "26",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The table gives three values of the linear function h, which a tiler uses to work out the number of battens a roof takes.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">h(x)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">23</td></tr></table> What is the value of h(8) ?",
+   "difficulty": "EASY",
+   "check": "h rises by 6 for every rise of 2 in x, so h(8) = 23 + 6 = 29.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "27",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "29",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "31",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A hoist raises a load at a constant speed. The load was 9 metres above the ground 2 seconds after the hoist started and 21 metres above the ground 6 seconds after it started. How many metres does the load rise each second?",
+   "difficulty": "EASY",
+   "check": "(21 - 9)/(6 - 2) = 12/4 = 3 metres a second.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "2.5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "3",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A mason is paid $22 for every stone he dresses. What is the least whole number of stones he must dress for his pay to be more than $300 ?",
+   "difficulty": "EASY",
+   "check": "22s > 300 gives s > 13.6, so 14 stones is the least whole number.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A tiler's rule for the number x of tiles in one row makes 7x - 12 = 4x + 27 true. What is the value of x ?",
+   "difficulty": "EASY",
+   "check": "Taking 4x from both sides gives 3x - 12 = 27, so 3x = 39 and x = 13.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "The number of tiles x that may be sent up in one lift of a hoist satisfies \\(5x+8\\le 78\\). What is the greatest number of tiles that may be sent up in one lift?",
+   "difficulty": "EASY",
+   "check": "5x is at most 70, so x is at most 14.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "17",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "On a mason's cutting list the numbers a and b of two sizes of stone satisfy 2a + 3b = 17. What is the value of 6a + 9b ?",
+   "difficulty": "EASY",
+   "check": "6a + 9b is 3 times 2a + 3b, so it is 3(17) = 51.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "17",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "34",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "51",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "68",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "At a tileworks the number of sound tiles left after sorting is 7x - 2(x - 4), where x is the number of racks sorted. That number equals ax + 8 for every value of x, where a is a constant. What is the value of a ?",
+   "difficulty": "EASY",
+   "check": "7x - 2x + 8 = 5x + 8, so a = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The function h is defined by \\(h(x)=(x-2)(x+6)\\). For which values of x is \\(h(x)=0\\) ?",
+   "difficulty": "EASY",
+   "check": "A product is zero only when a factor is, so x - 2 = 0 or x + 6 = 0.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-6 and -2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "-6 and 2",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "-2 and 6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "2 and 6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "Tiles are stacked in a square, x tiles along each side, so that the stack holds \\(x^{2}\\) tiles altogether. One such stack holds 196 tiles. How many tiles are there along each side of it?",
+   "difficulty": "EASY",
+   "check": "x^2 = 196 and x is positive, so x = 14.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "98",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The function p gives the price, in dollars, of n ridge tiles, and \\(p(n)=1.75n\\). Which statement is the best interpretation of \\(p(40)=70\\) ?",
+   "difficulty": "EASY",
+   "check": "p takes a number of tiles and returns a price, so p(40) = 70 prices 40 tiles at $70.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "One ridge tile costs $40.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The price of 70 ridge tiles is $40.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "One ridge tile costs $70.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The price of 40 ridge tiles is $70.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The function f gives the number of minutes a hoist takes to raise x crates of tiles, and \\(f(6)=19\\). Which point must lie on the graph of \\(y=f(x)\\) in the xy-plane?",
+   "difficulty": "EASY",
+   "check": "f(6) = 19 says the input 6 is paired with the output 19, which is the point (6, 19).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "(0, 19)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "(19, 0)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "(19, 6)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "(6, 19)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Two thirds of the tiles on a pallet are plain tiles, and one quarter of the plain tiles on that pallet are graded seconds. What fraction of all the tiles on the pallet are plain tiles graded seconds?",
+   "difficulty": "EASY",
+   "check": "A quarter of two thirds is one sixth.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{1}{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{6}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{5}{12}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of tiles of each kind stacked on one pallet. What fraction of the tiles on the pallet are ridge tiles?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Kind of tile</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Number on the pallet</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Plain</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">180</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Pantile</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ridge</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">72</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Valley</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr></table>",
+   "difficulty": "EASY",
+   "check": "The pallet holds 360 tiles and 72 of them are ridge tiles, so the fraction is 1/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{1}{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{1}{6}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{1}{5}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A pallet holds 480 plain tiles and 120 ridge tiles and no others. The number of plain tiles on the pallet is how many times the number of ridge tiles?",
+   "difficulty": "EASY",
+   "check": "480/120 = 4.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "On seven working days a hoist gang broke 4, 2, 5, 2, 6, 2 and 7 tiles. Which number of broken tiles was recorded on more of those days than any other?",
+   "difficulty": "EASY",
+   "check": "2 appears on three of the seven days and every other figure appears once.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "7",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A hoist rope is wound on a drum whose radius is 25 centimetres. How far, in centimetres, does the load rise during one complete turn of the drum?",
+   "difficulty": "EASY",
+   "check": "One turn winds on the circumference, 2 pi (25) = 50 pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(25\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(35\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(50\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(625\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A guy rope runs in a straight line from the head of a hoist mast to a peg in level ground. The head of the mast is 15 metres above the ground, and the tangent of the angle the rope makes with the ground is \\(\\frac{5}{2}\\). How many metres from the foot of the mast is the peg?",
+   "difficulty": "EASY",
+   "check": "The tangent is the 15-metre rise over the distance, so the distance is 15 divided by 5/2, or 6.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "7.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "37.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "On seven days a mason's yard received 12, 9, 15, 8, 20, 14 and 6 loads of stone. How many of those seven figures are greater than the mean of the seven?",
+   "difficulty": "EASY",
+   "check": "The seven loads total 84, so the mean is 12, and 15, 20 and 14 stand above it.",
+   "correctAnswerFR": "[\"3\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A circular sinking is cut in the top face of a stone plinth, and the sinking measures 42 centimetres across. The area of the sinking is \\(k\\pi\\) square centimetres. What is the value of k ?",
+   "difficulty": "EASY",
+   "check": "The radius is 21 centimetres, so the area is 21 squared times pi.",
+   "correctAnswerFR": "[\"441\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2E:H2E-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A straight joint runs across the top of a stone plinth. On one side of the joint the angle between the joint and a set square measures \\((3x+20)\\)&deg;, and on the other side the angle between them measures \\((2x-5)\\)&deg;. The two angles together make a straight line. What is the value of x ?",
+   "difficulty": "EASY",
+   "check": "(3x+20) + (2x-5) = 180 gives 5x + 15 = 180 and x = 33.",
+   "correctAnswerFR": "[\"33\"]"
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Two lengths x and y, in centimetres, cut from a stone bed satisfy \\(x+y=13\\) and \\(x^{2}-y^{2}=91\\). What is the value of \\(x-y\\) ?",
+   "difficulty": "HARD",
+   "check": "x^2 - y^2 = (x+y)(x-y), so 13(x-y) = 91 and x - y = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "91",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A mason is paid d dollars for each of the first 20 stones he dresses in a week, and half that rate for every stone he dresses after the first 20. In terms of d, how much is he paid for dressing 32 stones in a week?",
+   "difficulty": "HARD",
+   "check": "20d for the first 20 and 12(d/2) = 6d for the other 12 gives 26d.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "26d",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "28d",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "30d",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32d",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "On a mason's setting-out grid a straight cutting line passes through the points \\((a,2a)\\) and \\((3a,8a)\\), where a is a positive constant. What is the slope of that cutting line?",
+   "difficulty": "HARD",
+   "check": "(8a - 2a)/(3a - a) = 6a/(2a) = 3 for every positive a.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A tileworks numbers its press settings with integers n. How many integers n satisfy both 5n - 7 > 18 and 3n + 4 \\(\\le\\) 61 ?",
+   "difficulty": "HARD",
+   "check": "n > 5 and n at most 19 give n from 6 to 19, which is 14 integers.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "13",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "On a mason's setting-out plan a straight cutting line has the equation \\(px+qy=r\\), where p, q and r are positive constants. What is the x-coordinate of the point at which the cutting line crosses the x-axis?",
+   "difficulty": "HARD",
+   "check": "Putting y = 0 gives px = r, so x = r/p.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{q}{p}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{p}{r}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{r}{q}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{r}{p}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A dressed stone and the pallet under it have a combined mass of m kilograms, and the stone is 4 times as heavy as the pallet. In terms of m, what is the mass of the stone, in kilograms?",
+   "difficulty": "HARD",
+   "check": "With pallet p the total is 5p = m, so the stone, 4p, is 4m/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{4m}{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{m}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{3m}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{5m}{4}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A tileworks writes its press-wear index as the function f defined by \\(f(x)=\\frac{2x+5}{x^{2}-49}\\). For which values of x is f not defined?",
+   "difficulty": "HARD",
+   "check": "f is undefined exactly where the denominator vanishes, at x = 7 and x = -7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-7 and 7",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "-7 only",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "7 only",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(-\\frac{5}{2}\\) only",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A tileworks models the bow of a pressed tile by the function f defined by \\(f(x)=x^{2}-6x+5\\). For how many values of x does \\(f(x)=-4\\) ?",
+   "difficulty": "HARD",
+   "check": "f(x) + 4 = (x-3)^2, which is zero only at x = 3, so there is exactly one value.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "None",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Exactly one",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Exactly two",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "More than two",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A mason's setting-out rule gives an offset as \\((\\sqrt{y}+3)(\\sqrt{y}-3)\\), where y is a measured length and \\(y\\ge 0\\). Which expression is equivalent to that offset?",
+   "difficulty": "HARD",
+   "check": "The two factors are conjugates, so their product is y - 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(y+9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(y-6\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(y-6\\sqrt{y}+9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(y-9\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "A tileworks models the waste from a press by \\(f(x)=x^{2}-6x+c\\), where c is a constant and x is the number of hours the press has run. The least value f ever takes is 4. What is the value of c ?",
+   "difficulty": "HARD",
+   "check": "f(x) = (x-3)^2 + c - 9, whose least value is c - 9; setting c - 9 = 4 gives c = 13.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "-5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "22",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A tileworks records a clay stiffness index s for which \\(3^{2s}=7\\). What is the value of \\(3^{6s}\\) ?",
+   "difficulty": "HARD",
+   "check": "3^(6s) is the cube of 3^(2s), so it is 7^3 = 343.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "343",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "441",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "2,187",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "2,401",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "On a mason's template the expression \\((2x+5)(x-3)-(x-3)(x+1)\\) gives a length in centimetres. That expression is equivalent to \\((x-3)(ax+b)\\), where a and b are constants. What is the value of \\(a+b\\) ?",
+   "difficulty": "HARD",
+   "check": "Taking out (x-3) leaves (2x+5)-(x+1) = x+4, so a = 1, b = 4 and a + b = 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "11",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A gang of w masons cuts b blocks in d days, every mason working at the same steady rate. At that rate, how many blocks would a gang of 2w masons cut in 3d days?",
+   "difficulty": "HARD",
+   "check": "Twice the masons for three times the days is six times the work, or 6b blocks.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{2b}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3b",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5b",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6b",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The masses of the 9 dressed blocks in one load were recorded, and the median of the 9 masses was 84 kilograms. At most how many of those 9 masses could have been less than 84 kilograms?",
+   "difficulty": "HARD",
+   "check": "The median is the 5th of the 9 sorted masses, so at most the 4 below it can be smaller.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "A tileworks charges for a delivery by a rule of the form \\(C=a+bn\\), where n is the number of crates delivered, C is the charge in dollars, and a and b are constants. The table gives what four deliveries were charged, and exactly one of them was not charged by that rule. Which delivery was not?<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crates delivered</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Charge ($)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">86</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">137</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">188</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">220</td></tr></table>",
+   "difficulty": "HARD",
+   "check": "The first three sit on C = 18 + 17n, which gives 222 for 12 crates, not 220.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The delivery of 4 crates",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The delivery of 7 crates",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The delivery of 10 crates",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The delivery of 12 crates",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "In a mason's yard the ratio of dressed stones to rough stones is 3 to 5. After 40 more dressed stones are brought into the yard, and no rough stones are brought in or taken away, that ratio becomes 5 to 7. How many stones were in the yard before the 40 were brought in?",
+   "difficulty": "HARD",
+   "check": "(3k+40)/(5k) = 5/7 gives k = 70, so the yard held 3(70) + 5(70) = 560.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "280",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "420",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "560",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "640",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A stone column is a right circular cylinder 3.6 metres tall whose base is 0.8 metres across. Its curved surface, but neither of its flat ends, is to be tooled. How many square metres of surface is that?",
+   "difficulty": "HARD",
+   "check": "The curved surface is 2 pi r h with r = 0.4 and h = 3.6, which is 2.88 pi.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(1.44\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(2.88\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(5.76\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(11.52\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A two-centred head for a tracery light is struck with two circular arcs, each of radius equal to the span and each centred on one of the two springing points, so that the two arcs meet at the apex. The span is 2.4 metres. What is the height of the apex above the line joining the two springing points, in metres?",
+   "difficulty": "HARD",
+   "check": "The two springings and the apex form an equilateral triangle of side 2.4, whose height is 1.2 sqrt(3).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(1.2\\sqrt{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(1.2\\sqrt{3}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(2.4\\sqrt{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(2.4\\sqrt{3}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A raking shore is propped against a wall so that it rises 1 metre for every 4 metres it runs out from the foot of the wall. What is the sine of the angle the shore makes with the level ground?",
+   "difficulty": "HARD",
+   "check": "The shore is the hypotenuse of a 1 by 4 right triangle, of length sqrt(17), so the sine is 1/sqrt(17).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{1}{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{4}{17}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{\\sqrt{17}}{17}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{4\\sqrt{17}}{17}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A set of 12 measurements taken at a tileworks has a mean of 25. Every measurement in the set is then increased by 4, and each result is doubled. What is the mean of the 12 numbers that result?",
+   "difficulty": "HARD",
+   "check": "Adding 4 takes the mean to 29, and doubling takes it to 58.",
+   "correctAnswerFR": "[\"58\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A mason's rule sets the number x of stones in a course so that \\(\\frac{3}{x-2}=\\frac{5}{x+6}\\). What is the value of x ?",
+   "difficulty": "HARD",
+   "check": "Cross-multiplying gives 3x + 18 = 5x - 10, so 2x = 28 and x = 14.",
+   "correctAnswerFR": "[\"14\"]"
+  },
+  {
+   "_ref": "AUTHORED/T29-MATH_M2H:H2H-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A stone corbel is cut from a rectangular block 45 centimetres long, 22 centimetres wide and 18 centimetres deep. A rectangular notch running the whole 45-centimetre length, 8 centimetres wide and 6 centimetres deep, is cut out of one edge. What is the volume of the finished corbel, in cubic centimetres?",
+   "difficulty": "HARD",
+   "check": "45(22)(18) = 17,820, the notch is 45(8)(6) = 2,160, and 17,820 - 2,160 = 15,660.",
+   "correctAnswerFR": "[\"15660\"]"
+  }
+ ]
+}

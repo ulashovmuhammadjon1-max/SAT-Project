@@ -2,9 +2,9 @@
 """
 Even out the answer-key distribution of the authored Reading & Writing pool.
 
-Written by hand, the correct option tends to land in the same place — in this
-build it was A 72, B 5, C 4, D 0 — the authored key sat on the first option in
-nearly nine items out of ten, which a student would notice inside one module.
+Written by hand, the correct option tends to land in the same place — Test 29
+came in at A 41, B 21, C 15, D 4 before rotation, which a student would notice
+inside a single module.
 
 Rotating a question's choices moves its key, but it also silently invalidates
 any rationale that refers to an option *by letter* ("A is consistent with
@@ -12,13 +12,16 @@ either explanation"). That exact breakage happened during the Test 6 build, so
 this only rotates questions whose `why` names no letter, and re-checks
 afterwards that no rationale points at the wrong option.
 
-Out: rw_test31_balanced.json
+Every `why` in rw_test29.py names its options by CONTENT, so nothing here is
+locked and all 81 rotate.
+
+Out: rw_test29_balanced.json
 """
 import json
 import re
 from collections import Counter
 
-from rw_test31 import QUESTIONS
+from rw_test29 import QUESTIONS
 
 LETTERS = "ABCD"
 # A standalone option letter: "A is consistent", "Option D would support".
@@ -89,9 +92,9 @@ def main():
     print(f"most common answer: {worst:.0%}")
     assert worst <= 0.32, "still unbalanced"
 
-    with open("rw_test31_balanced.json", "w") as fh:
+    with open("rw_test29_balanced.json", "w") as fh:
         json.dump(out, fh, indent=1, ensure_ascii=False)
-    print("wrote rw_test31_balanced.json")
+    print("wrote rw_test29_balanced.json")
 
 
 if __name__ == "__main__":

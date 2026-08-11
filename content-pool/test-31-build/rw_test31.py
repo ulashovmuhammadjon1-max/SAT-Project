@@ -346,8 +346,9 @@ QUESTIONS = [
           "practice",
           ["procedure", "rehearsal", "custom", "profession"], "A",
           "The word points back to the specific technique just described, holding the day at "
-          "fourteen hours, so it names a method that is carried out. The sense of a rehearsal "
-          "would mean preparation for something later, and the lighting is the thing itself."),
+          "fourteen hours, so it names a method that is carried out. The sense of a custom "
+          "would make the lighting a habit the trade had fallen into, where the passage "
+          "presents it as a deliberate method with a stated effect."),
 
  # --------------------------------------------- Text Structure and Purpose (6)
  tsp("T1",
@@ -817,11 +818,12 @@ QUESTIONS = [
      "wore their feet raw. Drovers took the flock through a shallow trough of tar and then "
      "through a bed of sand, which set into a rough shoe that lasted several days. The "
      "practice sounds cruel and was in fact protective, since a goose that went lame on the "
-     "road was a goose _____ lost.",
-     ["simply", "simply,", "; simply", ": simply"], "A",
-     "The words after the blank finish the noun phrase begun before it, so no mark belongs "
-     "there at all. A semicolon requires a complete statement on each side, and nothing "
-     "after the blank could stand alone as a sentence."),
+     "_____ was a total loss.",
+     ["road", "road,", "road;", "road:"], "A",
+     "The words before the blank are the subject of the verb that follows it, and nothing "
+     "may stand between a subject and its verb, so the blank takes no mark at all. A "
+     "semicolon would require a complete statement on each side of it, and the words after "
+     "the blank cannot stand alone as a sentence."),
 
  bnd("B2",
      "A flight feather is not a solid sheet. Hundreds of barbs run out from the shaft, and "
@@ -879,20 +881,20 @@ QUESTIONS = [
      "rectangular frame with padded rails, slung from the shoulders of the man inside it, "
      "and four or five hooded birds ride on the rails facing outward. The man who carried "
      "it was the _____ the word survives in the modern sense of one who begs a ride.",
-     ["cadger, and", "cadger and", "cadger; and", "cadger:"], "A",
+     ["cadger, and", "cadger and", "cadger; and", "cadger and,"], "A",
      "Two complete statements are joined by a coordinating conjunction, and the comma "
      "before that conjunction is the standard mark. Omitting the comma joins the statements "
      "with nothing at all."),
 
  bnd("B8",
-     "The banks of a decoy pipe are screened with reed panels set at an angle so that a man "
-     "may pass along behind them unseen from the water. Gaps between panels overlap rather "
-     "than meet. The decoyman moves from gap to _____ showing the dog and never himself, "
-     "until the birds have come far enough up the pipe.",
-     ["gap,", "gap;", "gap", "gap:"], "A",
-     "What follows the blank is a participial phrase describing how the decoyman moves, not "
+     "The entrance to a loft is not a plain hole. A row of light wires hangs across it, "
+     "each one hinged along the top so that it swings inward under the head of a bird "
+     "pushing in and falls back into place behind. A returning racer drives through the "
+     "_____ dropping onto the board inside and finding no way out again.",
+     ["wires,", "wires;", "wires", "wires:"], "A",
+     "What follows the blank is a participial phrase describing how the bird arrives, not "
      "a complete statement, so a comma is the mark that attaches it. A semicolon would "
-     "require a full statement on each side."),
+     "require a full statement on each side of it."),
 
  bnd("B9",
      "A kiddle is a fixed fence of stakes and netting run out into a tidal channel to catch "
@@ -927,11 +929,14 @@ QUESTIONS = [
  bnd("B12",
      "Carp are netted from a stew pond at Michaelmas, when the water is cold enough that "
      "the fish handle well and the year's growth is finished. The pond is drawn down over "
-     "several days so the fish collect in a deep sump at the outlet. Only the largest are "
-     "taken; the rest go back for another _____",
-     ["season.", "season", "season,", "season;"], "A",
-     "The sentence ends at the blank and requires a full stop. A comma or semicolon would "
-     "signal that more of the sentence follows, and nothing does."),
+     "several days so the fish collect in a deep sump at the _____ which is the only part "
+     "of the bed still holding water. Only the largest are taken; the rest go back for "
+     "another season.",
+     ["outlet,", "outlet", "outlet;", "outlet:"], "A",
+     "The words after the blank form a relative clause describing the sump, and a clause "
+     "of that kind is attached to the noun it describes with a comma. A semicolon would "
+     "require a complete statement after it, and a relative clause opening with "
+     "&ldquo;which&rdquo; cannot stand alone."),
 
  # ------------------------------------------- Form, Structure, and Sense (9)
  fss("F1",
@@ -1006,7 +1011,7 @@ QUESTIONS = [
      "sight of a man sitting upright.",
      ["Lying flat on his back and paddling with his hands,",
       "Lying flat on his back and paddling with his hands",
-      "By lying flat on his back and paddling with his hands the",
+      "By lying flat on his back and paddling with his hands",
       "Lying flat on his back, and paddling with his hands"], "A",
      "The opening phrase describes the gunner, who must therefore be the subject that "
      "follows, and an introductory participial phrase is closed with a comma. The version "
