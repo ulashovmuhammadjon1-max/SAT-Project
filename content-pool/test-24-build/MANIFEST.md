@@ -197,3 +197,100 @@ renders as an empty row.
 No `Explanation` rows, consistent with every test from Test 1 onward. No images: every figure is
 real `<table>` markup, and the geometry items are worded so they are fully determined without a
 picture.
+
+---
+
+# Repair pass — same-subject R&W passages a single student would meet twice
+
+`validate_tests.py 24` reported **eight** pairs of R&W passages covering one subject where a
+single student sees both sides. A student takes Module 1 plus exactly one Module 2 branch, so
+M1↔M2E and M1↔M2H pairs count, as does any pair inside one module; only M2E↔M2H is safe. The
+original build screened R&W topics against the 1,295-passage corpus and against its own pool for
+*duplication*, but never asked whether two different questions on the same subject could land on
+the same side of the adaptive boundary — and the pool is organised one topic per block, so the
+assembler's per-block deal spread each subject across all three modules by construction.
+
+Test 24 is PUBLISHED in production. This repair changed the source, the assembled JSON and the
+**local** database only; production was not touched.
+
+## Which side of each pair was rewritten, and onto what
+
+The writing-domain item was rewritten wherever a pair had one, because a Transitions, Rhetorical
+Synthesis, Boundaries or Form/Structure/Sense passage exists to host a grammar or transition test
+and its subject is incidental, whereas a reading passage is the substance of its own question.
+Where both sides were writing items, the one whose rewrite also cleared a second near-threshold
+pair was chosen. All eight replacements stay inside Test 24's territory — the rope and canvas
+trades — and every one lands on a corner of it used nowhere else in the test.
+
+| flagged pair | score | rewritten | why that side | new subject |
+|---|---|---|---|---|
+| RW_M2H Q8 (`C4`, Central Ideas) ↔ RW_M2H Q26 (`R6`, Rhet. Synthesis) | 0.38 | **`R6`** | writing item; `C4`'s braille passage is its own question's substance | retting and hackling hemp — why the soak is judged, not timed |
+| RW_M1 Q5 (`W9`, Words in Context) ↔ RW_M2E Q22 (`N6`, Transitions) | 0.30 | **`N6`** | writing item | a rope's size stated round it vs straight across |
+| RW_M1 Q23 (`N2`, Transitions) ↔ RW_M2E Q25 (`R2`, Rhet. Synthesis) | 0.30 | **`R2`** | both writing; rewriting `R2` also cleared `W2`↔`R2` at 0.204 | tarred against white (untarred) cordage |
+| RW_M1 Q17 (`B9`, Boundaries) ↔ RW_M2H Q23 (`N5`, Transitions) | 0.28 | **`N5`** | both writing; rewriting `N5` also cleared `C3`↔`N5` at 0.220 | serving standing rigging with tarred twine against chafe |
+| RW_M2H Q22 (`N8`, Transitions) ↔ RW_M2H Q27 (`R8`, Rhet. Synthesis) | 0.27 | **`N8`** | both writing; rewriting `N8` also cleared `F8`↔`N8` at 0.217 | new canvas shrinking the first time it is wetted |
+| RW_M1 Q14 (`I4`, Inferences) ↔ RW_M2E Q23 (`N9`, Transitions) | 0.27 | **`N9`** | writing item; also cleared `F9`↔`N9` at 0.174 | a netmaker's flat gauge and even meshes |
+| RW_M1 Q26 (`R9`, Rhet. Synthesis) ↔ RW_M2H Q3 (`W12`, Words in Context) | 0.27 | **`R9`** | writing item | a knotted join against a spliced one |
+| RW_M1 Q16 (`B6`, Boundaries) ↔ RW_M2E Q21 (`F5`, Form/Structure) | 0.25 | **`F5`** | both writing; `F5` sits in a Module 2 branch, so its replacement has one fewer module to stay clear of | a tarpaulin lashed over open crates |
+
+Each question still tests exactly what it tested before:
+
+- **`N5`, `N8`** keep their consequence relation and their four unchanged options, so `As a
+  result,` / `Accordingly,` remain the only fits and the concessive distractors remain wrong for
+  the same reason.
+- **`N6`** keeps its contrast relation (two conventions set against each other) and **`N9`** its
+  concessive one (measures nothing, yet every mesh matches).
+- **`F5`** keeps the tested structure exactly: singular head noun, a plural noun in the relative
+  clause sitting nearer the blank, and a verb that must agree with the head — `A tarpaulin that is
+  lashed down over several open crates **shields** …`.
+- **`R2`** keeps the trade-off shape its goal depends on (one kind wins in one place and loses in
+  another), so the key is still the only option combining both halves, and the "names a single
+  winner" distractor still fails for the stated reason.
+- **`R6`, `R9`** keep the one-option-only structure: the key supplies the causal chain or the
+  trade-off, and the three distractors restate a single note, define a term, or restate the very
+  practice the student was asked to explain.
+
+`N6`'s arithmetic was checked: a three-inch circumference is 3/π ≈ 0.955 inches across, so "just
+under an inch" is right. `N6` deliberately avoids the word *diameter* so it shares no vocabulary
+with `E8`'s sheave table in Module 1.
+
+## Results after the repair
+
+| | before | after |
+|---|---|---|
+| `validate_tests.py 24` | FAIL, 8 same-subject pairs | **PASS**, zero problems |
+| worst student-visible same-subject pair | 0.375 (`C4`↔`R6`) | **0.225** (`T2`↔`B2`, untouched, threshold 0.24) |
+| worst pair involving a rewritten item | — | 0.196 (`R9`↔`R1`: splices vs the Chatham ropewalk — different subjects) |
+| R&W key distribution | A21/B20/C20/D20 | **A21/B20/C20/D20** |
+| questions whose key letter moved | — | **0** |
+| highest R&W Jaccard vs the 1,295-passage bank | 0.39 (`T1`) | 0.39 (`T1`); highest for a rewritten item is 0.32 (`R6`) |
+| `check_originality.py ngrams` | 0 flagged | **0 flagged**, 0 structural problems |
+| Math questions touched | — | **0** (byte-identical in `test24.json`) |
+
+The key distribution survived by construction rather than by luck: `balance_rw.py` deals target
+letters round-robin by position in `QUESTIONS`, so as long as a rewritten item keeps its source
+`answer` (all 81 are authored with the key first, at `"A"`) and its `why` names options by
+content rather than by letter, every question's final letter is unchanged. Verified by diffing
+the assembled JSON against the previous one: exactly 8 R&W questions differ, no Math question
+differs, and no correct-choice label moved anywhere in the test.
+
+## Local database
+
+Test 24 already existed locally and `insert_test.mjs` skips modules that exist, so the rows were
+deleted first — scoped by `testId`, after asserting the row's title is `Test 24` and that it had
+no `Response` rows — and the test re-inserted. It came back as a new local id
+**`67e769f1-5ff1-4d0a-9ad0-33485cbc5ffc`**, `DRAFT`, 6 modules / 147 questions, per-question
+difficulty matching module difficulty in all six modules, and the R&W key counted straight out of
+the database as 21/20/20/20. `audit_math_rendering.mjs` re-run over the whole local database:
+**1,452 Math questions across 22 tests, 0 rendering errors**.
+
+Production was deliberately left alone — the eight replacements are in `rw_test24.py` and
+`test24.json` for the user to apply.
+
+## Still not verified
+
+The same gap the original build recorded: no `/exam/{attemptId}` screenshot pass, because
+Playwright browsers are still absent from this container (`~/.cache/ms-playwright` does not
+exist). The eight rewritten passages are plain prose and `<ul>` note lists with no math spans, no
+tables and no images, so there is nothing in them a renderer can fail on that the assembled HTML
+does not already show.

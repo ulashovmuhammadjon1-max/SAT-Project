@@ -868,10 +868,14 @@ QUESTIONS = [
      "With exactly two items in view, the definite form is the one that points to the remaining "
      "member of the pair. The plural form would imply more than two diagrams."),
 
+ # Retopiced during the same-subject repair pass: the fibre bundle was also B6's
+ # subject in Module 1. Moved to a tarpaulin over crates, which keeps exactly the
+ # tested structure — a singular head noun, a plural noun in the relative clause
+ # nearer the blank, and a verb that must agree with the head.
  fss("F5",
-     "A bundle of fibres that shares its load evenly among its members _____ more predictably than "
-     "one in which a few fibres carry most of it.",
-     ["behaves", "behave", "behaving", "have behaved"],
+     "A tarpaulin that is lashed down over several open crates _____ the goods beneath it from "
+     "rain far better than a loose sheet does.",
+     ["shields", "shield", "shielding", "have shielded"],
      "A",
      "The subject is the singular noun at the head of the sentence, not the plural noun inside the "
      "relative clause, so the verb is singular. The plural forms agree with the nearer noun "
@@ -948,23 +952,34 @@ QUESTIONS = [
      "the transition must mark opposition. A marker of similarity would claim the two cases behave "
      "alike, and the text says they do not."),
 
+ # Retopiced during the same-subject repair pass: the fungal-thread passage was
+ # also B9's subject in Module 1, and C3's in this module. Moved to the service
+ # put on standing rigging, which appears nowhere else in the test. The logical
+ # relation across the blank is unchanged, so the four options still stand.
  trn("N5",
-     "Fungal threads reach into soil pores far too small for a root. _____ they take up phosphorus "
-     "from a volume of ground the tree could never work on its own.",
+     "Standing rigging chafes wherever it crosses a spar or another rope. _____ riggers wind the "
+     "exposed length with tarred twine, laid on hard with a wooden mallet, so that the turns wear "
+     "through before the rope beneath them does.",
      ["As a result,", "Even so,", "In contrast,", "Beforehand,"],
      "A",
-     "The second sentence states what follows from the fine threads described in the first, so a "
+     "The second sentence states what riggers do because of the chafe described in the first, so a "
      "consequence marker is called for. A concessive marker would set the two sentences against "
-     "each other."),
+     "each other, as though the service were put on despite the chafe."),
 
+ # Retopiced during the same-subject repair pass: this braille passage stood
+ # against W9 in Module 1. Moved to the two conventions for stating a rope's
+ # size; the blank still separates two things set against each other, and the
+ # word "diameter" is deliberately avoided so the passage shares no vocabulary
+ # with E8's sheave table.
  trn("N6",
-     "Raised alphabets that copied printed letters had to be traced curve by curve. Braille's "
-     "cells, _____ can be taken in whole at a single touch.",
+     "A rope's size was long stated as the distance round it, so a three-inch line measured three "
+     "inches in girth. Modern lists, _____ state the distance straight across, and the very same "
+     "line is now listed at just under an inch.",
      ["on the other hand,", "for instance,", "in addition,", "as a result,"],
      "A",
-     "The two systems are set against each other, one traced and the other read at rest, so the "
-     "transition marks a contrast. An additive marker would present the second as a further "
-     "example of the first."),
+     "The two conventions are set against each other, one measuring round and the other across, so "
+     "the transition marks a contrast. An additive marker would present the second convention as a "
+     "further instance of the first."),
 
  trn("N7",
      "Lava moving inside a tube is shielded from the air and loses heat slowly. _____ the tube "
@@ -975,23 +990,30 @@ QUESTIONS = [
      "an additive transition is called for. A contrastive marker would set the narrow path against "
      "the slow heat loss, and the two work together."),
 
+ # Retopiced during the same-subject repair pass: antibiotic resistance was
+ # already the subject of F8 and R8 in this module. Moved to the shrinkage of new
+ # canvas, keeping the same cause-and-effect relation across the blank.
  trn("N8",
-     "Maintaining a resistance gene costs a bacterium energy that would otherwise go into growth. "
-     "_____ resistant strains lose ground to their neighbours wherever the drug is withdrawn.",
+     "New canvas draws up the first time it is wetted, and a cloth can lose most of an inch in "
+     "every yard. _____ a tarpaulin cut to the exact size of the hatch it must cover will no longer "
+     "reach across it after a night of rain.",
      ["Accordingly,", "Nonetheless,", "Similarly,", "Meanwhile,"],
      "A",
-     "The second sentence draws the consequence of the cost stated in the first, which calls for a "
-     "result marker. A concessive marker would present the loss of ground as unexpected given the "
-     "cost, when it is exactly what the cost predicts."),
+     "The second sentence draws the consequence of the shrinkage stated in the first, which calls "
+     "for a result marker. A concessive marker would present the cover's falling short as "
+     "unexpected, when it is exactly what the shrinkage predicts."),
 
+ # Retopiced during the same-subject repair pass: the translation passage stood
+ # against I4 in Module 1. Moved to the netmaker's gauge, keeping the concessive
+ # relation across the blank.
  trn("N9",
-     "A system trained on parliamentary records handles formal argument well. _____ it stumbles "
-     "over the ordinary language of a kitchen, which its training text barely contains.",
+     "A netmaker at work measures nothing. _____ every mesh comes out the same size, because the "
+     "twine is carried round a flat wooden gauge before each knot is drawn up.",
      ["Even so,", "For that reason,", "In much the same way,", "To begin with,"],
      "A",
-     "The second sentence names a weakness that stands against the strength just reported, so the "
-     "transition must be contrastive. A causal marker would make the weakness follow from the "
-     "strength."),
+     "The second sentence names an outcome that stands against the absence of measuring just "
+     "reported, so the transition must be contrastive. A causal marker would make the even meshes "
+     "follow from measuring nothing, when what produces them is the gauge."),
 
  # -------------------------------------------------- Rhetorical Synthesis (9)
  syn("R1",
@@ -1013,24 +1035,31 @@ QUESTIONS = [
      "dimension with the full-length laying of cables of about 200 metres supplies the reason. "
      "Noting that the building is still in use is true but says nothing about why it is long."),
 
+ # Retopiced during the same-subject repair pass: these notes restated N2's
+ # sailcloth grades, and W2's, both of which a Module 1 student meets. Moved to
+ # tarred against untarred cordage, which keeps the same trade-off shape — one
+ # kind wins in one place and loses in another — so the key still turns on
+ # setting the two halves against each other.
  syn("R2",
-     ["Sailcloth is graded by the weight of a fixed area.",
-      "A heavier grade holds its shape better under a strong wind.",
-      "A heavier grade is stiff and sets poorly in light air.",
-      "Lofts keep several grades in stock.",
-      "Grade is chosen for the conditions a sail will most often meet."],
-     "emphasise that no single grade of sailcloth is best.",
-     ["A heavier grade holds its shape better in a strong wind but sets poorly in light air, so "
-      "the grade is chosen for the conditions a sail will most often meet.",
-      "Sailcloth is graded by the weight of a fixed area, and lofts keep several grades in stock.",
-      "A heavier grade of sailcloth holds its shape better under a strong wind than a lighter grade "
-      "does.",
-      "Lofts keep several grades of sailcloth in stock, and each is graded by the weight of a fixed "
-      "area."],
+     ["Hemp cordage is sold either white or steeped in tar.",
+      "Tar keeps the damp out of the fibre and slows its decay.",
+      "Tarred cordage is stiffer and weaker for its size than white.",
+      "Rigging that stands out in all weathers is tarred.",
+      "Rope that must run freely through a block is left white."],
+     "emphasise that neither tarred nor white cordage is better in itself.",
+     ["Tar keeps the damp out of the fibre but leaves the cordage stiffer and weaker for its size, "
+      "so rigging that stands out in all weathers is tarred while rope that must run freely through "
+      "a block is left white.",
+      "Hemp cordage is sold either white or steeped in tar before it leaves the maker.",
+      "Tarred cordage keeps the damp out of the fibre and decays more slowly than white cordage of "
+      "the same size.",
+      "Rigging that stands out in all weathers is tarred, and rope that must run freely through a "
+      "block is left white."],
      "A",
-     "Showing the same grade winning in one condition and losing in another is what establishes "
-     "that none is best overall. Reporting only that a heavy grade holds its shape better makes "
-     "the opposite case, naming a single winner."),
+     "Showing tar winning against damp and losing on stiffness and strength, and then attaching "
+     "each kind to the place that suits it, is what establishes that neither is better overall. "
+     "Reporting only that tarred cordage decays more slowly makes the opposite case, naming a "
+     "single winner."),
 
  syn("R3",
      ["A bridge cable is spun on site from individual wires.",
@@ -1089,25 +1118,27 @@ QUESTIONS = [
      "way and the phosphorus coming back does that. The seedling experiment shows that the network "
      "matters without saying what either partner receives."),
 
+ # Retopiced during the same-subject repair pass: this was a second braille item
+ # sitting in the same module as C4, which a single student meets. Moved to hemp
+ # dressing, a corner of the cordage trades used nowhere else in the test.
  syn("R6",
-     ["The contracted braille code has signs for common groups of letters.",
-      "It takes longer to learn than the uncontracted code.",
-      "Experienced readers of the contracted code read about half as fast again.",
-      "A reader who begins uncontracted must later drop the habit of tracking every letter.",
-      "Most schools now begin with the contracted code."],
-     "explain to an audience unfamiliar with the subject why most schools begin with the "
-     "contracted code.",
-     ["Although the contracted code takes longer to learn, experienced readers of it read about "
-      "half as fast again, and a reader who begins with the other code must later drop a habit.",
-      "The contracted braille code has signs for common groups of letters and takes longer to "
-      "learn than the uncontracted code.",
-      "Most schools now begin with the contracted code rather than with the uncontracted one.",
-      "A reader who begins with the uncontracted code must later drop the habit of tracking every "
-      "letter."],
+     ["Retting soaks hemp stalks until the gum holding the fibre to the woody core has rotted.",
+      "The gum breaks down faster in warm water than in cold.",
+      "Fibre from stalks lifted too early will not part from the core.",
+      "Fibre from stalks left in too long crumbles when it is combed.",
+      "The soaking is stopped when the fibre feels ready, not after a set number of days."],
+     "explain to an audience unfamiliar with the subject why the soaking is not simply timed.",
+     ["Because the gum rots faster in warm water than in cold, no set number of days suits every "
+      "batch, and a batch lifted too early or left too long yields fibre that cannot be used.",
+      "Retting soaks hemp stalks until the gum holding the fibre to the woody core has rotted "
+      "away.",
+      "Fibre from stalks that were left in the water too long crumbles when it is combed.",
+      "The soaking is stopped when the fibre feels ready rather than after a set number of days."],
      "A",
-     "The schools' choice is explained only by setting the extra learning time against the reading "
-     "speed and the habit that has to be unlearned. Reporting that most schools begin with the "
-     "contracted code restates the practice the student was asked to account for."),
+     "Only the sentence naming the varying rate of the rotting explains why a fixed schedule "
+     "cannot serve, and the narrow window either side of it is what makes the judgement matter. "
+     "Reporting that the soaking is stopped when the fibre feels ready restates the practice the "
+     "student was asked to account for."),
 
  syn("R7",
      ["A hoist's safety brake is worked by weights mounted on the cage.",
@@ -1145,22 +1176,29 @@ QUESTIONS = [
      "being outgrown after withdrawal supplies one. Restating that resistance can decline names "
      "the phenomenon without explaining it."),
 
+ # Retopiced during the same-subject repair pass: these notes covered the same
+ # ground as W12 in Module 2 Hard, and a Module 1 student meets one of them
+ # either way. Moved to the choice between a knotted and a spliced join — the
+ # practical trade, deliberately not the knot theory of R4 and W4 — and the goal
+ # rewritten to the trade-off the new notes support.
  syn("R9",
-     ["Early translation systems worked from rules written by linguists.",
-      "Those systems failed on sentences the rules had not anticipated.",
-      "Later systems were trained on large collections of existing translations.",
-      "Such systems find regularities in the data rather than being told them.",
-      "Assembling a large parallel corpus is itself demanding work."],
-     "emphasise that the newer approach changed the nature of the work rather than removing it.",
-     ["Later systems find regularities in existing translations instead of following rules written "
-      "by linguists, but assembling a large parallel corpus is demanding work in its own right.",
-      "Early translation systems worked from rules written by linguists and failed on sentences "
-      "those rules had not anticipated.",
-      "Later systems were trained on large collections of existing translations rather than on "
-      "rules.",
-      "Assembling a large parallel corpus is itself demanding work for those who undertake it."],
+     ["A knot costs a rope about a third of its strength where it bends round itself.",
+      "A splice tucks the strands of one rope in among another's.",
+      "A spliced join keeps most of the rope's strength.",
+      "A splice takes far longer to make than a knot.",
+      "A splice cannot be cast off in a hurry."],
+     "emphasise that the stronger join is not always the one a rigger wants.",
+     ["A splice keeps most of a rope's strength where a knot costs about a third of it, but a "
+      "splice cannot be cast off in a hurry, so a join that may have to be let go quickly is "
+      "knotted instead.",
+      "A knot costs a rope about a third of its strength where it bends round itself, and a splice "
+      "takes far longer to make.",
+      "A splice tucks the strands of one rope in among another's and keeps most of the rope's "
+      "strength.",
+      "A splice takes far longer to make than a knot does and cannot be cast off in a hurry."],
      "A",
-     "The point is that effort moved rather than vanished, so both the change of method and the "
-     "cost of the corpus must appear. Describing the new training data alone records the change "
-     "and drops the half about the work that remains."),
+     "The point is that strength alone does not settle the choice, so the sentence has to set the "
+     "spliced join's advantage against the time it costs to undo. Describing the splice's hold on "
+     "the rope's strength alone names the stronger join and drops the reason a knot is ever "
+     "preferred."),
 ]

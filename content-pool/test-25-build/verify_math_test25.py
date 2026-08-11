@@ -72,9 +72,9 @@ def m1_01():
 
 
 def m1_02():
-    slope, inter = symbols("slope inter")
-    sol = solve([Eq(40 * slope + inter, 286), Eq(100 * slope + inter, 562)], [slope, inter])
-    return sol[slope] * 150 + sol[inter]
+    hrs = symbols("hrs")
+    # 35 hours at 16 dollars, every further hour at 24
+    return solve(Eq(35 * 16 + 24 * (hrs - 35), 824), hrs)[0]
 
 
 def m1_03():
@@ -84,21 +84,20 @@ def m1_03():
 
 
 def m1_04():
-    cartons = symbols("cartons")
-    most = solve(Eq(Rational(125, 10) * cartons + 18, 500), cartons)[0]
-    return floor(most) * 5
+    fifth = symbols("fifth")
+    return solve(Eq((4 * 940 + fifth) / 5, 960), fifth)[0]
 
 
 def m1_05():
-    added = symbols("added")
-    fibre = 120 * Rational(4, 100)
-    return solve(Eq(fibre, Rational(5, 1000) * (120 + added)), added)[0]
+    total = symbols("total")
+    wove = Rational(3, 5) * total
+    cartridge = Rational(2, 5) * total
+    return solve(Eq(wove - cartridge, 84), total)[0]
 
 
 def m1_06():
-    slope = Rational(22 - 46, 10 - 4)
-    cyl = symbols("cyl")
-    return solve(Eq(46 + slope * (cyl - 4), 6), cyl)[0]
+    cart = symbols("cart")
+    return solve(Eq(5 * cart - 36, 3 * cart), cart)[0]
 
 
 def m1_07():
@@ -115,7 +114,7 @@ def m1_09():
 
 
 def m1_10():
-    return [z for z in solve(Eq(Rational(1, 4) * v ** 2 - 3 * v + 90, 106), v) if z > 0][0]
+    return [z for z in solve(Eq(n ** 2 + 18 * n, 63 * n), n) if z > 0][0]
 
 
 def m1_08():
@@ -126,19 +125,32 @@ def m1_08():
 
 
 def m1_11():
-    roots = solve(Eq((x - 3) * (x + 11), 0), x)
-    return max(roots) - min(roots)
+    # the piecewise rule read straight off the stem
+    f = lambda z: 3 * z + 7 if z < 5 else z ** 2 - 4
+    return sympify(f(6) - f(2))
+
+
+def m1_13():
+    fx = x ** 2 + 2 * x
+    return simplify((fx.subs(x, 5) - fx.subs(x, 1)) / (5 - 1))
+
+
+def m1_15():
+    before = [78, 79, 80, 81, 96]
+    after = [78, 79, 80, 81, 82]
+    mean = lambda vs: Rational(sum(vs), len(vs))
+    median = lambda vs: sorted(vs)[len(vs) // 2]
+    sgn = lambda z: (1 if z > 0 else 0) - (1 if z < 0 else 0)
+    key = (sgn(mean(after) - mean(before)), sgn(median(after) - median(before)))
+    return {(-1, 0): "The mean decreases and the median is unchanged.",
+            (0, -1): "The mean is unchanged and the median decreases.",
+            (-1, -1): "Both the mean and the median decrease.",
+            (0, 0): "Both the mean and the median are unchanged."}[key]
 
 
 def m1_16():
-    rows = [("Blotting", 310, Rational(560, 100)), ("Cartridge", 95, 18),
-            ("Laid", 140, Rational(1250, 100)), ("Wove", 220, 8)]
-    return max(rows, key=lambda row: row[1] * row[2])[0]
-
-
-def m1_17():
-    orig = symbols("orig")
-    return solve(Eq(orig * Rational(115, 100) * Rational(80, 100), Rational(1104, 100)), orig)[0]
+    laid = 765 - (310 + 95 + 220)
+    return laid * Rational(1250, 100)
 
 
 def m1_19():
@@ -149,18 +161,23 @@ def m1_19():
 
 
 def m1_20():
-    diag = sqrt(9 ** 2 + 12 ** 2)
-    return 2 * (Rational(1, 2) * 9 * 12) / diag
+    part = symbols("part")
+    unit = solve(Eq((2 + 3 + 7) * part, 180), part)[0]
+    return 7 * unit
 
 
 def m1_21():
-    lm = 63 * Rational(20, 21)
-    km = sqrt(63 ** 2 + lm ** 2)
-    return 63 + lm + km
+    ef = symbols("ef")
+    # tan A = BC/AC and tan D = EF/DF, and the two tangents are equal
+    return solve(Eq(Rational(8, 15), ef / 45), ef)[0]
+
+
+def m2e_02():
+    return solve(Eq(Rational(1, 4) * (3 * x + 1), 7), x)[0]
 
 
 def m2e_05():
-    return [z for z in (5, 6, 7, 8) if 5 * z + 12 > 47][0]
+    return [z for z in (3, 4, 6, 8) if z > 4 and 3 * z < 21][0]
 
 
 def m2e_10():
@@ -173,19 +190,23 @@ def m2e_11():
     return solve(Eq(rails ** 2 + 5, 41), rails)[0]
 
 
+def m2e_12():
+    return max(solve(Eq(x ** 2 - 9, 0), x))
+
+
 def m2e_13():
     ss = symbols("ss", positive=True)
     return solve(Eq(ss ** 3, 125), ss)[0]
 
 
 def m2e_16():
-    vals = [23, 31, 18, 26, 31]
-    return max(vals) - min(vals)
+    vals = [24, 31, 24, 40, 24, 31, 52]
+    return Counter(vals).most_common(1)[0][0]
 
 
 def m2h_01():
-    sol = solve([Eq(3 * x + 4 * y, 26), Eq(5 * x - 2 * y, 26)], [x, y])
-    return sol[x] + sol[y]
+    sk = symbols("sk")
+    return solve(Eq(90 + 6 * sk, 9 * sk), sk)[0]
 
 
 def m2h_02():
@@ -194,8 +215,8 @@ def m2h_02():
 
 
 def m2h_03():
-    pp = symbols("pp", nonzero=True)
-    return simplify((8 * pp - 2 * pp) / (3 * pp - pp))
+    slope = Rational(0 - (-8), 12 - 0)
+    return solve(Eq(slope * x - 8, -2), x)[0]
 
 
 def m2h_04():
@@ -205,9 +226,8 @@ def m2h_04():
 
 
 def m2h_05():
-    aa = symbols("aa")
-    diff = simplify(expand(2 * (6 * x + aa) - (3 * (4 * x - 5) + 11)))
-    return solve(Eq(diff, 0), aa)[0]
+    mins = symbols("mins")
+    return solve(Eq((18 - 11) * mins, 154), mins)[0]
 
 
 def m2h_06():
@@ -231,34 +251,31 @@ def m2h_09():
 
 
 def m2h_10():
-    bb, cc = symbols("bb cc")
-    cval = solve(Eq(0 ** 2 + bb * 0 + cc, 12), cc)[0]          # the point (0, 12)
-    axis = solve(Eq(diff(x ** 2 + bb * x + cval, x), 0), x)[0]  # vertex abscissa
-    return solve(Eq(axis, 5), bb)[0]
+    return [z for z in solve(Eq((24 + 2 * w) * (18 + 2 * w), 616), w) if z > 0][0]
 
 
 def m2h_11():
-    A = symbols("A")
-    return solve(Eq(A * Rational(8, 10) ** 4, Rational(2048, 10)), A)[0]
+    aa = symbols("aa")
+    # f(x-4) vanishes where its argument is the original intercept
+    return solve(Eq(aa - 4, 6), aa)[0]
 
 
 def m2h_12():
-    aa, bb = symbols("aa bb")
-    sols = solve([Eq(aa + bb, 11), Eq(aa * bb, 30)], [aa, bb], dict=True)
-    hi, lo = max(sols[0][aa], sols[0][bb]), min(sols[0][aa], sols[0][bb])
-    return hi - lo
+    xp = symbols("xp", positive=True)
+    root = solve(Eq(xp + 1 / xp, 5), xp)[0]
+    return simplify(root ** 2 + 1 / root ** 2)
 
 
 def m2h_13():
-    kk, other = symbols("kk other")
+    kk = symbols("kk")
     # 3 is a root, so k follows; the other root then follows from k
     kval = solve(Eq(3 ** 2 - kk * 3 + 18, 0), kk)[0]
     return [z for z in solve(Eq(x ** 2 - kval * x + 18, 0), x) if z != 3][0]
 
 
 def m2h_14():
-    shares = min(Rational(30, 5), Rational(14, 2))
-    return shares * (5 + 2)
+    hrs = symbols("hrs", positive=True)
+    return solve(Eq(4 * 15, 6 * hrs), hrs)[0]
 
 
 def m2h_15():
@@ -277,21 +294,30 @@ def m2h_17():
     return solve(Eq(30 * f + 18 * (1 - f), 22), f)[0]
 
 
+def m2h_18():
+    kk = symbols("kk")
+    vermilion = 60 * Rational(2, 5)
+    return solve(Eq(vermilion / (60 + kk), Rational(1, 3)), kk)[0]
+
+
 def m2h_19():
-    dep = symbols("dep", positive=True)
-    hh, rr = symbols("hh rr", positive=True)
-    val = solve(Eq(pi * rr ** 2 * hh, pi * (2 * rr) ** 2 * dep), dep)[0]
-    return val.subs(hh, symbols("h"))
+    return 20 ** 2 - pi * (Rational(20, 2)) ** 2
 
 
 def m2h_20():
-    return sqrt((11 - 3) ** 2 + (4 - (-2)) ** 2)
+    a_side, b_side = 9, 14
+    return [c for c in (4, 5, 18, 23) if b_side - a_side < c < b_side + a_side][0]
 
 
 def m2h_21():
-    bc = 20 * Rational(3, 5)                 # sin A = BC/AB
-    ac = sqrt(20 ** 2 - bc ** 2)
-    return Rational(1, 2) * bc * ac
+    half_base = Rational(48, 2)
+    height = sqrt(26 ** 2 - half_base ** 2)
+    return height / 26
+
+
+def m2h_22():
+    litres = 24 * 5
+    return Rational(litres * 1000, 80 * 50)
 
 
 DERIVE = {
@@ -306,12 +332,12 @@ DERIVE = {
  "M1-09": m1_09,
  "M1-10": m1_10,
  "M1-11": m1_11,
- "M1-12": lambda: solve(Eq(XP ** Rational(3, 2), 216), XP)[0],
- "M1-13": lambda: 1200 * Rational(7, 10) ** 3,
+ "M1-12": lambda: solve(Eq(a - 3, 12), a)[0],
+ "M1-13": m1_13,
  "M1-14": lambda: Rational(320 * 60 * 42 * 80, 10 * 1000),
- "M1-15": lambda: 9 * Rational(800, 10) - 8 * Rational(795, 10),
+ "M1-15": m1_15,
  "M1-16": m1_16,
- "M1-17": m1_17,
+ "M1-17": lambda: Rational(198, 12) - Rational(310, 20),
  "M1-18": lambda: Rational(27, 18 + 27 + 15),
  "M1-19": m1_19,
  "M1-20": m1_20,
@@ -319,25 +345,25 @@ DERIVE = {
  "M1-22": lambda: (210 + 12) * (297 + 2 * 9),
 
  "M2E-01": lambda: solve(Eq(4 * s + 35, 155), s)[0],
- "M2E-02": lambda: solve(Eq(7 * (k - 3), 42), k)[0],
+ "M2E-02": m2e_02,
  "M2E-03": lambda: (45 - 3 * m).subs(m, 8),
  "M2E-04": lambda: (Rational(65, 10) - Rational(4, 10) * h).subs(h, 0),
  "M2E-05": m2e_05,
- "M2E-06": lambda: solve(Eq(2 * (68 + w), 224), w)[0],
+ "M2E-06": lambda: solve(Eq(2 * p + 5, 47), p)[0],
  "M2E-07": lambda: solve(Eq(3 * q + 7, 34), q)[0],
- "M2E-08": lambda: expand(2 * x ** 3 * 5 * x ** 4),
+ "M2E-08": lambda: expand((x + 7) ** 2),
  "M2E-09": lambda: expand(4 * a + 9 * b - a + 2 * b),
  "M2E-10": m2e_10,
  "M2E-11": m2e_11,
- "M2E-12": lambda: (4 * 3 ** t).subs(t, 2),
+ "M2E-12": m2e_12,
  "M2E-13": m2e_13,
  "M2E-14": lambda: Rational(3, 10) * 40,
- "M2E-15": lambda: Rational(54, 72) * 20,
+ "M2E-15": lambda: Rational(45, 60),
  "M2E-16": m2e_16,
- "M2E-17": lambda: 46 - 17,
+ "M2E-17": lambda: 46 + 9 + 17 + 28,
  "M2E-18": lambda: Rational(18, 18 + 27),
  "M2E-19": lambda: 2 * (8 * 5 + 8 * 3 + 5 * 3),
- "M2E-20": lambda: 50 * 40 * 30,
+ "M2E-20": lambda: Rational(1, 2) * 14 * 9,
  "M2E-21": lambda: Rational(46, 24 - 1),
  "M2E-22": lambda: simplify(9 / cos(pi / 4)),
 
@@ -358,11 +384,11 @@ DERIVE = {
  "M2H-15": m2h_15,
  "M2H-16": m2h_16,
  "M2H-17": m2h_17,
- "M2H-18": lambda: 2 * Rational(5, 12) * Rational(7, 11),
+ "M2H-18": m2h_18,
  "M2H-19": m2h_19,
  "M2H-20": m2h_20,
  "M2H-21": m2h_21,
- "M2H-22": lambda: Rational(1, 3) * 30 ** 2 * 40,
+ "M2H-22": m2h_22,
 }
 
 # Nothing in Test 25 resists a symbolic derivation, so MANUAL is empty and

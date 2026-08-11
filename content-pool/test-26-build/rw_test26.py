@@ -21,14 +21,14 @@ sentence.
 Test 26's assigned territory is bell founding, campanology and change ringing,
 organ building, pipe voicing, carillons, and tuning and temperament. Test 20
 holds foundries, so the metalwork here is specifically about bells and never
-about ironfounding in general. Nine further subjects fill out the 81 items and
+about ironfounding in general. Eight further subjects fill out the 81 items and
 were each keyword-screened against the corpus before use: room acoustics and
 reverberation, ice cores and palaeoclimate, papermaking and paper conservation,
-stained glass and leaded lights, corvid cognition, emerging sign languages,
-metrology and the standard kilogram, falconry, and the acoustics of buildings
-for speech.
+stained glass and leaded lights, corvid cognition, birdsong learning and song
+dialects, tide gauges and the vertical datum, shorthand and gallery reporting,
+and falconry.
 
-Screened out before drafting, as collisions with the bank:
+Screened out BEFORE drafting, by keyword, as collisions with the bank:
   * bell tuning by turning metal off the inside on a lathe, and the five
     partials of a bell (rw_test14:S4 is exactly that passage);
   * tone set by casting profile rather than by tin content (rw_test10:E2);
@@ -36,11 +36,36 @@ Screened out before drafting, as collisions with the bank:
     organ or a bell tower (rw_test13:F5 and rw_test11:F5 are both that item);
   * a campanile rebuilt after an earthquake (rw_test10:F6);
   * an ensemble tuned to itself rather than to an external standard
-    (rw_test10:W8, gamelan).
+    (rw_test10:W8, gamelan);
+  * railway time replacing local noon (rw_test14:B7 and rw_test15:C2 both
+    have it, and rw_test11:S2 and rw_test15:I4 sit next to it).
 
-Every passage was then scored by token Jaccard against
-content-pool/rw_authored_corpus.json (1,295 banked passages); see MANIFEST.md
-for the highest score reached.
+Screened out AFTER drafting, by reading the Jaccard matches rather than by
+trusting the number — every one of these scored WELL BELOW the 0.50 reject
+line, which is the failure mode Tests 18-21 documented for Math and which
+turns out to hold for R&W too:
+  * the platinum-iridium kilogram, its drift against its own copies, and the
+    point that an artefact cannot be said to have changed because it defines
+    the unit. rw_test14:I1 is that passage; three items here (W15, E8, B11)
+    were built on it and scored 0.31 at worst. All three moved to tide gauges
+    and the vertical datum.
+  * deaf children at a new school, each cohort regularising the system it
+    inherited. rw_test9:W9 is that passage; W14 scored 0.37 against it and E5
+    made the same claim. W14 moved to birdsong learning, E5 to shorthand.
+  * "Neither the copper pipes nor the boiler _____" (rw_test9:F2) is the same
+    grammar item F3 was, with different nouns. F3 moved to agreement inside a
+    relative clause.
+  * "Each of the three prototypes _____ its own control board" (rw_test8:F4)
+    is the frame F5 used. F5 was reframed without it.
+  * volcanic ash layers tying distant ice cores together (rw_test10:B6) is
+    N8's premise as first drafted. N8 moved to shorthand.
+
+The four highest remaining scores (0.30-0.47) are all short writing items
+matched against other short writing items. They come from the FORMULAIC STEM,
+which every Boundaries and Form/Structure item in the bank shares word for
+word; on passage text alone the highest score anywhere is 0.17. Both numbers
+are printed by verify_rw_test26.py, and the passage-only one is the one worth
+reading.
 """
 
 TH = ('<th style="border:1px solid #D9DEE5;padding:0.35rem 0.6rem;'
@@ -77,18 +102,16 @@ QUESTIONS = []
 QUESTIONS += [
     {
         "num": "W1", "skill": "Words in Context",
-        "passage": "A bell is cast in the gap between two moulds: an inner core built up in loam over "
-                   "brick, and an outer cope shaped by sweeping a board cut to the bell's profile around "
-                   "a fixed spindle. The same board governs both surfaces, so every dimension of the "
-                   "finished casting is fixed before any metal is melted. The founder's work at the "
-                   "sweep board therefore _____ the tone the bell will have.",
+        "passage": "A clapper too light for the bell it hangs in strikes without drawing the note out of "
+                   "it. One too heavy drives the metal, and over the years it wears a hollow at the "
+                   "point where it lands that will in the end start a crack. The weight a founder hangs "
+                   "inside a casting has therefore to be _____ to that casting within narrow limits.",
         "stem": WIC_STEM,
-        "choices": ["settles", "obscures", "records", "exaggerates"],
+        "choices": ["matched", "opposed", "secondary", "invisible"],
         "answer": "A",
-        "why": "One board governs both surfaces and every dimension is fixed before the metal is melted, "
-               "so the shape that produces the tone is decided at the board. The option about recording "
-               "would mean the board merely registers a tone determined somewhere else, which reverses "
-               "the order the passage gives.",
+        "why": "Failure is described in both directions, too little weight and too much, which leaves "
+               "only a narrow band that suits the particular casting. The option meaning of lesser "
+               "importance is ruled out by the crack that the wrong weight eventually produces.",
     },
     {
         "num": "W2", "skill": "Words in Context",
@@ -105,30 +128,30 @@ QUESTIONS += [
     },
     {
         "num": "W3", "skill": "Words in Context",
-        "passage": "In a tracker organ a thin wooden strip runs from each key to the valve under its "
-                   "pipe, so that the finger opens the valve through the strip and nothing else. The "
-                   "weight the finger meets rises with the number of stops drawn, and the player can "
-                   "feel the moment the valve breaks free of its seat. The action gives the organist "
-                   "an _____ contact with the pipework.",
+        "passage": "A swell organ stands inside a wooden box whose front is a bank of hinged shutters "
+                   "worked by a pedal. Opening them does not make the pipes inside blow any harder; it "
+                   "lets out sound the box had been holding back. A crescendo made with the foot is "
+                   "therefore _____ rather than generated.",
         "stem": WIC_STEM,
-        "choices": ["immediate", "intermittent", "imagined", "involuntary"],
+        "choices": ["released", "amplified", "imagined", "postponed"],
         "answer": "A",
-        "why": "Nothing stands between finger and valve but the strip, and the player feels the valve "
-               "break free, so the contact is unmediated. The option meaning occasional is ruled out by "
-               "the passage, in which the resistance is present at every key and rises with the stops.",
+        "why": "The pipes are said to be doing exactly what they were doing before, and all that changes "
+               "is how much of their sound the box allows out. The option meaning made louder at the "
+               "source is what the second sentence explicitly denies.",
     },
     {
         "num": "W4", "skill": "Words in Context",
-        "passage": "Two flue pipes made to the same measurements will not speak alike. The voicer widens "
-                   "or narrows the opening at the mouth, raises or lowers the upper lip, and files small "
-                   "nicks into the languid, listening after each change. None of this appears on the "
-                   "drawings from which the pipe was made; the work is _____ rather than specified.",
+        "passage": "A reed sounds when a brass tongue beats against a channel called the shallot, and "
+                   "its pitch is set by how much of the tongue is left free to vibrate, not by the "
+                   "resonator standing above it. A wire pushed down against the tongue shortens the free "
+                   "part and raises the note. Tuning a reed is on this point _____ tuning a flue pipe, "
+                   "whose pitch follows the length of its body.",
         "stem": WIC_STEM,
-        "choices": ["empirical", "decorative", "provisional", "hereditary"],
+        "choices": ["unlike", "identical to", "dependent on", "preferable to"],
         "answer": "A",
-        "why": "Every adjustment is made by listening and none of it is written down in advance, which "
-               "describes work settled by trial rather than by instruction. The option meaning ornamental "
-               "misses that the adjustments determine whether the pipe speaks at all.",
+        "why": "One pitch is governed by a vibrating tongue and the other by the length of a body, so the "
+               "two operations work on different things. The option calling them identical contradicts "
+               "the closing contrast the sentence is built around.",
     },
     {
         "num": "W5", "skill": "Words in Context",
@@ -226,16 +249,18 @@ QUESTIONS += [
     },
     {
         "num": "W12", "skill": "Words in Context",
-        "passage": "Medieval glaziers had no way of making a large sheet, so a window had to be assembled "
-                   "from small pieces held in grooved strips of lead. Those strips are structural, and "
-                   "they are also drawn: the glazier ran them along the fold of a sleeve or the line of "
-                   "a jaw, so that a limitation of the material became a _____ of the design.",
+        "passage": "Paint on medieval glass is not a coating but a fused layer. Ground glass mixed with "
+                   "an iron compound is laid on with a brush, and the piece then goes into a furnace "
+                   "until the mixture softens and joins the surface beneath it. A line brought properly "
+                   "up to heat cannot be rubbed off; a line the furnace left short of it is merely "
+                   "_____ and will be gone within a century of weather.",
         "stem": WIC_STEM,
-        "choices": ["resource", "casualty", "concealment", "measurement"],
+        "choices": ["resting on the glass", "fused to the glass",
+                    "cut into the glass", "hidden under the glass"],
         "answer": "A",
-        "why": "The lead had to be there and the glazier put it where the drawing wanted a line, turning "
-               "a constraint into something the design used. The option meaning a loss suffered gets the "
-               "direction backwards, since the passage says the limitation was put to work.",
+        "why": "The contrast in the sentence is between a line that has joined the surface and one that "
+               "has not, so the underfired line is only sitting on top and can be washed away. The "
+               "option describing it as fused names the very state the furnace failed to reach.",
     },
     {
         "num": "W13", "skill": "Words in Context",
@@ -252,32 +277,34 @@ QUESTIONS += [
     },
     {
         "num": "W14", "skill": "Words in Context",
-        "passage": "When deaf children were brought together in a single school for the first time, the "
-                   "home-made gestures each had arrived with began to converge. Within a few cohorts the "
-                   "system had a settled order of parts and a set of markers no individual child had "
-                   "introduced, and the youngest signers used it more consistently than those who had "
-                   "built it. The language was therefore _____ rather than invented.",
+        "passage": "A young white-crowned sparrow reared where it can hear adults sings the song of that "
+                   "valley, down to the trill at the end of it. Reared in silence it produces something "
+                   "ragged that no sparrow anywhere sings; played a recording of a different species it "
+                   "ignores the recording altogether. What the bird inherits is not the song but a "
+                   "_____ narrow enough to shut out other species and loose enough to be filled in by "
+                   "whichever valley it grows up in.",
         "stem": WIC_STEM,
-        "choices": ["cumulative", "arbitrary", "borrowed", "temporary"],
+        "choices": ["template", "repertoire", "transcript", "rehearsal"],
         "answer": "A",
-        "why": "Each cohort added regularity that no single child had supplied, so the system was built "
-               "up across successive users. The option about borrowing would require a source outside the "
-               "school, and the passage says the children arrived with nothing but their own gestures.",
+        "why": "The inherited thing admits some songs and refuses others without fixing which of the "
+               "permitted ones is learned, which is a pattern waiting to be filled. The option naming a "
+               "stock of songs already known is ruled out by the bird reared in silence, which has no "
+               "song at all.",
     },
     {
         "num": "W15", "skill": "Words in Context",
-        "passage": "For ninety years the kilogram was a cylinder of platinum and iridium kept under three "
-                   "bell jars near Paris. Copies sent to other countries were brought back and compared "
-                   "with it at long intervals, and over the century the copies and the cylinder drifted "
-                   "apart by a few tens of micrograms. Because the cylinder <u>defined</u> the unit, it "
-                   "could not itself be said to have gained or lost mass.",
-        "stem": "As used in the text, what does the word \"defined\" most nearly mean?",
-        "choices": ["Fixed the meaning of", "Explained the purpose of",
-                    "Limited the use of", "Described the appearance of"],
+        "passage": "A tide gauge writes the height of the sea against a mark cut into rock beside it, and "
+                   "the average of nineteen years of those readings is adopted as the level from which "
+                   "every height on a national map is counted. The rock is itself rising in some "
+                   "districts and sinking in others. A height <u>referred</u> to that level therefore "
+                   "says something about the ground under the gauge as well as about the hill it "
+                   "purports to measure.",
+        "stem": "As used in the text, what does the word \"referred\" most nearly mean?",
+        "choices": ["Measured against", "Sent on to", "Mentioned in passing", "Traced back to a source"],
         "answer": "A",
-        "why": "The cylinder was the unit, which is why no drift could be charged to it, so the word "
-               "names the setting of what the term meant. The sense of describing an appearance would "
-               "leave the mass of the cylinder open to question, and the closing clause says it is not.",
+        "why": "Every height on the map is counted from the adopted level, so a height referred to it is "
+               "one reckoned from that starting point. The sense of passing something on to another "
+               "party needs a recipient, and the only things named here are a level and a hill.",
     },
 ]
 
@@ -473,24 +500,24 @@ QUESTIONS += [
     },
     {
         "num": "C3", "skill": "Central Ideas and Details",
-        "passage": "A hawk is not tamed by being made docile. The falconer's work is to persuade a bird "
-                   "that would otherwise leave that coming back to the fist is the surest route to a "
-                   "meal, and the whole of the training turns on weight. A hawk carrying too much is "
-                   "indifferent to the offer and drifts away; one carrying too little is desperate and "
-                   "unfit to fly at all. The falconer weighs the bird before every flight and adjusts "
-                   "the evening meal by a few grams.",
+        "passage": "A hawk in the moult renews its plumage over several months and cannot be flown while "
+                   "it does so, since a feather still growing carries blood in the shaft and snaps where "
+                   "a finished one would bend. The bird is accordingly put up for the moult: fed "
+                   "generously, handled hardly at all and left to itself in a loft until the last shaft "
+                   "has hardened. A season in the field rests on half a year in which the bird is asked "
+                   "to do nothing whatever.",
         "stem": "Which choice best states the main idea of the text?",
         "choices": [
-            "Training a hawk turns on holding its appetite within a narrow range rather than on subduing it.",
-            "A hawk that is fed generously becomes the most reliable hunter.",
-            "Falconers seldom fly the same bird more than once in a day.",
-            "A hawk's weight varies too much from day to day for weighing to be of use.",
+            "A hawk's flying season depends on a long stretch of deliberate idleness while its plumage is renewed.",
+            "Hawks are flown less often in summer than at other times of the year.",
+            "A hawk in the moult has to be handled daily if it is to stay tame.",
+            "Plumage grown in a loft is stronger than plumage grown in the wild.",
         ],
         "answer": "A",
-        "why": "The opening denies that taming is the point and the rest of the passage describes a "
-               "margin bounded by indifference above and weakness below, policed by weighing before "
-               "every flight. The option about generous feeding is the condition the text says makes a "
-               "bird drift away.",
+        "why": "A growing shaft that snaps rules out flying, and the passage closes by making the field "
+               "season depend on months of doing nothing, so the point is the necessity of the idle "
+               "period. The option about daily handling contradicts the text, which says the bird is "
+               "handled hardly at all.",
     },
     {
         "num": "C4", "skill": "Central Ideas and Details",
@@ -646,22 +673,24 @@ QUESTIONS += [
     },
     {
         "num": "E5", "skill": "Command of Evidence",
-        "passage": "The linguist Aur&eacute;lie Mensah has argued that the youngest signers in a new "
-                   "language community do not merely learn what their elders sign. They regularise it, "
-                   "supplying a consistent rule where the models in front of them are inconsistent.",
-        "stem": "Which quotation from Mensah's report would best illustrate her argument?",
+        "passage": "The historian Aur&eacute;lie Mensah argues that nineteenth-century parliamentary "
+                   "reports are not transcripts. Reporters worked in relays of a quarter of an hour, "
+                   "took down a shorthand that caught the sense of a sentence rather than its syllables, "
+                   "and wrote the notes out at a desk hours afterwards, so what survives was assembled "
+                   "from abbreviation and memory together.",
+        "stem": "Which quotation from a gallery reporter's memoir would best illustrate Mensah's argument?",
         "choices": [
-            "\"Where the first cohort marked the ending in about half of the contexts that called for it, the third cohort marked it in very nearly all of them.\"",
-            "\"The first cohort had no vocabulary in common on the day the school opened.\"",
-            "\"Signers of every cohort produced the same handshape for this verb.\"",
-            "\"Adults who arrived at the school after the age of twenty rarely became fluent.\"",
+            "\"My outlines gave me the drift of a sentence and nothing more; the words standing in that column were chosen at midnight, four hours after the member had sat down.\"",
+            "\"The gallery was so cold, and the light so poor, that much of the session was written by feel.\"",
+            "\"We were relieved at the quarter, and the relief had taken his seat before the man he replaced could rise.\"",
+            "\"The House rose at two, and the paper was on the streets by seven.\"",
         ],
         "answer": "A",
-        "why": "The argument is that later signers impose regularity their models lacked, which needs a "
-               "measure of the same feature in two cohorts moving from patchy to consistent, and the "
-               "quotation about an ending marked half the time and then almost always is that measure. "
-               "The quotation about an identical handshape across cohorts shows something transmitted "
-               "unchanged, which is the case Mensah's argument is meant to be distinguished from.",
+        "why": "Mensah's claim is that the printed words were composed later out of notes that had not "
+               "preserved them, which the quotation about outlines giving only the drift and words "
+               "chosen at midnight states directly. The quotation about relays at the quarter confirms "
+               "one detail of her account but shows nothing about how the words themselves were "
+               "arrived at.",
     },
     {
         "num": "E6", "skill": "Command of Evidence",
@@ -705,24 +734,23 @@ QUESTIONS += [
     },
     {
         "num": "E8", "skill": "Command of Evidence",
-        "passage": "The historian Ines Achebe argues that the campaign to replace the platinum kilogram "
-                   "with a definition drawn from a constant of nature was driven less by the drift of "
-                   "the artefact than by the impossibility of checking it. The cylinder could be "
-                   "compared only with copies taken from it, so no comparison could establish which of "
-                   "them had moved.",
-        "stem": "Which quotation from a metrologist's memorandum would best illustrate Achebe's argument?",
+        "passage": "The historian Ines Achebe argues that the choice of one harbour's tide gauge as the "
+                   "national datum was settled less by the quality of its record than by the accident of "
+                   "which harbour already had a bench mark cut in sound rock and an observer paid to "
+                   "read the gauge every day without a break.",
+        "stem": "Which quotation from the datum commission's minutes would best illustrate Achebe's argument?",
         "choices": [
-            "\"We can state that the copies and the prototype now differ by some fifty micrograms; we cannot state which of them has changed, and no measurement open to us will settle it.\"",
-            "\"The prototype is kept under three bell jars and is handled once in a generation.\"",
-            "\"The copies are made of the same platinum and iridium alloy as the prototype itself.\"",
-            "\"A definition drawn from a constant of nature could be realised in any sufficiently equipped laboratory.\"",
+            "\"The gauge before us is neither the longest record nor the steadiest; it is the only one whose bench mark stands in granite and whose readings have been taken daily by a paid observer for the whole term.\"",
+            "\"The commission has satisfied itself that a mean taken over nineteen years is the proper interval to adopt.\"",
+            "\"Several harbours were able to offer records of comparable length.\"",
+            "\"A national datum, once adopted, ought not to be revised except upon the clearest evidence.\"",
         ],
         "answer": "A",
-        "why": "Achebe's point is not that the artefact drifted but that nothing could say which side of "
-               "the comparison had moved, and the quotation stating a known difference alongside an "
-               "unanswerable question of attribution says exactly that. The quotation about realising a "
-               "definition anywhere describes the advantage of the replacement rather than the defect in "
-               "the artefact that Achebe puts at the centre.",
+        "why": "Achebe's claim sets the quality of a record against the practical accidents of rock and "
+               "an observer, and the quotation conceding that the chosen gauge is neither longest nor "
+               "steadiest while resting the choice on granite and daily readings makes exactly that "
+               "trade. Noting that several harbours had records of similar length supports only half of "
+               "the claim and says nothing about what decided between them.",
     },
     {
         "num": "E9", "skill": "Command of Evidence",
@@ -808,23 +836,23 @@ QUESTIONS += [
     },
     {
         "num": "I4", "skill": "Inferences",
-        "passage": "Air is not sealed into an ice sheet at the surface but tens of metres down, where the "
-                   "snow finally closes; until then the air in the pores exchanges freely with the "
-                   "atmosphere above. The gas in a bubble is therefore younger than the ice around it, "
-                   "and the difference is greatest where snow accumulates slowly, since the closing "
-                   "takes longer. A core drilled at a site of low accumulation will accordingly _____",
+        "passage": "The ear takes a reflection that arrives within about fifty milliseconds of the direct "
+                   "sound as part of that sound and adds its energy to it; a reflection arriving later "
+                   "is heard as a separate event. In a narrow hall the side walls stand close enough "
+                   "that their reflections fall inside that window whatever the length of the room. "
+                   "Widening a hall while leaving its length untouched will therefore _____",
         "stem": "Which choice most logically completes the text?",
         "choices": [
-            "show a wider gap between the age of its trapped gas and the age of the ice enclosing it.",
-            "hold gas older than the ice enclosing it.",
-            "contain fewer bubbles than a core from a snowier site.",
-            "yield no usable measurement of trapped gas at all.",
+            "push the reflections from the side walls out of the window in which they reinforce the direct sound.",
+            "bring the reflections from the side walls further inside that window.",
+            "shorten the time the reverberation in the hall takes to die away.",
+            "leave the arrival time of the side reflections unaltered.",
         ],
         "answer": "A",
-        "why": "Slow accumulation lengthens the time the pores stay open, and the passage states that the "
-               "age difference grows with that time. The option putting the gas older than the ice "
-               "reverses the direction the passage establishes, which is that exchange continues after "
-               "the ice around it has formed.",
+        "why": "Moving the side walls apart lengthens the path a reflection takes and so delays it, and "
+               "the passage puts the reinforcing window at the short end of that scale. The option "
+               "saying the arrival time is unaltered ignores the extra distance the sound has to travel "
+               "once the walls are further off.",
     },
     {
         "num": "I5", "skill": "Inferences",
@@ -992,10 +1020,11 @@ QUESTIONS += [
     },
     {
         "num": "B11", "skill": "Boundaries",
-        "passage": "The old definition tied the unit to a single object in a single _____ the constant "
-                   "that has replaced it can be realised in any laboratory able to build the apparatus.",
+        "passage": "A datum fixed at one harbour reaches the middle of the country only by levelling "
+                   "from bench mark to bench _____ every stage of that chain carries an error of its "
+                   "own, and an inland height is less certain than the sea it is counted from.",
         "stem": CONV_STEM,
-        "choices": ["vault; however,", "vault, however,", "vault however,", "vault: however,"],
+        "choices": ["mark; however,", "mark, however,", "mark however,", "mark: however,"],
         "answer": "A",
         "why": "Two complete statements meet here, and the connecting word between them is not a "
                "conjunction that can join them, so the heavier mark is needed in front of it. A comma in "
@@ -1003,10 +1032,11 @@ QUESTIONS += [
     },
     {
         "num": "B12", "skill": "Boundaries",
-        "passage": "The school had no signing adults on its staff when it _____ the children arrived with "
-                   "nothing in common but the handful of gestures each had improvised at home.",
+        "passage": "No sparrow had been heard in the valley for a decade after the fire _____ the birds "
+                   "that recolonised it brought the song of the next valley with them and sang nothing "
+                   "of what had been sung there before.",
         "stem": CONV_STEM,
-        "choices": ["opened, and", "opened and", "opened; and", "opened: and"],
+        "choices": ["fire, and", "fire and", "fire; and", "fire: and"],
         "answer": "A",
         "why": "Two complete statements are joined by a coordinating conjunction, which takes a comma in "
                "front of it. Using the conjunction with the heavier mark instead doubles up two ways of "
@@ -1046,14 +1076,16 @@ QUESTIONS += [
     },
     {
         "num": "F3", "skill": "Form, Structure, and Sense",
-        "passage": "Neither the reeds nor the great mixture _____ well in a dry room, and the builder "
-                   "asked for the heating to be turned down a week before the recital.",
+        "passage": "The workshop takes six months over an instrument of this size. Its founder is one of "
+                   "the few builders in the country who still _____ their own reeds instead of ordering "
+                   "them in from a trade supplier.",
         "stem": CONV_STEM,
-        "choices": ["speaks", "speak", "have spoken", "are speaking"],
+        "choices": ["make", "makes", "has made", "is making"],
         "answer": "A",
-        "why": "With subjects paired by \"neither ... nor\" the verb agrees with the one closest to it, "
-               "and that one is the singular mixture. The plural forms would agree with the reeds "
-               "instead, which stand on the far side of the pairing.",
+        "why": "The relative clause describes the builders, not the one founder picked out of them, so "
+               "the verb inside it is plural, as the plural possessive later in the same clause "
+               "confirms. A singular verb would attach the clause to the founder alone and leave the "
+               "plural noun in front of it stranded.",
     },
     {
         "num": "F4", "skill": "Form, Structure, and Sense",
@@ -1068,14 +1100,15 @@ QUESTIONS += [
     },
     {
         "num": "F5", "skill": "Form, Structure, and Sense",
-        "passage": "Each of the forty-seven bells has a clapper wire of its own, and _____ has to be "
-                   "taken up separately whenever the frame settles.",
+        "passage": "A carillon is regulated one bell at a time. The wire running down to each clapper is "
+                   "taken up or let out until _____ strikes at the same depth of touch as the clappers "
+                   "on either side of it.",
         "stem": CONV_STEM,
-        "choices": ["it", "they", "them", "these"],
+        "choices": ["it", "they", "them", "those"],
         "answer": "A",
-        "why": "The pronoun stands for the wire belonging to each single bell, which the sentence has "
-               "already treated as singular in \"has a clapper wire of its own\". The plural forms would "
-               "point at the whole set at once and contradict the word \"separately\".",
+        "why": "The pronoun stands for a single clapper on a single wire, which the sentence has already "
+               "made singular in \"each clapper\". A plural pronoun would take in the whole set at once "
+               "and contradict the regulating of one bell at a time.",
     },
     {
         "num": "F6", "skill": "Form, Structure, and Sense",
@@ -1223,29 +1256,31 @@ QUESTIONS += [
     },
     {
         "num": "N8", "skill": "Transitions",
-        "passage": "Ash from a large eruption falls across a whole hemisphere within weeks and settles "
-                   "into the snow as a thin layer of glass shards. _____ one eruption can be found in "
-                   "cores drilled thousands of kilometres apart, and the two records can be locked "
-                   "together at that depth.",
+        "passage": "A shorthand outline records the consonant skeleton of a word and leaves the vowels "
+                   "to be supplied by whoever reads it back, out of what the sentence around it will "
+                   "bear. _____ a reporter can read his own notes a week later and a stranger cannot "
+                   "read them at all.",
         "stem": TRANS_STEM,
         "choices": ["As a result,", "Even so,", "By comparison,", "Instead,"],
         "answer": "A",
-        "why": "Finding the same ash in distant cores is what follows from ash spreading over a "
-               "hemisphere in weeks, so the transition marks a consequence. A concessive transition "
-               "would set the shared layer against the wide fall of ash rather than deriving it from it.",
+        "why": "Notes that have to be completed from what the writer remembers of the context are "
+               "readable by that writer and by nobody else, so the second sentence states what follows "
+               "from the first. A concessive transition would set the reporter's advantage against the "
+               "way the outlines work rather than deriving it from them.",
     },
     {
         "num": "N9", "skill": "Transitions",
-        "passage": "A unit defined by an object can be realised in one place only, and every other "
-                   "laboratory has to work from a copy of it. _____ a unit defined by a constant of "
-                   "nature can be realised anywhere the apparatus can be built, and no copy stands "
-                   "between a laboratory and the unit itself.",
+        "passage": "A conservator mending a torn leaf does not reach for adhesive tape, whose carrier "
+                   "yellows and whose adhesive sinks into the fibres and cannot be got out again. "
+                   "_____ a strip of thin Japanese tissue is laid across the tear with a starch paste "
+                   "that can be softened with water and lifted off a century later, leaving the sheet "
+                   "as it was found.",
         "stem": TRANS_STEM,
-        "choices": ["By contrast,", "Consequently,", "In addition,", "For example,"],
+        "choices": ["Instead,", "Therefore,", "Likewise,", "In fact,"],
         "answer": "A",
-        "why": "Two kinds of definition are set opposite each other, one confined to a single vault and "
-               "the other available everywhere, so the transition marks the opposition. An additive "
-               "transition would present the second kind as a further feature of the first.",
+        "why": "The first sentence rules a method out and the second supplies the method used in its "
+               "place, so the transition marks a substitution. A result transition would make the "
+               "tissue-and-paste repair follow from the failings of tape rather than replace it.",
     },
 ]
 
@@ -1363,22 +1398,24 @@ QUESTIONS += [
     {
         "num": "R6", "skill": "Rhetorical Synthesis",
         "passage": notes([
-            "Equal temperament divides the octave into twelve identical steps.",
-            "In equal temperament every key is equally usable and equally out of tune.",
-            "In an unequal temperament the steps differ in size and each key has a quality of its own.",
-            "Composers before the nineteenth century chose keys partly for those qualities.",
+            "An organ pipe is cut to length when it is made and cannot afterwards be lengthened.",
+            "An organ built in 1740 stands about a semitone below the pitch now standard.",
+            "Bringing such an instrument up to the modern pitch means cutting every pipe shorter.",
+            "A pipe cut shorter keeps its old diameter and so ends up wide for its length.",
+            "The proportion of diameter to length is one of the things that governs a pipe's tone.",
         ], lead=SENTENCES),
-        "stem": "The student wants to explain what was lost when equal temperament became standard. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+        "stem": "The student wants to explain why an old organ is seldom brought up to modern pitch. Which choice most effectively uses information from the given sentences to accomplish this goal?",
         "choices": [
-            "Because equal temperament makes all twelve steps identical, the qualities that had once distinguished one key from another, and that composers had chosen a key for, no longer exist.",
-            "Equal temperament divides the octave into twelve identical steps.",
-            "In an unequal temperament the steps differ in size and each key has a quality of its own.",
-            "In equal temperament every key is equally usable and equally out of tune.",
+            "Raising an organ of 1740 by the semitone that separates it from modern pitch would mean cutting every pipe shorter without narrowing it, leaving each one wide for its length and altering the tone of the whole instrument.",
+            "An organ pipe is cut to length when it is made and cannot afterwards be lengthened.",
+            "An organ built in 1740 stands about a semitone below the pitch now standard.",
+            "Bringing such an instrument up to the modern pitch means cutting every pipe shorter.",
         ],
         "answer": "A",
-        "why": "The goal is to name a loss, which takes the identical steps, the qualities they abolish "
-               "and the use composers made of those qualities in one statement. Reporting that equal "
-               "temperament makes the steps identical gives the cause and stops short of the loss.",
+        "why": "The goal asks for a reason against the change, which takes the cutting, the proportion it "
+               "spoils and the effect on tone in a single statement. Reporting the semitone difference "
+               "establishes only that the instrument is at the wrong pitch, which is the reason for "
+               "attempting the change rather than against it.",
     },
     {
         "num": "R7", "skill": "Rhetorical Synthesis",

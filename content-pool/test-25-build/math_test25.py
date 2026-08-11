@@ -11,10 +11,10 @@ Difficulty, per the standing rule that Module 1 routes students:
   MODULE_2_EASY genuinely one-step: one operation, no recovery step. This is
                 the lower branch of the adaptive split.
   MODULE_2_HARD hard: parameters in place of numbers, symbolic answer choices,
-                a function defined through a composed argument, a system
-                conditioned on a constant, an inequality chain, a radical
-                equation with an extraneous root, and geometry that chains two
-                relationships together.
+                a function defined piecewise or through a shifted argument, a
+                border quadratic, an inverse variation, a probability that has
+                to be rebuilt after the box changes, and geometry that chains
+                two relationships together.
 
 Every setting sits inside Test 25's assigned thematic territory — papermaking
 and pulp mills, dye works, ink and pigment grinding, bookbinding, and paper
@@ -45,6 +45,18 @@ inline math stays plain text, data tables are real <table> markup, and every
 piece of LaTeX is typed by hand. No bulk conversion step was used anywhere in
 this file, and there are no images: the geometry items are worded so that they
 are fully determined without a picture.
+
+REPAIR PASS (this build). 34 of the original 66 drafts were rewritten as
+genuine template repeats of questions already live in production. Only two of
+the 34 scored at or above the 0.75 reject line; the rest were found by READING
+the flagged matches and, in eleven cases, by grepping the bank for the
+mechanism rather than for the words — a repeat that changes its setting words
+scores LOW precisely because it changed the words. The worst offenders scored
+0.37 (7(k-3)=42 against Test 6's 7(k-2)=63), 0.39 (a 5-to-2 ratio limited by
+stock, against Test 14's identical 5-to-2 ratio limited by stock) and 0.44
+(pouring one cylinder into a wider one, against Test 18's silo). Six more —
+M1-04, M1-05, M1-13, M1-15, M1-16 and M2E-08 — never scored above 0.30 against
+their true twins at all. See MANIFEST.md for the full table.
 """
 
 TABLE = '<table style="border-collapse:collapse;margin:0.75rem 0;">{head}{body}</table>'
@@ -73,13 +85,12 @@ MODULE_1 = [
             "t = 40."),
 
  dict(n="M1-02", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("A bindery's charge for a run of book cases is a linear function of the number of cases "
-            "in the run. The table gives the charge for two runs."
-            + table(["Cases in the run", "Charge (dollars)"], [["40", "286"], ["100", "562"]])
-            + "What is the charge, in dollars, for a run of 150 cases?"),
-      choices=["$690", "$792", "$846", "$920"], correct="B",
-      check="The charge rises by (562-286)/(100-40) = 4.6 dollars a case, so a run of 150 costs "
-            "286 + 4.6(150-40) = 792 dollars."),
+      stem=("A guillotine operator is paid $16 for each of the first 35 hours worked in a week and "
+            "$24 for each hour worked beyond 35. In one week the operator was paid $824. How many "
+            "hours did the operator work that week?"),
+      choices=["44", "46", "49", "52"], correct="B",
+      check="The first 35 hours pay 35(16) = 560 dollars, leaving 824 - 560 = 264 dollars at 24 "
+            "dollars an hour, which is 11 further hours, so 46 hours in all."),
 
  dict(n="M1-03", domain="ALG", skill="ALG-LE", type="FR",
       stem=("The counter on a paper machine's reel shows the total length of paper wound onto it. At "
@@ -91,29 +102,27 @@ MODULE_1 = [
             "15,380 - 9,380 = 6,000 metres were wound in 40 minutes, so the speed was 150."),
 
  dict(n="M1-04", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("Reams of paper are packed 5 to a carton, and a full carton weighs 12.5 kilograms. The "
-            "cartons are stacked on a pallet weighing 18 kilograms, and the hoist that lifts the "
-            "loaded pallet is rated for a total of at most 500 kilograms. What is the greatest "
-            "number of reams that can be lifted on one pallet?"),
-      choices=["176", "185", "190", "200"], correct="C",
-      check="12.5c + 18 <= 500 gives c <= 38.56, so at most 38 whole cartons, which hold "
-            "38(5) = 190 reams."),
+      stem=("The first four reels run on a paper machine averaged 940 metres of paper each. What is "
+            "the least number of metres the fifth reel must run if the five reels are to average at "
+            "least 960 metres each?"),
+      choices=["980", "1,000", "1,040", "1,160"], correct="C",
+      check="Five reels averaging 960 metres total 4,800 metres, and the first four total "
+            "4(940) = 3,760, so the fifth must run at least 4,800 - 3,760 = 1,040 metres."),
 
  dict(n="M1-05", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("Stuff leaving the beater is 4% fibre by mass, the rest being water. Before it reaches "
-            "the machine it is diluted with water until it is 0.5% fibre by mass. How many kilograms "
-            "of water must be added to 120 kilograms of the stuff leaving the beater?"),
-      choices=["600", "720", "780", "840"], correct="D",
-      check="The 120 kilograms carry 4.8 kilograms of fibre. At 0.5% the same fibre needs a total "
-            "mass of 4.8/0.005 = 960 kilograms, so 960 - 120 = 840 kilograms of water are added."),
+      stem=("Two fifths of the sheets on a pallet are cartridge and the rest are wove. There are 84 "
+            "more wove sheets than cartridge sheets on the pallet. How many sheets are on the "
+            "pallet?"),
+      choices=["140", "168", "210", "420"], correct="D",
+      check="Wove is three fifths and cartridge two fifths of the pallet, so the difference is one "
+            "fifth of the pallet. One fifth is 84, so the pallet holds 420 sheets."),
 
- dict(n="M1-06", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("The moisture content of the web falls linearly across the dryer section of a paper "
-            "machine. At the fourth cylinder the moisture content is 46%, and at the tenth cylinder "
-            "it is 22%. At which cylinder does this model give a moisture content of 6%?"),
-      choices=["14", "16", "18", "22"], correct="A",
-      check="The fall is (22-46)/(10-4) = -4 percentage points a cylinder, so 46 - 4(n-4) = 6 gives "
-            "n = 14."),
+ dict(n="M1-06", domain="ALG", skill="ALG-LE", type="MC",
+      stem=("A pallet holds 5 times as many blotting reams as cartridge reams. After 36 blotting "
+            "reams are taken off the pallet, it holds 3 times as many blotting reams as cartridge "
+            "reams. How many cartridge reams are on the pallet?"),
+      choices=["12", "18", "24", "90"], correct="B",
+      check="With c cartridge reams, 5c - 36 = 3c gives 2c = 36 and c = 18."),
 
  dict(n="M1-07", domain="ALG", skill="ALG-LI", type="MC",
       stem=("A stationer sells paper by the ream at $9.00 and by the quire at $0.60. On one day he "
@@ -138,31 +147,30 @@ MODULE_1 = [
             "so the axis is x = (3+5)/2 = 4."),
 
  dict(n="M1-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("For a certain paper machine the number n of sheets spoiled during a shift is modelled "
-            "by \\(n=\\frac{1}{4}v^{2}-3v+90\\), where v is the machine speed in metres per minute. "
-            "At what speed does this model give 106 spoiled sheets?"),
-      choices=["16", "24", "32", "40"], correct="A",
-      check="Multiplying by 4 gives v^2 - 12v + 360 = 424, so v^2 - 12v - 64 = 0 and "
-            "(v-16)(v+4) = 0. Only v = 16 is a possible speed."),
+      stem=("A bindery's cost, in dollars, of a run of n cases is \\(n^{2}+18n\\), and the bindery is "
+            "paid 63n dollars for the run. For how many cases does the payment for a run exactly "
+            "cover its cost?"),
+      choices=["18", "45", "63", "81"], correct="B",
+      check="n^2 + 18n = 63n gives n^2 = 45n, and since n is positive, n = 45."),
 
  dict(n="M1-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("In the xy-plane the graph of \\(y=(x-3)(x+11)\\) crosses the x-axis at two points. What "
-            "is the distance between those two points?"),
-      choices=["8", "11", "14", "22"], correct="C",
-      check="The graph crosses where (x-3)(x+11) = 0, that is at x = 3 and x = -11, and the "
-            "distance between those points is 3 - (-11) = 14."),
+      stem=("The function f is defined so that \\(f(x)=3x+7\\) when x is less than 5, and "
+            "\\(f(x)=x^{2}-4\\) when x is 5 or greater. What is the value of f(6) - f(2)?"),
+      choices=["19", "23", "25", "45"], correct="A",
+      check="6 is 5 or greater, so f(6) = 36 - 4 = 32; 2 is less than 5, so f(2) = 6 + 7 = 13. The "
+            "difference is 32 - 13 = 19."),
 
  dict(n="M1-12", domain="ADV", skill="ADV-EQ", type="FR",
-      stem=("If \\(x^{\\frac{3}{2}}=216\\) for a positive number x, what is the value of x?"),
-      answers=["36"],
-      check="Raising both sides to the power 2/3 gives x = 216^(2/3) = 6^2 = 36."),
+      stem=("For every positive value of x, \\(\\frac{x^{a}}{x^{3}}=x^{12}\\), where a is a constant. "
+            "What is the value of a?"),
+      answers=["15"],
+      check="Dividing powers of the same base subtracts the exponents, so a - 3 = 12 and a = 15."),
 
  dict(n="M1-13", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("Each pass through the dryer section removes 30% of the water still held in the web. A "
-            "web enters the dryers carrying 1,200 grams of water per square metre. How many grams of "
-            "water per square metre remain after three passes?"),
-      choices=["360", "411.6", "588", "840"], correct="B",
-      check="Each pass leaves 70%, so 1,200(0.7)^3 = 1,200(0.343) = 411.6 grams."),
+      stem=("The function f is defined by \\(f(x)=x^{2}+2x\\). What is the average rate of change of "
+            "f as x increases from 1 to 5?"),
+      choices=["6", "8", "10", "32"], correct="B",
+      check="f(5) = 35 and f(1) = 3, so the average rate of change is (35-3)/(5-1) = 32/4 = 8."),
 
  dict(n="M1-14", domain="PSDA", skill="PSDA-RP", type="MC",
       stem=("A paper machine runs a web 4.2 metres wide at 320 metres per minute, and the paper it "
@@ -173,30 +181,34 @@ MODULE_1 = [
             "metres, which at 80 grams a square metre is 6,451,200 grams, or 6,451.2 kilograms."),
 
  dict(n="M1-15", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The mean grammage of eight sample sheets was 79.5 grams per square metre. A ninth sheet "
-            "was then weighed, and the mean grammage of all nine sheets was 80.0 grams per square "
-            "metre. What was the grammage, in grams per square metre, of the ninth sheet?"),
-      choices=["84.0", "85.5", "88.0", "92.0"], correct="A",
-      check="The nine sheets total 9(80.0) = 720 and the first eight total 8(79.5) = 636, so the "
-            "ninth is 720 - 636 = 84."),
+      stem=("The grammages recorded for five sheets were 78, 79, 80, 81 and 96 grams per square "
+            "metre. The reading of 96 was afterwards found to be a misprint for 82, and the record "
+            "was corrected. Which statement correctly describes the effect of that correction on the "
+            "five readings?"),
+      choices=["The mean decreases and the median is unchanged.",
+               "The mean is unchanged and the median decreases.",
+               "Both the mean and the median decrease.",
+               "Both the mean and the median are unchanged."], correct="A",
+      check="The mean falls from 414/5 = 82.8 to 400/5 = 80, while the middle reading is 80 both "
+            "before and after the correction."),
 
  dict(n="M1-16", domain="PSDA", skill="PSDA-DI", type="MC",
-      stem=("The table shows the number of reams sold and the price per ream for four grades of "
-            "paper sold by a mill in one week."
-            + table(["Grade", "Reams sold", "Price per ream"],
-                    [["Blotting", "310", "$5.60"], ["Cartridge", "95", "$18.00"],
-                     ["Laid", "140", "$12.50"], ["Wove", "220", "$8.00"]])
-            + "For which grade was the total amount taken in the week greatest?"),
-      choices=["Blotting", "Cartridge", "Laid", "Wove"], correct="D",
-      check="The takings are 1,736, 1,710, 1,750 and 1,760 dollars, so wove is greatest."),
+      stem=("The table gives the number of reams of three of the four grades a mill sold in one week."
+            + table(["Grade", "Reams sold"],
+                    [["Blotting", "310"], ["Cartridge", "95"], ["Wove", "220"]])
+            + "The mill sold 765 reams altogether that week, the rest of them laid paper, and laid "
+              "paper sells at $12.50 a ream. What amount did the mill take for the laid paper it "
+              "sold that week?"),
+      choices=["$875.00", "$1,187.50", "$1,750.00", "$3,875.00"], correct="C",
+      check="The three grades shown account for 310 + 95 + 220 = 625 reams, so 765 - 625 = 140 reams "
+            "were laid, and 140(12.50) = 1,750 dollars."),
 
  dict(n="M1-17", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("The price of a ream of cartridge paper rose by 15% in the spring and then fell by 20% "
-            "in the autumn. After both changes a ream cost $11.04. What did a ream cost before the "
-            "rise?"),
-      choices=["$10.80", "$12.00", "$12.50", "$13.80"], correct="B",
-      check="The two changes multiply the price by 1.15(0.80) = 0.92, so the original price is "
-            "11.04/0.92 = 12.00 dollars."),
+      stem=("Cartridge paper is sold in a box of 12 reams for $198 and in a box of 20 reams for $310. "
+            "How many dollars less does one ream cost when it is bought in the larger box?"),
+      choices=["$0.50", "$1.00", "$1.50", "$2.00"], correct="B",
+      check="A ream costs 198/12 = 16.50 dollars in the smaller box and 310/20 = 15.50 dollars in "
+            "the larger, a difference of 1.00 dollar."),
 
  dict(n="M1-18", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("A mill inspected 400 sheets and recorded the grade of each sheet and whether it carried "
@@ -220,20 +232,17 @@ MODULE_1 = [
             "0.10-millimetre thickness gives 2,000,000pi millimetres, which is about 6,283 metres."),
 
  dict(n="M1-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("A rectangular sheet measuring 9 centimetres by 12 centimetres is cut along a diagonal. "
-            "In one of the two right triangles formed, what is the shortest distance, in centimetres, "
-            "from the right-angle corner to the cut edge?"),
-      choices=["7.2", "7.5", "9.0", "10.8"], correct="A",
-      check="The diagonal is 15 centimetres, and the triangle's area is (1/2)(9)(12) = 54, so the "
-            "altitude to the diagonal is 2(54)/15 = 7.2."),
+      stem=("In triangle ABC the measures of the three angles are in the ratio 2 to 3 to 7. What is "
+            "the measure, in degrees, of the largest of the three angles?"),
+      choices=["30", "45", "90", "105"], correct="D",
+      check="The three parts total 12, and 180/12 = 15, so the largest angle measures 7(15) = 105."),
 
  dict(n="M1-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("A bindery's set square is cut as a right triangle KLM with its right angle at L. The "
-            "length of KL is 63 millimetres and \\(\\tan K=\\frac{20}{21}\\). What is the perimeter "
-            "of the set square, in millimetres?"),
-      choices=["150", "183", "210", "246"], correct="C",
-      check="tan K = LM/KL, so LM = 63(20/21) = 60 and KM = sqrt(63^2 + 60^2) = 87. The perimeter "
-            "is 63 + 60 + 87 = 210."),
+      stem=("Right triangles ABC and DEF have their right angles at C and at F, and "
+            "\\(\\tan A=\\tan D\\). In triangle ABC the length of AC is 15 and the length of BC is 8. "
+            "In triangle DEF the length of DF is 45. What is the length of EF?"),
+      choices=["16", "20", "24", "40"], correct="C",
+      check="tan A = BC/AC = 8/15 and tan D = EF/DF = EF/45, so EF = 45(8/15) = 24."),
 
  dict(n="M1-22", domain="GT", skill="GT-AV", type="FR",
       stem=("A guillotine trims a rectangular sheet by removing 12 millimetres from the fore-edge and "
@@ -257,10 +266,10 @@ MODULE_2_EASY = [
       check="4s + 35 = 155 gives 4s = 120 and s = 30."),
 
  dict(n="M2E-02", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("A dyer bought k kilograms of madder root, and the purchase satisfies the equation "
-            "7(k - 3) = 42. What is the value of k?"),
-      choices=["3", "6", "9", "15"], correct="C",
-      check="Dividing by 7 gives k - 3 = 6, so k = 9."),
+      stem=("A dye house's tally sheet leads to the equation \\(\\frac{3x+1}{4}=7\\). What is the "
+            "value of x?"),
+      choices=["7", "9", "11", "27"], correct="B",
+      check="Multiplying by 4 gives 3x + 1 = 28, so 3x = 27 and x = 9."),
 
  dict(n="M2E-03", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A colourman works dry pigment into oil on a slab. The mass, in grams, of pigment not "
@@ -277,16 +286,16 @@ MODULE_2_EASY = [
       check="At h = 0 the model gives m = 6.5."),
 
  dict(n="M2E-05", domain="ALG", skill="ALG-LI", type="MC",
-      stem=("A marbler needs n combs, and n satisfies the inequality \\(5n+12>47\\). Which of the "
-            "following values of n satisfies that inequality?"),
-      choices=["5", "6", "7", "8"], correct="D",
-      check="5n > 35 gives n > 7, and 8 is the only listed value greater than 7."),
+      stem=("A marbler needs n combs, where n is greater than 4 and 3n is less than 21. Which of the "
+            "following could be the value of n?"),
+      choices=["3", "4", "6", "8"], correct="C",
+      check="3n < 21 gives n < 7, and with n > 4 the value must be 5 or 6. Only 6 is listed."),
 
  dict(n="M2E-06", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("A marbling trough is a rectangle with a perimeter of 224 centimetres. Its length is 68 "
-            "centimetres. What is its width, in centimetres?"),
-      answers=["44"],
-      check="2(68 + w) = 224 gives 68 + w = 112 and w = 44."),
+      stem=("A marbling trough holds 5 litres more than twice what a size pan holds, and the trough "
+            "holds 47 litres. How many litres does the size pan hold?"),
+      answers=["21"],
+      check="2p + 5 = 47 gives 2p = 42 and p = 21."),
 
  dict(n="M2E-07", domain="ALG", skill="ALG-LE", type="MC",
       stem=("For a certain dye bath the quantities p and q are related by p = 3q + 7. If p = 34, what "
@@ -295,10 +304,12 @@ MODULE_2_EASY = [
       check="3q = 34 - 7 = 27, so q = 9."),
 
  dict(n="M2E-08", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("A colourman's slab holds \\(2x^{3}\\) grams of pigment in each of \\(5x^{4}\\) parcels "
-            "set out on the slab. Which expression gives the total mass of pigment, in grams?"),
-      choices=["\\(7x^{7}\\)", "\\(10x^{7}\\)", "\\(7x^{12}\\)", "\\(10x^{12}\\)"], correct="B",
-      check="The total is 2x^3 times 5x^4, which is 10x^7 because the exponents add."),
+      stem=("A colourman sets out cakes of pigment in a square block with \\(x+7\\) rows and "
+            "\\(x+7\\) cakes in each row. Which expression gives the total number of cakes in the "
+            "block?"),
+      choices=["\\(x^{2}+49\\)", "\\(x^{2}+7x+49\\)", "\\(x^{2}+14x+49\\)", "2x + 14"],
+      correct="C",
+      check="The total is (x+7)(x+7), and expanding gives x^2 + 14x + 49."),
 
  dict(n="M2E-09", domain="ADV", skill="ADV-EQ", type="MC",
       stem=("A marbler records a morning's total, in grams, as 4a + 9b - a + 2b. Which expression is "
@@ -320,11 +331,10 @@ MODULE_2_EASY = [
       check="x^2 + 5 = 41 gives x^2 = 36, and the positive solution is x = 6."),
 
  dict(n="M2E-12", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("A colour dropped on a marbling bath spreads so that the area it covers is given by "
-            "\\(A(t)=4(3)^{t}\\) square centimetres t seconds after it is dropped. What area, in "
-            "square centimetres, does it cover 2 seconds after it is dropped?"),
-      choices=["12", "24", "36", "144"], correct="C",
-      check="A(2) = 4(3)^2 = 4(9) = 36 square centimetres."),
+      stem=("In the xy-plane the graph of \\(y=x^{2}-9\\) crosses the x-axis at (a, 0) and at (b, 0), "
+            "where a is less than b. What is the value of b?"),
+      choices=["-9", "-3", "3", "9"], correct="C",
+      check="x^2 - 9 = 0 gives x = -3 or x = 3, and the greater of the two is 3."),
 
  dict(n="M2E-13", domain="ADV", skill="ADV-NE", type="FR",
       stem=("A cake of dry pigment is a cube whose side length is s centimetres, and "
@@ -339,28 +349,26 @@ MODULE_2_EASY = [
       check="Lampblack is 3 of the 10 parts, so it is (3/10)(40) = 12 kilograms."),
 
  dict(n="M2E-15", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("72 grams of ultramarine costs $54.00. At that rate, what is the cost of 20 grams of "
-            "ultramarine?"),
-      choices=["$12.00", "$15.00", "$18.00", "$21.60"], correct="B",
-      check="54/72 = 0.75 dollars a gram, and 20(0.75) = 15.00 dollars."),
+      stem=("Of the 60 skeins in one delivery, 45 were dyed madder. What fraction of the delivery was "
+            "dyed madder?"),
+      choices=["\\(\\frac{1}{4}\\)", "\\(\\frac{2}{3}\\)", "\\(\\frac{3}{4}\\)",
+               "\\(\\frac{4}{3}\\)"], correct="C",
+      check="45 of 60 is 45/60, which is 3/4."),
 
  dict(n="M2E-16", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("The table gives the number of skeins dyed on each of five days."
-            + table(["Day", "Skeins dyed"],
-                    [["Monday", "23"], ["Tuesday", "31"], ["Wednesday", "18"],
-                     ["Thursday", "26"], ["Friday", "31"]])
-            + "What is the range of the five values?"),
-      choices=["5", "8", "13", "18"], correct="C",
-      check="The greatest value is 31 and the least is 18, so the range is 31 - 18 = 13."),
+      stem=("The masses, in grams, of seven cakes of pigment are 24, 31, 24, 40, 24, 31 and 52. What "
+            "is the mode of these seven masses, in grams?"),
+      choices=["24", "28", "31", "52"], correct="A",
+      check="24 occurs three times, more often than any other mass, so the mode is 24."),
 
  dict(n="M2E-17", domain="PSDA", skill="PSDA-DI", type="MC",
       stem=("The table gives the amount of each of four pigments held in a colourman's store."
             + table(["Pigment", "Kilograms held"],
                     [["Ochre", "46"], ["Vermilion", "9"], ["Verdigris", "17"],
                      ["Lampblack", "28"]])
-            + "How many more kilograms of ochre than of verdigris does the store hold?"),
-      choices=["17", "29", "37", "46"], correct="B",
-      check="46 - 17 = 29 kilograms."),
+            + "How many kilograms of pigment does the store hold altogether?"),
+      choices=["82", "91", "100", "118"], correct="C",
+      check="46 + 9 + 17 + 28 = 100 kilograms."),
 
  dict(n="M2E-18", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("A dyer's tally for one morning shows 18 skeins dyed indigo and 27 skeins dyed madder. If "
@@ -378,11 +386,11 @@ MODULE_2_EASY = [
             "is 2(40 + 24 + 15) = 158 square centimetres."),
 
  dict(n="M2E-20", domain="GT", skill="GT-AV", type="FR",
-      stem=("A rectangular dye tank has a base measuring 50 centimetres by 40 centimetres and is "
-            "filled with liquor to a depth of 30 centimetres. What is the volume of the liquor, in "
-            "cubic centimetres?"),
-      answers=["60000"],
-      check="50(40)(30) = 60,000 cubic centimetres."),
+      stem=("A marbler's corner brace is a right triangle whose two legs measure 14 centimetres and 9 "
+            "centimetres. What is the area, in square centimetres, of the brace?"),
+      answers=["63"],
+      check="The area of a right triangle is half the product of its legs, so it is "
+            "(1/2)(14)(9) = 63 square centimetres."),
 
  dict(n="M2E-21", domain="GT", skill="GT-LA", type="MC",
       stem=("A marbling comb carries 24 teeth set in a straight line with all the gaps between "
@@ -406,12 +414,11 @@ MODULE_2_EASY = [
 MODULE_2_HARD = [
 
  dict(n="M2H-01", domain="ALG", skill="ALG-LE", type="MC",
-      stem=("The solution to the system of equations below is the ordered pair (x, y)."
-            "<br/>3x + 4y = 26<br/>5x - 2y = 26<br/>"
-            "What is the value of x + y?"),
-      choices=["4", "6", "8", "12"], correct="C",
-      check="Doubling the second equation and adding gives 13x = 78, so x = 6 and y = 2, and "
-            "x + y = 8."),
+      stem=("A dye works makes a standing charge of $90 for a season and then charges $6 for each "
+            "skein dyed. A rival works makes no standing charge and charges $9 for each skein dyed. "
+            "For how many skeins dyed in a season do the two works charge the same amount?"),
+      choices=["10", "15", "30", "45"], correct="C",
+      check="90 + 6s = 9s gives 3s = 90 and s = 30."),
 
  dict(n="M2H-02", domain="ALG", skill="ALG-LE", type="MC",
       stem=("A dye works' costing rule leads to the equation \\(4(x-c)=3x+8\\), where c is a "
@@ -420,10 +427,11 @@ MODULE_2_HARD = [
       check="Substituting x = 20 gives 4(20 - c) = 68, so 80 - 4c = 68 and c = 3."),
 
  dict(n="M2H-03", domain="ALG", skill="ALG-LF", type="MC",
-      stem=("In the xy-plane a line passes through the points (p, 2p) and (3p, 8p), where p is a "
-            "nonzero constant. What is the slope of the line?"),
-      choices=["3", "4", "6", "3p"], correct="A",
-      check="The slope is (8p - 2p)/(3p - p) = 6p/2p = 3, and p cancels."),
+      stem=("In the xy-plane a line has its x-intercept at the point (12, 0) and its y-intercept at "
+            "the point (0, -8). For what value of x does this line pass through the point (x, -2)?"),
+      choices=["3", "6", "9", "10"], correct="C",
+      check="The slope is (0-(-8))/(12-0) = 2/3, so the line is y = (2/3)x - 8. Setting y = -2 gives "
+            "(2/3)x = 6 and x = 9."),
 
  dict(n="M2H-04", domain="ALG", skill="ALG-LI", type="MC",
       stem=("The inequality \\(3x-a>12\\), where a is a constant, is satisfied by exactly those "
@@ -433,10 +441,11 @@ MODULE_2_HARD = [
             "a = 15."),
 
  dict(n="M2H-05", domain="ALG", skill="ALG-LE", type="FR",
-      stem=("The equation \\(2(6x+a)=3(4x-5)+11\\) is true for every value of x, where a is a "
-            "constant. What is the value of a?"),
-      answers=["-2"],
-      check="Both sides carry 12x, so 2a = -15 + 11 = -4 and a = -2."),
+      stem=("A dye vat is filled through a pipe that runs 18 litres a minute, while a waste cock lets "
+            "11 litres a minute away. Both run from the moment the empty vat is opened. After how "
+            "many minutes does the vat hold 154 litres?"),
+      answers=["22"],
+      check="The vat gains 18 - 11 = 7 litres a minute, and 154/7 = 22 minutes."),
 
  dict(n="M2H-06", domain="ALG", skill="ALG-LF", type="MC",
       stem=("A skein of yarn of mass w grams takes up dye in the bath, and its finished mass M is "
@@ -467,24 +476,26 @@ MODULE_2_HARD = [
             "5x^2 - 24x + 32 and a + b + c = 5 - 24 + 32 = 13."),
 
  dict(n="M2H-10", domain="ADV", skill="ADV-NE", type="MC",
-      stem=("In the xy-plane the graph of \\(y=x^{2}+bx+c\\) passes through the point (0, 12) and "
-            "has its vertex on the line x = 5, where b and c are constants. What is the value of b?"),
-      choices=["-25", "-20", "-12", "-10"], correct="D",
-      check="The vertex of y = x^2 + bx + c lies at x = -b/2, so -b/2 = 5 and b = -10. The point "
-            "(0, 12) fixes c = 12 but does not affect b."),
+      stem=("A marbled panel 24 centimetres by 18 centimetres is mounted so that a border of the same "
+            "width runs all the way round it, and the mounted rectangle covers 616 square "
+            "centimetres. What is the width of the border, in centimetres?"),
+      choices=["2", "4", "5", "11"], correct="A",
+      check="(24+2w)(18+2w) = 616 gives 4w^2 + 84w - 184 = 0, that is w^2 + 21w - 46 = 0, so "
+            "(w+23)(w-2) = 0 and the positive width is 2."),
 
  dict(n="M2H-11", domain="ADV", skill="ADV-NF", type="MC",
-      stem=("The mass of pigment still too coarse to use after t hours under the muller is modelled "
-            "by \\(m(t)=A(0.8)^{t}\\), where m is in grams and A is a constant. After 4 hours 204.8 "
-            "grams are still too coarse. What is the value of A?"),
-      choices=["256", "320", "500", "640"], correct="C",
-      check="0.8^4 = 0.4096, and A(0.4096) = 204.8 gives A = 500."),
+      stem=("In the xy-plane the graph of \\(y=f(x)\\) has an x-intercept at the point (6, 0). The "
+            "graph of \\(y=f(x-4)\\) has an x-intercept at the point (a, 0). What is the value of a?"),
+      choices=["2", "4", "10", "24"], correct="C",
+      check="f(x-4) is zero when x - 4 = 6, that is when x = 10, so the shifted graph crosses the "
+            "x-axis at (10, 0)."),
 
  dict(n="M2H-12", domain="ADV", skill="ADV-EQ", type="MC",
-      stem=("The expression (x+a)(x+b) is equal to \\(x^{2}+11x+30\\) for every value of x, where a "
-            "and b are constants and a is greater than b. What is the value of a-b?"),
-      choices=["1", "5", "6", "11"], correct="A",
-      check="a and b multiply to 30 and add to 11, so they are 6 and 5, and a - b = 1."),
+      stem=("A colourman's roller setting is a positive number x for which "
+            "\\(x+\\frac{1}{x}=5\\). What is the value of \\(x^{2}+\\frac{1}{x^{2}}\\)?"),
+      choices=["21", "23", "25", "27"], correct="B",
+      check="Squaring both sides of x + 1/x = 5 gives x^2 + 2 + 1/x^2 = 25, so "
+            "x^2 + 1/x^2 = 23."),
 
  dict(n="M2H-13", domain="ADV", skill="ADV-NE", type="FR",
       stem=("One solution of the equation \\(x^{2}-kx+18=0\\) is 3, where k is a constant. What is "
@@ -494,12 +505,12 @@ MODULE_2_HARD = [
             "which makes k = 9.)"),
 
  dict(n="M2H-14", domain="PSDA", skill="PSDA-RP", type="MC",
-      stem=("A dye recipe calls for madder and alum in the ratio 5 to 2 by mass. A dyer holds 30 "
-            "kilograms of madder and 14 kilograms of alum. What is the greatest total mass, in "
-            "kilograms, of a mixture in that ratio that the dyer can make?"),
-      choices=["35", "42", "44", "49"], correct="B",
-      check="The madder allows 30/5 = 6 shares and the alum allows 14/2 = 7 shares, so 6 shares of "
-            "7 kilograms each can be made, a total of 42 kilograms."),
+      stem=("The time a batch of pigment takes to grind varies inversely with the number of mullers "
+            "set to work on it. Four mullers grind a batch in 15 hours. How many hours do six mullers "
+            "take to grind a batch of the same size?"),
+      choices=["8", "10", "12", "22.5"], correct="B",
+      check="Inverse variation makes the product of mullers and hours constant, so 4(15) = 6t gives "
+            "t = 60/6 = 10 hours."),
 
  dict(n="M2H-15", domain="PSDA", skill="PSDA-ST", type="MC",
       stem=("The mean of a set of 7 readings is 24. Each reading is multiplied by 3, and then 5 is "
@@ -527,44 +538,46 @@ MODULE_2_HARD = [
             "f = 1/3."),
 
  dict(n="M2H-18", domain="PSDA", skill="PSDA-ST", type="MC",
-      stem=("A box holds 5 cakes of vermilion and 7 cakes of ochre. Two cakes are taken from the box "
-            "at random, one after the other and without replacement. What is the probability that "
-            "the two cakes taken are of different pigments?"),
-      choices=["\\(\\frac{35}{132}\\)", "\\(\\frac{7}{22}\\)", "\\(\\frac{35}{66}\\)",
-               "\\(\\frac{7}{12}\\)"], correct="C",
-      check="Vermilion then ochre has probability (5/12)(7/11) and ochre then vermilion the same, "
-            "so the total is 2(35/132) = 35/66."),
+      stem=("A box holds 60 cakes of colour, and the probability that a cake drawn from it at random "
+            "is vermilion is \\(\\frac{2}{5}\\). How many ochre cakes must be added to the box so "
+            "that the probability of drawing a vermilion cake becomes \\(\\frac{1}{3}\\)?"),
+      choices=["6", "12", "18", "24"], correct="B",
+      check="The box holds (2/5)(60) = 24 vermilion cakes. Adding k ochre cakes makes the "
+            "probability 24/(60+k), and setting that equal to 1/3 gives 60 + k = 72 and k = 12."),
 
  dict(n="M2H-19", domain="GT", skill="GT-AV", type="MC",
-      stem=("A cylindrical can of radius r and height h is completely full of ink. All the ink is "
-            "poured into a second, taller cylindrical can whose radius is 2r. To what depth does the "
-            "ink stand in the second can?"),
-      choices=["\\(\\frac{h}{4}\\)", "\\(\\frac{h}{2}\\)", "\\(\\frac{3h}{4}\\)",
-               "\\(\\frac{4h}{3}\\)"], correct="A",
-      check="The volume pi r^2 h fills a can of base area pi(2r)^2 = 4 pi r^2, so the depth is "
-            "h/4."),
+      stem=("A square dye tray of side 20 centimetres has the largest possible circle marked on its "
+            "floor. What is the area, in square centimetres, of the part of the floor that is inside "
+            "the square but outside the circle?"),
+      choices=["\\(100-25\\pi\\)", "\\(400-20\\pi\\)", "\\(400-100\\pi\\)",
+               "\\(400-400\\pi\\)"], correct="C",
+      check="The square has area 400 and the largest circle inside it has radius 10 and area 100pi, "
+            "so the region between them has area 400 - 100pi."),
 
  dict(n="M2H-20", domain="GT", skill="GT-LA", type="MC",
-      stem=("In the xy-plane a circle has its centre at (3, -2) and passes through the point "
-            "(11, 4). What is the length of the radius of the circle?"),
-      choices=["6", "10", "14", "20"], correct="B",
-      check="The radius is the distance from (3,-2) to (11,4), which is sqrt(8^2 + 6^2) = "
-            "sqrt(100) = 10."),
+      stem=("A marbler's triangular scraper has two sides measuring 9 centimetres and 14 centimetres. "
+            "Which of the following could be the length, in centimetres, of its third side?"),
+      choices=["4", "5", "18", "23"], correct="C",
+      check="The third side must be greater than 14 - 9 = 5 and less than 14 + 9 = 23, and 18 is the "
+            "only listed length strictly between them."),
 
  dict(n="M2H-21", domain="GT", skill="GT-TR", type="MC",
-      stem=("A marbler's comb blank is cut as a right triangle ABC with its right angle at C. The "
-            "length of AB is 20 centimetres and \\(\\sin A=\\frac{3}{5}\\). What is the area of the "
-            "blank, in square centimetres?"),
-      choices=["48", "60", "96", "120"], correct="C",
-      check="sin A = BC/AB gives BC = 20(3/5) = 12, so AC = sqrt(400-144) = 16 and the area is "
-            "(1/2)(12)(16) = 96."),
+      stem=("A marbler's comb is cut as an isosceles triangle whose two equal sides each measure 26 "
+            "centimetres and whose base measures 48 centimetres. What is the sine of one of the two "
+            "equal base angles of that triangle?"),
+      choices=["\\(\\frac{5}{13}\\)", "\\(\\frac{5}{12}\\)", "\\(\\frac{12}{13}\\)",
+               "\\(\\frac{13}{5}\\)"], correct="A",
+      check="The perpendicular from the apex halves the base, giving a right triangle with "
+            "hypotenuse 26 and one leg 24, so the other leg is 10 and the sine of a base angle is "
+            "10/26 = 5/13."),
 
  dict(n="M2H-22", domain="GT", skill="GT-AV", type="FR",
-      stem=("A conical heap of dry pigment has a base of radius 30 centimetres and a height of 40 "
-            "centimetres. The volume of the heap is \\(k\\pi\\) cubic centimetres. What is the value "
-            "of k?"),
-      answers=["12000"],
-      check="The volume is (1/3)pi(30^2)(40) = 12,000 pi cubic centimetres, so k = 12,000."),
+      stem=("A dye vat is a rectangular tank 80 centimetres long and 50 centimetres wide. Liquor is "
+            "run into the empty tank at 24 litres a minute for 5 minutes. To what depth, in "
+            "centimetres, does the liquor then stand? (1 litre is 1,000 cubic centimetres.)"),
+      answers=["30"],
+      check="The tank receives 24(5) = 120 litres, which is 120,000 cubic centimetres. The base "
+            "covers 80(50) = 4,000 square centimetres, so the depth is 120,000/4,000 = 30."),
 ]
 
 ALL = MODULE_1 + MODULE_2_EASY + MODULE_2_HARD

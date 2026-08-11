@@ -49,9 +49,18 @@ def strip_html(s):
     return re.sub(r"<[^>]+>", " ", s or "")
 
 
+# The Rhetorical Synthesis opener is prescribed boilerplate and appears
+# verbatim in every RS passage ever banked. Left in, it makes all nine of this
+# test's RS items report a shared 5-gram with all of everyone else's. Stripped
+# here so a 5-gram hit means something.
+BOILERPLATE = re.compile(
+    r"while researching a topic,? a student has taken the following notes:?", re.I)
+
+
 def toks(s):
     s = strip_html(s).lower().replace("&mdash;", " ").replace("&rsquo;", "'")
     s = re.sub(r"&[a-z]+;", " ", s)
+    s = BOILERPLATE.sub(" ", s)
     return [w for w in WORD.findall(s) if w not in STOP and len(w) > 2]
 
 
@@ -69,7 +78,7 @@ def load_corpus():
     with open(CORPUS) as fh:
         rows = json.load(fh)
     for r in rows:
-        r["_t"] = toks((r.get("passage") or "") + " " + (r.get("stem") or ""))
+        r["_t"] = toks(r.get("passage") or "")
         r["_s"] = set(r["_t"])
         r["_g"] = ngrams(r["_t"])
         r["_flat"] = " ".join(strip_html((r.get("passage") or "") + " " + (r.get("stem") or "")).lower().split())
@@ -156,10 +165,21 @@ def keyword_pass(rows):
 
 # ------------------------------------------------------------------ final pass
 def final_pass(rows):
+    """Passage-only comparison.
+
+    An earlier version of this pass folded the STEM into the token set and
+    reported 63 items as sharing a 5-gram with the bank. Every one was the
+    formulaic writing-domain stem ("Which choice completes the text so that it
+    conforms to the conventions of Standard English?"), which by design appears
+    in every Boundaries and Form/Structure item ever banked. It also inflated
+    Jaccard for the short grammar passages, whose own content is a single
+    sentence. Comparing passages only is the honest measurement; the corpus
+    side is scored the same way.
+    """
     from rw_test23 import QUESTIONS
     worst = []
     for q in QUESTIONS:
-        t = toks((q.get("passage") or "") + " " + (q.get("stem") or ""))
+        t = toks(q.get("passage") or "")
         s, g = set(t), ngrams(t)
         best = (0.0, None)
         for r in rows:

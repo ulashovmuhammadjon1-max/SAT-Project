@@ -1,0 +1,4544 @@
+{
+ "RW_M1": [
+  {
+   "_ref": "AUTHORED-T23:W8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The tow rope of a horse-drawn boat ran from the mast to the animal's collar, and at every bridge hole it dragged across the corner of the masonry. No single passage marked the stone. But the same rope crossed the same corner tens of thousands of times, and the grooves cut into the quoins of some bridges are now deep enough to take a hand. They are a record of nothing sudden, only of something _____.",
+   "difficulty": "MEDIUM",
+   "why": "The text explicitly denies that any one passage did damage and sets the word against &ldquo;sudden,&rdquo; so it must describe force that never let up. A word meaning great force contradicts the statement that no single passage marked the stone.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "violent",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "recent",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "deliberate",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "relentless",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "The men who dug the canals moved with the work, living in huts at the end of the cutting and leaving when it was finished. Parishes along the line complained about them and were glad to see them go; the contractors who needed them complained that no sooner had a gang learned the ground than it was gone to another line for a penny more a day. The workforce was skilled and _____ in equal measure.",
+   "difficulty": "MEDIUM",
+   "why": "Both complaints turn on the same fact, that the men did not stay, so the paired word must mean travelling from job to job. Their moving for an extra penny a day says nothing about their poverty, and the text mentions neither their ages nor any organisation among them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "itinerant",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "impoverished",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "youthful",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "unionised",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A loaded boat seventy feet long cannot be turned round in a channel cut wide enough only to let two of them pass. Companies therefore widened the line at intervals into shallow bays just long enough to swing a bow into, and a boatman who ran past one had to work on for miles before he could turn. Knowing where those bays lay was _____ knowledge rather than a nicety of the trade.",
+   "difficulty": "MEDIUM",
+   "why": "The text describes a boatman who misses a bay as losing miles of work, which makes the knowledge something he cannot do without. A word meaning merely decorative or no longer current sits against the practical consequence the passage has just spelled out.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "theoretical",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "indispensable",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "ornamental",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "outdated",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;arm&rdquo; most nearly mean?",
+   "passage": "The main line ran past the town without entering it. A short <u>arm</u> was cut from it to a basin behind the corn mills, wide enough for two boats to pass and ending at a wall with cranes above it. Traffic for the mills left the main line at the junction and came back to it loaded, and the mills never had to send a cart to the public wharf at all.",
+   "difficulty": "MEDIUM",
+   "why": "The thing named is cut from the main line, is wide enough for boats and ends at a basin, so it must be a branch of the waterway. The organisational sense would make the following description of width and cranes incoherent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A division of a large organisation.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A limb of the body.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A branch channel leading off a main one.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "A weapon carried by a person.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Canal tunnels were cut without a towpath, so the horse was led over the hill and the boat was moved through by men who lay on planks across the bow and walked the tunnel wall with their feet. A long tunnel took four hours of this, in cold air and in the dark. Crews who could raise the fee for a tunnel tug were quick to abandon a method that was so _____.",
+   "difficulty": "MEDIUM",
+   "why": "The text dwells on four hours of physical effort in cold and darkness, so the word must describe hard labour. Calling the method clever praises a quality the text never claims for it, and the crews' eagerness to pay a tug fee is evidence that they did not find it cheap.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "laborious",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "ingenious",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "customary",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "economical",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "Two jobs on a navigation look alike from the bank and are not. Weed cutting takes off what has grown in the water this season; dredging takes out what has settled on the bed over many. A length cut clear in July may need cutting again in September and will not need dredging for twenty years. Committees that entered the two under one heading in the accounts never understood why the figure rose every year when much of the work behind it had not been done for a generation.",
+   "difficulty": "MEDIUM",
+   "why": "The text opens by denying that the two jobs are the same and closes on the accounting confusion that follows from treating them as one. No machinery appears, and the reason silt settles is never raised.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To recommend that weed cutting be carried out more often than it usually is.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To describe the machinery used to clear a navigation.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To explain why silt settles faster in some lengths than in others.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To show that two superficially similar operations differ in ways that matter to a budget.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "An iron trough carried across a valley on stone piers has to be designed for the weight of the water standing in it. A loaded boat entering the trough pushes aside exactly its own weight of water, which runs out at the ends. The engineer therefore sizes the piers for a full trough and stops there: whether one boat is crossing or none makes no difference to what they carry, and a queue of them makes none either.",
+   "difficulty": "MEDIUM",
+   "why": "Each sentence advances one conclusion, that the load is fixed by the water rather than by the boats. Masonry aqueducts are never mentioned, so no comparison with them is being made, and no engineer is named.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To recount the career of the engineer who devised the iron trough.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "To explain why the traffic crossing an aqueduct does not affect the load its piers carry.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "To describe how iron troughs and stone piers were built.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To argue that iron aqueducts were superior to masonry ones.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:X1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation offered in Text 1?",
+   "passage": "<p><strong>Text 1</strong></p><p>Historians long explained the collapse of canal carrying in a sentence: the railway was faster. A train covered in a morning what a boat took three days to do, and no amount of management could close a gap of that size. On this account the canals were beaten by a technology against which they had no answer.</p><p><strong>Text 2</strong></p><p>Speed mattered less than that account supposes. Coal, stone and timber made up the bulk of canal tonnage and none of it was urgent; the owners would have gone on sending it by water at a low enough price. A canal company's Act, however, fixed the most it might charge on every class of goods. It could cut a rate, but it could not raise the rate on the traffic that stayed in order to fund the cut, because that rate already stood at its statutory ceiling. The railway companies, bound far more loosely, could attack one traffic and recover on another.</p>",
+   "difficulty": "MEDIUM",
+   "why": "Text 2 accepts that the railway was faster and locates the decisive difference elsewhere, in what each kind of company was legally free to charge. It says the bulk of the tonnage was not urgent, the opposite of the claim about urgent traffic, and it describes railway companies cutting rates rather than denying that they did.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "By denying that railway companies ever cut their charges.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By arguing that it mistakes a difference in commercial freedom for a difference in speed.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By agreeing that speed was decisive but adding that it took longer to matter than is usually supposed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By pointing out that most canal tonnage was in fact urgent traffic.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "A canal on an embankment holds several feet of water above a valley, and a hole in the lining will empty a mile of it in an hour. Companies could not prevent every breach, so they set out instead to limit what one would cost them. Pairs of gates were hung at intervals along the exposed lengths, standing open in the water and held back by a catch; a rush of water towards a breach knocks the catch and slams them shut, and the loss stops at the length between one pair and the next.",
+   "difficulty": "MEDIUM",
+   "why": "The second sentence states the strategy in so many words and the third describes the device that carries it out. The gates are shut by the rush of water itself rather than by anyone, and the text puts the loss at a mile rather than the whole line.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Stop gates were closed by a keeper as soon as a breach was reported to him.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "A breach in an embankment will empty the whole of a canal.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Rather than trying to prevent breaches, companies installed gates that confine the damage a breach can do.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Embanked lengths of canal were abandoned because they could not be made safe.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "The warehouses built beside the early basins loaded across an open quay, and rain stopped the work. The next generation was built over the water instead. The channel ran in through an arch beneath the building, boats lay in the dark under the floors, and hoists in the ceiling lifted goods straight up through trapdoors into whichever storey had room for them. Nothing crossed open ground, nothing waited on the weather, and a cargo could go from hold to top floor without a cart being called for at all.",
+   "difficulty": "MEDIUM",
+   "why": "The final sentence names exactly two things the arrangement removed, waiting on the weather and the cart, and the rest of the text explains how. Cost and damp are never discussed, and the size of the early quays is not given as the reason for the change.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Bringing the water inside the building took both the weather and the cartage out of the transfer of goods.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "The early basins were abandoned because their quays had become too small.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Hoists were the most expensive part of a canal warehouse to install.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Goods stored on the upper floors were less likely to be spoiled by damp.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most strongly support the tow-rope explanation?",
+   "passage": "The stone at the corner of some canal bridges is cut with deep vertical grooves. One explanation is that they were worn by tow ropes dragging across the arris as boats were pulled past. Another is that they were cut on purpose to seat a timber rubbing post.",
+   "difficulty": "MEDIUM",
+   "why": "If the rope made the grooves, they should appear only where a rope crossed the stone and should deepen with the angle, which is what the finding about towpath layout describes. Surviving timber posts point instead to the deliberate seating explanation, and grooves on bridges no boat passed would undermine the rope account altogether.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The grooves are absent from bridges where the towpath passed under the arch without changing sides, and are deepest where the rope had to cross the corner at a sharp angle.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Grooves of similar depth are found on road bridges that boats never passed beneath.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Timber posts survive at several of the bridges where grooves are also present.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The grooves are cut into stone that is softer than the rest of the bridge.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly support the restoration society's reply?",
+   "passage": "Ecologists studying a derelict canal argued that the shallow weedy water it had become supported species a restored and navigated channel could not hold. A restoration society replied that the plants concerned would survive in the margins and in the pounds above the top lock, where boats seldom go.",
+   "difficulty": "MEDIUM",
+   "why": "The society's claim is specifically that the plants persist within a restored canal, so the evidence has to come from a restored canal, and a reopened line still holding them at similar densities is exactly that. Their presence in ponds elsewhere says nothing about survival in the channel, and heavier traffic and a richer derelict length both cut against the reply.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Traffic on restored canals has risen faster than restoration societies predicted it would.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The derelict length supports more species than any restored length yet surveyed.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Surveys of a line reopened twenty years ago find the same plants in its margins and its least-used pounds at densities close to those recorded before it was restored.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "The plants concerned also grow in ponds and ditches across the surrounding county.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from Josiah Kemp's memoir of the carrying trade most effectively illustrates Aldwinckle's claim?",
+   "passage": "Historian Ruth Aldwinckle argues that the authority a fly boat enjoyed at a lock rested less on the company's written order than on the readiness of waiting boatmen to give way without being shown it.",
+   "difficulty": "MEDIUM",
+   "why": "Aldwinckle's claim needs boatmen giving way of their own accord and the written order going unproduced, and the quotation about drawing aside without a word says both. Describing how the order was printed and signed supports the opposite emphasis, and the tunnel and horse quotations concern something else entirely.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;The flys changed horses at Wharton and again at the summit, and never tied up between the one and the other.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;The fly came up behind us at the bottom lock and we drew our boat aside for her without a word said, as any crew would; the order in her cabin was never once produced in my hearing.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;The company's order was pinned inside the cabin door of every fly boat on the line, printed on stiff card and signed by the clerk.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;We were four hours in the tunnel that night and came out at Bledlow with the horse already waiting at the far end.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "Puddle depends on staying wet: dried out it shrinks, cracks and will not close again when the water comes back. Concrete lining, which replaced it on many lengths in the twentieth century, is indifferent to being left dry. The change therefore mattered far less to a canal in daily use than to one _____",
+   "difficulty": "MEDIUM",
+   "why": "The only property distinguishing the two linings is what happens when they dry out, so the canals to which the change matters are the ones that dry out. The kind of cargo, the shape of the ground and the company's wealth are all irrelevant to whether a lining stays wet.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "built by a company wealthy enough to employ masons of its own.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "that had to be emptied for long repairs or was left without water for years at a time.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "whose traffic consisted mainly of heavy and slow-moving cargoes.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "that crossed a valley on an embankment rather than running in a cutting.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "The towpath changes sides wherever the ground makes it necessary, and every change costs the boatman something. At an ordinary bridge he must stop, cast off the line, lead the horse across and pick the line up again, with the boat carrying its way under him the whole time. A turnover bridge takes the path over the arch and back beneath itself, so the line never comes off. The design was worth most, then, to a boat worked by _____",
+   "difficulty": "MEDIUM",
+   "why": "The cost named is that the boat carries its way while the line is off, and only a boatman with nobody else aboard must abandon the tiller to deal with the horse. A large crew can do both jobs at once, and neither ownership of the bridges nor the nature of the cargo affects who must leave the tiller.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "a crew large enough to change its horses at every stage along the line.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "a company that owned the bridges as well as the boats that passed under them.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "a carrier whose cargo was perishable rather than bulky.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "a single hand, who could not mind the horse and hold the tiller at the same time.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Floated empty in a gauging dock and then loaded a ton at a time with iron _____ new boat yielded a table converting inches of freeboard into tons of cargo.",
+   "difficulty": "MEDIUM",
+   "why": "The opening participial phrase describes the boat and must be marked off by a comma before the main clause begins. Without it the reader joins &ldquo;iron weights&rdquo; to &ldquo;each new boat,&rdquo; and a semicolon or colon would need a complete sentence in front of it, which a participial phrase is not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "weights: each",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "weights, each",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "weights each",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "weights; each",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The two operations are not the same and are not costed the same way. Weed cutting removes what has grown in the water this _____ takes out what has settled on the bed over many.",
+   "difficulty": "MEDIUM",
+   "why": "The blank falls between two complete statements that are closely paired, and a semicolon is the mark for exactly that. A comma between them is a splice, no mark at all fuses them, and a colon would announce that the second explains the first when it instead sets a contrasting case beside it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "season dredging",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "season: dredging",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "season; dredging",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "season, dredging",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The man who walked a fixed beat of bank every day, watching for the soft place in the puddle before it could become a hole and known to the company as a _____ paid by the mile he covered rather than by the hour.",
+   "difficulty": "MEDIUM",
+   "why": "The supplement beginning &ldquo;watching for the soft place&rdquo; is opened with a comma and must be closed with one before the sentence reaches its verb. Leaving the mark out strands the opening comma, and neither a semicolon nor a colon may stand between a subject and its verb.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "lengthsman; was",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "lengthsman: was",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "lengthsman, was",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "lengthsman was",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Hanging on a hook inside the cabin door of every working boat _____ the windlasses with which the crew wound up the paddles at each lock they came to.",
+   "difficulty": "MEDIUM",
+   "why": "The sentence is inverted: the subject is &ldquo;the windlasses,&rdquo; which follows the verb and is plural, so the verb must be plural. Every singular form agrees with the participial phrase in front of it, which is not the subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "are",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "is",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "No boat moved on the line for three weeks that January: the summit had _____ hard enough for a cart to be driven across it below the top lock.",
+   "difficulty": "MEDIUM",
+   "why": "The auxiliary &ldquo;had&rdquo; requires the past participle of the verb, which is &ldquo;frozen.&rdquo; The simple past cannot follow &ldquo;had,&rdquo; the regular form is not an English word at all, and the present participle would need a form of &ldquo;be&rdquo; in front of it rather than &ldquo;had.&rdquo;",
+   "choices": [
+    {
+     "label": "A",
+     "content": "froze",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "freezed",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "freezing",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "frozen",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Cut through gravel and lined with clay trodden until it was uniform, _____",
+   "difficulty": "MEDIUM",
+   "why": "The opening phrase describes something cut and lined, and the only thing in the sentence that was cut and lined is the channel, so the channel must be the subject that follows. Beginning with the engineers, with the keeping, or with an empty subject leaves the description attached to something it cannot describe.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "engineers found that the channel held water only so long as the lining stayed wet.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "keeping the lining wet was what held the water in the channel.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "it was necessary to keep the lining wet if the channel was to hold water.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "the channel held water only so long as the lining stayed wet.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A canal company numbered every bridge on its line from one end to the other, and the boatmen took the numbers up in preference to the names of the places they passed. _____ a boat reported as lying below bridge ninety-four was somewhere no map named and every crew on the line could find.",
+   "difficulty": "MEDIUM",
+   "why": "The second sentence gives one instance of the practice described in the first, which is what an example marker announces. The two do not conflict, and the numbering of the bridges is not what makes the map silent.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Consequently,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Goods lay in open boats overnight at every wharf on the line, and a parish constable had no authority a yard beyond his own parish. _____ several companies obtained Acts appointing constables of their own, who could stop and search a boat anywhere between one end of the navigation and the other.",
+   "difficulty": "MEDIUM",
+   "why": "Goods left unguarded where no officer's authority reached are what produced the remedy described next, so the link is causal. The companies' own constables are not an instance of a parish constable's limits, and the second sentence follows from the first rather than standing against it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In addition,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "As a result,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "Legging a boat through a two-mile tunnel took four hours and paid badly. _____ crews carrying cheap cargo went on doing it for twenty years after the tug appeared, because the tug's charge was more than their freight would bear.",
+   "difficulty": "MEDIUM",
+   "why": "The second sentence reports crews continuing with a practice the first has just made unattractive, so the link must be concessive. A result marker would claim that the hardship caused the crews to persist, which reverses the logic.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Even so,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "As a result,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For instance,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain the circumstances in which a carrier would take a horse-marine. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A carrier's own horses worked fixed stages and were stabled at the ends of each one.</li><li>Beyond those stages a carrier had no animal of his own.</li><li>Innkeepers along the line kept horses and drivers for hire by the trip.</li><li>A hired horse and its driver together were known as a horse-marine.</li><li>Traffic running only occasionally beyond a carrier's own stages was worked this way.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The question asks when the hire happened, so the answer must join the limit of the carrier's own stages to the occasional traffic that went past it. Two options define the term or describe the innkeepers without naming an occasion, and one gives only the stages.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Innkeepers along the line kept horses and drivers for hire by the trip, and beyond his own stages a carrier had no animal of his own.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Because a carrier's own horses worked only his fixed stages, traffic that went beyond them occasionally was worked instead by a hired horse and driver taken by the trip.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "A hired horse and its driver together were known as a horse-marine, and innkeepers along the line kept both for hire.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A carrier's own horses worked fixed stages and were stabled at the ends of each one.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what the Act of 1877 was intended to control. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Falling freight rates after 1850 left many boatmen unable to keep a house ashore.</li><li>Whole families moved into cabins measuring about eight feet by seven.</li><li>An Act of 1877 required every boat used as a dwelling to be registered.</li><li>The registration stated the number of people who might lawfully sleep aboard.</li><li>An inspector could board a registered boat and count those sleeping in it.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "What the Act controlled was overcrowding, so the answer must connect the size of the cabins to the registered limit and to the inspection that enforced it. One option gives the cause without the Act, and the others give the Act without what it was answering.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Falling freight rates after 1850 left many boatmen unable to keep a house ashore, and whole families moved into cabins measuring about eight feet by seven.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "An Act of 1877 required every boat used as a dwelling to be registered.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "An inspector could board a registered boat, whose registration stated the number of people who might lawfully sleep aboard.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Because whole families had moved into cabins of about eight feet by seven, the Act of 1877 made a boat used as a dwelling register the number who might lawfully sleep aboard, which an inspector could come and count.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why the width of a single lock could govern a whole route. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Locks on the northern canals were built about seven feet wide.</li><li>Locks on the eastern navigations were built about fourteen feet wide.</li><li>A boat built to pass a seven-foot lock will also pass a fourteen-foot one.</li><li>A barge built for a fourteen-foot lock cannot pass a seven-foot one.</li><li>A through route was open only to craft that could pass its narrowest lock.</li></ul>",
+   "difficulty": "MEDIUM",
+   "why": "The governing fact is that the larger craft is excluded while the smaller is not, so the answer must state the asymmetry and then the consequence for a route. The others give the two widths, or the rule about the narrowest lock, without the asymmetry that produces it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because a barge built for a fourteen-foot lock cannot pass a seven-foot one, a through route was open only to craft small enough for the narrowest lock anywhere along it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Locks on the northern canals were built about seven feet wide and those on the eastern navigations about fourteen.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A boat built to pass a seven-foot lock will also pass a fourteen-foot one.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "A through route was open only to craft that could pass its narrowest lock, and the northern locks were about seven feet wide.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2E": [
+  {
+   "_ref": "AUTHORED-T23:W2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A lock gate is not a flat wall across the chamber. Each leaf is hung at an angle, so that the pair meets in a shallow V pointing towards the higher water. Pressure that would burst a flat gate instead drives the two leaves harder against one another and against the stone they close on. The design therefore _____ the very force that threatens it.",
+   "difficulty": "EASY",
+   "why": "The pressure is described as doing the closing work, not merely being survived, so the verb must mean putting that force to use. A word meaning that the design merely holds out against the pressure misses the point the text is making, which is that the pressure helps.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "conceals",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "enlists",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "withstands",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "measures",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A pumping engine at the foot of a flight returns water to the top of it, so that the same water serves a second boat instead of running away to the sea. Coal for the engine cost the company money every day of the year, while the water it saved mattered only in a dry summer. Directors who authorised such engines were buying _____ against a season they could not predict.",
+   "difficulty": "EASY",
+   "why": "A steady cost paid against an uncertain future loss is insurance. The engine adds no carrying capacity to the line, and nothing in the text suggests the directors were concerned with how the works looked or with the opinion of anyone outside the company.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "capacity",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "goodwill",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "insurance",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "prestige",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A boat carrying grain to a mill once tied up at a public wharf, where the sacks were craned onto a cart and hauled a quarter of a mile through the streets. The mills that prospered after 1800 were those that cut a short channel of their own from the main line to a basin under their own walls. What such a mill bought for the price of the digging was the _____ of the cartage altogether.",
+   "difficulty": "EASY",
+   "why": "Bringing the water to the mill removes the road journey rather than shortening or deferring it, so the word must mean doing away with the cartage. A word meaning putting it off later implies the carts were still needed, which the new channel makes untrue.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "regulation",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "postponement",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "subsidy",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "elimination",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "Ordinary boats tied up at dusk. A fly boat did not: it carried two crews who slept in turn, changed horses at stages along the line, and held a company order entitling it to take a lock ahead of anything waiting. Perishable goods and light manufactures went this way and paid for the privilege. Set against the leisurely progress of the coal traffic, the fly service was deliberately _____.",
+   "difficulty": "EASY",
+   "why": "Every detail listed &mdash; two crews, relays of horses, priority at locks &mdash; is a means of going faster, and the contrast drawn is with slow progress. The text says the shippers paid extra, so the service was not the cheap option, and it operated under a company order rather than outside the rules.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "seasonal",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "unregulated",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "expeditious",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "economical",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "When a canal froze, the company sent out a short iron-shod boat drawn by a team of horses, with a dozen men standing along a rail down its centre. The men rocked it from side to side in time as it went, so that the hull rose and fell and broke a channel wider than its own beam. Crude as the machine looks, its action had to be carefully _____: rock too slowly and the ice closed again behind the boat.",
+   "difficulty": "EASY",
+   "why": "The clause after the colon makes rate the issue, so the word must be about the tempo of the rocking. Nothing in the text concerns keeping the work secret, writing it down, or costing it.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "concealed",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "recorded",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "priced",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "timed",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "A towpath was never a public road. It was company property, made for the horses of boats that had paid a toll, and walkers on it were trespassers whom the company tolerated. <u>That history explains the odd position the paths occupy now.</u> Most are open to the public by agreement rather than by right, and the navigation authority that maintains a length may close it for repair without the procedure a highway would demand.",
+   "difficulty": "EASY",
+   "why": "The sentence looks back to the company ownership just described and forward to the modern arrangement set out next, and the text does not dispute what it asserts. It names no particular path and defines no term.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It connects the historical account before it to the present-day consequence described after it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "It states a conclusion that the rest of the text goes on to dispute.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It offers an example of a towpath that has been closed to walkers.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It defines a legal term used in the sentence that follows.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best states the main purpose of the text?",
+   "passage": "On the river navigations that came before the canals, boats were pulled by gangs of men who worked the bank for hire and had no employer beyond the day. Canal companies built a made path, fenced it, and let it only to boats that had paid a toll &mdash; and a horse on a firm level path could do what six men on a rutted bank could not. Within a generation the bow hauliers were gone from every line that had a towpath, and survived only where the bank was still whatever the river had left of it.",
+   "difficulty": "EASY",
+   "why": "The text turns on the made path: it is what lets a horse outwork six men and what marks the boundary of where the hauliers survived. The construction of the path is mentioned in a clause rather than described, and steam towage never appears.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "To explain how a change in the path itself displaced one kind of haulage with another.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "To argue that the men who hauled boats were treated unfairly by the canal companies.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "To describe in detail how a towpath was constructed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "To compare the cost of horse haulage with the cost of steam towage.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:X3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Based on the texts, the author of Text 2 would most likely respond to Text 1's description of the tug by",
+   "passage": "<p><strong>Text 1</strong></p><p>The steam tug that took over the long tunnels is usually described as a straightforward improvement. It brought a train of boats through in forty minutes where legging took four hours, and it ended a job that ruined men's backs. Nobody who had legged a tunnel would have wanted the practice kept.</p><p><strong>Text 2</strong></p><p>The tug charged by the boat, and the charge fell on the carrier whether his cargo could bear it or not. A fly boat carrying manufactures saved three hours that it could sell. A boat carrying coal at a few pence a ton saved three hours that it could not, and its crew went on legging until the company forbade it two decades later. What looks in retrospect like a clean replacement was for a generation a choice that different traffics made differently.</p>",
+   "difficulty": "EASY",
+   "why": "Text 2 contrasts a boat that could sell the hours saved with one that could not, which is an argument about who the saving was worth its price to. It never questions the forty-minute figure, and it says compulsion came two decades later, so it does not claim compulsion from the start.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "denying that the tug was in practice any faster than legging.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "arguing that the physical strain of legging has been exaggerated.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "showing that companies compelled every boat to use the tug from the outset.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "noting that the time it saved was worth paying for only to some of the traffic that could have used it.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what was one consequence of the way dredged material was disposed of?",
+   "passage": "The mud lifted out of a navigation has to be put somewhere, and the cheapest somewhere is the field side of the bank, straight over the gunwale of the mud boat. A century of this raised the offside of many canals into a low ridge, which seeded itself with hawthorn and left the water sitting visibly above the meadow beyond. Farmers who had sold a strip of land for a channel found themselves living beside an embankment nobody had asked them about, and several companies were sued over it.",
+   "difficulty": "EASY",
+   "why": "The text says the offside was raised into a ridge that left the water above the meadow, which is the consequence asked for. It says the hawthorn seeded itself, so nobody planted it, and tipping over the side is described as the alternative to carrying the mud away.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Hawthorn was planted along the new bank to hold it together.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The bank on the side away from the towpath was gradually built up above the land around it.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The channel became too shallow for loaded boats to work through.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Companies were obliged to carry the material away by boat to a distant tip.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, what was one effect of compensation tolls?",
+   "passage": "Where one company's line joined another's, a boat passing from the first to the second stopped paying the first and began paying the second, and the first company lost a haul it had built its works to carry. Several Acts therefore provided for a compensation toll: a payment made by the second company to the first on every ton crossing the junction, reckoned as though part of the journey had been made on the older line. The arrangement kept the junctions open. It also made the through rate higher than the sum of what either company would have charged on its own.",
+   "difficulty": "EASY",
+   "why": "The last sentence states the effect outright. The payment runs from the newer company to the older one, so the option reversing that direction contradicts the text, and the text says the arrangement kept junctions open rather than preventing them.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A boat was charged twice by the same company for a single haul.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Sending goods across a junction cost more than the two companies' own charges added together.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Companies refused to build junctions with one another's lines.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The older company had to pay the newer one for the traffic it had lost.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to support the engineer's argument?",
+   "passage": "A canal loses water in two ways: through the locks, in proportion to how many boats pass, and through the bed and banks, whether any boat passes or not. An engineer gauged four pounds on one line during a week in which the traffic was also recorded, separating the volume that went down through the locks from the volume that disappeared without a boat moving.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Pound</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Boats passed in the week</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lost through the locks (cubic metres)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lost through bed and banks (cubic metres)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Summit</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8,680</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,150</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Marsh</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8,120</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6,900</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Highfield</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,360</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,400</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ryebank</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,940</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5,600</td></tr></table> The engineer argued that on some pounds restricting traffic would save far less water than repairing the lining.",
+   "difficulty": "EASY",
+   "why": "The argument needs a pound whose leakage dwarfs its lockage, and Ryebank lost 5,600 cubic metres through the bed and banks against 2,940 through the locks. The summit figures show the opposite relationship, and the traffic comparison and the total for Highfield say nothing about which of the two kinds of loss is the larger.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "At the summit the locks accounted for far more of the loss than the bed and banks did.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Marsh passed almost as many boats during the week as the summit did.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Highfield lost less water in total than any other pound listed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "At Ryebank the bed and banks lost nearly twice the volume that the whole week's lockages took.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to support the authority's conclusion?",
+   "passage": "A navigation authority imposed a speed limit on part of one line and left the rest unchanged, then measured how far the bank had retreated at four sites over the following three years.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Site</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Speed limit in force</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Boats passing per year</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Bank retreat over three years (cm)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ashlock</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yes</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,100</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bramble</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3,050</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Coldwell</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Yes</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,400</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Denbrook</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,450</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr></table> The authority concluded that the retreat depended more on the speed of the boats than on how many of them passed.",
+   "difficulty": "EASY",
+   "why": "Only a comparison in which the busier site loses less bank can separate speed from volume, and Ashlock passed 3,100 boats for 4 centimetres of retreat while Denbrook passed 1,450 for 11. Every other statement is true of the table but is consistent with traffic alone driving the retreat.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ashlock, where a limit was in force, carried more than twice Denbrook's traffic and lost about a third as much bank.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Bramble lost more bank over the three years than any of the other sites.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The two sites with the heavier traffic carried more than twice as many boats as the two with the lighter traffic.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Coldwell lost the least bank of the four sites measured.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which finding, if true, would most directly weaken the company's explanation?",
+   "passage": "After a pumping engine was installed at the foot of a flight in 1842, the summit pound held its level through several dry summers in which it had previously failed, and the company credited the engine. A modern historian suspects that a reservoir enlarged in the same decade and a fall in traffic after the railway opened did most of the work.",
+   "difficulty": "EASY",
+   "why": "Isolating the engine from the reservoir is the only way to test the company's claim, and a period with the engine working and the reservoir still small in which the summit failed as before shows the engine was not what saved it. Rising traffic would strengthen rather than weaken the company's case, since the level then held under a heavier demand.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Other companies on the same watershed installed similar engines during the same decade.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In the two dry summers after the engine was built but before the reservoir was enlarged, the summit fell to the same levels it had reached before the engine existed.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "The engine burned more coal in dry years than in wet ones.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Traffic on the line rose in the years immediately after the engine was installed.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A lorry moving thirty tonnes uses several times as much fuel for each tonne it carries a kilometre as a barge moving three hundred. The barge is nonetheless the dearer option on most British routes, because hardly any factory or warehouse now stands on the water: the goods must be lifted twice and carried by road at each end of the voyage. The advantage of water carriage survives, then, only where _____",
+   "difficulty": "EASY",
+   "why": "The text names one thing that cancels the fuel advantage, the road journey and double handling at each end, so the advantage survives where those are absent, which means both ends are on the water. Cargo weight, journey length and fuel prices leave the terminal handling exactly as it was.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the origin and the destination both stand on the waterway itself.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "the cargo is light enough to be handled without cranes.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "the journey is short enough to be completed within a single day.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "fuel prices rise faster than the cost of labour does.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A boatman who owned his boat was paid for what he delivered, not for the days he worked. A frozen canal did not reduce his earnings in proportion to the delay; it stopped them altogether, while the horse still ate and the family still lived aboard. Set beside a company boatman on weekly wages, an owner therefore had reason to _____",
+   "difficulty": "EASY",
+   "why": "The owner alone loses his whole income to a stoppage while his costs continue, so the ice boat is worth more to him than to a man still drawing wages. Nothing in the text connects that difference to the number of locks, the length of a haul or the level of tolls.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "carry only goods that could be delivered within a single day.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "regard the company's toll schedule as the chief threat to his living.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "contribute far more willingly towards the cost of keeping a channel open in frost.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "prefer a route with more locks on it than his competitors used.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Ice forming in the joints of a lock wall lifts every stone a fraction each _____ the coping has to be taken up and reset long before the stone itself is anywhere near worn away.",
+   "difficulty": "EASY",
+   "why": "Two complete statements are joined here by &ldquo;and,&rdquo; and a comma belongs in front of the conjunction when the clauses either side of it are both independent and this long. A semicolon or a colon before a coordinating conjunction is not a standard pairing, and leaving the comma out runs the two statements together.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "winter, and",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "winter and",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "winter; and",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "winter: and",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Three reservoirs in the hills feed the summit, and in a wet year the company needs very little of what they _____ August of 1826 the summit was down to eighteen inches over the sill and all traffic stopped for a fortnight.",
+   "difficulty": "EASY",
+   "why": "Two complete sentences meet at the blank and nothing joins them, so a full stop is the only option that separates them properly. A comma between them makes a splice, running them together with no mark at all leaves a fused sentence, and the second clause contrasts with the first rather than explaining it, which is what a colon would promise.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "hold: in the dry",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "hold. In the dry",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "hold, in the dry",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "hold in the dry",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Because the top gate of one chamber is at the same time the bottom gate of the _____ boats cannot pass one another anywhere on a staircase.",
+   "difficulty": "EASY",
+   "why": "A long introductory clause beginning with &ldquo;Because&rdquo; must be closed off by a comma before the main clause starts. Without the comma the reader takes &ldquo;the next two boats&rdquo; as a single phrase, and a semicolon or a colon would require what precedes it to stand as a complete sentence, which a clause opening with &ldquo;Because&rdquo; does not.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "next, two",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "next two",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "next; two",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "next: two",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The wharfinger _____ ledgers survive at Norbrook recorded the name of every boat that tied up at the wharf and the hour at which it left again.",
+   "difficulty": "EASY",
+   "why": "The blank stands in front of a noun that belongs to the wharfinger, so a possessive relative pronoun is needed. The contraction of &ldquo;who is&rdquo; is not a possessive, the subject form cannot take a noun after it, and the pronoun for things cannot refer to a person.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "whose",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "who&rsquo;s",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "who",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "which",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Two of the tunnels on the northern section _____ wide enough for boats to pass one another inside, and traffic through the rest had to be worked one way at a time.",
+   "difficulty": "EASY",
+   "why": "The subject is the two tunnels, which is plural, so the verb must be plural; the singular noun in the phrase that follows describes where they are and cannot govern it. Every singular form agrees with the section instead of with the tunnels the sentence is about.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "were",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "was",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "Had the committee carried the line over the ridge in an open cutting instead of boring it through, the works _____ two years sooner and no crew would ever have had to leg a boat at all.",
+   "difficulty": "EASY",
+   "why": "The opening clause imagines a past that did not happen, so the main clause has to name its unrealised past consequence, which takes the conditional perfect. A present conditional points at now rather than at the year of the works, and neither a future nor a past perfect can carry the consequence of a condition contrary to fact.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "will have been finished",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "had been finished",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "would have been finished",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "would be finished",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A gauging table let a clerk read a cargo's weight off the side of a boat without opening a single hold. _____ the classification schedule let him fix a rate without inspecting the goods, provided the boatman's declaration was honest.",
+   "difficulty": "EASY",
+   "why": "Both sentences describe a document that spared the clerk a direct inspection, so the link marks a parallel. The second is neither an objection to the first nor something the first brings about.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "As a result,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In fact,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Similarly,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The tug through the long tunnels brought a train of boats out at the far end in forty minutes instead of four hours. _____ it put an end to a job that had left men with ruined backs.",
+   "difficulty": "EASY",
+   "why": "Both sentences describe benefits of the tug, and the second adds a further one, so an additive link is needed. The second is not a summary of the first and does not replace it with an alternative.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "In short,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Otherwise,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Moreover,",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Instead,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A canal company could cut a rate as far down as it liked; nothing in its Act set a floor. _____ it could not raise the rate on the traffic that stayed in order to pay for the cut, because that rate was already at the maximum the Act allowed.",
+   "difficulty": "EASY",
+   "why": "The first sentence grants a freedom and the second withdraws a related one, so the link is a contrast. Nothing in the freedom to cut rates causes the inability to raise them, so a conclusion word is wrong, and the second sentence is not an instance of the first.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "For example,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Similarly,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how a toll clerk arrived at the weight of a cargo, to an audience already familiar with gauging. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Every boat was floated empty and then loaded with known weights a ton at a time.</li><li>Its freeboard was recorded at each step, giving a table for that hull alone.</li><li>A copy of the table was kept at every toll house on the line.</li><li>A clerk measured the freeboard at the toll house and read the weight from the table.</li></ul>",
+   "difficulty": "EASY",
+   "why": "The question is about what the clerk did, so the answer must have him measuring and reading. The others describe the calibration or the filing of the tables and never reach the toll house counter.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The clerk measured a boat's freeboard at the toll house and read its weight from the table drawn up when that hull had been loaded with known weights.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Every boat was floated empty and then loaded with known weights a ton at a time, and its freeboard was recorded at each step.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A copy of the table for each hull was kept at every toll house on the line.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Its freeboard was recorded at each step, giving a table for that hull alone, and a copy was kept at every toll house.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain how the Braddon trough can move without leaking, to an audience already familiar with iron aqueducts. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>An iron trough carrying a canal expands as it warms and contracts as it cools.</li><li>The plates of the Braddon trough are bolted to one another at flanged joints.</li><li>Every joint at Braddon is bedded in flannel dipped in white lead.</li><li>The bedding lets the plates move slightly against one another without letting water through.</li></ul>",
+   "difficulty": "EASY",
+   "why": "An audience that already knows iron aqueducts does not need to be told that iron expands, so the answer must spend its words on the bedding and what it permits. Every other option gives part of the sentence over to the expansion the stated audience takes for granted.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "The plates of the Braddon trough are bolted to one another at flanged joints.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "An iron trough expands as it warms, and every joint at Braddon is bedded in flannel dipped in white lead.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "The flanged joints of the Braddon trough are bedded in flannel dipped in white lead, which lets its plates move slightly against one another without letting water through.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "An iron trough carrying a canal expands as it warms and contracts as it cools, and the plates of the Braddon trough are bolted at flanged joints.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to emphasise the limits of the evidence bearing on where the pattern came from. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Working boats were painted with roses and with castles on their cabin doors and water cans.</li><li>The pattern appears on boats from the 1860s onward.</li><li>Some writers trace it to the fairground and clock-dial painting of the same period.</li><li>Others argue that it grew out of the boatyards' own house styles.</li><li>No boat painted before 1858 has been found carrying the pattern.</li></ul>",
+   "difficulty": "EASY",
+   "why": "Emphasising the limits of the evidence means saying what the evidence cannot settle, and only one option names the missing early boats and draws the consequence for both explanations. The rest simply report the pattern or one side of the argument.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Some writers trace the pattern to fairground and clock-dial painting of the same period.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Others argue that the pattern grew out of the boatyards' own house styles, which were established well before the 1860s.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "No boat painted before 1858 has been found carrying the pattern at all, so neither the fairground account of its origin nor the boatyard account can be tested against an earlier example.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Working boats were painted with roses and with castles on their cabin doors and water cans, and the pattern appears from the 1860s onward.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "RW_M2H": [
+  {
+   "_ref": "AUTHORED-T23:W13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;pound&rdquo; most nearly mean?",
+   "passage": "Between one lock and the next the water lies dead level, and it is this level stretch, not the lock, that a boatman calls a <u>pound</u>. A long one holds enough water to absorb a busy morning's traffic without dropping. A short one, squeezed between two locks in a flight, can be drawn down several inches by a single boat and has to be refilled from above before the next boat may pass.",
+   "difficulty": "HARD",
+   "why": "The first sentence defines the term outright as the level stretch, and both examples that follow describe quantities of water held between locks. The everyday senses of the word have nothing to hold water or to be refilled from above.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A level stretch of water between locks.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A heavy repeated blow.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "A unit of weight.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "An enclosure for stray animals.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A horse pulling a boat at three miles an hour leaves the banks much as it found them. A propeller driven fast enough to save a day on the run throws a wave against both sides, and the wave carries away a little clay at every passage. The bank is the company's to repair; the day saved belongs to the carrier. Companies that imposed speed limits were answering a situation in which the party causing the damage and the party paying for it were _____.",
+   "difficulty": "HARD",
+   "why": "The two sentences before the blank name the company as the payer and the carrier as the beneficiary, so the word must mark them as different parties. Nothing in the text accuses either of carelessness, and both are plainly identifiable.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "cooperative",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "anonymous",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "distinct",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "negligent",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "As used in the text, what does the word &ldquo;reaches&rdquo; most nearly mean?",
+   "passage": "The surveyor divided the navigation into <u>reaches</u> and reported on each separately: so many tons of silt lifted from the two miles below the junction, so many from the straight above the aqueduct, so many from the curve at the mill. Dividing the work this way let the committee compare a mile of the summit with a mile of the valley and set a price for maintaining each.",
+   "difficulty": "HARD",
+   "why": "Each item in the list after the colon is a named length of water &mdash; two miles below the junction, the straight, the curve &mdash; so the word must denote a section of the navigation. Reading it as how far something can travel makes nonsense of lifting silt from one.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Distances that can be covered.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Continuous stretches of a waterway.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "Attempts to influence an audience.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Acts of stretching out an arm.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "In the two years after 1791, subscription lists for new canals filled within hours of opening, sometimes for lines whose route had not yet been surveyed. Promoters found that the name of a river and a promise of coal were enough. Investment on those terms was necessarily _____, and by 1797 a third of the companies authorised had not cut a yard of channel.",
+   "difficulty": "HARD",
+   "why": "Money committed before a route existed is a bet on an unknown, and the failure rate given in the last clause is the outcome such a bet produces. The sums were plainly not small, and the text describes an absence of scrutiny rather than any rule governing the subscriptions.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "collaborative",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "speculative",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "modest",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "regulated",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:W9",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-WV",
+   "block": "Words in Context",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "passage": "A canal company could not charge what it liked. Its Act fixed a maximum for each class of goods, and the classes were not alike: coal and limestone paid a few pence a ton over a long haul, while manufactured goods paid several times as much over the same water. The schedule was _____, and a clerk's decision about which class a cargo fell into could matter more to a trader than the distance he sent it.",
+   "difficulty": "HARD",
+   "why": "The sentence before the blank sets out rates rising by class, which is what a graduated schedule is. A word meaning the same throughout states the opposite of the example given, and a schedule a trader could argue about was neither temporary nor secret.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "graduated",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "uniform",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "provisional",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "confidential",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "A canal cut through gravel will not hold water. The remedy the early engineers used was puddle: clay worked with water and trodden until it is uniform, then laid in layers against the bed and the sides. <u>The material has no strength of its own and depends entirely on staying wet.</u> A pound drained for repair in a hot summer could crack its lining beyond saving, which is why companies preferred to do heavy work in winter and to refill a length as soon as the masons were clear of it.",
+   "difficulty": "HARD",
+   "why": "The sentence states that puddle must stay wet, and everything after it &mdash; winter working, prompt refilling &mdash; follows from that requirement. It does not define puddle, which the previous sentence has already defined, and no second lining method appears anywhere in the text.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It concedes a weakness in a claim that the text goes on to reject.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It defines a technical term introduced in the previous sentence.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It introduces a second method of lining that the text then compares with the first.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "It identifies a property of the lining that accounts for the working practice described afterwards.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:T4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-TS",
+   "block": "Text Structure and Purpose",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "passage": "A toll clerk took the boatman's declaration of what he carried and charged the rate for that class. A boatman who declared road stone and carried finished ironware paid a fraction of what he owed, and nothing in the toll house could tell the difference. <u>The company's loss was invisible: it appeared in no ledger, because the ledger recorded only what had been declared.</u> Check clerks were therefore stationed along the line to board boats at random, turn back the cloths and compare what they found with the ticket issued at the last toll house.",
+   "difficulty": "HARD",
+   "why": "The sentence explains that the fraud left no trace in the accounts, and the next sentence sends men out to look at the boats themselves; the word &ldquo;therefore&rdquo; makes the link explicit. The text never says the losses were trivial, and only one fraud is described.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "It introduces a second form of fraud unrelated to the one already described.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "It restates the argument of the text as a whole in shorter form.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "It explains why the company's own records could not reveal the problem, which is why an independent check was needed.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "It concedes that the sums involved were too small to be worth pursuing.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:X2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "CAS",
+   "skill": "CAS-CT",
+   "block": "Cross-Text Connections",
+   "stem": "Based on the texts, the author of Text 2 would most likely characterise the outcome that Text 1 calls restoration as",
+   "passage": "<p><strong>Text 1</strong></p><p>A derelict canal is not a wildlife park; it is an unfinished piece of engineering. The societies that reopen a line hang the lock gates again, dredge the bed to its designed depth and return the water to a channel that was cut to hold it. The alternative is not preservation but slow disappearance: reed, then willow, then a ditch that nobody can find.</p><p><strong>Text 2</strong></p><p>Sixty years of neglect turn a canal into something its engineers never made. Shallow, weedy water of a kind that has become scarce in the surrounding country supports plants and invertebrates that a dredged and navigated channel cannot hold. Ecologists do not object to restoration as such. They object to a restored length being reported as a recovery when, measured by what actually lives in it, what has taken place is an exchange.</p>",
+   "difficulty": "HARD",
+   "why": "Text 2's closing word is &ldquo;exchange,&rdquo; and its objection is to calling that exchange a recovery, which is precisely a denial that the outcome is a plain gain. It cannot be saying the wildlife is unaffected, since its whole case is that the scarce shallow-water species are lost.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "an engineering failure that restoration societies have not been willing to admit.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "an improvement that ecologists have been slow to acknowledge.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "a substitution of one set of living things for another rather than a straightforward gain.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "a change that leaves the wildlife of a canal essentially unaffected.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "According to the text, why did a carrier with a light trade hire horses rather than own them?",
+   "passage": "A boat horse worked a stage of about fifteen miles and was then changed, and stables stood at the ends of every stage. The animal ate whether it worked or not, which is why a carrier with a heavy trade and a carrier with a light one made very different arrangements. The first owned his horses and his stables outright. The second hired both by the day from an innkeeper on the line, at a rate that would have ruined him had he needed them every day of the week.",
+   "difficulty": "HARD",
+   "why": "The text gives the reason directly: the horse eats whether it works or not, and the light trader cannot spread that cost over enough working days. It makes no claim about the relative strength of hired animals and mentions no rule compelling anyone to hire.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Hired horses were stronger than any a small carrier could afford to buy.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Innkeepers on the line refused to stable horses a carrier owned himself.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Companies required carriers with light traffic to use hired animals.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Owning an animal meant paying to feed it on the days it earned nothing.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:C1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CI",
+   "block": "Central Ideas and Details",
+   "stem": "Which choice best states the main idea of the text?",
+   "passage": "In an ordinary flight each lock has a pound above it and a pound below it, and two boats can work past one another in those intervals. A staircase has no pounds: the top gate of one chamber is the bottom gate of the next, so water leaving the upper chamber has nowhere to go except into the lower one. A boat coming down must find every chamber below it empty, and a boat going up must find every chamber above it full. Two boats meeting on a staircase cannot pass, and one of them has to be worked right through before the other may start.",
+   "difficulty": "HARD",
+   "why": "The shared gate is given as the reason there are no pounds, and the absence of pounds is what forces the chambers into opposite states for the two directions and rules out passing. The text compares neither the height nor the water consumption of the two arrangements.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because a staircase's chambers share their gates, one boat's passage has to be finished before another's can begin.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Staircase locks raise boats higher than ordinary flights of locks do.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Staircase locks were built because they use less water than ordinary flights.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Boats going up a staircase travel more slowly than boats coming down.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from Marbury's account most effectively illustrates this emphasis?",
+   "passage": "In her account of a journey by canal in 1846, the traveller Anne Marbury dwells on the disorientation of passing through a long tunnel rather than on the labour it cost the men who moved the boat.",
+   "difficulty": "HARD",
+   "why": "Disorientation is a loss of one's bearings, and the quotation in which there is no up nor down and the writer cannot tell whether the boat is moving is exactly that. The quotation about hard breathing describes the labour Marbury is said to pass over, and the timed passage and the horse are plain narration.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;The two men lay upon their planks and walked the wall, and their breath came hard enough to be heard the length of the boat.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;We were an hour and fifty minutes within, by my husband's watch, and came out into a cutting hung about with ferns.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;The horse had been sent over the hill at the mouth and stood waiting at the far end when we came out.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;There was no up nor down in that place, and but for the drip that struck the cabin roof I could not have told whether we moved at all.&rdquo;",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which choice most effectively uses data from the table to support the student's conclusion?",
+   "passage": "A canal company's Act set a different maximum rate for each class of goods, and the traffic was not distributed as the classes might suggest. The table gives one company's tonnage and toll receipts for four classes of goods in 1838.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Class of goods</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tons carried</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Toll receipts (&pound;)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Coal and coke</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">214,000</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,280</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Stone, sand and lime</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96,000</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,400</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Timber</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31,000</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,550</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Manufactured goods</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16,000</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,700</td></tr></table> A student concluded that a small share of the tonnage could matter more to the company's income than its size suggests.",
+   "difficulty": "HARD",
+   "why": "The conclusion needs a class that is light in tonnage and heavy in receipts, and manufactured goods are 16,000 of the 357,000 tons shown while earning 2,700 pounds against the 2,400 pounds earned by 96,000 tons of stone, sand and lime. The other statements are all true of the table but describe classes whose income tracks their tonnage, so none of them bears on the point.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Timber produced less toll income than coal and coke did.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Stone, sand and lime accounted for more tonnage than timber and manufactured goods together.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Manufactured goods made up under five per cent of the tonnage shown yet produced more toll income than stone, sand and lime, which were six times as heavy.",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Coal and coke produced more toll income than any other class shown.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:E5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-CE",
+   "block": "Command of Evidence",
+   "stem": "Which quotation from the company's minute book most effectively illustrates that resistance?",
+   "passage": "The committee of one canal company is often said to have resisted the expense of a pumping engine for as long as it possibly could, agreeing to consider the question again rather than settling it.",
+   "difficulty": "HARD",
+   "why": "The claim is about postponing a decision, and only the resolution that sends the engine back to committee on the ground that the season turned out wet does that. One resolution orders the engine at once, and the other two concern a reservoir and a survey rather than the engine at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "&ldquo;Resolved, that the reservoir at Cheddleton be enlarged by ten acres, the land having been purchased in the last year.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "&ldquo;Resolved, that the surveyor do report upon the state of the lining between the third and the fourth locks.&rdquo;",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "&ldquo;Resolved, that the question of a pumping engine be referred once more to the works committee, the present season having proved less dry than was apprehended.&rdquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "&ldquo;Resolved, that a pumping engine be erected at the foot of the flight without delay, and that tenders be advertised within the month.&rdquo;",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "A canal company's Act stated the most it might charge for each class of goods, a protection written into the law when the company was the only carrier on its route. Railway companies were incorporated under Acts that bound them far more loosely and could quote a low rate for one traffic and recover the loss on another. A canal company facing that competition could cut its own rates, but it could not _____",
+   "difficulty": "HARD",
+   "why": "The maximum binds the company only from above, so the freedom it lacks is the freedom to raise a rate, which is exactly the recovery the railway companies are described as making. The text says the canal company could cut its rates, so an option denying that contradicts it outright.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "make up the shortfall by charging more to the traffic that remained.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "carry goods of a class its Act had not mentioned.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "reduce its charges below the maximum stated in its Act.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "apply to Parliament for any amendment of its powers.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:I1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "INI",
+   "skill": "INI-IE",
+   "block": "Inferences",
+   "stem": "Which choice most logically completes the text?",
+   "passage": "The leaves of a lock gate meet in a V pointing towards the higher water, and the pressure of that water is what holds them closed. A gate cannot be pushed open against it: the paddles must be drawn first and the two levels allowed to come together. A boatman who finds a gate that will not move should therefore suspect not that the gate is jammed but that _____",
+   "difficulty": "HARD",
+   "why": "The text gives one reason a gate will not move, an unequalised head of water, and says the paddles must be drawn before it will. Damaged ironwork, the width of a boat and a company padlock are all possible in the world but none of them is anything the text has established.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the ironwork of the leaves has been damaged by an earlier boat.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "his boat is too wide for the chamber he is trying to enter.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "the gate has been locked by the company against unauthorised use.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "water is still standing higher on one side of it than on the other.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The slots cut into the masonry at each end of a pound &mdash; plank grooves, in the company's _____ what let a single length be drained for a winter's repairs without emptying the miles on either side of it.",
+   "difficulty": "HARD",
+   "why": "The supplement is opened with a dash and must be closed with a dash, since the marks at either end of a parenthetical have to match. A comma or a semicolon leaves the opening dash unanswered, and dropping the mark altogether runs the supplement into the predicate.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "language; were",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "language &mdash; were",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "language, were",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "language were",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The boy who walked the horse the whole length of a day's run and opened the paddles at every lock while the steerer stayed at the _____ a share of the trip money rather than a wage.",
+   "difficulty": "HARD",
+   "why": "Everything from &ldquo;The boy&rdquo; to &ldquo;the tiller&rdquo; is a single long subject and &ldquo;took&rdquo; is its verb, and no punctuation belongs between a subject and its verb however far the two are driven apart.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "tiller, took",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "tiller; took",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "tiller: took",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "tiller took",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:B3",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-BS",
+   "block": "Boundaries",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The company's Act named three classes of goods and fixed a separate maximum rate for _____ building stone and general merchandise.",
+   "difficulty": "HARD",
+   "why": "What stands before the blank is a complete sentence and what follows it is a list naming the three classes, and a colon is the mark that introduces a list after a complete sentence. A comma leaves the list looking like a continuation of the phrase &ldquo;rate for each,&rdquo; no punctuation at all makes coal the object of that phrase, and a semicolon must be followed by something that could stand as a sentence.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "each, coal,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "each coal,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "each; coal,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "each: coal,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The advantage of a fly boat lay in changing horses at every stage, working through the night, and _____ ahead of anything waiting at a lock.",
+   "difficulty": "HARD",
+   "why": "The blank completes a list whose first two items are &ldquo;changing&rdquo; and &ldquo;working,&rdquo; so the third must take the same form. An infinitive, a full clause and a noun phrase each break the pattern the first two items establish.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "the taking of its turn",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "taking its turn",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "to take its turn",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "it took its turn",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The hand cranes along the wall of every warehouse on the arm _____ geared so low that a single man could lift a ton of grain to the third floor without help.",
+   "difficulty": "HARD",
+   "why": "The subject is the cranes, which is plural; &ldquo;every warehouse&rdquo; sits inside a prepositional phrase saying where the cranes are and cannot govern the verb. Each singular form agrees with that phrase rather than with the true subject.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "are",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "was",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:F4",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "SEC",
+   "skill": "SEC-FS",
+   "block": "Form, Structure, and Sense",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "passage": "The company set a stone at every mile along the towpath and reckoned its charges from them. A boat that passed one paid for the mile behind it, so the _____ positions settled what a haul cost as surely as the cargo did.",
+   "difficulty": "HARD",
+   "why": "The positions belong to the many stones set out in the sentence before, so the plural possessive is required. A singular possessive contradicts the stone at every mile, and a plain plural gives the noun no possessive form at all.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "stones&rsquo;s",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "stones&rsquo;",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "stone&rsquo;s",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "stones",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N2",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A company that dammed a hill stream for its reservoirs took water the mills below it had used for centuries, and its Act obliged it to send a fixed flow down the old channel every day of the year. _____ the water a reservoir could actually put into the summit was always less than the water it held.",
+   "difficulty": "HARD",
+   "why": "The shortfall in the second sentence follows directly from the obligation stated in the first, so the link is causal. A concession or a contrast would require the two to pull against each other, and the second sentence is a consequence rather than an instance.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Accordingly,",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "For instance,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N7",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "The shafts sunk from the hillside down to a canal tunnel were driven to get the spoil out while the tunnel was being cut, and were left open afterwards only because capping them would have cost money. _____ the openings that later carried off a tug's smoke were put there for a reason that had nothing to do with smoke.",
+   "difficulty": "HARD",
+   "why": "The second sentence puts the point of the first in plainer terms rather than adding anything new to it, which is what a restatement marker signals. There is no opposition between the two and no move to a different time.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "In other words,",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:N5",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-TR",
+   "block": "Transitions",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "passage": "A cabin boat carried its crew's home along with it, and the family slept aboard wherever the day's work happened to end. _____ a day boat had no cabin at all: it was an open box worked between two wharves by men who went home at night, and it never left the few miles it was built for.",
+   "difficulty": "HARD",
+   "why": "The two sentences set a boat that is a dwelling against a boat that is not, so the link must mark opposition. A word signalling similarity would tell the reader to expect the day boat to resemble the cabin boat, which is the reverse of what follows.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Accordingly,",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Indeed,",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "By contrast,",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R1",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain why a merchant would choose to keep goods in a bonded warehouse. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Imported goods paid customs duty at the moment they were landed.</li><li>A bonded warehouse held goods under a lock to which the Customs kept the key.</li><li>Duty on goods held in bond fell due only when they were taken out again.</li><li>A merchant could therefore hold a year's stock without finding the duty on it.</li><li>The canal company charged rent for the space and moved the goods to and from the wharf.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The reason for using such a warehouse is the deferral of the duty, so the answer has to state when the duty fell due and what that let the merchant do. The others describe the lock, the rent or the ordinary rule on landing without ever reaching the advantage.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Because duty on goods in bond fell due only when they were taken out, a merchant could hold a year's stock without having to find the duty on any of it.",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "A bonded warehouse held goods under a lock to which the Customs kept the key, and the canal company charged rent for the space.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Imported goods paid customs duty at the moment they were landed.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The canal company moved the goods to and from the wharf and charged rent for the space they occupied.",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R8",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain the purpose of the unusually small fall at Norbrook, to an audience already familiar with stop locks. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>A stop lock stands where one company's line meets another's.</li><li>The Wenholme summit lies four inches above the Ashby line at Norbrook.</li><li>The stop lock at Norbrook has a fall of four inches.</li><li>Its purpose is to keep the Wenholme company's water from running into the Ashby line.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The small fall is explained by matching it to the difference in level and naming what that prevents, and only one option makes that connection. One option defines a stop lock for an audience said to know what one is, and another sets the two four-inch figures side by side without saying they are the same four inches.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "A stop lock stands where one company's line meets another's, and the one at Norbrook has a fall of four inches.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "The stop lock at Norbrook has a fall of four inches, and the Wenholme summit lies four inches above the Ashby line.",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Its purpose is to keep the Wenholme company's water from running into the Ashby line, where one company's line meets another's.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "The Norbrook lock falls only the four inches by which the Wenholme summit lies above the Ashby line, so that Wenholme water cannot run away into it.",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED-T23:R6",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "EOI",
+   "skill": "EOI-RS",
+   "block": "Rhetorical Synthesis",
+   "stem": "The student wants to explain what the sale of 1902 meant for the canal itself. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>By 1900 several canal companies were carrying almost no traffic.</li><li>Their reservoirs still gathered and held water off the hills.</li><li>Towns below those hills were short of water.</li><li>One such company sold its reservoirs to a municipal waterworks in 1902.</li><li>The canal below them was left with no supply and closed within a decade.</li></ul>",
+   "difficulty": "HARD",
+   "why": "The question asks about the effect on the canal, and only one option carries the sale through to the loss of supply and the closure. The others explain why the sale was attractive or describe the reservoirs, stopping short of what became of the waterway.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Their reservoirs still gathered and held water off the hills, which the towns below them needed.",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Selling its reservoirs to the municipal waterworks in 1902 left the canal below them with no supply at all, and it closed within a decade.",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "By 1900 several canal companies were carrying almost no traffic, though their reservoirs still gathered water off the hills.",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "Towns below the hills were short of water, and one company sold its reservoirs to a municipal waterworks in 1902.",
+     "isCorrect": false
+    }
+   ]
+  }
+ ],
+ "MATH_M1": [
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "The Barrowby flight has 16 locks and lifts a boat 72 metres in all. Each of the 4 locks at the head of the flight lifts a boat 2 metres more than each of the other 12 locks does. How many metres does each of the 4 locks at the head lift a boat?",
+   "difficulty": "MEDIUM",
+   "check": "12x + 4(x+2) = 72 gives 16x = 64 and x = 4, so a head lock lifts 4 + 2 = 6 metres.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "4.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A steam dredger lifts 210 cubic metres of silt a day and a shovel gang lifts 90 cubic metres a day. The dredger started on a reach holding 4,500 cubic metres of silt and worked alone at first; the shovel gang then joined it, and the reach was clear at the end of the 18th day. On how many of those 18 days did the two work together?",
+   "difficulty": "MEDIUM",
+   "check": "The dredger lifted 18(210) = 3,780, leaving 720 for the shovel gang at 90 a day, so 8 days.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "12",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A gauge on an aqueduct trough records the depth of water in the trough at four times after the sluice at its head is opened, and the depth rises at a constant rate.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Minutes after the sluice was opened</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Depth of water (centimetres)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">43</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">55</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">67</td></tr></table>What depth of water does this model give at the moment the sluice was opened?",
+   "difficulty": "MEDIUM",
+   "check": "The depth rises 12 cm every 3 minutes, so 4 cm a minute, and 31 - 2(4) = 23.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "23",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A summit pound must be kept between 1.20 metres and 1.50 metres above the cill of its lower gates. Through a dry spell in which no boats are worked through, the depth above the cill, in metres, is 1.62 - 0.04t, where t is the number of hours since the spell began. The depth is within the required range for whole-number values of t from 3 up to some greatest value. What is that greatest value?",
+   "difficulty": "MEDIUM",
+   "check": "1.62 - 0.04t is at least 1.20 while t is at most 10.5, so the greatest whole number is 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "13",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "Three reaches of a canal are to be dredged. The middle reach is 400 metres longer than the shortest reach, and the longest reach is twice the shortest. The three reaches measure 6,000 metres altogether. How many metres long is the longest reach?",
+   "difficulty": "MEDIUM",
+   "check": "x + (x+400) + 2x = 6,000 gives x = 1,400, so the longest is 2(1,400) = 2,800.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,400",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "1,800",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "2,400",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "2,800",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A contractor's charge for dredging a reach is a fixed sum for bringing the plant to the site plus a fixed amount for each cubic metre of silt lifted. Lifting 900 cubic metres cost $6,150 and lifting 1,500 cubic metres cost $9,750. A third reach cost $10,950. How many cubic metres of silt were lifted from the third reach?",
+   "difficulty": "MEDIUM",
+   "check": "600 extra cubic metres cost $3,600, so $6 each and $750 fixed; (10,950 - 750)/6 = 1,700.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "1,600",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "1,700",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "1,825",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "1,900",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The depth of water in a pound, in metres, is modelled by \\(d(t)=-0.05(t-14)^{2}+3.2\\), where t is the number of hours after midnight and \\(0 \\le t \\le 24\\). For how many hours of that day does the model give a depth of at least 3 metres?",
+   "difficulty": "MEDIUM",
+   "check": "d >= 3 needs (t-14)^2 <= 4, so t runs from 12 to 16, a span of 4 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "Silt stirred up by a passing boat settles out so that the mass still held in the water, in grams per cubic metre, is modelled by \\(s(t)=180\\left(\\frac{1}{2}\\right)^{\\frac{t}{9}}\\), where t is the number of minutes since the boat passed. After how many minutes does the model give 22.5 grams per cubic metre?",
+   "difficulty": "MEDIUM",
+   "check": "22.5 is 180 divided by 8, so t/9 = 3 and t = 27.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "27",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "36",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "The speed v, in metres per second, at which water leaves a paddle under a head of h metres is modelled by \\(v=\\sqrt{2gh}\\), where g is a positive constant. Which expression gives h in terms of v and g?",
+   "difficulty": "MEDIUM",
+   "check": "Squaring gives v^2 = 2gh, so h = v^2/(2g).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{2v}{g}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{v^{2}}{2g}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{2g}{v^{2}}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{v}{2g^{2}}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The number of boats waiting to pass a lock when the flight reopens after a stoppage of d days is modelled by \\(w(d)=d^{2}+6d\\). After how many days' stoppage does this model give 91 boats waiting?",
+   "difficulty": "MEDIUM",
+   "check": "d^2 + 6d - 91 = 0 factors as (d+13)(d-7), and only d = 7 is possible.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "13",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "Two feeder streams delivered a cubic metres and b cubic metres of water in an hour, where a - b = 7 and a + b = 13. What is the value of \\(a^{2}-b^{2}\\)?",
+   "difficulty": "MEDIUM",
+   "check": "a^2 - b^2 is (a+b)(a-b) = 13(7) = 91, without solving for either amount.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "49",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "84",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "91",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A pound 2,400 metres long and 12 metres wide must be raised 15 centimetres before the deepest boats can pass along it. The feeder that supplies the pound delivers 480 cubic metres of water an hour. How many hours does raising the pound take?",
+   "difficulty": "MEDIUM",
+   "check": "2,400(12)(0.15) = 4,320 cubic metres, and 4,320/480 = 9 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A clerk added up the boats entered in 40 lock keepers' log books for one day and found a mean of 11.5 boats. Two of the books were then found to have been copied out wrongly: one had been entered as 4 boats when the book read 24, and the other as 1 boat when the book read 31. What is the corrected mean?",
+   "difficulty": "MEDIUM",
+   "check": "The total rises from 460 by 20 and by 30 to 510, and 510/40 = 12.75.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12.25",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12.75",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "13.25",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the volume of silt lifted and the number of hours worked at each of four reaches during one season.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Reach</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Silt lifted (cubic metres)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Hours worked</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ashby Cut</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,344</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">28</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Brindle Reach</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,530</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Croxall Reach</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,014</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Dunwater Cut</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,196</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26</td></tr></table>At which reach was the mean volume of silt lifted per hour greatest?",
+   "difficulty": "MEDIUM",
+   "check": "The four rates are 48, 45, 53 and 46 cubic metres an hour, and 53 is the greatest.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "Ashby Cut",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "Brindle Reach",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "Croxall Reach",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "Dunwater Cut",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The table gives the boats worked through one lock in a day, by size and by whether they were loaded.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Loaded</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Empty</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Narrow boats</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">36</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Wide boats</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td></tr></table>Of the boats that were empty, what fraction were narrow boats?",
+   "difficulty": "MEDIUM",
+   "check": "36 of the 51 empty boats were narrow, and 36/51 = 12/17.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{3}{10}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{5}{17}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{2}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{12}{17}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of days in one 30-day month on which a lock was worked the stated number of times.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Times the lock was worked</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Days</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr></table>What was the mean number of times a day that the lock was worked that month?",
+   "difficulty": "MEDIUM",
+   "check": "The month's total is 100 + 300 + 270 + 140 = 810 lockings, and 810/30 = 27.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "26.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "27",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "28.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "The two leaves of a pair of lock gates each make an angle of 18&deg; with the straight line drawn across the chamber from one leaf's hinge to the other's, and the leaves meet at a point on the centre line of the chamber. That line and the two leaves form a triangle. What is the measure, in degrees, of the angle of that triangle at the point where the leaves meet?",
+   "difficulty": "MEDIUM",
+   "check": "The triangle's other two angles are 18 each, so the angle at the meeting point is 180 - 36 = 144.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "72",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "144",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "162",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A culvert that carries a stream under a canal embankment is a cylinder 2 metres in diameter and 45 metres long. How many cubic metres of water does the culvert contain when it is running full?",
+   "difficulty": "MEDIUM",
+   "check": "The radius is 1 metre, so the volume is pi(1)^2(45) = 45 pi cubic metres.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(22.5\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(45\\pi\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "\\(90\\pi\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(180\\pi\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "The bank of a cutting rises 4.2 metres for every 5.6 metres measured horizontally. A stone drain runs straight up the face of the bank from its foot to its top. What is the cosine of the angle the drain makes with the horizontal?",
+   "difficulty": "MEDIUM",
+   "check": "The face is the hypotenuse of a 4.2 by 5.6 right triangle, so 7 metres, and 5.6/7 = 0.8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "0.6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "0.75",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "0.8",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "1.25",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A feeder stream and a spring both run into a summit pound. The feeder delivers 250 cubic metres of water an hour more than the spring does, and together they deliver 800 cubic metres an hour. How many cubic metres of water does the feeder deliver in an hour?",
+   "difficulty": "MEDIUM",
+   "check": "s + (s+250) = 800 gives s = 275, so the feeder delivers 525.",
+   "correctAnswerFR": "[\"525\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "The volume of water, in cubic metres, held in a leaking pound t days after the leak began is modelled by \\(V(t)=5{,}400-2t^{2}-40t\\). After how many days does the model give a volume of 4,800 cubic metres?",
+   "difficulty": "MEDIUM",
+   "check": "2t^2 + 40t = 600 gives t^2 + 20t - 300 = 0, whose positive root is t = 10.",
+   "correctAnswerFR": "[\"10\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M1:H1-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "Water crosses an aqueduct along a trough 3.5 metres wide, standing 1.2 metres deep and moving at 0.5 metres per second. How many cubic metres of water cross the aqueduct in one minute?",
+   "difficulty": "MEDIUM",
+   "check": "3.5(1.2) = 4.2 square metres, times 0.5 gives 2.1 cubic metres a second, times 60 is 126.",
+   "correctAnswerFR": "[\"126\"]"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A wharf charges $45 for berthing a barge and a further $8 for each tonne unloaded from it. One barge's bill came to $165. How many tonnes were unloaded from that barge?",
+   "difficulty": "EASY",
+   "check": "8t + 45 = 165 gives 8t = 120 and t = 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "20",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "24",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "At a wharf the number of loaded barges is 3 times the number of empty barges, and there are 48 barges in all. How many of them are empty?",
+   "difficulty": "EASY",
+   "check": "e + 3e = 48 gives e = 12.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "24",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "36",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "A barge horse walks along the towpath at a steady 4 kilometres an hour. Which equation gives the distance d, in kilometres, that the horse walks in h hours?",
+   "difficulty": "EASY",
+   "check": "Distance is the steady speed times the time, so d = 4h.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "d = 4 - h",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "d = h + 4",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4d = h",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "d = 4h",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "A barge may carry no more than 26 tonnes of cargo, and 17 tonnes have already been loaded into it. Which inequality gives the possible numbers t of further tonnes that may be loaded?",
+   "difficulty": "EASY",
+   "check": "17 + t is at most 26, so t is at most 9.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(t \\ge 9\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(t \\le 26\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(t \\le 9\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(t \\le 43\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The toll charged on a barge carrying t tonnes of cargo, in dollars, is given by C = 3t + 11. What is the toll on a barge that is carrying no cargo at all?",
+   "difficulty": "EASY",
+   "check": "Setting t = 0 gives C = 11.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "11",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "The number b of barges that passed a toll house in one week satisfies 5b - 12 = 43. How many barges passed the toll house that week?",
+   "difficulty": "EASY",
+   "check": "5b = 55, so b = 11.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "11",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "55",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "The toll on a barge carrying t tonnes of salt is 4(2t + 5) dollars, and the gauging fee on the same barge is 3t dollars. Which expression is equivalent to 4(2t + 5) - 3t?",
+   "difficulty": "EASY",
+   "check": "8t + 20 - 3t = 5t + 20.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "5t + 20",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "5t + 5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "8t + 20",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "11t + 20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The number of sacks left in a warehouse after n barges have been loaded from it is given by \\(w(n)=120-8n\\). How many sacks are left after 9 barges have been loaded?",
+   "difficulty": "EASY",
+   "check": "120 - 8(9) = 120 - 72 = 48.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "48",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "56",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "112",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "Sacks of grain on a quay are stacked in a square, with the same number of sacks along each side of the square, and the stack holds 196 sacks in all. How many sacks are there along each side?",
+   "difficulty": "EASY",
+   "check": "The side length is the square root of 196, which is 14.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "39",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "49",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "98",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A barge pays 6g dollars in toll on its gravel and 6h dollars in toll on its grain. Which expression is equivalent to 6g + 6h?",
+   "difficulty": "EASY",
+   "check": "6 is a factor of both terms, so 6g + 6h = 6(g + h).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6gh",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "12(g + h)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "36gh",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "6(g + h)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A gang shares a load of 8t + 20 sacks equally between 4 barges. Which expression gives the number of sacks put into each barge?",
+   "difficulty": "EASY",
+   "check": "(8t + 20)/4 = 2t + 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2t + 5",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "2t + 20",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4t + 10",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "8t + 5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A barge is carrying 32 tonnes of cargo, and 25% of that cargo is salt. How many tonnes of salt is the barge carrying?",
+   "difficulty": "EASY",
+   "check": "0.25(32) = 8.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "24",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The tolls collected at one toll house on the seven days of a week were, in dollars, 34, 47, 12, 29, 41, 22, and 38. What is the range of these seven amounts, in dollars?",
+   "difficulty": "EASY",
+   "check": "The greatest is 47 and the least is 12, so the range is 35.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "35",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "41",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "47",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the tolls collected at each of four toll houses in one week.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Toll house</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tolls collected (dollars)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Aldersley</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">640</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bratch</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">815</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Compton</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">470</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Deepfields</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">905</td></tr></table>How many more dollars were collected at Bratch than at Compton?",
+   "difficulty": "EASY",
+   "check": "815 - 470 = 345.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "145",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "235",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "290",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "345",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Three barges shared a cargo of 141 tonnes equally between them. How many tonnes did each barge carry?",
+   "difficulty": "EASY",
+   "check": "141/3 = 47.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "41",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "47",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "51",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "423",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "Of the 60 barges tied up along a wharf, 24 are carrying grain. What fraction of those barges are carrying grain?",
+   "difficulty": "EASY",
+   "check": "24/60 = 2/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{2}{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{5}{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{3}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{2}{3}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "The hold of a barge is a rectangular box 18 metres long, 2 metres wide and 1.5 metres deep. How many cubic metres does the hold contain when it is filled level to the top?",
+   "difficulty": "EASY",
+   "check": "18(2)(1.5) = 54.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "21.5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "27",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "54",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A triangular gusset plate on a barge has two sides of equal length, and the angle between those two sides measures 40&deg;. What is the measure, in degrees, of each of the plate's other two angles?",
+   "difficulty": "EASY",
+   "check": "The two angles opposite the equal sides are equal, and (180 - 40)/2 = 70.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "70",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "140",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "A barge horse pulls on a towline that makes an angle of 20&deg; with the line of the canal, and the pull along the towline is 400 newtons. Taking \\(\\cos 20^{\\circ}=0.94\\), what is the part of that pull acting along the line of the canal, in newtons?",
+   "difficulty": "EASY",
+   "check": "The component along the canal is 400 cos 20 degrees, which is 400(0.94) = 376.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "136",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "146",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "376",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "426",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A toll of $4 is charged for every tonne of cargo carried on a barge. The toll on one barge came to $92. How many tonnes of cargo was that barge carrying?",
+   "difficulty": "EASY",
+   "check": "92/4 = 23.",
+   "correctAnswerFR": "[\"23\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "A chute delivers \\(4^{x}\\) sacks of grain into a barge in x minutes. After how many minutes has the chute delivered 64 sacks?",
+   "difficulty": "EASY",
+   "check": "64 is 4 cubed, so x = 3.",
+   "correctAnswerFR": "[\"3\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2E:H2E-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "A rectangular grain store on a quay measures 26 metres by 14 metres. A fence is to be built all the way round the outside of the store. How many metres of fencing does that take?",
+   "difficulty": "EASY",
+   "check": "The perimeter is 2(26 + 14) = 80 metres.",
+   "correctAnswerFR": "[\"80\"]"
+  }
+ ],
+ "MATH_M2H": [
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-01",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A toll house charges $3 a tonne on the first 20 tonnes a barge carries and $2 a tonne on every tonne it carries above 20. One barge paid $94 in toll. How many tonnes was that barge carrying?",
+   "difficulty": "HARD",
+   "check": "The first 20 tonnes cost $60, and the remaining $34 buys 17 tonnes, so 20 + 17 = 37.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "31",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "34",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "37",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-02",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "A tally clerk's two rules for a barge's papers give the system below.<br/>3x + 2y = 19<br/>5x - 4y = 17<br/>What is the value of x + y?",
+   "difficulty": "HARD",
+   "check": "Doubling the first and adding gives 11x = 55, so x = 5, y = 2 and x + y = 7.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "11",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-03",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "Two haulage firms quote for towing the same barge. One charges $40 and a further $7 for each tonne carried; the other charges $96 and a further $3 for each tonne carried. For loads heavier than how many tonnes is the first firm's charge the greater of the two?",
+   "difficulty": "HARD",
+   "check": "40 + 7t exceeds 96 + 3t when 4t > 56, that is for loads above 14 tonnes.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "22",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-04",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LI",
+   "stem": "What is the greatest integer value of x for which \\(5-2x \\ge 3(x-4)\\)?",
+   "difficulty": "HARD",
+   "check": "5 - 2x >= 3x - 12 gives 17 >= 5x, so x is at most 3.4 and the greatest integer is 3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "17",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-05",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "In the equation 3(2x - 5) + k = 6x + 7, k is a constant, and the equation is true for every value of x. What is the value of k?",
+   "difficulty": "HARD",
+   "check": "6x - 15 + k = 6x + 7 for every x only when k - 15 = 7, so k = 22.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "22",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "27",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "32",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "37",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-06",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ALG",
+   "skill": "ALG-LF",
+   "stem": "The draught of a barge rises steadily with the load it carries: an empty barge of one class draws 46 centimetres, and every 5 tonnes loaded into it adds a further 3 centimetres. Which expression gives the load, in tonnes, of a barge of that class drawing d centimetres?",
+   "difficulty": "HARD",
+   "check": "d = 46 + (3/5)L, so L = 5(d-46)/3.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{3(d-46)}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{5d-46}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{d-46}{15}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{5(d-46)}{3}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-07",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The functions f and g are defined by \\(f(x)=\\frac{x+5}{2}\\) and g(x) = 4x - 3. Which expression is equivalent to f(g(x))?",
+   "difficulty": "HARD",
+   "check": "f(4x-3) = (4x-3+5)/2 = (4x+2)/2 = 2x + 1.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2x + 1",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "2x - 1",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "4x + 1",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{4x+5}{2}\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-08",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "In a toll clerk's gauging rule the positive number x satisfies \\(x+\\frac{1}{x}=5\\). What is the value of \\(x^{2}+\\frac{1}{x^{2}}\\)?",
+   "difficulty": "HARD",
+   "check": "Squaring gives x^2 + 2 + 1/x^2 = 25, so x^2 + 1/x^2 = 23.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "21",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "23",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-09",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "A tender divides a total charge of \\(6x^{2}-x-15\\) dollars equally among 2x + 3 barges, where \\(2x+3 \\ne 0\\). Which expression gives the charge, in dollars, for each barge?",
+   "difficulty": "HARD",
+   "check": "6x^2 - x - 15 factors as (2x+3)(3x-5), so the quotient is 3x - 5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "2x - 5",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "3x + 5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "3x - 5",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "\\(3x^{2}-5\\)",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-10",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-NF",
+   "stem": "The mass of grain left in a warehouse t weeks after a stoppage on the canal is modelled by \\(M(t)=M_{0}(0.85)^{t}\\), where \\(M_{0}\\) is the mass held when the stoppage began. By what percentage does this model say the mass falls over any period of 2 weeks?",
+   "difficulty": "HARD",
+   "check": "0.85 squared is 0.7225, a fall of 0.2775, or 27.75%, whatever the starting mass.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "27.75",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "30",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "32.5",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-11",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "ADV",
+   "skill": "ADV-EQ",
+   "stem": "Which expression is equivalent to \\(\\frac{1}{u}-\\frac{1}{v}\\), where u and v are positive?",
+   "difficulty": "HARD",
+   "check": "Over the common denominator uv the numerators are v and u, giving (v-u)/(uv).",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{u-v}{uv}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{1}{u-v}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{u+v}{uv}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{v-u}{uv}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-12",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "A wharf clerk gauged a random sample of 80 of the 1,200 barges that used the wharf in one season and found 18 of them loaded above the permitted limit. Which of the following is the most appropriate estimate of the number of those 1,200 barges that were loaded above the limit?",
+   "difficulty": "HARD",
+   "check": "18 of 80 is 0.225, and 0.225(1,200) = 270.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "108",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "270",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "480",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-13",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "Working at the same steady rate as one another, 4 gangs unload 6 barges in 9 hours. At that rate, how many hours would 6 gangs take to unload 10 barges?",
+   "difficulty": "HARD",
+   "check": "6 barges take 36 gang-hours, so 6 gang-hours each; 10 barges need 60, and 60/6 = 10 hours.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "7.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "10",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-14",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-DI",
+   "stem": "The table gives the number of barges gauged at two toll houses in one week, by the cargo each was carrying.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Cargo</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Hatton toll house</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Napton toll house</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Salt</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Grain</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Gravel</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">54</td></tr></table>What percentage of the barges carrying grain were gauged at Hatton toll house?",
+   "difficulty": "HARD",
+   "check": "45 of the 75 barges carrying grain were gauged at Hatton, and 45/75 = 0.60.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "45",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "60",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "75",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "80",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-15",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-RP",
+   "stem": "A barge's cargo is 40% salt by mass. After a further 6 tonnes of gravel are loaded into the same barge, the salt is 25% of the cargo by mass. What was the mass of the cargo, in tonnes, before the gravel was loaded?",
+   "difficulty": "HARD",
+   "check": "0.40m = 0.25(m+6) gives 0.15m = 1.5 and m = 10.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-16",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "PSDA",
+   "skill": "PSDA-ST",
+   "stem": "The table gives the tonnage entered against each of the 20 barges gauged at a toll house in one day.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tonnage entered</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Barges</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td></tr></table>What is the median of the 20 tonnages?",
+   "difficulty": "HARD",
+   "check": "The 10th and 11th of the 20 values in order are both 15, so the median is 15.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "15",
+     "isCorrect": true
+    },
+    {
+     "label": "B",
+     "content": "16.5",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "18",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-17",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "Two hoppers used for gravel at a wharf are similar in shape, and the larger hopper is 1.5 times as tall as the smaller. The smaller hopper holds 96 cubic metres. How many cubic metres does the larger hopper hold?",
+   "difficulty": "HARD",
+   "check": "Volumes of similar solids scale by 1.5 cubed = 3.375, and 96(3.375) = 324.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "144",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "216",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "324",
+     "isCorrect": true
+    },
+    {
+     "label": "D",
+     "content": "432",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-18",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-LA",
+   "stem": "A winding hole, the widened place in a canal where a barge is turned round, is a circle of area \\(400\\pi\\) square metres. By how many metres is the diameter of the winding hole greater than the length of a barge 21 metres long?",
+   "difficulty": "HARD",
+   "check": "The radius is 20 metres, so the diameter is 40 and 40 - 21 = 19.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "19",
+     "isCorrect": true
+    },
+    {
+     "label": "C",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "39",
+     "isCorrect": false
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-19",
+   "type": "MULTIPLE_CHOICE",
+   "domain": "GT",
+   "skill": "GT-TR",
+   "stem": "In right triangle ABC the right angle is at B, and \\(\\sin A=\\frac{5}{13}\\). What is the value of \\(\\tan C\\)?",
+   "difficulty": "HARD",
+   "check": "With BC = 5k and AC = 13k, AB = 12k, and tan C = AB/BC = 12/5.",
+   "choices": [
+    {
+     "label": "A",
+     "content": "\\(\\frac{5}{13}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "B",
+     "content": "\\(\\frac{5}{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "C",
+     "content": "\\(\\frac{13}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "label": "D",
+     "content": "\\(\\frac{12}{5}\\)",
+     "isCorrect": true
+    }
+   ]
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-20",
+   "type": "FREE_RESPONSE",
+   "domain": "ALG",
+   "skill": "ALG-LE",
+   "stem": "The toll, in dollars, on a barge carrying a load of L tonnes is given by \\(T=\\frac{5(L+8)}{4}\\). What load, in tonnes, is charged a toll of $60?",
+   "difficulty": "HARD",
+   "check": "5(L+8) = 240 gives L + 8 = 48 and L = 40.",
+   "correctAnswerFR": "[\"40\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-21",
+   "type": "FREE_RESPONSE",
+   "domain": "ADV",
+   "skill": "ADV-NE",
+   "stem": "In a gauging rule the positive numbers x and y satisfy \\(x^{2}+y^{2}=58\\) and xy = 21. What is the value of x + y?",
+   "difficulty": "HARD",
+   "check": "(x+y)^2 = x^2 + y^2 + 2xy = 58 + 42 = 100, and x + y is positive, so it is 10.",
+   "correctAnswerFR": "[\"10\"]"
+  },
+  {
+   "_ref": "AUTHORED/T23-MATH_M2H:H2H-22",
+   "type": "FREE_RESPONSE",
+   "domain": "GT",
+   "skill": "GT-AV",
+   "stem": "Two cylindrical hoppers on a wharf hold the same volume of gravel when full. The first has a base of radius 2 metres and a height of 9 metres, and the second has a base of radius 3 metres. What is the height of the second hopper, in metres?",
+   "difficulty": "HARD",
+   "check": "pi(4)(9) = pi(9)h gives h = 4.",
+   "correctAnswerFR": "[\"4\"]"
+  }
+ ]
+}

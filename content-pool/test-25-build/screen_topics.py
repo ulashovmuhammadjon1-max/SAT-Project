@@ -37,8 +37,12 @@ per cent because since although though even still yet upon within without across
 called known often usually always never sometimes rather instead whether either neither"""
            .split())
 
+# BOTH Rhetorical Synthesis boilerplates. Stripping only the "notes" one made
+# the three given-sentences items look like near-duplicates of one another:
+# they shared a 5-gram that is the stem template, not the content.
 BOILER = re.compile(
-    r"While researching a topic, a student has taken the following notes:?", re.I)
+    r"While researching a topic, a student has taken the following notes:?"
+    r"|While working on a paragraph, a student has written the following sentences:?", re.I)
 
 
 def tokens(text):

@@ -246,15 +246,15 @@ QUESTIONS = [
      "a schedule a trader could argue about was neither temporary nor secret."),
 
  wic("W10",
-     "Where a towpath changed from one bank to the other, an ordinary bridge forced the boatman to "
-     "unhitch his horse, lead it across and hitch it again, all while the boat carried its way "
-     "under him. The bridges built at such crossings instead took the path up one side, over the "
-     "arch, and back beneath itself on the far bank, so that the towline stayed attached the whole "
-     "way round. The design's whole purpose was to make the change _____.",
-     ["uninterrupted", "permanent", "inexpensive", "reversible"], "A",
-     "The fault being corrected is the pause while the line comes off, and the remedy keeps the "
-     "line attached, so the word must mean without a break. The crossing was already permanent and "
-     "could already be made in either direction; neither of those was the problem."),
+     "A loaded boat seventy feet long cannot be turned round in a channel cut wide enough only to "
+     "let two of them pass. Companies therefore widened the line at intervals into shallow bays "
+     "just long enough to swing a bow into, and a boatman who ran past one had to work on for miles "
+     "before he could turn. Knowing where those bays lay was _____ knowledge rather than a nicety "
+     "of the trade.",
+     ["indispensable", "ornamental", "outdated", "theoretical"], "A",
+     "The text describes a boatman who misses a bay as losing miles of work, which makes the "
+     "knowledge something he cannot do without. A word meaning merely decorative or no longer "
+     "current sits against the practical consequence the passage has just spelled out."),
 
  wic("W11",
      "A horse pulling a boat at three miles an hour leaves the banks much as it found them. A "
@@ -862,13 +862,14 @@ QUESTIONS = [
      "the first rather than explaining it, which is what a colon would promise."),
 
  bnd("B2",
-     "The level stretch of water between one lock and the next, known to boatmen as a _____ dead "
-     "level, and a short one can be drawn down several inches by a single boat.",
-     ["pound, is", "pound is", "pound; is", "pound: is"], "A",
-     "The phrase beginning &ldquo;known to boatmen&rdquo; is a supplement opened by a comma, so it "
-     "has to be closed by one before the sentence resumes with its verb. Leaving the mark out "
-     "strands the opening comma, and neither a semicolon nor a colon may stand between a subject "
-     "and its verb."),
+     "The man who walked a fixed beat of bank every day, watching for the soft place in the puddle "
+     "before it could become a hole and known to the company as a _____ paid by the mile he covered "
+     "rather than by the hour.",
+     ["lengthsman, was", "lengthsman was", "lengthsman; was", "lengthsman: was"], "A",
+     "The supplement beginning &ldquo;watching for the soft place&rdquo; is opened with a comma and "
+     "must be closed with one before the sentence reaches its verb. Leaving the mark out strands "
+     "the opening comma, and neither a semicolon nor a colon may stand between a subject and its "
+     "verb."),
 
  bnd("B3",
      "The company's Act named three classes of goods and fixed a separate maximum rate for _____ "
@@ -890,12 +891,13 @@ QUESTIONS = [
      "stand as a complete sentence, which a clause opening with &ldquo;Because&rdquo; does not."),
 
  bnd("B5",
-     "The bridges built where the towpath changed banks &mdash; turnover bridges, in the boatmen's "
-     "_____ the towline attached the whole way round the arch.",
-     ["phrase &mdash; kept", "phrase, kept", "phrase kept", "phrase; kept"], "A",
-     "The supplement is opened with a dash, so it must be closed with a dash; the marks at the two "
-     "ends of a parenthetical have to match. A comma or a semicolon leaves the opening dash "
-     "unanswered, and omitting the mark altogether runs the supplement into the predicate."),
+     "The slots cut into the masonry at each end of a pound &mdash; plank grooves, in the company's "
+     "_____ what let a single length be drained for a winter's repairs without emptying the miles "
+     "on either side of it.",
+     ["language &mdash; were", "language, were", "language were", "language; were"], "A",
+     "The supplement is opened with a dash and must be closed with a dash, since the marks at "
+     "either end of a parenthetical have to match. A comma or a semicolon leaves the opening dash "
+     "unanswered, and dropping the mark altogether runs the supplement into the predicate."),
 
  bnd("B6",
      "The two operations are not the same and are not costed the same way. Weed cutting removes "
@@ -907,19 +909,19 @@ QUESTIONS = [
      "case beside it."),
 
  bnd("B7",
-     "The check clerk who boarded boats at random and compared what he found under the cloths with "
-     "the ticket issued at the last toll _____ by the company rather than by the carrier.",
-     ["house was paid", "house, was paid", "house; was paid", "house: was paid"], "A",
-     "Everything from &ldquo;The check clerk&rdquo; to &ldquo;toll house&rdquo; is one long subject "
-     "and &ldquo;was paid&rdquo; is its verb, and no punctuation belongs between a subject and its "
-     "verb however long the subject grows."),
+     "The boy who walked the horse the whole length of a day's run and opened the paddles at every "
+     "lock while the steerer stayed at the _____ a share of the trip money rather than a wage.",
+     ["tiller took", "tiller, took", "tiller; took", "tiller: took"], "A",
+     "Everything from &ldquo;The boy&rdquo; to &ldquo;the tiller&rdquo; is a single long subject "
+     "and &ldquo;took&rdquo; is its verb, and no punctuation belongs between a subject and its verb "
+     "however far the two are driven apart."),
 
  bnd("B8",
-     "A horse walking a made and level towpath could pull a load that six men on a rutted riverbank "
-     "could _____ the bow hauliers vanished from every line that had such a path.",
-     ["not, and", "not and", "not; and", "not: and"], "A",
-     "Two complete statements are joined here by &ldquo;and,&rdquo; and a comma belongs before the "
-     "conjunction when the clauses either side of it are both independent and this long. A "
+     "Ice forming in the joints of a lock wall lifts every stone a fraction each _____ the coping "
+     "has to be taken up and reset long before the stone itself is anywhere near worn away.",
+     ["winter, and", "winter and", "winter; and", "winter: and"], "A",
+     "Two complete statements are joined here by &ldquo;and,&rdquo; and a comma belongs in front of "
+     "the conjunction when the clauses either side of it are both independent and this long. A "
      "semicolon or a colon before a coordinating conjunction is not a standard pairing, and leaving "
      "the comma out runs the two statements together."),
 
@@ -934,45 +936,49 @@ QUESTIONS = [
 
  # -------------------------------------------- Form, Structure, and Sense (9)
  fss("F1",
-     "The record of the tolls taken at the four toll houses on the summit level _____ in the county "
-     "archive, bound in a single volume.",
-     ["is preserved", "are preserved", "have been preserved", "were being preserved"], "A",
-     "The subject is the single record, not the four toll houses named in the phrase that follows "
-     "it, so the verb must be singular. Every plural form agrees with the nearest noun instead of "
-     "with the true subject."),
+     "Two of the tunnels on the northern section _____ wide enough for boats to pass one another "
+     "inside, and traffic through the rest had to be worked one way at a time.",
+     ["were", "was", "has been", "is"], "A",
+     "The subject is the two tunnels, which is plural, so the verb must be plural; the singular "
+     "noun in the phrase that follows describes where they are and cannot govern it. Every singular "
+     "form agrees with the section instead of with the tunnels the sentence is about."),
 
  fss("F2",
-     "By the time the surveyor reached the bottom of the flight in March, the frost _____ two of "
-     "the lower gates, and new leaves had to be hung before the season opened.",
-     ["had split", "has split", "splits", "will have split"], "A",
-     "The splitting happened before the surveyor arrived, and both surrounding verbs are in the "
-     "past, so the earlier action needs the past perfect. A present or future form cannot describe "
-     "something already complete when a past event took place."),
+     "No boat moved on the line for three weeks that January: the summit had _____ hard enough for "
+     "a cart to be driven across it below the top lock.",
+     ["frozen", "froze", "freezed", "freezing"], "A",
+     "The auxiliary &ldquo;had&rdquo; requires the past participle of the verb, which is "
+     "&ldquo;frozen.&rdquo; The simple past cannot follow &ldquo;had,&rdquo; the regular form is "
+     "not an English word at all, and the present participle would need a form of "
+     "&ldquo;be&rdquo; in front of it rather than &ldquo;had.&rdquo;"),
 
  fss("F3",
-     "Each of the four companies whose lines met at the junction charged a compensation toll, and "
-     "each reckoned _____ payment from a different point on the older route.",
-     ["its", "their", "it&rsquo;s", "there"], "A",
-     "The word before the blank is &ldquo;each,&rdquo; which is singular, so the possessive must be "
-     "singular too. The contraction of &ldquo;it is&rdquo; is not a possessive at all, and an "
-     "adverb of place cannot modify a noun."),
+     "The wharfinger _____ ledgers survive at Norbrook recorded the name of every boat that tied up "
+     "at the wharf and the hour at which it left again.",
+     ["whose", "who&rsquo;s", "who", "which"], "A",
+     "The blank stands in front of a noun that belongs to the wharfinger, so a possessive relative "
+     "pronoun is needed. The contraction of &ldquo;who is&rdquo; is not a possessive, the subject "
+     "form cannot take a noun after it, and the pronoun for things cannot refer to a person."),
 
  fss("F4",
-     "Tens of thousands of tow ropes crossed the same corner of the same bridge. The grooves in the "
-     "quoins are the only record left of those _____ passage, and they are deepest where the line "
-     "had to turn most sharply.",
-     ["ropes&rsquo;", "rope&rsquo;s", "ropes", "ropes&rsquo;s"], "A",
-     "The passage belongs to the many ropes named in the sentence before, so the plural possessive "
-     "is required. A singular possessive contradicts the tens of thousands just given, and a plain "
-     "plural leaves the noun with no possessive form at all."),
+     "The company set a stone at every mile along the towpath and reckoned its charges from them. A "
+     "boat that passed one paid for the mile behind it, so the _____ positions settled what a haul "
+     "cost as surely as the cargo did.",
+     ["stones&rsquo;", "stone&rsquo;s", "stones", "stones&rsquo;s"], "A",
+     "The positions belong to the many stones set out in the sentence before, so the plural "
+     "possessive is required. A singular possessive contradicts the stone at every mile, and a "
+     "plain plural gives the noun no possessive form at all."),
 
  fss("F5",
-     "The number of boats legged through the tunnel _____ every year after the tug was introduced, "
-     "although it did not reach nothing for another two decades.",
-     ["fell", "fall", "have fallen", "were falling"], "A",
-     "&ldquo;The number&rdquo; is the singular subject, so a plural verb cannot stand, and the "
-     "surrounding clause is in the simple past. The form that agrees in both number and tense is "
-     "the simple past singular."),
+     "Had the committee carried the line over the ridge in an open cutting instead of boring it "
+     "through, the works _____ two years sooner and no crew would ever have had to leg a boat at "
+     "all.",
+     ["would have been finished", "would be finished", "will have been finished",
+      "had been finished"], "A",
+     "The opening clause imagines a past that did not happen, so the main clause has to name its "
+     "unrealised past consequence, which takes the conditional perfect. A present conditional "
+     "points at now rather than at the year of the works, and neither a future nor a past perfect "
+     "can carry the consequence of a condition contrary to fact."),
 
  fss("F6",
      "Cut through gravel and lined with clay trodden until it was uniform, _____",
@@ -986,12 +992,12 @@ QUESTIONS = [
      "attached to something it cannot describe."),
 
  fss("F7",
-     "The toll clerk, along with the two check clerks stationed further down the line, _____ a "
-     "printed copy of the classification schedule at the start of each year.",
-     ["was issued", "were issued", "have been issued", "are issued"], "A",
-     "A phrase introduced by &ldquo;along with&rdquo; does not add to the subject, so the verb "
-     "agrees with the single toll clerk. The plural forms treat the check clerks as though they "
-     "were part of the subject, and the present-tense forms clash with the past narration."),
+     "The hand cranes along the wall of every warehouse on the arm _____ geared so low that a "
+     "single man could lift a ton of grain to the third floor without help.",
+     ["are", "is", "has been", "was"], "A",
+     "The subject is the cranes, which is plural; &ldquo;every warehouse&rdquo; sits inside a "
+     "prepositional phrase saying where the cranes are and cannot govern the verb. Each singular "
+     "form agrees with that phrase rather than with the true subject."),
 
  fss("F8",
      "The advantage of a fly boat lay in changing horses at every stage, working through the night, "
@@ -1002,12 +1008,12 @@ QUESTIONS = [
      "a noun phrase each break the pattern the first two items establish."),
 
  fss("F9",
-     "Standing open in the water and held back by nothing but a simple catch _____ the pairs of "
-     "gates that limit how much a breach can empty.",
+     "Hanging on a hook inside the cabin door of every working boat _____ the windlasses with which "
+     "the crew wound up the paddles at each lock they came to.",
      ["are", "is", "was", "has been"], "A",
-     "The sentence is inverted: the subject is &ldquo;the pairs of gates,&rdquo; which follows the "
-     "verb and is plural, so the verb must be plural. Every singular form agrees with the "
-     "participial phrase in front of it, which is not the subject."),
+     "The sentence is inverted: the subject is &ldquo;the windlasses,&rdquo; which follows the verb "
+     "and is plural, so the verb must be plural. Every singular form agrees with the participial "
+     "phrase in front of it, which is not the subject."),
 
  # ------------------------------------------------------------ Transitions (9)
  trn("N1",
@@ -1020,21 +1026,24 @@ QUESTIONS = [
      "conclusion word is wrong, and the second sentence is not an instance of the first."),
 
  trn("N2",
-     "A pound drained in July can crack its clay lining beyond repair, and a cracked lining will "
-     "not close again when the water comes back. _____ companies preferred to do their heavy "
-     "repairs in winter and to refill a length as soon as the masons were clear of it.",
+     "A company that dammed a hill stream for its reservoirs took water the mills below it had used "
+     "for centuries, and its Act obliged it to send a fixed flow down the old channel every day of "
+     "the year. _____ the water a reservoir could actually put into the summit was always less than "
+     "the water it held.",
      ["Accordingly,", "Nevertheless,", "In contrast,", "For instance,"], "A",
-     "The practice described in the second sentence follows directly from the danger set out in the "
-     "first, which makes the relation causal. A concession or a contrast would require the practice "
-     "to run against the danger, and it runs with it."),
+     "The shortfall in the second sentence follows directly from the obligation stated in the "
+     "first, so the link is causal. A concession or a contrast would require the two to pull "
+     "against each other, and the second sentence is a consequence rather than an instance."),
 
  trn("N3",
-     "Some canal words carry a meaning they have nowhere else. _____ a pound is not a weight or an "
-     "enclosure but the level stretch of water lying between one lock and the next.",
+     "A canal company numbered every bridge on its line from one end to the other, and the boatmen "
+     "took the numbers up in preference to the names of the places they passed. _____ a boat "
+     "reported as lying below bridge ninety-four was somewhere no map named and every crew on the "
+     "line could find.",
      ["For example,", "By contrast,", "Consequently,", "Even so,"], "A",
-     "The second sentence supplies a single instance of the general claim made in the first, which "
-     "is what an example marker signals. The two sentences do not conflict, and the general claim "
-     "does not cause the particular meaning of one word."),
+     "The second sentence gives one instance of the practice described in the first, which is what "
+     "an example marker announces. The two do not conflict, and the numbering of the bridges is not "
+     "what makes the map silent."),
 
  trn("N4",
      "The tug through the long tunnels brought a train of boats out at the far end in forty minutes "
@@ -1045,13 +1054,14 @@ QUESTIONS = [
      "with an alternative."),
 
  trn("N5",
-     "A horse pulling a boat at three miles an hour leaves the banks very much as it found them. "
-     "_____ a propeller driven fast enough to save a day on the run throws a wave against both "
-     "sides that carries away a little clay every time.",
+     "A cabin boat carried its crew's home along with it, and the family slept aboard wherever the "
+     "day's work happened to end. _____ a day boat had no cabin at all: it was an open box worked "
+     "between two wharves by men who went home at night, and it never left the few miles it was "
+     "built for.",
      ["By contrast,", "Likewise,", "Accordingly,", "Indeed,"], "A",
-     "The two sentences set gentle haulage against damaging haulage, so the link must mark "
-     "opposition. A word signalling similarity or agreement would tell the reader to expect the "
-     "same effect from both, which is the reverse of what follows."),
+     "The two sentences set a boat that is a dwelling against a boat that is not, so the link must "
+     "mark opposition. A word signalling similarity would tell the reader to expect the day boat to "
+     "resemble the cabin boat, which is the reverse of what follows."),
 
  trn("N6",
      "Legging a boat through a two-mile tunnel took four hours and paid badly. _____ crews carrying "
@@ -1063,13 +1073,14 @@ QUESTIONS = [
      "caused the crews to persist, which reverses the logic."),
 
  trn("N7",
-     "A boat entering the trough of an aqueduct pushes aside exactly its own weight of water, and "
-     "the displaced water runs out at the ends. _____ the traffic crossing the structure has no "
-     "bearing at all on what the piers beneath it must carry.",
+     "The shafts sunk from the hillside down to a canal tunnel were driven to get the spoil out "
+     "while the tunnel was being cut, and were left open afterwards only because capping them would "
+     "have cost money. _____ the openings that later carried off a tug's smoke were put there for a "
+     "reason that had nothing to do with smoke.",
      ["In other words,", "By contrast,", "Nevertheless,", "Meanwhile,"], "A",
-     "The second sentence restates the consequence of the first in plainer terms rather than adding "
-     "new information, which is what a restatement marker signals. There is no opposition between "
-     "the two sentences and no shift to a different time."),
+     "The second sentence puts the point of the first in plainer terms rather than adding anything "
+     "new to it, which is what a restatement marker signals. There is no opposition between the two "
+     "and no move to a different time."),
 
  trn("N8",
      "A gauging table let a clerk read a cargo's weight off the side of a boat without opening a "
@@ -1081,192 +1092,184 @@ QUESTIONS = [
      "brings about."),
 
  trn("N9",
-     "Subscription lists for new canals filled within hours of opening in 1792, sometimes before a "
-     "route had been surveyed at all. _____ a third of the companies authorised in those years had "
-     "not cut a yard of channel by 1797.",
+     "Goods lay in open boats overnight at every wharf on the line, and a parish constable had no "
+     "authority a yard beyond his own parish. _____ several companies obtained Acts appointing "
+     "constables of their own, who could stop and search a boat anywhere between one end of the "
+     "navigation and the other.",
      ["As a result,", "For instance,", "By contrast,", "In addition,"], "A",
-     "Money subscribed to unsurveyed routes is what produced the failures reported next, so the "
-     "link is causal. The failure figure is not an instance of a list filling quickly, and it "
-     "follows from the first sentence rather than standing against it."),
+     "Goods left unguarded where no officer's authority reached are what produced the remedy "
+     "described next, so the link is causal. The companies' own constables are not an instance of a "
+     "parish constable's limits, and the second sentence follows from the first rather than "
+     "standing against it."),
 
  # ------------------------------------------------------ Rhetorical Synthesis (9)
  syn("R1",
-     ["A canal company's Act fixed a maximum toll for each class of goods.",
-      "Coal and limestone were placed in the lowest classes.",
-      "Manufactured goods paid several times the coal rate over the same distance.",
-      "In 1838 one company carried 214,000 tons of coal and 16,000 tons of manufactured goods.",
-      "Manufactured goods brought the company more toll income in 1838 than stone, sand and lime "
-      "did."],
-     "emphasise how much a small tonnage could contribute to the company's income.",
-     ["Although manufactured goods came to only 16,000 tons in 1838 against 214,000 tons of coal, "
-      "they brought the company more toll income that year than stone, sand and lime did.",
-      "A canal company's Act fixed a maximum toll for each class of goods, and coal and limestone "
-      "were placed in the lowest classes.",
-      "Manufactured goods paid several times the coal rate over the same distance.",
-      "In 1838 one company carried 214,000 tons of coal, and coal and limestone were in the lowest "
-      "classes."], "A",
-     "The goal asks for the contrast between a small tonnage and a large contribution, and only one "
-     "option sets the 16,000 tons beside the 214,000 and then reports the income. The others "
-     "restate notes about how the classes were set without ever reaching the income at all."),
+     ["Imported goods paid customs duty at the moment they were landed.",
+      "A bonded warehouse held goods under a lock to which the Customs kept the key.",
+      "Duty on goods held in bond fell due only when they were taken out again.",
+      "A merchant could therefore hold a year's stock without finding the duty on it.",
+      "The canal company charged rent for the space and moved the goods to and from the wharf."],
+     "explain why a merchant would choose to keep goods in a bonded warehouse.",
+     ["Because duty on goods in bond fell due only when they were taken out, a merchant could hold "
+      "a year's stock without having to find the duty on any of it.",
+      "A bonded warehouse held goods under a lock to which the Customs kept the key, and the canal "
+      "company charged rent for the space.",
+      "Imported goods paid customs duty at the moment they were landed.",
+      "The canal company moved the goods to and from the wharf and charged rent for the space they "
+      "occupied."], "A",
+     "The reason for using such a warehouse is the deferral of the duty, so the answer has to state "
+     "when the duty fell due and what that let the merchant do. The others describe the lock, the "
+     "rent or the ordinary rule on landing without ever reaching the advantage."),
 
  syn("R2",
-     ["A towpath changes banks wherever the ground requires it.",
-      "At an ordinary bridge the boatman must cast off the line, lead the horse across and hitch "
-      "it again.",
-      "The boat carries its way while the line is off, so a single-handed boatman must leave the "
-      "tiller.",
-      "A turnover bridge takes the towpath over the arch and back beneath itself on the far bank.",
-      "The towline stays attached throughout the crossing of a turnover bridge."],
-     "explain the problem that the turnover bridge was designed to solve.",
-     ["Because an ordinary crossing meant casting off the line and leaving the tiller while the "
-      "boat carried its way, the turnover bridge was built to take the path over the arch and back "
-      "beneath itself so that the line never had to come off.",
-      "A towpath changes banks wherever the ground requires it, and a turnover bridge takes the "
-      "path over the arch and back beneath itself on the far bank.",
-      "At an ordinary bridge the boatman must cast off the line, lead the horse across and hitch it "
-      "again.",
-      "The towline stays attached throughout the crossing of a turnover bridge, which takes the "
-      "path over the arch and back beneath itself."], "A",
-     "Explaining the problem the design solves requires both the difficulty at an ordinary bridge "
-     "and the feature that removes it, and only one option states the difficulty and then the "
-     "remedy. Two options describe the turnover bridge without naming any problem, and one names "
-     "the difficulty without connecting it to the design."),
+     ["A carrier's own horses worked fixed stages and were stabled at the ends of each one.",
+      "Beyond those stages a carrier had no animal of his own.",
+      "Innkeepers along the line kept horses and drivers for hire by the trip.",
+      "A hired horse and its driver together were known as a horse-marine.",
+      "Traffic running only occasionally beyond a carrier's own stages was worked this way."],
+     "explain the circumstances in which a carrier would take a horse-marine.",
+     ["Because a carrier's own horses worked only his fixed stages, traffic that went beyond them "
+      "occasionally was worked instead by a hired horse and driver taken by the trip.",
+      "A hired horse and its driver together were known as a horse-marine, and innkeepers along the "
+      "line kept both for hire.",
+      "A carrier's own horses worked fixed stages and were stabled at the ends of each one.",
+      "Innkeepers along the line kept horses and drivers for hire by the trip, and beyond his own "
+      "stages a carrier had no animal of his own."], "A",
+     "The question asks when the hire happened, so the answer must join the limit of the carrier's "
+     "own stages to the occasional traffic that went past it. Two options define the term or "
+     "describe the innkeepers without naming an occasion, and one gives only the stages."),
 
  syn("R3",
-     ["A canal on an embankment stands several feet above the valley beside it.",
-      "A breach in the lining can empty a mile of channel within an hour.",
-      "Companies could not prevent every breach.",
-      "Pairs of gates were hung at intervals along the embanked lengths and held open by a catch.",
-      "A rush of water towards a breach slams the gates shut and confines the loss to one length."],
-     "explain the purpose of the gates hung along the embanked lengths.",
-     ["Because a breach could not be prevented and would empty a mile of channel within an hour, "
-      "gates were hung at intervals to be slammed shut by the rush itself and confine the loss to a "
-      "single length.",
-      "A canal on an embankment stands several feet above the valley beside it, and a breach can "
-      "empty a mile of channel within an hour.",
-      "Pairs of gates were hung at intervals along the embanked lengths and held open by a catch.",
-      "Companies could not prevent every breach, and a canal on an embankment stands several feet "
-      "above the valley beside it."], "A",
-     "The purpose of the gates is to limit a loss that cannot be prevented, so the answer must join "
-     "the impossibility of prevention to the confinement of the damage; only one option does both. "
-     "The rest describe the embankment or the gates themselves without saying what they are for."),
+     ["Working boats were painted with roses and with castles on their cabin doors and water cans.",
+      "The pattern appears on boats from the 1860s onward.",
+      "Some writers trace it to the fairground and clock-dial painting of the same period.",
+      "Others argue that it grew out of the boatyards' own house styles.",
+      "No boat painted before 1858 has been found carrying the pattern."],
+     "emphasise the limits of the evidence bearing on where the pattern came from.",
+     ["No boat painted before 1858 has been found carrying the pattern at all, so neither the "
+      "fairground account of its origin nor the boatyard account can be tested against an earlier "
+      "example.",
+      "Working boats were painted with roses and with castles on their cabin doors and water cans, "
+      "and the pattern appears from the 1860s onward.",
+      "Some writers trace the pattern to fairground and clock-dial painting of the same period.",
+      "Others argue that the pattern grew out of the boatyards' own house styles, which were "
+      "established well before the 1860s."], "A",
+     "Emphasising the limits of the evidence means saying what the evidence cannot settle, and only "
+     "one option names the missing early boats and draws the consequence for both explanations. The "
+     "rest simply report the pattern or one side of the argument."),
 
  syn("R4",
-     ["A frozen canal stopped all traffic on the line.",
-      "The company's ice boat was short, iron-shod and drawn by a team of horses.",
-      "A dozen men stood along a rail down the centre of the boat and rocked it in time as it "
-      "went.",
-      "The rocking made the hull rise and fall as the boat moved forward.",
-      "The channel broken was wider than the boat's own beam."],
-     "explain how the ice boat came to break a channel wider than itself.",
-     ["Rocked in time by a dozen men standing along a rail, the hull rose and fell as the boat went "
-      "forward, and the channel it broke was wider than its own beam.",
-      "A frozen canal stopped all traffic, and the company's ice boat was short, iron-shod and "
-      "drawn by a team of horses.",
-      "The channel broken by the ice boat was wider than the boat's own beam.",
-      "A dozen men stood along a rail down the centre of the ice boat, which was short, iron-shod "
-      "and drawn by a team of horses."], "A",
-     "The goal is the mechanism, so the answer must link the rocking to the rise and fall of the "
-     "hull and then to the width of the channel; only one option carries that chain through. One "
-     "option states the width without any cause, and the others describe the boat without "
-     "explaining anything."),
+     ["Falling freight rates after 1850 left many boatmen unable to keep a house ashore.",
+      "Whole families moved into cabins measuring about eight feet by seven.",
+      "An Act of 1877 required every boat used as a dwelling to be registered.",
+      "The registration stated the number of people who might lawfully sleep aboard.",
+      "An inspector could board a registered boat and count those sleeping in it."],
+     "explain what the Act of 1877 was intended to control.",
+     ["Because whole families had moved into cabins of about eight feet by seven, the Act of 1877 "
+      "made a boat used as a dwelling register the number who might lawfully sleep aboard, which an "
+      "inspector could come and count.",
+      "Falling freight rates after 1850 left many boatmen unable to keep a house ashore, and whole "
+      "families moved into cabins measuring about eight feet by seven.",
+      "An Act of 1877 required every boat used as a dwelling to be registered.",
+      "An inspector could board a registered boat, whose registration stated the number of people "
+      "who might lawfully sleep aboard."], "A",
+     "What the Act controlled was overcrowding, so the answer must connect the size of the cabins "
+     "to the registered limit and to the inspection that enforced it. One option gives the cause "
+     "without the Act, and the others give the Act without what it was answering."),
 
  syn("R5",
-     ["Weighing a loaded boat was not practicable.",
-      "Each new hull was floated empty and then loaded with known weights a ton at a time.",
-      "Its freeboard was recorded at every step, producing a table for that particular boat.",
-      "Copies of the table were kept at every toll house on the line.",
-      "A clerk measured the freeboard at a gauging stone and read the weight off the table."],
-     "explain how a clerk could charge by weight without ever weighing a cargo.",
-     ["Because each hull had already been calibrated against known weights, a clerk needed only to "
-      "measure its freeboard at the gauging stone and read the cargo's weight off that boat's own "
-      "table.",
-      "Weighing a loaded boat was not practicable, and copies of the table were kept at every toll "
-      "house on the line.",
-      "Each new hull was floated empty and then loaded with known weights a ton at a time.",
-      "A clerk measured the freeboard at a gauging stone, and the table for that boat was kept at "
-      "every toll house."], "A",
-     "The explanation needs the calibration done beforehand and the single measurement made "
-     "afterwards, and only one option puts the two together as cause and method. The others give "
-     "one half of the procedure or pair it with a detail about where the tables were kept."),
+     ["Locks on the northern canals were built about seven feet wide.",
+      "Locks on the eastern navigations were built about fourteen feet wide.",
+      "A boat built to pass a seven-foot lock will also pass a fourteen-foot one.",
+      "A barge built for a fourteen-foot lock cannot pass a seven-foot one.",
+      "A through route was open only to craft that could pass its narrowest lock."],
+     "explain why the width of a single lock could govern a whole route.",
+     ["Because a barge built for a fourteen-foot lock cannot pass a seven-foot one, a through route "
+      "was open only to craft small enough for the narrowest lock anywhere along it.",
+      "Locks on the northern canals were built about seven feet wide and those on the eastern "
+      "navigations about fourteen.",
+      "A boat built to pass a seven-foot lock will also pass a fourteen-foot one.",
+      "A through route was open only to craft that could pass its narrowest lock, and the northern "
+      "locks were about seven feet wide."], "A",
+     "The governing fact is that the larger craft is excluded while the smaller is not, so the "
+     "answer must state the asymmetry and then the consequence for a route. The others give the two "
+     "widths, or the rule about the narrowest lock, without the asymmetry that produces it."),
 
  syn("R6",
-     ["Dredged mud was tipped over the offside of the mud boat onto the field side of the bank.",
-      "A century of tipping raised the offside of many canals into a low ridge.",
-      "Hawthorn seeded itself along the new ridge.",
-      "The water came to sit visibly above the meadow beyond the bank.",
-      "Several companies were sued by neighbouring farmers over the raised bank."],
-     "explain why farmers went to law against the canal companies.",
-     ["A century of mud tipped over the offside had raised the bank into a ridge that left the "
-      "water sitting visibly above the meadow beyond, and several companies were sued by "
-      "neighbouring farmers over it.",
-      "Dredged mud was tipped over the offside of the mud boat onto the field side of the bank, "
-      "where hawthorn seeded itself along the new ridge.",
-      "Hawthorn seeded itself along the ridge raised by a century of tipping.",
-      "Several companies were sued by neighbouring farmers, and the water came to sit visibly above "
-      "the meadow beyond the bank."], "A",
-     "A reason for the lawsuits requires the raised bank and its effect on the neighbouring land to "
-     "be given as what the farmers complained of, which one option does in a single causal "
-     "sentence. Another mentions the suits and the water level but merely places them side by side, "
-     "and the rest are about hawthorn."),
+     ["By 1900 several canal companies were carrying almost no traffic.",
+      "Their reservoirs still gathered and held water off the hills.",
+      "Towns below those hills were short of water.",
+      "One such company sold its reservoirs to a municipal waterworks in 1902.",
+      "The canal below them was left with no supply and closed within a decade."],
+     "explain what the sale of 1902 meant for the canal itself.",
+     ["Selling its reservoirs to the municipal waterworks in 1902 left the canal below them with no "
+      "supply at all, and it closed within a decade.",
+      "By 1900 several canal companies were carrying almost no traffic, though their reservoirs "
+      "still gathered water off the hills.",
+      "Towns below the hills were short of water, and one company sold its reservoirs to a "
+      "municipal waterworks in 1902.",
+      "Their reservoirs still gathered and held water off the hills, which the towns below them "
+      "needed."], "A",
+     "The question asks about the effect on the canal, and only one option carries the sale through "
+     "to the loss of supply and the closure. The others explain why the sale was attractive or "
+     "describe the reservoirs, stopping short of what became of the waterway."),
 
  syn_given("R7",
-     ["A pound is the level stretch of water between one lock and the next.",
-      "A short pound can be drawn down several inches by a single boat.",
-      "The Marsh pound is 600 metres long.",
-      "The Marsh pound must be refilled from above before a second boat can pass."],
-     "The student wants to explain the consequence of the Marsh pound's length to an audience "
-     "already familiar with canal terminology.",
-     ["At only 600 metres, the Marsh pound is drawn down several inches by a single boat and must "
-      "be refilled from above before a second can pass.",
-      "A pound is the level stretch of water between one lock and the next, and the Marsh pound is "
-      "600 metres long.",
-      "A short pound, meaning a level stretch of water between two locks, can be drawn down several "
-      "inches by a single boat.",
-      "The Marsh pound is 600 metres long and is a level stretch of water between one lock and the "
-      "next."], "A",
-     "An audience that already knows the terminology does not need the term defined, so the answer "
-     "must spend its words on the length and what follows from it. Every other option gives over "
-     "part of the sentence to a definition the stated audience already has."),
+     ["An iron trough carrying a canal expands as it warms and contracts as it cools.",
+      "The plates of the Braddon trough are bolted to one another at flanged joints.",
+      "Every joint at Braddon is bedded in flannel dipped in white lead.",
+      "The bedding lets the plates move slightly against one another without letting water "
+      "through."],
+     "The student wants to explain how the Braddon trough can move without leaking, to an audience "
+     "already familiar with iron aqueducts.",
+     ["The flanged joints of the Braddon trough are bedded in flannel dipped in white lead, which "
+      "lets its plates move slightly against one another without letting water through.",
+      "An iron trough carrying a canal expands as it warms and contracts as it cools, and the "
+      "plates of the Braddon trough are bolted at flanged joints.",
+      "The plates of the Braddon trough are bolted to one another at flanged joints.",
+      "An iron trough expands as it warms, and every joint at Braddon is bedded in flannel dipped "
+      "in white lead."], "A",
+     "An audience that already knows iron aqueducts does not need to be told that iron expands, so "
+     "the answer must spend its words on the bedding and what it permits. Every other option gives "
+     "part of the sentence over to the expansion the stated audience takes for granted."),
 
  syn_given("R8",
-     ["Legging was the practice of moving a boat through a tunnel by walking along its walls.",
-      "The Braddon tunnel is 2,800 metres long.",
-      "Legging the Braddon tunnel took about four hours.",
-      "A steam tug introduced in 1863 brought a train of boats through in forty minutes."],
-     "The student wants to emphasise the scale of the time saved at the Braddon tunnel to an "
-     "audience already familiar with legging.",
-     ["The 2,800-metre Braddon tunnel took about four hours to leg, but the steam tug introduced in "
-      "1863 brought a train of boats through in forty minutes.",
-      "Legging, the practice of moving a boat through a tunnel by walking along its walls, took "
-      "about four hours at the Braddon tunnel.",
-      "The Braddon tunnel is 2,800 metres long, and legging was the practice of moving a boat "
-      "through a tunnel by walking along its walls.",
-      "A steam tug was introduced at the Braddon tunnel in 1863, and the tunnel is 2,800 metres "
-      "long."], "A",
-     "Emphasising the saving means putting the four hours and the forty minutes in the same "
-     "sentence, which only one option does. Two options spend their words defining legging for an "
-     "audience said to know it already, and one gives the tug without any time to compare."),
+     ["A stop lock stands where one company's line meets another's.",
+      "The Wenholme summit lies four inches above the Ashby line at Norbrook.",
+      "The stop lock at Norbrook has a fall of four inches.",
+      "Its purpose is to keep the Wenholme company's water from running into the Ashby line."],
+     "The student wants to explain the purpose of the unusually small fall at Norbrook, to an "
+     "audience already familiar with stop locks.",
+     ["The Norbrook lock falls only the four inches by which the Wenholme summit lies above the "
+      "Ashby line, so that Wenholme water cannot run away into it.",
+      "A stop lock stands where one company's line meets another's, and the one at Norbrook has a "
+      "fall of four inches.",
+      "The stop lock at Norbrook has a fall of four inches, and the Wenholme summit lies four "
+      "inches above the Ashby line.",
+      "Its purpose is to keep the Wenholme company's water from running into the Ashby line, where "
+      "one company's line meets another's."], "A",
+     "The small fall is explained by matching it to the difference in level and naming what that "
+     "prevents, and only one option makes that connection. One option defines a stop lock for an "
+     "audience said to know what one is, and another sets the two four-inch figures side by side "
+     "without saying they are the same four inches."),
 
  syn_given("R9",
-     ["A compensation toll was paid by one company to another on traffic crossing a junction.",
-      "The Wenholme and Ashby companies met at Norbrook.",
-      "The Ashby company paid the Wenholme company threepence a ton at Norbrook.",
-      "The payment was made on every ton that crossed, whether or not it had used the Wenholme "
-      "line."],
-     "The student wants to specify the terms of the arrangement at Norbrook to an audience already "
-     "familiar with compensation tolls.",
-     ["At Norbrook the Ashby company paid the Wenholme company threepence on every ton crossing the "
-      "junction, whether or not it had used the Wenholme line.",
-      "A compensation toll was paid by one company to another on traffic crossing a junction, and "
-      "the Wenholme and Ashby companies met at Norbrook.",
-      "The Wenholme and Ashby companies met at Norbrook, where a compensation toll of the usual "
-      "kind was in force.",
-      "A compensation toll, paid by one company to another on traffic crossing a junction, was paid "
-      "at Norbrook by the Ashby company."], "A",
-     "Specifying the terms means naming the payer, the payee, the rate and the condition, and only "
-     "one option supplies all four. The others use their words on a definition the stated audience "
-     "already has, or leave the rate out entirely."),
+     ["Every boat was floated empty and then loaded with known weights a ton at a time.",
+      "Its freeboard was recorded at each step, giving a table for that hull alone.",
+      "A copy of the table was kept at every toll house on the line.",
+      "A clerk measured the freeboard at the toll house and read the weight from the table."],
+     "The student wants to explain how a toll clerk arrived at the weight of a cargo, to an "
+     "audience already familiar with gauging.",
+     ["The clerk measured a boat's freeboard at the toll house and read its weight from the table "
+      "drawn up when that hull had been loaded with known weights.",
+      "Every boat was floated empty and then loaded with known weights a ton at a time, and its "
+      "freeboard was recorded at each step.",
+      "A copy of the table for each hull was kept at every toll house on the line.",
+      "Its freeboard was recorded at each step, giving a table for that hull alone, and a copy was "
+      "kept at every toll house."], "A",
+     "The question is about what the clerk did, so the answer must have him measuring and reading. "
+     "The others describe the calibration or the filing of the tables and never reach the toll "
+     "house counter."),
 ]
 
 
