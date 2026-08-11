@@ -762,4 +762,192 @@ QUESTIONS = [
      "Ferreira has to rule out price and establish weight, and the accounts showing equal cost "
      "beside consistently lighter rafters do both at once. Importation from the Low Countries "
      "speaks to where the tiles came from and leaves the reason for their spread untouched."),
+
+ # ---------------------------------------------------------- Inferences (6)
+ inf("I1",
+     "Water rises through the fine pores of a brick much as it rises through blotting paper, and "
+     "in a wall standing on wet ground it climbs until evaporation from the face carries it away "
+     "as fast as the pores deliver it. Two courses of slate bedded near the foot of the wall break "
+     "the run of pores, and nothing passes them. It follows that damp found on such a wall well "
+     "above the slate _____",
+     ["must have reached the wall by some route other than the ground beneath it.",
+      "shows that the slate has been bedded at the wrong height in the wall.",
+      "proves that the wall was built with no slate in it at all.",
+      "has been carried up through the slate by the rise that carries it through brick."],
+     "A",
+     "The passage states that nothing passes the slate, so ground water cannot be the source of "
+     "damp appearing above it and some other route is required. The option about damp being "
+     "carried up through the slate contradicts the sentence that says nothing passes it."),
+
+ inf("I2",
+     "Clay does not leave the kiln at the size it entered the mould. It gives up water in the "
+     "drying and gives up more in the burning, and it contracts through both. A moulder therefore "
+     "cuts his mould larger than the brick he intends to sell, by an allowance established for "
+     "that particular clay by trial. Because the allowance belongs to the clay rather than to the "
+     "mould, a yard that opens a pit in new ground _____",
+     ["can expect the new clay to contract by exactly the allowance already in use.",
+      "cannot keep using moulds cut for the old clay until the new contraction has been measured.",
+      "will find that the new clay needs no drying before it is burned.",
+      "must burn the new clay at a lower heat than the old to hold the size."],
+     "B",
+     "If the allowance is a property of the clay, a mould cut to the old allowance is only correct "
+     "for the old clay, so the new contraction has to be found before the moulds can be trusted. "
+     "Expecting the same allowance to carry over is precisely what the sentence about the "
+     "allowance belonging to the clay rules out."),
+
+ inf("I3",
+     "A bare scaffold lets the wind blow through between its poles and its boards, and the ties "
+     "fastening it back to the building have little to hold beyond the frame's own weight and the "
+     "men working on it. Sheeting the same scaffold in plastic to keep the weather off the work "
+     "turns that open frame into a wall standing in the wind. A designer handed a scaffold already "
+     "standing and asked to sheet it _____",
+     ["may leave the ties as they are, since sheeting weighs almost nothing.",
+      "should take out some of the ties so that the sheeting can move freely.",
+      "has to calculate the ties afresh, because the frame will now gather a load it was never "
+      "tied to resist.",
+      "will find that a sheeted scaffold needs no ties at all."],
+     "C",
+     "The passage turns on sheeting converting an open frame into a wall in the wind, which is a "
+     "new sideways load on the very fastenings that were sized without it. The option about "
+     "sheeting weighing almost nothing answers a point the passage never made, since the load "
+     "described is wind rather than weight."),
+
+ inf("I4",
+     "Blocks in a cornice or a parapet are held to one another by iron cramps, and the pocket cut "
+     "for the cramp is run full of molten lead so that no water can stand against the metal. Where "
+     "the lead has been skimped, or left with a channel down one side, rain reaches the iron and "
+     "it rusts. Rust occupies several times the volume of the metal it replaces and has nowhere to "
+     "go but into the stone around it, so in such a building the stone that fails first _____",
+     ["is whichever block happens to have been cut from the softest bed.",
+      "is the stone standing furthest from any joint.",
+      "shows no crack at all until the iron has rusted entirely away.",
+      "is the stone immediately around the cramp pockets rather than the stone in the open face."],
+     "D",
+     "The expansion described has nowhere to go but into the stone enclosing the pocket, which "
+     "places the damage at the pockets and not in the open face. The option about the softest bed "
+     "introduces a cause the passage never mentions and it does not follow from the rusting "
+     "described."),
+
+ inf("I5",
+     "Stucco spread over a rough brick front was ruled into rectangles with a jointing tool while "
+     "it was still soft, and the lines were run to the proportions of a handsome ashlar wall "
+     "rather than to anything actually behind them. A block of dressed stone is as deep as it is "
+     "broad; a rectangle scored in stucco is a groove a few millimetres deep. Anyone judging such "
+     "a front from the pavement therefore _____",
+     ["learns nothing from the ruled lines about how the wall behind them is built.",
+      "can count the courses and so arrive at the thickness of the wall.",
+      "can be certain that the wall behind is of brick rather than of rubble.",
+      "will find the lines set out to follow the brickwork joint for joint."],
+     "A",
+     "The lines are said to follow the proportions of a handsome wall rather than anything behind "
+     "them, so they carry no information about the construction they cover. The option about the "
+     "lines following the brickwork joint for joint is the opposite of what the passage says they "
+     "were set out to do."),
+
+ inf("I6",
+     "A gin wheel is a single pulley lashed to the head of a scaffold pole, with a rope over it "
+     "and a hook on the end. It changes the direction in which a man pulls, so that he can hang "
+     "his weight on the fall instead of lifting with his back, but the rope comes down one side "
+     "and goes up the other and no force whatever is gained: the pull on the rope equals the load "
+     "on the hook. A labourer who can raise two bags of sand on a gin wheel and no more _____",
+     ["would raise four bags if the wheel were made twice the diameter.",
+      "is being stopped by friction in the wheel rather than by the weight of the bags.",
+      "could raise the same load with half the pull if the rope were longer.",
+      "is limited by what he himself can pull, since the wheel multiplies his effort not at all."],
+     "D",
+     "The passage states outright that the pull on the rope equals the load on the hook, so the "
+     "only limit left is the man's own pull. Doubling the diameter of the wheel changes the "
+     "direction of the rope and nothing else, since the equality between pull and load does not "
+     "depend on the size of the pulley."),
+
+ # ---------------------------------------------------------- Boundaries (12)
+ bnd("B1",
+     "A brick burned in a kiln full of air comes out red, because the iron in the clay has taken "
+     "up oxygen. Shut the air off towards the end of the firing and the same clay yields a dense "
+     "grey-blue skin instead, which is why the engineering bricks of south Staffordshire are "
+     "_____ colour is the whole record of how the fire was run.",
+     ["blue. The", "blue, the", "blue the", "blue, however the"], "A",
+     "Two complete sentences stand either side of the blank, so they need a full stop between "
+     "them rather than a comma. Setting a comma before the word however leaves the same two "
+     "sentences spliced together with no joining word between them."),
+
+ bnd("B2",
+     "A mason works the block on a _____ at about waist height, and drives the chisel downwards "
+     "with the weight of his arm behind it rather than with the strength of his wrist.",
+     ["banker, a low bench of stone or heavy timber, set",
+      "banker a low bench of stone or heavy timber set",
+      "banker, a low bench of stone or heavy timber set",
+      "banker; a low bench of stone or heavy timber; set"], "A",
+     "The description of the bench is a supplementary element dropped into the middle of the "
+     "sentence and needs a comma at both ends of it. Opening it with a comma and never closing it "
+     "leaves the phrase running straight into the words that follow."),
+
+ bnd("B3",
+     "Where two slopes of a roof meet at an outward angle, no ordinary tile can be cut to cover "
+     "the joint, so the tiler reaches for a tile shaped for that one _____ moulded to sit astride "
+     "the angle like a small saddle and bedded solid in mortar.",
+     ["purpose, a bonnet;", "purpose: a bonnet,", "purpose a bonnet,", "purpose; a bonnet,"], "B",
+     "A complete sentence stands in front of the blank and what follows it names the tile that "
+     "sentence has just promised, which is the work a colon does. Putting a semicolon after the "
+     "word purpose demands a second complete sentence, and a moulded, bedded tile is not one."),
+
+ bnd("B4",
+     "The lead-lined gutter that used to be laid where two slopes of a roof meet at an inward "
+     "_____ a joint every few feet, and every one of those joints was somewhere for water to find "
+     "its way underneath.",
+     ["angle, had", "angle had", "angle; had", "angle: had"], "B",
+     "Everything in front of the blank is one long subject, and the verb belonging to it must not "
+     "be cut away from it by punctuation. A semicolon there would need a complete sentence on each "
+     "side, and the words in front of the blank are not one."),
+
+ bnd("B5",
+     "Tiles were left to dry under an open-sided shed rather than in the sun, since a face that "
+     "dries faster than its back will curl away from the flat. The shed cost the yard nothing to "
+     "_____ week of still weather under it did more for a tile than any amount of care at the "
+     "mould.",
+     ["run, and a", "run and a", "run, a", "run; and a"], "A",
+     "Two complete sentences are being joined at the blank, which calls for a comma together with "
+     "the joining word. Leaving the comma out runs the two together, and a comma with no joining "
+     "word splices them."),
+
+ bnd("B6",
+     "Pargeting is plaster combed, stamped or modelled into a pattern while it is still soft. The "
+     "ornament is not laid over the weathering coat but worked into the face of the coat _____ "
+     "therefore comes away altogether if the front is ever scraped back to the brick.",
+     ["itself which", "itself. Which", "itself, which", "itself; which"], "C",
+     "The clause introduced by the relative pronoun adds something about the coat rather than "
+     "picking out which coat is meant, so a comma introduces it. Starting a fresh sentence with "
+     "that pronoun leaves a fragment with no main verb of its own."),
+
+ bnd("B7",
+     "Wood lath was displaced in the 1920s by a sheet of steel slit into rows of short cuts and "
+     "then pulled open into a mesh. Because that mesh has no gaps of a fixed width and no grain to "
+     "split _____ can be pressed into it anywhere along its length rather than only where a gap "
+     "happens to fall.",
+     ["along the first coat", "along: the first coat", "along, the first coat",
+      "along; the first coat"], "C",
+     "The sentence opens with a long subordinate clause, and a comma has to close that clause "
+     "before the main statement begins. A semicolon in the same place would require a complete "
+     "sentence in front of it, and a clause opening with the word because is not one."),
+
+ bnd("B8",
+     "Fibrous plaster is cast flat in a mould on the bench, backed with canvas and thin laths "
+     "while it is still wet, and carried up to the ceiling as a finished panel. A run of ornament "
+     "that would have taken a modeller weeks overhead can be turned out in a day on the _____ "
+     "however, is only as good as the joint where one panel meets the next.",
+     ["bench, the result", "bench; however the result", "bench the result",
+      "bench; the result"], "D",
+     "Two complete sentences meet at the blank and a semicolon separates them, the transitional "
+     "word opening the second being followed by the comma the passage already supplies. Joining "
+     "them with a comma alone splices two sentences together."),
+
+ bnd("B9",
+     "The lodge was the shed built against the wall of a cathedral under construction, where the "
+     "banker masons worked under cover and where their tools were kept. It gave its name to the "
+     "customs that governed the trade, so that the _____ rules on hours, on wages and on who might "
+     "be taught the work outlasted the buildings they were framed for.",
+     ["masons rules", "masons's rules", "mason's rules", "masons' rules"], "D",
+     "The rules belong to the masons of the lodge, more than one of them, so the plural noun "
+     "already ending in s takes an apostrophe after it. The singular possessive would put the "
+     "whole body of custom down to one man."),
 ]

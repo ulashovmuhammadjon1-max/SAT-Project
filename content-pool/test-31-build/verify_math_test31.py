@@ -234,10 +234,6 @@ def m2h_16():
     return Integer(sorted(data)[len(data) // 2])
 
 
-def m2h_19():
-    return Rational(3, 2) ** 2 * Rational(8, 10) * 100
-
-
 def m2h_20():
     return solve(Eq(180 - Rational(360, 1) / n, 156), n)[0]
 
@@ -314,12 +310,6 @@ def m2h_18():
     return solve(Eq(per * n, 1540), n)[0] / 22
 
 
-def m2h_21():
-    ac = Rational(8, 17) * 51
-    bc = sqrt(Integer(51) ** 2 - ac ** 2)
-    return simplify(Rational(1, 2) * ac * bc)
-
-
 def m2h_22():
     return 96 * Rational(5, 2) ** 3
 
@@ -341,11 +331,26 @@ def m2e_13():
 
 
 def m2e_22():
-    # right angle at Y, so XZ is the hypotenuse; check the triple closes before
-    # reading any ratio off it
-    xy, yz, xz = 9, 40, 41
-    assert xy ** 2 + yz ** 2 == xz ** 2
-    return Rational(yz, xz)
+    # cos A = AC/AB with AB = 74; solve for AC rather than multiplying the
+    # ratio out by hand, then confirm the triangle that results actually
+    # closes, so a ratio that does not belong to a right triangle would fail
+    # here instead of being assumed.
+    ac = solve(Eq(v / 74, Rational(35, 37)), v)[0]
+    bc = sqrt(Integer(74) ** 2 - ac ** 2)
+    assert simplify(ac ** 2 + bc ** 2 - 74 ** 2) == 0
+    return ac
+
+
+def m2h_21():
+    # tan J = KL/JL with KL = 33; recover JL, then the hypotenuse JK
+    jl = solve(Eq(Rational(33, 1) / v, Rational(33, 56)), v)[0]
+    return sqrt(Integer(33) ** 2 + jl ** 2)
+
+
+def m2h_19():
+    # the displaced volume is the base area times the rise, converted to litres
+    rise = 22 - 15
+    return Rational(60 * 40 * rise, 1000)
 
 
 DERIVE = {
@@ -391,7 +396,7 @@ DERIVE = {
  "M2E-18": lambda: 134 - 88,
  "M2E-19": lambda: 18 * 25,
  "M2E-20": lambda: 360 - (95 + 128 + 62),
- "M2E-21": lambda: pi * 3 ** 2 * 10,
+ "M2E-21": lambda: Rational(14 + 22, 2) * 9,
  "M2E-22": m2e_22,
 
  "M2H-01": m2h_01,

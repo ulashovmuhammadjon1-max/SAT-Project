@@ -57,10 +57,25 @@ passage. That precision matters: a first cut that scanned the whole substituted 
 97 findings, 93 of them ordinary compound predicates. Currently **0 findings**; a regression test
 re-injecting the four original defects confirms it still fires on them.
 
+## Pipeline — all green
+- [x] `check_substitution.py` — 0 findings
+- [x] `verify_math_test28.py` — ALL CHECKS PASSED (Math untouched; 0.67 vs prod, 0.46 internal)
+- [x] `screen_topics.py final` — 0.250 vs corpus, 0.235 internal, 0 pairs at or above 0.5.
+      (Had to retarget it: copied from test-16-build, its `final` mode still imported `rw_test16`.)
+- [x] `balance_rw.py` — **A 21, B 20, C 20, D 20**, 0 locked
+- [x] `assemble_test28.py` — regenerated AFTER every edit; 147 questions, 0 duplicate refs
+- [x] `validate_tests.py 28` — PASS, zero problems
+- [x] local insert — **a stale Test 28 from the killed run was already there and the inserter is
+      idempotent, so it skipped everything and reported "inserted this run: 0". Deleted the old
+      row and re-inserted 147.** New local id `1631a6c4-ff5b-4da0-a0bc-de610cd3f192`, DRAFT.
+- [x] `audit_math_rendering.mjs` — 1,782 Math questions across 27 tests, 0 errors, 0 style-only
+- [x] MANIFEST.md written
+
 ## Left
-- [ ] verify_math_test28.py / balance_rw.py / assemble_test28.py / validate_tests.py 28
-- [ ] local insert + audit_math_rendering.mjs
-- [ ] MANIFEST.md
+Nothing outstanding for this pass. Not done, and deliberately so:
+- Production untouched, nothing published, nothing committed (the parent commits).
+- The R&W items were not opened in the real exam interface (`/exam/{attemptId}`) — every check
+  here is against the file and the local DB.
 
 ## Decisions a successor would otherwise re-derive
 - The defect class to hunt is a choice whose text overlaps what the passage supplies on the other

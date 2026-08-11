@@ -79,10 +79,44 @@ polygon recovered from its interior angle (1).
 
 Three trigonometry items sit in three different modules, and because a student
 sees Module 1 plus ONE Module 2 branch they are differentiated by both their
-given and their ask: M2E-22 gives all three sides and asks for a ratio, M1-21
-gives a ratio and a leg and asks for the perimeter, M2H-21 gives a ratio and the
-hypotenuse and asks for the area. Their Pythagorean triples are also disjoint —
-9-40-41, 20-21-29 and 8-15-17 — so no two share a number.
+given and their ask: M2E-22 gives a ratio and the hypotenuse and asks for a leg,
+M1-21 gives a ratio and a leg and asks for the perimeter, M2H-21 gives a ratio
+and a leg and asks for the hypotenuse. Their Pythagorean triples are disjoint —
+12-35-37, 20-21-29 and 33-56-65 — so no two share a number, and none of the
+three triples is used by any banked trigonometry question.
+
+A SECOND verification run (the one that produced the file you are reading) found
+four further defects that the first run's four passes all passed, and the way
+they were found is the transferable part:
+
+  * M2E-21 was a cylinder of radius 3 and height 10 — the same two numbers, the
+    same solid and the same ask as Test 5 M2E Q20. It scored 0.48 on Jaccard,
+    nowhere near the 0.75 reject line, because "grain bin for a pigeon loft"
+    shares almost no vocabulary with "a right circular cylinder". Replaced with
+    a trapezium area, a formula the bank applies plainly only once.
+  * M2E-22 was right triangle XYZ, right angle at Y, legs 9 and 40 — the same
+    labels, the same vertex and the same legs as Test 12 M2H Q18, which asks for
+    cos X where this asked for sin X.
+  * M2H-21 used cos A = 8/17 with a hypotenuse of 51, which is Test 16 M2H Q21's
+    ratio AND its hypotenuse, and asked for the area, which is Test 19 M2H Q21's
+    ask.
+  * M2H-19 was a cylinder whose radius grew and whose height shrank by stated
+    percentages — Test 9 M2H Q21 with different percentages, which is exactly
+    the "same template, only the numbers changed" the standing rule forbids.
+
+All four were found by mechanism_search.py, none by Jaccard. The first
+replacement DRAFTED for M2E-22 — two legs given, asked for tan — was itself
+rejected before it was written, because the same pre-screen showed Test 12 M2E
+Q22 already gives two legs and asks for tan. Pre-screening the replacement is
+not optional; the obvious replacement for a repeat is usually another repeat.
+
+A fifth defect was a house-style one, and it was systemic: NINE questions listed
+their numeric answer choices out of order (M1-04 read 1,299 / 1,300 / 1,310 /
+1,301). Every sibling build keeps numeric choices ascending — 85 purely numeric
+items across Tests 19 and 21, none out of order. The cause was choosing the key
+LETTER to balance the answer key instead of choosing distractor VALUES; the fix
+restores ascending order everywhere and buys the balance back by retuning
+distractors on six items. verify_math_test31.py now enforces the ordering.
 
 House style follows Test 1/2 (see CLAUDE.md): stems are bare HTML, simple
 inline math stays plain text, every data table is real <table> markup, degree
