@@ -45,3 +45,9 @@ next-env.d.ts
 __pycache__/
 prod_math_stems.json
 _dump_prod.mjs
+
+# Agent scratch space. The explanation-authoring agents write helper scripts
+# and extracted figures here; each namespaces its own subdirectory after two
+# agents clobbered a shared filename. None of it is work product — the actual
+# output is content-pool/explanations/out/*.jsonl, which IS committed.
+scratchpad/
