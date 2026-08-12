@@ -1,0 +1,68 @@
+# Broken questions found while authoring explanations
+
+Structural defects in **live** questions, found by the authoring agents and
+then confirmed directly against production. These need the *question* repaired
+— a key change does not fix any of them.
+
+Kept separate from REVIEW.md because `review_report.mjs` rewrites that file
+from the JSONL on every run, and would erase anything hand-written in it.
+
+## Unanswerable as it stands
+
+- **Test 7 · Math M2 Easy q17** (`060a8be5`) — the stem begins with the literal
+  placeholder token `TABLE_B` and the question asks "how many more tickets were
+  sold for the screening with the greatest number…". There is **no `<table>`
+  markup and no image**: the table it refers to does not exist. The key says 92,
+  but nothing on screen lets a student reach it. This is live.
+
+## Two correct answers
+
+- **Test 6 · Math M1 q6** (`b4f10f7d`) — the relationship is `p = 35c + 6`.
+  Choice A is `35c - p = -6` (keyed) and choice D is `p - 35c = 6`. Rearranged,
+  both are `p = 35c + 6` — the same equation. A student choosing D is marked
+  wrong for a correct answer.
+- **Test 2 · Math M1 q16** (`lismstoib…`) — "Which expression is equivalent to
+  \(\sqrt{48}\)?" Key is A `\(4\sqrt{3}\)`; choice C is `\(2\sqrt{12}\)`.
+  Both equal 6.9282…, verified arithmetically. C is only "wrong" for not being
+  in simplest radical form, which the stem never asks for.
+
+## Duplicate-value choices (grading unaffected, choice set redundant)
+
+- **Test 6 · Math M2 Easy q12** (`04294af7`) — A is `\(\frac{49}{2}\)` and B is
+  `24.5`: the same number twice. Key C (7) is unaffected.
+- **Test 1 · Math M2 Easy q21** — A is `\(36\pi\)` (keyed) and D is
+  `36π (approx)`, with D using a raw π glyph outside a math span.
+- **Test 2 · Math M2 Easy q21** — B is `\(3\pi\)` (keyed) and D is
+  `3π (approx)`. Choice A is `\(3π/2\)` — raw glyph and slash fraction inside
+  a math span.
+
+## The same question twice in one module
+
+- **Test 3 · R&W M1 q9 and q10** — identical stems (similarity 1.00).
+- **Test 4 · R&W M2 Hard q9 and q10** — identical lake-ice table and stem.
+
+## Identical distractors
+
+- **Test 2 · R&W M2 Hard q17** — choices B and D are byte-identical
+  ("advocate, Ernesto Hernandez-Lopez,"). Key is C, so it still grades, but two
+  of four options are the same string.
+
+## Rendering defects
+
+- **Test 3 · M1 q6, q19** — a whole prose sentence wrapped in `\( … \)`; KaTeX
+  drops the spaces and it renders as run-on text.
+- **Test 3 · M1 q3** — `cos(A)` unescaped inside math mode, rendering as three
+  italic variables instead of the function.
+- **Test 3 · M2 Hard q12** — carries `[Graph/figure not available]` where its
+  table should be.
+- **Test 1 · M2 Easy q14, M2 Hard q27** — raw markdown asterisks around titles
+  instead of `<em>`.
+- **Test 3 · M1 q7, M2 Hard q17/q22** — the stem describes the figure in prose
+  alongside the real image (the answer leak CLAUDE.md rule 3 warns about).
+
+## Coverage gap (a content decision, not a bug)
+
+- **Tests 8 and 9** contain **no Command of Evidence — Graph/Table** questions
+  at all. All 18 `INI-CE` items across their six modules are the
+  "which finding, if true, would support/weaken" type. That is block 7 of the
+  mandated R&W domain-block sequence, empty in both tests.
