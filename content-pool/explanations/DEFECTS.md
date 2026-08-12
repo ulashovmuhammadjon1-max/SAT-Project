@@ -131,3 +131,38 @@ Module 2 item reusing a Module 1 setting is not violated in either package.
 The cause is the documented one: sibling authoring agents that were not steered
 onto disjoint thematic territory. It is the same failure that cost Tests 13 and
 14 a repair pass during the original build.
+
+
+## Tests 14 and 15 share Math templates too — same slot, same numbers
+
+`t12-math-b` found the collision running through Math as well, question-for-
+question in matching slots. Verified against production:
+
+| | Test 14 M2 Easy **q16** | Test 15 M2 Easy **q16** |
+|---|---|---|
+| stem | "The price of a season ticket fell from **$250 to $210**" | "A cycle shop's stock of helmets fell from **250 to 210**" |
+| answer | **16%** | **16%** |
+
+Identical numbers, identical answer, identical slot number — only the setting
+words differ. Seven more pairs behave the same way:
+
+- **M2 Hard q1** — `6x-4y=10 / 9x+cy=15` against `6x-4y=14 / 9x+ky=21`, the same
+  four choices (-6 / -4 / 4 / 6).
+- **M1 q10** — the same decay function `6250(1/5)^d` in the same "tracer"
+  framing, target 10 against 2.
+- **M2 Easy q22** — a 9-12-15 right triangle in both (guy wire / batten).
+- **M1 q12** — solve `(5c-12)/3` for c against `(5g-8)/3` for g.
+- **M2 Hard q3** — the same "at least 3 of item B per item A, capped resource"
+  optimisation.
+- **M1 q3 / q4** — the same grant-minus-licence-fee-then-divide setup.
+- Kiln / percent-cracked data tables at Test 14 M2 Hard q15 and Test 15 M1 q17.
+
+**Why the existing dedupe missed all of this.** These score *low* on token
+Jaccard precisely because the setting words changed — the exact trap CLAUDE.md
+records under "a similarity threshold decides what to READ, not what to
+accept". The numbers survived; only the nouns moved.
+
+Combined with the ten R&W scenario pairs above, **Tests 14 and 15 are close to
+parallel forms of one another.** A student sitting both meets the same
+mathematics and the same passages twice. This needs a decision: rebuild one of
+the two, or accept them as an intentional pair and say so.
