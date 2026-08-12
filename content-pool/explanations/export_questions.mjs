@@ -12,10 +12,16 @@ const sql = neon(process.env.PROD_URL);
 const OUT = new URL(".", import.meta.url).pathname;
 mkdirSync(`${OUT}/input`, { recursive: true });
 
+// Test numbers from argv, so a later batch never has to edit this file:
+//   node export_questions.mjs 6 7 8 9 10 11
+const nums = process.argv.slice(2).map(Number).filter(Number.isFinite);
+if (!nums.length) throw new Error("Pass test numbers, e.g. `node export_questions.mjs 6 7 8`");
 const tests = await sql.query(
-  `SELECT id, title FROM "Test" WHERE title = ANY($1) ORDER BY title`,
-  [["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"]]
+  `SELECT id, title FROM "Test" WHERE title = ANY($1)`,
+  [nums.map((n) => `Test ${n}`)]
 );
+// Sort numerically — "Test 10" sorts before "Test 6" as a string.
+tests.sort((a, b) => Number(a.title.match(/\d+/)[0]) - Number(b.title.match(/\d+/)[0]));
 
 let grand = 0;
 for (const t of tests) {

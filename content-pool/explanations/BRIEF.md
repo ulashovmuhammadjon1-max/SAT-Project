@@ -67,6 +67,24 @@ Direct and plain. Address the student as "you". No praise, no filler, no
 "Great question!". Assume they got it wrong and want to know why — that is who
 reads an explanation.
 
+## Learned the hard way on the first batch — read these
+
+- **Namespace your scratch files.** The scratchpad is shared by all six agents.
+  On the last run two agents wrote a helper called `dump.mjs` and one silently
+  clobbered the other, so an agent briefly processed a sibling's questions. Put
+  everything under `scratchpad/<your-agent-name>/`.
+- **Dollar amounts are fine.** Write "$22", not "22 dollars". The verifier's
+  inline-math check used to fire on two prices in one sentence; that is fixed,
+  and rewriting prices as words made the prose worse.
+- **Work the figure, not the stem's description of it.** Several questions
+  carry a prose summary of their chart alongside the real image, and the
+  summary is sometimes wrong or leaks the answer. Extract the base64 image and
+  read it.
+- **Watch for broken items** — two choices with the same value, a choice that
+  is mathematically equal to the key, byte-identical distractors, or the same
+  question appearing twice in one module. The first batch found several. Report
+  them; do not try to fix them.
+
 ## When you finish
 
 Run `node content-pool/explanations/verify.mjs` and fix anything it reports

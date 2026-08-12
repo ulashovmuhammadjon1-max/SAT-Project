@@ -11,7 +11,13 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 const DIR = new URL(".", import.meta.url).pathname;
 mkdirSync(`${DIR}/out`, { recursive: true });
 
-const TESTS = ["test-1", "test-2", "test-3", "test-4", "test-5"];
+// node slices.mjs <prefix> <test numbers…>   e.g. `node slices.mjs t6 6 7 8 9 10 11`
+// The prefix namespaces this batch's agents so a new run cannot overwrite a
+// previous batch's slice or output files.
+const PREFIX = process.argv[2] ?? "";
+const NUMS = process.argv.slice(3).map(Number).filter(Number.isFinite);
+if (!PREFIX || !NUMS.length) throw new Error("Usage: node slices.mjs <prefix> <test numbers…>");
+const TESTS = NUMS.map((n) => `test-${n}`);
 const all = [];
 for (const t of TESTS) {
   const { test, questions } = JSON.parse(readFileSync(`${DIR}/input/${t}.json`, "utf8"));
@@ -28,8 +34,8 @@ function chunk(arr, n) {
 }
 
 const agents = {};
-chunk(math, 3).forEach((qs, i) => (agents[`math-${"abc"[i]}`] = qs));
-chunk(rw, 3).forEach((qs, i) => (agents[`rw-${"abc"[i]}`] = qs));
+chunk(math, 3).forEach((qs, i) => (agents[`${PREFIX}-math-${"abc"[i]}`] = qs));
+chunk(rw, 3).forEach((qs, i) => (agents[`${PREFIX}-rw-${"abc"[i]}`] = qs));
 
 for (const [name, qs] of Object.entries(agents)) {
   writeFileSync(`${DIR}/out/${name}.slice.json`, JSON.stringify(qs, null, 1));

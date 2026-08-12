@@ -1,0 +1,6249 @@
+{
+ "test": "Test 8",
+ "testId": "2627614d-4142-42fd-85e7-6885da300746",
+ "questions": [
+  {
+   "id": "bf3dc2ef-1308-45a5-b7d3-c9fc974a0541",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Far from being a _____ record of what the painter saw, the sketchbook is full of revisions, abandoned starts and figures redrawn three or four times.",
+   "choices": [
+    {
+     "id": "864cb9bb-b7c2-4948-b492-f8de66574a98",
+     "label": "A",
+     "content": "faithful",
+     "isCorrect": true
+    },
+    {
+     "id": "c0a7ee93-6853-4428-9b7a-2cc12cffcb99",
+     "label": "B",
+     "content": "hurried",
+     "isCorrect": false
+    },
+    {
+     "id": "1e9dccab-a78c-4328-a5c3-2e6bfa6ddd57",
+     "label": "C",
+     "content": "detailed",
+     "isCorrect": false
+    },
+    {
+     "id": "db18843b-f018-4d1c-b758-6a5d5fa3666d",
+     "label": "D",
+     "content": "private",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "43990ed9-d196-4a0f-bf8f-961d16e05654",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The novel's structure is deliberately _____, doubling back on events the reader has already been shown and retelling them from a second vantage point.",
+   "choices": [
+    {
+     "id": "2248acfe-7db7-41b9-b8da-94296ed86673",
+     "label": "A",
+     "content": "conventional",
+     "isCorrect": false
+    },
+    {
+     "id": "b7067ae4-6704-463f-ab20-7c4de2f69804",
+     "label": "B",
+     "content": "linear",
+     "isCorrect": false
+    },
+    {
+     "id": "b93a1866-2c85-40d3-bedd-727e14a96758",
+     "label": "C",
+     "content": "recursive",
+     "isCorrect": true
+    },
+    {
+     "id": "9e1a5055-9fe9-4ef5-b94f-1f9374450d20",
+     "label": "D",
+     "content": "abrupt",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "125c590f-6e5f-4712-816e-44a8d1880328",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Rather than confining herself to a single medium, the sculptor Ruth Asawa worked in wire, clay and paper with equal _____, moving between them throughout her career.",
+   "choices": [
+    {
+     "id": "598d90a8-fd3a-4fe7-8fd0-4dc211b2d516",
+     "label": "A",
+     "content": "obscurity",
+     "isCorrect": false
+    },
+    {
+     "id": "d6fba20f-8ff1-428c-bb4b-356e904d3fa2",
+     "label": "B",
+     "content": "restraint",
+     "isCorrect": false
+    },
+    {
+     "id": "ebd33bff-0756-4346-8114-3df2f4983c77",
+     "label": "C",
+     "content": "reluctance",
+     "isCorrect": false
+    },
+    {
+     "id": "641a51be-d5e2-4d08-9541-a9c62536e4a1",
+     "label": "D",
+     "content": "facility",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "0c835ce4-aa22-446b-b734-aba6faaf8b11",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Although the technique was developed for restoring frescoes, conservators soon found it _____ to textiles as well.",
+   "choices": [
+    {
+     "id": "0395615b-6b1b-4213-963a-04b48e477ff6",
+     "label": "A",
+     "content": "applicable",
+     "isCorrect": true
+    },
+    {
+     "id": "349f32ab-0fd4-425d-a883-95e3150ff2b6",
+     "label": "B",
+     "content": "comparable",
+     "isCorrect": false
+    },
+    {
+     "id": "1c236fdd-2442-4720-8d41-cba8e18ddd4a",
+     "label": "C",
+     "content": "preferable",
+     "isCorrect": false
+    },
+    {
+     "id": "ee737288-6340-4765-bbdb-0e5c21f351b2",
+     "label": "D",
+     "content": "susceptible",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "bab7ce46-47a2-4b09-a6a6-de07884264c1",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The theory remains _____ among specialists: three recent papers endorse it, and three others argue it cannot be reconciled with the fossil record.",
+   "choices": [
+    {
+     "id": "4ce2fb88-ff9a-445a-82da-1c91166a93e1",
+     "label": "A",
+     "content": "obscure",
+     "isCorrect": false
+    },
+    {
+     "id": "4d24ff4a-3acc-4d8b-9434-1429ef0b3199",
+     "label": "B",
+     "content": "outdated",
+     "isCorrect": false
+    },
+    {
+     "id": "53ff4101-d4ee-4736-b232-0e5638096a35",
+     "label": "C",
+     "content": "settled",
+     "isCorrect": false
+    },
+    {
+     "id": "c037bc86-54ec-40e3-96f9-1a29cf29e184",
+     "label": "D",
+     "content": "contested",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "de58dd80-48f6-40f9-b476-518e55e45fad",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Ordinary glass is a liquid that has been cooled too quickly to crystallise. Its molecules are frozen in the disordered arrangement they held while molten. <u>This is why a pane of glass has no grain and can be cut in any direction.</u>",
+   "choices": [
+    {
+     "id": "960849da-a3c4-4116-ae0a-925a8b133fd4",
+     "label": "A",
+     "content": "It defines a term used earlier in the text.",
+     "isCorrect": false
+    },
+    {
+     "id": "fc76fea9-7432-4f41-9ac0-d81eb15b4648",
+     "label": "B",
+     "content": "It introduces a distinction the text then develops.",
+     "isCorrect": false
+    },
+    {
+     "id": "d06fa403-9e53-4d24-8b71-ed7969515988",
+     "label": "C",
+     "content": "It draws a practical consequence from the explanation given.",
+     "isCorrect": true
+    },
+    {
+     "id": "2abdd0ee-707f-4dee-855e-076ce291a371",
+     "label": "D",
+     "content": "It provides evidence contradicting the preceding claim.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "3064e526-862e-4092-b7bd-7a2ce845573d",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "In 1901 the physicist Hertha Ayrton became the first woman to read her own paper before the Institution of Electrical Engineers. <u>The paper concerned the hissing of electric arcs, a nuisance that had defeated better-funded laboratories for years.</u> Ayrton traced the noise to a chemical reaction at the carbon rods and showed that reshaping them silenced it.",
+   "choices": [
+    {
+     "id": "300f6bcc-6e2b-4388-87a1-2550c7ce63f1",
+     "label": "A",
+     "content": "It establishes the significance of the problem Ayrton is then shown to have solved.",
+     "isCorrect": true
+    },
+    {
+     "id": "b37d611c-325c-4c2d-af96-85fd1894963b",
+     "label": "B",
+     "content": "It contrasts Ayrton's methods with those of her better-funded contemporaries.",
+     "isCorrect": false
+    },
+    {
+     "id": "94f1bf9f-3fb4-443b-b89f-203d2f3b66cf",
+     "label": "C",
+     "content": "It explains why Ayrton was invited to address the Institution.",
+     "isCorrect": false
+    },
+    {
+     "id": "fa302174-757b-44db-9801-be00772be26d",
+     "label": "D",
+     "content": "It concedes a limitation in the research the text goes on to describe.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "35d7dc9a-39be-4df8-88b8-c856c4be0c00",
+   "stem": "According to the text, what accounts for the durability of Roman marine concrete?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Roman concrete harbours have stood in seawater for two thousand years while modern marine concrete degrades within decades. Analysis of Roman samples shows that seawater percolating through the material reacts with volcanic ash to grow interlocking crystals in the cracks. The concrete is strengthened by the very process that weakens its modern counterpart.",
+   "choices": [
+    {
+     "id": "b5154047-1831-448b-9f1e-7f5edb17c0dc",
+     "label": "A",
+     "content": "The volcanic ash used in it repels seawater.",
+     "isCorrect": false
+    },
+    {
+     "id": "4ccbf432-4c1b-4012-bd88-a5dbb3f9ee4e",
+     "label": "B",
+     "content": "It contains far less water than modern concrete.",
+     "isCorrect": false
+    },
+    {
+     "id": "10aade95-48b1-4a9d-a742-2c1e4d36fbf7",
+     "label": "C",
+     "content": "Its cracks are sealed by crystals that seawater helps to form.",
+     "isCorrect": true
+    },
+    {
+     "id": "5bee12a7-1575-45f1-9f7b-0c49f3f77b33",
+     "label": "D",
+     "content": "It was mixed to a consistency that resists cracking altogether.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "b6e4edc6-4300-4f72-bad4-910e6d6da211",
+   "stem": "According to the text, what was notable about the solutions Cartwright studied?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "In the 1930s the mathematician Mary Cartwright was asked to explain why radio amplifiers behaved erratically at high power. The equations she studied produced solutions that never settled and never repeated. Decades later those solutions were recognised as early examples of what is now called chaos.",
+   "choices": [
+    {
+     "id": "2f5fdeb8-14d6-410c-b361-c7971138d4e2",
+     "label": "A",
+     "content": "They neither reached a steady state nor repeated themselves.",
+     "isCorrect": true
+    },
+    {
+     "id": "8e5b8113-298f-4704-b964-5bf421acf630",
+     "label": "B",
+     "content": "They could not be calculated without electronic computers.",
+     "isCorrect": false
+    },
+    {
+     "id": "1876a442-c324-479e-8142-422b561c5189",
+     "label": "C",
+     "content": "They applied only to radio amplifiers and to no other system.",
+     "isCorrect": false
+    },
+    {
+     "id": "078f0219-98a3-4824-92e2-9e5480f9c5aa",
+     "label": "D",
+     "content": "They settled into a repeating cycle after a long delay.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "079c3dd8-b940-4e68-a751-07d9386c0465",
+   "stem": "Which finding, if true, would most directly weaken the researchers' conclusion?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Researchers studying a songbird found that males raised in isolation produce songs that are simpler than those of wild males but that still contain the species' characteristic opening phrase. They concluded that the opening phrase is innate while the rest is learned.",
+   "choices": [
+    {
+     "id": "3c396de0-124d-4d79-b9f4-e3188f64207d",
+     "label": "A",
+     "content": "Isolated males can hear recordings of adult song played elsewhere in the facility.",
+     "isCorrect": true
+    },
+    {
+     "id": "7154f222-902d-4f91-8dce-48de7e2670d5",
+     "label": "B",
+     "content": "The opening phrase is shorter in isolated males than in wild males.",
+     "isCorrect": false
+    },
+    {
+     "id": "5f2c0ea8-934d-4b4d-8de8-4ad5cbaf1d81",
+     "label": "C",
+     "content": "Isolated males sing less often than wild males.",
+     "isCorrect": false
+    },
+    {
+     "id": "8f5ba44a-c12b-4ae3-837f-ec199b2a6604",
+     "label": "D",
+     "content": "Wild males vary considerably in the length of their songs.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f43dafe8-1c8d-46c7-b55a-56733d3eb11b",
+   "stem": "Which finding, if true, would most directly support the linguist's claim?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "A linguist claims that a community's shift away from its heritage language was driven mainly by schooling policy rather than by migration to cities, since the shift accelerated sharply in the decade a monolingual school system was imposed.",
+   "choices": [
+    {
+     "id": "f356f13e-4b73-4633-92dc-efab07f3b962",
+     "label": "A",
+     "content": "Migration to cities from the community continued at a steady rate throughout the century.",
+     "isCorrect": false
+    },
+    {
+     "id": "29c9c0cf-1923-427d-b591-6904495c7648",
+     "label": "B",
+     "content": "The heritage language is still spoken by elders in the community today.",
+     "isCorrect": false
+    },
+    {
+     "id": "29031601-249c-4743-bc74-f1c1d3ba634a",
+     "label": "C",
+     "content": "Neighbouring communities that migrated at similar rates but kept bilingual schooling retained the language.",
+     "isCorrect": true
+    },
+    {
+     "id": "e2efd6aa-46bf-4f36-aff2-5fde5b184de0",
+     "label": "D",
+     "content": "The monolingual school system was abandoned after thirty years.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c1857796-6e05-4425-b93b-217b9f42b423",
+   "stem": "Which finding, if true, would most directly support the engineer's argument?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "An engineer argues that a bridge's unexpected swaying was caused by pedestrians unconsciously matching their steps to the bridge's motion, rather than by wind.",
+   "choices": [
+    {
+     "id": "e2a9a2e9-2ea5-4949-ac29-c370224da6c9",
+     "label": "A",
+     "content": "The swaying occurred on days with little or no wind whenever the bridge was crowded.",
+     "isCorrect": true
+    },
+    {
+     "id": "c8e6949c-a092-4ea2-88c9-599b5cbf9dd0",
+     "label": "B",
+     "content": "The bridge was designed to withstand winds far stronger than any recorded.",
+     "isCorrect": false
+    },
+    {
+     "id": "e1b93718-20b2-4837-a273-d25ec6023ab2",
+     "label": "C",
+     "content": "Pedestrians reported feeling unsteady while crossing.",
+     "isCorrect": false
+    },
+    {
+     "id": "f0fa2e25-bc58-4f31-a2e9-6b0bbf45f4bc",
+     "label": "D",
+     "content": "The swaying stopped when the bridge was closed for repairs.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "957afce4-7f4c-4f6e-a980-eb93dd314473",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "A study of urban foxes found that individuals living near busy roads were bolder in approaching novel objects than those in quiet parks. The researchers caution, however, that they measured boldness only in adults. If bold foxes are more likely to settle near roads in the first place, then the study's finding _____",
+   "choices": [
+    {
+     "id": "b41ff024-7e9b-43b5-b59f-48fc2d9aca32",
+     "label": "A",
+     "content": "would be strengthened by adding juveniles to the sample.",
+     "isCorrect": false
+    },
+    {
+     "id": "e2c4bc16-b61a-4c4a-acba-935d94437958",
+     "label": "B",
+     "content": "may reflect where bold foxes choose to live rather than an effect of traffic.",
+     "isCorrect": true
+    },
+    {
+     "id": "7326466e-55af-4c91-99a8-0ab165cde18c",
+     "label": "C",
+     "content": "would apply only to foxes in the parks studied.",
+     "isCorrect": false
+    },
+    {
+     "id": "86f778ff-b629-4939-bb64-aa44f18d10db",
+     "label": "D",
+     "content": "shows that traffic makes foxes bolder over time.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "449fa227-ac11-4b4a-80ef-49f0d8697587",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Manuscripts copied in the scriptorium at Corbie can be identified by a distinctive letterform. Scholars long assumed the form was invented there. But a charter from a monastery three hundred kilometres away, securely dated forty years earlier, uses the same form. The Corbie scribes, it now appears, _____",
+   "choices": [
+    {
+     "id": "d6f57c30-d12f-413d-a14d-0f4c4823cbfa",
+     "label": "A",
+     "content": "adopted a letterform that already existed elsewhere.",
+     "isCorrect": true
+    },
+    {
+     "id": "d2b26855-eb88-468c-b5fe-f6d846df0697",
+     "label": "B",
+     "content": "were trained at the monastery that produced the charter.",
+     "isCorrect": false
+    },
+    {
+     "id": "41a79548-9cd6-4425-ac36-9b91fc16d7fe",
+     "label": "C",
+     "content": "invented the letterform independently of the charter's scribe.",
+     "isCorrect": false
+    },
+    {
+     "id": "9d192ed4-47c4-4cc1-a246-84ff7b71ab30",
+     "label": "D",
+     "content": "copied the charter directly into their own manuscripts.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "455738df-58bf-49ba-8612-8ecbfdc19aff",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Because the samples had been stored improperly _____ the team could not use them to establish a baseline.",
+   "choices": [
+    {
+     "id": "4dbc984f-b66e-438b-a610-101ae0501a08",
+     "label": "A",
+     "content": "stored improperly and the team could",
+     "isCorrect": false
+    },
+    {
+     "id": "ee3f1454-c456-45dc-8cc0-a6e3368959e9",
+     "label": "B",
+     "content": "stored improperly, the team could",
+     "isCorrect": true
+    },
+    {
+     "id": "b0a10326-edd1-4b9f-8902-54c95b8509ea",
+     "label": "C",
+     "content": "stored improperly; the team could",
+     "isCorrect": false
+    },
+    {
+     "id": "765d0222-acef-4588-939d-971765699b58",
+     "label": "D",
+     "content": "stored improperly: the team could",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1c4324c5-6232-4315-80a4-b5b41bcefb93",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Researchers have recovered pollen, seeds and insect remains from the peat _____ each of which helps date the layers around it.",
+   "choices": [
+    {
+     "id": "e30fd4b8-b670-406d-b5b7-1c45827ef18d",
+     "label": "A",
+     "content": "the peat, each of which",
+     "isCorrect": true
+    },
+    {
+     "id": "b4397803-b664-4f94-a36e-2e29849c99a6",
+     "label": "B",
+     "content": "the peat; each of which",
+     "isCorrect": false
+    },
+    {
+     "id": "f3018bf4-615a-4295-bb40-25e5384393bf",
+     "label": "C",
+     "content": "the peat: each of which",
+     "isCorrect": false
+    },
+    {
+     "id": "b1a919b7-a849-462f-999c-48b989a5792e",
+     "label": "D",
+     "content": "the peat. each of which",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "7de12f36-4e63-49a7-ba0c-b6cb64c5ec61",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The cartographer Marie Tharp spent years plotting soundings by hand _____ the result was the first map to show the mid-Atlantic ridge as a continuous feature.",
+   "choices": [
+    {
+     "id": "248f1cba-9d6d-40c8-bf55-bff13c54d14d",
+     "label": "A",
+     "content": "by hand; the result was",
+     "isCorrect": true
+    },
+    {
+     "id": "86204bbf-9778-4681-b53c-714efb4a5b89",
+     "label": "B",
+     "content": "by hand, the result was",
+     "isCorrect": false
+    },
+    {
+     "id": "17877256-48c4-4d12-afaa-3f2672108df4",
+     "label": "C",
+     "content": "by hand the result was",
+     "isCorrect": false
+    },
+    {
+     "id": "9658452f-082f-4883-b7e9-e744e46e3124",
+     "label": "D",
+     "content": "by hand: and the result was",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1a9cf134-9b09-41fd-b208-7ff03b4e7c25",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The revised design reduced material use by a fifth _____ it also cut assembly time almost in half.",
+   "choices": [
+    {
+     "id": "af733c8a-a11b-41b9-a497-6a51004e8bc3",
+     "label": "A",
+     "content": "a fifth, it also cut",
+     "isCorrect": false
+    },
+    {
+     "id": "de168066-8cd9-4159-9aa8-8a35e8e5bfb0",
+     "label": "B",
+     "content": "a fifth; also it also cut",
+     "isCorrect": false
+    },
+    {
+     "id": "2cf69da3-0b38-4acb-82ef-7d376dcf43da",
+     "label": "C",
+     "content": "a fifth it also cut",
+     "isCorrect": false
+    },
+    {
+     "id": "dae41808-88e8-4b7f-902e-56b97c6cc3a6",
+     "label": "D",
+     "content": "a fifth, and it also cut",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "097c6537-20fa-473d-9d61-ad888e13667f",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Each of the three prototypes _____ its own control board.",
+   "choices": [
+    {
+     "id": "f14dc64c-a561-49ef-a7cd-762e92a57686",
+     "label": "A",
+     "content": "were having",
+     "isCorrect": false
+    },
+    {
+     "id": "860fde12-ad7f-4fcb-89a0-57bd8f832f87",
+     "label": "B",
+     "content": "have",
+     "isCorrect": false
+    },
+    {
+     "id": "75893af9-559a-4f89-9777-31dab9083661",
+     "label": "C",
+     "content": "has",
+     "isCorrect": true
+    },
+    {
+     "id": "12d8242c-a1bc-48a5-a314-420e055bb180",
+     "label": "D",
+     "content": "having",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "33c7ae33-26e8-4319-a6e0-3677df2d90f1",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The results were more consistent than _____ obtained in the earlier trial.",
+   "choices": [
+    {
+     "id": "6ccb9f53-7839-4a32-a6c8-2d0992a8e014",
+     "label": "A",
+     "content": "that",
+     "isCorrect": false
+    },
+    {
+     "id": "4041865f-93cf-4f00-9e0e-21c495e2c8a2",
+     "label": "B",
+     "content": "those",
+     "isCorrect": true
+    },
+    {
+     "id": "21705f92-1f9f-4f5b-a8d8-a40072c4860b",
+     "label": "C",
+     "content": "them",
+     "isCorrect": false
+    },
+    {
+     "id": "688aa274-ada2-4b5a-9c26-a70293ae8c4b",
+     "label": "D",
+     "content": "it",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c9d3e949-889a-4242-b105-5b4c7c877f56",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Not only did the storm damage the pier, but it also _____ the harbour wall.",
+   "choices": [
+    {
+     "id": "e37c8dfe-343a-496c-a92f-659e0d25eb8d",
+     "label": "A",
+     "content": "breach",
+     "isCorrect": false
+    },
+    {
+     "id": "684ea484-ef30-44c1-8d27-75459e24a329",
+     "label": "B",
+     "content": "had breach",
+     "isCorrect": false
+    },
+    {
+     "id": "5b9b3d71-765c-44b6-929b-0f8c1e8dcdbb",
+     "label": "C",
+     "content": "breaching",
+     "isCorrect": false
+    },
+    {
+     "id": "a5bc81b9-4545-46fd-96ff-f3f3819c0d71",
+     "label": "D",
+     "content": "breached",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "119d8450-1466-42dc-a67a-6d719cf6d9e0",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Lead pipes were used in Roman aqueducts for centuries. _____ the water they carried was so heavily mineralised that a layer of scale quickly coated the metal.",
+   "choices": [
+    {
+     "id": "9b797cc4-8517-48f9-a2eb-cca7d62e3ffb",
+     "label": "A",
+     "content": "Thus,",
+     "isCorrect": false
+    },
+    {
+     "id": "5616fd22-9db2-4f96-b067-97c99de80328",
+     "label": "B",
+     "content": "For instance,",
+     "isCorrect": false
+    },
+    {
+     "id": "4db95e9e-ea33-48f4-9ea1-63dc504d3f2f",
+     "label": "C",
+     "content": "In fact,",
+     "isCorrect": false
+    },
+    {
+     "id": "810e9a98-0209-4633-93b5-62703a750b3f",
+     "label": "D",
+     "content": "However,",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f53fd689-653a-41cb-8961-0f3f66adabe5",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 23,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "The instrument records tremors far too faint for anyone to feel. _____ it can detect a quarry blast fifty kilometres away.",
+   "choices": [
+    {
+     "id": "7f37b251-1594-4588-94c7-0bc2f4e05591",
+     "label": "A",
+     "content": "For example,",
+     "isCorrect": true
+    },
+    {
+     "id": "85090fed-2236-4820-bc91-40750b6db1a2",
+     "label": "B",
+     "content": "In contrast,",
+     "isCorrect": false
+    },
+    {
+     "id": "31cb0f0b-1c09-4621-a5ca-95d09e5f81d5",
+     "label": "C",
+     "content": "Instead,",
+     "isCorrect": false
+    },
+    {
+     "id": "94986636-43fd-4a48-bca4-66450f922137",
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5bda0e13-e1b4-4f19-b9de-46a2d89d4c65",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 24,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "Early photographs required exposures of several minutes. _____ portrait subjects were clamped into frames to hold their heads still.",
+   "choices": [
+    {
+     "id": "bcf6793a-8809-4ad5-a513-8d54b240a5ee",
+     "label": "A",
+     "content": "In summary,",
+     "isCorrect": false
+    },
+    {
+     "id": "ff61370f-8468-45d9-9e03-263d8ce4b041",
+     "label": "B",
+     "content": "For this reason,",
+     "isCorrect": true
+    },
+    {
+     "id": "d2fa74f1-ac4d-4dbc-be6c-ac9a6ac6cea1",
+     "label": "C",
+     "content": "Even so,",
+     "isCorrect": false
+    },
+    {
+     "id": "e9aff994-d720-49a3-afc0-3c2b2f311317",
+     "label": "D",
+     "content": "By comparison,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "618a57e6-1b7a-4e68-991b-61e5c32f6a29",
+   "stem": "The student wants to emphasise the lengths Coleman went to in order to fly. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 25,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Bessie Coleman was refused entry to American flight schools in 1918.</li><li>She learned French in order to train abroad.</li><li>She earned her licence in France in 1921.</li><li>She was the first African American woman to hold a pilot's licence.</li></ul>",
+   "choices": [
+    {
+     "id": "5134ab65-d8b9-4a5a-bdea-382c2753711b",
+     "label": "A",
+     "content": "Bessie Coleman earned her pilot's licence in France in 1921.",
+     "isCorrect": false
+    },
+    {
+     "id": "c982011d-437b-4599-9ed2-71206d5a4ddd",
+     "label": "B",
+     "content": "Refused entry to American flight schools, Coleman learned French so that she could train abroad, earning her licence in 1921.",
+     "isCorrect": true
+    },
+    {
+     "id": "c80dae2d-f53d-40f8-89a0-85cf63fdbd56",
+     "label": "C",
+     "content": "Coleman was the first African American woman to hold a pilot's licence.",
+     "isCorrect": false
+    },
+    {
+     "id": "e47a1b57-3a12-447e-8f4b-a76ec4356b7f",
+     "label": "D",
+     "content": "American flight schools refused Coleman entry in 1918.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "418a91a9-0781-4e5b-97e8-fddc82c2437f",
+   "stem": "The student wants to emphasise the significance of Lovelace's notes. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 26,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Ada Lovelace wrote notes on Charles Babbage's Analytical Engine in 1843.</li><li>Her notes were three times longer than the paper she was translating.</li><li>They included a method for computing Bernoulli numbers.</li><li>That method is often called the first published computer program.</li></ul>",
+   "choices": [
+    {
+     "id": "438f27af-bf9a-4583-9e7b-5d2bee708bbf",
+     "label": "A",
+     "content": "Lovelace's 1843 notes contained a method for computing Bernoulli numbers that is often called the first published computer program.",
+     "isCorrect": true
+    },
+    {
+     "id": "c90afd76-0d9b-4423-9699-09f77a008021",
+     "label": "B",
+     "content": "Charles Babbage designed the Analytical Engine, which Lovelace wrote about in 1843.",
+     "isCorrect": false
+    },
+    {
+     "id": "0327802f-8aa8-4b32-81db-3d23cf64d3f9",
+     "label": "C",
+     "content": "Lovelace's 1843 notes were three times longer than the paper she was translating.",
+     "isCorrect": false
+    },
+    {
+     "id": "a12a48bc-d213-4ba4-84eb-3af481b749f2",
+     "label": "D",
+     "content": "Lovelace translated a paper about Charles Babbage's Analytical Engine in 1843.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "98084993-ae8e-48e9-a4bf-6bb804d59b7b",
+   "stem": "The student wants to explain why the mechanism is considered remarkable. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 27,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Antikythera mechanism was recovered from a shipwreck in 1901.</li><li>It contains at least 30 interlocking bronze gears.</li><li>It was used to predict eclipses and track the calendar.</li><li>No comparable geared device is known for the next thousand years.</li></ul>",
+   "choices": [
+    {
+     "id": "14232cc0-28ec-47e4-957b-44dc43204ebd",
+     "label": "A",
+     "content": "The mechanism was recovered from a shipwreck in 1901 and contains at least 30 gears.",
+     "isCorrect": false
+    },
+    {
+     "id": "a2809f15-abca-4b3f-9f11-44e7743f829a",
+     "label": "B",
+     "content": "The mechanism used at least 30 interlocking gears to predict eclipses, and nothing comparable is known for the next thousand years.",
+     "isCorrect": true
+    },
+    {
+     "id": "5f60544a-882f-4be4-9d75-749457929c68",
+     "label": "C",
+     "content": "The mechanism was used to track the calendar and predict eclipses.",
+     "isCorrect": false
+    },
+    {
+     "id": "cc14225c-71ea-4663-a03f-01cc1e93bc50",
+     "label": "D",
+     "content": "No geared device comparable to the mechanism appeared for a thousand years after it.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4a0b43dc-a264-47e6-af9b-f6014098f60b",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The engineer's design is admired less for its elegance than for its _____: it has run for thirty years with almost no maintenance.",
+   "choices": [
+    {
+     "id": "8e67baaf-8719-4387-a66a-b51460af63ce",
+     "label": "A",
+     "content": "simplicity",
+     "isCorrect": false
+    },
+    {
+     "id": "312136f1-24e3-4bb6-b947-1b15ac1c9fa0",
+     "label": "B",
+     "content": "economy",
+     "isCorrect": false
+    },
+    {
+     "id": "44c1ff35-946d-41a3-a99b-83a44b256eb5",
+     "label": "C",
+     "content": "ingenuity",
+     "isCorrect": false
+    },
+    {
+     "id": "df3be780-567f-4e15-bfe6-ba1d8d2cc1da",
+     "label": "D",
+     "content": "durability",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "779d6c26-03a1-48cb-becd-27098ace0608",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Early attempts to cultivate the orchid outside its native range were uniformly _____, and it was fifty years before a grower succeeded.",
+   "choices": [
+    {
+     "id": "ffd9723d-06ef-487d-9f40-0a797ee820ed",
+     "label": "A",
+     "content": "controversial",
+     "isCorrect": false
+    },
+    {
+     "id": "49f7eb97-efae-4fbc-95b2-fcb4ff7c1050",
+     "label": "B",
+     "content": "expensive",
+     "isCorrect": false
+    },
+    {
+     "id": "d725063f-b6cc-4657-83a5-db99ca367ebe",
+     "label": "C",
+     "content": "profitable",
+     "isCorrect": false
+    },
+    {
+     "id": "626fe8c7-be5b-4f1b-8d30-27b111bf1f44",
+     "label": "D",
+     "content": "unsuccessful",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "6754a198-5627-4971-8100-fd5fa6de15a7",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Grasses colonised the plain so quickly that within two decades they had all but _____ the shrubs that once dominated it.",
+   "choices": [
+    {
+     "id": "6fd830fb-5559-456e-b4c7-ce441d615fdb",
+     "label": "A",
+     "content": "preserved",
+     "isCorrect": false
+    },
+    {
+     "id": "63786baa-c3c7-4d47-8ba9-2a8af61c335d",
+     "label": "B",
+     "content": "sheltered",
+     "isCorrect": false
+    },
+    {
+     "id": "01913466-b056-489a-9774-2c99d5fc7f47",
+     "label": "C",
+     "content": "supplanted",
+     "isCorrect": true
+    },
+    {
+     "id": "822a856b-bc1f-4c73-bb1a-d3d448be6ee3",
+     "label": "D",
+     "content": "resembled",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "2db67697-fe87-4138-a279-1abf32ea08f8",
+   "stem": "As used in the text, what does the word &ldquo;register&rdquo; most nearly mean?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The surveyor's field book does not record impressions. It is a register of angles, distances and bearings, set down in the same hand for thirty years, from which the shape of a coastline can be reconstructed but nothing of the weather or the company.",
+   "choices": [
+    {
+     "id": "5a11dfe9-2797-44ac-bd22-631b4dc1e47c",
+     "label": "A",
+     "content": "A systematic record.",
+     "isCorrect": true
+    },
+    {
+     "id": "6368260a-a9c0-498a-9dcf-1475d7a3c4af",
+     "label": "B",
+     "content": "An official who keeps records.",
+     "isCorrect": false
+    },
+    {
+     "id": "cb80a5d5-6844-4068-9f70-601209c076f2",
+     "label": "C",
+     "content": "A range of musical pitch.",
+     "isCorrect": false
+    },
+    {
+     "id": "0b98f998-220f-42f3-9f89-d53fe9d92a62",
+     "label": "D",
+     "content": "A formal tone of writing.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1e5635a3-c5c3-4b81-a4c2-5209c81ee56a",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The committee's report was praised for its _____: it set out the evidence for each recommendation without overstating what the data could show.",
+   "choices": [
+    {
+     "id": "befe178d-9e45-452c-b8e0-66a22cf94621",
+     "label": "A",
+     "content": "novelty",
+     "isCorrect": false
+    },
+    {
+     "id": "10c9f79c-1569-46f9-8ead-48038cf1e4f9",
+     "label": "B",
+     "content": "urgency",
+     "isCorrect": false
+    },
+    {
+     "id": "c789b994-5f34-4226-9e92-fde41b7be9a3",
+     "label": "C",
+     "content": "brevity",
+     "isCorrect": false
+    },
+    {
+     "id": "67142fb1-5fa0-4fd9-9915-d099f876a824",
+     "label": "D",
+     "content": "candour",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "3da42429-a377-4ffa-9987-b399b182dbdc",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The composer Florence Price sent her scores to conductors who never replied. She kept composing anyway, filling notebooks that stayed in a summer house outside Chicago for decades. In 2009 the house was being renovated when the new owners found the manuscripts stacked in a room they had assumed was empty.",
+   "choices": [
+    {
+     "id": "60de56be-69e9-439d-91ca-02680a9e59a6",
+     "label": "A",
+     "content": "It describes a setback, notes a response to it, and reports a later discovery.",
+     "isCorrect": true
+    },
+    {
+     "id": "649db705-a65d-47d5-9ebc-d77d4e2e7491",
+     "label": "B",
+     "content": "It compares Price's reception during her life with her reputation today.",
+     "isCorrect": false
+    },
+    {
+     "id": "62680604-0c95-4bb1-b873-c7c33fd9673f",
+     "label": "C",
+     "content": "It lists the works Price completed in chronological order.",
+     "isCorrect": false
+    },
+    {
+     "id": "e67ae3f0-05f5-4c4b-96ff-c4020fa60793",
+     "label": "D",
+     "content": "It poses a question about Price's career and then answers it.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "6c34c49a-6069-4477-8c4a-7842b88d7b00",
+   "stem": "Which choice best states the main purpose of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "A team surveying the seafloor off Norway expected to map sediment. What the sonar returned instead were parallel ridges, regular as ploughed furrows, running for kilometres. They were the scours left by icebergs that had dragged along the bottom as the last ice sheet collapsed.",
+   "choices": [
+    {
+     "id": "164053a9-5f7c-4f81-aedc-fb11fbeec2ec",
+     "label": "A",
+     "content": "To argue that the last ice sheet collapsed faster than believed.",
+     "isCorrect": false
+    },
+    {
+     "id": "d855a998-68c3-4745-a830-f1aa00b64ed3",
+     "label": "B",
+     "content": "To compare seafloor sediment with glacial deposits on land.",
+     "isCorrect": false
+    },
+    {
+     "id": "75373018-a74c-46ad-8b63-fe749997e835",
+     "label": "C",
+     "content": "To explain how sonar surveys of the seafloor are conducted.",
+     "isCorrect": false
+    },
+    {
+     "id": "393693e6-45f9-418b-9e01-d2cea0328fca",
+     "label": "D",
+     "content": "To recount an unexpected finding and identify its cause.",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ceb518b2-6ebf-4ff4-9fb0-2e78d7cf0589",
+   "stem": "Which choice best states the main idea of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The Voynich manuscript has resisted every attempt at decipherment. Its script shows the statistical regularities of a natural language — word lengths cluster, and certain characters recur in fixed positions — which argues against its being random. But no one has matched it to a known tongue, and its illustrations depict plants that do not exist.",
+   "choices": [
+    {
+     "id": "26eaee8f-aeec-4c21-87ed-8750d23647d5",
+     "label": "A",
+     "content": "The manuscript's illustrations are its most studied feature.",
+     "isCorrect": false
+    },
+    {
+     "id": "3e468d64-892f-4e3d-bba6-ffa0830c2ba9",
+     "label": "B",
+     "content": "The manuscript is almost certainly an elaborate hoax.",
+     "isCorrect": false
+    },
+    {
+     "id": "796fb12c-973b-4f57-a2fd-08e156d97238",
+     "label": "C",
+     "content": "The manuscript's script has been matched to an extinct language.",
+     "isCorrect": false
+    },
+    {
+     "id": "2e5630b6-9962-4888-8745-a51d63cabaa1",
+     "label": "D",
+     "content": "Evidence about the manuscript points in conflicting directions.",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4cd29777-1b48-4db0-8902-aa8da9955b06",
+   "stem": "Which choice best states the main idea of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Between 1935 and 1943 the Federal Writers' Project sent interviewers to record the recollections of formerly enslaved people. The resulting narratives are indispensable and also difficult: most interviewers were white, most subjects were elderly and dependent on local goodwill, and what was said was shaped by both facts.",
+   "choices": [
+    {
+     "id": "ddf66b21-eb08-411e-bc5e-52708e1acdad",
+     "label": "A",
+     "content": "The interviewers deliberately altered the accounts they recorded.",
+     "isCorrect": false
+    },
+    {
+     "id": "c5ee0994-3314-439f-b620-53b357afd33b",
+     "label": "B",
+     "content": "The project should have employed interviewers of the same background as its subjects.",
+     "isCorrect": false
+    },
+    {
+     "id": "a2eb82bf-7e3d-4219-8e77-ffeb1a565e71",
+     "label": "C",
+     "content": "The narratives are unreliable and should be used with caution only rarely.",
+     "isCorrect": false
+    },
+    {
+     "id": "f77201da-17c3-4924-ab7a-d1d63ab59ce9",
+     "label": "D",
+     "content": "The narratives are valuable evidence whose conditions of production affected them.",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4d76e378-6d83-42d1-9fa7-9f547344da26",
+   "stem": "Which finding, if true, would most directly undermine the curator's argument?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "A curator argues that a small panel long catalogued as a workshop copy is in fact by the master herself, pointing to the confidence of the underdrawing revealed by infrared imaging.",
+   "choices": [
+    {
+     "id": "296160f2-8d8b-4158-936e-2a45e6023c6f",
+     "label": "A",
+     "content": "Infrared imaging of the panel shows no changes between underdrawing and paint layer.",
+     "isCorrect": false
+    },
+    {
+     "id": "fd9a07fa-99f7-475f-be0e-e3973ac1c8ad",
+     "label": "B",
+     "content": "Several documented workshop copies show underdrawing of comparable confidence.",
+     "isCorrect": true
+    },
+    {
+     "id": "6fbf6a41-7166-4c01-8857-02ed48de90ac",
+     "label": "C",
+     "content": "The panel's wooden support comes from a tree felled during the master's lifetime.",
+     "isCorrect": false
+    },
+    {
+     "id": "baaaccc8-2562-4768-a1e1-3d559aa21e44",
+     "label": "D",
+     "content": "The master is known to have completed few panels of this size.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "b9619fb4-9c0a-4da7-9eec-ea644caa8159",
+   "stem": "Which finding, if true, would most directly support the psychologist's proposal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "A psychologist proposes that people recall the beginnings and ends of lists better than the middles because attention lapses during the middle, not because of how memory stores order.",
+   "choices": [
+    {
+     "id": "9af68fb9-8713-45a0-a39a-ec698c3c99e3",
+     "label": "A",
+     "content": "The effect is stronger for long lists than for short ones.",
+     "isCorrect": false
+    },
+    {
+     "id": "06b96688-944d-4a16-a09b-105f4ccc9bf7",
+     "label": "B",
+     "content": "Participants warned that they will be tested on middle items recall them as well as the ends.",
+     "isCorrect": true
+    },
+    {
+     "id": "ee436429-f7c9-4d50-b9d7-5d8d9a8d096a",
+     "label": "C",
+     "content": "The effect appears in participants of all ages.",
+     "isCorrect": false
+    },
+    {
+     "id": "76ba0b70-8368-4829-bb65-ccb311532112",
+     "label": "D",
+     "content": "Participants recall the last item best of all.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "fa4d0dcf-7c4c-4b51-ac77-8b3db070a375",
+   "stem": "Which finding, if true, would most directly support the scientist's claim?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "A materials scientist claims that a new alloy resists fatigue because of its unusually fine grain structure, not because of the trace niobium it contains.",
+   "choices": [
+    {
+     "id": "f8e0a7e8-2a03-4256-92d7-932ad13c3e27",
+     "label": "A",
+     "content": "Alloys with the same niobium content but coarser grains fail after far fewer cycles.",
+     "isCorrect": true
+    },
+    {
+     "id": "db0b4aef-c2de-4bf2-91c4-e5aef35b3650",
+     "label": "B",
+     "content": "The alloy's grain structure is finer than that of any comparable alloy.",
+     "isCorrect": false
+    },
+    {
+     "id": "dda00b53-def3-434f-8233-444fdbd76789",
+     "label": "C",
+     "content": "Removing niobium from the alloy makes it harder to cast.",
+     "isCorrect": false
+    },
+    {
+     "id": "1cf20b25-b704-4aac-9a80-4133f35f0bfa",
+     "label": "D",
+     "content": "The alloy costs more to produce than conventional alternatives.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "24372098-b06c-4226-a2bd-12d1a4a3723e",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Solar panels lose efficiency as they heat, and a panel in direct desert sun can run far hotter than its rated temperature. Engineers testing installations in Morocco found that panels mounted a few centimetres higher above the ground, allowing air to pass beneath, produced measurably more power than identical panels mounted flush. This suggests that in hot climates the mounting height _____",
+   "choices": [
+    {
+     "id": "acb4fd14-7776-4bda-9921-4eb595cc3eef",
+     "label": "A",
+     "content": "matters more than the efficiency rating of the panel itself.",
+     "isCorrect": false
+    },
+    {
+     "id": "2a85e52f-fc87-4f04-b869-36be7ad28c6d",
+     "label": "B",
+     "content": "affects output by influencing how well the panels shed heat.",
+     "isCorrect": true
+    },
+    {
+     "id": "9e696614-c706-4734-bb69-8b2ed8d26614",
+     "label": "C",
+     "content": "should be minimised to reduce wind loading on the array.",
+     "isCorrect": false
+    },
+    {
+     "id": "886e5851-3b13-4364-a840-935722e7e2d0",
+     "label": "D",
+     "content": "has no measurable effect once panels exceed their rated temperature.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5f6b5e61-4f91-430e-87e6-e4099777991b",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The tuatara of New Zealand is often called a living fossil, but the label misleads. Its lineage is indeed ancient, having diverged from other reptiles over two hundred million years ago. Yet molecular studies show that tuatara DNA has accumulated changes faster than that of any other vertebrate yet measured. The animal's appearance has changed little; its genome, by contrast, _____",
+   "choices": [
+    {
+     "id": "db424743-3ff3-479c-b1c1-bb3cda6e47c1",
+     "label": "A",
+     "content": "has remained essentially unaltered since the lineage diverged.",
+     "isCorrect": false
+    },
+    {
+     "id": "509fea18-0440-4c4d-87bf-9d5fcad0151f",
+     "label": "B",
+     "content": "has changed more rapidly than its outward form would suggest.",
+     "isCorrect": true
+    },
+    {
+     "id": "1f7a5952-6b85-48b6-a4c3-3f14ae805fe1",
+     "label": "C",
+     "content": "resembles that of other reptiles more closely than expected.",
+     "isCorrect": false
+    },
+    {
+     "id": "a8075b3c-4a1e-41f9-83ff-af40cd0163f2",
+     "label": "D",
+     "content": "cannot be compared with that of other vertebrates.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "794c239a-b6b2-4a7e-8196-8dc7c981f195",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Aksum, a kingdom centred on what is now northern Ethiopia _____ minted its own coinage from the third century onward.",
+   "choices": [
+    {
+     "id": "a9213f44-cc6e-4bab-9b96-505b5f2a3d84",
+     "label": "A",
+     "content": "northern Ethiopia: minted its own",
+     "isCorrect": false
+    },
+    {
+     "id": "6db7a0cc-41f4-4ab4-8406-9c228c0f09b8",
+     "label": "B",
+     "content": "northern Ethiopia minted its own",
+     "isCorrect": false
+    },
+    {
+     "id": "b7dd06c8-ed53-416c-b5bb-f9579ef51c27",
+     "label": "C",
+     "content": "northern Ethiopia, minted its own",
+     "isCorrect": true
+    },
+    {
+     "id": "638786db-5d82-4f0b-88f2-0889f7e1cef7",
+     "label": "D",
+     "content": "northern Ethiopia; minted its own",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ee16f4b9-8daa-4acc-aa8d-c4fc5e1dd999",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Hedgerows shelter species that farmland cannot support on its own _____ dormice, several warblers and a great many invertebrates.",
+   "choices": [
+    {
+     "id": "d030dd1c-30e6-4e49-a51f-b3da51dcbd75",
+     "label": "A",
+     "content": "its own; dormice, several warblers",
+     "isCorrect": false
+    },
+    {
+     "id": "f5e3cd8b-e779-436f-8602-adeefdf3fae7",
+     "label": "B",
+     "content": "its own, but dormice, several warblers",
+     "isCorrect": false
+    },
+    {
+     "id": "7bef3613-d7b5-4466-be39-1082cbe71a37",
+     "label": "C",
+     "content": "its own and dormice, several warblers",
+     "isCorrect": false
+    },
+    {
+     "id": "9e5b3501-a8f0-4d0f-9c36-c0cbbbce7c1e",
+     "label": "D",
+     "content": "its own: dormice, several warblers",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1e373a4e-d9c2-4c05-b5bf-859663ef4f75",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "When the tide is out _____ the causeway is passable on foot.",
+   "choices": [
+    {
+     "id": "6f8c51eb-3e18-4a04-9865-5eabf58e66bb",
+     "label": "A",
+     "content": "is out that the causeway is",
+     "isCorrect": false
+    },
+    {
+     "id": "c5692699-996d-408c-8d18-bee8715000cb",
+     "label": "B",
+     "content": "is out, the causeway is",
+     "isCorrect": true
+    },
+    {
+     "id": "670799c5-7406-4fda-ad7f-6144ce436639",
+     "label": "C",
+     "content": "is out; the causeway is",
+     "isCorrect": false
+    },
+    {
+     "id": "82a6235f-d140-44f6-bb2b-8b2b133d9e7e",
+     "label": "D",
+     "content": "is out: the causeway is",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "051e7661-3713-434b-8df1-33f4aeb8660c",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Although the manuscript is undated _____ its watermark places it within a decade.",
+   "choices": [
+    {
+     "id": "d9796ec7-aa08-4dce-ac53-500a562d48a5",
+     "label": "A",
+     "content": "is undated, its watermark places",
+     "isCorrect": true
+    },
+    {
+     "id": "2be0b1f0-bf99-4160-af4a-ead3b47b8968",
+     "label": "B",
+     "content": "is undated; its watermark places",
+     "isCorrect": false
+    },
+    {
+     "id": "0a79928d-a98e-4109-9fbf-499282a221d4",
+     "label": "C",
+     "content": "is undated: its watermark places",
+     "isCorrect": false
+    },
+    {
+     "id": "bab33ec5-c897-4d87-b728-646d992e72e1",
+     "label": "D",
+     "content": "is undated and its watermark places",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "dd2d6f2f-7c41-4bc6-bafb-2021fd7d8332",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The report criticises the ministry for failing to consult residents and for _____ the objections it did receive.",
+   "choices": [
+    {
+     "id": "355cabbe-1367-4486-855b-fbde1a7ae433",
+     "label": "A",
+     "content": "it ignored",
+     "isCorrect": false
+    },
+    {
+     "id": "e0757203-d225-4b21-be5a-12ff3ac8b339",
+     "label": "B",
+     "content": "having ignore",
+     "isCorrect": false
+    },
+    {
+     "id": "91694948-afa2-40e6-9b1c-b261b6cc7bea",
+     "label": "C",
+     "content": "to ignore",
+     "isCorrect": false
+    },
+    {
+     "id": "693ea6be-6d1e-4c2e-a2cb-c65047924129",
+     "label": "D",
+     "content": "ignoring",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "7c5e2579-e89d-4436-afbd-cc75ae1f8bc0",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "By the time the expedition reached the coast, the supplies they had packed in September _____ almost entirely.",
+   "choices": [
+    {
+     "id": "7fe97389-1a30-435a-beca-65b1ab64c1b2",
+     "label": "A",
+     "content": "deplete",
+     "isCorrect": false
+    },
+    {
+     "id": "a1b0bbf2-4d17-4fd8-8b1b-9f698b52e01a",
+     "label": "B",
+     "content": "had been depleted",
+     "isCorrect": true
+    },
+    {
+     "id": "cdd3a91d-77a2-487b-b1ca-d9f2ef02c4c1",
+     "label": "C",
+     "content": "will be depleted",
+     "isCorrect": false
+    },
+    {
+     "id": "552d693e-80fe-457f-b744-054815e34afb",
+     "label": "D",
+     "content": "are depleted",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "7e225cbd-2aba-4ddd-9ab9-93f34b8222a2",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The collection of maps, along with several atlases, _____ kept in a climate-controlled room.",
+   "choices": [
+    {
+     "id": "df787ac0-94b9-4fbe-ac39-05252e8756d2",
+     "label": "A",
+     "content": "is",
+     "isCorrect": true
+    },
+    {
+     "id": "083b230a-d3a8-4380-b204-7dba8d7803a5",
+     "label": "B",
+     "content": "have been",
+     "isCorrect": false
+    },
+    {
+     "id": "c1031d32-4efe-4f45-86f8-1fcf3faf884d",
+     "label": "C",
+     "content": "were",
+     "isCorrect": false
+    },
+    {
+     "id": "406e78c8-6353-432f-a8ce-0253e4ad634d",
+     "label": "D",
+     "content": "are",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "75d5d36f-c82e-472a-8ac7-10fbcd2fec61",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The alloy is light and unusually stiff. _____ it is expensive enough that it is used only where weight is critical.",
+   "choices": [
+    {
+     "id": "6639b1de-d740-4ed6-ad32-2c89c28c239a",
+     "label": "A",
+     "content": "However,",
+     "isCorrect": true
+    },
+    {
+     "id": "a3c7c414-975f-4e98-8bc6-acf1b555b404",
+     "label": "B",
+     "content": "Therefore,",
+     "isCorrect": false
+    },
+    {
+     "id": "e3fbf697-01fb-4d60-bc69-6be3b5995a23",
+     "label": "C",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "id": "712f6953-d485-4c09-8037-d3f0cbcc3879",
+     "label": "D",
+     "content": "For example,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f3d72324-40e4-4fb9-895b-99bb7e2ee88d",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 23,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "The colony's records were destroyed in a fire in 1698. _____ almost everything known about its first decade comes from letters held elsewhere.",
+   "choices": [
+    {
+     "id": "a48c53fb-f2c0-48f3-baf4-b7c5d1347869",
+     "label": "A",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    },
+    {
+     "id": "cfd527c0-665c-4bb2-bf82-f06e55bac358",
+     "label": "B",
+     "content": "Consequently,",
+     "isCorrect": true
+    },
+    {
+     "id": "900d090e-c38d-4799-b210-60671f6c30dd",
+     "label": "C",
+     "content": "By contrast,",
+     "isCorrect": false
+    },
+    {
+     "id": "b2c19f35-6dc0-4311-bd46-e8f967a6c77a",
+     "label": "D",
+     "content": "Similarly,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c92c47d5-1244-4d40-ad4a-a178b47d3cd0",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 24,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "Some frogs freeze almost solid through the winter, their hearts stopping entirely. _____ certain fish survive by producing proteins that prevent ice crystals from forming at all.",
+   "choices": [
+    {
+     "id": "232a46e3-863a-4651-a2d5-7901ab08f531",
+     "label": "A",
+     "content": "Consequently,",
+     "isCorrect": false
+    },
+    {
+     "id": "5bda0ea4-b75d-4474-a9d7-d9fbae50e010",
+     "label": "B",
+     "content": "In other words,",
+     "isCorrect": false
+    },
+    {
+     "id": "0bcce997-bb5d-44d3-b99d-2d15e50c8bf5",
+     "label": "C",
+     "content": "Similarly,",
+     "isCorrect": true
+    },
+    {
+     "id": "f382582f-b74a-444c-b194-a055d9a7fdd2",
+     "label": "D",
+     "content": "Nevertheless,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "9a4c0715-7927-42fd-9655-e6e0ee7b0245",
+   "stem": "The student wants to emphasise the builders' technical skill. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 25,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>The Great Bath at Mohenjo-daro was built around 2500 BCE.</li><li>It is lined with tightly fitted brick sealed with bitumen.</li><li>The seal has kept it watertight for over four thousand years.</li><li>Its purpose is still debated.</li></ul>",
+   "choices": [
+    {
+     "id": "815e4c59-6439-40d1-90d3-090b17548173",
+     "label": "A",
+     "content": "The Great Bath was built around 2500 BCE, and its purpose is still debated.",
+     "isCorrect": false
+    },
+    {
+     "id": "d97d0a8c-2147-43c6-be6d-0b0a85f79e77",
+     "label": "B",
+     "content": "The Great Bath's brick lining, sealed with bitumen, has remained watertight for over four thousand years.",
+     "isCorrect": true
+    },
+    {
+     "id": "fbb3ad6e-9e1c-45d0-94d7-1ddf200572ff",
+     "label": "C",
+     "content": "The Great Bath at Mohenjo-daro is lined with tightly fitted brick.",
+     "isCorrect": false
+    },
+    {
+     "id": "82b4d417-320b-4319-ab53-96302669dbdd",
+     "label": "D",
+     "content": "Archaeologists continue to debate the purpose of the Great Bath.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c23e2c98-6a50-4ce8-800d-eb8528304485",
+   "stem": "The student wants to explain how the huddle shares the cost of warmth. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 26,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Emperor penguins huddle in tight groups during Antarctic winter.</li><li>Birds on the windward edge lose heat fastest.</li><li>The huddle moves slowly, in waves, as birds shuffle inward.</li><li>Over time every bird spends a similar period at the edge.</li></ul>",
+   "choices": [
+    {
+     "id": "ce709f64-a9ea-421b-b406-9f6be32be59b",
+     "label": "A",
+     "content": "Emperor penguins huddle in tight groups during the Antarctic winter.",
+     "isCorrect": false
+    },
+    {
+     "id": "15658353-afe4-4f58-ab44-4d587c627f19",
+     "label": "B",
+     "content": "Because the huddle shuffles inward in slow waves, each bird spends a similar period on the cold windward edge.",
+     "isCorrect": true
+    },
+    {
+     "id": "517f6cf4-7896-4d1a-b19f-2c7251f38c83",
+     "label": "C",
+     "content": "Birds on the windward edge of the huddle lose heat fastest.",
+     "isCorrect": false
+    },
+    {
+     "id": "329923ed-7d73-429d-9612-f01d31710d8d",
+     "label": "D",
+     "content": "The huddle moves slowly and in waves during the winter.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "6e41b08e-b855-4bdf-9a6a-caa0d127d75d",
+   "stem": "The student wants to emphasise the lasting influence of Lamarr's patent. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 27,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Hedy Lamarr co-patented a frequency-hopping system in 1942.</li><li>The system was designed to stop radio-guided torpedoes being jammed.</li><li>The navy did not adopt it during the war.</li><li>Frequency hopping underlies modern Bluetooth and Wi-Fi.</li></ul>",
+   "choices": [
+    {
+     "id": "e452748d-1f44-4f9f-83c2-957a4086f574",
+     "label": "A",
+     "content": "Lamarr co-patented a frequency-hopping system in 1942 to prevent the jamming of torpedoes.",
+     "isCorrect": false
+    },
+    {
+     "id": "ee6db7d3-bd2d-4b41-b3ca-225464b69a4f",
+     "label": "B",
+     "content": "The navy did not adopt Lamarr's frequency-hopping system during the war.",
+     "isCorrect": false
+    },
+    {
+     "id": "25ece178-2170-45c7-9bb9-e93d09627414",
+     "label": "C",
+     "content": "Though the navy passed over her 1942 patent, the frequency hopping Lamarr co-invented underlies Bluetooth and Wi-Fi today.",
+     "isCorrect": true
+    },
+    {
+     "id": "c2792c56-eda2-4174-865d-e013b217617f",
+     "label": "D",
+     "content": "Lamarr's system was intended to stop radio-guided torpedoes from being jammed.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "3ca9b99e-6003-42f1-bb0d-954e00ad989c",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Marine biologist Ayanna Osei was initially _____ about the claim that octopuses use discarded coconut shells as portable shelters; only after watching hours of her own footage did she accept it.",
+   "choices": [
+    {
+     "id": "b7a2d4ee-3ba2-4037-9de0-0e97e2a6df70",
+     "label": "A",
+     "content": "indifferent",
+     "isCorrect": false
+    },
+    {
+     "id": "d93a9f7f-1943-4a8f-aab3-b6a51b5680e6",
+     "label": "B",
+     "content": "informed",
+     "isCorrect": false
+    },
+    {
+     "id": "c75a2758-2879-4cc1-8315-d8c8b48cec71",
+     "label": "C",
+     "content": "adamant",
+     "isCorrect": false
+    },
+    {
+     "id": "e483747e-8a30-47f4-b8ab-dad81d1a52db",
+     "label": "D",
+     "content": "sceptical",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4a58059e-3026-4a44-9c9f-5bcbcd3bf9da",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The archive's holdings are so _____ that a researcher can spend a week there and examine only a fraction of the material on a single decade.",
+   "choices": [
+    {
+     "id": "2771bb4c-e234-4b17-bdec-497ac2ace830",
+     "label": "A",
+     "content": "specialised",
+     "isCorrect": false
+    },
+    {
+     "id": "b2c2d845-f6b1-45ab-afca-f8e41c8ea4de",
+     "label": "B",
+     "content": "fragile",
+     "isCorrect": false
+    },
+    {
+     "id": "b34b8c3e-b2c7-4723-923d-788878ffa5ee",
+     "label": "C",
+     "content": "disorganised",
+     "isCorrect": false
+    },
+    {
+     "id": "87b25788-97e3-412f-9ad2-e33e08ff072e",
+     "label": "D",
+     "content": "extensive",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "880cce1f-3f04-4039-8987-5220e839376e",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Historians once dismissed the diaries as _____, but chemical analysis of the ink has since confirmed that they date from the period they describe.",
+   "choices": [
+    {
+     "id": "b50909db-0fbb-417f-9109-ff8a3304d0d3",
+     "label": "A",
+     "content": "incomplete",
+     "isCorrect": false
+    },
+    {
+     "id": "85881cac-d334-448a-8739-f5d923e83c2f",
+     "label": "B",
+     "content": "derivative",
+     "isCorrect": false
+    },
+    {
+     "id": "898c4ee0-ce65-4bb8-9170-7057dea8b0f6",
+     "label": "C",
+     "content": "fraudulent",
+     "isCorrect": true
+    },
+    {
+     "id": "6568c5cf-0af3-4926-acc4-effcfee58cd4",
+     "label": "D",
+     "content": "trivial",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "407d4272-6235-4d62-af29-554f4b467690",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Because the two research teams published within weeks of each other, the discovery is now conventionally _____ to both.",
+   "choices": [
+    {
+     "id": "d46f74c8-83eb-49c5-8a16-b95302956142",
+     "label": "A",
+     "content": "confined",
+     "isCorrect": false
+    },
+    {
+     "id": "f6d3a08e-fe4c-4d15-9440-e7f24380e471",
+     "label": "B",
+     "content": "opposed",
+     "isCorrect": false
+    },
+    {
+     "id": "f7a2e497-a084-4734-8560-918876fa75d4",
+     "label": "C",
+     "content": "referred",
+     "isCorrect": false
+    },
+    {
+     "id": "2fa705c8-769e-4136-8e71-231b77904d8d",
+     "label": "D",
+     "content": "attributed",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "41ed381c-43be-4173-9d6b-64efbfb6e86e",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-WV",
+   "skill_name": "Words in Context",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The mayor's proposal was criticised as _____, addressing the symptoms of overcrowding while leaving its causes untouched.",
+   "choices": [
+    {
+     "id": "5ba2aef6-9935-438c-8022-c35ae89463fb",
+     "label": "A",
+     "content": "superficial",
+     "isCorrect": true
+    },
+    {
+     "id": "48668ada-a20d-4f82-b62c-39a1bb1e3010",
+     "label": "B",
+     "content": "costly",
+     "isCorrect": false
+    },
+    {
+     "id": "a24ae595-de6d-4319-bea8-24e674bac813",
+     "label": "C",
+     "content": "premature",
+     "isCorrect": false
+    },
+    {
+     "id": "9c7e1ea2-9ef5-4d2a-a36d-a060634d6256",
+     "label": "D",
+     "content": "unpopular",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "fc685977-53ed-42ac-969b-026cb38398f6",
+   "stem": "Which choice best describes the function of the underlined sentence?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "<u>Lichens are not single organisms.</u> Each is a partnership between a fungus, which supplies structure and moisture, and an alga or cyanobacterium, which supplies sugars through photosynthesis. Neither partner can occupy bare rock alone.",
+   "choices": [
+    {
+     "id": "c1d946b7-66d9-4a46-b72b-aaed5cda6f3b",
+     "label": "A",
+     "content": "It raises an objection that the rest of the text answers.",
+     "isCorrect": false
+    },
+    {
+     "id": "996f6215-defa-409b-837b-b075397bb129",
+     "label": "B",
+     "content": "It offers an example of a phenomenon defined later.",
+     "isCorrect": false
+    },
+    {
+     "id": "a6d45db1-f5eb-4838-8a03-5ed3e7d97a6d",
+     "label": "C",
+     "content": "It qualifies a generalisation made elsewhere in the text.",
+     "isCorrect": false
+    },
+    {
+     "id": "255e10d5-d1bf-481f-a180-551383f49670",
+     "label": "D",
+     "content": "It states the claim that the rest of the text explains.",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "93d2d286-0e52-47d4-b719-c57e69a55741",
+   "stem": "Which choice best states the main purpose of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "CAS",
+   "subject": "READING_WRITING",
+   "skill": "CAS-TS",
+   "skill_name": "Text Structure and Purpose",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Most accounts of the printing revolution begin with Gutenberg. Yet movable type had been in use in Korea for two centuries before him, cast in bronze rather than the lead alloy Gutenberg favoured. What Europe added was not the idea of movable type but a metallurgy cheap enough to make it disposable.",
+   "choices": [
+    {
+     "id": "3a04745f-0b82-43b3-aadb-c8207b5fbc0b",
+     "label": "A",
+     "content": "To argue that Gutenberg's contribution has been overstated by historians.",
+     "isCorrect": false
+    },
+    {
+     "id": "ac302fc4-8d15-436a-a03b-40292481cef5",
+     "label": "B",
+     "content": "To describe the metallurgical differences between Korean and European type.",
+     "isCorrect": false
+    },
+    {
+     "id": "29f1f154-63e4-441d-849a-d51ede4450ab",
+     "label": "C",
+     "content": "To correct a common account by specifying what was actually new in Europe.",
+     "isCorrect": true
+    },
+    {
+     "id": "6aabf4f7-810e-4c43-8de1-57ecdfaab223",
+     "label": "D",
+     "content": "To trace the spread of printing from Korea to Europe.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ee648100-8bf7-48ff-8e81-5dfcf8fcfca8",
+   "stem": "Which choice best states the main idea of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Bowerbirds build elaborate structures from twigs and decorate them with objects sorted by colour. The bower is not a nest; no eggs are laid in it, and it is abandoned once the breeding season ends. Females inspect several bowers before choosing, and males whose decorations are removed by researchers are chosen less often.",
+   "choices": [
+    {
+     "id": "07110b65-dd1c-4122-8866-f49dc8ec25b6",
+     "label": "A",
+     "content": "The bower functions in mate choice rather than in raising young.",
+     "isCorrect": true
+    },
+    {
+     "id": "a12dc133-dcdd-4616-b05f-6607214a8940",
+     "label": "B",
+     "content": "Female bowerbirds prefer bowers decorated in a single colour.",
+     "isCorrect": false
+    },
+    {
+     "id": "7167dd91-797d-429d-b2a2-40f027c07fbc",
+     "label": "C",
+     "content": "Researchers have disrupted bowerbird breeding by removing decorations.",
+     "isCorrect": false
+    },
+    {
+     "id": "b3e45499-bde0-4b05-886e-2a40147112fe",
+     "label": "D",
+     "content": "Bowerbirds build nests that are unusually elaborate for their size.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1e2e919d-6ced-4d10-97a3-0a0a1fca74d1",
+   "stem": "Which choice best states the main idea of the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CI",
+   "skill_name": "Central Ideas and Details",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Sea otters eat sea urchins, and urchins eat kelp. Where otters were hunted out, urchin populations exploded and kelp forests were grazed to bare rock. Where otters have returned, the kelp has come back within a decade — but only where the rock still holds enough sediment for young kelp to anchor.",
+   "choices": [
+    {
+     "id": "9fd360d6-13a0-4af8-af10-2ec9803991c0",
+     "label": "A",
+     "content": "Hunting otters was the sole cause of kelp forest decline.",
+     "isCorrect": false
+    },
+    {
+     "id": "4898e7d2-660a-48e4-980b-9b8e02bb8418",
+     "label": "B",
+     "content": "Sea otters are the only predator capable of controlling urchin numbers.",
+     "isCorrect": false
+    },
+    {
+     "id": "1d65206d-173e-49b3-a176-67050fb2b2fc",
+     "label": "C",
+     "content": "Kelp forests recover once otters return, provided the substrate permits it.",
+     "isCorrect": true
+    },
+    {
+     "id": "3d4bf26b-5fc0-4a12-bbba-840057a7b5ee",
+     "label": "D",
+     "content": "Urchins cause more damage to kelp forests than any other grazer.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "854ff0cb-5ab7-48c4-949c-4a771df110d1",
+   "stem": "Which finding, if true, would most directly support Lindqvist's explanation over the rival one?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Ecologist Tomas Lindqvist has proposed that urban street trees grow faster than their rural counterparts because city air is warmer, lengthening the growing season. A rival explanation holds that the difference is instead due to nitrogen deposited from vehicle exhaust, which acts as a fertiliser.",
+   "choices": [
+    {
+     "id": "227e4a88-12b7-42f8-8cac-536daa7362d7",
+     "label": "A",
+     "content": "Street trees in cities are on average taller than rural trees of the same age.",
+     "isCorrect": false
+    },
+    {
+     "id": "7214bf6e-53b4-4e1e-877d-013c8cad1c72",
+     "label": "B",
+     "content": "Trees in cool coastal cities with heavy traffic grow no faster than rural trees nearby.",
+     "isCorrect": true
+    },
+    {
+     "id": "8c0736d2-f47d-4de5-a447-d5d82fab8138",
+     "label": "C",
+     "content": "Nitrogen levels in city soils are higher than in rural soils.",
+     "isCorrect": false
+    },
+    {
+     "id": "2ee328b7-4e7e-401b-92a8-af52a83665ab",
+     "label": "D",
+     "content": "Rural trees planted beside motorways grow faster than those planted inland.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "96e6b258-858d-40fe-8ca3-85b0ae6919ca",
+   "stem": "Which finding, if true, would most directly weaken the team's argument?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "A team argues that a cave's hand stencils were made by adolescents rather than adults, on the basis of the small size of the hands.",
+   "choices": [
+    {
+     "id": "f6a35082-aa57-49d1-9487-9cd50741b92f",
+     "label": "A",
+     "content": "The stencils were made over a period of several centuries.",
+     "isCorrect": false
+    },
+    {
+     "id": "9403d7af-ae37-486a-9e92-ae444e76f327",
+     "label": "B",
+     "content": "Adult women in the population had hands within the same size range as the stencils.",
+     "isCorrect": true
+    },
+    {
+     "id": "30bfd125-fba6-4287-83fa-c948d45879d2",
+     "label": "C",
+     "content": "Similar stencils are found in caves elsewhere in the region.",
+     "isCorrect": false
+    },
+    {
+     "id": "15debee7-8954-48b5-bb72-e2ed9cb65cf5",
+     "label": "D",
+     "content": "The pigment used in the stencils was traded over long distances.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "36dcb06c-6867-4a36-b2bc-e29dff61c914",
+   "stem": "Which finding, if true, would most directly support the historian's argument?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-CE",
+   "skill_name": "Command of Evidence",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "A historian argues that a medieval town's sudden prosperity came from a change in trade routes rather than from a local increase in wool production.",
+   "choices": [
+    {
+     "id": "ee5e5474-f89c-484f-a883-8832df7f6908",
+     "label": "A",
+     "content": "Wool exports recorded at the town's port rose sharply in the same decade.",
+     "isCorrect": false
+    },
+    {
+     "id": "623af335-fea3-4b83-9ca9-2761fa621d73",
+     "label": "B",
+     "content": "The number of sheep grazed in the surrounding countryside was unchanged across the period.",
+     "isCorrect": true
+    },
+    {
+     "id": "6e11ab8a-4972-4c46-96b1-87b50201c015",
+     "label": "C",
+     "content": "The town's population grew steadily over the following century.",
+     "isCorrect": false
+    },
+    {
+     "id": "d732ab73-c9b6-493a-aab1-677bbd4fcc03",
+     "label": "D",
+     "content": "Several neighbouring towns also prospered during the same decade.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "32172fbb-59f9-45b0-973f-6282458a2849",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Coffee plants grown in full sun yield more beans per hectare than those grown under shade trees. Shade-grown plots, however, retain more soil nitrogen, suffer less erosion, and continue producing for decades after full-sun plots have been abandoned. A grower comparing the two systems on yield alone would therefore _____",
+   "choices": [
+    {
+     "id": "333f0e62-50bc-4d65-902d-a38a80c2f618",
+     "label": "A",
+     "content": "find shade-grown coffee more profitable in the first season.",
+     "isCorrect": false
+    },
+    {
+     "id": "08063b7f-5640-418e-af3f-61a931a87cfc",
+     "label": "B",
+     "content": "conclude that shade trees have no effect on soil quality.",
+     "isCorrect": false
+    },
+    {
+     "id": "b9ce5270-4c61-4264-a90c-4052e306cab3",
+     "label": "C",
+     "content": "underestimate the number of beans a full-sun plot produces.",
+     "isCorrect": false
+    },
+    {
+     "id": "bdcffcab-543a-4024-8b18-6d0c182765cb",
+     "label": "D",
+     "content": "overstate the long-term advantage of full-sun cultivation.",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "2f6375a5-0f0a-4b18-8a0a-ed6f7ab77028",
+   "stem": "Which choice most logically completes the text?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "INI",
+   "subject": "READING_WRITING",
+   "skill": "INI-IE",
+   "skill_name": "Inferences",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Anthropologist Nadia Behrouz notes that in the communities she studied, gift-giving at weddings is meticulously recorded, and a family that receives a large gift is expected to give one of similar value when the giver's own children marry. The practice functions less as generosity than as _____",
+   "choices": [
+    {
+     "id": "d043a931-b1fd-49d7-bbd6-7f370652a535",
+     "label": "A",
+     "content": "a ritual whose original meaning has been forgotten.",
+     "isCorrect": false
+    },
+    {
+     "id": "67c9369f-fe06-4549-afd8-0a13324d14d4",
+     "label": "B",
+     "content": "an obligation imposed by religious authorities.",
+     "isCorrect": false
+    },
+    {
+     "id": "be0a0768-35ff-4006-970b-9c74f8f4edcd",
+     "label": "C",
+     "content": "a form of credit extended between families over time.",
+     "isCorrect": true
+    },
+    {
+     "id": "0afce642-21f1-45f8-97d5-25c3c28cfb02",
+     "label": "D",
+     "content": "a display of wealth intended to establish social rank.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "74618505-f547-4893-9b59-c225f1810e0f",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The library holds three items of interest to _____ bundle of letters and a hand-drawn plan of the estate.",
+   "choices": [
+    {
+     "id": "f0685c05-840a-41e3-9bed-bafd4a36c311",
+     "label": "A",
+     "content": "the project: a ledger, a",
+     "isCorrect": true
+    },
+    {
+     "id": "1c63fcf3-50b2-4ab0-8777-ab6180ffd340",
+     "label": "B",
+     "content": "the project; a ledger, a",
+     "isCorrect": false
+    },
+    {
+     "id": "5cfb3313-307f-4e0f-98c2-3917852a9d41",
+     "label": "C",
+     "content": "the project, and a ledger, a",
+     "isCorrect": false
+    },
+    {
+     "id": "36485753-25a1-4917-8d7e-d7195ef2716a",
+     "label": "D",
+     "content": "the project which are a ledger, a",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "988b236a-3071-48e5-b2fc-e23fb77571ea",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The survey covered every district in the city _____ the results were published the following spring.",
+   "choices": [
+    {
+     "id": "3a17a404-9352-4c54-962d-9b71162edd9c",
+     "label": "A",
+     "content": "the city the results were",
+     "isCorrect": false
+    },
+    {
+     "id": "c22ae533-ccf3-4850-ba7c-ec67ca0e1b6b",
+     "label": "B",
+     "content": "the city; the results were",
+     "isCorrect": true
+    },
+    {
+     "id": "d2dbb7c2-3be0-464e-88fe-28b09dce484a",
+     "label": "C",
+     "content": "the city, the results were",
+     "isCorrect": false
+    },
+    {
+     "id": "c65d20cf-761a-48fa-848f-8c66ae2689dc",
+     "label": "D",
+     "content": "the city: the results were",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "af476543-fe92-437a-be85-64449a7a1d4a",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The engine ran for eleven hours without fault _____ then, without warning, it seized.",
+   "choices": [
+    {
+     "id": "c88eccec-74fe-4d7b-9094-6566992cb72e",
+     "label": "A",
+     "content": "without fault: then, without warning,",
+     "isCorrect": false
+    },
+    {
+     "id": "5d589e94-0879-482a-95fa-a76ee4a64e30",
+     "label": "B",
+     "content": "without fault then, without warning,",
+     "isCorrect": false
+    },
+    {
+     "id": "b21f8323-e4a6-4054-be5d-e222e348ecee",
+     "label": "C",
+     "content": "without fault; then, without warning,",
+     "isCorrect": true
+    },
+    {
+     "id": "ba1aae85-3fe3-4b10-8690-a0e467903baa",
+     "label": "D",
+     "content": "without fault, then, without warning,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4cb0e842-c89e-46ac-a542-23e46fb7d1b8",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-BS",
+   "skill_name": "Boundaries",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Mercury, the smallest planet in the solar system _____ has almost no atmosphere to retain heat.",
+   "choices": [
+    {
+     "id": "b95d2c1f-4241-40fc-ab05-dbd96f462733",
+     "label": "A",
+     "content": "solar system: has almost no",
+     "isCorrect": false
+    },
+    {
+     "id": "e3dfc705-929b-4d48-b414-d10121386802",
+     "label": "B",
+     "content": "solar system has almost no",
+     "isCorrect": false
+    },
+    {
+     "id": "0ec58392-39ef-4d4d-a219-ebc0df8049e9",
+     "label": "C",
+     "content": "solar system, has almost no",
+     "isCorrect": true
+    },
+    {
+     "id": "71242aa0-09f4-4d75-9d6a-40e171035444",
+     "label": "D",
+     "content": "solar system; has almost no",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "4d03297f-f12f-4a25-8ba0-9571b1adc2a1",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Neither the surveyor nor the two assistants _____ able to reach the summit before dark.",
+   "choices": [
+    {
+     "id": "d793a229-c99f-4c70-878d-f2988c507432",
+     "label": "A",
+     "content": "has been",
+     "isCorrect": false
+    },
+    {
+     "id": "346f6cc4-8193-4223-ad60-2140afb5572c",
+     "label": "B",
+     "content": "is",
+     "isCorrect": false
+    },
+    {
+     "id": "b6c00d64-ada0-464b-9b88-44d9c2e8a1c6",
+     "label": "C",
+     "content": "was",
+     "isCorrect": false
+    },
+    {
+     "id": "e88bbfae-1f14-4f1d-af63-b112dc32f21b",
+     "label": "D",
+     "content": "were",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f47c7270-294f-4430-ac28-0113850cb271",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The committee published its findings in March, and by June the recommendations _____ into policy.",
+   "choices": [
+    {
+     "id": "139c32be-8767-427e-8f67-174d754ec2ef",
+     "label": "A",
+     "content": "are written",
+     "isCorrect": false
+    },
+    {
+     "id": "b2ebfd0a-f1a7-4834-81cb-0e94153448c7",
+     "label": "B",
+     "content": "have written",
+     "isCorrect": false
+    },
+    {
+     "id": "9349b4f0-027a-4956-b1e3-194b3d96234d",
+     "label": "C",
+     "content": "had been written",
+     "isCorrect": true
+    },
+    {
+     "id": "65039882-3cc2-4522-92e5-56b7ae19b287",
+     "label": "D",
+     "content": "writing",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ddd0e63a-5ce0-4a5f-a457-aba8168a60f6",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "SEC",
+   "subject": "READING_WRITING",
+   "skill": "SEC-FS",
+   "skill_name": "Form, Structure, and Sense",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Having been restored twice in the last century, the fresco _____ more of the restorers' work than of the original.",
+   "choices": [
+    {
+     "id": "c2a2f8b4-aba7-4114-8606-b8b95b50371a",
+     "label": "A",
+     "content": "shows",
+     "isCorrect": true
+    },
+    {
+     "id": "37915b2a-f550-43f7-a2d6-1866d8252a19",
+     "label": "B",
+     "content": "to show",
+     "isCorrect": false
+    },
+    {
+     "id": "65dda76f-2f21-46d0-8111-d824424f98c2",
+     "label": "C",
+     "content": "shown",
+     "isCorrect": false
+    },
+    {
+     "id": "e43a8735-575d-4424-9cc2-677668213d45",
+     "label": "D",
+     "content": "showing",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "089798d2-b3d4-481d-b9b1-1eb98a9302cd",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The new timetable reduced the average journey by four minutes. _____ passenger numbers on the line fell in the same period.",
+   "choices": [
+    {
+     "id": "22632a03-cab0-40b1-acf8-1b55077a5b4f",
+     "label": "A",
+     "content": "That is,",
+     "isCorrect": false
+    },
+    {
+     "id": "9a91e997-1f59-454b-8c64-abcca3f51bfa",
+     "label": "B",
+     "content": "Accordingly,",
+     "isCorrect": false
+    },
+    {
+     "id": "473cd351-2f83-4ae8-882f-047bc705c28c",
+     "label": "C",
+     "content": "Nonetheless,",
+     "isCorrect": true
+    },
+    {
+     "id": "15b60032-d93e-42af-b067-73cc1f3af8fa",
+     "label": "D",
+     "content": "Indeed,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "df7f37c4-838d-410f-9a66-00368b06608d",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 23,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "Wind turbines are usually sited on ridgelines to catch stronger, steadier air. _____ ridgelines are often the routes migrating birds follow.",
+   "choices": [
+    {
+     "id": "d0d66b26-084e-4d5e-87ae-ea6afeb11f3b",
+     "label": "A",
+     "content": "Likewise,",
+     "isCorrect": false
+    },
+    {
+     "id": "b42d4d1d-cac1-4ec6-8bb2-385f4c4ab238",
+     "label": "B",
+     "content": "As a result,",
+     "isCorrect": false
+    },
+    {
+     "id": "33931a02-eb58-43a0-ad03-45ecb1d4edea",
+     "label": "C",
+     "content": "In particular,",
+     "isCorrect": false
+    },
+    {
+     "id": "a1f6d837-7600-425f-ac26-8f6eb60e82cc",
+     "label": "D",
+     "content": "Unfortunately,",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "42f32ad6-6862-4708-8111-e5729fd88e99",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 24,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-TR",
+   "skill_name": "Transitions",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "The two manuscripts share the same scribal errors in the same places. _____ they were almost certainly copied from a common source.",
+   "choices": [
+    {
+     "id": "6e6fd528-0cc7-4d31-8f7e-6b565ac410ac",
+     "label": "A",
+     "content": "Admittedly,",
+     "isCorrect": false
+    },
+    {
+     "id": "f85938ce-b93d-4d66-98c8-53e7bd92dbae",
+     "label": "B",
+     "content": "Conversely,",
+     "isCorrect": false
+    },
+    {
+     "id": "68ff672f-b4ce-4c12-bd51-fae8bf96cf13",
+     "label": "C",
+     "content": "Thus,",
+     "isCorrect": true
+    },
+    {
+     "id": "41397caa-acc1-4690-8f7a-ea0a0c917f8a",
+     "label": "D",
+     "content": "Meanwhile,",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "7bdb6f72-dfa4-4350-b101-348ed2b99943",
+   "stem": "The student wants to describe the exchange between fungi and trees. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 25,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Fungi form networks of thin filaments called hyphae.</li><li>Hyphae connect to tree roots and exchange nutrients with them.</li><li>Trees supply the fungus with sugars.</li><li>The fungus supplies the tree with phosphorus from the soil.</li></ul>",
+   "choices": [
+    {
+     "id": "63e4b14b-6217-44ff-b8ce-ac1ed1ee81f3",
+     "label": "A",
+     "content": "Fungi form networks of thin filaments called hyphae that connect to tree roots.",
+     "isCorrect": false
+    },
+    {
+     "id": "1e22ee58-b713-4647-9dbd-3c39ad73fca9",
+     "label": "B",
+     "content": "Trees and fungi both benefit from the connection between hyphae and roots.",
+     "isCorrect": false
+    },
+    {
+     "id": "9f01705a-172a-4825-a74d-8e4ced86ec14",
+     "label": "C",
+     "content": "Through hyphae connected to tree roots, trees supply fungi with sugars while fungi supply trees with soil phosphorus.",
+     "isCorrect": true
+    },
+    {
+     "id": "f77a1c59-e2f4-466e-9cec-9002bb49c3b6",
+     "label": "D",
+     "content": "Fungi obtain phosphorus from the soil and pass some of it on.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "31ca22e9-0efe-405b-a59e-609df77cbdf0",
+   "stem": "The student wants to convey the economic importance of cochineal. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 26,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Cochineal is a red dye made from insects that feed on cactus.</li><li>It was produced in Oaxaca and exported to Europe from the 1500s.</li><li>For two centuries it was Mexico's second most valuable export after silver.</li><li>Synthetic dyes replaced it in the late 1800s.</li></ul>",
+   "choices": [
+    {
+     "id": "9dd1058c-1ef9-4cbf-9bd7-c45a360093ee",
+     "label": "A",
+     "content": "Cochineal is a red dye made from insects that feed on cactus.",
+     "isCorrect": false
+    },
+    {
+     "id": "944aeafc-a085-4612-b84c-c9418eb4480f",
+     "label": "B",
+     "content": "Cochineal was exported to Europe from Oaxaca beginning in the 1500s.",
+     "isCorrect": false
+    },
+    {
+     "id": "7d186e1c-c5b4-49ea-8044-99ec02f93dd1",
+     "label": "C",
+     "content": "For two centuries cochineal was Mexico's second most valuable export, behind only silver.",
+     "isCorrect": true
+    },
+    {
+     "id": "97cb9507-8c9b-4e8e-bb62-af03c0e64bc1",
+     "label": "D",
+     "content": "Synthetic dyes replaced cochineal in the late 1800s.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "84c6035e-6adf-4972-a92f-e3203654f6e7",
+   "stem": "The student wants to explain how mangroves protect coastlines. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 27,
+   "imageUrl": null,
+   "domain": "EOI",
+   "subject": "READING_WRITING",
+   "skill": "EOI-RS",
+   "skill_name": "Rhetorical Synthesis",
+   "m_subject": "READING_WRITING",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": "While researching a topic, a student has taken the following notes:<ul><li>Mangrove forests grow in salt water along tropical coasts.</li><li>Their roots trap sediment carried by rivers.</li><li>Trapped sediment raises the seabed over time.</li><li>A raised seabed reduces the height of waves reaching the shore.</li></ul>",
+   "choices": [
+    {
+     "id": "b40104fb-08a2-4d63-a8fb-b133293a9faa",
+     "label": "A",
+     "content": "Mangrove forests grow in salt water along tropical coasts, where rivers carry sediment.",
+     "isCorrect": false
+    },
+    {
+     "id": "0d438f75-e34b-435c-b209-f9f83b6dc383",
+     "label": "B",
+     "content": "By trapping river sediment, mangrove roots raise the seabed, which reduces the height of waves reaching the shore.",
+     "isCorrect": true
+    },
+    {
+     "id": "b37dbbbc-d633-4bb8-b9af-ff6b56cfe220",
+     "label": "C",
+     "content": "Mangrove roots trap sediment, and mangroves grow along tropical coasts.",
+     "isCorrect": false
+    },
+    {
+     "id": "0c5d71a3-cfd9-4315-97f8-a8b7a498d95e",
+     "label": "D",
+     "content": "Waves reaching tropical shores are lower than they would otherwise be.",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "b70ac223-3d30-4407-afc4-f9597d4eb657",
+   "stem": "\\[5(x-3)-2(x+4)=13\\]What is the solution to the given equation?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "5e2c1b62-8ebe-4d00-aa52-ea9cae7f8e38",
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "id": "34c82b95-c104-4c6a-8981-3cc625e2db26",
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "8b37b302-167b-42e2-b808-b88d710e7b31",
+     "label": "C",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "id": "2cf21039-86bb-4e39-8bd8-ed0242e50ddb",
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f0add076-8782-4ace-801c-c6e2bf9713ee",
+   "stem": "A shop sells notebooks at x dollars each and pens at y dollars each. Three notebooks and four pens cost $25 in total, and five notebooks cost $7 more than two pens. What is the cost, in dollars, of two notebooks and one pen?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "b99ef7fa-826e-406a-a7d3-222907e96bdb",
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "6c6626c6-fd0e-403d-9a50-3cd24a77e944",
+     "label": "B",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "id": "960cf4e6-911c-442c-9091-084834a1500b",
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "id": "73b5dcef-831b-429f-9c07-b8e58d09071c",
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "0cf9bf02-ef4b-4fae-8db7-244119ab5e88",
+   "stem": "A line passes through \\((-2, 7)\\) and \\((4, -5)\\). At what value of x does the line cross the x-axis?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "741106a5-2f77-4f48-9c73-9af96f10588e",
+     "label": "A",
+     "content": "\\(\\frac{3}{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "f04fc2db-7b15-4a21-a876-0b124c823920",
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "id": "dafcb13c-2b24-483c-bc25-b66e14066c2e",
+     "label": "C",
+     "content": "\\(\\frac{5}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "ac79c4a7-097c-44ab-a9a4-c14f1258e4dc",
+     "label": "D",
+     "content": "3",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "bbdb9896-5a2c-4819-9bc7-1750c3dc1989",
+   "stem": "A delivery van weighs 1,850 kilograms empty and may not exceed a total mass of 3,200 kilograms. Each crate loaded onto the van has a mass of 45 kilograms. What is the greatest number of crates the van can carry?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LI",
+   "skill_name": "Linear Inequalities",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "ec059c90-d53d-4d75-9a41-e75365f0a018",
+     "label": "A",
+     "content": "28",
+     "isCorrect": false
+    },
+    {
+     "id": "2f26ef7b-b269-48ba-89af-cb22a40393ab",
+     "label": "B",
+     "content": "29",
+     "isCorrect": false
+    },
+    {
+     "id": "0fe7ae7a-c8b3-476f-b435-3f20bff5554d",
+     "label": "C",
+     "content": "30",
+     "isCorrect": true
+    },
+    {
+     "id": "be1c8817-7a2d-4ad5-8583-ce90fdbf277d",
+     "label": "D",
+     "content": "31",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "24391a0c-eb3b-43e6-965c-a58ca97a7910",
+   "stem": "A recipe is written twice on a card. The first version reads \\(ax+7y=21\\) and the second reads \\(6x+14y=42\\), where a is a constant, x is the mass of flour and y the mass of sugar. If the two versions place no different requirement on x and y at all, what is the value of a?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "9db3af6f-469a-4033-a460-df47028d7f63",
+     "label": "A",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "id": "cd17b740-df08-4864-8d4e-25e5b240ab89",
+     "label": "B",
+     "content": "3",
+     "isCorrect": true
+    },
+    {
+     "id": "9a74c112-bc82-4e08-a793-93b68d917f28",
+     "label": "C",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "id": "2314c351-2f69-4acb-aa8d-dc5ccc69256f",
+     "label": "D",
+     "content": "7",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f613a08c-4264-4f59-8232-e92543bdee21",
+   "stem": "The function f is linear. If \\(f(3)=8\\) and \\(f(7)=20\\), what is the value of \\(f(0)\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "20c130dd-278e-4a24-9dd2-318b8e3395b2",
+     "label": "A",
+     "content": "-4",
+     "isCorrect": false
+    },
+    {
+     "id": "0d5e4f55-27db-4ec7-9678-3f3a8c38fb08",
+     "label": "B",
+     "content": "-1",
+     "isCorrect": true
+    },
+    {
+     "id": "6cefd17e-83d1-4dce-aa40-c14057047064",
+     "label": "C",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "id": "6b48d640-17d8-4993-88c9-aadd53fe1e18",
+     "label": "D",
+     "content": "5",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ec5ac90d-bc76-4669-9f29-77b160efc719",
+   "stem": "A cyclist rides for 2 hours at one constant speed and then for 3 hours at a speed 8 kilometres per hour slower. The total distance is 156 kilometres. What was the faster speed, in kilometres per hour?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "29646421-f5ae-4ea5-a7e4-2c0e0b81f5bb",
+     "label": "A",
+     "content": "30",
+     "isCorrect": false
+    },
+    {
+     "id": "69d555f1-b153-486c-9332-e0c745eb11e5",
+     "label": "B",
+     "content": "34",
+     "isCorrect": false
+    },
+    {
+     "id": "2d45998a-94c5-4aa3-898c-a239c1b97c43",
+     "label": "C",
+     "content": "36",
+     "isCorrect": true
+    },
+    {
+     "id": "16c6e9d5-76d8-4ba7-8985-cda9221a37a9",
+     "label": "D",
+     "content": "40",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "6158dd07-e848-4442-81b3-bc7dd6b8e9cf",
+   "stem": "A large square has side \\(3x-2\\) units and a small square has side \\(x+5\\) units. Which expression gives how much greater the area of the large square is than that of the small square?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3c9c9fb6-346f-40f9-964f-3681190d3c6c",
+     "label": "A",
+     "content": "\\(8x^{2}-22x-21\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "d6395a2d-da64-4305-b60c-cc0016568921",
+     "label": "B",
+     "content": "\\(8x^{2}-2x-21\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "b9fbd544-3aea-480f-bc7d-e0f23f5978a4",
+     "label": "C",
+     "content": "\\(10x^{2}-22x+29\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "145335ad-dcf5-4213-ae6b-cbc5e47a5ee5",
+     "label": "D",
+     "content": "\\(8x^{2}-22x+29\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "a8bcfa7b-4b83-4453-84b3-fdb2813cf3ad",
+   "stem": "A farmer's yield, in tonnes, from applying x units of fertiliser is modelled by \\(Y(x)=-2x^{2}+16x-27\\). What is the greatest yield the model predicts?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "81b24a8d-7669-42aa-adcf-1d0efc9ad6a5",
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "id": "fb7b0389-c769-4f1d-adf6-bd2a0279d512",
+     "label": "B",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "id": "577f8b79-9751-402a-879a-d91e432dd5c6",
+     "label": "C",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "e1e11d8c-6a9b-4af0-9fa6-1a8d1d58e968",
+     "label": "D",
+     "content": "27",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "960e85f8-2385-42e9-9336-66175dcd96cf",
+   "stem": "A file is compressed so that its size is \\(4^{2x-1}\\) kilobytes. The compressed file is 64 kilobytes. What is the value of x?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "5fbee29f-82f2-4a74-b257-892e558ff5ff",
+     "label": "A",
+     "content": "1",
+     "isCorrect": false
+    },
+    {
+     "id": "873f91b6-45f8-42e3-b89d-0f51a9d374be",
+     "label": "B",
+     "content": "2",
+     "isCorrect": true
+    },
+    {
+     "id": "7e2bcdc7-6ca7-409f-9f92-b07e67e7cef6",
+     "label": "C",
+     "content": "\\(\\frac{5}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "ed272ef8-98f5-4637-88c2-096c304546be",
+     "label": "D",
+     "content": "3",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "fb9b9244-830b-453b-a5d0-f697d4a13890",
+   "stem": "The solutions to \\(2x^{2}-9x-5=0\\) are p and q, with \\(p>q\\). What is the value of \\(p-q\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "07701848-4790-426f-88bd-10ed18ccf7b8",
+     "label": "A",
+     "content": "\\(\\frac{9}{2}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "17704a33-516e-427e-8953-623395996c13",
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "id": "8f66e7cd-7f73-4f5f-8502-2c9637c6340e",
+     "label": "C",
+     "content": "\\(\\frac{11}{2}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "42701074-3922-4b8e-ab1c-8a5496cdc278",
+     "label": "D",
+     "content": "\\(\\frac{21}{4}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "085dab37-31e3-453a-8961-fedfa4717ff2",
+   "stem": "A rectangle has an area of \\(x^{2}-x-12\\) square units and a width of \\(x+3\\) units. Which expression represents its length, in units, for \\(x>4\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "7176bb4e-1183-4c74-929e-84b38cbf7192",
+     "label": "A",
+     "content": "\\(x-4\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "c48e048e-686f-4cc6-b46a-adaf6effcaf2",
+     "label": "B",
+     "content": "\\(x+4\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "dbc0822f-991a-4f22-9d24-73e0010966ea",
+     "label": "C",
+     "content": "\\(x-3\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "5ca93690-ec49-4767-a612-0cc26e5c0868",
+     "label": "D",
+     "content": "\\(x-12\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f2109f9d-1e90-4514-bd31-52be59c66b7e",
+   "stem": "A projectile is launched so that its height, in metres, after t seconds is \\(h(t)=-4.9t^{2}+29.4t\\). For how many seconds is the projectile in the air before it returns to the ground?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "bebe3ddc-ed53-41dc-897a-2f610545e7fa",
+     "label": "A",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "id": "2e441a3e-5c21-4a6d-847b-c51728610081",
+     "label": "B",
+     "content": "4.9",
+     "isCorrect": false
+    },
+    {
+     "id": "b2b66786-638f-4b5d-b725-c7a7ed388fd7",
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "id": "36d157c2-74c4-4086-ae6d-382fd672bbd8",
+     "label": "D",
+     "content": "29.4",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "76fae626-28d6-4c17-b4bc-b2701ecd5899",
+   "stem": "A sample of a radioactive isotope halves in mass every 12 years. A laboratory records a mass of 40 grams today. Which function gives the mass, \\(M(y)\\), in grams, y years from today?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "0308aeb4-6a55-4c1e-83bb-26fb5dac9a1e",
+     "label": "A",
+     "content": "\\(M(y)=40\\left(\\frac{1}{2}\\right)^{12y}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "a9f3a240-8f15-4e88-8ece-d5e1793bc29b",
+     "label": "B",
+     "content": "\\(M(y)=40\\left(\\frac{1}{2}\\right)^{\\frac{y}{12}}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "b87e9901-65d4-4b33-accc-1dad65316349",
+     "label": "C",
+     "content": "\\(M(y)=40\\left(\\frac{1}{12}\\right)^{\\frac{y}{2}}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "efcb84e1-0a57-44d7-a186-3f24cf37816a",
+     "label": "D",
+     "content": "\\(M(y)=40-\\frac{y}{12}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "8fa86f65-e6e1-4730-ace1-c814f724525c",
+   "stem": "A map is drawn to a scale of 1 centimetre to 2.5 kilometres. Two towns are 17.4 centimetres apart on the map. A road between them is 12 kilometres longer than the straight-line distance. How long, in kilometres, is the road?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-RP",
+   "skill_name": "Ratios, Rates, and Proportions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "f0a6aae0-281f-4af4-a623-6b5b86628a48",
+     "label": "A",
+     "content": "43.5",
+     "isCorrect": false
+    },
+    {
+     "id": "b8c50b90-210a-48fa-8548-99068615838f",
+     "label": "B",
+     "content": "51.0",
+     "isCorrect": false
+    },
+    {
+     "id": "9232d406-cfa7-4ecb-a80e-0a33939dd423",
+     "label": "C",
+     "content": "55.5",
+     "isCorrect": true
+    },
+    {
+     "id": "87453a21-72a9-453a-8e62-8cfd1dd42b6d",
+     "label": "D",
+     "content": "58.5",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "a84f61f5-4e3d-472f-9ae2-edf46e465ae0",
+   "stem": "After a 12% increase, the price of a season ticket is $728. What was the price, in dollars, before the increase?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-RP",
+   "skill_name": "Ratios, Rates, and Proportions",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3dad9b48-e68b-4e47-a85e-b4f116f090be",
+     "label": "A",
+     "content": "$616",
+     "isCorrect": false
+    },
+    {
+     "id": "5cca9af9-80f7-4736-b9f4-f1824aa43109",
+     "label": "B",
+     "content": "$640",
+     "isCorrect": false
+    },
+    {
+     "id": "2f1ef567-ce9c-4a7b-b8dc-f070bf0c7d1c",
+     "label": "C",
+     "content": "$650",
+     "isCorrect": true
+    },
+    {
+     "id": "a4f40efc-46dc-4d69-bfc0-06f3a48862d6",
+     "label": "D",
+     "content": "$684",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1287cf28-030f-4a26-8590-a2c9e3efca79",
+   "stem": "The table shows the distribution of scores on a 10-point quiz taken by 25 students.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Score</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Number of students</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td></tr></table>What is the mean score, to the nearest hundredth?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-DI",
+   "skill_name": "Data Interpretation",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "8546a5a9-ecbb-454c-b74a-ff492f3e1f83",
+     "label": "A",
+     "content": "7.96",
+     "isCorrect": true
+    },
+    {
+     "id": "620c4dac-08ff-4a76-a0c6-749a82c2a4d8",
+     "label": "B",
+     "content": "8.00",
+     "isCorrect": false
+    },
+    {
+     "id": "df315452-ad94-4b1b-8e44-505e2f7f61a7",
+     "label": "C",
+     "content": "8.16",
+     "isCorrect": false
+    },
+    {
+     "id": "6e4aab3b-512f-4b98-8de8-c16506ad6ade",
+     "label": "D",
+     "content": "8.24",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "8e88de1e-5b9b-4966-9e64-2794c771ad40",
+   "stem": "A jar holds 9 white counters and 6 black counters. Two counters are drawn at random without replacement. What is the probability that both are black?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-ST",
+   "skill_name": "Statistics and Probability",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3a99914d-1f42-4c22-8d67-fc81a1373269",
+     "label": "A",
+     "content": "\\(\\frac{1}{7}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "7af2717f-f097-41b9-8784-4bee5f4e6b67",
+     "label": "B",
+     "content": "\\(\\frac{2}{15}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "a2d245e6-2a68-4231-b0b5-bb80cf83c362",
+     "label": "C",
+     "content": "\\(\\frac{4}{25}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "3188d70a-0568-49c7-8b43-db2ae2b84814",
+     "label": "D",
+     "content": "\\(\\frac{3}{14}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "0da8b0ac-530a-4591-8e87-ad0e4c3b100a",
+   "stem": "Two similar triangles have areas of 45 and 125 square centimetres. The shortest side of the smaller triangle is 6 centimetres. What is the length, in centimetres, of the shortest side of the larger triangle?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-LA",
+   "skill_name": "Lines, Angles, and Triangles",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "9902a72a-33d7-487c-a548-cbaedfea047d",
+     "label": "A",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "250568fc-0d18-4c81-9d3a-2091b200f770",
+     "label": "B",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "id": "6aaea6a5-c4d5-420f-a63d-cc04d8c072ad",
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "id": "51f16afa-db8e-44eb-87f0-693f6069f43e",
+     "label": "D",
+     "content": "15",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "dfbf8548-b43f-4674-98e2-decd8b3345e3",
+   "stem": "A cone and a cylinder have the same radius and the same height. The volume of the cylinder is 96 cubic centimetres. What is the volume, in cubic centimetres, of the cone?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": "[\"32\"]",
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-AV",
+   "skill_name": "Area and Volume",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "5ed5cdf9-638f-4a9a-863a-9a5dd7e9d8ba",
+   "stem": "\\[x^{2}+kx+36=0\\]In the given equation, k is a negative constant. If the equation has exactly one real solution, what is the value of \\(|k|\\)?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": "[\"12\"]",
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "518dbdf5-5c00-47d3-9c29-5d80cf63944f",
+   "stem": "A ladder leans against a wall so that its foot is 7 metres from the base of the wall and its top touches the wall 24 metres above the ground. How many metres long is the ladder?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "MEDIUM",
+   "correctAnswerFR": "[\"25\"]",
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-TR",
+   "skill_name": "Trigonometry",
+   "m_subject": "MATH",
+   "m_order": 1,
+   "m_difficulty": "STANDARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "6bca6adc-3326-425b-962f-956c3d686e18",
+   "stem": "A theatre had some people seated. After 9 more people arrived, there were 23 people seated. How many people were seated before the 9 arrived?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "386c689f-47d2-448a-9436-2850e6b1b19c",
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "id": "2395eed0-17d4-4e29-8be8-d31026fda8ad",
+     "label": "B",
+     "content": "14",
+     "isCorrect": true
+    },
+    {
+     "id": "a1b35f51-9599-4f46-ab6a-440c948ff594",
+     "label": "C",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "id": "2782c3ac-2c22-4c2e-9678-e2e9e7d9f070",
+     "label": "D",
+     "content": "32",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "a4ee0885-6a5b-45ed-9938-ee9a5102782f",
+   "stem": "Six identical crates have a combined mass of 54 kilograms. What is the mass, in kilograms, of one crate?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3bf18e93-b489-46b2-96e8-bade5c23689a",
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "id": "052cce1e-66ca-4e74-8a00-ca98a28fbd58",
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "4de63ad8-d251-4f9c-b8c6-c46688a9db9d",
+     "label": "C",
+     "content": "9",
+     "isCorrect": true
+    },
+    {
+     "id": "ee911dec-149a-4af4-89f1-f34015cd4d78",
+     "label": "D",
+     "content": "48",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1e1c032c-9d13-4f04-a0f5-3c524b69e88d",
+   "stem": "A shop sells pens for $3 each. Which equation gives the total cost C, in dollars, of p pens?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "32b68820-35ae-407e-9a09-3dd66fc7528e",
+     "label": "A",
+     "content": "\\(C=3+p\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "0113370a-52da-41a1-88b6-1fab804c3355",
+     "label": "B",
+     "content": "\\(C=3p\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "0a3d7c4c-e4f4-4df9-92f7-e0b7814cd12d",
+     "label": "C",
+     "content": "\\(C=p-3\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "e70a9b8d-a019-4801-9d44-87043105bc3e",
+     "label": "D",
+     "content": "\\(C=\\frac{p}{3}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "37cc752e-c3f7-49c6-8b5a-757c21e2d6ca",
+   "stem": "A plumber charges a $5 call-out fee plus $2 for each minute on site. What is the total charge, in dollars, for a 4-minute visit?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "29505415-b78d-4060-9c0a-55a9c18ccb3f",
+     "label": "A",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "id": "7dc1dc14-e870-4a58-ad70-bcbdc8561560",
+     "label": "B",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "id": "2ec14652-f2ac-4928-8b8f-09f9d02ec2d7",
+     "label": "C",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "id": "db46c57b-2644-407e-bdce-9b7425ae739c",
+     "label": "D",
+     "content": "14",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "d26cb2c2-398b-4cfb-952c-7bb666551bf5",
+   "stem": "Which value of x satisfies \\(x+4<9\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LI",
+   "skill_name": "Linear Inequalities",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "6cb5732f-3cf2-4f35-9b9e-7c709657a863",
+     "label": "A",
+     "content": "4",
+     "isCorrect": true
+    },
+    {
+     "id": "25655782-723a-47cf-9a43-48383c0c1aec",
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "id": "03f5f63c-0800-497e-906d-3c3bf2dc6ba0",
+     "label": "C",
+     "content": "9",
+     "isCorrect": false
+    },
+    {
+     "id": "ff57ab81-e6af-4b5d-9e54-94ef1e97f445",
+     "label": "D",
+     "content": "13",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "740bd98e-48bb-41f9-8f5d-7e464724a023",
+   "stem": "A rope 48 centimetres long is cut into 6 equal pieces. How long, in centimetres, is each piece?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "1e5c08a5-d3e6-4b7b-ae25-c67fe4e70f7b",
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "id": "b94c2c13-8d60-4ea1-a19d-1125f1373fd8",
+     "label": "B",
+     "content": "8",
+     "isCorrect": true
+    },
+    {
+     "id": "cfb43c26-3eb7-43d2-bfcc-33b1a480835f",
+     "label": "C",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "id": "479c2159-2803-49f9-9eac-f28adbbac132",
+     "label": "D",
+     "content": "42",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "226c7f66-c129-42b1-847f-2efade7d7a35",
+   "stem": "What is the slope of the line \\(y=7x-2\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "ef57df18-f926-4b9e-8b52-935cf5afdbb9",
+     "label": "A",
+     "content": "-2",
+     "isCorrect": false
+    },
+    {
+     "id": "1fc9ffe5-e20e-4e91-b804-e3883baca661",
+     "label": "B",
+     "content": "2",
+     "isCorrect": false
+    },
+    {
+     "id": "9651d7ca-db1e-4b72-a26a-35b0fbb33dcd",
+     "label": "C",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "id": "7a212b71-5e22-4bbb-999e-5de3697ab52b",
+     "label": "D",
+     "content": "7",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "14d4682a-2636-4f9b-9acf-c50988647bbd",
+   "stem": "A square tile has a side length of \\(x+3\\) centimetres. What is the perimeter of the tile, in centimetres?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "b6249a0c-a1a2-4140-955d-0533b5839a90",
+     "label": "A",
+     "content": "\\(4x+3\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "8ceb8df4-093c-40e5-b66b-cb06c999e3d0",
+     "label": "B",
+     "content": "\\(4x+7\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "685cfe9e-dc11-4e86-9f5a-ad72b2d6cd14",
+     "label": "C",
+     "content": "\\(4x+12\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "d67c997f-c34a-44f0-a9f8-593b55ca1a7d",
+     "label": "D",
+     "content": "\\(x+12\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "623e0a92-b95d-4528-a694-31a92b79d81b",
+   "stem": "A storage box has a square base of side \\(x^{2}\\) units and a height of \\(x^{3}\\) units. Which expression gives its volume, in cubic units, for \\(x>0\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "43d72399-930b-4170-947a-af38fdf00990",
+     "label": "A",
+     "content": "\\(x^{7}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "08ea48aa-8fff-49f4-b30e-ea8119f0c13a",
+     "label": "B",
+     "content": "\\(x^{12}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "41dfe2fb-18fb-40be-8145-0839a3a09b14",
+     "label": "C",
+     "content": "\\(2x^{7}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "0766fb26-979c-459e-8924-bd7c1c5ec2d5",
+     "label": "D",
+     "content": "\\(x^{5}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "f972db2b-558b-49b8-a885-180b7531a509",
+   "stem": "A gardener models the number of blooms on a shrub as \\(B(w)=w^{2}-6\\), where w is the number of weeks since planting. How many blooms does the model predict after 5 weeks?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3b08cd72-22af-48b8-94c8-2341b5dc1c01",
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "id": "61b3624f-6a23-43b1-977f-8f4d1a1f9f35",
+     "label": "B",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "id": "9828464c-1313-47eb-9c3f-f3ad7513fd3f",
+     "label": "C",
+     "content": "19",
+     "isCorrect": true
+    },
+    {
+     "id": "53ff37ce-3875-4e10-8cdf-a32eecba1ffe",
+     "label": "D",
+     "content": "25",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "749b70ea-9a7b-4409-ae25-b4763fdcdb08",
+   "stem": "A square patio has an area of 49 square metres. What is the length, in metres, of one side?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "4877a5e2-a9db-4057-b2d7-044a03e7affb",
+     "label": "A",
+     "content": "6",
+     "isCorrect": false
+    },
+    {
+     "id": "86582069-73cf-4e0e-96ec-7cefac99416c",
+     "label": "B",
+     "content": "7",
+     "isCorrect": true
+    },
+    {
+     "id": "8dcd7252-cd9e-4ab7-99c4-3cfb49980558",
+     "label": "C",
+     "content": "24.5",
+     "isCorrect": false
+    },
+    {
+     "id": "5655db1e-94d8-4ef1-a73d-b4bf1ae2af17",
+     "label": "D",
+     "content": "98",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5470053d-2a1e-4986-ae97-a3b61cf381d0",
+   "stem": "Two square rugs have areas of 81 and 16 square metres. What is the combined length, in metres, of one side of each rug?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "8b71fc5b-0418-4aca-ae34-7c0693c6c4bd",
+     "label": "A",
+     "content": "11",
+     "isCorrect": false
+    },
+    {
+     "id": "717fa33a-5f5a-42f5-8c7a-3061407bc80a",
+     "label": "B",
+     "content": "13",
+     "isCorrect": true
+    },
+    {
+     "id": "96e8deb6-c6b6-46b3-84c7-4157cef2421d",
+     "label": "C",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "id": "8c485078-6f2e-4bd0-bbfc-c8f15289b678",
+     "label": "D",
+     "content": "97",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5992f84d-55ca-48e8-b4f8-4c722f4329c6",
+   "stem": "A rectangular sheet has an area of \\(10x^{4}\\) square units and a width of \\(2x\\) units. What is its length, in units, for \\(x>0\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "976de39b-14b5-4f9c-a4ce-86c94f427479",
+     "label": "A",
+     "content": "\\(5x^{3}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "617c554e-1f67-482d-8972-fce2f4690aef",
+     "label": "B",
+     "content": "\\(5x^{4}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "8f9c2a48-5fd6-41b5-aa02-f33e375239c1",
+     "label": "C",
+     "content": "\\(8x^{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "de6141c5-3b00-4968-b072-1eeb07b94fc0",
+     "label": "D",
+     "content": "\\(20x^{3}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "50716100-1855-453f-beae-c4ac09bfa593",
+   "stem": "What is 30% of 260?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-RP",
+   "skill_name": "Ratios, Rates, and Proportions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "a1474d71-f526-4eaf-96a6-5b24c1217c2b",
+     "label": "A",
+     "content": "68",
+     "isCorrect": false
+    },
+    {
+     "id": "3fa0ad91-29a8-429e-9cf0-e8ec2991573a",
+     "label": "B",
+     "content": "72",
+     "isCorrect": false
+    },
+    {
+     "id": "314f141d-1fb6-43fa-a822-2bdc6146909f",
+     "label": "C",
+     "content": "78",
+     "isCorrect": true
+    },
+    {
+     "id": "6afc0d95-d681-4358-bb5c-7fbd4ad6f22b",
+     "label": "D",
+     "content": "86",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1051871d-07e0-4f7a-8c28-d3f27101b2a7",
+   "stem": "A car uses 6 litres of fuel to travel 90 kilometres. At the same rate, how many litres are needed to travel 240 kilometres?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-RP",
+   "skill_name": "Ratios, Rates, and Proportions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "c518cb0b-a499-44b0-9620-a0126c0b9b41",
+     "label": "A",
+     "content": "12",
+     "isCorrect": false
+    },
+    {
+     "id": "147b8843-2347-4e39-a7ed-0822f7ccc1da",
+     "label": "B",
+     "content": "14",
+     "isCorrect": false
+    },
+    {
+     "id": "55c362a9-6c9f-4e3b-b280-331f71a7d763",
+     "label": "C",
+     "content": "16",
+     "isCorrect": true
+    },
+    {
+     "id": "303c43c5-03b8-4e70-88fe-2ce7ae026925",
+     "label": "D",
+     "content": "18",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "063fdc2a-48da-4fd0-ac24-621d13328e54",
+   "stem": "What is the mean of 12, 15, 18, 19 and 26?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-ST",
+   "skill_name": "Statistics and Probability",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "6d61983e-e25b-4a1a-974f-f9bada2e5726",
+     "label": "A",
+     "content": "17",
+     "isCorrect": false
+    },
+    {
+     "id": "4a6cdf4f-16cf-495f-8fe9-4962f9d9ac90",
+     "label": "B",
+     "content": "18",
+     "isCorrect": true
+    },
+    {
+     "id": "544f7c9c-62bd-42db-ae54-db6cb2ada1e4",
+     "label": "C",
+     "content": "19",
+     "isCorrect": false
+    },
+    {
+     "id": "126549aa-e485-44ba-ac66-1097b4e607ce",
+     "label": "D",
+     "content": "20",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "e4dfc045-8074-4c8d-acc3-914d5f131fa2",
+   "stem": "The table shows the number of visitors to a museum on three days.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Day</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Visitors</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Friday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">220</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Saturday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">410</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Sunday</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">365</td></tr></table>How many more visitors came on Saturday than on Friday?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-DI",
+   "skill_name": "Data Interpretation",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "bc6d384b-253e-4000-a182-553104cc0ab3",
+     "label": "A",
+     "content": "145",
+     "isCorrect": false
+    },
+    {
+     "id": "4c8b6fc0-ab5d-474b-9e42-73209be15229",
+     "label": "B",
+     "content": "165",
+     "isCorrect": false
+    },
+    {
+     "id": "caaf4dc4-fbc9-4815-8a1c-8aca671991b4",
+     "label": "C",
+     "content": "190",
+     "isCorrect": true
+    },
+    {
+     "id": "1d83aeda-5302-4a1b-942d-05fd74d222eb",
+     "label": "D",
+     "content": "215",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "de3547d7-c50c-45b0-934a-5f3a87e62079",
+   "stem": "A bag holds 4 red and 6 yellow tokens. One token is drawn at random. What is the probability that it is red?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-ST",
+   "skill_name": "Statistics and Probability",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "2bcdf313-2a5a-4d81-a6c3-3b85ad7a9745",
+     "label": "A",
+     "content": "\\(\\frac{2}{5}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "0652571f-9d7e-4713-9281-915ec3a08369",
+     "label": "B",
+     "content": "\\(\\frac{3}{5}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "4f7155ad-4faf-4a93-a63d-1f3ec5a2aae2",
+     "label": "C",
+     "content": "\\(\\frac{2}{3}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "ff7da5f0-8fbb-4dea-abfc-20b9216fbff5",
+     "label": "D",
+     "content": "\\(\\frac{1}{4}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c890b20e-5160-4d3c-877d-f00f0c08d9f6",
+   "stem": "A triangular sail has two corners measuring 55&deg; and 65&deg;. What is the measure, in degrees, of the third corner?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "EASY",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-LA",
+   "skill_name": "Lines, Angles, and Triangles",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": [
+    {
+     "id": "9553332a-8182-4f7f-8bff-b8fa0bbe31e2",
+     "label": "A",
+     "content": "50",
+     "isCorrect": false
+    },
+    {
+     "id": "e9ec3010-1fd7-411b-972d-8d951574b798",
+     "label": "B",
+     "content": "60",
+     "isCorrect": true
+    },
+    {
+     "id": "697a0a7e-716c-4283-9a5d-110368182c3e",
+     "label": "C",
+     "content": "70",
+     "isCorrect": false
+    },
+    {
+     "id": "9de0bc63-c7a3-47b5-9744-25fa40ddf8ac",
+     "label": "D",
+     "content": "120",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "0733a077-2e86-4db2-a3ff-2b2d63a804a6",
+   "stem": "A rectangle has a length of 14 centimetres and a width of 9 centimetres. What is its area, in square centimetres?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "EASY",
+   "correctAnswerFR": "[\"126\"]",
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-AV",
+   "skill_name": "Area and Volume",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "242a8033-7435-4bf6-90c7-491dfc9fe001",
+   "stem": "A circle has a radius of 7 units. What is its circumference, in terms of \\(\\pi\\)? (Enter the coefficient of \\(\\pi\\).)",
+   "type": "FREE_RESPONSE",
+   "difficulty": "EASY",
+   "correctAnswerFR": "[\"14\"]",
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-AV",
+   "skill_name": "Area and Volume",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "2464c0e8-2d6e-4314-a3a6-8841811eae8a",
+   "stem": "In right triangle JKL, angle L is a right angle, \\(JL=6\\) and \\(KL=8\\). What is the length of JK?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "EASY",
+   "correctAnswerFR": "[\"10\"]",
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-TR",
+   "skill_name": "Trigonometry",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "EASY",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "c0f7884c-3e01-4520-8b4d-add49b16dc71",
+   "stem": "\\[px+qy=14\\]\\[3x+2y=7\\]In the given system, p and q are constants. If the system has no solution, which of the following must be true?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 1,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "af9980ae-160f-4daf-a3fa-ab1598a7cbb9",
+     "label": "A",
+     "content": "\\(2p=3q\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "cd57ad2a-48a2-40d6-928f-ea72a81e965b",
+     "label": "B",
+     "content": "\\(2p-3q=0\\) and \\(p\\ne 6\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "131a35df-48a4-401d-bb8b-230ccb5667ab",
+     "label": "C",
+     "content": "\\(p=6\\) and \\(q=4\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "8ec44b11-fa64-4c5f-8372-ee1a91598bfa",
+     "label": "D",
+     "content": "\\(3p=2q\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "d7002f7c-b386-4347-92fe-027198eed971",
+   "stem": "Line m has equation \\(4x-3y=12\\). Line n is perpendicular to m and passes through the point \\((8, -1)\\). What is the y-intercept of line n?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 2,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "c63ceb60-c49c-4bed-8a0d-5d4d97180767",
+     "label": "A",
+     "content": "-7",
+     "isCorrect": false
+    },
+    {
+     "id": "a9790039-19c5-411b-a7c0-3aebc8167c6e",
+     "label": "B",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "id": "933ea8c6-f889-4fed-8bbf-8e5e768788f7",
+     "label": "C",
+     "content": "5",
+     "isCorrect": true
+    },
+    {
+     "id": "97b6ad2d-f1b5-4598-a50f-307d595c0940",
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "50e9661f-4f03-48f4-b157-a7539a5d9a4c",
+   "stem": "A worker earns $16 per hour for the first 38 hours in a week and $24 per hour for each additional hour. In a week when the worker earned at least $704, what is the least number of hours worked?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 3,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LI",
+   "skill_name": "Linear Inequalities",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "9fdb18e5-5ea9-49f6-a760-5ac4567430cd",
+     "label": "A",
+     "content": "40",
+     "isCorrect": false
+    },
+    {
+     "id": "bf7c3f78-72f8-4cff-a13d-4adde29d0606",
+     "label": "B",
+     "content": "42",
+     "isCorrect": true
+    },
+    {
+     "id": "42cf8919-967d-4a28-a538-78411d19ff4b",
+     "label": "C",
+     "content": "44",
+     "isCorrect": false
+    },
+    {
+     "id": "3f36d602-6744-4868-80a5-ded3454119ff",
+     "label": "D",
+     "content": "46",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "746d01f2-facf-4ac9-af81-fbc6c3d5e6d7",
+   "stem": "\\[3x^{2}+bx+12=0\\]In the given equation, b is a constant. For how many values of b does the equation have exactly one real solution?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 4,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "341b15a7-e8c6-49d1-8bde-b458f48b81c7",
+     "label": "A",
+     "content": "Zero",
+     "isCorrect": false
+    },
+    {
+     "id": "6d805249-96d5-43dd-9809-26ee1cd06b35",
+     "label": "B",
+     "content": "Exactly one",
+     "isCorrect": false
+    },
+    {
+     "id": "6f6a6f1f-e42b-4b37-9646-ed8e9ff8ce38",
+     "label": "C",
+     "content": "Exactly two",
+     "isCorrect": true
+    },
+    {
+     "id": "2abce67f-c97e-403d-8202-702768944137",
+     "label": "D",
+     "content": "Infinitely many",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "a6b98d0e-7551-4089-8b70-d59f53788c41",
+   "stem": "A parabola has its vertex at \\((4, 7)\\) and passes through \\((2, 19)\\). What is the y-coordinate of the point on the parabola whose x-coordinate is 8?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 5,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "ee73136b-d8b2-4386-9b81-996bf50610c4",
+     "label": "A",
+     "content": "31",
+     "isCorrect": false
+    },
+    {
+     "id": "ce7dc53a-1c1c-4258-a35b-9ed4bf0665ba",
+     "label": "B",
+     "content": "43",
+     "isCorrect": false
+    },
+    {
+     "id": "45a907ea-b82c-4de9-bd14-1041378016f4",
+     "label": "C",
+     "content": "55",
+     "isCorrect": true
+    },
+    {
+     "id": "c31dec03-002d-48a1-9255-60adb538478d",
+     "label": "D",
+     "content": "67",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5b2e882b-0d4d-4469-b13e-279e917d411f",
+   "stem": "The table gives values of the function f.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">3</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">4</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">f(x)</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr></table>The function g is defined by \\(g(x)=x^{2}+2\\). What is the value of \\(g(f(3))\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 6,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "ce63b62b-2023-4dfe-ae90-6f4d4bd896c5",
+     "label": "A",
+     "content": "26",
+     "isCorrect": false
+    },
+    {
+     "id": "af0637fa-450f-4ecd-80f9-b7d9fb5222c8",
+     "label": "B",
+     "content": "38",
+     "isCorrect": false
+    },
+    {
+     "id": "dc0845e2-96a9-4ae5-8203-6a9a082ed645",
+     "label": "C",
+     "content": "64",
+     "isCorrect": false
+    },
+    {
+     "id": "e0ad9c75-24ee-455a-ae27-a0daa14fddfe",
+     "label": "D",
+     "content": "123",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "5039b56c-f0c2-4b88-ae2a-ec4ec882d927",
+   "stem": "A support wire of length \\(x+1\\) metres is replaced by one of length \\(\\sqrt{3x+13}\\) metres, and the two lengths turn out to be equal. Given that the length is positive, what is the value of x?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 7,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "60761891-40a0-4f72-b190-37b28519ad5e",
+     "label": "A",
+     "content": "-4",
+     "isCorrect": false
+    },
+    {
+     "id": "e8b93699-8653-4290-8240-87a1872dbbbb",
+     "label": "B",
+     "content": "-1",
+     "isCorrect": false
+    },
+    {
+     "id": "f376e121-ee87-40e3-9eaa-57247cc690cd",
+     "label": "C",
+     "content": "3",
+     "isCorrect": false
+    },
+    {
+     "id": "e30e9b42-73ff-4fde-bc86-7c36180cbb6d",
+     "label": "D",
+     "content": "4",
+     "isCorrect": true
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "ca930f56-0d19-4baf-b668-1840a6cd9729",
+   "stem": "A cube has a volume of \\(\\frac{8x^{9}}{27}\\) cubic units, where \\(x>0\\). What is the area, in square units, of one of its faces?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 8,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-EQ",
+   "skill_name": "Equivalent Expressions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "6bc8fe68-34c3-480a-843c-c4766dd254d8",
+     "label": "A",
+     "content": "\\(\\frac{4x^{6}}{9}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "60acecae-7ce1-4441-bbef-7ea51e6f55d1",
+     "label": "B",
+     "content": "\\(\\frac{4x^{6}}{27}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "dafc82d5-accd-4703-aef5-6c939144e0ad",
+     "label": "C",
+     "content": "\\(\\frac{16x^{6}}{9}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "025744da-49c5-4502-acd4-b14fff4534f0",
+     "label": "D",
+     "content": "\\(\\frac{4x^{27}}{9}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "1278e330-5712-44a8-995b-c7bbdb8c89d2",
+   "stem": "A biologist models a population as \\(P(t)=k\\left(\\frac{3}{2}\\right)^{t}\\), where t is measured in years and k is a constant. The population two years from now will exceed today's population by 25. What is the value of k?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 9,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NF",
+   "skill_name": "Nonlinear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "47f9e16b-af49-4f30-9574-dc4b38e13a4b",
+     "label": "A",
+     "content": "16",
+     "isCorrect": false
+    },
+    {
+     "id": "64e72eaa-474a-4092-b62b-250ce8cf7ba1",
+     "label": "B",
+     "content": "20",
+     "isCorrect": true
+    },
+    {
+     "id": "1053e4f7-ef6b-4918-8525-4bcde4bcc41d",
+     "label": "C",
+     "content": "25",
+     "isCorrect": false
+    },
+    {
+     "id": "c03891dd-c0aa-4c08-b33d-a3b0a3bfcc7b",
+     "label": "D",
+     "content": "36",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "6363d5de-c836-4b43-bfc0-811401a5d3d4",
+   "stem": "A circular running track is described in the xy-plane by \\[x^{2}+y^{2}-10x+8y=-16\\]with distances measured in metres. How many metres apart are the two points of the track that are farthest from each other?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 10,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "cf1165ae-4c30-4ceb-959e-1add23bbffe5",
+     "label": "A",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "id": "94e00250-fe26-4788-be3e-d3fa81bc3625",
+     "label": "B",
+     "content": "8",
+     "isCorrect": false
+    },
+    {
+     "id": "0b769415-0136-4286-af53-9c1f483c9274",
+     "label": "C",
+     "content": "10",
+     "isCorrect": true
+    },
+    {
+     "id": "afe0a66b-a794-482a-81cc-159f618ef32e",
+     "label": "D",
+     "content": "\\(2\\sqrt{41}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "9e438b6d-25d5-474d-b739-15bf2604b257",
+   "stem": "A chemist mixes a 15% saline solution with a 40% saline solution to obtain 20 litres of a 24% solution. How many litres of the 40% solution are used?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 11,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "a8eb0c31-ae45-49f8-a268-8b728802424b",
+     "label": "A",
+     "content": "6.4",
+     "isCorrect": false
+    },
+    {
+     "id": "e7c34628-679e-4d07-acc7-dc99d3f8cfad",
+     "label": "B",
+     "content": "7.2",
+     "isCorrect": true
+    },
+    {
+     "id": "d421eee7-9386-4670-95e8-d05dd5b36e6d",
+     "label": "C",
+     "content": "8.0",
+     "isCorrect": false
+    },
+    {
+     "id": "34abb10e-c328-4bca-9de5-0bd133c33443",
+     "label": "D",
+     "content": "12.8",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "a229a9d5-7916-4572-854b-c34db41612f7",
+   "stem": "A data set of 12 values has a mean of 31. Two values, 18 and 24, are removed. What is the mean of the remaining 10 values?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 12,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-ST",
+   "skill_name": "Statistics and Probability",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "b2baa431-0121-413f-ab6b-c5044cbc6147",
+     "label": "A",
+     "content": "32.0",
+     "isCorrect": false
+    },
+    {
+     "id": "50e45611-53bf-4d68-9b97-3ec56e9e84ce",
+     "label": "B",
+     "content": "33.0",
+     "isCorrect": true
+    },
+    {
+     "id": "71d72659-c753-4644-ac24-9b7c49f808ca",
+     "label": "C",
+     "content": "34.0",
+     "isCorrect": false
+    },
+    {
+     "id": "92314334-8824-49fc-9a05-274701519f72",
+     "label": "D",
+     "content": "35.0",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "266e5fe0-456c-4cc7-b5f5-d2fc48ea0593",
+   "stem": "A survey of 480 commuters is summarised below.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Drives</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Takes transit</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Under 30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">156</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30 or over</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">138</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">222</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">258</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">480</td></tr></table>A commuter who takes transit is selected at random. What is the probability that the commuter is under 30?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 13,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-ST",
+   "skill_name": "Statistics and Probability",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "84572be0-c729-43d4-84f9-f4172a2b3a8f",
+     "label": "A",
+     "content": "\\(\\frac{13}{40}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "e1b0e918-c448-4d1e-a37f-ff9268b04e8f",
+     "label": "B",
+     "content": "\\(\\frac{26}{43}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "24da8f76-3105-4c00-89ab-0174e0954fc9",
+     "label": "C",
+     "content": "\\(\\frac{13}{20}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "5aed0a3f-9b64-4b4d-8b44-10b2f7db001a",
+     "label": "D",
+     "content": "\\(\\frac{17}{43}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "90984e5b-8244-4dce-9a85-a5b1d6ad1aa7",
+   "stem": "A solution's concentration falls by 15% in the first hour and by a further 20% in the second hour. By what percent has the concentration fallen overall?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 14,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-RP",
+   "skill_name": "Ratios, Rates, and Proportions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "2d61bab9-777b-4302-82f2-3bde9aa81b56",
+     "label": "A",
+     "content": "31%",
+     "isCorrect": false
+    },
+    {
+     "id": "7bc5616f-7ef1-4d24-8f31-5ae3b1a49faa",
+     "label": "B",
+     "content": "32%",
+     "isCorrect": true
+    },
+    {
+     "id": "2e26a916-070d-4645-aaab-615a40c167ff",
+     "label": "C",
+     "content": "35%",
+     "isCorrect": false
+    },
+    {
+     "id": "d898fa6c-99bc-440a-aa0c-5cf6e458311a",
+     "label": "D",
+     "content": "37%",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "c1240074-4bea-431d-b0a3-d30446b2dc2a",
+   "stem": "A researcher reports the mean of 25 measurements as 14.8. A 26th measurement is then added, and the mean of all 26 becomes 15.0. What is the 26th measurement?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 15,
+   "imageUrl": null,
+   "domain": "PSDA",
+   "subject": "MATH",
+   "skill": "PSDA-DI",
+   "skill_name": "Data Interpretation",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "7d558658-9732-4b84-a951-2a115b1cc73d",
+     "label": "A",
+     "content": "18.0",
+     "isCorrect": false
+    },
+    {
+     "id": "428cd071-5422-4698-956b-d78f4ce7937d",
+     "label": "B",
+     "content": "19.0",
+     "isCorrect": false
+    },
+    {
+     "id": "a26412b8-0367-4166-ad84-e9b14fe87471",
+     "label": "C",
+     "content": "20.0",
+     "isCorrect": true
+    },
+    {
+     "id": "f4b37909-6c66-4ebc-bdf2-acb6a93e6ad9",
+     "label": "D",
+     "content": "21.0",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "b4caf4fd-aaaf-4b47-86da-b24e307ec4de",
+   "stem": "In triangle PQR, \\(PQ=15\\), \\(PR=20\\) and the measure of angle P is 90&deg;. Point S lies on QR so that PS is perpendicular to QR. What is the length of PS?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 16,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-LA",
+   "skill_name": "Lines, Angles, and Triangles",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "e14db634-4874-4135-8bff-eec2d3ba24f8",
+     "label": "A",
+     "content": "10",
+     "isCorrect": false
+    },
+    {
+     "id": "e771c25a-832f-4695-9c56-900b57939cf2",
+     "label": "B",
+     "content": "12",
+     "isCorrect": true
+    },
+    {
+     "id": "6aa67219-c6ff-436f-808c-71ac96124f94",
+     "label": "C",
+     "content": "\\(\\frac{60}{7}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "8896a288-07e5-4322-857a-7b19443ac8c1",
+     "label": "D",
+     "content": "16",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "e5be288c-5c2c-4b94-a81b-c7da37bf45c2",
+   "stem": "A sphere has the same volume as a cylinder of radius 4 and height 18. What is the radius of the sphere?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 17,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-AV",
+   "skill_name": "Area and Volume",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "bb8fc6a1-c496-48be-acda-db8024fd8ab8",
+     "label": "A",
+     "content": "4",
+     "isCorrect": false
+    },
+    {
+     "id": "545e86d4-0322-4bf7-a3fa-4cebb74ae266",
+     "label": "B",
+     "content": "5",
+     "isCorrect": false
+    },
+    {
+     "id": "d9cd15f9-02e7-4714-b4b2-054549432915",
+     "label": "C",
+     "content": "6",
+     "isCorrect": true
+    },
+    {
+     "id": "5a88d45d-0dfe-441c-a498-f7100065748c",
+     "label": "D",
+     "content": "9",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "9d9978cb-024a-4512-ad9d-0c18947deda4",
+   "stem": "In a right triangle, \\(\\cos x^{\\circ}=\\frac{8}{17}\\). What is the value of \\(\\sin x^{\\circ}\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 18,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-TR",
+   "skill_name": "Trigonometry",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "3ff88cae-2265-4e62-9c46-5c547c68872d",
+     "label": "A",
+     "content": "\\(\\frac{15}{17}\\)",
+     "isCorrect": true
+    },
+    {
+     "id": "286bf5b3-36b0-469e-b591-f0abde96c1fc",
+     "label": "B",
+     "content": "\\(\\frac{8}{15}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "e903b31e-6b68-4a8e-9fd6-8ea6d2396732",
+     "label": "C",
+     "content": "\\(\\frac{15}{8}\\)",
+     "isCorrect": false
+    },
+    {
+     "id": "ed42a34f-372d-46ed-9881-3ab0311a62a8",
+     "label": "D",
+     "content": "\\(\\frac{17}{15}\\)",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "7fa83ef5-f12b-4212-aef0-98251baa84d4",
+   "stem": "The function f is linear and satisfies \\(f(x+4)-f(x)=18\\) for all x. If \\(f(1)=5\\), what is the value of \\(f(9)\\)?",
+   "type": "MULTIPLE_CHOICE",
+   "difficulty": "HARD",
+   "correctAnswerFR": null,
+   "q_order": 19,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LF",
+   "skill_name": "Linear Functions",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": [
+    {
+     "id": "b537f515-ac86-4bd1-a043-99377b692616",
+     "label": "A",
+     "content": "23",
+     "isCorrect": false
+    },
+    {
+     "id": "9b071eb4-fb87-4dc2-b50e-74d8502f282a",
+     "label": "B",
+     "content": "36",
+     "isCorrect": false
+    },
+    {
+     "id": "377bef48-d03b-40c4-8e25-2a2f48019f2c",
+     "label": "C",
+     "content": "41",
+     "isCorrect": true
+    },
+    {
+     "id": "9241f927-c89d-4e06-a0d7-f4712ed98409",
+     "label": "D",
+     "content": "45",
+     "isCorrect": false
+    }
+   ],
+   "has_explanation": 0
+  },
+  {
+   "id": "0764a546-edf1-40bd-b25c-0245c32ba374",
+   "stem": "A rectangle's length and width, in centimetres, are the two solutions of \\(3x^{2}-14x+8=0\\). What is the area of the rectangle, in square centimetres? (Express your answer as a fraction or a decimal.)",
+   "type": "FREE_RESPONSE",
+   "difficulty": "HARD",
+   "correctAnswerFR": "[\"8/3\"]",
+   "q_order": 20,
+   "imageUrl": null,
+   "domain": "ADV",
+   "subject": "MATH",
+   "skill": "ADV-NE",
+   "skill_name": "Nonlinear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "a4a76735-0ac4-411d-aec5-0b50e5c2106d",
+   "stem": "At a fundraiser, tickets cost $12 for adults and $7 for children. A total of 260 tickets were sold for $2,470. How many child tickets were sold?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "HARD",
+   "correctAnswerFR": "[\"130\"]",
+   "q_order": 21,
+   "imageUrl": null,
+   "domain": "ALG",
+   "subject": "MATH",
+   "skill": "ALG-LE",
+   "skill_name": "Linear Equations and Systems",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  },
+  {
+   "id": "69136dcf-1eba-483a-9159-855542cac1ff",
+   "stem": "A conical paper cup has a radius of 6 centimetres and holds \\(96\\pi\\) cubic centimetres of water when full. How deep, in centimetres, is the cup?",
+   "type": "FREE_RESPONSE",
+   "difficulty": "HARD",
+   "correctAnswerFR": "[\"8\"]",
+   "q_order": 22,
+   "imageUrl": null,
+   "domain": "GT",
+   "subject": "MATH",
+   "skill": "GT-AV",
+   "skill_name": "Area and Volume",
+   "m_subject": "MATH",
+   "m_order": 2,
+   "m_difficulty": "HARD",
+   "passage": null,
+   "choices": null,
+   "has_explanation": 0
+  }
+ ]
+}

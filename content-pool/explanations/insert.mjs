@@ -17,6 +17,11 @@ import { checkOne } from "./verify.mjs";
 
 const DIR = new URL(".", import.meta.url).pathname;
 const APPLY = process.argv.includes("--apply");
+// `--only <prefix>` limits the run to one batch's agents. Without it every
+// batch is re-upserted, which is harmless but needlessly slow once several
+// batches exist.
+const onlyIdx = process.argv.indexOf("--only");
+const ONLY = onlyIdx === -1 ? null : process.argv[onlyIdx + 1];
 const sql = neon(process.env.PROD_URL);
 
 /** Assemble the student-facing HTML from the authored parts. */
@@ -33,6 +38,7 @@ function toHtml(q, e) {
 
 let ready = [], rejected = 0;
 for (const name of agentNames()) {
+  if (ONLY && !name.startsWith(ONLY)) continue;
   const slice = JSON.parse(readFileSync(`${DIR}/out/${name}.slice.json`, "utf8"));
   const byId = new Map(slice.map((q) => [q.id, q]));
   for (const e of readJsonl(`${DIR}/out/${name}.jsonl`)) {
