@@ -145,12 +145,56 @@ const config: Config = {
           from: { opacity: "0", transform: "translateY(8px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        // Entrance with a little overshoot — the difference between a card
+        // that appears and one that arrives.
+        "pop-in": {
+          "0%": { opacity: "0", transform: "translateY(12px) scale(0.97)" },
+          "60%": { opacity: "1", transform: "translateY(-2px) scale(1.01)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        // For a value that just changed — a coin balance, a streak count.
+        "pop": {
+          "0%": { transform: "scale(1)" },
+          "40%": { transform: "scale(1.18)" },
+          "100%": { transform: "scale(1)" },
+        },
+        // Loading placeholders, so a slow page reads as working rather than stuck.
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        // A slow drift for decorative background blobs.
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        // Attention on something earned, without the jitter of a bounce.
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--primary) / 0.35)" },
+          "50%": { boxShadow: "0 0 0 10px hsl(var(--primary) / 0)" },
+        },
+        // Streak flame.
+        flicker: {
+          "0%, 100%": { transform: "scale(1) rotate(0deg)", opacity: "1" },
+          "50%": { transform: "scale(1.12) rotate(-4deg)", opacity: "0.9" },
+        },
+        // Slow hue drift across a gradient, for hero surfaces only.
+        "gradient-pan": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.4s ease-out",
         "fade-up": "fade-up 0.5s ease-out",
+        "pop-in": "pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both",
+        pop: "pop 0.35s ease-out",
+        shimmer: "shimmer 1.6s infinite",
+        float: "float 6s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-out infinite",
+        flicker: "flicker 2.2s ease-in-out infinite",
+        "gradient-pan": "gradient-pan 12s ease infinite",
       },
     },
   },

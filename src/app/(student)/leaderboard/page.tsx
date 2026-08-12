@@ -49,7 +49,7 @@ export default async function LeaderboardPage({
             key={k}
             href={`/leaderboard?board=${k}`}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm transition-colors",
+              "pressable inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm transition-colors",
               k === kind
                 ? "border-transparent bg-primary text-primary-foreground"
                 : "border-border hover:bg-secondary"
@@ -69,7 +69,7 @@ export default async function LeaderboardPage({
         <CardContent className="p-0">
           {board.rows.length ? (
             <>
-              <ol>
+              <ol className="stagger">
                 {board.rows.map((row) => (
                   <Row key={row.userId} row={row} unit={labels.unit} />
                 ))}

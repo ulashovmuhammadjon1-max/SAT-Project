@@ -62,13 +62,13 @@ export function StudentSidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                "group flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium transition-all duration-200",
                 active
                   ? "bg-primary text-primary-foreground shadow-soft"
-                  : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                  : "text-muted-foreground hover:translate-x-0.5 hover:bg-secondary hover:text-foreground"
               )}
             >
-              <item.icon className="h-4 w-4" />
+              <item.icon className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
               {item.label}
             </Link>
           );

@@ -51,8 +51,10 @@ export function AchievementMedal({
   return (
     <span
       className={cn(
-        "flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-1",
-        a.unlocked ? TIER_STYLES[a.tier] : "bg-muted text-muted-foreground ring-border",
+        "flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-1 transition-transform duration-300",
+        a.unlocked
+          ? `${TIER_STYLES[a.tier]} group-hover/tile:scale-110`
+          : "bg-muted text-muted-foreground ring-border",
         className
       )}
     >
@@ -63,7 +65,7 @@ export function AchievementMedal({
 
 export function AchievementTile({ achievement: a }: { achievement: EarnedAchievement }) {
   return (
-    <Card className={cn(!a.unlocked && "opacity-75")}>
+    <Card className={cn("group/tile lift", !a.unlocked && "opacity-75 hover:opacity-100")}>
       <CardContent className="flex gap-3 p-4">
         <AchievementMedal achievement={a} />
 

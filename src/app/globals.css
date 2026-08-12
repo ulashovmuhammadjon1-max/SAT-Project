@@ -296,3 +296,75 @@ mark.sat-highlight.is-active {
 .exam-passage {
   overflow-wrap: break-word;
 }
+
+/* ---------------------------------------------------------------------------
+   Motion
+   --------------------------------------------------------------------------- */
+
+@layer utilities {
+  /* Stagger children of a revealed group. Applied as a delay so a grid of
+     cards arrives in sequence rather than all at once — the thing that makes
+     an interface feel alive rather than merely rendered. */
+  .stagger > * {
+    animation: pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .stagger > *:nth-child(1)  { animation-delay: 0.00s; }
+  .stagger > *:nth-child(2)  { animation-delay: 0.05s; }
+  .stagger > *:nth-child(3)  { animation-delay: 0.10s; }
+  .stagger > *:nth-child(4)  { animation-delay: 0.15s; }
+  .stagger > *:nth-child(5)  { animation-delay: 0.20s; }
+  .stagger > *:nth-child(6)  { animation-delay: 0.25s; }
+  .stagger > *:nth-child(7)  { animation-delay: 0.30s; }
+  .stagger > *:nth-child(8)  { animation-delay: 0.35s; }
+  .stagger > *:nth-child(n + 9) { animation-delay: 0.4s; }
+
+  /* Interactive lift. Transform and shadow only — never width/height/top,
+     which force layout on every frame. */
+  .lift {
+    @apply transition-all duration-200 ease-out;
+  }
+  .lift:hover {
+    @apply -translate-y-0.5 shadow-lg;
+  }
+  .lift:active {
+    @apply translate-y-0 shadow-sm;
+  }
+
+  /* Press feedback on anything tappable. Phones have no hover, so the press
+     state is the only affordance a thumb ever gets. */
+  .pressable {
+    @apply transition-transform duration-100 active:scale-[0.97];
+  }
+
+  .shimmer-bg {
+    @apply relative overflow-hidden;
+  }
+  .shimmer-bg::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--foreground) / 0.06),
+      transparent
+    );
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+/*
+  Honour the system setting. Vestibular disorders make large motion genuinely
+  unpleasant, and this is a site students sit with for hours. Everything above
+  degrades to an instant state change rather than being disabled — the
+  interface still works, it just stops moving.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

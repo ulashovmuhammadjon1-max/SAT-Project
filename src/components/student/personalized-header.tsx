@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Flame, Target, TrendingUp } from "lucide-reac
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { GRADE_LABELS, SECTION_LABELS } from "@/lib/validations/onboarding";
+import { AuroraBackdrop } from "@/components/shared/motion";
 
 export interface PersonalizedHeaderProps {
   firstName: string;
@@ -53,7 +54,8 @@ export function PersonalizedHeader({
   const gapToTarget = targetScore !== null && predictedScore !== null ? targetScore - predictedScore : null;
 
   return (
-    <div className="space-y-5">
+    <div className="relative space-y-5">
+      <AuroraBackdrop className="-z-10 opacity-70" />
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -95,9 +97,9 @@ export function PersonalizedHeader({
         </div>
       )}
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {/* Target vs predicted */}
-        <div className="rounded-xl border border-border bg-card p-5 shadow-soft">
+        <div className="lift rounded-2xl border border-border bg-card p-5 shadow-soft">
           <div className="flex items-center gap-2 text-muted-foreground">
             <Target className="h-4 w-4" />
             <p className="text-xs font-medium uppercase tracking-wide">Target score</p>
@@ -118,7 +120,7 @@ export function PersonalizedHeader({
         </div>
 
         {/* Predicted */}
-        <div className="rounded-xl border border-border bg-card p-5 shadow-soft">
+        <div className="lift rounded-2xl border border-border bg-card p-5 shadow-soft">
           <div className="flex items-center gap-2 text-muted-foreground">
             <TrendingUp className="h-4 w-4" />
             <p className="text-xs font-medium uppercase tracking-wide">Predicted score</p>
@@ -132,7 +134,7 @@ export function PersonalizedHeader({
         </div>
 
         {/* Exam countdown */}
-        <div className="rounded-xl border border-border bg-card p-5 shadow-soft">
+        <div className="lift rounded-2xl border border-border bg-card p-5 shadow-soft">
           <div className="flex items-center gap-2 text-muted-foreground">
             <CalendarDays className="h-4 w-4" />
             <p className="text-xs font-medium uppercase tracking-wide">Your SAT</p>
@@ -158,7 +160,7 @@ export function PersonalizedHeader({
         </div>
 
         {/* Today's goal */}
-        <div className="rounded-xl border border-border bg-card p-5 shadow-soft">
+        <div className="lift rounded-2xl border border-border bg-card p-5 shadow-soft">
           <div className="flex items-center gap-2 text-muted-foreground">
             <Flame className="h-4 w-4" />
             <p className="text-xs font-medium uppercase tracking-wide">Today&apos;s goal</p>

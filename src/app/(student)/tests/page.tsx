@@ -40,12 +40,12 @@ export default async function TestsPage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tests.map((test) => {
           const questionCount = test.modules.reduce((sum, m) => sum + m._count.questions, 0);
           const totalMinutes = test.modules.reduce((sum, m) => sum + m.timeLimitMinutes, 0);
           return (
-            <Card key={test.id}>
+            <Card key={test.id} className="lift">
               <CardHeader>
                 <CardTitle className="text-base">{test.title}</CardTitle>
               </CardHeader>
