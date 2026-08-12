@@ -36,7 +36,40 @@ from the JSONL on every run, and would erase anything hand-written in it.
   `3π (approx)`. Choice A is `\(3π/2\)` — raw glyph and slash fraction inside
   a math span.
 
-## The same question twice in one module
+## The same question in two different tests
+
+A full exact-duplicate scan over all 4,557 published questions (signature =
+passage + stem, so a reordered choice set still matches) found **14 duplicate
+groups covering 28 questions**, and they are overwhelmingly one pair:
+
+| tests | shared items |
+|---|---|
+| **Test 6 + Test 7** | **11** |
+| Test 4 + Test 5 | 1 |
+| Test 5 + Test 6 | 1 |
+| Test 4 + Test 6 | 1 |
+
+Test 7 recycles eleven R&W items from Test 6 verbatim. A student who sits both
+meets the same question twice. Worse, **five of the eleven land in a different
+difficulty branch** — an Easy-branch student in one test meets the identical
+item on the Hard branch in the other:
+
+- Test 6 M1 q20 → Test 7 M2 **Hard** q21
+- Test 6 M1 q24 → Test 7 M2 **Easy** q22
+- Test 6 M2 Easy q4 → Test 7 M2 **Hard** q2
+- Test 6 M2 Easy q26 → Test 7 M2 **Hard** q26
+- Test 6 M2 Hard q26 → Test 7 M2 **Easy** q26
+
+The remaining six sit in comparable positions: M1 q1→q2, M1 q18→q17,
+M2E q5→M2E q1, M2H q21→q20, M2H q22→q24, M2H q23→q22.
+
+## Near-duplicates within one module
+
+The scan above matches only *exact* passage+stem pairs and returns zero
+within-test hits. These two were found by agents reading the questions, and
+differ by a few words in the passage, so a strict signature misses them:
+
+
 
 - **Test 3 · R&W M1 q9 and q10** — identical stems (similarity 1.00).
 - **Test 4 · R&W M2 Hard q9 and q10** — identical lake-ice table and stem.

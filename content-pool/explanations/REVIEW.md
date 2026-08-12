@@ -1,6 +1,6 @@
 # Answer-key review list
 
-51 questions where an agent's independent answer disagreed with the live key.
+53 questions where an agent's independent answer disagreed with the live key.
 **None of these were inserted** — the verifier holds a mismatch back rather than
 shipping an explanation that argues against the stored answer.
 
@@ -30,6 +30,14 @@ same question, and Test 4 M1 q16 is keyed to a sentence fragment.
 - **key:** C. It explains how one tribal cultural center differs from other tribal cultural centers.
 - **agent:** D. It provides a basic description of a particular tribal cultural center.
 - The underlined sentence comes second, right after the center is named, and it does two plain things: it says the exhibits are designed from traditional knowledge and that the audience is the tribes' own citizens. That is groundwork the rest of the text builds on when it compares the Comanche center and then the non-Indigenous museums. Its job is to describe the center, not to evaluate or contrast it.
+
+
+## Test 10
+
+### M2 Easy q14 · Inferences · `e09b3da7`
+- **key:** A. do not live anything like as long as those at the treeline.
+- **agent:** D. produce rings that are easier for researchers to count.
+- The text supplies one measurable fact about the treeline trees' rings — they can be thinner than a sheet of paper — and then says the lower-slope trees of the same species grow far faster. Faster growth means more wood laid down each year, so wider rings. The completion that follows from what is actually stated is that their rings are easier to distinguish and count.
 
 
 ## Test 2
@@ -274,3 +282,11 @@ same question, and Test 4 M1 q16 is keyed to a sentence fragment.
 - **key:** B. A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.
 - **agent:** D. Quartz can leave visible scratches on talc, which means that quartz is harder than talc.
 - The goal names the two minerals to compare: talc and quartz. This option puts both in one sentence and states the comparison directly — quartz scratches talc, so quartz is harder — which follows from the notes, since quartz is a 7 and talc is a 1 and higher numbers scratch lower ones.
+
+
+## Test 7
+
+### M2 Hard q10 · Command of Evidence · `97278a56`
+- **key:** B. 81% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 72% of its diet with individual 12&rsquo;s diet.
+- **agent:** C. 81% of its diet with individual 9&rsquo;s diet, whereas individual 12&rsquo;s mother shared approximately 20% of its diet with individual 12&rsquo;s diet.
+- The claim is that immature females' diets overlap with their mothers' more than immature males' diets do, so the example needs one high overlap figure and one clearly lower one. A mother-offspring overlap of about 81% set against one of about 20% shows that gap plainly, matching the order in which the passage names females before males.
