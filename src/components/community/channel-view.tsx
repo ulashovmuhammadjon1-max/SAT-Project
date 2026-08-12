@@ -1,43 +1,26 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CornerUpLeft, FileText, Loader2, Shield, Trash2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Composer, type ReplyTarget } from "@/components/community/composer";
-import { MessageText } from "@/components/community/message-text";
-import { deleteMessage, listMessages, markChannelRead } from "@/server/actions/student/community";
+import { MessageRow } from "@/components/community/message-row";
+import {
+  deleteMessage,
+  editMessage,
+  listMessages,
+  markChannelRead,
+  toggleReaction,
+} from "@/server/actions/student/community";
 import type { CommunityMessageView } from "@/lib/community/types";
 import { cn } from "@/lib/utils";
 
 /** How often to pull new messages while the tab is visible. */
 const POLL_MS = 8000;
 
-function initials(name: string): string {
-  return name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((p) => p[0])
-    .join("")
-    .toUpperCase();
-}
 
-function timeLabel(iso: string): string {
-  const d = new Date(iso);
-  const today = new Date();
-  const sameDay = d.toDateString() === today.toDateString();
-  return sameDay
-    ? d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })
-    : d.toLocaleDateString(undefined, { day: "numeric", month: "short" }) +
-        " " +
-        d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
-}
 
-function fileSize(bytes: number): string {
-  if (bytes < 1024) return `${bytes} B`;
-  if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
-  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-}
 
 export function ChannelView({
   channelSlug,
@@ -82,8 +65,22 @@ export function ChannelView({
       // and the reader's scroll position is untouched.
       const sameLength = prev.length === fresh.length;
       const sameTail = sameLength && prev[prev.length - 1]?.id === fresh[fresh.length - 1]?.id;
+      // Reactions and edits change nothing about length or tail id, so they
+      // have to be compared explicitly or a new reaction would never appear.
       const sameEdits =
-        sameTail && prev.every((m, i) => m.deleted === fresh[i].deleted);
+        sameTail &&
+        prev.every(
+          (m, i) =>
+            m.deleted === fresh[i].deleted &&
+            m.editedAt === fresh[i].editedAt &&
+            m.reactions.length === fresh[i].reactions.length &&
+            m.reactions.every(
+              (r, j) =>
+                r.emoji === fresh[i].reactions[j]?.emoji &&
+                r.count === fresh[i].reactions[j]?.count &&
+                r.mine === fresh[i].reactions[j]?.mine
+            )
+        );
       return sameEdits ? prev : fresh;
     });
     setHasMore(more);
@@ -125,6 +122,43 @@ export function ChannelView({
     }
   }
 
+  async function edit(id: string, body: string) {
+    const result = await editMessage(id, body);
+    if (result.ok) {
+      setMessages((prev) =>
+        prev.map((m) => (m.id === id ? { ...m, body, editedAt: new Date().toISOString() } : m))
+      );
+    }
+  }
+
+  /**
+   * Toggle a reaction, updating the pill immediately.
+   *
+   * Optimistic because a reaction is the lowest-stakes action in the app and a
+   * pill that waits for a round trip feels broken. A refresh follows so the
+   * count settles to the truth if someone else reacted in the same moment.
+   */
+  function react(id: string, emoji: string) {
+    setMessages((prev) =>
+      prev.map((m) => {
+        if (m.id !== id) return m;
+        const existing = m.reactions.find((r) => r.emoji === emoji);
+        if (!existing) return { ...m, reactions: [...m.reactions, { emoji, count: 1, mine: true }] };
+        const count = existing.count + (existing.mine ? -1 : 1);
+        return {
+          ...m,
+          reactions:
+            count === 0
+              ? m.reactions.filter((r) => r.emoji !== emoji)
+              : m.reactions.map((r) =>
+                  r.emoji === emoji ? { ...r, count, mine: !existing.mine } : r
+                ),
+        };
+      })
+    );
+    void toggleReaction(id, emoji).then(() => refresh());
+  }
+
   function onScroll() {
     const el = scroller.current;
     if (!el) return;
@@ -132,13 +166,13 @@ export function ChannelView({
   }
 
   return (
-    <div className="flex h-[calc(100vh-8rem)] flex-col overflow-hidden rounded-xl border bg-card">
-      <div className="border-b px-4 py-3">
-        <h2 className="font-display text-base font-semibold"># {channelName}</h2>
-        {description && <p className="text-xs text-muted-foreground">{description}</p>}
+    <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl border bg-card">
+      <div className="shrink-0 border-b px-5 py-3">
+        <h2 className="font-display text-lg font-semibold"># {channelName}</h2>
+        {description && <p className="text-sm text-muted-foreground">{description}</p>}
       </div>
 
-      <div ref={scroller} onScroll={onScroll} className="flex-1 space-y-1 overflow-y-auto px-2 py-3">
+      <div ref={scroller} onScroll={onScroll} className="flex-1 overflow-y-auto px-3 py-4">
         {hasMore && (
           <div className="flex justify-center pb-2">
             <Button variant="ghost" size="sm" onClick={() => void loadOlder()} disabled={loadingMore}>
@@ -149,9 +183,7 @@ export function ChannelView({
         )}
 
         {messages.length === 0 ? (
-          <p className="py-16 text-center text-sm text-muted-foreground">
-            No messages yet. Say hello.
-          </p>
+          <p className="py-24 text-center text-muted-foreground">No messages yet. Say hello.</p>
         ) : (
           messages.map((m, i) => (
             <MessageRow
@@ -175,6 +207,8 @@ export function ChannelView({
                 })
               }
               onDelete={() => void remove(m.id)}
+              onEdit={(body) => edit(m.id, body)}
+              onReact={(emoji) => react(m.id, emoji)}
             />
           ))
         )}
@@ -190,124 +224,6 @@ export function ChannelView({
           void refresh();
         }}
       />
-    </div>
-  );
-}
-
-function MessageRow({
-  message: m,
-  grouped,
-  onReply,
-  onDelete,
-}: {
-  message: CommunityMessageView;
-  grouped: boolean;
-  onReply: () => void;
-  onDelete: () => void;
-}) {
-  return (
-    <div
-      className={cn(
-        "group relative rounded-lg px-2 py-1 hover:bg-secondary/40",
-        m.mentionedMe && "bg-primary/5 ring-1 ring-primary/20",
-        grouped ? "mt-0" : "mt-3"
-      )}
-    >
-      {m.replyTo && (
-        <div className="mb-1 flex items-center gap-1.5 pl-10 text-xs text-muted-foreground">
-          <CornerUpLeft className="h-3 w-3 shrink-0" />
-          <span className="font-medium text-foreground/80">{m.replyTo.authorName}</span>
-          <span className={cn("truncate", m.replyTo.deleted && "italic")}>{m.replyTo.excerpt}</span>
-        </div>
-      )}
-
-      <div className="flex gap-2.5">
-        <div className="w-8 shrink-0">
-          {!grouped && (
-            <span
-              className={cn(
-                "flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-semibold",
-                m.author.isAdmin ? "bg-navy-900 text-white" : "bg-primary/15 text-primary"
-              )}
-            >
-              {initials(m.author.name)}
-            </span>
-          )}
-        </div>
-
-        <div className="min-w-0 flex-1">
-          {!grouped && (
-            <div className="flex items-baseline gap-2">
-              <span className="text-sm font-medium">{m.author.name}</span>
-              {m.author.isAdmin && (
-                <span className="flex items-center gap-0.5 rounded bg-navy-900 px-1.5 py-px text-[10px] font-medium text-white">
-                  <Shield className="h-2.5 w-2.5" /> Team
-                </span>
-              )}
-              <span className="text-[11px] text-muted-foreground">{timeLabel(m.createdAt)}</span>
-            </div>
-          )}
-
-          {m.deleted ? (
-            <p className="text-sm italic text-muted-foreground">This message was deleted.</p>
-          ) : (
-            <>
-              {m.body && (
-                <MessageText body={m.body} className="whitespace-pre-wrap break-words text-sm" />
-              )}
-              {m.attachments.length > 0 && (
-                <div className="mt-1.5 flex flex-wrap gap-2">
-                  {m.attachments.map((a) =>
-                    a.kind === "IMAGE" ? (
-                      <a key={a.id} href={a.url} target="_blank" rel="noopener noreferrer">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={a.url}
-                          alt={a.fileName}
-                          className="max-h-64 max-w-full rounded-lg border object-contain"
-                        />
-                      </a>
-                    ) : (
-                      <a
-                        key={a.id}
-                        href={a.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 rounded-lg border bg-secondary/40 px-3 py-2 text-xs hover:bg-secondary"
-                      >
-                        <FileText className="h-4 w-4 shrink-0 text-muted-foreground" />
-                        <span className="max-w-[14rem] truncate font-medium">{a.fileName}</span>
-                        <span className="text-muted-foreground">{fileSize(a.sizeBytes)}</span>
-                      </a>
-                    )
-                  )}
-                </div>
-              )}
-            </>
-          )}
-        </div>
-
-        {!m.deleted && (
-          <div className="absolute right-2 top-1 hidden gap-1 group-hover:flex">
-            <button
-              onClick={onReply}
-              className="rounded border bg-card p-1.5 text-muted-foreground shadow-sm hover:text-foreground"
-              aria-label="Reply"
-            >
-              <CornerUpLeft className="h-3.5 w-3.5" />
-            </button>
-            {m.canDelete && (
-              <button
-                onClick={onDelete}
-                className="rounded border bg-card p-1.5 text-muted-foreground shadow-sm hover:text-destructive"
-                aria-label="Delete message"
-              >
-                <Trash2 className="h-3.5 w-3.5" />
-              </button>
-            )}
-          </div>
-        )}
-      </div>
     </div>
   );
 }

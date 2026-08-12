@@ -120,9 +120,10 @@ model User {
   studyPlan           StudyPlan?
   platformSettings    PlatformSetting[] @relation("PlatformSettingUpdatedBy")
 
-  communityMessages CommunityMessage[] @relation("CommunityMessages")
-  communityMentions CommunityMention[] @relation("CommunityMentions")
-  communityReads    CommunityRead[]    @relation("CommunityReads")
+  communityMessages  CommunityMessage[]  @relation("CommunityMessages")
+  communityMentions  CommunityMention[]  @relation("CommunityMentions")
+  communityReads     CommunityRead[]     @relation("CommunityReads")
+  communityReactions CommunityReaction[] @relation("CommunityReactions")
 
   uploadsCreated     PDFUpload[]       @relation("UploadedBy")
   uploadsReviewed    AIProcessingJob[] @relation("ReviewedBy")
@@ -1130,6 +1131,7 @@ model CommunityMessage {
   author      User                  @relation("CommunityMessages", fields: [authorId], references: [id], onDelete: Cascade)
   attachments CommunityAttachment[]
   mentions    CommunityMention[]
+  reactions   CommunityReaction[]
 
   @@index([channelId, createdAt])
   @@index([authorId])
@@ -1180,4 +1182,23 @@ model CommunityRead {
   channel CommunityChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
 
   @@unique([userId, channelId])
+}
+
+/// An emoji reaction. One row per person per emoji per message, so the unique
+/// constraint is what stops double-counting rather than application logic.
+model CommunityReaction {
+  id        String @id @default(cuid())
+  messageId String
+  userId    String
+  /// The emoji itself, stored as the character. A short allowlist is enforced
+  /// server-side, so this column never holds arbitrary user text.
+  emoji     String
+
+  createdAt DateTime @default(now())
+
+  message CommunityMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  user    User             @relation("CommunityReactions", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([messageId, userId, emoji])
+  @@index([messageId])
 }

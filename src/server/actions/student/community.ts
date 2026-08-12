@@ -10,9 +10,11 @@ import {
   MAX_BODY,
   PAGE_SIZE,
   RATE_LIMIT_PER_MINUTE,
+  REACTIONS,
   type ChannelView,
   type CommunityMessageView,
   type NewAttachment,
+  type ReactionSummary,
 } from "@/lib/community/types";
 
 /**
@@ -122,6 +124,7 @@ export async function listMessages(
       author: { select: { id: true, name: true, role: true } },
       attachments: true,
       mentions: { where: { userId: user.id }, select: { id: true } },
+      reactions: { select: { emoji: true, userId: true } },
       replyTo: {
         select: {
           id: true,
@@ -139,6 +142,17 @@ export async function listMessages(
 
   const messages = page.reverse().map((m): CommunityMessageView => {
     const deleted = m.deletedAt != null;
+
+    // Group by emoji, preserving the order they were first used so the row of
+    // pills does not reshuffle every time someone reacts.
+    const byEmoji = new Map<string, ReactionSummary>();
+    for (const r of m.reactions) {
+      const entry = byEmoji.get(r.emoji) ?? { emoji: r.emoji, count: 0, mine: false };
+      entry.count += 1;
+      if (r.userId === user.id) entry.mine = true;
+      byEmoji.set(r.emoji, entry);
+    }
+
     return {
       id: m.id,
       // A deleted message keeps its slot in the thread but surrenders its text.
@@ -171,6 +185,11 @@ export async function listMessages(
             deleted: m.replyTo.deletedAt != null,
           }
         : null,
+      // Reactions come off a deleted message with its content.
+      reactions: deleted ? [] : [...byEmoji.values()],
+      // Editing is the author's alone. An admin can remove a message but must
+      // not be able to rewrite what somebody else said.
+      canEdit: !deleted && m.author.id === user.id,
       canDelete: !deleted && (m.author.id === user.id || isAdmin),
     };
   });
@@ -303,6 +322,81 @@ export async function deleteMessage(
 
   revalidatePath(`/community/${message.channel.slug}`);
   return { ok: true };
+}
+
+/**
+ * Edit a message's text.
+ *
+ * Authors only — an admin may remove a message but must never be able to
+ * rewrite what someone else said and leave it under their name.
+ *
+ * Attachments and mentions are untouched: this edits the words, and silently
+ * re-resolving mentions would let an edit tag people who were never in the
+ * original conversation.
+ */
+export async function editMessage(
+  messageId: string,
+  body: string
+): Promise<{ ok: true } | { ok: false; error: string }> {
+  const user = await requireUser();
+
+  const trimmed = body.trim();
+  if (!trimmed) return { ok: false, error: "A message cannot be emptied — delete it instead." };
+  if (trimmed.length > MAX_BODY) return { ok: false, error: `Keep it under ${MAX_BODY} characters.` };
+
+  const message = await prisma.communityMessage.findUnique({
+    where: { id: messageId },
+    select: { id: true, authorId: true, deletedAt: true, channel: { select: { slug: true } } },
+  });
+  if (!message || message.deletedAt) return { ok: false, error: "Message not found." };
+  if (message.authorId !== user.id) {
+    return { ok: false, error: "You can only edit your own messages." };
+  }
+
+  await prisma.communityMessage.update({
+    where: { id: message.id },
+    data: { body: trimmed, editedAt: new Date() },
+  });
+
+  revalidatePath(`/community/${message.channel.slug}`);
+  return { ok: true };
+}
+
+/**
+ * Add or remove one emoji reaction, whichever the student is not currently in.
+ *
+ * The emoji is checked against the fixed set rather than trusted: the column
+ * would otherwise accept any string the client cared to send, which is how a
+ * reaction row becomes a place to store arbitrary text.
+ */
+export async function toggleReaction(
+  messageId: string,
+  emoji: string
+): Promise<{ ok: true; reacted: boolean } | { ok: false; error: string }> {
+  const user = await requireUser();
+
+  if (!(REACTIONS as readonly string[]).includes(emoji)) {
+    return { ok: false, error: "Unsupported reaction." };
+  }
+
+  const message = await prisma.communityMessage.findUnique({
+    where: { id: messageId },
+    select: { id: true, deletedAt: true, channel: { select: { slug: true } } },
+  });
+  if (!message || message.deletedAt) return { ok: false, error: "Message not found." };
+
+  const existing = await prisma.communityReaction.findUnique({
+    where: { messageId_userId_emoji: { messageId, userId: user.id, emoji } },
+    select: { id: true },
+  });
+
+  if (existing) {
+    await prisma.communityReaction.delete({ where: { id: existing.id } });
+    return { ok: true, reacted: false };
+  }
+
+  await prisma.communityReaction.create({ data: { messageId, userId: user.id, emoji } });
+  return { ok: true, reacted: true };
 }
 
 /** Move this student's read marker to now. */

@@ -296,7 +296,7 @@ export function Composer({
           </ul>
         )}
 
-        <div className="flex items-end gap-2 p-3">
+        <div className="flex items-end gap-2 p-4">
           <input
             ref={fileInput}
             type="file"
@@ -327,8 +327,8 @@ export function Composer({
             onPaste={onPaste}
             rows={1}
             maxLength={MAX_BODY}
-            placeholder="Message the community…  @ to mention, paste a screenshot"
-            className="max-h-40 min-h-[2.5rem] flex-1 resize-y rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
+            placeholder="Message the community…   @ to mention · paste a screenshot · Shift+Enter for a new line"
+            className="max-h-52 min-h-[3rem] flex-1 resize-y rounded-lg border bg-background px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-ring"
           />
 
           <Button

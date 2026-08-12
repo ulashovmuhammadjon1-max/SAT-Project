@@ -31,11 +31,26 @@ export interface CommunityAttachmentView {
   sizeBytes: number;
 }
 
+/** The emoji students may react with. A fixed set, enforced server-side, so
+ *  the column can never hold arbitrary text and the picker stays scannable. */
+export const REACTIONS = ["👍", "🎉", "🔥", "❤️", "😂", "🤔", "👀", "✅"] as const;
+export type ReactionEmoji = (typeof REACTIONS)[number];
+
+export interface ReactionSummary {
+  emoji: string;
+  count: number;
+  /** Whether the signed-in student is one of them. */
+  mine: boolean;
+}
+
 export interface CommunityMessageView {
   id: string;
   body: string;
   createdAt: string;
   editedAt: string | null;
+  reactions: ReactionSummary[];
+  /** Whether the signed-in user may edit it — author only, and not deleted. */
+  canEdit: boolean;
   deleted: boolean;
   author: CommunityAuthor;
   attachments: CommunityAttachmentView[];
