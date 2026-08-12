@@ -53,7 +53,12 @@ export function checkOne(q, e) {
   // House style, same rules the question content follows.
   const text = [e.whyCorrect, ...Object.values(e.whyWrong || {}), e.tips].join(" ");
   if (/\*[^*\n]+\*/.test(text)) problems.push("markdown asterisks — use <em>");
-  if (/\$[^$\n]+\$/.test(text)) problems.push("$…$ math — use \\( \\)");
+  // Currency, not math. Two prices in one sentence ("$22 … the $30") matched
+  // the old /\$[^$\n]+\$/ and both Math agents rewrote real dollar amounts as
+  // "22 dollars" to satisfy it — a checker making the prose worse. TeX inline
+  // math never opens on a digit, so requiring a non-digit after the $ keeps
+  // the check while letting prices through.
+  if (/\$(?!\d)[^$\n]{1,80}\$/.test(text)) problems.push("$…$ math — use \\( \\)");
   // A LaTeX macro loose in prose renders as a literal backslash.
   const outside = text.replace(/\\\((.|\n)*?\\\)/g, "");
   if (/\\(frac|sqrt|pi|cdot|times|le|ge|ne)\b/.test(outside))
