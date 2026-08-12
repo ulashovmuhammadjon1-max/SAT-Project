@@ -274,3 +274,45 @@ same question, and Test 4 M1 q16 is keyed to a sentence fragment.
 - **key:** B. A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.
 - **agent:** D. Quartz can leave visible scratches on talc, which means that quartz is harder than talc.
 - The goal names the two minerals to compare: talc and quartz. This option puts both in one sentence and states the comparison directly — quartz scratches talc, so quartz is harder — which follows from the notes, since quartz is a 7 and talc is a 1 and higher numbers scratch lower ones.
+
+---
+
+## Separate content defects (not key errors)
+
+Found by agents while authoring, and confirmed directly against production.
+These need the *question* repaired, not the key.
+
+### Two correct answers
+- **Test 2 M1 q16** (`lismstoib…`) — "Which expression is equivalent to \(\sqrt{48}\)?"
+  Key is A `\(4\sqrt{3}\)`; choice C is `\(2\sqrt{12}\)`. These are the same
+  number (both 6.9282…), verified arithmetically. C is only "wrong" for not
+  being in simplest radical form, which the stem does not ask for. A student
+  picking C is marked wrong for a correct answer.
+
+### Duplicate-value choices
+- **Test 1 M2 Easy q21** — A is `\(36\pi\)` (the key) and D is `36π (approx)`:
+  the same value twice, with D using a raw π glyph outside a math span.
+- **Test 2 M2 Easy q21** — B is `\(3\pi\)` (the key) and D is `3π (approx)`.
+  Choice A is `\(3π/2\)` — raw glyph and a slash fraction inside a math span.
+
+### The same question twice in one module
+- **Test 3 M1 q9 and q10** — identical stems (similarity 1.00), same Hidalgo
+  passage, choices reordered.
+- **Test 4 M2 Hard q9 and q10** — identical lake-ice table and stem.
+
+### Identical distractors
+- **Test 2 M2 Hard q17** — choices B and D are byte-identical
+  ("advocate, Ernesto Hernandez-Lopez,"). Key is C, so the item is still
+  answerable, but two of the four options are the same string.
+
+### Rendering defects
+- **Test 3 M1 q6, q19** — a whole prose sentence wrapped in `\( … \)`; KaTeX
+  drops the spaces and it renders as run-on text.
+- **Test 3 M1 q3** — `cos(A)` unescaped inside math mode, rendering as three
+  italic variables rather than the function.
+- **Test 3 M2 Hard q12** — carries `[Graph/figure not available]` where its
+  table should be.
+- **Test 1 M2 Easy q14, M2 Hard q27** — raw markdown asterisks around titles
+  instead of `<em>`.
+- **Test 3 M1 q7, M2 Hard q17/q22** — the stem still describes the figure in
+  prose alongside the real image, the answer-leak CLAUDE.md rule 3 warns about.
