@@ -51,8 +51,8 @@ export default async function StudentActivityPage() {
         </Link>
         <h1 className="mt-2 font-display text-2xl font-semibold tracking-tight">Student activity</h1>
         <p className="text-sm text-muted-foreground">
-          One row per student. {students.length} shown · {active} active in the last week ·{" "}
-          {neverStarted} who have never answered a question.
+          One row per student — click a name for their full profile. {students.length} shown ·{" "}
+          {active} active in the last week · {neverStarted} who have never answered a question.
         </p>
       </div>
 
@@ -99,9 +99,14 @@ export default async function StudentActivityPage() {
 function Row({ s }: { s: StudentActivityRow }) {
   const dormant = s.questionsAnswered === 0;
   return (
-    <tr className={cn("border-b last:border-0", dormant && "opacity-60")}>
+    <tr className={cn("border-b last:border-0 hover:bg-secondary/40", dormant && "opacity-60")}>
       <Td className="pl-6">
-        <span className="font-medium">{s.name ?? "—"}</span>
+        <Link
+          href={`/admin/statistics/students/${s.userId}`}
+          className="font-medium hover:text-primary hover:underline"
+        >
+          {s.name ?? "—"}
+        </Link>
         <span className="block text-xs text-muted-foreground">{s.email}</span>
       </Td>
       <Td>

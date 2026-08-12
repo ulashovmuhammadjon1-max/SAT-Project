@@ -41,6 +41,15 @@
     --ring: 226 84% 56%;
 
     --radius: 0.75rem;
+
+    /* Categorical chart series. Assigned in fixed order — total, then the two
+       sections — so a series keeps its colour whatever else is on the chart.
+       Checked with the palette validator for colour-vision separation and for
+       contrast against the card surface; the dark steps below are chosen
+       against the dark surface rather than derived by flipping these. */
+    --chart-1: 226 84% 56%;
+    --chart-2: 152 60% 40%;
+    --chart-3: 29 91% 38%;
   }
 
   .dark {
@@ -79,6 +88,12 @@
     --border: 222 25% 18%;
     --input: 222 25% 20%;
     --ring: 226 84% 62%;
+
+    /* Dark steps for the same three series — re-picked against the dark
+       surface, not lightened copies of the light ones. */
+    --chart-1: 226 84% 66%;
+    --chart-2: 152 55% 43%;
+    --chart-3: 28 88% 44%;
   }
 }
 

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -36,7 +38,20 @@ export default async function AdminUsersPage() {
             <TableBody>
               {users.map((user) => (
                 <TableRow key={user.id}>
-                  <TableCell className="font-medium">{user.name}</TableCell>
+                  <TableCell className="font-medium">
+                    {/* Only students have a profile page — it has nothing to
+                        show for an admin account, so it 404s on one. */}
+                    {user.role === "STUDENT" ? (
+                      <Link
+                        href={`/admin/statistics/students/${user.id}`}
+                        className="hover:text-primary hover:underline"
+                      >
+                        {user.name ?? "—"}
+                      </Link>
+                    ) : (
+                      (user.name ?? "—")
+                    )}
+                  </TableCell>
                   <TableCell className="text-sm text-muted-foreground">{user.email}</TableCell>
                   <TableCell>
                     <UserRoleSelect userId={user.id} role={user.role} />
