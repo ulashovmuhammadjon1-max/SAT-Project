@@ -93,6 +93,14 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
       ? {
           content: r.question.explanation.content,
           whyCorrect: r.question.explanation.whyCorrect,
+          // Stored as { [choiceLabel]: reason }. Cast rather than trusting the
+          // Json column's shape blindly — an older row may hold anything.
+          whyWrong:
+            r.question.explanation.whyWrongJson &&
+            typeof r.question.explanation.whyWrongJson === "object" &&
+            !Array.isArray(r.question.explanation.whyWrongJson)
+              ? (r.question.explanation.whyWrongJson as Record<string, string>)
+              : null,
           commonMistakes: r.question.explanation.commonMistakes,
           tips: r.question.explanation.tips,
           relatedConcepts: r.question.explanation.relatedConcepts,

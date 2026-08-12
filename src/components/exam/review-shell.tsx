@@ -34,6 +34,7 @@ interface ReviewItem {
   explanation: {
     content: string;
     whyCorrect: string | null;
+    whyWrong: Record<string, string> | null;
     commonMistakes: string | null;
     tips: string | null;
     relatedConcepts: string | null;
@@ -409,24 +410,66 @@ function ReviewDetail({ item }: { item: ReviewItem }) {
         <CardContent className="space-y-4 p-5">
           <h3 className="font-display text-base font-semibold">Explanation</h3>
           {item.explanation ? (
-            <div className="space-y-3 text-sm">
-              <p>{item.explanation.content}</p>
-              {item.explanation.whyCorrect && (
-                <div>
-                  <p className="font-medium">Why it&apos;s correct</p>
-                  <p className="text-muted-foreground">{item.explanation.whyCorrect}</p>
+            <div className="space-y-4 text-sm">
+              {/*
+                `content` is an HTML string, and rendering it as {content} inside
+                a <p> printed the tags as visible text — every explanation showed
+                a wall of literal <p>, <strong> and <li>. It also duplicated the
+                sections below it, since content is assembled *from* them.
+
+                So the structured fields are the display when they exist, and
+                content is only the fallback for older explanations that have
+                nothing else — rendered through MathContent, which parses the
+                HTML and typesets any math in it.
+              */}
+              {item.explanation.whyCorrect ? (
+                <div className="space-y-1.5">
+                  <p className="font-medium">Why the answer is correct</p>
+                  <MathContent
+                    html={item.explanation.whyCorrect}
+                    className="block leading-relaxed text-muted-foreground"
+                  />
+                </div>
+              ) : (
+                <MathContent
+                  html={item.explanation.content}
+                  className="block leading-relaxed"
+                />
+              )}
+
+              {item.explanation.whyWrong && Object.keys(item.explanation.whyWrong).length > 0 && (
+                <div className="space-y-1.5">
+                  <p className="font-medium">Why the other choices are wrong</p>
+                  <ul className="space-y-1.5">
+                    {Object.entries(item.explanation.whyWrong).map(([label, why]) => (
+                      <li key={label} className="flex gap-2">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-semibold">
+                          {label}
+                        </span>
+                        <MathContent html={why} className="block leading-relaxed text-muted-foreground" />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
+
               {item.explanation.commonMistakes && (
-                <div>
-                  <p className="font-medium">Common mistakes</p>
-                  <p className="text-muted-foreground">{item.explanation.commonMistakes}</p>
+                <div className="space-y-1.5">
+                  <p className="font-medium">Common mistake</p>
+                  <MathContent
+                    html={item.explanation.commonMistakes}
+                    className="block leading-relaxed text-muted-foreground"
+                  />
                 </div>
               )}
+
               {item.explanation.tips && (
-                <div>
-                  <p className="font-medium">Tip</p>
-                  <p className="text-muted-foreground">{item.explanation.tips}</p>
+                <div className="rounded-lg bg-secondary/60 p-3">
+                  <p className="mb-0.5 font-medium">Tip</p>
+                  <MathContent
+                    html={item.explanation.tips}
+                    className="block leading-relaxed text-muted-foreground"
+                  />
                 </div>
               )}
             </div>
