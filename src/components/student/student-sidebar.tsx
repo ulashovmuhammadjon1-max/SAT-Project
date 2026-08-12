@@ -19,6 +19,7 @@ import {
   Award,
   CalendarDays,
   Trophy,
+  MessagesSquare,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -30,6 +31,7 @@ const NAV = [
   { href: "/tests", label: "Practice Tests", icon: BookOpen },
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+  { href: "/community", label: "Community", icon: MessagesSquare },
   { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
   { href: "/achievements", label: "Achievements", icon: Award },
   { href: "/bookmarks", label: "Bookmarks", icon: Bookmark },

@@ -120,6 +120,10 @@ model User {
   studyPlan           StudyPlan?
   platformSettings    PlatformSetting[] @relation("PlatformSettingUpdatedBy")
 
+  communityMessages CommunityMessage[] @relation("CommunityMessages")
+  communityMentions CommunityMention[] @relation("CommunityMentions")
+  communityReads    CommunityRead[]    @relation("CommunityReads")
+
   uploadsCreated     PDFUpload[]       @relation("UploadedBy")
   uploadsReviewed    AIProcessingJob[] @relation("ReviewedBy")
   testsCreated       Test[]            @relation("TestCreatedBy")
@@ -1064,4 +1068,116 @@ model StudyPlan {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+}
+
+// ---------------------------------------------------------------------------
+// Community chat
+//
+// Channel-based discussion between students. Messages are plain text, stored
+// unrendered: the client escapes and linkifies at display time, so a message
+// can never inject markup into another student's page. Mentions are resolved
+// server-side into rows rather than being parsed out of the body on every
+// read, which keeps "who was tagged" answerable without re-scanning text.
+//
+// Deletion is soft. A hard delete would tear replies out of their context and
+// leave dangling "replying to a deleted message" threads with no way to show
+// that something was removed; `deletedAt` keeps the shape of the conversation
+// while hiding the content.
+// ---------------------------------------------------------------------------
+
+model CommunityChannel {
+  id          String  @id @default(cuid())
+  /// URL segment: /community/<slug>
+  slug        String  @unique
+  name        String
+  description String?
+  /// Display order in the channel list.
+  order       Int     @default(0)
+  /// Announcements: admins post, students read.
+  isReadOnly  Boolean @default(false)
+  isArchived  Boolean @default(false)
+
+  createdAt DateTime @default(now())
+
+  messages CommunityMessage[]
+  reads    CommunityRead[]
+
+  @@index([isArchived, order])
+}
+
+model CommunityMessage {
+  id        String @id @default(cuid())
+  channelId String
+  authorId  String
+
+  /// Raw text as typed. Never HTML — see the note above.
+  body String @db.Text
+
+  /// The message this one replies to. SetNull rather than Cascade so deleting
+  /// a parent does not silently erase every reply under it.
+  replyToId String?
+  replyTo   CommunityMessage?  @relation("MessageReply", fields: [replyToId], references: [id], onDelete: SetNull)
+  replies   CommunityMessage[] @relation("MessageReply")
+
+  editedAt    DateTime?
+  deletedAt   DateTime?
+  /// Who removed it — the author themselves, or a moderator.
+  deletedById String?
+
+  createdAt DateTime @default(now())
+
+  channel     CommunityChannel      @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  author      User                  @relation("CommunityMessages", fields: [authorId], references: [id], onDelete: Cascade)
+  attachments CommunityAttachment[]
+  mentions    CommunityMention[]
+
+  @@index([channelId, createdAt])
+  @@index([authorId])
+}
+
+enum CommunityAttachmentKind {
+  IMAGE
+  PDF
+  FILE
+}
+
+model CommunityAttachment {
+  id          String                  @id @default(cuid())
+  messageId   String
+  kind        CommunityAttachmentKind
+  /// Blob URL. Uploaded straight from the browser so a large screenshot never
+  /// has to fit through a serverless request body.
+  url         String
+  fileName    String
+  contentType String
+  sizeBytes   Int
+
+  message CommunityMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  @@index([messageId])
+}
+
+model CommunityMention {
+  id        String @id @default(cuid())
+  messageId String
+  userId    String
+
+  message CommunityMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  user    User             @relation("CommunityMentions", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([messageId, userId])
+  @@index([userId])
+}
+
+/// How far a student has read in a channel, for the unread dot.
+model CommunityRead {
+  id         String   @id @default(cuid())
+  userId     String
+  channelId  String
+  lastReadAt DateTime @default(now())
+
+  user    User             @relation("CommunityReads", fields: [userId], references: [id], onDelete: Cascade)
+  channel CommunityChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, channelId])
 }

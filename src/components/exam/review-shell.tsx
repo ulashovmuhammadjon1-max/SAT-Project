@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
 import Link from "next/link";
-import { Bookmark, Check, Clock, Flag, RotateCcw, X } from "lucide-react";
+import { Bookmark, Check, ChevronLeft, ChevronRight, Clock, Flag, RotateCcw, X } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,6 +40,15 @@ interface ReviewItem {
   } | null;
 }
 
+type ReviewFilter = "all" | "incorrect" | "flagged" | "skipped";
+
+const FILTERS: { key: ReviewFilter; label: string }[] = [
+  { key: "all", label: "All" },
+  { key: "incorrect", label: "Incorrect" },
+  { key: "flagged", label: "Flagged" },
+  { key: "skipped", label: "Skipped" },
+];
+
 export function ReviewShell({
   testTitle,
   totalScaledScore,
@@ -58,7 +67,72 @@ export function ReviewShell({
   items: ReviewItem[];
 }) {
   const [index, setIndex] = useState(0);
+  const [filter, setFilter] = useState<ReviewFilter>("all");
   const item = items[index];
+
+  /**
+   * Indices that match the current filter, in order.
+   *
+   * The filter narrows *navigation*, not the palette: the numbered grid still
+   * shows every question so the shape of the paper stays recognisable, but
+   * Previous/Next and the arrow keys skip to the next match. Reviewing a test
+   * is almost always "show me the ones I got wrong", and paging through 54
+   * questions to find 11 of them is the friction worth removing.
+   */
+  const matches = useMemo(() => {
+    const keep = (it: ReviewItem) =>
+      filter === "all" ||
+      (filter === "incorrect" && !it.isCorrect) ||
+      (filter === "flagged" && it.flagged) ||
+      (filter === "skipped" && it.selectedChoiceId == null && !it.freeResponseAnswer);
+    return items.map((it, i) => ({ it, i })).filter(({ it }) => keep(it)).map(({ i }) => i);
+  }, [items, filter]);
+
+  const positionInMatches = matches.indexOf(index);
+
+  // Picking a filter should land on a matching question, not leave the reader
+  // parked on one the filter excludes with nothing on screen but "not in this
+  // filter". Only fires when the current question genuinely falls outside.
+  useEffect(() => {
+    if (matches.length && positionInMatches === -1) {
+      setIndex(matches.find((i) => i >= index) ?? matches[0]);
+    }
+  }, [matches, positionInMatches, index]);
+
+  const step = useCallback(
+    (delta: number) => {
+      if (!matches.length) return;
+      if (positionInMatches === -1) {
+        // The current question is filtered out — move to the nearest match in
+        // the direction of travel rather than jumping back to the first one.
+        const next =
+          delta > 0
+            ? (matches.find((i) => i > index) ?? matches[0])
+            : ([...matches].reverse().find((i) => i < index) ?? matches[matches.length - 1]);
+        setIndex(next);
+        return;
+      }
+      const next = positionInMatches + delta;
+      if (next >= 0 && next < matches.length) setIndex(matches[next]);
+    },
+    [matches, positionInMatches, index]
+  );
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      const target = e.target as HTMLElement | null;
+      // Never steal keys from a field the reader is typing in.
+      if (target && ["INPUT", "TEXTAREA"].includes(target.tagName)) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === "ArrowRight" || e.key === "j") step(1);
+      else if (e.key === "ArrowLeft" || e.key === "k") step(-1);
+      else if (e.key === "Home") setIndex(matches[0] ?? 0);
+      else if (e.key === "End") setIndex(matches[matches.length - 1] ?? items.length - 1);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [step, matches, items.length]);
 
   return (
     <div className="h-screen overflow-y-auto bg-secondary/30">
@@ -98,6 +172,37 @@ export function ReviewShell({
 
       <div className="mx-auto grid max-w-7xl gap-6 p-6 lg:grid-cols-[280px_1fr]">
         <div className="space-y-5 lg:sticky lg:top-6 lg:h-fit">
+          <div className="flex flex-wrap gap-1.5">
+            {FILTERS.map((f) => {
+              const count =
+                f.key === "all"
+                  ? items.length
+                  : items.filter((it) =>
+                      f.key === "incorrect"
+                        ? !it.isCorrect
+                        : f.key === "flagged"
+                          ? it.flagged
+                          : it.selectedChoiceId == null && !it.freeResponseAnswer
+                    ).length;
+              return (
+                <button
+                  key={f.key}
+                  onClick={() => setFilter(f.key)}
+                  // A filter that would show nothing is disabled rather than
+                  // hidden, so the counts still read as a summary of the paper.
+                  disabled={count === 0}
+                  className={cn(
+                    "rounded-full border px-2.5 py-1 text-xs transition-colors disabled:opacity-40",
+                    filter === f.key
+                      ? "border-transparent bg-primary text-primary-foreground"
+                      : "hover:bg-secondary"
+                  )}
+                >
+                  {f.label} {count}
+                </button>
+              );
+            })}
+          </div>
           <QuestionNavGroup
             label="Reading & Writing"
             items={items}
@@ -108,7 +213,35 @@ export function ReviewShell({
           <QuestionNavGroup label="Math" items={items} subject="MATH" activeIndex={index} onSelect={setIndex} />
         </div>
 
-        {item && <ReviewDetail item={item} />}
+        <div className="min-w-0 space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-card px-4 py-2.5">
+            <Button variant="outline" size="sm" onClick={() => step(-1)} disabled={!matches.length}>
+              <ChevronLeft className="h-4 w-4" /> Previous
+            </Button>
+
+            <div className="text-center text-sm">
+              <p className="font-medium tabular-nums">
+                {positionInMatches === -1
+                  ? "Not in this filter"
+                  : `${positionInMatches + 1} of ${matches.length}`}
+                {filter !== "all" && positionInMatches !== -1 && (
+                  <span className="ml-1 font-normal text-muted-foreground">
+                    {filter}
+                  </span>
+                )}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                Arrow keys or J / K to move
+              </p>
+            </div>
+
+            <Button variant="outline" size="sm" onClick={() => step(1)} disabled={!matches.length}>
+              Next <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+
+          {item && <ReviewDetail item={item} />}
+        </div>
       </div>
     </div>
   );
