@@ -337,6 +337,69 @@ Every verifier in that directory is runnable and passing: `verify_math_m2easy.py
 enforces the R&W block order by sorting on block rank so the writing block opens at question 15
 in every module.
 
+## Explanations — the pipeline, and what it found (read before authoring more)
+
+`content-pool/explanations/` builds student-facing explanations with six parallel
+agents. Tests 1–11 are done: **1,617 authored, ~1,570 live**, up from 3 in the whole
+database. `MANIFEST.md` there explains the design; `BRIEF.md` is the authoring spec every
+agent reads and is the reason all 1,617 came out in one voice.
+
+Run it as: `export_questions.mjs <test numbers>` → `slices.mjs <prefix> <test numbers>`
+→ spawn six agents → `insert.mjs --only <prefix> --apply` (repeatedly, while they work).
+
+### The gate is the point, not the generation
+Every agent derives the answer **itself** and records its own answer, never the marked
+key. `verify.mjs` rejects any mismatch, so it goes to `REVIEW.md` for a human instead of
+to students. An explanation that confidently argues for a wrong key teaches the error —
+worse than the blank page it replaces. Across 1,617 questions the gate held back 53 and
+let through zero style failures.
+
+### Durability, because agents do hit limits
+Work is append-only JSONL written after **every** question, never buffered. A stopped
+agent loses at most the line in flight, and a replacement resumes by skipping ids already
+in the file. `insert.mjs` upserts on the unique `questionId` and runs *while* agents work,
+so finished explanations go live progressively rather than in one end-of-run batch a dead
+session would lose. One first-batch agent buffered instead and had written nothing after
+40 minutes — the containment is per-slice, but only because the other five obeyed.
+
+### What the audit proved: transcribed keys lie, authored keys don't
+| content | mismatches |
+|---|---|
+| Tests 3–4 R&W (transcribed) | 44 |
+| Tests 6–11 R&W (authored) | 3 in 648 |
+| Tests 6–11 Math (authored) | 0 in 396 |
+| Tests 1–5 Math | 1 in 330 |
+
+Six independent agents reached this. It confirms the existing rule to author rather than
+transcribe, and it means **Tests 3 and 4 need a key review before they are trusted**.
+
+### Broken questions the audit found — see `content-pool/explanations/DEFECTS.md`
+Confirmed against production, not taken on an agent's word:
+- **Test 7 Math M2E q17 is unanswerable** — stem starts with the literal token `TABLE_B`
+  and there is no table and no image.
+- **Two questions have two correct answers**: Test 6 Math M1 q6 (`35c-p=-6` and `p-35c=6`
+  are the same equation) and Test 2 Math M1 q16 (`2\sqrt{12}` equals the keyed
+  `4\sqrt{3}`, and the stem only asks for an equivalent expression).
+- **Test 7 recycles 11 R&W items verbatim from Test 6**, five of them landing in a
+  different difficulty branch. An exact passage+stem scan over all 4,557 published
+  questions found 14 duplicate groups total, 11 of them this one pair.
+
+### Checker bugs, again — the recurring own-goal
+The `$…$` inline-math check fired on ordinary prices ("$22 … the $30"), and **two agents
+rewrote real dollar amounts as "22 dollars"** to satisfy it — a checker actively making
+prose worse. Fixed by requiring a non-digit after the `$`, since TeX math never opens on a
+digit. A third agent's own ad-hoc checker reported 131 false "LaTeX macro outside math"
+findings by making the backslash optional, matching the words *less*, *line*, *fraction*.
+Same family as `\bpi` and `LETTER_REF`. **An over-matching checker is worse than none.**
+
+### Rendering: explanations are structured, not one HTML blob
+The review page rendered `content` as `<p>{content}</p>`, printing raw `<p>`/`<strong>`/
+`<li>` as visible text and duplicating `whyCorrect` right below it. It now renders the
+structured fields — why the answer is correct, then **every** wrong choice with its own
+reason, then common mistake, then tip — with `content` only as the fallback for old rows.
+`whyWrongJson` had to be threaded through the review page; it was stored and gated but
+never displayed. The Question Bank was fine, it already used `MathContent`.
+
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 
 When building, reordering, or regenerating any Reading & Writing module (Module 1, Module 2
