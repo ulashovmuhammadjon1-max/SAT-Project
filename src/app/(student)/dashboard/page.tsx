@@ -12,7 +12,15 @@ import {
   DashboardPlanCard,
   DashboardSessionCard,
 } from "@/components/student/dashboard-plan-card";
+import {
+  DashboardAchievementsCard,
+  DashboardDailyCard,
+  DashboardLeaderboardCard,
+} from "@/components/student/dashboard-engagement";
 import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
+import { getAchievements } from "@/lib/achievements/service";
+import { getDailyChallenge } from "@/lib/daily-challenge";
+import { getLeaderboard } from "@/lib/leaderboard";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
@@ -44,6 +52,9 @@ export default async function DashboardPage() {
     coinUser,
     upcomingSession,
     settings,
+    daily,
+    achievements,
+    weeklyBoard,
   ] = await Promise.all([
     prisma.attempt.findFirst({
       where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
@@ -84,6 +95,10 @@ export default async function DashboardPage() {
       },
     }),
     getSettings(),
+    getDailyChallenge(user.id),
+    getAchievements(user.id),
+    // Just the podium for the dashboard card; the full board is its own page.
+    getLeaderboard("weekly", user.id, 3),
   ]);
 
   const totalAnswered = responses.length;
@@ -147,7 +162,23 @@ export default async function DashboardPage() {
         onboarded={profile?.onboardedAt != null}
       />
 
+      {daily && <DashboardDailyCard daily={daily} />}
+
       <DashboardPlanCard plan={planSummary} />
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <DashboardAchievementsCard
+          unlocked={achievements.unlocked}
+          nextUp={achievements.nextUp}
+          unlockedCount={achievements.unlockedCount}
+          totalCount={achievements.totalCount}
+        />
+        <DashboardLeaderboardCard
+          rows={weeklyBoard.rows}
+          myRank={weeklyBoard.rows.find((r) => r.isMe)?.rank ?? weeklyBoard.me?.rank ?? null}
+          participants={weeklyBoard.participants}
+        />
+      </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <DashboardCoinsCard

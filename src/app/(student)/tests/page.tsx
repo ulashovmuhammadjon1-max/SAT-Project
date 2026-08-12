@@ -82,7 +82,7 @@ export default async function TestsPage() {
                   </div>
                   {attempt.status === "SUBMITTED" ? (
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={`/review/${attempt.id}`}>View review</Link>
+                      <Link href={`/results/${attempt.id}`}>View result</Link>
                     </Button>
                   ) : (
                     <Button size="sm" asChild>

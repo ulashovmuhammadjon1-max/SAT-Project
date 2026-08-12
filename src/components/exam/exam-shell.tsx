@@ -435,7 +435,9 @@ export function ExamShell({
           // Non-fatal.
         }
         if (result.finished) {
-          router.push(`/review/${attemptId}`);
+          // The result summary first — score, movement, percentile, and the
+          // shareable card. Review of individual questions is one click on.
+          router.push(`/results/${attemptId}`);
           return;
         }
         if (result.breakBefore) {

@@ -14,8 +14,11 @@ export default async function ExamPage({ params }: { params: { attemptId: string
   });
 
   if (!attempt || attempt.userId !== user.id) notFound();
-  if (attempt.status === "SUBMITTED") redirect(`/review/${attempt.id}`);
-  if (!attempt.currentModuleId) redirect(`/review/${attempt.id}`);
+  // A finished attempt goes to the result summary, not straight into the
+  // per-question review — same destination the exam itself redirects to on
+  // submit, so a refresh and a submit land in the same place.
+  if (attempt.status === "SUBMITTED") redirect(`/results/${attempt.id}`);
+  if (!attempt.currentModuleId) redirect(`/results/${attempt.id}`);
 
   let moduleAttempt = await prisma.moduleAttempt.findFirst({
     where: { attemptId: attempt.id, moduleId: attempt.currentModuleId, submittedAt: null },

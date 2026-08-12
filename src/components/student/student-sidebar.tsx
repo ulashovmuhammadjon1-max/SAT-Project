@@ -16,16 +16,22 @@ import {
   UserPlus,
   Settings,
   GraduationCap,
+  Award,
+  CalendarDays,
+  Trophy,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/daily", label: "Daily Challenge", icon: CalendarDays },
   { href: "/plan", label: "My SAT Plan", icon: Target },
   { href: "/tests", label: "Practice Tests", icon: BookOpen },
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+  { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
+  { href: "/achievements", label: "Achievements", icon: Award },
   { href: "/bookmarks", label: "Bookmarks", icon: Bookmark },
   { href: "/events", label: "Events", icon: CalendarRange },
   { href: "/bookings", label: "My Sessions", icon: CalendarCheck },

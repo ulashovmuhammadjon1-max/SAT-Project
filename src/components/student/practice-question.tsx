@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { MathContent } from "@/components/shared/math-content";
 import { cn } from "@/lib/utils";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
+import { submitQuestionAnswer } from "@/server/actions/student/question-bank";
 
 interface PracticeQuestionData {
   id: string;
@@ -40,11 +41,46 @@ export function PracticeQuestion({
   const [submitted, setSubmitted] = useState(false);
   const [bookmarked, setBookmarked] = useState(initiallyBookmarked);
   const [isPending, startTransition] = useTransition();
+  const [grading, setGrading] = useState(false);
+  const [serverCorrect, setServerCorrect] = useState<boolean | null>(null);
 
-  const isCorrect =
+  /**
+   * The server's verdict when it has one, the local key otherwise.
+   *
+   * Checking an answer used to be `setSubmitted(true)` and nothing else: the
+   * result was computed here from the key already embedded in the props, so no
+   * QuestionAttempt row was ever written. Practising a single question counted
+   * for nothing — it did not appear in history, did not move accuracy, and did
+   * not feed the study streak. The submit now goes through the server action
+   * that grades and records, which is the same one the Question Bank session
+   * runner uses, and the local key is kept only as the fallback for a failed
+   * request so a network blip still shows the student their answer.
+   */
+  const localCorrect =
     question.type === "MULTIPLE_CHOICE"
       ? question.choices.find((c) => c.id === selected)?.isCorrect ?? false
       : freeResponse.trim().toLowerCase() === (question.correctAnswerFR ?? "").trim().toLowerCase();
+  const isCorrect = serverCorrect ?? localCorrect;
+
+  function check() {
+    setGrading(true);
+    startTransition(async () => {
+      try {
+        const result = await submitQuestionAnswer({
+          questionId: question.id,
+          selectedChoiceId: question.type === "MULTIPLE_CHOICE" ? selected : null,
+          freeResponseAnswer: question.type === "FREE_RESPONSE" ? freeResponse : null,
+        });
+        setServerCorrect(result.isCorrect);
+      } catch {
+        // Recording failed — still reveal the answer rather than trapping the
+        // student on a question they have already committed to.
+      } finally {
+        setGrading(false);
+        setSubmitted(true);
+      }
+    });
+  }
 
   return (
     <div className="space-y-6">
@@ -121,10 +157,12 @@ export function PracticeQuestion({
 
             {!submitted ? (
               <Button
-                onClick={() => setSubmitted(true)}
-                disabled={question.type === "MULTIPLE_CHOICE" ? !selected : !freeResponse}
+                onClick={check}
+                disabled={
+                  grading || (question.type === "MULTIPLE_CHOICE" ? !selected : !freeResponse)
+                }
               >
-                Check answer
+                {grading ? "Checking…" : "Check answer"}
               </Button>
             ) : (
               <div className="flex items-center gap-3">
