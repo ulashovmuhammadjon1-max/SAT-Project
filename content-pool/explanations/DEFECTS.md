@@ -99,3 +99,35 @@ differ by a few words in the passage, so a strict signature misses them:
   at all. All 18 `INI-CE` items across their six modules are the
   "which finding, if true, would support/weaken" type. That is block 7 of the
   mandated R&W domain-block sequence, empty in both tests.
+
+
+## Same scenario reused across sibling tests (Tests 14 / 15)
+
+Found by `t12-rw-b` while authoring, and **not caught by the exact-duplicate
+scan**, because the passages differ by a few words. The exact scan matches
+passage+stem verbatim; these are rewrites of the same material.
+
+The one that is effectively a duplicate — verified against production:
+
+| | Test 14 M2 Hard q1 | Test 15 M2 Hard q4 |
+|---|---|---|
+| passage | "A male sandgrouse may nest fifty kilometres from the nearest water…" | same scenario, near-identical wording |
+| skill | Words in Context | Words in Context |
+| branch | M2 Hard | M2 Hard |
+| **key** | **vessel** | **a container** |
+
+Same passage material, same skill, same slot type, same difficulty branch, and
+the two correct answers are synonyms of each other. This is one question
+shipped twice; one of the pair needs replacing.
+
+Nine further scenarios appear once in each test, in different skills or slots —
+Nicaraguan deaf children, gecko toe hairs, railway time zones, gold tesserae,
+Exchequer tally sticks, the Athenian allotment machine, bar-headed geese,
+sundial vs clock, and a contrast-transition template landing at q22 in both.
+A student sitting both tests meets each scenario twice.
+
+None of these collide *within* a single test, so the CLAUDE.md rule about a
+Module 2 item reusing a Module 1 setting is not violated in either package.
+The cause is the documented one: sibling authoring agents that were not steered
+onto disjoint thematic territory. It is the same failure that cost Tests 13 and
+14 a repair pass during the original build.
