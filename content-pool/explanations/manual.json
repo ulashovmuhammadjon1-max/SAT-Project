@@ -1,0 +1,17 @@
+[
+ {
+  "questionId": "ftu9hz9ipyg1wwanuseyj558",
+  "where": "Test 2 R&W M2 Hard q22 — Transitions",
+  "note": "Adjudicated: the marked key B is correct and the agent's answer was wrong, so no key change. Written by hand because the gate correctly refused to ship the agent's explanation, which argued for a different answer.",
+  "expect": "However",
+  "answerLabel": "B",
+  "whyCorrect": "The first sentence names something the library did well — energy-efficient windows and solar panels. The second reports a drawback of doing it: construction cost nearly 20 percent above a traditional building. A benefit followed by its price is a contrast, and <em>however</em> is the transition that marks one.",
+  "whyWrong": {
+   "A": "<em>In addition</em> signals another item of the same kind, which would need the second sentence to name a further advantage. Higher cost is not another advantage.",
+   "C": "<em>For example</em> would make the higher cost an instance of building with efficient windows and solar panels. A cost is a consequence of that choice, not a case of it.",
+   "D": "<em>Therefore</em> is the closest wrong answer, because the panels really did cause the extra cost. But a causal transition presents the second sentence as the point the first was building toward, and here it works against it — the sentence is a concession, so the contrast is what the passage needs."
+  },
+  "commonMistakes": "Choosing <em>Therefore</em> because the relationship really is causal. Both a cause and a contrast are present; the transition has to match how the writer is using the sentence, not only how the facts connect.",
+  "tips": "When a sentence reports the cost of something just praised, expect a contrast transition even if the cost was genuinely caused by it."
+ }
+]

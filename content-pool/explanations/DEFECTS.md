@@ -166,3 +166,65 @@ Combined with the ten R&W scenario pairs above, **Tests 14 and 15 are close to
 parallel forms of one another.** A student sitting both meets the same
 mathematics and the same passages twice. This needs a decision: rebuild one of
 the two, or accept them as an intentional pair and say so.
+
+## Found during the Tests 18-23 and review-list passes
+
+### Test 7 R&W M2 Hard q10 is unanswerable — no graph
+`97278a56-e5a3-4704-9af0-224bac8e42fe`. The stem reads "Which choice most
+effectively uses data from the graph to complete the example?" and asks the
+student to pick between percentages for individual 9 and individual 12. There is
+no graph: `Question.imageUrl` is null, the passage carries no image, and the
+passage contains no `<table>`. Every choice is a bare pair of numbers with
+nothing to check them against.
+
+This is the second question of this shape in Test 7, after M2 Easy q17 (stem
+opens with the literal token `TABLE_B`, no table). Both need the missing figure
+supplied or the question replaced; neither can be repaired with an explanation,
+which is why both are still uncovered.
+
+### Test 23 R&W Module 1 leaks its own answer
+Reported by the agent covering Tests 22-23, confirmed as a content problem
+rather than a rendering one. Module 1 q6's passage prints the sentence
+"Weed cutting takes off what has grown in the water this season; dredging takes
+out what has settled on the bed over many." Module 1 **q17** then asks the
+student to punctuate that same sentence — and the semicolon they must supply is
+already on screen eleven questions earlier in the same module.
+
+### Test 23 repeats content across modules a single student sees
+A student takes Module 1 plus one Module 2 branch, so a Module 2 item reusing
+Module 1 material shows the same passage twice to half the cohort.
+- M1 q8 (Cross-Text) states the statutory rate ceiling; **M2 Hard q14** is an
+  Inference item whose answer is that same proposition, and **M2 Easy q24** is a
+  Transitions item built from a near-verbatim restatement of it.
+- M2 Easy q8's Text 1 and M2 Easy q23 are the same two clauses, about fifteen
+  questions apart in one module.
+
+### Test 22 and Test 23 share a trigonometry template
+Test 22 M2 Hard q21 (`508c39f6-1970-4e23-a6af-6747ccafe90c`) and Test 23 M2 Hard
+q19 (`59425706-9db9-4346-a631-4045fd17c91b`) are the same 5-12-13 triangle with
+the same given ratio; only which angle's tangent is requested differs. Both are
+correct as written.
+
+## Answer keys corrected on the review list
+
+Seven of the 53 held-back questions were adjudicated and the key was found
+wrong. `fix_keys.mjs` carries the full reasoning for each; the agents' own
+explanations then shipped through the normal pipeline.
+
+| question | was | now | why |
+|---|---|---|---|
+| Test 1 R&W M1 q7 | D | A | The underlined portion is the refutation; the explanation it overturns sits before the underline. |
+| Test 1 Math M1 q8 | A | B | Line n passes through (0, 3) and hits y = 12 at x = 1.5, so its slope is 6 and the perpendicular is -1/6. |
+| Test 1 R&W M1 q16 | D | B | Both sides of the blank are independent clauses; the keyed comma is a splice. |
+| Test 1 R&W M2 Hard q7 | C | D | The next sentence says the Comanche center "employs a similar strategy", so the sentence cannot be distinguishing this center from other tribal centers. |
+| Test 2 R&W M1 q22 | A | C | The sentence restates the one before it rather than exemplifying it. |
+| Test 2 R&W M2 Hard q3 | B | C | "unique, rapidly evolving local conditions" defines the blank as "distinctive to"; "prohibitive in" contradicts the advantage being described. |
+| Test 10 R&W M2 Easy q14 | A | D | Only the ring inference is supported by the passage; lifespan is never mentioned, and choices B and C are the two reversals of the density sentence. |
+
+One was adjudicated the other way — **Test 2 R&W M2 Hard q22**, where the key
+"However" is correct and the agent's "Therefore" was wrong. Its explanation was
+written by hand (`manual.json`) because the agent's argued for the wrong answer.
+
+Six of these seven are in Tests 1 and 2, both transcribed. That is the same
+pattern the original audit found, now confirmed a level deeper: the errors are
+in the transcribed keys, not in the agents.
