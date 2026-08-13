@@ -1,0 +1,111 @@
+[
+ {
+  "id": "6bb63ee0",
+  "where": "Test 4 R&W M1 q1",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "B",
+  "expect": "extrapolating from",
+  "reasoning": "The blank is the object of \"caution against\" and takes \"this one example\" as its own object, so the phrase must name the risky act the researchers warn about. The colon supplies the reason: the labor-pool driver behind Detroit's car clustering was largely absent from toy manufacturing, so generalizing from Detroit to industrial agglomeration as a whole is unsafe. \"Extrapolating from this one example\" names exactly that generalization. \"Corroborating this one example\" is incoherent — the warning is not against confirming Detroit but against treating it as representative."
+ },
+ {
+  "id": "7c8cd0fe",
+  "where": "Test 4 R&W M1 q2",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "B",
+  "expect": "reject",
+  "reasoning": "Both examples show artists deliberately combining Indigenous music with another genre — powwow music inside electronic dance music, powwow-style melodies inside rock. Artists who fuse the two categories are refusing to treat the boundary between them as binding, which is what it means to reject the distinctions. \"Replace\" fails because nothing in the text says what the distinctions are replaced with; the artists merge across the categories rather than substituting something for them."
+ },
+ {
+  "id": "e37d085d",
+  "where": "Test 4 R&W M1 q5",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "two differing viewpoints",
+  "reasoning": "The text names one feature of the series — the abrupt endings — and then reports two reactions to it: some critics call the endings arbitrary stops, and other critics say the books should be read as one continuous work. The text itself endorses neither side and never argues that O'Brian deserves Proust's renown; In Search of Lost Time appears only inside the second group's comparison. That structure is a characteristic plus two differing viewpoints on it."
+ },
+ {
+  "id": "48c42b75",
+  "where": "Test 4 R&W M1 q14",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "D",
+  "expect": "more krill per day than the sei whale",
+  "reasoning": "The 19,800 kg figure is attached to the bowhead alone, and it is about 30 percent of the bowhead's 66,000 kg mass. The sei whale tops out at 25,000 kg, so at the same 30 percent ceiling its maximum intake is about 7,500 kg per day — nowhere near 19,800 kg, which makes the stored key factually false on the text's own numbers. The supportable conclusion is the comparative one: the bowhead can eat more krill per day than the sei whale can."
+ },
+ {
+  "id": "6ce576e4",
+  "where": "Test 4 R&W M1 q16",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "D",
+  "expect": "have positioned",
+  "reasoning": "Remove the dashed list and the sentence is \"Several advantages _____ acoustic waves as a promising alternative...\" — a subject with no finite verb. \"Having positioned\" is a participle and leaves the whole first clause a fragment before the semicolon, which requires an independent clause on each side. The plural subject \"advantages\" takes \"have positioned.\""
+ },
+ {
+  "id": "082086ce",
+  "where": "Test 4 R&W M1 q19",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "C",
+  "expect": "contributed",
+  "expectExact": "contributed",
+  "reasoning": "The subject is \"President Mikhail Gorbachev's reforms,\" and everything between the commas (\"by helping ... assert their prerogatives\") is a modifying phrase. Strip it and the sentence still needs a finite main verb before \"to the Soviet Union's breakup,\" so only the past-tense \"contributed\" completes it. \"Having contributed\" is a participle and leaves the sentence a fragment."
+ },
+ {
+  "id": "1e52740c",
+  "where": "Test 4 R&W M1 q22",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "Alternatively",
+  "reasoning": "The first sentence gives one naming strategy — picking something wholly original — and the sentence after the blank gives a competing strategy, borrowing a recognizable song title. The parallel \"might ... might\" marks them as two options, not a general claim and its illustration. The example arrives in the third sentence (Boris and the Melvins), which is what \"For instance\" would have to introduce."
+ },
+ {
+  "id": "7dac0122",
+  "where": "Test 4 R&W M1 q27",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "both show African American figures in poses that symbolize supportive relationships",
+  "reasoning": "The stated goal is to emphasize a similarity between the two sculptures. The stored key contrasts rounded, indistinct features with sharply defined ones, which is a difference and defeats the goal outright. Only option B names both works and a quality they share — African American figures whose poses symbolize supportive relationships — drawn from the notes about reaching out and about embracing while holding an equal sign."
+ },
+ {
+  "id": "46dc9715",
+  "where": "Test 4 R&W M2 Hard q5",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "A",
+  "expect": "current purpose of a building",
+  "reasoning": "The underlined sentence is \"Now the house is a museum dedicated to Dunbar's life and writings.\" The previous sentence says what the house used to be — where Dunbar lived and wrote — and the underlined sentence begins with \"Now\" to report what the building is used for today, which the rest of the text then develops. It summarizes nothing about Dunbar's career; it names only the house's present function."
+ },
+ {
+  "id": "c8ceee3b",
+  "where": "Test 4 R&W M2 Easy q6",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "C",
+  "expect": "based in part on the similarity of their construction",
+  "reasoning": "The text's core move is a conclusion plus its basis: the researchers decided the 41 settlements were culturally linked to Izapa because each matches Izapa in age and layout, pyramid north and plaza south. Option C states that conclusion and that basis. The stored key adds claims the text never makes — that archaeologists have learned much about Izapa \"over years of research\" and that the settlements were found \"only recently\" — and makes the discovery's timing, not the inference, the point."
+ },
+ {
+  "id": "524a7e3d",
+  "where": "Test 4 R&W M2 Hard q6",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "C",
+  "expect": "Nahuatl",
+  "reasoning": "The text traces both words along the same path into English, through Spanish, and then marks where they diverge: \"coyote\" goes back to Nahuatl in Central Mexico, \"iguana\" to Taino in the Caribbean. \"But in this case\" opening the fourth sentence signals that the ultimate source language is the difference the passage draws. Nothing in the text dates either borrowing, so the stored key's claim about one entering English recently and the other centuries ago is unsupported."
+ },
+ {
+  "id": "61ec3a90",
+  "where": "Test 4 R&W M2 Easy q12",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "no effect of sex on the uptake of oxygen-18",
+  "reasoning": "The researchers read a difference in oxygen-18 between a female's septum (F07) and a male's (M28) as a difference in the depth at which each formed. That reading only holds if sex itself does not change how oxygen-18 is absorbed and laid down in septa; otherwise the gap could come from the animals' sex rather than from the water. Option B removes exactly that alternative explanation. The stored key establishes only that nautilids live below 50 meters, which does not distinguish 135 meters from 365 meters and so does nothing to license the comparison actually drawn."
+ }
+]

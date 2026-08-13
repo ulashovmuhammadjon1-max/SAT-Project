@@ -1,0 +1,137 @@
+[
+ {
+  "id": "36ebf93f",
+  "where": "Test 3 R&W M1 q2",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "biased",
+  "reasoning": "The sentence is built as a concession-plus-rebuttal: politicians accuse journalists of something, and the rebuttal is that although some journalists \"allow their own views to creep into their reporting,\" most \"make a good-faith effort to be neutral.\" The thing being denied is therefore a lack of neutrality, so the accusation in the blank must name exactly that failing. \"Biased\" is the word for letting one's own views color reporting. \"Irrelevant\" has no connection to neutrality and nothing in the sentence rebuts a charge of irrelevance."
+ },
+ {
+  "id": "0cadbfd9",
+  "where": "Test 3 R&W M1 q4",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "match",
+  "reasoning": "The sentence's point is that Djamaa el Djazair, holding roughly 120,000 people, is \"one of the largest mosques in the world.\" \"Few religious buildings can be said to _____ the astonishing size\" must therefore mean that few buildings equal or rival it. \"Match\" carries that sense of equaling. \"Minimize\" would say that few buildings make its size seem smaller, which is not a claim the sentence supports and does not follow from the superlative that closes it."
+ },
+ {
+  "id": "c15bd6e7",
+  "where": "Test 3 R&W M1 q15",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "D",
+  "expect": "reevaluate their classifications",
+  "reasoning": "Both of Camacho and McLachlan's observations undermine the same thing: species leave old ranges and new areas become habitable, so a fixed \"native\"/\"invasive\" label may stop describing reality. The text says these changes \"challenge such designations\" generally, and it notes that many states draw the same distinction, so the inference is about the labels themselves and the states that use them. Choice D states that. Choice A carves out the flathead catfish as a special exception, which the text never singles out; the catfish is only the opening example of the general practice being questioned."
+ },
+ {
+  "id": "660bc315",
+  "where": "Test 3 R&W M1 q25",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "A",
+  "expect": "housed at the New Mexico Museum of Natural History",
+  "reasoning": "The stated goal is to identify the institution in which Spike is housed. Only choice A names an institution and says Spike is housed there, combining the two relevant notes. Choice D gives Spike's geologic age and names no institution at all, so it cannot accomplish the goal."
+ },
+ {
+  "id": "28154b9f",
+  "where": "Test 3 R&W M1 q27",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "C",
+  "expect": "10.2 million tons",
+  "reasoning": "The goal is to identify the combined carrying capacity of Malaysia's merchant ships in 2021. The notes supply that figure indirectly: carrying capacity is another name for deadweight tonnage, and the combined DWT of the 1,769 ships was 10.2 million tons. Choice C states exactly that combined figure in the terms the goal asks for. Choice A only defines the term \"deadweight tonnage\" and gives no capacity figure at all, so it cannot accomplish the goal."
+ },
+ {
+  "id": "233ab1cd",
+  "where": "Test 3 R&W M2 Hard q2",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "A",
+  "expect": "dogmatic",
+  "reasoning": "The comparison is between speeches expressing nuanced, compromise-friendly views and speeches expressing the opposite kind of view, and the sentence then labels the second kind \"the unyielding rhetoric of the latter.\" The blank must therefore name views held rigidly and asserted as beyond question, which is what \"dogmatic\" means. \"Vacillating\" means wavering back and forth, the opposite of unyielding, so it contradicts the sentence's own description of the speeches it modifies."
+ },
+ {
+  "id": "724ad42b",
+  "where": "Test 3 R&W M2 Easy q3",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "C",
+  "expect": "hesitancy about",
+  "reasoning": "\"Despite\" sets up a contrast with what follows, and what follows is that she \"could speak authoritatively\" about a particular author's books. The blank must therefore name something about her general expertise that would ordinarily have kept her from speaking with authority, which is doubt or reluctance. \"Hesitancy about\" supplies that. \"Insight into her expertise\" names no obstacle, so it leaves the \"despite\" with nothing to contrast against."
+ },
+ {
+  "id": "754669d8",
+  "where": "Test 3 R&W M2 Hard q3",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "B",
+  "expect": "adequate",
+  "reasoning": "The \"although\" concedes that averages mislead when only a few users have rated a game, then turns to the fact that this game has over 22,000 ratings. The blank must say that this many ratings is enough to trust the average, which is what \"adequate\" means. \"Excessive\" would say the sample is unreasonably large, a criticism the sentence never makes and one that does not support feeling confident in the average."
+ },
+ {
+  "id": "f31e958b",
+  "where": "Test 3 R&W M2 Easy q4",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "manifest in",
+  "reasoning": "The clause after the semicolon says the handcrafted elements \"exemplify the artistry involved,\" so the physical books are presented as evidence that displays Morris's rejection of industrial production, not as something that muddies it. The blank needs a phrase meaning plainly visible in, which is \"manifest in.\" \"Complicated by\" would say the handmade materials make his repudiation harder to see, which the sentence's own explanatory second half contradicts."
+ },
+ {
+  "id": "5ffe66e1",
+  "where": "Test 3 R&W M2 Easy q5",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "Define",
+  "reasoning": "Each speaker rises and tries to \"hew out his conception of art a little more clearly\" — the axe image is of cutting a rough mass into a distinct shape, and \"more clearly\" tells you the goal is sharper outlines for an idea. Figuratively that is making an idea precise, which is what \"define\" means; the follow-up, in which each speaker sits down feeling his strokes \"had gone awry\" and immediately corrects himself, confirms that the attempt was at clarity. \"Vacate\" means to leave or empty, which reverses the sense: the speakers are building up their conceptions, not abandoning them."
+ },
+ {
+  "id": "a1501579",
+  "where": "Test 3 R&W M2 Easy q6",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "B",
+  "expect": "discusses 3D vision in sheep and barn owls, then introduces a study",
+  "reasoning": "The first half explains how sheep and barn owls get 3D vision by combining one image from each eye; the second half turns to Nityananda's study of the same capacity in mantises. That is a discussion of 3D vision in one group followed by a study of it in another, which is choice B. Choice C claims the mantis study \"challenges the accuracy\" of the sheep-and-owl description, but the text says only that mantis 3D vision is unlike that of other animals — it never casts doubt on how sheep and owls see."
+ },
+ {
+  "id": "e4315d09",
+  "where": "Test 3 R&W M2 Easy q7",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "lesser-known works",
+  "reasoning": "Every sentence after the first serves one recommendation: overlooking Joplin's less famous works means missing his full range, \"Pleasant Moments\" and Treemonisha are offered as proof of that range, and the closing sentence says those works \"deserve as much fame as Joplin's biggest hits.\" That is an argument for giving his lesser-known pieces more attention. Choice C generalizes to many different composers, but the text discusses only Joplin and never recommends listening more broadly."
+ },
+ {
+  "id": "9b422715",
+  "where": "Test 3 R&W M2 Hard q7",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "summarizes the purpose of founding",
+  "reasoning": "The underlined sentence names the organization that preserves the history just described and then gives the reason it was created: it was founded in 1975 \"to support Black media professionals and honor people like Wilk.\" That infinitive clause is a statement of founding purpose, which is choice D. Choice C fails because the sentence lists nothing the association has accomplished — only when and where it was founded and what it was founded to do."
+ },
+ {
+  "id": "948a0a64",
+  "where": "Test 3 R&W M2 Hard q8",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "B",
+  "expect": "automatic",
+  "reasoning": "Text 1 credits the designation itself: \"Simply by selecting Arequipa,\" UNESCO raised awareness of local food and boosted tourism. Text 2 answers that cities \"must still create effective marketing strategies to benefit fully\" and adds that without deliberate promotion, visitors would not even know about the city's food. The disagreement is over whether the benefits arrive on their own or have to be worked for, which is choice B. Choice C misreads Text 2 as doubting that any benefit occurred, but Text 2 accepts the benefit and only insists that intentional effort is what produced it."
+ },
+ {
+  "id": "6f363a30",
+  "where": "Test 3 R&W M2 Easy q11",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "C",
+  "expect": "belonging to her earlier style, to which she never returned",
+  "reasoning": "The claim is that Harbor Number 1 marks a significant change in Martin's development, so the supporting quotation has to establish a before and an after. Choice C does exactly that: the works preceding the painting belong to an earlier style she never went back to, which makes Harbor Number 1 the dividing line. Choice B calls Martin ahead of her time and cites the painting as evidence, but says nothing about her work changing at that point."
+ }
+]
