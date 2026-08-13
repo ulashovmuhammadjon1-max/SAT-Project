@@ -14,7 +14,6 @@ import {
   Layers,
   LineChart,
   MonitorPlay,
-  Quote,
   ShieldCheck,
   Sparkles,
   Star,
@@ -73,7 +72,6 @@ export function Landing({ partners }: { partners?: React.ReactNode }) {
         <Analytics />
         <Adaptive />
         <Vocabulary />
-        <Testimonials />
         <Faq />
         {partners}
         <FinalCta />
@@ -609,11 +607,24 @@ function Ecosystem() {
 /* 3. Stats                                                                    */
 /* -------------------------------------------------------------------------- */
 
-const STATS = [
-  { value: 1600, label: "Point scale, fully modelled" },
+/**
+ * Every number here must be checkable against the database.
+ *
+ * This block previously carried "+180 pts average practice gain" and "98%
+ * Bluebook layout parity". Neither was measured — the platform has never had
+ * enough completed tests to compute a score gain, and the parity figure was a
+ * number with no method behind it. An invented statistic on a landing page is a
+ * false advertising claim, and it is also the easiest thing for a sceptical
+ * student to catch, which costs more trust than the claim ever bought.
+ */
+const STATS: { value: number; prefix?: string; suffix?: string; label: string }[] = [
+  { value: 31, label: "Full-length practice tests" },
+  // A floor, not a snapshot. The exact count was 4,605 when this was written and
+  // only ever grows as content is added, so a "+" keeps the claim true without
+  // needing a code change every time questions are authored.
+  { value: 4600, suffix: "+", label: "Questions, every one explained" },
   { value: 27, label: "Questions per R&W module" },
-  { value: 180, prefix: "+", suffix: " pts", label: "Average practice gain" },
-  { value: 98, suffix: "%", label: "Bluebook layout parity" },
+  { value: 1600, label: "Point scale, fully modelled" },
 ];
 
 function Stats() {
@@ -974,79 +985,6 @@ function Vocabulary() {
             </RevealGroup>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-/* 9. Testimonials                                                             */
-/* -------------------------------------------------------------------------- */
-
-const TESTIMONIALS = [
-  {
-    quote:
-      "The interface is the whole thing. I'd done six practice tests elsewhere and still felt lost opening Bluebook. After SATForge, test day was muscle memory.",
-    name: "Dilnoza R.",
-    detail: "1290 → 1480",
-    school: "Accepted — NYU Abu Dhabi",
-  },
-  {
-    quote:
-      "I found out I was losing 40 points to Boundaries questions alone. Nobody had ever told me that. Two weeks of targeted practice and it stopped being a problem.",
-    name: "Aziz K.",
-    detail: "1350 → 1520",
-    school: "Accepted — Bocconi",
-  },
-  {
-    quote:
-      "The adaptive routing is what sold me. Other platforms give you a flat test and a fake score. This one told me I wasn't reaching the hard module yet, and why.",
-    name: "Malika S.",
-    detail: "1180 → 1400",
-    school: "Accepted — Nazarbayev University",
-  },
-];
-
-function Testimonials() {
-  return (
-    <section className="border-y border-border/60 bg-secondary/25 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          label="Results"
-          icon={Star}
-          title="Students who stopped guessing"
-          body="Score changes reported by students using SATForge alongside official practice."
-        />
-
-        <RevealGroup className="mt-14 grid gap-5 lg:grid-cols-3" stagger={0.1}>
-          {TESTIMONIALS.map((t) => (
-            <RevealItem key={t.name}>
-              <HoverLift className="h-full">
-                <figure className="flex h-full flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-soft transition-shadow hover:shadow-card">
-                  <Quote className="h-6 w-6 text-primary/30" />
-                  <blockquote className="mt-3 flex-1 text-[15px] leading-relaxed">{t.quote}</blockquote>
-                  <figcaption className="mt-5 border-t border-border/70 pt-4">
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm font-semibold">{t.name}</p>
-                      <span className="rounded-full bg-success/10 px-2.5 py-0.5 text-xs font-semibold text-success">
-                        {t.detail}
-                      </span>
-                    </div>
-                    <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <GraduationCap className="h-3.5 w-3.5" /> {t.school}
-                    </p>
-                  </figcaption>
-                </figure>
-              </HoverLift>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-
-        <Reveal delay={0.2}>
-          <p className="mt-8 text-center text-xs text-muted-foreground">
-            Individual results vary. Score changes are self-reported and are not a guarantee of performance.
-          </p>
-        </Reveal>
       </div>
     </section>
   );

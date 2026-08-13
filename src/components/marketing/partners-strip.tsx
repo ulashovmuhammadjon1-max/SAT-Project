@@ -20,11 +20,22 @@ import { Reveal } from "@/components/shared/motion";
  * somewhere else, which is a real phishing vector on any outbound link.
  */
 export async function PartnersStrip({ compact = false }: { compact?: boolean }) {
-  const partners = await prisma.partner.findMany({
-    where: { isPublished: true },
-    orderBy: [{ order: "asc" }, { createdAt: "asc" }],
-    select: { id: true, name: true, logoUrl: true, href: true, blurb: true },
-  });
+  // Fails soft, deliberately. This component is rendered on the marketing
+  // landing page, which Next prerenders at build time — so a database that is
+  // unreachable during a build would otherwise fail the whole deploy over a
+  // decorative logo strip. Caught here, a build with no database simply ships a
+  // page without partners, and the next request-time render fills them in.
+  let partners: { id: string; name: string; logoUrl: string; href: string; blurb: string | null }[];
+  try {
+    partners = await prisma.partner.findMany({
+      where: { isPublished: true },
+      orderBy: [{ order: "asc" }, { createdAt: "asc" }],
+      select: { id: true, name: true, logoUrl: true, href: true, blurb: true },
+    });
+  } catch (error) {
+    console.error("[partners] could not load, rendering nothing", error);
+    return null;
+  }
 
   if (partners.length === 0) return null;
 
