@@ -228,3 +228,43 @@ written by hand (`manual.json`) because the agent's argued for the wrong answer.
 Six of these seven are in Tests 1 and 2, both transcribed. That is the same
 pattern the original audit found, now confirmed a level deeper: the errors are
 in the transcribed keys, not in the agents.
+
+
+## Status after the repair pass — everything above is FIXED
+
+| defect | fix |
+|---|---|
+| Test 7 M2E q17 unanswerable (literal `TABLE_B`, no table) | table built to the existing key and distractors; no choice changed |
+| Test 7 M2H q10 unanswerable (no graph) | bar chart built and attached as `imageUrl` |
+| Test 6 M1 q6 two correct answers | distractor D `p-35c=6` was the key times -1; replaced with a variable swap |
+| Test 2 M1 q16 two correct answers | distractor C `2\sqrt{12}` equalled the keyed `4\sqrt{3}`; replaced with `2\sqrt{24}` |
+| Test 29 M1 q3 inconsistent with its own numbers | starting stock 30 -> 40 tonnes so the keyed 60 hours is reachable |
+| Test 23 M1 q6 leaked q17's answer | q17 moved onto different clauses in the same setting |
+| Test 26 M2H q2 == Test 27 M2H q4 | Test 27's re-authored: new points, slope 3, intercept +4a |
+| Test 29 M2E q6 == Test 31 M2E q3 | Test 31's re-authored: 9n-15=5n+21, answer 9 |
+| Test 22 M2H q21 == Test 23 M2H q19 | Test 23's re-authored onto the 8-15-17 triple |
+| Test 24 M2E q17 and Test 27 M2E q17 defective | both recast so exactly one choice is correct |
+| 51 wrong answer keys | corrected; see REVIEW.md |
+
+Every re-authored Math answer was re-derived with sympy, and the DB-wide
+rendering audit passes on all 2,046 Math questions after the stem edits.
+
+**The Test 6/7 recycling reported above is no longer present.** An exact
+passage+stem scan over the 2,511 published R&W questions now finds 2 duplicate
+groups, neither involving Test 7: Test 4 M2E q24 == Test 5 M2E q19, and Test 5
+M2E q6 == Test 6 M2H q6. Both are cross-test, so no single student meets either
+pair twice. They are the last known duplicates.
+
+## Still open
+
+- **Test 4 M2 Hard q5** carries its underline as a trailing parenthetical,
+  `(Underlined sentence: "Now the house is a museum…")`, instead of wrapping the
+  sentence in `<u>…</u>` as every other Text Structure item does. Answerable, so
+  not blocking, but inconsistent markup.
+- **Test 24 reuses five settings across Module 1 and a Module 2 branch** (ropes,
+  sails, braille, cave-painting dating, antibiotic resistance). A student sees
+  Module 1 plus one Module 2 branch, so half the cohort meets the same scene
+  twice. Tests 25 and 26 are clean in this respect.
+- **Test 29 M2 Easy q10** has a distractor that is a verbatim sub-clause of the
+  correct answer, so the item is answerable by construction without reading the
+  claim it is supposed to support.
