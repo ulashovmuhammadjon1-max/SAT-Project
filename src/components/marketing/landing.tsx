@@ -145,7 +145,7 @@ function Hero() {
       // -z-10 background wrapper escapes to the root and paints BEHIND the page
       // shell's opaque bg-background, which is why the plate was invisible.
       // Purely a paint-order fix: nothing moves, resizes or restyles.
-      className="relative isolate overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-24 lg:pt-36"
+      className="relative isolate overflow-hidden pb-14 pt-28 sm:pt-32 lg:pb-16 lg:pt-32"
     >
       {/* Animated background.
           Layer order inside this existing -z-10 wrapper is paint order, so the
@@ -177,7 +177,7 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-      <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-16">
+      <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] lg:gap-8 xl:gap-10">
         {/* ---------------------------------------------------------------- */}
         {/* Copy column                                                       */}
         {/* ---------------------------------------------------------------- */}
@@ -196,7 +196,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.05] tracking-tight text-balance sm:text-[3.4rem] lg:text-[2.85rem] xl:text-[3.05rem]">
+            <h1 className="mt-6 font-display text-[2.7rem] font-bold leading-[0.98] tracking-[-0.02em] text-balance sm:text-[3.5rem] lg:text-[3.5rem] xl:text-[4rem]">
               Master the SAT.
               <br />
               <span className="bg-gradient-to-r from-primary via-[hsl(250_84%_60%)] to-[hsl(266_84%_60%)] bg-clip-text text-transparent">
@@ -236,10 +236,14 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.32}>
-            <p className="mt-5 flex items-center justify-center gap-1.5 text-[13px] text-muted-foreground lg:justify-start">
-              <CheckCircle2 className="h-3.5 w-3.5 text-success" />
-              No credit card — setup takes about a minute
-            </p>
+            <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground lg:justify-start">
+              {["No credit card", "Setup in 60 seconds", "100% free core features"].map((t) => (
+                <li key={t} className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-success" />
+                  {t}
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
 
@@ -269,9 +273,13 @@ function Hero() {
             </div>
           </Reveal>
 
-          {/* 1580 mentorship card — the differentiator. Sits below the product
-              rather than on top of it, so neither competes with the other. */}
-          <Reveal delay={0.58} direction="up" className="mt-6 sm:mt-16 lg:mt-16">
+          {/* 1580 mentorship card. Tucked UNDER the exam window rather than
+              stacked below it: the negative margin lets the window overlap its
+              top edge, which is what gives the column depth instead of reading
+              as two separate boxes with a gap between them. -z-10 keeps it
+              behind the window; pt compensates so its own text is never
+              covered. */}
+          <Reveal delay={0.58} direction="up" className="relative -z-10 -mt-10 pt-16 sm:-mt-14 sm:pt-20 lg:-mt-16 lg:pt-28">
             <MentorshipCard className="sm:max-w-[380px] lg:max-w-none" />
           </Reveal>
         </motion.div>
