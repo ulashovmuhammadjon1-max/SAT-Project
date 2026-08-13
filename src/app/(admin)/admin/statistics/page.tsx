@@ -1,9 +1,14 @@
 import Link from "next/link";
-import { AlertTriangle, CheckCircle2, TrendingUp, Users } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Minus, TrendingDown, TrendingUp, Users } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { DistributionChart, TrendAreaChart } from "@/components/charts/trend-chart";
-import { getAdminStatistics, type QuestionOutlier } from "@/lib/admin/statistics";
+import {
+  getAdminStatistics,
+  type QuestionOutlier,
+  type SignupComparison,
+} from "@/lib/admin/statistics";
 import { EVENT_TYPE_LABELS } from "@/lib/events";
 import type { SessionType } from "@prisma/client";
 import { cn } from "@/lib/utils";
@@ -82,10 +87,11 @@ export default async function AdminStatisticsPage() {
       {/* ---- trends ------------------------------------------------------ */}
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
-          <CardHeader>
+          <CardHeader className="pb-2">
             <CardTitle>New students, last 12 weeks</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
+            <WeekOnWeek c={stats.signupComparison} />
             {stats.signupsByWeek.length ? (
               <TrendAreaChart data={stats.signupsByWeek} unitLabel="students" />
             ) : (
@@ -397,4 +403,59 @@ function Td({
 
 function Empty({ children }: { children: React.ReactNode }) {
   return <p className="py-6 text-center text-sm text-muted-foreground">{children}</p>;
+}
+
+/**
+ * This week's signups beside last week's.
+ *
+ * The current week is partial — it is only however far into the week we are —
+ * so the caption says which day we are on. Without that, a Tuesday reading
+ * looks like a collapse against a completed week, and someone acts on it.
+ */
+function WeekOnWeek({ c }: { c: SignupComparison }) {
+  const up = c.change != null && c.change > 0;
+  const down = c.change != null && c.change < 0;
+  const Icon = up ? TrendingUp : down ? TrendingDown : Minus;
+
+  return (
+    <div className="flex flex-wrap items-end gap-x-8 gap-y-3 rounded-xl border bg-secondary/30 p-4">
+      <div>
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">This week</p>
+        <p className="font-display text-3xl font-semibold tabular-nums">{c.thisWeek}</p>
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">Last week</p>
+        <p className="font-display text-3xl font-semibold tabular-nums text-muted-foreground">
+          {c.lastWeek}
+        </p>
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <p
+          className={cn(
+            "flex items-center gap-1 text-sm font-medium",
+            up && "text-emerald-500",
+            down && "text-amber-500",
+            !up && !down && "text-muted-foreground"
+          )}
+        >
+          <Icon className="h-4 w-4" />
+          {c.change == null
+            ? "No signups either week"
+            : `${c.change > 0 ? "+" : ""}${c.change} vs last week`}
+          {c.changePct != null && c.change !== 0 && (
+            <span className="text-muted-foreground">
+              ({c.changePct > 0 ? "+" : ""}
+              {c.changePct}%)
+            </span>
+          )}
+        </p>
+        <p className="mt-0.5 text-xs text-muted-foreground">
+          {c.daysIntoWeek < 7
+            ? `Day ${c.daysIntoWeek} of 7 — this week is still in progress.`
+            : "Full week, Monday to Sunday."}
+        </p>
+      </div>
+    </div>
+  );
 }

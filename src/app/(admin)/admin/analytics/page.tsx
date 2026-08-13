@@ -141,6 +141,18 @@ export default async function AdminAnalyticsPage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <MetricCard label="Students" value={students.length} />
           <MetricCard
+            label="Countries reached"
+            value={countriesRanked.length}
+            // Counts distinct countries students actually selected. Anyone who
+            // skipped the question is excluded rather than bucketed as unknown,
+            // so this never overstates the footprint.
+            sub={
+              countriesRanked.length
+                ? `${countriesRanked[0].flag} ${countriesRanked[0].name} leads with ${countriesRanked[0].value}`
+                : "no country selected yet"
+            }
+          />
+          <MetricCard
             label="Completed onboarding"
             value={onboardedCount}
             sub={students.length ? `${Math.round((onboardedCount / students.length) * 100)}% of students` : undefined}
@@ -177,8 +189,28 @@ export default async function AdminAnalyticsPage() {
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Country breakdown</CardTitle>
+            <CardHeader className="pb-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <CardTitle>Country breakdown</CardTitle>
+                <span className="text-sm text-muted-foreground">
+                  <strong className="font-display text-lg text-foreground tabular-nums">
+                    {countriesRanked.length}
+                  </strong>{" "}
+                  {countriesRanked.length === 1 ? "country" : "countries"}
+                </span>
+              </div>
+              {countriesRanked.length > 0 && (
+                // Every flag, not just the ranked top slice — the point of the
+                // number above is the reach, and the strip makes it visible at
+                // a glance without scrolling the list.
+                <p className="pt-1 text-lg leading-relaxed" title={countriesRanked.map((c) => c.name).join(", ")}>
+                  {countriesRanked.map((c) => (
+                    <span key={c.code} className="mr-1 inline-block">
+                      {c.flag}
+                    </span>
+                  ))}
+                </p>
+              )}
             </CardHeader>
             <CardContent>
               {countriesRanked.length > 0 ? (

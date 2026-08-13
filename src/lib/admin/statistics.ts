@@ -84,9 +84,28 @@ export interface StudentActivityRow {
   sessionsAttended: number;
 }
 
+/**
+ * This week's signups against last week's.
+ *
+ * Weeks are Postgres `date_trunc('week', …)` buckets, which start on Monday.
+ * The current week is deliberately *partial* — it is however far into the week
+ * we are — so `partialWeek` is exposed and the page says so. Comparing three
+ * days against a full seven and calling it a fall would be misleading.
+ */
+export interface SignupComparison {
+  thisWeek: number;
+  lastWeek: number;
+  /** Signed difference; null when there is no prior week to compare against. */
+  change: number | null;
+  changePct: number | null;
+  /** Days elapsed in the current week, 1–7. */
+  daysIntoWeek: number;
+}
+
 export interface AdminStatistics {
   funnel: FunnelStep[];
   signupsByWeek: TrendPoint[];
+  signupComparison: SignupComparison;
   activityByDay: TrendPoint[];
   scoreDistribution: ScoreBucket[];
   averageTotalScore: number | null;
@@ -152,6 +171,37 @@ async function signupsByWeek(): Promise<TrendPoint[]> {
     label: new Date(r.week).toLocaleDateString(undefined, { day: "numeric", month: "short" }),
     value: asNumber(r.n),
   }));
+}
+
+/** This week's student signups against last week's. */
+async function signupComparison(): Promise<SignupComparison> {
+  const rows = await prisma.$queryRaw<{ bucket: string; n: bigint }[]>`
+    SELECT CASE
+             WHEN "createdAt" >= date_trunc('week', now()) THEN 'this'
+             ELSE 'last'
+           END AS bucket,
+           COUNT(*)::bigint AS n
+      FROM "User"
+     WHERE role = 'STUDENT'
+       AND "createdAt" >= date_trunc('week', now()) - interval '1 week'
+     GROUP BY 1
+  `;
+  const thisWeek = asNumber(rows.find((r) => r.bucket === "this")?.n);
+  const lastWeek = asNumber(rows.find((r) => r.bucket === "last")?.n);
+
+  // Monday is day 1. getDay() calls Sunday 0, which would otherwise report the
+  // last day of the week as the zeroth.
+  const dow = new Date().getDay();
+  const daysIntoWeek = dow === 0 ? 7 : dow;
+
+  return {
+    thisWeek,
+    lastWeek,
+    change: lastWeek === 0 && thisWeek === 0 ? null : thisWeek - lastWeek,
+    // A percentage against a zero baseline is infinity, not growth.
+    changePct: lastWeek === 0 ? null : Math.round(((thisWeek - lastWeek) / lastWeek) * 100),
+    daysIntoWeek,
+  };
 }
 
 /** Questions answered per day for the last 30 days, from the study log. */
@@ -449,6 +499,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
   const [
     funnel,
     weeks,
+    weekCompare,
     days,
     scores,
     usage,
@@ -460,6 +511,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
   ] = await Promise.all([
     buildFunnel(),
     signupsByWeek(),
+    signupComparison(),
     activityByDay(),
     scoreDistribution(),
     testUsage(),
@@ -485,6 +537,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
   return {
     funnel,
     signupsByWeek: weeks,
+    signupComparison: weekCompare,
     activityByDay: days,
     scoreDistribution: scores.buckets,
     averageTotalScore: scores.average,
