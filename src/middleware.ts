@@ -46,5 +46,9 @@ export default auth((req) => {
 });
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.png$|.*\\.svg$).*)"],
+  // Static image extensions are excluded so they are served directly rather
+  // than redirected to /login for a logged-out visitor. .webp was missing,
+  // which made the hero background plate 307 on the marketing page — the
+  // one page whose visitors are all logged out.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|svg|webp|avif|jpg|jpeg|gif|ico)$).*)"],
 };

@@ -141,10 +141,26 @@ function Hero() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-24 lg:pt-36"
+      // `isolate` gives this section its own stacking context. Without it the
+      // -z-10 background wrapper escapes to the root and paints BEHIND the page
+      // shell's opaque bg-background, which is why the plate was invisible.
+      // Purely a paint-order fix: nothing moves, resizes or restyles.
+      className="relative isolate overflow-hidden pb-20 pt-32 sm:pt-36 lg:pb-24 lg:pt-36"
     >
-      {/* Animated background */}
+      {/* Animated background.
+          Layer order inside this existing -z-10 wrapper is paint order, so the
+          plate goes first and everything already here keeps sitting on top of
+          it. No z-index anywhere else changes, and no foreground UI moves.
+            1. hero-plate       — the campus photograph
+            2. readability wash — navy, heaviest on the left under the headline
+            3. the original radial gradient, blobs and grid
+          Dark-only: the theme provider defaults to dark but has enableSystem,
+          so a visitor whose OS is set to light still gets the light palette,
+          and a dark plate under light-theme type would be unreadable. In light
+          mode this renders exactly as it did before. */}
       <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="hero-plate absolute inset-0 hidden dark:block" />
+        <div className="hero-wash absolute inset-0 hidden dark:block" />
         <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,hsl(226_84%_56%/0.10),transparent_70%)]" />
         <FloatingBlob className="absolute -top-24 left-[8%] h-[380px] w-[380px] rounded-full bg-primary/20 blur-[110px]" />
         <FloatingBlob
