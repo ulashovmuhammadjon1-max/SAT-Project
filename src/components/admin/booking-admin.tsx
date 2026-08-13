@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Ban, Check, Loader2, Plus, Trash2, Undo2, X } from "lucide-react";
+import { Ban, Check, Loader2, Plus, RotateCcw, Trash2, Undo2, X } from "lucide-react";
 import { toast } from "sonner";
 
 import type { BookingStatus } from "@prisma/client";
@@ -173,6 +173,13 @@ const DECISION_COPY: Record<
     reasonRequired: true,
     hint: "Required. The student sees this, so say what went wrong and what they can do instead.",
   },
+  REVOKE: {
+    title: "Send this session back for review",
+    verb: "Un-approve",
+    done: "Sent back for review — the student has been emailed what to fix.",
+    reasonRequired: true,
+    hint: "Required. Say which step is missing. The slot and the coins stay held, so the student can fix it and be approved again.",
+  },
   CANCEL: {
     title: "Cancel this approved session",
     verb: "Cancel session",
@@ -272,7 +279,12 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                         <Check className="h-3.5 w-3.5" /> Complete
                       </Button>
                     )}
-                    {taken && (b!.status === "UPCOMING" || b!.status === "PENDING") && b!.status === "UPCOMING" && (
+                    {taken && b!.status === "UPCOMING" && (
+                      <Button size="sm" variant="outline" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "REVOKE", who: b!.name })}>
+                        <RotateCcw className="h-3.5 w-3.5" /> Un-approve
+                      </Button>
+                    )}
+                    {taken && b!.status === "UPCOMING" && (
                       <Button size="sm" variant="outline" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "CANCEL", who: b!.name })}>
                         Cancel booking
                       </Button>
@@ -393,9 +405,11 @@ function DecisionDialog({
               placeholder={
                 target.decision === "REJECT"
                   ? "e.g. That slot is reserved for students sitting the March test — please pick a time in April."
-                  : target.decision === "CANCEL"
-                    ? "e.g. Your mentor is ill. Please rebook any open slot and we will prioritise you."
-                    : "e.g. Bring your last practice test score to the session."
+                  : target.decision === "REVOKE"
+                    ? "e.g. We could not find you following @satforge_org on Instagram. Follow the account and reply, and we will approve this again."
+                    : target.decision === "CANCEL"
+                      ? "e.g. Your mentor is ill. Please rebook any open slot and we will prioritise you."
+                      : "e.g. Bring your last practice test score to the session."
               }
               onChange={(e) => setReason(e.target.value)}
             />

@@ -3,9 +3,11 @@
 import { revalidatePath } from "next/cache";
 
 import { credit } from "@/lib/coins";
+import { getCommunityRequirements } from "@/lib/community";
 import {
   sendBookingApproved,
   sendBookingCancelledByAdmin,
+  sendBookingNeedsRecheck,
   sendBookingRejected,
 } from "@/lib/email/booking-decision";
 import { prisma } from "@/lib/prisma";
@@ -121,7 +123,7 @@ export async function setBookingStatus(
   return { ok: true };
 }
 
-export type BookingDecision = "APPROVE" | "REJECT" | "CANCEL";
+export type BookingDecision = "APPROVE" | "REJECT" | "CANCEL" | "REVOKE";
 
 /**
  * Approve, reject, or cancel a booking, with a reason the student is told.
@@ -174,9 +176,28 @@ export async function decideBooking(input: {
   if (input.decision === "CANCEL" && !["PENDING", "UPCOMING"].includes(booking.status)) {
     return { ok: false, error: "That booking isn't active." };
   }
+  if (input.decision === "REVOKE" && booking.status !== "UPCOMING") {
+    return {
+      ok: false,
+      error:
+        booking.status === "PENDING"
+          ? "That booking is already waiting for approval."
+          : "Only an approved session can be sent back for review.",
+    };
+  }
 
+  // REVOKE returns an approved session to the queue rather than ending it: the
+  // seat stays held, the coins stay held, and the student keeps their slot while
+  // they fix whatever failed the check. That is the whole point of it being
+  // separate from CANCEL.
   const nextStatus =
-    input.decision === "APPROVE" ? "UPCOMING" : input.decision === "REJECT" ? "REJECTED" : "CANCELLED";
+    input.decision === "APPROVE"
+      ? "UPCOMING"
+      : input.decision === "REJECT"
+        ? "REJECTED"
+        : input.decision === "REVOKE"
+          ? "PENDING"
+          : "CANCELLED";
 
   // Guarded on the status we just read, so two admins clicking at once cannot
   // both decide it — the loser updates zero rows and refunds nothing.
@@ -187,30 +208,39 @@ export async function decideBooking(input: {
       statusReason: reason,
       decidedAt: new Date(),
       decidedById: admin.id,
-      cancelledAt: nextStatus === "UPCOMING" ? null : new Date(),
+      // Only a genuinely terminal state carries a cancellation timestamp.
+      cancelledAt: nextStatus === "UPCOMING" || nextStatus === "PENDING" ? null : new Date(),
     },
   });
   if (changed.count === 0) return { ok: false, error: "Someone else just decided that booking." };
 
+  // No refund on REVOKE — the booking still exists and the coins are still
+  // held against it. Refunding here and re-debiting on re-approval would risk
+  // the student's balance having moved in between, which is the failure mode
+  // holding the coins exists to avoid.
   let refunded = 0;
-  if (nextStatus !== "UPCOMING" && booking.coinCost > 0) {
-    try {
-      await credit({
-        userId: booking.userId,
-        amount: booking.coinCost,
-        type: "BOOKING_REFUND",
-        description:
-          nextStatus === "REJECTED" ? "Session request declined — coins returned" : "Session cancelled — coins returned",
-        bookingId: booking.id,
-        // Same key the student-initiated cancel uses, so a booking can only
-        // ever be refunded once no matter which path releases it.
-        idempotencyKey: `refund:${booking.id}`,
-      });
-      refunded = booking.coinCost;
-    } catch (error) {
-      // The decision stands; the refund is recoverable by hand. Failing the
-      // whole action here would leave the admin thinking nothing happened.
-      console.error("[booking] admin refund failed", error);
+  if (nextStatus === "REJECTED" || nextStatus === "CANCELLED") {
+    if (booking.coinCost > 0) {
+      try {
+        await credit({
+          userId: booking.userId,
+          amount: booking.coinCost,
+          type: "BOOKING_REFUND",
+          description:
+            nextStatus === "REJECTED"
+              ? "Session request declined — coins returned"
+              : "Session cancelled — coins returned",
+          bookingId: booking.id,
+          // Same key the student-initiated cancel uses, so a booking can only
+          // ever be refunded once no matter which path releases it.
+          idempotencyKey: `refund:${booking.id}`,
+        });
+        refunded = booking.coinCost;
+      } catch (error) {
+        // The decision stands; the refund is recoverable by hand. Failing the
+        // whole action here would leave the admin thinking nothing happened.
+        console.error("[booking] admin refund failed", error);
+      }
     }
   }
 
@@ -226,6 +256,10 @@ export async function decideBooking(input: {
   };
   if (nextStatus === "UPCOMING") await sendBookingApproved(emailArgs);
   else if (nextStatus === "REJECTED") await sendBookingRejected(emailArgs);
+  else if (nextStatus === "PENDING")
+    // The re-check mail lists the actual requirements so the student knows
+    // exactly what to do rather than guessing which step they missed.
+    await sendBookingNeedsRecheck({ ...emailArgs, requirements: await getCommunityRequirements() });
   else await sendBookingCancelledByAdmin(emailArgs);
 
   revalidatePath("/admin/bookings");

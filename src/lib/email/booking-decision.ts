@@ -122,6 +122,61 @@ export async function sendBookingRejected(args: DecisionArgs) {
   }).catch((e) => console.error("[booking] rejection email failed", e));
 }
 
+/**
+ * An approval taken back, pending a re-check.
+ *
+ * This is the subscription case: the community requirements are self-attested
+ * at booking time (see lib/community.ts), and a volunteer checks them properly
+ * before the session. When the check fails, the session is not cancelled — the
+ * seat and the coins stay held and the student can still make it — so the email
+ * has to be an actionable "fix this", not a refusal. Saying "cancelled" here
+ * would be false and would send students off to rebook a slot they still hold.
+ */
+export async function sendBookingNeedsRecheck(
+  args: DecisionArgs & { requirements?: { label: string; handle: string; href: string }[] },
+) {
+  const label = EVENT_TYPE_LABELS[args.sessionType];
+  const when = args.startsAt.toUTCString();
+  const first = firstNameOf(args.name);
+  const reqs = args.requirements ?? [];
+
+  await sendEmail({
+    to: args.to,
+    subject: `Action needed to keep your ${label}`,
+    text:
+      `Hi ${first},\n\n` +
+      `Your ${label} on ${when} is on hold. We could not confirm the community steps ` +
+      `you agreed to when booking.\n` +
+      reasonText(args.reason) +
+      (reqs.length
+        ? `\nPlease complete these, then reply to this email so we can re-approve:\n` +
+          reqs.map((r) => `  - ${r.label} (${r.handle}): ${r.href}\n`).join("")
+        : "") +
+      `\nYour time slot is still reserved and your coins are still held — nothing has ` +
+      `been cancelled and you do not need to rebook.`,
+    html: layout(
+      para(`Hi ${first},`) +
+        para(
+          `Your <strong style="color:#ffffff;">${label}</strong> on ${when} is on hold. We could not confirm the community steps you agreed to when booking.`,
+        ) +
+        reasonHtml(args.reason) +
+        (reqs.length
+          ? `<ul style="margin:0 0 14px;padding-left:20px;color:#d6dcea;font-size:15px;line-height:1.7;">` +
+            reqs
+              .map(
+                (r) =>
+                  `<li>${r.label} — <a href="${r.href}" style="color:#608ffa;">${r.handle}</a></li>`,
+              )
+              .join("") +
+            `</ul>`
+          : "") +
+        para(
+          `<strong style="color:#ffffff;">Your slot is still reserved and your coins are still held.</strong> Nothing has been cancelled and you do not need to rebook — complete the steps above and reply to this email so we can re-approve.`,
+        ),
+    ),
+  }).catch((e) => console.error("[booking] re-check email failed", e));
+}
+
 /** An approved session withdrawn afterwards — reads differently from a decline. */
 export async function sendBookingCancelledByAdmin(args: DecisionArgs) {
   const label = EVENT_TYPE_LABELS[args.sessionType];
