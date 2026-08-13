@@ -1,0 +1,241 @@
+[
+ {
+  "ref": "ct-lighthouse",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Satellite navigation has made the lighthouse an ornament. A receiver fixes a ship's position within a few meters anywhere on earth, in any weather, and does not depend on a keeper, a lens, or a line of sight to a headland. Several maritime authorities have begun decommissioning towers on exactly this reasoning.</p><p><strong>Text 2</strong></p><p>A satellite signal arrives at the receiver about as strong as a car headlight seen from twenty thousand kilometers, which is why a transmitter the size of a suitcase can blank it across a whole port. Jamming incidents reported to European authorities have risen every year for a decade. A light on a rock cannot be spoofed, and its whole value is that it works when the clever system does not.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the decommissioning described in Text 1",
+  "choices": [
+   {"label": "A", "content": "removes a backup precisely because the primary system usually works", "isCorrect": true},
+   {"label": "B", "content": "is premature because satellite receivers are not yet accurate enough for harbor navigation", "isCorrect": false},
+   {"label": "C", "content": "will prove more expensive than maintaining the towers once removal costs are counted", "isCorrect": false},
+   {"label": "D", "content": "should be limited to towers that are no longer visible from the main shipping lanes", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 never disputes that satellite navigation ordinarily works better; it disputes the inference that ordinary performance is the thing to plan around. The signal is faint enough to be blanked by a suitcase-sized transmitter, jamming reports have climbed for ten years, and a light on a rock \"cannot be spoofed.\" Its value is reserve capacity — it \"works when the clever system does not\" — which is exactly what reasoning from normal conditions throws away.",
+  "whyWrong": {
+   "B": "Text 2 concedes the accuracy in Text 1. Its concern is availability under interference, not precision.",
+   "C": "No costs are discussed in either text. Text 2's argument is about failure modes.",
+   "D": "Text 2 draws no distinction between towers by location. Its reasoning applies to any port a jammer can reach."
+  },
+  "commonMistakes": "Assuming that defending an old technology means claiming the new one is inaccurate. Here the old one is defended as a fallback.",
+  "tips": "When Text 2 describes what happens when a system fails, look for an answer about redundancy rather than about everyday performance."
+ },
+ {
+  "ref": "ct-tulip",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>The Dutch tulip mania of the 1630s is the standard parable of a speculative bubble: prices for a single rare bulb reportedly reached the cost of a canal house, then collapsed in a February week, ruining those left holding contracts. Economists reach for it whenever an asset rises faster than any plausible income it could produce.</p><p><strong>Text 2</strong></p><p>Historian Anne Goldgar's work in the notarial archives finds fewer than four hundred people trading at the peak, most of them wealthy merchants already known to one another, and almost no bankruptcies traceable to the crash. The contracts were futures settled in a tavern, and when the price fell the courts simply declined to enforce them. What survived was not a financial catastrophe but the pamphlets written about one.</p>",
+  "stem": "Based on the texts, Goldgar's findings (Text 2) most directly challenge the parable in Text 1 by",
+  "choices": [
+   {"label": "A", "content": "showing that the episode involved few participants and produced little of the ruin attributed to it", "isCorrect": true},
+   {"label": "B", "content": "showing that bulb prices never rose to unusual levels at any point in the 1630s", "isCorrect": false},
+   {"label": "C", "content": "showing that the collapse happened over several years rather than in a single week", "isCorrect": false},
+   {"label": "D", "content": "showing that tulip contracts were traded mainly by people outside the merchant class", "isCorrect": false}
+  ],
+  "whyCorrect": "The parable's force comes from scale and consequence: extraordinary prices, then ruin. Goldgar leaves the prices alone and removes both of the other elements. Fewer than four hundred traders were active at the peak, and almost no bankruptcies trace to the crash — the contracts were tavern futures the courts then declined to enforce. Text 2's closing line names what actually endured: not a catastrophe but the pamphlets written about one.",
+  "whyWrong": {
+   "B": "Text 2 does not contest the prices. Its argument concerns how many people were exposed to them and what happened afterward.",
+   "C": "No revised timeline appears. Text 2 accepts the collapse and disputes its effects.",
+   "D": "Text 2 says the opposite — most traders were wealthy merchants who already knew one another."
+  },
+  "commonMistakes": "Assuming a debunking must deny the headline fact. Here the striking prices survive; the ruin does not.",
+  "tips": "Break a parable into its claims — how big, how many, how bad — and check which ones the second text actually touches."
+ },
+ {
+  "ref": "ct-selfheal",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Self-healing concrete carries dormant bacteria and a calcium compound they feed on. When a crack opens and water reaches them, the bacteria wake, precipitate limestone, and seal the gap. Laboratory specimens have closed cracks up to half a millimeter wide, which is the width at which reinforcing steel begins to corrode.</p><p><strong>Text 2</strong></p><p>The bacteria seal what water reaches, and water reaches the surface. In cores taken from a trial pavement after four years, the sealing was confined to the outer few millimeters while cracks deeper in remained open. Corrosion begins at the steel, which is deliberately buried well below that. The material heals where damage is visible and least consequential.</p>",
+  "stem": "Which choice best describes the objection Text 2 makes to the claim in Text 1?",
+  "choices": [
+   {"label": "A", "content": "The healing occurs at depths other than the one where the damage that matters begins", "isCorrect": true},
+   {"label": "B", "content": "The bacteria do not survive long enough in concrete to respond to later cracking", "isCorrect": false},
+   {"label": "C", "content": "The limestone the bacteria produce is weaker than the surrounding concrete", "isCorrect": false},
+   {"label": "D", "content": "Cracks wider than half a millimeter are more common in pavements than in laboratory specimens", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1 links the mechanism to a threshold that matters: cracks of half a millimeter, the width at which reinforcing steel starts to corrode. Text 2 accepts that sealing happens but locates it. Water reaches the surface, so after four years the trial cores were sealed only in the outer few millimeters, while deeper cracks stayed open — and the steel is buried well below. The healing and the risk are at different depths.",
+  "whyWrong": {
+   "B": "Text 2 reports healing after four years, which requires the bacteria to be alive and responsive. Survival is evidence in its argument, not a target.",
+   "C": "The strength of the precipitated limestone is not discussed in either text.",
+   "D": "Crack width is Text 1's variable. Text 2 shifts the discussion to depth and never claims pavement cracks are wider."
+  },
+  "commonMistakes": "Assuming the objection must be that the mechanism fails. It works — just not where the consequence lives.",
+  "tips": "When Text 1 ties a benefit to a specific threshold, check whether Text 2 accepts the mechanism and moves the location or condition instead."
+ },
+ {
+  "ref": "ct-oralhistory",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Historians trained on documents have often treated oral tradition as a source of last resort, valuable where nothing was written down but subject to the drift of memory across generations. A story told for four hundred years, on this view, records the present of its tellers at least as much as the past it claims to describe.</p><p><strong>Text 2</strong></p><p>Aboriginal Australian accounts of coastlines now underwater match sea levels last seen seven thousand years ago, in twenty-one separate places along the continent. The stories were not preserved by accident: they were held in constrained forms, cross-checked between custodians, and penalized when told wrong. Drift is what happens to a story nobody is charged with keeping.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the historians described in Text 1 have",
+  "choices": [
+   {"label": "A", "content": "generalized from traditions lacking the safeguards that make some oral records durable", "isCorrect": true},
+   {"label": "B", "content": "underestimated how much of the written record was itself copied from oral sources", "isCorrect": false},
+   {"label": "C", "content": "confused stories about coastlines with stories about inland features", "isCorrect": false},
+   {"label": "D", "content": "correctly identified drift but wrongly concluded that written sources are free of it", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 does not deny that stories drift; its last sentence concedes drift is real and specifies when it happens — \"to a story nobody is charged with keeping.\" Against that it sets traditions built to resist it: constrained forms, cross-checking between custodians, penalties for telling it wrong, and a result checkable against sea levels of seven thousand years ago in twenty-one places. So the historians' rule holds for unguarded traditions and has been applied to all of them.",
+  "whyWrong": {
+   "B": "The origins of the written record are not discussed. Text 2 argues about the reliability of oral transmission itself.",
+   "C": "No confusion between kinds of story is alleged. The coastlines are Text 2's evidence, not a category error it is correcting.",
+   "D": "Text 2 makes no claim about written sources at all, so it cannot be faulting historians for exempting them."
+  },
+  "commonMistakes": "Reading Text 2 as denying that oral tradition drifts. It concedes drift and explains the conditions that prevent it.",
+  "tips": "When the second text explains when a rule applies, the answer is usually that the first text applied it too broadly."
+ },
+ {
+  "ref": "ct-plasticeat",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>A bacterium isolated outside a Japanese bottle plant secretes an enzyme that breaks the ester bonds in PET, the plastic of drink bottles, into monomers a factory can polymerize again. Engineered variants now work within hours instead of weeks, and a demonstration plant in France has run bottles back to food-grade resin.</p><p><strong>Text 2</strong></p><p>The enzyme wants clean, uncolored, amorphous PET, and most plastic waste is none of those things: crystalline, dyed, laminated to foil, or blended with other polymers in a single tray. The step that would make the world's plastic waste digestible is sorting and pre-treating it, which is also the step that has always made recycling uneconomic. The enzyme solves the part that was not the obstacle.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely characterize the demonstration plant described in Text 1 as",
+  "choices": [
+   {"label": "A", "content": "a working process operating on an unusually favorable feedstock rather than on typical waste", "isCorrect": true},
+   {"label": "B", "content": "unable to produce resin pure enough for food-grade use", "isCorrect": false},
+   {"label": "C", "content": "too slow to process bottles at commercial volumes", "isCorrect": false},
+   {"label": "D", "content": "dependent on a bacterium that cannot be cultured outside a laboratory", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 accepts that the chemistry works and points at what it is fed. The enzyme needs clean, uncolored, amorphous PET; real waste is crystalline, dyed, foil-laminated or blended. So a plant running bottles is running the easy case, and the hard step — sorting and pre-treatment — is untouched. Text 2's closing line makes the judgment explicit: \"the enzyme solves the part that was not the obstacle.\"",
+  "whyWrong": {
+   "B": "Text 1 reports food-grade resin and Text 2 does not contest it. The dispute is over what can be fed in, not what comes out.",
+   "C": "Text 1 says engineered variants work in hours, and Text 2 raises no speed objection.",
+   "D": "Culturing is never mentioned. Text 2's obstacle is the waste stream, not the organism."
+  },
+  "commonMistakes": "Treating a successful demonstration as proof of general applicability. Text 2's whole point is what the demonstration was fed.",
+  "tips": "Ask what the successful trial used as its input — if the second text describes real-world inputs as different, that gap is the answer."
+ },
+ {
+  "ref": "ct-gigwork",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Platform work is defended on the ground that it is chosen. Nobody is rostered; a courier opens the application when it suits and closes it when it does not, and surveys find flexibility named as the leading reason for signing up. Whatever else the arrangement lacks, the argument runs, it gives the worker control of their own hours.</p><p><strong>Text 2</strong></p><p>Control of hours is not the same as control of earnings. Pay per delivery is set by the platform and changes without notice, so the courier who wants a given weekly figure has their hours chosen for them by a rate they do not set. When one platform cut its per-drop rate by a fifth, average hours worked rose rather than fell — which is not what a freely chosen schedule does.</p>",
+  "stem": "Which choice best describes how Text 2 responds to the defense summarized in Text 1?",
+  "choices": [
+   {"label": "A", "content": "It distinguishes formal freedom over hours from the constraint imposed by a rate the worker does not control", "isCorrect": true},
+   {"label": "B", "content": "It denies that couriers can open and close the application whenever they wish", "isCorrect": false},
+   {"label": "C", "content": "It argues that most couriers would prefer a fixed roster if one were offered", "isCorrect": false},
+   {"label": "D", "content": "It shows that surveys of platform workers reach too few respondents to be reliable", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 opens by separating two things Text 1 treats as one: \"control of hours is not the same as control of earnings.\" The platform sets pay per delivery and changes it without notice, so a courier aiming at a weekly figure has their hours determined by a rate they cannot touch. The rate cut supplies the test — hours rose when pay fell, and as Text 2 says, that \"is not what a freely chosen schedule does.\"",
+  "whyWrong": {
+   "B": "Text 2 grants the formal freedom. Its argument is that this freedom does not amount to control once earnings are fixed elsewhere.",
+   "C": "Worker preferences between arrangements are never discussed. Text 2 reasons from observed hours, not stated wishes.",
+   "D": "Sample size is not raised. Text 2 accepts that couriers report valuing flexibility."
+  },
+  "commonMistakes": "Missing that the rate cut is evidence, not background. Hours rising when pay fell is the fact that distinguishes the two kinds of control.",
+  "tips": "When a text draws a distinction in its first sentence, that distinction is usually the answer — read the rest as support for it."
+ },
+ {
+  "ref": "ct-antivenom",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Antivenom has been made the same way for more than a century: venom is milked from snakes, injected in small doses into horses, and the antibodies the horses raise are harvested and purified. The method is cheap in materials, needs no genetic technology, and has saved a great many lives in exactly the places where laboratories are scarce.</p><p><strong>Text 2</strong></p><p>Horse antibodies are foreign proteins, and the reaction rate against them is high enough that treatment often requires a hospital that can manage it. A vial raised against Indian cobra venom does poorly against the same species in Sri Lanka, because venom composition varies with population. The method is cheap to make and expensive to use, and the places with the most bites have the fewest hospitals.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the advantage claimed in Text 1 is",
+  "choices": [
+   {"label": "A", "content": "undercut by requirements that fall hardest on the regions the method is said to serve", "isCorrect": true},
+   {"label": "B", "content": "outdated, because genetic technology is now cheaper than maintaining horses", "isCorrect": false},
+   {"label": "C", "content": "overstated, because purified antibodies lose potency during storage", "isCorrect": false},
+   {"label": "D", "content": "valid, though it applies to a smaller number of snake species than is generally assumed", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1's claim is that a cheap method suits places without laboratories. Text 2 accepts the low production cost and attacks the fit. Horse antibodies provoke reactions often enough that treatment needs a hospital equipped to manage them, and a vial raised against one population of a species works poorly against another. Its final sentence completes the reversal: cheap to make, expensive to use, and \"the places with the most bites have the fewest hospitals.\"",
+  "whyWrong": {
+   "B": "Text 2 proposes no alternative technology and makes no cost comparison with genetic methods.",
+   "C": "Storage and potency are not mentioned. The limits Text 2 names are immune reaction and geographic variation in venom.",
+   "D": "The problem Text 2 describes is variation within a species across regions, not the number of species covered."
+  },
+  "commonMistakes": "Stopping at \"cheap\" and \"reaction rate\" without connecting them. The argument only lands because the burden falls where the bites are.",
+  "tips": "When Text 1 claims something suits a particular setting, check whether Text 2's objection is specific to that setting — that match is usually the answer."
+ },
+ {
+  "ref": "ct-microbiome",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Mice raised germ-free are anxious, and giving them the gut bacteria of a bold mouse makes them bolder. Findings like these have driven the idea of a gut-brain axis in which the microbial community shapes behavior, and a large trade in probiotic supplements now rests on it.</p><p><strong>Text 2</strong></p><p>A germ-free mouse is not a normal mouse missing one thing. It is raised in an isolator, develops an abnormal immune system and a thinner gut wall, and is fed sterilized food. The comparison that would isolate the microbes — a conventional animal with a specific community removed — is much harder to run and much less often reported.</p>",
+  "stem": "Based on the texts, the concern raised in Text 2 about germ-free mice is best described as",
+  "choices": [
+   {"label": "A", "content": "the animals differ from normal mice in several ways at once, so the microbes alone cannot be credited", "isCorrect": true},
+   {"label": "B", "content": "the behavioral differences reported in germ-free mice are too small to measure reliably", "isCorrect": false},
+   {"label": "C", "content": "gut bacteria transferred between mice do not establish themselves in the recipient", "isCorrect": false},
+   {"label": "D", "content": "results from mice rarely reproduce in other laboratory species", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's first sentence sets up the problem: a germ-free mouse is not a normal mouse minus its microbes. It grows up in an isolator, with an abnormal immune system, a thinner gut wall, and sterilized food — several differences at once, any of which could bear on behavior. The clean comparison, removing a specific community from a conventional animal, is harder and rarer, so the attribution to microbes is not isolated by the design.",
+  "whyWrong": {
+   "B": "Effect size is not questioned. Text 2 disputes what causes the difference, not whether it can be detected.",
+   "C": "Text 1 reports that transferred bacteria change behavior, and Text 2 does not deny colonization.",
+   "D": "Cross-species replication is not raised. The objection concerns how the mice themselves were raised."
+  },
+  "commonMistakes": "Reading the objection as doubt about the data. The data stand; what fails is the inference from a comparison with many differences.",
+  "tips": "When a text describes how an experimental animal or group was produced, look for a confound introduced by that production."
+ },
+ {
+  "ref": "ct-openaccess",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Under open access, a published paper is free to read by anyone with a connection, which removes the subscription wall that kept research out of hospitals, schools, and universities in poorer countries. Funders across Europe now require it, and the share of new papers freely readable has passed half.</p><p><strong>Text 2</strong></p><p>The bill did not disappear; it moved to the author, and a publication charge of two to three thousand dollars is now standard at the better-known journals. Reading has been opened and publishing has been closed, and the researchers who could not previously afford to read are largely the ones who now cannot afford to appear. Access to a literature one is barred from joining is a narrower gain than it sounds.</p>",
+  "stem": "Which choice best describes the relationship between the two texts?",
+  "choices": [
+   {"label": "A", "content": "Text 2 accepts the gain Text 1 describes but argues it was paid for by a new barrier falling on the same people", "isCorrect": true},
+   {"label": "B", "content": "Text 2 disputes Text 1's figure for the share of papers now freely readable", "isCorrect": false},
+   {"label": "C", "content": "Text 2 argues that readers in poorer countries lack the connections needed to reach online papers", "isCorrect": false},
+   {"label": "D", "content": "Text 2 claims that open-access papers are reviewed less rigorously than subscription papers", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 grants that reading has been opened — that is the first half of its own summary. What it adds is where the cost went: to the author, as a publication charge of two to three thousand dollars, which falls hardest on exactly the researchers who previously could not afford subscriptions. The trade is stated plainly: \"reading has been opened and publishing has been closed,\" and access to a literature you cannot join is a smaller gain than it appears.",
+  "whyWrong": {
+   "B": "The share of freely readable papers is never contested. Text 2's argument concerns who can publish, not how much is readable.",
+   "C": "Connectivity is not raised. Text 2 assumes the papers can be reached and asks who can contribute to them.",
+   "D": "Review quality is not discussed in either text."
+  },
+  "commonMistakes": "Reading Text 2 as opposed to open access. It accepts the benefit and identifies its price.",
+  "tips": "When Text 2 says a cost \"moved\" rather than vanished, the answer will name who now bears it."
+ },
+ {
+  "ref": "ct-namibia",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Namibia's communal conservancies let a community hold the wildlife rights on its own land and keep the income from tourism and regulated hunting. Elephant and lion numbers have risen across the conservancy areas since the 1990s, and the arrangement is widely cited as evidence that conservation succeeds when local people gain from it.</p><p><strong>Text 2</strong></p><p>The income is real and it arrives at the conservancy, which is not the same address as the household that lost the maize. Compensation for crop and stock losses is capped, paid late, and assessed by a committee, while the loss falls on one family in one night. Where the accounting has been done at household level, the people nearest the elephants are frequently net losers in a system that is profitable in aggregate.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the evidence in Text 1 is",
+  "choices": [
+   {"label": "A", "content": "measured at a level that conceals how the costs and benefits are distributed within the community", "isCorrect": true},
+   {"label": "B", "content": "based on wildlife counts that are unreliable over the periods involved", "isCorrect": false},
+   {"label": "C", "content": "drawn from conservancies that receive more tourism than is typical", "isCorrect": false},
+   {"label": "D", "content": "outdated, because the income from regulated hunting has since fallen sharply", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 accepts both the wildlife recovery and the income. Its objection is about the unit of accounting: the money \"arrives at the conservancy, which is not the same address as the household that lost the maize.\" Compensation is capped, late, and committee-assessed, while losses land on one family in one night. Where accounts have been kept per household, those nearest the elephants are often net losers in a scheme that is profitable in aggregate — a distribution the community-level figure hides.",
+  "whyWrong": {
+   "B": "Text 2 does not question the counts. Rising wildlife numbers are compatible with, and partly the cause of, the household losses it describes.",
+   "C": "No claim is made that the conservancies are unrepresentative in their tourism income.",
+   "D": "No trend in hunting income is mentioned. Text 2 treats the income as real and present."
+  },
+  "commonMistakes": "Assuming a critique of a successful program must dispute its headline results. Here both results stand and the aggregate is the problem.",
+  "tips": "When one text reports a total and the other talks about households, the answer almost certainly involves distribution."
+ },
+ {
+  "ref": "ct-mapproj",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>The Mercator projection is regularly criticized in classrooms for its distortion of area: Greenland is drawn about the size of Africa, though Africa is fourteen times larger. Several school systems have replaced it with equal-area projections so that students are not given a false sense of the relative size of continents.</p><p><strong>Text 2</strong></p><p>Mercator was drawn for a navigator, and it does something no equal-area map can: a straight line on it is a constant compass bearing. Every projection trades one fidelity for another, and an equal-area map distorts shape and angle instead. A projection is not true or false but fit or unfit for the use it is put to.</p>",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the school systems described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "By agreeing the change suits their purpose while denying that it makes the map more accurate overall", "isCorrect": true},
+   {"label": "B", "content": "By arguing that students should learn navigation before studying the relative size of continents", "isCorrect": false},
+   {"label": "C", "content": "By denying that the Mercator projection distorts the area of landmasses near the poles", "isCorrect": false},
+   {"label": "D", "content": "By claiming that equal-area projections are too recent to have been properly tested", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 sets up a trade rather than a ranking: every projection buys one fidelity with another, and an equal-area map pays in shape and angle. Its closing sentence supplies the standard — a projection is \"not true or false but fit or unfit for the use it is put to.\" For teaching relative size, the equal-area map is the fit one, so the schools are right; but the change is a change of purpose, not a correction of an error.",
+  "whyWrong": {
+   "B": "Text 2 recommends no curriculum order. It contrasts uses, without ranking which should come first.",
+   "C": "The distortion is not denied — Text 2's whole framework assumes every projection distorts something.",
+   "D": "Nothing about the age or testing of equal-area projections appears in either text."
+  },
+  "tips": "When a text insists a thing is \"fit or unfit\" rather than right or wrong, the answer will accept the specific choice while rejecting the general claim."
+ },
+ {
+  "ref": "ct-nightshift",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Hospitals have shortened night shifts on the reasoning that fatigue accumulates across a long stretch of duty. Where twelve-hour nights were cut to eight, staff reported feeling more alert at the end of a shift, and several administrators have described the change as an evidence-based improvement in patient safety.</p><p><strong>Text 2</strong></p><p>Shortening the shift lengthens the rota, and errors cluster around handover, where one team's incomplete picture is passed to another. A unit moving from two nightly handovers to three raises the number of these joints by half. Self-reported alertness measures how the shift felt to the person leaving it, not how much of what they knew survived the door.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the reasoning in Text 1 fails to account for",
+  "choices": [
+   {"label": "A", "content": "the additional handovers created by shorter shifts and the information lost at each one", "isCorrect": true},
+   {"label": "B", "content": "the possibility that staff will work second jobs on the nights they are not rostered", "isCorrect": false},
+   {"label": "C", "content": "the greater cost of employing more staff to cover the same number of hours", "isCorrect": false},
+   {"label": "D", "content": "the fact that fatigue affects experienced and inexperienced staff differently", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 identifies a side effect built into the fix. Shorter shifts mean more of them, so a unit going from two nightly handovers to three adds half again as many joints — and handover is where errors cluster, because an incomplete picture passes between teams. It also disqualifies Text 1's evidence for the safety claim: self-reported alertness measures how the shift felt to the person leaving, \"not how much of what they knew survived the door.\"",
+  "whyWrong": {
+   "B": "Second jobs are not mentioned in either text.",
+   "C": "Staffing cost is never raised. Text 2's concern is information transfer, not budget.",
+   "D": "No distinction by experience level appears. The handover problem in Text 2 is structural."
+  },
+  "commonMistakes": "Accepting alertness as a safety measure. Text 2's last sentence is specifically about the gap between how a shift felt and what was safely passed on.",
+  "tips": "When an intervention changes the number of times something is repeated, check whether the second text counts the new repetitions as a cost."
+ }
+]
