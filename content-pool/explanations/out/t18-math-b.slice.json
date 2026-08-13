@@ -1,0 +1,5492 @@
+[
+ {
+  "id": "f296701d-62d3-48cf-9a24-18386adfadcd",
+  "stem": "At a coal face two teams fill tubs during one shift. The hewing team fills 3 more tubs than twice the number the packing team fills, and the two teams fill 84 tubs between them. Each tub holds 0.45 tonnes. How many tonnes does the hewing team fill during the shift?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "959d2566-9742-418a-9c2e-a1edf321399b",
+    "label": "A",
+    "content": "12.15",
+    "isCorrect": false
+   },
+   {
+    "id": "c90bdcd8-eab5-4ac0-919b-94c94c8ec77a",
+    "label": "B",
+    "content": "24.30",
+    "isCorrect": false
+   },
+   {
+    "id": "f833996b-8a5d-4651-9976-aa825723556a",
+    "label": "C",
+    "content": "25.65",
+    "isCorrect": true
+   },
+   {
+    "id": "e3afaee6-797d-4926-8d34-a153038b6711",
+    "label": "D",
+    "content": "37.80",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "9816ede9-14ce-436e-b621-e8e65df5b750",
+  "stem": "A scrap yard takes in a 15-tonne load made up only of cast iron and copper. Cast iron fetches $60 a tonne and copper fetches $130 a tonne, and the whole load fetched $1,180. The yard is charged $18 for every tonne of copper it has to sort out. How many dollars did the yard keep after that sorting charge?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "68ad95a4-1065-4e35-acf8-07fe702907ff",
+    "label": "A",
+    "content": "$1,036",
+    "isCorrect": false
+   },
+   {
+    "id": "6d3c567c-a566-4931-9fdd-63f2dd849517",
+    "label": "B",
+    "content": "$1,108",
+    "isCorrect": true
+   },
+   {
+    "id": "10c4f749-3c09-4d02-ac68-2e2bb0ecfb3e",
+    "label": "C",
+    "content": "$1,162",
+    "isCorrect": false
+   },
+   {
+    "id": "0bca4e8f-57ee-426c-9e04-f732afca04df",
+    "label": "D",
+    "content": "$1,180",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "826b61b5-9a91-48aa-8c8c-a9301bffed46",
+  "stem": "The charge for hiring a dockside crane is a linear function of the number of hours the crane is used. A 5-hour hire cost $310 and a 12-hour hire cost $618. For how many hours can the crane be hired for $750?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "e346df46-cc02-4328-9646-4adbb1f1e262",
+    "label": "A",
+    "content": "15",
+    "isCorrect": true
+   },
+   {
+    "id": "cdad8b3c-e0a8-4315-8c32-bc94bc612684",
+    "label": "B",
+    "content": "17",
+    "isCorrect": false
+   },
+   {
+    "id": "a80f069b-f587-4821-9470-cd386b7a81ad",
+    "label": "C",
+    "content": "19",
+    "isCorrect": false
+   },
+   {
+    "id": "61c3cd9a-cb35-4128-8635-0f0d9969c1dc",
+    "label": "D",
+    "content": "22",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "552a2b89-94bf-4493-b824-311dddf6856b",
+  "stem": "The distance a tunnelling shield has driven is a linear function of the number of lining rings erected behind it. After 40 rings the shield had driven 96 metres, and after 105 rings it had driven 252 metres. How many rings must be erected for the shield to have driven 420 metres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d5694b1c-e41a-49ee-aca2-3ac2e965ee78",
+    "label": "A",
+    "content": "150",
+    "isCorrect": false
+   },
+   {
+    "id": "d83ed7ca-91fb-4f3b-80ec-bae82af372b1",
+    "label": "B",
+    "content": "175",
+    "isCorrect": true
+   },
+   {
+    "id": "9cfb6f74-d2f5-449d-a10b-c6aeff902234",
+    "label": "C",
+    "content": "187",
+    "isCorrect": false
+   },
+   {
+    "id": "6ed60377-5644-4d40-98de-390a100ec0ee",
+    "label": "D",
+    "content": "210",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "6210ca67-e1d9-486a-b775-b603957b3f87",
+  "stem": "A dockside crane may lift no more than 9.5 tonnes at one time. The lifting beam and chains together have a mass of 1,180 kilograms, and each bale of sorted scrap has a mass of 640 kilograms. What is the greatest number of bales the crane can lift at one time?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0fa9ee2a-9b83-490e-b2fe-1bd99e1b342b",
+    "label": "A",
+    "content": "13",
+    "isCorrect": true
+   },
+   {
+    "id": "6f80bbc6-ab78-4f54-9638-55f2fb9a65da",
+    "label": "B",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "2eac0a9f-8818-42ae-8665-3e6ba36c1657",
+    "label": "C",
+    "content": "16",
+    "isCorrect": false
+   },
+   {
+    "id": "8cd27053-f519-4155-bfa5-b3064096e3f1",
+    "label": "D",
+    "content": "18",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "537b1c8f-c483-4c15-a8f5-c4f61089c2bb",
+  "stem": "A foundry pours wheel castings and pipe castings from a single melt. Each wheel casting takes 4 kilograms more iron than each pipe casting. A melt that filled 9 wheel moulds and 14 pipe moulds used 634 kilograms of iron. How many kilograms of iron does one wheel casting take?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "9de03c38-f3d0-4d7b-9ded-f997c4e301ba",
+    "label": "A",
+    "content": "26",
+    "isCorrect": false
+   },
+   {
+    "id": "c6e41939-acbb-4ae2-ac99-44ebb95caf56",
+    "label": "B",
+    "content": "28",
+    "isCorrect": false
+   },
+   {
+    "id": "114323cb-4bcd-47a7-a1f9-c70afa1b4ceb",
+    "label": "C",
+    "content": "30",
+    "isCorrect": true
+   },
+   {
+    "id": "2ab2897c-add4-4bc8-9192-9bce4d2896b0",
+    "label": "D",
+    "content": "34",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "4a9443ec-f521-4a20-8312-b9ab8d2b5b0e",
+  "stem": "A pattern maker starts from a square board of side \\(2x-5\\) centimetres and cuts from it a square hole of side \\(x-8\\) centimetres. Which expression gives the area of the board that remains, in square centimetres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "4a73fe2c-7666-4548-b18d-4350f005c1e4",
+    "label": "A",
+    "content": "\\(3x^{2}-4x+89\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "e04c6684-e8e3-45d7-b868-e9d0bef4717d",
+    "label": "B",
+    "content": "\\(3x^{2}-36x+89\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "4262fe67-414e-4183-87df-465cafdabdb5",
+    "label": "C",
+    "content": "\\(5x^{2}-36x+89\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "5926beeb-7904-47e2-a9d2-9a7da22d6da2",
+    "label": "D",
+    "content": "\\(3x^{2}-4x-39\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "1d31770b-f500-48e5-bc2d-8ebb12815823",
+  "stem": "A scrap baler's daily output, in tonnes, when the machine is run at s strokes each minute is modelled by \\(T(s)=-2s^{2}+72s-160\\). What is the greatest daily output, in tonnes, that this model gives?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "631ac9e7-2bbc-4e92-b437-aac6f188147b",
+    "label": "A",
+    "content": "392",
+    "isCorrect": false
+   },
+   {
+    "id": "90c1b31e-37b4-43f8-af3a-4bba2830a544",
+    "label": "B",
+    "content": "440",
+    "isCorrect": false
+   },
+   {
+    "id": "b856e692-5592-4356-b7e3-f204446cdee8",
+    "label": "C",
+    "content": "464",
+    "isCorrect": false
+   },
+   {
+    "id": "cd61a3f7-60f8-447d-b27d-d1a86611e068",
+    "label": "D",
+    "content": "488",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "2bd7ed13-0292-4b95-931c-09d2aa0a3162",
+  "stem": "The floor of a spoil skip at a tunnel heading is a rectangle whose length is 3 metres greater than its width, and its area is 54 square metres. What is the width of the floor, in metres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d7598076-6dfb-4377-81a4-1dfa3ed018c7",
+    "label": "A",
+    "content": "6",
+    "isCorrect": true
+   },
+   {
+    "id": "eb70ea3b-c184-44cb-87b9-aa21da9bfdf7",
+    "label": "B",
+    "content": "7",
+    "isCorrect": false
+   },
+   {
+    "id": "35fad21c-e0b8-48c0-8346-fd02421c43a2",
+    "label": "C",
+    "content": "9",
+    "isCorrect": false
+   },
+   {
+    "id": "50d68e23-f190-49b9-80f6-f07ee833e3f3",
+    "label": "D",
+    "content": "12",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "0ae13a99-11ee-438e-9e5d-9caeb8704813",
+  "stem": "A foundry sizes the runner that feeds a mould by the rule \\(d=14\\sqrt[3]{m}\\), where d is the diameter of the runner in millimetres and m is the mass of the casting in kilograms. A casting needs a runner 56 millimetres in diameter. What is the mass of that casting, in kilograms?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1a96db5e-a91e-49d5-a4fd-1f2947c6ca8d",
+    "label": "A",
+    "content": "16",
+    "isCorrect": false
+   },
+   {
+    "id": "2be9616d-4fd1-4695-a6bb-e00c7e1f3216",
+    "label": "B",
+    "content": "64",
+    "isCorrect": true
+   },
+   {
+    "id": "a7cb0511-6300-42cf-ba19-7fa77913eb60",
+    "label": "C",
+    "content": "125",
+    "isCorrect": false
+   },
+   {
+    "id": "e95961d8-2e63-4ce2-9e01-6b30fb87583d",
+    "label": "D",
+    "content": "216",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "ea36a0de-4be3-4ef9-b13a-57ad78f06d63",
+  "stem": "A colliery's total output up to and including week n is modelled by \\(f(n)=n^{2}+6n\\) hundred tonnes. For which value of n does week n+1 by itself account for 39 hundred tonnes?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "344bc033-4b62-43f1-841d-7c022790466c",
+    "label": "A",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "e602d055-1a8c-4daa-a105-41d3b3dcb94b",
+    "label": "B",
+    "content": "16",
+    "isCorrect": true
+   },
+   {
+    "id": "7ebe44e9-dbb3-4ab6-8e3c-5cdd38522e42",
+    "label": "C",
+    "content": "18",
+    "isCorrect": false
+   },
+   {
+    "id": "7216fc7c-0fd2-4da5-91d9-91825cf26ebe",
+    "label": "D",
+    "content": "32",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "35a85cfa-46ec-401f-b4ea-40d8a983a9d1",
+  "stem": "A pattern maker's core allowance, in square centimetres, is written as \\((x+6)(x-2)-(x-3)(x+4)\\), where x is a length in centimetres. Which expression is equivalent to that allowance?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "c5e0cf1c-d64f-4f27-b2f9-6b0776216c81",
+    "label": "A",
+    "content": "\\(3x\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "2f58324a-de03-4877-9c12-fcd695f1f8b4",
+    "label": "B",
+    "content": "\\(3x-24\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "35d6d428-2ccf-4420-837a-9b9e285e6cab",
+    "label": "C",
+    "content": "\\(5x-24\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "6d6a7efd-87fb-404a-a850-b4de31ee0969",
+    "label": "D",
+    "content": "\\(2x^{2}+5x-24\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "bdad2569-32ca-4723-b667-5f31231e7e27",
+  "stem": "A scrap yard buys 240 tonnes of mixed steel at $46 a tonne. Baling drives off 12% of that mass as dirt and rust, and the baled steel sells at $62 a tonne. What is the yard's gain, in dollars, on the whole lot?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "3e92a89b-9beb-47a6-8e08-30aa9eee8288",
+    "label": "A",
+    "content": "$2,054.40",
+    "isCorrect": true
+   },
+   {
+    "id": "6c0ba5bc-4010-4f75-9507-7c2b82df4de2",
+    "label": "B",
+    "content": "$2,844.00",
+    "isCorrect": false
+   },
+   {
+    "id": "03fbfe1f-3008-4b1e-b62f-bad4e4a72b49",
+    "label": "C",
+    "content": "$3,840.00",
+    "isCorrect": false
+   },
+   {
+    "id": "a9f84fb6-0be0-402e-8bd7-0d895c33b348",
+    "label": "D",
+    "content": "$13,094.40",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "bbfde2a1-07b8-424f-932e-31ac8cf85317",
+  "stem": "Cast iron has a mass of 7.2 grams for each cubic centimetre, and a foundry buys iron at $0.44 a kilogram. What does the iron in a casting of volume 12,500 cubic centimetres cost?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "5c22f5c5-13fc-4c63-9978-995c3fdb7d0d",
+    "label": "A",
+    "content": "$3.96",
+    "isCorrect": false
+   },
+   {
+    "id": "e318b832-31c9-4d9a-8493-0bc898ae318b",
+    "label": "B",
+    "content": "$5.50",
+    "isCorrect": false
+   },
+   {
+    "id": "e1f3fac1-e0f2-4c36-8c5a-b9b7162666ad",
+    "label": "C",
+    "content": "$27.50",
+    "isCorrect": false
+   },
+   {
+    "id": "32171bfd-8f93-4e3c-aab2-24cd6d93c396",
+    "label": "D",
+    "content": "$39.60",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "a2aed8d7-44a6-4cf9-9738-7f4e44208a7a",
+  "stem": "A dock recorded the number of lifts each of its four cranes made in one day, together with the mean mass of a lift for that crane.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crane</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Lifts made</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mean mass of a lift (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">46</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.2</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">52</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3.0</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">No. 4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5.4</td></tr></table>Which crane moved the greatest total mass that day?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "993b4c31-c9f4-4b36-9e01-40974cb8cce2",
+    "label": "A",
+    "content": "No. 1",
+    "isCorrect": false
+   },
+   {
+    "id": "fa0cbcf7-5ba4-4995-8d16-839b8ca741e0",
+    "label": "B",
+    "content": "No. 2",
+    "isCorrect": false
+   },
+   {
+    "id": "20bee9c1-0473-427e-bb00-ede5931fda8e",
+    "label": "C",
+    "content": "No. 3",
+    "isCorrect": false
+   },
+   {
+    "id": "0d6f5f2e-1196-41fd-aea9-57513b28ddac",
+    "label": "D",
+    "content": "No. 4",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "095c2f67-68f2-4a3b-8fbe-82727fa56804",
+  "stem": "A scrap store holds 180 bales: 45 of copper, 63 of brass and the rest of lead. One bale is picked at random from the store. What is the probability that the bale picked is a lead bale?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d388707a-4331-4fb9-86d7-090d6f8ceefe",
+    "label": "A",
+    "content": "\\(\\frac{1}{4}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "e63d5c71-fe0e-4e03-ba2a-42ac5146f578",
+    "label": "B",
+    "content": "\\(\\frac{7}{20}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "09b67ae1-4be9-4d3d-be8e-5cfb6fd7fba6",
+    "label": "C",
+    "content": "\\(\\frac{2}{5}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "7d7a291b-c95c-4046-a2fa-58b2ac6a2081",
+    "label": "D",
+    "content": "\\(\\frac{3}{5}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "30d72d0d-be66-4dfd-a466-adaab4761ef5",
+  "stem": "A dockside crane's jib is 32 metres long and is pivoted 4 metres above the quay. When the jib is raised to 62&deg; above the horizontal, how high above the quay is the head of the jib, to the nearest metre?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0abc5d53-1132-4201-ba0f-4240a944aafc",
+    "label": "A",
+    "content": "28",
+    "isCorrect": false
+   },
+   {
+    "id": "b6a9293d-74c3-452c-ab6f-0bff6cf85899",
+    "label": "B",
+    "content": "32",
+    "isCorrect": true
+   },
+   {
+    "id": "2f31a4d6-fb37-4b2b-95fa-9806fccd0801",
+    "label": "C",
+    "content": "36",
+    "isCorrect": false
+   },
+   {
+    "id": "dbae1218-a8a8-40ce-ba19-70dd9cea0806",
+    "label": "D",
+    "content": "40",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "1ca9a185-7c21-437e-8fbf-e26e0182b6de",
+  "stem": "A tunnel is lined with rings, and each ring is built from 8 identical segments that close up into a regular octagon. What is the measure, in degrees, of each interior angle of that octagon?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b22e2d2a-87a6-44fc-ab17-5472d9bcfe85",
+    "label": "A",
+    "content": "108",
+    "isCorrect": false
+   },
+   {
+    "id": "fbd32dd6-ce3b-48b2-a1a2-30a38d71b251",
+    "label": "B",
+    "content": "120",
+    "isCorrect": false
+   },
+   {
+    "id": "14bb542b-fd09-4013-9c26-6676cd742786",
+    "label": "C",
+    "content": "135",
+    "isCorrect": true
+   },
+   {
+    "id": "b7ebfd9e-949d-451f-91de-27a41e7ef4b6",
+    "label": "D",
+    "content": "150",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "632f1049-1b0d-47ae-9189-61cc0f10d346",
+  "stem": "A dockside crane's ballast box is an open-topped rectangular tank 3 metres long, 2 metres wide and 1.5 metres deep. How many square metres of steel sheet do its base and its four sides take together?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ae4df58e-bfba-4593-9889-cb62a2f59e88",
+    "label": "A",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "89bc4ea0-5bf6-4a39-9e95-d9d9f41c749b",
+    "label": "B",
+    "content": "15",
+    "isCorrect": false
+   },
+   {
+    "id": "e860a925-be84-4fa4-afe2-01875312de49",
+    "label": "C",
+    "content": "21",
+    "isCorrect": true
+   },
+   {
+    "id": "0e35954f-de95-455d-8aeb-c666d8bf2618",
+    "label": "D",
+    "content": "27",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "c1649602-7958-4278-bfb6-42303ae233c4",
+  "stem": "The table gives the number of tubs drawn from each of four districts of a colliery in one week, together with the mean mass of a tub in that district.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">District</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Tubs drawn</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Mean mass of a tub (tonnes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bute</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">300</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.55</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Garth</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.60</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Rhas</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">180</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.45</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Tir</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">260</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0.50</td></tr></table>How many tonnes of coal were drawn from the four districts altogether that week?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"520\"]",
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "1217ed3d-d44f-472f-9760-99120749df70",
+  "stem": "A foundry's cupola burns 0.6 tonnes of coke to bring itself up to heat and then a further 1 tonne of coke for every 8 tonnes of iron it melts. One melt used 5.1 tonnes of coke altogether. How many tonnes of iron were melted?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"36\"]",
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "7a802ca8-ec0b-49da-a162-4024a5445d73",
+  "stem": "A casting is a closed hollow box whose outside measurements are 40 centimetres by 30 centimetres by 20 centimetres. Its walls are 2.5 centimetres thick everywhere, including the top and the bottom. How many cubic centimetres of iron does the casting contain?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"10875\"]",
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "b90ec2e2-0ae9-4b5c-9485-6e5af3860068",
+  "stem": "A gas works charges its 7 retorts with equal shares of 154 hundredweight of fuel. How many hundredweight of fuel go into each retort?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "640aea7a-83f2-43df-b688-be991ebc3cbc",
+    "label": "A",
+    "content": "22",
+    "isCorrect": true
+   },
+   {
+    "id": "1b60db35-43aa-481d-bb0a-25b4a0c1e164",
+    "label": "B",
+    "content": "24",
+    "isCorrect": false
+   },
+   {
+    "id": "0adb4399-68a0-470c-81a9-63d46438aad7",
+    "label": "C",
+    "content": "26",
+    "isCorrect": false
+   },
+   {
+    "id": "9ca9cf16-ce0f-44c7-a623-d708db9575e9",
+    "label": "D",
+    "content": "28",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "70fb9914-9bc7-4017-aa1a-6bbdea5c4ec3",
+  "stem": "A tramway sold 468 tickets one morning. Of these, 129 were child tickets and the rest were adult tickets. How many adult tickets were sold?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "77330ee2-45e5-4c94-b12c-db93befd18b0",
+    "label": "A",
+    "content": "329",
+    "isCorrect": false
+   },
+   {
+    "id": "508f12b9-e7e3-4e24-b0fa-860f3a1be319",
+    "label": "B",
+    "content": "339",
+    "isCorrect": true
+   },
+   {
+    "id": "9c111e89-11b0-4a85-bded-195379069419",
+    "label": "C",
+    "content": "349",
+    "isCorrect": false
+   },
+   {
+    "id": "1b1dc10c-c755-495b-9f2c-356772750556",
+    "label": "D",
+    "content": "597",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "ba847918-bcf4-4c91-a839-89f6750ee7be",
+  "stem": "A pumping engine's total discharge, in gallons, t minutes after it is started is given by p=250t+400. How many gallons has it discharged 6 minutes after it is started?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a1f83bcc-33d3-463f-a6cb-d22ec6641d5d",
+    "label": "A",
+    "content": "1,000",
+    "isCorrect": false
+   },
+   {
+    "id": "e2d1f64b-1ad5-4608-bba9-ebcaa4ad215d",
+    "label": "B",
+    "content": "1,650",
+    "isCorrect": false
+   },
+   {
+    "id": "71568f21-1895-4e1f-accc-408e43f3f810",
+    "label": "C",
+    "content": "1,900",
+    "isCorrect": true
+   },
+   {
+    "id": "6a9e44de-8008-425b-a796-29c03b14e6d9",
+    "label": "D",
+    "content": "3,900",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "e53d8967-8a11-462f-a19d-4e88c67bbfa4",
+  "stem": "The cost of stringing overhead wire for a trolleybus route is modelled by c=1,450+380m, where c is the cost in dollars and m is the number of miles of route strung. What does 380 represent in this model?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "aea68bdd-8001-41fd-b651-b54506d13f7a",
+    "label": "A",
+    "content": "The total cost, in dollars, of stringing the whole route",
+    "isCorrect": false
+   },
+   {
+    "id": "14cf4ca1-17d4-4192-aaf0-b67c951354c0",
+    "label": "B",
+    "content": "The number of miles of route that can be strung for $1,450",
+    "isCorrect": false
+   },
+   {
+    "id": "c19e1932-cf97-4328-afc0-dcb490bebf18",
+    "label": "C",
+    "content": "The cost, in dollars, incurred before any wire is strung",
+    "isCorrect": false
+   },
+   {
+    "id": "eda75bb1-d13c-4c77-81be-8b90c3fb9e1b",
+    "label": "D",
+    "content": "The cost, in dollars, of stringing each mile of route",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "eefe71c2-f0b7-48c4-985f-4aa77c7fba63",
+  "stem": "A tramway rule requires that the number n of cars running on the Canal Road route be at least 6 and no more than 11. Which inequality represents this rule?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d8dce887-dd76-4175-923f-799b8d0b2335",
+    "label": "A",
+    "content": "\\(6\\le n\\le 11\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "21582afc-fe10-4262-b182-bbf34338a935",
+    "label": "B",
+    "content": "\\(6<n\\le 11\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "5f15193b-f6f5-4417-993e-f5b64f6d2458",
+    "label": "C",
+    "content": "\\(6\\le n<11\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "d850b997-d168-4164-8fb3-f75970c226c7",
+    "label": "D",
+    "content": "\\(6<n<11\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "41cad347-f192-4ea8-99bd-f953be020ac1",
+  "stem": "A tram conductor's takings x, in dollars, satisfy \\(\\frac{x}{4}+7=19\\). What is the value of x?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "43829501-84af-49df-8741-dca15475df5d",
+    "label": "A",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "0c32ad58-610a-45c6-bfe0-676b9bd951f6",
+    "label": "B",
+    "content": "21",
+    "isCorrect": false
+   },
+   {
+    "id": "e9cacc77-19e5-4a9c-a55e-7e060d5d4122",
+    "label": "C",
+    "content": "48",
+    "isCorrect": true
+   },
+   {
+    "id": "2bfd2712-a954-4f97-8d95-4175c3f541f1",
+    "label": "D",
+    "content": "104",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "10805bc1-86b4-4ede-a7e8-ea37d8d21fa4",
+  "stem": "The time, in minutes, needed to clean x tram cars is given by \\(4(3x-7)+5x\\). Which expression is equivalent to it?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "51dd989a-ab4e-4fc9-92fb-b75889c57541",
+    "label": "A",
+    "content": "\\(17x-28\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "a893e7bd-bbcc-4f0e-9742-e55ca17f2f86",
+    "label": "B",
+    "content": "\\(17x-7\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "f11a7ca4-809d-4fa0-b7c1-c2e6c9fc8a1c",
+    "label": "C",
+    "content": "\\(12x-28\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "03b7ad2a-6c47-421d-955e-428e5608d584",
+    "label": "D",
+    "content": "\\(7x-28\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "0d1bbd32-41e6-4ca0-838c-be1ffdf62eeb",
+  "stem": "A gas works records a leakage allowance as \\((x+9)(x-9)\\). Which expression is equivalent to that allowance?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "3df6d4e3-d348-403c-9285-5f8379acbe99",
+    "label": "A",
+    "content": "\\(x^{2}+81\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "9c63234e-67c6-46da-b6a1-5695a66f9a76",
+    "label": "B",
+    "content": "\\(x^{2}-18x-81\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "2b3d9db0-444a-4824-acb8-0c5f38457986",
+    "label": "C",
+    "content": "\\(x^{2}+18x-81\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "6e003f06-0709-42e9-9e21-3144c075c1c8",
+    "label": "D",
+    "content": "\\(x^{2}-81\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "60ccf10d-41d0-42b7-805f-53ad54f0c561",
+  "stem": "A wire-drawing bench's wear index is given by \\(h(x)=x^{2}-9\\), where x is the number of dies fitted. What is the value of \\(h(5)\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "f923478b-4aaa-4ec9-9d1f-6b3a35b48ea6",
+    "label": "A",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "9f169c24-4fd7-4072-96f0-78f828531e14",
+    "label": "B",
+    "content": "16",
+    "isCorrect": true
+   },
+   {
+    "id": "02d89bce-3c8c-42fd-818b-72289fb554d8",
+    "label": "C",
+    "content": "25",
+    "isCorrect": false
+   },
+   {
+    "id": "2e613273-1206-4de2-a297-7d765ef38ac4",
+    "label": "D",
+    "content": "34",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "062d01c3-8658-4a0a-9b40-d105b11fbfde",
+  "stem": "The number of cars in service on a tramway is modelled by \\(T(y)=40(1.25)^{y}\\), where y is the number of years since the tramway opened. By what percent does the model say the number of cars increases each year?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1940ead8-5027-458a-8f86-ed60a42f5d12",
+    "label": "A",
+    "content": "1.25%",
+    "isCorrect": false
+   },
+   {
+    "id": "322b80cd-eeda-4b89-a69b-66275798a774",
+    "label": "B",
+    "content": "12.5%",
+    "isCorrect": false
+   },
+   {
+    "id": "c7ae742c-1150-4e37-ab5a-79487e5e9f6a",
+    "label": "C",
+    "content": "25%",
+    "isCorrect": true
+   },
+   {
+    "id": "64e206d4-3e0a-4b77-adc7-116894c6b0b9",
+    "label": "D",
+    "content": "125%",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "ede33817-8c75-4718-8dd8-45741d782bea",
+  "stem": "A gas works doubles its stock of fuel each hour, so that after y hours it holds \\(3\\cdot 2^{y}\\) tonnes. After how many hours does it hold 96 tonnes?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "862b2f25-c189-4aea-b3f0-738be2ae82de",
+    "label": "A",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "ce0565ed-fdf0-4fce-9e44-514c85a3f95b",
+    "label": "B",
+    "content": "5",
+    "isCorrect": true
+   },
+   {
+    "id": "bfbac432-3b9d-4787-99c6-3605c5bd9d0f",
+    "label": "C",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "dab7f300-9359-4beb-9c59-c237a2bee6f0",
+    "label": "D",
+    "content": "32",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "1b67c0a8-9dd4-4c90-a186-822d569c3c49",
+  "stem": "A tram signal cabin times its interlocking with the function f. The table gives four values of f.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">\\(f(x)\\)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-4</td></tr></table>What is the value of \\(f(1)\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "84a82ee9-8023-445e-90e2-5b0186b6e09b",
+    "label": "A",
+    "content": "-4",
+    "isCorrect": true
+   },
+   {
+    "id": "8449b6dc-f304-4baa-8394-100ce133372d",
+    "label": "B",
+    "content": "-1",
+    "isCorrect": false
+   },
+   {
+    "id": "729507f7-16c0-4efb-afad-4a4a500b6a73",
+    "label": "C",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "c4b91578-c48f-47f2-a4a5-a79d8aa4f468",
+    "label": "D",
+    "content": "11",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "334c7a8b-919e-4be5-b283-6b1348a7eff6",
+  "stem": "Three tram cars take 21 litres of oil between them for a full greasing. At the same rate, how many litres are needed to grease 8 tram cars?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1599a19b-b563-4f10-8a9c-1b87bfbaa546",
+    "label": "A",
+    "content": "24",
+    "isCorrect": false
+   },
+   {
+    "id": "c0c6bd50-63b0-426c-a8df-96e3b450a564",
+    "label": "B",
+    "content": "42",
+    "isCorrect": false
+   },
+   {
+    "id": "744ccb71-de08-453a-b482-436d61ec479e",
+    "label": "C",
+    "content": "49",
+    "isCorrect": false
+   },
+   {
+    "id": "f99bacde-037a-44bc-b098-a060dbc8a500",
+    "label": "D",
+    "content": "56",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "f067c844-2083-4303-8f46-3de22d28d477",
+  "stem": "A tram fare of $1.20 is raised by 25%. What is the new fare?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "e407d241-2fec-443a-822f-317ef59b34ee",
+    "label": "A",
+    "content": "$0.30",
+    "isCorrect": false
+   },
+   {
+    "id": "25a6ecd8-922b-4cc0-a94e-290038647174",
+    "label": "B",
+    "content": "$1.25",
+    "isCorrect": false
+   },
+   {
+    "id": "05bce4a9-51c9-4143-8b32-0c1c014a6472",
+    "label": "C",
+    "content": "$1.45",
+    "isCorrect": false
+   },
+   {
+    "id": "3f2180fd-9520-47c6-86e0-6f7dd03d9f0e",
+    "label": "D",
+    "content": "$1.50",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "e7b56bfd-a0f6-4637-8465-1bc88308b777",
+  "stem": "The table gives the number of cars kept at each of four tram depots.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Depot</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Cars kept</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Canal Road</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">48</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Marsh Lane</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">61</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Old Wharf</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">37</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Bell Green</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">55</td></tr></table>How many more cars are kept at Marsh Lane than at Old Wharf?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "198aed87-07b9-48b2-8533-f54e4d031d28",
+    "label": "A",
+    "content": "24",
+    "isCorrect": true
+   },
+   {
+    "id": "ee993372-f64d-4bc0-b8f4-e10500d0ebcf",
+    "label": "B",
+    "content": "37",
+    "isCorrect": false
+   },
+   {
+    "id": "4046f258-a2ca-45bc-816b-7f3c63ff6205",
+    "label": "C",
+    "content": "61",
+    "isCorrect": false
+   },
+   {
+    "id": "d0d61ef4-bf6a-43ea-b43f-725a8eb6a3a3",
+    "label": "D",
+    "content": "98",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "6f5bceee-efcc-4c0e-92d9-207fd1522cc7",
+  "stem": "A tram signal cabin recorded the number of levers pulled in each of five hours: 22, 19, 25, 19 and 30. What is the range of these five numbers?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1b6f3bab-bcb8-473c-a398-ed2b1acdbb3d",
+    "label": "A",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "8568099e-b70a-48fc-aebd-9d49092b569a",
+    "label": "B",
+    "content": "11",
+    "isCorrect": true
+   },
+   {
+    "id": "defb92c5-03df-4d05-aee9-94b7d9bf55de",
+    "label": "C",
+    "content": "19",
+    "isCorrect": false
+   },
+   {
+    "id": "37ffe925-323a-4de4-bbec-3aa91b77ca95",
+    "label": "D",
+    "content": "22",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "18f2bd76-181f-4fcb-8a92-55aecd42abd9",
+  "stem": "A trolleybus route runs in a straight line through three stops A, B and C, in that order. It is 14 kilometres from A to B and 37 kilometres from A to C. How many kilometres is it from B to C?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "35b443aa-7ab9-420a-be73-57d60fd0d246",
+    "label": "A",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "e3521de9-aff1-4703-8c09-6c65cc505d88",
+    "label": "B",
+    "content": "23",
+    "isCorrect": true
+   },
+   {
+    "id": "83aa1b65-ae27-4b90-95ea-56aab66d098e",
+    "label": "C",
+    "content": "37",
+    "isCorrect": false
+   },
+   {
+    "id": "b5628b45-198a-4aa8-987f-182718d0bf7d",
+    "label": "D",
+    "content": "51",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "0d38ef4e-d412-445d-bb1c-c568c4f98424",
+  "stem": "A gas holder's tank is a cylinder whose base has an area of 1,250 square metres. Gas fills the tank to a depth of 18 metres. How many cubic metres of gas does the tank hold?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "613cc379-9e7f-4a0c-bdda-678a05c6c6fb",
+    "label": "A",
+    "content": "4,500",
+    "isCorrect": false
+   },
+   {
+    "id": "7d0663ea-9e06-4c67-80ff-b783bd6feb63",
+    "label": "B",
+    "content": "11,250",
+    "isCorrect": false
+   },
+   {
+    "id": "573ab382-9e86-4541-b7f6-2c00f94a4c4b",
+    "label": "C",
+    "content": "22,500",
+    "isCorrect": true
+   },
+   {
+    "id": "cc8b61c2-07bb-4a61-a977-7f77517ba14a",
+    "label": "D",
+    "content": "45,000",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "07b25953-d9ec-4938-91ef-c2e22b470ce2",
+  "stem": "On a setting-out plan a pumping engine's two holding-down bolts are at the points \\((-4,7)\\) and \\((10,1)\\). What are the coordinates of the point midway between the two bolts?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "01e634a0-0220-4ccb-b605-abe9c3edf8eb",
+    "label": "A",
+    "content": "\\((-7,3)\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "904effde-0d8a-41a0-ac93-f6f516570ddd",
+    "label": "B",
+    "content": "\\((3,-4)\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "c6b05a9b-9025-46e9-8005-31716607eac3",
+    "label": "C",
+    "content": "\\((3,4)\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "f4360648-d443-479c-bf16-1c55c00cc54a",
+    "label": "D",
+    "content": "\\((7,8)\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "733da690-ec81-4ac6-9929-1d4cbf17151a",
+  "stem": "The number of coils of wire drawn on each of six days was 34, 41, 38, 45, 39 and 43. What is the median number of coils drawn per day?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"40\"]",
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "43e543e2-754f-4f39-8049-98075275bb33",
+  "stem": "A wire-drawing bench drew 72 coils in one shift, and \\(\\frac{5}{8}\\) of them were of the finest gauge. How many coils of the finest gauge were drawn that shift?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"45\"]",
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "f319abde-80eb-4a0e-99e5-27ccdee232d3",
+  "stem": "A tramway crossover is set out as right triangle PQR with the right angle at R. The hypotenuse PQ measures 25 metres and side QR measures 7 metres. What is the value of \\(\\sin P\\)?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"7/25\", \"0.28\"]",
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "1a159744-69c5-49bd-879c-468cc9b2a353",
+  "stem": "A cable ship's manifest sets two conditions on the numbers x and y of the two sizes of cable drum carried:<br/>3x+5y=41<br/>5x+3y=39<br/>What is the value of x+y?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "721c6cc1-162c-49e9-bfd4-990b6159df28",
+    "label": "A",
+    "content": "8",
+    "isCorrect": false
+   },
+   {
+    "id": "25751824-b433-464f-92d2-8dea502b9295",
+    "label": "B",
+    "content": "10",
+    "isCorrect": true
+   },
+   {
+    "id": "b2004a23-045d-40cf-a88c-434d263ea4a7",
+    "label": "C",
+    "content": "16",
+    "isCorrect": false
+   },
+   {
+    "id": "2c932804-5260-45c6-9b94-61ad4f4bbb75",
+    "label": "D",
+    "content": "80",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "4b5dc57a-7f0b-4f78-b216-7f4bda682b7a",
+  "stem": "On a cable ship's plotting sheet a straight course is the set of points \\((x,y)\\) satisfying \\(y=mx+b\\), where m and b are constants. The course passes through \\((-2,9)\\) and \\((6,-7)\\). What is the value of \\(m+b\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ac760ea0-10b1-45e5-b871-5b8b95ecbc5b",
+    "label": "A",
+    "content": "-2",
+    "isCorrect": false
+   },
+   {
+    "id": "12404d3d-22d0-4d19-a805-54dfc5f5fdf6",
+    "label": "B",
+    "content": "3",
+    "isCorrect": true
+   },
+   {
+    "id": "51e350e2-645a-4b37-a2cc-1f1c5dc49c31",
+    "label": "C",
+    "content": "5",
+    "isCorrect": false
+   },
+   {
+    "id": "28676c3c-2dfa-4932-a059-7e3234a9e44f",
+    "label": "D",
+    "content": "7",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "31121e1f-0900-40f7-8210-909d54857942",
+  "stem": "A mine ventilation fan must be run so that the air quantity q, in thousands of cubic feet each minute, satisfies both \\(3q-8\\ge 40\\) and \\(2q+5\\le 65\\). What is the greatest possible value of q?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "cbe645f3-3150-4d68-abaa-5e68efe40418",
+    "label": "A",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "1d1e8ed1-f7e3-4c4c-a0f4-7de16121d420",
+    "label": "B",
+    "content": "16",
+    "isCorrect": false
+   },
+   {
+    "id": "0de475b1-343c-480e-be3b-acdba3698bf7",
+    "label": "C",
+    "content": "24",
+    "isCorrect": false
+   },
+   {
+    "id": "af93f2ac-2b0b-45b4-af16-9d4472a768de",
+    "label": "D",
+    "content": "30",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "ca09d32f-16d9-48d1-b07c-bc3dd3b8f4df",
+  "stem": "A boiler shop rivets seams in two patterns. Four metres of the double-riveted pattern together with seven metres of the single-riveted pattern take 63 rivets, while seven metres of the double-riveted pattern together with four metres of the single-riveted pattern take 69 rivets. How many rivets does one metre of the double-riveted pattern take?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d7fb6388-1b49-45e6-abfb-02ca7a46b092",
+    "label": "A",
+    "content": "5",
+    "isCorrect": false
+   },
+   {
+    "id": "17858fe0-6f94-4d36-8984-e083d985e5b1",
+    "label": "B",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "ab11aac0-1fb6-436e-bdb7-68137b7b085c",
+    "label": "C",
+    "content": "7",
+    "isCorrect": true
+   },
+   {
+    "id": "a34a2272-5684-49b0-a65e-fca5b6e1cdc0",
+    "label": "D",
+    "content": "9",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "e931dbc5-b0ce-4175-b4a4-ddb6f7577784",
+  "stem": "A telegraph company's charge for a new line is \\(C(n)=an+b\\) dollars for a line n miles long, where a and b are constants. A 30-mile line costs $1,290 and a 50-mile line costs $2,050. Which expression gives the charge, in dollars, for a line m miles long?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "76a55768-5dd0-4bfa-afe8-82634108568a",
+    "label": "A",
+    "content": "\\(38m+150\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "7e5c31a1-4c33-4a70-8b09-071e5790643f",
+    "label": "B",
+    "content": "\\(38m+43\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "81a3d218-9c3d-4d9b-9657-ae017a1cd0f6",
+    "label": "C",
+    "content": "\\(41m+60\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "ca831155-e2f2-4c7d-8a50-0a9f5d0aacc5",
+    "label": "D",
+    "content": "\\(43m\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "4559cda7-9331-4b84-8fc0-f8d7de666054",
+  "stem": "A cable ship pays out cable at a steady rate. Three hours after paying out began, 8.4 nautical miles of cable remained on the drum; seven hours after it began, 5.2 nautical miles remained. The ship must leave at least 1.2 nautical miles on the drum. For how many further hours after the seventh hour can the ship go on paying out?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "94052797-d906-45c2-9cc5-5ac833ea9f66",
+    "label": "A",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "a16150c0-3443-4237-8068-ff38bd094d34",
+    "label": "B",
+    "content": "5",
+    "isCorrect": true
+   },
+   {
+    "id": "61625a9f-e29f-44a6-8ced-ed4aca557367",
+    "label": "C",
+    "content": "6.5",
+    "isCorrect": false
+   },
+   {
+    "id": "b227104d-e666-430a-92ad-8e7d324a49fd",
+    "label": "D",
+    "content": "8",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "f556236e-321c-45d8-8e5e-f144c1df9492",
+  "stem": "A telegraph office converts a reading with \\(g(x)=2x-5\\) and then converts the result back with \\(f(x)=\\frac{x+5}{2}\\). Which expression is equivalent to \\(f(g(x))\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "7b2f8eb9-c895-4e1b-a011-06432fb81c3e",
+    "label": "A",
+    "content": "\\(x\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "bcc955ed-f5d4-4baf-8c52-788dc5fb888f",
+    "label": "B",
+    "content": "\\(x-5\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "00c9a424-81c8-4a35-be20-c6f7e6aab9df",
+    "label": "C",
+    "content": "\\(x+5\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "487bee04-5f5f-4cb5-bc26-3e910962958f",
+    "label": "D",
+    "content": "\\(4x-5\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "6091c3ed-cdee-4aae-8e14-400cf0db12b0",
+  "stem": "A boiler shop writes the combined allowance of two riveted seams as \\(\\frac{1}{\\frac{1}{u}+\\frac{1}{v}}\\), where u and v are positive. Which expression is equivalent to that allowance?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "da67c917-a870-43c2-846d-507ed9364c93",
+    "label": "A",
+    "content": "\\(\\frac{u+v}{uv}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "aea43b5d-cd90-4cea-b78a-b7da65223975",
+    "label": "B",
+    "content": "\\(u+v\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "eb56c38c-ed5e-4438-9baa-1a06da68c5f5",
+    "label": "C",
+    "content": "\\(\\frac{1}{u+v}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "7479bb65-3a47-4732-9ffd-2781a72c5e49",
+    "label": "D",
+    "content": "\\(\\frac{uv}{u+v}\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "31849d33-baee-472d-853d-c50adf9d16ea",
+  "stem": "A telegraph repeater station's traffic is modelled by \\(M(t)=k\\cdot 4^{\\frac{t}{5}}\\) messages, where t is the number of hours since midnight and k is a constant. The model gives 1,728 messages at \\(t=15\\). How many messages does the model give at \\(t=0\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "78fc4257-663f-4ba2-9ec2-5eb3a9ff125a",
+    "label": "A",
+    "content": "27",
+    "isCorrect": true
+   },
+   {
+    "id": "1b3dfa1a-e58a-4d12-a8f0-612778fa3c28",
+    "label": "B",
+    "content": "108",
+    "isCorrect": false
+   },
+   {
+    "id": "27f168ad-a97e-4c29-bf83-6b6a5acf80e1",
+    "label": "C",
+    "content": "432",
+    "isCorrect": false
+   },
+   {
+    "id": "f24da2b3-f2da-43fc-9190-acf31afe224c",
+    "label": "D",
+    "content": "864",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "2ee8a669-41ca-427b-9848-05b611d4a712",
+  "stem": "A boiler designer's two working stresses are the two solutions of \\(3x^{2}-12x-7=0\\). What is the sum of those two solutions?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0983aa16-1423-40c0-900c-b46674a05f79",
+    "label": "A",
+    "content": "\\(-\\frac{7}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "3a5e93e3-3be5-4173-8409-430484d0f791",
+    "label": "B",
+    "content": "\\(\\frac{7}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "11769cb0-2abe-4751-a00d-4bae29d3842a",
+    "label": "C",
+    "content": "4",
+    "isCorrect": true
+   },
+   {
+    "id": "81d01358-9aba-4a6e-9d3b-411256322c0f",
+    "label": "D",
+    "content": "12",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "bab1e4b9-d7b4-4e98-be4c-93bbb2b04ba4",
+  "stem": "A ventilation gauge is out of true whenever \\(|2x-9|=15\\), where x is the reading in inches of water. What is the sum of the two values of x that satisfy this equation?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "f1257b2d-42d7-4e86-a042-c9557e9126aa",
+    "label": "A",
+    "content": "9",
+    "isCorrect": true
+   },
+   {
+    "id": "d7d5e891-254e-4d45-bee4-9405053d6f27",
+    "label": "B",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "1eb82212-b1fe-461d-a3ca-5276bf33f322",
+    "label": "C",
+    "content": "15",
+    "isCorrect": false
+   },
+   {
+    "id": "de44550e-8c07-4d3a-90a7-56d1d017c757",
+    "label": "D",
+    "content": "24",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "5a42334f-e0ab-47d3-8fa6-496cf2072924",
+  "stem": "A boiler designer writes a plate-strength ratio as \\(\\frac{a^{\\frac{3}{4}}}{a^{\\frac{1}{6}}}\\), where \\(a>1\\). Which expression is equivalent to that ratio?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "7387c4c9-75c1-46bf-9fb8-a3819e978948",
+    "label": "A",
+    "content": "\\(a^{\\frac{7}{12}}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "30774766-ed94-4b03-9a54-4b0bf5824550",
+    "label": "B",
+    "content": "\\(a^{\\frac{1}{2}}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "3f81591d-17f4-4866-bb8f-f7b08426c5c6",
+    "label": "C",
+    "content": "\\(a^{\\frac{11}{12}}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "a27e1816-774a-4e03-bdac-89c63e550aaa",
+    "label": "D",
+    "content": "\\(a^{\\frac{9}{2}}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "0eea83fc-9ed2-471b-830e-216391f76d73",
+  "stem": "A ventilation engineer measured the air quantity at 30 randomly chosen of the 400 working places in one mine and found a mean of 3,100 cubic feet each minute. To which group is it most appropriate to generalize this result?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a8d5f3d7-c45a-4525-8276-0a8d1f6dd854",
+    "label": "A",
+    "content": "Only the 30 working places at which the air quantity was measured",
+    "isCorrect": false
+   },
+   {
+    "id": "8585e73c-1169-49b2-a462-f3642e886335",
+    "label": "B",
+    "content": "All working places in every mine in the district",
+    "isCorrect": false
+   },
+   {
+    "id": "7e65c3d8-e992-4186-a673-c56e9193fd0c",
+    "label": "C",
+    "content": "All ventilation fans in use in the district",
+    "isCorrect": false
+   },
+   {
+    "id": "bd6d52c7-2593-428e-b406-27ff5c76029a",
+    "label": "D",
+    "content": "All 400 working places in that mine",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "276b2fd4-71d8-44f3-9ae7-3b955300ed26",
+  "stem": "The table shows the results of a hydraulic test on 300 boiler plates, sorted by the thickness of the plate.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Result</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">12 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">16 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">20 mm</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Passed</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">240</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Failed</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">16</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">100</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">120</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">80</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">300</td></tr></table>Of the plates that failed the test, what fraction were 16 millimetres thick?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b13ad8e7-d4f3-4ebf-bbd6-a5361ad09c61",
+    "label": "A",
+    "content": "\\(\\frac{2}{25}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "74339eff-7bc9-4b2e-a199-369446d1f525",
+    "label": "B",
+    "content": "\\(\\frac{1}{5}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "279f118a-d24b-45b7-bfb0-63cfca8f6485",
+    "label": "C",
+    "content": "\\(\\frac{1}{4}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "d1dfbe75-c938-400c-a265-5cbe3efccdb1",
+    "label": "D",
+    "content": "\\(\\frac{2}{5}\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "a795b907-17a8-4b9c-b862-d50380b8068d",
+  "stem": "A mine's ventilation fan was speeded up so that the air quantity rose by 15%. The fan drift was then widened so that the quantity rose by a further 20%. By what percent is the final air quantity greater than the quantity before either change?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "70a21b88-4c61-4af2-bfda-f9d1263fc761",
+    "label": "A",
+    "content": "35%",
+    "isCorrect": false
+   },
+   {
+    "id": "62cc1716-5417-4838-bed7-de591c74c46d",
+    "label": "B",
+    "content": "36%",
+    "isCorrect": false
+   },
+   {
+    "id": "9226ea45-1071-48f7-8a1e-a59a2d409616",
+    "label": "C",
+    "content": "38%",
+    "isCorrect": true
+   },
+   {
+    "id": "babdb505-d5b6-4d70-ac3e-016774442879",
+    "label": "D",
+    "content": "41%",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "fcaf4e8d-e4f4-48bb-99dd-883615d2baf7",
+  "stem": "The mean thickness of 12 boiler plates was measured as 15.4 millimetres. When one plate was set aside, the mean thickness of the remaining 11 was 15.6 millimetres. What was the thickness, in millimetres, of the plate that was set aside?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0701ba6c-03c6-4a2c-9288-383058ce4a79",
+    "label": "A",
+    "content": "11.6",
+    "isCorrect": false
+   },
+   {
+    "id": "7a8c10f1-9180-4848-b17f-787471d0316c",
+    "label": "B",
+    "content": "13.2",
+    "isCorrect": true
+   },
+   {
+    "id": "b6a34575-001b-4ff9-b1fe-bb48cbb18ff0",
+    "label": "C",
+    "content": "15.0",
+    "isCorrect": false
+   },
+   {
+    "id": "6f4eaf6d-13f7-4852-8205-2d2e82918c27",
+    "label": "D",
+    "content": "17.6",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "cd3d91b0-a397-4100-9062-92cd928953d5",
+  "stem": "A boiler shop's templet is a right triangle \\(ABC\\) with the right angle at C. The shop's record gives \\(\\sin A=\\frac{7}{25}\\) and \\(BC=21\\) centimetres. What is the length of \\(AC\\), in centimetres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ba036591-ec7e-45e0-b7ac-cfa2bd57a072",
+    "label": "A",
+    "content": "24",
+    "isCorrect": false
+   },
+   {
+    "id": "35f62cde-a98e-468f-99c2-89b0579517c1",
+    "label": "B",
+    "content": "54",
+    "isCorrect": false
+   },
+   {
+    "id": "96126d5a-57c2-48aa-8cbc-4aa78974527f",
+    "label": "C",
+    "content": "72",
+    "isCorrect": true
+   },
+   {
+    "id": "a757e19e-ed22-45ca-af24-0f51d0551d83",
+    "label": "D",
+    "content": "75",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "7eece334-0897-4051-a84b-79dad08bf86a",
+  "stem": "A boiler shell is a cylinder 10 feet long closed at each end by a hemisphere. The cylinder and both hemispheres have a radius of 3 feet. What is the total volume of the shell, in cubic feet?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b478215d-bc37-4787-8adb-5f3bf7b2f124",
+    "label": "A",
+    "content": "\\(108\\pi\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "6657c6dd-7846-4895-bd16-55a393afedbc",
+    "label": "B",
+    "content": "\\(126\\pi\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "bda72d8c-b5aa-4ebf-af7c-5d5f5b2d31d5",
+    "label": "C",
+    "content": "\\(144\\pi\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "bfeec38d-b1f2-4239-9f01-6df9f49d568a",
+    "label": "D",
+    "content": "\\(162\\pi\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "17fc6753-11d5-4924-876f-5243ac2a55f8",
+  "stem": "Two telegraph wires are strung parallel to each other, and a straight stay wire crosses both. The angle the stay makes with the upper wire and the angle it makes with the lower wire are corresponding angles, and they measure \\((7x-4)\\)&deg; and \\((3x+24)\\)&deg;. What is the measure, in degrees, of each of those two angles?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a1e5c1a0-313a-4aba-a018-4e8b876132a7",
+    "label": "A",
+    "content": "7",
+    "isCorrect": false
+   },
+   {
+    "id": "0ae1718c-a701-42a5-864c-d16833221ed9",
+    "label": "B",
+    "content": "28",
+    "isCorrect": false
+   },
+   {
+    "id": "85c37813-9acc-41d7-b221-b80a2d731f58",
+    "label": "C",
+    "content": "45",
+    "isCorrect": true
+   },
+   {
+    "id": "09e01998-8186-4872-9617-0c56af1680a1",
+    "label": "D",
+    "content": "135",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "8d263526-cff0-4c19-a8a6-58f5fb803334",
+  "stem": "A submarine cable is made up of three sections. The second section is twice as long as the first, and the third is 40 nautical miles longer than the second. The whole cable is 620 nautical miles long. How many nautical miles long is the third section?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"272\"]",
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "6fed61a8-5f69-438b-8edc-d996760c54a5",
+  "stem": "In a riveted boiler seam the ratio of rivets accepted to rivets cut out is 23 to 2. A seam took 1,150 rivets altogether, and every rivet cut out cost the shop $3.40 in lost time. What was the total lost-time cost, in dollars, for that seam?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"312.80\", \"312.8\"]",
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "8c579a88-68a6-4f54-82fc-9534279083d1",
+  "stem": "A ventilation drift is a rectangular airway 3.5 metres wide and 2.4 metres high, and air moves along it at 6 metres each second. How many cubic metres of air pass a point in the drift each minute?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"3024\"]",
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 20"
+ },
+ {
+  "id": "25fef040-cfaf-446b-8b2e-f0125e641cf6",
+  "stem": "In one week a picking crew worked its way along the rows of a vineyard, taking 3 more rows of Riesling vines than of Pinot vines and 47 rows in all. Each Riesling row gave 210 kilograms of grapes and each Pinot row gave 260 kilograms. How many kilograms of grapes did the crew take that week?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "32ee3df8-b142-4068-a697-383a14420189",
+    "label": "A",
+    "content": "10,810",
+    "isCorrect": false
+   },
+   {
+    "id": "6dc1267e-dc58-492a-9e53-46debe303566",
+    "label": "B",
+    "content": "10,970",
+    "isCorrect": true
+   },
+   {
+    "id": "605009f2-9f45-4cd0-8a0e-7ff69e88db19",
+    "label": "C",
+    "content": "11,120",
+    "isCorrect": false
+   },
+   {
+    "id": "97baa14d-fc6e-4ca2-816c-a6361ff6a907",
+    "label": "D",
+    "content": "11,280",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "c323717a-206b-45ba-879d-49fb87f2d4ed",
+  "stem": "A rain gauge at a weather station was not emptied overnight. Rain then fell at a steady rate all morning: the gauge held 7 millimetres of water at 11 in the morning and 16 millimetres at 2 in the afternoon. Which equation gives the depth d, in millimetres, of water in the gauge h hours after 9 in the morning?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "2e8476ac-ef52-43cd-8d45-22caf73f99f6",
+    "label": "A",
+    "content": "d=3h+1",
+    "isCorrect": true
+   },
+   {
+    "id": "dde6bfee-7d9d-4bbc-9543-044ef10e95d3",
+    "label": "B",
+    "content": "d=3h+7",
+    "isCorrect": false
+   },
+   {
+    "id": "e6f901af-b8f5-4529-bddd-7951ccc3905c",
+    "label": "C",
+    "content": "d=3h-1",
+    "isCorrect": false
+   },
+   {
+    "id": "b04743cd-218c-455a-8d7b-9d400e2e0f12",
+    "label": "D",
+    "content": "d=h+5",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "c94e4ae7-d9ea-4f7d-99c3-f47dd6b9bc59",
+  "stem": "A saddler's stitching horse will hold a strap no more than 210 centimetres long. Every strap is cut 18 centimetres longer than 4 times the length of the billet that will be sewn to it. What is the greatest possible length, in centimetres, of a billet whose strap the stitching horse will hold?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "9db64153-ac4b-4733-a2b7-87ef95e2adf8",
+    "label": "A",
+    "content": "36",
+    "isCorrect": false
+   },
+   {
+    "id": "d9e0987e-9b42-4688-8769-047b9ef69650",
+    "label": "B",
+    "content": "42",
+    "isCorrect": false
+   },
+   {
+    "id": "4e84e00f-30b6-4be1-b549-cd3f440bf8aa",
+    "label": "C",
+    "content": "45",
+    "isCorrect": false
+   },
+   {
+    "id": "2bcd5bdc-a121-4590-a779-361acd3293d0",
+    "label": "D",
+    "content": "48",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "988e2d37-4bd3-4b14-a037-815ac7e00c43",
+  "stem": "A cartwright's yard holds 3 times as many cart wheels as dray wheels. After 24 cart wheels are sold and 6 dray wheels are bought, the yard holds twice as many cart wheels as dray wheels. How many dray wheels did the yard hold at the start?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "cd8f8c9e-666f-4ab7-9b08-6f1194caf333",
+    "label": "A",
+    "content": "30",
+    "isCorrect": false
+   },
+   {
+    "id": "54bdf59f-43b1-4d6d-858f-03ef217bba2e",
+    "label": "B",
+    "content": "33",
+    "isCorrect": false
+   },
+   {
+    "id": "ba4e0eb6-61c5-426b-b615-420e7b65dc45",
+    "label": "C",
+    "content": "36",
+    "isCorrect": true
+   },
+   {
+    "id": "a50afbfd-839b-4fc7-a637-52d5e29efa02",
+    "label": "D",
+    "content": "42",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "65862cb3-fcb1-4015-a913-70096833fe6f",
+  "stem": "Bales were carried out of a mown field at a steady rate. Three hours after the loading began 264 bales were still in the field, and seven hours after it began 148 were still in the field. How many bales were in the field when the loading began?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"351\"]",
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "ef705c6f-f44b-4e49-a18e-33a3656e43c6",
+  "stem": "The air in a tobacco curing barn warms at a constant rate once the flues are lit. Two hours after lighting a thermometer in the barn read 46 degrees Celsius, and five hours after lighting it read 64 degrees Celsius. The leaf is taken down when the thermometer reads 100 degrees Celsius. How many hours after lighting is the leaf taken down?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "c96ab2d1-360f-4580-8195-43761784fd1e",
+    "label": "A",
+    "content": "9",
+    "isCorrect": false
+   },
+   {
+    "id": "3f585b61-a450-4356-ae9c-8957c849396a",
+    "label": "B",
+    "content": "10",
+    "isCorrect": false
+   },
+   {
+    "id": "3df2b12b-663a-4c13-b387-5241aa1d78a7",
+    "label": "C",
+    "content": "11",
+    "isCorrect": true
+   },
+   {
+    "id": "dae16aca-b049-4365-bc2d-010041c13288",
+    "label": "D",
+    "content": "12",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "346e6808-cd87-42a4-943a-5c47e2172e1f",
+  "stem": "A seed cleaner passes a batch only if it carries at most 4 grams of chaff for each kilogram of seed. A batch of 45 kilograms of seed carries 294 grams of chaff, and each further run through the cleaner takes out 36 grams of chaff. What is the least number of further runs that will bring the batch within the limit?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "e931520d-4cbd-4ffc-85d3-2b3f5dc5c6fa",
+    "label": "A",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "bc325fdb-0817-4130-9055-3a6e1cada177",
+    "label": "B",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "3bb9fcd8-6af4-40cd-8766-1a65c08aa280",
+    "label": "C",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "cecc5883-56c0-4d65-91a4-be256ad54fb3",
+    "label": "D",
+    "content": "4",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "f77c2ad2-b0a6-4698-9599-a53e908d21bf",
+  "stem": "A vineyard estimates the trellis wire needed for n rows, in metres, as \\((3n+4)^{2}-\\left(9n^{2}+7\\right)\\). Which expression is equivalent to this estimate?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "5166216a-1a1b-4986-97ba-8dd7a805bdbc",
+    "label": "A",
+    "content": "24n+9",
+    "isCorrect": true
+   },
+   {
+    "id": "47ca35c2-1ec7-4c34-bf80-d6634efdf822",
+    "label": "B",
+    "content": "24n+23",
+    "isCorrect": false
+   },
+   {
+    "id": "8411d1de-5ba3-4751-a034-abbb0fa080c0",
+    "label": "C",
+    "content": "24n-9",
+    "isCorrect": false
+   },
+   {
+    "id": "b9228ee3-6760-487d-a653-6c30e287b9d3",
+    "label": "D",
+    "content": "9n+9",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "161f0eb5-5e7b-4426-a928-d40d05c10da8",
+  "stem": "The number of frost-free days in a year at a weather station is modelled by \\(F(a)=180-\\frac{a^{2}}{500}\\), where a is the station's height above sea level in metres and \\(0<a<300\\). At what height, in metres, does this model give 135 frost-free days?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ac6e13c8-362c-436f-9646-6ff5ad728260",
+    "label": "A",
+    "content": "60",
+    "isCorrect": false
+   },
+   {
+    "id": "6df431f0-66d3-4a9b-825c-94a961868c9c",
+    "label": "B",
+    "content": "90",
+    "isCorrect": false
+   },
+   {
+    "id": "8a056b23-6101-4fda-9bfb-1782b60debbf",
+    "label": "C",
+    "content": "120",
+    "isCorrect": false
+   },
+   {
+    "id": "edafce2b-f8fa-40a5-9265-d267d5e33142",
+    "label": "D",
+    "content": "150",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "703973d2-5363-45bc-8dab-70fd3ef06556",
+  "stem": "The area of leaf on a young vine, in square centimetres, is modelled by \\(A(w)=24(1.5)^{w}\\), where w is the number of weeks since bud break. According to this model, by what percent does the leaf area grow over any two-week stretch?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "f768fffc-3eb7-4bd2-8008-62d29f64bb83",
+    "label": "A",
+    "content": "50%",
+    "isCorrect": false
+   },
+   {
+    "id": "b7827cc6-6847-415a-948b-ed12ebf3219d",
+    "label": "B",
+    "content": "100%",
+    "isCorrect": false
+   },
+   {
+    "id": "19a1269e-0948-466e-8bc0-b129fefcc2f5",
+    "label": "C",
+    "content": "125%",
+    "isCorrect": true
+   },
+   {
+    "id": "8c8084c7-66f1-432f-a7ca-b61f1e62fe20",
+    "label": "D",
+    "content": "225%",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "2509b35c-879c-4c89-aed3-7df0b11b8870",
+  "stem": "The volume of must a vineyard's press yields in one pressing varies directly with the square of the diameter of the press's ram. A press whose ram is 30 centimetres across yields 45 litres in a pressing. How many litres does a press whose ram is 40 centimetres across yield in a pressing?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ae07d80c-c878-4b13-894d-fed8c1ca5de3",
+    "label": "A",
+    "content": "60",
+    "isCorrect": false
+   },
+   {
+    "id": "10cd27dd-8f67-44a0-93b1-e43074ce79cf",
+    "label": "B",
+    "content": "72",
+    "isCorrect": false
+   },
+   {
+    "id": "957b31e7-21ff-4340-b8cd-6eb67b7dc160",
+    "label": "C",
+    "content": "80",
+    "isCorrect": true
+   },
+   {
+    "id": "1b170b6b-2b45-4867-82c9-1cd9b6de0a13",
+    "label": "D",
+    "content": "90",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "81b31620-9555-4711-9056-baf46f45a745",
+  "stem": "A wheelwright sets the dish of a wheel by the rule \\(D=\\frac{r(s-2)}{4}\\), where r is the rim radius, s is the number of spokes and D is the dish. Which expression gives s in terms of D and r?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a3053a15-a2ce-4881-a204-ef33f2b26503",
+    "label": "A",
+    "content": "\\(\\frac{4D}{r}+2\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "bbb29b02-4689-428e-a48b-5c49bc43ab78",
+    "label": "B",
+    "content": "\\(\\frac{4D+2}{r}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "0e224dd0-f84c-435c-abde-8b38b956817e",
+    "label": "C",
+    "content": "\\(\\frac{4D}{r}-2\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "0838bd5b-9acb-469f-ade0-a86aba7cc48d",
+    "label": "D",
+    "content": "\\(\\frac{D}{4r}+2\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "42741b12-574e-4758-97e5-252e1dbd40cd",
+  "stem": "The ripeness of a vineyard's grapes, measured in degrees Brix, is modelled by \\(S(d)=d^{2}-4d+15\\), where d counts the days after veraison and \\(0\\le d\\le 30\\). At what value of d does this model reach 75 degrees Brix?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "6aae9b5c-7be2-41bd-ba1b-73fbc3786664",
+    "label": "A",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "a92e2219-0034-43d7-a3c1-2e8ae16fe4ac",
+    "label": "B",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "5aebe484-c82f-4aa9-b24e-06cc7c1fd221",
+    "label": "C",
+    "content": "8",
+    "isCorrect": false
+   },
+   {
+    "id": "f6cd18a4-13e9-4c39-b2ae-fd22a78bd73d",
+    "label": "D",
+    "content": "10",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "96383406-15a9-4c06-8cc4-ea7b3bf9b6d5",
+  "stem": "A vineyard pays its pickers $4 for each lug box filled, and a full lug box holds 9 kilograms of grapes. How many dollars is a picker paid for a day on which that picker brings in 738 kilograms of grapes?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "4efe1a31-06cb-43da-a23d-afb76f673eeb",
+    "label": "A",
+    "content": "246",
+    "isCorrect": false
+   },
+   {
+    "id": "a9d4139e-9d49-462b-a4ce-656ff17e4bf2",
+    "label": "B",
+    "content": "328",
+    "isCorrect": true
+   },
+   {
+    "id": "3f711fc0-70af-421f-939d-d8aa1fe9699c",
+    "label": "C",
+    "content": "369",
+    "isCorrect": false
+   },
+   {
+    "id": "dfc93468-ef90-4fad-99ba-8927d734d393",
+    "label": "D",
+    "content": "410",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "d5acfa76-3544-476a-9479-326b8fbfaa06",
+  "stem": "After 12 percent of the leaf hung in a tobacco curing barn was thrown out as trash, 2,024 kilograms were left. How many kilograms of leaf were hung in the barn?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b31fafb3-cfa0-4e5e-860b-500fb417e55a",
+    "label": "A",
+    "content": "2,266",
+    "isCorrect": false
+   },
+   {
+    "id": "5d167ab4-509b-4807-b7b2-72ee274587d5",
+    "label": "B",
+    "content": "2,300",
+    "isCorrect": true
+   },
+   {
+    "id": "ab758afa-85c4-4a01-926a-4aed5eea7efe",
+    "label": "C",
+    "content": "2,432",
+    "isCorrect": false
+   },
+   {
+    "id": "51ec4b7a-cfd5-4844-b46d-560db56981d0",
+    "label": "D",
+    "content": "2,530",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "580ff5f0-3c79-40c5-ad91-b1a517a343ee",
+  "stem": "The table gives the depth of rain, in millimetres, that four weather stations measured in May and in June.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Weather station</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Rainfall in May (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Rainfall in June (mm)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ashdown</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">91</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Braylea</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">78</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Cowden</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">83</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Denbrook</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">70</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102</td></tr></table>For the station whose rainfall rose by the greatest amount from May to June, what was the total rainfall, in millimetres, over the two months?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a344af27-1a3d-4d3f-b1c7-41dd7129f317",
+    "label": "A",
+    "content": "128",
+    "isCorrect": true
+   },
+   {
+    "id": "4ce4b61a-2bae-4eb9-8bd2-d619c7cb019d",
+    "label": "B",
+    "content": "153",
+    "isCorrect": false
+   },
+   {
+    "id": "2f52cf26-e1c2-42ce-bfb4-b49e9ee92f26",
+    "label": "C",
+    "content": "172",
+    "isCorrect": false
+   },
+   {
+    "id": "688278c5-9dd9-4ba3-901d-f492da876e1f",
+    "label": "D",
+    "content": "174",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "afe15da4-7556-45b8-bf92-6104e1399680",
+  "stem": "The table gives the seed lots a merchant tested last season, classified by crop and by whether the lot passed the germination test.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Crop</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Passed</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Failed</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Clover</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">100</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Ryegrass</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">130</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Timothy</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">70</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td></tr></table>Every lot that failed will be tested a second time. What percent of all the lots in the table will be tested a second time?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "fd11e605-1937-40e0-9468-96fce7b3c533",
+    "label": "A",
+    "content": "20%",
+    "isCorrect": false
+   },
+   {
+    "id": "b6b36268-86ee-4fba-a5fa-7e7815367055",
+    "label": "B",
+    "content": "25%",
+    "isCorrect": true
+   },
+   {
+    "id": "3635f320-fdf1-4e9d-b10f-07dd5f80d953",
+    "label": "C",
+    "content": "30%",
+    "isCorrect": false
+   },
+   {
+    "id": "e82bafc4-dc58-432a-a0bd-f33c09dbeb92",
+    "label": "D",
+    "content": "33%",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "967af3ad-6029-436d-b56b-4d2775c995ec",
+  "stem": "In one vineyard 14 rows gave a mean of 205 kilograms of grapes each, and 6 further rows gave a mean of 240 kilograms each. What was the mean yield, in kilograms, of these 20 rows?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"215.5\"]",
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "11821e0d-2d4d-4166-8e17-6652681d6373",
+  "stem": "A harness maker cuts a triangular gusset with two sides of equal length and a third side that is 7 centimetres shorter than each of the equal sides. The three sides together measure 71 centimetres. What is the length, in centimetres, of the shortest side of the gusset?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "3fbe1ad0-d151-4133-9cec-ca8ffc0f603f",
+    "label": "A",
+    "content": "19",
+    "isCorrect": true
+   },
+   {
+    "id": "39899027-c686-4fed-9647-8565a27615b5",
+    "label": "B",
+    "content": "23",
+    "isCorrect": false
+   },
+   {
+    "id": "c271a353-b327-47a5-a293-8a32e5c17ebb",
+    "label": "C",
+    "content": "26",
+    "isCorrect": false
+   },
+   {
+    "id": "f97edb48-a905-4a85-9847-181e62f63993",
+    "label": "D",
+    "content": "33",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "12675fe2-6fbf-42c6-bfb7-050bd5db6fd4",
+  "stem": "A vineyard row runs straight up a slope, rising 25 metres over a horizontal run of 60 metres. What is the value of the sine of the angle at which the row meets the horizontal?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d6b1394c-fdba-4947-a4aa-ece2f3a3d96e",
+    "label": "A",
+    "content": "\\(\\frac{5}{12}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "d6ed8c1c-30b8-4dd9-827c-7d921918aa70",
+    "label": "B",
+    "content": "\\(\\frac{5}{13}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "17bc8ee2-c09f-4380-b64a-21c09e319c50",
+    "label": "C",
+    "content": "\\(\\frac{12}{13}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "993151d0-ab08-4dc2-9aec-9d6033820e34",
+    "label": "D",
+    "content": "\\(\\frac{13}{5}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "926e97b9-307d-4adb-a299-5833951857be",
+  "stem": "A rain gauge catches rain in a funnel whose circular mouth is 20 centimetres across, and every drop that lands in the funnel runs down into a cylindrical measuring tube 4 centimetres across. After a shower in which 1.2 centimetres of rain fell, how many centimetres deep does the water stand in the measuring tube?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": null,
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "c97a0b3a-439e-4d73-9951-31aa39abf9d7",
+    "label": "A",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "0aadf343-66dc-4293-98e1-7f60088a51b5",
+    "label": "B",
+    "content": "24",
+    "isCorrect": false
+   },
+   {
+    "id": "88e6fd98-cdf1-4ac3-8692-d72ae31cbf8e",
+    "label": "C",
+    "content": "30",
+    "isCorrect": true
+   },
+   {
+    "id": "3c9338db-3e85-41ad-a227-6009b77579f4",
+    "label": "D",
+    "content": "48",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "26ce871b-041d-43df-9bc2-f392f7b188b6",
+  "stem": "A hay rick is built as a rectangular block 9 metres long, 5 metres wide and 4 metres high, carrying on top of it a prism whose triangular cross-section is 5 metres wide at its base and 2 metres tall. What is the total volume of the rick, in cubic metres?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "MEDIUM",
+  "correctAnswerFR": "[\"225\"]",
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "52459f9d-8219-4503-8847-71bb5b08148a",
+  "stem": "An observatory's dome shutter is opened by turning a crank. The number of turns t needed satisfies 6t+14=92. What is the value of t?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "afc25970-c6b0-4a4e-841b-afa0b6ff57b7",
+    "label": "A",
+    "content": "11",
+    "isCorrect": false
+   },
+   {
+    "id": "16d7a8a3-285e-41a2-8628-38373d989485",
+    "label": "B",
+    "content": "13",
+    "isCorrect": true
+   },
+   {
+    "id": "99d61142-8672-479a-bea0-a4bf19793142",
+    "label": "C",
+    "content": "15",
+    "isCorrect": false
+   },
+   {
+    "id": "af620a8c-51b0-4e5a-a065-fe92e76ec95b",
+    "label": "D",
+    "content": "18",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "501a74a9-38ec-4e4c-bb5e-7e08d5e50bde",
+  "stem": "A silk reeler winds 45 grams of raw silk onto each skein. How many grams of raw silk are wound onto 16 skeins?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "7ad2eb84-a165-4eb8-82f6-97c48dee8e3e",
+    "label": "A",
+    "content": "720",
+    "isCorrect": true
+   },
+   {
+    "id": "43d68901-6e4b-4bf6-aa51-44bbcb0e7498",
+    "label": "B",
+    "content": "760",
+    "isCorrect": false
+   },
+   {
+    "id": "8b5b8c9c-c9f5-4ac1-9165-3578ff3b8464",
+    "label": "C",
+    "content": "805",
+    "isCorrect": false
+   },
+   {
+    "id": "52a76c0a-ceb7-4b4d-af73-04125c8da441",
+    "label": "D",
+    "content": "845",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "0b581176-26d5-444b-9d6e-5d918d353e92",
+  "stem": "A carriage spring stands 260 millimetres high when nothing rests on it, and it settles 3 millimetres lower for each sack loaded onto it. Which expression gives the height of the spring, in millimetres, once s sacks have been loaded?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "a2141985-5161-4588-a5c6-80774ed64070",
+    "label": "A",
+    "content": "260-3s",
+    "isCorrect": true
+   },
+   {
+    "id": "6544faee-e0fc-4b11-b546-5a909464e417",
+    "label": "B",
+    "content": "260+3s",
+    "isCorrect": false
+   },
+   {
+    "id": "aec91cf8-9e5e-40fa-91fd-4c2888eb4334",
+    "label": "C",
+    "content": "3s-260",
+    "isCorrect": false
+   },
+   {
+    "id": "4c306f1e-971d-43f8-99ac-28f4a794c211",
+    "label": "D",
+    "content": "257s",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "b733669c-3cc7-452f-ad06-a85d76f064da",
+  "stem": "A carriage spring's deflection is modelled in the xy-plane by the line y=7x+4. This line crosses the y-axis at the point (0, k). What is the value of k?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "f41ccee4-d293-410e-9ae2-d11e15867fe4",
+    "label": "A",
+    "content": "-7",
+    "isCorrect": false
+   },
+   {
+    "id": "4f69dc97-be89-4ebc-8cac-686fec45dcc6",
+    "label": "B",
+    "content": "-4",
+    "isCorrect": false
+   },
+   {
+    "id": "efc151e8-6575-4c68-ac72-4c88b916c69c",
+    "label": "C",
+    "content": "4",
+    "isCorrect": true
+   },
+   {
+    "id": "3d8f09ce-686f-44b1-9ca0-880a891d7579",
+    "label": "D",
+    "content": "7",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "1cb869e8-36dd-4b0a-8c9e-b211a135d639",
+  "stem": "A lens polisher's speed setting x satisfies \\(3x-8>16\\). Which of the following could be the value of x?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "3a73181a-c59d-4477-a2cf-cd8b645e37cd",
+    "label": "A",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "c13e6402-10a0-4133-8cc4-5eee4f4d0050",
+    "label": "B",
+    "content": "7",
+    "isCorrect": false
+   },
+   {
+    "id": "d944f014-5fae-489a-b664-30e1d9868f93",
+    "label": "C",
+    "content": "8",
+    "isCorrect": false
+   },
+   {
+    "id": "8db7adf0-01c1-4d3f-9165-5bab7855854d",
+    "label": "D",
+    "content": "9",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "ae9f842d-6140-4540-aa7d-01f2ef418a76",
+  "stem": "A spring maker's stock of 320 steel strips falls by 24 strips each day. After how many days are 152 strips left?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0c3678b7-1546-44d1-b960-995f275c1b42",
+    "label": "A",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "56beb90e-0bf1-4412-9886-6429deeccd67",
+    "label": "B",
+    "content": "5",
+    "isCorrect": false
+   },
+   {
+    "id": "aee4a8e7-a6e0-4225-8e96-359b8a9956e9",
+    "label": "C",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "e34377ed-c169-47f2-9637-715d655be2b6",
+    "label": "D",
+    "content": "7",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "274255e2-7de1-4c80-ab49-52428adafa17",
+  "stem": "A rack in a silk-reeling shed holds at most 24 skeins, and 9 skeins are on it already. What is the greatest number of further skeins that can be put on the rack?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "f7ca4df4-9080-4faa-84be-ef5a248ac7e7",
+    "label": "A",
+    "content": "13",
+    "isCorrect": false
+   },
+   {
+    "id": "5370db65-67bc-4bfc-a843-4ae0c93d7e38",
+    "label": "B",
+    "content": "15",
+    "isCorrect": true
+   },
+   {
+    "id": "0617af33-882b-4d8a-a644-cd688e39c953",
+    "label": "C",
+    "content": "17",
+    "isCorrect": false
+   },
+   {
+    "id": "71ba1dea-6059-46c2-b772-8fd5e0bf31d5",
+    "label": "D",
+    "content": "33",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "a18b06d6-2c82-4e13-be58-4ede24d5f360",
+  "stem": "A silk mill writes its cost estimate as \\(4(3k+5)-7k\\), where k is the number of reels running. Which expression is equivalent to this estimate?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ff03ac98-4101-4fea-9cbd-bb596f6847e1",
+    "label": "A",
+    "content": "\\(5k+20\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "57094722-aa96-4656-9241-78cfe678844e",
+    "label": "B",
+    "content": "\\(5k+5\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "c50a8b9a-7caf-4353-a6c4-255751167a6a",
+    "label": "C",
+    "content": "\\(12k+20\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "630f9427-1336-4c89-b340-3973c04ebfd4",
+    "label": "D",
+    "content": "\\(19k+20\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "ac50c3ca-544a-49e0-a3fa-8854fe747870",
+  "stem": "The area of a telescope maker's baffle, in square centimetres, is \\(x^{2}+9x+20\\). Which expression is equivalent to this area?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "fa62e9f7-8f1e-4aee-9710-9f3dcd99821e",
+    "label": "A",
+    "content": "\\((x+2)(x+10)\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "f3a1ad2f-7165-47ea-8c6f-f05660be6046",
+    "label": "B",
+    "content": "\\((x+4)(x+5)\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "1d151671-c3b3-416b-95ff-a9fa9fc5cf13",
+    "label": "C",
+    "content": "\\((x+1)(x+20)\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "be775182-23e4-4027-bb70-fcb167355b07",
+    "label": "D",
+    "content": "\\((x-4)(x-5)\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "1c763455-2db1-4f18-8c4f-72f2abaa85c4",
+  "stem": "The table gives four values of the function f, which records a telescope drive's error.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">f(x)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-3</td></tr></table>For which value of x does \\(f(x)=0\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b31f1123-4680-41b3-a078-dc46578eee64",
+    "label": "A",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "4bbc3604-f623-41ac-aab8-8b0590de8086",
+    "label": "B",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "10644b06-fa18-4aa9-bf97-5cbc8c0dba9a",
+    "label": "C",
+    "content": "3",
+    "isCorrect": true
+   },
+   {
+    "id": "aba514c6-4113-40af-b2fb-f07bad85380f",
+    "label": "D",
+    "content": "4",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "0a665bcf-b1bf-4d0c-8548-dc7a98bef9ae",
+  "stem": "A grinder's design equation is \\((n-7)(n+2)=0\\), where n is a positive number of grinding passes. What is the value of n?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "578a6b18-3416-4d04-b83b-6e5a5d0d506d",
+    "label": "A",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "b3709ac7-d74b-45a3-bb40-0bee4f5e1d60",
+    "label": "B",
+    "content": "7",
+    "isCorrect": true
+   },
+   {
+    "id": "63d03564-9770-4040-bcb6-319e35c0082f",
+    "label": "C",
+    "content": "9",
+    "isCorrect": false
+   },
+   {
+    "id": "8550f179-6c09-40e3-8ab4-fb52ce63ef3b",
+    "label": "D",
+    "content": "14",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "89a82c68-d4bb-4c47-a6d8-e5d16a290f76",
+  "stem": "A silk-reeling machine's thread tension is modelled by \\(f(x)=-(x-4)^{2}+29\\). What is the greatest value this model can take?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "8265eda7-1c0d-453b-a7ae-3ea5f4527f76",
+    "label": "A",
+    "content": "-29",
+    "isCorrect": false
+   },
+   {
+    "id": "249655b2-73a4-4f47-9df4-5d567822ac41",
+    "label": "B",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "e545bc74-d15d-4077-bd1b-58a01bc19945",
+    "label": "C",
+    "content": "25",
+    "isCorrect": false
+   },
+   {
+    "id": "f8849a83-7ab9-4b47-b136-81829f395470",
+    "label": "D",
+    "content": "29",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "26dbc0b8-a2ee-4623-8be5-ed914b41cf9d",
+  "stem": "An optician writes a magnification ratio as \\(\\frac{x^{9}}{x^{4}}\\), where \\(x>0\\). Which expression is equivalent to this ratio?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "c68d4a0c-c0a6-42d7-818d-5e8307d6cfaa",
+    "label": "A",
+    "content": "\\(x^{2}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "983c0b57-5f16-405b-80f2-38e550af53ff",
+    "label": "B",
+    "content": "\\(x^{5}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "c9517191-0f2a-4582-9460-e65c834f4d30",
+    "label": "C",
+    "content": "\\(x^{13}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "6bbd8893-6b14-40da-be98-363f1d9bd360",
+    "label": "D",
+    "content": "\\(x^{36}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "0274d823-4d64-49fe-86f6-0d7160e69466",
+  "stem": "A silk reeler reels 6 skeins in an hour. Working at this rate, how many hours does the reeler take to reel 78 skeins?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"13\"]",
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "fcb14f72-54c8-42cf-af79-f00c287243df",
+  "stem": "When raw silk is reeled, the ratio of the mass of reeled silk to the mass of waste is 5 to 2. How many kilograms of waste are produced alongside 140 kilograms of reeled silk?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b06d271a-3b3e-470a-be25-e3ba9f8c622f",
+    "label": "A",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "3331bd38-ad1a-4c44-af37-2cfb4fcf90b1",
+    "label": "B",
+    "content": "35",
+    "isCorrect": false
+   },
+   {
+    "id": "f12e63fa-9963-49f5-88e3-b550b8a25fb7",
+    "label": "C",
+    "content": "40",
+    "isCorrect": false
+   },
+   {
+    "id": "a4b3608b-9f46-4843-b76c-71544e3d7e6d",
+    "label": "D",
+    "content": "56",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "86d763bf-dbc7-4d08-9641-b5b3c96ee511",
+  "stem": "The table gives the number of clear nights an observatory recorded in each of four months.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Month</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Clear nights</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">January</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">February</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">March</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">April</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr></table>In how many of these months were there more than 12 clear nights?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "91c86afd-ec5e-4434-928e-3fe1045b2632",
+    "label": "A",
+    "content": "0",
+    "isCorrect": false
+   },
+   {
+    "id": "ed8d3da7-f0e5-40a2-8f2e-6da854569874",
+    "label": "B",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "3c62ceb0-bd86-4ea2-9f93-9a4f16cb7af6",
+    "label": "C",
+    "content": "2",
+    "isCorrect": true
+   },
+   {
+    "id": "d9c5e3fe-a0f0-4e6c-94a8-4d1e88f80590",
+    "label": "D",
+    "content": "3",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "6efc3a4c-2534-4413-963b-b47818898cb7",
+  "stem": "The table gives the number of lens blanks ground and the number rejected at each of four benches last week.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Bench</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Blanks ground</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Blanks rejected</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Alder</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">120</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">7</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Birch</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Cedar</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">140</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Dunn</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">88</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">9</td></tr></table>At which bench were the most blanks rejected?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "b47f0f49-ef4a-4423-8b2d-a26802858ee8",
+    "label": "A",
+    "content": "Alder",
+    "isCorrect": false
+   },
+   {
+    "id": "3f6fc21d-85d6-42ad-8104-7f1bee8c528e",
+    "label": "B",
+    "content": "Birch",
+    "isCorrect": true
+   },
+   {
+    "id": "eb87626a-ea3b-4bb7-bdad-64e802d668a8",
+    "label": "C",
+    "content": "Cedar",
+    "isCorrect": false
+   },
+   {
+    "id": "93ec46a4-45e3-4adc-acd4-6c59f7010f88",
+    "label": "D",
+    "content": "Dunn",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "c5fa897b-9ba4-4d7a-bcce-98b9b88c0566",
+  "stem": "A rearing tray holds 45 cocoons, and 18 of them are double cocoons. One of the 45 cocoons is picked at random. What is the probability that it is a double cocoon? Give the answer as a fraction in lowest terms.",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"2/5\"]",
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "6a066545-87f2-4391-a433-75ba13cfb364",
+  "stem": "In the xy-plane the midpoint of the segment joining the points (2, -5) and (10, 1) is the point (a, b). What is the value of a+b?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "08130d79-21ec-4213-babe-dc4777ea5fa2",
+    "label": "A",
+    "content": "-4",
+    "isCorrect": false
+   },
+   {
+    "id": "6822546b-0eb0-46fe-a512-553658f18825",
+    "label": "B",
+    "content": "0",
+    "isCorrect": false
+   },
+   {
+    "id": "0ba2762b-799d-4970-a12d-2cea37ea975b",
+    "label": "C",
+    "content": "4",
+    "isCorrect": true
+   },
+   {
+    "id": "0561d923-8d72-4cdc-aa57-0bd32e4c67ef",
+    "label": "D",
+    "content": "8",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "aca25de1-dbe4-4382-a6ff-87037a9ccdd9",
+  "stem": "An observatory pier is finished with a stone cap in the shape of a pyramid whose square base is 12 centimetres on a side and whose height is 10 centimetres. What is the volume of the cap, in cubic centimetres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "5f382f16-8d6e-4c69-8386-c06fef0618dc",
+    "label": "A",
+    "content": "160",
+    "isCorrect": false
+   },
+   {
+    "id": "adcaa347-1810-4b3e-846f-8369410e486e",
+    "label": "B",
+    "content": "400",
+    "isCorrect": false
+   },
+   {
+    "id": "273eef9e-f804-4d9b-93f8-33e09086b511",
+    "label": "C",
+    "content": "480",
+    "isCorrect": true
+   },
+   {
+    "id": "6cfee1b1-2647-48b9-ae90-f6e8a732e158",
+    "label": "D",
+    "content": "1,440",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "3c48fbf7-781e-438c-8fe3-3c31bdaec351",
+  "stem": "A plate-drying rack rests on a solid block in the shape of a prism 40 centimetres long whose cross-section is a right triangle with legs of 8 centimetres and 15 centimetres. What is the volume of the block, in cubic centimetres?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "EASY",
+  "correctAnswerFR": "[\"2400\"]",
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "05b3b282-16c5-4845-9163-ee96911f22eb",
+  "stem": "A mounting bracket is a right triangle ABC with its right angle at C. In this bracket \\(\\tan A=\\frac{3}{4}\\) and AC=24 centimetres. What is the length of BC, in centimetres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "EASY",
+  "correctAnswerFR": null,
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0ed0d594-0c9d-4ecf-9c29-8e60f51f5161",
+    "label": "A",
+    "content": "8",
+    "isCorrect": false
+   },
+   {
+    "id": "cf54d33a-650b-40a8-8274-fbddfa1cfc77",
+    "label": "B",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "95eb449b-9dc1-472a-963e-835996a83cee",
+    "label": "C",
+    "content": "18",
+    "isCorrect": true
+   },
+   {
+    "id": "bb3a55ad-24d2-4f7d-8880-8f6b9f963b9a",
+    "label": "D",
+    "content": "32",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "a1d90560-0c8f-43b0-8783-59059a0e291b",
+  "stem": "A darkroom mixes a developer from x litres of one stock solution and y litres of another, and the mixture must satisfy both of the following conditions.<br/>2x+5y=31<br/>4x-3y=23<br/>What is the value of \\(\\frac{x}{y}\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 1,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "ee1771f1-e9a5-48d1-a3cf-faa8d38e5834",
+    "label": "A",
+    "content": "\\(\\frac{3}{8}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "b25b51b5-d8e4-4d9f-8595-cc5e7cf3604c",
+    "label": "B",
+    "content": "\\(\\frac{2}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "7c2194b7-19b9-4422-8666-2fef00b2ef05",
+    "label": "C",
+    "content": "\\(\\frac{5}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "051ec26a-a3a2-40f4-89fc-bff9f691de8f",
+    "label": "D",
+    "content": "\\(\\frac{8}{3}\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "3535779c-2e56-4318-abdc-a40379a14688",
+  "stem": "The two setting circles of a telescope mounting are drawn in the xy-plane as perpendicular lines. One of them is the line \\(4x-6y=15\\); the other passes through the point \\((8,-1)\\). What is the y-coordinate of the y-intercept of the second line?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 2,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d444ed0d-98d5-4fbe-af56-00970460b4d7",
+    "label": "A",
+    "content": "-13",
+    "isCorrect": false
+   },
+   {
+    "id": "c8e1515b-4d95-4f10-8767-59f56a81fa54",
+    "label": "B",
+    "content": "-1",
+    "isCorrect": false
+   },
+   {
+    "id": "f24917ee-a426-4a87-b89f-5559d7c38551",
+    "label": "C",
+    "content": "11",
+    "isCorrect": true
+   },
+   {
+    "id": "a6f11664-64b3-4f5f-aec9-88602a6c4d42",
+    "label": "D",
+    "content": "23",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "03171b3a-78ce-4818-a1cd-4933df7d4454",
+  "stem": "A spectacle grinder's setting x must satisfy both \\(7x-4>3x+16\\) and \\(2x+5\\le 41\\). How many integer values of x satisfy both conditions?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 3,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "8b723458-08ee-4087-a69f-18d50a12ce02",
+    "label": "A",
+    "content": "12",
+    "isCorrect": false
+   },
+   {
+    "id": "70357809-f5d5-4457-ae2a-4f15e90eca84",
+    "label": "B",
+    "content": "13",
+    "isCorrect": true
+   },
+   {
+    "id": "71fdae05-9e32-4309-a1a4-8197da957e9b",
+    "label": "C",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "cd9aa49d-1ed6-4264-8bcf-f8bfaae0cfba",
+    "label": "D",
+    "content": "18",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "7a48e21f-6a51-4479-aad1-6120ed17c75e",
+  "stem": "A darkroom's stop bath is made up of 3 parts water to 1 part acid by volume. How many litres of water must be stirred into 8 litres of this stop bath so that the result is 5 parts water to 1 part acid?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 4,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "d0aa653d-85dc-4f75-88f4-a7a456600cbf",
+    "label": "A",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "ae288737-5308-4eae-922f-7a8b6ac6c8a7",
+    "label": "B",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "0f41941c-7524-46af-9f82-e7ba76587f35",
+    "label": "C",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "3945de54-2a07-4b5d-9611-35378853d358",
+    "label": "D",
+    "content": "4",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "b6264e9c-1500-499f-9896-2606d504e100",
+  "stem": "A telescope drive's setting error is a linear function f for which \\(f(3)=-2\\) and \\(f(9)=16\\). For what value of x does \\(f(x)=40\\)?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"17\"]",
+  "q_order": 5,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LF",
+  "skill_name": "Linear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "3281565d-44c8-4d81-b24f-4405f7c86139",
+  "stem": "A darkroom thermometer's tolerance is described by \\(\\left|2x-9\\right|=13\\). What is the sum of the values of x that satisfy this equation?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 6,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LE",
+  "skill_name": "Linear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "5b86bfeb-1a7a-4b8f-9ec4-2516a02bebcf",
+    "label": "A",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "1712f806-a49e-49ac-a05e-068a40a6c4c4",
+    "label": "B",
+    "content": "9",
+    "isCorrect": true
+   },
+   {
+    "id": "ab2e302c-7eaf-49e2-8bdd-89f111dc5afd",
+    "label": "C",
+    "content": "13",
+    "isCorrect": false
+   },
+   {
+    "id": "b3f136ad-4401-4017-929e-e9ad1452f248",
+    "label": "D",
+    "content": "22",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "12d67886-af16-4f55-abbf-97577f2e7647",
+  "stem": "A darkroom worker has 240 minutes of bench time. Each contact sheet takes 6 minutes to print and each enlargement takes 14 minutes, and the worker must print at least 12 enlargements. What is the greatest number of contact sheets the worker can print in the 240 minutes?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 7,
+  "imageUrl": null,
+  "domain": "ALG",
+  "subject": "MATH",
+  "skill": "ALG-LI",
+  "skill_name": "Linear Inequalities",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "43a2c9c4-3bc0-43dc-8947-0932a91eade6",
+    "label": "A",
+    "content": "10",
+    "isCorrect": false
+   },
+   {
+    "id": "1994a60c-8343-424b-9067-40ab32e0ab2a",
+    "label": "B",
+    "content": "12",
+    "isCorrect": true
+   },
+   {
+    "id": "225ba725-a8cc-477a-a34f-fca9a98c31f7",
+    "label": "C",
+    "content": "14",
+    "isCorrect": false
+   },
+   {
+    "id": "32edd18d-3b0c-4b08-8722-1fe31639e49f",
+    "label": "D",
+    "content": "16",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "50b9a55e-1c00-45f6-a655-e4f6b1e21f4f",
+  "stem": "A darkroom's dilution rule is the function f defined by \\(f(x)=\\frac{60}{x+3}\\). For some number a it happens that \\(f(a)=5\\). What is the value of \\(f(a-6)\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 8,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0d424a20-d951-41d7-879f-70c175d09829",
+    "label": "A",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "34848605-ef86-4854-8ff3-cf1b48b08b75",
+    "label": "B",
+    "content": "5",
+    "isCorrect": false
+   },
+   {
+    "id": "e209e4ff-41b6-4ab0-bdd3-12ee1c4aa10e",
+    "label": "C",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "5c8c3798-888b-42a0-89d1-ce49aceb2918",
+    "label": "D",
+    "content": "10",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "095bafa2-4053-489f-b437-654404a156b7",
+  "stem": "A spectacle grinder writes \\(\\frac{4x^{2}+5x-9}{x+2}\\) in the form \\(4x-3+\\frac{k}{x+2}\\), where k is a constant and \\(x\\ne -2\\). What is the value of k?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 9,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "392d267c-80c5-4e95-89d8-99981ef91824",
+    "label": "A",
+    "content": "-6",
+    "isCorrect": false
+   },
+   {
+    "id": "02b32fd9-ba56-4ecf-95a3-16da239ce0c6",
+    "label": "B",
+    "content": "-3",
+    "isCorrect": true
+   },
+   {
+    "id": "64f6c5bd-6aba-4edd-a73e-ed57073b4b04",
+    "label": "C",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "8f482aa0-5a9d-4ef9-a6cb-8684f21cab8d",
+    "label": "D",
+    "content": "6",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "7a0aa88d-9900-4e4f-950c-c1aae8b79c59",
+  "stem": "A telescope maker's focal relation is \\(\\frac{18}{x}+x=11\\), an equation with two solutions. What is the greater of the two solutions?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 10,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0100ebcb-e583-452a-a6ab-be52b7e5c4e1",
+    "label": "A",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "7a52a21d-3f52-4e0f-8cc5-a0f5b7429032",
+    "label": "B",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "61bae2f2-1b69-47df-b362-10af4d451ada",
+    "label": "C",
+    "content": "6",
+    "isCorrect": false
+   },
+   {
+    "id": "99839d9c-52c7-469f-a8f7-5b88c4cb84d1",
+    "label": "D",
+    "content": "9",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "d892d81e-b680-44db-a5d3-0fba57ff06b8",
+  "stem": "A silk mill's throwing ratio satisfies \\(\\frac{8^{x}}{4^{x-3}}=32\\). What is the value of x?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 11,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NE",
+  "skill_name": "Nonlinear Equations and Systems",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "03d81217-c45e-4f2b-b794-1950f28dcba1",
+    "label": "A",
+    "content": "-1",
+    "isCorrect": true
+   },
+   {
+    "id": "2bd6f76f-11fd-4f10-bda8-39dba9ca8e1a",
+    "label": "B",
+    "content": "1",
+    "isCorrect": false
+   },
+   {
+    "id": "24220ca8-8cd5-481a-8dd2-ff47fba95968",
+    "label": "C",
+    "content": "2",
+    "isCorrect": false
+   },
+   {
+    "id": "9ed2e6ca-c92a-4b5a-b57b-8e232534dbca",
+    "label": "D",
+    "content": "5",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "f45b986b-1663-4c7b-b510-b2c57e7e97d9",
+  "stem": "The two leaf thicknesses a and b of a carriage spring satisfy \\(\\frac{a}{b}=\\frac{5}{3}\\). What is the value of \\(\\frac{2a+b}{b}\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 12,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-EQ",
+  "skill_name": "Equivalent Expressions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "31d05ead-b766-4ec4-8007-c6decf286106",
+    "label": "A",
+    "content": "\\(\\frac{8}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "fbf975b9-b8b8-471e-9667-29c7f92d110e",
+    "label": "B",
+    "content": "\\(\\frac{10}{3}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "bde9b8b7-9e15-436b-babd-1d6b89b06758",
+    "label": "C",
+    "content": "\\(\\frac{13}{5}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "a43ac762-2237-4d11-8ebe-b6b9d59048ae",
+    "label": "D",
+    "content": "\\(\\frac{13}{3}\\)",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "9e6b8a36-89bd-4f02-82c4-8c72a55bc0b1",
+  "stem": "An observatory dome's profile is modelled by \\(f(x)=x^{2}-8x+21\\). Exactly one value of x other than 2 gives \\(f(x)=f(2)\\). What is that value of x?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 13,
+  "imageUrl": null,
+  "domain": "ADV",
+  "subject": "MATH",
+  "skill": "ADV-NF",
+  "skill_name": "Nonlinear Functions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "0548c977-42c1-454d-acdb-26852a128c3f",
+    "label": "A",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "eff7acd4-e5d6-4e29-9e49-90ab331a3a42",
+    "label": "B",
+    "content": "5",
+    "isCorrect": false
+   },
+   {
+    "id": "f1a23010-50d8-47a6-b82a-b308a2f6ff93",
+    "label": "C",
+    "content": "6",
+    "isCorrect": true
+   },
+   {
+    "id": "4f30afc5-a017-4fb9-973d-80bd876c1a91",
+    "label": "D",
+    "content": "10",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "d450ce43-d2d9-45ca-acec-2dbbbe4c56f6",
+  "stem": "A list of 8 exposure times has a mean of 34 seconds. Two further exposure times are added to the list, and the mean of the 10 times is 39.2 seconds. One of the two times added is 58 seconds. What is the other, in seconds?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 14,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "aaaeefed-f46b-43ef-b538-c42846dd0d95",
+    "label": "A",
+    "content": "58",
+    "isCorrect": false
+   },
+   {
+    "id": "f649fab4-a7e7-4a99-9f48-2410bd2cc239",
+    "label": "B",
+    "content": "60",
+    "isCorrect": false
+   },
+   {
+    "id": "314d9c7d-19a0-4712-9c8d-38829e5860ce",
+    "label": "C",
+    "content": "62",
+    "isCorrect": true
+   },
+   {
+    "id": "66c496ef-6a9f-41cf-9fbf-07a232d12963",
+    "label": "D",
+    "content": "66",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "4b9cdcfe-df20-46be-8606-be27d2fcd53b",
+  "stem": "The table gives the plates exposed at an observatory over one season, classified by the instrument used and by whether the plate proved usable.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Instrument</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Usable</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Not usable</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Astrograph</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">84</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Refractor</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">96</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">44</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Coelostat</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">40</td></tr></table>One of the usable plates is selected at random. What is the probability that it was exposed with the astrograph?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 15,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-DI",
+  "skill_name": "Data Interpretation",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "e51ff6ee-be4b-42f7-a958-d6659db3afee",
+    "label": "A",
+    "content": "\\(\\frac{7}{20}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "62c1ffef-fd0f-41a3-9834-784e18236e0d",
+    "label": "B",
+    "content": "\\(\\frac{6}{25}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "22fc8e39-a0a1-4b17-b13e-21361f024b97",
+    "label": "C",
+    "content": "\\(\\frac{21}{50}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "ca98c3b3-c7c6-470c-8866-e162832bd4ee",
+    "label": "D",
+    "content": "\\(\\frac{42}{125}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "3b02c420-5cda-432a-9036-68145b852854",
+  "stem": "A silk mill's output was 5,000 kilograms in its first year. The output rose by 6 percent in the second year and then fell by 6 percent in the third. What was the output, in kilograms, in the third year?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 16,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "7a87e99c-4eb6-446c-ab6c-ebeed3a3d937",
+    "label": "A",
+    "content": "4,964",
+    "isCorrect": false
+   },
+   {
+    "id": "d9954f50-eb61-4cb3-82f1-583be2cd958c",
+    "label": "B",
+    "content": "4,982",
+    "isCorrect": true
+   },
+   {
+    "id": "45b477c6-486d-44f6-9fa1-505d514efe7e",
+    "label": "C",
+    "content": "5,000",
+    "isCorrect": false
+   },
+   {
+    "id": "1eed0073-ca4b-437d-a727-48c63d8f73c0",
+    "label": "D",
+    "content": "5,018",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "56f3b246-03b9-41dd-a354-de8e22036ed8",
+  "stem": "A contact printer works at a steady rate, turning out 200 prints in 3 hours and 20 minutes. At this rate, how many prints does it turn out in 5 hours and 15 minutes?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 17,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-RP",
+  "skill_name": "Ratios, Rates, and Proportions",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "3c986b61-1e4d-42c9-aa1e-1126704023c3",
+    "label": "A",
+    "content": "252",
+    "isCorrect": false
+   },
+   {
+    "id": "de90d5b3-385f-4a5d-be3d-1e00e197d8fb",
+    "label": "B",
+    "content": "280",
+    "isCorrect": false
+   },
+   {
+    "id": "5799c5dd-5511-456e-a7b8-efac87b1b90d",
+    "label": "C",
+    "content": "300",
+    "isCorrect": false
+   },
+   {
+    "id": "979b3593-165e-471c-8c43-1a706ec25bbc",
+    "label": "D",
+    "content": "315",
+    "isCorrect": true
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "a3c4ac97-8332-4a48-8d5a-4d83ef25122a",
+  "stem": "A drawer holds 40 photographic plates, of which 15 have not been exposed. Three of the unexposed plates are taken out of the drawer. If one of the plates still in the drawer is then chosen at random, what is the probability that it has not been exposed?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"12/37\"]",
+  "q_order": 18,
+  "imageUrl": null,
+  "domain": "PSDA",
+  "subject": "MATH",
+  "skill": "PSDA-ST",
+  "skill_name": "Statistics and Probability",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "c0caaf0d-c4ce-4204-a920-cac04e4e2e08",
+  "stem": "A telescope's finder bracket is a right triangle whose vertices sit at the points A(-3, 2), B(5, 2) and C(5, 8) of the xy-plane, with the right angle at B. The point M is the midpoint of side AC. What is the length of the segment BM?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 19,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-LA",
+  "skill_name": "Lines, Angles, and Triangles",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1a813cea-d3e1-40ba-a6ba-616b88944575",
+    "label": "A",
+    "content": "3",
+    "isCorrect": false
+   },
+   {
+    "id": "430bbf2e-4f7c-4397-a719-0b7d8ac45b83",
+    "label": "B",
+    "content": "4",
+    "isCorrect": false
+   },
+   {
+    "id": "cb85a08c-a405-4174-aad2-325a33d78b20",
+    "label": "C",
+    "content": "5",
+    "isCorrect": true
+   },
+   {
+    "id": "9d2ae92f-89fe-4e7e-8887-54be794a7469",
+    "label": "D",
+    "content": "6",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "342ca465-12c1-4ea5-b545-1fcf501baaca",
+  "stem": "An observatory dome is a hemisphere whose curved surface area is \\(72\\pi\\) square metres. What is the volume of this hemisphere, in cubic metres?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 20,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1bf95342-4840-4d75-843b-1682446f1fd8",
+    "label": "A",
+    "content": "\\(72\\pi\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "16787aa7-ccea-4a0a-a52c-63bde0fcefd7",
+    "label": "B",
+    "content": "\\(108\\pi\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "4490ecc4-8c00-4add-a3ca-4d1b3b7952f7",
+    "label": "C",
+    "content": "\\(144\\pi\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "94514714-1f57-4d3c-ab01-30e2777dbb34",
+    "label": "D",
+    "content": "\\(288\\pi\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "179a5ffb-91db-43b5-a302-7d5b477654df",
+  "stem": "A telescope's tube ring is cut as right triangle ABC, whose right angle is at B. In this ring \\(\\cos A=\\frac{7}{25}\\). What is the value of \\(\\sin C\\)?",
+  "type": "MULTIPLE_CHOICE",
+  "difficulty": "HARD",
+  "correctAnswerFR": null,
+  "q_order": 21,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-TR",
+  "skill_name": "Trigonometry",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": [
+   {
+    "id": "1399b766-58c5-4260-b24b-f9db10b71498",
+    "label": "A",
+    "content": "\\(\\frac{7}{25}\\)",
+    "isCorrect": true
+   },
+   {
+    "id": "f9fad869-724a-474d-9ca4-0faf5d342588",
+    "label": "B",
+    "content": "\\(\\frac{7}{24}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "5ae748d7-11f7-416c-84f4-99703192d6b7",
+    "label": "C",
+    "content": "\\(\\frac{24}{25}\\)",
+    "isCorrect": false
+   },
+   {
+    "id": "1526c230-3673-47bb-be85-feb8eccec98e",
+    "label": "D",
+    "content": "\\(\\frac{25}{7}\\)",
+    "isCorrect": false
+   }
+  ],
+  "has_explanation": 0,
+  "test": "Test 21"
+ },
+ {
+  "id": "edf27360-f14d-4df2-903b-dbd83f60f6d7",
+  "stem": "A darkroom tank is a rectangular box with a square base and a height of 30 centimetres, and it holds 12,000 cubic centimetres. The inside of the base and the insides of the four walls are lined with felt. How many square centimetres of felt does the lining take?",
+  "type": "FREE_RESPONSE",
+  "difficulty": "HARD",
+  "correctAnswerFR": "[\"2800\"]",
+  "q_order": 22,
+  "imageUrl": null,
+  "domain": "GT",
+  "subject": "MATH",
+  "skill": "GT-AV",
+  "skill_name": "Area and Volume",
+  "m_subject": "MATH",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "passage": null,
+  "choices": null,
+  "has_explanation": 0,
+  "test": "Test 21"
+ }
+]
