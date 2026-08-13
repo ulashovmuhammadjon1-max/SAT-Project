@@ -3,6 +3,7 @@
 import type { SessionType } from "@prisma/client";
 
 import { getCommunityRequirements, type CommunityRequirement } from "@/lib/community";
+import { SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { EVENT_TYPE_LABELS } from "@/lib/events";
@@ -59,7 +60,7 @@ export async function getEvents(): Promise<EventsPage> {
       take: 50,
       include: {
         bookings: {
-          where: { status: { not: "CANCELLED" } },
+          where: { status: { in: SEAT_HOLDING_STATUSES } },
           select: { userId: true, meetingUrl: true },
         },
       },

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookingList } from "@/components/student/booking-list";
 import { LocalTime } from "@/components/shared/local-time";
+import { ACTIVE_STATUSES } from "@/lib/booking/status";
 import { getMyBookings } from "@/server/actions/student/bookings";
 
 export const metadata = { title: "My sessions" };
@@ -25,7 +26,7 @@ export default async function MyBookingsPage({
           <h1 className="font-display text-2xl font-semibold tracking-tight">My sessions</h1>
           <p className="text-sm text-muted-foreground">Your free 1-on-1 SAT guidance sessions.</p>
         </div>
-        {!bookings.some((b) => b.status === "UPCOMING") && (
+        {!bookings.some((b) => ACTIVE_STATUSES.includes(b.status)) && (
           <Button asChild>
             <Link href="/booking">Book a session</Link>
           </Button>
@@ -88,6 +89,7 @@ export default async function MyBookingsPage({
           bookings={bookings.map((b) => ({
             id: b.id,
             status: b.status,
+            statusReason: b.statusReason,
             startsAt: b.slot.startsAt.toISOString(),
             durationMinutes: b.slot.durationMinutes,
           }))}

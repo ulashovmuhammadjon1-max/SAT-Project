@@ -2,21 +2,27 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Ban, Check, Loader2, Plus, Trash2, Undo2 } from "lucide-react";
+import { Ban, Check, Loader2, Plus, Trash2, Undo2, X } from "lucide-react";
 import { toast } from "sonner";
+
+import type { BookingStatus } from "@prisma/client";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { LocalTime, useLocalTimezone } from "@/components/shared/local-time";
+import { BOOKING_STATUS_LABELS, BOOKING_STATUS_TONE } from "@/lib/booking/status";
 import { cn } from "@/lib/utils";
 import {
   createSlots,
+  decideBooking,
   deleteSlot,
   setBookingStatus,
   setSlotBlocked,
+  type BookingDecision,
 } from "@/server/actions/admin/bookings";
 
 export interface AdminSlotRow {
@@ -26,7 +32,8 @@ export interface AdminSlotRow {
   isBlocked: boolean;
   booking: {
     id: string;
-    status: "UPCOMING" | "COMPLETED" | "CANCELLED";
+    status: BookingStatus;
+    statusReason: string | null;
     name: string;
     email: string;
     currentScore: number | null;
@@ -140,8 +147,44 @@ export function SlotCreator() {
   );
 }
 
+/** Which booking the reason dialog is open for, and what it will do. */
+interface DecisionTarget {
+  bookingId: string;
+  slotId: string;
+  decision: BookingDecision;
+  who: string;
+}
+
+const DECISION_COPY: Record<
+  BookingDecision,
+  { title: string; verb: string; done: string; reasonRequired: boolean; hint: string }
+> = {
+  APPROVE: {
+    title: "Approve this session",
+    verb: "Approve",
+    done: "Approved — the student has been emailed.",
+    reasonRequired: false,
+    hint: "Optional. Anything you add here goes into the approval email.",
+  },
+  REJECT: {
+    title: "Decline this request",
+    verb: "Decline",
+    done: "Declined — the student has been emailed and their coins returned.",
+    reasonRequired: true,
+    hint: "Required. The student sees this, so say what went wrong and what they can do instead.",
+  },
+  CANCEL: {
+    title: "Cancel this approved session",
+    verb: "Cancel session",
+    done: "Cancelled — the student has been emailed and their coins returned.",
+    reasonRequired: true,
+    hint: "Required. This session was already confirmed, so tell the student why it is being called off.",
+  },
+};
+
 export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
   const router = useRouter();
+  const [deciding, setDeciding] = useState<DecisionTarget | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [, startTransition] = useTransition();
 
@@ -170,9 +213,26 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
   }
 
   return (
+    <>
+      {deciding && (
+        <DecisionDialog
+          target={deciding}
+          busy={busy === deciding.slotId}
+          onClose={() => setDeciding(null)}
+          onConfirm={(reason) => {
+            const copy = DECISION_COPY[deciding.decision];
+            const { bookingId, decision, slotId } = deciding;
+            setDeciding(null);
+            run(slotId, () => decideBooking({ bookingId, decision, reason }), copy.done);
+          }}
+        />
+      )}
     <ul className="space-y-2">
       {slots.map((s) => {
-        const taken = s.booking && s.booking.status !== "CANCELLED";
+        const b = s.booking;
+        // A rejected booking releases the slot exactly like a cancelled one, so
+        // the slot reads as Open again and can be blocked, deleted or rebooked.
+        const taken = b && b.status !== "CANCELLED" && b.status !== "REJECTED";
         return (
           <li key={s.id}>
             <Card className={cn(s.isBlocked && "opacity-60")}>
@@ -186,31 +246,34 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                   {s.isBlocked ? (
                     <Badge variant="secondary">Blocked</Badge>
                   ) : taken ? (
-                    <Badge variant={s.booking!.status === "COMPLETED" ? "success" : "default"}>
-                      {s.booking!.status[0] + s.booking!.status.slice(1).toLowerCase()}
-                    </Badge>
+                    <Badge variant={BOOKING_STATUS_TONE[b!.status]}>{BOOKING_STATUS_LABELS[b!.status]}</Badge>
                   ) : (
                     <Badge variant="outline">Open</Badge>
                   )}
 
                   <div className="ml-auto flex flex-wrap gap-2">
-                    {taken && s.booking!.status === "UPCOMING" && (
+                    {taken && b!.status === "PENDING" && (
+                      <Button size="sm" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "APPROVE", who: b!.name })}>
+                        <Check className="h-3.5 w-3.5" /> Approve
+                      </Button>
+                    )}
+                    {taken && b!.status === "PENDING" && (
+                      <Button size="sm" variant="outline" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "REJECT", who: b!.name })}>
+                        <X className="h-3.5 w-3.5" /> Decline
+                      </Button>
+                    )}
+                    {taken && b!.status === "UPCOMING" && (
                       <Button
                         size="sm"
                         variant="outline"
                         disabled={busy === s.id}
-                        onClick={() => run(s.id, () => setBookingStatus(s.booking!.id, "COMPLETED"), "Marked completed.")}
+                        onClick={() => run(s.id, () => setBookingStatus(b!.id, "COMPLETED"), "Marked completed.")}
                       >
                         <Check className="h-3.5 w-3.5" /> Complete
                       </Button>
                     )}
-                    {taken && s.booking!.status === "UPCOMING" && (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        disabled={busy === s.id}
-                        onClick={() => run(s.id, () => setBookingStatus(s.booking!.id, "CANCELLED"), "Booking cancelled.")}
-                      >
+                    {taken && (b!.status === "UPCOMING" || b!.status === "PENDING") && b!.status === "UPCOMING" && (
+                      <Button size="sm" variant="outline" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "CANCEL", who: b!.name })}>
                         Cancel booking
                       </Button>
                     )}
@@ -273,6 +336,88 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
         );
       })}
     </ul>
+    </>
+  );
+}
+
+/**
+ * The reason box.
+ *
+ * A modal rather than an inline field because a decline or a cancellation is
+ * irreversible from the admin's side and sends mail to a student the moment it
+ * lands — it deserves a deliberate confirm, not a button that fires on the
+ * first click. Approving goes through the same dialog so the admin can attach a
+ * note, but leaves the reason optional.
+ */
+function DecisionDialog({
+  target,
+  busy,
+  onClose,
+  onConfirm,
+}: {
+  target: DecisionTarget;
+  busy: boolean;
+  onClose: () => void;
+  onConfirm: (reason: string) => void;
+}) {
+  const copy = DECISION_COPY[target.decision];
+  const [reason, setReason] = useState("");
+  const blocked = copy.reasonRequired && !reason.trim();
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label={copy.title}
+      onClick={onClose}
+    >
+      <Card className="w-full max-w-lg" onClick={(e) => e.stopPropagation()}>
+        <CardContent className="space-y-4 p-6">
+          <div>
+            <h2 className="font-display text-lg font-semibold">{copy.title}</h2>
+            <p className="mt-0.5 text-sm text-muted-foreground">
+              {target.who} will be emailed straight away.
+            </p>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="decision-reason">
+              Reason {copy.reasonRequired ? "" : <span className="text-muted-foreground">(optional)</span>}
+            </Label>
+            <Textarea
+              id="decision-reason"
+              rows={4}
+              value={reason}
+              autoFocus
+              placeholder={
+                target.decision === "REJECT"
+                  ? "e.g. That slot is reserved for students sitting the March test — please pick a time in April."
+                  : target.decision === "CANCEL"
+                    ? "e.g. Your mentor is ill. Please rebook any open slot and we will prioritise you."
+                    : "e.g. Bring your last practice test score to the session."
+              }
+              onChange={(e) => setReason(e.target.value)}
+            />
+            <p className="text-xs text-muted-foreground">{copy.hint}</p>
+          </div>
+
+          <div className="flex justify-end gap-2">
+            <Button variant="ghost" onClick={onClose} disabled={busy}>
+              Never mind
+            </Button>
+            <Button
+              variant={target.decision === "APPROVE" ? "default" : "destructive"}
+              disabled={blocked || busy}
+              onClick={() => onConfirm(reason)}
+            >
+              {busy && <Loader2 className="h-4 w-4 animate-spin" />}
+              {copy.verb}
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 

@@ -6,6 +6,7 @@ import {
   type NextSessionInfo,
 } from "@/components/admin/next-session-panel";
 import { Card, CardContent } from "@/components/ui/card";
+import { SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 import { getSettings } from "@/lib/settings";
@@ -19,7 +20,7 @@ export default async function AdminBookingsPage() {
   const [slots, settings] = await Promise.all([
     prisma.mentorSlot.findMany({
       orderBy: { startsAt: "asc" },
-      include: { bookings: { where: { status: { not: "CANCELLED" } } } },
+      include: { bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } } } },
     }),
     getSettings(),
   ]);
@@ -53,6 +54,7 @@ export default async function AdminBookingsPage() {
   const upcoming = slots.filter(
     (s) => s.bookings.some((b) => b.status === "UPCOMING") && s.startsAt > new Date()
   ).length;
+  const awaiting = slots.filter((s) => s.bookings.some((b) => b.status === "PENDING")).length;
   const open = slots.filter(
     (s) => !s.isBlocked && s.startsAt > new Date() && s.bookings.length < s.capacity
   ).length;
@@ -66,6 +68,7 @@ export default async function AdminBookingsPage() {
       ? {
           id: s.bookings[0].id,
           status: s.bookings[0].status,
+          statusReason: s.bookings[0].statusReason,
           name: s.bookings[0].name,
           email: s.bookings[0].email,
           currentScore: s.bookings[0].currentScore,
@@ -94,7 +97,10 @@ export default async function AdminBookingsPage() {
 
       <EventCreator />
 
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-4">
+        {/* Awaiting approval leads, because it is the only tile that is a
+            to-do list rather than a status readout. */}
+        <Stat label="Awaiting approval" value={awaiting} />
         <Stat label="Upcoming sessions" value={upcoming} />
         <Stat label="Open slots" value={open} />
         <Stat label="Total slots" value={slots.length} />

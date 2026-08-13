@@ -21,6 +21,7 @@ import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
 import { getAchievements } from "@/lib/achievements/service";
 import { getDailyChallenge } from "@/lib/daily-challenge";
 import { getLeaderboard } from "@/lib/leaderboard";
+import { ACTIVE_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
@@ -87,7 +88,7 @@ export default async function DashboardPage() {
       select: { coinBalance: true },
     }),
     prisma.booking.findFirst({
-      where: { userId: user.id, status: "UPCOMING" },
+      where: { userId: user.id, status: { in: ACTIVE_STATUSES } },
       orderBy: { slot: { startsAt: "asc" } },
       select: {
         meetingUrl: true,

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/student/booking-form";
 import { LocalTime } from "@/components/shared/local-time";
+import { ACTIVE_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { getBookingContext, getOpenSlots } from "@/server/actions/student/bookings";
@@ -40,7 +41,7 @@ export default async function BookingPage() {
     getOpenSlots(),
     getBookingContext(),
     prisma.booking.findFirst({
-      where: { userId: user.id, status: "UPCOMING" },
+      where: { userId: user.id, status: { in: ACTIVE_STATUSES } },
       include: { slot: true },
     }),
   ]);

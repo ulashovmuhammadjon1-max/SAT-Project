@@ -2,6 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 
+import { credit } from "@/lib/coins";
+import {
+  sendBookingApproved,
+  sendBookingCancelledByAdmin,
+  sendBookingRejected,
+} from "@/lib/email/booking-decision";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 
@@ -100,13 +106,132 @@ export async function setBookingStatus(
   const booking = await prisma.booking.findUnique({ where: { id: bookingId } });
   if (!booking) return { ok: false, error: "Booking not found." };
 
+  // Cancelling has to go through decideBooking so the coins are actually
+  // returned. This path used to flip the status and keep the student's coins,
+  // which is the bug that made an admin cancel quietly more expensive for the
+  // student than cancelling it themselves.
+  if (status === "CANCELLED") return decideBooking({ bookingId, decision: "CANCEL" });
+
   await prisma.booking.update({
     where: { id: bookingId },
-    data: { status, cancelledAt: status === "CANCELLED" ? new Date() : null },
+    data: { status, cancelledAt: null },
   });
 
   revalidatePath("/admin/bookings");
   return { ok: true };
+}
+
+export type BookingDecision = "APPROVE" | "REJECT" | "CANCEL";
+
+/**
+ * Approve, reject, or cancel a booking, with a reason the student is told.
+ *
+ * One action for all three because they share everything that matters: the
+ * same authorization, the same "has someone already decided this?" race, the
+ * same refund rule, and the same requirement that the student hears about it.
+ * Splitting them produced three near-identical bodies and one of them
+ * (cancel) silently skipped the refund.
+ *
+ * Coins are held at booking time, not charged on approval. That way a student
+ * cannot be approved into a session they can no longer afford because their
+ * balance moved while they waited, and the refund path is the one already
+ * proven by student-initiated cancellation — including its idempotency key,
+ * which is what stops a double-click refunding twice.
+ */
+export async function decideBooking(input: {
+  bookingId: string;
+  decision: BookingDecision;
+  /** Shown to the student verbatim, in the email and on My Sessions. */
+  reason?: string | null;
+}): Promise<AdminResult & { refunded?: number }> {
+  const admin = await requireAdmin();
+
+  const reason = input.reason?.trim().slice(0, 2000) || null;
+  // A decline or a withdrawal without a stated cause reads as arbitrary and
+  // leaves the student nothing to act on. Approving needs no justification.
+  if (input.decision !== "APPROVE" && !reason) {
+    return { ok: false, error: "Give the student a reason — it goes in the email they receive." };
+  }
+
+  const booking = await prisma.booking.findUnique({
+    where: { id: input.bookingId },
+    include: { slot: { select: { startsAt: true, durationMinutes: true, sessionType: true } } },
+  });
+  if (!booking) return { ok: false, error: "Booking not found." };
+
+  if (input.decision === "APPROVE" && booking.status !== "PENDING") {
+    return {
+      ok: false,
+      error:
+        booking.status === "UPCOMING"
+          ? "That booking is already approved."
+          : `That booking is ${booking.status.toLowerCase()} and can't be approved.`,
+    };
+  }
+  if (input.decision === "REJECT" && booking.status !== "PENDING") {
+    return { ok: false, error: "Only a booking still awaiting approval can be declined." };
+  }
+  if (input.decision === "CANCEL" && !["PENDING", "UPCOMING"].includes(booking.status)) {
+    return { ok: false, error: "That booking isn't active." };
+  }
+
+  const nextStatus =
+    input.decision === "APPROVE" ? "UPCOMING" : input.decision === "REJECT" ? "REJECTED" : "CANCELLED";
+
+  // Guarded on the status we just read, so two admins clicking at once cannot
+  // both decide it — the loser updates zero rows and refunds nothing.
+  const changed = await prisma.booking.updateMany({
+    where: { id: booking.id, status: booking.status },
+    data: {
+      status: nextStatus,
+      statusReason: reason,
+      decidedAt: new Date(),
+      decidedById: admin.id,
+      cancelledAt: nextStatus === "UPCOMING" ? null : new Date(),
+    },
+  });
+  if (changed.count === 0) return { ok: false, error: "Someone else just decided that booking." };
+
+  let refunded = 0;
+  if (nextStatus !== "UPCOMING" && booking.coinCost > 0) {
+    try {
+      await credit({
+        userId: booking.userId,
+        amount: booking.coinCost,
+        type: "BOOKING_REFUND",
+        description:
+          nextStatus === "REJECTED" ? "Session request declined — coins returned" : "Session cancelled — coins returned",
+        bookingId: booking.id,
+        // Same key the student-initiated cancel uses, so a booking can only
+        // ever be refunded once no matter which path releases it.
+        idempotencyKey: `refund:${booking.id}`,
+      });
+      refunded = booking.coinCost;
+    } catch (error) {
+      // The decision stands; the refund is recoverable by hand. Failing the
+      // whole action here would leave the admin thinking nothing happened.
+      console.error("[booking] admin refund failed", error);
+    }
+  }
+
+  const emailArgs = {
+    to: booking.email,
+    name: booking.name,
+    startsAt: booking.slot.startsAt,
+    durationMinutes: booking.slot.durationMinutes,
+    sessionType: booking.slot.sessionType,
+    reason,
+    meetingUrl: booking.meetingUrl,
+    refunded,
+  };
+  if (nextStatus === "UPCOMING") await sendBookingApproved(emailArgs);
+  else if (nextStatus === "REJECTED") await sendBookingRejected(emailArgs);
+  else await sendBookingCancelledByAdmin(emailArgs);
+
+  revalidatePath("/admin/bookings");
+  revalidatePath("/bookings");
+  revalidatePath("/dashboard");
+  return { ok: true, refunded };
 }
 
 /**

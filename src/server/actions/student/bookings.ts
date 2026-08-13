@@ -8,6 +8,7 @@ import { InsufficientCoinsError, credit, debit } from "@/lib/coins";
 import { button, layout, para, sendEmail } from "@/lib/email";
 import { EVENT_TYPE_LABELS } from "@/lib/events";
 import { createMeetingSafely } from "@/lib/meeting";
+import { ACTIVE_STATUSES, SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { bookingCostFor, getSettings } from "@/lib/settings";
@@ -64,7 +65,7 @@ export async function getOpenSlots(): Promise<OpenSlot[]> {
       durationMinutes: true,
       sessionType: true,
       capacity: true,
-      _count: { select: { bookings: { where: { status: { not: "CANCELLED" } } } } },
+      _count: { select: { bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } } } } },
     },
   });
   // A cancelled booking frees its seat again, which is why this filters on the
@@ -108,7 +109,7 @@ export async function getBookingContext(): Promise<BookingContext> {
     // reserved, and a cancel/rebook cycle must not reset the price.
     prisma.booking.count({ where: { userId: user.id, sessionType: "ONE_ON_ONE_SAT" } }),
     prisma.booking.findFirst({
-      where: { userId: user.id, status: "UPCOMING", sessionType: "ONE_ON_ONE_SAT" },
+      where: { userId: user.id, status: { in: ACTIVE_STATUSES }, sessionType: "ONE_ON_ONE_SAT" },
       select: { id: true },
     }),
     getCommunityRequirements(),
@@ -204,7 +205,7 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
   const slot = await prisma.mentorSlot.findUnique({
     where: { id: input.slotId },
     include: {
-      bookings: { where: { status: { not: "CANCELLED" } }, select: { id: true, userId: true } },
+      bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } }, select: { id: true, userId: true } },
     },
   });
   if (!slot) return { ok: false, error: "That time slot no longer exists.", reason: "slot_gone" };
@@ -234,7 +235,7 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
   // review and still hold a 1-on-1.
   if (slot.sessionType === "ONE_ON_ONE_SAT") {
     const existing = await prisma.booking.findFirst({
-      where: { userId: user.id, status: "UPCOMING", sessionType: "ONE_ON_ONE_SAT" },
+      where: { userId: user.id, status: { in: ACTIVE_STATUSES }, sessionType: "ONE_ON_ONE_SAT" },
       select: { id: true },
     });
     if (existing) {
@@ -273,7 +274,7 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
       await tx.$queryRaw`SELECT id FROM "MentorSlot" WHERE id = ${slot.id} FOR UPDATE`;
 
       const taken = await tx.booking.count({
-        where: { slotId: slot.id, status: { not: "CANCELLED" } },
+        where: { slotId: slot.id, status: { in: SEAT_HOLDING_STATUSES } },
       });
       if (taken >= slot.capacity) throw new SlotFullError();
 
@@ -297,9 +298,15 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
       // [slotId, userId] pair, so reuse it rather than colliding.
       const booking = await tx.booking.upsert({
         where: { slotId_userId: { slotId: slot.id, userId: user.id } },
-        create: { userId: user.id, slotId: slot.id, coinCost: cost, ...snapshot },
+        create: { userId: user.id, slotId: slot.id, coinCost: cost, status: "PENDING", ...snapshot },
         update: {
-          status: "UPCOMING",
+          // Back into the queue, not straight to confirmed — and the previous
+          // decision has to be cleared or the student would see the old
+          // rejection reason attached to a fresh request.
+          status: "PENDING",
+          statusReason: null,
+          decidedAt: null,
+          decidedById: null,
           cancelledAt: null,
           coinCost: cost,
           meetingUrl: null,
@@ -415,21 +422,26 @@ export async function cancelBooking(
   if (!booking) return { ok: false, error: "Booking not found." };
   // Authorization: a student may only cancel their own booking.
   if (booking.userId !== user.id) return { ok: false, error: "Booking not found." };
-  if (booking.status !== "UPCOMING") return { ok: false, error: "That session isn't upcoming." };
+  if (!ACTIVE_STATUSES.includes(booking.status))
+    return { ok: false, error: "That session isn't active." };
 
-  // Refund only outside the cutoff, and only what was actually charged.
+  // Refund only outside the cutoff, and only what was actually charged — the
+  // cutoff exists to stop someone holding a confirmed slot and dropping it too
+  // late for anyone else to take. A PENDING request was never confirmed and
+  // nobody was ever turned away from it, so withdrawing one always refunds
+  // regardless of how close the slot is.
   const hoursUntil = (booking.slot.startsAt.getTime() - Date.now()) / 36e5;
   const eligible =
-    settings.bookingRefundHours !== null &&
-    hoursUntil >= settings.bookingRefundHours &&
-    booking.coinCost > 0;
+    booking.coinCost > 0 &&
+    (booking.status === "PENDING" ||
+      (settings.bookingRefundHours !== null && hoursUntil >= settings.bookingRefundHours));
 
   const cancelled = await prisma.booking.updateMany({
-    where: { id: bookingId, status: "UPCOMING" },
+    where: { id: bookingId, status: { in: ACTIVE_STATUSES } },
     data: { status: "CANCELLED", cancelledAt: new Date() },
   });
   // Someone else already cancelled it — do not refund twice.
-  if (cancelled.count === 0) return { ok: false, error: "That session isn't upcoming." };
+  if (cancelled.count === 0) return { ok: false, error: "That session isn't active." };
 
   let refunded = 0;
   if (eligible) {
@@ -469,7 +481,12 @@ export async function getMyBookings() {
 
 
 /**
- * Confirmation email.
+ * Request-received email.
+ *
+ * Deliberately NOT a confirmation. A booking now lands as PENDING and a human
+ * approves it, so promising a confirmed session here would be a lie the student
+ * only discovers if it is later declined. The join link is withheld for the
+ * same reason — it is sent with the approval.
  *
  * Times are written in UTC with the offset spelled out, because the server has
  * no reliable way to render the student's local clock in an email and a wrong
@@ -490,27 +507,33 @@ async function sendBookingConfirmation(args: {
 
   await sendEmail({
     to: args.to,
-    subject: `Confirmed: ${label}`,
+    subject: `Request received: ${label}`,
     text:
       `Hi ${firstName},\n\n` +
-      `Your ${label} is booked.\n\n` +
-      `When: ${when}\n` +
+      `We have your request for a ${label}. A volunteer will review it and you will ` +
+      `get another email as soon as it is approved.\n\n` +
+      `Requested time: ${when}\n` +
       `Duration: ${args.durationMinutes} minutes\n` +
-      (args.meetingUrl ? `Join: ${args.meetingUrl}\n` : `A join link will be sent before the session.\n`) +
-      (args.coinsSpent > 0 ? `Coins used: ${args.coinsSpent}\n` : "") +
+      (args.coinsSpent > 0
+        ? `Coins held: ${args.coinsSpent} — returned in full if the request is not approved.\n`
+        : "") +
       `\nRemember to follow @satforge_org on Instagram and join the Telegram channel — ` +
-      `volunteers check this before each session.\n\n` +
-      `Need to cancel? Do it from My Sessions on satforge.org.`,
+      `volunteers check this before approving.\n\n` +
+      `Changed your mind? Withdraw it from My Sessions on satforge.org.`,
     html: layout(
       para(`Hi ${firstName},`) +
-        para(`Your <strong style="color:#ffffff;">${label}</strong> is booked.`) +
-        para(`<strong style="color:#ffffff;">${when}</strong><br/>${args.durationMinutes} minutes`) +
-        (args.meetingUrl
-          ? button(args.meetingUrl, "Join the session")
-          : para("A join link will be sent before the session starts.")) +
         para(
-          `<span style="color:#8a97b1;font-size:13px;">Volunteers check your Instagram and Telegram subscription before each session. Need to cancel? Do it from My Sessions.</span>`,
+          `We have your request for a <strong style="color:#ffffff;">${label}</strong>. A volunteer will review it and you will get another email as soon as it is approved.`,
+        ) +
+        para(`<strong style="color:#ffffff;">${when}</strong><br/>${args.durationMinutes} minutes`) +
+        (args.coinsSpent > 0
+          ? para(
+              `<span style="color:#8a97b1;font-size:13px;">${args.coinsSpent} coin${args.coinsSpent === 1 ? "" : "s"} held — returned in full if the request is not approved.</span>`,
+            )
+          : "") +
+        para(
+          `<span style="color:#8a97b1;font-size:13px;">Volunteers check your Instagram and Telegram subscription before approving. Changed your mind? Withdraw it from My Sessions.</span>`,
         ),
     ),
-  }).catch((e) => console.error("[booking] confirmation email failed", e));
+  }).catch((e) => console.error("[booking] request-received email failed", e));
 }
