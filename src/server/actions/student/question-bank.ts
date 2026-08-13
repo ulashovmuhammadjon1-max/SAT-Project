@@ -392,6 +392,9 @@ export interface SubmitAnswerResult {
   correctChoiceId: string | null;
   correctAnswerFR: string[] | null;
   explanationHtml: string | null;
+  /** Carried separately from the HTML so the panel can style them as their own notes. */
+  commonMistakes: string | null;
+  tips: string | null;
 }
 
 /**
@@ -458,6 +461,8 @@ export async function submitQuestionAnswer(input: {
     correctChoiceId: question.choices.find((c) => c.isCorrect)?.id ?? null,
     correctAnswerFR,
     explanationHtml: question.explanation?.content ?? null,
+    commonMistakes: question.explanation?.commonMistakes ?? null,
+    tips: question.explanation?.tips ?? null,
   };
 }
 

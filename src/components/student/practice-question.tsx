@@ -183,7 +183,18 @@ export function PracticeQuestion({
           <CardContent className="space-y-3 p-5 text-sm">
             <h3 className="font-display text-base font-semibold">Explanation</h3>
             <MathContent html={question.explanation.content} className="block" />
-            {question.explanation.tips && <p className="text-muted-foreground">Tip: {question.explanation.tips}</p>}
+            {question.explanation.commonMistakes && (
+              <p className="rounded-md border-l-4 border-amber-400 bg-amber-50 px-3 py-2 text-muted-foreground">
+                <span className="font-medium text-foreground">Common mistake: </span>
+                {question.explanation.commonMistakes}
+              </p>
+            )}
+            {question.explanation.tips && (
+              <p className="rounded-md border-l-4 border-sky-400 bg-sky-50 px-3 py-2 text-muted-foreground">
+                <span className="font-medium text-foreground">Tip: </span>
+                {question.explanation.tips}
+              </p>
+            )}
           </CardContent>
         </Card>
       )}

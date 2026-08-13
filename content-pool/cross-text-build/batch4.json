@@ -1,0 +1,241 @@
+[
+ {
+  "ref": "ct-seedvault",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>The Svalbard Global Seed Vault holds more than a million samples in a tunnel cut into permafrost, cold enough to keep seed viable for centuries without power. It is described as a backup for the world's crop diversity, the copy that survives whatever happens to the collections it duplicates.</p><p><strong>Text 2</strong></p><p>A seed in a freezer stops where it was put. The landrace wheat a Syrian farmer grows is meanwhile being selected every season against a drought that arrived last year, and after thirty years the field version and the frozen version are no longer the same plant. A vault preserves the diversity that existed; it cannot preserve the process that keeps producing it.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the Svalbard vault",
+  "choices": [
+   {"label": "A", "content": "safeguards existing varieties but cannot substitute for the ongoing adaptation that occurs in cultivated fields", "isCorrect": true},
+   {"label": "B", "content": "cannot keep seed viable for the periods its designers claim", "isCorrect": false},
+   {"label": "C", "content": "duplicates collections that are already secure and therefore adds little", "isCorrect": false},
+   {"label": "D", "content": "should hold wild relatives of crops rather than varieties grown by farmers", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 accepts the vault's function and names what that function cannot cover. \"A seed in a freezer stops where it was put,\" while a landrace in a Syrian field is selected every season against conditions that keep changing, so after thirty years the two have diverged. Its closing sentence draws the distinction exactly: a vault preserves the diversity that existed, not \"the process that keeps producing it.\"",
+  "whyWrong": {
+   "B": "Viability is not contested. Text 2's argument depends on the seed keeping perfectly — that is why it stops changing.",
+   "C": "Text 2 never claims the source collections are secure. Its point concerns adaptation, not redundancy.",
+   "D": "No recommendation about which seeds to store appears. Text 2 questions what storage can achieve at all."
+  },
+  "commonMistakes": "Reading the objection as doubt about the technology. The freezing works; that is precisely the limitation.",
+  "tips": "When one text describes preserving a thing and the other describes a process that makes the thing, the answer lives in that difference."
+ },
+ {
+  "ref": "ct-dazzle",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Dazzle camouflage — the harsh geometric stripes painted on First World War shipping — was never meant to hide a vessel. The stripes were designed to confuse a submarine commander's estimate of a ship's heading and speed, so the torpedo would be aimed where the ship was not going. Admiralty enthusiasm was considerable and thousands of hulls were painted.</p><p><strong>Text 2</strong></p><p>Dazzled ships were also the ships given the newest escorts, the best routing, and priority in convoy, and losses fell across the whole merchant fleet in the same months. When Robert Barnes and colleagues tested dazzle patterns on moving targets under laboratory conditions, observers misjudged speed by a few percent — real, but far smaller than the effect the wartime figures were taken to show.</p>",
+  "stem": "Which choice best describes how Text 2 complicates the account in Text 1?",
+  "choices": [
+   {"label": "A", "content": "It identifies other changes that occurred alongside dazzle and finds the measured effect much smaller than assumed", "isCorrect": true},
+   {"label": "B", "content": "It shows that dazzle patterns made ships easier rather than harder to target", "isCorrect": false},
+   {"label": "C", "content": "It argues that submarine commanders were aware of the technique and compensated for it", "isCorrect": false},
+   {"label": "D", "content": "It establishes that far fewer hulls were painted than the Admiralty recorded", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 attacks the inference on two fronts. The wartime comparison is confounded — dazzled ships also got the newest escorts, the best routing, and convoy priority, and losses fell fleet-wide in the same months, so the improvement has several candidate causes. And when the effect was isolated in the laboratory, observers misjudged speed by a few percent: real, but far smaller than what the wartime figures were read as showing.",
+  "whyWrong": {
+   "B": "Text 2 reports a real if small effect in the intended direction. It never claims dazzle helped the attacker.",
+   "C": "Commanders' awareness or adaptation is not discussed in either text.",
+   "D": "The number of painted hulls is not disputed. Text 2 questions what their survival rate proves."
+  },
+  "commonMistakes": "Taking \"the effect is smaller than believed\" for \"there is no effect.\" Text 2 confirms a measurable one.",
+  "tips": "When two things changed at once, expect the second text to name the confound — then check whether it also measured the effect on its own."
+ },
+ {
+  "ref": "ct-nudge",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Making pension enrollment automatic, with an option to leave, raises participation from roughly half of eligible staff to more than nine in ten. The change costs almost nothing, compels nobody, and has been adopted by governments across the world as the standard example of a small design choice with a large result.</p><p><strong>Text 2</strong></p><p>Default enrollment also defaults the contribution rate, and the rate chosen is usually low. Workers who would have opted in at eight percent settle at the default three and stay there, so total savings in some schemes rose far less than participation did. A default recruits the indifferent and anchors the committed.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the success described in Text 1 is measured by",
+  "choices": [
+   {"label": "A", "content": "a figure that counts participants rather than the amount they actually save", "isCorrect": true},
+   {"label": "B", "content": "surveys of worker satisfaction rather than by enrollment records", "isCorrect": false},
+   {"label": "C", "content": "short-term results that reverse once workers change employers", "isCorrect": false},
+   {"label": "D", "content": "comparisons with countries whose pension systems are not similar", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1's evidence is a participation rate, and Text 2 shows why that rate can rise while the goal barely moves. The default sets the contribution as well as the enrollment, usually low, so someone who would have chosen eight percent settles at three — \"a default recruits the indifferent and anchors the committed.\" Total savings in some schemes therefore rose far less than participation did.",
+  "whyWrong": {
+   "B": "Text 1 cites enrollment figures, not satisfaction surveys, and Text 2 accepts those figures.",
+   "C": "Job changes are not mentioned in either text. The anchoring Text 2 describes happens with one employer.",
+   "D": "No cross-country comparison is at issue. Text 2's argument works within a single scheme."
+  },
+  "commonMistakes": "Assuming a critique of a policy must dispute its headline statistic. Here the statistic is accepted and shown to measure the wrong thing.",
+  "tips": "Ask what the reported number actually counts — then ask what the policy was for. A gap between the two is a standard SAT answer."
+ },
+ {
+  "ref": "ct-mangrove",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Mangrove forests absorb wave energy, and villages behind an intact belt suffered markedly less damage in the 2004 Indian Ocean tsunami than villages behind cleared coast. Replanting programs have followed across South and Southeast Asia, with tens of millions of propagules put in the ground.</p><p><strong>Text 2</strong></p><p>Survival in these programs is often below twenty percent, because the sites available for planting are the ones nobody wanted: open mudflats and abandoned shrimp ponds where the tidal range and salinity are wrong for the species being planted. Mangroves establish themselves readily where the hydrology suits them. The binding constraint is not seedlings but the water, and planting is what gets funded.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that replanting programs fail primarily because",
+  "choices": [
+   {"label": "A", "content": "they address a shortage of seedlings when the real limitation is the condition of the available sites", "isCorrect": true},
+   {"label": "B", "content": "the species chosen are not the ones that absorb wave energy effectively", "isCorrect": false},
+   {"label": "C", "content": "they are funded for too few years to allow the forests to mature", "isCorrect": false},
+   {"label": "D", "content": "local communities clear the new plantings for shrimp ponds before they establish", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 explains the low survival by where the planting happens: open mudflats and abandoned shrimp ponds, sites available precisely because their tidal range and salinity suit nobody. It then names the real limit — mangroves establish themselves readily where the hydrology suits them, so \"the binding constraint is not seedlings but the water.\" The programs supply the input that was never scarce, and the closing clause explains why: planting is what gets funded.",
+  "whyWrong": {
+   "B": "Species choice is mentioned only as being mismatched to a site's conditions, not as ineffective against waves. Text 2 does not dispute the protective effect.",
+   "C": "Funding duration is not discussed. Text 2's point about funding is which activity attracts it, not for how long.",
+   "D": "Text 2 refers to abandoned ponds as planting sites, not to communities clearing new plantings."
+  },
+  "commonMistakes": "Reading the low survival rate as poor execution. Text 2 attributes it to site conditions that no amount of care would change.",
+  "tips": "When a text names a \"binding constraint,\" the correct answer will contrast it with whatever the program actually supplies."
+ },
+ {
+  "ref": "ct-facialrec",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Face recognition systems are now tested against standard benchmarks, and the leading algorithms exceed ninety-nine percent accuracy on them. Vendors cite those figures when selling to police forces, and the argument is straightforward: a system that is right ninety-nine times in a hundred is more reliable than the eyewitness it replaces.</p><p><strong>Text 2</strong></p><p>The benchmark asks whether two photographs show the same person. A police search asks which of two million faces matches one frame of poor footage, and at that scale a false-match rate small enough to be invisible in the benchmark produces a long list of innocent people. Accuracy on a comparison is not accuracy on a search, and the second is the task the system is bought for.</p>",
+  "stem": "Which choice best describes the objection Text 2 raises to the argument in Text 1?",
+  "choices": [
+   {"label": "A", "content": "The reported accuracy comes from a task different in kind from the one the system performs in use", "isCorrect": true},
+   {"label": "B", "content": "The benchmarks used by vendors are compiled from images of unusually high quality", "isCorrect": false},
+   {"label": "C", "content": "Eyewitness identification is more reliable than the comparison in Text 1 allows", "isCorrect": false},
+   {"label": "D", "content": "Police forces lack the training needed to operate the systems they purchase", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's objection is a mismatch of tasks. The benchmark is a pairwise question — do these two photographs show the same person — while a police deployment searches one poor frame against two million faces. At that scale a false-match rate too small to show up in the benchmark still returns many innocent people. Its closing sentence states the point: \"accuracy on a comparison is not accuracy on a search, and the second is the task the system is bought for.\"",
+  "whyWrong": {
+   "B": "Image quality is mentioned only for the police footage, and it is not the basis of the objection. Even with good images, the scale problem would remain.",
+   "C": "Text 2 makes no claim about eyewitnesses. It does not defend the alternative Text 1 dismisses.",
+   "D": "Operator training is never raised. The flaw Text 2 describes is in the measurement, not the users."
+  },
+  "commonMistakes": "Treating a high accuracy figure as transferable. Text 2's whole argument is that the number belongs to a different question.",
+  "tips": "When a rate is quoted, ask what population it was measured over — a rate that is tiny per comparison can be large across millions of them."
+ },
+ {
+  "ref": "ct-marathon",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>The shoes introduced in 2017 with a curved carbon plate set into a thick foam midsole return more energy to the runner than any previous design, and the world records that followed came quickly at every distance from five kilometers to the marathon. Governing bodies debated whether the technology had made the comparison with earlier eras meaningless.</p><p><strong>Text 2</strong></p><p>Laboratory tests put the saving at about four percent of the energy cost of running, which at elite pace is worth roughly two minutes over a marathon — real, and not the whole story. The same decade brought the closed-loop pace car, sanctioned rotating pacemakers, and courses chosen for a flat, sheltered, single-lap profile. Attributing the record to the shoe alone requires ignoring the road it was run on.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the shoe's contribution to recent records is",
+  "choices": [
+   {"label": "A", "content": "genuine but one factor among several that changed at the same time", "isCorrect": true},
+   {"label": "B", "content": "smaller than laboratory measurements suggest, because those tests use treadmills", "isCorrect": false},
+   {"label": "C", "content": "impossible to estimate because no controlled comparison has been attempted", "isCorrect": false},
+   {"label": "D", "content": "less important than the improved training methods adopted over the same period", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 quantifies the shoe's benefit rather than dismissing it: about four percent of running's energy cost, worth roughly two minutes over a marathon — \"real, and not the whole story.\" It then lists what else changed in the same decade: the closed-loop pace car, sanctioned rotating pacemakers, and flat sheltered single-lap courses. Crediting the shoe alone \"requires ignoring the road it was run on.\"",
+  "whyWrong": {
+   "B": "Text 2 cites the laboratory figure approvingly and never questions how it was obtained.",
+   "C": "It reports a controlled estimate, so it cannot be claiming none exists.",
+   "D": "Training is not among the factors Text 2 lists, and it ranks none of them above the shoe."
+  },
+  "tips": "A phrase like \"real, and not the whole story\" is the author telling you the answer keeps the effect and adds to it."
+ },
+ {
+  "ref": "ct-desal",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Reverse-osmosis desalination has fallen in cost by more than half in twenty years, and a coastal city that builds a plant is no longer dependent on rainfall. For places where the reservoirs are emptying, the technology converts a climate problem into an engineering one with a known price.</p><p><strong>Text 2</strong></p><p>What comes out of the plant is not only water. For every liter of fresh water, roughly a liter of brine at twice the salinity of the sea is returned to it, usually near the shore, where it sinks and spreads across the bottom. Seagrass meadows that root in those shallows are the least tolerant of raised salinity and the most valuable habitat there. The problem has been converted, not solved.</p>",
+  "stem": "Which choice best states the point Text 2 makes about the technology described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "It relieves the water shortage by creating a different burden on the coastal environment", "isCorrect": true},
+   {"label": "B", "content": "It costs more to operate than the figures in Text 1 acknowledge", "isCorrect": false},
+   {"label": "C", "content": "It produces water too saline for agricultural use", "isCorrect": false},
+   {"label": "D", "content": "It works only in cities whose reservoirs have not yet emptied", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 accepts that the plant delivers fresh water and follows the other output. Roughly a liter of brine at twice sea salinity returns to the shallows for every liter produced, sinking and spreading across the bottom where seagrass meadows — the least salt-tolerant and most valuable habitat there — are rooted. Its final sentence names the trade: \"the problem has been converted, not solved.\"",
+  "whyWrong": {
+   "B": "Cost is Text 1's subject and Text 2 does not revisit it. Its concern is the discharge.",
+   "C": "The brine, not the product water, is the salty stream. Text 2 never suggests the fresh water is unusable.",
+   "D": "No such limitation appears. Text 2's objection applies wherever a plant discharges to the shore."
+  },
+  "commonMistakes": "Mixing up the two streams. The fresh water is fine; the brine is the problem.",
+  "tips": "When a process has more than one output, check whether the second text is following the one the first text left out."
+ },
+ {
+  "ref": "ct-recess",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Schools under pressure on test scores have cut break time to buy instructional minutes, and the arithmetic is easy to defend: an hour of mathematics teaches more mathematics than an hour of running about. Some districts have reduced daily break to fifteen minutes on that reasoning.</p><p><strong>Text 2</strong></p><p>Attention is not a stock that lasts as long as the timetable says. In classes tracked across a morning, on-task behavior fell steadily until a break and returned to its starting level afterward, so the lesson before break and the lesson after it are not equally productive hours. A minute moved from break to instruction is not a minute added to learning.</p>",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the reasoning described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "By arguing that instructional minutes vary in value, so adding them can subtract learning", "isCorrect": true},
+   {"label": "B", "content": "By arguing that physical activity contributes more to school performance than academic instruction", "isCorrect": false},
+   {"label": "C", "content": "By pointing out that test scores are a poor measure of what students have learned", "isCorrect": false},
+   {"label": "D", "content": "By noting that younger students need longer breaks than older ones", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1 treats every instructional minute as interchangeable. Text 2 denies exactly that: attention \"is not a stock that lasts as long as the timetable says.\" On-task behavior declined across a morning and recovered after a break, so the hour before break and the hour after are not equal. Hence the closing line — a minute moved from break to instruction is not a minute added to learning.",
+  "whyWrong": {
+   "B": "Text 2 makes no such ranking. It argues break makes instruction work better, not that it is more valuable than instruction.",
+   "C": "The validity of test scores is never questioned. Text 2 accepts the goal and disputes the method.",
+   "D": "No comparison by age appears in either text."
+  },
+  "commonMistakes": "Reading Text 2 as a defense of play for its own sake. Its argument is entirely about instructional productivity.",
+  "tips": "When one text treats units as interchangeable and the other shows they are not, that inequality is the answer."
+ },
+ {
+  "ref": "ct-permafrost",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Northern permafrost holds roughly twice the carbon now in the atmosphere, frozen into soils that have not thawed in millennia. As they warm, microbes resume decomposing that carbon and release it, which warms the climate further. The loop is often described as a threshold: past some temperature the thaw becomes self-sustaining and no longer answers to emissions.</p><p><strong>Text 2</strong></p><p>Thaw is not one process. Gradual deepening of the active layer proceeds at centimeters a year and tracks air temperature closely, which means it also slows when temperature does. Abrupt thaw — ground collapsing into a thermokarst lake — releases far more carbon far faster from perhaps a fifth of the area, and once a lake has formed it does not refreeze because temperature fell. A single threshold statement mixes a process that responds with one that does not.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that describing permafrost thaw as a single threshold",
+  "choices": [
+   {"label": "A", "content": "obscures that one form of thaw remains responsive to temperature while another does not", "isCorrect": true},
+   {"label": "B", "content": "overstates the quantity of carbon that northern soils actually contain", "isCorrect": false},
+   {"label": "C", "content": "is accurate for gradual thaw but not for the carbon released by microbes", "isCorrect": false},
+   {"label": "D", "content": "understates how quickly the active layer deepens in response to warming", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 splits the thaw in two and shows the halves behave differently. Gradual deepening tracks air temperature closely, so it slows when temperature does; abrupt thermokarst collapse releases much more carbon much faster from about a fifth of the area, and a lake once formed does not refreeze if temperature falls. Its last sentence is the verdict: a single threshold statement \"mixes a process that responds with one that does not.\"",
+  "whyWrong": {
+   "B": "The carbon stock is not contested. Text 2's argument concerns how it is released, not how much there is.",
+   "C": "Microbial decomposition is the mechanism in both forms of thaw, so this splits the wrong pair. Text 2's division is gradual versus abrupt.",
+   "D": "Text 2 gives the gradual rate as centimeters a year and treats it as tracking temperature. It makes no claim that this is faster than supposed."
+  },
+  "commonMistakes": "Assuming Text 2 either accepts or rejects the threshold. It says the threshold applies to one of two processes bundled under one name.",
+  "tips": "When a text says a phenomenon \"is not one process,\" expect the answer to describe how the parts differ in behavior."
+ },
+ {
+  "ref": "ct-provenance",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Attribution in painting has been transformed by technical analysis. Pigment identification dates a layer, infrared reflectography reveals the underdrawing beneath the paint, and dendrochronology fixes the earliest possible year for a panel. Judgments that once rested on a connoisseur's eye can now be grounded in physical evidence.</p><p><strong>Text 2</strong></p><p>Every one of those techniques dates materials, and materials tell you when a picture could have been made, not who made it. A workshop assistant used his master's pigments on his master's panels in his master's decade. Technical analysis has been decisive at excluding — a panel felled in 1620 cannot be by a man who died in 1610 — and it has settled far fewer attributions than it has overturned.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely characterize technical analysis as",
+  "choices": [
+   {"label": "A", "content": "better suited to ruling out an attribution than to establishing one", "isCorrect": true},
+   {"label": "B", "content": "unreliable, because pigment identification frequently returns inconsistent dates", "isCorrect": false},
+   {"label": "C", "content": "useful only for panels, since the techniques do not apply to canvas", "isCorrect": false},
+   {"label": "D", "content": "a replacement for connoisseurship that arrived earlier than the field acknowledges", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 grants the techniques and defines what they can answer: they date materials, so they establish when a picture could have been made, not who made it. The workshop assistant is the illustration — same pigments, same panels, same decade as the master. Hence the asymmetry it names outright: analysis has been \"decisive at excluding\" and has settled far fewer attributions than it has overturned.",
+  "whyWrong": {
+   "B": "Reliability is not questioned. The exclusion argument depends on the dates being trustworthy.",
+   "C": "Canvas is never mentioned, and the argument would apply equally to any dated material.",
+   "D": "Text 2 argues that analysis cannot replace attribution judgments, so it is not claiming an earlier replacement."
+  },
+  "commonMistakes": "Reading a limit on what evidence can prove as a claim that the evidence is bad.",
+  "tips": "Notice when a text distinguishes what a method can rule out from what it can establish — that asymmetry is often the whole answer."
+ },
+ {
+  "ref": "ct-rewild-river",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Removing a dam restores a river to itself. Within a season of the Elwha removals, sediment held back for a century moved downstream and rebuilt an estuary that had been starved of it, and salmon returned to reaches they had not reached since 1912. More than two thousand dams have now come down across the United States.</p><p><strong>Text 2</strong></p><p>The Elwha's sediment was clean, because its catchment is a national park. Where a reservoir sits below farmland or a smelter, the same century of accumulation has stored nitrogen, mercury, or mine tailings, and releasing it moves a contaminated deposit into a living channel all at once. What a removal does depends less on the dam than on what the catchment has been doing upstream of it.</p>",
+  "stem": "Which choice best describes how Text 2 qualifies the account in Text 1?",
+  "choices": [
+   {"label": "A", "content": "It attributes the favorable outcome partly to a catchment condition that most sites do not share", "isCorrect": true},
+   {"label": "B", "content": "It argues that salmon returns after removal are usually temporary", "isCorrect": false},
+   {"label": "C", "content": "It maintains that sediment released by removal rarely reaches the estuary", "isCorrect": false},
+   {"label": "D", "content": "It recommends removing dams in stages rather than all at once", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 does not dispute what happened on the Elwha; it explains a condition that made the result possible. The sediment was clean because the catchment is a national park. Below farmland or a smelter, the same century of accumulation holds nitrogen, mercury or mine tailings, and removal sends a contaminated deposit into a living channel at once. Its closing sentence generalizes: what a removal does \"depends less on the dam than on what the catchment has been doing upstream of it.\"",
+  "whyWrong": {
+   "B": "Salmon returns are not questioned. Text 2 accepts the Elwha outcome entirely.",
+   "C": "Text 2's concern is that the sediment does move downstream — which is the problem when it is contaminated.",
+   "D": "No staged approach is proposed. Text 2 identifies what varies between sites rather than recommending a method."
+  },
+  "commonMistakes": "Reading Text 2 as opposing dam removal. It explains why one success does not predict the next.",
+  "tips": "When a second text explains why a case study went well, look for an answer about a condition that case had and others lack."
+ },
+ {
+  "ref": "ct-espionage-lit",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Critics have long treated the spy novel as a form that cannot bear serious weight. Its plots run on withheld information, its characters are defined by function, and its resolutions depend on a revelation the reader could not have reasoned toward. Whatever pleasures it offers, the argument goes, are pleasures of mechanism rather than of understanding.</p><p><strong>Text 2</strong></p><p>The objection describes the puzzle novel and has been transferred to a form that abandoned the puzzle. In le Carré the identity of the traitor is often announced early or is obvious by the middle; what the book withholds is not who but what it cost to find out, and the last hundred pages are spent among the people the answer ruins. A form whose revelations are not the point cannot be faulted for how it distributes them.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the critics described in Text 1 have",
+  "choices": [
+   {"label": "A", "content": "applied to one kind of novel a standard drawn from a different kind", "isCorrect": true},
+   {"label": "B", "content": "underestimated how difficult it is to construct a plot that withholds information successfully", "isCorrect": false},
+   {"label": "C", "content": "based their judgment on a small number of unrepresentative authors", "isCorrect": false},
+   {"label": "D", "content": "confused the popularity of a form with its literary quality", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's opening sentence is the charge: the objection \"describes the puzzle novel and has been transferred to a form that abandoned the puzzle.\" The le Carré example shows the mismatch — the traitor is named early or obvious by the middle, and the book's real subject is the cost of finding out and the people the answer ruins. A form whose revelations are not the point cannot be judged by how it manages them.",
+  "whyWrong": {
+   "B": "Text 2 is not defending the craft of withholding. It argues the form does not rely on withholding at all.",
+   "C": "No claim about sample size appears. Le Carré is offered as an illustration, not as evidence that critics read too few books.",
+   "D": "Popularity is never mentioned in either text."
+  },
+  "commonMistakes": "Choosing an answer that defends the genre on the critics' own terms. Text 2 rejects the terms.",
+  "tips": "When Text 2 says a criticism belongs to something else, the answer is a misapplied standard — not a disagreement about the facts."
+ }
+]

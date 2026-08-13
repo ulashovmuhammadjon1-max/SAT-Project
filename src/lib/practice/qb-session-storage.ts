@@ -22,13 +22,15 @@
 const STORAGE_KEY = "satforge-qb-session:1";
 
 /** Bumped when the stored shape changes; older records are discarded on read. */
-const VERSION = 1;
+const VERSION = 2;
 
 export interface StoredQbResult {
   isCorrect: boolean;
   correctChoiceId: string | null;
   correctAnswerFR: string[] | null;
   explanationHtml: string | null;
+  commonMistakes: string | null;
+  tips: string | null;
 }
 
 export interface StoredQbQuestionState {

@@ -721,8 +721,37 @@ function ExplanationPanel({
             </p>
           )}
         </div>
+
+        {/* Kept out of the explanation body so they read as advice about the
+            question type rather than as more of the answer's reasoning. */}
+        {result.commonMistakes && (
+          <ExplanationNote label="Common mistake" text={result.commonMistakes} tone="warn" />
+        )}
+        {result.tips && <ExplanationNote label="Tip" text={result.tips} tone="info" />}
       </div>
     </section>
+  );
+}
+
+function ExplanationNote({
+  label,
+  text,
+  tone,
+}: {
+  label: string;
+  text: string;
+  tone: "warn" | "info";
+}) {
+  return (
+    <div
+      className={cn(
+        "rounded-md border-l-4 px-3 py-2",
+        tone === "warn" ? "border-amber-400 bg-amber-50" : "border-sky-400 bg-sky-50"
+      )}
+    >
+      <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-exam-muted">{label}</p>
+      <MathContent html={text} className="mt-0.5 text-[14px] leading-[1.6] text-exam-text" />
+    </div>
   );
 }
 
