@@ -27,7 +27,13 @@ export default async function AdminBookingsPage() {
           // is the whole reason the un-approve button exists.
           include: {
             user: {
-              select: { telegramUserId: true, telegramUsername: true, telegramIsMember: true, telegramCheckedAt: true },
+              select: {
+                telegramUserId: true,
+                telegramUsername: true,
+                telegramIsMember: true,
+                telegramCheckedAt: true,
+                telegramManualOverride: true,
+              },
             },
           },
         },
@@ -97,6 +103,7 @@ export default async function AdminBookingsPage() {
                 checkedAt: s.bookings[0].user.telegramCheckedAt
                   ? s.bookings[0].user.telegramCheckedAt.toISOString()
                   : null,
+                manual: s.bookings[0].user.telegramManualOverride,
               }
             : null,
         }

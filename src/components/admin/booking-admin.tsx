@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Ban, Check, Loader2, Plus, RotateCcw, Trash2, Undo2, X } from "lucide-react";
+import { Ban, Check, Loader2, Plus, RefreshCw, RotateCcw, Trash2, Undo2, X } from "lucide-react";
 import { toast } from "sonner";
 
 import type { BookingStatus } from "@prisma/client";
@@ -20,7 +20,9 @@ import {
   createSlots,
   decideBooking,
   deleteSlot,
+  recheckStudentTelegram,
   setBookingStatus,
+  setStudentTelegramVerified,
   setSlotBlocked,
   type BookingDecision,
 } from "@/server/actions/admin/bookings";
@@ -48,6 +50,7 @@ export interface AdminSlotRow {
       username: string | null;
       isMember: boolean;
       checkedAt: string | null;
+      manual: boolean;
     } | null;
   } | null;
 }
@@ -327,7 +330,22 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                         {s.booking!.email}
                       </a>
                     </p>
-                    {b!.telegram && <TelegramStatus t={b!.telegram} />}
+                    {b!.telegram && (
+                      <TelegramStatus
+                        t={b!.telegram}
+                        busy={busy === s.id}
+                        onSet={(isMember) =>
+                          run(
+                            s.id,
+                            () => setStudentTelegramVerified({ bookingId: b!.id, isMember }),
+                            isMember ? "Marked as subscribed." : "Marked as not subscribed.",
+                          )
+                        }
+                        onRecheck={() =>
+                          run(s.id, () => recheckStudentTelegram(b!.id), "Re-checked with Telegram.")
+                        }
+                      />
+                    )}
                     <dl className="mt-2 grid gap-x-6 gap-y-1 text-xs sm:grid-cols-2">
                       <Detail label="Current score" value={s.booking!.currentScore} />
                       <Detail label="Target score" value={s.booking!.targetScore} />
@@ -453,8 +471,20 @@ function DecisionDialog({
  */
 function TelegramStatus({
   t,
+  busy,
+  onSet,
+  onRecheck,
 }: {
-  t: { linked: boolean; username: string | null; isMember: boolean; checkedAt: string | null };
+  t: {
+    linked: boolean;
+    username: string | null;
+    isMember: boolean;
+    checkedAt: string | null;
+    manual: boolean;
+  };
+  busy: boolean;
+  onSet: (isMember: boolean) => void;
+  onRecheck: () => void;
 }) {
   const tone = !t.linked
     ? "border-border bg-secondary/40 text-muted-foreground"
@@ -476,10 +506,38 @@ function TelegramStatus({
       )}
       <span className="font-medium">{text}</span>
       {t.checkedAt && (
-        <span className="ml-auto opacity-70">
-          checked <LocalTime iso={t.checkedAt} format="dateShort" />
+        <span className="opacity-70">
+          {t.manual ? "set by hand" : "checked"} <LocalTime iso={t.checkedAt} format="dateShort" />
         </span>
       )}
+
+      {/* Manual override. The automatic check only exists once a bot token is
+          configured and the student has signed in, and Instagram can never be
+          checked at all — so the admin is the verifier and needs a place to
+          record what they found. */}
+      <span className="ml-auto flex shrink-0 gap-1">
+        {t.isMember ? (
+          <Button size="sm" variant="ghost" className="h-6 px-2 text-xs" disabled={busy} onClick={() => onSet(false)}>
+            Mark unverified
+          </Button>
+        ) : (
+          <Button size="sm" variant="ghost" className="h-6 px-2 text-xs" disabled={busy} onClick={() => onSet(true)}>
+            Mark verified
+          </Button>
+        )}
+        {t.linked && (
+          <Button
+            size="sm"
+            variant="ghost"
+            className="h-6 px-2 text-xs"
+            disabled={busy}
+            onClick={onRecheck}
+            title="Ask Telegram again"
+          >
+            <RefreshCw className="h-3 w-3" />
+          </Button>
+        )}
+      </span>
     </div>
   );
 }

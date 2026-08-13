@@ -12,6 +12,7 @@ import {
 } from "@/lib/email/booking-decision";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
+import { checkChannelMembership } from "@/lib/telegram";
 
 export type AdminResult = { ok: boolean; error?: string };
 
@@ -324,4 +325,78 @@ export async function createEvent(input: {
   revalidatePath("/admin/bookings");
   revalidatePath("/events");
   return { ok: true, created: res.count };
+}
+
+
+/**
+ * Set a student's Telegram membership by hand, from the bookings queue.
+ *
+ * The automatic check only exists once a bot token is configured and the
+ * student has signed in through the widget. Until then — and for Instagram,
+ * which can never be checked automatically — the admin is the verifier, and
+ * needs somewhere to record what they found. This is that somewhere.
+ *
+ * `telegramManualOverride` marks the value as human-set so the badge can say so
+ * rather than implying Telegram confirmed it.
+ */
+export async function setStudentTelegramVerified(input: {
+  bookingId: string;
+  isMember: boolean;
+}): Promise<AdminResult> {
+  await requireAdmin();
+
+  const booking = await prisma.booking.findUnique({
+    where: { id: input.bookingId },
+    select: { userId: true },
+  });
+  if (!booking) return { ok: false, error: "Booking not found." };
+
+  await prisma.user.update({
+    where: { id: booking.userId },
+    data: {
+      telegramIsMember: input.isMember,
+      telegramCheckedAt: new Date(),
+      telegramManualOverride: true,
+    },
+  });
+
+  revalidatePath("/admin/bookings");
+  return { ok: true };
+}
+
+/**
+ * Re-run the real membership check for the student on this booking.
+ *
+ * Clears the manual flag on success: a fresh answer from Telegram supersedes
+ * whatever was set by hand, and leaving the badge saying "set by hand" after a
+ * real check would misreport the evidence.
+ */
+export async function recheckStudentTelegram(bookingId: string): Promise<AdminResult> {
+  await requireAdmin();
+
+  const booking = await prisma.booking.findUnique({
+    where: { id: bookingId },
+    select: { user: { select: { id: true, telegramUserId: true } } },
+  });
+  if (!booking?.user) return { ok: false, error: "Booking not found." };
+  if (!booking.user.telegramUserId) {
+    return { ok: false, error: "This student has not connected Telegram, so there is nothing to check." };
+  }
+
+  const membership = await checkChannelMembership(booking.user.telegramUserId);
+  if (membership.status === "unknown") {
+    return { ok: false, error: `Telegram didn't answer: ${membership.error}` };
+  }
+
+  await prisma.user.update({
+    where: { id: booking.user.id },
+    data: {
+      telegramIsMember: membership.status === "member",
+      telegramCheckedAt: new Date(),
+      telegramManualOverride: false,
+    },
+  });
+
+  revalidatePath("/admin/bookings");
+  return { ok: true };
 }

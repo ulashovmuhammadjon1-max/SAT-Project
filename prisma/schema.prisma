@@ -113,18 +113,22 @@ model User {
   /// Telegram identity, set once the student signs in through the Login Widget.
   /// Stored as a string rather than BigInt: ids can exceed 2^53 and this value
   /// is only ever passed straight back to Telegram, never used in arithmetic.
-  telegramUserId    String?             @unique
-  telegramUsername  String?
-  telegramLinkedAt  DateTime?
+  telegramUserId         String?             @unique
+  telegramUsername       String?
+  telegramLinkedAt       DateTime?
   /// Last known channel membership and when it was established. Cached because
   /// the admin queue would otherwise call Telegram once per row on every render.
-  telegramIsMember  Boolean             @default(false)
-  telegramCheckedAt DateTime?
-  vocabProgress     VocabProgress[]
-  vocabSetProgress  VocabDeckProgress[]
-  studyActivities   StudyActivity[]
-  chatThreads       ChatThread[]
-  auditLogs         AuditLog[]
+  telegramIsMember       Boolean             @default(false)
+  telegramCheckedAt      DateTime?
+  /// True when an admin set the flag by hand instead of it coming from
+  /// getChatMember. Kept separate so the badge can say which it was — a value
+  /// a human typed and a value Telegram confirmed are not the same evidence.
+  telegramManualOverride Boolean             @default(false)
+  vocabProgress          VocabProgress[]
+  vocabSetProgress       VocabDeckProgress[]
+  studyActivities        StudyActivity[]
+  chatThreads            ChatThread[]
+  auditLogs              AuditLog[]
 
   coinTransactions    CoinTransaction[] @relation("CoinLedgerOwner")
   coinAdjustmentsMade CoinTransaction[] @relation("CoinLedgerActor")
@@ -1230,4 +1234,31 @@ model CommunityReaction {
 
   @@unique([messageId, userId, emoji])
   @@index([messageId])
+}
+
+// ---------------------------------------------------------------------------
+// Partners
+// ---------------------------------------------------------------------------
+
+/// A partner whose logo appears on the landing page and links out to them.
+///
+/// Kept in the database rather than a config file so a partnership can be added
+/// or pulled without a deploy — the practical case being that a partner goes
+/// quiet and their logo has to come down the same day.
+model Partner {
+  id          String   @id @default(cuid())
+  name        String
+  /// Served through /api/images/... for uploads, or any absolute https URL.
+  logoUrl     String
+  /// Where clicking the logo goes. Validated as http(s) on write, because this
+  /// value ends up in an href and a javascript: URL there would be an XSS.
+  href        String
+  /// One line under the name. Optional — most rows are just a logo.
+  blurb       String?
+  order       Int      @default(0)
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isPublished, order])
 }
