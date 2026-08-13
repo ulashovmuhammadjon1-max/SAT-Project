@@ -1,0 +1,240 @@
+[
+ {
+  "ref": "ct-firestick",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Colonial accounts described the Australian interior as an untouched wilderness, and the parks that were later drawn on it were managed to keep it that way: fire suppressed, access limited, the land left alone. The assumption underneath was that whatever the continent had looked like in 1788 was its natural state.</p><p><strong>Text 2</strong></p><p>Aboriginal groups had burned country in small, cool, patchy fires for millennia, and the open grassy woodland the colonists admired was the product of that burning, not an alternative to it. Where fire was withheld, the patchwork closed into continuous scrub that carries a crown fire for a hundred kilometers. The parks preserved a landscape by removing the practice that had made it.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely describe the management approach in Text 1 as",
+  "choices": [
+   {"label": "A", "content": "self-defeating, because it withheld the very practice that had produced the landscape it aimed to preserve", "isCorrect": true},
+   {"label": "B", "content": "reasonable, given how little was known about fire behavior at the time the parks were drawn", "isCorrect": false},
+   {"label": "C", "content": "too narrow, because it protected woodland while neglecting the grasslands beside it", "isCorrect": false},
+   {"label": "D", "content": "effective in the short term but expensive to sustain over many decades", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 supplies the fact Text 1's approach did not know: the open woodland was made by millennia of small, cool, patchy Aboriginal burning. Suppressing fire therefore did not protect the landscape — it removed its cause, and the patchwork closed into scrub that carries fire across a hundred kilometers. The final sentence names the contradiction exactly: the parks \"preserved a landscape by removing the practice that had made it.\"",
+  "whyWrong": {
+   "B": "Text 2 offers no excuse for the policy and never discusses what was known at the time. Its point is what the policy did, not how forgivable it was.",
+   "C": "The contrast in Text 2 is between burned and unburned country, not between woodland and grassland. No neglected habitat is named.",
+   "D": "Text 2 describes the approach as failing on its own terms, not as costly. Expense is not mentioned in either text."
+  },
+  "commonMistakes": "Reading Text 2 as merely adding historical background, when it is identifying a contradiction in the policy itself.",
+  "tips": "If Text 2 shows that a cause Text 1 ignored was the reason for the thing Text 1 valued, look for an answer with the word \"self-defeating\" or its equivalent."
+ },
+ {
+  "ref": "ct-nuraghe",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Some seven thousand nuraghi — conical stone towers — stand across Sardinia, and their walls, several meters thick at the base with a single low entrance, have long been read as military. On that account Bronze Age Sardinia was a landscape of small warring chiefdoms, each tower a keep commanding the ground within sight of it.</p><p><strong>Text 2</strong></p><p>Seven thousand towers on an island of this size means one every few kilometers, which is a density no plausible population could have garrisoned. Excavation finds grain jars, looms, and grinding stones in the chambers, and the towers sit not on defensible peaks but on the edges of good soil. Thickness is what an unmortared corbelled vault requires to stand up at all; it need not have been chosen for what it would stop.</p>",
+  "stem": "Which choice best describes how Text 2 responds to the interpretation presented in Text 1?",
+  "choices": [
+   {"label": "A", "content": "It reinterprets the same architectural feature as a structural necessity and adds evidence of ordinary use", "isCorrect": true},
+   {"label": "B", "content": "It accepts the military interpretation for the largest towers while rejecting it for the smaller ones", "isCorrect": false},
+   {"label": "C", "content": "It argues that the towers were built much later than the Bronze Age date usually assigned to them", "isCorrect": false},
+   {"label": "D", "content": "It maintains that too few towers have been excavated to support any interpretation", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 works on two fronts. It takes the feature Text 1 reads as fortification — the massive walls — and gives it a structural explanation: an unmortared corbelled vault needs that thickness to stand, so the walls need not have been chosen for what they would stop. Alongside that it supplies positive evidence of domestic life (grain jars, looms, grinding stones) and siting on good soil rather than defensible peaks, plus a density argument that no population could have garrisoned.",
+  "whyWrong": {
+   "B": "Text 2 draws no distinction by size. Its arguments apply to the towers generally.",
+   "C": "Dating is not contested anywhere in Text 2. It disputes function, not chronology.",
+   "D": "Text 2 relies on excavation results rather than complaining about their scarcity — the jars, looms and grinding stones are its evidence."
+  },
+  "commonMistakes": "Assuming that thick walls can only mean defense. Text 2's central move is that the same feature has a non-military explanation.",
+  "tips": "When Text 1 infers purpose from a physical feature, expect Text 2 to offer a different reason that same feature exists."
+ },
+ {
+  "ref": "ct-iron",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Across much of the open ocean, iron is the nutrient that runs out first, and adding it makes plankton bloom within days. Because plankton draw carbon dioxide into their tissues and some of them sink when they die, fertilizing the sea with iron has been proposed as a way of moving atmospheric carbon into the deep, at a cost far below that of capturing it from air.</p><p><strong>Text 2</strong></p><p>Blooming is easy and sinking is not. Across thirteen ocean iron-addition experiments, blooms formed reliably but the fraction of carbon that reached depth was small and, in most trials, could not be distinguished from zero. Carbon respired near the surface returns to the air within a year or two, and it is depth, not growth, that determines whether the drawdown lasts.</p>",
+  "stem": "Based on the texts, the results described in Text 2 most directly undermine which part of the proposal in Text 1?",
+  "choices": [
+   {"label": "A", "content": "The step in which carbon taken up by plankton is transferred to the deep ocean", "isCorrect": true},
+   {"label": "B", "content": "The claim that iron is the nutrient limiting plankton growth in much of the ocean", "isCorrect": false},
+   {"label": "C", "content": "The claim that adding iron produces a bloom within days", "isCorrect": false},
+   {"label": "D", "content": "The claim that plankton take up carbon dioxide as they grow", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1's proposal is a chain: iron makes plankton bloom, blooming plankton take up carbon, and sinking carries that carbon to depth. Text 2 confirms the first links and breaks the last — blooms \"formed reliably,\" but the fraction reaching depth was small and usually indistinguishable from zero. Since carbon respired near the surface returns to the air in a year or two, the transfer step is where the scheme fails.",
+  "whyWrong": {
+   "B": "Text 2 assumes iron limitation is real; that is why adding iron produced blooms in all thirteen experiments.",
+   "C": "Text 2 states blooms formed reliably. It concedes this point rather than undermining it.",
+   "D": "Uptake by growing plankton is not questioned. Text 2's concern is what happens to that carbon afterward."
+  },
+  "commonMistakes": "Treating a failed outcome as though every step failed. Here three of four links held, and identifying the broken one is the whole question.",
+  "tips": "When a proposal is a chain of steps, read the second text for which link it targets — the wrong answers are usually the links it left standing."
+ },
+ {
+  "ref": "ct-cavedate",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Radiocarbon dating of cave art works on the pigment: charcoal in a painted line contains carbon that stopped exchanging with the atmosphere when the wood burned, and the decay of its carbon-14 gives an age. On this basis European cave painting was long placed within the last thirty thousand years, comfortably within the span of modern humans in Europe.</p><p><strong>Text 2</strong></p><p>Uranium-thorium dating measures the thin calcite crust that grows over a painting rather than the paint itself, and so returns a minimum age — the art is at least as old as its skin. Applied in three Spanish caves by Dirk Hoffmann and colleagues, it produced ages beyond sixty thousand years, before modern humans are known to have arrived. Charcoal cannot reach back that far; beyond about fifty thousand years too little carbon-14 remains to measure.</p>",
+  "stem": "Based on the texts, the dates reported in Text 2 differ from those in Text 1 in part because the uranium-thorium method",
+  "choices": [
+   {"label": "A", "content": "dates a layer that formed over the art, and remains usable at ages where radiocarbon does not", "isCorrect": true},
+   {"label": "B", "content": "measures the pigment directly and so avoids contamination from the cave wall", "isCorrect": false},
+   {"label": "C", "content": "gives a maximum age for the art rather than a minimum one", "isCorrect": false},
+   {"label": "D", "content": "was applied to caves whose paintings had already been dated by radiocarbon", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 names both differences. The method dates the calcite crust that grew over the painting rather than the paint, which is why it yields a minimum — the art is at least as old as its skin. And it stays usable past radiocarbon's ceiling: beyond roughly fifty thousand years too little carbon-14 survives to measure, so charcoal simply cannot report the ages beyond sixty thousand years that Hoffmann's team found.",
+  "whyWrong": {
+   "B": "This describes radiocarbon, not uranium-thorium. Text 2 is explicit that the calcite is dated \"rather than the paint itself.\"",
+   "C": "It gives a minimum, and Text 2 says so directly. Reversing that inverts the logic of the finding.",
+   "D": "No overlap between the two sets of caves is described. Text 2 identifies three Spanish caves without saying they had been dated before."
+  },
+  "commonMistakes": "Missing the ceiling on radiocarbon. Without it, the two sets of dates look like a simple disagreement rather than one method reaching where the other cannot.",
+  "tips": "When two texts describe different methods, list what each one physically measures before comparing their results."
+ },
+ {
+  "ref": "ct-inducedbike",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Councils weighing a protected bike lane usually count the cyclists already on the street and size the demand from that. Where the count is low, the lane is judged unwarranted: the road space would serve more people as a traffic lane, and a lane built for cyclists who are not there is space taken from drivers who are.</p><p><strong>Text 2</strong></p><p>Most people who would ride say the reason they do not is that they are unwilling to share a lane with traffic. A count taken before the lane is built therefore measures the people willing to ride in the conditions the lane exists to remove. Seville built eighty kilometers of separated lanes in four years and cycling trips rose elevenfold; the riders were not waiting to be counted, they were waiting for the lane.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the counts described in Text 1 are",
+  "choices": [
+   {"label": "A", "content": "a poor guide to demand, because they can only register riders willing to accept present conditions", "isCorrect": true},
+   {"label": "B", "content": "accurate for existing riders but taken at times of day that understate the total", "isCorrect": false},
+   {"label": "C", "content": "unnecessary, since councils can estimate cycling demand from population density alone", "isCorrect": false},
+   {"label": "D", "content": "useful mainly for deciding where a lane should be placed rather than whether to build one", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 identifies a circularity. The people who would ride say the barrier is sharing a lane with traffic; a count taken before the lane is built therefore samples only those already willing to face that barrier — \"the conditions the lane exists to remove.\" Seville is the demonstration: eighty kilometers of separated lanes, an elevenfold rise in trips, from riders who were \"waiting for the lane\" rather than waiting to be counted.",
+  "whyWrong": {
+   "B": "Time of day is never raised. Text 2's objection would hold for a count taken at any hour, because the barrier is the traffic itself.",
+   "C": "Text 2 proposes no substitute measure and says nothing about density. It explains why this measure misleads.",
+   "D": "Placement is not Text 2's subject. Its argument bears directly on whether to build, which is the decision Text 1 describes."
+  },
+  "commonMistakes": "Reading the objection as \"the count was done badly.\" The count is accurate; it measures the wrong population.",
+  "tips": "Watch for a measurement whose result is shaped by the very problem it is being used to decide — the SAT tests this circular pattern often."
+ },
+ {
+  "ref": "ct-amber",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Insects in amber are preserved in a detail no rock fossil can match: wing hairs, gut contents, the color bands on a beetle's back. Because of that fidelity, amber assemblages are often treated as snapshots of the forests they came from, a census of what was flying and crawling there a hundred million years ago.</p><p><strong>Text 2</strong></p><p>Resin flows down a trunk, and what it catches is what walks or lands on bark. Ground beetles, soil mites, and anything larger than a few millimeters that could pull free are scarce in amber and abundant in the same forests' compression fossils. The record is exquisite and it is a record of one surface.</p>",
+  "stem": "Based on the texts, how would the author of Text 2 most likely characterize the treatment of amber assemblages described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "As mistaking a sample biased by where resin falls for a survey of the whole forest", "isCorrect": true},
+   {"label": "B", "content": "As overstating how well fine anatomical features survive in amber", "isCorrect": false},
+   {"label": "C", "content": "As relying on amber deposits that are too few and too widely scattered to compare", "isCorrect": false},
+   {"label": "D", "content": "As assuming that insects preserved in amber died at the moment they were trapped", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 grants the fidelity and attacks the coverage. Resin runs down a trunk, so it samples whatever walks or lands on bark; ground beetles, soil mites, and anything strong enough to pull free are rare in amber but common in compression fossils from the same forests. Its closing line concedes and qualifies in one breath: the record is exquisite, and it is \"a record of one surface\" — not a census of the forest.",
+  "whyWrong": {
+   "B": "Text 2 explicitly calls the record exquisite. Preservation quality is the one thing it does not dispute.",
+   "C": "The number and spread of deposits is never mentioned. The bias Text 2 describes would affect a single deposit just as much.",
+   "D": "Timing of death is not at issue in either text."
+  },
+  "commonMistakes": "Assuming a critical text must be attacking the quality of the evidence, when it is attacking what the evidence represents.",
+  "tips": "Ask what physical process created the sample. If it can only capture part of the whole, that partiality is usually the answer."
+ },
+ {
+  "ref": "ct-subglacial",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Lake Vostok lies four kilometers beneath the East Antarctic ice sheet, sealed off, by most estimates, for something like fifteen million years. Sequencing of the accreted ice that freezes onto the lake's ceiling has returned thousands of genetic signatures, including relatives of organisms that live around hydrothermal vents. If they are living there, the lake is an isolated biosphere of extraordinary age.</p><p><strong>Text 2</strong></p><p>The drill used to reach the accretion ice was lubricated with sixty tonnes of kerosene and freon, and the sequences recovered include organisms known from human skin and from the drill fluid itself. Sealed does not mean sterile in the way the inference requires: a signature in accreted ice may record the lake, or the borehole, and nothing in the sequencing distinguishes them.</p>",
+  "stem": "Which choice best describes the objection Text 2 raises to the conclusion drawn in Text 1?",
+  "choices": [
+   {"label": "A", "content": "The sampling method could itself have introduced the organisms whose presence is taken as evidence", "isCorrect": true},
+   {"label": "B", "content": "The lake has probably been isolated for far less time than fifteen million years", "isCorrect": false},
+   {"label": "C", "content": "Organisms found near hydrothermal vents could not survive at the pressures found in the lake", "isCorrect": false},
+   {"label": "D", "content": "Sequencing cannot identify organisms reliably below a certain abundance", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's objection is contamination. Reaching the accretion ice required sixty tonnes of kerosene and freon, and the recovered sequences include organisms known from human skin and from the drill fluid. That makes the evidence ambiguous in a way the conclusion cannot survive: a signature \"may record the lake, or the borehole, and nothing in the sequencing distinguishes them.\"",
+  "whyWrong": {
+   "B": "Text 2 does not challenge the isolation estimate. Its phrase \"sealed does not mean sterile\" concedes the seal and disputes what follows from it.",
+   "C": "No claim about pressure tolerance appears. Text 2 questions whether the organisms were ever in the lake, not whether they could live there.",
+   "D": "Detection limits are not mentioned. The problem is not that too little was found but that what was found has two possible sources."
+  },
+  "commonMistakes": "Hearing \"sealed for fifteen million years\" and assuming any objection must target that figure. Text 2 lets it stand.",
+  "tips": "Whenever a second text describes how a sample was physically obtained, expect contamination or selection to be the objection."
+ },
+ {
+  "ref": "ct-birdsong",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>White-crowned sparrows sing in regional dialects, and a male raised in silence never produces his population's song correctly. Song is learned from adults during a narrow window in the first months of life, which is why the dialect boundaries on a map have stayed roughly where they were when they were first surveyed in the 1960s.</p><p><strong>Text 2</strong></p><p>Recordings from San Francisco across the pandemic shutdown show males singing at lower amplitude and, within about a year, recovering a low-frequency trill that had disappeared as traffic noise rose. The window for learning explains how a dialect is acquired; it does not fix what will be worth acquiring, and the birds tracked a changing city faster than the map suggests.</p>",
+  "stem": "Based on the texts, the observations in Text 2 suggest that dialect boundaries are",
+  "choices": [
+   {"label": "A", "content": "more responsive to changing conditions than the stability of the map implies", "isCorrect": true},
+   {"label": "B", "content": "learned from a bird's parents rather than from unrelated adults nearby", "isCorrect": false},
+   {"label": "C", "content": "maintained only in populations that do not encounter traffic noise", "isCorrect": false},
+   {"label": "D", "content": "unrelated to the learning window described in Text 1", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1 offers a stable picture: song is learned in a narrow early window, and the dialect map has hardly moved since the 1960s. Text 2 keeps the window but separates two things it had been made to explain. Within about a year of the traffic falling silent, San Francisco males recovered a low-frequency trill that noise had driven out. As Text 2 puts it, the window explains how a dialect is acquired but not what will be worth acquiring — so the songs tracked the city faster than a stable map suggests.",
+  "whyWrong": {
+   "B": "Neither text distinguishes parents from other adults. Text 1 says song is learned from adults, and Text 2 does not revisit the question.",
+   "C": "Text 2 describes a population that does encounter traffic noise and still holds a dialect. Noise changed the song rather than abolishing the pattern.",
+   "D": "Text 2 explicitly retains the window — \"the window for learning explains how a dialect is acquired.\" It limits its scope rather than denying it."
+  },
+  "tips": "When a text says a mechanism explains one thing \"but not\" another, the answer usually lives in the part it says the mechanism does not cover."
+ },
+ {
+  "ref": "ct-verticalfarm",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>A vertical farm grows lettuce in stacked trays under tuned lights, using perhaps five percent of the water a field crop takes and no pesticide at all. Sited in a warehouse inside the city, it delivers within hours of harvest and removes the refrigerated lorry from the chain, which is where a large share of fresh produce is lost.</p><p><strong>Text 2</strong></p><p>Sunlight arrives free; a photon from a lamp must be paid for. Published figures put indoor lettuce between thirty and eighty times the energy per kilogram of a field crop, nearly all of it lighting and cooling, and transport is usually a small fraction of the total footprint of a leafy vegetable. Where the grid is not clean, the saving in water is bought with carbon.</p>",
+  "stem": "Which choice best describes the relationship between the two texts?",
+  "choices": [
+   {"label": "A", "content": "Text 2 accepts the advantages named in Text 1 but argues they are offset by a cost Text 1 does not weigh", "isCorrect": true},
+   {"label": "B", "content": "Text 2 disputes Text 1's figures for the water use of indoor growing", "isCorrect": false},
+   {"label": "C", "content": "Text 2 argues that indoor lettuce is of lower quality than field lettuce", "isCorrect": false},
+   {"label": "D", "content": "Text 2 recommends siting vertical farms outside cities to reduce their costs", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 leaves the water saving and the absent pesticide alone. What it introduces is energy: indoor lettuce runs thirty to eighty times a field crop per kilogram, almost all of it lighting and cooling, because \"a photon from a lamp must be paid for.\" It also deflates the one advantage Text 1 leaned on hardest, noting transport is a small fraction of a leafy vegetable's footprint. The conclusion is a trade rather than a refutation — on a dirty grid, water is saved and carbon is spent.",
+  "whyWrong": {
+   "B": "The water figure is never contested. Text 2's final sentence depends on the saving being real.",
+   "C": "Quality is not discussed in either text. The comparison is about resources.",
+   "D": "Text 2 makes no siting recommendation. Moving the farm out of the city would not change the lighting and cooling load that drives its argument."
+  },
+  "commonMistakes": "Assuming that a text raising a drawback must be denying the benefits. Here both are granted and set against each other.",
+  "tips": "When Text 2 introduces a resource Text 1 never mentioned, the relationship is almost always \"unweighed cost\" rather than \"disputed fact.\""
+ },
+ {
+  "ref": "ct-audiobook",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>Teachers sometimes treat listening to a book as a lesser substitute for reading it, on the grounds that decoding print is the skill school exists to build. A student who listens, the worry goes, is skipping the difficulty that produces fluency.</p><p><strong>Text 2</strong></p><p>Comprehension tests given after listening and after reading return closely matched scores once decoding is fluent, and brain imaging by Fatma Deniz and colleagues found the same semantic maps active either way. The difficulty of decoding is a stage, not the destination; for a student still stuck in it, listening is often the only route to the vocabulary that will eventually make decoding easier.</p>",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the worry expressed in Text 1?",
+  "choices": [
+   {"label": "A", "content": "By arguing that listening delivers the comprehension and vocabulary that decoding practice is meant to serve", "isCorrect": true},
+   {"label": "B", "content": "By conceding that listening should be reserved for students who have already become fluent readers", "isCorrect": false},
+   {"label": "C", "content": "By showing that students remember more from listening than from reading the same text", "isCorrect": false},
+   {"label": "D", "content": "By arguing that decoding skill has little effect on how well a student understands a text", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 answers by separating means from end. Comprehension scores match across the two modes once decoding is fluent, and Deniz's imaging shows the same semantic maps at work either way — so listening reaches the understanding that reading aims at. Then it turns the worry around: decoding is \"a stage, not the destination,\" and for a student still stuck in that stage, listening is often the only way to the vocabulary that will make decoding easier later.",
+  "whyWrong": {
+   "B": "Text 2 argues the opposite, singling out the student still struggling to decode as the one listening helps most.",
+   "C": "It reports matched scores, not an advantage for listening. Claiming superiority overstates the finding.",
+   "D": "Text 2 treats decoding as genuinely important — a stage worth passing through — and never says it fails to matter."
+  },
+  "tips": "When a text calls something \"a stage, not the destination,\" it is distinguishing a means from a goal; the answer usually turns on that distinction."
+ },
+ {
+  "ref": "ct-permeable",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>A sponge city absorbs its rainfall instead of piping it away: permeable pavement, planted swales, and roof gardens hold the water where it falls. Chinese cities that have retrofitted whole districts this way report sharp reductions in the flash flooding that follows a summer downpour, at a construction cost below that of enlarging the storm sewers.</p><p><strong>Text 2</strong></p><p>Absorption has a ceiling, and the ceiling is reached when the soil beneath is saturated. In the Zhengzhou storm of 2021 a year's rain fell in three days on a district built to sponge standards and the surface behaved as if it were sealed. Sponge measures shave the common storm, which is most storms; they do not address the rare one that does the killing, and a city that believes otherwise has bought the wrong insurance.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that sponge city measures are",
+  "choices": [
+   {"label": "A", "content": "genuinely effective against ordinary rainfall but not a defense against the extreme events that cause the worst damage", "isCorrect": true},
+   {"label": "B", "content": "ineffective at any scale, because urban soils are saturated for most of the year", "isCorrect": false},
+   {"label": "C", "content": "less economical than enlarging storm sewers once maintenance is included", "isCorrect": false},
+   {"label": "D", "content": "effective only in cities whose rainfall is spread evenly through the year", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 divides storms into two classes and assigns the measures to one of them. For the common storm, which is most storms, sponge measures work — Text 2 says they \"shave\" it. For the rare one, absorption has a ceiling set by saturated soil, and Zhengzhou is the demonstration: a year's rain in three days on a sponge-standard district, and the surface behaved as if sealed. The danger it names is misplaced confidence, not uselessness.",
+  "whyWrong": {
+   "B": "Text 2 explicitly credits the measures on ordinary storms. It never claims urban soils are saturated most of the time.",
+   "C": "Cost appears only in Text 1, and Text 2 does not take it up. Maintenance is mentioned nowhere.",
+   "D": "The distinction in Text 2 is between common and extreme storms, not between climates with even and uneven rainfall."
+  },
+  "commonMistakes": "Turning a limit into a rejection. Text 2 says the measures work on most storms and fail on the worst — both halves belong in the answer.",
+  "tips": "When a text says something handles the common case but not the rare one, a correct choice will keep the credit as well as the limit."
+ },
+ {
+  "ref": "ct-guild",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>The craft guilds of medieval Europe are usually described as engines of quality. A guild set standards, inspected work, and punished the member who sold a short measure or an unseasoned timber, and in an age when a buyer could not judge a barrel or a beam by looking at it, that assurance is what made a market in skilled goods possible at all.</p><p><strong>Text 2</strong></p><p>The same records that show inspections show admission fees rising far faster than prices, mastery examinations lengthened during slumps, and outright bars on the sons of men outside the trade. Standards and closure were not two policies but one: a rule that a barrel be made in a particular way is also a rule about who is permitted to make barrels, and the guilds enforced both edges of it.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the account in Text 1",
+  "choices": [
+   {"label": "A", "content": "describes a real function while overlooking that the same rules also served to restrict entry", "isCorrect": true},
+   {"label": "B", "content": "exaggerates how often guild inspectors actually detected substandard work", "isCorrect": false},
+   {"label": "C", "content": "applies to guilds in large cities but not to those in smaller market towns", "isCorrect": false},
+   {"label": "D", "content": "mistakes a late development for a feature that guilds had from their founding", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 does not deny that guilds set and enforced standards; it draws on the same inspection records. Its argument is that those records also show rising admission fees, examinations stretched during slumps, and bars on outsiders' sons — and that these are not a separate policy. A rule about how a barrel must be made is simultaneously a rule about who may make barrels, so Text 1's account is true and half the picture.",
+  "whyWrong": {
+   "B": "Detection rates are never questioned. Text 2 treats the inspections as real and reads the same records for a second purpose.",
+   "C": "No distinction between large cities and market towns appears in either text.",
+   "D": "Text 2 makes no chronological claim. The examinations lengthening \"during slumps\" describes a response to conditions, not a late invention."
+  },
+  "commonMistakes": "Expecting the second text to contradict the first. Here it accepts every fact in Text 1 and adds a second function those same facts served.",
+  "tips": "When Text 2 says two things were \"not two policies but one,\" the answer should preserve both functions rather than choosing between them."
+ }
+]
