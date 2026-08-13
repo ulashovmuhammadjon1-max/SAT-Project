@@ -1,0 +1,239 @@
+[
+ {
+  "ref": "ct-bees",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>Rooftop hives have multiplied across European capitals, and city governments often present the trend as pollinator conservation. The reasoning is simple enough: bees are in trouble, hives hold bees, so more hives must mean more bees. Municipal grants now cover the cost of a starter colony in several cities, and the hive count in central Paris roughly tripled between 2013 and 2019.</p><p><strong>Text 2</strong></p><p>The honeybee is a managed livestock species, not a wild one, and it is not the insect in decline. Ecologist Jonas Geldmann notes that a single hive sends tens of thousands of foragers into a fixed radius of flowers, and that in cities the flowers are already scarce. Where hive density has climbed fastest, surveys have recorded fewer wild solitary bees, which have no keeper to feed them through a bad season.</p>",
+  "stem": "Based on the texts, how would Geldmann (Text 2) most likely characterize the municipal grants described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "As an effective way to reverse the decline of pollinators in dense urban areas", "isCorrect": false},
+   {"label": "B", "content": "As support for a farmed species that may come at the expense of the wild pollinators actually at risk", "isCorrect": true},
+   {"label": "C", "content": "As too small to make any measurable difference to the number of hives in a city", "isCorrect": false},
+   {"label": "D", "content": "As valuable chiefly because they make city residents more aware of insect conservation", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 makes two moves that combine into one judgment. First, it separates the honeybee from the pollinators in trouble — it is \"a managed livestock species\" and \"not the insect in decline.\" Second, it explains a cost: each hive floods a limited supply of city flowers with tens of thousands of foragers, and wild solitary bees have declined where hives grew fastest. A grant that buys more hives therefore subsidizes the wrong bee and squeezes the right one.",
+  "whyWrong": {
+   "A": "This is Text 1's assumption, and Text 2 exists to dispute it. Text 2 never grants that more hives help pollinators generally.",
+   "C": "Scale is not Text 2's objection. It raises no doubt that the grants increase hive numbers — its worry is that they do, and that rising hive density is what harms wild bees.",
+   "D": "Text 2 says nothing about public awareness. Inventing a benefit it never mentions replaces its actual argument with a milder one."
+  },
+  "commonMistakes": "Assuming any objection must be that a program is too small or too weak, when the objection here is that the program works and does damage.",
+  "tips": "When Text 2 redefines a term from Text 1 — here, which insect counts as the endangered pollinator — that redefinition is usually the whole answer."
+ },
+ {
+  "ref": "ct-concrete",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Roman harbor concrete has stood in seawater for two thousand years while modern marine concrete degrades in decades, and the usual explanation credits the volcanic ash the Romans mixed into it. Seawater percolating through the ash-lime matrix grows interlocking crystals of a rare mineral, aluminous tobermorite, which knits cracks shut. On this account the sea does not attack Roman concrete so much as continue to build it.</p><p><strong>Text 2</strong></p><p>Admiration for the recipe has obscured what the surviving structures are. Nearly all of them are massive: piers and breakwaters many meters thick, with no steel inside and no load to speak of beyond their own weight. Modern marine concrete is poured thin around steel reinforcement that rusts and expands, and it is asked to span. A material that survives because nothing was demanded of it is a poor model for a bridge.</p>",
+  "stem": "Which choice best describes the relationship between the two texts?",
+  "choices": [
+   {"label": "A", "content": "Text 2 accepts the chemical mechanism described in Text 1 but argues that the comparison it invites is unsound", "isCorrect": true},
+   {"label": "B", "content": "Text 2 offers laboratory evidence that the mineral described in Text 1 does not form in seawater", "isCorrect": false},
+   {"label": "C", "content": "Text 2 extends Text 1's explanation to a wider range of ancient structures", "isCorrect": false},
+   {"label": "D", "content": "Text 2 argues that Roman builders understood the chemistry Text 1 describes", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 never contests the tobermorite chemistry — it does not mention the mineral at all, and it opens by conceding that the structures survive. What it attacks is the inference: the Roman survivors are thick, unreinforced, and barely loaded, while modern marine concrete is thin, steel-reinforced, and asked to span. Same durability record, incomparable demands. That is a challenge to the comparison, not to the science.",
+  "whyWrong": {
+   "B": "Text 2 presents no laboratory evidence and makes no claim about whether the mineral forms. It argues from the shape and function of the surviving structures.",
+   "C": "It narrows rather than extends. Text 2's point is that the surviving structures are a particular, undemanding kind, which is why they generalize badly.",
+   "D": "Neither text says anything about what Roman builders knew. Text 1 describes a mechanism, not an intention."
+  },
+  "tips": "\"Text 2 accepts X but disputes what follows from X\" is one of the most common real relationships on this question type — check whether Text 2 actually denies the evidence before assuming it does."
+ },
+ {
+  "ref": "ct-octopus",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Two thirds of an octopus's neurons sit in its arms rather than its brain, and each arm can carry out a search for food while severed from the animal. Researchers have taken this as evidence of genuinely distributed cognition: the arm is not a limb receiving orders but a semi-independent agent, and the octopus is better understood as a federation than as a single decider.</p><p><strong>Text 2</strong></p><p>A severed arm that gropes and grips is doing something a spinal reflex arc also does, and no one calls a knee a second mind. Behavioral work by Tamar Gutnick and colleagues found that an octopus learning to reach through a maze to a target it could see used one arm under visual guidance and kept the others still — precisely the centralized control the federation picture denies.</p>",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that each arm is \"a semi-independent agent\"?",
+  "choices": [
+   {"label": "A", "content": "By agreeing, and adding that the arms coordinate with one another without involving the brain", "isCorrect": false},
+   {"label": "B", "content": "By noting that the behavior offered as proof is consistent with simple reflex, while directed tasks show central control", "isCorrect": true},
+   {"label": "C", "content": "By arguing that the neuron counts reported in Text 1 are too imprecise to support any conclusion", "isCorrect": false},
+   {"label": "D", "content": "By observing that octopuses solve maze tasks more slowly than vertebrates of comparable size", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 answers the claim twice over. The severed-arm evidence is reinterpreted — groping and gripping is what a reflex arc does, and a reflex does not make a mind. Then the Gutnick maze result supplies a positive counter-case: given a task that requires direction, the animal used one arm and held the rest still, which is centralized control rather than a federation.",
+  "whyWrong": {
+   "A": "Text 2 argues against independence, not for it. The maze finding is offered precisely because it shows the brain directing a single arm.",
+   "C": "Text 2 never questions the neuron proportion. It disputes what the distribution implies about who is in charge.",
+   "D": "Speed against vertebrates appears in neither text. Gutnick's result is about which arms move, not how fast."
+  },
+  "commonMistakes": "Treating the severed-arm behavior as settled evidence for autonomy. Text 2's first move is to reinterpret that same observation, not to dismiss it.",
+  "tips": "When a text supplies both a reinterpretation of the old evidence and a new experiment, the right answer usually contains both halves."
+ },
+ {
+  "ref": "ct-repatriation",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>The encyclopedic museum defends itself on grounds of access: objects gathered from everywhere, placed side by side, let a visitor see the Benin bronzes and the Parthenon marbles in an afternoon and grasp connections no single national collection could stage. Dispersal in the name of return, on this argument, buys justice at the price of understanding, and the loser is the ordinary visitor who will never travel to see the pieces where they were made.</p><p><strong>Text 2</strong></p><p>The access argument quietly assumes that the audience worth counting is the one already near the museum. Some seventy percent of the world's population has never been within reach of a London or Berlin gallery, and for communities whose works were taken, access has meant applying for a visa to visit their own inheritance. Digital surrogates now stage the comparisons the encyclopedic museum claims as its unique service — and stage them for everyone, not for those who can reach Bloomsbury.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely argue that the \"ordinary visitor\" invoked in Text 1 is",
+  "choices": [
+   {"label": "A", "content": "a figure defined narrowly enough that the argument counts only audiences already close to the collection", "isCorrect": true},
+   {"label": "B", "content": "less interested in comparative display than curators in encyclopedic museums assume", "isCorrect": false},
+   {"label": "C", "content": "unlikely to notice whether an object on display is original or a reproduction", "isCorrect": false},
+   {"label": "D", "content": "better served by national collections that present a single culture in depth", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's opening sentence is aimed exactly at that figure: the access argument \"assumes that the audience worth counting is the one already near the museum.\" The statistics that follow spell out the exclusion — most of the world is nowhere near London or Berlin, and source communities need a visa to see their own inheritance. So the ordinary visitor is not wrong to want access; the category has simply been drawn around the people who already have it.",
+  "whyWrong": {
+   "B": "Text 2 does not doubt that comparison is valuable — it argues digital surrogates can deliver it more widely. Its complaint is about who gets to compare, not whether anyone wants to.",
+   "C": "Whether visitors can tell an original from a surrogate is never raised. Text 2 invokes digital display as a matter of reach, not of authenticity.",
+   "D": "Text 2 recommends neither national collections nor depth over breadth. That would concede Text 1's framing that someone must lose the comparison."
+  },
+  "commonMistakes": "Reading Text 2 as anti-museum generally, then choosing whichever option sounds most critical, rather than tracking the specific term it disputes.",
+  "tips": "When a question quotes a phrase from Text 1, find where Text 2 touches that exact phrase — the answer is almost always anchored there rather than in the text's general mood."
+ },
+ {
+  "ref": "ct-fourday",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>In the largest trial of its kind, sixty-one British companies moved staff to four days a week at full pay for six months. Output held steady or rose at nearly every firm, sick days fell by two thirds, and fifty-six of the sixty-one kept the schedule when the trial ended. The result is now routinely cited as evidence that the fifth day was never producing much.</p><p><strong>Text 2</strong></p><p>Firms volunteered for the trial, and the ones that volunteer are the ones whose managers already suspect the week is padded — mostly small offices doing project work that can be compressed. Nobody enrolled a hospital ward or a bus depot, where the fifth day is not slack to be squeezed out but a shift somebody has to cover. What the trial measured well, it measured only for the workplaces that put themselves forward.</p>",
+  "stem": "Which choice best states the main criticism Text 2 makes of the trial described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "Its results came from firms that selected themselves, so they may not extend to workplaces of other kinds", "isCorrect": true},
+   {"label": "B", "content": "Its six-month duration was too short for reduced hours to affect output", "isCorrect": false},
+   {"label": "C", "content": "Its measures of output were less reliable than its measures of sick leave", "isCorrect": false},
+   {"label": "D", "content": "Its participating firms reduced pay along with hours, which explains the savings", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 grants the findings and questions their reach. \"Firms volunteered,\" and the volunteers are those whose managers already suspected slack — small project offices where work compresses. No ward, no bus depot, where the fifth day is a shift rather than slack. The closing sentence states the limit outright: what the trial measured, it measured only for the workplaces that put themselves forward.",
+  "whyWrong": {
+   "B": "Text 2 never calls the trial too short, and it does not dispute that output held up. Its concern is which firms were in the sample, not how long they were watched.",
+   "C": "No comparison of measurement quality appears. Text 2 treats the trial as having measured well within its sample.",
+   "D": "Text 1 states the schedule was at full pay, and Text 2 does not contradict that."
+  },
+  "commonMistakes": "Confusing a selection-bias objection with a claim that the study was badly run. Text 2 says the opposite — it was run well, on an unrepresentative set of firms.",
+  "tips": "\"Who volunteered?\" is one of the standard weaknesses the SAT expects you to spot in a study; look for it whenever participation was optional."
+ },
+ {
+  "ref": "ct-wolves",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>After wolves returned to Yellowstone in 1995, elk stopped lingering in open valleys where they could be caught, willow and aspen recovered along the streams they had been browsing flat, and beaver colonies climbed from one to a dozen. The sequence has become the textbook illustration of a trophic cascade: restore the predator and the vegetation, the rivers and the smaller animals follow.</p><p><strong>Text 2</strong></p><p>The willows recovered in some drainages and not others, and the ones that recovered were mostly those where beaver dams had raised the water table. Elk numbers were falling in those years for reasons that included drought, a growing bear population, and a sharp rise in hunting permits outside the park. Ecologist Elaine Brice and colleagues find the cascade real but partial — one push among several, in places where the water allowed it.</p>",
+  "stem": "Based on the texts, Brice and colleagues (Text 2) would most likely describe the account in Text 1 as",
+  "choices": [
+   {"label": "A", "content": "correct in outline but overstated, since other causes and local conditions shaped where the change occurred", "isCorrect": true},
+   {"label": "B", "content": "mistaken, because willow and aspen did not in fact recover anywhere in the park", "isCorrect": false},
+   {"label": "C", "content": "premature, because the changes it describes have not yet been observed outside Yellowstone", "isCorrect": false},
+   {"label": "D", "content": "incomplete, because it fails to mention that beaver colonies declined after the initial recovery", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's own summary is the answer: the cascade is \"real but partial — one push among several.\" Both qualifications are supported in the paragraph. Other causes worked on the elk at the same time (drought, bears, hunting permits), and the effect was uneven across the landscape, appearing where beaver dams had already lifted the water table. That is Text 1's story, kept but demoted from sole cause to contributing one.",
+  "whyWrong": {
+   "B": "Text 2 explicitly says willows recovered in some drainages. Denying recovery outright goes further than the text and contradicts it.",
+   "C": "Text 2 raises no question of whether the pattern appears elsewhere. Its evidence is entirely from within the park.",
+   "D": "No later decline in beaver colonies is mentioned in either text. Text 1 reports the rise and Text 2 treats the dams as part of the explanation."
+  },
+  "commonMistakes": "Sliding from \"partial\" to \"wrong.\" A text that adds causes is usually qualifying a claim, not rejecting it.",
+  "tips": "When Text 2 states its own verdict in a phrase — here \"real but partial\" — the correct choice is generally a paraphrase of that phrase."
+ },
+ {
+  "ref": "ct-handwriting",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>Students who take lecture notes by hand outperform laptop users on questions about concepts, even though laptop users record far more words. Psychologists Pam Mueller and Daniel Oppenheimer attribute the gap to the slowness of writing: unable to keep up, the hand-writer must decide what matters and put it in their own words, and that decision is itself a first pass of learning.</p><p><strong>Text 2</strong></p><p>If slowness is what helps, then the tool is beside the point. In later work, laptop users simply instructed not to transcribe verbatim scored as well as writers did, and hand-writers who copied the slides word for word scored no better than typists. What the pen supplies is friction, and friction can be supplied by an instruction.</p>",
+  "stem": "Based on the texts, how does Text 2 refine the explanation offered in Text 1?",
+  "choices": [
+   {"label": "A", "content": "By showing that the benefit follows from how notes are taken rather than from the instrument used", "isCorrect": true},
+   {"label": "B", "content": "By showing that laptop users recall concepts better when they record more words", "isCorrect": false},
+   {"label": "C", "content": "By showing that the advantage for hand-writers disappears when tests are given immediately", "isCorrect": false},
+   {"label": "D", "content": "By showing that students prefer typing even when they know handwriting helps", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1 credits the pen but locates the mechanism in slowness, which forces selection and rewording. Text 2 takes that mechanism seriously and tests it separately from the tool. Laptop users told not to transcribe matched the writers; hand-writers who copied verbatim lost the advantage. The benefit travels with the behavior, so as Text 2 puts it, friction \"can be supplied by an instruction.\"",
+  "whyWrong": {
+   "B": "Text 2 reports the reverse. Verbatim recording is the habit associated with the poorer scores, whether it happens on a keyboard or on paper.",
+   "C": "Neither text mentions the timing of the test. The comparison in Text 2 is between transcribing and summarizing.",
+   "D": "Student preference never comes up. Text 2 is concerned with what produces the effect, not with what students would choose."
+  },
+  "tips": "When Text 1 names a mechanism, ask whether Text 2 keeps the mechanism and drops the assumed cause — that is refinement, and it is different from disagreement."
+ },
+ {
+  "ref": "ct-translation",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Machine translation now covers more than two hundred languages, many of them with few speakers online, and the systems reach that coverage by training one model on all of them at once. Languages with almost no parallel text borrow structure from their better-resourced relatives, so a model that has read a great deal of Swahili can translate Luganda it has barely seen.</p><p><strong>Text 2</strong></p><p>Borrowing runs in one direction. Reviewers of the output for several low-resource languages found fluent sentences carrying the idiom of the larger relative, and errors that a speaker described as text \"in our words but not in our language.\" A metric that scores overlap with a reference sentence rewards exactly that fluency, which is why the systems' own numbers did not fall.</p>",
+  "stem": "Based on the texts, the flaw identified in Text 2 is best described as one in which",
+  "choices": [
+   {"label": "A", "content": "the borrowing that produces coverage also imports the source language's idiom, and the usual scoring hides it", "isCorrect": true},
+   {"label": "B", "content": "the systems refuse to produce output for languages with very little training data", "isCorrect": false},
+   {"label": "C", "content": "adding more languages to a single model reduces its accuracy on well-resourced languages", "isCorrect": false},
+   {"label": "D", "content": "reviewers disagreed with one another about which translations were acceptable", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 1 presents the transfer between related languages as the mechanism that makes wide coverage possible. Text 2 shows the same mechanism carries a cost — output arrives in the idiom of the larger relative, \"in our words but not in our language.\" The second half explains why this stayed invisible: an overlap-based metric rewards fluency, so the scores held up while the output drifted.",
+  "whyWrong": {
+   "B": "The systems do produce output; that output is the problem. Refusal is not described in either text.",
+   "C": "Neither text reports harm to well-resourced languages. The damage described falls on the low-resource side.",
+   "D": "Text 2 reports agreement, not dispute — reviewers found the same pattern, and a speaker's phrase is quoted to characterize it."
+  },
+  "commonMistakes": "Missing that the metric is part of the flaw. Text 2's last sentence explains why the numbers stayed healthy while the quality did not.",
+  "tips": "If Text 2 mentions how something is measured, that measurement is usually load-bearing in its argument, not background detail."
+ },
+ {
+  "ref": "ct-canopy",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Cities are several degrees hotter than the countryside around them, and the cheapest correction is shade. A mature street tree cools the air beneath it by transpiration as well as by blocking sun, and citywide canopy targets — thirty percent cover is the usual figure — have been adopted from Melbourne to Barcelona on the strength of that arithmetic.</p><p><strong>Text 2</strong></p><p>Canopy is counted as a citywide percentage, and a citywide percentage can be met entirely in the districts that already have trees. In most cities the hottest blocks are also the poorest, with the narrowest verges, the least soil, and the fewest places a tree can be put. A target that says nothing about where the canopy goes will be met most cheaply exactly where it does least good.</p>",
+  "stem": "Which choice best describes the function of the last sentence of Text 2 in relation to Text 1?",
+  "choices": [
+   {"label": "A", "content": "It identifies a weakness in how the goal from Text 1 is specified, rather than in the cooling effect Text 1 describes", "isCorrect": true},
+   {"label": "B", "content": "It denies that street trees lower air temperature as much as Text 1 claims", "isCorrect": false},
+   {"label": "C", "content": "It proposes a higher canopy percentage than the target named in Text 1", "isCorrect": false},
+   {"label": "D", "content": "It argues that the cities named in Text 1 have already reached their targets", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 leaves the physics of shade and transpiration untouched. Its objection is to the shape of the target: expressed as one citywide percentage, it can be satisfied in districts that are already leafy, while the hottest and poorest blocks have the least room to plant. The final sentence names that defect — a target silent about location \"will be met most cheaply exactly where it does least good.\" The flaw is in the specification, not the science.",
+  "whyWrong": {
+   "B": "Cooling is never disputed. Text 2's complaint depends on trees working, which is why placing them in the wrong districts wastes the benefit.",
+   "C": "No alternative number is offered. Raising the percentage would not fix a target that says nothing about where the trees go.",
+   "D": "Whether any city has met its target is not discussed in either text."
+  },
+  "commonMistakes": "Reading any critical second text as a denial of the first text's science, when the dispute is often about policy design.",
+  "tips": "For a function question, state what the sentence does before looking at the options — then reject any choice describing a move the sentence never makes."
+ },
+ {
+  "ref": "ct-sourdough",
+  "difficulty": "EASY",
+  "passage": "<p><strong>Text 1</strong></p><p>Bakers speak of a sourdough starter as a local creature, its flavor drawn from the wild yeasts of the place where it is kept. The lore is old and specific: a San Francisco loaf is supposed to taste of San Francisco, and a starter carried elsewhere is supposed to change.</p><p><strong>Text 2</strong></p><p>A survey of five hundred starters from four continents by Elizabeth Landis and colleagues found that geography predicted almost nothing about which microbes a starter held. What did predict it was the flour the baker fed it and the temperature of the kitchen. Two starters from the same street differed more than a Belgian one and an Australian one kept on the same schedule.</p>",
+  "stem": "Based on the texts, the findings in Text 2 most directly challenge which assumption behind the lore described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "That the microbes in a starter are drawn from, and therefore reflect, the place it is kept", "isCorrect": true},
+   {"label": "B", "content": "That a starter can be kept alive for many years with regular feeding", "isCorrect": false},
+   {"label": "C", "content": "That bakers can detect differences in flavor between one loaf and another", "isCorrect": false},
+   {"label": "D", "content": "That sourdough fermentation depends on yeasts rather than on bacteria", "isCorrect": false}
+  ],
+  "whyCorrect": "The lore in Text 1 rests on place: local wild yeasts make a local flavor, so a relocated starter should change. Text 2 tests exactly that and finds geography predicts \"almost nothing,\" while flour and kitchen temperature predict a great deal. The closing comparison seals it — two starters from one street diverged more than starters from Belgium and Australia kept the same way.",
+  "whyWrong": {
+   "B": "Longevity is not at issue. Text 2 assumes starters are maintained by feeding; that is part of its explanation, not a target of it.",
+   "C": "Text 2 measures which microbes are present, not whether bakers can taste differences. It never questions bakers' palates.",
+   "D": "Neither text separates yeasts from bacteria as the agent of fermentation. Text 2 refers to microbes without taking that position."
+  },
+  "tips": "Locate the single assumption the second text was designed to test — here, that place determines the culture — and the wrong answers fall away as topics nobody raised."
+ },
+ {
+  "ref": "ct-adaptive",
+  "difficulty": "HARD",
+  "passage": "<p><strong>Text 1</strong></p><p>Adaptive optics has largely closed the gap that once justified putting telescopes in orbit. A deformable mirror, bent hundreds of times a second against a laser guide star, cancels the blurring of the atmosphere, and the largest ground-based instruments now resolve detail finer than the Hubble Space Telescope at a small fraction of the cost.</p><p><strong>Text 2</strong></p><p>The correction is bought in one color at a time. Atmospheric distortion scales with wavelength, so a mirror tuned for the infrared does comparatively little in the visible and nothing at all in the ultraviolet, which the air absorbs before it reaches the mirror. The comparison with a space telescope holds precisely where the atmosphere was least of an obstacle to begin with.</p>",
+  "stem": "Based on the texts, the author of Text 2 would most likely say that the comparison drawn in Text 1 is",
+  "choices": [
+   {"label": "A", "content": "valid only over a limited range of wavelengths, and least applicable where the atmosphere interferes most", "isCorrect": true},
+   {"label": "B", "content": "invalid, because deformable mirrors cannot in practice be adjusted quickly enough", "isCorrect": false},
+   {"label": "C", "content": "sound, but relevant only for telescopes above a certain aperture", "isCorrect": false},
+   {"label": "D", "content": "misleading, because the cost of building and operating ground-based instruments has been understated", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2 accepts that the correction works and specifies where. Because distortion scales with wavelength, a mirror tuned to the infrared does less in the visible and nothing in the ultraviolet, which the atmosphere absorbs outright. Its final sentence states the consequence directly: the favorable comparison holds \"precisely where the atmosphere was least of an obstacle to begin with\" — so the claim survives, but only within a band, and not where a space telescope's advantage is greatest.",
+  "whyWrong": {
+   "B": "Text 2 does not question the speed of the mirrors. It grants the correction works and limits the range over which it works.",
+   "C": "Aperture is never mentioned. The limiting variable in Text 2 is wavelength.",
+   "D": "Text 2 raises no objection to Text 1's cost claim. Cost is left standing; reach is what it narrows."
+  },
+  "commonMistakes": "Choosing a flat rejection when the text has drawn a boundary. \"Only in this range\" is a limit, not a refutation.",
+  "tips": "Watch for a physical variable — here wavelength — that the second text introduces to carve the first text's claim into a region where it holds and a region where it does not."
+ },
+ {
+  "ref": "ct-library",
+  "difficulty": "MEDIUM",
+  "passage": "<p><strong>Text 1</strong></p><p>Circulation figures have fallen for two decades, and councils weighing branch closures reasonably ask what a building full of lightly borrowed books is for. Where a service can be delivered online at a fraction of the cost, keeping the premises open looks like sentiment about a Victorian idea of self-improvement rather than a use of public money.</p><p><strong>Text 2</strong></p><p>Sociologist Eric Klinenberg's study of a Chicago heat wave found that neighborhoods with libraries, cafés, and busy sidewalks lost far fewer residents than demographically identical neighborhoods without them, because people who had somewhere to go were known and checked on. A branch is measured by loans because loans are what a branch counts, and what it counts is not what it chiefly does.</p>",
+  "stem": "Based on the texts, how would Klinenberg (Text 2) most likely respond to the reasoning described in Text 1?",
+  "choices": [
+   {"label": "A", "content": "By arguing that the chosen measure captures only part of what the building provides", "isCorrect": true},
+   {"label": "B", "content": "By showing that circulation figures have risen again in cities with newer branches", "isCorrect": false},
+   {"label": "C", "content": "By conceding that online delivery makes physical branches unnecessary in most neighborhoods", "isCorrect": false},
+   {"label": "D", "content": "By arguing that closures should be decided by residents rather than by councils", "isCorrect": false}
+  ],
+  "whyCorrect": "Text 2's closing sentence is the response in miniature: a branch \"is measured by loans because loans are what a branch counts, and what it counts is not what it chiefly does.\" The heat-wave evidence shows the uncounted function — neighborhoods with such places lost far fewer residents, because people with somewhere to go were known and checked on. The reasoning in Text 1 is not called false; it is called partial, because the metric it relies on misses the main service.",
+  "whyWrong": {
+   "B": "Text 2 never disputes the circulation trend. Its argument works even if loans keep falling.",
+   "C": "This concedes what Text 2 is arguing against. The heat-wave finding is about a physical place doing something no online service can.",
+   "D": "Who should decide is not Text 2's subject. It addresses what the decision leaves out of account."
+  },
+  "commonMistakes": "Expecting the second text to contest the first text's numbers. Here it accepts them and attacks their sufficiency.",
+  "tips": "When Text 1 rests on a single statistic, check whether Text 2 attacks the statistic or attacks its completeness — they lead to different answers."
+ }
+]
