@@ -107,5 +107,78 @@
   "correctKey": "B",
   "expect": "no effect of sex on the uptake of oxygen-18",
   "reasoning": "The researchers read a difference in oxygen-18 between a female's septum (F07) and a male's (M28) as a difference in the depth at which each formed. That reading only holds if sex itself does not change how oxygen-18 is absorbed and laid down in septa; otherwise the gap could come from the animals' sex rather than from the water. Option B removes exactly that alternative explanation. The stored key establishes only that nautilids live below 50 meters, which does not distinguish 135 meters from 365 meters and so does nothing to license the comparison actually drawn."
+ },
+ {
+  "id": "71a15330",
+  "where": "Test 4 R&W M2 Hard q12",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "C",
+  "expect": "insights that other types of genomic data cannot",
+  "reasoning": "The text says hDNA \"offers unique benefits, such as the ability to ascertain the biogeographical origins of organisms\" — \"unique\" means those benefits belong to hDNA and not to other data sources, which is precisely the claim that it may yield insights other genomic data cannot. The same sentence gives the actual reason it is underutilized: hDNA is often degraded and current methods cannot easily fix that. The stored key substitutes \"controversial status among scientists,\" which the text never mentions."
+ },
+ {
+  "id": "51734627",
+  "where": "Test 4 R&W M2 Easy q16",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "B",
+  "expect": "studies",
+  "reasoning": "Cross out the phrase set off by commas, \"of the Universidade Federal Fluminense in Brazil,\" and the subject is the singular \"Anthropologist Lívia Barbosa.\" A singular subject in the present tense takes \"studies\"; \"have studied,\" \"study,\" and \"are studying\" are all plural forms and none agrees with one person."
+ },
+ {
+  "id": "6fbe00f0",
+  "where": "Test 4 R&W M2 Hard q16",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "transparent. Allowing",
+  "reasoning": "What follows the blank — \"only some light to pass through, hauyne is instead classified as translucent\" — needs \"Allowing\" in front of it to form an opening participial modifier attached to hauyne. That forces the kainite statement to close at \"transparent\" with a period, giving two complete sentences. The stored key runs \"transparent allowing\" together with no punctuation at all, and the comma version would attach \"allowing only some light\" to kainite, contradicting the sentence's own claim that all light passes through kainite."
+ },
+ {
+  "id": "ef4fcb22",
+  "where": "Test 4 R&W M2 Easy q17",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "A",
+  "expect": "reaches",
+  "reasoning": "The blank sits in a relative clause introduced by \"which,\" and a relative clause needs a finite verb. \"Which\" refers to the single Guadalupe Peak, so the present-tense form is \"reaches.\" The main clause \"one can find the highest point in Texas\" already has its own subject and verb, so the infinitive \"to reach\" leaves the \"which\" clause without one."
+ },
+ {
+  "id": "26cb5748",
+  "where": "Test 4 R&W M2 Easy q18",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "dendrochronologist",
+  "expectFull": "dendrochronologist (no punctuation)",
+  "reasoning": "Read the interrupting clause on its own: \"claims dendrochronologist Valerie Trouet.\" Here \"dendrochronologist\" is a title working as part of the name that follows it, exactly like \"claims scientist Valerie Trouet,\" and no punctuation ever separates that kind of title from the name. A colon, comma, or dash after it would sever the title from the person it identifies and interrupt the verb-plus-subject inversion \"claims Valerie Trouet.\""
+ },
+ {
+  "id": "2b1a91c0",
+  "where": "Test 4 R&W M2 Hard q18",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "A",
+  "expect": "functions:",
+  "reasoning": "Both halves stand alone: \"The relationship ... reveals how cells with identical DNA develop different functions\" is a complete sentence, and \"whereas the genome in each cell contains a complete DNA sequence, the epigenome consists of chemical compounds ...\" is another, with \"the epigenome consists\" as its main clause. Joining them with only a comma is a comma splice. The second half explains the general statement in the first — how identical DNA yields different functions — and a colon after a complete clause is exactly the mark that introduces that explanation."
+ },
+ {
+  "id": "bdc274f0",
+  "where": "Test 4 R&W M2 Hard q25",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "D",
+  "expect": "providing water treatment to its residents",
+  "reasoning": "The goal is to give an example of a public service Metztitlán is responsible for, so the sentence has to name a specific service. Only option D does: water treatment, taken from the note that names it as a service municipalities provide, and tied to Metztitlán through \"As a municipality.\" The stored key says Metztitlán is one of 84 municipalities providing public services but never names one, so it fails the stated goal."
+ },
+ {
+  "id": "c56984a2",
+  "where": "Test 4 R&W M2 Hard q26",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "D",
+  "expect": "quartz is harder than talc",
+  "reasoning": "The goal names the two minerals to be compared, talc and quartz. Option D puts both in one sentence and states the comparison directly — quartz scratches talc, so quartz is harder — which follows from the notes, since quartz is a 7 and talc a 1 and higher numbers scratch lower ones. The stored key compares fluorite with talc and never mentions quartz, so it compares the wrong pair."
  }
 ]

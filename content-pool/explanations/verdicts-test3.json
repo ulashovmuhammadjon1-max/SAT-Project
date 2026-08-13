@@ -133,5 +133,86 @@
   "correctKey": "C",
   "expect": "belonging to her earlier style, to which she never returned",
   "reasoning": "The claim is that Harbor Number 1 marks a significant change in Martin's development, so the supporting quotation has to establish a before and an after. Choice C does exactly that: the works preceding the painting belong to an earlier style she never went back to, which makes Harbor Number 1 the dividing line. Choice B calls Martin ahead of her time and cites the painting as evidence, but says nothing about her work changing at that point."
+ },
+ {
+  "id": "dbf6e363",
+  "where": "Test 3 R&W M2 Hard q14",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "A",
+  "expect": "significantly less financial outlay",
+  "reasoning": "The text links CLSA-ÉLCV's need for \"extensive financial support\" directly to sampling the population over many years, and it says that method earns its cost by revealing causal relationships. The fitness study asks only for a percentage and raises no question of causation, so the text concludes that longitudinal methods are unnecessary for it — and with them, the expense they require. The \"and so\" therefore completes with the cost consequence in choice A. Choice C draws no new conclusion at all: it merely restates the premise that longitudinal methods are unnecessary here, and it overstates it into a claim that such methods \"ought to be avoided\" for fitness studies, which the text never says."
+ },
+ {
+  "id": "ef552c32",
+  "where": "Test 3 R&W M2 Hard q15",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "D",
+  "expect": "insufficiently familiar with Joyce",
+  "reasoning": "Follow the setup: the edition's errors came from a technical editorial choice, catching them required both Joyce expertise and command of the relevant editorial theories, few scholars had both, and most who did had worked on the edition and so could not review it independently. The reviewers who remained were missing one half of that expertise, which is why the flaws went unnoticed and the early reviews were favorable — choice D. Choice C concludes the reviews were negative on the grounds that reviewers would have spotted the facsimile problem, but the text has just explained that the scholars capable of spotting it were unavailable, and the errors were \"later found,\" not caught at review time."
+ },
+ {
+  "id": "9f3b1f5f",
+  "where": "Test 3 R&W M2 Easy q16",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "C",
+  "expect": "struggle",
+  "reasoning": "Match the verb to the tense the rest of the passage establishes: the two languages \"have a clear difference\" and both \"require highly technical knowledge,\" all simple present. The sentence describes an ongoing general condition, not a completed past event, so the blank takes the simple present \"struggle.\" The past perfect \"had struggled\" would need an earlier past reference point, and nothing in the passage supplies one. (Note for the applying script: choice C is the bare word \"struggle\", which is a substring of choices A, B and D as well, so match it by label or by exact equality rather than by substring alone.)"
+ },
+ {
+  "id": "2075e61b",
+  "where": "Test 3 R&W M2 Easy q18",
+  "verdict": "KEY_WRONG",
+  "storedKey": "C",
+  "correctKey": "B",
+  "expect": "chemist Ahmed Zewail expanded",
+  "reasoning": "The sentence opens with the modifying phrase \"A recipient of the King Faisal International Prize and the Othmer Gold Medal,\" which must attach to the noun that immediately follows it. Only a person can be a prize recipient, so Ahmed Zewail has to be the subject, and choice B puts him there. Choice C makes \"the introduction of a new scientific discipline\" the subject, which leaves the opening phrase describing an introduction rather than a person — a dangling modifier."
+ },
+ {
+  "id": "6fb1105a",
+  "where": "Test 3 R&W M2 Easy q19",
+  "verdict": "KEY_WRONG",
+  "storedKey": "B",
+  "correctKey": "D",
+  "expect": "coalition—",
+  "reasoning": "\"Including Dark Mane, Golden Mane, and Scar-Nose\" is a nonessential insertion interrupting \"the lions of the Majingilane coalition ... thrived,\" and the sentence already supplies a closing dash before \"thrived.\" Punctuation that brackets an interruption has to match at both ends, so the opening mark must also be a dash. A comma at the opening leaves the pair mismatched."
+ },
+ {
+  "id": "1aef018c",
+  "where": "Test 3 R&W M2 Hard q22",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "B",
+  "expect": "To that end",
+  "reasoning": "The first sentence gives Nazareth's belief that Elvis's music is best understood as an anthology; the second reports what he did in service of that belief — he built a course around Elvis's many musical influences and named it \"Elvis as Anthology.\" The transition has to signal an action taken toward the aim just stated, which is \"To that end.\" \"In addition\" would treat the course title as a separate, unrelated fact about Nazareth, ignoring that the title is the belief restated as a course name."
+ },
+ {
+  "id": "659db3ba",
+  "where": "Test 3 R&W M2 Hard q23",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "D",
+  "expect": "Finally",
+  "reasoning": "The passage walks through a dig in order: permissions are granted, the surveyor makes a grid, \"Then\" the site is dug and finds are recorded, and now the artifacts are removed, cataloged, and analyzed in a lab. The blank marks the last stage in that sequence, so it needs \"Finally.\" \"For instance\" would make lab analysis an example of the recording step rather than the step that comes after it."
+ },
+ {
+  "id": "9887e37e",
+  "where": "Test 3 R&W M2 Easy q26",
+  "verdict": "KEY_WRONG",
+  "storedKey": "A",
+  "correctKey": "B",
+  "expect": "Topaz can leave visible scratches on calcite",
+  "reasoning": "The goal names two specific minerals, calcite and topaz, so the sentence has to compare that pair. Topaz is 8 and calcite is 3, and the notes say a higher-numbered mineral is harder and can leave visible scratches on a lower-numbered one, which is exactly what choice B states. Choice A compares orthoclase with calcite — the right kind of comparison for the wrong pair, since topaz never appears in it."
+ },
+ {
+  "id": "66a9ac9d",
+  "where": "Test 3 R&W M2 Hard q27",
+  "verdict": "KEY_WRONG",
+  "storedKey": "D",
+  "correctKey": "B",
+  "expect": "causing the poetry collection to enter the public domain",
+  "reasoning": "The question asks why New Hampshire entered the public domain, so the sentence must give the cause. The notes supply the chain: a book enters the public domain when its copyright expires, and New Hampshire entered on January 1, 2019. Choice B names the expiration as the cause and links it to the result with \"causing.\" Choice D describes what became possible after the book entered the public domain, which is a consequence of the event rather than an explanation of it."
  }
 ]

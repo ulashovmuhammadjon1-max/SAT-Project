@@ -80,6 +80,38 @@ const REWRITES = [
       tips: "If the words after the blank rename the noun before it, you are looking at an appositive, and the question is only about how to fence it off.",
     },
   },
+  {
+    id: "99a4e8fc",
+    where: "Test 23 R&W M1 q17 — answer shown earlier in the same module",
+    // q6's passage, eleven questions earlier in this same module, prints
+    // "Weed cutting takes off what has grown in the water this season; dredging
+    // takes out what has settled on the bed over many" — the exact sentence
+    // this item asks the student to punctuate, semicolon included. Moved onto a
+    // different pair of clauses in the same setting. The colon stays wrong for
+    // the same reason as before: the second clause is the next step in the
+    // process, not an explanation of the first.
+    expectOld: "Weed cutting removes what has grown in the water this",
+    passage:
+      "The two operations are not the same and are not costed the same way. A gauging station records what a boat is _____ toll clerk works out what that cargo owes.",
+    choices: [
+      { label: "A", content: "carrying the", isCorrect: false },
+      { label: "B", content: "carrying: the", isCorrect: false },
+      { label: "C", content: "carrying; the", isCorrect: true },
+      { label: "D", content: "carrying, the", isCorrect: false },
+    ],
+    explanation: {
+      whyCorrect:
+        "Both sides of the blank stand alone as sentences: <em>a gauging station records what a boat is carrying</em> has its own subject and verb, and so does <em>the toll clerk works out what that cargo owes</em>. Two complete sentences that belong together in one sentence need a semicolon.",
+      whyWrong: {
+        A: "With nothing between them the two sentences run together, which is the error the question is testing.",
+        B: "A colon does follow a complete sentence, but what comes after it has to explain or spell out what came before. Working out the toll is the next step after gauging the boat, not an explanation of it.",
+        D: "A comma cannot join two complete sentences on its own. This is a comma splice.",
+      },
+      commonMistakes:
+        "Choosing the comma because the two actions happen in sequence and feel like one thought. Closeness of meaning never licenses a comma between two complete sentences.",
+      tips: "Cover the blank and read each side as its own sentence. If both work, the comma is out and you are choosing between the semicolon and the colon — and the colon needs the second half to explain the first.",
+    },
+  },
 ];
 
 let bad = 0;
