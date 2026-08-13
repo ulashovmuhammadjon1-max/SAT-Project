@@ -190,15 +190,20 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
 
   // Community requirements. An attestation, not a verification — see
   // lib/community.ts for why that is the honest implementation.
-  const reqCheck = await checkRequirements(input.acknowledgedRequirements ?? []);
+  const reqCheck = await checkRequirements(input.acknowledgedRequirements ?? [], user.id);
   if (!reqCheck.ok) {
     return {
       ok: false,
       reason: "requirements",
       error:
-        reqCheck.missing.length === 1
-          ? `Please confirm: ${reqCheck.missing[0].label}.`
-          : "Please confirm both community steps before booking.",
+        reqCheck.missing.some((m) => m.verification === "verified")
+          ? `We couldn't confirm you in ${reqCheck.missing
+              .filter((m) => m.verification === "verified")
+              .map((m) => m.handle)
+              .join(" and ")}. Join, then press Re-check.`
+          : reqCheck.missing.length === 1
+            ? `Please confirm: ${reqCheck.missing[0].label}.`
+            : "Please confirm both community steps before booking.",
     };
   }
 

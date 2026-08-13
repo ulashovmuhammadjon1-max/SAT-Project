@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/student/booking-form";
 import { LocalTime } from "@/components/shared/local-time";
 import { ACTIVE_STATUSES } from "@/lib/booking/status";
+import { getBotUsername } from "@/lib/telegram";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { getBookingContext, getOpenSlots } from "@/server/actions/student/bookings";
@@ -26,7 +27,7 @@ const COVERED = [
 export default async function BookingPage() {
   const user = await requireUser();
 
-  const [profile, slots, bookingContext, existing] = await Promise.all([
+  const [profile, slots, bookingContext, existing, botUsername] = await Promise.all([
     prisma.user.findUnique({
       where: { id: user.id },
       select: {
@@ -36,6 +37,9 @@ export default async function BookingPage() {
         targetScore: true,
         satDate: true,
         weakestArea: true,
+        telegramUserId: true,
+        telegramUsername: true,
+        telegramIsMember: true,
       },
     }),
     getOpenSlots(),
@@ -44,6 +48,9 @@ export default async function BookingPage() {
       where: { userId: user.id, status: { in: ACTIVE_STATUSES } },
       include: { slot: true },
     }),
+    // Null unless a bot token is configured, which is what makes the widget
+    // opt-in: without it the requirement falls back to the tick box.
+    getBotUsername(),
   ]);
 
   if (existing) {
@@ -93,6 +100,18 @@ export default async function BookingPage() {
 
       <BookingForm
         slots={slots}
+        telegram={
+          botUsername
+            ? {
+                botUsername,
+                state: {
+                  linked: Boolean(profile?.telegramUserId),
+                  isMember: Boolean(profile?.telegramIsMember),
+                  username: profile?.telegramUsername ?? null,
+                },
+              }
+            : null
+        }
         prefill={{
           name: profile?.name ?? "",
           email: profile?.email ?? "",

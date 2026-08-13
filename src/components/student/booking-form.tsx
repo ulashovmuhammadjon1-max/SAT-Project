@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CoinAmount } from "@/components/student/coin-badge";
 import { LocalTime, useLocalTimezone } from "@/components/shared/local-time";
+import { TelegramRequirement, type TelegramState } from "@/components/student/telegram-requirement";
 import { cn } from "@/lib/utils";
 import {
   createBooking,
@@ -48,10 +49,13 @@ export function BookingForm({
   slots,
   prefill,
   context,
+  telegram,
 }: {
   slots: OpenSlot[];
   prefill: BookingPrefill;
   context: BookingContext;
+  /** Null when no bot token is configured — the checkbox fallback then applies. */
+  telegram: { botUsername: string; state: TelegramState } | null;
 }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -59,7 +63,12 @@ export function BookingForm({
   // Which community requirements the student has confirmed. Server-checked
   // again on submit — this only drives the button state.
   const [acked, setAcked] = useState<Set<string>>(new Set());
-  const allAcked = context.requirements.every((r) => acked.has(r.id));
+  // A verified requirement is not something the student can tick. It is
+  // satisfied by the real check or not at all, so it is excluded here and
+  // enforced server-side in checkRequirements().
+  const allAcked = context.requirements
+    .filter((r) => r.verification !== "verified")
+    .every((r) => acked.has(r.id));
 
   const [slotId, setSlotId] = useState<string | null>(null);
   const [name, setName] = useState(prefill.name);
@@ -166,9 +175,9 @@ export function BookingForm({
 
   return (
     <form onSubmit={submit} className="space-y-6">
-      {/* Requirements. Deliberately worded as a confirmation, not a check —
-          neither Instagram nor Telegram can be verified server-side for an
-          arbitrary user, and claiming otherwise would be a lie in the UI. */}
+      {/* Instagram is a confirmation and says so — the Graph API cannot answer
+          "does user X follow account Y". Telegram is a real check when a bot
+          token is configured, and renders its own widget instead of a tick. */}
       <section aria-labelledby="requirements">
         <h2 id="requirements" className="font-display text-lg font-semibold">
           1. Join the community
@@ -178,6 +187,18 @@ export function BookingForm({
         </p>
         <div className="mt-4 space-y-2">
           {context.requirements.map((r) => {
+            if (r.verification === "verified" && r.id === "telegram" && telegram) {
+              return (
+                <TelegramRequirement
+                  key={r.id}
+                  botUsername={telegram.botUsername}
+                  channelHandle={r.handle}
+                  channelHref={r.href}
+                  label={r.label}
+                  state={telegram.state}
+                />
+              );
+            }
             const checked = acked.has(r.id);
             return (
               <label

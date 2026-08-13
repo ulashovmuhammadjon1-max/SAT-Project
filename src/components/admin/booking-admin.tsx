@@ -43,6 +43,12 @@ export interface AdminSlotRow {
     weakestArea: string | null;
     notes: string | null;
     timezone: string | null;
+    telegram: {
+      linked: boolean;
+      username: string | null;
+      isMember: boolean;
+      checkedAt: string | null;
+    } | null;
   } | null;
 }
 
@@ -321,6 +327,7 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                         {s.booking!.email}
                       </a>
                     </p>
+                    {b!.telegram && <TelegramStatus t={b!.telegram} />}
                     <dl className="mt-2 grid gap-x-6 gap-y-1 text-xs sm:grid-cols-2">
                       <Detail label="Current score" value={s.booking!.currentScore} />
                       <Detail label="Target score" value={s.booking!.targetScore} />
@@ -431,6 +438,48 @@ function DecisionDialog({
           </div>
         </CardContent>
       </Card>
+    </div>
+  );
+}
+
+/**
+ * Whether this student is really in the Telegram channel.
+ *
+ * Shown from the cached result of the last real `getChatMember` call rather
+ * than from what they ticked at booking time — the tick is what could not be
+ * trusted. "Not connected" is its own state and is not the same as "not a
+ * member": it means the student never signed in through Telegram, so nothing
+ * has been checked either way.
+ */
+function TelegramStatus({
+  t,
+}: {
+  t: { linked: boolean; username: string | null; isMember: boolean; checkedAt: string | null };
+}) {
+  const tone = !t.linked
+    ? "border-border bg-secondary/40 text-muted-foreground"
+    : t.isMember
+      ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+      : "border-destructive/40 bg-destructive/10 text-destructive";
+  const text = !t.linked
+    ? "Telegram not connected — unverified"
+    : t.isMember
+      ? `In the Telegram channel${t.username ? ` (@${t.username})` : ""}`
+      : `NOT in the Telegram channel${t.username ? ` (@${t.username})` : ""}`;
+
+  return (
+    <div className={cn("mt-2 flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs", tone)}>
+      {t.linked && t.isMember ? (
+        <Check className="h-3.5 w-3.5 shrink-0" />
+      ) : (
+        <X className="h-3.5 w-3.5 shrink-0" />
+      )}
+      <span className="font-medium">{text}</span>
+      {t.checkedAt && (
+        <span className="ml-auto opacity-70">
+          checked <LocalTime iso={t.checkedAt} format="dateShort" />
+        </span>
+      )}
     </div>
   );
 }

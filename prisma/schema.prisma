@@ -108,12 +108,23 @@ model User {
   questionAttempts QuestionAttempt[]
   bookings         Booking[]
   /// Bookings this user (an admin) approved, rejected or cancelled.
-  bookingDecisions Booking[]           @relation("BookingDecider")
-  vocabProgress    VocabProgress[]
-  vocabSetProgress VocabDeckProgress[]
-  studyActivities  StudyActivity[]
-  chatThreads      ChatThread[]
-  auditLogs        AuditLog[]
+  bookingDecisions Booking[]         @relation("BookingDecider")
+
+  /// Telegram identity, set once the student signs in through the Login Widget.
+  /// Stored as a string rather than BigInt: ids can exceed 2^53 and this value
+  /// is only ever passed straight back to Telegram, never used in arithmetic.
+  telegramUserId    String?             @unique
+  telegramUsername  String?
+  telegramLinkedAt  DateTime?
+  /// Last known channel membership and when it was established. Cached because
+  /// the admin queue would otherwise call Telegram once per row on every render.
+  telegramIsMember  Boolean             @default(false)
+  telegramCheckedAt DateTime?
+  vocabProgress     VocabProgress[]
+  vocabSetProgress  VocabDeckProgress[]
+  studyActivities   StudyActivity[]
+  chatThreads       ChatThread[]
+  auditLogs         AuditLog[]
 
   coinTransactions    CoinTransaction[] @relation("CoinLedgerOwner")
   coinAdjustmentsMade CoinTransaction[] @relation("CoinLedgerActor")

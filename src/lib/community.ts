@@ -1,4 +1,6 @@
+import { prisma } from "@/lib/prisma";
 import { getSettings } from "@/lib/settings";
+import { telegramConfigured } from "@/lib/telegram";
 
 /**
  * Community follow/join requirements for booking a session.
@@ -14,13 +16,19 @@ import { getSettings } from "@/lib/settings";
  *     administers, but only for a Telegram user id — which we do not have
  *     unless the student authenticates through Telegram Login first.
  *
- * So the honest implementation is: ask, record that they confirmed, and
- * timestamp it. `requirementsAckAt` on the booking is the audit trail.
+ * **Telegram is now really verified** when `TELEGRAM_BOT_TOKEN` is configured:
+ * the student signs in through the Login Widget, which gives us their Telegram
+ * user id, and `getChatMember` answers whether that id is in the channel. See
+ * lib/telegram.ts. With no token configured it falls back to the attestation
+ * checkbox, so the site behaves exactly as it did before.
  *
- * The shape below is deliberately provider-ish so real verification can be
- * added later without touching the booking flow: a `verify` function per
- * requirement, defaulting to attestation. Telegram is the realistic first
- * candidate, via Telegram Login + `getChatMember`.
+ * Instagram stays attested and there is no path to changing that: the Graph API
+ * exposes aggregate follower counts for accounts you own and never "does user X
+ * follow account Y". A human still has to look.
+ *
+ * For attested requirements the honest implementation is: ask, record that they
+ * confirmed, and timestamp it. `requirementsAckAt` on the booking is the audit
+ * trail.
  */
 
 export type RequirementVerification = "attested" | "verified";
@@ -49,7 +57,7 @@ export async function getCommunityRequirements(): Promise<CommunityRequirement[]
       label: "Join the SATForge Telegram",
       handle: `@${settings.telegramHandle}`,
       href: `https://t.me/${settings.telegramHandle}`,
-      verification: "attested",
+      verification: telegramConfigured() ? "verified" : "attested",
     },
   ];
 }
@@ -57,15 +65,29 @@ export async function getCommunityRequirements(): Promise<CommunityRequirement[]
 /**
  * Check a student's confirmation against the current requirement list.
  *
- * Today every requirement is attested, so this reduces to "did they tick all of
- * them". It exists as a seam: when a requirement gains a real `verify`, only
- * this function changes and `createBooking` keeps calling it the same way.
+ * An attested requirement passes when the student ticked it. A *verified* one
+ * ignores the tick entirely and asks the database what the last real check
+ * found — a checkbox cannot satisfy a requirement we can actually confirm, and
+ * accepting one would put the honour system back in front of the real answer.
  */
 export async function checkRequirements(
   acknowledgedIds: string[],
+  userId?: string,
 ): Promise<{ ok: true } | { ok: false; missing: CommunityRequirement[] }> {
   const required = await getCommunityRequirements();
   const acked = new Set(acknowledgedIds);
-  const missing = required.filter((r) => !acked.has(r.id));
+
+  const verifiedState = new Map<string, boolean>();
+  if (userId && required.some((r) => r.id === "telegram" && r.verification === "verified")) {
+    const row = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { telegramIsMember: true },
+    });
+    verifiedState.set("telegram", Boolean(row?.telegramIsMember));
+  }
+
+  const missing = required.filter((r) =>
+    verifiedState.has(r.id) ? !verifiedState.get(r.id) : !acked.has(r.id),
+  );
   return missing.length === 0 ? { ok: true } : { ok: false, missing };
 }

@@ -20,7 +20,18 @@ export default async function AdminBookingsPage() {
   const [slots, settings] = await Promise.all([
     prisma.mentorSlot.findMany({
       orderBy: { startsAt: "asc" },
-      include: { bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } } } },
+      include: {
+        bookings: {
+          where: { status: { in: SEAT_HOLDING_STATUSES } },
+          // The verified answer to "did this student actually subscribe", which
+          // is the whole reason the un-approve button exists.
+          include: {
+            user: {
+              select: { telegramUserId: true, telegramUsername: true, telegramIsMember: true, telegramCheckedAt: true },
+            },
+          },
+        },
+      },
     }),
     getSettings(),
   ]);
@@ -78,6 +89,16 @@ export default async function AdminBookingsPage() {
           weakestArea: s.bookings[0].weakestArea,
           notes: s.bookings[0].notes,
           timezone: s.bookings[0].timezone,
+          telegram: s.bookings[0].user
+            ? {
+                linked: Boolean(s.bookings[0].user.telegramUserId),
+                username: s.bookings[0].user.telegramUsername,
+                isMember: s.bookings[0].user.telegramIsMember,
+                checkedAt: s.bookings[0].user.telegramCheckedAt
+                  ? s.bookings[0].user.telegramCheckedAt.toISOString()
+                  : null,
+              }
+            : null,
         }
       : null,
   }));
