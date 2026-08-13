@@ -4,15 +4,22 @@ import { Reveal } from "@/components/shared/motion";
 /**
  * Partner logos, each linking out to the partner.
  *
+ * Rendered in two places, because they have different audiences: the marketing
+ * landing page, which only logged-out visitors see, and the student dashboard.
+ * A student logs in straight to /dashboard and never returns to /, so a strip
+ * that lived only on the landing page would be invisible to exactly the people
+ * a partner most wants reaching their channel. `compact` is the in-app version:
+ * same data, less vertical shouting inside the app shell.
+ *
  * Renders nothing at all when there are no published partners — an empty
- * "Our partners" heading on a landing page reads as a company with no partners,
- * which is worse than not raising the subject.
+ * "Our partners" heading reads as a company with no partners, which is worse
+ * than not raising the subject.
  *
  * Every link is `rel="noopener noreferrer"`: without `noopener` the destination
  * gets a handle on this window through `window.opener` and can navigate it
  * somewhere else, which is a real phishing vector on any outbound link.
  */
-export async function PartnersStrip() {
+export async function PartnersStrip({ compact = false }: { compact?: boolean }) {
   const partners = await prisma.partner.findMany({
     where: { isPublished: true },
     orderBy: [{ order: "asc" }, { createdAt: "asc" }],
@@ -20,6 +27,46 @@ export async function PartnersStrip() {
   });
 
   if (partners.length === 0) return null;
+
+  if (compact) {
+    return (
+      <section aria-labelledby="partners-heading">
+        <h2 id="partners-heading" className="font-display text-lg font-semibold">
+          Our partners
+        </h2>
+        <p className="mt-0.5 text-sm text-muted-foreground">
+          Communities we work with. Worth following.
+        </p>
+        <ul className="stagger mt-4 flex flex-wrap gap-3">
+          {partners.map((p) => (
+            <li key={p.id}>
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lift group flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3 pr-4 transition-colors hover:border-primary/40 hover:bg-card"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.logoUrl}
+                  alt=""
+                  aria-hidden
+                  className="h-10 w-10 rounded-full object-cover ring-1 ring-border transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium">{p.name}</span>
+                  {p.blurb && (
+                    <span className="block text-xs text-muted-foreground">{p.blurb}</span>
+                  )}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  }
 
   return (
     <section className="border-t border-border/60 py-16">
