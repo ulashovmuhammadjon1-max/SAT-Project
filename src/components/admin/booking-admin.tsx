@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Ban, Check, Loader2, Plus, RefreshCw, RotateCcw, Trash2, Undo2, X } from "lucide-react";
+import { Ban, Check, Loader2, Plus, RefreshCw, RotateCcw, Trash2, Undo2, UserMinus, X } from "lucide-react";
 import { toast } from "sonner";
 
 import type { BookingStatus } from "@prisma/client";
@@ -189,6 +189,13 @@ const DECISION_COPY: Record<
     reasonRequired: true,
     hint: "Required. Say which step is missing. The slot and the coins stay held, so the student can fix it and be approved again.",
   },
+  REMOVE: {
+    title: "Remove this student from the slot",
+    verb: "Remove from slot",
+    done: "Removed — the slot is open again.",
+    reasonRequired: true,
+    hint: "Required. The student is emailed this. The slot reopens immediately so someone else can book it. A session that already happened is not refunded; anything else is.",
+  },
   CANCEL: {
     title: "Cancel this approved session",
     verb: "Cancel session",
@@ -296,6 +303,17 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                     {taken && b!.status === "UPCOMING" && (
                       <Button size="sm" variant="outline" disabled={busy === s.id} onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "CANCEL", who: b!.name })}>
                         Cancel booking
+                      </Button>
+                    )}
+                    {taken && (
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        className="text-destructive hover:text-destructive"
+                        disabled={busy === s.id}
+                        onClick={() => setDeciding({ bookingId: b!.id, slotId: s.id, decision: "REMOVE", who: b!.name })}
+                      >
+                        <UserMinus className="h-3.5 w-3.5" /> Free the slot
                       </Button>
                     )}
                     {!taken && (
@@ -428,7 +446,9 @@ function DecisionDialog({
               value={reason}
               autoFocus
               placeholder={
-                target.decision === "REJECT"
+                target.decision === "REMOVE"
+                  ? "e.g. You did not attend and did not let us know, so the slot is going back to the queue."
+                  : target.decision === "REJECT"
                   ? "e.g. That slot is reserved for students sitting the March test — please pick a time in April."
                   : target.decision === "REVOKE"
                     ? "e.g. We could not find you following @satforge_org on Instagram. Follow the account and reply, and we will approve this again."

@@ -124,7 +124,7 @@ export async function setBookingStatus(
   return { ok: true };
 }
 
-export type BookingDecision = "APPROVE" | "REJECT" | "CANCEL" | "REVOKE";
+export type BookingDecision = "APPROVE" | "REJECT" | "CANCEL" | "REVOKE" | "REMOVE";
 
 /**
  * Approve, reject, or cancel a booking, with a reason the student is told.
@@ -177,6 +177,13 @@ export async function decideBooking(input: {
   if (input.decision === "CANCEL" && !["PENDING", "UPCOMING"].includes(booking.status)) {
     return { ok: false, error: "That booking isn't active." };
   }
+  // REMOVE is the only decision allowed from a terminal state. It exists for
+  // the case the others do not cover: a COMPLETED booking still occupies its
+  // seat, so without this a slot that has already been used can never be
+  // reopened for anyone else.
+  if (input.decision === "REMOVE" && !["PENDING", "UPCOMING", "COMPLETED"].includes(booking.status)) {
+    return { ok: false, error: "That slot is already free." };
+  }
   if (input.decision === "REVOKE" && booking.status !== "UPCOMING") {
     return {
       ok: false,
@@ -200,6 +207,11 @@ export async function decideBooking(input: {
           ? "PENDING"
           : "CANCELLED";
 
+  // A session that already happened was delivered, so removing it from the slot
+  // frees the seat without handing the coins back — the student got what they
+  // paid for. Every other removal refunds.
+  const wasDelivered = booking.status === "COMPLETED";
+
   // Guarded on the status we just read, so two admins clicking at once cannot
   // both decide it — the loser updates zero rows and refunds nothing.
   const changed = await prisma.booking.updateMany({
@@ -220,7 +232,7 @@ export async function decideBooking(input: {
   // the student's balance having moved in between, which is the failure mode
   // holding the coins exists to avoid.
   let refunded = 0;
-  if (nextStatus === "REJECTED" || nextStatus === "CANCELLED") {
+  if ((nextStatus === "REJECTED" || nextStatus === "CANCELLED") && !wasDelivered) {
     if (booking.coinCost > 0) {
       try {
         await credit({
