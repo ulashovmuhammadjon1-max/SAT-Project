@@ -183,17 +183,21 @@ export function PracticeQuestion({
           <CardContent className="space-y-3 p-5 text-sm">
             <h3 className="font-display text-base font-semibold">Explanation</h3>
             <MathContent html={question.explanation.content} className="block" />
+            {/* Through MathContent, not as bare text: a Math tip can carry an
+                inline \( … \) span, which would otherwise print literally. */}
             {question.explanation.commonMistakes && (
-              <p className="rounded-md border-l-4 border-amber-400 bg-amber-50 px-3 py-2 text-muted-foreground">
-                <span className="font-medium text-foreground">Common mistake: </span>
-                {question.explanation.commonMistakes}
-              </p>
+              <div className="rounded-md border-l-4 border-amber-400 bg-amber-50 px-3 py-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  Common mistake
+                </p>
+                <MathContent html={question.explanation.commonMistakes} className="mt-0.5 block" />
+              </div>
             )}
             {question.explanation.tips && (
-              <p className="rounded-md border-l-4 border-sky-400 bg-sky-50 px-3 py-2 text-muted-foreground">
-                <span className="font-medium text-foreground">Tip: </span>
-                {question.explanation.tips}
-              </p>
+              <div className="rounded-md border-l-4 border-sky-400 bg-sky-50 px-3 py-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Tip</p>
+                <MathContent html={question.explanation.tips} className="mt-0.5 block" />
+              </div>
             )}
           </CardContent>
         </Card>
