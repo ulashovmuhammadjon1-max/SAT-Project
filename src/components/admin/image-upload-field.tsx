@@ -14,9 +14,13 @@ import { Button } from "@/components/ui/button";
 export function ImageUploadField({
   imageUrl,
   onChange,
+  label,
 }: {
   imageUrl: string | null | undefined;
   onChange: (url: string | null) => void;
+  /** Button text. The default describes a question figure, which is wrong
+   *  anywhere else the field is reused. */
+  label?: string;
 }) {
   const [isUploading, setIsUploading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -60,7 +64,7 @@ export function ImageUploadField({
           onClick={() => inputRef.current?.click()}
         >
           {isUploading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImagePlus className="h-3.5 w-3.5" />}
-          Upload figure (graph, diagram, table)
+          {label ?? "Upload figure (graph, diagram, table)"}
         </Button>
       )}
       <input

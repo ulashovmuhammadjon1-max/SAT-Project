@@ -47,7 +47,12 @@ import { cn } from "@/lib/utils";
  */
 const PLAN_CTA_HREF = "/booking";
 
-export function Landing() {
+/**
+ * `partners` is passed in rather than imported because this is a client
+ * component and the partners strip is an async server component that reads the
+ * database. Handing it down as a child keeps the query on the server.
+ */
+export function Landing({ partners }: { partners?: React.ReactNode }) {
   return (
     <div className="min-h-screen overflow-x-clip bg-background">
       <SiteNav />
@@ -70,6 +75,7 @@ export function Landing() {
         <Vocabulary />
         <Testimonials />
         <Faq />
+        {partners}
         <FinalCta />
       </main>
       <Footer />
