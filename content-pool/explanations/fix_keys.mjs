@@ -80,6 +80,22 @@ const FIXES = [
     expect: "easier for researchers to count",
     why: "The passage supports the ring inference directly — treeline rings can be thinner than a sheet of paper, and the lower trees grow far faster, so their rings are wider. Lifespan is never mentioned. The distractor design confirms it: B and C are the two reversals of the density sentence, leaving the ring sentence as the one the answer keys to.",
   },
+  {
+    id: "67845ef0",
+    where: "Test 27 R&W M2 Hard q16 — Boundaries",
+    from: "A",
+    to: "D",
+    expect: "place: deliberately, since",
+    why: "A semicolon needs an independent clause on both sides, and 'deliberately, since they carry the digestive enzymes…' has no subject and no finite verb of its own. A colon takes a complete sentence before it — which 'Gutting a herring…leaving the pyloric caeca in place' is — and may be followed by a fragment that explains it, which is exactly what this is.",
+  },
+  {
+    id: "522b9934",
+    where: "Test 29 R&W M2 Easy q17 — Boundaries",
+    from: "D",
+    to: "B",
+    expect: "heavy timber set",
+    why: "The appositive renaming 'banker' is the whole phrase 'a low bench of stone or heavy timber set at about waist height' — 'set at about waist height' is a reduced relative telling you which kind of bench, so it belongs inside the appositive. The keyed D puts a comma between 'timber' and its own modifier, closing the appositive early and stranding the participle.",
+  },
 ];
 
 let bad = 0;

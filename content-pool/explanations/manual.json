@@ -13,5 +13,20 @@
   },
   "commonMistakes": "Choosing <em>Therefore</em> because the relationship really is causal. Both a cause and a contrast are present; the transition has to match how the writer is using the sentence, not only how the facts connect.",
   "tips": "When a sentence reports the cost of something just praised, expect a contrast transition even if the cost was genuinely caused by it."
+ },
+ {
+  "questionId": "d4651a93-f564-48fc-bc98-17b2098f7fa9",
+  "where": "Test 27 R&W M2 Easy q17 — Boundaries (rewritten)",
+  "note": "The original had two independent clauses either side of the blank, which made both 'membrane. It' and 'membrane, and it' correct. rewrite_questions.mjs recast it around an appositive. This explanation belongs to the rewritten item; the agent's line still describes the old one, which is why insert.mjs now refuses to overwrite a MANUAL row.",
+  "expect": "bacterioruberin,",
+  "answerLabel": "A",
+  "whyCorrect": "What follows the blank — <em>a carotenoid that sits in the archaeal cell membrane…</em> — renames the pigment just named. That is an appositive, and a non-restrictive appositive is separated from the noun it renames by a comma.",
+  "whyWrong": {
+   "B": "With no punctuation the appositive runs into the noun, so the sentence reads as though the red came from something called a <em>bacterioruberin a carotenoid</em>. An appositive has to be marked off.",
+   "C": "A semicolon needs a complete sentence on both sides. <em>A carotenoid that sits in the archaeal cell membrane and stiffens it…</em> has no main verb of its own — it is a noun phrase, not a sentence.",
+   "D": "Adding <em>and</em> turns one thing into two, as if the red came from bacterioruberin plus some separate carotenoid. There is only one pigment here, and the phrase after the blank is another name for it."
+  },
+  "commonMistakes": "Reading the long phrase after the blank as a clause because it contains verbs. <em>Sits</em> and <em>stiffens</em> both belong to <em>that</em>, inside the relative clause — the phrase as a whole is still a noun.",
+  "tips": "If the words after the blank rename the noun before it, you are looking at an appositive, and the question is only about how to fence it off."
  }
 ]

@@ -1,6 +1,14 @@
 /**
  * Insert verified explanations into the database.
  *
+ * A hand-written explanation always wins. The upsert refuses to overwrite a row
+ * whose `source` is `MANUAL`, because those rows exist precisely where an
+ * agent's line must not ship — a question that was rewritten after the agent
+ * read it, or one where adjudication found the agent's answer wrong. Without
+ * that guard the agent's line silently replaced a rewritten question's
+ * explanation while leaving `source = 'MANUAL'` in place, since the DO UPDATE
+ * never touched `source`.
+ *
  * Idempotent and re-runnable: it upserts on `Explanation.questionId`, which is
  * unique, and it can be run repeatedly while agents are still working — each
  * run picks up whatever has landed on disk since the last one. That is the
@@ -66,7 +74,8 @@ for (const { q, e } of ready) {
      ON CONFLICT ("questionId") DO UPDATE
        SET content = EXCLUDED.content, "whyCorrect" = EXCLUDED."whyCorrect",
            "whyWrongJson" = EXCLUDED."whyWrongJson", "commonMistakes" = EXCLUDED."commonMistakes",
-           tips = EXCLUDED.tips, "generatedAt" = NOW()`,
+           tips = EXCLUDED.tips, "generatedAt" = NOW()
+     WHERE "Explanation".source <> 'MANUAL'`,
     [q.id, toHtml(q, e), e.whyCorrect, JSON.stringify(e.whyWrong || {}),
      e.commonMistakes ?? null, e.tips ?? null]
   );

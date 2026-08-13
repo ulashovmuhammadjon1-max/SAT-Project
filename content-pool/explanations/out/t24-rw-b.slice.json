@@ -3167,27 +3167,27 @@
   "passage": "The red that colours a saturating pond comes from bacterioruberin, a carotenoid that sits in the archaeal cell _____ stiffens it against the osmotic stress of the surrounding brine and, incidentally, screens the cell from ultraviolet light.",
   "choices": [
    {
-    "id": "e4133ba2-3321-4131-aede-17845f200cc9",
+    "id": "41ea7d3d-bfaa-48ec-948e-bea6363c54b3",
     "label": "A",
-    "content": "membrane, and it",
-    "isCorrect": false
-   },
-   {
-    "id": "15c2e589-856b-4168-b2fa-481f4915f7aa",
-    "label": "B",
-    "content": "membrane. It",
+    "content": "bacterioruberin,",
     "isCorrect": true
    },
    {
-    "id": "f79424d6-f996-4bfa-adb9-7568f92d31a8",
-    "label": "C",
-    "content": "membrane, it",
+    "id": "8445ab76-ba75-4509-91c2-cd37d475a08c",
+    "label": "B",
+    "content": "bacterioruberin",
     "isCorrect": false
    },
    {
-    "id": "09965ba4-8334-408a-a138-bdef535283d0",
+    "id": "51cebd15-cd87-4685-bfba-9242eddb1ef6",
+    "label": "C",
+    "content": "bacterioruberin;",
+    "isCorrect": false
+   },
+   {
+    "id": "2755d9fc-012b-4bbd-ba63-5db2575684ac",
     "label": "D",
-    "content": "membrane it",
+    "content": "bacterioruberin, and",
     "isCorrect": false
    }
   ],
@@ -4340,7 +4340,7 @@
     "id": "b7a073c0-385d-4c6b-9f63-f53563ac0cff",
     "label": "A",
     "content": "place; deliberately, since",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "f78f56fb-c021-44f2-a84d-9fc80d95e495",
@@ -4358,7 +4358,7 @@
     "id": "fc656078-41c5-403b-91de-a13b0aee8aed",
     "label": "D",
     "content": "place: deliberately, since",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
