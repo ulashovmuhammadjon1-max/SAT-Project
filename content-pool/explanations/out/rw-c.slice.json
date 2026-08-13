@@ -245,7 +245,7 @@
     "id": "164e8fdb-43d1-4711-b686-60f4adae3c30",
     "label": "A",
     "content": "Although archaeologists have learned much about Izapa over years of research, they have only recently found the smaller settlements that surrounded it.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "5746ff16-b759-4e6d-a557-f64181354db3",
@@ -257,7 +257,7 @@
     "id": "e6d08c3a-ce5c-4424-a033-e63818752ecc",
     "label": "C",
     "content": "Researchers have inferred that Izapa was related to the smaller settlements that surrounded it based in part on the similarity of their construction.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "343b6875-c2f6-40b8-bd3f-98b15decee72",
@@ -521,7 +521,7 @@
     "id": "3d06ef02-0021-40f5-8b00-3049ebf93a46",
     "label": "B",
     "content": "Among nautilids, there is no effect of sex on the uptake of oxygen-18 from water or its deposition in septa.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "8ecd0726-d72b-4f1d-8a23-212559007587",
@@ -533,7 +533,7 @@
     "id": "7a1ef429-2732-4876-aa20-16724dec935f",
     "label": "D",
     "content": "Regardless of sex, nautilids spend most of their lives at depths of 50 meters or greater, where oxygen-18 concentrations typically differ from those higher in the water column.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -695,13 +695,13 @@
     "id": "b2db7638-df33-4c4d-96be-b9187309a50f",
     "label": "A",
     "content": "have studied",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "87c81b74-7195-4c1e-9b17-0cb57647159b",
     "label": "B",
     "content": "studies",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "0c28279f-c5a8-4ab5-924d-0946dcae0982",
@@ -740,7 +740,7 @@
     "id": "9e54775a-a8f2-4b0c-badd-03b1c32a7970",
     "label": "A",
     "content": "reaches",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "001891b1-f2a1-409f-9946-84061f72a153",
@@ -758,7 +758,7 @@
     "id": "f7b78645-00f1-40bd-b4a8-6566a56d5e16",
     "label": "D",
     "content": "to reach",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -797,13 +797,13 @@
     "id": "b314c9c8-6e72-487a-9b74-1fd7f28d1bdb",
     "label": "C",
     "content": "dendrochronologist:",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "963ccfc2-4738-4e7d-b321-93ce79aa60b7",
     "label": "D",
     "content": "dendrochronologist",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -1415,13 +1415,13 @@
     "id": "68c44a3c-9c3b-4786-9249-b0887889cf13",
     "label": "A",
     "content": "It states the current purpose of a building mentioned in the previous sentence.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "a51d9eae-0e47-486c-8b50-5c1707f002b7",
     "label": "B",
     "content": "It summarizes the career of an author mentioned in the previous sentence.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "c01dc8db-3c6e-4eff-bb98-992a343be6bd",
@@ -1472,13 +1472,13 @@
     "id": "e3f89808-89ef-4ec8-bab5-c3c30d8fa426",
     "label": "C",
     "content": "\"Coyote\" can be traced to the Nahuatl language, while \"iguana\" can be traced to the Taino language.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "9f2d28f4-01f6-4052-a7c8-bababb7e96c0",
     "label": "D",
     "content": "\"Coyote\" entered English recently, but \"iguana\" entered English many centuries ago.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -1730,7 +1730,7 @@
     "id": "8970636c-e665-452d-8893-f1fe05ab4c0c",
     "label": "A",
     "content": "It may be underused because of its controversial status among scientists.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "e1418a44-5f17-4bf2-9cd6-af20d9bd529c",
@@ -1742,7 +1742,7 @@
     "id": "3225624c-6c75-47e2-9226-c32b962c0e4c",
     "label": "C",
     "content": "It may yield insights that other types of genomic data cannot.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "261303e6-ac32-4855-9c16-e82f09af7224",
@@ -1916,7 +1916,7 @@
     "id": "1a4d274a-95fc-4981-b413-19043363b1c3",
     "label": "B",
     "content": "transparent. Allowing",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "45fd5d8f-d525-4695-be21-e525444fa93e",
@@ -1928,7 +1928,7 @@
     "id": "047c16a8-8df1-464b-8d48-428ccf26ffa1",
     "label": "D",
     "content": "transparent allowing",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -2000,13 +2000,13 @@
     "id": "52734e7b-ea4f-483d-ac8e-dbcf2b4b080f",
     "label": "A",
     "content": "functions:",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "c408ff35-e317-4b47-84ff-cfb84ef77f06",
     "label": "B",
     "content": "functions,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "bad857f0-1d5c-414b-a856-9511744195e8",
@@ -2321,7 +2321,7 @@
     "id": "72355a26-0050-448f-919d-a4983196e64e",
     "label": "B",
     "content": "Metztitlán is one of 84 municipalities in Hidalgo providing public services to their communities.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "ad7c3907-4273-4a8b-a71d-0973706188cd",
@@ -2333,7 +2333,7 @@
     "id": "cc626173-fa9a-4017-ad29-4d7759fc3a16",
     "label": "D",
     "content": "As a municipality, Metztitlán is responsible for providing water treatment to its residents.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -2366,7 +2366,7 @@
     "id": "09a9cbbe-78eb-4295-8f50-d94c4ee4c86e",
     "label": "B",
     "content": "A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "a39d1832-f268-4ad9-b31a-244da4d0d8d4",
@@ -2378,7 +2378,7 @@
     "id": "ffbc67fe-4031-4877-b3de-189568fc58f2",
     "label": "D",
     "content": "Quartz can leave visible scratches on talc, which means that quartz is harder than talc.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,

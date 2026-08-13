@@ -51,7 +51,8 @@
   "storedKey": "B",
   "correctKey": "C",
   "expect": "contributed",
-  "expectExact": "contributed",
+  "expectExactMatch": true,
+  "expectNote": "the choice content is exactly \"contributed\"; match the whole string, not a substring — other choices contain this text",
   "reasoning": "The subject is \"President Mikhail Gorbachev's reforms,\" and everything between the commas (\"by helping ... assert their prerogatives\") is a modifying phrase. Strip it and the sentence still needs a finite main verb before \"to the Soviet Union's breakup,\" so only the past-tense \"contributed\" completes it. \"Having contributed\" is a participle and leaves the sentence a fragment."
  },
  {
@@ -79,7 +80,8 @@
   "storedKey": "B",
   "correctKey": "A",
   "expect": "current purpose of a building",
-  "reasoning": "The underlined sentence is \"Now the house is a museum dedicated to Dunbar's life and writings.\" The previous sentence says what the house used to be — where Dunbar lived and wrote — and the underlined sentence begins with \"Now\" to report what the building is used for today, which the rest of the text then develops. It summarizes nothing about Dunbar's career; it names only the house's present function."
+  "reasoning": "The underlined sentence is \"Now the house is a museum dedicated to Dunbar's life and writings.\" The previous sentence says what the house used to be — where Dunbar lived and wrote — and the underlined sentence begins with \"Now\" to report what the building is used for today, which the rest of the text then develops. It summarizes nothing about Dunbar's career; it names only the house's present function.",
+  "note": "Separate markup defect, not affecting the key: this passage carries the underline as a trailing parenthetical, \"(Underlined sentence: ...)\", instead of wrapping the sentence in <u>...</u> inside the passage as every other Text Structure item does. Worth fixing when the key is corrected."
  },
  {
   "id": "c8ceee3b",
@@ -151,7 +153,8 @@
   "storedKey": "C",
   "correctKey": "D",
   "expect": "dendrochronologist",
-  "expectFull": "dendrochronologist (no punctuation)",
+  "expectExactMatch": true,
+  "expectNote": "the choice content is exactly \"dendrochronologist\"; match the whole string, not a substring — other choices contain this text",
   "reasoning": "Read the interrupting clause on its own: \"claims dendrochronologist Valerie Trouet.\" Here \"dendrochronologist\" is a title working as part of the name that follows it, exactly like \"claims scientist Valerie Trouet,\" and no punctuation ever separates that kind of title from the name. A colon, comma, or dash after it would sever the title from the person it identifies and interrupt the verb-plus-subject inversion \"claims Valerie Trouet.\""
  },
  {

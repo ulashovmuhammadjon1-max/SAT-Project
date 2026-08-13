@@ -1286,7 +1286,7 @@
     "id": "ed76e70b-ccf5-4538-8c12-8b6d5ca5285e",
     "label": "B",
     "content": "biased",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "b7f1381d-3eb6-427e-a3fc-e06e40af1ecc",
@@ -1298,7 +1298,7 @@
     "id": "8182ad54-8d60-43d5-bf29-313e9638bb74",
     "label": "D",
     "content": "irrelevant",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -1382,13 +1382,13 @@
     "id": "665e8ee9-3068-4eec-a451-8979c3a14385",
     "label": "C",
     "content": "minimize",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "fa34fd4e-7ede-4f5a-b615-d60e4e67cd88",
     "label": "D",
     "content": "match",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 1,
@@ -1865,7 +1865,7 @@
     "id": "36efbfa3-600a-45f4-857e-f553f294f948",
     "label": "A",
     "content": "it's useful at present for Maryland to distinguish between invasive and native species in some instances but not in the case of the flathead catfish.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "531560c4-1409-4e9c-a6ad-adc2766815a8",
@@ -1883,7 +1883,7 @@
     "id": "9614dc5e-48bf-4dee-9aaa-f831f53a4b03",
     "label": "D",
     "content": "states such as Maryland may need to reevaluate their classifications of species.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -2315,7 +2315,7 @@
     "id": "80645169-b149-41ab-9d05-eabd29c392ba",
     "label": "A",
     "content": "Spike is housed at the New Mexico Museum of Natural History in Albuquerque, New Mexico.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "e8a4d911-ac35-4128-b619-bcdecf3bed30",
@@ -2333,7 +2333,7 @@
     "id": "38a39cc6-142a-46d1-996d-f3d043abd37b",
     "label": "D",
     "content": "The Pentaceratops fossil specimen Spike lived more than 65 million years ago, in the Late Cretaceous period.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -2405,7 +2405,7 @@
     "id": "0c2b8287-d976-4fe9-98c9-fa076756b30f",
     "label": "A",
     "content": "The carrying capacity of a merchant ship is also known as its deadweight tonnage.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "b243f264-f0d9-4671-9579-53290e2dd6eb",
@@ -2417,7 +2417,7 @@
     "id": "13dce73e-0c20-4d54-b442-ff4b15cbee54",
     "label": "C",
     "content": "The combined carrying capacity of Malaysia's merchant ships was 10.2 million tons in 2021.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "db5f14c4-1ad4-4903-bd23-95d4c62e620c",
@@ -2546,13 +2546,13 @@
     "id": "2a309380-3cea-4c03-bf7f-719fe3b26e00",
     "label": "B",
     "content": "insight into",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "ddb2a71e-5275-4017-a6a4-e0f4d8110831",
     "label": "C",
     "content": "hesitancy about",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "e65cbc6f-08d0-461e-814c-2b13b8f526e9",
@@ -2591,7 +2591,7 @@
     "id": "d1062b4e-0292-4c1f-9313-a847e6489ad4",
     "label": "B",
     "content": "manifest in",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "bf19a99d-d655-4433-8ee8-fa26cea0c12e",
@@ -2603,7 +2603,7 @@
     "id": "d631a954-bf7b-41ef-addb-64b6207f3f15",
     "label": "D",
     "content": "complicated by",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -2642,13 +2642,13 @@
     "id": "60150530-7bb2-45bd-addc-3420a4d6eb46",
     "label": "C",
     "content": "Vacate",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "c165a57d-f06b-4759-8ea2-5258d30b407c",
     "label": "D",
     "content": "Define",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -2681,13 +2681,13 @@
     "id": "02607c8b-700c-47a5-8874-aac4d75973d7",
     "label": "B",
     "content": "The text discusses 3D vision in sheep and barn owls, then introduces a study about this kind of vision in praying mantises.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "6bc16121-f324-4636-9313-87958c253020",
     "label": "C",
     "content": "The text describes how sheep and barn owls see, then presents a study about praying mantises that challenges the accuracy of that description.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "e64b4346-8d46-4f08-9115-3ce3e7518fbe",
@@ -2732,13 +2732,13 @@
     "id": "0cb6ff6b-3411-4e1b-9449-5e37b34b8f0f",
     "label": "C",
     "content": "To encourage music lovers to listen to music by many different composers",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "34e627bd-8175-4667-a380-612884c91ca4",
     "label": "D",
     "content": "To argue that more attention should be given to Joplin's lesser-known works",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -2906,13 +2906,13 @@
     "id": "8d69b03f-f478-4eb7-8e18-ac29a210bae4",
     "label": "B",
     "content": "\"Although Martin was clearly influenced by other artists of her time, she was also an artist ahead of her time, as Harbor Number 1 demonstrates.\"",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "609d37a5-bfc8-4b3a-bc7d-5c0b7af0cb5e",
     "label": "C",
     "content": "\"The paintings that Martin produced before Harbor Number 1 can be thought of as belonging to her earlier style, to which she never returned.\"",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "dc8379ef-c50e-48e4-8623-e703c437c2f3",
@@ -3131,13 +3131,13 @@
     "id": "2b5bbc4e-b34f-4e52-84a2-b6394221a289",
     "label": "B",
     "content": "had struggled",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "9ff73349-4cc7-4854-8ceb-7f52019f57c3",
     "label": "C",
     "content": "struggle",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "b6b4126f-8190-4f5f-ba47-6504742088f5",
@@ -3221,13 +3221,13 @@
     "id": "c836ea68-1d02-4e47-b2f9-34ac38419dab",
     "label": "B",
     "content": "chemist Ahmed Zewail expanded the limits of measurability and introduced a new scientific discipline",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "72e3ec92-4677-4504-a4e2-72a1147a22c8",
     "label": "C",
     "content": "the introduction of a new scientific discipline by chemist Ahmed Zewail led to the expansion of the limits of measurability",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "ddb80c19-166c-4455-855f-69caa89774ea",
@@ -3266,7 +3266,7 @@
     "id": "2b92fa40-9734-41ad-95d6-69f66f1dd76b",
     "label": "B",
     "content": "coalition,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "777298a6-0058-4bb4-bebd-761832cb27f0",
@@ -3278,7 +3278,7 @@
     "id": "042637bc-496d-4114-88fd-c609bb6b5260",
     "label": "D",
     "content": "coalition—",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -3575,13 +3575,13 @@
     "id": "4491a162-6265-4023-aa19-1a75d1ca0ade",
     "label": "A",
     "content": "A mineral with a Mohs number of 6, like orthoclase, is harder than one with a Mohs number of 3, like calcite.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "61bd34ef-3efc-423f-b697-772c278006de",
     "label": "B",
     "content": "Topaz can leave visible scratches on calcite, which means that topaz is harder than calcite.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "1bcb7977-87fe-419f-9136-8af7b59e53aa",
@@ -3710,13 +3710,13 @@
     "id": "c7848886-e000-4ecd-8c00-cbc41bfca3cf",
     "label": "A",
     "content": "dogmatic",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "be64db9b-bbf8-496a-a67b-bc31d0467762",
     "label": "B",
     "content": "vacillating",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "1363183f-11bc-4920-809a-d0b2b8546c58",
@@ -3755,13 +3755,13 @@
     "id": "3de951a4-4bbd-485a-a284-7a074f3b56de",
     "label": "A",
     "content": "excessive",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "2f696604-c935-4e3e-a55b-4322a7bc5a22",
     "label": "B",
     "content": "adequate",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "b1fc457e-1a70-4884-bfc4-c628c690e445",
@@ -3947,13 +3947,13 @@
     "id": "28ab9552-fc90-443e-91f9-c7302ae5a766",
     "label": "C",
     "content": "It lists the achievements of the National Association of Black Journalists.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "0441177a-3cb7-4d14-be09-dbb8c376bd1e",
     "label": "D",
     "content": "It summarizes the purpose of founding the National Association of Black Journalists.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -3986,13 +3986,13 @@
     "id": "2ea016a3-a8ec-447a-9412-7d04b27775af",
     "label": "B",
     "content": "The author of Text 1 states that the benefits are automatic, while the author of Text 2 states that effort is required to fully achieve the benefits.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "dc3c0a3d-6c9b-4d3d-a04c-37735ad35ac2",
     "label": "C",
     "content": "The author of Text 1 views Arequipa's status as a City of Gastronomy as having been beneficial for the city, but the author of Text 2 questions whether there's been a benefit.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "165e59b1-a8ef-4db9-a037-7059a2309446",
@@ -4250,7 +4250,7 @@
     "id": "346c2740-ddbd-43ea-a1cd-80aef224a22a",
     "label": "A",
     "content": "the success of the fitness study likely requires significantly less financial outlay than that needed for CLSA-ÉLCV.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "8ae7f6a6-32e7-476e-88a6-208398199a40",
@@ -4262,7 +4262,7 @@
     "id": "cbfe6bac-a94c-4917-91ca-236e4cb20184",
     "label": "C",
     "content": "longitudinal methods are suitable for studies of aging but ought to be avoided for those of fitness.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "22b31005-5e71-4fdf-b9bc-2a5b0359071c",
@@ -4307,13 +4307,13 @@
     "id": "484a95d9-7b9b-4aca-a787-9c30d261204c",
     "label": "C",
     "content": "negative, since those Joyce scholars with the necessary expertise to write a review of the 1984 edition would be aware that facsimile manuscripts cannot be produced with a high enough fidelity to the original to ensure that relying on them will not introduce editorial errors.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "b89453f2-9a07-462f-a411-b425b92b0c43",
     "label": "D",
     "content": "positive, since scholars who reviewed the 1984 edition were unaffiliated with its production and were mostly either Joyce specialists who were largely unfamiliar with editorial theories and practices or specialists in such theories and practices who were insufficiently familiar with Joyce.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -4610,13 +4610,13 @@
     "id": "2c02f717-eca0-4f08-bc1d-b9d02edcc1cf",
     "label": "A",
     "content": "In addition,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "9290297c-bbc3-47ba-9f56-984c7e338c9c",
     "label": "B",
     "content": "To that end,",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "1f711864-448d-401e-b8b3-fbf10593b90a",
@@ -4655,7 +4655,7 @@
     "id": "3def25a1-5837-43e4-b466-70ea589e0a8b",
     "label": "A",
     "content": "For instance,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "dda527aa-c989-4d71-b3ff-2c7e53f1c0d1",
@@ -4673,7 +4673,7 @@
     "id": "478ffd9c-4148-4928-afda-e7513b56c798",
     "label": "D",
     "content": "Finally,",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -4841,7 +4841,7 @@
     "id": "80e67e25-e751-4cb2-8e1b-04cd28548c5a",
     "label": "B",
     "content": "The copyright to New Hampshire expired in 2019, causing the poetry collection to enter the public domain.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "96031b7f-7046-4ccd-a229-aa03e3f1c72f",
@@ -4853,7 +4853,7 @@
     "id": "19977af4-b9a2-4a26-ae38-2bf18c26deb4",
     "label": "D",
     "content": "Once New Hampshire entered the public domain, anyone could publish its contents.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -4886,13 +4886,13 @@
     "id": "75ee6495-d8b5-4ed5-b14a-c9db213f1213",
     "label": "B",
     "content": "extrapolating from",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "5a8694fc-b20f-41b6-a44c-969e4385e06f",
     "label": "C",
     "content": "corroborating",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "5dc8928a-0d46-404f-8b1b-01dc5ea4825a",
@@ -4931,13 +4931,13 @@
     "id": "9a3c565d-0112-48d8-b626-4934cb9066ca",
     "label": "B",
     "content": "reject",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "98f42bca-9647-44a7-a397-98a289084b31",
     "label": "C",
     "content": "replace",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "dac9eaef-a6ae-4d27-9c7d-ece69bb606f9",
@@ -5066,7 +5066,7 @@
     "id": "3d8f2f6d-97fd-4570-a3e1-a574322409a3",
     "label": "B",
     "content": "To describe a characteristic of the Aubrey-Maturin novels and offer two differing viewpoints on this characteristic",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "4ab0096f-2d1e-4140-bf57-797779bddd8a",
@@ -5078,7 +5078,7 @@
     "id": "7adc454f-ace6-4471-9750-ffc7cb033d84",
     "label": "D",
     "content": "To argue that the Aubrey-Maturin series should have the literary renown of In Search of Lost Time",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -5471,7 +5471,7 @@
     "id": "2a076bc4-0740-431a-b91a-06efbecf6a97",
     "label": "B",
     "content": "Both the sei whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "81f3f807-448a-4ebf-b730-bae80880cc3a",
@@ -5483,7 +5483,7 @@
     "id": "237a783d-4e43-44e8-a686-f628bb543e22",
     "label": "D",
     "content": "The bowhead whale is able to eat more krill per day than the sei whale is.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -5555,7 +5555,7 @@
     "id": "04456fd7-0fd1-4d16-abe1-905c30c755ce",
     "label": "A",
     "content": "having positioned",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "aa395266-882e-40e1-887c-21ff1e906417",
@@ -5573,7 +5573,7 @@
     "id": "9b427eb1-c3b8-47dd-8a3d-7a0d6984acde",
     "label": "D",
     "content": "have positioned",
-    "isCorrect": false
+    "isCorrect": true
    }
   ],
   "has_explanation": 0,
@@ -5696,13 +5696,13 @@
     "id": "6be34544-ae40-4486-a649-7d47b0caa03b",
     "label": "B",
     "content": "having contributed",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "id": "20576740-7509-4e94-ab9f-df277b80f9cd",
     "label": "C",
     "content": "contributed",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "6069aeb0-17c4-43bd-98e8-aa664b0bc7a6",
@@ -5831,7 +5831,7 @@
     "id": "7c5c0363-d31e-4576-a9d8-2a9970f8a7b2",
     "label": "B",
     "content": "Alternatively,",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "0c1dc31b-b4cc-4594-9cd8-b1d2b48cb64b",
@@ -5843,7 +5843,7 @@
     "id": "4464de6f-c802-4419-a2a6-05a9bee07442",
     "label": "D",
     "content": "For instance,",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
@@ -6056,7 +6056,7 @@
     "id": "86bac5fb-cc93-4e2b-be21-0b21b4f6dea3",
     "label": "B",
     "content": "Recognition and Students Aspire both show African American figures in poses that symbolize supportive relationships.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "id": "ed54ed9f-8585-4580-9c0a-000fa4846133",
@@ -6068,7 +6068,7 @@
     "id": "c8389a43-ca1b-4515-b307-8031c24460e4",
     "label": "D",
     "content": "The figures in Recognition have features that are rounded and indistinct, while the figures in Students Aspire have sharply defined features.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ],
   "has_explanation": 0,
