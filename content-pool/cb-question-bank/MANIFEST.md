@@ -95,10 +95,7 @@ every Standard English Conventions question has both a blank and the
 
 ## Remaining work before any of this ships
 
-1. **The 73 figure questions.** All in Information and Ideas. Their bar and
-   line graphs are vector glyphs that text extraction shreds, so each needs its
-   figure rebuilt from a page render (`pdftoppm -r 110 -png`, fully legible) as
-   either a real `<table>` or a chart image on `Question.imageUrl`.
+1. ~~**The 73 figure questions.**~~ **DONE — see `figures.json` below.**
 2. **The collection separation.** `QuestionCollection` was reverted after it
    took production down, and has to go back in *together with* its migration —
    which needs `PROD_URL`. See the schema rule at the top of CLAUDE.md.
@@ -160,10 +157,80 @@ rewriting the wrong question.
    produce an unanswerable stem, the defect CLAUDE.md rule 3 exists to prevent.
    73 of the 552 are affected.
 
+## `figures.json` — the 73 rebuilt figures, and how they were recovered
+
+All 73 `needs_figure` questions are rebuilt. One record each:
+
+    { "id", "question", "figure_html" }      26 data tables
+    { "id", "question", "figure_png_b64" }   47 bar/line charts (data: URI)
+
+`question` is the passage + stem with the shredded chart text removed; it is a
+verbatim slice of `bank_parsed.json`'s own stem (asserted at build time), so
+nothing was reworded. `figure_html` uses the standard table style block from
+CLAUDE.md. The chart PNGs go on `Question.imageUrl`, which is rendered as a
+bare `<img src>`, so a data URI works exactly like a Blob path.
+
+### Don't read the numbers off a picture — the PDF still has the geometry
+
+The charts defeat `pdftotext` and carry zero image objects, but they are not
+opaque: `pdftocairo -svg` emits every bar as a filled rectangle and every line
+as its polyline vertices, in page coordinates. Convert those with a linear fit
+from the y-axis tick **labels** and the data comes back essentially exact —
+Test values land on `1252.0`, `207.0`, `126.0` rather than "about 1,250". That
+is the whole method, and it is why nothing here is eyeballed:
+
+- **Calibrate on the gridlines, not on the tick labels** (`calib.py`). Label
+  text sits a fraction of a point off the line it names, so the fit carries a
+  constant offset — +5.0 on a 0–1750 axis, +0.25 on a 0–110 one. Subtract it
+  and `1605` becomes `1600`, which is exactly what that question's own answer
+  choice calls "approximately 1,600 in 2013". **Bars are immune**: a bar's
+  value is top *minus* bottom and the offset cancels; only line charts need it.
+- **A dashed or dotted line has no usable polyline** — it is emitted as dozens
+  of separate dashes. Use its markers instead. Squares, circles and diamonds
+  are symmetric, so the marker bounding box centre *is* the data point.
+  **Triangles are not** — their bbox centre reads ~1.7 units high on a 0–350
+  axis. Prefer the polyline for a triangle series, and only fall back to the
+  marker where the line is dashed.
+- **Legend swatches parse as bars.** They are drawn with the same fill and
+  stroke, below the axis, so they come out as negative values. Filter on a
+  shared baseline rather than trusting the shape list.
+- The page render (`pdftoppm -r 120`) is still needed, but for *labels* —
+  rotated category names, legend text and titles — not for values.
+
+Independent check that it worked: 30-odd answer choices quote numbers ("about
+150 thousand more MWh", "approximately 550°C and 650°C", "fewer than 195
+days"), and every one of them matches the recovered series, including the
+distractors that are true-but-irrelevant.
+
+### Charts follow the `dataviz` skill, not the source's grayscale
+
+Palette `#2a78d6, #eb6834, #4a3aa7, #199e70` in fixed slot order, which is the
+only 4-slot set tried that clears `validate_palette.js --pairs all --mode
+light` on CVD separation, normal-vision separation *and* 3:1 contrast (the
+documented slot-3 aqua `#1baf7a` fails contrast at 2.74:1 and would have
+obliged direct labels). Line series carry a distinct marker and dash pattern
+as well as a hue, so identity never rests on color alone. **No value labels**:
+the originals had none, and printing the numbers would hand the student
+precision the source figure withheld — that is the "no more than the original"
+rule, and it is the reason the contrast gate had to be cleared by color choice
+instead of by labels.
+
+### `figures-build/`
+
+Reproducible: `python3 build.py` rewrites `figures.json` from `tables.py`
+(hand-transcribed table data) and `charts.py` (recovered series) and re-renders
+every PNG. `probe.py` dumps a page's words-with-boxes and vector shapes,
+`dump.py` / `ldata.py` turn those into values, `prose.py` + `clean.py` cut the
+stem free of the shredded figure text. Two per-question overrides live in
+`clean.py` and one text repair list in `build.py`; each asserts the text it
+expects before touching anything.
+
+Known cosmetic leftover, inherited from the source extraction and not
+introduced here: `ab94d40a`'s stem contains "top- ranked", a hyphen-plus-line-
+break the export flattened. It is present the same way in `bank_parsed.json`.
+
 ## Not yet done
 
-- The `needs_figure` questions: rebuild each as a real `<table>` or a chart
-  image on `Question.imageUrl`.
 - Dedupe against the 4,560 questions already banked.
 - The collection separation (`QuestionCollection`) was reverted after it took
   production down; it has to go back in together with its migration, which
