@@ -46,6 +46,11 @@ TOPIC_TO_SKILL = {
     "Words in Context - Gap Filling": ("Craft and Structure", "Words in Context"),
     "Words in Contenxt — Synonyms": ("Craft and Structure", "Words in Context"),
     "Words in Context — Synonyms": ("Craft and Structure", "Words in Context"),
+    # Writing book.
+    "Boundaries": ("Standard English Conventions", "Boundaries"),
+    "Form, Structure, and Sense": ("Standard English Conventions", "Form, Structure, and Sense"),
+    "Transitions": ("Expression of Ideas", "Transitions"),
+    "Rhetorical Synthesis": ("Expression of Ideas", "Rhetorical Synthesis"),
 }
 
 
