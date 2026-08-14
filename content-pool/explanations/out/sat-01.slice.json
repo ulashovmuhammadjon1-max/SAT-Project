@@ -1,0 +1,4202 @@
+[
+ {
+  "id": "235e6930-688a-4945-9d6e-5fc74f8fcd54",
+  "source": "SAT:satoplam-words-in-context-gap-filling-168",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>In a 2018 article celebrating films depicting the Black experience, critics for the New York Times __________ Ossie Davis’s 1970 film Cotton Comes to Harlem and Cheryl Dunye’s 1996 film The Watermelon Woman, praising the former as ’especially pointed’ and the latter as ’heartbreaking and inspiring.’</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "inspired",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "satirized",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "overlooked",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "commended",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 1
+ },
+ {
+  "id": "62766583-d391-4b0c-8bea-e3c23e1b80bd",
+  "source": "SAT:satoplam-words-in-context-gap-filling-93",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>The results of randomized clinical trials testing the efficacy of common medical interventions sometimes fail to ________ conclusions that practitioners reach based on their real-world observations of patients. While there are several possible reasons for this, one is that practitioners may overlook confounding variables that account for the results they attribute to the interventions in question.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "implement",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "disseminate",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "circumvent",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "corroborate",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 2
+ },
+ {
+  "id": "05158212-596a-4875-8b5a-4bd580a5f0af",
+  "source": "SAT:satoplam-words-in-context-gap-filling-95",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>In the 2010s, the price of vintage My Little Pony figures rose dramatically, which had the counterintuitive effect of ________ demand: buyers who hadn’t previously wanted to purchase old toys suddenly thronged the market, believing prices would continue to rise and the toys could be resold later at a profit.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "exploiting",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "stabilizing",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "monetizing",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "precipitating",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 3
+ },
+ {
+  "id": "8783d415-141d-4f9d-ab6b-6afb9a33ddbf",
+  "source": "SAT:satoplam-words-in-context-gap-filling-232",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>In the architectural process called modular construction, a building is manufactured in modules under controlled conditions and then assembled at its intended location. _____ this approach cite the production of less material waste and a faster return on investment. of</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Components",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Safeguards",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Proponents",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Epitomes",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 4
+ },
+ {
+  "id": "1f0a5ee3-f648-4c18-a033-9359cb2cb196",
+  "source": "SAT:satoplam-words-in-context-gap-filling-73",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>Economists often assert that countries looking to increase their reliance on solar energy should expand their capacity for storage: having an ample reserve of stored energy can mitigate the effects of ____________ solar energy collection caused by unpredictable shifts in cloud cover and haze.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "calibrations with",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "developments of",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "fluctuations in",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "incentives for",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 5
+ },
+ {
+  "id": "4b67d165-552b-4cfa-be4b-0b2e04310895",
+  "source": "SAT:satoplam-main-purpose-25",
+  "test": "Test 16",
+  "stem": "Which choice best describes the overall purpose of the text?",
+  "passage": "<p>The following text is adopted from Pam Munoz Ryan’s 2020 novel Mananaland. In the village where Max lives, there is an old fortress called La Reina. Children in the village say that the fortress is haunted. For as long as he could remember, Max had begged Papa (his father) to take him to see La Reina and the ruins up close. He’d be a hero among his friends if he was the first boy to cross the haunted gates! Just because Papa didn’t believe in ghosts didn’t mean they weren’t there. Maybe this summer Papa would finally take him. He was almost twelve.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To show how much Max wants to visit La Reina.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "To portray how proud Max’s father is of Max.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "To criticize Max for disliking summer.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "To explain why Max doesn’t want to grow up yet.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 6
+ },
+ {
+  "id": "3e84927c-cb2e-4419-a9b3-a41d58bcd5f2",
+  "source": "SAT:satoplam-main-purpose-19",
+  "test": "Test 16",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>San Francisco has high pedestrian traffic, but simply replicating a feature of San Francisco associated with walkability—e.g. its high density of storefronts—may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals decision-making about whether to walk is insufficiently robust: some studies emphasize the role of demographic characteristics, others the role of public transit availability, and so on, but walking decisions are made in complex contexts in which multiple conditions and needs inform individuals’ choices.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To discuss the difficulty of identifying a reliable way to increase walking in any given city.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "To explain why it is challenging to compare the amount of pedestrian traffic in different cities.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "To describe the effect of a high density of storefronts on any given city’s walkability.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "To present a claim about how individual’s decision-making about walking can be improved.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 7
+ },
+ {
+  "id": "b812f9a3-ae41-4bc8-bc0a-e06479cccd5b",
+  "source": "SAT:satoplam-cross-text-connections-7",
+  "test": "Test 16",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim about Sula advanced by the author of Text 1?",
+  "passage": "<p><strong>Text 1</strong></p><p>: Toni Morrison’s 1973 novel Sula, a tale of two women’s lives set in small-town Ohio from the 1910s to the 1960s, has been described as historical fiction. While it’s inarguable that Morrison’s book takes place in the past rather than in her own time, Sula is much richer and more complicated than the mere re-creation of the past suggested by the term \"historical fiction.\"</p><p><strong>Text 2</strong></p><p>: Some literary critics dismiss historical fiction as a shallow genre in which writers show off their knowledge of period details rather than tell meaningful stories. But historical fiction can be used to explore profound themes and complex characters. In fact, many writers find that writing about the past gives them a creative freedom they’d lack if they wrote about the present.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "By arguing that Morrison displays a thorough knowledge of historical details in Sula.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "By asserting that dissatisfaction with describing Sula as historical fiction reflects a misunderstanding of the genre.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "By conceding that the genre of historical fiction contains many works that are less sophisticated than Sula is.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "By claiming that the author of Text 1 has underestimated the richness and complexity of Sula",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-CT",
+  "skill_name": "Cross-Text Connections",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 8
+ },
+ {
+  "id": "748d2a6d-3049-459e-8d34-612876e42437",
+  "source": "SAT:satoplam-details-question-7",
+  "test": "Test 16",
+  "stem": "According to the text, what is one potential drawback of Hidalgo and colleagues’ method?",
+  "passage": "<p>Researcher César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of businesses and places of interest found in a given neighborhood. The team used data from the Google Places, API service to help identify furniture stores, florists, and other businesses and map their locations. This approach has some limits-data from Places API tend to be restricted to places that the customer facing-but the data set nonetheless provides an extremely reliable source to study colocation patterns of neighborhood amenities.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It depends upon data that are likely to be outdated.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It is based on recent advancements from other fields that have yet to be applied outside of those contexts.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It is likely to contribute to inaccurate identifications of the boundaries of specific neighborhoods.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It may lead to conclusions that are not reflective of all the amenities in a given neighborhood.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 9
+ },
+ {
+  "id": "79acf6e5-19ec-427f-aaf3-de7553ee5e73",
+  "source": "SAT:satoplam-main-ideas-17",
+  "test": "Test 16",
+  "stem": "Which choice best states the main idea of the text?",
+  "passage": "<p>Roy McLendon’s Moonlit St. Lucie, a riverscape featuring the silhouette of a single palm tree against the backdrop of shimmering water and a brilliant moonlit sky, is typical of paintings by the Florida Highwaymen, an informal collective of landscape artists mainly active in the 1950s and ’60s. Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography—placid inland rivers, windswept palm trees—that McLendon and colleagues perpetually revisited.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Although similar in its subject matter to many paintings by the Florida Highwaymen, Moonlit St. Lucie is now more highly regarded than other Florida Highwaymen paintings are.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Representative images found across many paintings by McLendon and other Florida Highwaymen came to be widely associated with Florida in part due to the Florida Highwaymen’s influence.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Although paintings by the Florida Highwaymen were once celebrated for their depictions of Florida’s natural environments, the popularity of these paintings waned after the 1960s.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The placid inland rivers and windswept palm trees that are typical of McLendon’s works, which are otherwise indistinguishable from other Florida Highwaymen paintings, help to differentiate McLendon’s paintings from those of his colleagues.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 10
+ },
+ {
+  "id": "56c3506f-22ec-466e-86ef-a8bc13faabf4",
+  "source": "SAT:satoplam-quotation-22",
+  "test": "Test 16",
+  "stem": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+  "passage": "<p>Life Among the Paiutes is an 1882 autobiographical narrative by Sarah Winnemucca Hopkins. In the work, Winnemucca creates suspense by emphasizing her physical response to an event, writing ____________</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A. \"Oh, how my heart jumped when I heard a noise close by. It was a horse running towards us. We had to lie down close to the ground. It came close to us and stopped. Oh, how my heart beat! I thought whoever it was would hear my heart beat.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "\"Oh, how happy everybody was! One could hear laughter everywhere, and songs were sung by happy women and children.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "\"Late in that fall, there came news that my grandfather was on his way home. Then my father took a great many of his men and went to meet his father, and there came back a runner, saying, that all our people must come together.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "\"That same fall, after my grandfather came home, he told my father to take charge of his people and hold the tribe, as he was going back to California with as many of his people as he could get to go with him.\"",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 11
+ },
+ {
+  "id": "f8f1a61c-3bcd-4adc-bf84-34757c058a1f",
+  "source": "SAT:satoplam-quotation-37",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
+  "passage": "<p>The Clouds is a 423 BCE play by Aristophanes, originally written in ancient Greek. At the time, professional intellectuals called sophists taught customers rhetorical techniques to use in public speaking, along with providing instruction in other subjects. In the play, Aristophanes satirizes sophists as having an exaggerated sense of their own wisdom, as seen when the character.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Socrates, a sophist, says to a customer, \"You talk nonsense. Begone; I can’t teach you any longer.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Strepsiades says of a sophist business, \"There dwell men who in speaking of the heavens persuade people that it is an oven, and that it encompasses us, and that we are the embers. These men teach, if one give them money, to conquer in speaking, right or wrong.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "\"Because the predictions the platform makes about what new songs I might like depend on my past listening habits, at times its recommendations can feel overly repetitive and unvarying.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Socrates, a sophist, says to a new customer, \"Come, then, take care that, whenever I propound any clever dogma about abstruse matters, you [seize] immediately.\"",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 12
+ },
+ {
+  "id": "058c0f66-cd2e-49c7-af3e-2b57244f2c83",
+  "source": "SAT:satoplam-command-of-evidence-weaken-8",
+  "test": "Test 16",
+  "stem": "Which finding, if true, would most directly weaken the student’s claim?",
+  "passage": "<p>Geneticist Elaine Ostrander led an international collaboration in which Norbert Benecke and other researchers investigated the evolutionary history of size variation in modern dogs. The researchers identified multiple versions of the gene regulating the production of IGF-1 (insulin-like growth factor 1) in dogs and found that dogs of the same breed consistently share the same version of the gene. In a discussion of the study, a student hypothesizes that small breeds of dogs (for example, Havaneses) must share a version that represses IGF-1 production that would otherwise confer larger body size.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The majority of the most prevalent dog breeds have limited activity in the gene that regulates IGF-1 production.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The gene that regulates IGF-1 production is not the only gene that influences body size in dogs but is the only such gene that shows within-breed version consistency.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The degree of size variation among dogs is greater than that of any other land-based mammal.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Some breeds with small body sizes and low IGF-1 concentrations have a different version of the gene regulating IGF-1 production than do toy poodles.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 13
+ },
+ {
+  "id": "fadb9f81-2166-4dc6-9a42-3a4be40423b7",
+  "source": "SAT:satoplam-inference-84",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>Exclusively inhabiting tropical countries such as Liberia, wild chimpanzees lack adaptations to seasonal variations in ultraviolet B (UVB) irradiance from sunlight; since UVB exposure enables vertebrates to synthesize vitamin D, this raises questions about how chimpanzees in mid-latitude zoos are affected by the lower and more variable UVB irradiance in those locations. In a study of zoo chimpanzees in Norway and other mid latitude countries, Sophie Moittié and colleagues found not only that chimpanzees’ vitamin D levels correlate with UVB irradiance but also that vitamin D levels show no evidence of plateauing as UVB irradiance reaches its highest local levels, suggesting that ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "averaged across seasons, vitamin D levels in zoo chimpanzees in mid-latitude countries such as Norway tend to be comparable to those in wild chimpanzees in tropical countries such as Liberia.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "adaptations to seasonal variations in UVB irradiance may be emerging in zoo chimpanzees in Norway and other mid-latitude countries.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "zoo chimpanzees in Norway and other mid-latitude countries tend to synthesize less vitamin D than they are inherently capable of synthesizing",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "providing supplemental vitamin D to chimpanzees in zoos in Norway and other mid-latitude countries would likely not be beneficial.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 14
+ },
+ {
+  "id": "e8ed65c2-d0f9-4d5e-a249-db59cadc0163",
+  "source": "SAT:satoplam-inference-88",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>Liverpool Football Club won more than half its home matches between 1947 and 2003, helping to distinguish the team as a top British professional soccer club. Additionally, Liverpool, whose home uniform color is mainly red, was more successful in home matches than was Oldham Athletic Association Football Club, whose home uniform color is not red. Research has shown that many people associate the color red with power and dominance. Past experiences with red objects such as stop signs can even cause people to respond to the color red with caution and hesitation. These findings, if applicable in the context of athletic competitions, could suggest that in matches played at Liverpool’s home stadium, opponents may have ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "been unaffected by the red clothing worn by fans in the stadium.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "played more aggressively than they would have if their own uniforms were red.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "been aware that-Liverpool’s uniform color affected their own performance.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "been influenced by the color of Liverpool’s uniforms.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 15
+ },
+ {
+  "id": "78c607d6-0c40-4691-87bb-19585817c445",
+  "source": "SAT:satoplam-boundaries-78",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Featuring works by the photographers Dora Maar and Rogi André, the 2021 exhibition The New Woman Behind the Camera set out to provide a wide-ranging overview of photography by women in the 1920s through the _____ given the collection’s breadth of more than 120 photos, its efforts were largely successful.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1950s",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "1950s and",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "1950s, and",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "1950s,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 16
+ },
+ {
+  "id": "06821f42-4db5-4a30-8846-59c7e2b2fadd",
+  "source": "SAT:satoplam-boundaries-189",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>George Saunders concludes his essay \"What Writers Really Do When They Write\" by comparing the work of fiction writing to the act of juggling. The author-as-juggler performs a _____ gathering of central themes and tensions, the tossing of these elements into a dynamic narrative, and the catching of the resolutions that emerge.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "routine; the",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "routine, the",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "routine. The",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "routine: the",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 17
+ },
+ {
+  "id": "93a62805-bc6a-4a0e-9777-0873fe84fc1c",
+  "source": "SAT:satoplam-boundaries-1",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Within Earth’s biomes, there are four main types of deserts: arid, semiarid, coastal, and cold. The Great Salt Desert in western Asia is an arid _____ it is one of the largest deserts in the world, with a total area of about 77, 000 km2 .</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "desert, for example;",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "desert, for example,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "desert; for example,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "desert, for example",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 18
+ },
+ {
+  "id": "3f2cbeeb-7856-4b4c-8382-b47f67b3fc13",
+  "source": "SAT:satoplam-form-structure-and-sense-175",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Topographical prominence is a measure of a mountain’s independence from other mountains. Having 9,721 feet of prominence, _____ .</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Pico do Ramelau, a peak located in Timor-Leste, is ranked by geographers as the world’s 98th most prominent mountain.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "the list of mountains geographers rank as the world’s most prominent includes Pico do Ramelau, a peak located in Timor-Leste, at number 98.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "geographers have ranked Pico do Ramelau, a peak in Timor-Leste, as the world’s 98th most prominent mountain.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "the ranking given by geographers to Pico do Ramelau, a peak located in Timor-Leste, is 98th most prominent mountain in the world.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 19
+ },
+ {
+  "id": "ddd4f2e1-3995-437a-b1b1-d2b081ca22b4",
+  "source": "SAT:satoplam-form-structure-and-sense-4",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Rising 11,371 feet above sea level, Mount Leuser _____ among the world’s tallest mountains.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "is ranked",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "to rank",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "ranking",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "having ranked",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 20
+ },
+ {
+  "id": "9fb19908-eb6a-4c73-b180-b142a551acf9",
+  "source": "SAT:satoplam-form-structure-and-sense-146",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Museo Castillo Serrallés, a history museum in Ponce, Puerto Rico, is one of more than eighty museums in the US territory. Puerto Rico museums _____ visitors about everything from the territory’s history to its architecture to its coffee.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "inform",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "informing",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "to inform",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "having informed",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 21
+ },
+ {
+  "id": "0bf7892e-47fb-4d7f-b4bd-551353483910",
+  "source": "SAT:satoplam-transitions-82",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>With his room-sized installation Unicorn/My Private Sky, Norwegian artist Børre Sæthre succeeds in creating a whimsical yet perplexing experience. __________ when visitors set foot inside the fantastically blue room and encounter the life-sized stuffed unicorn preening at the far end of it, they are both dazzled and confused—as if stepping into a strange and enchanting new world.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Indeed,",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Second,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Nevertheless,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Instead,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 22
+ },
+ {
+  "id": "02bf6cea-ee77-4333-85a1-f0829ce9ef43",
+  "source": "SAT:satoplam-transitions-44",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>With many elements, like cadmium, scientists were able to isolate a relatively pure sample of the substance shortly after discovering its existence–but this wasn’t the case with all elements. ________ the isolation process took years. The element niobium, for instance, was discovered in 1801 but not isolated until 1864.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Moreover,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Thus,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "However,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Sometimes,",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 23
+ },
+ {
+  "id": "fc593635-f103-4278-86f4-94ca79342e7c",
+  "source": "SAT:satoplam-transitions-79",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Australia ratified the Outer Space Treaty, an international agreement with over 100 signing nations that acts as the foundation for the laws of space, on January 27, 1967. Colombia signed the treaty; ________ it has yet to officially ratify it.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "however,",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "similarly,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "specifically,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "for example,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 24
+ },
+ {
+  "id": "3eababba-a2fc-412d-b1f2-3e3bea74757a",
+  "source": "SAT:satoplam-rhetorical-synthesis-80",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses information from the given sentences to make and support a generalization about symbols on flags?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Vexillology is the study of flags.</li><li>The flags of many countries include symbols like animals, plants, or landforms.</li><li>These symbols often represent an aspect of the region’s history, culture, or landscape.</li><li>The flag of Papua New Guinea includes a raggiana bird-of-paradise.</li><li>The flag of El Salvador includes a palm branch.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Papua New Guinea’s flag includes a raggiana bird-of-paradise, a symbol that is important to that country’s national identity.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The flags of some countries include symbols of animals; Papua New Guinea’s, for example, includes a raggiana bird-of-paradise.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Many countries feature symbols on their flags, and the study of these designs is known as vexillology.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Vexillology is the study of flags; accordingly, vexillologists are interested in flags from around the world.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 25
+ },
+ {
+  "id": "bf482f17-679b-42b9-8787-85be535529e8",
+  "source": "SAT:satoplam-rhetorical-synthesis-172",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Today, more than twenty different national currencies are referred to as \"dollars.\"</li><li>The English word \"dollar\" comes from the German word \"thaler.\"</li><li>Kiribati’s currency is known as the Kiribati dollar</li></ul><p>The student wants to provide an example of a country that uses the word \"dollar\" in the name of its currency.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Kiribati uses the Kiribati dollar as its national currency.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Kiribati does not refer to its currency by the German word \"thaler.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The German word \"thaler\" is the origin of the English word \"dollar.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Today, many countries use the word \"dollar\" in naming their currencies.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 26
+ },
+ {
+  "id": "4f3c3c60-4ddd-4336-b46b-2489e178a2ca",
+  "source": "SAT:satoplam-rhetorical-synthesis-52",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The human tongue contains taste receptors for a rich, savory flavor called umami.</li><li>Umami is triggered by the compounds in a variety of foods, including pork and tomato paste.</li><li>Participants in a study tasted a sample of macrokelp, a type of brown seaweed.</li><li>They rated its umami intensity as moderate.</li><li>The participants tasted a sample of ma-konbu, another type of brown seaweed.</li><li>They rated its umami intensity as high.</li></ul><p>The student wants to make a generalization about brown seaweed.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Macrokelp is a type of brown seaweed, as is ma-konbu.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "In a research study, participants tasted samples of macrokelp and ma-konbu, two types of brown seaweed.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Participants in a study rated the umami intensity of various seaweeds.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Some types of brown seaweed trigger umami flavor in human taste buds.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 27
+ },
+ {
+  "id": "71646e95-979f-437a-b62b-81d403347623",
+  "source": "SAT:satoplam-words-in-context-gap-filling-39",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>Despite stated claims of global relevance, much major research on income inequality performed in the 2010s suffered from a myopic focus on a few countries in North America and Western Europe, partly due to limited data availability. Researchers would later ______________ this shortcoming after gaining new access to banking records located in nations in Africa, such as Tunisia, and Eastern Europe, such as Poland.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "mitigate",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "validate",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "presuppose",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "categorize",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 1
+ },
+ {
+  "id": "27931536-47c3-43e3-8258-4f9d573b683f",
+  "source": "SAT:satoplam-words-in-context-gap-filling-9",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>The A2X Markets in Johannesburg, South Africa, connects companies operating in South Africa with potential investors. This is a valuable service since the time and expense necessary to find individual investors might otherwise be ____________ for these companies: many of the companies could not operate if they had to do everything necessary to find investors for themselves.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "misconstrued",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "distinctive",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "prohibitive",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "beneficial",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 2
+ },
+ {
+  "id": "da6a8a23-177a-47c7-843a-3fd4c39e3825",
+  "source": "SAT:satoplam-words-in-context-gap-filling-74",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>Few religious buildings can be said to ____________ the astonishing size of Sultan Salahuddin Abdul Aziz Mosque in Malaysia, which, with the capacity to accommodate approximately 24,000 people at once, is one of the largest mosques in the world.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "conceal",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "symbolize",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "minimize",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "match",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 3
+ },
+ {
+  "id": "5e0a2407-1a73-46ae-90b8-2cbdb08af279",
+  "source": "SAT:satoplam-words-in-context-gap-filling-196",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>In the 2010s, the price of vintage Teenage Mutant Ninja Turtles action figures rose dramatically, which had the counterintuitive effect of ______________ demand: buyers who hadn’t previously wanted to purchase old action figures thronged the market, believing prices would continue to rise and the toys could be resold later at a profit.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "monetizing",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "appraising",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "engendering",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "exploiting",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 4
+ },
+ {
+  "id": "2931948f-1466-41bf-8dc8-bd7c2351f923",
+  "source": "SAT:satoplam-words-in-context-gap-filling-112",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>To evaluate their ideas about environmental conditions in the Pliocene epoch, paleontologists must turn to ________ evidence. Only material objects—such as the fossil remains of the individual known as AL 200-1, discovered in Ethiopia in 1975—can show whether a particular idea about the Pliocene is defensible.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "physical",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "convenient",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "creative",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "inconclusive",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 5
+ },
+ {
+  "id": "83b71dfa-b32c-41bc-a832-ee4098b228df",
+  "source": "SAT:satoplam-overall-structure-5",
+  "test": "Test 16",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>Joel Brown and colleagues showed that high moonlight intensity inhibits the activity of the Arizona pocket mouse (Perognathus amplus), a result explicable in terms of benefits and costs: greater lunar intensity may not enable the mice to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Most other nocturnal mammals respond to lunar intensity variations similarly to Arizona pocket mice, but Azara’s night monkeys (Aotus azarae) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It introduces an observation of a behavioral pattern, presents an explanation for the pattern, and then describes an exception to the pattern that casts doubt on that explanation.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It describes and accounts for a finding, characterizes the finding as representative of a general pattern, and then describes and accounts for an exception to that pattern.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "It discusses two different responses to the same natural phenomenon, explains why one of those responses occurs, and then suggests that the other response still needs to be explained.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It presents and explains a study result, indicates that the result is similar to the results of many other studies, and then attributes a conflicting study result to a difference in that study’s methods.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 6
+ },
+ {
+  "id": "0812b253-d46b-482a-8712-5049d67a9076",
+  "source": "SAT:satoplam-overall-structure-32",
+  "test": "Test 16",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It introduces the topic of a scientific study, describes the study’s importance, and then presents the study’s results.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "It argues for a new approach to scientific research, comments on the public’s opinion about the approach, and then describes how that approach was applied in a certain study.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 7
+ },
+ {
+  "id": "782d6de1-74d1-4230-8460-ffd618bbed12",
+  "source": "SAT:satoplam-details-question-40",
+  "test": "Test 16",
+  "stem": "According to the text, what happened when the researchers added oil to the surfaces covered in graphene fragments?",
+  "passage": "<p>Superlubricity, the state of virtually no friction between materials, has desirable applications in many industries. For example, it can make aircraft engines more efficient. To produce a coating that achieves superlubricity, Chanaka Kumar and colleagues broke down carbon nanotubes into fragments of graphene to fully cover two surfaces that would rub together. Friction between pieces of graphene is generally extremely low, and when the researchers added a drop of oil as lubrication, that friction nearly vanished. This new coating may drastically lower friction-related energy costs.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "All the pieces of graphene collected on just one of the two surfaces.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The low amount of friction between the surfaces became even lower.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Carbon nanotubes on the surfaces fractured into smaller pieces.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Friction between the surfaces did not noticeably change right away.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 8
+ },
+ {
+  "id": "144a2b44-48e8-486a-9417-dccea6a760bb",
+  "source": "SAT:satoplam-details-question-8",
+  "test": "Test 16",
+  "stem": "According to the text, how did Hooks and Ward initially meet?",
+  "passage": "<p>The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Carter Harrison’s award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry’s play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Hooks and Ward participated in the same workshop at NEC.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Hooks and Ward attended the same performance of The Great MacDaddy.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Hooks and Ward were both actors in a production of A Raisin in the Sun.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 9
+ },
+ {
+  "id": "e440df62-a5bb-4e2f-8451-80f13c958754",
+  "source": "SAT:satoplam-details-question-34",
+  "test": "Test 16",
+  "stem": "According to the text, what is a difference between how historians view Lestek and how they view Władysław I Herman?",
+  "passage": "<p>Historians point to the rule of the Piast dynasty as crucial to the formation of the Polish state. However, some differentiate between members of the dynasty like Władysław I Herman, who ruled as duke from 1079 to 1102 CE, and less well-documented figures like Lestek, who is said to have ruled in the 9th and 10th centuries but whose historical actuality is disputed. Lestek appears in the Gesta principum Polonorum, a chronicle of medieval Polish history written between 1112 and 1118. However, the chronicle’s documentation of Lestek relies on oral tradition, unlike its records of later rulers.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Historians believe that the Gesta principum Polonorum provides more evidence for Lestek’s existence than it does for Władysław I Herman’s existence.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Historians agree that Władysław I Herman existed, but disagree about whether Lestek existed.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Historians agree that Lestek ruled Poland much later than Władysław I Herman.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Historians find the orally transmitted stories affirming the existence of Władysław I Herman to be more convincing than similar stories about Lestek.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 10
+ },
+ {
+  "id": "5afaa9a5-14a0-43c4-a676-5422d502b5ff",
+  "source": "SAT:satoplam-quotation-19",
+  "test": "Test 16",
+  "stem": "Which quotation from \"A Pair of Silk Stockings\" most effectively illustrates the claim?",
+  "passage": "<p>A Pair of Silk Stockings is an 1897 short story written by Kate Chopin. In the story, Chopin suggests that the protagonist, Mrs. Sommers, experiences a shift in her sense of self as a result of putting on certain articles of clothing, writing, __________.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\"Mrs. Sommers was one who knew the value of bargains; who could stand for hours making her way inch by inch toward the desired object that was selling below cost.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "\"She held back her skirts and turned her feet one way and her head another way as she glanced down at the polished pointed-tipped boots.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "\"She would buy so and so many yards of percale for new shirt waists for the boys and Janie and Mag.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "\"Her stockings and boots and well-fitting gloves had worked marvels in her bearing had given her a feeling of assurance, a sense of belonging to the well-dressed multitude.\"",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 11
+ },
+ {
+  "id": "eb663f6a-1055-4106-9d59-e51ed67b6994",
+  "source": "SAT:satoplam-command-of-evidence-support-3",
+  "test": "Test 16",
+  "stem": "Which choice, if true, would most effectively support the writer’s claim?",
+  "passage": "<p>It was only when Alma Thomas turned away from figurative art and toward abstraction that she rose to acclaim as an artist. When the solidity of her line gave way to broken, vibrant colors, the beauty she had long seen emerged.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Her painting Starry Night and the Astronauts (1972) includes a small kaleidoscope of red, orange, and yellow that suggests the spaceship Apollo 10.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Thomas was fascinated by the natural world, incorporating everything from the flowers in her garden to the stars in the night sky into her paintings.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Her Still Life with Vases and Flowers (1964), which contains realistic images, feels labored, whereas Lunar Surface (1970) glows with rich splashes of purple and blue.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Although Thomas’s own works focused on nature, she believed that art could also evoke the energy of airplanes, cars, skyscrapers, and electric signals.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 12
+ },
+ {
+  "id": "ee65bd1c-6ac7-409c-9bb8-9da48633e3b0",
+  "source": "SAT:satoplam-quotation-43",
+  "test": "Test 16",
+  "stem": "Which quotation from an art history textbook would most effectively support the student’s claim?",
+  "passage": "<p>In a paper for an art history class, a student claims that Rosa Bonheur’s 1855 painting The Horse Fair marks a significant change in Bonheur’s artistic development.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\"The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "\"Of all Bonheur’s paintings, none so clearly represents her abilities and ideas as The Horse Fair.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "\"The Horse Fair has been analyzed extensively since it was first exhibited, as no two viewers seem to agree about exactly what the painting means.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "\"Although Bonheur was clearly influenced by other artists of her time, she was also an artist ahead of her time, as The Horse Fair demonstrates.\"",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 13
+ },
+ {
+  "id": "5f12584d-f7d6-49ad-92ef-e3371dab3868",
+  "source": "SAT:satoplam-inference-61",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>As exemplified by Temiar songs about landforms and landmarks and Lakota songs about gathering mouse beans, ecological information can be transmitted in Indigenous songs, and in some instances is maintained only in this way. Kwaxsistalla Wathl’thla, a song keeper for the Kwakwaka’wakw people in Canada, collaborated with ethnobiologist Dana Lepofsky et al., sharing songs referencing terraced intertidal clam gardens the people implemented in the past to foster healthy development of a dietary staple. Drawing on archaeological evidence as well, Lepofsky et al. determined that the prevalence of the practice described in the songs corresponded with growth in clam size and abundance despite increased harvesting pressure—a finding that demonstrates that ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "representation of practical applications of ecological knowledge is the defining characteristic of the music of certain Indigenous peoples.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "the Kwakwaka’wakw people likely would not have detailed their creation of clam gardens in songs if their efforts had not produced significantly larger clams.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "the clams harvested from intertidal terraces by Kwakwaka’wakw people in the past likely were a different species than the clams found in those areas today.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "effective methods for the cultivation of sources of sustenance are among the ecological knowledge preserved in Indigenous songs.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 14
+ },
+ {
+  "id": "2b14a975-cd8e-43e0-9325-73f9f007fbdf",
+  "source": "SAT:satoplam-inference-20",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>The Socio-Economic Panel (SOEP) is a longitudinal study surveying approximately 12,000 individuals in Germany to glean extended trends in childhood development. To carry out the necessary sampling of the population over many years, SOEP needs extensive financial support, but this method provides valuable insights into causal relationships. However, when questions of causation are irrelevant, as with a transportation study seeking only to reveal the number of people per day who use a city’s public transportation system, longitudinal methods are unnecessary, and so ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "the expense of SOEP is likely greater than the cost of longitudinal studies of transportation.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "conclusions drawn from SOEP are likely to be more authoritative than those from the transportation study.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "longitudinal methods are suitable for studies of childhood development but ought to be avoided for those of transportation.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "the success of the transportation study likely requires significantly less financial outlay than that needed for SOEP.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 15
+ },
+ {
+  "id": "ecbf1e78-e17a-4aa7-be55-bbb7d804a834",
+  "source": "SAT:satoplam-boundaries-40",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Long attributed to Jacques-Louis David, the preeminent Neoclassical painter of his day, the 1801 painting Marie Joséphine Charlotte du Val d’Ognes gained fresh attention in the 1990s when art historians discovered that the painting which depicts a solitary young woman sketching was actually the work of little-known French portrait _____ Villers (1774-1821).</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "artist—",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "artist",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "artist:",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "artist,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 16
+ },
+ {
+  "id": "0c6b5a6d-3bac-4f4e-8a28-8576a8ab2857",
+  "source": "SAT:satoplam-form-structure-and-sense-17",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Lily Everett and Mary Foote were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to the American audience. Marcel Duchamp’s abstract cubist aesthetic received the most skepticism from critics, as _____ represented a radical departure from the more realistic painting style that was popular at the time.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "these",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "they",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "we",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "it",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 17
+ },
+ {
+  "id": "1e5c27db-b2ad-4104-90f4-ddd76ce23a53",
+  "source": "SAT:satoplam-form-structure-and-sense-135",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Legal scholars James Melton and Tom Ginsburg’s analysis of de jure judicial independence and its growth over decades _____ six constitutional features that enhance such independence, including judicial tenure and selection procedure. Romania’s constitution contains one of these features.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "have identified",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "identifies",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "are identifying",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "identify",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 18
+ },
+ {
+  "id": "1ba58c29-0479-4ef9-84c2-2bcd7f194144",
+  "source": "SAT:satoplam-form-structure-and-sense-61",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>As comet C/1911 N1 (Kiess) orbits the Sun, it is trailed by a stream of rocky particles. When Earth passes through this meteoroid stream each year, typically between August 28 and September 5, the 66-kilometer-per-second collision between these meteoroids and atmospheric gases _____ streaks of light in the sky—the Aurigid meteor shower.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "produces",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "are producing",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "produce",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "have produced",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 19
+ },
+ {
+  "id": "358b6ac5-6b1f-4ef7-9577-cd113ce5e8bb",
+  "source": "SAT:satoplam-boundaries-92",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>In a 2023 study, researchers documented a fascinating behavior in the aquatic plant Elodea densa. When exposed to low levels of light, the plant’s _____ the cellular organs that generate energy from light—reshuffled to form a tightly packed, glass-like surface ideal for collecting more light.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "chloroplasts,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "chloroplasts—",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "chloroplasts",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "chloroplasts;",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 20
+ },
+ {
+  "id": "0a2c3541-b431-48a9-a724-535bfd87e289",
+  "source": "SAT:satoplam-form-structure-and-sense-176",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>The radial velocity method, a means of indirect planetary discovery, has detected previously unknown exoplanets at vast distances from _____ the Neptune-like planet DMPP-1 b; at 296 light-years away, the gas giant 42 Draconis b; and, as of 2023, over 1,000 other exoplanets that are too far away and dim to be observed directly.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Earth, at 204 light-years away,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Earth at 204 light-years away,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Earth at 204 light-years away:",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Earth: at 204 light-years away,",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 21
+ },
+ {
+  "id": "ebcc376d-8f0e-4f4c-9260-673350715352",
+  "source": "SAT:satoplam-transitions-48",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>In the South Asian country of Sri Lanka, the percentage of the population living in cities increased from 18.3% to 18.7% between 2015 and 2020; this upward trend in urbanization was seen throughout that part of the continent. __________ from 2015 to 2020, the overall percentage of the South Asian population living in cities rose from 34.5% to 36.6%.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Nevertheless,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Indeed,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "In reality,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Later,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 22
+ },
+ {
+  "id": "827ad8d7-8c1f-410a-b739-d7df868a9cb0",
+  "source": "SAT:satoplam-transitions-97",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Blair L. M. Kelley, a historian specializing in the history of segregation in the US, conducted extensive research while writing a book about the landmark Brown v. Board of Education court case. __________ when the book was released, colleagues in her field regarded it as a reliable source of information on the subject.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Likewise,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Consequently,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Next,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Nevertheless,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 23
+ },
+ {
+  "id": "9c06cc51-b31c-4232-9b4a-210de20b640f",
+  "source": "SAT:satoplam-transitions-50",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Humans inherit specific physical traits (like having type O or type AB blood) from their parents.__________cats inherit specific physical traits (like having short or long fur) from their parents.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In other words,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "As a result,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "In conclusion,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Similarly,",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 24
+ },
+ {
+  "id": "d0fe425f-5a08-4942-a120-caeb820ce45f",
+  "source": "SAT:satoplam-rhetorical-synthesis-35",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The poem “5 love haiku\" is by African American writer Sonia Sanchez</li><li>It was published in her 2010 poetry book entitled Morning Haiku.</li><li>The poem is written as a sequence of five haiku.</li><li>According to the book’s publisher, Penguin Random House (PRH), the book “celebrates the gifts of life and mourns the deaths of revered African American figures.”</li><li>According to Sanchez, she chose to write in the form of haiku because it helps “maintain memory and dignity.\"</li></ul><p>The student wants to provide an example of a poem from Morning Haiku.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Included in Sanchez’s poetry book Morning Haiku (2010),“love haiku” is a poem written as a sequence of five haiku.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Sanchez chose to write in the form of the haiku because it helps “maintain memory and dignity.”",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The poetry book Morning Haiku “celebrates the gifts of life and mourns the deaths of revered African American figures.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The poem by Sanchez is written as a sequence of five haiku.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 25
+ },
+ {
+  "id": "eaac4a9f-f08f-4cb3-8d0d-b375c123b34f",
+  "source": "SAT:satoplam-rhetorical-synthesis-187",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Bread is a 1968 black-and-white linocut print by Black American artist Elizabeth Catlett.</li><li>It features a young girl eating a slice of bread.</li><li>Relief printing is a technique in which an image is first carved onto a printing block made of wood, rubber, or other materials.</li><li>The block is then painted and stamped on to a print surface.</li><li>Lino cutting is a type of relief printing that uses linoleum tile as the printing block.</li></ul><p>The student wants to emphasize a similarity between the two countries.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Relief printing is a technique that can use wood, rubber, and other materials as the printing block, not just linoleum tile.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Catlett used a relief printing technique called lino cutting, carving an image onto linoleum tile.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Catlett used relief printing to create the 1968 linocut Bread.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "In relief printing, an image is carved on to a printing block, which is then painted and pressed Vonto a print surface.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 26
+ },
+ {
+  "id": "961f64c8-3842-4367-853a-db4d0e45e18d",
+  "source": "SAT:satoplam-rhetorical-synthesis-206",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The A.M. Turing Award is a prestigious award given by the Association for Computing Machinery (ACM).</li><li>The ACM gives the award for \"major contributions of lasting importance to computing.\"</li><li>is named after groundbreaking British mathematician Alan Turing.</li><li>Raj Reddy won the award in 1994 for pioneering the development of large-scale artificial intelligence systems.</li></ul><p>The student wants to explain whom the award is named for.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 1994, Raj Reddy won the A.M. Turing Award for pioneering the development of large-scale artificial intelligence systems.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The A.M. Turing Award is given for \"major contributions of lasting importance to computing.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The A.M. Turing Award is named for groundbreaking British mathematician Alan Turing.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "It was in 1994 that Raj Reddy won the A.M. Turing Award.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "q_order": 27
+ },
+ {
+  "id": "215f591a-f5ff-4fe1-aa78-cbbe6138e7fd",
+  "source": "SAT:satoplam-words-in-context-gap-filling-115",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>Whatever the general attitude toward Spike Lee’s 1992 film Malcolm X and Carl Franklin’s 1995 film Devil in a Blue Dress when they were initially released, both films now tend to be regarded quite ______. In 2018, for example, critics for the New York Times praised the former as ’electrifying’ and the latter as ’picture-perfect.’</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "strangely",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "neutrally",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "skeptically",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "favorably",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 1
+ },
+ {
+  "id": "381339e5-a6fa-413c-af38-3d8a7c172ce8",
+  "source": "SAT:satoplam-words-in-context-gap-filling-86",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>British painter Peter Edwards has a ____________ painting portraits of notable figures from a variety of different fields. These characteristic works include his esteemed portraits of writer Maud Sulter and soccer player Bobby Charlton.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "complaint about",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "question about",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "requirement for",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "reputation for",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 2
+ },
+ {
+  "id": "b2d51c23-7202-4a0d-ba01-e99a2a187c62",
+  "source": "SAT:satoplam-words-in-context-gap-filling-141",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>As with other river deltas, the Paraná River delta is __________; it is a constantly evolving network of channels and strips of land that change in size and shape as the river deposits new sedimentary particles where the river meets the waters of the Atlantic Ocean.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "dynamic",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "immutable",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "sustainable",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "unrivaled",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 3
+ },
+ {
+  "id": "7a7c15c8-c170-42cb-9c44-020488a81711",
+  "source": "SAT:satoplam-words-in-context-gap-filling-192",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>The fact that publications by University of Minnesota economist Ellen R. McGrattan, who studies financial policy, are so frequently cited in other scholars’ work ______________ the usefulness of her research for her peers—other economists clearly find her studies valuable for their own scholarship.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "forestalls",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "belies",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "underscores",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "overshadows",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 4
+ },
+ {
+  "id": "a003edc3-6b56-4bd4-ba36-50aebca55657",
+  "source": "SAT:satoplam-words-in-context-gap-filling-122",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>New and interesting research conducted by Suleiman A. Al-Sweedan and Moath Alhaj is inspired by their observation that though studies of the effect of high altitude on blood chemistry are __________, the effect on blood chemistry of living in locations below sea level, such as the California towns of Niland and Heber, has received comparatively little notice.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "abundant",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "equivocal",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "sporadic",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "preliminary",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 5
+ },
+ {
+  "id": "cb0f35ce-937a-419a-91ae-74a7326776f8",
+  "source": "SAT:satoplam-main-purpose-6",
+  "test": "Test 16",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>Researchers have long hypothesized that woolly mammoths were hunted to extinction in North America by humans using spears with grooved tips known as Clovis points. One anthropologist set out to test this hypothesis. Using a mechanical spear-thrower, he launched spears with Clovis points into mounds of clay—substitutes for the animals’ large bodies. The projectiles generally penetrated only a few inches into the clay, an amount insufficient to have harmed most woolly mammoths. This led the anthropologist to conclude that hunters using spears with Clovis points likely weren’t the principal drivers of the extinction.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To argue for the significance of new findings amid an ongoing debate among researchers.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "To discuss the advantages and disadvantages of the method used in an experiment.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "To summarize two competing hypotheses and a major finding associated with each one.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "To describe an experiment whose results cast doubt on an established hypothesis.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 6
+ },
+ {
+  "id": "9b4d35b9-4120-4afb-8537-2b054b4ca9e0",
+  "source": "SAT:satoplam-overall-structure-9",
+  "test": "Test 16",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>Like all species of baleen whales, the humpback whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the humpback whale small—it can have a mass as high as 30,000 kg—it is one of the smaller baleen whales and is much smaller than the northern right whale, which can weigh a whopping 80,000 kg and consume as much as 24,000 kg of krill per day.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It describes a characteristic shared by all baleen whales and then illustrates a difference between the humpback whale and the northern right whale that is relevant to that characteristic.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It discusses a unique feature of the humpback whale and how the lack of that feature in the northern right whale explains differences in the two species’ behavior.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It draws a distinction between the sizes of the humpback whale and the northern right whale and then presents a feature that they have in common.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "It details a relationship between humpback and northern right whales and krill and then discusses an unexpected consequence of a change in baleen whale populations.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 7
+ },
+ {
+  "id": "11c0dd70-17b8-4d1a-b3df-d8fa8e65bbe1",
+  "source": "SAT:satoplam-cross-text-connections-5",
+  "test": "Test 16",
+  "stem": "Based on the texts, how would the author of Text 2 most likely regard the emphasis that Text 1 places on poetic form during the modernist period?",
+  "passage": "<p><strong>Text 1</strong></p><p>: Scholarship today overrepresents formal experimentation, such as William Carlos Williams’s use of minimalistic, image-based structures, well beyond the degree to which it actually influenced US poetry during the modernist period (roughly 1900-1945). Meanwhile, the work of Countee Cullen, who relied on conventional poetic forms associated with previous literary periods, attracts woefully little attention from scholars of modernism.</p><p><strong>Text 2</strong></p><p>: Distant reading, or computer-assisted quantitative analysis of massive collections of digitized texts, can reveal stylistic elements that have heretofore escaped notice, despite being shared by numerous texts from the modernist period. For too long, scholars have focused on experimental versus conventional poetic forms, inhibiting inquiry into other points of stylistic correspondence among poems that would enrich our understanding of the modernist canon.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "As having the effect of forestalling consideration of the full stylistic dimensions of poetry written in the period.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "As overestimating the impact that poetic form, whether experimental or conventional, has on the reading experience.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "As being founded on a misconception about modernist poetry that has been called into question by distant reading.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "As complementing the study of other stylistic features that distinguish the modernist period.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-CT",
+  "skill_name": "Cross-Text Connections",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 8
+ },
+ {
+  "id": "d4168197-2505-40d9-bca9-513643ba05da",
+  "source": "SAT:satoplam-main-ideas-13",
+  "test": "Test 16",
+  "stem": "Which choice best states the main idea of the text?",
+  "passage": "<p>In a large community science effort, biologist Abbigail Merrill and colleagues collaborated with hundreds of students and other amateur science enthusiasts for more than three years to study how butterfly color and time of day relate to butterfly behavior. They found that butterfly color might influence behavior more than butterfly size does, and that butterflies were observed to feed more often in the morning than at any other time of day.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Time of day and butterfly color seem to have less influence on butterfly behavior than the location where the butterflies are studied does.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "A recent study suggested that butterflies’ coloring seems to be less relevant to their behavior than time of day.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Collaboration between professional scientists and members of the public is especially useful when studying the behavior of butterflies and other flying insects.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "A large study suggested that butterfly color and time of day might influence the behavior of certain butterflies.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 9
+ },
+ {
+  "id": "d8511647-c451-4118-899d-694898f8f66f",
+  "source": "SAT:satoplam-details-question-39",
+  "test": "Test 16",
+  "stem": "According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+  "passage": "<p>Can field mustard plants grow on Mars? Can pea plants? You might think the answer to these questions is obviously no, but researchers in the Netherlands recently showed that the seeds of many common plant species can germinate in soil designed to simulate Martian conditions, as long as water is supplied. In fact, some species actually did better in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted in simulated Martian soil, compared with 4 percent that did when planted in soil from their home planet.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18 percent",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "30 percent",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "100 percent",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "5 percent",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 10
+ },
+ {
+  "id": "b25a017f-bfed-4525-bb2b-d6b4eae045ac",
+  "source": "SAT:satoplam-command-of-evidence-support-26",
+  "test": "Test 16",
+  "stem": "Which finding, if true, would most strongly support the researchers’ conclusion?",
+  "passage": "<p>The utilization of deceptive antipredator displays is well documented in the little ringed plover (Charadrius dubius) and other species of the avian order Charadriiformes. An extensive literature review conducted by Léna de Framond et al. revealed that this trait has evolved across a surprisingly large phylogenetic distribution of 13 Aves orders, including Caprimulgiformes and Gruiformes. Subsequent investigation of potential selection mechanisms prompted the researchers to conclude that independent of avian order, the prevalence of the trait is mediated by environmental variations associated with the absolute latitude of brooding sites.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Across the orders in the study, approximately 54% of the bird species brood in ranges from 50° to 80° absolute latitude, but most of the birds that are known to use deceptive antipredator displays brood between 0° and 30° absolute latitude.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Deceptive antipredator displays are documented in Charadriiformes species across the entire range of absolute latitudes of brooding sites within that order, but in species from other orders, deceptive antipredator displays are documented only when brooding sites are at absolute latitudes 10°–20° higher than what is typical for those species.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The use of deceptive antipredator displays is widespread among Charadriiformes species independent of the absolute latitude of their breeding sites, but its prevalence in other avian orders is limited to species with brooding sites located in absolute latitudes of 0°–30°.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Across the orders in the study, deceptive antipredator displays are observed in approximately 34% of species with brooding ranges of 0°–30° absolute latitude and approximately 60% of species with brooding ranges of 50°–80° absolute latitude.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 11
+ },
+ {
+  "id": "e3ef928f-ec15-4ffb-bbc5-418b464b1023",
+  "source": "SAT:satoplam-command-of-evidence-support-20",
+  "test": "Test 16",
+  "stem": "Which finding, if true, would most directly support the second research team’s hypothesis?",
+  "passage": "<p>Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagisuru, Otar Akanyeti, and James C. Liao using models of three head shapes—narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length)—showed that for large vortices, fish with intermediate heads would be better able than wide-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than wide-headed fish to detect obstructions that create large vortices.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A study using obstructions that created large vortices in low-visibility conditions found that the intermediate-headed black sea bass (Centropristis striates) bumped into the obstructions just as often as the wide-headed Synodontis macropunctata did.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "A study using obstructions that created large vortices in low-visibility conditions found that the wide-headed Synodontis macropunctata bumped into obstructions more often than the intermediate-headed black sea bass (Centropristis striates) did.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "A study using obstructions that created large vortices in low-visibility conditions found that some specimens of the intermediate-headed black sea bass (Centropristis striates) bumped into the obstructions more often than other specimens of the same fish did.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "A study using obstructions that created large vortices in low-visibility conditions found that the Synodontis macropunctata, which has a relatively wide head, bumped into more than half of the obstructions.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 12
+ },
+ {
+  "id": "3f2f867b-1be1-46b9-84b9-91f55fdb9d0b",
+  "source": "SAT:satoplam-command-of-evidence-support-28",
+  "test": "Test 16",
+  "stem": "Which finding, if true, would most directly support the researchers’ hypothesis?",
+  "passage": "<p>Cardiff, Wales, has installed engineered structures – mainly breakwalls – along 87% of its shoreline to protect infrastructure from storm surges and other hazards, a practice known as shoreline hardening. Investigating the impact of such structures on waterbird communities at various sites in the Chesapeake Bay on the US East Coast, Diann Prosser et al. hypothesized that shoreline hardening more negatively affects waterbirds than does land development for uses such as housing or agriculture. To evaluate the responses of local waterbird species, including the osprey, to landscape alterations, the researchers utilized the Index of Waterbird Community Integrity (IWCI), on which a low score corresponds to low community integrity.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Waterbird communities at Back River, a site with a relatively high percentage of developed land and a relatively low percentage of hardened shoreline, had higher average IWCI scores than did waterbird communities at Margothy, a site with a lower percentage of developed land but a higher percentage of hardened shoreline.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Waterbird communities at Langford, a site with a relatively high percentage of developed land and a relatively low percentage of hardened shoreline, had lower average IWCI scores than did waterbird communities at Mill, a site with a lower percentage of developed land but a higher percentage of hardened shoreline.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Waterbird communities at Stony and Curtis, two sites with relatively high percentages of developed land and hardened shoreline, had similar IWCI scores, whereas waterbird communities at Ware and Honga, two sites with relatively low percentage of developed land and hardened shoreline, had widely differing IWCI scores.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Waterbird communities at Old Road, a site with a relatively high percentage of developed land and hardened shoreline, had lower average IWCI scores than did waterbird communities at Onancock, a site with a relatively low percentage of developed land and hardened shoreline.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 13
+ },
+ {
+  "id": "f192bc8f-cfc8-4404-8759-6dee803a8f81",
+  "source": "SAT:satoplam-inference-113",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>Archaeologists have traditionally thought that many cities in ancient Mesopotamia, including Uruk and Ur, lay on the extremely dry banks of the Tigris and Euphrates rivers. Jennifer Pournelle and her team found evidence that the land these ancient cities sat on consisted of marshy wetlands. This finding suggests that ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Uruk was founded at an earlier time than Ur was.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "far fewer fish species are found in rivers today than in ancient times.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "the land many ancient Mesopotamian cities sat on wasn’t as dry as previously believed.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "people in Ur engaged in trade with people from many parts of ancient Mesopotamia.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 14
+ },
+ {
+  "id": "05fd7b4a-37dd-4d2f-ace5-51b8698eb388",
+  "source": "SAT:satoplam-inference-132",
+  "test": "Test 16",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>The compositional strategy of Untitled, a 1955 work by Cherokee artist Edna Massey, is far more closely aligned with Abstract Expressionism — a mid-twentieth-century school of painting dominated by European American artists — than with traditionally abstract forms of indigenous art, such as beadwork. Few viewers would infer from the stylistic attributes of Untitled that Massey was Indigenous. In this respect, the work typifies Indigenous painters’ forays into abstraction during the period. In contrast, the contemporary Caddo artist Chad \"Nishi\" Earles assembles abstract compositions out of motifs common in the traditional ceramics and graphic art of his tribe. Thus in Earles’s work, abstraction has the effect of ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "rendering Indigenous identity more legible than it is in Untitled.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "asserting the indigenous origins of motifs associated with Abstract Expressionismlation density would be found for medieval settlements in other regions.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "challenging the dominance of European American artists within Abstract Expressionism.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "reconciling Indigenous and European American influences that coexist uneasily in Untitled.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 15
+ },
+ {
+  "id": "a38ab223-e11b-415e-a2ea-a578188af1d0",
+  "source": "SAT:satoplam-boundaries-214",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>When attempting to determine a fault’s seismic history, geophysicists like Dr. Estella Atekwana at the University of Delaware rely in part on data about the fault’s physical dimensions and geological features. For the Ione Valley fault in Lander County, Nevada, the US Geological Survey compiles such data in several _____ exchanging information with state geological surveys, by linking maps of the fault with sources that offer detailed descriptions of it, and by maintaining a database of quantitative data such as the fault’s length (76 km).</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "ways. By",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "ways: by",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "ways; by",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "ways by:",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 16
+ },
+ {
+  "id": "af4fb462-fc1a-4263-b981-48f6842d77dc",
+  "source": "SAT:satoplam-boundaries-202",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>In Norway, the Longyearbyen observatory site monitors activity in the upper atmosphere of the northern _____ in Australia, another observatory site, Buckland Park, monitors the sky of the southern hemisphere. Together, they are part of the Super Dual Auroral Radar Network—or SuperDARN, as space physicists like Tadahiko Ogawa call it.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "hemisphere and",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "hemisphere",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "hemisphere,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "hemisphere;",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 17
+ },
+ {
+  "id": "6aef4e54-f5df-4727-a08e-d837536fff03",
+  "source": "SAT:satoplam-form-structure-and-sense-28",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>To study the ultrafast movements of atoms, chemist Ahmed Zewail had to devise a novel spectroscopy technique capable of measuring chemical reactions, _____ within molecules at a quadrillionth of a second. Ultimately, Zewail succeeded and was eventually honored with the Robert A. Welch Award and the Albert Einstein World Award of Science for this groundbreaking achievement.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "occurred",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "occurring",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "occur",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "will occur",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 18
+ },
+ {
+  "id": "b27d203c-55ef-4f81-bb55-4468d6539447",
+  "source": "SAT:satoplam-boundaries-204",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Along the hallowed walls of New York City’s Museum of Modern Art hangs 24.5-by-34.5-inch oil _____ which was created in 1964 by American artist Vija Celmins.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "painting Gun with Hand #1",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "painting, Gun with Hand #1,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "painting Gun with Hand #1,",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "painting, Gun with Hand #1",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 19
+ },
+ {
+  "id": "e6901dc0-6c37-4f28-86f1-459da89193e0",
+  "source": "SAT:satoplam-form-structure-and-sense-110",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Louisiana resident Oscar James Dunn, one of the nearly two thousand African Americans elected to public office during the decade that followed the Civil War, _____ his term as lieutenant governor in 1868.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "to begin",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "having begun",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "beginning",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "began",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 20
+ },
+ {
+  "id": "a437721f-c0e2-4b58-bc52-4eeb850fb545",
+  "source": "SAT:satoplam-boundaries-184",
+  "test": "Test 16",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>In the 1980s, Latino filmmakers Luis Valdez. Gregory Nava, and Ramón Menéndez helped expand on-screen representation of Latino Americans with the films Zoot Suit _____ and Stand and Deliver (1988), respectively.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(1981) El Norte (1983),",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "(1981) El Norte (1983)",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "(1981)—El Norte (1983)—",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "(1981), El Norte (1983),",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 21
+ },
+ {
+  "id": "be19de93-19b6-4ccf-8bfa-327c2c08f94d",
+  "source": "SAT:satoplam-transitions-5",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Nineteenth century Modernista architect championed nature in their designs. ____________ the dramatic archway and botanical glasswork of Palau, a Modernista private home designed by Manuell Raspel, could not exactly grow in a forest. Still, one sees natural influences in Raspel’s penchant for curves and plant and animal inspired flourishes.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Of course,",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Similarly,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Furthermore,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Thus,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 22
+ },
+ {
+  "id": "63962f84-9085-4722-ac50-3ed0e7aa86cd",
+  "source": "SAT:satoplam-transitions-115",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Generally, sleek vehicles are more aerodynamic than bulkier ones. The streamlined nose of the F-4 Phantom II jet, __________ helps it glide through wind with relative ease, while a boxy semitruck encounters more wind resistance, making it less aerodynamic.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "however,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "meanwhile,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "for example,",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "additionally,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 23
+ },
+ {
+  "id": "8849d0da-1efc-4ef8-a8ab-1328bd68d57c",
+  "source": "SAT:satoplam-transitions-133",
+  "test": "Test 16",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Textile artist Amber Joy Greenidge-Sabral wanted to avoid using harsh synthetic dyes that could be damaging to the environment. ______________ she began experimenting with more environmentally friendly natural dye methods, using organic materials like Texas paintbrush and madder root for their natural brown and red colors.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "With this in mind,",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "To sum up,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Nevertheless,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "In actuality,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 24
+ },
+ {
+  "id": "0542898d-785a-46cf-a76b-2e13572b5fcc",
+  "source": "SAT:satoplam-rhetorical-synthesis-199",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Kale is a vegetable that contains ascorbic acid, an essential nutrient for humans.</li><li>Apricots are fruits that contain ascorbic acid.</li><li>There is 120 milligrams (mg) of ascorbic acid per every 100 grams (g) of kale.</li><li>There is 10 mg of ascorbic acid per every 100 g of apricot.</li><li>Humans cannot make ascorbic acid in their bodies, so they must get it from foods, including fruits and vegetables.</li><li>Ascorbic acid is also known as vitamin C.</li></ul><p>The student wants to refute a claim that apricots are a better source of vitamin C than kale is.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Kale contains vitamin C (also known as ascorbic acid); in fact, there is 120 mg of vitamin C in every 100 g of kale.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Kale contains ascorbic acid (also known as vitamin C), and apricots do too.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Humans cannot make ascorbic acid in their bodies, but they can get it from kale and apricots.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "With 120 mg of vitamin C per every 100 g, kale is actually a better source of vitamin C than apricots, which contain only 10 mg per every 100 g.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 25
+ },
+ {
+  "id": "4a9a5f8d-a6a8-487a-a740-ce408f6e4dd7",
+  "source": "SAT:satoplam-rhetorical-synthesis-198",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Brussels sprouts are vegetables that contain ascorbic acid, an essential nutrient for humans.</li><li>Cranberries are fruits that contain ascorbic acid.</li><li>There is 80 milligrams (mg) of ascorbic acid per every 100 grams (g) of brussels sprouts.</li><li>There is 13 mg of ascorbic acid per every 100 g of cranberries.</li><li>Humans cannot make ascorbic acid in their bodies, so they must get it from foods, including fruits and vegetables.</li><li>Ascorbic acid is also known as vitamin C.</li></ul><p>The student wants to refute a claim that cranberries are a better source of vitamin C than brussels sprouts are.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Brussels sprouts contain ascorbic acid (also known as vitamin C), and cranberries do too.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Brussels sprouts contain vitamin C (also known as ascorbic acid); in fact, there is 80 mg of vitamin C in every 100 g of brussels sprouts.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "With 80 mg of vitamin C per every 100 g, brussels sprouts are actually a better source of vitamin C than cranberries, which contain only 13 mg per every 100 g.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Humans cannot make ascorbic acid in their bodies, but they can get it from brussels sprouts and cranberries.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 26
+ },
+ {
+  "id": "797e9047-55cf-495d-a113-ee1e164dfc31",
+  "source": "SAT:satoplam-rhetorical-synthesis-48",
+  "test": "Test 16",
+  "stem": "Which choice most effectively uses information from the given sentences to emphasize a difference between the two birds?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Birds of Northern South America is an identification guidebook by ornithologists Robin Restall, Clemencia Rodner, and Miguel Lentino.</li><li>It lists the thirty-five hummingbird species found in Suriname.</li><li>The sooty-capped hermit is a large hummingbird found in Suriname.</li><li>It is identifiable by its distinctive facial markings and its long, black, curved bill.</li><li>The fiery-tailed awlbill is a small hummingbird found in Suriname.</li><li>It is identifiable by its mostly dark green color and its short, black, upturned bill.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The sooty-capped hermit and the fiery-tailed awlbill are two of the thirty-five hummingbird species found in Suriname.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Identifiable by its long, black, curved bill and its distinctive facial markings, the sooty-capped hermit is a large hummingbird found in Suriname.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Though they share several traits in common, the sooty-capped hermit is larger than the fiery-tailed awlbill.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "The fiery-tailed awlbill is a small hummingbird identifiable by its mostly dark green color and its short, black, upturned bill.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "q_order": 27
+ },
+ {
+  "id": "e5ca021b-62ec-40b1-bbc0-2c57aeb89a18",
+  "source": "SAT:satoplam-words-in-context-gap-filling-242",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>The unique subak water management system used to irrigate the rice paddy fields of the Indonesian island of Bali has a rich cultural, philosophical, and historical significance dating back to the ninth century. The many elements of subakterraces, canals, and water temples-are _____ : they are joined together into a single cohesive unit.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "interconnected",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "outmoded",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "optional",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "informal",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 1
+ },
+ {
+  "id": "76e4ff19-c2d7-463a-b0e6-10acbb4a2a9a",
+  "source": "SAT:satoplam-words-in-context-gap-filling-48",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>British painter Peter Edwards is known for his portraits of notable figures in different fields, from poet Wendy Cope to mathematician Christopher Zeeman. Widespread admiration of these works has helped Edwards gain substantial ____________ as an artist.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "sympathy",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "prestige",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "assistance",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "tolerance",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 2
+ },
+ {
+  "id": "bcd57d17-2fb3-4b3f-9b25-c0aacf581031",
+  "source": "SAT:satoplam-words-in-context-gap-filling-62",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>The percentage of US forest land that a 2023 federal report identified as being either mature or old growth exceeds other recent estimates. Given how little ______________ there is among scientists regarding the scope of these categories, this discrepancy shouldn’t be surprising: forest researchers regularly dispute one another’s classifications.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "interest",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "deliberation",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "vigilance",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "consensus",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "EASY",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 3
+ },
+ {
+  "id": "aab0bb4d-ccf0-4f39-8d0a-6e07708db4f7",
+  "source": "SAT:satoplam-words-in-context-gap-filling-161",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>In the mid-1980s, the price of vintage and even new baseball cards rose dramatically, which had the counterintuitive effect of __________ demand: buyers who hadn’t previously wanted to purchase baseball cards thronged the market, believing prices would continue to rise and the cards could be resold later at a profit.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "capitalizing",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "exploiting",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "eliciting",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "satisfying",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 4
+ },
+ {
+  "id": "cd2c848c-fe21-45c2-b467-c6d919f02ae9",
+  "source": "SAT:satoplam-words-in-context-gap-filling-227",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "passage": "<p>Run by researchers in multiple countries, the Study on Global Ageing and Adult Health (SAGE) is an examination of aging that has attempted to track approximately 66,000 people for several years. Long-running studies like this need a lot of participants not merely for statistical robustness but also because of _____ : over such a length of time, a substantial number of participants will withdraw or fall out of contact with the researchers.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "impartiality",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "replicability",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "attrition",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "circumspection",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 5
+ },
+ {
+  "id": "9ae8294a-a8b8-43d9-ab29-6ee1b878f7c3",
+  "source": "SAT:satoplam-overall-structure-2",
+  "test": "Test 17",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>In what is now Washington state, the Tulalip Tribes operate the Hibulb Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution presents Tulalip history and culture to the tribes’ citizens. The Turtle Mountain Band of Chippewa, a tribe in North Dakota, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren’t Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Euro-centric strategies for designing exhibits.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It describes how tribal cultural centers designed exhibits of a particular set of artifacts, then analyzes how non-Indigenous institutions designed exhibits of the same artifacts.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It examines how tribal citizens respond to exhibits at tribal cultural centers, then speculates how non-Indigenous audiences would respond to the same exhibits.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It discusses two cultural centers operated by tribes, then compares them with non-Indigenous institutions that present Indigenous exhibits.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "It outlines an early strategy for exhibit design used by one tribal cultural center, then explains a newer strategy used by a different tribal cultural center.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 6
+ },
+ {
+  "id": "b0965fc4-b300-45d7-befe-72fb88f25e1d",
+  "source": "SAT:satoplam-overall-structure-15",
+  "test": "Test 17",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal, a convoluted tale of criminality and eroded ethics involving a constellation of associates such as political operative Jeb Stuart Magruder and Nixon’s secretary Rose Mary Woods. But Nixon’s legacy is complex: he has been praised for his role in affirming the sovereignty of tribal nations, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act, which became law during the Barack Obama administration.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "An achievement of a historical figure is described, and then reasons why that achievement is often disregarded by historians are suggested.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Information supporting a particular perception of a historical figure is provided, and then additional facts are offered suggesting that this perception is an oversimplification.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "A list of historical figures is presented, followed by reasons why one should be considered more significant than the others.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "An assertion about a historical figure is made, and then evidence both for and against that assertion is presented.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 7
+ },
+ {
+  "id": "4ab03dfd-ef21-4188-ace7-438093ab7006",
+  "source": "SAT:satoplam-cross-text-connections-6",
+  "test": "Test 17",
+  "stem": "Based on the texts, how would the author of Text 1 most likely respond to the claim about the potential benefits of Costa and colleagues’ research in Text 2?",
+  "passage": "<p><strong>Text 1</strong></p><p>: Attempts to automate classification of music into genres have not been very successful. It is also unclear whether categorizing music by genre is useful, since genre categories are ambiguous, subjective, and simplistic. As Jin Ha Lee and Anh Thu Nguyen argue in their study of the South Korean band BTS, relationships between pieces of music may be best understood with concepts other than genre.</p><p><strong>Text 2</strong></p><p>: Forró is a genre of music originally from Brazil that shares some harmonic and rhythmic similarities with the bolero genre. Automated genre classification systems typically struggle to draw distinctions in situations like this, but Yandre Costa and colleagues solved that problem by converting sound to images and having computers compare features of those images. Their approach could improve genre classification, which could have many benefits for users.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "By suggesting that future research may provide substantial advancements in the field of automated genre classification.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "By asserting that genre classifications may not be the most helpful way to think about music.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "By arguing that some genres are more easily recognized by classification systems than others.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "By emphasizing that humans do not necessarily enjoy every recording in a genre they claim to prefer.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "skill": "CAS-CT",
+  "skill_name": "Cross-Text Connections",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 8
+ },
+ {
+  "id": "7c54ea17-3d55-4e99-bfd9-70baa957cfc0",
+  "source": "SAT:satoplam-main-ideas-3",
+  "test": "Test 17",
+  "stem": "Which choice best states the main idea of the text?",
+  "passage": "<p>Master and Commander, first published in 1969, is a novel in Patrick O’Brian’s Aubrey/Maturin series, which includes twenty completed books. Some critics have found fault with the abrupt endings of Master and Commander and other books in the series, saying that they do not finish conclusively but arbitrarily stop. Other critics, however, argue that the books should not be thought of as discrete texts with traditional beginnings and endings but as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy’s The story of Saga.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The unusual structure that O’Brian uses for Master and Commander makes it one of his most intricate books.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Critics have differing views regarding the efficacy of the structures of the novels in the Aubrey/Maturin series.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Some critics think the Aubrey/Maturin series should have the literary form of The story of Saga, while others disagree.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Many critics judge the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels’ structures.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 9
+ },
+ {
+  "id": "97556df8-e744-4d32-bfd0-b491fedce2ee",
+  "source": "SAT:satoplam-main-ideas-10",
+  "test": "Test 17",
+  "stem": "Which choice best states the main idea of the text?",
+  "passage": "<p>Mexican textile artist Victoria Villasana weaves stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of musician and composer Prince. However, in other works, Villasana honors ordinary people, as she does in her captivating portrayal of a young girl sitting on a sidewalk. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Villasana’s portrayal of a young girl sitting on a sidewalk focuses more on human connection than it does on human resilience.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Villasana began her artistic career by painting portraits of famous people and then transitioned to depicting everyday people instead.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Villasana’s works focus on recognizing both famous and everyday examples of human strength and connection.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Villasana’s depiction of Prince receives more attention from scholars than her depiction of a young girl sitting on a sidewalk does.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CI",
+  "skill_name": "Central Ideas and Details",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 10
+ },
+ {
+  "id": "8ae5648d-b63d-4bc8-ba5f-3b3c26f68ab0",
+  "source": "SAT:satoplam-quotation-51",
+  "test": "Test 17",
+  "stem": "Which quotation from a study of irrigation best supports the student’s claim?",
+  "passage": "<p>A student is writing a research paper on the history of irrigation in the United States, situating the development of the Bear River Reservoir (created in Amador County, California, in 1900) in a large historical context. The student claims that innovation in irrigation practices throughout the United States has led to designs with increased efficiency.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\"While the low humidity of Southern California’s desert areas makes irrigation a requirement if agriculture is to be a success there, the relatively high humidity in the northern parts of the state makes such practices less necessary.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "\"The importance of irrigation infrastructure in the United States today cannot be overstated, since it is the most widely utilized means of conveying water for food production. Accordingly, any increase in the efficiency of irrigation, however small, would be of significant economic and social value.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "\"The irrigation system developed by the Hohokam people in the 7th century CE in what is now Arizona was simple but applied hydraulic engineering design features that are still in use today.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "\"Competition for water as a scarce economic resource inspired the development of sprinkler irrigation systems, which have contributed to the reduction of water used for irrigation in the United States to 45% of the total water usage of its population. Comparatively, 70% of the world’s water usage is dedicated to irrigation.\"",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 11
+ },
+ {
+  "id": "4eabad5d-7a86-4df3-9ea3-5d2637b5efd1",
+  "source": "SAT:satoplam-command-of-evidence-weaken-15",
+  "test": "Test 17",
+  "stem": "Which finding, if true, would most directly weaken the critic’s claim?",
+  "passage": "<p>Hypothesizing that lullabies, characterized by their slow tempos, are universally calming to infants, Constance M. Bainbridge and colleagues played a lullaby sung in the Western Nahuatl language and a non-lullaby sung in the Serbian language to a group of infants. The team found that the infants’ heart rates and pupil size both decreased more during the lullaby than during the non-lullaby. Since a decrease in heart rate is associated with relaxation, the team concluded that the lullaby relaxed the infants. However, noting that reduced heart rate can also be associated with increased attention, one critic argues that instead, the lullaby simply attracted the infants’ attention.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Parents of infants in the study preferred the Western Nahuatl lullaby over the Serbian non-lullaby.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Infants in the study had never heard the Western Nahuatl lullaby before.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "More frequent blinking has also been found to be a reliable indication of attention.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Pupil size typically increases when a stimulus captures a person’s attention.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 12
+ },
+ {
+  "id": "6a9a1e7f-c8bc-4a25-a72b-652464207639",
+  "source": "SAT:satoplam-command-of-evidence-support-38",
+  "test": "Test 17",
+  "stem": "Which finding, if true, would most directly support Mulder and Spellman’s conclusion?",
+  "passage": "<p>Mooseberry (Viburnum edule) plants are native to Alaska, where harsh conditions have historically impeded potential invasive species. As the boreal climate has warmed in recent decades, however, common knotgrass (Polygonum aviculare) plants have established Johann themselves in Alaska. It has been suggested that warming-induced delays in the onset of subfreezing temperatures in autumn can benefit invasives more than native species; to evaluate this possibility, biologists Christa Mulder and Katie Spellman tracked V. edule and P. aviculare, along with other native and invasive species, over several years, concluding that invasives are advantaged by delays in subfreezing temperature onset in Alaska.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Although V. edule and P. aviculare both tended to produce leaves later into autumn in years with late subfreezing temperature onset, the extension was much greater for P. aviculare than for V. edule.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Although significant interannual variations in subfreezing temperature onset were observed during the study, neither P. aviculare nor V. edule showed any significant interannual variation in the cessation of leaf production.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Although V. edule and P. aviculare tended to stop producing leaves at about the same time in years with historically typical temperature patterns, P. aviculare stopped producing leaves sooner than V. edule did in years with late subfreezing temperature onset.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Although V. edule and P. aviculare both tended to produce more leaves overall in years with late subfreezing temperature onset than they did in years with historically typical temperature patterns, the years with late subfreezing temperature onset also had early growing season onset in spring.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 13
+ },
+ {
+  "id": "392f2e5b-dee8-4251-b6e4-1b8c328c91b7",
+  "source": "SAT:satoplam-inference-130",
+  "test": "Test 17",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>Researchers who study olfaction–the sense of smell–define valence as a person’s perception of how pleasant an odor is. Conventional wisdom holds that valence is culturally mediated. A team of scientists led by Artin Arshamian evaluated this view by testing how people from ten different places-including the Semelai people from a small community in the Malay Peninsula and the Chachi people from a small community in Ecuador-ranked ten odors from most pleasant to least pleasant. In general, respondents ranked scents similarly regardless of where they lived, overwhelmingly choosing the odorant eugenol as more pleasant than caprylic acid. These results show that ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "valence may affect cultural traditions more strongly than researchers had previously predicted.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "the respondents agreed more often on unpleasant odors than they did on pleasant ones.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "the conventional belief that odor pleasantness can be objectively measured is questionable.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "the standard view of culture’s role in olfactory valence may be unsound.",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 14
+ },
+ {
+  "id": "65baf9c3-8a0c-40bf-a07b-c640a04177b8",
+  "source": "SAT:satoplam-inference-14",
+  "test": "Test 17",
+  "stem": "Which choice most logically completes the text?",
+  "passage": "<p>The small white heron and the little blue heron are long legged birds that live in wetlands, like the Everglades in Florida. Laura D’Acunto and colleagues wanted to know how these birds choose an area in which to live. They looked at features of these birds’ habitats, such as how quickly water drains from the area and the amount of tree-canopy cover there is in the area. They found that small white herons prefer areas with extensive canopy cover, but this was not true for little blue herons. The researchers therefore concluded that wetland-management strategies that increase the amount of tree canopy in potential wetland bird habitats are less likely to ______</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "attract little blue herons to the area than they are to attract small white herons to the area.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "extend the average lifespan of small white herons already in the area than they are to attract a greater number of those birds to the area.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "decrease the area’s appeal to both small white herons and little blue herons than they are to increase the appeal to other species.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "attract birds that don’t typically live in wetlands to the area than they are to attract small white herons or little blue herons to the area.",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "skill": "INI-IE",
+  "skill_name": "Inferences",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 15
+ },
+ {
+  "id": "7af16daa-403a-4c0d-aa9f-ea54e3b71fd9",
+  "source": "SAT:satoplam-boundaries-28",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Featuring works by the photographers Niu Weiyu and Rogi André, the 2021 exhibition The New Woman Behind the Camera set out to provide a wide-ranging overview of photography by women in the 1920s through the _____ given the collection’s breadth of more than 120 photos, its efforts were largely successful.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1950s and",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "1950s",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "1950s, and",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "1950s,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 16
+ },
+ {
+  "id": "381753bb-2278-4d5c-b3ab-f95454a0634c",
+  "source": "SAT:satoplam-form-structure-and-sense-149",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>In a US national election, one might expect major-party campaigns to focus on the most populous states. However, if polls and past voting data suggest that the outcome in a given state is a foregone conclusion, a campaign will not invest its resources there. Ultimately, a state’s voting record and polling data, not its population size, _____ its importance to campalgns.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "determines",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "has determined",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "determining",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "determine",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 17
+ },
+ {
+  "id": "c167bd60-192e-4ddb-8329-a4fb167196ef",
+  "source": "SAT:satoplam-boundaries-165",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>On February 1, 2018, Florida-based researchers Martha A.Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez _____ climate data from several sites in Puerto Rico’s Luquillo Mountains. At 8:30 a.m, the air temperature was 16°C at site CC1, the site with the highest elevation, and it had shifted to 16.8° C by 11:00p.m.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "compiled,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "compiled",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "compiled;",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "compiled:",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "MEDIUM",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 18
+ },
+ {
+  "id": "e0433e67-c196-49d8-9acc-3e1becff6a74",
+  "source": "SAT:satoplam-boundaries-141",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Two of the most celebrated examples of visual allegory in painting, The Four Elements: Air by Joachim Beuckelaer and Ceres (Summer) by Antoine Watteau, were completed in 1570 and _____ such allegorical artwork was particularly popular from the 15th through the late 18th centuries.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1712 respectively,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "1712, respectively;",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "1712, respectively,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "1712; respectively,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 19
+ },
+ {
+  "id": "edd9a505-1a94-4151-8ef9-92c8fad64528",
+  "source": "SAT:satoplam-boundaries-185",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>Olga Tokarezuk of Poland won it; George Bernard Shaw of Ireland won it, too. These are just two examples of the wide range of writers to be granted what is arguably the most prestigious _____ the Nobel Prize in Literature.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "award; for a person of letters,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "award for a person of letters;",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "award: for a person of letters",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "award for a person of letters:",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 20
+ },
+ {
+  "id": "a3c8ecf3-1de2-4125-b9b3-76f24583d920",
+  "source": "SAT:satoplam-boundaries-216",
+  "test": "Test 17",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>The 2020 documentary Without a Whisper—Konnon:Kwe was directed by Katsitsionni Fox. It explores how Indigenous Haudenosaunee culture shaped the woman suffrage movement in the early nineteenth _____ how the personal and political authority Haudenosaunee women had in their communities influenced the first suffragists in the US.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Century. Revealing",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "century; revealing",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "century, revealing",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "century revealing",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "skill": "SEC-BS",
+  "skill_name": "Boundaries",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 21
+ },
+ {
+  "id": "aa4b9629-5aac-4071-b11b-b3a1b5a88168",
+  "source": "SAT:satoplam-transitions-21",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>As part of a study, participants were asked to list animals they thought of as \"charismatic,\" which was defined as \"attractive, fascinating, or appealing.\" Researchers compiled the responses into a single list and found that the panda and the crocodile both landed in the top twenty. ____________ no animal outranked the tiger.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "For instance,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "In contrast,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Hence,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Alternatively,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 22
+ },
+ {
+  "id": "65ebee34-38e3-4769-9121-9acf56fca394",
+  "source": "SAT:satoplam-transitions-64",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>In his essay \"Of Smells,\" French philosopher Michel de Montaigne explores a relatively light subject, but he addresses heavier fare in \"Of the Punishment of Cowardice.\" Regardless of subject matter, Montaigne works to question his own perspective throughout his essays. ______ his personal motto was \"What do I know?\"</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Nowadays,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Still,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Conversely,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Fittingly,",
+    "isCorrect": true
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 23
+ },
+ {
+  "id": "2d176660-a2ca-494c-9364-2820d9b5c1b3",
+  "source": "SAT:satoplam-transitions-190",
+  "test": "Test 17",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>At Storm King Art Center, an outdoor sculpture park in New York, Herbert Ferber’s Konkapot Ilis exposed to rain, snow, heat, and humidity. _____ it remains in good condition due to its material: Ferber’s sculpture is made of corrosion-resistant steel.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "As a result,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "That said,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "In addition,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "On the contrary,",
+    "isCorrect": false
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "m_subject": "READING_WRITING",
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "q_order": 24
+ }
+]
