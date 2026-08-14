@@ -43,38 +43,57 @@ empty stems or choices, and duplicate ids.
 Dedupes across parts on the official question id, flags anything whose stem
 already matches a banked question, and writes `bank_parsed.json`.
 
-## Current status — pages 1-1000 parsed, 877 questions, zero defects
+## Current status — pages 1-1450 parsed, 1,317 questions, zero defects
 
-Thirteen part files covering book pages 1-1000 (one part arrived twice as a
+Eighteen part files covering book pages 1-1450 (one part arrived twice as a
 straight re-send; several boundaries overlap by a page).
 
 | | count |
 |---|---|
-| unique questions | 877 |
-| duplicates across parts | 94 |
-| already in the live bank | 24 |
-| **new to import** | **853** |
+| unique questions | 1,317 |
+| duplicates across parts | 99 |
+| already in the live bank | 42 |
+| **new to import** | **1,275** |
 | need a rebuilt figure | 73 |
 
 Zero parse errors, zero questions without exactly 4 choices, zero keys absent
-from their own choice list, zero missing rationales, zero lost apostrophes.
+from their own choice list, zero missing rationales, zero empty stems, zero
+lost apostrophes.
 
 | domain | count |
 |---|---|
 | Information and Ideas | 554 |
-| Craft and Structure | 323 |
+| Craft and Structure | 469 |
+| Expression of Ideas | 294 |
 
-By skill: Command of Evidence 268, Words in Context 175, Central Ideas and
-Details 136, Inferences 136, Text Structure and Purpose 98, Cross-Text
-Connections 40. Difficulty Hard 321 / Easy 278 / Medium 254. Keys fall A221
-B220 D210 C202 — balanced, so no rotation pass is needed.
+By skill: Command of Evidence 268, Words in Context 252, Rhetorical Synthesis
+146, Text Structure and Purpose 141, Transitions 140, Central Ideas and Details
+136, Inferences 136, Cross-Text Connections 61. Difficulty Medium 440 / Hard
+422 / Easy 413. Keys fall B335 D323 A320 C297 — balanced, so no rotation pass
+is needed.
 
-Sanity checks that pass: all 40 Cross-Text questions carry both Text 1 and
-Text 2, and every Words in Context question either has a `_____` blank (153)
-or is the "as used in the text … most nearly mean" variant (28).
+Structural checks that pass across the whole set: all Cross-Text questions
+carry both Text 1 and Text 2; every Words in Context question either has a
+`_____` blank or is the "as used in the text … most nearly mean" variant; every
+Rhetorical Synthesis question references the notes or the given sentences.
 
-Expression of Ideas and Standard English Conventions have not appeared yet —
-expect them in the pages after 1000.
+**Standard English Conventions has not appeared yet** — Boundaries and Form,
+Structure, and Sense are still missing, so the writing half is incomplete.
+Expect them after page 1450.
+
+## `overrides.json` — repairs to defects in the source export
+
+One question so far. `e3bbf2bf` has its choice D typeset as a nested bullet
+underneath choice C with no "D." label, so it parses as part of C; the
+question's own rationale discusses "Choice D", confirming the choice exists,
+and a render of the page shows the mis-typeset bullet. This is a flaw in
+College Board's export, not in extraction.
+
+Kept as data rather than as parser heuristics: these are one-off typesetting
+flaws, not patterns, and a heuristic general enough to catch them would misfire
+on correct questions. Every override asserts the text it expects to find before
+changing anything, so a stale override fails loudly rather than silently
+rewriting the wrong question.
 
 ## Five extraction traps, all found by running the parser rather than assuming
 

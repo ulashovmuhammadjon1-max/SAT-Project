@@ -59,6 +59,47 @@ def load_bank_keys():
     return keys
 
 
+def apply_overrides(all_q):
+    """Repair known defects in the source export itself.
+
+    Kept as data in overrides.json rather than as parser heuristics: these are
+    one-off flaws in College Board's own PDF typesetting, not patterns, and a
+    heuristic general enough to catch them would misfire on correct questions.
+
+    Every override asserts the text it expects to find before changing
+    anything, per the project rule that a positional fix must be gated on a
+    distinctive content substring. A stale override fails loudly instead of
+    silently rewriting the wrong question.
+    """
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "overrides.json")
+    if not os.path.exists(path):
+        return 0
+    overrides = json.load(open(path))
+    by_id = {q["id"]: q for q in all_q}
+    applied = 0
+    for qid, rule in overrides.items():
+        q = by_id.get(qid)
+        if q is None or "error" in q:
+            continue
+        spec = rule.get("split_choice")
+        if not spec:
+            continue
+        target = next((c for c in q["choices"] if c["label"] == spec["label"]), None)
+        if target is None:
+            raise SystemExit(f"override {qid}: no choice {spec['label']}")
+        if spec["new_content"] not in target["content"]:
+            raise SystemExit(
+                f"override {qid}: choice {spec['label']} no longer contains the text to split off — "
+                "the source or the parser changed, re-check before trusting this override"
+            )
+        target["content"] = spec["keep"]
+        q["choices"].append({"label": spec["new_label"], "content": spec["new_content"]})
+        q["choices"].sort(key=lambda c: c["label"])
+        q["source_defect_repaired"] = rule["why"]
+        applied += 1
+    return applied
+
+
 def main():
     out, parts = sys.argv[1], sys.argv[2:]
     seen, dupes, repaired = {}, 0, 0
@@ -95,6 +136,9 @@ def main():
         print(f"\n{repaired} truncated record(s) replaced by a complete copy from a later part")
 
     all_q = list(seen.values())
+    fixed = apply_overrides(all_q)
+    if fixed:
+        print(f"{fixed} question(s) repaired from overrides.json")
     bank = load_bank_keys()
     for q in all_q:
         q["already_in_bank"] = bool(bank) and norm(q.get("question", ""))[:120] in bank

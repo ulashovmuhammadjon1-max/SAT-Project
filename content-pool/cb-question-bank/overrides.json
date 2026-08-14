@@ -1,0 +1,11 @@
+{
+  "e3bbf2bf": {
+    "why": "Defect in the College Board export, not in extraction: choice D is typeset as a nested bullet underneath choice C with no 'D.' label, so it parses as part of C's text. The rationale for this question explicitly discusses 'Choice D', confirming the choice exists. Verified against a render of the source page.",
+    "split_choice": {
+      "label": "C",
+      "keep": "Both the Choctaw Code Talkers and the Navajo Code Talkers transmitted coded military messages in the soldiers’ native languages.",
+      "new_label": "D",
+      "new_content": "The Choctaw Code Talkers, not the Navajo Code Talkers, served in World War I."
+    }
+  }
+}
