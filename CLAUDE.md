@@ -499,6 +499,48 @@ reason, then common mistake, then tip — with `content` only as the fallback fo
 `whyWrongJson` had to be threaded through the review page; it was stored and gated but
 never displayed. The Question Bank was fine, it already used `MathContent`.
 
+## Tests 16-31 R&W is SAToplam content; 6-15 is College Board. Read this before touching either.
+
+Full detail in `content-pool/explanations/SATOPLAM_DEFECTS.md`. Three things generalise:
+
+### Withhold the answer key from the authoring tool, don't just ask for it
+The explanation brief has always said "derive the answer yourself, then record yours". That
+was an instruction an agent could drift from. `content-pool/explanations/dump_slice.mjs` is now
+the only way an agent reads a question and it does not print `isCorrect`, so the rule is a
+property of the workflow instead. `verify.mjs` still compares afterwards. Across 1,233
+questions it held back 29 disagreements (2.4%) and shipped zero explanations arguing for a
+disputed key. **Do this for any future authoring batch** — it costs nothing and it is the only
+reason the gate means anything.
+
+Two signs the disagreements are real rather than agent error, both worth checking next time:
+they **cluster on repeated question positions**, and **independent agents converge** on the
+same items without seeing each other's work. One item was keyed `conversely` in the Easy
+branch and `likewise` in the Hard branch of the same test — the same question, two keys, so
+one is provably wrong.
+
+### Dedupe a new bank against the TEST being assembled, not just against exact content
+The Tests 16-31 build deduped on exact passage+stem and still shipped **33 near-duplicate
+pairs inside a single test**, two of them byte-identical, plus 443 across tests. A template
+repeat swaps the setting words, which is exactly what defeats an exact-match check — the same
+reason CLAUDE.md already says a similarity score decides what to *read*, not what to accept.
+The gap here was that the allocator never scored candidate pairs at all. Screen every module's
+picks against every other question **in the same test** before assembling, because a student
+sees Module 1 plus one Module 2 branch and a same-test repeat shows half the cohort one
+question twice in a sitting. `content-pool/cb-question-bank/scan_satoplam_defects.mjs` does the
+scoring.
+
+### Transcribed content hides defects in the FIELD SPLIT, not just the text
+Eleven questions had the passage's last sentence stored in the `stem` column with the closing
+`</p>` still attached and the passage left unclosed. It is invisible to any check that reads
+stem and passage separately, and it is the worst kind of damage — the sentence that goes
+missing is the study's conclusion, the one the question is about. Found by agents reading, not
+by a regex. When auditing transcribed content, check that stems contain no block tags and that
+every passage's `<p>` count balances.
+
+Two checkers over-matched in this pass and were thrown away rather than trusted: a splice
+pattern that ate `e.g.`, and a shared-span detector that turned out to be finding legitimate
+quotation from notes. Same family as `\bpi` and `LETTER_REF` — the recurring own-goal.
+
 ## SAT Reading & Writing (EBRW) module question order — MUST FOLLOW
 
 When building, reordering, or regenerating any Reading & Writing module (Module 1, Module 2
