@@ -66,8 +66,13 @@ for (const r of rows) {
   // the passage, or an imageUrl on the question. The inline case is how the
   // regenerated charts ship — they are self-contained in the passage
   // deliberately, so that a chart is never rendered twice.
-  if (/\b(graph|table|chart|figure)\b/i.test(r.stem ?? "") &&
-      !/<table/i.test(text) && !/<img/i.test(text) && !r.imageUrl)
+  // Only a stem that points at a DISPLAYED figure needs one. "Halley's table"
+  // is a historical artefact described in the narrative, not something to
+  // render, and a bare keyword match flags it forever.
+  const pointsAtFigure =
+    /\b(?:the|this|these|following|accompanying)\s+(?:table|graph|chart|figure)\b/i.test(r.stem ?? "") ||
+    /\b(?:table|graph|chart|figure)\s+(?:above|below|shown|presented)\b/i.test(r.stem ?? "");
+  if (pointsAtFigure && !/<table/i.test(text) && !/<img/i.test(text) && !r.imageUrl)
     add(r, "references a figure, none present");
 
   // A paragraph break in the middle of a sentence or a name. The classic case
@@ -79,7 +84,10 @@ for (const r of rows) {
     .map((m) => m[1].replace(/<[^>]+>/g, "").trim());
   for (let i = 0; i < paras.length - 1; i++) {
     const a = paras[i], b = paras[i + 1];
-    if (/\b[A-Z]\.$/.test(a)) add(r, "paragraph split after an initial", a.slice(-28));
+    // A name initial looks like "Booker T." — a capitalised word then a single
+    // capital and a stop. Requiring the preceding word keeps units out: a
+    // paragraph ending "14 &deg;C." is a temperature, not a split name.
+    if (/[A-Z][a-z]+\s+[A-Z]\.$/.test(a)) add(r, "paragraph split after an initial", a.slice(-28));
     else if (b && /^[a-z]/.test(b)) add(r, "paragraph starts lowercase", b.slice(0, 28));
   }
   if (paras.some((p) => /^[^\w\s]{1,3}$/.test(p))) add(r, "punctuation-only paragraph");
