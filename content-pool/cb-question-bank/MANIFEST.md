@@ -43,32 +43,40 @@ empty stems or choices, and duplicate ids.
 Dedupes across parts on the official question id, flags anything whose stem
 already matches a banked question, and writes `bank_parsed.json`.
 
-## Current status — pages 1-657 complete, 552 questions, zero defects
+## Current status — pages 1-1000 parsed, 877 questions, zero defects
 
-Nine part files covering book pages 1-657 (one part arrived twice as a
+Thirteen part files covering book pages 1-1000 (one part arrived twice as a
 straight re-send; several boundaries overlap by a page).
 
 | | count |
 |---|---|
-| unique questions | 552 |
-| duplicates across parts | 91 |
-| already in the live bank | 14 |
-| **new to import** | **538** |
+| unique questions | 877 |
+| duplicates across parts | 94 |
+| already in the live bank | 24 |
+| **new to import** | **853** |
 | need a rebuilt figure | 73 |
 
 Zero parse errors, zero questions without exactly 4 choices, zero keys absent
-from their own choice list, zero missing rationales, zero empty stems, zero
-lost apostrophes.
+from their own choice list, zero missing rationales, zero lost apostrophes.
 
-All 552 are **Information and Ideas** — Command of Evidence 268, Central Ideas
-and Details 136, Inferences 134. Difficulty Hard 231 / Medium 174 / Easy 133.
-Keys fall A148 B137 C121 D132, already balanced, so `balance_rw.py`-style
-rotation is not needed.
+| domain | count |
+|---|---|
+| Information and Ideas | 554 |
+| Craft and Structure | 323 |
 
-Craft and Structure, Expression of Ideas and Standard English Conventions are
-still to come — those are separate exports.
+By skill: Command of Evidence 268, Words in Context 175, Central Ideas and
+Details 136, Inferences 136, Text Structure and Purpose 98, Cross-Text
+Connections 40. Difficulty Hard 321 / Easy 278 / Medium 254. Keys fall A221
+B220 D210 C202 — balanced, so no rotation pass is needed.
 
-## Three extraction traps, all found by running the parser rather than assuming
+Sanity checks that pass: all 40 Cross-Text questions carry both Text 1 and
+Text 2, and every Words in Context question either has a `_____` blank (153)
+or is the "as used in the text … most nearly mean" variant (28).
+
+Expression of Ideas and Standard English Conventions have not appeared yet —
+expect them in the pages after 1000.
+
+## Five extraction traps, all found by running the parser rather than assuming
 
 1. **Use `pdftotext -raw`, never `-layout`.** In `-layout` mode PDFium emits
    every typographic apostrophe on its own line *ahead of* the line it belongs
@@ -92,7 +100,15 @@ still to come — those are separate exports.
    the first one seen — keying on first-seen silently preferred the truncated
    copy.
 
-4. **The charts are not images.** `pdfimages` reports **zero** image objects in
+4. **The metadata row wraps.** A long skill name breaks across lines, so
+   "…Craft and Structure Text Structure and" / "Purpose" / "Hard" arrives as
+   three lines and reading only the first one fails. 103 questions in a single
+   part were lost this way. The whole region between the table header and the
+   `Question` marker is now collapsed and matched as one string. Matching is
+   also case-insensitive, because the export writes both "Cross-text
+   Connections" and "Cross-Text Connections".
+
+5. **The charts are not images.** `pdfimages` reports **zero** image objects in
    the whole file: every bar and line graph is drawn as individually positioned
    glyphs. Text extraction shreds their axis labels into fragments like
    `ns e ry tiv e`. Those questions are flagged `needs_figure` and must have

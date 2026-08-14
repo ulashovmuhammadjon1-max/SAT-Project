@@ -86,15 +86,27 @@ def extract_text(pdf: str) -> str:
     return text.replace("\f", "")
 
 
-def parse_meta(line: str):
-    """Pull domain, skill and difficulty out of the collapsed metadata line."""
+def parse_meta(meta: str):
+    """Pull domain, skill and difficulty out of the metadata region.
+
+    The region is read as a whole and whitespace-collapsed rather than read as
+    one line, because a long skill name wraps: "Text Structure and Purpose"
+    arrives as "…Craft and Structure Text Structure and" / "Purpose" / "Hard"
+    across three lines. Matching the first line alone silently failed on 103
+    questions in a single part.
+
+    Matching is case-insensitive: the export writes "Cross-text Connections"
+    here and "Cross-Text Connections" elsewhere, and a case-sensitive lookup
+    drops those questions for no real reason.
+    """
+    low = meta.lower()
     difficulty = None
     for d in ("Easy", "Medium", "Hard"):
-        if line.rstrip().endswith(d):
+        if low.rstrip().endswith(d.lower()):
             difficulty = d
             break
-    domain = next((d for d in DOMAINS if d in line), None)
-    skill = next((s for s in SKILLS if s in line), None)
+    domain = next((d for d in DOMAINS if d.lower() in low), None)
+    skill = next((s for s in SKILLS if s.lower() in low), None)
     return domain, skill, difficulty
 
 
@@ -110,24 +122,24 @@ def parse(text: str):
         qid = re.search(r"Question ID: ([0-9a-f]+)", b).group(1)
         rec = {"id": qid}
 
-        meta_line = next(
-            (ln for ln in b.split("\n") if ln.startswith("SAT ")
-             and ("Reading and Writing" in ln or "Math" in ln)),
-            None,
-        )
-        if not meta_line:
-            rec["error"] = "no metadata line"
+        key_m = re.search(r"^Correct Answer:\s*([A-D])\s*$", b, re.M)
+        ans_m = re.search(r"^Answer\s*$", b, re.M)
+        q_m = re.search(r"^Question\s*$", b, re.M)
+        hdr_m = re.search(r"^Assessment Test Domain Skill Difficulty\s*$", b, re.M)
+
+        if not hdr_m or not q_m:
+            rec["error"] = "no metadata header"
             out.append(rec)
             continue
+        # Everything between the table header and the "Question" marker is the
+        # metadata row, however many lines it wrapped onto.
+        meta_line = " ".join(b[hdr_m.end():q_m.start()].split())
         domain, skill, difficulty = parse_meta(meta_line)
         if not (domain and skill and difficulty):
             rec["error"] = f"unrecognised taxonomy: {meta_line.strip()!r}"
             out.append(rec)
             continue
 
-        key_m = re.search(r"^Correct Answer:\s*([A-D])\s*$", b, re.M)
-        ans_m = re.search(r"^Answer\s*$", b, re.M)
-        q_m = re.search(r"^Question\s*$", b, re.M)
         if not (key_m and ans_m and q_m):
             rec["error"] = "missing Question/Answer/Correct Answer marker"
             out.append(rec)
