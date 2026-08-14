@@ -43,43 +43,54 @@ empty stems or choices, and duplicate ids.
 Dedupes across parts on the official question id, flags anything whose stem
 already matches a banked question, and writes `bank_parsed.json`.
 
-## Current status — pages 1-1450 parsed, 1,317 questions, zero defects
+## Current status — all four R&W domains parsed, 1,767 questions, zero defects
 
-Eighteen part files covering book pages 1-1450 (one part arrived twice as a
+Twenty-three part files covering book pages 1-1900 (one part arrived twice as a
 straight re-send; several boundaries overlap by a page).
 
 | | count |
 |---|---|
-| unique questions | 1,317 |
-| duplicates across parts | 99 |
-| already in the live bank | 42 |
-| **new to import** | **1,275** |
+| unique questions | 1,767 |
+| duplicates across parts | 104 |
+| already in the live bank | 53 |
+| **new to import** | **1,714** |
 | need a rebuilt figure | 73 |
 
-Zero parse errors, zero questions without exactly 4 choices, zero keys absent
-from their own choice list, zero missing rationales, zero empty stems, zero
-lost apostrophes.
+Every check at zero: parse errors, questions without exactly 4 choices, keys
+absent from their own choice list, duplicate choice text within a question,
+missing rationales, empty stems, lost apostrophes, duplicate ids.
 
 | domain | count |
 |---|---|
 | Information and Ideas | 554 |
 | Craft and Structure | 469 |
-| Expression of Ideas | 294 |
+| Expression of Ideas | 398 |
+| Standard English Conventions | 346 |
 
 By skill: Command of Evidence 268, Words in Context 252, Rhetorical Synthesis
-146, Text Structure and Purpose 141, Transitions 140, Central Ideas and Details
-136, Inferences 136, Cross-Text Connections 61. Difficulty Medium 440 / Hard
-422 / Easy 413. Keys fall B335 D323 A320 C297 — balanced, so no rotation pass
-is needed.
+199, Transitions 184, Boundaries 173, Form Structure and Sense 164, Text
+Structure and Purpose 141, Central Ideas and Details 136, Inferences 136,
+Cross-Text Connections 61. Difficulty Easy 582 / Medium 572 / Hard 560. Keys
+fall D448 B433 A429 C404 — balanced, so no rotation pass is needed.
 
-Structural checks that pass across the whole set: all Cross-Text questions
-carry both Text 1 and Text 2; every Words in Context question either has a
-`_____` blank or is the "as used in the text … most nearly mean" variant; every
-Rhetorical Synthesis question references the notes or the given sentences.
+**All four Reading and Writing domains are now present**, which makes this a
+complete R&W bank rather than a partial one. Two consequences worth noting:
 
-**Standard English Conventions has not appeared yet** — Boundaries and Form,
-Structure, and Sense are still missing, so the writing half is incomplete.
-Expect them after page 1450.
+- Rhetorical Synthesis and Transitions were the two chronically scarce domains
+  in every previous test build — the reason CLAUDE.md mandates pooling supply
+  across tests with a largest-remainder split. At 199 and 184 that constraint
+  is gone.
+- Boundaries vs Form, Structure, and Sense previously had to be told apart by
+  reading each question's choices by eye, because a stem-only classifier
+  cannot distinguish them. Here the official skill label is supplied, so that
+  hand-classification step disappears entirely.
+
+Structural checks passing across the whole set: all Cross-Text questions carry
+both Text 1 and Text 2; every Words in Context question either has a `_____`
+blank or is the "as used in the text … most nearly mean" variant; every
+Rhetorical Synthesis question references the notes or the given sentences; all
+346 Standard English Conventions questions have both a `_____` blank and the
+"conventions of Standard English" phrasing.
 
 ## `overrides.json` — repairs to defects in the source export
 
