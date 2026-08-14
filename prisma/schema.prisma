@@ -319,35 +319,9 @@ enum QuestionDifficulty {
   HARD
 }
 
-/// A named batch of questions imported together, so a large import can be
-/// filtered, reviewed, published and rolled back as one unit instead of being
-/// indistinguishable from everything already in the bank.
-///
-/// Deliberately a real table rather than another `Question.source` string: the
-/// admin bank filters on it, a bulk publish/delete needs a stable key, and a
-/// free-text tag drifts the moment two import runs spell it differently.
-model QuestionCollection {
-  id          String   @id @default(cuid())
-  /// Human label shown in the admin bank, e.g. "R&W Pack 2026".
-  name        String
-  /// Stable machine key used by importers and by the `?collection=` filter.
-  slug        String   @unique
-  description String?
-  /// Where the questions came from — a PDF filename, a paper name, a URL.
-  origin      String?
-  order       Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  questions Question[]
-
-  @@index([order])
-}
-
 model Question {
   id              String             @id @default(cuid())
   moduleId        String?
-  collectionId    String?
   passageId       String?
   domainId        String
   skillId         String
@@ -363,11 +337,10 @@ model Question {
   source          String? // e.g. "AI_EXTRACTED", "MANUAL"
   sourceUploadId  String?
 
-  module     Module?             @relation(fields: [moduleId], references: [id], onDelete: SetNull)
-  collection QuestionCollection? @relation(fields: [collectionId], references: [id], onDelete: SetNull)
-  passage    Passage?            @relation(fields: [passageId], references: [id], onDelete: SetNull)
-  domain     Domain              @relation(fields: [domainId], references: [id])
-  skill      Skill               @relation(fields: [skillId], references: [id])
+  module  Module?  @relation(fields: [moduleId], references: [id], onDelete: SetNull)
+  passage Passage? @relation(fields: [passageId], references: [id], onDelete: SetNull)
+  domain  Domain   @relation(fields: [domainId], references: [id])
+  skill   Skill    @relation(fields: [skillId], references: [id])
 
   choices          AnswerChoice[]
   explanation      Explanation?
@@ -379,7 +352,6 @@ model Question {
   updatedAt DateTime @updatedAt
 
   @@index([moduleId])
-  @@index([collectionId])
   @@index([domainId, skillId])
   @@index([difficulty])
 }

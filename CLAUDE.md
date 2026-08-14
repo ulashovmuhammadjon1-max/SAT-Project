@@ -1,5 +1,52 @@
 # Project memory
 
+## SCHEMA CHANGES: never push schema.prisma ahead of the deployed database
+
+This has now taken production down twice with a public "Something went wrong"
+error boundary — once on `/admin/analytics`, `/admin/questions` and
+`/admin/content-health` (an admin-only outage a sweep run as admin missed),
+and again on `/dashboard`, `/daily` and `/bookmarks` for every logged-in
+**student**, because a whole-row `Question` fetch on those pages selected a
+column (`collectionId`) that had been added to `schema.prisma` and committed,
+but never applied to the production database.
+
+The mechanism: Vercel rebuilds the Prisma client from `schema.prisma` on
+every deploy. Migrations under `prisma/migrations/manual/` are a separate,
+manual step against `PROD_URL`. The moment a commit adding a new column to
+`schema.prisma` lands on the deployed branch, every `findMany`/`findUnique`
+anywhere in the app that selects that model **without an explicit `select`**
+starts asking the live database for a column it doesn't have, and Prisma
+throws P2022 (or P2021 for a whole missing table) — caught by nothing,
+because most pages have no reason to expect their own model's columns to be
+absent. That reaches a real, logged-in student as a generic error boundary,
+not a build failure anyone would see first.
+
+**The rule, with no exception:**
+1. Never commit a `schema.prisma` field/model addition and its migration SQL
+   as separate steps if the schema commit can reach the deployed branch
+   before the migration is applied. Either apply the migration to production
+   in the same sitting (requires `PROD_URL` — ask for it before touching
+   `schema.prisma`, not after), or don't touch `schema.prisma` yet.
+2. If a schema change must land before production access is available, every
+   query anywhere in the app that touches the changed model must use an
+   explicit `select`/`include` that does **not** name the new column, or be
+   wrapped in the `isMissingColumn` guard pattern from
+   `src/lib/onboarding/profile.ts` (catches P2022/P2021 only, everything else
+   still throws). A page written as `findMany({ where })` with no `select`
+   silently asks for every column the *schema* has, not every column the
+   *database* has — that gap is exactly what broke both times.
+3. **Verify as a STUDENT, not just as admin.** The first sweep after the
+   `collectionId` incident checked only admin routes and reported "all green"
+   while `/dashboard`, `/daily` and `/bookmarks` were 500ing for every
+   student. Reproduce by dropping the new column from local dev
+   (`ALTER TABLE "..." DROP COLUMN IF EXISTS "...";`) — that exactly mirrors
+   production's pending-migration state — then hit the full route list
+   (`grep -rn "prisma\.<model>\.\(findMany\|findFirst\|findUnique\)" src/`
+   finds every call site) logged in as both roles before calling a schema
+   change safe.
+4. When in doubt, don't add the schema field yet. A feature that ships a
+   sitting later is fine; students seeing an error boundary is not.
+
 ## STANDING RULES FOR ALL NEW TESTS (set by the user — do not deviate)
 
 These are permanent instructions, not one-off preferences. Re-read them at the start of any
