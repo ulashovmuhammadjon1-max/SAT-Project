@@ -62,7 +62,12 @@ for (const r of rows) {
   if (/underlined/i.test(r.stem ?? "") && !/<u>/i.test(text)) add(r, "underline stem, no <u>");
   if (/completes the text/i.test(r.stem ?? "") && !/_{3,}/.test(text)) add(r, "blank stem, no _____");
   if (r.skill === "CAS-CT" && !(/Text 1/.test(text) && /Text 2/.test(text))) add(r, "cross-text missing Text 1/2");
-  if (/\b(graph|table|chart|figure)\b/i.test(r.stem ?? "") && !/<table/i.test(text) && !r.imageUrl)
+  // A figure counts whether it is a real <table>, an inline <img> embedded in
+  // the passage, or an imageUrl on the question. The inline case is how the
+  // regenerated charts ship — they are self-contained in the passage
+  // deliberately, so that a chart is never rendered twice.
+  if (/\b(graph|table|chart|figure)\b/i.test(r.stem ?? "") &&
+      !/<table/i.test(text) && !/<img/i.test(text) && !r.imageUrl)
     add(r, "references a figure, none present");
 
   if (/\*[^*\n]{2,}\*/.test(text)) add(r, "markdown asterisks");
