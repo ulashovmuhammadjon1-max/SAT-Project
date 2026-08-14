@@ -32,6 +32,21 @@ const CATEGORIES = [
 // is configured, the browser uploads the PDF directly to Blob storage instead
 // of routing the raw file through a Server Action, so large mock-test PDFs
 // still work. Without it (local dev), the file goes through createUpload as before.
+
+/**
+ * The ceiling on the Server Action fallback path.
+ *
+ * Vercel enforces ~4.5MB on serverless request bodies at the platform edge,
+ * BEFORE Next.js sees the request — so `serverActions.bodySizeLimit` in
+ * next.config.mjs cannot raise it, and a file that uploads happily in local dev
+ * is rejected in production with no application-level error to report. Held at
+ * 4MB rather than 4.5 because multipart encoding and the other form fields ride
+ * along in the same body.
+ *
+ * This only applies when Blob is unconfigured. With Blob the browser uploads
+ * straight to storage and the limit does not exist.
+ */
+const FALLBACK_MAX_BYTES = 4 * 1024 * 1024;
 export function UploadDialog({
   blobEnabled,
   continuationParams,
@@ -62,6 +77,20 @@ export function UploadDialog({
       setError("Choose a PDF file first.");
       return;
     }
+
+    // Fail here, with a reason, rather than letting the platform reject the
+    // request body. That rejection happens before any of this code runs, so
+    // there is nothing to catch and the user sees only a generic failure.
+    if (!blobEnabled && file.size > FALLBACK_MAX_BYTES) {
+      setError(
+        `This file is ${(file.size / 1024 / 1024).toFixed(1)}MB. Without Blob storage configured, ` +
+          `uploads go through the server and Vercel caps those at about 4.5MB. ` +
+          `Connect a Blob store in the Vercel dashboard (Storage tab) to upload files of any size — ` +
+          `the browser then uploads straight to storage and this limit disappears.`
+      );
+      return;
+    }
+
     setError(null);
 
     startTransition(async () => {
@@ -168,6 +197,15 @@ export function UploadDialog({
               </>
             )}
           </div>
+
+          {/* Stated up front, because the limit is invisible until a large file
+              has already been chosen and rejected. */}
+          {!blobEnabled && (
+            <p className="text-xs text-muted-foreground">
+              Blob storage isn&apos;t configured, so files go through the server and are capped at
+              about 4.5MB. Connect a Blob store in the Vercel dashboard to lift the limit.
+            </p>
+          )}
 
           {error && <p className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">{error}</p>}
         </div>
