@@ -119,7 +119,22 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("bank"); ap.add_argument("out")
     ap.add_argument("--tests", nargs="+", type=int, required=True)
+    ap.add_argument("--exclude", nargs="*", default=[],
+                    help="previously built test files whose questions are already in use")
     args = ap.parse_args()
+
+    # A question already placed in another test must never be picked again — a
+    # student meeting the same item in two tests is the whole point of tracking
+    # this. Read from the built files rather than the database so the exclusion
+    # is deterministic and auditable, and verify against the DB afterwards.
+    used = set()
+    for f in args.exclude:
+        for t in json.load(open(f)):
+            for m in t["modules"]:
+                for q in m["questions"]:
+                    used.add(q["cb_id"])
+    if used:
+        print(f"excluding {len(used)} questions already placed in earlier tests")
 
     rng = random.Random(20260814)
     pool = defaultdict(lambda: defaultdict(list))
@@ -129,6 +144,8 @@ def main():
         if q.get("source_book"):          # College Board rows only
             continue
         if not q.get("difficulty"):
+            continue
+        if q["id"] in used:
             continue
         pool[skill_key(q)][q["difficulty"]].append(q)
     for s in pool:
