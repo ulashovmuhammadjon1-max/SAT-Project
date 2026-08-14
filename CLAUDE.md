@@ -1,5 +1,57 @@
 # Project memory
 
+## R&W TEST DIFFICULTY STRUCTURE (set by the user — reuse, do not ask again)
+
+The per-module difficulty mix for every rebuilt Reading & Writing test. The
+user specified this once; it is recorded here so it never has to be re-sent.
+
+| module | difficulty | count | the user's wording |
+|---|---|---|---|
+| Module 1 (STANDARD) | EASY | 3 | "2-3 easy questions" |
+| | MEDIUM | 15 | "around 15 medium" |
+| | HARD | 9 | "the other hard" |
+| Module 2 Easy | EASY | 21 | "all other are easy" |
+| | MEDIUM | 6 | "around 6-7 medium" |
+| | HARD | 0 | |
+| Module 2 Hard | EASY | 2 | "1-2 easy questions" |
+| | MEDIUM | 10 | "the other medium" |
+| | HARD | 15 | "15 hard questions" |
+
+27 per module, 81 per test. Per test that totals EASY 26 / MEDIUM 31 / HARD 24,
+which is almost exactly the College Board bank's own natural shape — the mix is
+realistic, not a stretch.
+
+**The domain-block ORDER is unchanged** — the mandated sequence further down
+this file ("SAT Reading & Writing (EBRW) module question order") still governs.
+Only the difficulty mix is specified here. Per-module skill blocks used by the
+builder, which satisfy that order and sum to 27:
+
+    Words in Context 5, Text Structure and Purpose 2, Cross-Text Connections 1,
+    Central Ideas and Details 2, Command of Evidence 3, Inferences 2   (reading, 15)
+    Standard English Conventions 6, Transitions 3, Rhetorical Synthesis 3 (writing, 12)
+
+Capacity against the current bank is computed by
+`content-pool/cb-question-bank/capacity.py` — do not estimate it by dividing
+totals, because the binding constraint is a skill x difficulty *cell*. Dividing
+suggests 22 tests where the real answer was 16.
+
+## REPLACING A TEST'S QUESTIONS: retire, never DELETE
+
+Students have already answered these questions. Tests 6-10's R&W alone carried
+**428 `Response` rows and 272 `QuestionAttempt` rows** at the time of the first
+rebuild. `Response.questionId` has **no** `onDelete` rule, so a hard delete
+either fails on the foreign key or, if the responses are deleted first,
+silently destroys real students' attempt history and makes their past results
+and review pages wrong.
+
+The safe replacement, used by `rebuild_rw.mjs`:
+1. `UPDATE "Question" SET "moduleId" = NULL, "isPublished" = false` for the old
+   rows — they leave the test but still exist, so every past `Response` still
+   resolves and old review pages keep working.
+2. Insert the new questions into the now-empty module with `order` 1..27.
+
+It is also reversible, which a delete is not.
+
 ## SCHEMA CHANGES: never push schema.prisma ahead of the deployed database
 
 This has now taken production down twice with a public "Something went wrong"
