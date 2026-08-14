@@ -11,36 +11,100 @@ export const dynamic = "force-dynamic";
 export default async function AdminQuestionsPage({
   searchParams,
 }: {
-  searchParams: { domain?: string; difficulty?: string };
+  searchParams: { domain?: string; difficulty?: string; collection?: string };
 }) {
-  const questions = await prisma.question.findMany({
-    where: {
-      domainId: searchParams.domain || undefined,
-      difficulty: (searchParams.difficulty as never) || undefined,
-    },
-    orderBy: { createdAt: "desc" },
-    take: 100,
-    include: { domain: true, skill: true, explanation: true },
-  });
+  // `collection` has three meanings, not two: absent = no filter, "original" =
+  // the pre-existing bank (collectionId IS NULL), anything else = that slug.
+  // Without the explicit "original" value there would be no way to ask for
+  // "everything that did not arrive in an import", which is the whole point of
+  // being able to tell the batches apart.
+  const collectionFilter =
+    searchParams.collection === "original"
+      ? { collectionId: null }
+      : searchParams.collection
+        ? { collection: { slug: searchParams.collection } }
+        : {};
 
-  const domains = await prisma.domain.findMany({ orderBy: { name: "asc" } });
+  const where = {
+    domainId: searchParams.domain || undefined,
+    difficulty: (searchParams.difficulty as never) || undefined,
+    ...collectionFilter,
+  };
+
+  const [questions, total, domains, collections, originalCount] = await Promise.all([
+    prisma.question.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      take: 100,
+      include: { domain: true, skill: true, explanation: true, collection: true },
+    }),
+    prisma.question.count({ where }),
+    prisma.domain.findMany({ orderBy: { name: "asc" } }),
+    prisma.questionCollection.findMany({
+      orderBy: [{ order: "asc" }, { createdAt: "asc" }],
+      include: { _count: { select: { questions: true } } },
+    }),
+    prisma.question.count({ where: { collectionId: null } }),
+  ]);
+
+  /** Keeps the other filters intact when one of them is changed. */
+  function hrefWith(patch: Record<string, string | undefined>) {
+    const next = new URLSearchParams();
+    for (const [k, v] of Object.entries({ ...searchParams, ...patch })) {
+      if (v) next.set(k, v);
+    }
+    const qs = next.toString();
+    return qs ? `/admin/questions?${qs}` : "/admin/questions";
+  }
 
   return (
     <div className="space-y-6">
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight">Question Bank</h1>
-        <p className="text-sm text-muted-foreground">{questions.length} questions shown (latest 100)</p>
+        <p className="text-sm text-muted-foreground">
+          {total.toLocaleString()} matching{" "}
+          {total === 1 ? "question" : "questions"}
+          {total > questions.length && ` — showing the latest ${questions.length}`}
+        </p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        <Link href="/admin/questions">
-          <Badge variant={!searchParams.domain ? "default" : "outline"}>All domains</Badge>
-        </Link>
-        {domains.map((d) => (
-          <Link key={d.id} href={`/admin/questions?domain=${d.id}`}>
-            <Badge variant={searchParams.domain === d.id ? "default" : "outline"}>{d.name}</Badge>
+      {collections.length > 0 && (
+        <div className="space-y-1.5">
+          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            Collection
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Link href={hrefWith({ collection: undefined })}>
+              <Badge variant={!searchParams.collection ? "default" : "outline"}>Everything</Badge>
+            </Link>
+            <Link href={hrefWith({ collection: "original" })}>
+              <Badge variant={searchParams.collection === "original" ? "default" : "outline"}>
+                Original bank ({originalCount.toLocaleString()})
+              </Badge>
+            </Link>
+            {collections.map((c) => (
+              <Link key={c.id} href={hrefWith({ collection: c.slug })}>
+                <Badge variant={searchParams.collection === c.slug ? "default" : "outline"}>
+                  {c.name} ({c._count.questions.toLocaleString()})
+                </Badge>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="space-y-1.5">
+        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Domain</p>
+        <div className="flex flex-wrap gap-2">
+          <Link href={hrefWith({ domain: undefined })}>
+            <Badge variant={!searchParams.domain ? "default" : "outline"}>All domains</Badge>
           </Link>
-        ))}
+          {domains.map((d) => (
+            <Link key={d.id} href={hrefWith({ domain: d.id })}>
+              <Badge variant={searchParams.domain === d.id ? "default" : "outline"}>{d.name}</Badge>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <Card>
@@ -49,6 +113,7 @@ export default async function AdminQuestionsPage({
             <TableHeader>
               <TableRow>
                 <TableHead>Question</TableHead>
+                <TableHead>Collection</TableHead>
                 <TableHead>Domain</TableHead>
                 <TableHead>Skill</TableHead>
                 <TableHead>Difficulty</TableHead>
@@ -63,6 +128,13 @@ export default async function AdminQuestionsPage({
                     <Link href={`/admin/questions/${q.id}`} className="line-clamp-1 font-medium hover:underline">
                       {q.stem.replace(/<[^>]+>/g, "")}
                     </Link>
+                  </TableCell>
+                  <TableCell>
+                    {q.collection ? (
+                      <Badge variant="outline">{q.collection.name}</Badge>
+                    ) : (
+                      <span className="text-sm text-muted-foreground">Original bank</span>
+                    )}
                   </TableCell>
                   <TableCell className="text-sm text-muted-foreground">{q.domain.name}</TableCell>
                   <TableCell className="text-sm text-muted-foreground">{q.skill.name}</TableCell>
@@ -83,7 +155,7 @@ export default async function AdminQuestionsPage({
               ))}
               {questions.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={6} className="py-12 text-center text-sm text-muted-foreground">
+                  <TableCell colSpan={7} className="py-12 text-center text-sm text-muted-foreground">
                     No questions yet. Publish a PDF upload to populate the bank.
                   </TableCell>
                 </TableRow>
