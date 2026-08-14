@@ -11,18 +11,26 @@ export const dynamic = "force-dynamic";
 export default async function AdminQuestionsPage({
   searchParams,
 }: {
-  searchParams: { domain?: string; difficulty?: string };
+  searchParams: { domain?: string; difficulty?: string; retired?: string };
 }) {
+  // Retired questions — detached from their test and unpublished — are hidden
+  // by default. They are already invisible to students, but they were still
+  // counted here, which made the bank's headline total look impossibly large
+  // (5,415 rows for 4,605 live questions). They cannot simply be deleted:
+  // most carry real attempt history, and Response.questionId has no onDelete
+  // rule, so removing them would break past results. Hidden, not destroyed.
+  const showRetired = searchParams.retired === "1";
   const where = {
     domainId: searchParams.domain || undefined,
     difficulty: (searchParams.difficulty as never) || undefined,
+    ...(showRetired ? {} : { NOT: { moduleId: null, isPublished: false } }),
   };
 
   // Named columns rather than a whole-row fetch. The list shows a stem excerpt,
   // some labels and a "has explanation" tick, so pulling `imageUrl` (base64
   // data URIs averaging 127 KB) and full explanation bodies for 100 rows was
   // wasted transfer.
-  const [questions, total, domains] = await Promise.all([
+  const [questions, total, domains, retiredCount] = await Promise.all([
     prisma.question.findMany({
       where,
       orderBy: { createdAt: "desc" },
@@ -40,6 +48,7 @@ export default async function AdminQuestionsPage({
     }),
     prisma.question.count({ where }),
     prisma.domain.findMany({ orderBy: { name: "asc" } }),
+    prisma.question.count({ where: { moduleId: null, isPublished: false } }),
   ]);
 
   /** Keeps the other filters intact when one of them is changed. */
@@ -61,6 +70,29 @@ export default async function AdminQuestionsPage({
           {total === 1 ? "question" : "questions"}
           {total > questions.length && ` — showing the latest ${questions.length}`}
         </p>
+        {retiredCount > 0 && (
+          <p className="mt-1 text-sm text-muted-foreground">
+            {showRetired ? (
+              <>
+                Including {retiredCount.toLocaleString()} retired{" "}
+                {retiredCount === 1 ? "question" : "questions"} — replaced in a test and hidden
+                from students.{" "}
+                <Link href={hrefWith({ retired: undefined })} className="text-primary hover:underline">
+                  Hide them
+                </Link>
+              </>
+            ) : (
+              <>
+                {retiredCount.toLocaleString()} retired{" "}
+                {retiredCount === 1 ? "question is" : "questions are"} hidden — replaced in a test
+                and no longer shown to students.{" "}
+                <Link href={hrefWith({ retired: "1" })} className="text-primary hover:underline">
+                  Show them
+                </Link>
+              </>
+            )}
+          </p>
+        )}
       </div>
 
       <div className="space-y-1.5">

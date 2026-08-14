@@ -1,0 +1,266 @@
+[
+ {
+  "id": "5d220a8d-713b-4bc5-acd6-2f680a0ffd67",
+  "title": "Test 3",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 12,
+  "source": "May",
+  "stem": "Which choice best describes data in the table that support the city planner's conclusion?",
+  "passage_id": "f756b872-6120-4b75-afea-8abe5ee0231b",
+  "passage": "<p>Esther Sanye-Mengual, Kathrin Specht, and their team surveyed three groups of people in Bologna, Italy—leaders of urban agriculture projects, stakeholders in urban agriculture (e.g., food researchers and urban farming associations), and the general public—to compare their views about the extent to which urban agriculture contributes to 25 social or ecological services that the team identified. The researchers used these ratings to rank the services for each group, with a conclusion that both stakeholders and the general public regard the improvement of attitudes and outlooks as an important benefit of urban agriculture.</p><p><em>[Graph/figure not available in this environment -- described here for reference: page 17-18 of source PDF has a table — needs image extraction/vision check.]</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The improvement of physical health was ranked lower for the general public than it was for project leaders.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The provision of raw materials was ranked higher for the general public than was the improvement of attitudes and outlooks.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The improvement of attitudes and outlooks was ranked higher for stakeholders than it was for the general public.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The improvement of attitudes and outlooks was ranked higher for the general public than were the other four services.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "2abe301e-35f7-41d2-8dec-1b9f02b5468a",
+  "title": "Test 3",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 12,
+  "source": "March",
+  "stem": "Which choice most effectively uses data from the graph to complete the example?",
+  "passage_id": "7431ecf0-e5ae-424a-b365-c86c9fb28421",
+  "passage": "<p>A report from an international organization that monitors the numbers of women serving as judges or magistrates on various nations' highest courts, such as the Supreme court in Finland and the Supreme Court in the Dominican republic. From 2009 to 2013, the number of women serving as justices or magistrates on highest courts in most countries increased. However, there are also countries where the number decreased or remained unchanged; for example, ____</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Slovenia was greater in 2013 than in 2009, whereas the number in the Dominican Republic was lower in 2013 than in 2009.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Slovenia was greater in 2013 than in 2009, whereas the number in Finland was the same in 2013 as in 2009.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Finland was the same in 2013 as in 2009, but it had more women on its high courts than either Slovenia or the Dominican republic did in 2013.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "the Dominican Republic was lower in 2013 than in 2009, whereas the number in Finland was the same in 2013 as in 2009.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "e534f4ce-d32e-4fdb-90ff-b1445ecfd878",
+  "title": "Test 4",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 4,
+  "source": "Dec2023E",
+  "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+  "passage_id": "98e5ee20-d2e9-475d-a95f-df2c4f664594",
+  "passage": "<p>On painter William H. Johnson's return to the United States in 1938 after a decade in Europe, his style underwent an abrupt transformation. Turning away from landscapes painted in an expressionist style—a style that often involves using fluid, distorted shapes and thick, textured brushstrokes to express the artist's subjective experience of reality—Johnson began painting portraits of Black Americans in a bold new way. Evocative of African sculpture and American and Scandinavian folk art, these portraits feature flat, deliberately oversimplified figures in a vibrant but limited color palette. (Underlined sentence: \"Turning away from landscapes painted in an expressionist style—a style that often involves using fluid, distorted shapes and thick, textured brushstrokes to express the artist's subjective experience of reality—Johnson began painting portraits of Black Americans in a bold new way.\")</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It elaborates on the previous sentence's statement about a transitional moment in Johnson's artistic career.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "It provides information about Johnson's travels in support of a claim about his artistic influences, which is advanced in the following sentence.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It recounts a moment in Johnson's personal life that enabled the success of his subsequent career, which is summarized in the following sentence.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It presents evidence that calls into question the previous sentence's characterization of Johnson's artistic development.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "46dc9715-803e-401f-9043-791ccd0f50b0",
+  "title": "Test 4",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 5,
+  "source": "Dec2023E",
+  "stem": "Which choice best states the function of the underlined sentence in the text as a whole?",
+  "passage_id": "eba0dd7f-9d59-4bfb-bdfa-886c9662e463",
+  "passage": "<p>The Paul Laurence Dunbar House in Dayton, Ohio, is the house where Paul Laurence Dunbar lived for two years and wrote his later poetry collections. Now the house is a museum dedicated to Dunbar's life and writings. Visitors travel to this museum to feel more connected to an author they admire. To encourage that sense of connection, the museum's curators have set up exhibits with furnishings owned by Dunbar. Such exhibits help visitors understand day-to-day life in the house where Dunbar felt inspired. (Underlined sentence: \"Now the house is a museum dedicated to Dunbar's life and writings.\")</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It states the current purpose of a building mentioned in the previous sentence.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "It summarizes the career of an author mentioned in the previous sentence.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It recommends the works of an author mentioned in the previous sentence.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It recounts the history of a place mentioned in the previous sentence.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "8ab77272-90b5-4547-8125-f5196e27164c",
+  "title": "Test 4",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 5,
+  "source": "Dec2023E",
+  "stem": "Which choice best describes the function of the underlined portion in the text as a whole?",
+  "passage_id": "97b93dc7-1d81-4305-9d48-c5a4d5383298",
+  "passage": "<p>The following text is from Lady Gregory's 1904 play Spreading the News. Mrs. Tarpey, Bartley, and Mrs. Fallon have been buying and selling goods at the local fair. MRS. TARPEY: Good morrow, Bartley Fallon; good morrow, Mrs. Fallon. Well, Bartley, you'll find no cause for complaining to-day; they are saying it was a good fair. BARTLEY: (Raising his voice.) It was not a good fair, Mrs. Tarpey. It was a scattered sort of a fair. If we didn't expect more, we got less. That's the way with me always; whatever I have to sell goes down and whatever I have to buy goes up. If there's ever any misfortune coming to this world, it's on myself it pitches, like a flock of crows on seed potatoes. (Underlined portion: \"like a flock of crows on seed potatoes\")</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It discusses an event that Mrs. Tarpey believes is unlikely to occur.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It uses a counterexample to raise questions about a claim that Bartley made.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It provides a description of something that happened to Bartley at the fair.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It presents a vivid image to emphasize a claim that Bartley makes.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "f7af0f2a-a574-4029-a3cb-dcbe46380e6e",
+  "title": "Test 4",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 11,
+  "source": "Nov2023",
+  "stem": "Which choice most effectively uses data from the graph to support the underlined claim?",
+  "passage_id": "00d0db72-4e72-49b8-9648-d0d4ba14a8e1",
+  "passage": "<p>A student is researching the trends in the topics submitted to a national science fair for high school students. The graph shows the number of submissions by topic that were made each year. Based on the data in the graph, the student claims that there were more medicine and health research topics submitted in 2019 than in any other year.</p><p><em>[Graph/figure not available in this environment -- described here for reference: Line graph titled 'Total Science Research Submissions by Topic, 2016-2019' showing number of submissions (y-axis, 0-350) for four topics (cellular and molecular biology, physics and space science, medicine and health, animal science) across years 2016-2019 (x-axis).]</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2016, the number of cellular and molecular biology topic submissions was the same as the number of animal science topic submissions.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "In 2019, there were more physics and space science topic submissions than there were medicine and health topic submissions.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The lowest number of animal science topic submissions in a year was approximately 95 in 2016.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The highest number of medicine and health topic submissions during the period shown is approximately 285 in 2019.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "5ed97e52-2471-4d43-b0c4-de66a9843902",
+  "title": "Test 5",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 4,
+  "source": "Dec2023_12A",
+  "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+  "passage_id": "3aee67ff-daa4-4e67-88dd-251099040bf7",
+  "passage": "<p>In Hoocąk, an Indigenous language from the Midwest region of what is now the United States, paras means \"flat,\" whereas paraparač means \"square.\" This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element \"para\" in paras gets repeated in paraparač. There are many examples of this type of reduplication in Hoocąk. (The underlined sentence referenced in the question is: \"In this case, the element 'para' in paras gets repeated in paraparač.\")</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It emphasizes how frequently reduplication occurs in Hoocąk.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It acknowledges that Hoocąk has some important exceptions to the general pattern described earlier.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It elaborates on the discussion of reduplication by explaining how it works in the specific Hoocąk words introduced earlier.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "It provides English translations of the Hoocąk words mentioned earlier.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "618cdc97-9c2b-4c3d-ba86-e1ce405deee0",
+  "title": "Test 5",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 5,
+  "source": "Dec2023_12A",
+  "stem": "Which choice best describes the function of the underlined portion in the text as a whole?",
+  "passage_id": "cde837c1-971b-4522-9535-338fccef9f1d",
+  "passage": "<p>In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Mexico City, Mexico, and Buenos Aires, Argentina, were surveyed about parks in their cities. Of the 562 respondents from Mexico City, 77.6% indicated that they use the city's parks, and of the 683 respondents from Buenos Aires, 69.9% indicated using city parks. Given that the percentage of Mexico City respondents who reported living within a 10-minute walk of a park was much lower than that reported by Buenos Aires respondents, greater proximity alone can't explain the difference in park use. (The underlined portion referenced in the question is: \"was much lower than\")</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It marks a shift from a discussion of the researchers' conclusion to a discussion of their methods.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It identifies the nature of a relationship that is significant to the text's conclusion.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "It provides context to help readers understand the scope of the researchers' survey.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It introduces a counterexample to the scenario described earlier in the text.",
+    "isCorrect": false
+   }
+  ]
+ }
+]
