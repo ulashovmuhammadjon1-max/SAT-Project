@@ -108,6 +108,30 @@ def parse(pdfs):
         if cur:
             chunks.append(cur)
 
+        # A missing dotted separator glues two questions into one chunk, which
+        # shows up as a second "A)" appearing after a "D)". Split there rather
+        # than dropping the pair — silently losing questions to a stray
+        # separator is exactly the kind of quiet under-count to avoid.
+        split = []
+        for ch in chunks:
+            starts = [j for j, ln in enumerate(ch) if ln.startswith("A)")]
+            if len(starts) <= 1:
+                split.append(ch)
+                continue
+            bounds = [0]
+            for j in starts[1:]:
+                # Walk back over this question's passage to its own start: the
+                # previous question ends at its last choice line.
+                k = j - 1
+                while k > bounds[-1] and not ch[k].startswith(("A)", "B)", "C)", "D)")):
+                    k -= 1
+                bounds.append(k + 1)
+            bounds.append(len(ch))
+            for a, b in zip(bounds, bounds[1:]):
+                if any(ln.startswith("A)") for ln in ch[a:b]):
+                    split.append(ch[a:b])
+        chunks = split
+
         for ch in chunks:
             a_at = next((j for j, ln in enumerate(ch) if CHOICE.match(ln) and ln.startswith("A)")), None)
             if a_at is None:
