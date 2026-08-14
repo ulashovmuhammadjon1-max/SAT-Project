@@ -209,6 +209,25 @@ def main():
             continue
         if q["id"] in used:
             continue
+        # Skip anything unanswerable as stored. A question asking about an
+        # underlined portion needs the <u>; one pointing at a figure needs the
+        # figure. For Tests 6-15 the underlines were recovered from page
+        # renders, but those recoveries live in the database, not in this bank
+        # file, so a question drawn here still has none — and 12 such questions
+        # reached Tests 16-31 before this filter existed.
+        body = (q.get("question") or "")
+        has_fig = bool(q.get("figure_html") or q.get("figure_image") or "<table" in body)
+        if re.search(r"underlined", body, re.I) and "<u>" not in body:
+            continue
+        if re.search(r"\b(?:the|this|these|following|accompanying)\s+"
+                     r"(?:table|graph|chart|figure)\b", body, re.I) and not has_fig:
+            continue
+        if re.search(r"completes the text", body, re.I) and not re.search(r"_{3,}", body):
+            continue
+        if re.search(r"\*[^*\n]{2,}\*", body):
+            continue
+        if not body.strip():
+            continue
         if q.get("difficulty"):
             pool[skill_key(q)][q["difficulty"]].append(q)
         elif args.allow_unlabelled:

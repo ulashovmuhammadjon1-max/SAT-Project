@@ -96,6 +96,21 @@ def parse(pdfs):
         keys = parse_answer_table(lines[ans_at[1] + 1: nxt[1] if nxt else len(lines)])
         body = lines[i + 1: ans_at[1]]
 
+        # Drop the topic's own header block. Each section opens with a question
+        # count, a DIRECTIONS panel of tips and a "Recommended time per
+        # question" line, and all of it was being swept into the FIRST
+        # question's passage — 17 questions, one per topic. It also broke blank
+        # recovery, which found a wide-spaced gap inside the header and put the
+        # question's blank there instead of in its passage.
+        cut = next((j for j, ln in enumerate(body)
+                    if re.match(r"Recommended time per question", ln.strip())), None)
+        if cut is not None:
+            # The line can wrap; skip to the end of the sentence it starts.
+            k = cut
+            while k < len(body) and "Exam level" not in body[k]:
+                k += 1
+            body = body[k + 1:]
+
         # Split into per-question chunks on the dotted separators.
         chunks, cur = [], []
         for ln in body:

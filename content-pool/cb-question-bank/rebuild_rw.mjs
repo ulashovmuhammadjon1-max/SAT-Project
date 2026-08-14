@@ -74,17 +74,22 @@ for (const t of tests) {
          AND "order" = ${m.order} AND difficulty = ${m.difficulty}::"ModuleDifficulty"`;
     if (!mod) throw new Error(`${title} module ${m.order}/${m.difficulty} not found`);
 
-    // Source prefix records where a question actually came from: CB: for the
-    // official College Board export, SAT: for the SAToplam books. Both are
-    // "current pipeline"; anything else in the module is the old content this
-    // run replaces.
-    const isCurrent = (src) => src?.startsWith("CB:") || src?.startsWith("SAT:");
+    // Retire whatever this build does not contain.
+    //
+    // Membership is decided against THIS build's own question list, not
+    // against a source prefix. Prefix matching looked equivalent and was not:
+    // re-running after a corrected build left the previous run's questions in
+    // place — they carried the same SAT: prefix, so they read as "current" —
+    // and the module ended up holding both batches, 54 questions instead of
+    // 27. Comparing to the intended set makes a rebuild converge on that set
+    // whatever was there before.
+    const srcOf = (q) => (q.source_book ? "SAT:" : "CB:") + q.cb_id;
+    const wanted = new Set(m.questions.map(srcOf));
     const existing = await sql`
       SELECT id, source FROM "Question" WHERE "moduleId" = ${mod.id}`;
-    const already = new Set(existing.map((r) => r.source).filter(isCurrent));
-    const stale = existing.filter((r) => !isCurrent(r.source));
+    const already = new Set(existing.map((r) => r.source).filter((s) => wanted.has(s)));
+    const stale = existing.filter((r) => !wanted.has(r.source));
 
-    const srcOf = (q) => (q.source_book ? "SAT:" : "CB:") + q.cb_id;
     console.log(`${title} M${m.order}${m.difficulty[0]}: ${stale.length} to retire, ` +
                 `${m.questions.filter((q) => !already.has(srcOf(q))).length} to insert`);
 
@@ -124,11 +129,18 @@ for (const t of tests) {
       }
 
       // The official rationale covers the credited answer and every distractor,
-      // so it ships as the explanation rather than anything re-authored.
-      await sql`
-        INSERT INTO "Explanation" (id, "questionId", content, "whyCorrect", source, "generatedAt")
-        VALUES (gen_random_uuid()::text, ${questionId}, ${`<p>${q.rationale}</p>`},
-                ${q.rationale}, 'MANUAL', NOW())`;
+      // so where one exists it ships as the explanation rather than anything
+      // re-authored. Where none exists — the SAToplam books carry no
+      // rationales — NO row is written. An empty Explanation is worse than a
+      // missing one: it satisfies every "has an explanation" check while
+      // showing the student a blank panel, and it hides the gap from the
+      // audit. 1,254 empty shells were created before this guard existed.
+      if ((q.rationale ?? "").trim()) {
+        await sql`
+          INSERT INTO "Explanation" (id, "questionId", content, "whyCorrect", source, "generatedAt")
+          VALUES (gen_random_uuid()::text, ${questionId}, ${`<p>${q.rationale}</p>`},
+                  ${q.rationale}, 'MANUAL', NOW())`;
+      }
       inserted++;
     }
   }
