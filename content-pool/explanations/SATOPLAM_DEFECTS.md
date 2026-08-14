@@ -51,10 +51,12 @@ the allocator never scored candidate pairs at all. Any future build from this
 bank must screen each module's picks against every other question **in the same
 test** before assembling it.
 
-## Answer keys: 29 disagreements in 1,233 (2.4%)
+## Answer keys: 29 disagreements in 1,254 (2.3%)
 
 Every agent derived its own answer before seeing the key; `verify.mjs` held
 back every mismatch, so **no explanation shipped arguing for a disputed key**.
+**1,225 of the 1,254 are live**; the 29 below are the only R&W questions in all
+31 tests still without an explanation, and they are held deliberately.
 The full list is reproducible with:
 
     node content-pool/explanations/verify.mjs 2>&1 | grep "! sat-"
@@ -74,7 +76,7 @@ error:
    so at least one is provably wrong.
 
 This is consistent with CLAUDE.md's measured rate for transcribed R&W keys
-(Test 5: 6 wrong in 81, 7.4%). 2.4% is better, not clean.
+(Test 5: 6 wrong in 81, 7.4%). 2.3% is better, not clean.
 
 ## Needs the source books — cannot be repaired from what is in the database
 
@@ -105,6 +107,14 @@ re-read, or the question replaced.
   underlined) and the passage carries no `<u>` markup.
 - `5b61af59` **Test 27 M1 q22** — stem asks which choice "conforms to the
   conventions of Standard English" while all four choices are transitions.
+- `3e218287` **Test 25 M1 q10** — stem asks for the "main idea" but all four
+  choices are bare noun phrases answering a *main topic* question. Stem and
+  choices come from two different question forms.
+- `23eb6fb3` **Test 24 M2 Hard q21** — "at 14,08 meters" should be 1,408 m. As
+  printed it is *shorter* than the 1,006 m bridge the sentence says it exceeds,
+  so the passage contradicts itself.
+- `11ec09c8` **Test 24 M2 Hard q25** — choice C reads "lived from year to
+  1737"; the notes give 1644.
 
 ## Cosmetic transcription noise
 
