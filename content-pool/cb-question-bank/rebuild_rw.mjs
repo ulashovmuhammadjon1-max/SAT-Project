@@ -74,13 +74,19 @@ for (const t of tests) {
          AND "order" = ${m.order} AND difficulty = ${m.difficulty}::"ModuleDifficulty"`;
     if (!mod) throw new Error(`${title} module ${m.order}/${m.difficulty} not found`);
 
+    // Source prefix records where a question actually came from: CB: for the
+    // official College Board export, SAT: for the SAToplam books. Both are
+    // "current pipeline"; anything else in the module is the old content this
+    // run replaces.
+    const isCurrent = (src) => src?.startsWith("CB:") || src?.startsWith("SAT:");
     const existing = await sql`
       SELECT id, source FROM "Question" WHERE "moduleId" = ${mod.id}`;
-    const already = new Set(existing.map((r) => r.source).filter((s) => s?.startsWith("CB:")));
-    const stale = existing.filter((r) => !r.source?.startsWith("CB:"));
+    const already = new Set(existing.map((r) => r.source).filter(isCurrent));
+    const stale = existing.filter((r) => !isCurrent(r.source));
 
+    const srcOf = (q) => (q.source_book ? "SAT:" : "CB:") + q.cb_id;
     console.log(`${title} M${m.order}${m.difficulty[0]}: ${stale.length} to retire, ` +
-                `${m.questions.filter((q) => !already.has(`CB:${q.cb_id}`)).length} to insert`);
+                `${m.questions.filter((q) => !already.has(srcOf(q))).length} to insert`);
 
     if (!APPLY) { retired += stale.length; continue; }
 
@@ -94,7 +100,7 @@ for (const t of tests) {
     }
 
     for (const q of m.questions) {
-      const src = `CB:${q.cb_id}`;
+      const src = srcOf(q);
       if (already.has(src)) { skipped++; continue; }
       const skill = skills[SKILL_CODE[q.skill]];
 

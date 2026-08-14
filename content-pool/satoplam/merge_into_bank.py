@@ -71,7 +71,7 @@ def main():
     for q in live:
         by_passage.setdefault(norm(q["question"])[:150], []).append(q)
 
-    kept, dropped, reordered, conflicts = [], 0, 0, []
+    kept, dropped, reordered, conflicts, rejected = [], 0, 0, [], []
     for q in sat:
         cand = by_passage.get(norm(q["passage"] + " " + q["question"])[:150], []) \
             or by_passage.get(norm(q["passage"])[:150], [])
@@ -92,6 +92,17 @@ def main():
 
         domain, skill = TOPIC_TO_SKILL.get(q["topic"], (None, None))
         if not skill:
+            continue
+
+        # Reject a question whose choices are not four distinct options. Three
+        # Boundaries items lost a punctuation variant in transcription, leaving
+        # two byte-identical choices — so the student sees three real options
+        # and cannot tell two of them apart. The same defect exists in Test 2's
+        # copy of one of these questions, which is how the pattern was
+        # recognised. Repairing them would mean inventing the missing variant,
+        # so they are dropped instead.
+        if len({re.sub(r"\s+", " ", c["content"]).strip().lower() for c in q["choices"]}) != len(q["choices"]):
+            rejected.append(f"{q['topic']} #{q['number']}: duplicate choice text")
             continue
         kept.append({
             "id": f"satoplam-{re.sub(r'[^a-z0-9]+', '-', q['topic'].lower())}-{q['number']}",
@@ -118,6 +129,10 @@ def main():
     print(f"    of those, choices reordered so the letter differs: {reordered}")
     print(f"    of those, a real answer conflict:                  {len(conflicts)}")
     print(f"  contributed as new         {len(kept)}")
+    if rejected:
+        print(f"  rejected as defective      {len(rejected)}")
+        for r in rejected:
+            print(f"      {r}")
     print(f"  ... carrying bracketed editorial text: {sum(1 for q in kept if q['bracketed_text'])}")
 
     merged = cb + kept
