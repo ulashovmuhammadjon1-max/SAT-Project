@@ -103,29 +103,43 @@ def build_html(lines):
         out += [f"<p>{esc(l)}</p>" for l in lines[tail:]]
         return "".join(out)
 
-    # Otherwise: join wrapped lines into paragraphs. A new paragraph starts at a
-    # "Text 1" / "Text 2" marker, or after a line that ended a sentence and is
-    # markedly short (a real line break rather than wrapping).
+    # Otherwise: ONE paragraph, broken only at an explicit Text 1 / Text 2
+    # marker.
+    #
+    # `pdftotext -raw` emits no blank line anywhere inside a passage — checked
+    # across a whole part, zero occurrences — so the source carries no
+    # paragraph information at all. An earlier version guessed at breaks from
+    # line length, which invented them: "…such concerns didn't ______ Booker T"
+    # / "." / "Whatley's efforts…" was split into two paragraphs straight
+    # through a person's name, because the line ended in a period and was
+    # short. Guessing a break is strictly worse than not breaking, so this now
+    # only breaks where the source is explicit.
+    #
+    # A line that is nothing but punctuation is the same PDFium artifact as the
+    # floating apostrophe: the period after "Booker T" lands on its own line.
+    # It is re-attached to the previous line with no space.
     paras, cur = [], ""
     for l in lines:
-        if re.match(r"^Text [12]\b", l):
+        st = l.strip()
+        if re.match(r"^Text [12]\b", st):
             if cur:
                 paras.append(cur)
-            paras.append(l.strip())
+            paras.append(st)
             cur = ""
             continue
-        cur = (cur + " " + l).strip() if cur else l.strip()
-        if re.search(r"[.!?][\"”)]?$", l) and len(l) < 55:
-            paras.append(cur); cur = ""
+        if re.fullmatch(r"[^\w\s]{1,3}", st) and cur:
+            cur += st                       # stray punctuation, no space
+            continue
+        cur = (cur + " " + st).strip() if cur else st
     if cur:
         paras.append(cur)
 
     html = []
-    for p in paras:
-        if re.fullmatch(r"Text [12]", p.strip()):
-            html.append(f"<p><strong>{esc(p.strip())}</strong></p>")
+    for para in paras:
+        if re.fullmatch(r"Text [12]", para.strip()):
+            html.append(f"<p><strong>{esc(para.strip())}</strong></p>")
         else:
-            html.append(f"<p>{esc(p)}</p>")
+            html.append(f"<p>{esc(para)}</p>")
     return "".join(html)
 
 

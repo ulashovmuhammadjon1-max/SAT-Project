@@ -70,6 +70,20 @@ for (const r of rows) {
       !/<table/i.test(text) && !/<img/i.test(text) && !r.imageUrl)
     add(r, "references a figure, none present");
 
+  // A paragraph break in the middle of a sentence or a name. The classic case
+  // is an initial: "…didn't ______ Booker T." / "Whatley's efforts…" split a
+  // person in half, because the line ended in a period and looked like the end
+  // of a sentence. Also catches a following paragraph that opens lowercase,
+  // and a stray punctuation-only paragraph.
+  const paras = [...(r.passage ?? "").matchAll(/<p>(.*?)<\/p>/gs)]
+    .map((m) => m[1].replace(/<[^>]+>/g, "").trim());
+  for (let i = 0; i < paras.length - 1; i++) {
+    const a = paras[i], b = paras[i + 1];
+    if (/\b[A-Z]\.$/.test(a)) add(r, "paragraph split after an initial", a.slice(-28));
+    else if (b && /^[a-z]/.test(b)) add(r, "paragraph starts lowercase", b.slice(0, 28));
+  }
+  if (paras.some((p) => /^[^\w\s]{1,3}$/.test(p))) add(r, "punctuation-only paragraph");
+
   if (/\*[^*\n]{2,}\*/.test(text)) add(r, "markdown asterisks");
   if (/\\[A-Za-z]{2,}/.test(text)) add(r, "LaTeX macro in prose");
   for (const tag of ["u", "em", "strong", "p", "li", "ul", "table"]) {
