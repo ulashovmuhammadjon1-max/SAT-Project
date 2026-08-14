@@ -43,54 +43,67 @@ empty stems or choices, and duplicate ids.
 Dedupes across parts on the official question id, flags anything whose stem
 already matches a banked question, and writes `bank_parsed.json`.
 
-## Current status — all four R&W domains parsed, 1,767 questions, zero defects
+## Current status — COMPLETE. 1,838 questions, zero defects
 
-Twenty-three part files covering book pages 1-1900 (one part arrived twice as a
-straight re-send; several boundaries overlap by a page).
+Twenty-four part files covering the whole export, book pages 1-1971 (one part
+arrived twice as a straight re-send; several boundaries overlap by a page).
 
 | | count |
 |---|---|
-| unique questions | 1,767 |
-| duplicates across parts | 104 |
-| already in the live bank | 53 |
-| **new to import** | **1,714** |
+| unique questions | 1,838 |
+| duplicates across parts | 105 |
+| already in the live bank | 55 |
+| **new to import** | **1,783** |
 | need a rebuilt figure | 73 |
 
 Every check at zero: parse errors, questions without exactly 4 choices, keys
 absent from their own choice list, duplicate choice text within a question,
-missing rationales, empty stems, lost apostrophes, duplicate ids.
+missing rationales, empty stems, lost apostrophes, duplicate ids, and choice
+labels out of A-B-C-D order. Rationales run 337 characters at the shortest,
+1,135 at the median.
 
 | domain | count |
 |---|---|
 | Information and Ideas | 554 |
 | Craft and Structure | 469 |
+| Standard English Conventions | 417 |
 | Expression of Ideas | 398 |
-| Standard English Conventions | 346 |
 
-By skill: Command of Evidence 268, Words in Context 252, Rhetorical Synthesis
-199, Transitions 184, Boundaries 173, Form Structure and Sense 164, Text
+By skill: Command of Evidence 268, Words in Context 252, Boundaries 207,
+Rhetorical Synthesis 199, Form Structure and Sense 199, Transitions 184, Text
 Structure and Purpose 141, Central Ideas and Details 136, Inferences 136,
-Cross-Text Connections 61. Difficulty Easy 582 / Medium 572 / Hard 560. Keys
-fall D448 B433 A429 C404 — balanced, so no rotation pass is needed.
+Cross-Text Connections 61. Difficulty Easy 608 / Medium 591 / Hard 584. Keys
+fall D471 A445 B445 C422 — balanced, so no rotation pass is needed.
 
-**All four Reading and Writing domains are now present**, which makes this a
-complete R&W bank rather than a partial one. Two consequences worth noting:
+Two long-standing constraints in this project disappear with this bank:
 
-- Rhetorical Synthesis and Transitions were the two chronically scarce domains
-  in every previous test build — the reason CLAUDE.md mandates pooling supply
-  across tests with a largest-remainder split. At 199 and 184 that constraint
-  is gone.
-- Boundaries vs Form, Structure, and Sense previously had to be told apart by
-  reading each question's choices by eye, because a stem-only classifier
-  cannot distinguish them. Here the official skill label is supplied, so that
-  hand-classification step disappears entirely.
+- Rhetorical Synthesis and Transitions were the chronically scarce domains in
+  every previous build — the reason CLAUDE.md mandates pooling supply across
+  tests with a largest-remainder split rather than per-test silos. At 199 and
+  184, supply is no longer the binding constraint.
+- Boundaries vs Form, Structure, and Sense could not be separated by any
+  stem-only classifier, because the only signal is which punctuation differs
+  between the four choices; both previously needed a by-eye pass. The official
+  skill label is supplied here, so that step disappears.
 
 Structural checks passing across the whole set: all Cross-Text questions carry
 both Text 1 and Text 2; every Words in Context question either has a `_____`
 blank or is the "as used in the text … most nearly mean" variant; every
-Rhetorical Synthesis question references the notes or the given sentences; all
-346 Standard English Conventions questions have both a `_____` blank and the
+Rhetorical Synthesis question references the notes or the given sentences;
+every Standard English Conventions question has both a blank and the
 "conventions of Standard English" phrasing.
+
+## Remaining work before any of this ships
+
+1. **The 73 figure questions.** All in Information and Ideas. Their bar and
+   line graphs are vector glyphs that text extraction shreds, so each needs its
+   figure rebuilt from a page render (`pdftoppm -r 110 -png`, fully legible) as
+   either a real `<table>` or a chart image on `Question.imageUrl`.
+2. **The collection separation.** `QuestionCollection` was reverted after it
+   took production down, and has to go back in *together with* its migration —
+   which needs `PROD_URL`. See the schema rule at the top of CLAUDE.md.
+3. **Import.** Insert unpublished into its own collection, spot-check in the
+   real exam interface, then publish.
 
 ## `overrides.json` — repairs to defects in the source export
 
