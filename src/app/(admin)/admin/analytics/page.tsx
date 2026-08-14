@@ -13,32 +13,48 @@ export const dynamic = "force-dynamic";
 const GRADE_ORDER = ["GRADE_9", "GRADE_10", "GRADE_11", "GRADE_12", "GAP_YEAR", "COLLEGE", "OTHER"] as const;
 
 export default async function AdminAnalyticsPage() {
-  const [totalAttempts, submittedAttempts, responses, audience] = await Promise.all([
+  const [totalAttempts, submittedAttempts, domainAccuracy, audience] = await Promise.all([
     prisma.attempt.count(),
     prisma.attempt.count({ where: { status: "SUBMITTED" } }),
-    prisma.response.findMany({
-      where: { isCorrect: { not: null } },
-      include: { question: { include: { domain: true } } },
-      take: 5000,
-    }),
+    // Aggregated in the database, deliberately.
+    //
+    // This used to be `response.findMany({ include: { question: { include:
+    // { domain } } }, take: 5000 })`, which dragged 5,000 whole Question rows
+    // across the wire -- stems, and `imageUrl` columns holding base64 data
+    // URIs that average 127 KB -- to compute one percentage per domain. It also
+    // silently capped the statistic at an arbitrary 5,000 responses, so the
+    // number shown was not actually the platform's accuracy.
+    //
+    // Naming the columns is also what keeps this page alive when schema.prisma
+    // is ahead of the deployed database: Vercel builds the Prisma client at
+    // deploy time but migrations are applied separately, and a `SELECT *` over
+    // Question 500s on any column that has not landed yet. Same hazard
+    // `readAudience` already guards against.
+    prisma.$queryRaw<{ domain: string; correct: bigint; total: bigint }[]>`
+      SELECT d.name AS domain,
+             COUNT(*) FILTER (WHERE r."isCorrect") AS correct,
+             COUNT(*)                              AS total
+        FROM "Response" r
+        JOIN "Question" q ON q.id = r."questionId"
+        JOIN "Domain"   d ON d.id = q."domainId"
+       WHERE r."isCorrect" IS NOT NULL
+       GROUP BY d.name
+       ORDER BY d.name`,
     readAudience(),
   ]);
 
   const { students } = audience;
 
   /* ---- existing platform performance ------------------------------------ */
-  const byDomain = new Map<string, { correct: number; total: number }>();
-  for (const r of responses) {
-    const key = r.question.domain.name;
-    const bucket = byDomain.get(key) ?? { correct: 0, total: 0 };
-    bucket.total += 1;
-    if (r.isCorrect) bucket.correct += 1;
-    byDomain.set(key, bucket);
-  }
-  const chartData = [...byDomain.entries()].map(([domain, { correct, total }]) => ({
-    domain,
-    accuracy: total ? Math.round((correct / total) * 100) : 0,
-  }));
+  // COUNT() comes back as bigint, which JSON cannot serialise and arithmetic
+  // cannot mix with numbers — convert at the boundary.
+  const chartData = domainAccuracy.map((r) => {
+    const total = Number(r.total);
+    return {
+      domain: r.domain,
+      accuracy: total ? Math.round((Number(r.correct) / total) * 100) : 0,
+    };
+  });
   const completionRate = totalAttempts ? Math.round((submittedAttempts / totalAttempts) * 100) : 0;
 
   /* ---- audience composition --------------------------------------------- */

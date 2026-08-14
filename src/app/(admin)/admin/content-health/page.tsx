@@ -22,12 +22,40 @@ function moduleLabel(subject: "READING_WRITING" | "MATH", order: number, difficu
 }
 
 export default async function ContentHealthPage() {
+  // Which questions carry an image, as a set of ids. The diagram check only
+  // ever tests `imageUrl` for truthiness, never reads it, and the column holds
+  // base64 data URIs averaging 127 KB — so selecting it would move tens of
+  // megabytes across the wire to answer a yes/no question.
+  const withImage = new Set(
+    (
+      await prisma.$queryRaw<{ id: string }[]>`
+        SELECT id FROM "Question" WHERE "imageUrl" IS NOT NULL AND "imageUrl" <> ''`
+    ).map((r) => r.id)
+  );
+
+  // Named columns rather than whole rows. This scans every published question
+  // — over 4,500 of them — so `include` was pulling every `imageUrl` in the
+  // database (base64 data URIs averaging 127 KB each) purely to test whether
+  // one was null. Selecting the columns the checks actually read also keeps
+  // the page working while schema.prisma is ahead of the deployed database.
   const questions = await prisma.question.findMany({
     where: { isPublished: true },
-    include: {
-      choices: true,
+    select: {
+      id: true,
+      stem: true,
+      type: true,
+      order: true,
+      tableData: true,
+      choices: { select: { content: true, isCorrect: true } },
       passage: { select: { content: true } },
-      module: { include: { test: { select: { id: true, title: true } } } },
+      module: {
+        select: {
+          subject: true,
+          order: true,
+          difficulty: true,
+          test: { select: { id: true, title: true } },
+        },
+      },
     },
     orderBy: [{ moduleId: "asc" }, { order: "asc" }],
   });
@@ -42,7 +70,7 @@ export default async function ContentHealthPage() {
 
   const missingDiagrams = questions.filter(
     (q) =>
-      !q.imageUrl &&
+      !withImage.has(q.id) &&
       !q.tableData &&
       !q.stem.includes("<table") &&
       !q.passage?.content.includes("<table") &&
