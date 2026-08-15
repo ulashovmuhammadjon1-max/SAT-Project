@@ -63,6 +63,14 @@ skips ids already in its JSONL, so it resumes exactly where it left off.
   held aside and `dump_q.py` never prints it. Do not "helpfully" put it back —
   it is the entire gate.
 
+## Cosmetic, working, do not "fix" mid-run
+
+Hard Book records carry no `src`, so their page images are named
+`None-042.png`. It is unambiguous — that book has exactly one source file, and
+`dump_q.py` reads and writes the same name — so it works. Changing the naming
+while agents are running would make every one of them re-render. Set `src` in
+`parse_hard.py` only once the transcription stage is finished.
+
 ## Known gaps
 
 - 30 Areas&Volumes answers (Math 2.0 questions 43-72) sit on book page **382**,

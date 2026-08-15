@@ -51,3 +51,7 @@ _dump_prod.mjs
 # agents clobbered a shared filename. None of it is work product — the actual
 # output is content-pool/explanations/out/*.jsonl, which IS committed.
 scratchpad/
+# Rendered book pages: regenerable from the source PDFs on demand by
+# dump_q.py, and several hundred PNGs do not belong in git history.
+content-pool/satoplam-math/pages/
+content-pool/satoplam-math/render.log
