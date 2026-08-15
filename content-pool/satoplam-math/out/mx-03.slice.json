@@ -29,9 +29,7 @@
     "content": "8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-10",
@@ -46,9 +44,7 @@
   "skill": "ALG-LE",
   "body": "5(9x + 7 +\nc\n5\n) = 45x\nIn the given equation, c is a constant.\nThe equation has infinitely many solu-\ntions. What is the value of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-35",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-17",
@@ -80,9 +76,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-20",
@@ -114,9 +108,7 @@
     "content": "88"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-21",
@@ -131,9 +123,7 @@
   "skill": "ALG-LE",
   "body": "y =\n1\n2\nx \u2212 7\n1\n2\ny = 3x + 2\nThe solution to the given equations is\n(x, y). What is the value of (y \u2212 x)?\n26",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-6",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-22",
@@ -165,9 +155,7 @@
     "content": "-3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-24",
@@ -199,9 +187,7 @@
     "content": "20m \u2212 4 \u221a 11"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-25",
@@ -233,9 +219,7 @@
     "content": "79.86"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-27",
@@ -250,9 +234,7 @@
   "skill": "ALG-LE",
   "body": "In the given system of equations, t is a con-\nstant. If the system has no solution, what\nis the value of t?\n4x \u2212 6y = 10y + 2\nty =\n1\n2\n+ 2x\n27",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "8",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-28",
@@ -284,9 +266,7 @@
     "content": "(0,5)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-30",
@@ -318,9 +298,7 @@
     "content": "(0,5) 28 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-31",
@@ -352,9 +330,7 @@
     "content": "(3, 0)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-33",
@@ -386,9 +362,7 @@
     "content": "(14, 3) 29 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-1",
@@ -420,9 +394,7 @@
     "content": "370"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-2",
@@ -437,9 +409,7 @@
   "skill": "ALG-LF",
   "body": "x\ny\nTime since initial deposit (months)\nBank\naccount\nbalance\n(dollars)\n0 2 4 6 8 10\n0.0\n10.0\n20.0\n30.0\n40.0\n50.0\n60.0\n70.0\n80.0\nA bank account was opened with an ini-\ntial deposit. Over the next several months,\nregular deposits were made into this ac-\ncount, and there were no withdrawals\nmade during this time. The graph of the\nfunction f shown, where y = f (x), esti-\nmates the account balance, in dollars, in\nthis bank account x months since the ini-\ntial deposit. To the nearest whole dollar,\nwhat is the amount of the initial deposit\nestimated by the graph?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "15",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-functions-4",
@@ -471,9 +441,7 @@
     "content": "190"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-6",
@@ -505,9 +473,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-12",
@@ -522,9 +488,7 @@
   "skill": "ALG-LF",
   "body": "The function m is defined by\nm(x) = 3x + 6 and the function p is de-\nfined by p(x) = 6 \u2212 x What is the value of\n2m(6) \u2212 p(6)?\n32",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "48",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-functions-15",
@@ -556,9 +520,7 @@
     "content": "8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-17",
@@ -590,9 +552,7 @@
     "content": "165"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-18",
@@ -607,9 +567,7 @@
   "skill": "ALG-LF",
   "body": "Charles saves\n3\n5\nof the $225 he earns each\nweek from his summer job. If Charles\ncontinues to save at this rate, how much\nmoney, in dollars, will Charles save in 3\nweeks?\n33",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "405",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-functions-20",
@@ -641,9 +599,7 @@
     "content": "y = \u22127 3 x + 125 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-22",
@@ -675,9 +631,7 @@
     "content": "17.5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-24",
@@ -709,9 +663,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-25",
@@ -743,9 +695,7 @@
     "content": " 2qt q \u2212 5t"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-29",
@@ -777,9 +727,7 @@
     "content": "1440"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-30",
@@ -811,9 +759,7 @@
     "content": "14"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-functions-31",
@@ -845,9 +791,7 @@
     "content": "10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-2",
@@ -879,9 +823,7 @@
     "content": "Neither I nor II"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "f(x)",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-3",
@@ -896,9 +838,7 @@
   "skill": "ALG-LI",
   "body": "A number x is less than 8 more than 1\n2\ntimes the value of a number y. If y is an in-\nteger and x = 17, what is the least possible\nvalue of y?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "f(x)",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-6",
@@ -930,9 +870,7 @@
     "content": " x y 18 -57 24 -58 30 -59"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-7",
@@ -964,9 +902,7 @@
     "content": "The region where x > 0 and y < 0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-8",
@@ -998,9 +934,7 @@
     "content": "The region where x > 0 and y < 0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-13",
@@ -1032,9 +966,7 @@
     "content": " x y 12 -8 18 -9 24 -10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-15",
@@ -1066,9 +998,7 @@
     "content": "51 41 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "c",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-inequalities-17",
@@ -1100,9 +1030,7 @@
     "content": "32"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-4",
@@ -1134,9 +1062,7 @@
     "content": "x5 + y9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-5",
@@ -1168,9 +1094,7 @@
     "content": "v3(v \u2212 450)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-8",
@@ -1202,9 +1126,7 @@
     "content": "0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-9",
@@ -1236,9 +1158,7 @@
     "content": "\u22124"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-10",
@@ -1253,9 +1173,7 @@
   "skill": "ADV-EQ",
   "body": "\u22121 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nO\nx\ny\nThe graph of the polynomial function f,\nwhere y = f (x), is shown. The y-intercept\nof the graph is (0, y). What is the value of\ny?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-polynomials-11",
@@ -1287,9 +1205,7 @@
     "content": "57x 49 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-12",
@@ -1321,9 +1237,7 @@
     "content": "a = 2b2 5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-polynomials-13",
@@ -1355,9 +1269,7 @@
     "content": "1"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-1",
@@ -1389,9 +1301,7 @@
     "content": "36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-2",
@@ -1406,9 +1316,7 @@
   "skill": "ADV-EQ",
   "body": "For what value of a is\na\n\u221a\nr42 equivalent to\nr6/7, where r > 1.",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "49",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-3",
@@ -1440,9 +1348,7 @@
     "content": "v = 2K 532"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-4",
@@ -1474,9 +1380,7 @@
     "content": "\u221218 7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-5",
@@ -1508,9 +1412,7 @@
     "content": "30"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-6",
@@ -1542,9 +1444,7 @@
     "content": "5 y\u22128 52 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponents-radicals-7",
@@ -1576,9 +1476,7 @@
     "content": "8 53 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-1",
@@ -1593,9 +1491,7 @@
   "skill": "ADV-NF",
   "body": "The function f is defined by f (x) =\n7x3 + 6. What is the value of f (2) ?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "62",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-2",
@@ -1627,9 +1523,7 @@
     "content": "23"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-3",
@@ -1661,9 +1555,7 @@
     "content": "7 55 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-4",
@@ -1695,9 +1587,7 @@
     "content": "90"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-5",
@@ -1729,9 +1619,7 @@
     "content": "\u22126"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-6",
@@ -1763,9 +1651,7 @@
     "content": "\u22123"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-13",
@@ -1797,9 +1683,7 @@
     "content": "90 57 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-14",
@@ -1831,9 +1715,7 @@
     "content": "If the length of the base of the triangle is 2,268 cm, then the area of the trian- gle is 18 cm2."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-16",
@@ -1865,9 +1747,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-17",
@@ -1899,9 +1779,7 @@
     "content": "4x2 + 24x + 11"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-20",
@@ -1916,9 +1794,7 @@
   "skill": "ADV-NF",
   "body": "The function f is defined by f (x) = x3 + 7.\nWhat is the value of f (2)?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "15",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-21",
@@ -1933,9 +1809,7 @@
   "skill": "ADV-NF",
   "body": "The function f is defined by f (x) =\n1\n8x\n.\nWhat is the value of f (x) when x = 9?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1/72",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-22",
@@ -1967,9 +1841,7 @@
     "content": "Four"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-functions-function-notation-23",
@@ -2001,9 +1873,7 @@
     "content": "\u22127 5 59 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-2",
@@ -2035,9 +1905,7 @@
     "content": "\u22126"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-5",
@@ -2069,9 +1937,7 @@
     "content": "118"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-6",
@@ -2103,9 +1969,7 @@
     "content": "142"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-10",
@@ -2137,9 +2001,7 @@
     "content": "y = 1779(1.83)x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-12",
@@ -2171,9 +2033,7 @@
     "content": "9 11"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-15",
@@ -2188,9 +2048,7 @@
   "skill": "ADV-NF",
   "body": "The population of a certain city doubled\nevery 75 years from 1651 to 1951. The pop-\nulation of this city was 160,000 in 1951.\nWhat was the population of this city in\n1651?\n63",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "10000",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-exponential-functions-23",
@@ -2222,9 +2080,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-26",
@@ -2256,9 +2112,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-27",
@@ -2290,9 +2144,7 @@
     "content": "9 65 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-32",
@@ -2324,9 +2176,7 @@
     "content": "Three"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-33",
@@ -2358,9 +2208,7 @@
     "content": "26 66 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-exponential-functions-34",
@@ -2392,9 +2240,7 @@
     "content": "81 67 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-1",
@@ -2409,9 +2255,7 @@
   "skill": "ADV-NE",
   "body": "1\ncx\n=\nx\n96\n+\n1\nc\nIn the given equation, c is a constant. If the\nequation has exactly one solution, what is\nthe value of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-24",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-quadratics-2",
@@ -2443,9 +2287,7 @@
     "content": "\u22129+ \u221a 85 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-5",
@@ -2477,9 +2319,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-6",
@@ -2494,9 +2334,7 @@
   "skill": "ADV-NE",
   "body": "(x \u2212 k)2 = (k \u2212 4a)(x \u2212 k)\nIn the given equation, a and k are con-\nstants, where k > 4a The sum of the so-\nlutions to the equation is 3k + 37 What is\nthe value of a?\n69",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-37/4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-quadratics-7",
@@ -2528,9 +2366,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-8",
@@ -2562,9 +2398,7 @@
     "content": "y = 7(x + b 14)2 \u2212 6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-9",
@@ -2579,9 +2413,7 @@
   "skill": "ADV-NE",
   "body": "\u2212x2 + bx \u2212 49 = 0\nIn the given equation, b is an integer. The\nequation has no real solution. What is least\npossible value of b?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-13",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-quadratics-10",
@@ -2613,9 +2445,7 @@
     "content": "\u22129+ \u221a 85 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-11",
@@ -2647,9 +2477,7 @@
     "content": "92"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-12",
@@ -2681,9 +2509,7 @@
     "content": "\u2212 1 10 \u2212 \u221a 181 10 70 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-13",
@@ -2715,9 +2541,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-14",
@@ -2732,9 +2556,7 @@
   "skill": "ADV-NE",
   "body": "1\n78\nx2\n+ (s \u2212\n1\n78\nt)x \u2212 st = 0\nIn the given equation, s and t are positive\nconstants. The product of the solutions to\nthe given equation is \u22122kst, where k is a\nconstant. What is the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "39",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-quadratics-16",
@@ -2749,9 +2571,7 @@
   "skill": "ADV-NE",
   "body": "kx2\n\u2212 16x = 27x2\n\u2212 8\nIn the given equation, k is an integer con-\nstant. If the equation has two distinct\nreal solutions, what is the greatest possible\nvalue of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": null,
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-quadratics-17",
@@ -2783,9 +2603,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-18",
@@ -2817,9 +2635,7 @@
     "content": "\u2212 1 10 \u2212 \u221a 181 10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-quadratics-19",
@@ -2851,8 +2667,6 @@
     "content": "\u2212465 4 71 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  }
 ]

@@ -29,9 +29,7 @@
     "content": "49 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-9",
@@ -63,9 +61,7 @@
     "content": "78"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-12",
@@ -97,9 +93,7 @@
     "content": "11"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-13",
@@ -131,9 +125,7 @@
     "content": "18"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-15",
@@ -165,9 +157,7 @@
     "content": "20 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "13",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-20",
@@ -199,9 +189,7 @@
     "content": "160"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-21",
@@ -233,9 +221,7 @@
     "content": "33"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-24",
@@ -267,9 +253,7 @@
     "content": "There is not enough information to compare the standard deviations. "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-25",
@@ -301,9 +285,7 @@
     "content": "55"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-28",
@@ -318,9 +300,7 @@
   "skill": "PSDA-ST",
   "body": "The bar graph shows the frequency\nof each data value in a data set.\n1 2 3 4 5 6\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\nData value\nFrequency\nWhat is the frequency of data value 2 in this\ndata set?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "6",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-30",
@@ -352,9 +332,7 @@
     "content": "2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-34",
@@ -386,9 +364,7 @@
     "content": "9.5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-35",
@@ -420,9 +396,7 @@
     "content": "26"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-38",
@@ -454,9 +428,7 @@
     "content": "37"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-39",
@@ -488,9 +460,7 @@
     "content": "There is not enough information to compare the standard deviations of weight for the objects in these two groups."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-41",
@@ -522,9 +492,7 @@
     "content": "There is not enough information to compare the standard deviations."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-43",
@@ -556,9 +524,7 @@
     "content": "12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-44",
@@ -590,9 +556,7 @@
     "content": "20"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-46",
@@ -607,9 +571,7 @@
   "skill": "PSDA-ST",
   "body": "The bar graph shows the number of trees planted for 4 separate plots of and on a tree farm.\nWhat is the maximum number of trees on one of these plots of land?\nPlot 1 Plot 2 Plot 3 Plot 4\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\nTrees\nplanted",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "90",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-mean-median-mode-range-47",
@@ -629,9 +591,7 @@
     "content": "Data set A B) Data set B C) Data set C D) Data set D "
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-scatterplots-1",
@@ -663,9 +623,7 @@
     "content": "y = 28 \u2212 6x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-2",
@@ -697,9 +655,7 @@
     "content": "(18,4) "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-3",
@@ -731,9 +687,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-4",
@@ -765,9 +719,7 @@
     "content": "y = 77 + 78.9x "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-5",
@@ -799,9 +751,7 @@
     "content": "y = 2.4 \u2212 1.5x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-6",
@@ -833,9 +783,7 @@
     "content": "y = (x + 8)2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-7",
@@ -867,9 +815,7 @@
     "content": "y = \u22123.3 \u2212 1.6x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-8",
@@ -901,9 +847,7 @@
     "content": "3.3 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-9",
@@ -935,9 +879,7 @@
     "content": "y = 8.7 \u2212 0.8x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-10",
@@ -969,9 +911,7 @@
     "content": "y = \u2212x+5.7 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-11",
@@ -1003,9 +943,7 @@
     "content": "y = 8.7 \u2212 0.8x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-12",
@@ -1037,9 +975,7 @@
     "content": "From x = 1 to x = 2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-13",
@@ -1071,9 +1007,7 @@
     "content": "26 + 35 1301 x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-14",
@@ -1105,9 +1039,7 @@
     "content": "y = 582(1.2)x "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-15",
@@ -1139,9 +1071,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-16",
@@ -1156,9 +1086,7 @@
   "skill": "PSDA-DI",
   "body": "1 2 3 4 5 6\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\n120\n130\n140\nx\ny\nThe scatterplot shows the body length, in\ncentimeters (cm), of of a New Zealand fur\nseal from an age of 1 to 6 years old. A line\nof best fit is also shown. For a New Zealand\nfur seal at an age of 3 years old, what is the\nbody length in centimeters predicted by the\nline of best fit, to the nearest 10 cm?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "110",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-scatterplots-17",
@@ -1190,9 +1118,7 @@
     "content": "y = 148.13 + 58.61x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-18",
@@ -1224,9 +1150,7 @@
     "content": "11.19 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-19",
@@ -1258,9 +1182,7 @@
     "content": "y = \u22125.2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-20",
@@ -1292,9 +1214,7 @@
     "content": "12 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-21",
@@ -1326,9 +1246,7 @@
     "content": "y = \u22120.8 \u2212 1.7x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-22",
@@ -1360,9 +1278,7 @@
     "content": "62.75 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-23",
@@ -1394,9 +1310,7 @@
     "content": "y = \u22120.6 \u2212 1.5x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-scatterplots-24",
@@ -1411,9 +1325,7 @@
   "skill": "PSDA-DI",
   "body": "1 2 3 4 5 6\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\n120\n130\n140\nx\ny\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year to\n6 years old. A line of best fit is also shown.\nFor a New Zealand fur seal at an age of 3\nyears old, what is the body length predicted\nby the line of best fit, to the nearest 10 cm?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "100",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-scatterplots-25",
@@ -1445,9 +1357,7 @@
     "content": "y = 2x  Questions 26 and 27 refer to the following information The line graph shows the amount, in millions of dollars, that the National Science Foundation (NFS) granted to museums in Minnesota for the years 2000 through 2006. 2000 2001 2002 2003 2004 2005 2006 0 1 2 3 4 3.9 2.3 3.2 1.6 2.1 3.4 1.0 Year Grant amount (in millions of dollars) NSF Grants to Museums in Minnesota"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-1",
@@ -1479,9 +1389,7 @@
     "content": "x + w = 90"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-4",
@@ -1513,9 +1421,7 @@
     "content": "2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-6",
@@ -1547,9 +1453,7 @@
     "content": "69"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-8",
@@ -1581,9 +1485,7 @@
     "content": "500"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-11",
@@ -1615,9 +1517,7 @@
     "content": "150 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-12",
@@ -1632,9 +1532,7 @@
   "skill": "GT-LA",
   "body": "r s\nt\nx\u25e6\ny\u25e6\nNote: Figure not drawn to scale\nIn the figure shown, line r is parallel to line\ns, and both lines are intersected by line t. If\nx = 2w+24, y = 5w+29, and 7w = a,where\na is a constant, what is the value of a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "127",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-lines-angles-14",
@@ -1649,9 +1547,7 @@
   "skill": "GT-LA",
   "body": "r\ns\nn\n164\u25e6\nx\u25e6\nIn the figure, line n intersects lines r and s.\nLine r is parallel to line s. What is the value\nof x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "164",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-lines-angles-16",
@@ -1666,9 +1562,7 @@
   "skill": "GT-LA",
   "body": "r\ns\n138\u25e6\nx\u25e6\nIn the figure, line n intersects lines r and s.\nLine r is parallel to line s. What is the value\nof x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "138",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-lines-angles-17",
@@ -1700,9 +1594,7 @@
     "content": "\u2212 3 4 \u03c0 \u00b7 360\u25e6 \u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-19",
@@ -1734,9 +1626,7 @@
     "content": "j < p "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-20",
@@ -1768,9 +1658,7 @@
     "content": "180"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-21",
@@ -1802,9 +1690,7 @@
     "content": "t = 135"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-23",
@@ -1836,9 +1722,7 @@
     "content": "65 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-24",
@@ -1870,9 +1754,7 @@
     "content": "94"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-27",
@@ -1904,9 +1786,7 @@
     "content": "128 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-28",
@@ -1938,9 +1818,7 @@
     "content": "z = 145\u25e6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-29",
@@ -1972,9 +1850,7 @@
     "content": "x + y > 180"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-30",
@@ -2006,9 +1882,7 @@
     "content": "59"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-31",
@@ -2040,9 +1914,7 @@
     "content": "y + z = 180 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-32",
@@ -2074,9 +1946,7 @@
     "content": "\u2212 5 12 \u03c0 \u00b7 360\u25e6 \u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-33",
@@ -2108,9 +1978,7 @@
     "content": "z = 126"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-34",
@@ -2142,9 +2010,7 @@
     "content": "180"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-35",
@@ -2176,9 +2042,7 @@
     "content": "65"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-36",
@@ -2210,9 +2074,7 @@
     "content": "131 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-lines-angles-37",
@@ -2244,9 +2106,7 @@
     "content": "90"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-2",
@@ -2261,9 +2121,7 @@
   "skill": "GT-LA",
   "body": "Triangle ABC is similar to triangle DEF,\nwhere angle A corresponds to angle D and\nangles C and F are right angles. The\nlength AB is 2.4 times the length of DE. If\ntan A =\n21\n20\n, what is the value of sin D?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "21/29",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-6",
@@ -2295,9 +2153,7 @@
     "content": "10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-9",
@@ -2312,9 +2168,7 @@
   "skill": "GT-LA",
   "body": "The area of a triangle is equal to x2\nsquare\ncentimeters. The length of the base of the\ntriangle is 2x + 16 centimeters, and the\nheight of the triangle x \u2212 6 centimeters.\nWhat is the value of x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "24",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-11",
@@ -2346,9 +2200,7 @@
     "content": "12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-13",
@@ -2380,9 +2232,7 @@
     "content": " 9 \u221a 2 8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-14",
@@ -2414,9 +2264,7 @@
     "content": "310"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-18",
@@ -2448,9 +2296,7 @@
     "content": "70"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-19",
@@ -2482,9 +2328,7 @@
     "content": "96"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-20",
@@ -2516,9 +2360,7 @@
     "content": "38 \u221a 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-21",
@@ -2550,9 +2392,7 @@
     "content": "2.7 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-22",
@@ -2584,9 +2424,7 @@
     "content": "449.4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-23",
@@ -2618,9 +2456,7 @@
     "content": "132"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-24",
@@ -2652,9 +2488,7 @@
     "content": "Neither I nor II is sufficient."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-25",
@@ -2669,9 +2503,7 @@
   "skill": "GT-LA",
   "body": "Triangle QRS is similar to triangle FGH\nsuch that Q, R, and S correspond to F, G,\nand H, respectively. Each side of triangle\nFGH has 1\n4\nthe length of its corresponding\nside in triangle QRS. In triangle FGH, the\nmeasure of angle F is 35\u25e6\n, the measure of\nangle G is 8\u25e6\n, and FG = a. In triangle QRS,\nthe measure of angle Q is b\u25e6\nand QR = 20.\nWhat is the value of a + b?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "40",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-26",
@@ -2686,9 +2518,7 @@
   "skill": "GT-LA",
   "body": "The area of a triangle is equal to x2\nsquare\ncentimeters. The length of the base of the\ntriangle is 2x + 12.5 centimeters, and the\nheight of the triangle is x \u2212 5 centimeters.\nWhat is the value of x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "25",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-27",
@@ -2720,9 +2550,7 @@
     "content": "No additional information is necessary."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-29",
@@ -2754,9 +2582,7 @@
     "content": "4,232 3 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-32",
@@ -2788,9 +2614,7 @@
     "content": "18 \u221a 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-34",
@@ -2822,9 +2646,7 @@
     "content": "37 \u221a 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-36",
@@ -2839,9 +2661,7 @@
   "skill": "GT-LA",
   "body": "A\nB C\n32\nFor triangle ABC, the length of of AB is\n11 less than the length of AC. Point D\n(not shown) lies on AC such that BD (not\nshown) is perpendicular to AC. What is the\nvalue of\nBC\nBD\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "32/21",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-40",
@@ -2873,9 +2693,7 @@
     "content": "128"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-41",
@@ -2907,8 +2725,6 @@
     "content": "36 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  }
 ]

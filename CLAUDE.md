@@ -1,5 +1,11 @@
 # Project memory
 
+## MATH REBUILD OF TESTS 6-31 IS IN PROGRESS — read content-pool/satoplam-math/RESUME.md
+
+That file is the live state of the job: which stage is running, how to check
+progress, how to resume a stopped agent, and the traps already hit. Read it
+before touching anything under `content-pool/satoplam-math/`.
+
 ## MATH TEST DIFFICULTY STRUCTURE, tests 6-31 (set by the user — reuse, do not ask again)
 
 The per-module difficulty mix for the Math rebuild from the SATashkent books.

@@ -29,9 +29,7 @@
     "content": "y = 19x2 + 28"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-mean-median-mode-range-8",
@@ -63,9 +61,7 @@
     "content": "88"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-mean-median-mode-range-10",
@@ -97,9 +93,7 @@
     "content": "98"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-1",
@@ -131,9 +125,7 @@
     "content": "2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-2",
@@ -165,9 +157,7 @@
     "content": "4.4 95 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-3",
@@ -199,9 +189,7 @@
     "content": "17.7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-4",
@@ -233,9 +221,7 @@
     "content": "y = 1.7 + 0.7x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-5",
@@ -267,9 +253,7 @@
     "content": "d = 392.8 + 2.02t 96 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-6",
@@ -301,9 +285,7 @@
     "content": "The predicted temperature increases at a constant rate of approximately 180\u25e6F per hour over the 10-hour pe- riod."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-7",
@@ -318,9 +300,7 @@
   "skill": "PSDA-DI",
   "body": "1 2 3 4 5 6\n30\n50\n70\n90\n110\n130\n150\nAge (years)\nBody length (cm)\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year\nto 6 years old. A line of best fit is also\nshown. For a New Zealand fur seal at an\nage of 3 years old, what is the body length\npredicted by the line of best fit, to the near-\nest 10 cm?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "110",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-scatterplots-8",
@@ -335,9 +315,7 @@
   "skill": "PSDA-DI",
   "body": "1 2 3 4 5 6\n20\n40\n60\n80\n100\n120\n140\nAge (years)\nBody length (cm)\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year\nto 6 years old. A line of best fit is also\nshown. For a New Zealand fur seal at an\nage of 3 years old, what is the body length\npredicted by the line of best fit, to the near-\nest ?\n97",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "100",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-scatterplots-10",
@@ -369,9 +347,7 @@
     "content": "y = 6(1.55)x + 18 98 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-11",
@@ -403,9 +379,7 @@
     "content": "y = 199(2.04)x + 2.04"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-12",
@@ -437,9 +411,7 @@
     "content": "Day 4 99 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-scatterplots-13",
@@ -471,9 +443,7 @@
     "content": "The number of tomato seeds that ger- minate is predicted to increase by 300 seeds for every additional 100 tomato seeds that are planted. 100 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-3",
@@ -505,9 +475,7 @@
     "content": "68"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-4",
@@ -539,9 +507,7 @@
     "content": "18 110 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-7",
@@ -573,9 +539,7 @@
     "content": "180"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-8",
@@ -607,9 +571,7 @@
     "content": "36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-9",
@@ -641,9 +603,7 @@
     "content": "90 111 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-10",
@@ -675,9 +635,7 @@
     "content": "90"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-12",
@@ -709,9 +667,7 @@
     "content": "613 35"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-13",
@@ -726,9 +682,7 @@
   "skill": "GT-LA",
   "body": "r s\nt\na\u25e6\nb\u25e6\nc\u25e6\n\u2022 Clockwise from top left, the 3 lines are\nlabeled t, r, and s.\n\u2022 Line t intersects both line r and line s.\n\u2022 At the intersection of line t and line r,\n1 angle is labeled clockwise from top\nleft as follows:\n\u2013 Top right: a\u25e6\n\u2022 At the intersection of line t and line\ns, 2 angles are labeled clockwise from\ntop left as follows:\n\u2013 Top left: b\u25e6\n\u2013 Bottom left: c\u25e6\n\u2022 Note: Figure not drawn to scale.\nIn the figure, lines r and s are parallel and\nline t intersects both lines. If a = 4k + 57\nand b = k\n2 + 55, what is the value of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "121",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-lines-angles-15",
@@ -760,9 +714,7 @@
     "content": "18"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-17",
@@ -794,9 +746,7 @@
     "content": "252 113 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-lines-angles-18",
@@ -828,9 +778,7 @@
     "content": "y + z = 180 114 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-triangles-5",
@@ -862,9 +810,7 @@
     "content": "AB = 50 and QR = 50 116 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "22/73",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-triangles-6",
@@ -879,9 +825,7 @@
   "skill": "GT-LA",
   "body": "In triangle RST, angle T is a right angle,\npoint L lies on RS, point K lies on ST, and\nLK is parallel to RT. If the length of RT\nis 72 units, the length of LK is 24 units,\nand the area of RST triangle is 396 square\nunits, what is the length of KT, in units?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-triangles-9",
@@ -913,9 +857,7 @@
     "content": "12 + 14 = a"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "90",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-triangles-10",
@@ -930,9 +872,7 @@
   "skill": "GT-LA",
   "body": "X\nY Z\n35\u25e6\nNote: Figure not drawn to scale\nIn triangle XYZ, the measure of angle Y is\n90 degrees. Triangle RST (not shown) is\nsimilar to triangle XYZ such that R, S, and\nT correspond to X, Y, and Z, respectively.\nEach side of triangle RST is 19 times the\nlength of the corresponding side of trian-\ngle XYZ. What is the measure, in degrees,\nof one of the angles in triangle RST?\n117",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-triangles-11",
@@ -964,9 +904,7 @@
     "content": "108"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-1",
@@ -998,9 +936,7 @@
     "content": "43 23"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-3",
@@ -1015,9 +951,7 @@
   "skill": "GT-TR",
   "body": "K\nJ\nL\n55 y\u25e6\nNote: Figure not drawn to scale.\nIn triangle JKL, cos y\u25e6 =\n54\n55\n. What is the\nlength of KL?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "54",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-trigonometry-5",
@@ -1049,9 +983,7 @@
     "content": "10 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-6",
@@ -1083,9 +1015,7 @@
     "content": "9 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-7",
@@ -1100,9 +1030,7 @@
   "skill": "GT-TR",
   "body": "59\nK\nJ\nL\ny\nIn triangle JKL, cos(y) = 58\n59. What is the\nlength of KL?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "58",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-trigonometry-8",
@@ -1134,9 +1062,7 @@
     "content": "613 35"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-9",
@@ -1168,9 +1094,7 @@
     "content": " \u221a 421 15 121 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-trigonometry-10",
@@ -1202,9 +1126,7 @@
     "content": "37 sinQ 122 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-circles-2",
@@ -1236,9 +1158,7 @@
     "content": "(x \u2212 8)2 + y2 = 64"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-circles-5",
@@ -1270,9 +1190,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-circles-15",
@@ -1304,9 +1222,7 @@
     "content": "(x + 4)2 + (y \u2212 1)2 = 5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "16",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-3",
@@ -1338,9 +1254,7 @@
     "content": "88"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-5",
@@ -1355,9 +1269,7 @@
   "skill": "GT-AV",
   "body": "The points (0, 15), (10, 8), and (10, 3) are\nshown in the xy-plane, where the x-axis\nand y-axis are measured in units.\n0 1 2 3 4 5 6 7 8 9 10 11\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nx\ny\nThese points define one of the bases of a\ntriangular prism. The distance between\nthe two bases of the prism is 20 units.\nWhat is the volume, in cubic units, of the\nprism?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "500",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-areas-volumes-6",
@@ -1389,9 +1301,7 @@
     "content": "3, 240 127 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-7",
@@ -1423,9 +1333,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-8",
@@ -1457,9 +1365,7 @@
     "content": "154"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-9",
@@ -1474,9 +1380,7 @@
   "skill": "GT-AV",
   "body": "Cylinder Volume\n(cubic\nunits)\nRight circular\ncylinder A\n32\u03c0\nRight circular\ncylinder B\n4000\u03c0\nThe table shows the volume of two sim-\nilar solids, right circular cylinder A and\nright circular cylinder B. The radius of the\nright circular cylinder A is 4 units. The\nsurface area of right circular cylinder A is\nk\u03c0 square units, and the surface area of\nright circular cylinder B is n\u03c0 square units,\nwhere k and n are constants. What is the\nvalue of n \u2212 k? (The surface area of a right\ncircular cylinder with radius r and height\nh is 2\u03c0r2 + 2\u03c0rh.)",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1152",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-areas-volumes-10",
@@ -1508,9 +1412,7 @@
     "content": "36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-11",
@@ -1542,9 +1444,7 @@
     "content": "144"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-12",
@@ -1576,9 +1476,7 @@
     "content": "9, 604"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-13",
@@ -1593,9 +1491,7 @@
   "skill": "GT-AV",
   "body": "In triangle RST, angle T is a right angle,\npoint L lies on RS, point K lies on ST, and\nLK is parallel to RT. If the length RT of\nis 63 units, the length of LK is 21 units,\nand the area of triangle RST is 630 square\nunits, what is the length of KT, in units?\n128",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-areas-volumes-14",
@@ -1627,9 +1523,7 @@
     "content": "8 \u221a 3 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-15",
@@ -1661,9 +1555,7 @@
     "content": "121"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-16",
@@ -1695,9 +1587,7 @@
     "content": "372"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-17",
@@ -1729,9 +1619,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-18",
@@ -1763,9 +1651,7 @@
     "content": "8 \u221a 3 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-20",
@@ -1797,9 +1683,7 @@
     "content": "144"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "14",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-areas-volumes-21",
@@ -1814,9 +1698,7 @@
   "skill": "GT-AV",
   "body": "A right circular cylinder has a height of\n16 inches and a volume of 3136\u03c0 cubic\ninches. What is the radius, in inches, of\nthis cylinder?\n129",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-areas-volumes-22",
@@ -1848,9 +1730,7 @@
     "content": "81"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "40556",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-algebra-2",
@@ -1863,9 +1743,7 @@
   "difficulty": "HARD",
   "body": "Kyle invented a new temperature scale he\ncalled the Tutorllini scale. The function T(x)\ngives the temperature, in degrees Torte, that\ncorresponds to a temperature of x degrees\nCelsius.\nT(x) =\n3\n4\n\u0012\n26x\n7\n\u2212 800\n\u0013\n+ 15.50\nIf a temperature increased by 3.3 degrees\nTorte, by how much did the temperature\nincrease, in degrees Celsius?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1.18",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-3",
@@ -1878,9 +1756,7 @@
   "difficulty": "HARD",
   "body": "In the given system of equations, p is a\nconstant. If the system has no solution, what\nis the value of p?\n3\n2\ny \u2212\n1\n4\nx =\n2\n3\n\u2212\n3\n2\ny\n1\n6\nx +\n3\n6\n= py +\n9\n5",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-4",
@@ -1893,9 +1769,7 @@
   "difficulty": "HARD",
   "body": "In the given system of equations, t is a\nconstant. If the system has no solution, what\nis the value of t?\n4x \u2212 6y = 10y + 2\nty =\n1\n2\n+ 2x",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "8",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-5",
@@ -1917,9 +1791,7 @@
     "content": "20(p + r + s) C prs pr + rs + ps D prs 20p + 20r + 20s 7"
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-7",
@@ -1932,9 +1804,7 @@
   "difficulty": "HARD",
   "body": "f (x) = 3 + | \u2212 2x \u2212 x2\n|\ng(w) = \u2212\nw\nw \u2212 1\n\u2212 w + 5\nThe functions f and g are defined by the\ngiven equations. If f (\u22124) = c, where c is\na constant, what is the value of g(c)?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-4.9",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-8",
@@ -1947,9 +1817,7 @@
   "difficulty": "HARD",
   "body": "The equation 9x + 5 = a(x + b), where a and\nb are constants, has no solutions. Which of\nthe following must be true?\nI. a = 9\nII. b = 5\nIII. b \u0338= 5\n9\nA I only\nB III only\nC I and III only\nD None of the above",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-9",
@@ -1962,9 +1830,7 @@
   "difficulty": "HARD",
   "body": "In the given pair of equations, a and b\nare constants. The graph of this pair\nof equations in the xy-plane is a pair of\nperpendicular lines. Which of the following\npairs of equations also represents a pair of\nperpendicular lines?\n(\n5x + 7y = 1\nax + by = 1\nA\n10x + 7y = 1\nax \u2212 2by = 1\nB\n10x + 7y = 1\nax + 2by = 1\nC\n10x + 7y = 1\n2ax + by = 1\nD\n5x \u2212 7y = 1\nax + by = 1\n8",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-12",
@@ -1977,9 +1843,7 @@
   "difficulty": "HARD",
   "body": "In the system of equations below, a and c are\nconstants.\nax + y = c\n1\n2\nx +\n1\n3\ny =\n1\n6\nIf the system of equations has an infinite\nnumber of solutions (x, y), what is the value\nof a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1.5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-15",
@@ -1992,9 +1856,7 @@
   "difficulty": "HARD",
   "body": "3 consecutive even integers are ordered from\nsmallest to largest. 5 times the first integer is\nat least 9 more than the sum of the second\nand third integers. What is the minimum\npossible value for the second integer?\n9",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "8",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-18",
@@ -2007,9 +1869,7 @@
   "difficulty": "HARD",
   "body": "\u221232x + 18y + 150 = 15y + 4x\n52 +\nw\n3\nx + 18y = \u221232\nIn the given system of equations, w is a\nconstant. The system has only one solution.\nFind the value that w is not equal to?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-648",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-24",
@@ -2022,9 +1882,7 @@
   "difficulty": "HARD",
   "body": "Line s is defined by x \u2212 4y = 24. Line t is\nperpendicular to line s in the xy-plane and\npasses through the points (k, 0) and (60, \u2212k).\nWhat is the value of k?\n11",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "48",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-25",
@@ -2054,9 +1912,7 @@
     "content": "1 2 3 4 5 2 4 6 8 10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-algebra-26",
@@ -2078,9 +1934,7 @@
     "content": "2 C 21 4 D 4 21"
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-27",
@@ -2093,9 +1947,7 @@
   "difficulty": "HARD",
   "body": "In the xy-plane, line r passes through the\npoints (3, 12) and (7, 13). Line s passes\nthrough the point (1, 2) and is perpendicular\nto line r. An equation of line s is ax + 7y = c,\nwhere a and c are constants. What is the\nvalue of c?\n12",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "42",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-29",
@@ -2108,9 +1960,7 @@
   "difficulty": "HARD",
   "body": "7x + 8y = 3\nThe given equation is one equation in a\nsystem of two linear equations. If the system\nof equations has at least one solution, which\nof the following equations could be the other\nequation in the system?\nI 14x + 16y = 12\nII 14x + 16y = 6\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-30",
@@ -2140,9 +1990,7 @@
     "content": "28"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-algebra-31",
@@ -2155,9 +2003,7 @@
   "difficulty": "HARD",
   "body": "x\n7\n+\ny\n5\n=\n41\n35\nAn engineer connects resistors in series,\nwhere the resistors in the series have a total\nresistance of 41\n35 ohms. In this series, there\nare x resistors of type A, which each have\na resistance of a ohms, and y resistors of\ntype B, which each have a resistance of b\nohms. The given equation represents this\nsituation. According to this equation, what\nis the positive difference between the value\nof a and the value of b?\nA\n1\n35\nB\n2\n35\nC\n3\n35\nD\n12\n35\n13",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-33",
@@ -2170,9 +2016,7 @@
   "difficulty": "HARD",
   "body": "j(x \u2212 k) =\n3\n4\nx + 15\nIn the equation above, j and k are constants.\nIf the equation has infinitely many solutions\nfor x, what is the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-20",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-algebra-34",
@@ -2202,9 +2046,7 @@
     "content": "4x + 3y = 6 14"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-algebra-37",
@@ -2217,9 +2059,7 @@
   "difficulty": "HARD",
   "body": "2 4 6 8 10\n1\n1\n2\n3\n4\nThe graph shows the total amount of rainfall\ny, in centimeters, from the start of a 10-hour\nperiod, where x is the number of hours\nafter the start of the period. Which of\nthe following statements about the rainfall\nduring this time period is true?\nA The rate of rainfall was 2 centimeters\nper hour between x = 2 and x = 4.\nB The rate of rainfall was the greatest\nbetween x = 4 and x = 10.\nC The rate of rainfall increased between\nx = 0 and x = 2.\nD The rate of rainfall was 0 centimeters\nper hour between x = 2 and x = 4.\n15",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-1",
@@ -2232,9 +2072,7 @@
   "difficulty": "HARD",
   "body": "In the xy-plane, the quadrants are labeled as\nshown. The graph of the equation\ny = 3(x + a)2\n+ b\nwhere a and b are positive constants, has a\nvertex in which quadrant?\nI\nII\nIII IV\nA Quadrant I\nB Quadrant II\nC Quadrant III\nD Quadrant IV",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-2",
@@ -2247,9 +2085,7 @@
   "difficulty": "HARD",
   "body": "The solutions to x2 + 12x + 35 = 0 are r\nand s, where r < s. The solutions to x2 +\n12x + 27 = 0 are t and u, where t < u. The\nsolutions to x2 + 24x + c = 0, where c is a\nconstant, are r + u and s + t. What is the\nvalue of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "140",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-6",
@@ -2262,9 +2098,7 @@
   "difficulty": "HARD",
   "body": "If x = 2n\n\u221a\n2xn + 35, where n is a positive\ninteger constant, what is the value of xn?\n18",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "7",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-7",
@@ -2277,9 +2111,7 @@
   "difficulty": "HARD",
   "body": "\u22121 1 2 3 4 5\n\u22121\n\u22122\n\u22123\n\u22124\n\u22125\n1\n2\n3\n4\n5\nThe graph of y = g(x) is shown, where the\nfunction g is defined by\ng(x) = f (x + a) + b\nand a and b are constants. If the function f\nis defined by f (x) = x3, what is the value of\na + b?\nA \u22125\nB \u22121\nC 1\nD 5",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-8",
@@ -2292,9 +2124,7 @@
   "difficulty": "HARD",
   "body": "(3x + p)(5x2\n\u2212 45)(2x2\n\u2212 16x + 6p) = 0\nIn the given equation, p is a positive\nconstant. The sum of the solutions to the\nequation is 20\n3 . What is the value of p?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-9",
@@ -2307,9 +2137,7 @@
   "difficulty": "HARD",
   "body": "f (x) = ax2\n+ 6x + c\nIn the given quadratic function, a and c are\nconstants. The graph of y = f (x) in the\nxy-plane is a parabola that opens upward\nand has a vertex at the point (h, k), where h\nand k are constants. If k > 0 and f (\u22127) =\nf (5), which of the following must be true?\nI. c > 3\nII. a > 3\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-10",
@@ -2322,9 +2150,7 @@
   "difficulty": "HARD",
   "body": "Function f is a quadratic function. The\ngraph of y = f (x) in the xy-plane has a\nvertex at (9, \u22127), contains the point (8, \u22129),\nand has a y-intercept at (0, a). The graph of\ny = 6 \u00b7 f (x) has a y-intercept at (0, b). What\nis the positive difference between a and b?\n19",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "845",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-11",
@@ -2337,9 +2163,7 @@
   "difficulty": "HARD",
   "body": "\u22124 \u22122 2 4\n\u22124\n\u22122\n2\n4\ny = f (x)\nThe graph of y = f (x) is shown in the\nxy-plane. If the function g is defined by\ng(x) = (x + 3)(x \u2212 1)\nfor which of the following values of x is\nf (x) > g(x)?\nA \u22123\nB \u22122\nC 1\nD 2",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-12",
@@ -2352,9 +2176,7 @@
   "difficulty": "HARD",
   "body": "34z14\n+ bz7\n+ 70\nIn the given expression, b is a positive\ninteger. If qz7 + r is a factor of expression,\nwhere q and r are positive integers, what is\nthe highest possible value of b?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2381",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-13",
@@ -2384,9 +2206,7 @@
     "content": "y = 2(x \u2212 2)2(x + 3)2 20"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-14",
@@ -2399,9 +2219,7 @@
   "difficulty": "HARD",
   "body": "\u22124 \u22123 \u22122 \u22121 1 2 3 4 5\n\u22124\n\u22123\n\u22122\n\u22121\n1\n2\n3\n4\nAn equation for the graph shown is\ny = a(x + 3)(x + b)\nwhere a and b are constants. What is the\nvalue of ab?\nA \u22122\nB \u2212\n4\n3\nC\n1\n2\nD 8",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-16",
@@ -2431,9 +2249,7 @@
     "content": "(x + 5)2 \u2212 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-17",
@@ -2446,8 +2262,6 @@
   "difficulty": "HARD",
   "body": "3\n\u22124\n\u22126\n(3, \u22124)\n0, \u22126)\n(r, s)\nThe xy-plane above shows two points of\nintersection of the graphs of a linear function\nand a quadratic function. The vertex of the\ngraph of the quadratic function is at (3, \u22124)\nand (r, s) is one of the points of intersection\nof the graphs. What is the value of r?\n21",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "4.5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  }
 ]

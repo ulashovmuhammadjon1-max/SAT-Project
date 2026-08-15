@@ -27,9 +27,7 @@
     "content": "f (x) = (x + a)2(x \u2212 b)2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-19",
@@ -42,9 +40,7 @@
   "difficulty": "HARD",
   "body": "f (x) = m\n\u221a\n\u2212x \u2212 n\nwhere m and n are constants. If f (8) = 0 and\nf (4) < \u221216, which of the following must be\ntrue?\nA m > \u22128\nB n + m = 0\nC n + m > 0\nD n \u2212 m > 0",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-21",
@@ -57,9 +53,7 @@
   "difficulty": "HARD",
   "body": "8rx2\n\u2212 80sx + 8r = 0\nFor the given equation, r and s are constants\nsuch that r > 0, s < 0 and r\ns > k. What is the\nleast value of k that ensures that the equation\nhas two distinct real solutions?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-24",
@@ -72,9 +66,7 @@
   "difficulty": "HARD",
   "body": "The functions f and g are defined by the\ngiven equations, where x \u2265 0. Which of the\nfollowing equations displays, as a constant\nor coefficient, the maximum value of the\nfunction it defines, where x \u2265 0?\nI. f (x) = 16(1.24)x + 43\nII. g(x) = 8(0.72)x\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-27",
@@ -87,9 +79,7 @@
   "difficulty": "HARD",
   "body": "The expression 6x4 + 17x2 + 7 can be\nrewritten as (3x2 + a)(2x2 + b), where a and\nb are positive integers, or as (3x2 + c)(2x2 +\nd), where c and d are positive nonintegers.\nWhat is the value of a + c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "8.5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-28",
@@ -102,9 +92,7 @@
   "difficulty": "HARD",
   "body": "The function f is defined by f (x) = x2+ax+b\n2x+c ,\nwhere a, b, and c are constants. The graph\nof the function f in the xy-plane, where y =\nf (x), does not intersect the line x = 4. If\nf (5) = f (6) = 0, what is the value of\na + b + c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "11",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-29",
@@ -117,9 +105,7 @@
   "difficulty": "HARD",
   "body": "The function h is defined by\nh(x) = \u2212\np\nx2 + bx + c\nThe graph of y = h(x) passes through (2, 0)\nand (0, \u2212\n\u221a\n358). If h(m) = 0, what is the\ngreatest possible value of m?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "179",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-30",
@@ -132,9 +118,7 @@
   "difficulty": "HARD",
   "body": "7\nq\np4 = t\n5\n7\nIn the given equation, p > 1 and t > 1. If\nt = p2n\u22121, where n is a constant. What is the\nvalue of n?\n23",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "0.9",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-31",
@@ -147,9 +131,7 @@
   "difficulty": "HARD",
   "body": "In the xy-plane, a parabola has vertex\n(9, \u221214) and intersects the x-axis at two\npoints. If the equation of the parabola\nis written in the form y = ax2 + bx + c\nwhere a, b, and c are constants, which of the\nfollowing could be the value of a + b + c?\nA \u221223\nB \u221219\nC \u221214\nD \u221212",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-32",
@@ -162,9 +144,7 @@
   "difficulty": "HARD",
   "body": "y = ax2\n+ bx + c\nThe function f is defined above, where a, b,\nand c are constants. The graph of y = f (x)\nin the xy-plane passes through the points\n(\u221216, 0) and (9, 0). If a is an integer greater\nthan 3, what is the smallest possible value of\n3b \u2212 2a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "76",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-33",
@@ -177,9 +157,7 @@
   "difficulty": "HARD",
   "body": "f (x) = ax2\n+ bx + c\nThe function f is defined above, where a, b,\nand c are constants and 4 < b < 7. The\ngraph of y = f (x) is such that f (1) = f (5).\nIf b is an integer, what could be the value of\nab?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-6",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-35",
@@ -192,9 +170,7 @@
   "difficulty": "HARD",
   "body": "f (x) =\n3\np\nx3 + ax2 + bx + c\nThe function f is defined by the given\nequation, where a, b, c are integers. The\ngraph of y = f (x) passes through the point\n(9, 0), and f (0) = 27. What is the value of\n9a + b?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-2268",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-36",
@@ -224,9 +200,7 @@
     "content": "8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-38",
@@ -239,9 +213,7 @@
   "difficulty": "HARD",
   "body": "The solutions to x2 + 12x + 35 = 0 are r\nand s, where r < s. The solutions to x2 +\n12x + 27 = 0 are t and u, where t < u. The\nsolutions to x2 + 24x + c = 0, where c is a\nconstant, are r + u and s + t. What is the\nvalue of c?\n24",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "140",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-40",
@@ -254,9 +226,7 @@
   "difficulty": "HARD",
   "body": "If p(x) = x2 + kx + 4 has no real zeros, what\nis the range of possible values for k?\nA k < \u22124\nB \u22124 < k < 4\nC k > 4\nD No range, k can be any real number.",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-41",
@@ -269,9 +239,7 @@
   "difficulty": "HARD",
   "body": "f (x) = \u22123x2\n+ bx + c\nIn the given quadratic function b and c are\nconstants. The graph of y = f (x) in the\nxy-plane is a parabola that has a vertex at\nthe point (h, k), where h and k are constants.\nIf f (\u22124) = f (8), and the quadratic function\nhas x-intercepts at (r, 0) and (s, 0), which of\nthe following must be true?\nI. r + s = 4\nII. b < 0\nIII. c < k\nA I and II only\nB II and III only\nC I and III only\nD I, II, and III",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-42",
@@ -284,9 +252,7 @@
   "difficulty": "HARD",
   "body": "The functions f and g are defined by the\ngiven equations, where 2 \u2264 x \u2264 8. Which\nof the following equations displays, as a\nconstant or coefficient, the minimum value\nof the function it defines, where 2 \u2264 x \u2264 8?\nI. f (x) = 0.0625(0.5)(2)x+2\nII. g(x) = 1500(0.2)x\u22123\nA I only\nB II only\nC I and II\nD Neither I nor II\n25",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-43",
@@ -299,9 +265,7 @@
   "difficulty": "HARD",
   "body": "The given expression is\n\u221216(5x \u2212 3)2\n+ 4(5x \u2212 2)2\nThe given expression can be rewritten as\nax2\n4 + bx\n4 + c\n4, where a, b, and c are constants.\nWhat is the value of a + b + c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-112",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-44",
@@ -314,9 +278,7 @@
   "difficulty": "HARD",
   "body": "Given the expression\n4\n\u221a\n40n \u00d7 (\n5\n\u221a\n40n)3\nfind the value of y for which the expression\nis equivalent to (40n)30y, where n > 1.\nA\n17\n600\nB\n10\n600\nC\n7\n600\nD\n14\n600",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-45",
@@ -346,9 +308,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-46",
@@ -378,9 +338,7 @@
     "content": "24x2 \u2212 484x \u2212 15b"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-47",
@@ -393,9 +351,7 @@
   "difficulty": "HARD",
   "body": "1\ncx\n=\nx\n128\n+\n1\nc\nIn the given equation, c is a constant. If the\nequation has exactly one solution, what is\nthe value of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-48",
@@ -408,9 +364,7 @@
   "difficulty": "HARD",
   "body": "The expression\nbx2\n\u2212 13x + 22\ncan be rewritten as (hx \u2212 k)(x + j) where\nb is a constant and h, j, and k are integer\nconstants. Which of the following must be\nan integer?\nA\nk \u2212 13\nh\nB\n13\nb\nC \u2212\nj\n22\nD\n1\nh\n26",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-51",
@@ -440,9 +394,7 @@
     "content": "69"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "69",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-53",
@@ -455,9 +407,7 @@
   "difficulty": "HARD",
   "body": "In the given equation, k is a constant. The\nequation \u221a\nk \u2212 x = 43 \u2212 x\nhas exactly one real solution. What is the\nminimum possible value of 4k?\n27",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "173",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-55",
@@ -470,9 +420,7 @@
   "difficulty": "HARD",
   "body": "The functions f and g are defined by the\ngiven equations, where 2 \u2264 x \u2264 5. Which\nof the following equations displays, as a\nconstant or coefficient, the maximum value\nof the function it defines, where 2 \u2264 x \u2264 5?\nI. f (x) = \u2212(x \u2212 4)2 + 7\nII. g(x) = \u2212(x + 4)2 + 7\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-56",
@@ -502,9 +450,7 @@
     "content": "38/21"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-57",
@@ -534,9 +480,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "3",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-58",
@@ -549,9 +493,7 @@
   "difficulty": "HARD",
   "body": "Quadratic function h is defined by\nh(x) = ax2\n\u2212 2x + c\nwhere a and c are constants. The graph of\ny = h(x) in the xy-plane is a parabola that\nopens downward and has a vertex of (h, k),\nwhere k > 0. If h(1) = h(\u221213), which of the\nfollowing must be true?\nI. \u22121 < a < 0\nII. c > 0\nA I only\nB II only\nC I and II\nD Neither I nor II\n28",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-59",
@@ -564,9 +506,7 @@
   "difficulty": "HARD",
   "body": "f (x) = \u22122x2\n+ bx + c\nIn the given quadratic function, a and c are\nconstants. The graph of y = f (x) is a\nparabola that has a vertex at the point (h, k),\nwhere h and k are constants. If k < 0 and\nf (\u22125) = f (7) which of the following must\nbe true?\nI. c < \u22121\nII. b \u2265 3\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-60",
@@ -596,9 +536,7 @@
     "content": "162"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "162",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-61",
@@ -611,9 +549,7 @@
   "difficulty": "HARD",
   "body": "The function f is defined by\nf (x) = a\n\u221a\n\u2212x + b\nwhere a and b are constants. In the xy-plane,\nthe graph of y = f (x) passes through the\npoint (5, 0), and f (\u221212) > f (\u22127). Which\nof the following must be true?\nA a < f (b)\nB a > b\nC f (3) < f (\u22122b)\nD a < b",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-63",
@@ -626,9 +562,7 @@
   "difficulty": "HARD",
   "body": "34z18\n+ bz9\n+ 30\nIn the given expression, b is a positive\ninteger. If qz9 + r is a factor of the expression,\nwhere q and r are positive integers, what is\nthe greatest possible value of b?\n29",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1021",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-64",
@@ -641,9 +575,7 @@
   "difficulty": "HARD",
   "body": "The function\nv(x) =\nx2 + bx + c\n(x \u2212 7)(x \u2212 17)\nwhere b, c are constants goes through the\npoints (0, 99\n119 ) and (11, 0). There is another\npoint where v(q) = 0. What is the value of\nq?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "9",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-65",
@@ -656,9 +588,7 @@
   "difficulty": "HARD",
   "body": "The function\nf (x) = 6(x \u2212 a)(x \u2212 b)(x \u2212 c)\nis defined by the given equation, where a, b,\nand c are distinct constants. When a < x <\nb, the value of f (x) is positive. The graph of\ny = f (x) in the xy-plane contains the point\n(r, s), where r and s are constants. If s = 9,\nwhich of the following could be true?\nI. r < a\nII. b < r < c\nIII. r > c\nA I only\nB III only\nC I and III only\nD II and III only",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-67",
@@ -671,9 +601,7 @@
   "difficulty": "HARD",
   "body": "g(x) = 12(x \u2212 a)(x \u2212 b)(x \u2212 c)\nwhere a, b, and c are distinct constants.\nWhen a < x < b, g(x) will be positive. If\n(p, q) is on the graph of g(x), where p and\nq are constants, and q = 45, which of the\nfollowing could be true?\nI. p < a\nII. b < p < c\nIII. p > c\nA Only I\nB Only III\nC I and III only\nD II and III only\n30",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-69",
@@ -703,9 +631,7 @@
     "content": "1 \u2212 ( 55 2 )2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-70",
@@ -718,9 +644,7 @@
   "difficulty": "HARD",
   "body": "The polynomial\n8x4\n+ 50x2\n+ 63\ncan be factored, and one of the factors is of\nthe form (ax2 + b). What is one possible\nvalue of the product a \u00b7 b?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "18",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-72",
@@ -750,9 +674,7 @@
     "content": "124"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-74",
@@ -765,9 +687,7 @@
   "difficulty": "HARD",
   "body": "The functions f and g are defined by the\ngiven equations, where x \u2264 0. Which of the\nfollowing equations displays, as a constant\nor coefficient, the maximum value of the\nfunction it defines, where x \u2264 0?\nI. f (x) = \u2212(x + 4)2 + 7\nII. g(x) = \u2212(x \u2212 4)2 + 7\nA I only\nB II only\nC I and II\nD Neither I nor II",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-75",
@@ -789,9 +709,7 @@
     "content": "6a C \u22126a D \u22127a"
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-76",
@@ -821,9 +739,7 @@
     "content": "-789"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-77",
@@ -836,9 +752,7 @@
   "difficulty": "HARD",
   "body": "The function f is defined by\nf (x) = 3x2\n\u2212 5x + 10\nIf the function f (x \u2212 2) is written in the form\nax2 + bx + c, what is the value of a + b + c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "18",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-78",
@@ -851,9 +765,7 @@
   "difficulty": "HARD",
   "body": "In the given equation, p is a positive\nconstant. The product of the solutions to the\nequation\n(3x \u22127p)(5x2\n+8x \u22124p)(x3\n+3x2\n\u221216x \u221248) = 0\nis \u2212560\n9 . What is the value of p?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "5/6",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-79",
@@ -866,9 +778,7 @@
   "difficulty": "HARD",
   "body": "The equation above has two real solutions,\nwhere a and b are positive constants. The\nsum of the solutions to the given equation\nis k(21a \u2212 35b), where k is a constant. What\nis the value of k?\n32",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-1/14",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-81",
@@ -881,9 +791,7 @@
   "difficulty": "HARD",
   "body": "The functions f, g and h are defined by the\ngiven equations, where x \u2265 0. Which of the\nfollowing equations displays, as a constant\nor coefficient, the maximum or minimum\nvalue of the function it defines, where x \u2265 0?\nI. f (x) = (x \u2212 3)2 + 6\nII. g(x) = (x + 3)2 + 6\nIII. h(x) = (x \u2212 5)2 + 8\nA I only\nB I and III only\nC Both I and II\nD None of these",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-82",
@@ -896,9 +804,7 @@
   "difficulty": "HARD",
   "body": "f (x) = \u22122(x \u2212 a)(x \u2212 b)(x \u2212 c)\nThe function f is defined by the given\nequation, where a, b and c are distinct\nconstants. When b < x < c, the value of\nf (x) is positive. The graph of y = f (x) in the\nxy-plane contains the point (m, n), where m\nand n are constants. If n is equal to -5, which\nof the following could be true?\nI. m < a\nII. a < m < b\nIII. m > c\nA I only\nB II only\nC II and III\nD I and III\n33",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-83",
@@ -911,9 +817,7 @@
   "difficulty": "HARD",
   "body": "Which of the following below has a factor of\n4x + 7b, where b is a non-positive integer?\nI. 16x2 \u2212 49\nII. 16x2 + 56x + 49\nIII. 64x3 + 343\nA I only\nB II and III only\nC I and III only\nD All of them",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-86",
@@ -943,9 +847,7 @@
     "content": "100(Q 1 2 + 1)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-87",
@@ -971,9 +873,7 @@
     "content": "When v(x) is divided by (x + 2), the remainder is 7. D When v(x) is divided by (x \u2212 6), the remainder is -13."
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-88",
@@ -986,9 +886,7 @@
   "difficulty": "HARD",
   "body": "When the polynomial P(x) = 2x3 \u2212 5x2 +\nax + b is divided by x \u2212 2, the remainder\nis 10. When P(x) is divided by x + 1, the\nremainder is 1. What is the value of a + b?\n34",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "10",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-89",
@@ -1001,9 +899,7 @@
   "difficulty": "HARD",
   "body": "x2\n\u221a\nx2 \u2212 c2\n=\nc2\n\u221a\nx2 \u2212 c2 + 39\nIn the given equation, c is a positive\nconstant. Which of the following is one of\nthe solutions to the given equation?\nA \u2212c\nB \u2212c2 \u2212 392\nC \u2212\n\u221a\n392 \u2212 c2\nD \u2212\n\u221a\nc2 + 392",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-90",
@@ -1016,9 +912,7 @@
   "difficulty": "HARD",
   "body": "The expression\n12x2\n+ 41x + 35\ncan be rewritten as (4x + r)(3x + s), where\nr and s are integers, or as (4x + t)(3x + v),\nwhere t and v are not integers. What is the\nvalue of s + v?\nA\n41\n3\nB\n41\n4\nC 12\nD 35",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "41/4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-93",
@@ -1031,9 +925,7 @@
   "difficulty": "HARD",
   "body": "x(9x \u2212 2a) + b(9x \u2212 2a) \u2212 (x + b) = 0\nIn the given equation, a and b are positive\nconstants. A solution to the equation is x =\n42. What is the value of a?\n35",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "188.5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-94",
@@ -1046,9 +938,7 @@
   "difficulty": "HARD",
   "body": "For a polynomial function f, the graph of\ny = f (x) in the xy-plane contains the points\n(\u22126, 0), (7, 0), (0, 0), and (4, 0). Which of the\nfollowing must be a factor of f (x)?\nA x2 \u2212 2x \u2212 24\nB x2 \u2212 x + 42\nC x2 \u2212 11x \u2212 28\nD x2 \u2212 7x",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-95",
@@ -1061,9 +951,7 @@
   "difficulty": "HARD",
   "body": "f (x) = m\n\u221a\n\u2212x \u2212 n\nwhere m and n are constants. If f (8) = 0 and\nf (4) < \u221216, which of the following must be\ntrue?\nA m > \u22128\nB n + m = 0\nC n + m > 0\nD n \u2212 m > 0",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-96",
@@ -1076,9 +964,7 @@
   "difficulty": "HARD",
   "body": "(3x + p)(5x2\n\u2212 45)(2x2\n\u2212 16x + 6p) = 0\nIn the given equation, p is a positive\nconstant. The sum of the solutions to the\nequation is 20\n3 . What is the value of p?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-97",
@@ -1091,9 +977,7 @@
   "difficulty": "HARD",
   "body": "\u22123 2\n\u22126\ny = f (x)\nIn the xy-plane above, the function f is\ndefined by f (x) = 2x3 + 3x2 + ax + b, where\na and b are constants. If the graph of f\nintersects the x-axis at three points, what is\nthe value of a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-98",
@@ -1123,9 +1007,7 @@
     "content": "10 36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-99",
@@ -1138,9 +1020,7 @@
   "difficulty": "HARD",
   "body": "6\n5\n10\n15\nP(3, 5)\nIn the xy-plane above, the graph of a\nquadratic function y = f (x) intersects the\nx-axis at points O and Q, and has a vertex\nat point P. If line \u2113 passes through points P\nand Q, what is the y-intercept of line \u2113?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-100",
@@ -1153,9 +1033,7 @@
   "difficulty": "HARD",
   "body": "1 2 3 4 5 6 7 8\n10\n20\n30\n6\n24\n(4, 6)\n(5, 24)\nThe function f is defined by f (x) = x3. The\nfunction g is defined by g(x) = a \u00b7 f (x + b) +\nc, where a, b, and c are constants. The graph\nof y = g(x) is shown in the xy-plane. Find\nthe value of ab?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-72",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-101",
@@ -1168,9 +1046,7 @@
   "difficulty": "HARD",
   "body": "The graphs of y = x2 and y = mx \u2212 1 are\nshown in the xy-plane below, where m is the\nslope of the line. If the graph of y = mx \u2212 1\nis tangent to the graph of y = x2, what is the\nvalue of m?\n\u22122 \u22121 1 2 3 4\n\u22121\ny = x2\ny = mx \u2212 1",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-103",
@@ -1200,9 +1076,7 @@
     "content": "y = \u2212 1 15 (x + 6)2(x + 4)(x \u2212 1)2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-104",
@@ -1232,9 +1106,7 @@
     "content": "P = 3 r 18 C2V4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-105",
@@ -1264,9 +1136,7 @@
     "content": "4 38"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-107",
@@ -1296,9 +1166,7 @@
     "content": "R = p + q + s + 13"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-108",
@@ -1311,9 +1179,7 @@
   "difficulty": "HARD",
   "body": "In the given equation,\n1\n5xy\n+ xyz =\n1\n4yz\nWhich expression is equivalent to y?\nA\n5x \u2212 4z\n20xz2\nB\nr\n5x \u2212 4z\n20xz2\nC\nr\n1\n4xz2 \u2212 5xz\nD\nr\n1\n4xz2 \u2212 5xz2",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-109",
@@ -1343,9 +1209,7 @@
     "content": "24x2 \u2212 484xb \u2212 15b2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-110",
@@ -1358,9 +1222,7 @@
   "difficulty": "HARD",
   "body": "The function v is defined by the equation\nv(x) =\nx2 + bx + c\n(x + 5)(x \u2212 15)\nwhere b and c are constants. In the xy-plane,\nthe graph of y = v(x) passes through the\npoints (0, 22\n25 ) and (11, 0). If v(q) = 0, which\nof the following could be the value of q?\nA \u22126\nB \u22125\nC 5\nD 6\n39",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-111",
@@ -1373,9 +1235,7 @@
   "difficulty": "HARD",
   "body": "y = 3 a\n6\n\u0001x+c\n\u2212 b\nHow many times does the graph of the given\nequation in the xy-plane cross the x-axis,\nwhere a, b, and c are positive constants such\nthat a > 6 and b > c?\nA Zero\nB One\nC Two\nD Three",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-112",
@@ -1405,9 +1265,7 @@
     "content": "60"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-114",
@@ -1420,9 +1278,7 @@
   "difficulty": "HARD",
   "body": "r(x) = 9(x \u2212 3)\ns(x) = x3 + nx2 + 3nx + 27\nFor the given functions r and s, n is a\nconstant. If r(x) \u00b7 s(x) = 9(x4 \u2212 81), what\nis the value of n?\n40",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "3",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-116",
@@ -1435,9 +1291,7 @@
   "difficulty": "HARD",
   "body": "The function j is defined by j(x) = 10x+5\n3p ,\nand the function k is defined by k(x) = j(x)\u00b7p\nx+1 ,\nwhere p is a positive constant. What is the\nvalue of k(9)?\nA\n19\n6\nB\n10\n3\nC\n95\n13\nD\n85\n3",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-117",
@@ -1450,9 +1304,7 @@
   "difficulty": "HARD",
   "body": "y = 3\n\u0010a\n6\n\u0011x+c\n\u2212 b\nHow many times does the graph of the given\nequation in the xy-plane cross the x-axis,\nwhere a, b, and c are positive constants such\nthat a > 6 and b > c?\nA Zero\nB One\nC Two\nD Three\n41",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-118",
@@ -1482,9 +1334,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-advanced-math-121",
@@ -1497,9 +1347,7 @@
   "difficulty": "HARD",
   "body": "\u22122 \u22121 1 2 3 4 5\n\u22121\ny = x2\ny = mx \u2212 1\nThe graphs of y = x2 and y = mx \u2212 1 are\nshown in the xy-plane above, where m is the\nslope of the line. If the graph of y = mx \u2212 1\nis tangent to the graph of y = x2, what is the\nvalue of m?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-122",
@@ -1512,9 +1360,7 @@
   "difficulty": "HARD",
   "body": "The function f is defined by f (x) = x2+ax+b\n2x+c ,\nwhere a, b, and c are constants. The graph\nof the function f in the xy-plane, where y =\nf (x), does not intersect the line x = 4. If\nf (5) = f (6) = 0, what is the value of\na + b + c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "11",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-advanced-math-123",
@@ -1527,9 +1373,7 @@
   "difficulty": "HARD",
   "body": "(x \u2212 k)2\n= (k \u2212 5a)(x \u2212 k)\nIn the given equation, a and k are constants,\nwhere k > 5a. The sum of the solutions to\nthe equation is 3k + 32. What is the value of\na?\n42",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-6.4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-geometry-2",
@@ -1559,9 +1403,7 @@
     "content": "72"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-6",
@@ -1574,9 +1416,7 @@
   "difficulty": "HARD",
   "body": "If the perimeter of an equilateral triangle\nwith a height of 21 is a\n\u221a\n3, what is the value\nof a?\n47",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "42",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-geometry-8",
@@ -1606,9 +1446,7 @@
     "content": "12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "6",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-9",
@@ -1638,9 +1476,7 @@
     "content": "R = 64r and H = 9h"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-10",
@@ -1670,9 +1506,7 @@
     "content": "Neither I nor II is sufficient. 48"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-12",
@@ -1702,9 +1536,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-14",
@@ -1734,9 +1566,7 @@
     "content": "x + w = 90"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-16",
@@ -1749,9 +1579,7 @@
   "difficulty": "HARD",
   "body": "Right rectangular prism X is similar to\nright rectangular prism Y. The surface area\nof right rectangular prism X is 59 square\ncentimeters cm2\n\u0001\n, and the surface area of\nright rectangular prism Y is 1,475cm2. The\nvolume of right rectangular prism Y is 1,500\ncubic centimeters cm3\n\u0001\n. What is the sum\nof the volumes, in cm3, of right rectangular\nprism X and right rectangular prism Y?\n49",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1512",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-geometry-17",
@@ -1764,9 +1592,7 @@
   "difficulty": "HARD",
   "body": "Note: Figure not drawn to scale.\nA\nB C\n28\nFor triangle ABC, the length of AB is 11\nless than the length of AC. Point D (not\nshown) lies on AC such that BD (not shown)\nis perpendicular to AC. What is the value of\nBC\nBD\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-geometry-18",
@@ -1796,9 +1622,7 @@
     "content": " 441 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-20",
@@ -1828,9 +1652,7 @@
     "content": "110"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-25",
@@ -1843,9 +1665,7 @@
   "difficulty": "HARD",
   "body": "A line intersects two parallel lines, forming\nfour acute angles and four obtuse angles.\nThe measure of one of the acute angles is\n(7x \u2212 610)\u25e6. The sum of the measures of one\nof the acute angles and three of the obtuse\nangles is (\u221214x + w)\u25e6. What is the value of\nw?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "A",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "sathard-geometry-26",
@@ -1875,9 +1695,7 @@
     "content": "No additional information is necessary."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "sathard-geometry-28",
@@ -1890,8 +1708,6 @@
   "difficulty": "HARD",
   "body": "Note: Figure not drawn to scale.\nA\nC\nD E\nB\nx\u25e6\nIn the figure, AC = CD. The measure of\nangle EBC is 29\u00b0, and the measure of angle\nACD is 108\u00b0. What is the value of x?\n51",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "29",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  }
 ]

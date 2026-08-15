@@ -29,9 +29,7 @@
     "content": "65"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-43",
@@ -63,9 +61,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-44",
@@ -80,9 +76,7 @@
   "skill": "GT-LA",
   "body": "B\nA\nC\n28\nNote: Figure not drawn to scale\nFor triangle ABC, the length of AB is\n11 less than the length of AC. Point D\n(not shown) lies on AC such that BD (not\nshown) is perpendicular to AC. What is the\nvalue of BC\nBD\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "28/17",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-45",
@@ -114,9 +108,7 @@
     "content": "88 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-46",
@@ -148,9 +140,7 @@
     "content": "76"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-47",
@@ -182,9 +172,7 @@
     "content": "72"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-53",
@@ -216,9 +204,7 @@
     "content": "2x + 2y = 47 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-54",
@@ -250,9 +236,7 @@
     "content": "16"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-57",
@@ -267,9 +251,7 @@
   "skill": "GT-LA",
   "body": "A\nB\nC\nD\nNote: Figure not drawn to scale\nIn the figure, AD and BC intersect at point\nD. The measure of \u0338 ABD is w\u25e6\n, the mea-\nsure of \u0338 CAD is z\u25e6\n, and AD = 178. If\ncos w\u25e6\n=\n9\n41\n, what is the value of tan z\u25e6\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "40/9",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-triangles-59",
@@ -301,9 +283,7 @@
     "content": "98"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-triangles-60",
@@ -335,9 +315,7 @@
     "content": "22"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-1",
@@ -352,9 +330,7 @@
   "skill": "GT-TR",
   "body": "3\nD\nE\nF\n4\nIn triangle DEF, point G (not shown) lies\non DE. If the measure of \u0338 DFG is x\u25e6\n, and\nthe measure of \u0338 GFE is y\u25e6\n, what is the value\nof cos x\u25e6\n\u2212 sin y\u25e6\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "0",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-2",
@@ -369,9 +345,7 @@
   "skill": "GT-TR",
   "body": "x\nheight\nof the\nramp\nlength of the ramp\n\u03b8\nAccording to a US law ramps for use by the\ngeneral public must form an angle with level\nground such that tan\u03b8 < 1\n12\n. If the ramp in\nthe figure conforms to this law and has a\nheight of 22.3 inches, what is the least pos-\nsible value of x, in inches?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "268",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-3",
@@ -386,9 +360,7 @@
   "skill": "GT-TR",
   "body": "x\nheight of\nthe ramp\nlength of the ramp\n\u03b8\nAccording to a US law, ramps for use by\nthe general public must form an angle with\nground such that tan \u03b8 \u2264 1\n12\n. If the ramp\nin the figure above conforms to this law and\nheight of the ramp is 28.2 inches, what is the\nleast possible value of x in inches?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "339",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-4",
@@ -420,9 +392,7 @@
     "content": " 54 53 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-6",
@@ -454,9 +424,7 @@
     "content": "51"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-7",
@@ -488,9 +456,7 @@
     "content": " 3 \u221a 17 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-8",
@@ -522,9 +488,7 @@
     "content": " \u221a 3 2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-9",
@@ -556,9 +520,7 @@
     "content": "tan X"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-10",
@@ -573,9 +535,7 @@
   "skill": "GT-TR",
   "body": "T S\nR\n79\nIn the triangle shown RS =\n\u221a\n157. What is\nthe value of sinR?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "78/79",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-14",
@@ -607,9 +567,7 @@
     "content": "cos Y"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-15",
@@ -624,9 +582,7 @@
   "skill": "GT-TR",
   "body": "39\n22\nc\nx\u25e6\nIn the right triangle shown, c is a constant.\nThe value of sin x\u25e6\n=\nk\nc\n, where k is a con-\nstant. What is the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "22",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-16",
@@ -641,9 +597,7 @@
   "skill": "GT-TR",
   "body": "35\n28\nc\nx\u25e6\nNote: Figure not drawn to scale\nIn the right triangle shown, c is a constant.\nThe value of sin x\u25e6\n=\nk\nc\n, where k is a con-\nstant. What is the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "28",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-17",
@@ -658,9 +612,7 @@
   "skill": "GT-TR",
   "body": "In triangle JKL, cos(K) =\n36\n60\nand angles j\nis a right angle. What is the value of cos L?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "4/5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-18",
@@ -692,9 +644,7 @@
     "content": "1"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-19",
@@ -726,9 +676,7 @@
     "content": " 2 \u221a 10 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-20",
@@ -760,9 +708,7 @@
     "content": " \u221a 2 2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-trigonometry-21",
@@ -777,9 +723,7 @@
   "skill": "GT-TR",
   "body": "x\n\u03b8\nheight\nof the\nramp\nlength of the ramp\nNote: Figure not drawn to scale.\nAccording to a US law, ramps for use by\nthe general public must form an angle with\nlevel ground such that tan \u03b8 < 1\n12\n. If the\nramp in the figure conforms to this law and\nhas a height of 29.1 inches, what is the least\npossible value of x, in inches?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "350",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-trigonometry-23",
@@ -811,9 +755,7 @@
     "content": "29"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-2",
@@ -845,9 +787,7 @@
     "content": "188"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-5",
@@ -862,9 +802,7 @@
   "skill": "GT-AV",
   "body": "A circle in the xy-plane has its center at\n(2, \u22125) and has a radius of 3. An equation\nof this circle is\nx2\n+ y2\n+ ax + by + c = 0,\nwhere a, b, and c are constants. What is the\nvalue of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "20",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-circles-7",
@@ -896,9 +834,7 @@
     "content": "324"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-8",
@@ -930,9 +866,7 @@
     "content": "2 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-9",
@@ -964,9 +898,7 @@
     "content": "234"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-11",
@@ -998,9 +930,7 @@
     "content": "324"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-15",
@@ -1032,9 +962,7 @@
     "content": "\u2212 \u221a 3 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-16",
@@ -1066,9 +994,7 @@
     "content": "3 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-17",
@@ -1100,9 +1026,7 @@
     "content": "144"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-22",
@@ -1134,9 +1058,7 @@
     "content": "23"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-24",
@@ -1168,9 +1090,7 @@
     "content": "18 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-25",
@@ -1202,9 +1122,7 @@
     "content": "(x \u2212 16)2 + (y \u2212 17)2 = 7k2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-26",
@@ -1236,9 +1154,7 @@
     "content": "72"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-29",
@@ -1270,9 +1186,7 @@
     "content": " 67 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-31",
@@ -1287,9 +1201,7 @@
   "skill": "GT-AV",
   "body": "c(r) =\n2\n5\n(2\u03c0r)\nThe function c gives the partial length, in\ncentimeters (cm), of the circumference of a\ncircle with a radius that measures r cm. Ac-\ncording to the function, for each increase 18\ncm in the length of radius, this partial length\nof circumference increases by k\u03c0 cm. What\nis the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "14.4",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-circles-34",
@@ -1321,9 +1233,7 @@
     "content": "148\u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-36",
@@ -1355,9 +1265,7 @@
     "content": "1,225\u03c0 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-38",
@@ -1389,9 +1297,7 @@
     "content": "(x \u2212 14)2 + (y \u2212 19)2 = 7k2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-39",
@@ -1423,9 +1329,7 @@
     "content": "16"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-40",
@@ -1440,9 +1344,7 @@
   "skill": "GT-AV",
   "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n\u22122\n2\n4\n6\n8\n10\n12\n14\nx\ny\nCircle A shown is defined by the equation\nx2\n+ (y \u2212 5)2\n= 7.\nCircle B (not shown) has the same radius\nbut is translated 91 units to the right. If the\nequation of circle B is (x\u2212h)2\n+(y\u2212k)2\n= a,\nwhere h, k, and a are constants, what is the\nvalue of 4a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "28",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-circles-41",
@@ -1457,9 +1359,7 @@
   "skill": "GT-AV",
   "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with coor-\ndinates (1, 0) and point B with coordinates\n(\n5\n\u221a\n34\n, \u2212\n3\n\u221a\n34\n). If the measure of angle AOB\nis p radians, what is the value of\ncosp\nsinp\n?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-5/3",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-circles-42",
@@ -1474,9 +1374,7 @@
   "skill": "GT-AV",
   "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with coor-\ndinates (1, 0) and point B with coordinates\n\u0012\n\u2212\n5\n\u221a\n89\n,\n8\n\u221a\n89\n\u0013\n. If the measure of angle\nAOB is w radians, what is the value of\ntan w?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-8/5",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-circles-43",
@@ -1508,9 +1406,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-46",
@@ -1542,9 +1438,7 @@
     "content": "157\u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-circles-47",
@@ -1559,9 +1453,7 @@
   "skill": "GT-AV",
   "body": "A circle in the xy-plane has its center at\n(\u22127, 3) and has a radius of 9. An equation\nof this circle is\nx2\n+ y2\n+ ax + by + c = 0,\nwhere a, b, and c are constants. What is the\nvalue of c?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-23",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-expressions-1",
@@ -1593,9 +1485,7 @@
     "content": "8x2 + 11x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-2",
@@ -1627,9 +1517,7 @@
     "content": "v = q 2K 65"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-5",
@@ -1661,9 +1549,7 @@
     "content": "8nr2 + 4n2r + 5nr"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-7",
@@ -1695,9 +1581,7 @@
     "content": "6x2 + 13x"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-8",
@@ -1729,9 +1613,7 @@
     "content": "x = by\u221238 y"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-9",
@@ -1763,9 +1645,7 @@
     "content": "x\u22124z8 + y11z\u22123"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-12",
@@ -1797,9 +1677,7 @@
     "content": "\u22124x6 + 3x3 + x + 3 10 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-13",
@@ -1831,9 +1709,7 @@
     "content": "v3(v \u2212 590)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-14",
@@ -1865,9 +1741,7 @@
     "content": "x = by \u2212 19"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-16",
@@ -1899,9 +1773,7 @@
     "content": "x\u22125z10 + y14z\u22122"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-17",
@@ -1933,9 +1805,7 @@
     "content": " 2qt q \u2212 5t"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-18",
@@ -1967,9 +1837,7 @@
     "content": "23 11 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-20",
@@ -2001,9 +1869,7 @@
     "content": "a = 2b2 5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-21",
@@ -2035,9 +1901,7 @@
     "content": "5x2y2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-22",
@@ -2069,9 +1933,7 @@
     "content": "4ts(18t2s2 \u2212 12t)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-23",
@@ -2103,9 +1965,7 @@
     "content": "b = \u00b1 \u221a 7d \u2212 4c"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-expressions-24",
@@ -2137,9 +1997,7 @@
     "content": "22 12 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-1",
@@ -2171,9 +2029,7 @@
     "content": "34"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-3",
@@ -2188,9 +2044,7 @@
   "skill": "ALG-LE",
   "body": "If 4 +\n5(7 \u2212 x)\n2\n=\n8(7 \u2212 x)\n3\n, what is the\nvalue of 7 \u2212 x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "24",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-equations-6",
@@ -2222,9 +2076,7 @@
     "content": "42"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-8",
@@ -2256,9 +2108,7 @@
     "content": "11 14 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-11",
@@ -2290,9 +2140,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-14",
@@ -2324,9 +2172,7 @@
     "content": "4 15 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-19",
@@ -2358,9 +2204,7 @@
     "content": "16"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-20",
@@ -2392,9 +2236,7 @@
     "content": "12 7 16 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-26",
@@ -2426,9 +2268,7 @@
     "content": "108"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-27",
@@ -2443,9 +2283,7 @@
   "skill": "ALG-LE",
   "body": "6(t + 7) \u2212 8(t + 7) = 38\nWhat value of t is the solution to the given\nequation?\n17",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-26",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma3-linear-equations-31",
@@ -2477,9 +2315,7 @@
     "content": "10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-32",
@@ -2511,9 +2347,7 @@
     "content": "51"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-33",
@@ -2545,9 +2379,7 @@
     "content": "50"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-35",
@@ -2579,9 +2411,7 @@
     "content": "23"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-37",
@@ -2613,9 +2443,7 @@
     "content": "-22"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-40",
@@ -2647,9 +2475,7 @@
     "content": "670"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-42",
@@ -2681,9 +2507,7 @@
     "content": "207 19 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-43",
@@ -2715,9 +2539,7 @@
     "content": "4 45"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-44",
@@ -2749,9 +2571,7 @@
     "content": "10"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-equations-48",
@@ -2783,9 +2603,7 @@
     "content": "40 21 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-4",
@@ -2817,9 +2635,7 @@
     "content": "8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma3-linear-system-of-equations-6",
@@ -2851,8 +2667,6 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  }
 ]

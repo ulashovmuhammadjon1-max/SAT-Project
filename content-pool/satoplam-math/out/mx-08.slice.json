@@ -29,9 +29,7 @@
     "content": "12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-8",
@@ -46,9 +44,7 @@
   "skill": "ALG-LE",
   "body": "1\n3\n(6y \u2212 9) = 13\nWhat value of y satisfies the given equation?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "8",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-15",
@@ -80,9 +76,7 @@
     "content": "66"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-19",
@@ -114,9 +108,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-23",
@@ -131,9 +123,7 @@
   "skill": "ALG-LE",
   "body": "If 4 + 5(3\u2212x)\n2\n= 8(3\u2212x)\n3\n, what is the value\nof 3 \u2212 x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "24",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-25",
@@ -165,9 +155,7 @@
     "content": "36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-26",
@@ -199,9 +187,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-27",
@@ -233,9 +219,7 @@
     "content": "20 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-28",
@@ -267,9 +251,7 @@
     "content": "1, 323"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-29",
@@ -301,9 +283,7 @@
     "content": "4.75 and 7.25"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-30",
@@ -335,9 +315,7 @@
     "content": "x \u2212 3 = \u221224"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-31",
@@ -369,9 +347,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-34",
@@ -403,9 +379,7 @@
     "content": "27"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-36",
@@ -437,9 +411,7 @@
     "content": "507.83"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-37",
@@ -454,9 +426,7 @@
   "skill": "ALG-LE",
   "body": "The function g is defined by g(x) = x\n2\n. For\nwhat value of x does g(x) = 624?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1248",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-39",
@@ -488,9 +458,7 @@
     "content": " 5 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-40",
@@ -522,9 +490,7 @@
     "content": "32 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-41",
@@ -556,9 +522,7 @@
     "content": "3 only"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-42",
@@ -590,9 +554,7 @@
     "content": "-7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-43",
@@ -624,9 +586,7 @@
     "content": "270"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-45",
@@ -658,9 +618,7 @@
     "content": "1,216"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-46",
@@ -692,9 +650,7 @@
     "content": "4 and 6 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-48",
@@ -726,9 +682,7 @@
     "content": "15"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-50",
@@ -760,9 +714,7 @@
     "content": "26"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-51",
@@ -794,9 +746,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-53",
@@ -828,9 +778,7 @@
     "content": "56 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-54",
@@ -862,9 +810,7 @@
     "content": "30"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-56",
@@ -896,9 +842,7 @@
     "content": "16"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-59",
@@ -930,9 +874,7 @@
     "content": "38"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-62",
@@ -947,9 +889,7 @@
   "skill": "ALG-LE",
   "body": "12x + 28\n4\n\u2212\ns\n13\n= r(x \u2212 8)\nIn the given equation, s and r are constants,\nand s > 0. If the equation has infinitely\nmany solutions, what is the value of s?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "403",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-63",
@@ -981,9 +921,7 @@
     "content": "468"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-66",
@@ -1015,9 +953,7 @@
     "content": "9 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-69",
@@ -1032,9 +968,7 @@
   "skill": "ALG-LE",
   "body": "A park rents beach umbrellas to visitors.\nThe park earns revenue of $16 for each beach\numbrella they rent for the day. On Wednes-\nday, the park earned $400 in profit from\nrenting beach umbrellas after paying daily\nexpenses of $144. How many beach umbrel-\nlas did the park rent on Wednesday? (profit\n= total revenue - total expenses)\n(A) 16\n(B) 25\n(C) 32\n(D) 34",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "D",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-70",
@@ -1049,9 +983,7 @@
   "skill": "ALG-LE",
   "body": "To purchase a used car at a total price of\n14, 000 dollars, a one-time down payment is\nrequired, and then fixed monthly payments\nare made for the remaining amount owed for\nthe car. The equation 14, 000 = 2, 800+200t\nrepresents this situation, where t is the num-\nber of fixed monthly payments that are\nmade. Which of the following is the best\ninterpretation of 200 in this context?\n(A) The amount, in dollars, of the down\npayment.\n(B) The amount, in dollars, of each fixed\nmonthly payment.\n(C) The total amount, in dollars, paid for\nthe car after t fixed monthly payments.\n(D) The total number of fixed monthly pay-\nments.",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-72",
@@ -1083,9 +1015,7 @@
     "content": "9 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-73",
@@ -1117,9 +1047,7 @@
     "content": "75"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-75",
@@ -1151,9 +1079,7 @@
     "content": "78"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-77",
@@ -1185,9 +1111,7 @@
     "content": "41"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-78",
@@ -1219,9 +1143,7 @@
     "content": "60 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-85",
@@ -1253,9 +1175,7 @@
     "content": "12 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-89",
@@ -1270,9 +1190,7 @@
   "skill": "ALG-LE",
   "body": "\u2212\n3\n19\nrx +\ns\n8\n= 10 \u2212\n5\n57\nx\nIn the given equation, r and s are constants.\nThe equation has no solution. What is the\nvalue of r?(s \u0338= 80)",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "5/9",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-90",
@@ -1304,9 +1222,7 @@
     "content": "32"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-91",
@@ -1338,9 +1254,7 @@
     "content": "14 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-92",
@@ -1372,9 +1286,7 @@
     "content": "46"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-96",
@@ -1406,9 +1318,7 @@
     "content": "There is no solution"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-97",
@@ -1440,9 +1350,7 @@
     "content": "6 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-98",
@@ -1474,9 +1382,7 @@
     "content": "26"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-99",
@@ -1508,9 +1414,7 @@
     "content": "There is no solution."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-100",
@@ -1542,9 +1446,7 @@
     "content": "43"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-101",
@@ -1576,9 +1478,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-103",
@@ -1610,9 +1510,7 @@
     "content": "88 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-104",
@@ -1644,9 +1542,7 @@
     "content": "14"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-106",
@@ -1661,9 +1557,7 @@
   "skill": "ALG-LE",
   "body": "5(kx \u2212 n) = \u2212\n65\n14\nx \u2212\n85\n18\nIn the given equation, k and n are constants\nand n > 1. The equation has no solution.\nWhat is the value of k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-13/14",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-108",
@@ -1695,9 +1589,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-109",
@@ -1729,9 +1621,7 @@
     "content": "11"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-110",
@@ -1763,9 +1653,7 @@
     "content": "9 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-111",
@@ -1780,9 +1668,7 @@
   "skill": "ALG-LE",
   "body": "If 2 +\n(1 \u2212 x)\n2\n= \u2212\n2(1 \u2212 x)\n3\n, what is the\nvalue of 1 \u2212 x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-12/7",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-113",
@@ -1814,9 +1700,7 @@
     "content": "42"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-114",
@@ -1848,9 +1732,7 @@
     "content": "20"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-116",
@@ -1882,9 +1764,7 @@
     "content": "56"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-equations-117",
@@ -1899,9 +1779,7 @@
   "skill": "ALG-LE",
   "body": "If\n6\n7\np + 42 = 84, what is the value of 7p?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "343",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-equations-118",
@@ -1933,9 +1811,7 @@
     "content": "62 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-3",
@@ -1963,9 +1839,7 @@
     "content": "(7,-1) E) (25,-7)"
    }
   ],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-6",
@@ -1997,9 +1871,7 @@
     "content": "20"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-8",
@@ -2031,9 +1903,7 @@
     "content": "8"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-11",
@@ -2065,9 +1935,7 @@
     "content": "7 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-15",
@@ -2099,9 +1967,7 @@
     "content": "200"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-19",
@@ -2133,9 +1999,7 @@
     "content": "There are no solutions."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-20",
@@ -2167,9 +2031,7 @@
     "content": "64"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-28",
@@ -2201,9 +2063,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-29",
@@ -2218,9 +2078,7 @@
   "skill": "ALG-LE",
   "body": "y = \u2212\n1\n7\nx\ny =\n1\n11\nx\nThe solution to the given system of equa-\ntions is (x, y). What is the value of x?\n(A) \u22127\n(B) 0\n(C) 4\n(D) 11",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "B",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-32",
@@ -2252,9 +2110,7 @@
     "content": "3s = 7c s + c = 4, 880 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-33",
@@ -2269,9 +2125,7 @@
   "skill": "ALG-LE",
   "body": "x \u2212 18\n6\n+\ny + 25\n3\n= \u22125\nx \u2212 18\n3\n\u2212\ny + 25\n6\n= 5\nThe solution to the given system of equa-\ntions is (x, y). What is the value of x \u2212 y?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "67",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-35",
@@ -2303,9 +2157,7 @@
     "content": "Infinitely many"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-39",
@@ -2337,9 +2189,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-44",
@@ -2371,9 +2221,7 @@
     "content": "16"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-45",
@@ -2405,9 +2253,7 @@
     "content": "1.2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-48",
@@ -2422,9 +2268,7 @@
   "skill": "ALG-LE",
   "body": "22x \u2212 21y = 43\n5x + 14y = 59\nThe solution to the given system of equa-\ntions is (x, y) = (\np\n59\n,\nw\n826\n), where p and w\nare integers. What is the value of p?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "263",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-49",
@@ -2456,9 +2300,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-50",
@@ -2490,9 +2332,7 @@
     "content": "47"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-53",
@@ -2524,9 +2364,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-54",
@@ -2558,9 +2396,7 @@
     "content": "64"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-55",
@@ -2575,9 +2411,7 @@
   "skill": "ALG-LE",
   "body": "x\n7\n+ 5(y \u2212 14) = 29\nx\n3\n\u2212 5(y \u2212 14) = 41\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 10x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1470",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-59",
@@ -2609,9 +2443,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-60",
@@ -2643,9 +2475,7 @@
     "content": "77"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-64",
@@ -2677,9 +2507,7 @@
     "content": "21"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-65",
@@ -2711,9 +2539,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-67",
@@ -2745,9 +2571,7 @@
     "content": "9 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-68",
@@ -2779,9 +2603,7 @@
     "content": "2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-69",
@@ -2796,9 +2618,7 @@
   "skill": "ALG-LE",
   "body": "16x \u2212 20y = 6y + 8\nty = 8x +\n1\n5\nIn the given system of equations, t is con-\nstant. If the system has no solution, what is\nthe value of t?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "13",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-70",
@@ -2813,9 +2633,7 @@
   "skill": "ALG-LE",
   "body": "1\n4\n(s + 4t) = 544\n7s \u2212 8t = 1,192\nThe solution to the given system of equa-\ntions is (s, t). What is the value of s \u2212 t?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "226",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-72",
@@ -2847,9 +2665,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-73",
@@ -2881,8 +2697,6 @@
     "content": "38 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  }
 ]

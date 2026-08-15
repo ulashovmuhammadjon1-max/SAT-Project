@@ -29,9 +29,7 @@
     "content": "12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-79",
@@ -46,9 +44,7 @@
   "skill": "ALG-LE",
   "body": "\u221214 \u221212 \u221210 \u22128 \u22126 \u22124 \u22122\n2\n4\n6\n8\n10\n12\n14\nx\ny\nThe graph of line g is shown in the xy-plane.\nLine k is defined by 165x + py = w, where\np and w are constants. If line k is graphed\nin this xy-plane, resulting in the graph of a\nsystem of two linear equations, the system\nof two linear equations will have infinitely\nmany solutions. What is the value of p+w?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "270",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-80",
@@ -80,9 +76,7 @@
     "content": " 8 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-81",
@@ -114,9 +108,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-82",
@@ -131,9 +123,7 @@
   "skill": "ALG-LE",
   "body": "y =\n5\n7\nx + 9\nOne of two equations in a system of linear\nequations is given. The system has infinitely\nmany solutions. What is the slope of the\ngraph of the second equation?\n(A) \u2212\n7\n5\n(B) \u2212\n5\n7\n(C)\n5\n7\n(D)\n7\n5",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "C",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-83",
@@ -148,9 +138,7 @@
   "skill": "ALG-LE",
   "body": "\u221214\u221212\u221210 \u22128 \u22126 \u22124 \u22122\n2\n4\n6\n8\n10\n12\n14\nx\ny\nThe graph of line g is shown in the xy-\nplane. Line k is defined by the equation\n165x + py = w, where p and w are con-\nstants. If line k is graphed in this xy-plane,\nresulting in the graph of a system of two lin-\near equations, the system will have infinitely\nmany solutions. What is the value of p+w?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "300",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-84",
@@ -182,9 +170,7 @@
     "content": "3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-85",
@@ -216,9 +202,7 @@
     "content": "-320"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-system-of-equations-86",
@@ -250,9 +234,7 @@
     "content": "9 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-1",
@@ -284,9 +266,7 @@
     "content": "g(x) = 15 4 x + 33 4"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-3",
@@ -301,9 +281,7 @@
   "skill": "ALG-LF",
   "body": "Line k in the xy-plane has slope \u2212\n2p\n5\nand\ny-intercept (0, p), where p is a positive con-\nstant. What is the x-coordinate of the x-\nintercept of line k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "5/2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-4",
@@ -318,9 +296,7 @@
   "skill": "ALG-LF",
   "body": "The function f is defined by\nf(x) =\n1\n5\nx +\n9\n10\n.\nFor what value of x does f(x) = 1?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "1/2",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-6",
@@ -352,9 +328,7 @@
     "content": "15"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-12",
@@ -386,9 +360,7 @@
     "content": "37"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-13",
@@ -420,9 +392,7 @@
     "content": "6"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-15",
@@ -454,9 +424,7 @@
     "content": " 2 4 6 8 10 2 4 6 8 10 12 x y"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-18",
@@ -488,9 +456,7 @@
     "content": "2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-19",
@@ -522,9 +488,7 @@
     "content": "y = x \u2212 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-20",
@@ -556,9 +520,7 @@
     "content": "3 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-24",
@@ -590,9 +552,7 @@
     "content": "93 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-25",
@@ -624,9 +584,7 @@
     "content": "20"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-30",
@@ -641,9 +599,7 @@
   "skill": "ALG-LF",
   "body": "The function g is defined by g(x) =\n4\n5\nx\u221232.\nWhat is the x coordinate of x intercept of\nthe graph of y = g(x) in the xy-plane?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "40",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-31",
@@ -675,9 +631,7 @@
     "content": "y = 3 2 x \u2212 3"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-33",
@@ -709,9 +663,7 @@
     "content": "2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-37",
@@ -726,9 +678,7 @@
   "skill": "ALG-LF",
   "body": "The function f is defined by f(x) =\nx\n10\n+74.\nWhat is the value of f(20)?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "76",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-38",
@@ -743,9 +693,7 @@
   "skill": "ALG-LF",
   "body": "x y\n\u221211 \u221225\n9 55\nThe table shows two values of x and their\ncorresponding values of y. The graph of the\nlinear equation representing this relation-\nship passes through the point (1\n3\n, a). What\nis the value of a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "61/3",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-39",
@@ -777,9 +725,7 @@
     "content": "282.0 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-41",
@@ -811,9 +757,7 @@
     "content": "(0, 13)"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-45",
@@ -845,9 +789,7 @@
     "content": "9"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-46",
@@ -862,9 +804,7 @@
   "skill": "ALG-LF",
   "body": "2 4 6 8 10\n2\n4\n6\n8\n10\nx\ny\nThe graph of the linear equation\n8x + By = 56\nis shown, where B is a constant. What is\nthe value of B?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "28",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-49",
@@ -896,9 +836,7 @@
     "content": "30 \u2212 6m"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-55",
@@ -930,9 +868,7 @@
     "content": "f(x) = 4 5 x + 3 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-56",
@@ -947,9 +883,7 @@
   "skill": "ALG-LF",
   "body": "F(x) =\n9\n5\n(x \u2212 273.15) + 32\nThe function F gives the temperature, in\ndegrees Fahrenheit, that corresponds to x\nkelvins. If a temperature is increased by\n11.70 kelvins, by how much did the temper-\nature increase in degrees Fahrenheit?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "21.06",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-57",
@@ -981,9 +915,7 @@
     "content": "f(x) = 2 3 x + 1"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-58",
@@ -1015,9 +947,7 @@
     "content": "87"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-60",
@@ -1049,9 +979,7 @@
     "content": "150"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-63",
@@ -1083,9 +1011,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-65",
@@ -1117,9 +1043,7 @@
     "content": "The estimated total pressure, in kPa, the diver experienced when the diver began to descend d additional meters."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-66",
@@ -1151,9 +1075,7 @@
     "content": "6 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-68",
@@ -1185,9 +1107,7 @@
     "content": "y = \u22122x + 12"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-71",
@@ -1202,9 +1122,7 @@
   "skill": "ALG-LF",
   "body": "The function f is defined by\nf(x) =\n7\n10\nx + 61\nWhat is the value of f(20)?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "75",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-72",
@@ -1236,9 +1154,7 @@
     "content": "79,786"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-73",
@@ -1253,9 +1169,7 @@
   "skill": "ALG-LF",
   "body": "Lines h and k are graphed in the xy-plane.\nThe graph of line h has a slope of\n5\n3\nand an\nx-intercept at (17, 0). Line k is the result of\ntranslating the graph of line h down 4 units.\nWhat is the y-coordinate of the y-intercept\nof the graph of line k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "-97/3",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-75",
@@ -1270,9 +1184,7 @@
   "skill": "ALG-LF",
   "body": "x y\n-11 -33\n6 52\nThe table shows two values of x and their\ncorresponding values of y. The graph of the\nlinear equation representing this relation-\nship passes through the point (\n1\n4\n, a). What\nis the value of a?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "23.25",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-linear-functions-79",
@@ -1304,9 +1216,7 @@
     "content": "415.0 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-linear-functions-81",
@@ -1338,9 +1248,7 @@
     "content": "600"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-2",
@@ -1372,9 +1280,7 @@
     "content": "162\u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-3",
@@ -1389,9 +1295,7 @@
   "skill": "GT-AV",
   "body": "The area of a triangle is equal to x2\nsquare\ncentimeters. The length of the base of the\ntriangle is 2x+6 centimeters, and the height\nof the triangle is x \u2212 2 centimeters. What is\nthe values of x?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "6",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-4",
@@ -1423,9 +1327,7 @@
     "content": "1296\u03c0 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-5",
@@ -1457,9 +1359,7 @@
     "content": "816"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-6",
@@ -1491,9 +1391,7 @@
     "content": "896"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-7",
@@ -1525,9 +1423,7 @@
     "content": "540"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-11",
@@ -1559,9 +1455,7 @@
     "content": "10, 952"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-12",
@@ -1593,9 +1487,7 @@
     "content": "225 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-13",
@@ -1610,9 +1502,7 @@
   "skill": "GT-AV",
   "body": "Volume\n(cubic units)\nRight circular\ncylinder A\n112\u03c0\nRight circular\ncylinder B\n3, 024\u03c0\nThe table shows the volume of two similar\nsolids, right circular cylinder A and right cir-\ncular cylinder B. The radius of right circu-\nlar cylinder A is 4 units. The surface area of\nright circular cylinder A is k\u03c0 square units,\nand the surface area of right circular cylin-\nder B is n\u03c0 square units, where k and n are\nconstants. What is the value of n\u2212k? (The\nsurface area of a right circular cylinder with\nradius r and height h is 2\u03c0r2\n+ 2\u03c0rh.)",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "704",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-14",
@@ -1644,9 +1534,7 @@
     "content": "33"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-15",
@@ -1678,9 +1566,7 @@
     "content": "329"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-17",
@@ -1712,9 +1598,7 @@
     "content": "12482"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-18",
@@ -1746,9 +1630,7 @@
     "content": "275"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-20",
@@ -1780,9 +1662,7 @@
     "content": " 5\u03c0 13 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-22",
@@ -1814,9 +1694,7 @@
     "content": "3,456"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-25",
@@ -1848,9 +1726,7 @@
     "content": "36"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-31",
@@ -1865,9 +1741,7 @@
   "skill": "GT-AV",
   "body": "A right rectangular prism has a length of\n26 centimeters(cm), a width of 16cm, and a\nheight of 14cm. What is the surface area, in\ncm2\n, of the right rectangular prism?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "2008",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-32",
@@ -1899,9 +1773,7 @@
     "content": "10,000 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-35",
@@ -1916,9 +1788,7 @@
   "skill": "GT-AV",
   "body": "The floor of a library has an area of 9375\nsquare feet. An architect creates a scale\nmodel of the floor of the library, where the\nlength of each side of the model is\n1\n25\ntimes\nthe length of the corresponding side of the\nfloor of the actual library. What is the area,\nin square feet, of the scale model?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": "15",
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-36",
@@ -1950,9 +1820,7 @@
     "content": "128 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-37",
@@ -1984,9 +1852,7 @@
     "content": "R = 64r and H = 9h"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-38",
@@ -2018,9 +1884,7 @@
     "content": "39"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-42",
@@ -2052,9 +1916,7 @@
     "content": "7"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "C",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-44",
@@ -2069,9 +1931,7 @@
   "skill": "GT-AV",
   "body": "A right triangular pyramid has exactly six\nedges. Each of these edges is 96 centimeters\nlong. If the surface area of the pyramid is\nk\n\u221a\n3 square centimeters, what is the value\nof k?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": null,
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-46",
@@ -2103,9 +1963,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-48",
@@ -2137,9 +1995,7 @@
     "content": "560p + 96 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-49",
@@ -2171,9 +2027,7 @@
     "content": "3672"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-51",
@@ -2205,9 +2059,7 @@
     "content": "551"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-53",
@@ -2239,9 +2091,7 @@
     "content": "468\u03c0"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-54",
@@ -2273,9 +2123,7 @@
     "content": " 2048\u03c0 81"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-55",
@@ -2307,9 +2155,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-56",
@@ -2324,9 +2170,7 @@
   "skill": "GT-AV",
   "body": "A triangular prism has a height of 3 centime-\nters (cm) and a volume of 60 cm3\n. What is\nthe area, in cm2\n, of the base of the prism?\n(The volume of a triangular prism is equal\nto Bh, where B is the area of the base and\nh is the height of the prism.)",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": null,
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-59",
@@ -2358,9 +2202,7 @@
     "content": "40"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-60",
@@ -2392,9 +2234,7 @@
     "content": "464 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-61",
@@ -2426,9 +2266,7 @@
     "content": " 9 43"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-62",
@@ -2460,9 +2298,7 @@
     "content": "180"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-66",
@@ -2477,9 +2313,7 @@
   "skill": "GT-AV",
   "body": "l\nw\nh\nThe figure shown is a right rectangular pyra-\nmid, where l = 18 units, w = 9 units, and\nh = 12 units. What is the surface area, in\nsquare units, of the pyramid?",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": null,
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-68",
@@ -2511,9 +2345,7 @@
     "content": "14,000"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-69",
@@ -2545,9 +2377,7 @@
     "content": "39 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-areas-volumes-70",
@@ -2562,9 +2392,7 @@
   "skill": "GT-AV",
   "body": "A triangular prism has a height of 9 cen-\ntimeters (cm) and a volume of 234 cm3\n.\nWhat is the area, in cm2\n, of the base of the\nprism? (The volume of a triangular prism\nis equal to Bh, where B is the area of the\nbase and h is the height of the prism.)",
   "choices": [],
-  "type": "FREE_RESPONSE",
-  "key": null,
-  "needs_vision": true
+  "type": "FREE_RESPONSE"
  },
  {
   "id": "satmath-ma2-areas-volumes-72",
@@ -2596,9 +2424,7 @@
     "content": "25 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": null,
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-exponential-functions-1",
@@ -2630,9 +2456,7 @@
     "content": "f(x) = 2x + 2"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "D",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-exponential-functions-7",
@@ -2664,9 +2488,7 @@
     "content": "5"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-exponential-functions-20",
@@ -2698,9 +2520,7 @@
     "content": "24"
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-exponential-functions-21",
@@ -2732,9 +2552,7 @@
     "content": "6 "
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "A",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  },
  {
   "id": "satmath-ma2-exponential-functions-28",
@@ -2766,8 +2584,6 @@
     "content": "The mass of the sample is approxi- mately 3 grams 27 years before the sample starts to decay."
    }
   ],
-  "type": "MULTIPLE_CHOICE",
-  "key": "B",
-  "needs_vision": true
+  "type": "MULTIPLE_CHOICE"
  }
 ]
