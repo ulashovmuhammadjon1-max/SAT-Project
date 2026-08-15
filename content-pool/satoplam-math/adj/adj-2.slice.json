@@ -1,0 +1,624 @@
+[
+ {
+  "id": "satmath-ma3-lines-angles-13",
+  "stem": "<p>In the figure, lines r and s are parallel and line t intersects both lines. If \\( a = 4k + 57 \\) and \\( b = \\frac{k}{2} + 55 \\) , what is the value of c?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "The numbers do not come out whole: k = 136/9 and c = 1057/9 = 117.444..., so the intended answer is probably a round number and one of the printed constants is likely mistyped. Answer recorded as the exact consequence of the stem as printed."
+ },
+ {
+  "id": "satmath-ma3-triangles-5",
+  "stem": "In triangle ABC, the measure of angle A is 56&deg; and AC = 35. In triangle PQR, the measure of angle P is 56&deg; and PR = 105. Which additional piece of information is sufficient to prove that triangle ABC is similar to triangle PQR?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "AB = 50 and PQ = 50"
+   },
+   {
+    "label": "B",
+    "content": "The measures of angle B and angle R are 32&deg; and 92&deg;, respectively."
+   },
+   {
+    "label": "C",
+    "content": "The measures of angle B and angle Q are 56&deg; and 32&deg;, respectively."
+   },
+   {
+    "label": "D",
+    "content": "AB = 50 and QR = 50"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-triangles-6",
+  "stem": "In triangle RST, angle T is a right angle, point L lies on RS, point K lies on ST, and LK is parallel to RT. If the length of RT is 72 units, the length of LK is 24 units, and the area of triangle RST is 396 square units, what is the length of KT, in units?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-triangles-9",
+  "stem": "<p>Which equation gives the relationship between the side lengths of the triangle shown?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( 12^{2} + 14^{2} = a^{2} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( a^{2} + 12^{2} = 14^{2} \\)"
+   },
+   {
+    "label": "C",
+    "content": "a + 12 = 14"
+   },
+   {
+    "label": "D",
+    "content": "12 + 14 = a"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": true,
+  "book_note": "The book prints \"the side length\"; the figure labels three sides, so it is read as \"side lengths\"."
+ },
+ {
+  "id": "satmath-ma3-triangles-10",
+  "stem": "<p>In triangle XYZ, the measure of angle Y is 90 degrees. Triangle RST (not shown) is similar to triangle XYZ such that R, S, and T correspond to X, Y, and Z, respectively. Each side of triangle RST is 19 times the length of the corresponding side of triangle XYZ. What is the measure, in degrees, of one of the angles in triangle RST?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "Free response with three correct answers: 35, 55 and 90 are all angles of triangle RST. Recorded 35; a key listing only one of the three is still not wrong."
+ },
+ {
+  "id": "satmath-ma3-trigonometry-9",
+  "stem": "Triangle ABC is similar to triangle DEF, where angle A corresponds to angle D and angle C corresponds to angle F. Angles B and E are right angles. If \\( \\cos A = \\frac{14}{\\sqrt{421}} \\) , what is the value of \\( \\frac{1}{\\sin F} \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{15}{\\sqrt{421}} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{14}{\\sqrt{421}} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{\\sqrt{421}}{14} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{\\sqrt{421}}{15} \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-circles-15",
+  "stem": "A circle in the xy-plane has its center at (&minus;4, 1) and the point (&minus;8, 4) lies on the circle. Which equation represents this circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( (x - 4)^{2} + (y + 1)^{2} = 5 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( (x + 4)^{2} + (y - 1)^{2} = 25 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( (x - 4)^{2} + (y + 1)^{2} = 25 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( (x + 4)^{2} + (y - 1)^{2} = 5 \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-13",
+  "stem": "In triangle RST, angle T is a right angle, point L lies on RS, point K lies on ST, and LK is parallel to RT. If the length of RT is 63 units, the length of LK is 21 units, and the area of triangle RST is 630 square units, what is the length of KT, in units?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "The book prints \"If the length RT of is 63 units\"; the words are transposed and are transcribed here as \"the length of RT\"."
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-14",
+  "stem": "A right square pyramid has a height of 6 units and a volume of 128 cubic units. What is the length, in units, of one side of the base of the pyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "256"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{64}{3} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{8\\sqrt{3}}{3} \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-16",
+  "stem": "The length of the diagonal of a square is \\( \\frac{186\\sqrt{2}}{2} \\) units. What is the area, in square units, of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8,649"
+   },
+   {
+    "label": "B",
+    "content": "17,298"
+   },
+   {
+    "label": "C",
+    "content": "93"
+   },
+   {
+    "label": "D",
+    "content": "372"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-17",
+  "stem": "Cube B has a volume of 125 cubic inches. The length of each edge of cube A is k times the length of each edge of cube B. If cube A has a volume of 3,375 cubic inches, what is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "25"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-18",
+  "stem": "A right square pyramid has a height of 6 units and a volume of 128 cubic units. What is the length, in units, of one side of the base of the pyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "256"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{64}{3} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{8\\sqrt{3}}{3} \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "This question is printed twice on the same page, as items 14 and 18, with the choices reordered."
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-20",
+  "stem": "A triangle has a base length of 48 centimeters and a height of 96 centimeters. What is the area, in square centimeters, of the triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2304"
+   },
+   {
+    "label": "B",
+    "content": "1152"
+   },
+   {
+    "label": "C",
+    "content": "4608"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-21",
+  "stem": "A right circular cylinder has a height of 16 inches and a volume of \\( 3136\\pi \\) cubic inches. What is the radius, in inches, of this cylinder?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-22",
+  "stem": "The length of a side of square X is 9 centimeters. The area of rectangle Y is 32 square centimeters. What is the total area, in square centimeters, of square X and rectangle Y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "145"
+   },
+   {
+    "label": "B",
+    "content": "113"
+   },
+   {
+    "label": "C",
+    "content": "82"
+   },
+   {
+    "label": "D",
+    "content": "81"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-algebra-2",
+  "stem": "<p>Kyle invented a new temperature scale he called the Tutorllini scale. The function T(x) gives the temperature, in degrees Torte, that corresponds to a temperature of x degrees Celsius.</p><p>\\[ T(x) = \\frac{3}{4}\\left(\\frac{26x}{7} - 800\\right) + 15.50 \\]</p><p>If a temperature increased by 3.3 degrees Torte, by how much did the temperature increase, in degrees Celsius?</p>",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "The answer is not a round number: 77/65 = 1.1846..., so a grid entry would be 77/65 or 1.18/1.19."
+ },
+ {
+  "id": "sathard-algebra-31",
+  "stem": "<p>\\[ \\frac{x}{7} + \\frac{y}{5} = \\frac{41}{35} \\]</p><p>An engineer connects resistors in series, where the resistors in the series have a total resistance of \\( \\frac{41}{35} \\) ohms. In this series, there are x resistors of type A, which each have a resistance of a ohms, and y resistors of type B, which each have a resistance of b ohms. The given equation represents this situation. According to this equation, what is the positive difference between the value of a and the value of b?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{1}{35} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{2}{35} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{3}{35} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{12}{35} \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "The slice records this as free response; the book prints four choices."
+ },
+ {
+  "id": "sathard-advanced-math-42",
+  "stem": "The functions \\(f\\) and \\(g\\) are defined by the given equations, where \\( 2 \\le x \\le 8 \\). Which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where \\( 2 \\le x \\le 8 \\)?<br/>I. \\( f(x) = 0.0625(0.5)(2)^{x+2} \\)<br/>II. \\( g(x) = 1500(0.2)^{x-3} \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-47",
+  "stem": "\\[ \\frac{1}{cx} = \\frac{x}{128} + \\frac{1}{c} \\]In the given equation, \\(c\\) is a constant. If the equation has exactly one solution, what is the value of \\(c\\)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "c = 0 would also leave one solution (x = 1) after clearing, but c = 0 makes 1/(cx) and 1/c undefined, so it is not admissible."
+ },
+ {
+  "id": "sathard-advanced-math-51",
+  "stem": "\\[ f(x) = (x-a)(x-b) \\]The function \\(f\\) is defined by the given equation, where \\(a\\) and \\(b\\) are integer constants. If \\( f(32) &gt; 0 \\), \\( f(35) &lt; 0 \\), and \\( f(38) &gt; 0 \\), which of the following could be the value of \\( a+b \\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "35"
+   },
+   {
+    "label": "B",
+    "content": "37"
+   },
+   {
+    "label": "C",
+    "content": "67"
+   },
+   {
+    "label": "D",
+    "content": "69"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "DEFECT in the book: the displayed defining equation is missing from the page (and from the PDF text layer) \u2014 the item begins \"The function f is defined by the given equation\" with nothing above it. f(x) = (x-a)(x-b) is reconstructed from the two named integer constants and the +,-,+ sign pattern; it is the only standard form fitting, and 69 is the only choice consistent with it. Same defect affects question 50 on this page."
+ },
+ {
+  "id": "sathard-advanced-math-53",
+  "stem": "In the given equation, \\(k\\) is a constant. The equation \\[ \\sqrt{k-x} = 43-x \\]has exactly one real solution. What is the minimum possible value of \\( 4k \\)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "4k > 172 also yields exactly one solution (the larger root then exceeds 43 and is extraneous), but 171 is the minimum."
+ },
+ {
+  "id": "sathard-advanced-math-57",
+  "stem": "\\[ P(t) = 260(1.03)^{\\frac{t}{8}} \\]The function \\(P\\) models the population, in thousands, of a certain city \\(t\\) years after 2009. According to the model, the population is predicted to increase by \\(n\\)% every 8 months. What is the value of \\(n\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.22"
+   },
+   {
+    "label": "B",
+    "content": "1.03"
+   },
+   {
+    "label": "C",
+    "content": "2"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "DEFECT: my value, n = 100((1.03)^(1/12) - 1) = 0.2466, is not among the choices; the nearest printed choice, 0.22, is about 11% away and is not produced by any consistent reading. The item is only clean if the intended period is 96 months (8 years), which gives exactly n = 3, or if t is meant to be in months, which also gives n = 3. Needs a human decision; answerValue holds my derived value rather than a letter."
+ },
+ {
+  "id": "sathard-advanced-math-58",
+  "stem": "Quadratic function \\(h\\) is defined by \\[ h(x) = ax^2-2x+c \\]where \\(a\\) and \\(c\\) are constants. The graph of \\( y = h(x) \\) in the <em>xy</em>-plane is a parabola that opens downward and has a vertex of \\( (h,k) \\), where \\( k &gt; 0 \\). If \\( h(1) = h(-13) \\), which of the following must be true?<br/>I. \\( -1 &lt; a &lt; 0 \\)<br/>II. \\( c &gt; 0 \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "The stem reuses h for both the function name and the vertex's x-coordinate, as printed in the book."
+ },
+ {
+  "id": "sathard-advanced-math-59",
+  "stem": "\\[ f(x) = -2x^2+bx+c \\]In the given quadratic function, \\(b\\) and \\(c\\) are constants. The graph of \\( y = f(x) \\) is a parabola that has a vertex at the point \\( (h,k) \\), where \\(h\\) and \\(k\\) are constants. If \\( k &lt; 0 \\) and \\( f(-5) = f(7) \\), which of the following must be true?<br/>I. \\( c &lt; -1 \\)<br/>II. \\( b \\ge 3 \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "Book prints \"a and c are constants\" though the equation uses b and c; corrected to b and c."
+ },
+ {
+  "id": "sathard-advanced-math-60",
+  "stem": "The function \\(f\\) is defined by \\[ f(x) = 9x^2+kx-21 \\]where \\(k\\) is a constant. In the <em>xy</em>-plane, the graph of \\( y = f(x) \\) passes through the points \\( (r,23) \\) and \\( (2r,139) \\), where \\(r\\) is a constant. Which of the following could be the value of \\(k\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "116"
+   },
+   {
+    "label": "D",
+    "content": "162"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-61",
+  "stem": "The function \\(f\\) is defined by \\[ f(x) = a\\sqrt{-x+b} \\]where \\(a\\) and \\(b\\) are constants. In the <em>xy</em>-plane, the graph of \\( y = f(x) \\) passes through the point \\( (5,0) \\), and \\( f(-12) &gt; f(-7) \\). Which of the following must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( a &lt; f(b) \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( a &gt; b \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( f(3) &lt; f(-2b) \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( a &lt; b \\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-65",
+  "stem": "The function \\[ f(x) = 6(x-a)(x-b)(x-c) \\]is defined by the given equation, where \\(a\\), \\(b\\), and \\(c\\) are distinct constants. When \\( a &lt; x &lt; b \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (r,s) \\), where \\(r\\) and \\(s\\) are constants. If \\( s = 9 \\), which of the following could be true?<br/>I. \\( r &lt; a \\)<br/>II. \\( b &lt; r &lt; c \\)<br/>III. \\( r &gt; c \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "III only"
+   },
+   {
+    "label": "C",
+    "content": "I and III only"
+   },
+   {
+    "label": "D",
+    "content": "II and III only"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-70",
+  "stem": "The polynomial \\[ 8x^4+50x^2+63 \\]can be factored, and one of the factors is of the form \\( (ax^2+b) \\). What is one possible value of the product \\( a \\cdot b \\)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "The other factor gives a valid answer too: 2 x 9 = 18. Both 28 and 18 should be accepted."
+ },
+ {
+  "id": "sathard-advanced-math-76",
+  "stem": "\\[ f(x) = \\frac{3}{8}(x-3)^3 + \\frac{ax^2}{4} + \\frac{bx}{4} + \\frac{c}{4} + \\frac{99}{2} \\]If the <em>x</em>-coordinates of the <em>x</em>-intercepts of the given function, \\(f\\), are at \\( x = 4 \\), \\( x = 12 \\) and \\( x = -2 \\), what is the value of \\( 16(a+b+c) \\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-322"
+   },
+   {
+    "label": "B",
+    "content": "-457"
+   },
+   {
+    "label": "C",
+    "content": "-603"
+   },
+   {
+    "label": "D",
+    "content": "-789"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "DEFECT: my value, -600, is not among the choices (verified with sympy: a = -15/2, b = -33/2, c = -27/2 reproduce zeros at 4, 12 and -2 exactly). The printed choice -603 is presumably a typo for -600. answerValue holds the derived value rather than a letter."
+ },
+ {
+  "id": "sathard-advanced-math-82",
+  "stem": "\\[ f(x) = -2(x-a)(x-b)(x-c) \\]The function \\(f\\) is defined by the given equation, where \\(a\\), \\(b\\) and \\(c\\) are distinct constants. When \\( b &lt; x &lt; c \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (m,n) \\), where \\(m\\) and \\(n\\) are constants. If \\(n\\) is equal to -5, which of the following could be true?<br/>I. \\( m &lt; a \\)<br/>II. \\( a &lt; m &lt; b \\)<br/>III. \\( m &gt; c \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "II and III"
+   },
+   {
+    "label": "D",
+    "content": "I and III"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-83",
+  "stem": "Which of the following below has a factor of \\( 4x+7b \\), where \\(b\\) is a non-positive integer?<br/>I. \\( 16x^2-49 \\)<br/>II. \\( 16x^2+56x+49 \\)<br/>III. \\( 64x^3+343 \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II and III only"
+   },
+   {
+    "label": "C",
+    "content": "I and III only"
+   },
+   {
+    "label": "D",
+    "content": "All of them"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ }
+]

@@ -1,0 +1,607 @@
+[
+ {
+  "id": "satmath-ma2-mean-median-mode-range-15",
+  "stem": "The table shows the frequency of values in a data set.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Value</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr></table>What is the minimum value of the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-34",
+  "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Task</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (minutes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">A</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">B</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">D</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">E</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr></table>The table shows the amount of time it took a participant in a study to complete each of 5 tasks. What was the mean time, in minutes, for this participant to complete a task?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "10"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "9.5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-scatterplots-22",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, for data set <em>A</em>. A line of best fit for the data is also shown. Data set <em>B</em> is created by subtracting 9 units from the value of <em>y</em> for each data point from data set <em>A</em>. Which of the following is closest to the <em>y</em>-coordinate of the <em>y</em>-intercept of the line of best fit for data set <em>B</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "45.57"
+   },
+   {
+    "label": "B",
+    "content": "53"
+   },
+   {
+    "label": "C",
+    "content": "59.62"
+   },
+   {
+    "label": "D",
+    "content": "62.75"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": true,
+  "book_note": "Scatterplot, x from 0 to about 50 and y from 0 to 60, with a line of best fit through about (12, 45) and (37, 20). Points approximately (12, 45), (13, 45), (15, 42), (16, 41), (17, 39), (22, 32), (25, 30), (28, 24), (29, 31), (30, 25), (33, 30), (36, 20). A least-squares fit to those readings gives intercept 56 and slope -0.97, so the shifted intercept is about 47, nearest to choice A."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-2",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 22.3 inches, what is the least possible value of x, in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. Note: the inequality is strict, so strictly speaking there is no least value; 267.6 is the intended answer and is the greatest lower bound."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-3",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with ground such that \\(\\tan\\theta \\le \\frac{1}{12}\\). If the ramp in the figure above conforms to this law and height of the ramp is 28.2 inches, what is the least possible value of x in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-21",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 29.1 inches, what is the least possible value of x, in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp', and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. 'Note: Figure not drawn to scale.' The inequality is strict, so 349.2 is the greatest lower bound rather than an attainable minimum; it is the intended answer."
+ },
+ {
+  "id": "satmath-ma3-expressions-18",
+  "stem": "If 5c = 15, what is the value of 5c - 8?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "67"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-expressions-20",
+  "stem": "\\[5a = \\frac{4b^{2}}{a} - 20a\\]The given equation relates the positive variables a and b. Which equation correctly expresses a in terms of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(a = \\frac{4b}{25}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(a = \\frac{4b^{2}}{25}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(a = \\frac{2b}{5}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(a = \\frac{2b^{2}}{5}\\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-linear-equations-6",
+  "stem": "If \\(|16 - 2x| = 58\\), which of the following is a value of 8 - x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "29"
+   },
+   {
+    "label": "D",
+    "content": "42"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-linear-equations-43",
+  "stem": "\\[\\frac{x}{5} + \\frac{y}{9} = \\frac{47}{45}\\]An engineer connects resistors in series, where the resistors in the series have a total resistance of \\(\\frac{47}{45}\\) ohms. In this series, there are x resistors of type A, which each have a resistance of a ohms, and y resistors of type B, which each have a resistance of b ohms. The given equation represents this situation. According to this equation, what is the positive difference between the value of a and the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "47"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{47}{45}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\frac{4}{45}\\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-linear-functions-29",
+  "stem": "A company developed a plan to set the selling price of a product. The company determined that for a selling price of $120.00, zero products would be sold. For each $2.50 decrease in the selling price, the number of products sold would increase by one. For a revenue of exactly $1,437.50, which of the following could be the number of products sold? (revenue = price &times; number of products sold)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "23"
+   },
+   {
+    "label": "B",
+    "content": "24"
+   },
+   {
+    "label": "C",
+    "content": "527"
+   },
+   {
+    "label": "D",
+    "content": "1440"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-2",
+  "stem": "The graphs of y = &minus;3x + 7 and y = x &minus; 5 are shown. Point <em>P</em> (not shown) has coordinates (&minus;3, 5). The coordinates of <em>P</em> satisfy which of the following inequalities?<p>I. y &lt; &minus;3x + 7<br/>II. y &gt; x &minus; 5</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "The stem says P lies in the shaded region, but the region shaded in the book's figure is the wedge BELOW both lines (y < -3x+7 and y < x-5), which does not contain (-3, 5). Substituting the given coordinates - the method the question asks for - gives 'I and II'. The figure and the stem disagree; the answer above is from the coordinates."
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-3",
+  "stem": "A number <em>x</em> is less than 8 more than \\( \\frac{1}{2} \\) times the value of a number <em>y</em>. If <em>y</em> is an integer and x = 17, what is the least possible value of <em>y</em>?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-quadratics-41",
+  "stem": "\\[ h(t) = -16t^{2} + b \\]The function <em>h</em> estimates an object's height, in feet, above the ground <em>t</em> seconds after the object is dropped, where <em>b</em> is a constant. The function estimates that the object is 19.36 feet above the ground when it is dropped at t = 0. How many seconds after being dropped does the function estimate the object will hit the ground?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-8",
+  "stem": "A certain goose species can fly at an average speed of 16 meters per second when in continuous flight. At this rate, how many meters would this goose species fly in 6 seconds?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "96"
+   },
+   {
+    "label": "B",
+    "content": "16"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-probability-3",
+  "stem": "A department store sells pants in three lengths: short, regular, and long. The table summarizes the distribution of pant length, by color, for all the pants in the store.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Black</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Brown</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Blue</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Short</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">63</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Regular</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Long</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">66</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">65</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">181</td></tr></table>A pair of pants is selected at random. What is the probability of selecting a pair of pants that is brown, given that the pair of pants is regular length? (Express your answer as a decimal or fraction, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-52",
+  "stem": "The table shows selected values from the function f. <table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">f(x)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">\\( \\frac{1}{69} \\)</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">69</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4,761</td></tr></table> Which of the following is the best description of function f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Increasing linear"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Decreasing exponential"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-64",
+  "stem": "The graph shows the total amount of rainfall y, in centimeters, from the start of a 10-hour period, where x is the number of hours after the start of the period. Which of the following statements about the rainfall during this time period is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The rate of rainfall was 2 centimeters per hour between x = 2 and x = 4."
+   },
+   {
+    "label": "B",
+    "content": "The rate of rainfall was the greatest between x = 4 and x = 10."
+   },
+   {
+    "label": "C",
+    "content": "The rate of rainfall increased between x = 0 and x = 2."
+   },
+   {
+    "label": "D",
+    "content": "The rate of rainfall was 0 centimeters per hour between x = 2 and x = 4."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": true,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-19",
+  "stem": "\\[ y = -4x^{2} - 23 \\]<br/>\\[ y = qx - 19 \\] In the given system of equations, q is a positive constant. The graphs of the equations in the given system intersect at exactly one point (x, y) in the xy-plane. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-42"
+   },
+   {
+    "label": "B",
+    "content": "-27"
+   },
+   {
+    "label": "C",
+    "content": "-8"
+   },
+   {
+    "label": "D",
+    "content": "-1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-20",
+  "stem": "What value of x is the solution to the equation \\( 65x + 20 = -15x^{2} \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{1}{4} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{1}{3} \\)"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "DEFECTIVE: my answer is not among the choices. The equation's solutions are -1/3 and -4; every choice is positive, and no positive x can work because the left side is positive while the right side is negative. The choices fit the equation -65x + 20 = -15x^2, i.e. 15x^2 - 65x + 20 = 0, whose solutions are 1/3 and 4 - so the printed sign on the 65x term is most likely wrong. Needs a human decision before shipping."
+ },
+ {
+  "id": "satmath-ma2-quadratics-51",
+  "stem": "\\[ y = 2x^{2} - 19x + 40 \\]<br/>\\[ y = x + a \\] In the given system of equations, a is a constant. The graphs of the equations in the given system intersect at exactly one point (x, y) in the xy-plane. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-10"
+   },
+   {
+    "label": "B",
+    "content": "-5"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-60",
+  "stem": "\\[ y = 2x^{2} - 23x + 64 \\]<br/>\\[ y = x + a \\] In the given system of equations, a is a constant. The graphs of the equations in the given system intersect at exactly one point (x, y) in the xy-plane. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-8"
+   },
+   {
+    "label": "B",
+    "content": "-6"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-98",
+  "stem": "\\(y=2x^2-15x+23\\)<br/>y = x + a<br/><br/>In the given system of equations, \\(a\\) is a constant. The graphs of the equations in the given system intersect at exactly one point, \\((x,y)\\), in the \\(xy\\)-plane. What is the value of \\(x\\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(-9\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(-4\\)"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-140",
+  "stem": "x + 7 = 13<br/>\\(y=5x^2+5\\)<br/><br/>At what point \\((x,y)\\) do the graphs of the equations in the given system intersect?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "Printed with no answer choices, so it parses as free response, but the answer is an ordered pair, which cannot be entered in a grid-in. The choice block is probably missing from the book."
+ },
+ {
+  "id": "satmath-ma2-quadratics-167",
+  "stem": "\\[ x^2-11x-3=0 \\]<br/>What is a solution to the given equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{11+\\sqrt{(-11)^2-4(1)(-3)}}{2(-3)}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{11+\\sqrt{(-11)^2-4(1)(-3)}}{2(1)}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{3+\\sqrt{(-3)^2-4(1)(-11)}}{2(-3)}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\frac{3+\\sqrt{(-3)^2-4(1)(-11)}}{2(1)}\\)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-182",
+  "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-20</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">28</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">-20</td></tr></table>The table shows three values of \\(x\\) and their corresponding values of \\(y\\), where \\(y=f(x)+6\\) and \\(f\\) is a quadratic function. What is the \\(y\\)-coordinate of the \\(y\\)-intercept of the graph of \\(y=f(x)\\) in the \\(xy\\)-plane?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-185",
+  "stem": "y = &minus;0.5<br/>\\(y=x^2+10x+a\\)<br/><br/>In the given system of equations, \\(a\\) is a positive integer constant. The system has no real solutions. What is the least possible value of \\(a\\) ?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-187",
+  "stem": "The product of a positive number \\(x\\) and the number that is 1 less than \\(x\\) is equal to 342. What is the value of \\(x\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.5"
+   },
+   {
+    "label": "B",
+    "content": "19"
+   },
+   {
+    "label": "C",
+    "content": "341"
+   },
+   {
+    "label": "D",
+    "content": "343"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-unit-conversion-16",
+  "stem": "An object's speed is increasing at a rate of 1.1 meters per second squared. What is this rate in miles per minute squared, rounded to the nearest tenth? (Use 1 mile = 1,609 meters.)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "2.5"
+   },
+   {
+    "label": "C",
+    "content": "29.5"
+   },
+   {
+    "label": "D",
+    "content": "1462.7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-48",
+  "stem": "A right rectangular prism has a base of 28p square centimeters (\\(\\text{cm}^2\\)). The length of the rectangular prism is 12 cm, and the height of the rectangular prism is 4 cm. Which expression represents the surface area, in \\(\\text{cm}^2\\), of the right rectangular prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{512p}{3}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{224p}{3} + 96\\)"
+   },
+   {
+    "label": "C",
+    "content": "56p + 192"
+   },
+   {
+    "label": "D",
+    "content": "560p + 96"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": "The book's first sentence says \"right triangular prism\" while the rest of the question and the answer choices are about a right rectangular prism; transcribed as rectangular, which is the reading that makes choice B come out exactly."
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-66",
+  "stem": "The figure shown is a right rectangular pyramid, where \\(l = 18\\) units, \\(w = 9\\) units, and \\(h = 12\\) units. What is the surface area, in square units, of the pyramid?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": true,
+  "book_note": "Answer is not a clean number: exactly \\(297 + 9\\sqrt{657} \\approx 527.688\\), which is unusual for a grid-in and worth a human check. Stem refers to a figure. Verified data for rebuilding it: a right rectangular pyramid drawn in perspective with the vertical segment from apex to base centre labelled h, the front-right base edge labelled w and the front-left base edge labelled l; the hidden base edges and diagonals are dotted. No measurements appear in the figure itself."
+ }
+]

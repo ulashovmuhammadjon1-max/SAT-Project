@@ -1,0 +1,230 @@
+[
+ {
+  "id": "satmath-ma2-lines-angles-37",
+  "stem": "In the figure shown, line <em>r</em> is parallel to line <em>s</em>. What is the value of <em>x</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "30"
+   },
+   {
+    "label": "B",
+    "content": "45"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "90"
+   }
+  ],
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Both marked angles are drawn in the same corner of their crossing - between the upward-right part of <em>t</em> and the rightward part of the horizontal line - so they are corresponding angles. A transversal across parallel lines makes corresponding angles equal, so x = 44. None of the printed choices is 44, so this question as printed has no correct option.",
+  "whyWrong": {
+   "A": "30 is not equal to 44 and no relationship in the figure produces it.",
+   "B": "45 is close to 44 but not equal to it; the figure gives exactly 44, and rounding an angle to a \"nice\" value is not a legitimate step.",
+   "C": "60 does not arise from 44 by any of the parallel-line relationships (equal, or 180 minus).",
+   "D": "90 would require the transversal to be perpendicular to both lines, which the marked 44-degree angle rules out."
+  },
+  "needsFigure": true,
+  "note": "DEFECT: the correct value is 44 and it is not among the printed choices A) 30, B) 45, C) 60, D) 90. The two marked angles occupy identical corresponding positions, so x must equal 44. Needs a human decision - most likely the choice block belongs to a different question. Figure: two parallel horizontal lines, r above and s below, crossed by a line t rising from lower left to upper right; x is marked above r to the right of t and 44 degrees is marked above s to the right of t, both with the same arc.",
+  "printed_key": "B"
+ },
+ {
+  "id": "satmath-ma3-linear-functions-20",
+  "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">g(x)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">44</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">38</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">32</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26</td></tr></table><p>For the linear function <em>g</em>, the table shows four values of <em>x</em> and their corresponding values of g(x). The function can be written as g(x) = mx + b, where <em>m</em> and <em>b</em> are constants. What is the value of <em>b</em>?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "22"
+   },
+   {
+    "label": "C",
+    "content": "44"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = \\frac{-7}{3}x + \\frac{125}{3} \\)"
+   }
+  ],
+  "answerLabel": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "b is the value of g at x = 0, so extend the table backwards. Each step of 1 in x drops g(x) by 6, which makes m = &minus;6, so going from x = 1 back to x = 0 adds 6: b = 44 + 6 = 50. The correct value is 50, which is not offered as a choice.",
+  "whyWrong": {
+   "A": "6 is the size of the drop per step, so it is \\( |m| \\) , not b.",
+   "B": "22 is not produced by any correct step; it looks like half of 44.",
+   "C": "44 is g(1), the first table output, not g(0).",
+   "D": "This is not even a number - it is the answer equation from the neighbouring question, printed here by mistake."
+  },
+  "note": "DEFECTIVE. The correct value b = 50 is not among the choices, and choice D is not a value of b at all - it is a stray equation copied from question 19 on the same page. Do not import without a corrected choice set.",
+  "answerValue": null,
+  "needsFigure": false,
+  "printed_key": "B"
+ },
+ {
+  "id": "satmath-ma3-linear-functions-25",
+  "stem": "In the given equation, <em>q</em>, <em>r</em>, <em>s</em>, and <em>t</em> are positive, and \\( \\frac{q}{t} \\) is greater than 5. Which expression is equivalent to <em>s</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{-9qt}{q - 5t} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{9qt}{q - 5t} \\)"
+   },
+   {
+    "label": "C",
+    "content": "18qrt"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{2qt}{q - 5t} \\)"
+   }
+  ],
+  "answerLabel": null,
+  "difficulty": "HARD",
+  "whyCorrect": "This question cannot be solved as printed: the stem says \\\"the given equation\\\" but no equation appears anywhere on the page. The only usable information is the condition \\( \\frac{q}{t} > 5 \\) , which forces \\( q - 5t > 0 \\) and so rules out the negative option, but that still leaves three positive candidates and no way to choose between them.",
+  "whyWrong": {
+   "A": "With \\( \\frac{q}{t} > 5 \\) the denominator \\( q - 5t \\) is positive, so this expression is negative, contradicting the statement that s is positive.",
+   "B": "Cannot be confirmed or rejected - the defining equation is missing.",
+   "C": "Cannot be confirmed or rejected, though it is the only choice containing r, which the stem does introduce.",
+   "D": "Cannot be confirmed or rejected - the defining equation is missing."
+  },
+  "note": "DEFECTIVE. The equation the stem refers to is absent from the printed page, so the question is unanswerable. It also names a variable r that appears in only one choice. Do not import without recovering the missing equation.",
+  "answerValue": null,
+  "needsFigure": false,
+  "printed_key": "B"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-12",
+  "stem": "\\[ g(x) = \\frac{1}{11}\\left(5(2)^{x} + 4\\right) \\]<p>The function <em>g</em> is defined by the given equation. For all values of <em>x</em>, the value of g(x) is greater than <em>k</em>, where <em>k</em> is a constant. What is the greatest possible value of <em>k</em>?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{4}{1} \\)"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{9}{11} \\)"
+   }
+  ],
+  "answerLabel": null,
+  "difficulty": "HARD",
+  "whyCorrect": "\\( 2^{x} \\) is always positive but gets arbitrarily close to 0 as x becomes very negative, so \\( 5(2)^{x} + 4 \\) is always above 4 and approaches 4. Dividing by 11, g(x) is always above \\( \\frac{4}{11} \\) and gets as close to it as you like, so the greatest possible k is \\( \\frac{4}{11} \\) . That value is not correctly printed among the choices.",
+  "whyWrong": {
+   "A": "4 forgets to divide by 11; g(x) is under 1 for very negative x, so it is not always above 4.",
+   "B": "As printed, \\( \\frac{4}{1} \\) is just 4, so it repeats choice A. It appears to be a misprint of \\( \\frac{4}{11} \\) .",
+   "C": "9 is larger still and is not a value the function stays above.",
+   "D": "\\( \\frac{9}{11} \\) uses 5 + 4 = 9 in the numerator, as if \\( 2^{x} \\) were fixed at 1; the horizontal asymptote comes from \\( 2^{x} \\to 0 \\) , not \\( 2^{x} = 1 \\) ."
+  },
+  "note": "DEFECTIVE. The correct answer, 4/11, is printed as choice B in the form 4/1, which equals 4 and therefore duplicates choice A. Almost certainly a dropped digit in the book's typesetting; fix choice B to 4/11 before importing.",
+  "answerValue": null,
+  "needsFigure": false,
+  "printed_key": "B"
+ },
+ {
+  "id": "sathard-advanced-math-79",
+  "stem": "The equation above has two real solutions, where \\(a\\) and \\(b\\) are positive constants. The sum of the solutions to the given equation is \\( k(21a-35b) \\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+  "choices": [],
+  "needsFigure": false,
+  "note": "DEFECT: unanswerable as printed. The stem says \"The equation above\" but no equation appears anywhere on the page (nor in the PDF text layer) \u2014 the display block was dropped in typesetting, the same failure that hits questions 50 and 51 of this chapter. Nothing in the stem determines k, so no answer can be derived; this item should not be imported.",
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "HARD",
+  "printed_key": "-1/14"
+ },
+ {
+  "id": "sathard-geometry-49",
+  "stem": "\\[(x+3)^{2}+(y-18)^{2}=169\\]The graph of the given equation is a circle in the <em>xy</em>-plane. The point (a, b) lies on the circle. Which of the following is a possible value for a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-16"
+   },
+   {
+    "label": "B",
+    "content": "-10"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   },
+   {
+    "label": "E",
+    "content": "16"
+   }
+  ],
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The circle has center (-3, 18) and radius \\(\\sqrt{169}=13\\), so the x-coordinate of any point on it satisfies \\(-3-13 \\le a \\le -3+13\\), that is \\(-16 \\le a \\le 10\\). Every one of -16, -10, 3 and 10 falls in that interval, so all four are possible values of a; only 16 lies outside the circle's horizontal reach. As printed, the question has four correct answers.",
+  "whyWrong": {},
+  "needsFigure": false,
+  "note": "DEFECTIVE as printed. Five choices are given (A-E, itself non-standard) and four of them - -16, -10, 3 and 10 - are all possible x-coordinates, since a can be anything in [-16, 10]. Only E (16) is impossible. Either the choices need replacing (the real SAT version would offer one value inside [-16, 10] and three outside) or the stem should read 'which is NOT a possible value', in which case the answer is E. No answer recorded because there is no unique one.",
+  "printed_key": "D"
+ },
+ {
+  "id": "sathard-problem-solving-46",
+  "stem": "[No question here - see note.]",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "whyWrong": {},
+  "needsFigure": false,
+  "note": "NOT A QUESTION - drop it. This id is a parser artifact: its body is the tail of the answer choices for Problem Solving #14 on the same page 77 ('B) The mean of data set B is less than 46. C) ... D) ...'), which the upstream splitter broke off and numbered 46. Page 77 of the Math Hard Book prints only questions 13 to 16; there is no question 46 on it. The four choices have been restored to Problem Solving #14, which is the real item and is multiple choice, not free response.",
+  "printed_key": "A"
+ },
+ {
+  "id": "sathard-problem-solving-67",
+  "stem": "The scatter plot and the line of best fit of data set A with the equation \\(y=0.07x^{2}+0.05x+6.33\\) is shown. If the point h is removed from data set A to create data set B with the equation \\(y=ax^{2}+bx+c\\), which of the following is true?<br/>I. \\(a &gt; 0.07\\)<br/>II. \\(c &lt; 6.33\\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "DEFECTIVE as printed - the scatter plot it depends on is missing. Page 88 of the Math Hard Book prints this question with no figure at all, and there is none on the facing pages. How dropping a single point h changes the leading coefficient and the y-intercept of a quadratic fit depends entirely on where h sits relative to the curve, so no answer can be derived. Either the figure has to be supplied or the item should be dropped. No answer recorded.",
+  "printed_key": "C"
+ }
+]
