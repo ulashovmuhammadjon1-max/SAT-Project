@@ -71,6 +71,22 @@ Hard Book records carry no `src`, so their page images are named
 while agents are running would make every one of them re-render. Set `src` in
 `parse_hard.py` only once the transcription stage is finished.
 
+## The books repeat themselves — dedupe at assembly, not after
+
+mx-07 found, inside a single 93-question slice, the same probability item five
+times, one solve-for-x item four times, and three more families twice or three
+times each — differing only in a constant or a sitting. These books collect
+real exam questions across many administrations, and the exams reuse
+templates, so this is the EliteXSAT and SAToplam finding again in a third
+corpus.
+
+Stage 4 must therefore score candidate pairs before assembling, exactly as
+`cb-question-bank/plan_dupe_fix.py` does for R&W: co-visible pairs only
+(Module 1 plus one Module 2 branch), a detect threshold set by READING the
+band rather than guessing it, and a reject line for incoming questions
+stricter than the detect line. The R&W build skipped this and shipped 33
+same-test duplicates.
+
 ## Known gaps
 
 - ~~30 Areas&Volumes answers on book page 382~~ **CLOSED.** The user supplied
