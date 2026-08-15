@@ -116,6 +116,18 @@ notes to collect them. Representative so far:
 - **Exact duplicate questions inside one book**, e.g. four pairs in the linear
   slice alone. See the recycling section above.
 
+- **Unanswerable as printed** — these carry `answerLabel: null` and must be
+  dropped or repaired, never imported:
+  `ma3-linear-functions-20` (correct value 50 is not among the choices, and
+  choice D is the *answer equation from the previous question* printed by
+  mistake); `ma3-linear-functions-25` (stem says "in the given equation" and
+  no equation is printed anywhere on the page); `ma3-exponential-functions-12`
+  (correct 4/11 is printed as "4/1", a dropped digit, which equals 4 and
+  duplicates choice A).
+- **Figure contradicts the stem.** `ma3-linear-inequalities-2` says point
+  P(−3, 5) lies in the shaded region; the region actually shaded is the wedge
+  below both lines, which does not contain it.
+
 **Questions needing a figure** carry `needsFigure: true`. Agents were told to
 put their reading of the graph in `note`, never in the stem, so a prose
 description cannot leak the answer — CLAUDE.md rule 3. Those need a real
