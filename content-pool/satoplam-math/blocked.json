@@ -1,0 +1,11 @@
+{
+ "_why": "Questions kept out of the pool entirely. Each was caught by verify_allocation.py after a first allocation pass, and each is a defect in the question rather than something a threshold should decide. The pool has ~600 spare questions, so replacing is cheaper and safer than hand-repairing a source defect.",
+ "ids": {
+  "satmath-ma2-linear-inequalities-19": "Stem is corrupted: '\\( y \\( y > -4x - 7 \\)' opens a math span twice and the first inequality of the system is missing, yet the stem says 'system of inequalities'.",
+  "sathard-geometry-100": "Stem says 'In the circle shown' and carries the book's 'Note: Figure not drawn to scale' caption, but the transcriber marked needsFigure false, so no figure was built. The bisected-chord configuration cannot be read from the prose alone.",
+  "satmath-ma2-areas-volumes-40": "'The figure shown consists of a rectangle WXYZ and a semicircle' — which side the semicircle sits on is only in the picture, and no figure was built.",
+  "satmath-ma3-triangles-11": "'Triangles ABC and A'B'C' are shown' — the correspondence between vertices is only in the picture, and no figure was built.",
+  "sathard-advanced-math-76": "The transcriber derived -600; the four printed choices are -322, -457, -603 and -789. -600 is close to C but not equal to it, so either the stem's constants or the derivation is wrong. Not shippable either way.",
+  "sathard-problem-solving-63": "All four answer choices are dot plots drawn into one image, so the choice TEXT is the same placeholder string four times. It renders as four identical options."
+ }
+}
