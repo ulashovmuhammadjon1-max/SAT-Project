@@ -22,7 +22,7 @@
    {
     "label": "A",
     "content": "Miranda completes its orbit of Uranus many times faster than Oberon does.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "B",
@@ -32,53 +32,11 @@
    {
     "label": "C",
     "content": "Oberon’s orbit of Uranus is elliptical in shape and takes, on average, 13.46 Earth days, while Miranda’s orbit of Uranus is circular in shape and takes, on average, 1.41 Earth days.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
     "content": "Uranus’s moons, specifically Oberon and Miranda, orbit their planet in the same way the planets orbit the Sun.",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "id": "a47d1b31-1f48-43c9-a7af-121d18bafbd8",
-  "source": "SAT:satoplam-command-of-evidence-weaken-2",
-  "test": "Test 31",
-  "mo": 1,
-  "branch": "STANDARD",
-  "qo": 12,
-  "skill": "INI-CE",
-  "skill_name": "Command of Evidence",
-  "difficulty": "MEDIUM",
-  "type": "MULTIPLE_CHOICE",
-  "correctAnswerFR": null,
-  "subject": "READING_WRITING",
-  "domain": "INI",
-  "q_order": 12,
-  "m_order": 1,
-  "m_difficulty": "STANDARD",
-  "stem": "Which finding, if true, would undermine the genetic paleontologists’ proposal?",
-  "passage": "<p>Dinosaurs, with the exception of the ancestors of birds, disappeared during a mass extinction 65 million years ago when an asteroid struck the Earth. Because a high metabolic rate has generally been suggested as one of the key advantages when it comes to surviving mass extinctions, some genetic palaeontologists have proposed that birds survived while non-avian dinosaurs did not because of the birds’ increased metabolic capacity.</p>",
-  "choices": [
-   {
-    "label": "A",
-    "content": "The metabolisms of non-avian dinosaurs may have decreased over time.",
-    "isCorrect": false
-   },
-   {
-    "label": "B",
-    "content": "Because some non-avian dinosaurs moved quickly, they likely had high metabolic rates.",
-    "isCorrect": true
-   },
-   {
-    "label": "C",
-    "content": "Birds have some of the highest metabolism rates of any creatures on Earth.",
-    "isCorrect": false
-   },
-   {
-    "label": "D",
-    "content": "Many dinosaurs with very high metabolic rates went extinct 65 million years ago.",
     "isCorrect": false
    }
   ]
@@ -116,12 +74,12 @@
    {
     "label": "C",
     "content": "To present information about two institutions, including each institution’s area of focus.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
     "content": "To trace a historical development that encouraged the founding of two institutions.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ]
  },
@@ -153,12 +111,12 @@
    {
     "label": "B",
     "content": "Conversely,",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
     "content": "Indeed,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
@@ -190,12 +148,12 @@
    {
     "label": "A",
     "content": "In 2003, Carruthers proposed the massive modularity hypothesis, disagreeing with Fodor’s earlier hypothesis that the mind is composed of innate neural structures.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
     "content": "In considering some but not all cognitive systems modular, Fodorian modularity is not as expansive in its definition of modularity as MMH is.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
@@ -237,7 +195,7 @@
    {
     "label": "B",
     "content": "Considerable",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
@@ -247,7 +205,7 @@
    {
     "label": "D",
     "content": "Reliable",
-    "isCorrect": true
+    "isCorrect": false
    }
   ]
  },
@@ -284,12 +242,12 @@
    {
     "label": "C",
     "content": "Unlike carbon nanotubes, which are composed of sheets of carbon atoms arranged in a flat honeycomb pattern, graphite is a cylindrical carbon allotrope.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
     "content": "The graphene sheets in graphite are stacked, whereas in carbon nanotubes, they form a cylinder.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ]
  },
@@ -316,7 +274,7 @@
    {
     "label": "A",
     "content": "Among the caterpillar species that produced sound in response to simulated attacks, no individuals produced sound in the minute before the attacks, but the vast majority of individuals produced sound once the simulated attacks began.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
@@ -326,7 +284,7 @@
    {
     "label": "C",
     "content": "Caterpillars that were found to produce sounds in response to simulated attacks are typically solitary and were tested in isolation.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
@@ -358,12 +316,12 @@
    {
     "label": "A",
     "content": "Compared with P. perezi, A. aquaticus can accumulate detectable WC-NP concentrations with significantly fewer negative effects.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
     "content": "The rate of WC-NP uptake in A. aquaticus differs from the rate of WC-NP uptake in P. perezi in a way that is not yet well understood by researchers.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
@@ -405,12 +363,12 @@
    {
     "label": "B",
     "content": "To trace a historical development that encouraged the founding of two institutions",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "C",
     "content": "To present information about two institutions, including each institution’s area of focus",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
@@ -484,7 +442,7 @@
    {
     "label": "A",
     "content": "It describes a characteristic shared by all baleen whales and then illustrates a difference between the humpback whale and the northern right whale that is relevant to that characteristic.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "B",
@@ -494,7 +452,7 @@
    {
     "label": "C",
     "content": "It draws a distinction between the sizes of the humpback whale and the northern right whale and then presents a feature that they have in common.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
@@ -536,12 +494,12 @@
    {
     "label": "C",
     "content": "“Wouldn’t they be surprised when one day I woke out of my black ugly dream, and my real hair, which was long and blonde, would take the place of the kinky mass that Momma wouldn’t let me straighten?”",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
     "content": "“If growing up is painful for the Southern Black girl, being aware of her difference is worse. It is an unnecessary insult.”",
-    "isCorrect": true
+    "isCorrect": false
    }
   ]
  }

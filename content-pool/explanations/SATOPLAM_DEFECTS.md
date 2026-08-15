@@ -5,20 +5,65 @@ question by hand is the most thorough audit this content has had, and it found
 things no regex pass had. This records what was fixed, what needs the source
 books, and one structural problem in how the tests were built.
 
+## Status: closed
+
+Everything below was found and every item is now resolved. Production carries
+**4,557 live questions, all 4,557 with an explanation**, and the R&W audit
+across all 31 tests reports no findings.
+
 ## Fixed in production
 
 | defect | count | how |
 |---|---|---|
 | quotation marks encoded as apostrophes (`’especially pointed’`) | 32 | `cb-question-bank/fix_quote_glyphs.mjs` |
 | passage's last sentence stored in the `stem` column | 11 | `cb-question-bank/fix_stem_spill.mjs` |
-| spliced tail on an answer choice | 2 | truncated at the join, gated on the exact current text |
+| spliced or mangled answer choice | 8 | gated per-row rewrites, values restored from the question's own notes |
+| duplicate a student could meet twice in one sitting | 35 | `plan_dupe_fix.py` + `apply_dupe_fix.mjs` |
+| unanswerable or incoherent question, replaced | 18 | same pipeline, driven by `force_replace.json` |
+| wrong answer key | 21 | `explanations/apply_key_verdicts.mjs` |
 
-The stem-spill one was the worst of the three for a student: the sentence that
-went missing is usually the study's conclusion, which is the sentence the
-question is about, so the passage stopped mid-argument and the question opened
-mid-sentence. Five agents reported it independently.
+### The answer keys: 21 of 26 were genuinely wrong
+
+Every disputed question was worked **three times** — once by the authoring
+agent, then by two adjudicators who could not see the key, could not see each
+other, and were not told what the first agent concluded.
+
+- **21** — both independent readings converged on the same answer against the
+  stored key. Flipped.
+- **2** — the adjudicator reached the stored key; the first agent was the
+  outlier. Key left alone, adjudicator's explanation shipped.
+- **3** — replaced instead, because adjudication found the question itself
+  broken rather than merely miskeyed.
+- **0** — unsettled. Nothing needed a coin toss.
+
+An 81% confirmation rate is not a story about careful reading; it is a story
+about the source. Two examples worth keeping:
+
+- The same museum question appears in Test 17 and Test 28 with different
+  institutions, and **both are keyed to the same wrong option under different
+  letters** — which rules out a transcription letter-slip and means the defect
+  is in the source book, replicated.
+- One question was keyed `conversely` in the Easy branch and `likewise` in the
+  Hard branch of the same test. Same question, two keys, so one is provably
+  wrong.
+
+**The gate is what made this recoverable.** Because no explanation was ever
+written from the key, a wrong key showed up as a disagreement instead of being
+silently justified. Withholding the key from `dump_slice.mjs` is the cheapest
+high-value thing in this pipeline — keep it.
+
+### Two questions replaced rather than re-keyed, on purpose
+
+A defective question is not fixed by moving its key. Test 31's bird-metabolism
+item had **two** choices that undermine the proposal — one hedged, one flat —
+and a weaken question with two working answers is broken whichever letter is
+marked. Test 22's Henry VIII item is filed under Standard English Conventions
+but every choice is well-formed English; it is decided on diction and history,
+not grammar. The first was replaced; the second is answerable and correctly
+keyed, so it stands, noted here rather than churned.
 
 ## Structural: the source bank recycles templates, and the allocator did not check
+
 
 `cb-question-bank/scan_satoplam_defects.mjs` scores every pair of questions on
 a passage+stem token signature. Across Tests 16–31:
@@ -78,10 +123,14 @@ error:
 This is consistent with CLAUDE.md's measured rate for transcribed R&W keys
 (Test 5: 6 wrong in 81, 7.4%). 2.3% is better, not clean.
 
-## Needs the source books — cannot be repaired from what is in the database
+## Was unrepairable from the database — all replaced
 
-These are corrupted beyond mechanical recovery. Each needs the SAToplam page
-re-read, or the question replaced.
+These were corrupted beyond mechanical recovery: the text that went missing
+exists only in the source books. Rather than leave them in front of students
+pending a re-transcription, each was replaced with a sound question a tier
+harder. `cb-question-bank/force_replace.json` records the reason beside each
+id. Listed here because the defects are worth recognising if the books are
+ever re-parsed.
 
 - `f8f1a61c` **Test 16 M1 q12** — choice C is text from an unrelated
   music-recommendation question, and the stem is truncated mid-sentence ("as

@@ -1,0 +1,44 @@
+[
+ {
+  "id": "2416d7a9-cad9-464d-8971-db871b994a37",
+  "source": "SAT:satoplam-rhetorical-synthesis-6",
+  "test": "Test 30",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 27,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 27,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses information from the given sentences to emphasize the difference between the two works?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Maya Lin is an American artist known for her memorials and works of installation art.</li><li>She completed the Women’s Table in 1993.</li><li>It is a memorial sculpture consisting of thirty-two-ton granite fountain, and it is designed to commemorate female students at Yale University.</li><li>She completed Untitled in 1997.</li><li>It is an installation artwork composed of wood that fills an entire gallery room.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Maya is well known for her memorials and installation art, such as the Women’s table and Untitled.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Completed in 1997, respectively, the Women’s Table and Untitled are both large scale works.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Maya’s Women’s Table is a memorial sculpture, while Untitled is an installation artwork.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Though Maya’s Untitled is not a memorial, its gallery-filling scale may call to mind her imposing Women’s Table, which consists of a thirty-ton-granite fountain.",
+    "isCorrect": false
+   }
+  ]
+ }
+]

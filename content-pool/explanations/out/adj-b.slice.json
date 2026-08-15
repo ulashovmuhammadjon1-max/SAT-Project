@@ -22,12 +22,12 @@
    {
     "label": "A",
     "content": "Although the dogs’ general hearing sensitivity declined with age, dogs of all ages showed more brain activity in response to hearing the language they were accustomed to than in response to hearing the other language.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
     "content": "The difference between the pattern of brain activity a dog showed when hearing the language it was accustomed to and the pattern of brain activity it showed when hearing the language it was not accustomed to was greatest among older dogs.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
@@ -37,48 +37,6 @@
    {
     "label": "D",
     "content": "Dogs showed a different pattern of brain activity when hearing the language they were accustomed to than when hearing the scrambled recording, and the difference in brain activity increased with the age of the dog scanned.",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "id": "b5471fa4-fe7c-496e-947c-ae295d65fdaa",
-  "source": "SAT:satoplam-rhetorical-synthesis-176",
-  "test": "Test 30",
-  "mo": 2,
-  "branch": "HARD",
-  "qo": 27,
-  "skill": "EOI-RS",
-  "skill_name": "Rhetorical Synthesis",
-  "difficulty": "HARD",
-  "type": "MULTIPLE_CHOICE",
-  "correctAnswerFR": null,
-  "subject": "READING_WRITING",
-  "domain": "EOI",
-  "q_order": 27,
-  "m_order": 2,
-  "m_difficulty": "HARD",
-  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
-  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Most of the plant and bird species in Oahu, Hawaii, are non-native.</li><li>In a 2019 study, researchers wanted to know what role non-native birds play in dispersing plant seeds in Oahu.</li><li>Researchers catalogued plant seeds found in fecal samples from non-native birds.</li><li>Psydrax odorata, a flowering shrub, was one of fifteen native species catalogued.</li><li>Cestrum nocturnum, a nightshade, was one of twenty-nine non-native species catalogued.</li><li>Researchers concluded that non-native birds play a vital role in dispersing the seeds of native and non-native plants.</li></ul><p>The student wants to emphasize the order in which the supercontinents were formed.</p>",
-  "choices": [
-   {
-    "label": "A",
-    "content": "Most plant species found in Oahu, Hawall, like Cestrum nocturnum, are nonnative.",
-    "isCorrect": false
-   },
-   {
-    "label": "B",
-    "content": "Though Psydrax odorata and Cestrum nocturnum can both be found in Oahu, Hawaii, only the former plant is native.",
-    "isCorrect": true
-   },
-   {
-    "label": "C",
-    "content": "A 2019 study catalogued plant seeds found in bird fecal samples in Oahu, Hawaii, to determine what role non-native birds play in seed dispersal.",
-    "isCorrect": false
-   },
-   {
-    "label": "D",
-    "content": "Seeds from Psydrax odorata and Cestrum nocturnum plants were found in the fecal samples of non-native Hawaiian birds, according to a 2019 study.",
     "isCorrect": false
    }
   ]
@@ -116,12 +74,12 @@
    {
     "label": "C",
     "content": "They are examples of factors that studies suggest are important in people’s decision-making about walking but that the text claims most people rarely consider when making walking decisions.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
     "content": "They represent factors that have been identified as important influences on walking decisions but that the text suggests are merely some of the many factors that may contribute to people’s decision-making about walking.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ]
  },
@@ -148,7 +106,7 @@
    {
     "label": "A",
     "content": "\"While the low humidity of Southern California’s desert areas makes irrigation a requirement if agriculture is to be a success there, the relatively high humidity in the northern parts of the state makes such practices less necessary.\"",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
@@ -163,7 +121,7 @@
    {
     "label": "D",
     "content": "\"Competition for water as a scarce economic resource inspired the development of sprinkler irrigation systems, which have contributed to the reduction of water used for irrigation in the United States to 45% of the total water usage of its population. Comparatively, 70% of the world’s water usage is dedicated to irrigation.\"",
-    "isCorrect": false
+    "isCorrect": true
    }
   ]
  },
@@ -190,7 +148,7 @@
    {
     "label": "A",
     "content": "It argues that what is beautiful is a matter of fact rather than opinion.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
@@ -205,7 +163,7 @@
    {
     "label": "D",
     "content": "It makes a claim about one of the principal effects of culture.",
-    "isCorrect": false
+    "isCorrect": true
    }
   ]
  },
@@ -274,7 +232,7 @@
    {
     "label": "A",
     "content": "Early snow melt reduces the amount of soil moisture available for the growth of plant species such as C. canadensis, and it raises the rate of heterotrophic respiration.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "B",
@@ -284,7 +242,7 @@
    {
     "label": "C",
     "content": "Early snow melt slows the growth of plant species such as C. canadensis by reducing soil insulation, and it suppresses heterotrophic respiration.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
@@ -326,12 +284,12 @@
    {
     "label": "C",
     "content": "In DLS. UV light Images are projected into a liquid resin pool to cure a 3D object layer by layer: once solidified,the object is baked in an oven.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
     "content": "DLS is a form of additive manufacturing that creates a \"dead zone\" in which UV light solidifies layer by layer before being baked in an oven, creating a highquality, 3D object.",
-    "isCorrect": true
+    "isCorrect": false
    }
   ]
  },
@@ -363,12 +321,12 @@
    {
     "label": "B",
     "content": "To present information about two institutions, including each institution’s area of focus",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "C",
     "content": "To trace a historical development that encouraged the founding of two institutions",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "D",
@@ -400,7 +358,7 @@
    {
     "label": "A",
     "content": "likewise,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "B",
@@ -415,7 +373,7 @@
    {
     "label": "D",
     "content": "though,",
-    "isCorrect": false
+    "isCorrect": true
    }
   ]
  },
@@ -447,12 +405,12 @@
    {
     "label": "B",
     "content": "conversely,",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "C",
     "content": "likewise,",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "D",
@@ -484,12 +442,12 @@
    {
     "label": "A",
     "content": "It makes a claim about one of the principal effects of culture.",
-    "isCorrect": false
+    "isCorrect": true
    },
    {
     "label": "B",
     "content": "It asserts that what is beautiful is a matter of objective truth rather than subjective perception.",
-    "isCorrect": true
+    "isCorrect": false
    },
    {
     "label": "C",
@@ -499,48 +457,6 @@
    {
     "label": "D",
     "content": "It explains differences in matters of taste between the English and others.",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "id": "20eee368-a4df-4616-8f2c-65d882cd5c94",
-  "source": "SAT:satoplam-quotation-56",
-  "test": "Test 29",
-  "mo": 1,
-  "branch": "STANDARD",
-  "qo": 11,
-  "skill": "INI-CE",
-  "skill_name": "Command of Evidence",
-  "difficulty": "MEDIUM",
-  "type": "MULTIPLE_CHOICE",
-  "correctAnswerFR": null,
-  "subject": "READING_WRITING",
-  "domain": "INI",
-  "q_order": 11,
-  "m_order": 1,
-  "m_difficulty": "STANDARD",
-  "stem": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
-  "passage": "<p>The Clouds is a 423 BCE play by Aristophanes, originally written in ancient Greek. At the time, professional intellectuals called sophists taught customers rhetorical techniques to use in public speaking, along with providing instruction in other subjects. In the play, Aristophanes satirizes sophists as having an exaggerated sense of their own wisdom, as seen when the character</p>",
-  "choices": [
-   {
-    "label": "A",
-    "content": "Socrates, a sophist, says to a new customer, “Come, then, take care that, whenever I propound any clever dogma about abstruse matters, you [seize] immediately.\"",
-    "isCorrect": false
-   },
-   {
-    "label": "B",
-    "content": "Strepsiades says of a sophist business, “There dwell men who in speaking of the heavens persuade people that it is an oven, and that it encompasses us, and that we are the embers. These men teach, if one give them money, to conquer in speaking, right or wrong.\"",
-    "isCorrect": true
-   },
-   {
-    "label": "C",
-    "content": "Socrates, a sophist, says to a potential customer, “Is the power of speaking, pray, implanted in your nature?”",
-    "isCorrect": false
-   },
-   {
-    "label": "D",
-    "content": "Strepsiades encourages his son to learn to be a sophist, saying, “Reform your habits as quickly as possible, and go and learn what I advise.",
     "isCorrect": false
    }
   ]
