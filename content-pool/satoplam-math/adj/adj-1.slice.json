@@ -1,30 +1,5 @@
 [
  {
-  "id": "satmath-ma2-mean-median-mode-range-15",
-  "stem": "The table shows the frequency of values in a data set.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Value</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr></table>What is the minimum value of the data set?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "1"
-   },
-   {
-    "label": "B",
-    "content": "8"
-   },
-   {
-    "label": "C",
-    "content": "13"
-   },
-   {
-    "label": "D",
-    "content": "20"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
   "id": "satmath-ma2-mean-median-mode-range-34",
   "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Task</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (minutes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">A</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">B</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">D</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">E</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr></table>The table shows the amount of time it took a participant in a study to complete each of 5 tasks. What was the mean time, in minutes, for this participant to complete a task?",
   "choices": [
@@ -73,14 +48,6 @@
   "type": "MULTIPLE_CHOICE",
   "needsFigure": true,
   "book_note": "Scatterplot, x from 0 to about 50 and y from 0 to 60, with a line of best fit through about (12, 45) and (37, 20). Points approximately (12, 45), (13, 45), (15, 42), (16, 41), (17, 39), (22, 32), (25, 30), (28, 24), (29, 31), (30, 25), (33, 30), (36, 20). A least-squares fit to those readings gives intercept 56 and slope -0.97, so the shifted intercept is about 47, nearest to choice A."
- },
- {
-  "id": "satmath-ma2-trigonometry-2",
-  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 22.3 inches, what is the least possible value of x, in inches?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. Note: the inequality is strict, so strictly speaking there is no least value; 267.6 is the intended answer and is the greatest lower bound."
  },
  {
   "id": "satmath-ma2-trigonometry-3",
@@ -224,47 +191,6 @@
   "book_note": ""
  },
  {
-  "id": "satmath-ma3-linear-inequalities-2",
-  "stem": "The graphs of y = &minus;3x + 7 and y = x &minus; 5 are shown. Point <em>P</em> (not shown) has coordinates (&minus;3, 5). The coordinates of <em>P</em> satisfy which of the following inequalities?<p>I. y &lt; &minus;3x + 7<br/>II. y &gt; x &minus; 5</p>",
-  "choices": [
-   {
-    "label": "A",
-    "content": "I only"
-   },
-   {
-    "label": "B",
-    "content": "II only"
-   },
-   {
-    "label": "C",
-    "content": "I and II"
-   },
-   {
-    "label": "D",
-    "content": "Neither I nor II"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": "The stem says P lies in the shaded region, but the region shaded in the book's figure is the wedge BELOW both lines (y < -3x+7 and y < x-5), which does not contain (-3, 5). Substituting the given coordinates - the method the question asks for - gives 'I and II'. The figure and the stem disagree; the answer above is from the coordinates."
- },
- {
-  "id": "satmath-ma3-linear-inequalities-3",
-  "stem": "A number <em>x</em> is less than 8 more than \\( \\frac{1}{2} \\) times the value of a number <em>y</em>. If <em>y</em> is an integer and x = 17, what is the least possible value of <em>y</em>?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "satmath-ma3-quadratics-41",
-  "stem": "\\[ h(t) = -16t^{2} + b \\]The function <em>h</em> estimates an object's height, in feet, above the ground <em>t</em> seconds after the object is dropped, where <em>b</em> is a constant. The function estimates that the object is 19.36 feet above the ground when it is dropped at t = 0. How many seconds after being dropped does the function estimate the object will hit the ground?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
   "id": "satmath-ma3-percent-ratio-proportion-8",
   "stem": "A certain goose species can fly at an average speed of 16 meters per second when in continuous flight. At this rate, how many meters would this goose species fly in 6 seconds?",
   "choices": [
@@ -286,14 +212,6 @@
    }
   ],
   "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "satmath-ma3-probability-3",
-  "stem": "A department store sells pants in three lengths: short, regular, and long. The table summarizes the distribution of pant length, by color, for all the pants in the store.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Black</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Brown</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Blue</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Short</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">63</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Regular</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Long</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">66</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">65</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">181</td></tr></table>A pair of pants is selected at random. What is the probability of selecting a pair of pants that is brown, given that the pair of pants is regular length? (Express your answer as a decimal or fraction, not as a percent.)",
-  "choices": [],
-  "type": "FREE_RESPONSE",
   "needsFigure": false,
   "book_note": ""
  },
@@ -595,13 +513,5 @@
   "type": "MULTIPLE_CHOICE",
   "needsFigure": false,
   "book_note": "The book's first sentence says \"right triangular prism\" while the rest of the question and the answer choices are about a right rectangular prism; transcribed as rectangular, which is the reading that makes choice B come out exactly."
- },
- {
-  "id": "satmath-ma2-areas-volumes-66",
-  "stem": "The figure shown is a right rectangular pyramid, where \\(l = 18\\) units, \\(w = 9\\) units, and \\(h = 12\\) units. What is the surface area, in square units, of the pyramid?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Answer is not a clean number: exactly \\(297 + 9\\sqrt{657} \\approx 527.688\\), which is unusual for a grid-in and worth a human check. Stem refers to a figure. Verified data for rebuilding it: a right rectangular pyramid drawn in perspective with the vertical segment from apex to base centre labelled h, the front-right base edge labelled w and the front-left base edge labelled l; the hidden base edges and diagonals are dotted. No measurements appear in the figure itself."
  }
 ]

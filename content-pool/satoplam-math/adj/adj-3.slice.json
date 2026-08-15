@@ -1,5 +1,113 @@
 [
  {
+  "id": "sathard-advanced-math-65",
+  "stem": "The function \\[ f(x) = 6(x-a)(x-b)(x-c) \\]is defined by the given equation, where \\(a\\), \\(b\\), and \\(c\\) are distinct constants. When \\( a &lt; x &lt; b \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (r,s) \\), where \\(r\\) and \\(s\\) are constants. If \\( s = 9 \\), which of the following could be true?<br/>I. \\( r &lt; a \\)<br/>II. \\( b &lt; r &lt; c \\)<br/>III. \\( r &gt; c \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "III only"
+   },
+   {
+    "label": "C",
+    "content": "I and III only"
+   },
+   {
+    "label": "D",
+    "content": "II and III only"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-70",
+  "stem": "The polynomial \\[ 8x^4+50x^2+63 \\]can be factored, and one of the factors is of the form \\( (ax^2+b) \\). What is one possible value of the product \\( a \\cdot b \\)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "The other factor gives a valid answer too: 2 x 9 = 18. Both 28 and 18 should be accepted."
+ },
+ {
+  "id": "sathard-advanced-math-76",
+  "stem": "\\[ f(x) = \\frac{3}{8}(x-3)^3 + \\frac{ax^2}{4} + \\frac{bx}{4} + \\frac{c}{4} + \\frac{99}{2} \\]If the <em>x</em>-coordinates of the <em>x</em>-intercepts of the given function, \\(f\\), are at \\( x = 4 \\), \\( x = 12 \\) and \\( x = -2 \\), what is the value of \\( 16(a+b+c) \\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-322"
+   },
+   {
+    "label": "B",
+    "content": "-457"
+   },
+   {
+    "label": "C",
+    "content": "-603"
+   },
+   {
+    "label": "D",
+    "content": "-789"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "needsFigure": false,
+  "book_note": "DEFECT: my value, -600, is not among the choices (verified with sympy: a = -15/2, b = -33/2, c = -27/2 reproduce zeros at 4, 12 and -2 exactly). The printed choice -603 is presumably a typo for -600. answerValue holds the derived value rather than a letter."
+ },
+ {
+  "id": "sathard-advanced-math-82",
+  "stem": "\\[ f(x) = -2(x-a)(x-b)(x-c) \\]The function \\(f\\) is defined by the given equation, where \\(a\\), \\(b\\) and \\(c\\) are distinct constants. When \\( b &lt; x &lt; c \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (m,n) \\), where \\(m\\) and \\(n\\) are constants. If \\(n\\) is equal to -5, which of the following could be true?<br/>I. \\( m &lt; a \\)<br/>II. \\( a &lt; m &lt; b \\)<br/>III. \\( m &gt; c \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "II and III"
+   },
+   {
+    "label": "D",
+    "content": "I and III"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-advanced-math-83",
+  "stem": "Which of the following below has a factor of \\( 4x+7b \\), where \\(b\\) is a non-positive integer?<br/>I. \\( 16x^2-49 \\)<br/>II. \\( 16x^2+56x+49 \\)<br/>III. \\( 64x^3+343 \\)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II and III only"
+   },
+   {
+    "label": "C",
+    "content": "I and III only"
+   },
+   {
+    "label": "D",
+    "content": "All of them"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
   "id": "sathard-advanced-math-88",
   "stem": "When the polynomial \\( P(x) = 2x^3-5x^2+ax+b \\) is divided by \\( x-2 \\), the remainder is 10. When \\( P(x) \\) is divided by \\( x+1 \\), the remainder is 1. What is the value of \\( a+b \\)?",
   "choices": [],
@@ -74,31 +182,6 @@
   "book_note": "DEFECT: my answer is not among the choices. Choice B is the same expression with x instead of x^2 in the denominator. Numeric check at x = 4, z = 1: the equation gives y^2 = 0.05, my expression gives 0.05, choice B gives 0.2. Choices C and D are also malformed (D's denominator 4xz^2 - 5xz^2 collapses to -xz^2, making the radicand negative). answerValue holds the derived expression rather than a letter."
  },
  {
-  "id": "sathard-geometry-8",
-  "stem": "The three points shown define a circle. The circumference of this circle is \\( k\\pi \\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "3"
-   },
-   {
-    "label": "B",
-    "content": "6"
-   },
-   {
-    "label": "C",
-    "content": "9"
-   },
-   {
-    "label": "D",
-    "content": "12"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": true,
-  "book_note": "Figure needed: a grid from 0 to 15 on both axes with three plotted points at (9,7), (12,10) and (12,4)."
- },
- {
   "id": "sathard-geometry-14",
   "stem": "In the figure, parallel lines \\(a\\) and \\(b\\) are intersected by lines \\(c\\), \\(d\\), and \\(e\\). If \\( z = 49 \\), \\( y = 136 \\), and \\( v &lt; z \\), which statement about \\(x\\) and \\(w\\) must be true?",
   "choices": [
@@ -122,14 +205,6 @@
   "type": "MULTIPLE_CHOICE",
   "needsFigure": true,
   "book_note": "Figure needed: vertical parallel lines a and b crossed by three transversals \u2014 c rising to the right, d and e falling to the right. v is at a on line d, y and z are at b on lines c and e, x is where c meets d (right of b), and w is where c meets e (left of a)."
- },
- {
-  "id": "sathard-geometry-17",
-  "stem": "For triangle \\(ABC\\), the length of \\( \\overline{AB} \\) is 11 less than the length of \\( \\overline{AC} \\). Point \\(D\\) (not shown) lies on \\( \\overline{AC} \\) such that \\( \\overline{BD} \\) (not shown) is perpendicular to \\( \\overline{AC} \\). What is the value of \\( \\frac{BC}{BD} \\)?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Figure needed: right triangle ABC with the right angle at B, A above B, C to the right, and hypotenuse AC labelled 28."
  },
  {
   "id": "sathard-geometry-25",
@@ -174,31 +249,6 @@
    {
     "label": "D",
     "content": "56"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "sathard-geometry-32",
-  "stem": "The perimeter of an isosceles right triangle is \\(52+52\\sqrt{2}\\) inches. What is the length, in inches, of the hypotenuse of this triangle?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "26"
-   },
-   {
-    "label": "B",
-    "content": "\\(26\\sqrt{2}\\)"
-   },
-   {
-    "label": "C",
-    "content": "52"
-   },
-   {
-    "label": "D",
-    "content": "\\(52\\sqrt{2}\\)"
    }
   ],
   "type": "MULTIPLE_CHOICE",
@@ -255,69 +305,12 @@
   "book_note": "Duplicate of Geometry #29 on page 52, except that this printing drops the degree symbols after both expressions (page 52 prints them). Bank only one."
  },
  {
-  "id": "sathard-geometry-94",
-  "stem": "What is the area, in square units, of the triangle formed by connecting the three points shown?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Figure needed: an xy-grid with x from -4 to 6 and y from -4 to 10, with three plotted points at (-3, 4), (5, 3) and (4, -3). The coordinates appear only in the figure."
- },
- {
-  "id": "sathard-geometry-95",
-  "stem": "The area of triangle <em>ABC</em> above is at least 48 but no more than 60. If y is an integer, what is one possible value of x?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Figure needed: right triangle ABC with the right angle at C, A at the lower left, C at the lower right and B directly above C. Along AC, a vertical segment labelled x rises from a point on AC to meet AB, meeting AC at a right angle; the part of AC from A to its foot is labelled 5 and the part from the foot to C is labelled 7. The side BC is labelled y. Only y = 9 gives a terminating decimal, so 3.75 is recorded; 10/3 and 25/6 are equally valid."
- },
- {
-  "id": "sathard-geometry-101",
-  "stem": "For triangle <em>ABC</em> shown, the length of <em>AB</em> is 11 less than the length of <em>AC</em>. Point D (not shown) lies on <em>AC</em> such that <em>BD</em> (not shown) is perpendicular to <em>AC</em>. What is the value of \\(\\frac{BC}{BD}\\)?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": true,
-  "book_note": "Figure needed: right triangle ABC with the right angle at B, A at the top, B at the lower left and C at the lower right, with the hypotenuse AC labelled 28. The right angle and the length 28 appear only in the figure."
- },
- {
-  "id": "sathard-geometry-102",
-  "stem": "The three points shown define a circle. The circumference of this circle is \\(k\\pi\\), where k is a constant. What is the value of k?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "3"
-   },
-   {
-    "label": "B",
-    "content": "6"
-   },
-   {
-    "label": "C",
-    "content": "9"
-   },
-   {
-    "label": "D",
-    "content": "12"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": true,
-  "book_note": "Figure needed: an xy-grid with both axes running from 0 to about 15, with three plotted points at (12, 10), (9, 7) and (12, 4). The coordinates appear only in the figure."
- },
- {
   "id": "sathard-geometry-108",
   "stem": "In the figure above, O is the center of the circle and <em>AC</em> is tangent to the circle at D. If triangle <em>ABC</em> is equilateral, what is the ratio \\(\\frac{FE}{AC}\\)?",
   "choices": [],
   "type": "FREE_RESPONSE",
   "needsFigure": true,
   "book_note": "Figure needed: equilateral triangle ABC with base AC horizontal at the bottom and apex B at the top, and a circle passing through B and tangent to AC at D, the midpoint of AC. O is the circle's centre, on segment BD. The circle cuts AB at F and BC at E, and the horizontal chord FE is drawn; the angle between FO and FE at F is marked 30 degrees. Points D, E and F exist only in the figure."
- },
- {
-  "id": "sathard-geometry-118",
-  "stem": "In isosceles triangle <em>RST</em>, SR = ST and the length of <em>RT</em> is 76. If \\(\\tan(\\angle R)=\\frac{2}{35}\\), what is the area of triangle <em>RST</em>?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": "The answer is not a clean value: 2888/35 = 82.5142857..., which is longer than a real SAT grid-in accepts (it would have to be entered as 82.51). The source numbers may be slightly off - with RT = 70 the same setup gives exactly 70. Worth a human check before banking."
  },
  {
   "id": "sathard-geometry-119",
@@ -345,39 +338,6 @@
   "book_note": "Same item as Geometry #32 on page 52 with 52 replaced by 48 throughout."
  },
  {
-  "id": "sathard-problem-solving-41",
-  "stem": "A set of five consecutive even integers is ordered from least to greatest. The sum of the first and fourth even integers is 5,860% more than the quotient of the fifth even integer and 30. The first even integer is p% less than the fifth even integer, where p is a constant. What is the value of p?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": "The answer is 16/15, roughly 1.0667 - an unusually small and untidy value for a grid-in, though it is exactly what the stated numbers give."
- },
- {
-  "id": "sathard-problem-solving-64",
-  "stem": "A biologist mixed a solution that is 0.3% sodium chloride by mass with a solution that is 0.15% sodium chloride by mass to obtain a new solution, which has a mass of 80 grams and contains 0.21 grams of sodium chloride. How many grams of 0.3% sodium chloride solution did the biologist use?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "0.14"
-   },
-   {
-    "label": "B",
-    "content": "20"
-   },
-   {
-    "label": "C",
-    "content": "60"
-   },
-   {
-    "label": "D",
-    "content": "79.86"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
   "id": "sathard-problem-solving-65",
   "stem": "The tables give the distribution of daily travel times between two towns for bus A and bus B over a 40-day period.<p><strong>Bus A</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (min)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">44</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">47</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">48</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr></table><p><strong>Bus B</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (min)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">40</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr></table>Which statement correctly compares the standard deviations of travel times for bus A and bus B?",
   "choices": [
@@ -401,31 +361,6 @@
   "type": "MULTIPLE_CHOICE",
   "needsFigure": false,
   "book_note": "Parsed upstream as free response, but the book prints four lettered choices; recorded here as multiple choice."
- },
- {
-  "id": "sathard-problem-solving-66",
-  "stem": "A biologist mixed a solution that is 0.3% sodium chloride by mass with a solution that is 0.15% sodium chloride by mass to obtain a new solution, which has a mass of 80 grams and contains 0.21 grams of sodium chloride. How many grams of 0.3% sodium chloride solution did the biologist use?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "0.14"
-   },
-   {
-    "label": "B",
-    "content": "20"
-   },
-   {
-    "label": "C",
-    "content": "60"
-   },
-   {
-    "label": "D",
-    "content": "79.86"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": "Verbatim duplicate of Problem Solving #64 on page 87. Bank only one."
  },
  {
   "id": "sathard-problem-solving-70",

@@ -10,7 +10,25 @@ difficulty structure recorded at the top of CLAUDE.md.
 finished. Every question was transcribed from its page image, solved
 independently of the printed key, given a difficulty and an explanation.
 
-**Stage 3 (verify the keys) is NEXT and has not started.** Nothing is in the
+**Stage 3 (verify the keys) is RUNNING.** `verify_keys.py` compared all 1,102
+derived answers with `printed_keys.json`: **1,012 agree, 72 dispute (6.6%),
+8 the agent judged unanswerable, 10 have no usable printed key.** Three blind
+adjudicators (`adj/adj-1..3`) are re-solving the 72 — they see neither the key
+nor the first reading.
+
+Next after them: `apply_key_verdicts`-style resolution — a key moves only when
+BOTH readings agree against the book; where the adjudicator lands on the
+printed key, the first agent was the outlier; where all three differ, leave it
+for a human. Then stage 4.
+
+**Do not "simplify" verify_keys.py.** Four artifact classes are handled
+explicitly there and each one was a fake dispute before it was: the book
+listing two accepted forms (`1.1;11/10`), the key column catching body text
+(`f(x)`), the book rounding a grid-in (268 vs 267.6), and — the subtle one —
+the book printing the ANSWER instead of its LETTER, `13` where the answer is
+choice C whose content is 13. Together they were 20 of the 92 first reported.
+
+**Original stage-3 note:** Nothing is in the
 database: production still carries the original 2,046 authored/EliteXSAT Math
 questions, and zero rows exist under `SATMATH:` or `SATHARD:`.
 

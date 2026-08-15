@@ -1,39 +1,5 @@
 [
  {
-  "id": "satmath-ma2-mean-median-mode-range-15",
-  "stem": "The table shows the frequency of values in a data set.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Value</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr></table>What is the minimum value of the data set?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "1"
-   },
-   {
-    "label": "B",
-    "content": "8"
-   },
-   {
-    "label": "C",
-    "content": "13"
-   },
-   {
-    "label": "D",
-    "content": "20"
-   }
-  ],
-  "answerLabel": "C",
-  "answerValue": null,
-  "difficulty": "EASY",
-  "whyCorrect": "Only the Value column holds data; the Frequency column just says how many times each value appears. The smallest value listed is 13, and it does occur (frequency 8), so the minimum is 13.",
-  "whyWrong": {
-   "A": "1 is the smallest frequency, not the smallest value.",
-   "B": "8 is a frequency, not a value in the data set.",
-   "D": "20 is in the data set but 13 is smaller."
-  },
-  "needsFigure": false,
-  "note": "",
-  "printed_key": "13"
- },
- {
   "id": "satmath-ma2-mean-median-mode-range-34",
   "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Task</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (minutes)</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">A</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">B</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">D</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">E</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">11</td></tr></table>The table shows the amount of time it took a participant in a study to complete each of 5 tasks. What was the mean time, in minutes, for this participant to complete a task?",
   "choices": [
@@ -100,19 +66,6 @@
   "needsFigure": true,
   "note": "Scatterplot, x from 0 to about 50 and y from 0 to 60, with a line of best fit through about (12, 45) and (37, 20). Points approximately (12, 45), (13, 45), (15, 42), (16, 41), (17, 39), (22, 32), (25, 30), (28, 24), (29, 31), (30, 25), (33, 30), (36, 20). A least-squares fit to those readings gives intercept 56 and slope -0.97, so the shifted intercept is about 47, nearest to choice A.",
   "printed_key": "C"
- },
- {
-  "id": "satmath-ma2-trigonometry-2",
-  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 22.3 inches, what is the least possible value of x, in inches?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "267.6",
-  "difficulty": "MEDIUM",
-  "whyCorrect": "In the figure \\(\\theta\\) sits at the ground, with the height opposite it and x adjacent, so \\(\\tan\\theta = \\frac{22.3}{x}\\). The law then requires \\(\\frac{22.3}{x} < \\frac{1}{12}\\). Cross-multiplying (x is positive, so the inequality direction is safe) gives x > 12(22.3) = 267.6. A shallower ramp means a longer run, so the smallest allowed x is 267.6 inches.",
-  "whyWrong": {},
-  "needsFigure": true,
-  "note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. Note: the inequality is strict, so strictly speaking there is no least value; 267.6 is the intended answer and is the greatest lower bound.",
-  "printed_key": "268"
  },
  {
   "id": "satmath-ma2-trigonometry-3",
@@ -311,65 +264,6 @@
   "printed_key": "C"
  },
  {
-  "id": "satmath-ma3-linear-inequalities-2",
-  "stem": "The graphs of y = &minus;3x + 7 and y = x &minus; 5 are shown. Point <em>P</em> (not shown) has coordinates (&minus;3, 5). The coordinates of <em>P</em> satisfy which of the following inequalities?<p>I. y &lt; &minus;3x + 7<br/>II. y &gt; x &minus; 5</p>",
-  "choices": [
-   {
-    "label": "A",
-    "content": "I only"
-   },
-   {
-    "label": "B",
-    "content": "II only"
-   },
-   {
-    "label": "C",
-    "content": "I and II"
-   },
-   {
-    "label": "D",
-    "content": "Neither I nor II"
-   }
-  ],
-  "answerLabel": "C",
-  "difficulty": "MEDIUM",
-  "whyCorrect": "You do not need the picture - test the point in each inequality. For I, &minus;3(&minus;3) + 7 = 16 and 5 &lt; 16, so I holds. For II, (&minus;3) &minus; 5 = &minus;8 and 5 &gt; &minus;8, so II holds too. Both are satisfied.",
-  "whyWrong": {
-   "A": "This stops after checking the first inequality; II is also true because 5 is well above &minus;8.",
-   "B": "This misses that 5 is below 16, so I is true as well.",
-   "D": "Both inequalities check out when you substitute x = &minus;3 and y = 5; concluding neither usually comes from mixing up the direction of the inequality signs."
-  },
-  "note": "The stem says P lies in the shaded region, but the region shaded in the book's figure is the wedge BELOW both lines (y < -3x+7 and y < x-5), which does not contain (-3, 5). Substituting the given coordinates - the method the question asks for - gives 'I and II'. The figure and the stem disagree; the answer above is from the coordinates.",
-  "answerValue": null,
-  "needsFigure": false,
-  "printed_key": "f(x)"
- },
- {
-  "id": "satmath-ma3-linear-inequalities-3",
-  "stem": "A number <em>x</em> is less than 8 more than \\( \\frac{1}{2} \\) times the value of a number <em>y</em>. If <em>y</em> is an integer and x = 17, what is the least possible value of <em>y</em>?",
-  "choices": [],
-  "answerValue": "19",
-  "difficulty": "MEDIUM",
-  "whyCorrect": "Translate the sentence exactly: \\( x &lt; \\frac{1}{2}y + 8 \\) . Substituting x = 17 gives \\( 17 &lt; \\frac{1}{2}y + 8 \\) , so \\( 9 &lt; \\frac{1}{2}y \\) and y &gt; 18. The inequality is strict, so y = 18 does not work; the least integer greater than 18 is 19.",
-  "answerLabel": null,
-  "needsFigure": false,
-  "note": "",
-  "printed_key": "f(x)"
- },
- {
-  "id": "satmath-ma3-quadratics-41",
-  "stem": "\\[ h(t) = -16t^{2} + b \\]The function <em>h</em> estimates an object's height, in feet, above the ground <em>t</em> seconds after the object is dropped, where <em>b</em> is a constant. The function estimates that the object is 19.36 feet above the ground when it is dropped at t = 0. How many seconds after being dropped does the function estimate the object will hit the ground?",
-  "choices": [],
-  "answerValue": "1.1",
-  "difficulty": "MEDIUM",
-  "whyCorrect": "First use the drop height to pin down b: at t = 0 the \\( -16t^{2} \\) term is 0, so b = 19.36. Hitting the ground means height 0, so solve \\( -16t^{2} + 19.36 = 0 \\) , giving \\( t^{2} = 1.21 \\) and t = 1.1 seconds. Discard the negative root \u2014 time cannot be negative.",
-  "note": "",
-  "answerLabel": null,
-  "whyWrong": {},
-  "needsFigure": false,
-  "printed_key": "1.1;11/10"
- },
- {
   "id": "satmath-ma3-percent-ratio-proportion-8",
   "stem": "A certain goose species can fly at an average speed of 16 meters per second when in continuous flight. At this rate, how many meters would this goose species fly in 6 seconds?",
   "choices": [
@@ -402,19 +296,6 @@
   "answerValue": null,
   "needsFigure": false,
   "printed_key": "C"
- },
- {
-  "id": "satmath-ma3-probability-3",
-  "stem": "A department store sells pants in three lengths: short, regular, and long. The table summarizes the distribution of pant length, by color, for all the pants in the store.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Black</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Brown</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Blue</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Short</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">63</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Regular</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">60</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Long</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">14</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">58</td></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">66</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">65</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">181</td></tr></table>A pair of pants is selected at random. What is the probability of selecting a pair of pants that is brown, given that the pair of pants is regular length? (Express your answer as a decimal or fraction, not as a percent.)",
-  "choices": [],
-  "answerValue": "0.35",
-  "difficulty": "MEDIUM",
-  "whyCorrect": "\"Given that the pair is regular length\" restricts you to the Regular row, so the denominator is 60, not the 181 total. The brown entry in that row is 21, so the probability is \\( \\frac{21}{60} = 0.35 \\) . Using the whole-store total instead of the row total is the mistake this question is testing.",
-  "note": "",
-  "answerLabel": null,
-  "whyWrong": {},
-  "needsFigure": false,
-  "printed_key": "0.35;7/20"
  },
  {
   "id": "satmath-ma2-functions-function-notation-52",
@@ -825,19 +706,6 @@
   "printed_key": "C"
  },
  {
-  "id": "satmath-ma2-areas-volumes-66",
-  "stem": "The figure shown is a right rectangular pyramid, where \\(l = 18\\) units, \\(w = 9\\) units, and \\(h = 12\\) units. What is the surface area, in square units, of the pyramid?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "527.69",
-  "difficulty": "HARD",
-  "whyCorrect": "A rectangular pyramid has two different pairs of triangular faces, each pair needing its own slant height, plus the rectangular base. Base: 18 &times; 9 = 162. The faces standing on the 9-unit edges have slant height \\(\\sqrt{12^2 + 9^2} = 15\\) (using half of 18), contributing \\(2 \\cdot \\frac{1}{2}(9)(15) = 135\\). The faces on the 18-unit edges have slant height \\(\\sqrt{12^2 + 4.5^2} = \\sqrt{164.25} \\approx 12.82\\), contributing \\(2 \\cdot \\frac{1}{2}(18)(12.82) \\approx 230.69\\). The total is about 527.69. Using h itself as the slant height is the usual mistake &mdash; it gives 162 + 108 + 216 = 486.",
-  "needsFigure": true,
-  "note": "Answer is not a clean number: exactly \\(297 + 9\\sqrt{657} \\approx 527.688\\), which is unusual for a grid-in and worth a human check. Stem refers to a figure. Verified data for rebuilding it: a right rectangular pyramid drawn in perspective with the vertical segment from apex to base centre labelled h, the front-right base edge labelled w and the front-left base edge labelled l; the hidden base edges and diagonals are dotted. No measurements appear in the figure itself.",
-  "whyWrong": {},
-  "printed_key": "528"
- },
- {
   "id": "satmath-ma3-lines-angles-13",
   "stem": "<p>In the figure, lines r and s are parallel and line t intersects both lines. If \\( a = 4k + 57 \\) and \\( b = \\frac{k}{2} + 55 \\) , what is the value of c?</p><p><em>Note: Figure not drawn to scale.</em></p>",
   "choices": [],
@@ -1238,18 +1106,6 @@
   "printed_key": "40556"
  },
  {
-  "id": "sathard-algebra-2",
-  "stem": "<p>Kyle invented a new temperature scale he called the Tutorllini scale. The function T(x) gives the temperature, in degrees Torte, that corresponds to a temperature of x degrees Celsius.</p><p>\\[ T(x) = \\frac{3}{4}\\left(\\frac{26x}{7} - 800\\right) + 15.50 \\]</p><p>If a temperature increased by 3.3 degrees Torte, by how much did the temperature increase, in degrees Celsius?</p>",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "77/65",
-  "difficulty": "HARD",
-  "whyCorrect": "Only the rate of change matters, so ignore every constant. Expanding, the coefficient of x is \\( \\frac{3}{4} \\cdot \\frac{26}{7} = \\frac{39}{14} \\) , meaning each Celsius degree is worth \\( \\frac{39}{14} \\) Torte degrees. To find the Celsius change that produces 3.3 Torte, divide rather than multiply: \\( 3.3 \\div \\frac{39}{14} = \\frac{33}{10} \\cdot \\frac{14}{39} = \\frac{77}{65} \\approx 1.185 \\) . The &minus;800 and the +15.50 shift the scale but never change how fast it moves.",
-  "needsFigure": false,
-  "note": "The answer is not a round number: 77/65 = 1.1846..., so a grid entry would be 77/65 or 1.18/1.19.",
-  "printed_key": "1.18"
- },
- {
   "id": "sathard-algebra-31",
   "stem": "<p>\\[ \\frac{x}{7} + \\frac{y}{5} = \\frac{41}{35} \\]</p><p>An engineer connects resistors in series, where the resistors in the series have a total resistance of \\( \\frac{41}{35} \\) ohms. In this series, there are x resistors of type A, which each have a resistance of a ohms, and y resistors of type B, which each have a resistance of b ohms. The given equation represents this situation. According to this equation, what is the positive difference between the value of a and the value of b?</p>",
   "choices": [
@@ -1328,40 +1184,6 @@
   "answerLabel": null,
   "difficulty": "HARD",
   "printed_key": "C"
- },
- {
-  "id": "sathard-advanced-math-51",
-  "stem": "\\[ f(x) = (x-a)(x-b) \\]The function \\(f\\) is defined by the given equation, where \\(a\\) and \\(b\\) are integer constants. If \\( f(32) &gt; 0 \\), \\( f(35) &lt; 0 \\), and \\( f(38) &gt; 0 \\), which of the following could be the value of \\( a+b \\)?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "35"
-   },
-   {
-    "label": "B",
-    "content": "37"
-   },
-   {
-    "label": "C",
-    "content": "67"
-   },
-   {
-    "label": "D",
-    "content": "69"
-   }
-  ],
-  "answerLabel": "D",
-  "whyCorrect": "The sign pattern positive, negative, positive means the graph crosses the <em>x</em>-axis somewhere between 32 and 35 and again between 35 and 38, so the two zeros \\(a\\) and \\(b\\) are trapped in those windows. Being integers, one of them is 33 or 34 and the other is 36 or 37. The possible sums are 69, 70, 70 and 71, and only 69 is offered (it comes from \\( a=33 \\), \\( b=36 \\)).",
-  "whyWrong": {
-   "A": "35 is where the function is negative, not a sum of two zeros; the smallest possible sum is \\( 33+36 = 69 \\).",
-   "B": "37 is a single possible zero, not \\( a+b \\).",
-   "C": "67 would need the zeros to average 33.5, putting both below 35 &mdash; then \\( f(38) \\) and \\( f(35) \\) would have the same sign."
-  },
-  "needsFigure": false,
-  "note": "DEFECT in the book: the displayed defining equation is missing from the page (and from the PDF text layer) \u2014 the item begins \"The function f is defined by the given equation\" with nothing above it. f(x) = (x-a)(x-b) is reconstructed from the two named integer constants and the +,-,+ sign pattern; it is the only standard form fitting, and 69 is the only choice consistent with it. Same defect affects question 50 on this page.",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "printed_key": "69"
  },
  {
   "id": "sathard-advanced-math-53",
@@ -1783,40 +1605,6 @@
   "printed_key": "B"
  },
  {
-  "id": "sathard-geometry-8",
-  "stem": "The three points shown define a circle. The circumference of this circle is \\( k\\pi \\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "3"
-   },
-   {
-    "label": "B",
-    "content": "6"
-   },
-   {
-    "label": "C",
-    "content": "9"
-   },
-   {
-    "label": "D",
-    "content": "12"
-   }
-  ],
-  "answerLabel": "B",
-  "whyCorrect": "Two of the points share an <em>x</em>-coordinate, so the chord joining them is vertical and the centre must lie on its perpendicular bisector, the horizontal line halfway between them. That fixes the centre's <em>y</em>-coordinate at 7; equating the distances from \\( (a,7) \\) to the two remaining points gives \\( a = 12 \\), so the centre is \\( (12,7) \\) and the radius is 3. The circumference is \\( 2\\pi(3) = 6\\pi \\), so \\( k = 6 \\).",
-  "whyWrong": {
-   "A": "3 is the radius, not the coefficient in the circumference \\( 2\\pi r \\).",
-   "C": "9 is \\( r^2 \\), which belongs to the area formula \\( \\pi r^2 \\), not the circumference.",
-   "D": "12 is the diameter doubled again, or the centre's <em>x</em>-coordinate; the circumference is \\( 2\\pi r = 6\\pi \\)."
-  },
-  "needsFigure": true,
-  "note": "Figure needed: a grid from 0 to 15 on both axes with three plotted points at (9,7), (12,10) and (12,4).",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "printed_key": "6"
- },
- {
   "id": "sathard-geometry-14",
   "stem": "In the figure, parallel lines \\(a\\) and \\(b\\) are intersected by lines \\(c\\), \\(d\\), and \\(e\\). If \\( z = 49 \\), \\( y = 136 \\), and \\( v &lt; z \\), which statement about \\(x\\) and \\(w\\) must be true?",
   "choices": [
@@ -1849,18 +1637,6 @@
   "answerValue": null,
   "difficulty": "HARD",
   "printed_key": "A"
- },
- {
-  "id": "sathard-geometry-17",
-  "stem": "For triangle \\(ABC\\), the length of \\( \\overline{AB} \\) is 11 less than the length of \\( \\overline{AC} \\). Point \\(D\\) (not shown) lies on \\( \\overline{AC} \\) such that \\( \\overline{BD} \\) (not shown) is perpendicular to \\( \\overline{AC} \\). What is the value of \\( \\frac{BC}{BD} \\)?",
-  "choices": [],
-  "answerValue": "28/17",
-  "whyCorrect": "From the figure the right angle is at \\(B\\) and \\( AC = 28 \\), so \\( AB = 28-11 = 17 \\). Dropping the altitude \\( \\overline{BD} \\) to the hypotenuse creates triangle \\(BDC\\), which is similar to triangle \\(ABC\\) (both are right triangles sharing angle \\(C\\)). Matching corresponding sides, \\( \\frac{BC}{BD} = \\frac{AC}{AB} = \\frac{28}{17} \\) &mdash; you never need \\(BC\\) itself. (Checking directly: \\( BC = \\sqrt{495} \\) and \\( BD = \\frac{17\\sqrt{495}}{28} \\), whose ratio is \\( \\frac{28}{17} \\).)",
-  "needsFigure": true,
-  "note": "Figure needed: right triangle ABC with the right angle at B, A above B, C to the right, and hypotenuse AC labelled 28.",
-  "answerLabel": null,
-  "difficulty": "HARD",
-  "printed_key": "2"
  },
  {
   "id": "sathard-geometry-25",
@@ -1932,40 +1708,6 @@
   "needsFigure": false,
   "note": "",
   "printed_key": "B"
- },
- {
-  "id": "sathard-geometry-32",
-  "stem": "The perimeter of an isosceles right triangle is \\(52+52\\sqrt{2}\\) inches. What is the length, in inches, of the hypotenuse of this triangle?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "26"
-   },
-   {
-    "label": "B",
-    "content": "\\(26\\sqrt{2}\\)"
-   },
-   {
-    "label": "C",
-    "content": "52"
-   },
-   {
-    "label": "D",
-    "content": "\\(52\\sqrt{2}\\)"
-   }
-  ],
-  "answerLabel": "C",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "whyCorrect": "An isosceles right triangle with leg \\(a\\) has hypotenuse \\(a\\sqrt{2}\\), so its perimeter is \\(2a+a\\sqrt{2}=a(2+\\sqrt{2})\\). Set that equal to \\(52+52\\sqrt{2}=52(1+\\sqrt{2})\\) and solve: \\(a=\\frac{52(1+\\sqrt{2})}{2+\\sqrt{2}}\\). Multiply top and bottom by \\(2-\\sqrt{2}\\); the denominator becomes 2 and the numerator becomes \\(52\\sqrt{2}\\), so \\(a=26\\sqrt{2}\\). The hypotenuse is \\(a\\sqrt{2}=26\\sqrt{2}\\cdot\\sqrt{2}=52\\). The trap is that the perimeter is written to look like it splits as leg + leg + hypotenuse; it does not.",
-  "whyWrong": {
-   "A": "This is half of 52, which would be the answer if you read the perimeter's first term, 52, as the sum of the two legs. The two parts of \\(52+52\\sqrt{2}\\) are not the legs and the hypotenuse.",
-   "B": "This is the leg length \\(a\\), the value you get partway through. The question asks for the hypotenuse, which is \\(a\\sqrt{2}\\).",
-   "D": "This treats the \\(52\\sqrt{2}\\) term of the perimeter as the hypotenuse directly. If it were, the two legs would sum to 52, making each leg 26 and the hypotenuse \\(26\\sqrt{2}\\), which contradicts the assumption."
-  },
-  "needsFigure": false,
-  "note": "",
-  "printed_key": "52"
  },
  {
   "id": "sathard-geometry-52",
@@ -2041,79 +1783,6 @@
   "printed_key": "A"
  },
  {
-  "id": "sathard-geometry-94",
-  "stem": "What is the area, in square units, of the triangle formed by connecting the three points shown?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "24.5",
-  "difficulty": "HARD",
-  "whyCorrect": "None of the three sides is horizontal or vertical, so there is no easy base and height - use the shoelace formula on the coordinates instead: \\(\\frac{1}{2}\\left|x_{1}(y_{2}-y_{3})+x_{2}(y_{3}-y_{1})+x_{3}(y_{1}-y_{2})\\right|\\). With the points in the order shown that is \\(\\frac{1}{2}\\left|(-3)(3-(-3))+5(-3-4)+4(4-3)\\right|=\\frac{1}{2}\\left|-18-35+4\\right|=\\frac{49}{2}=24.5\\). If you would rather avoid the formula, box the triangle in the 8-by-7 rectangle that just contains it (area 56) and subtract the three right triangles in the corners, which come to 31.5.",
-  "whyWrong": {},
-  "needsFigure": true,
-  "note": "Figure needed: an xy-grid with x from -4 to 6 and y from -4 to 10, with three plotted points at (-3, 4), (5, 3) and (4, -3). The coordinates appear only in the figure.",
-  "printed_key": "25"
- },
- {
-  "id": "sathard-geometry-95",
-  "stem": "The area of triangle <em>ABC</em> above is at least 48 but no more than 60. If y is an integer, what is one possible value of x?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "3.75",
-  "difficulty": "HARD",
-  "whyCorrect": "The base <em>AC</em> is 5 + 7 = 12 and the height is y, so the area is \\(\\frac{1}{2}(12)y=6y\\). Requiring \\(48 \\le 6y \\le 60\\) gives \\(8 \\le y \\le 10\\), so the integer y can be 8, 9 or 10. The segment marked x is perpendicular to <em>AC</em> at a point 5 units from A, so the small triangle it forms with vertex A is similar to triangle <em>ABC</em>: \\(\\frac{x}{y}=\\frac{5}{12}\\), giving \\(x=\\frac{5y}{12}\\). Taking y = 9 gives \\(x=\\frac{45}{12}=3.75\\). The other allowed values are \\(\\frac{10}{3}\\) (from y = 8) and \\(\\frac{25}{6}\\) (from y = 10).",
-  "whyWrong": {},
-  "needsFigure": true,
-  "note": "Figure needed: right triangle ABC with the right angle at C, A at the lower left, C at the lower right and B directly above C. Along AC, a vertical segment labelled x rises from a point on AC to meet AB, meeting AC at a right angle; the part of AC from A to its foot is labelled 5 and the part from the foot to C is labelled 7. The side BC is labelled y. Only y = 9 gives a terminating decimal, so 3.75 is recorded; 10/3 and 25/6 are equally valid.",
-  "printed_key": "10/3;15/4;25/6"
- },
- {
-  "id": "sathard-geometry-101",
-  "stem": "For triangle <em>ABC</em> shown, the length of <em>AB</em> is 11 less than the length of <em>AC</em>. Point D (not shown) lies on <em>AC</em> such that <em>BD</em> (not shown) is perpendicular to <em>AC</em>. What is the value of \\(\\frac{BC}{BD}\\)?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "28/17",
-  "difficulty": "HARD",
-  "whyCorrect": "The right angle is at B and the hypotenuse <em>AC</em> is 28, so AB = 28 &minus; 11 = 17. <em>BD</em> is the altitude drawn from the right angle to the hypotenuse, and its length satisfies \\(BD=\\frac{AB\\cdot BC}{AC}\\) - the area of the triangle computed two ways. Substituting, \\(\\frac{BC}{BD}=\\frac{BC\\cdot AC}{AB\\cdot BC}=\\frac{AC}{AB}=\\frac{28}{17}\\). The BC cancels, so you never have to compute it (it is \\(3\\sqrt{55}\\), which would only make the arithmetic messy).",
-  "whyWrong": {},
-  "needsFigure": true,
-  "note": "Figure needed: right triangle ABC with the right angle at B, A at the top, B at the lower left and C at the lower right, with the hypotenuse AC labelled 28. The right angle and the length 28 appear only in the figure.",
-  "printed_key": "2"
- },
- {
-  "id": "sathard-geometry-102",
-  "stem": "The three points shown define a circle. The circumference of this circle is \\(k\\pi\\), where k is a constant. What is the value of k?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "3"
-   },
-   {
-    "label": "B",
-    "content": "6"
-   },
-   {
-    "label": "C",
-    "content": "9"
-   },
-   {
-    "label": "D",
-    "content": "12"
-   }
-  ],
-  "answerLabel": "B",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "whyCorrect": "Two of the points share the x-coordinate 12, so the chord joining them is vertical and the center lies on its perpendicular bisector, the horizontal line y = 7. Write the center as (h, 7) and set the distances to two of the points equal: \\((h-12)^{2}+3^{2}=(h-9)^{2}\\). Expanding gives \\(-24h+153=-18h+81\\), so h = 12 and the center is (12, 7) with radius 3. The circumference is \\(2\\pi(3)=6\\pi\\), so k = 6.",
-  "whyWrong": {
-   "A": "3 is the radius. Circumference is \\(2\\pi r\\), so the coefficient of \\(\\pi\\) is 6.",
-   "C": "9 is \\(r^{2}\\), the coefficient of \\(\\pi\\) in the <em>area</em>, not the circumference.",
-   "D": "This uses the diameter 6 in place of the radius in \\(2\\pi r\\), doubling the circumference."
-  },
-  "needsFigure": true,
-  "note": "Figure needed: an xy-grid with both axes running from 0 to about 15, with three plotted points at (12, 10), (9, 7) and (12, 4). The coordinates appear only in the figure.",
-  "printed_key": "6"
- },
- {
   "id": "sathard-geometry-108",
   "stem": "In the figure above, O is the center of the circle and <em>AC</em> is tangent to the circle at D. If triangle <em>ABC</em> is equilateral, what is the ratio \\(\\frac{FE}{AC}\\)?",
   "choices": [],
@@ -2125,19 +1794,6 @@
   "needsFigure": true,
   "note": "Figure needed: equilateral triangle ABC with base AC horizontal at the bottom and apex B at the top, and a circle passing through B and tangent to AC at D, the midpoint of AC. O is the circle's centre, on segment BD. The circle cuts AB at F and BC at E, and the horizontal chord FE is drawn; the angle between FO and FE at F is marked 30 degrees. Points D, E and F exist only in the figure.",
   "printed_key": "C"
- },
- {
-  "id": "sathard-geometry-118",
-  "stem": "In isosceles triangle <em>RST</em>, SR = ST and the length of <em>RT</em> is 76. If \\(\\tan(\\angle R)=\\frac{2}{35}\\), what is the area of triangle <em>RST</em>?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "2888/35",
-  "difficulty": "HARD",
-  "whyCorrect": "Because SR = ST, the altitude from S meets <em>RT</em> at its midpoint, splitting the base into two pieces of 38. In the right triangle formed on the left, the angle at R has the altitude h opposite it and 38 adjacent, so \\(\\tan(\\angle R)=\\frac{h}{38}=\\frac{2}{35}\\) and \\(h=\\frac{76}{35}\\). The area is \\(\\frac{1}{2}(76)\\left(\\frac{76}{35}\\right)=\\frac{5776}{70}=\\frac{2888}{35}\\), about 82.514. The trap is putting the whole base 76 under the tangent instead of half of it.",
-  "whyWrong": {},
-  "needsFigure": false,
-  "note": "The answer is not a clean value: 2888/35 = 82.5142857..., which is longer than a real SAT grid-in accepts (it would have to be entered as 82.51). The source numbers may be slightly off - with RT = 70 the same setup gives exactly 70. Worth a human check before banking.",
-  "printed_key": "2888/35q"
  },
  {
   "id": "sathard-geometry-119",
@@ -2174,53 +1830,6 @@
   "printed_key": "320"
  },
  {
-  "id": "sathard-problem-solving-41",
-  "stem": "A set of five consecutive even integers is ordered from least to greatest. The sum of the first and fourth even integers is 5,860% more than the quotient of the fifth even integer and 30. The first even integer is p% less than the fifth even integer, where p is a constant. What is the value of p?",
-  "choices": [],
-  "answerLabel": null,
-  "answerValue": "16/15",
-  "difficulty": "HARD",
-  "whyCorrect": "Call the integers \\(n, n+2, n+4, n+6, n+8\\). The first and fourth sum to \\(2n+6\\), and the quotient of the fifth and 30 is \\(\\frac{n+8}{30}\\). \"5,860% more than\" means 59.6 times as much, not 58.6 times: \\(2n+6=59.6\\cdot\\frac{n+8}{30}\\). Multiplying by 30 gives \\(60n+180=59.6n+476.8\\), so \\(0.4n=296.8\\) and n = 742, making the fifth integer 750. Check: 742 + 748 = 1,490 and \\(59.6\\times 25=1{,}490\\). Finally, \\(p=\\frac{750-742}{750}\\times 100=\\frac{800}{750}=\\frac{16}{15}\\), about 1.07.",
-  "whyWrong": {},
-  "needsFigure": false,
-  "note": "The answer is 16/15, roughly 1.0667 - an unusually small and untidy value for a grid-in, though it is exactly what the stated numbers give.",
-  "printed_key": "1.07"
- },
- {
-  "id": "sathard-problem-solving-64",
-  "stem": "A biologist mixed a solution that is 0.3% sodium chloride by mass with a solution that is 0.15% sodium chloride by mass to obtain a new solution, which has a mass of 80 grams and contains 0.21 grams of sodium chloride. How many grams of 0.3% sodium chloride solution did the biologist use?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "0.14"
-   },
-   {
-    "label": "B",
-    "content": "20"
-   },
-   {
-    "label": "C",
-    "content": "60"
-   },
-   {
-    "label": "D",
-    "content": "79.86"
-   }
-  ],
-  "answerLabel": "C",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "whyCorrect": "Track the salt, not the solution. Let x be the grams of the 0.3% solution; the rest, 80 &minus; x grams, is the 0.15% solution. The salt each contributes must total 0.21 grams: \\(0.003x+0.0015(80-x)=0.21\\). That becomes \\(0.0015x+0.12=0.21\\), so \\(0.0015x=0.09\\) and x = 60. Check it: 60(0.003) = 0.18 and 20(0.0015) = 0.03, which sum to 0.21. The usual slip is writing 0.3 and 0.15 instead of 0.003 and 0.0015.",
-  "whyWrong": {
-   "A": "0.14 is on the scale of the salt, not the solution. A mere 0.14 grams of a 0.3% solution holds about 0.0004 grams of salt, nowhere near 0.21 grams.",
-   "B": "20 grams is the amount of the <em>0.15%</em> solution, the other unknown. The question asks for the 0.3% one.",
-   "D": "This is 80 &minus; 0.14, the complement of choice A. It fails immediately: 79.86 grams of the 0.3% solution alone would already contain about 0.24 grams of salt, more than the 0.21 grams in the mixture."
-  },
-  "needsFigure": false,
-  "note": "",
-  "printed_key": "60"
- },
- {
   "id": "sathard-problem-solving-65",
   "stem": "The tables give the distribution of daily travel times between two towns for bus A and bus B over a 40-day period.<p><strong>Bus A</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (min)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">44</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">45</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">47</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">48</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr></table><p><strong>Bus B</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Time (min)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Frequency</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">25</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">5</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">30</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">40</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td></tr></table>Which statement correctly compares the standard deviations of travel times for bus A and bus B?",
   "choices": [
@@ -2253,40 +1862,6 @@
   "needsFigure": false,
   "note": "Parsed upstream as free response, but the book prints four lettered choices; recorded here as multiple choice.",
   "printed_key": "C"
- },
- {
-  "id": "sathard-problem-solving-66",
-  "stem": "A biologist mixed a solution that is 0.3% sodium chloride by mass with a solution that is 0.15% sodium chloride by mass to obtain a new solution, which has a mass of 80 grams and contains 0.21 grams of sodium chloride. How many grams of 0.3% sodium chloride solution did the biologist use?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "0.14"
-   },
-   {
-    "label": "B",
-    "content": "20"
-   },
-   {
-    "label": "C",
-    "content": "60"
-   },
-   {
-    "label": "D",
-    "content": "79.86"
-   }
-  ],
-  "answerLabel": "C",
-  "answerValue": null,
-  "difficulty": "HARD",
-  "whyCorrect": "Track the salt. Let x be the grams of the 0.3% solution, so 80 &minus; x grams is the 0.15% solution, and the salt must total 0.21 grams: \\(0.003x+0.0015(80-x)=0.21\\). This simplifies to \\(0.0015x+0.12=0.21\\), so \\(0.0015x=0.09\\) and x = 60. Check: 60(0.003) = 0.18 plus 20(0.0015) = 0.03 gives 0.21. The usual slip is using 0.3 and 0.15 instead of 0.003 and 0.0015.",
-  "whyWrong": {
-   "A": "0.14 is on the scale of the salt, not of the solution. 0.14 grams of a 0.3% solution would hold about 0.0004 grams of salt.",
-   "B": "20 grams is the amount of the <em>0.15%</em> solution, the other unknown.",
-   "D": "This is 80 &minus; 0.14. It fails a quick check: 79.86 grams of the 0.3% solution alone would already contain about 0.24 grams of salt, more than the 0.21 grams present."
-  },
-  "needsFigure": false,
-  "note": "Verbatim duplicate of Problem Solving #64 on page 87. Bank only one.",
-  "printed_key": "60"
  },
  {
   "id": "sathard-problem-solving-70",

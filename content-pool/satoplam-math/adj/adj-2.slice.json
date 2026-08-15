@@ -290,14 +290,6 @@
   "book_note": ""
  },
  {
-  "id": "sathard-algebra-2",
-  "stem": "<p>Kyle invented a new temperature scale he called the Tutorllini scale. The function T(x) gives the temperature, in degrees Torte, that corresponds to a temperature of x degrees Celsius.</p><p>\\[ T(x) = \\frac{3}{4}\\left(\\frac{26x}{7} - 800\\right) + 15.50 \\]</p><p>If a temperature increased by 3.3 degrees Torte, by how much did the temperature increase, in degrees Celsius?</p>",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": "The answer is not a round number: 77/65 = 1.1846..., so a grid entry would be 77/65 or 1.18/1.19."
- },
- {
   "id": "sathard-algebra-31",
   "stem": "<p>\\[ \\frac{x}{7} + \\frac{y}{5} = \\frac{41}{35} \\]</p><p>An engineer connects resistors in series, where the resistors in the series have a total resistance of \\( \\frac{41}{35} \\) ohms. In this series, there are x resistors of type A, which each have a resistance of a ohms, and y resistors of type B, which each have a resistance of b ohms. The given equation represents this situation. According to this equation, what is the positive difference between the value of a and the value of b?</p>",
   "choices": [
@@ -354,31 +346,6 @@
   "type": "FREE_RESPONSE",
   "needsFigure": false,
   "book_note": "c = 0 would also leave one solution (x = 1) after clearing, but c = 0 makes 1/(cx) and 1/c undefined, so it is not admissible."
- },
- {
-  "id": "sathard-advanced-math-51",
-  "stem": "\\[ f(x) = (x-a)(x-b) \\]The function \\(f\\) is defined by the given equation, where \\(a\\) and \\(b\\) are integer constants. If \\( f(32) &gt; 0 \\), \\( f(35) &lt; 0 \\), and \\( f(38) &gt; 0 \\), which of the following could be the value of \\( a+b \\)?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "35"
-   },
-   {
-    "label": "B",
-    "content": "37"
-   },
-   {
-    "label": "C",
-    "content": "67"
-   },
-   {
-    "label": "D",
-    "content": "69"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": "DEFECT in the book: the displayed defining equation is missing from the page (and from the PDF text layer) \u2014 the item begins \"The function f is defined by the given equation\" with nothing above it. f(x) = (x-a)(x-b) is reconstructed from the two named integer constants and the +,-,+ sign pattern; it is the only standard form fitting, and 69 is the only choice consistent with it. Same defect affects question 50 on this page."
  },
  {
   "id": "sathard-advanced-math-53",
@@ -507,114 +474,6 @@
    {
     "label": "D",
     "content": "\\( a &lt; b \\)"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "sathard-advanced-math-65",
-  "stem": "The function \\[ f(x) = 6(x-a)(x-b)(x-c) \\]is defined by the given equation, where \\(a\\), \\(b\\), and \\(c\\) are distinct constants. When \\( a &lt; x &lt; b \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (r,s) \\), where \\(r\\) and \\(s\\) are constants. If \\( s = 9 \\), which of the following could be true?<br/>I. \\( r &lt; a \\)<br/>II. \\( b &lt; r &lt; c \\)<br/>III. \\( r &gt; c \\)",
-  "choices": [
-   {
-    "label": "A",
-    "content": "I only"
-   },
-   {
-    "label": "B",
-    "content": "III only"
-   },
-   {
-    "label": "C",
-    "content": "I and III only"
-   },
-   {
-    "label": "D",
-    "content": "II and III only"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "sathard-advanced-math-70",
-  "stem": "The polynomial \\[ 8x^4+50x^2+63 \\]can be factored, and one of the factors is of the form \\( (ax^2+b) \\). What is one possible value of the product \\( a \\cdot b \\)?",
-  "choices": [],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": "The other factor gives a valid answer too: 2 x 9 = 18. Both 28 and 18 should be accepted."
- },
- {
-  "id": "sathard-advanced-math-76",
-  "stem": "\\[ f(x) = \\frac{3}{8}(x-3)^3 + \\frac{ax^2}{4} + \\frac{bx}{4} + \\frac{c}{4} + \\frac{99}{2} \\]If the <em>x</em>-coordinates of the <em>x</em>-intercepts of the given function, \\(f\\), are at \\( x = 4 \\), \\( x = 12 \\) and \\( x = -2 \\), what is the value of \\( 16(a+b+c) \\)?",
-  "choices": [
-   {
-    "label": "A",
-    "content": "-322"
-   },
-   {
-    "label": "B",
-    "content": "-457"
-   },
-   {
-    "label": "C",
-    "content": "-603"
-   },
-   {
-    "label": "D",
-    "content": "-789"
-   }
-  ],
-  "type": "FREE_RESPONSE",
-  "needsFigure": false,
-  "book_note": "DEFECT: my value, -600, is not among the choices (verified with sympy: a = -15/2, b = -33/2, c = -27/2 reproduce zeros at 4, 12 and -2 exactly). The printed choice -603 is presumably a typo for -600. answerValue holds the derived value rather than a letter."
- },
- {
-  "id": "sathard-advanced-math-82",
-  "stem": "\\[ f(x) = -2(x-a)(x-b)(x-c) \\]The function \\(f\\) is defined by the given equation, where \\(a\\), \\(b\\) and \\(c\\) are distinct constants. When \\( b &lt; x &lt; c \\), the value of \\( f(x) \\) is positive. The graph of \\( y = f(x) \\) in the <em>xy</em>-plane contains the point \\( (m,n) \\), where \\(m\\) and \\(n\\) are constants. If \\(n\\) is equal to -5, which of the following could be true?<br/>I. \\( m &lt; a \\)<br/>II. \\( a &lt; m &lt; b \\)<br/>III. \\( m &gt; c \\)",
-  "choices": [
-   {
-    "label": "A",
-    "content": "I only"
-   },
-   {
-    "label": "B",
-    "content": "II only"
-   },
-   {
-    "label": "C",
-    "content": "II and III"
-   },
-   {
-    "label": "D",
-    "content": "I and III"
-   }
-  ],
-  "type": "MULTIPLE_CHOICE",
-  "needsFigure": false,
-  "book_note": ""
- },
- {
-  "id": "sathard-advanced-math-83",
-  "stem": "Which of the following below has a factor of \\( 4x+7b \\), where \\(b\\) is a non-positive integer?<br/>I. \\( 16x^2-49 \\)<br/>II. \\( 16x^2+56x+49 \\)<br/>III. \\( 64x^3+343 \\)",
-  "choices": [
-   {
-    "label": "A",
-    "content": "I only"
-   },
-   {
-    "label": "B",
-    "content": "II and III only"
-   },
-   {
-    "label": "C",
-    "content": "I and III only"
-   },
-   {
-    "label": "D",
-    "content": "All of them"
    }
   ],
   "type": "MULTIPLE_CHOICE",
