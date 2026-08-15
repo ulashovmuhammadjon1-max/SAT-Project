@@ -27355,42 +27355,23 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-circles-14",
-      "stem": "A circle has diameters \\(\\overline{AC}\\) and \\(\\overline{BD}\\). The circumference of the circle is \\(84\\pi\\), and the length of arc \\(DA\\) is 2 times the length of arc \\(AB\\). What is the length of arc \\(BC\\)?",
-      "choices": [
-       {
-        "label": "A",
-        "content": "\\(2\\pi\\)"
-       },
-       {
-        "label": "B",
-        "content": "\\(14\\pi\\)"
-       },
-       {
-        "label": "C",
-        "content": "\\(21\\pi\\)"
-       },
-       {
-        "label": "D",
-        "content": "\\(28\\pi\\)"
-       }
-      ],
-      "answerLabel": "D",
-      "answerValue": null,
+      "id": "satmath-ma2-areas-volumes-66",
+      "stem": "The figure shown is a right rectangular pyramid, where \\(l = 18\\) units, \\(w = 9\\) units, and \\(h = 12\\) units. What is the surface area, in square units, of the pyramid?",
+      "choices": [],
+      "answerLabel": null,
+      "answerValue": "527.69",
       "difficulty": "HARD",
-      "whyCorrect": "Two diameters cut the circle into four arcs, and arcs on opposite sides of the centre are equal because their central angles are vertical angles: arc \\(BC\\) = arc \\(DA\\) and arc \\(AB\\) = arc \\(CD\\). Since \\(\\overline{AC}\\) is a diameter, arc \\(AB\\) + arc \\(BC\\) is half the circumference, \\(42\\pi\\). Writing arc \\(AB = x\\), the condition arc \\(DA = 2\\,\\text{arc}\\,AB\\) makes arc \\(BC = 2x\\) as well, so \\(x + 2x = 42\\pi\\), \\(x = 14\\pi\\), and arc \\(BC = 28\\pi\\).",
-      "whyWrong": {
-       "A": "\\(2\\pi\\) treats the \"2 times\" as a length in itself rather than a ratio.",
-       "B": "\\(14\\pi\\) is arc \\(AB\\), the smaller of the two arcs. Arc \\(BC\\) is twice that.",
-       "C": "\\(21\\pi\\) is a quarter of the circumference, which would only be right if the two diameters were perpendicular &mdash; that is, if all four arcs were equal."
-      },
+      "whyCorrect": "A rectangular pyramid has two different pairs of triangular faces, each pair needing its own slant height, plus the rectangular base. Base: 18 &times; 9 = 162. The faces standing on the 9-unit edges have slant height \\(\\sqrt{12^2 + 9^2} = 15\\) (using half of 18), contributing \\(2 \\cdot \\frac{1}{2}(9)(15) = 135\\). The faces on the 18-unit edges have slant height \\(\\sqrt{12^2 + 4.5^2} = \\sqrt{164.25} \\approx 12.82\\), contributing \\(2 \\cdot \\frac{1}{2}(18)(12.82) \\approx 230.69\\). The total is about 527.69. Using h itself as the slant height is the usual mistake &mdash; it gives 162 + 108 + 216 = 486.",
       "needsFigure": false,
-      "note": "",
+      "note": "Answer is not a clean number: exactly \\(297 + 9\\sqrt{657} \\approx 527.688\\), which is unusual for a grid-in and worth a human check. Stem refers to a figure. Verified data for rebuilding it: a right rectangular pyramid drawn in perspective with the vertical segment from apex to base centre labelled h, the front-right base edge labelled w and the front-left base edge labelled l; the hidden base edges and diagonals are dotted. No measurements appear in the figure itself. | figure: The page draws all four base edges solid and only the two base diagonals dotted; the recorded spec says the hidden base edges are dotted too. Drawn as printed.",
+      "whyWrong": {},
+      "imageUrl": "data:image/png;base64,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",
+      "imageAlt": "Perspective drawing of a right rectangular pyramid: the rectangular base with its two diagonals dotted, the four slanted edges meeting at the apex, and the vertical height from the apex to the centre of the base; the height and two base edges are labelled with letters.",
       "domain": "GT",
       "skill": "GT-AV",
-      "topic": "Circles",
+      "topic": "Areas&Volumes",
       "hardbook": false,
-      "fr": false
+      "fr": true
      },
      {
       "id": "satmath-ma2-percent-ratio-proportion-22",
@@ -27651,21 +27632,42 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-expressions-7",
-      "stem": "If \\(x^{3} + y^{3} = 12\\) and \\(x^{3} - y^{3} = 6\\), what is the value of \\(x^{6} - y^{6}\\)?",
-      "choices": [],
-      "answerValue": "72",
+      "id": "satmath-ma2-expressions-70",
+      "stem": "\\[ f = \\frac{(10x)^{2}}{7g} \\]The given equation relates the positive numbers \\( f \\), \\( x \\), and \\( g \\). Which equation correctly expresses \\( x \\) in terms of \\( f \\) and \\( g \\)?",
+      "choices": [
+       {
+        "label": "A",
+        "content": "\\( x = \\frac{\\sqrt{7fg}}{10} \\)"
+       },
+       {
+        "label": "B",
+        "content": "\\( x = 10\\sqrt{7fg} \\)"
+       },
+       {
+        "label": "C",
+        "content": "\\( x = \\sqrt{\\frac{7fg}{10}} \\)"
+       },
+       {
+        "label": "D",
+        "content": "\\( x = \\sqrt{7fg} - 10 \\)"
+       }
+      ],
+      "answerLabel": "A",
       "difficulty": "MEDIUM",
-      "whyCorrect": "Do not solve for \\(x\\) and \\(y\\). Recognise \\(x^{6} - y^{6}\\) as a difference of squares of \\(x^{3}\\) and \\(y^{3}\\): \\(x^{6} - y^{6} = (x^{3} + y^{3})(x^{3} - y^{3}) = 12 \\times 6 = 72\\).",
-      "note": "",
-      "answerLabel": null,
-      "whyWrong": {},
+      "whyCorrect": "Multiply both sides by \\( 7g \\) to get \\( 7fg = (10x)^{2} = 100x^{2} \\). Then \\( x^{2} = \\frac{7fg}{100} \\), and taking the positive square root gives \\( x = \\frac{\\sqrt{7fg}}{10} \\). The 10 is inside the square, so it comes out as 10, not \\( \\sqrt{10} \\).",
+      "whyWrong": {
+       "B": "This multiplies by 10 instead of dividing &mdash; it undoes \\( \\frac{x}{10} \\) rather than \\( 10x \\).",
+       "C": "This square-roots the 10 along with everything else, but \\( (10x)^{2} = 100x^{2} \\), so the divisor under the root would have to be 100.",
+       "D": "Subtracting 10 undoes addition, not multiplication; nothing in the equation adds 10."
+      },
       "needsFigure": false,
+      "note": "",
+      "answerValue": null,
       "domain": "ALG",
       "skill": "ADV-EQ",
       "topic": "Expressions",
       "hardbook": false,
-      "fr": true
+      "fr": false
      },
      {
       "id": "satmath-ma2-linear-functions-84",
@@ -27782,40 +27784,40 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-areas-volumes-15",
-      "stem": "The width of a rectangle is 7 centimeters. The length of the rectangle is 40 centimeters longer than the width. What is the area, in square centimeters, of this rectangle?",
+      "id": "satmath-ma3-circles-3",
+      "stem": "Circle \\(N\\) has a radius of 8 millimeters (mm). Circle \\(M\\) has an area of \\(144\\pi\\) mm<sup>2</sup>. What is the total area, in mm<sup>2</sup>, of circles \\(N\\) and \\(M\\)?",
       "choices": [
        {
         "label": "A",
-        "content": "7"
+        "content": "\\(20\\pi\\)"
        },
        {
         "label": "B",
-        "content": "14"
+        "content": "\\(160\\pi\\)"
        },
        {
         "label": "C",
-        "content": "54"
+        "content": "\\(176\\pi\\)"
        },
        {
         "label": "D",
-        "content": "329"
+        "content": "\\(208\\pi\\)"
        }
       ],
       "answerLabel": "D",
+      "answerValue": null,
       "difficulty": "EASY",
-      "whyCorrect": "\"40 longer than the width\" means length = 7 + 40 = 47, not 40. Then the area is 47 &times; 7 = 329 square centimeters.",
+      "whyCorrect": "Circle \\(N\\)'s area is \\(\\pi r^{2} = \\pi(8)^{2} = 64\\pi\\). Adding circle \\(M\\)'s \\(144\\pi\\) gives \\(64\\pi + 144\\pi = 208\\pi\\) square millimeters.",
       "whyWrong": {
-       "A": "7 is the width by itself.",
-       "B": "14 is twice the width; no multiplication by the length has happened.",
-       "C": "54 is 7 + 47, the length plus the width (half the perimeter), not their product."
+       "A": "\\(20\\pi\\) adds the radius 8 to something like a radius of 12 &mdash; it combines lengths, not areas.",
+       "B": "\\(160\\pi\\) uses \\(16\\pi\\) (the circumference of circle \\(N\\)) instead of its area \\(64\\pi\\).",
+       "C": "\\(176\\pi\\) uses \\(32\\pi\\) for circle \\(N\\), doubling the radius rather than squaring it."
       },
       "needsFigure": false,
       "note": "",
-      "answerValue": null,
       "domain": "GT",
       "skill": "GT-AV",
-      "topic": "Areas&Volumes",
+      "topic": "Circles",
       "hardbook": false,
       "fr": false
      },
@@ -27972,37 +27974,37 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-areas-volumes-30",
-      "stem": "A cylinder has a diameter of 14 inches and a height of 8 inches. What is the volume, in cubic inches, of the cylinder?",
+      "id": "satmath-ma2-areas-volumes-15",
+      "stem": "The width of a rectangle is 7 centimeters. The length of the rectangle is 40 centimeters longer than the width. What is the area, in square centimeters, of this rectangle?",
       "choices": [
        {
         "label": "A",
-        "content": "\\(49\\pi\\)"
+        "content": "7"
        },
        {
         "label": "B",
-        "content": "\\(112\\pi\\)"
+        "content": "14"
        },
        {
         "label": "C",
-        "content": "\\(392\\pi\\)"
+        "content": "54"
        },
        {
         "label": "D",
-        "content": "\\(1{,}568\\pi\\)"
+        "content": "329"
        }
       ],
-      "answerLabel": "C",
-      "answerValue": null,
+      "answerLabel": "D",
       "difficulty": "EASY",
-      "whyCorrect": "The volume of a cylinder is \\(V = \\pi r^{2}h\\), and the problem gives the diameter, not the radius. Halve 14 to get \\(r = 7\\), then \\(V = \\pi \\cdot 7^{2} \\cdot 8 = 392\\pi\\) cubic inches.",
+      "whyCorrect": "\"40 longer than the width\" means length = 7 + 40 = 47, not 40. Then the area is 47 &times; 7 = 329 square centimeters.",
       "whyWrong": {
-       "A": "\\(49\\pi\\) is the area of the circular base alone; you still have to multiply by the height.",
-       "B": "\\(112\\pi\\) is \\(14 \\times 8\\pi\\) &mdash; the diameter times the height, with no squaring of a radius at all.",
-       "D": "\\(1{,}568\\pi = \\pi \\cdot 14^{2} \\cdot 8\\), which uses the diameter as the radius. That makes the volume four times too large."
+       "A": "7 is the width by itself.",
+       "B": "14 is twice the width; no multiplication by the length has happened.",
+       "C": "54 is 7 + 47, the length plus the width (half the perimeter), not their product."
       },
       "needsFigure": false,
       "note": "",
+      "answerValue": null,
       "domain": "GT",
       "skill": "GT-AV",
       "topic": "Areas&Volumes",
@@ -28523,36 +28525,36 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-expressions-70",
-      "stem": "\\[ f = \\frac{(10x)^{2}}{7g} \\]The given equation relates the positive numbers \\( f \\), \\( x \\), and \\( g \\). Which equation correctly expresses \\( x \\) in terms of \\( f \\) and \\( g \\)?",
+      "id": "satmath-ma2-expressions-78",
+      "stem": "\\[ P = N(34 - C) \\]The given equation relates the variables \\( P \\), \\( N \\), and \\( C \\). Which expression represents the value of \\( C \\) for distinct positive values of \\( P \\) and \\( N \\)?",
       "choices": [
        {
         "label": "A",
-        "content": "\\( x = \\frac{\\sqrt{7fg}}{10} \\)"
+        "content": "\\( C + \\frac{P}{N} \\)"
        },
        {
         "label": "B",
-        "content": "\\( x = 10\\sqrt{7fg} \\)"
+        "content": "\\( 34 + \\frac{P}{N} \\)"
        },
        {
         "label": "C",
-        "content": "\\( x = \\sqrt{\\frac{7fg}{10}} \\)"
+        "content": "\\( 34 - \\frac{P}{C} \\)"
        },
        {
         "label": "D",
-        "content": "\\( x = \\sqrt{7fg} - 10 \\)"
+        "content": "\\( 34 - \\frac{P}{N} \\)"
        }
       ],
-      "answerLabel": "A",
+      "answerLabel": "D",
       "difficulty": "MEDIUM",
-      "whyCorrect": "Multiply both sides by \\( 7g \\) to get \\( 7fg = (10x)^{2} = 100x^{2} \\). Then \\( x^{2} = \\frac{7fg}{100} \\), and taking the positive square root gives \\( x = \\frac{\\sqrt{7fg}}{10} \\). The 10 is inside the square, so it comes out as 10, not \\( \\sqrt{10} \\).",
+      "whyCorrect": "Divide both sides by \\( N \\) first, which keeps the parentheses intact: \\( \\frac{P}{N} = 34 - C \\). Then move \\( C \\) across and \\( \\frac{P}{N} \\) across to get \\( C = 34 - \\frac{P}{N} \\). Dividing before expanding is what makes this one line of work.",
       "whyWrong": {
-       "B": "This multiplies by 10 instead of dividing &mdash; it undoes \\( \\frac{x}{10} \\) rather than \\( 10x \\).",
-       "C": "This square-roots the 10 along with everything else, but \\( (10x)^{2} = 100x^{2} \\), so the divisor under the root would have to be 100.",
-       "D": "Subtracting 10 undoes addition, not multiplication; nothing in the equation adds 10."
+       "A": "An expression for \\( C \\) cannot contain \\( C \\) itself, so this has not isolated anything.",
+       "B": "The sign is wrong: \\( \\frac{P}{N} = 34 - C \\) rearranges to \\( C = 34 - \\frac{P}{N} \\), not \\( 34 + \\frac{P}{N} \\).",
+       "C": "This divides by \\( C \\) instead of \\( N \\), and it leaves \\( C \\) on both sides."
       },
       "needsFigure": false,
-      "note": "",
+      "note": "Same template as expressions-61 (44 replaced by 34, and the left side there is PC rather than P); the two are close enough to flag at allocation.",
       "answerValue": null,
       "domain": "ALG",
       "skill": "ADV-EQ",
@@ -29080,37 +29082,37 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-expressions-78",
-      "stem": "\\[ P = N(34 - C) \\]The given equation relates the variables \\( P \\), \\( N \\), and \\( C \\). Which expression represents the value of \\( C \\) for distinct positive values of \\( P \\) and \\( N \\)?",
+      "id": "satmath-ma2-expressions-79",
+      "stem": "A right rectangular prism has a base area of \\(56t\\) square centimeters (cm&sup2;). The length of the base of the rectangular prism is \\(\\frac{14}{3}\\) cm, and the height of the rectangular prism is 3 cm. Which expression represents the surface area, in cm&sup2;, of the right rectangular prism?",
       "choices": [
        {
         "label": "A",
-        "content": "\\( C + \\frac{P}{N} \\)"
+        "content": "\\(112t + 56\\)"
        },
        {
         "label": "B",
-        "content": "\\( 34 + \\frac{P}{N} \\)"
+        "content": "\\(184t + 28\\)"
        },
        {
         "label": "C",
-        "content": "\\( 34 - \\frac{P}{C} \\)"
+        "content": "\\(1{,}680t + 28\\)"
        },
        {
         "label": "D",
-        "content": "\\( 34 - \\frac{P}{N} \\)"
+        "content": "\\(168t\\)"
        }
       ],
-      "answerLabel": "D",
+      "answerLabel": "B",
       "difficulty": "MEDIUM",
-      "whyCorrect": "Divide both sides by \\( N \\) first, which keeps the parentheses intact: \\( \\frac{P}{N} = 34 - C \\). Then move \\( C \\) across and \\( \\frac{P}{N} \\) across to get \\( C = 34 - \\frac{P}{N} \\). Dividing before expanding is what makes this one line of work.",
+      "whyCorrect": "First get the base width: area &divide; length \\(= 56t \\div \\frac{14}{3} = 56t \\cdot \\frac{3}{14} = 12t\\). Surface area is two bases plus the side faces: \\(2(56t) + (\\text{base perimeter})(\\text{height}) = 112t + 2\\left(\\frac{14}{3} + 12t\\right)(3) = 112t + 28 + 72t = 184t + 28\\).",
       "whyWrong": {
-       "A": "An expression for \\( C \\) cannot contain \\( C \\) itself, so this has not isolated anything.",
-       "B": "The sign is wrong: \\( \\frac{P}{N} = 34 - C \\) rearranges to \\( C = 34 - \\frac{P}{N} \\), not \\( 34 + \\frac{P}{N} \\).",
-       "C": "This divides by \\( C \\) instead of \\( N \\), and it leaves \\( C \\) on both sides."
+       "A": "This doubles the base area and then adds 56 instead of computing the four side faces from the perimeter.",
+       "C": "1,680 comes from multiplying rather than dividing when finding the width, inflating the side-face contribution.",
+       "D": "This omits the constant term entirely, which comes from the two faces whose area is \\(\\frac{14}{3} \\times 3\\) each."
       },
-      "needsFigure": false,
-      "note": "Same template as expressions-61 (44 replaced by 34, and the left side there is PC rather than P); the two are close enough to flag at allocation.",
       "answerValue": null,
+      "needsFigure": false,
+      "note": "",
       "domain": "ALG",
       "skill": "ADV-EQ",
       "topic": "Expressions",
@@ -29308,33 +29310,33 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-expressions-79",
-      "stem": "A right rectangular prism has a base area of \\(56t\\) square centimeters (cm&sup2;). The length of the base of the rectangular prism is \\(\\frac{14}{3}\\) cm, and the height of the rectangular prism is 3 cm. Which expression represents the surface area, in cm&sup2;, of the right rectangular prism?",
+      "id": "satmath-ma2-expressions-8",
+      "stem": "Which expression is equivalent to \\(2(xy^{2} + x^{2}y) - 8(xy^{2} - 4x^{2}y)\\)?",
       "choices": [
        {
         "label": "A",
-        "content": "\\(112t + 56\\)"
+        "content": "\\(-6xy^{2} + 34x^{2}y\\)"
        },
        {
         "label": "B",
-        "content": "\\(184t + 28\\)"
+        "content": "\\(-6xy^{2} + 33x^{2}y\\)"
        },
        {
         "label": "C",
-        "content": "\\(1{,}680t + 28\\)"
+        "content": "\\(-6xy^{2} - 30x^{2}y\\)"
        },
        {
         "label": "D",
-        "content": "\\(168t\\)"
+        "content": "\\(-6xy^{2} - 31x^{2}y\\)"
        }
       ],
-      "answerLabel": "B",
+      "answerLabel": "A",
       "difficulty": "MEDIUM",
-      "whyCorrect": "First get the base width: area &divide; length \\(= 56t \\div \\frac{14}{3} = 56t \\cdot \\frac{3}{14} = 12t\\). Surface area is two bases plus the side faces: \\(2(56t) + (\\text{base perimeter})(\\text{height}) = 112t + 2\\left(\\frac{14}{3} + 12t\\right)(3) = 112t + 28 + 72t = 184t + 28\\).",
+      "whyCorrect": "Distribute both coefficients, keeping the sign on the second: \\(2xy^{2} + 2x^{2}y - 8xy^{2} + 32x^{2}y\\). The \\(-8\\) times \\(-4x^{2}y\\) is \\(+32x^{2}y\\). Combining like terms gives \\(-6xy^{2} + 34x^{2}y\\).",
       "whyWrong": {
-       "A": "This doubles the base area and then adds 56 instead of computing the four side faces from the perimeter.",
-       "C": "1,680 comes from multiplying rather than dividing when finding the width, inflating the side-face contribution.",
-       "D": "This omits the constant term entirely, which comes from the two faces whose area is \\(\\frac{14}{3} \\times 3\\) each."
+       "B": "\\(33x^{2}y\\) uses \\(32 + 1\\); the first bracket contributes \\(2x^{2}y\\), not \\(x^{2}y\\).",
+       "C": "\\(-30x^{2}y\\) comes from distributing \\(-8\\) over \\(-4x^{2}y\\) as \\(-32x^{2}y\\); two negatives multiply to a positive.",
+       "D": "Same sign error on the \\(32x^{2}y\\) term, combined with using \\(1x^{2}y\\) instead of \\(2x^{2}y\\) from the first bracket."
       },
       "answerValue": null,
       "needsFigure": false,
@@ -29673,42 +29675,21 @@
       "fr": true
      },
      {
-      "id": "satmath-ma2-expressions-8",
-      "stem": "Which expression is equivalent to \\(2(xy^{2} + x^{2}y) - 8(xy^{2} - 4x^{2}y)\\)?",
-      "choices": [
-       {
-        "label": "A",
-        "content": "\\(-6xy^{2} + 34x^{2}y\\)"
-       },
-       {
-        "label": "B",
-        "content": "\\(-6xy^{2} + 33x^{2}y\\)"
-       },
-       {
-        "label": "C",
-        "content": "\\(-6xy^{2} - 30x^{2}y\\)"
-       },
-       {
-        "label": "D",
-        "content": "\\(-6xy^{2} - 31x^{2}y\\)"
-       }
-      ],
-      "answerLabel": "A",
+      "id": "satmath-ma2-expressions-7",
+      "stem": "If \\(x^{3} + y^{3} = 12\\) and \\(x^{3} - y^{3} = 6\\), what is the value of \\(x^{6} - y^{6}\\)?",
+      "choices": [],
+      "answerValue": "72",
       "difficulty": "MEDIUM",
-      "whyCorrect": "Distribute both coefficients, keeping the sign on the second: \\(2xy^{2} + 2x^{2}y - 8xy^{2} + 32x^{2}y\\). The \\(-8\\) times \\(-4x^{2}y\\) is \\(+32x^{2}y\\). Combining like terms gives \\(-6xy^{2} + 34x^{2}y\\).",
-      "whyWrong": {
-       "B": "\\(33x^{2}y\\) uses \\(32 + 1\\); the first bracket contributes \\(2x^{2}y\\), not \\(x^{2}y\\).",
-       "C": "\\(-30x^{2}y\\) comes from distributing \\(-8\\) over \\(-4x^{2}y\\) as \\(-32x^{2}y\\); two negatives multiply to a positive.",
-       "D": "Same sign error on the \\(32x^{2}y\\) term, combined with using \\(1x^{2}y\\) instead of \\(2x^{2}y\\) from the first bracket."
-      },
-      "answerValue": null,
-      "needsFigure": false,
+      "whyCorrect": "Do not solve for \\(x\\) and \\(y\\). Recognise \\(x^{6} - y^{6}\\) as a difference of squares of \\(x^{3}\\) and \\(y^{3}\\): \\(x^{6} - y^{6} = (x^{3} + y^{3})(x^{3} - y^{3}) = 12 \\times 6 = 72\\).",
       "note": "",
+      "answerLabel": null,
+      "whyWrong": {},
+      "needsFigure": false,
       "domain": "ALG",
       "skill": "ADV-EQ",
       "topic": "Expressions",
       "hardbook": false,
-      "fr": false
+      "fr": true
      },
      {
       "id": "satmath-ma2-quadratics-175",
@@ -29838,19 +29819,42 @@
       "fr": true
      },
      {
-      "id": "satmath-ma2-quadratics-178",
-      "stem": "\\[ 18x^2-24x+c=0 \\]<br/>In the given equation, \\(c\\) is a constant. The equation has exactly one solution. What is the value of \\(c\\) ?",
-      "answerValue": "8",
+      "id": "satmath-ma2-quadratics-35",
+      "stem": "\\(y = 5(x - 3)\\)<br/>\\(y = (x - 3)^2\\)<br/>Which ordered pair \\((x, y)\\) is a solution to the given system of equations?",
+      "choices": [
+       {
+        "label": "A",
+        "content": "\\((8, -5)\\)"
+       },
+       {
+        "label": "B",
+        "content": "\\((8, 25)\\)"
+       },
+       {
+        "label": "C",
+        "content": "\\((3, 8)\\)"
+       },
+       {
+        "label": "D",
+        "content": "\\((2, -5)\\)"
+       }
+      ],
+      "answerLabel": "B",
+      "answerValue": null,
       "difficulty": "MEDIUM",
-      "whyCorrect": "Exactly one solution means the discriminant is zero: \\((-24)^2-4(18)c=0\\), so \\(576=72c\\) and \\(c=8\\). (Check: \\(18x^2-24x+8=2(3x-2)^2\\), a perfect square.)",
+      "whyCorrect": "Set the two expressions for <em>y</em> equal: \\((x-3)^2 = 5(x-3)\\). Move everything to one side and factor out the common \\((x-3)\\): \\((x-3)(x-8) = 0\\), so \\(x = 3\\) or \\(x = 8\\). At \\(x = 8\\), \\(y = 5(5) = 25\\), giving \\((8, 25)\\). (The other solution is \\((3,0)\\), which is not offered.)",
+      "whyWrong": {
+       "A": "The <em>x</em>-value is right but the <em>y</em>-value is not: \\(5(8-3) = 25\\), not \\(-5\\).",
+       "C": "At \\(x = 3\\) both equations give \\(y = 0\\), so the solution there is \\((3,0)\\), not \\((3,8)\\).",
+       "D": "This satisfies the first equation only: \\(5(2-3) = -5\\), but \\((2-3)^2 = 1\\). A solution must satisfy both."
+      },
       "needsFigure": false,
-      "answerLabel": null,
       "note": "",
       "domain": "ADV",
       "skill": "ADV-NE",
       "topic": "Quadratics",
       "hardbook": false,
-      "fr": true
+      "fr": false
      },
      {
       "id": "satmath-ma2-expressions-81",
@@ -30005,40 +30009,40 @@
       "fr": false
      },
      {
-      "id": "satmath-ma3-circles-3",
-      "stem": "Circle \\(N\\) has a radius of 8 millimeters (mm). Circle \\(M\\) has an area of \\(144\\pi\\) mm<sup>2</sup>. What is the total area, in mm<sup>2</sup>, of circles \\(N\\) and \\(M\\)?",
+      "id": "satmath-ma2-areas-volumes-30",
+      "stem": "A cylinder has a diameter of 14 inches and a height of 8 inches. What is the volume, in cubic inches, of the cylinder?",
       "choices": [
        {
         "label": "A",
-        "content": "\\(20\\pi\\)"
+        "content": "\\(49\\pi\\)"
        },
        {
         "label": "B",
-        "content": "\\(160\\pi\\)"
+        "content": "\\(112\\pi\\)"
        },
        {
         "label": "C",
-        "content": "\\(176\\pi\\)"
+        "content": "\\(392\\pi\\)"
        },
        {
         "label": "D",
-        "content": "\\(208\\pi\\)"
+        "content": "\\(1{,}568\\pi\\)"
        }
       ],
-      "answerLabel": "D",
+      "answerLabel": "C",
       "answerValue": null,
       "difficulty": "EASY",
-      "whyCorrect": "Circle \\(N\\)'s area is \\(\\pi r^{2} = \\pi(8)^{2} = 64\\pi\\). Adding circle \\(M\\)'s \\(144\\pi\\) gives \\(64\\pi + 144\\pi = 208\\pi\\) square millimeters.",
+      "whyCorrect": "The volume of a cylinder is \\(V = \\pi r^{2}h\\), and the problem gives the diameter, not the radius. Halve 14 to get \\(r = 7\\), then \\(V = \\pi \\cdot 7^{2} \\cdot 8 = 392\\pi\\) cubic inches.",
       "whyWrong": {
-       "A": "\\(20\\pi\\) adds the radius 8 to something like a radius of 12 &mdash; it combines lengths, not areas.",
-       "B": "\\(160\\pi\\) uses \\(16\\pi\\) (the circumference of circle \\(N\\)) instead of its area \\(64\\pi\\).",
-       "C": "\\(176\\pi\\) uses \\(32\\pi\\) for circle \\(N\\), doubling the radius rather than squaring it."
+       "A": "\\(49\\pi\\) is the area of the circular base alone; you still have to multiply by the height.",
+       "B": "\\(112\\pi\\) is \\(14 \\times 8\\pi\\) &mdash; the diameter times the height, with no squaring of a radius at all.",
+       "D": "\\(1{,}568\\pi = \\pi \\cdot 14^{2} \\cdot 8\\), which uses the diameter as the radius. That makes the volume four times too large."
       },
       "needsFigure": false,
       "note": "",
       "domain": "GT",
       "skill": "GT-AV",
-      "topic": "Circles",
+      "topic": "Areas&Volumes",
       "hardbook": false,
       "fr": false
      },
@@ -30785,34 +30789,34 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-quadratics-35",
-      "stem": "\\(y = 5(x - 3)\\)<br/>\\(y = (x - 3)^2\\)<br/>Which ordered pair \\((x, y)\\) is a solution to the given system of equations?",
+      "id": "satmath-ma2-quadratics-36",
+      "stem": "The function f is a quadratic function. In the xy-plane, the graph of \\( y = f(x) \\) has a vertex at (1, 9) and passes through the points (2, 33) and (-1, 105). What is the value of \\( f(-2) - f(0) \\) ?",
       "choices": [
        {
         "label": "A",
-        "content": "\\((8, -5)\\)"
+        "content": "81"
        },
        {
         "label": "B",
-        "content": "\\((8, 25)\\)"
+        "content": "129"
        },
        {
         "label": "C",
-        "content": "\\((3, 8)\\)"
+        "content": "192"
        },
        {
         "label": "D",
-        "content": "\\((2, -5)\\)"
+        "content": "225"
        }
       ],
-      "answerLabel": "B",
+      "answerLabel": "C",
       "answerValue": null,
       "difficulty": "MEDIUM",
-      "whyCorrect": "Set the two expressions for <em>y</em> equal: \\((x-3)^2 = 5(x-3)\\). Move everything to one side and factor out the common \\((x-3)\\): \\((x-3)(x-8) = 0\\), so \\(x = 3\\) or \\(x = 8\\). At \\(x = 8\\), \\(y = 5(5) = 25\\), giving \\((8, 25)\\). (The other solution is \\((3,0)\\), which is not offered.)",
+      "whyCorrect": "Use vertex form: \\( f(x) = a(x - 1)^{2} + 9 \\) . The point (2, 33) gives \\( a(1) + 9 = 33 \\) , so a = 24, and (-1, 105) confirms it since \\( 24(4) + 9 = 105 \\) . Then \\( f(-2) = 24(9) + 9 = 225 \\) and \\( f(0) = 24(1) + 9 = 33 \\) , so the difference is 192.",
       "whyWrong": {
-       "A": "The <em>x</em>-value is right but the <em>y</em>-value is not: \\(5(8-3) = 25\\), not \\(-5\\).",
-       "C": "At \\(x = 3\\) both equations give \\(y = 0\\), so the solution there is \\((3,0)\\), not \\((3,8)\\).",
-       "D": "This satisfies the first equation only: \\(5(2-3) = -5\\), but \\((2-3)^2 = 1\\). A solution must satisfy both."
+       "A": "81 comes from a wrong leading coefficient. Pin a down first from the point (2, 33): \\( a(2 - 1)^{2} + 9 = 33 \\) forces a = 24.",
+       "B": "129 is \\( 24(5) + 9 \\) , which evaluates \\( (-2 - 1)^{2} \\) as \\( (-2)^{2} + 1 \\) . Subtract inside the parentheses first: \\( (-3)^{2} = 9 \\) .",
+       "D": "225 is \\( f(-2) \\) on its own. The question asks for the difference, so \\( f(0) = 33 \\) still has to come off."
       },
       "needsFigure": false,
       "note": "",
@@ -30937,34 +30941,34 @@
       "fr": false
      },
      {
-      "id": "satmath-ma2-quadratics-36",
-      "stem": "The function f is a quadratic function. In the xy-plane, the graph of \\( y = f(x) \\) has a vertex at (1, 9) and passes through the points (2, 33) and (-1, 105). What is the value of \\( f(-2) - f(0) \\) ?",
+      "id": "satmath-ma2-quadratics-40",
+      "stem": "\\[f(x) = \\sqrt{5x + 6}\\]The function <em>f</em> is defined by the given equation. If \\(f(a) = -5a\\), where <em>a</em> is a constant, what is the value of <em>a</em>?",
       "choices": [
        {
         "label": "A",
-        "content": "81"
+        "content": "\\(\\frac{3}{5}\\)"
        },
        {
         "label": "B",
-        "content": "129"
+        "content": "\\(\\frac{2}{5}\\)"
        },
        {
         "label": "C",
-        "content": "192"
+        "content": "\\(-\\frac{2}{5}\\)"
        },
        {
         "label": "D",
-        "content": "225"
+        "content": "\\(-\\frac{3}{5}\\)"
        }
       ],
       "answerLabel": "C",
       "answerValue": null,
       "difficulty": "MEDIUM",
-      "whyCorrect": "Use vertex form: \\( f(x) = a(x - 1)^{2} + 9 \\) . The point (2, 33) gives \\( a(1) + 9 = 33 \\) , so a = 24, and (-1, 105) confirms it since \\( 24(4) + 9 = 105 \\) . Then \\( f(-2) = 24(9) + 9 = 225 \\) and \\( f(0) = 24(1) + 9 = 33 \\) , so the difference is 192.",
+      "whyCorrect": "Squaring \\(\\sqrt{5a+6} = -5a\\) gives \\(25a^2 - 5a - 6 = 0\\), which factors as \\((5a-3)(5a+2) = 0\\), so \\(a = \\frac{3}{5}\\) or \\(a = -\\frac{2}{5}\\). A square root is never negative, so \\(-5a \\ge 0\\) and <em>a</em> must not be positive. Checking \\(a = -\\frac{2}{5}\\): \\(\\sqrt{-2+6} = 2\\) and \\(-5\\left(-\\frac{2}{5}\\right) = 2\\).",
       "whyWrong": {
-       "A": "81 comes from a wrong leading coefficient. Pin a down first from the point (2, 33): \\( a(2 - 1)^{2} + 9 = 33 \\) forces a = 24.",
-       "B": "129 is \\( 24(5) + 9 \\) , which evaluates \\( (-2 - 1)^{2} \\) as \\( (-2)^{2} + 1 \\) . Subtract inside the parentheses first: \\( (-3)^{2} = 9 \\) .",
-       "D": "225 is \\( f(-2) \\) on its own. The question asks for the difference, so \\( f(0) = 33 \\) still has to come off."
+       "A": "This is the extraneous root that squaring introduces. It makes the right side \\(-3\\), and \\(\\sqrt{9} = 3\\), not \\(-3\\).",
+       "B": "Not a root of \\(25a^2 - 5a - 6 = 0\\) at all: substituting gives \\(-4\\), and it is positive, which the sign check already rules out.",
+       "D": "Also not a root: substituting \\(-\\frac{3}{5}\\) into \\(25a^2 - 5a - 6\\) gives 6, not 0."
       },
       "needsFigure": false,
       "note": "",

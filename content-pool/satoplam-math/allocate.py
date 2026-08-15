@@ -30,8 +30,20 @@ from collections import Counter, defaultdict
 import sim
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FIRST_TEST = 6
-N_TESTS = int(sys.argv[sys.argv.index("--tests") + 1]) if "--tests" in sys.argv else 17
+def _arg(flag, default):
+    return sys.argv[sys.argv.index(flag) + 1] if flag in sys.argv else default
+
+
+FIRST_TEST = int(_arg("--start", 6))
+N_TESTS = int(_arg("--tests", 17))
+OUT = _arg("--out", "allocation.json")
+# Ids already spent by an earlier pass, so a second run extends the build
+# instead of re-allocating the same questions into new tests.
+EXCLUDE = set()
+for f in _arg("--exclude", "").split(",") if _arg("--exclude", "") else []:
+    for t in json.load(open(f"{HERE}/{f}")):
+        for m in t["modules"].values():
+            EXCLUDE |= {q["id"] for q in m["questions"]}
 
 # Read off the band survey, not guessed: 0.45-0.60 is the same question with
 # the numbers changed, and 0.35-0.45 still holds real template repeats
@@ -81,7 +93,7 @@ DOMAIN_TARGET = {"ALG": 7, "ADV": 8, "PSDA": 4, "GT": 3}
 # last three Module 2 Hards came out 14 of 22 geometry with no
 # problem-solving at all. A module that lopsided is not a Digital SAT module,
 # so it is better to stop building tests than to ship it.
-DOMAIN_CAP = 9
+DOMAIN_CAP = int(_arg("--cap", 9))
 
 
 def rank(q, mod, used_dom, used_skill, used_topic):
@@ -103,7 +115,9 @@ def rank(q, mod, used_dom, used_skill, used_topic):
             used_skill[q["skill"]], used_topic[q["topic"]], q["id"])
 
 
-available = {q["id"]: q for q in pool}
+available = {q["id"]: q for q in pool if q["id"] not in EXCLUDE}
+if EXCLUDE:
+    print(f"excluding {len(EXCLUDE)} already-allocated questions; {len(available)} left")
 tests, failures = [], []
 
 for t in range(N_TESTS):
@@ -178,5 +192,5 @@ for t in tests:
         for q in m["questions"]:
             q.pop("_mod", None)
 
-json.dump(tests, open(f"{HERE}/allocation.json", "w"), indent=1)
-print(f"\nwrote allocation.json")
+json.dump(tests, open(f"{HERE}/{OUT}", "w"), indent=1)
+print(f"\nwrote {OUT}")

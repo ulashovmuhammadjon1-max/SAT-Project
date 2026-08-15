@@ -1,0 +1,521 @@
+[
+ {
+  "id": "satmath-ma3-lines-angles-18",
+  "stem": "<p>In the figure shown, line k intersects lines r and s. If w = 147, which additional piece of information is sufficient to prove that lines r and s are parallel?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 33"
+   },
+   {
+    "label": "B",
+    "content": "y = 147"
+   },
+   {
+    "label": "C",
+    "content": "w + y = 180"
+   },
+   {
+    "label": "D",
+    "content": "y + z = 180"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "To prove two lines are parallel you need a fact that is not already true regardless. w and y sit in the same position at their own intersections &mdash; both to the right of their line and above k &mdash; so they are corresponding angles, and corresponding angles are equal exactly when the lines are parallel. y = 147 = w is therefore the fact that does it.",
+  "whyWrong": {
+   "A": "x = 33 follows automatically from w = 147, because w and x form a straight line along r. A statement that is already true tells you nothing about s.",
+   "C": "If w + y = 180 with w = 147, then y = 33, so the corresponding angles would differ and the lines would not be parallel.",
+   "D": "y and z form a straight line along s, so y + z = 180 is true whatever the lines do. It never mentions r."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-triangles-9",
+  "stem": "<p>Which equation gives the relationship between the side lengths of the triangle shown?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( 12^{2} + 14^{2} = a^{2} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( a^{2} + 12^{2} = 14^{2} \\)"
+   },
+   {
+    "label": "C",
+    "content": "a + 12 = 14"
+   },
+   {
+    "label": "D",
+    "content": "12 + 14 = a"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "In the Pythagorean theorem the hypotenuse is always alone on one side of the equation, and the hypotenuse is the side opposite the right angle. Here the right-angle mark is between a and 12, so those are the legs and 14 is the hypotenuse: \\( a^{2} + 12^{2} = 14^{2} \\) .",
+  "whyWrong": {
+   "A": "This treats a as the hypotenuse. a is a leg &mdash; it touches the right angle, so it cannot be the longest side.",
+   "C": "Side lengths in a right triangle do not add like this; the relationship is between the squares, and 12 + a is greater than 14 for the true value of a.",
+   "D": "Adding two sides gives the third only in a degenerate flat triangle, and again a is a leg, not the sum of the others."
+  },
+  "needsFigure": true,
+  "note": "The book prints \"the side length\"; the figure labels three sides, so it is read as \"side lengths\"."
+ },
+ {
+  "id": "satmath-ma3-triangles-10",
+  "stem": "<p>In triangle XYZ, the measure of angle Y is 90 degrees. Triangle RST (not shown) is similar to triangle XYZ such that R, S, and T correspond to X, Y, and Z, respectively. Each side of triangle RST is 19 times the length of the corresponding side of triangle XYZ. What is the measure, in degrees, of one of the angles in triangle RST?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "35",
+  "difficulty": "EASY",
+  "whyCorrect": "Similar triangles have identical angles no matter how the sides are scaled, so the factor of 19 changes nothing here &mdash; it is there to pull you toward multiplying. Triangle XYZ has angles 90&deg; at Y, 35&deg; at Z, and 180 &minus; 90 &minus; 35 = 55&deg; at X, so triangle RST has those same three angles. Any one of 35, 55 or 90 answers the question.",
+  "needsFigure": true,
+  "note": "Free response with three correct answers: 35, 55 and 90 are all angles of triangle RST. Recorded 35; a key listing only one of the three is still not wrong."
+ },
+ {
+  "id": "satmath-ma3-trigonometry-1",
+  "stem": "In the right triangle shown, what is the value of \\( \\cos A \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{1}{43} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{1}{23} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{23}{43} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{43}{23} \\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Cosine is the side next to the angle over the hypotenuse. The right angle is at B, so the hypotenuse is AC = 43, and the leg touching angle A is AB = 23. That gives \\( \\cos A = \\frac{23}{43} \\) .",
+  "whyWrong": {
+   "A": "\\( \\frac{1}{43} \\) has the right denominator but a numerator of 1 instead of the adjacent leg 23.",
+   "B": "\\( \\frac{1}{23} \\) puts the leg in the denominator and invents a 1 on top; the hypotenuse must be the denominator for a cosine.",
+   "D": "\\( \\frac{43}{23} \\) is upside down. Any cosine is at most 1, so a value bigger than 1 cannot be right."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-trigonometry-3",
+  "stem": "<p>In triangle JKL, \\( \\cos y^{\\circ} = \\frac{54}{55} \\) . What is the length of KL?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "54",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "y&deg; is the angle at L and the right angle is at K, so KL is the leg beside y and JL is the hypotenuse: \\( \\cos y^{\\circ} = \\frac{KL}{JL} \\) . The hypotenuse JL is 55, so \\( \\frac{KL}{55} = \\frac{54}{55} \\) and KL = 54. No Pythagorean work is needed &mdash; the given ratio already has 55 as its denominator.",
+  "needsFigure": true,
+  "note": "In the book the length 55 is printed on top of the right-angle mark at K rather than beside a side. It must be the hypotenuse JL: reading it as the leg JK gives KL \\u2248 284.5, which is not a plausible intended answer, and the parallel question on the facing page (59 with cos y = 58/59) has the same layout."
+ },
+ {
+  "id": "satmath-ma3-trigonometry-5",
+  "stem": "<p>In triangle QRS, what is the value of \\( \\tan y^{\\circ} \\) ?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{c}{4} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{c}{10} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{4}{10} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{10}{4} \\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Tangent uses the two legs only, never the hypotenuse: opposite over adjacent. y&deg; is at S, so the leg opposite it is QR = 4 and the leg beside it is RS = 10, giving \\( \\tan y^{\\circ} = \\frac{4}{10} \\) .",
+  "whyWrong": {
+   "A": "c is the hypotenuse, which no tangent ever uses.",
+   "B": "Same problem: bringing the hypotenuse in makes this a secant, not a tangent.",
+   "D": "\\( \\frac{10}{4} \\) is opposite and adjacent swapped &mdash; it is the tangent of the angle at Q, not at S."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-trigonometry-6",
+  "stem": "In triangle QRS, what is the value of \\( \\tan y \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\frac{c}{9} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\frac{4}{9} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{c}{4} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( \\frac{9}{4} \\)"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The right angle is at R, so QR = 4 and RS = 9 are the legs and c is the hypotenuse. y is the angle at S, so the opposite leg is QR = 4 and the adjacent leg is RS = 9: \\( \\tan y = \\frac{4}{9} \\) .",
+  "whyWrong": {
+   "A": "The hypotenuse c never appears in a tangent; this is a secant-type ratio.",
+   "C": "Same error as A, with the other leg underneath.",
+   "D": "\\( \\frac{9}{4} \\) reverses opposite and adjacent, giving the tangent of the angle at Q instead."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-trigonometry-7",
+  "stem": "In triangle JKL, \\( \\cos y = \\frac{58}{59} \\) . What is the length of KL?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "58",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The right angle is at K and y is the angle at L, so the side beside y is KL and the hypotenuse is JL: \\( \\cos y = \\frac{KL}{JL} \\) . The hypotenuse is 59, so \\( \\frac{KL}{59} = \\frac{58}{59} \\) and KL = 58. The ratio is already written with the hypotenuse as its denominator, so no further computation is needed.",
+  "needsFigure": true,
+  "note": "As in the companion question earlier in the chapter, the book prints the length 59 on top of the right-angle mark at K instead of beside a side; it has to be the hypotenuse JL for the numbers to work."
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-14",
+  "stem": "A store owner recorded the number of units of a certain product that were sold per day for 28 days. The boxplot shown summarizes the number of units sold per day. What is the minimum number of units of this product sold per day for these 28 days?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "85",
+  "difficulty": "EASY",
+  "whyCorrect": "On a boxplot the minimum is the far left end of the left whisker, not the left edge of the box. The left edge of the box is the first quartile, which is 97 here; the whisker runs further left, down to 85. So the smallest daily total is 85 units.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Needs the boxplot figure. Measured from the page image against the axis (ticks every 5 from 80 to 140): minimum 85, Q1 97, median 114, Q3 124, maximum 138. Title above the plot reads \"Number of units sold per day\"."
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-19",
+  "stem": "The graph shown gives the estimated value, in dollars, of a mountain bike as a function of the number of months since it was purchased. What is the best interpretation of the y-intercept of the graph in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated value of the bike decreased by approximately 2.75% each year after it was purchased."
+   },
+   {
+    "label": "B",
+    "content": "The estimated value of the bike had decreased by $275 in the 24 months after it was purchased."
+   },
+   {
+    "label": "C",
+    "content": "The estimated value of the bike 24 months after it was purchased was $275."
+   },
+   {
+    "label": "D",
+    "content": "The estimated value of the bike was $275 when it was purchased."
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The y-intercept is the point where the horizontal variable is 0. Here the horizontal axis counts months since purchase, so x = 0 is the moment of purchase, and the y-value there is the value at that moment. The graph meets the y-axis at 275 dollars.",
+  "whyWrong": {
+   "A": "A percentage rate is not read off an intercept at all, and 275 dollars is not 2.75 percent of anything in the graph.",
+   "B": "The drop over 24 months is 275 - 75 = 200 dollars, and in any case a decrease is a difference between two points, not an intercept.",
+   "C": "275 dollars is the value at month 0, not month 24. At month 24 the graph is at 75 dollars."
+  },
+  "needsFigure": true,
+  "note": "Figure: decaying curve, horizontal axis months 0 to 24, vertical axis dollars 0 to 350. Labelled points (0, 275) and (24, 75)."
+ },
+ {
+  "id": "satmath-ma3-mean-median-mode-range-1",
+  "stem": "The dot plots represent the distributions of values in data sets A and B. Which of the following statements must be true?<br/>I. The median of data set A is equal to the median of data set B.<br/>II. The standard deviation of data set A is equal to the standard deviation of data set B.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I and II"
+   },
+   {
+    "label": "B",
+    "content": "I only"
+   },
+   {
+    "label": "C",
+    "content": "II only"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Count the dots rather than judging the shapes by eye. Both sets have 16 values, so the median is the average of the 8th and 9th. In A the counts run 1, 2, 3, 4, 3, 2, 1 across 4 to 10, putting both middle values at 7; in B they run 2, 3, 4, 3, 2, 1, 1, putting both middle values at 6. The medians differ, so I is false. B also carries a longer right tail, so its spread is larger and II is false as well.",
+  "whyWrong": {
+   "A": "This needs both statements true, but the medians are already different (7 against 6).",
+   "B": "The medians are not equal. A is centred at 7 and B at 6, which you can see once the dots either side of the middle are counted.",
+   "C": "The standard deviations are not equal either. A is symmetric about 7, while B is pulled right by isolated values at 9 and 10, so B is more spread out."
+  },
+  "needsFigure": true,
+  "note": "Figure: two dot plots on a 4-to-10 scale. Data Set A counts, from 4 to 10: 1, 2, 3, 4, 3, 2, 1 (median 7, population SD about 1.58). Data Set B counts: 2, 3, 4, 3, 2, 1, 1 (median 6, population SD about 1.66)."
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-5",
+  "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">x</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">y</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6</td></tr></table>Which graph best models the relationship between x and y in the given table?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Graph A"
+   },
+   {
+    "label": "B",
+    "content": "Graph B"
+   },
+   {
+    "label": "C",
+    "content": "Graph C"
+   },
+   {
+    "label": "D",
+    "content": "Graph D"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Look at how y grows against x: y doubles from 2 to 4 while x quadruples from 2 to 8, and y goes to 6 when x = 18 \u2014 nine times 2. That squaring pattern says y is proportional to the square root of x, and the exact rule is \\( y = \\sqrt{2x} \\) , which fits all four rows. So the graph must start at the origin and pass through (2, 2), (8, 4) and (18, 6) \u2014 the curve reaching only about 4.5 at x = 10.",
+  "whyWrong": {
+   "A": "This curve starts at the origin but rises too fast: it is at about 3 when x = 2 and about 6.3 when x = 10, matching \\( y = 2\\sqrt{x} \\) rather than \\( y = \\sqrt{2x} \\) .",
+   "C": "This curve is shifted left \u2014 it meets the <em>x</em>-axis at a negative x and is already positive at x = 0, so it does not pass through (0, 0).",
+   "D": "This curve starts below the <em>x</em>-axis near x = 0, so it fails the first row of the table, y = 0 when x = 0."
+  },
+  "needsFigure": true,
+  "note": "The four answer choices are graphs, not text, so this question needs all four figures rebuilt, not just one. Measured readings: A is y = 2*sqrt(x) from the origin (about 3 at x = 2, about 6.3 at x = 10); B is y = sqrt(2x) from the origin (about 2 at x = 2, about 4.5 at x = 10); C is a square-root curve shifted left, crossing the y-axis near y = 1; D is a square-root curve starting near (0, -2).",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-2",
+  "stem": "The dot plot shows the estimated market values, in thousands of dollars, for 15 houses in a neighborhood. What is the maximum estimated market value, in thousands of dollars, for the data set?",
+  "choices": [],
+  "answerValue": "178",
+  "difficulty": "EASY",
+  "whyCorrect": "The maximum is just the largest value in the data set, which on a dot plot is the position of the rightmost dot &mdash; you do not need to count how many dots sit above it. That rightmost stack sits at 178, so the maximum estimated market value is 178 thousand dollars.",
+  "needsFigure": true,
+  "note": "Dot plot needed. Measured from the page image, axis labelled 168 to 178 with a tick every 2 units and dots placed at whole numbers: 167 (1 dot), 168 (3), 170 (1), 171 (3), 173 (4), 174 (1), 178 (2) &mdash; 15 dots in total, matching the stated 15 houses.",
+  "answerLabel": null,
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-3",
+  "stem": "The dot plot shows the 9 values of a data set with a mean value of \\( a \\) and a median value of \\( b \\). The value of 46 is removed to create a new data set of 8 values with a mean value of \\( y \\) and a median value of \\( z \\). Which statement best compares the mean values and the median values for the two data sets?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( a = y \\) and \\( b < z \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( a = y \\) and \\( b > z \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( a < y \\) and \\( b = z \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( a > y \\) and \\( b = z \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Removing 46 removes a clear outlier that sits far above everything else, so the mean must drop: \\( a > y \\). The median barely notices, because the middle of the list does not move &mdash; with 9 values the median is the 5th value, 40, and with 8 values it is the average of the 4th and 5th, which are both 40. So \\( b = z \\). Numerically \\( a = \\frac{363}{9} \\approx 40.3 \\) and \\( y = \\frac{317}{8} \\approx 39.6 \\).",
+  "whyWrong": {
+   "A": "Removing a value can only leave the mean unchanged if that value equals the mean; 46 is well above it, so \\( a = y \\) fails. The median also does not rise.",
+   "B": "Same problem with \\( a = y \\), and the median stays at 40 rather than falling.",
+   "C": "This has the mean going up. Deleting the largest value cannot increase the mean of what is left."
+  },
+  "needsFigure": true,
+  "note": "Dot plot needed. Measured from the page image, axis 38 to 46 with a tick at every integer: 38 (2 dots), 39 (1), 40 (3), 41 (2), 46 (1) &mdash; 9 values in total, i.e. 38, 38, 39, 40, 40, 40, 41, 41, 46. The book's stem ends without a question mark.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-16",
+  "stem": "The average price, in dollars, when adjusted for inflation, of a US domestic airline ticket each quarter of a year can be modeled by the equation y = &minus;5x + 500, where x is the number of quarters after the last quarter of 1999, and x &le; 20. Which graph represents this model?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(graph)"
+   },
+   {
+    "label": "B",
+    "content": "(graph)"
+   },
+   {
+    "label": "C",
+    "content": "(graph)"
+   },
+   {
+    "label": "D",
+    "content": "(graph)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read two things off the equation and check them against each graph. The y-intercept is 500, so the line must start at y = 500 when x = 0, and the slope is &minus;5, so over the 20 quarters shown the price falls by 5(20) = 100, ending at y = 400. Only the graph that drops gently from 500 to 400 across the full width does both.",
+  "whyWrong": {
+   "B": "This line starts at 500 but reaches 0 at x = 20, a drop of 500 over 20 quarters. That is a slope of &minus;25, not &minus;5.",
+   "C": "A horizontal line at y = 500 has slope 0, meaning the price never changes. The &minus;5x term says it falls by $5 each quarter.",
+   "D": "This line rises, so its slope is positive. The negative coefficient on x means the ticket price decreases over time."
+  },
+  "needsFigure": true,
+  "note": "All four answer choices are graphs and must be supplied as images; the choice text above is a placeholder. Measured reading of the printed choices: A is a line from (0, 500) falling gently to about (20, 400); B falls from (0, 500) to (20, 0); C is horizontal at y = 500; D rises from (0, 500) to about (20, 580). Both axes run x from 0 to 20 and y from 0 to 600."
+ },
+ {
+  "id": "satmath-ma2-linear-functions-52",
+  "stem": "The point (v, &minus;7) lies on the line shown. What is the value of v?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(-\\frac{84}{13}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{13}{14}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{83}{14}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\frac{280}{13}\\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the two points where the line meets the axes, then build its equation. Those two intercepts give a slope of \\(-\\frac{13}{14}\\) and a y-intercept of &minus;13, so the line is \\(y = -\\frac{13}{14}x - 13\\). Set y = &minus;7: \\(-7 = -\\frac{13}{14}x - 13\\) gives \\(6 = -\\frac{13}{14}x\\), so \\(x = -\\frac{84}{13}\\). The negative sign is expected, since the whole line sits left of the y-axis in this window.",
+  "whyWrong": {
+   "B": "This is the reciprocal of the slope, with the sign lost. It is also positive, but every point on the drawn line has a negative x-coordinate.",
+   "C": "This inverts the slope and mixes in the wrong constant. Substituting a positive x into \\(y = -\\frac{13}{14}x - 13\\) gives a y-value below &minus;13, not &minus;7.",
+   "D": "This multiplies rather than divides when isolating x, and drops the negative sign. Check the size: at \\(x = \\frac{280}{13} \\approx 21.5\\) the line would be at y &asymp; &minus;33."
+  },
+  "needsFigure": true,
+  "note": "Needs the printed graph. Measured reading: a straight line with a solid endpoint at (&minus;14, 0) on the x-axis and another solid endpoint at (0, &minus;13) on the y-axis; the x-axis is drawn along the top of the window with ticks at &minus;14 through &minus;2, and the y-axis on the right with ticks at &minus;1 through &minus;13."
+ },
+ {
+  "id": "satmath-ma2-linear-functions-80",
+  "stem": "A botanist wants to plant certain types of oak trees and pine trees in a 600-foot-long row. Each of these oak trees requires 40 feet of space to grow, and each of these pine trees requires 30 feet of space to grow. The equation 40x + 30y = 600 models the possible number of oak trees, x, and pine trees, y, that the botanist can plant. Which graph represents this relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(graph)"
+   },
+   {
+    "label": "B",
+    "content": "(graph)"
+   },
+   {
+    "label": "C",
+    "content": "(graph)"
+   },
+   {
+    "label": "D",
+    "content": "(graph)"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Find both intercepts and match them. With no pine trees, 40x = 600 gives x = 15 oaks; with no oaks, 30y = 600 gives y = 20 pines. So the correct graph is a falling line meeting the vertical axis at 20 and the horizontal axis at 15. Getting these the right way round is the whole question &mdash; the smaller intercept goes with the larger space requirement.",
+  "whyWrong": {
+   "A": "This line has intercepts 15 on the pine axis and 20 on the oak axis, exactly reversed. That would mean each oak needs 30 feet and each pine 40.",
+   "C": "Both intercepts are near 15, so it fits neither 40x = 600 nor 30y = 600.",
+   "D": "This line rises, meaning more oaks would allow more pines. The 600-foot row is fixed, so planting more of one leaves room for fewer of the other."
+  },
+  "needsFigure": true,
+  "note": "All four answer choices are graphs and must be supplied as images; the choice text above is a placeholder. Measured reading of the printed choices, horizontal axis \"Number of oak trees\", vertical axis \"Number of pine trees\": A is a falling line from (0, 15) to (20, 0) on axes running to 40; B is a falling line from (0, 20) to (15, 0) on axes running to 40; C is a falling line from (0, 15) to about (15, 0) on axes running to about 18-20; D is a rising line from the origin on axes running to about 18-20."
+ },
+ {
+  "id": "satmath-ma3-scatterplots-9",
+  "stem": "For the first 10 hours of an experiment, the scatterplot shows the temperature \\(y\\), in degrees Fahrenheit (&deg;F), of an object at various times, \\(x\\), in hours, since the start of the experiment. A line of best fit is also shown. Which of the following is the best interpretation of the slope of the line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The predicted temperature increases at a constant rate of approximately 170&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "B",
+    "content": "The predicted temperature decreases at a constant rate of approximately 170&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "C",
+    "content": "The predicted temperature increases at a constant rate of approximately 40&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "D",
+    "content": "The predicted temperature decreases at a constant rate of approximately 40&deg;F per hour over the 10-hour period."
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The slope of a line of best fit is the predicted change in \\(y\\) per one-unit change in \\(x\\) &mdash; here, degrees per hour. The line rises from left to right, so the rate is positive, and over the 10-hour span it climbs by roughly 380&deg;F, giving about 40&deg;F per hour. Reading the direction off the line first cuts the four choices to two.",
+  "whyWrong": {
+   "A": "The direction is right but 170 is far too large: a rate of 170&deg;F per hour would take the temperature up 1,700&deg;F over the 10 hours, off the top of the grid, which is spaced 150&deg;F between labels.",
+   "B": "Wrong in both respects &mdash; the line rises, and the rate is nowhere near 170&deg;F per hour.",
+   "D": "The rate is about right, but the line clearly slopes upward, so the temperature is increasing, not decreasing."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: scatterplot of temperature vs time with a line of best fit. My reading of the printed graph - y-axis labelled 225, 375, 525 (150 apart), x-axis 2 to 10; data points approximately (2, 265), (4, 335), (6, 415), (7, 455), (9, 525); the line of best fit runs from about (0, 180) to (10, 565), slope about 38-40 degrees F per hour. DEFECT: the book prints choice C as \"...at a constant rate of approximately per hour...\" with the number missing; restored to 40 degrees F, which is the only reading that makes the four choices a standard direction-by-rate grid with D."
+ },
+ {
+  "id": "satmath-ma3-triangles-2",
+  "stem": "In the right triangle shown, what is the value of \\(\\cos A\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{1}{47}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{1}{29}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{29}{47}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\frac{47}{29}\\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Cosine is the adjacent leg over the hypotenuse. The right angle is at \\(B\\), so the hypotenuse is \\(\\overline{AC}\\) and the leg next to angle \\(A\\) is \\(\\overline{AB}\\); with \\(AB = 29\\) and \\(AC = 47\\), \\(\\cos A = \\frac{29}{47}\\). Because the hypotenuse is the longest side, a cosine can never be greater than 1 &mdash; that alone eliminates half the choices.",
+  "whyWrong": {
+   "A": "\\(\\frac{1}{47}\\) is the reciprocal of the hypotenuse, not a ratio of two sides of the triangle.",
+   "B": "\\(\\frac{1}{29}\\) is the reciprocal of the adjacent leg; cosine compares two side lengths, so both must appear.",
+   "D": "\\(\\frac{47}{29}\\) inverts the ratio. It is greater than 1, which no sine or cosine can be."
+  },
+  "needsFigure": true,
+  "note": "DEFECT: the printed figure shows only the right triangle with vertices C (left), B (bottom right, right angle) and A (top right) and carries NO side lengths, so the question cannot be answered from the page as printed. The four choices are only consistent with AB = 29 (leg adjacent to A) and AC = 47 (hypotenuse) - the labels the figure must have lost, since any other assignment makes the hypotenuse shorter than a leg. Figure must be rebuilt with those labels before shipping."
+ }
+]

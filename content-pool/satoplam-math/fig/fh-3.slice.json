@@ -1,0 +1,687 @@
+[
+ {
+  "id": "satmath-ma2-trigonometry-14",
+  "stem": "Triangle XYZ shown is a right triangle. Which of the following has the same value as \\(\\sin X\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\tan X\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\tan Y\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\cos X\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\cos Y\\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "With the right angle at Z, angles X and Y are complementary. \\(\\sin X\\) is the side opposite X over the hypotenuse, \\(\\frac{ZY}{XY}\\), and \\(\\cos Y\\) is the side adjacent to Y over the hypotenuse, which is the same side: \\(\\frac{ZY}{XY}\\). Sine of an angle always equals cosine of its complement.",
+  "whyWrong": {
+   "A": "\\(\\tan X = \\frac{ZY}{XZ} = \\frac{28}{23}\\) divides leg by leg. It is greater than 1, so it cannot equal a sine.",
+   "B": "\\(\\tan Y = \\frac{23}{28}\\) is also a leg-over-leg ratio, and it uses the hypotenuse nowhere.",
+   "C": "\\(\\cos X = \\frac{XZ}{XY}\\) uses the other leg over the hypotenuse. It equals \\(\\sin X\\) only when the legs are equal, and 23 and 28 are not."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle XYZ with the right angle marked at Z. X is at the top left, Z directly below it at the bottom left, Y at the bottom right. Leg XZ is labeled 23 and leg ZY is labeled 28."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-15",
+  "stem": "In the right triangle shown, c is a constant. The value of \\(\\sin x^{\\circ} = \\frac{k}{c}\\), where k is a constant. What is the value of k?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "22",
+  "difficulty": "EASY",
+  "whyCorrect": "c labels the hypotenuse, so \\(\\frac{k}{c}\\) is already in the form (something) over hypotenuse \u2014 that means k has to be the leg opposite the angle \\(x^{\\circ}\\). The angle \\(x^{\\circ}\\) sits at the bottom-right vertex, and the side across from it is the vertical leg of length 22. So k = 22. You never need the value of c, and 39 is the adjacent leg.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle marked at the bottom-left vertex. The vertical left leg is labeled 22, the horizontal bottom leg is labeled 39, and the hypotenuse (from the top-left vertex down to the bottom-right vertex) is labeled c. The angle at the bottom-right vertex is labeled x&deg;."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-16",
+  "stem": "In the right triangle shown, c is a constant. The value of \\(\\sin x^{\\circ} = \\frac{k}{c}\\), where k is a constant. What is the value of k?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "28",
+  "difficulty": "EASY",
+  "whyCorrect": "Since c is the hypotenuse, \\(\\frac{k}{c}\\) is opposite over hypotenuse, so k must be the leg opposite \\(x^{\\circ}\\). The angle \\(x^{\\circ}\\) is at the bottom-right vertex, and the side facing it is the vertical leg of length 28. So k = 28. The 35 is the adjacent leg, which belongs to the cosine, not the sine.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle marked at the bottom-left vertex. The vertical left leg is labeled 28, the horizontal bottom leg is labeled 35, and the hypotenuse (from the top-left vertex down to the bottom-right vertex) is labeled c. The angle at the bottom-right vertex is labeled x&deg;. 'Note: Figure not drawn to scale'."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-18",
+  "stem": "In the right triangle shown, the value of \\(\\tan x^{\\circ}\\) is \\(\\frac{c}{39}\\). What is the value of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "79"
+   },
+   {
+    "label": "B",
+    "content": "40"
+   },
+   {
+    "label": "C",
+    "content": "39"
+   },
+   {
+    "label": "D",
+    "content": "1"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The angle \\(x^{\\circ}\\) is at the top vertex. From there, the opposite leg is the horizontal side of length 40 and the adjacent leg is the vertical side of length 39, so \\(\\tan x^{\\circ} = \\frac{40}{39}\\). Matching that to \\(\\frac{c}{39}\\) gives c = 40. The trap is assuming the side drawn next to the angle in the picture is the opposite one \u2014 check which side actually touches the vertex.",
+  "whyWrong": {
+   "A": "This adds the two legs, 39 + 40. Tangent is a ratio of the legs, not their sum.",
+   "C": "This repeats the denominator, which would make the tangent 1 and the triangle isosceles. The legs here are 39 and 40, so it is not.",
+   "D": "This is the value \\(\\tan x^{\\circ}\\) would take in a 45-45-90 triangle, not the numerator c."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle marked at the bottom-right vertex. The horizontal bottom leg is labeled 40, the vertical right leg is labeled 39, and the angle at the top vertex is labeled x&deg;. 'Note: Figure not drawn to scale'."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-21",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 29.1 inches, what is the least possible value of x, in inches?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "349.2",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "\\(\\theta\\) is the angle at the ground, so the height is opposite it and x is adjacent: \\(\\tan\\theta = \\frac{29.1}{x}\\). The law requires \\(\\frac{29.1}{x} < \\frac{1}{12}\\), and since x is positive you can cross-multiply to get x > 12(29.1) = 349.2. Shrinking the angle forces the horizontal run to grow, so 349.2 inches is the shortest run that satisfies the law.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp', and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. 'Note: Figure not drawn to scale.' The inequality is strict, so 349.2 is the greatest lower bound rather than an attainable minimum; it is the intended answer."
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-28",
+  "stem": "The graph of a system of a linear equation and a nonlinear equation is shown. What is the solution \\( (x, y) \\) to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(4, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(5, 4)"
+   },
+   {
+    "label": "C",
+    "content": "(0, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(0, 5)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "EASY",
+  "whyCorrect": "The solution to a system shown graphically is the point where the two curves cross, which is marked with a dot on the graph. That dot sits 5 units right of the y-axis and 4 units above the x-axis, so the solution is (5, 4). You do not need either equation - only the intersection point matters.",
+  "whyWrong": {
+   "A": "(4, 0) reads the coordinates in the wrong order and drops the y-value; the point 4 units along the x-axis is not on either curve at height 0.",
+   "C": "(0, 0) is the origin, where neither curve passes.",
+   "D": "(0, 5) swaps the coordinates of the crossing point; the marked point is at x = 5, y = 4, not x = 0."
+  },
+  "needsFigure": true,
+  "note": "Depends on a coordinate-plane graph (a line and a curve crossing at (5,4)) that must be supplied as an image. This question is identical to Linear System of Equations #30 on the same page - same graph, same stem, same choices.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-30",
+  "stem": "The graph of a system of a linear equation and a nonlinear equation is shown. What is the solution \\( (x, y) \\) to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(4, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(5, 4)"
+   },
+   {
+    "label": "C",
+    "content": "(0, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(0, 5)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "EASY",
+  "whyCorrect": "A point is a solution of the system only if it lies on both graphs, so the answer is the marked crossing point. Reading it off the axes gives x = 5 and y = 4. The shapes of the two graphs are irrelevant once you have located the intersection.",
+  "whyWrong": {
+   "A": "(4, 0) is a point on the x-axis; the curves do not meet there.",
+   "C": "(0, 0) is the origin, which is on neither graph.",
+   "D": "(0, 5) reverses the coordinates of the intersection."
+  },
+  "needsFigure": true,
+  "note": "Depends on a coordinate-plane graph that must be supplied as an image. Duplicate of Linear System of Equations #28 on the same page - do not import both into the same test.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-31",
+  "stem": "The graph of a system of a linear equation and a nonlinear equation is shown. What is the solution \\( (x, y) \\) to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(0, -2)"
+   },
+   {
+    "label": "C",
+    "content": "(-2, 2)"
+   },
+   {
+    "label": "D",
+    "content": "(3, 0)"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "The solution is the point that lies on both graphs, so look for where the line and the curve actually cross - not where either one crosses an axis. They meet 2 units left of the y-axis and 2 units above the x-axis, giving (-2, 2).",
+  "whyWrong": {
+   "A": "(0, 0) is the origin, where the line passes but the curve does not.",
+   "B": "(0, -2) is on neither graph; it comes from reading the crossing point's coordinates in the wrong order and flipping a sign.",
+   "D": "(3, 0) is a point on the x-axis, not the intersection of the two graphs."
+  },
+  "needsFigure": true,
+  "note": "Depends on a coordinate-plane graph (a decreasing line and a decaying curve crossing at (-2, 2)) that must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-linear-functions-2",
+  "stem": "A bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function <em>f</em> shown, where y = f(x), estimates the account balance, in dollars, in this bank account <em>x</em> months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?",
+  "choices": [],
+  "answerValue": "15",
+  "difficulty": "EASY",
+  "whyCorrect": "The initial deposit is the balance at the moment the account was opened, which is x = 0 months. So you want the y-value where the line meets the vertical axis, not where it ends. The line starts at 15 on the balance axis, so the initial deposit is $15.",
+  "needsFigure": true,
+  "note": "Depends on the line graph of balance against months (line from (0, 15) to (10, 55)); must be supplied as an image.",
+  "answerLabel": null
+ },
+ {
+  "id": "satmath-ma3-polynomials-8",
+  "stem": "The graph of the polynomial function <em>f</em> is shown, where y = f(x). What is the value of f(5)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "&minus;3"
+   },
+   {
+    "label": "D",
+    "content": "0"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "EASY",
+  "whyCorrect": "f(5) means the height of the graph when x = 5, so go to 5 on the horizontal axis and read the curve's y-value there. The curve is crossing the x-axis at that point, so its height is 0.",
+  "whyWrong": {
+   "A": "2 is a y-value the curve takes elsewhere, not at x = 5.",
+   "B": "5 is the input, not the output; reading the input back as the answer is the most common slip on this type.",
+   "C": "&minus;3 is roughly the minimum of the curve, which happens near x = 4, not at x = 5."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of a cubic-shaped curve crossing the x-axis at x = 5; must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-polynomials-10",
+  "stem": "The graph of the polynomial function <em>f</em>, where y = f(x), is shown. The <em>y</em>-intercept of the graph is \\( (0, y) \\) . What is the value of <em>y</em>?",
+  "choices": [],
+  "answerValue": "5",
+  "difficulty": "EASY",
+  "whyCorrect": "The y-intercept is the point where the graph meets the vertical axis, that is where x = 0. On this graph the marked point on the y-axis sits at height 5, so y = 5.",
+  "needsFigure": true,
+  "note": "Depends on the graph of an upward-opening curve with its marked y-intercept at (0, 5); must be supplied as an image.",
+  "answerLabel": null
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-5",
+  "stem": "The graph of the function <em>f</em> is shown, where y = f(x). What is the value of f(0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "&minus;2"
+   },
+   {
+    "label": "D",
+    "content": "&minus;6"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "EASY",
+  "whyCorrect": "f(0) is the y-value where the graph meets the vertical axis. The marked point there sits at height 6, so f(0) = 6. The two dips on either side are at height 4 - do not read those instead.",
+  "whyWrong": {
+   "B": "2 is a gridline value the curve passes on its way down, not its height at x = 0.",
+   "C": "&minus;2 is negative, but the whole curve lies above the x-axis in this window.",
+   "D": "&minus;6 has the right size but the wrong sign."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of a W-shaped quartic with a marked point at (0, 6) and minima at height 4; must be supplied as an image. The printed stem writes 'y = f()' with the argument missing.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-6",
+  "stem": "The graph of the polynomial function <em>f</em> is shown, where y = f(x). What is the value of f(2)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "&minus;3"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "EASY",
+  "whyCorrect": "Go to x = 2 on the horizontal axis and read the curve's height there. The curve is crossing the x-axis at that point, so f(2) = 0.",
+  "whyWrong": {
+   "A": "2 is the input; reading the input back as the output is the usual slip here. It is also roughly the curve's peak height, which occurs near x = &minus;1, not x = 2.",
+   "C": "5 is another x-value where the curve crosses zero, not a y-value at x = 2.",
+   "D": "&minus;3 is below the curve's minimum in this region, which is only about &minus;1."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of a cubic crossing the x-axis at about x = -4, x = 2 and x = 5; must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-22",
+  "stem": "The complete graph of y = f(x) is shown. For how many values of <em>x</em> does f(x) = 0 ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "One"
+   },
+   {
+    "label": "B",
+    "content": "Two"
+   },
+   {
+    "label": "C",
+    "content": "Three"
+   },
+   {
+    "label": "D",
+    "content": "Four"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "f(x) = 0 wherever the graph touches or crosses the x-axis, so count the crossings, not the turning points. The curve crosses the axis three times: once near x = &minus;4, once at the origin and once near x = 2.",
+  "whyWrong": {
+   "A": "One counts only the crossing you happen to notice first; the curve returns to the axis twice more.",
+   "B": "Two misses the crossing at the origin, where the curve passes through the axis on its way up.",
+   "D": "Four counts a turning point as a crossing - the curve reaches a minimum near x = &minus;3 and a maximum near x = 1 but stays off the axis at both."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of a cubic that crosses the x-axis near x = -4, at 0, and near x = 2; must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-2",
+  "stem": "The graph of the function <em>f</em> is shown, where y = f(x). What is the value of f(0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "&minus;2"
+   },
+   {
+    "label": "D",
+    "content": "&minus;6"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "f(0) is the height of the curve where it meets the y-axis. The marked point on the y-axis is at &minus;2, so f(0) = &minus;2. The other marked point, at height 6, is at x = 1, not x = 0.",
+  "whyWrong": {
+   "A": "6 is f(1), the other marked point.",
+   "B": "2 has the right size but the wrong sign; the curve is below the x-axis at x = 0.",
+   "D": "&minus;6 is below the curve's horizontal asymptote, which sits near &minus;3."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of a rising exponential-type curve with marked points at (0, -2) and (1, 6); must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-10",
+  "stem": "The graph shows the estimated number of cell phone subscribers, <em>y</em>, in a town <em>x</em> years since 1990. Which equation represents the exponential relationship between the number of cell phone subscribers in the town and the number of years since 1990, where \\( 0 \\le x \\le 10 \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = 370(0.17)^{x} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = 370(1.17)^{x} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = 1779(0.83)^{x} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 1779(1.83)^{x} \\)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Two features settle it. The starting value is the y-intercept, which the graph puts near 370, so the coefficient is 370, not 1779 (1779 is the value at the right-hand end, x = 10). The curve rises, so the base must be greater than 1, which leaves \\( y = 370(1.17)^{x} \\) . Checking, \\( 370(1.17)^{10} \\approx 1{,}780 \\) , matching the graph's end value.",
+  "whyWrong": {
+   "A": "A base of 0.17 shrinks the value by 83% per year, giving a falling curve.",
+   "C": "This starts at the final value 1779 and then decays, which is the graph read backwards.",
+   "D": "This starts at 1779 and grows, reaching hundreds of thousands by x = 10, far above the graph."
+  },
+  "needsFigure": true,
+  "note": "Depends on the graph of subscribers against years (rising from about 370 at x = 0 to about 1,780 at x = 10); must be supplied as an image.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-5",
+  "stem": "The shaded region shown represents solutions to an inequality. Which ordered pair \\( (x, y) \\) is a solution to this inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( (-7, 0) \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( (0, -7) \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( (0, 7) \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( (7, 0) \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the boundary line off the grid: it passes through \\( (\\frac{16}{3}, 0) \\) and \\( (8, -8) \\) , which is \\( y = -3x + 16 \\) , and the shading is on the upper-right side, so the inequality is \\( y \\ge -3x + 16 \\) . Test each point rather than eyeballing: only \\( (7, 0) \\) gives \\( 0 \\ge -5 \\) , a true statement. You do not need to plot the points, just substitute.",
+  "whyWrong": {
+   "A": "At x = &minus;7 the boundary is at y = 37, so the point sits far below the line, on the unshaded side.",
+   "B": "At x = 0 the boundary is at y = 16, and &minus;7 is well below it.",
+   "C": "This is the closest miss: at x = 0 the boundary is y = 16, and 7 is still below the line. Being in the upper half of the plane is not the same as being in the shaded region."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: an xy-plane from &minus;8 to 8 on both axes, with the solid boundary line y = &minus;3x + 16 drawn, and the region above/right of that line shaded.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-17",
+  "stem": "The shaded region shown represents solutions to an inequality. Which ordered pair \\( (x, y) \\) is a solution to this inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( (-8, 0) \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( (0, 8) \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( (0, -8) \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( (8, 0) \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The boundary line falls two units for every one unit right and crosses the <em>x</em>-axis between 6 and 7, so it is \\( y = -2x + 13 \\) , and the shading lies above and to the right of it. Substituting each point, only \\( (8, 0) \\) works: the line is at \\( y = -3 \\) when x = 8, and 0 is above that. Locating the points on the grid works too \u2014 three of them are far out on the left, where nothing is shaded.",
+  "whyWrong": {
+   "A": "At x = &minus;8 the boundary is up at y = 29, so this point lies far below the line, in the unshaded half.",
+   "B": "At x = 0 the boundary is y = 13, so \\( (0, 8) \\) is below the line even though it is high on the <em>y</em>-axis. The shaded side is defined by the line, not by the axis.",
+   "C": "This is below the line as well, and further from it than choice B."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: an xy-plane from &minus;8 to 8 on both axes, with the solid boundary line y = &minus;2x + 13 and the region above/right of it shaded.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-21",
+  "stem": "The shaded region shown in the graph represents all the solutions to which inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( x < 33 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( x \\ge 33 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y \\le 33 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y \\ge 33 \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "EASY",
+  "whyCorrect": "The boundary is horizontal, which means it is a line of constant <em>y</em>, so the inequality is about <em>y</em>, not <em>x</em>. It sits at y = 33 and the region above it is shaded, so the solutions are \\( y \\ge 33 \\) . The line is solid rather than dashed, which is why the inequality includes equality.",
+  "whyWrong": {
+   "A": "An inequality in <em>x</em> alone has a vertical boundary. This region would be everything to the left of a vertical line.",
+   "B": "Also a vertical boundary \u2014 everything to the right of x = 33, which is not what the graph shows.",
+   "C": "Right variable and right boundary, wrong side. This is the unshaded half, below the line."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: an xy-plane with x from &minus;15 to 15 and y from 0 to 60, a solid horizontal boundary line at y = 33, and everything above it shaded.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-47",
+  "stem": "The shaded region shown represents solutions to an inequality. Which ordered pair \\( (x, y) \\) is a solution to this inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( (-5, 0) \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( (0, 5) \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( (0, -5) \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( (5, 0) \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The boundary drops three units for every unit to the right and meets the <em>x</em>-axis at 4, so it is \\( y = -3x + 12 \\) , and the shading is on its right-hand side. Substituting \\( (5, 0) \\) gives a boundary value of &minus;3, and 0 sits above that, so the point is in the shaded region. The other three all lie to the left of the line.",
+  "whyWrong": {
+   "A": "At x = &minus;5 the boundary is at y = 27, so this point is nowhere near the shaded side.",
+   "B": "At x = 0 the boundary is at y = 12, so \\( (0, 5) \\) is below the line. Sitting above the origin is not the same as being in the region.",
+   "C": "Also on the <em>y</em>-axis and even lower, so further from the shaded region than choice B."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: an xy-plane from &minus;8 to 8 on both axes, with the solid boundary line y = &minus;3x + 12 and the region to its right (above it) shaded.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-50",
+  "stem": "The shaded region shown represents the solutions to which inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y > 3x + 7 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y > 3x - 7 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y < 3x + 7 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y < 3x - 7 \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the intercept and slope off the dashed boundary: it crosses the <em>y</em>-axis at 7 and rises 3 for each step right, so the line is \\( y = 3x + 7 \\) . The shading is above and to the left of it, which is the side where <em>y</em> is larger, so the inequality is \\( y > 3x + 7 \\) . The dashed line confirms a strict inequality rather than \\( \\ge \\) .",
+  "whyWrong": {
+   "B": "Correct direction, wrong intercept \u2014 this line would cross the <em>y</em>-axis at &minus;7, well below the graph's boundary.",
+   "C": "Correct line, wrong side. This describes the unshaded region to the right of the boundary.",
+   "D": "Both the intercept and the side are wrong."
+  },
+  "needsFigure": true,
+  "note": "The book writes \"solutions to which quality?\"; corrected to \"inequality\". Needs the graph rebuilt: an xy-plane with x from about &minus;6 to 4 and y from about &minus;1 to 13, a dashed boundary line y = 3x + 7, and the region above/left of it shaded.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-4",
+  "stem": "The graph shows the estimated concentration of a certain strain of bacteria, in millions of cells per mL of nutrient medium, over time <em>x</em>, in minutes since the initial measurement. According to the graph, which of the following is closest to the number of minutes it took for the estimated concentration of the bacteria to increase from 20 million cells per mL of nutrient to 30 million cells per mL of nutrient medium?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15"
+   },
+   {
+    "label": "B",
+    "content": "20"
+   },
+   {
+    "label": "C",
+    "content": "30"
+   },
+   {
+    "label": "D",
+    "content": "35"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "This asks for an elapsed time, so you need two readings, not one. The curve reaches 20 million at about x = 38 minutes and reaches 30 million at about x = 51 minutes, so the increase took roughly 13 minutes. Of the choices, 15 is closest.",
+  "whyWrong": {
+   "B": "This is the starting concentration, 20 million, read off the vertical axis instead of a time.",
+   "C": "This is the ending concentration, again a value from the wrong axis.",
+   "D": "This is close to the time at which the concentration <em>reaches</em> 20 million, not the time it takes to climb from 20 to 30. Subtracting the two times is the step being missed."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: an increasing exponential-looking curve of bacteria concentration (millions of cells per mL, y-axis 0 to 80) against time in minutes (x-axis 0 to 80), starting near 8 at x = 0, passing through about (38, 20) and (51, 30), and reaching about 69 at x = 80.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-6",
+  "stem": "The graph of \\( y = f(x) \\) is shown. What is the value of \\( f(0) \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-5"
+   },
+   {
+    "label": "B",
+    "content": "-4"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "\\( f(0) \\) is the value of the graph when x = 0, which is where the curve crosses the vertical axis. That crossing happens at y = 4.",
+  "whyWrong": {
+   "A": "This reads a value off the lower-right branch of the curve, which is nowhere near the <em>y</em>-axis.",
+   "B": "Right size, wrong sign \u2014 the crossing is above the <em>x</em>-axis, not below it.",
+   "D": "This is one gridline too high; the curve meets the axis exactly at 4, not 5."
+  },
+  "needsFigure": true,
+  "note": "Needs the graph rebuilt: a two-branch rational-looking curve on axes from &minus;7 to 7. The left branch rises from about y = 2.5 at x = &minus;7, crosses the y-axis at exactly (0, 4), and shoots up past y = 6 near x = 1. The right branch comes up from below, crossing the x-axis near x = 3.7 and levelling off near y = 1 at x = 7.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-15",
+  "stem": "The graph models the population, in thousands, of a town x years since 2004, where 0 &le; x &le; 15. Which statement is the best interpretation of the point (1, 5.30)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2019, the estimated population of the town was 5,300."
+   },
+   {
+    "label": "B",
+    "content": "In 2018, the estimated population of the town was 5,300."
+   },
+   {
+    "label": "C",
+    "content": "In 2005, the estimated population of the town was 5,300."
+   },
+   {
+    "label": "D",
+    "content": "In 2004, the estimated population of the town was 5,300."
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Read the two coordinates against the units the stem defines. The first coordinate is x, measured in years since 2004, so x = 1 means 2004 + 1 = 2005. The second coordinate is population in thousands, so 5.30 means 5.30 thousand = 5,300 people.",
+  "whyWrong": {
+   "A": "2019 is 15 years after 2004, which is x = 15, the right-hand end of the domain, not x = 1.",
+   "B": "2018 is 14 years after 2004, so it corresponds to x = 14. The point's first coordinate is 1.",
+   "D": "2004 itself is x = 0, the starting year. x = 1 is one year later."
+  },
+  "needsFigure": true,
+  "note": "The graph is shown for context, but the point (1, 5.30) is stated in the stem, so the interpretation follows from the units alone."
+ }
+]

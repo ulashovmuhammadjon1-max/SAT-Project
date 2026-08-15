@@ -1,0 +1,752 @@
+[
+ {
+  "id": "satmath-ma2-mean-median-mode-range-12",
+  "stem": "The dot plot shown gives the distribution of values in a data set. What is the minimum value in the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "11"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The minimum is the smallest value that actually occurs, so read the position of the leftmost column of dots on the number line, not how many dots are stacked there. The leftmost stack sits at 11, so the minimum value is 11.",
+  "whyWrong": {
+   "A": "1 is not a value on the number line at all; it looks like the count of the shortest stack.",
+   "B": "2 is the height of the leftmost stack \u2014 how many times 11 occurs, not the value itself.",
+   "C": "9 is a tick on the axis with no dots above it, so no data point takes that value."
+  },
+  "needsFigure": true,
+  "note": "Dot plot on a number line labelled 10-17. Dot counts: 11 -> 2, 12 -> 3, 13 -> 5, 14 -> 5, 15 -> 4, 16 -> 1 (no dots at 10 or 17), 20 values in total. Not converted to a table because questions 13 and 15 in the same section are the same question presented as a frequency table."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-1",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the following equations is the most appropriate linear model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = -6 + 28x"
+   },
+   {
+    "label": "B",
+    "content": "y = 6 - 28x"
+   },
+   {
+    "label": "C",
+    "content": "y = 28 + 6x"
+   },
+   {
+    "label": "D",
+    "content": "y = 28 - 6x"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Two features of the plot decide this without any calculation. The points fall as <em>x</em> increases, so the slope must be negative, which rules out any equation with a positive <em>x</em> coefficient. And near x = 0 the points sit around y = 25, so the constant term has to be close to 25, not 6. Only y = 28 - 6x has both a negative slope and a constant near 25.",
+  "whyWrong": {
+   "A": "The coefficient of <em>x</em> is +28, so this model rises steeply; the data falls.",
+   "B": "The slope is negative, but the constant term 6 puts the line near y = 6 at x = 0, while the data starts around y = 25 there. This is the answer you get by pairing the right sign with the wrong two numbers.",
+   "C": "Both numbers are the right size but the slope is positive, so the line rises when the data falls."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 4 and y from 5 to 30. Points approximately (0, 25), (0.3, 26), (0.6, 24), (1.3, 17), (2, 13), (2.5, 14), (3, 7), (3.5, 8)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-2",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. What data point has an actual <em>y</em>-value that is 2 less than the <em>y</em>-value predicted by the line of best fit for the corresponding <em>x</em>-value?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(2, 12)"
+   },
+   {
+    "label": "B",
+    "content": "(6, 14)"
+   },
+   {
+    "label": "C",
+    "content": "(10, 12)"
+   },
+   {
+    "label": "D",
+    "content": "(18, 4)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "\"2 less than predicted\" means the point sits 2 units <em>below</em> the line, so start by throwing out every point that lies above it. Only the point at x = 18 is clearly below the line by about two units: the line is at roughly y = 6 there and the point is at y = 4.",
+  "whyWrong": {
+   "A": "At x = 2 the line is at about 12.5 and the point is at 12, so it is only about half a unit below.",
+   "B": "(6, 14) sits above the line, so its actual value is greater than predicted, not less.",
+   "C": "(10, 12) also sits above the line, by roughly 3 units."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 20 and y from 2 to 16, with a line of best fit running from about (0, 13.5) down to (20, 5). Points approximately (2, 12), (4, 11), (6, 14), (8, 9), (10, 12), (12, 7), (14, 10), (16, 8), (18, 4). Book prints \"for corresponding x-value\"; read as \"for the corresponding x-value\"."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-4",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. Which of the following best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 77 + 0.01x"
+   },
+   {
+    "label": "B",
+    "content": "y = 77 + 0.79x"
+   },
+   {
+    "label": "C",
+    "content": "y = 77 + 68.9x"
+   },
+   {
+    "label": "D",
+    "content": "y = 77 + 78.9x"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "All four choices share the same intercept, so only the slope can tell them apart \u2014 find how much <em>y</em> climbs per unit of <em>x</em>. The line starts near y = 77 at x = 0 and reaches roughly y = 865 at x = 10, a rise of about 790 over a run of 10, so the slope is about 79.",
+  "whyWrong": {
+   "A": "A slope of 0.01 would make the line essentially flat, rising by 0.1 across the whole graph, while the line climbs by hundreds.",
+   "B": "A slope of 0.79 would take the line from 77 to only about 85 by x = 10 \u2014 still visually flat.",
+   "C": "A slope of 68.9 puts the line at about 766 when x = 10, which is below the 800 gridline; the drawn line is above it there. This is the trap for reading the run as slightly too long or the rise as slightly too short."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 10 and y from 0 to about 900, with a line of best fit from about (0, 77) to (10, 865). Points approximately (1, 90), (3, 280), (4, 490), (6, 620), (8, 710), (9, 690)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-5",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 3.5 + 1.8x"
+   },
+   {
+    "label": "B",
+    "content": "y = -2.4 + 1.55x"
+   },
+   {
+    "label": "C",
+    "content": "y = 3.4 + 1.55x"
+   },
+   {
+    "label": "D",
+    "content": "y = 2.4 - 1.5x"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the two ends of the drawn line. It meets the <em>y</em>-axis at about 3.5, which kills any equation with a negative constant, and it reaches about y = 16 when x = 8. That is a rise of about 12.4 over a run of 8, so the slope is roughly 1.55, not 1.8.",
+  "whyWrong": {
+   "A": "The intercept is right but a slope of 1.8 would put the line at 3.5 + 14.4 = 17.9 when x = 8, above the top of the graph. Check the far end of the line, not just where it starts.",
+   "B": "A constant of -2.4 puts the line below the <em>x</em>-axis at x = 0, but the drawn line crosses the <em>y</em>-axis above 3.",
+   "D": "The slope is negative, so this line falls; the data and the drawn line both rise."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 8 and y from 0 to 16, with a line of best fit from about (0, 3.7) to (8, 16). Points approximately (0.3, 4), (0.5, 6), (2, 8), (2.2, 6), (3.3, 10), (3.5, 9), (4.3, 11), (4.5, 10), (5.5, 14), (6.5, 12)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-6",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the equations is the most appropriate model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = x^{2} - 8 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = x^{2} + 8 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = (x - 8)^{2} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = (x + 8)^{2} \\)"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The points fall to a lowest value and then rise again, so the model is a parabola, and the only things to match are where the bottom sits. The lowest points are near x = 0 with y just under 10, so the vertex is at about (0, 8). Writing the vertex form, a parabola with vertex on the <em>y</em>-axis at height 8 is \\( y = x^{2} + 8 \\).",
+  "whyWrong": {
+   "A": "\\( y = x^{2} - 8 \\) has its vertex at (0, -8), so it would predict negative <em>y</em>-values near x = 0; every plotted point has y above 8.",
+   "C": "\\( y = (x-8)^{2} \\) has its vertex at x = 8, off to the right of every point shown, so it would be decreasing across the whole graph instead of turning around near x = 0.",
+   "D": "\\( y = (x+8)^{2} \\) has its vertex at x = -8, so it would be increasing across the whole graph. The sign inside the parentheses shifts the curve left or right, not up or down."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from -5 to 5 and y from 0 to about 30, U-shaped. Points approximately (-5, 29), (-4, 17.5), (-3.4, 14), (-2.1, 9.5), (-2, 9), (1, 8), (2, 9), (3, 14), (4, 17.5), (4.5, 25.5)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-7",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 3.3 + 1.6x"
+   },
+   {
+    "label": "B",
+    "content": "y = 3.3 - 1.6"
+   },
+   {
+    "label": "C",
+    "content": "y = -3.3 + 1.6x"
+   },
+   {
+    "label": "D",
+    "content": "y = -3.3 - 1.6x"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Two readings settle it. The line crosses the <em>y</em>-axis above the origin, at about 3.3, so the constant term is positive. And the line rises as <em>x</em> increases, so the coefficient of <em>x</em> is positive. Only y = 3.3 + 1.6x has both signs positive.",
+  "whyWrong": {
+   "B": "This has no <em>x</em> in it at all, so it is the horizontal line y = 1.7. The drawn line is not horizontal.",
+   "C": "A constant of -3.3 would put the line 3.3 units below the origin at x = 0, but the drawn line starts above the origin.",
+   "D": "Both signs are wrong: the line would start below the origin and fall, while the drawn line starts above it and rises."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 8 and y from 0 to 16, with a line of best fit from about (0, 3.3) up through (8, 16). Points approximately (0.5, 4), (1.8, 6), (2, 8), (2.5, 6), (3.5, 10), (3.5, 7), (5.5, 14), (6.8, 13). Choice B is printed as \"y = 3.3 - 1.6\", with no x term - reproduced as printed. Stem printed as \"best represents the of best fit shown\"; read as \"the line of best fit\"."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-8",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, together with a line of best fit. Which of the following is closest to the slope of this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-3.3"
+   },
+   {
+    "label": "B",
+    "content": "-1.1"
+   },
+   {
+    "label": "C",
+    "content": "1.1"
+   },
+   {
+    "label": "D",
+    "content": "3.3"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The line falls from left to right, so the slope is negative straight away, leaving only -3.3 and -1.1. Take the two easiest points on the line: it meets the <em>y</em>-axis at 14 and the <em>x</em>-axis at about 13. That is a drop of 14 over a run of 13, a slope of about -1.1.",
+  "whyWrong": {
+   "A": "-3.3 is three times too steep; a line that steep would drop from 14 to 0 in about 4 units of <em>x</em>, not 13.",
+   "C": "The sign is wrong \u2014 a positive slope rises, and this line falls.",
+   "D": "Wrong sign and roughly three times too steep."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 16 and y from 0 to 16, with a line of best fit from (0, 14) to about (13, 0). Points approximately (3, 10), (5, 10.4), (5.5, 6.4), (6, 9), (7.5, 4.2)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-9",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the following equations is the most appropriate linear model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 8.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 - 8.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = 8.7 + 0.8x"
+   },
+   {
+    "label": "D",
+    "content": "y = 8.7 - 0.8x"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The points fall as <em>x</em> increases, so the coefficient of <em>x</em> must be negative. That leaves two options, and the constant term is what the model predicts at x = 0, where the data sits at about y = 9 \u2014 so the constant is 8.7, not 0.8. The gentle drop from about 9 to about 1 over ten units of <em>x</em> also matches a slope near -0.8, not -8.7.",
+  "whyWrong": {
+   "A": "Positive slope, so the line rises while the data falls.",
+   "B": "The sign is right but the two numbers are swapped: this line starts at 0.8 and drops to about -77 by x = 9, far off the graph.",
+   "C": "Correct constant, wrong sign on the slope \u2014 this line rises."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 10 and y from 0 to 10. Points approximately (0, 9), (1, 9), (2, 6), (3, 6), (4, 4), (5, 5), (6, 4), (7, 3), (8, 2), (9, 1)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-10",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = x - 19.9"
+   },
+   {
+    "label": "B",
+    "content": "y = x - 19.9"
+   },
+   {
+    "label": "C",
+    "content": "y = x - 5.7"
+   },
+   {
+    "label": "D",
+    "content": "y = -x + 5.7"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Every plotted <em>x</em>-value is negative and every plotted <em>y</em>-value is positive, and the line falls from left to right, so its slope is negative. Only y = -x + 5.7 has a negative slope, and it also gives sensible values here: at x = -14 it predicts 19.7, which matches the top-left end of the drawn line.",
+  "whyWrong": {
+   "A": "Slope +1 means the line rises, and at x = -14 it would predict y = -33.9, far below the graph.",
+   "B": "Identical to choice A, and wrong for the same reason.",
+   "C": "Slope +1 again, so the line rises; at x = -14 it would predict y = -19.7."
+  },
+  "needsFigure": true,
+  "note": "DEFECT: choices A and B are printed identically as y = x - 19.9, so this question has only three distinct options. Scatterplot, x from about -15 to 0 and y from 0 to 20, with the y-axis drawn on the right. Line of best fit runs from about (-14.3, 20) down to (-1.5, 4). Points approximately (-14.3, 19.5), (-13.2, 18.5), (-11.7, 17.5), (-9.8, 14.5), (-8.4, 13), (-5.5, 9)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-11",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the following equations is the most appropriate linear model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 8.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 - 8.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = 8.7 + 0.8x"
+   },
+   {
+    "label": "D",
+    "content": "y = 8.7 - 0.8x"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The data falls as <em>x</em> increases, so the coefficient of <em>x</em> is negative \u2014 that rules out the two choices with a plus sign. Between the remaining two, the constant is the predicted value at x = 0. Extending the pattern back from (1, 7) gives about 8 or 9 there, so the constant is 8.7. The drop of about 6 units across 9 units of <em>x</em> also matches a slope of -0.8, not -8.7.",
+  "whyWrong": {
+   "A": "Positive slope; the line rises while the data falls.",
+   "B": "Right sign, but the numbers are swapped. A slope of -8.7 would send the line from 0.8 down past -70 by x = 9.",
+   "C": "Right constant, wrong sign on the slope."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 10 and y from 0 to 10. Points approximately (1, 7), (2, 7), (3, 5), (5, 5), (5.3, 5), (7, 4), (7.5, 4), (9, 2), (9.5, 1). Same four answer choices as Scatterplots question 9 in this book, with different plotted data."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-12",
+  "stem": "The scatterplot shows the recorded temperature, in degrees Fahrenheit, against time, in days since June 1. During which of the following time periods did the greatest increase in recorded temperature take place?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "From x = 6 to x = 7"
+   },
+   {
+    "label": "B",
+    "content": "From x = 5 to x = 6"
+   },
+   {
+    "label": "C",
+    "content": "From x = 2 to x = 3"
+   },
+   {
+    "label": "D",
+    "content": "From x = 1 to x = 2"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "An increase means the later point is higher than the earlier one, so first discard any interval where the graph goes down. Only two intervals rise: 2 to 3 and 6 to 7. From x = 2 to x = 3 the temperature climbs from about 60&deg;F to about 75&deg;F, a jump of roughly 15 degrees, while from x = 6 to x = 7 it rises only about 2 degrees.",
+  "whyWrong": {
+   "A": "This interval does rise, but only from about 62&deg;F to about 64&deg;F \u2014 a much smaller increase.",
+   "B": "From x = 5 to x = 6 the temperature falls, from about 67&deg;F to about 62&deg;F. A large change is not the same as a large increase.",
+   "D": "From x = 1 to x = 2 the temperature falls from about 69&deg;F to about 60&deg;F. This is the biggest change of all, which is why it is the trap, but it is a decrease."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, Temperature (&deg;F) from 0 to 80 against Time (days since June 1) from 1 to 8. Points approximately (1, 69), (2, 60), (3, 75), (4, 68), (5, 67), (6, 62), (7, 64)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-14",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the following equations is the most appropriate model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = -582 + 1.2x"
+   },
+   {
+    "label": "B",
+    "content": "y = 582 - 1.2x"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = -582(1.2)^{x} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 582(1.2)^{x} \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The points climb at a steady rate \u2014 equal steps right produce roughly equal steps up \u2014 so the model is linear, not exponential, and it is increasing. That leaves only y = -582 + 1.2x, whose slope of 1.2 matches the roughly one-to-one climb across the graph.",
+  "whyWrong": {
+   "B": "The coefficient of <em>x</em> is negative, so this model falls as <em>x</em> grows, while the data rises.",
+   "C": "An exponential with a negative coefficient in front gives negative <em>y</em>-values for every <em>x</em>; all the plotted points are positive.",
+   "D": "This grows by a factor of 1.2 for each increase of 1 in <em>x</em>. Over the plotted range, which runs to x = 4,000, that is an unimaginably large number, not 4,000. Exponential growth would also show as a curve that steepens, and these points lie on a straight path."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, both axes from 0 to 5,000. Points approximately (1000, 880), (1500, 1150), (1800, 1600), (2100, 1900), (2700, 2850), (3100, 3050), (3500, 3700), (4100, 4000)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-15",
+  "stem": "In the given scatterplot, a line of best fit for the data is shown. Which of the following is closest to the slope of this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-7"
+   },
+   {
+    "label": "B",
+    "content": "-0.7"
+   },
+   {
+    "label": "C",
+    "content": "0.7"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The line falls from left to right, so the slope is negative \u2014 that removes both positive choices immediately. For the size, take two points on the line: it starts near (0, 7.5) and reaches about (10, 1), a drop of roughly 6.5 across 10 units of <em>x</em>, so the slope is about -0.65, closest to -0.7.",
+  "whyWrong": {
+   "A": "A slope of -7 would drop 7 units for every single unit of <em>x</em>; this line takes the whole width of the graph to drop that far.",
+   "C": "Right size, wrong sign. A positive slope rises.",
+   "D": "Wrong sign and about ten times too steep."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 10 and y from 0 to 10, with a line of best fit from about (0, 7.5) to (10, 0.9). Points approximately (0, 6), (1.2, 8), (2.2, 7), (3, 5), (4.5, 4), (5.2, 3), (6.5, 4), (7.2, 2), (8.8, 1), (9.8, 1)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-16",
+  "stem": "The scatterplot shows the body length, in centimeters (cm), of a New Zealand fur seal from an age of 1 to 6 years old. A line of best fit is also shown. For a New Zealand fur seal at an age of 3 years old, what is the body length in centimeters predicted by the line of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "110",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The question asks what the <em>line</em> predicts, not where a data point sits, so go up from x = 3 to the line rather than to any dot. The line runs from about 88 cm at age 1 to about 135 cm at age 6, climbing roughly 9.4 cm per year, which puts it near 107 cm at age 3. Rounded to the nearest 10 cm that is 110.",
+  "needsFigure": true,
+  "note": "Scatterplot, body length (cm) 0 to 140 against age (years) 1 to 6, with a line of best fit from about (0.5, 84) to (6, 135). Points approximately (1, 87), (2, 108), (4, 113), (5, 133), (6, 134). The line at x = 3 reads about 107, so the rounded answer is 110; the reading is close to the 105 boundary, so a human should confirm against the printed key. Book prints \"of of a New Zealand fur seal\"; read as \"of a\".",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-scatterplots-17",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, together with a line of best fit. Which of the following best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 148.13 + 0.02x"
+   },
+   {
+    "label": "B",
+    "content": "y = 148.13 + 0.59x"
+   },
+   {
+    "label": "C",
+    "content": "y = 148.13 + 48.61x"
+   },
+   {
+    "label": "D",
+    "content": "y = 148.13 + 58.61x"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "All four choices start at 148.13, so only the slope separates them \u2014 work out how much <em>y</em> gains per unit of <em>x</em>. The line climbs from about 148 at x = 0 to about 735 at x = 10, a rise of roughly 590 over 10, so the slope is close to 59. The two small slopes can be dismissed on sight, since a slope under 1 would leave the line essentially flat while this line climbs by hundreds.",
+  "whyWrong": {
+   "A": "A slope of 0.02 raises <em>y</em> by only 0.2 across the whole graph \u2014 a flat line.",
+   "B": "A slope of 0.59 raises <em>y</em> by about 6 across the whole graph, still flat at this scale.",
+   "C": "48.61 is the right order of magnitude but too shallow: it puts the line at about 634 when x = 10, well below where the drawn line ends."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 10 and y from 0 to about 850, with a line of best fit from about (0, 148) to (10.3, 750). Points approximately (1, 120), (2, 340), (4, 420), (5, 390), (6, 550), (7, 510). A least-squares fit to those points gives slope 59.3 and intercept 141, which confirms choice D."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-18",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, together with a line of best fit. Which of the following is closest to the slope of the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-11.19"
+   },
+   {
+    "label": "B",
+    "content": "-0.84"
+   },
+   {
+    "label": "C",
+    "content": "0.84"
+   },
+   {
+    "label": "D",
+    "content": "11.19"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The line falls from left to right, so the slope is negative, which leaves -11.19 and -0.84. The line drops from about y = 11 at x = 0 to about y = 4.5 at x = 8, a fall of roughly 6.5 over a run of 8, giving a slope near -0.8.",
+  "whyWrong": {
+   "A": "-11.19 is the <em>y</em>-intercept dressed up as a slope. A slope that steep would drop the line 11 units for each single unit of <em>x</em>, taking it off the bottom of the graph before x = 2.",
+   "C": "Right size, wrong sign \u2014 a positive slope rises.",
+   "D": "Wrong sign and about thirteen times too steep."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 8 and y from 0 to 16, with a line of best fit from about (0, 11) to (8, 4.5). Points approximately (1, 10.4), (2, 9.6), (4, 7.5), (5, 6.7), (6, 6.1), (7, 5.3)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-19",
+  "stem": "In the given scatterplot, a line of best fit for the data is shown. Which of the following equations best represents this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 1.1x"
+   },
+   {
+    "label": "B",
+    "content": "y = -1.1x"
+   },
+   {
+    "label": "C",
+    "content": "y = 5.2"
+   },
+   {
+    "label": "D",
+    "content": "y = -5.2"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The drawn line passes through the origin and rises to about (5, 5.2), so it has a positive slope of roughly 1 and no constant term. That is y = 1.1x.",
+  "whyWrong": {
+   "B": "A negative slope falls from left to right; this line rises.",
+   "C": "y = 5.2 has no <em>x</em> in it, so it is the horizontal line at height 5.2. The drawn line is not horizontal \u2014 it only reaches 5.2 at the far right.",
+   "D": "y = -5.2 is a horizontal line below the <em>x</em>-axis, nowhere near the data."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 6 and y from 0 to 6, with a line of best fit from (0, 0) to about (5, 5.15). Points approximately (0, 0), (1, 1.5), (1, 0.8), (2, 1.1), (2.5, 3), (3, 2.9), (3.5, 4), (4, 4.8), (5, 5.15)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-20",
+  "stem": "The graph models the number of active projects a company was working on <em>x</em> months after the end of November 2011, where 0 &le; x &le; 6. According to the model, what is the predicted number of active projects the company was working on at the end of November 2011?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "\"At the end of November 2011\" is zero months after the end of November 2011, so set x = 0 and read the height of the curve where it meets the <em>y</em>-axis. That value is 8.",
+  "whyWrong": {
+   "A": "0 is the <em>x</em>-value you substitute, not the <em>y</em>-value you read off. The curve does not touch the <em>x</em>-axis anywhere.",
+   "C": "11 is the value at x = 2 and again at x = 6, not at x = 0.",
+   "D": "12 is the highest point of the curve, reached at x = 4 \u2014 the maximum over the whole period, not the starting value."
+  },
+  "needsFigure": true,
+  "note": "Graph, x from 0 to 6 and y from 0 to 13, a smooth curve rising from (0, 8) through (2, 11) to a maximum at (4, 12) and back down to (6, 11). Book prints the domain as \"0 >= x >= 6\", which is backwards; read as 0 <= x <= 6."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-21",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, together with a line of best fit. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 1.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 - 1.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = -0.8 + 1.7x"
+   },
+   {
+    "label": "D",
+    "content": "y = -0.8 - 1.7x"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Only the two signs matter here, since every choice uses the same numbers. The line rises from left to right, so the coefficient of <em>x</em> is positive, and it crosses the <em>y</em>-axis just above the origin at about 0.9, so the constant is positive too.",
+  "whyWrong": {
+   "B": "Negative slope \u2014 this line would fall.",
+   "C": "The slope is right but a constant of -0.8 puts the crossing point below the <em>x</em>-axis; the drawn line crosses above it.",
+   "D": "Both signs wrong: this line starts below the origin and falls."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 8 and y from 0 to 16, with a line of best fit from about (0, 0.9) to (8, 15.5). Points approximately (0.5, 2), (1.8, 4), (2.5, 6), (2.5, 4), (3.3, 8), (3.8, 5), (4.3, 9), (4.5, 8), (5.5, 12), (6.5, 12)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-23",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.6 + 1.5x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.6 - 1.5x"
+   },
+   {
+    "label": "C",
+    "content": "y = -0.6 + 1.5x"
+   },
+   {
+    "label": "D",
+    "content": "y = -0.6 - 1.5x"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Only the two signs differ between the choices. The line rises from left to right, so the coefficient of <em>x</em> is positive, and it meets the <em>y</em>-axis slightly above the origin at about 0.7, so the constant is positive as well.",
+  "whyWrong": {
+   "B": "Negative slope \u2014 this line falls as <em>x</em> increases.",
+   "C": "Right slope, but a constant of -0.6 puts the crossing point below the <em>x</em>-axis, while the drawn line crosses above the origin.",
+   "D": "Both signs wrong."
+  },
+  "needsFigure": true,
+  "note": "The book labels the fourth choice \"C)\" as well; recorded here as D. Scatterplot, x from 0 to 9 and y from 0 to 16, with a line of best fit from about (0, 0.7) to (9, 14.8). Points approximately (1, 2), (2, 4), (2, 3), (3, 6), (3, 5), (4, 9), (4, 8), (5, 12), (5, 11), (6, 12), (6, 10), (7, 9)."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-24",
+  "stem": "The scatterplot shows 5 measurements of the body length, in centimeters (cm), of a New Zealand fur seal from an age of 1 year to 6 years old. A line of best fit is also shown. For a New Zealand fur seal at an age of 3 years old, what is the body length predicted by the line of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "100",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the line, not the dots \u2014 there is no measurement at age 3, which is exactly why the line is there. The line runs from about 68 cm at age 0 to about 126 cm at age 6, gaining roughly 9.7 cm a year, so at age 3 it is near 97 cm. To the nearest 10 cm that is 100.",
+  "needsFigure": true,
+  "note": "Scatterplot, body length (cm) 0 to 140 against age (years) 0 to 6, with a line of best fit from about (0, 68) to (6, 126). Points approximately (1, 80), (2, 100), (4, 105), (5, 120), (6, 125). Same wording as Scatterplots question 16 in this book but different data, so the two answers differ.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-scatterplots-25",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>. Which of the following equations is the most appropriate linear model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = -2x"
+   },
+   {
+    "label": "B",
+    "content": "y = -x"
+   },
+   {
+    "label": "C",
+    "content": "y = x"
+   },
+   {
+    "label": "D",
+    "content": "y = 2x"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The points rise as <em>x</em> increases, so the slope is positive and the two negative choices are out. For the size, compare a point's two coordinates: near x = 9 the value of <em>y</em> is about 10, and near x = 4 it is about 4.5. The <em>y</em>-value stays close to the <em>x</em>-value, so the slope is about 1, not 2.",
+  "whyWrong": {
+   "A": "Negative slope, and twice too steep; this line falls below the <em>x</em>-axis for every positive <em>x</em>.",
+   "B": "Negative slope \u2014 the model would fall while the data rises.",
+   "D": "A slope of 2 predicts y = 18 when x = 9, but the plotted value there is about 10. Doubling is the trap if you only check that the data rises."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to 14 and y from 0 to 11. Points approximately (1.5, 1.9), (2, 2.5), (4, 4.5), (5.5, 3.1), (8, 7.9), (9, 9.9), (9.5, 9.7), (10.5, 10.2)."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-11",
+  "stem": "In the figure, two lines intersect at a point. If w = 150, what is the value of <em>z</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "30"
+   },
+   {
+    "label": "B",
+    "content": "50"
+   },
+   {
+    "label": "C",
+    "content": "75"
+   },
+   {
+    "label": "D",
+    "content": "150"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The angle marked <em>w</em> is above the crossing point and the angle marked <em>z</em> is below it, so they are vertical angles \u2014 opposite each other across the intersection, not side by side. Vertical angles are always equal, so z = 150. The figure not being drawn to scale does not matter; the relationship holds either way.",
+  "whyWrong": {
+   "A": "30 is 180 - 150, which is the size of the two angles at the <em>sides</em> of the crossing. Those are supplementary to <em>w</em>, not equal to it, and <em>z</em> is not one of them.",
+   "B": "50 has no basis here; it looks like dividing 150 by 3.",
+   "C": "75 is half of 150; nothing in the figure halves the angle."
+  },
+  "needsFigure": true,
+  "note": "Figure: two straight lines crossing at one point, forming an X. The angle above the crossing is labelled w and the angle below it is labelled z."
+ }
+]

@@ -1,0 +1,647 @@
+[
+ {
+  "id": "satmath-ma2-lines-angles-12",
+  "stem": "In the figure shown, line <em>r</em> is parallel to line <em>s</em>, and both lines are intersected by line <em>t</em>. If x = 2w + 24, y = 5w + 29, and 7w = a, where <em>a</em> is a constant, what is the value of <em>a</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "127",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The marked angles sit on the same side of the transversal, one below it and one above it, at the two parallel lines \u2014 so they are co-interior and add to 180, not equal. Write (2w + 24) + (5w + 29) = 180, which gives 7w + 53 = 180 and 7w = 127. The question asks for a = 7w, so you never need <em>w</em> itself: the answer is 127.",
+  "needsFigure": true,
+  "note": "Figure: two parallel vertical lines, r on the left and s on the right, crossed by a line t that rises to the right. x is marked in the wedge to the left of r and below t; y is marked in the wedge to the left of s and above t.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-lines-angles-14",
+  "stem": "In the figure, line <em>n</em> intersects lines <em>r</em> and <em>s</em>. Line <em>r</em> is parallel to line <em>s</em>. What is the value of <em>x</em>?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "164",
+  "difficulty": "EASY",
+  "whyCorrect": "Both marked angles sit in the same position relative to their intersection \u2014 above the horizontal line and to the right of <em>n</em> \u2014 so they are corresponding angles. When a transversal crosses parallel lines, corresponding angles are equal, so x = 164. No subtraction from 180 is needed, because the two angles are matching, not adjacent.",
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, r above and s below, crossed by a line n running from upper left to lower right. The 164-degree angle is marked above r and to the right of n; x is marked above s and to the right of n.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-lines-angles-16",
+  "stem": "In the figure, line <em>n</em> intersects lines <em>r</em> and <em>s</em>. Line <em>r</em> is parallel to line <em>s</em>. What is the value of <em>x</em>?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "138",
+  "difficulty": "EASY",
+  "whyCorrect": "Both marked angles occupy the same corner of their intersection \u2014 above the horizontal line and to the left of <em>n</em> \u2014 so they are corresponding angles. A transversal cutting parallel lines makes corresponding angles equal, so x = 138. There is nothing to subtract from 180 here, because the two angles are in matching positions rather than side by side.",
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, r above and s below, crossed by a line n rising from lower left to upper right. The 138-degree angle is marked above r and to the left of n; x is marked above s and to the left of n.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-lines-angles-20",
+  "stem": "In the figure, line <em>p</em> is parallel to line <em>q</em>, and <em>t</em> intersects both of them. What is the value of x + 142?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "52"
+   },
+   {
+    "label": "B",
+    "content": "90"
+   },
+   {
+    "label": "C",
+    "content": "142"
+   },
+   {
+    "label": "D",
+    "content": "180"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The two marked angles sit side by side on the same side of line <em>q</em>, split by the transversal, so together they make the straight angle along <em>q</em>. That means x + 142 = 180 directly \u2014 you never have to find <em>x</em> on its own, and the fact that <em>p</em> is parallel to <em>q</em> is not needed at all.",
+  "whyWrong": {
+   "A": "52 is not the sum of anything here; it may come from 142 - 90.",
+   "B": "90 would mean the two angles are complementary, but they lie along a straight line, not in a right angle.",
+   "C": "142 is one of the two angles; the question asks for their sum, so <em>x</em> is being treated as 0. This is the answer if you read the question as asking only for the marked value."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, p above and q below, crossed by a line t that descends from upper left to lower right. At t's crossing of q, x is marked above q on the left of t and 142 degrees is marked above q on the right of t."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-21",
+  "stem": "In the figure shown, line <em>m</em> is parallel to line <em>n</em>, and line <em>k</em> intersects both lines. Which of the following statements is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "q = 135"
+   },
+   {
+    "label": "B",
+    "content": "r = 135"
+   },
+   {
+    "label": "C",
+    "content": "s = 135"
+   },
+   {
+    "label": "D",
+    "content": "t = 135"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Work from the 135-degree angle, which sits below <em>n</em> on the left of <em>k</em>. The angle marked <em>s</em> is directly opposite it across the crossing point \u2014 above <em>n</em> on the right of <em>k</em> \u2014 so they are vertical angles and s = 135. Every other marked angle is on the same side of <em>k</em> or the same side of the horizontal line as the 135, which makes it a linear pair instead, worth 45.",
+  "whyWrong": {
+   "A": "<em>q</em> is above <em>m</em> on the left of <em>k</em>, which corresponds to the angle above <em>n</em> on the left of <em>k</em>. That one pairs with <em>s</em> along line <em>n</em>, so q = 45.",
+   "B": "<em>r</em> is vertical to <em>q</em>, so r = 45 as well.",
+   "D": "<em>t</em> is below <em>n</em> on the right of <em>k</em>, sharing line <em>n</em> with the 135-degree angle. They form a straight angle, so t = 45."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, m above and n below, crossed by a line k descending from upper left to lower right. At k's crossing of m: q is marked above m to the left of k, r below m to the right of k. At k's crossing of n: s is marked above n to the right of k, t below n to the right of k, and 135 degrees below n to the left of k."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-23",
+  "stem": "In the figure, line <em>q</em> is parallel to line <em>r</em>, and both lines are intersected by line <em>s</em>. If y = 2x + 9, what is the value of <em>x</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "26"
+   },
+   {
+    "label": "B",
+    "content": "35"
+   },
+   {
+    "label": "C",
+    "content": "55"
+   },
+   {
+    "label": "D",
+    "content": "65"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Find <em>y</em> first. The 61-degree angle is above <em>q</em> on the right of <em>s</em>, while <em>y</em> is above <em>r</em> on the left of <em>s</em> \u2014 opposite sides of the transversal \u2014 so they are co-interior rather than corresponding, and y = 180 - 61 = 119. Then solve 119 = 2x + 9, giving 2x = 110 and x = 55.",
+  "whyWrong": {
+   "A": "26 comes from setting y = 61 (treating the two angles as equal) and solving 61 = 2x + 9.",
+   "B": "35 comes from 2x + 9 = 79 or a similar slip; no angle in the figure measures 79 degrees.",
+   "D": "65 comes from solving 2x + 9 = 139, or from using 180 - 61 = 119 but then dividing before subtracting the 9."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, q above and r below, crossed by a line s rising from lower left to upper right. The 61-degree angle is marked above q to the right of s; y is marked above r to the left of s."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-27",
+  "stem": "In the figure, two lines intersect at a point. If w = 128, what is the value of <em>z</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28"
+   },
+   {
+    "label": "B",
+    "content": "52"
+   },
+   {
+    "label": "C",
+    "content": "64"
+   },
+   {
+    "label": "D",
+    "content": "128"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The angle marked <em>w</em> sits above the crossing point and the angle marked <em>z</em> sits below it, directly opposite. Angles opposite each other at an intersection are vertical angles and are always equal, so z = 128.",
+  "whyWrong": {
+   "A": "28 is 128 - 100, or a misread of 180 - 128.",
+   "B": "52 is 180 - 128, the size of the angles at the left and right of the crossing. Those are supplementary to <em>w</em>, but <em>z</em> is not one of them.",
+   "C": "64 is half of 128; nothing here bisects the angle."
+  },
+  "needsFigure": true,
+  "note": "Figure: two straight lines crossing at one point, forming an X. The angle above the crossing is labelled w and the angle below it is labelled z. Same structure as Lines&Angles question 11 in this book."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-29",
+  "stem": "In the figure shown, the lines <em>l</em> and <em>k</em> are parallel and line <em>t</em> intersects both lines. If x &gt; 154, which of the following must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y &lt; 26"
+   },
+   {
+    "label": "B",
+    "content": "y &gt; 26"
+   },
+   {
+    "label": "C",
+    "content": "x + y &lt; 180"
+   },
+   {
+    "label": "D",
+    "content": "x + y &gt; 180"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "<em>x</em> is above <em>l</em> on the right of <em>t</em> and <em>y</em> is above <em>k</em> on the left of <em>t</em> \u2014 opposite sides of the transversal \u2014 so with the lines parallel they are co-interior and x + y = 180 exactly. Then y = 180 - x, and x &gt; 154 gives y &lt; 180 - 154 = 26. Subtracting flips the inequality, which is the step the question is testing.",
+  "whyWrong": {
+   "B": "This carries the direction of x &gt; 154 straight over to <em>y</em>, but <em>y</em> is 180 minus <em>x</em>, so a bigger <em>x</em> makes a smaller <em>y</em>.",
+   "C": "x + y is exactly 180, never less.",
+   "D": "x + y is exactly 180, never more. Both C and D fail for the same reason: the sum is fixed, so no strict inequality holds."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, l above and k below, crossed by a line t descending from upper left to lower right. x is marked above l to the right of t; y is marked above k to the left of t."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-30",
+  "stem": "In the figure, line <em>q</em> is parallel to line <em>r</em>, and both lines are intersected by line <em>s</em>. If y = 2x + 8, what is the value of <em>x</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "33"
+   },
+   {
+    "label": "B",
+    "content": "41"
+   },
+   {
+    "label": "C",
+    "content": "49"
+   },
+   {
+    "label": "D",
+    "content": "59"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The 74-degree angle is above <em>q</em> on the right of <em>s</em>, and <em>y</em> is above <em>r</em> on the left of <em>s</em>. Because they sit on opposite sides of the transversal, they are co-interior and add to 180, so y = 180 - 74 = 106. Substituting into y = 2x + 8 gives 2x = 98 and x = 49.",
+  "whyWrong": {
+   "A": "33 comes from treating the two angles as equal, so 74 = 2x + 8.",
+   "B": "41 comes from 2x + 8 = 90, using a right angle that is not in the figure.",
+   "D": "59 comes from 2x = 118, i.e. subtracting 8 from 126 or otherwise mis-solving after getting y = 106."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, q above and r below, crossed by a line s rising from lower left to upper right. The 74-degree angle is marked above q to the right of s; y is marked above r to the left of s."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-36",
+  "stem": "In the figure, line <em>l</em> is parallel to line <em>m</em>. What is the value of <em>x</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "31"
+   },
+   {
+    "label": "B",
+    "content": "69"
+   },
+   {
+    "label": "C",
+    "content": "111"
+   },
+   {
+    "label": "D",
+    "content": "131"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Move the 111-degree angle across its own intersection first: it sits below <em>m</em> on the left of <em>k</em>, so the angle directly opposite it \u2014 above <em>m</em> on the right of <em>k</em> \u2014 is also 111&deg; because vertical angles are equal. That angle is in the same corner at <em>m</em> that <em>x</em> is in at <em>l</em>, so the two are corresponding angles and x = 111. Both angles are obtuse in the figure, which is a quick sanity check.",
+  "whyWrong": {
+   "A": "31 does not arise from any angle relationship here.",
+   "B": "69 is 180 - 111, the size of the acute angles at each crossing. It is what you get by treating <em>x</em> and the 111-degree angle as a linear pair, but they are at different intersections.",
+   "D": "131 has no basis; it appears to be 111 with a digit changed."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel horizontal lines, l above and m below, crossed by a line k descending from upper left to lower right. x is marked above l to the right of k; 111 degrees is marked below m to the left of k."
+ },
+ {
+  "id": "satmath-ma2-triangles-11",
+  "stem": "The area of triangle <em>ABC</em> is 30 square centimeters. What is the height <em>h</em>, in centimeters, of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Use area = one half times base times height with the base of 10 cm shown in the figure: \\( 30 = \\frac{1}{2}(10)h \\), so 30 = 5h and h = 6.",
+  "whyWrong": {
+   "A": "3 comes from dividing 30 by 10 and then halving again \u2014 the one half is applied twice.",
+   "C": "10 is the base length given in the figure, not the height.",
+   "D": "12 is twice the correct height. It comes from doubling the area to 60 but then dividing by 5 instead of by the full base of 10."
+  },
+  "needsFigure": true,
+  "note": "Figure: triangle ABC with horizontal base AC marked 10 cm, apex B above, and a dashed vertical segment from B to AC labelled h with a right-angle mark where it meets AC."
+ },
+ {
+  "id": "satmath-ma2-triangles-23",
+  "stem": "In the triangle shown, what is the value of <em>x</em>?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "22"
+   },
+   {
+    "label": "B",
+    "content": "\\( 22\\sqrt{3} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( 66\\sqrt{3} \\)"
+   },
+   {
+    "label": "D",
+    "content": "132"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The side marked <em>x</em> is opposite the 30-degree angle and the side marked 66 is adjacent to it, so use the tangent: \\( \\tan 30^{\\circ} = \\frac{x}{66} \\). Since \\( \\tan 30^{\\circ} = \\frac{1}{\\sqrt{3}} \\), \\( x = \\frac{66}{\\sqrt{3}} = 22\\sqrt{3} \\), about 38.1. Note that <em>x</em> is a leg, not the hypotenuse \u2014 the right angle mark is at the other end of the 66 side.",
+  "whyWrong": {
+   "A": "22 is 66 divided by 3, dropping the radical from \\( \\frac{66}{\\sqrt{3}} \\).",
+   "C": "\\( 66\\sqrt{3} \\) multiplies by \\( \\sqrt{3} \\) instead of dividing, which is what you get from using tan 60&deg; \u2014 the angle at the top of the triangle, not the marked one.",
+   "D": "132 is twice 66, the hypotenuse-to-short-leg relationship in a 30-60-90 triangle applied to the wrong side. Here 66 is the long leg, not the short one."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle at the lower left. The bottom (horizontal) leg is labelled 66, the left (vertical) leg is labelled x, and the angle at the lower-right vertex is marked 30 degrees."
+ },
+ {
+  "id": "satmath-ma2-triangles-34",
+  "stem": "In the right triangle shown, what is the value of <em>x</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( \\sqrt{2} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( \\sqrt{37} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\sqrt{74} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( 37\\sqrt{2} \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Both legs are 37 and <em>x</em> is the hypotenuse, so \\( x^{2} = 37^{2} + 37^{2} = 2(37^{2}) \\) and \\( x = 37\\sqrt{2} \\). Equivalently, a right triangle with equal legs is a 45-45-90 triangle, whose hypotenuse is always a leg times \\( \\sqrt{2} \\). A quick check: the hypotenuse must be longer than 37, and \\( 37\\sqrt{2} \\approx 52 \\).",
+  "whyWrong": {
+   "A": "\\( \\sqrt{2} \\) is the ratio between the hypotenuse and a leg, not a length; it is far shorter than either leg.",
+   "B": "\\( \\sqrt{37} \\approx 6.1 \\), shorter than the legs, so it cannot be the hypotenuse. This comes from taking a square root of 37 that the work never asks for.",
+   "C": "\\( \\sqrt{74} \\approx 8.6 \\) comes from adding the legs as 37 + 37 = 74 and then rooting, instead of squaring each leg first: the sum of the squares is 2,738, not 74."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle at the lower left, the vertical leg labelled 37, the horizontal leg labelled 37, and the hypotenuse labelled x."
+ },
+ {
+  "id": "satmath-ma2-triangles-42",
+  "stem": "For the triangles shown, triangle ABC is dilated by a factor of 5 to obtain triangle XYZ, where d = 19. What is the measure, in degrees, of angle X?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "12"
+   },
+   {
+    "label": "B",
+    "content": "55"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "65"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "A dilation changes every length by the scale factor but leaves every angle measure alone. Triangle XYZ is the image of triangle ABC, so angle X corresponds to angle A, and the figure marks angle A as 60&deg;. The value d = 19 is there only to tempt you into computing something; no length is needed. Angle X = 60&deg;.",
+  "whyWrong": {
+   "A": "This divides 60 by the scale factor 5. Scale factors act on lengths, not on angles.",
+   "B": "This subtracts the scale factor from the angle, which no property of dilation supports.",
+   "D": "This adds the scale factor to the angle, which again treats the dilation as if it changed angle measures."
+  },
+  "needsFigure": true,
+  "note": "Figure: two triangles side by side, 'Note: Figure not drawn to scale'. Left triangle ABC with A top-left, B top-right, C below between them; the angle at A is labeled 60&deg; and side AC is labeled d. Right triangle XYZ, same orientation (X top-left, Y top-right, Z below), drawn larger, no labels on its sides or angles."
+ },
+ {
+  "id": "satmath-ma2-triangles-43",
+  "stem": "The line segment shown in the <em>xy</em>-plane represents one of the legs of a right triangle. The area of this triangle is \\(48\\sqrt{13}\\) square units. What is the length, in units, of the other leg of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "16"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "\\(3\\sqrt{13}\\)"
+   },
+   {
+    "label": "D",
+    "content": "24"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the two endpoints off the grid and use the distance formula: the run is 9 and the rise is 6, so the drawn leg has length \\(\\sqrt{9^{2}+6^{2}}=\\sqrt{117}=3\\sqrt{13}\\). In a right triangle the two legs are the base and the height, so \\(\\tfrac{1}{2}(3\\sqrt{13})L = 48\\sqrt{13}\\). Solving gives \\(L = \\frac{96\\sqrt{13}}{3\\sqrt{13}} = 32\\). The radicals cancel, which is the signal you read the segment correctly.",
+  "whyWrong": {
+   "A": "This is what you get if you drop the \\(\\tfrac{1}{2}\\) in the area formula and compute \\(48\\sqrt{13} \\div 3\\sqrt{13}\\).",
+   "C": "This is the length of the leg that is already drawn, not the one the question asks for.",
+   "D": "This comes from mis-reading the endpoints so the drawn leg is \\(2\\sqrt{13}\\) instead of \\(3\\sqrt{13}\\), and then also dropping the factor of \\(\\tfrac{1}{2}\\)."
+  },
+  "needsFigure": true,
+  "note": "Figure: xy-plane, x-axis from -8 to 8 and y-axis from 0 to 16, gridlines every 1 unit, axis labels every 2 units. A single thick line segment with filled dots at both endpoints, from (-5, 3) to (4, 9)."
+ },
+ {
+  "id": "satmath-ma2-triangles-45",
+  "stem": "The area of triangle ABC is 220 square centimeters. What is the height h, in centimeters, of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "10"
+   },
+   {
+    "label": "B",
+    "content": "22"
+   },
+   {
+    "label": "C",
+    "content": "44"
+   },
+   {
+    "label": "D",
+    "content": "88"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The height h in the figure is drawn perpendicular to side AC, so AC is the matching base and it is labeled 10 cm. Put both into the area formula: \\(\\tfrac{1}{2}(10)h = 220\\), so 5h = 220 and h = 44. The step people skip is doubling the area before dividing.",
+  "whyWrong": {
+   "A": "This is the base length copied out of the figure, not the height.",
+   "B": "This is \\(220 \\div 10\\) \u2014 it divides by the base without first doubling the area, so it is half the right answer.",
+   "D": "This doubles the area a second time: \\(4 \\times 220 \\div 10\\). The formula has only one factor of 2."
+  },
+  "needsFigure": true,
+  "note": "Figure: triangle ABC with A at the bottom left, C at the bottom right and B at the top, roughly above the middle of AC. The base AC is labeled 10 cm. A dashed vertical segment from B down to AC is labeled h, with a right-angle mark where it meets AC. 'Note: Figure not drawn to scale'."
+ },
+ {
+  "id": "satmath-ma2-triangles-46",
+  "stem": "In the right triangle shown, what is the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "24"
+   },
+   {
+    "label": "B",
+    "content": "66"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "76"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The three angles of any triangle add to 180&deg;. Here one angle is the marked right angle, 90&deg;, and another is 24&deg;, so a = 180 - 90 - 24 = 66. A shortcut worth remembering: in a right triangle the two non-right angles are complementary, so a = 90 - 24 straight away.",
+  "whyWrong": {
+   "A": "This copies the angle already given instead of finding the third one. The two acute angles here are not equal, since the triangle is not isosceles.",
+   "C": "This is the right angle marked in the figure, not the angle labeled a&deg;.",
+   "D": "This subtracts 24 from 100 rather than from 90. The two acute angles of a right triangle add to 90&deg;, not 100&deg;."
+  },
+  "needsFigure": true,
+  "note": "Figure: a right triangle with the right angle marked at the bottom-left vertex, the top vertex directly above it, and the third vertex at the bottom right. The angle at the top vertex is labeled 24&deg; and the angle at the bottom-right vertex is labeled a&deg;. 'Note: Figure not drawn to scale'."
+ },
+ {
+  "id": "satmath-ma2-triangles-47",
+  "stem": "In right triangle JKL, the tangent of angle L is \\(\\frac{3}{4}\\). What is the length of JK?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{35}{16}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{15}{4}\\)"
+   },
+   {
+    "label": "C",
+    "content": "54"
+   },
+   {
+    "label": "D",
+    "content": "72"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The right angle is at K, so JL is the hypotenuse and JL = 90. From angle L, the opposite leg is JK and the adjacent leg is KL, so \\(\\tan L = \\frac{JK}{KL} = \\frac{3}{4}\\). Legs in the ratio 3 : 4 make a 3-4-5 triangle, so the hypotenuse corresponds to 5. Scaling 5 up to 90 multiplies everything by 18, which gives JK = 3(18) = 54.",
+  "whyWrong": {
+   "A": "This is not reachable from any correct step. Note that it is smaller than 3, while the hypotenuse of this triangle is 90 \u2014 every side must be far larger.",
+   "B": "This scales the 3-4-5 triangle to a hypotenuse of 5 rather than to the given hypotenuse of 90, so it is the answer for a triangle 18 times too small.",
+   "D": "This is KL, the leg adjacent to angle L: 4(18) = 72. The tangent's numerator, not its denominator, matches the side opposite angle L."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle JKL with the right angle marked at K. L is at the bottom left, K at the bottom right, J directly above K. The hypotenuse LJ is labeled 90. 'Note: Figure not drawn to scale'. The book misprints the fourth choice's label as 'C' \u2014 it is transcribed here as D."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-1",
+  "stem": "In triangle DEF, point G (not shown) lies on \\(\\overline{DE}\\). If the measure of angle DFG is \\(x^{\\circ}\\), and the measure of angle GFE is \\(y^{\\circ}\\), what is the value of \\(\\cos x^{\\circ} - \\sin y^{\\circ}\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "0",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "G is on DE, so ray FG splits angle DFE into the two pieces measuring \\(x^{\\circ}\\) and \\(y^{\\circ}\\), which means x + y = 90 because angle DFE is the right angle in the figure. Complementary angles trade sine for cosine: \\(\\sin y^{\\circ} = \\sin(90 - x)^{\\circ} = \\cos x^{\\circ}\\). So the expression is \\(\\cos x^{\\circ} - \\cos x^{\\circ} = 0\\). The side lengths 3 and 4 are never needed, and neither x nor y can be pinned down individually.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle DEF with the right angle at F. D is at the top, F directly below D at the bottom left, E at the bottom right. Leg DF is labeled 4 and leg FE is labeled 3."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-2",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with level ground such that \\(\\tan\\theta < \\frac{1}{12}\\). If the ramp in the figure conforms to this law and has a height of 22.3 inches, what is the least possible value of x, in inches?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "267.6",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "In the figure \\(\\theta\\) sits at the ground, with the height opposite it and x adjacent, so \\(\\tan\\theta = \\frac{22.3}{x}\\). The law then requires \\(\\frac{22.3}{x} < \\frac{1}{12}\\). Cross-multiplying (x is positive, so the inequality direction is safe) gives x > 12(22.3) = 267.6. A shallower ramp means a longer run, so the smallest allowed x is 267.6 inches.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;. Note: the inequality is strict, so strictly speaking there is no least value; 267.6 is the intended answer and is the greatest lower bound."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-3",
+  "stem": "According to a US law, ramps for use by the general public must form an angle with ground such that \\(\\tan\\theta \\le \\frac{1}{12}\\). If the ramp in the figure above conforms to this law and height of the ramp is 28.2 inches, what is the least possible value of x in inches?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "338.4",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The angle \\(\\theta\\) is at the ground, so the height is the leg opposite it and x is the leg adjacent: \\(\\tan\\theta = \\frac{28.2}{x}\\). The law gives \\(\\frac{28.2}{x} \\le \\frac{1}{12}\\), and multiplying both sides by 12x (positive) gives \\(x \\ge 12(28.2) = 338.4\\). The gentler the required slope, the longer the horizontal run has to be, so 338.4 inches is the shortest run allowed.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: a right triangle representing a ramp. The horizontal bottom side is labeled x, the vertical right side is labeled 'height of the ramp' with a right angle marked where they meet, and the hypotenuse is labeled 'length of the ramp'. The angle at the bottom-left vertex, between the ground and the ramp, is labeled &theta;."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-4",
+  "stem": "What is the value of \\(\\cos A\\) in the triangle shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{1}{53}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{1}{54}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{53}{54}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\frac{54}{53}\\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Cosine is adjacent over hypotenuse. The right angle is at C, so the hypotenuse is the side across from it, AB = 54. The leg touching angle A other than the hypotenuse is AC = 53. So \\(\\cos A = \\frac{53}{54}\\).",
+  "whyWrong": {
+   "A": "This puts 1 in the numerator instead of the adjacent leg. Cosine compares two side lengths; a 1 never appears unless a side actually measures 1.",
+   "B": "Same error as the previous choice, with the hypotenuse in the denominator instead.",
+   "D": "This is the reciprocal, hypotenuse over adjacent. Any cosine must be at most 1, so a value greater than 1 can be ruled out on sight."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle marked at C. A is at the bottom left, C at the bottom right, B directly above C. Side AC (the horizontal bottom) is labeled 53 and the hypotenuse AB is labeled 54. 'Note: Figure not drawn to a scale.'"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-9",
+  "stem": "Triangle XYZ shown is a right triangle. Which of the following has the same value as \\(\\sin X\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\cos Y\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\cos X\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\tan Y\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\tan X\\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The right angle is at Z, so angles X and Y are the two acute angles and they add to 90 degrees. \\(\\sin X\\) is the leg opposite X over the hypotenuse, which is \\(\\frac{ZY}{XY}\\); \\(\\cos Y\\) is the leg adjacent to Y over the hypotenuse, which is the same \\(\\frac{ZY}{XY}\\). This is the general rule that the sine of an angle equals the cosine of its complement, and it holds no matter what the side lengths are.",
+  "whyWrong": {
+   "B": "\\(\\cos X = \\frac{XZ}{XY}\\) uses the other leg. It would equal \\(\\sin X\\) only if the two legs were equal, and 29 and 37 are not.",
+   "C": "\\(\\tan Y\\) divides one leg by the other leg, not by the hypotenuse, so it is not the same kind of ratio at all.",
+   "D": "\\(\\tan X\\) is also a leg-over-leg ratio; here it is \\(\\frac{37}{29}\\), which is greater than 1, while any sine is at most 1."
+  },
+  "needsFigure": true,
+  "note": "Figure: right triangle XYZ with the right angle marked at Z. X is at the top left, Z directly below it at the bottom left, Y at the bottom right. Leg XZ is labeled 29 and leg ZY is labeled 37."
+ },
+ {
+  "id": "satmath-ma2-trigonometry-10",
+  "stem": "In the triangle shown \\(RS = \\sqrt{157}\\). What is the value of \\(\\sin R\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "78/79",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The right angle is at S, so TR = 79 is the hypotenuse and the two legs are RS and TS. Pythagoras gives \\(TS^{2} = 79^{2} - (\\sqrt{157})^{2} = 6241 - 157 = 6084\\), so TS = 78. From angle R the opposite leg is TS, so \\(\\sin R = \\frac{78}{79}\\). Squaring the radical is the step to watch: \\((\\sqrt{157})^{2}\\) is just 157.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle RST with the right angle marked at S. T is at the bottom left, S at the bottom right, R above S. The hypotenuse TR is labeled 79. Answer 78/79 = 0.9873..., so .9873 or .987 would also grid in."
+ }
+]

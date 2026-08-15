@@ -29,6 +29,8 @@ const APPLY = process.argv.includes("--apply");
 const PUBLISH = process.argv.includes("--publish");
 const ONLY = process.argv.includes("--only")
   ? process.argv[process.argv.indexOf("--only") + 1] : null;
+const SRC = process.argv.includes("--src")
+  ? process.argv[process.argv.indexOf("--src") + 1] : "allocation.json";
 
 if (!process.env.DATABASE_URL) {
   console.error("Set DATABASE_URL.");
@@ -48,7 +50,7 @@ if (isLocal) {
   console.log("driver: neon HTTP (production)");
 }
 
-const tests = JSON.parse(readFileSync(path.join(HERE, "allocation.json"), "utf8"));
+const tests = JSON.parse(readFileSync(path.join(HERE, SRC), "utf8"));
 
 const domainId = Object.fromEntries(
   (await sql.query('SELECT id, code FROM "Domain"')).map((d) => [d.code, d.id]));

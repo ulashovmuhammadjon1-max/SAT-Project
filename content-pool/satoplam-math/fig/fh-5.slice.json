@@ -1,0 +1,729 @@
+[
+ {
+  "id": "satmath-ma2-linear-functions-41",
+  "stem": "The graph of \\(y = f(x)\\) is shown. What is the <em>y</em>-intercept of the graph of \\(y = f(x) + 13\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, &minus;12)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 14)"
+   },
+   {
+    "label": "C",
+    "content": "(1, 13)"
+   },
+   {
+    "label": "D",
+    "content": "(0, 13)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Adding 13 to a function shifts every point up by 13, so the <em>y</em>-intercept moves up by 13 and stays on the <em>y</em>-axis. The graph shows f(0) = 1, so the new intercept is at (0, 1 + 13) = (0, 14). Only the y-value changes; x stays 0.",
+  "whyWrong": {
+   "A": "This subtracts 13 from 1 instead of adding. Adding a positive constant raises the graph.",
+   "C": "This puts the 1 in the x-slot. An intercept on the <em>y</em>-axis always has x = 0; the 1 was the height, not a horizontal position.",
+   "D": "This assumes f(0) = 0, reading the intercept at the origin. The line crosses the <em>y</em>-axis one unit above it."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the line y = 2.5x + 1, through (0, 1) and (-0.4, 0), drawn over roughly -2.8 <= x <= 2.1; grid spans x from -7 to 7 and y from -7 to 7.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-46",
+  "stem": "The graph of the linear equation \\[ 8x + By = 56 \\]is shown, where B is a constant. What is the value of B?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "28",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The graph meets the <em>y</em>-axis at (0, 2), so substitute that point: 8(0) + B(2) = 56, giving 2B = 56 and B = 28. Do not use the <em>x</em>-intercept &mdash; setting y = 0 gives 8x = 56, i.e. x = 7, with B cancelling out, which is why the graph's x-intercept of 7 is only a consistency check.",
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the segment of 8x + 28y = 56 from (0, 2) to (7, 0), extended slightly past the x-intercept; axes x from 0 to about 10.5 and y from 0 to about 10.5.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-linear-functions-68",
+  "stem": "What is an equation of the graph shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = x + 12"
+   },
+   {
+    "label": "B",
+    "content": "y = &minus;x + 12"
+   },
+   {
+    "label": "C",
+    "content": "y = 2x + 12"
+   },
+   {
+    "label": "D",
+    "content": "y = &minus;2x + 12"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "EASY",
+  "whyCorrect": "All four choices have the same intercept, 12, so the graph settles it on slope alone. The line falls as you move right, so the slope is negative, and it drops from 12 at x = 0 to 2 at x = 10 &mdash; 10 down over 10 across, a slope of -1.",
+  "whyWrong": {
+   "A": "Slope +1 rises to the right; the graphed line falls.",
+   "C": "Slope 2 rises, and twice as steeply as the graph.",
+   "D": "The sign is right but the line is twice too steep: a slope of -2 would reach y = -8 at x = 10, not y = 2."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the line y = -x + 12 drawn over roughly -4 <= x <= 10; grid spans x from -11 to 11 and y from -16 to 16.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-72",
+  "stem": "A certain open star cluster contains <em>M</em>-type stars and <em>K</em>-type stars. The estimated total mass of all <em>M</em>-type and <em>K</em>-type stars in this open star cluster is 132,778 quettagrams. The graph shown models the possible combinations of the number of <em>M</em>-type stars, x, and <em>K</em>-type stars, y, that could be in this open star cluster if all the <em>M</em>-type stars have the same estimated mass and all the <em>K</em>-type stars have the same estimated mass. Based on the graph, which of the following is closest to the estimated mass, in quettagrams, of each <em>M</em>-type star in this cluster?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "828"
+   },
+   {
+    "label": "B",
+    "content": "973"
+   },
+   {
+    "label": "C",
+    "content": "52,992"
+   },
+   {
+    "label": "D",
+    "content": "79,786"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Use the intercept that removes the other kind of star. Where the line meets the <em>x</em>-axis there are no <em>K</em>-type stars, so about 160 <em>M</em>-type stars account for the entire 132,778 quettagrams: 132,778 &divide; 160 &asymp; 830, closest to 828. The <em>y</em>-intercept would give the <em>K</em>-type mass instead.",
+  "whyWrong": {
+   "B": "973 comes from the <em>y</em>-intercept of about 137: 132,778 &divide; 137 is the mass of one <em>K</em>-type star, not an <em>M</em>-type.",
+   "C": "This is the total mass divided by about 2.5, or a slope misread; it is far too large for one star when 160 of them share the total.",
+   "D": "This is roughly half the total mass, which would only be one star's mass if the cluster held two stars."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: a segment from about (0, 137) to about (160, 0); x-axis 'Number of M-type stars' 0 to about 170, y-axis 'Number of K-type stars' 0 to about 165. The book's y-axis label misprints K-type as N-type.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-2",
+  "stem": "A hemisphere and a cone have circular bases of equal circumference and have been connected at their bases, as shown in the figure. The diameter of the base of the hemisphere is 6 centimeters (cm) and the total height of the figure is 9 cm. What is the total volume, in \\(\\text{cm}^3\\), of the cone and hemisphere?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(18\\pi\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(36\\pi\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(45\\pi\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(162\\pi\\)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Split the 9 cm of total height between the two solids. The radius is half of 6, so r = 3, and a hemisphere of radius 3 is 3 cm tall &mdash; that leaves 9 - 3 = 6 cm for the cone's height. Then the hemisphere is \\(\\frac{2}{3}\\pi(3)^3 = 18\\pi\\) and the cone is \\(\\frac{1}{3}\\pi(3)^2(6) = 18\\pi\\), for a total of \\(36\\pi\\).",
+  "whyWrong": {
+   "A": "\\(18\\pi\\) is just one of the two pieces; both happen to equal \\(18\\pi\\), so stopping after one halves the answer.",
+   "C": "\\(45\\pi\\) comes from giving the cone the full 9 cm of height: \\(\\frac{1}{3}\\pi(9)(9) = 27\\pi\\) plus \\(18\\pi\\). The hemisphere occupies the top 3 cm.",
+   "D": "\\(162\\pi\\) treats the whole shape as a cylinder of radius 3 and height 9 &times; 2, or drops the \\(\\frac{1}{3}\\) and \\(\\frac{2}{3}\\) factors entirely."
+  },
+  "needsFigure": true,
+  "note": "Stem refers to a figure. Verified data for rebuilding it: a hemisphere (flat face down, radius 3 cm) sitting on top of a cone that points downward, sharing the circular base; a vertical dimension arrow at the right labelled 9 cm spanning the whole shape.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-37",
+  "stem": "The figure shown is a right circular cylinder with a radius r and a height of h. A second right circular cylinder (not shown) has a volume that is 576 times as large as the volume of the cylinder shown. Which of the following could represent the radius R, in terms of r, and the height H, in terms of h, of the second cylinder?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "R = 9r and H = 8h"
+   },
+   {
+    "label": "B",
+    "content": "R = 9r and H = 64h"
+   },
+   {
+    "label": "C",
+    "content": "R = 8r and H = 9h"
+   },
+   {
+    "label": "D",
+    "content": "R = 64r and H = 9h"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "In \\(V = \\pi r^2 h\\) the radius is squared but the height is not, so scaling the radius by a and the height by b multiplies the volume by \\(a^2 b\\). Test the choices: \\(8^2 \\times 9 = 64 \\times 9 = 576\\), which is the required factor.",
+  "whyWrong": {
+   "A": "\\(9^2 \\times 8 = 648\\), not 576. Here the larger factor was put on the radius, where squaring makes it too big.",
+   "B": "\\(9^2 \\times 64 = 5{,}184\\), nine times too large.",
+   "D": "\\(64^2 \\times 9 = 36{,}864\\). The 64 belongs to the squared effect of scaling the radius by 8, not to the radius itself."
+  },
+  "needsFigure": true,
+  "note": "Stem refers to a figure. It is only a generic labelled diagram: a right circular cylinder with a horizontal radius segment marked r on the top face and a vertical arrow at the right marked h. No measurements appear in it.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-exponential-functions-1",
+  "stem": "The graph of \\(y = f(x) - 1\\) is shown. Which equation could define function \\(f\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(f(x) = 2^x\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(f(x) = 2^x - 1\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(f(x) = 2^x + 1\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(f(x) = 2^x + 2\\)"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The curve drawn is not f &mdash; it is f shifted down 1. It has a horizontal asymptote at y = 1 and passes through (0, 2), so the graphed function is \\(2^x + 1\\). Undo the shift by adding 1 back: \\(f(x) = 2^x + 2\\). Check it: \\(f(0) - 1 = 3 - 1 = 2\\), matching the graph.",
+  "whyWrong": {
+   "A": "\\(2^x\\) has asymptote y = 0 and passes through (0, 1); shifting it down would put the curve below the one shown by 2 units.",
+   "B": "This shifts in the wrong direction twice; \\(f(x) - 1 = 2^x - 2\\), an asymptote at y = -2.",
+   "C": "This is the equation of the curve <em>shown</em>, not of f. The graph is f minus 1, so f is one unit higher."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the curve \\(y = 2^x + 1\\) drawn for roughly -3.5 <= x <= 2.2, with horizontal asymptote y = 1 and passing through (0, 2); grid spans x from -3.5 to 3.5 and y from -1.5 to 5.5.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-exponential-functions-21",
+  "stem": "The graph of the equation \\(y = 2^x + k\\) is shown, where k is a constant. What is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "&minus;7"
+   },
+   {
+    "label": "B",
+    "content": "&minus;6"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "For \\(y = 2^x + k\\), the horizontal asymptote is y = k, because \\(2^x\\) shrinks to 0 as x runs left. The flat left tail of the graph sits at y = -7, so k = -7. Check it at x = 0: \\(2^0 + k = 1 - 7 = -6\\), and the curve does cross the <em>y</em>-axis at -6.",
+  "whyWrong": {
+   "B": "-6 is the <em>y</em>-intercept, which is \\(1 + k\\), not k itself. That extra 1 comes from \\(2^0\\).",
+   "C": "A positive k would lift the whole curve above the x-axis; this graph lies mostly below it.",
+   "D": "Same sign problem: with k = 6 the asymptote would be y = 6 and the curve would never reach negative values."
+  },
+  "needsFigure": true,
+  "note": "The book labels the four choices A, B, A, B; transcribed here as A, B, C, D in the order printed. Depends on a graph. Verified data for rebuilding it: the curve \\(y = 2^x - 7\\) drawn for roughly -11 <= x <= 4, with horizontal asymptote y = -7, y-intercept (0, -6) and x-intercept near x = 2.81; grid spans x from -11 to 11 and y from -11 to 11.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma3-scatterplots-1",
+  "stem": "The scatterplot shows the relationship between two variables, x and y. A line of best fit for the data is also shown. For how many of the 9 data points is the actual y-value greater than the y-value predicted by the line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "2"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "\"Predicted\" means the height of the line directly above or below that point's own x-value, so compare each point vertically with the line, not with the other points. The line runs from about (0.5, 80) up to about (10, 100). Going left to right, the points near x = 1, 2, 3, 4.5 and 9 sit above the line and the points near x = 5, 6, 7 and 8.5 sit below it. That is 5 points above.",
+  "whyWrong": {
+   "A": "8 counts every point that is above y = 80, the line's starting height, instead of above the line at that point's own x. The line rises to 100, so being above 80 is not enough.",
+   "B": "7 comes from missing the two points on the right that sit just below the rising line; near x = 7 and x = 8.5 the line has already climbed past them.",
+   "D": "2 counts only the points that clear the line by an obvious margin. Three more points on the left are above it by a smaller amount and still count."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-2",
+  "stem": "The graph shows the number of internet users worldwide y, in billions, x years after 2007. Which of the following is closest to the number of internet users worldwide, in billions, 5 years after 2007?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1.4"
+   },
+   {
+    "label": "B",
+    "content": "2.4"
+   },
+   {
+    "label": "C",
+    "content": "3.4"
+   },
+   {
+    "label": "D",
+    "content": "4.4"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "x is years after 2007, so \"5 years after 2007\" is x = 5, not the fifth plotted point counting from the left of a list. Go up from 5 on the horizontal axis to the point there and read across: it sits just under halfway between 2 and 3, about 2.4 billion.",
+  "whyWrong": {
+   "A": "1.4 is the value at x = 0, that is, in 2007 itself.",
+   "C": "3.4 is higher than any plotted point; even at x = 9 the graph has only reached about 3.1.",
+   "D": "4.4 is well off the data, which never rises above about 3."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-3",
+  "stem": "The scatterplot shows data set A, which consists of the weights y, in pounds, of a Labrador retriever puppy at various ages, x, in months. The equation of a line of best fit for the relationship in data set A can be written as \\( y = -5.1 + 8.7x \\) , where \\( 2 \\le x \\le 6 \\) . The puppy was weighed again at 9 months old and weighed 52 pounds. Data set B consists of all the data points in data set A as well as the data point (9, 52). The equation of a line of best fit for data set B can be written as \\( y = r + sx \\) , where r and s are constants and \\( 2 \\le x \\le 9 \\) . Assuming the equations of the lines of best fit are calculated in the same way, which of the following is the best estimate for the value of s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5.9"
+   },
+   {
+    "label": "B",
+    "content": "8.7"
+   },
+   {
+    "label": "C",
+    "content": "13.8"
+   },
+   {
+    "label": "D",
+    "content": "17.7"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "s is the slope of the new line, so ask what the extra point does to the trend rather than trying to recompute a regression. Data set A's line predicts \\( -5.1 + 8.7(9) = 73.2 \\) pounds at 9 months, but the puppy actually weighed 52 pounds &mdash; far below the trend, and at the far right where it pulls hardest. A point that low on the right end drags the right side of the line down, so the new slope must be smaller than 8.7. Only 5.9 is smaller.",
+  "whyWrong": {
+   "B": "8.7 is the old slope, which would only stay the same if the new point landed on the old line. It lands 21 pounds below it.",
+   "C": "13.8 is a steeper slope, which would require the new point to sit above the old line, not below it.",
+   "D": "17.7 is roughly double the old slope; nothing here makes the growth trend steeper. It also comes from dividing 52 by 3 or similar, which is not a slope."
+  },
+  "needsFigure": true,
+  "note": "The book prints the domains with the inequality signs reversed (2 &ge; x &ge; 6 and 2 &ge; x &ge; 9), which is impossible; transcribed as 2 &le; x &le; 6 and 2 &le; x &le; 9. The book also writes the new line as y = r + st, using t where the variable is x."
+ },
+ {
+  "id": "satmath-ma3-scatterplots-4",
+  "stem": "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = 0 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = 1.7 \\)"
+   },
+   {
+    "label": "C",
+    "content": "0.7"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 1.7 + 0.7x \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The plotted line clearly rises from left to right, so its equation must contain an x term with a positive coefficient. Only one choice does. The others describe horizontal lines or are not equations at all, so no reading of the graph is needed beyond noticing the line is not flat.",
+  "whyWrong": {
+   "A": "y = 0 is the horizontal x-axis; the line shown is neither horizontal nor on the axis.",
+   "B": "y = 1.7 is a horizontal line at height 1.7. A constant y cannot describe a line that climbs.",
+   "C": "0.7 is a number, not an equation, so it cannot represent any line. It is the slope-shaped part of choice D with the rest removed."
+  },
+  "needsFigure": true,
+  "note": "The line drawn in the figure passes close to the origin, so its y-intercept looks nearer 0 than the 1.7 in choice D; D is still the only choice that is an increasing linear equation. Choice C is printed without \"y =\"."
+ },
+ {
+  "id": "satmath-ma3-scatterplots-5",
+  "stem": "The scatterplot shows the relationship between t and d, along with a line of best fit. Which of the following equations is the most appropriate linear model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( d = -62.1 + 2.02t \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( d = 162.1 + 2.02t \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( d = 357.8 + 2.02t \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( d = 392.8 + 2.02t \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Every choice has the same slope, so the slope tells you nothing &mdash; only the constant separates them. Test one point instead: the data run from about (230, 400) to about (270, 490). Substituting t = 230 into choice A gives \\( -62.1 + 2.02(230) \\approx 402 \\) , which matches. The graph never shows t = 0, so the constant is far below the plotted d-values rather than near them.",
+  "whyWrong": {
+   "B": "At t = 230 this predicts about 627, roughly 200 too high; nothing on the graph reaches that.",
+   "C": "At t = 230 this predicts about 822, nearly double the observed value. 357.8 was read as though it were a d-value on the graph.",
+   "D": "At t = 230 this predicts about 857. Like C, it treats the constant as the height of the line over the plotted region instead of its value at t = 0."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-6",
+  "stem": "For the first 10 hours of an experiment, the scatterplot shows the temperature y, in degrees Fahrenheit (&deg;F), of an object at various times x, in hours, since the start of the experiment. A line of best fit is also shown. Which of the following is the best interpretation of the slope of the line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The predicted temperature increases at a constant rate of approximately 40&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "B",
+    "content": "The predicted temperature decreases at a constant rate of approximately 40&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "C",
+    "content": "The predicted temperature decreases at a constant rate of approximately 180&deg;F per hour over the 10-hour period."
+   },
+   {
+    "label": "D",
+    "content": "The predicted temperature increases at a constant rate of approximately 180&deg;F per hour over the 10-hour period."
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Two decisions: direction and size. The line rises left to right, so the rate is an increase, which rules out half the choices immediately. For the size, the line climbs from roughly 200&deg;F at 0 hours to roughly 550&deg;F at 10 hours, a rise of about 350&deg;F over 10 hours, so about 35&deg;F per hour &mdash; approximately 40.",
+  "whyWrong": {
+   "B": "The direction is wrong. A decrease would need the line to fall as time increases, and it rises.",
+   "C": "Both parts are wrong: the line rises, and 180&deg;F per hour would put the object above 1,800&deg;F by hour 10.",
+   "D": "The direction is right but the size is not. 180 is roughly the height of the line near the start, or its rise over 2 hours, not its rise per single hour."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-7",
+  "stem": "The scatterplot shows 5 measurements of the body length, in centimeters (cm), of a New Zealand fur seal from an age of 1 year to 6 years old. A line of best fit is also shown. For a New Zealand fur seal at an age of 3 years old, what is the body length predicted by the line of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "110",
+  "difficulty": "EASY",
+  "whyCorrect": "The question asks for the line's value, not a data point's, and at age 3 there is no plotted point &mdash; that is the trap. Go up from 3 on the horizontal axis to the line itself and read across: the line is a little above 105, so to the nearest 10 cm the prediction is 110.",
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-8",
+  "stem": "The scatterplot shows 5 measurements of the body length, in centimeters (cm), of a New Zealand fur seal from an age of 1 year to 6 years old. A line of best fit is also shown. For a New Zealand fur seal at an age of 3 years old, what is the body length predicted by the line of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "100",
+  "difficulty": "EASY",
+  "whyCorrect": "Read the line, not the points: at age 3 no seal was measured, so trace up from 3 to the line of best fit and across to the vertical axis. The line is just above 100 there, so to the nearest 10 cm the predicted length is 100 cm.",
+  "needsFigure": true,
+  "note": "The book truncates the last words of the stem to \"to the nearest ?\"; the rounding unit is restored as 10 cm from the parallel question printed beside it. If a different unit was intended the answer changes."
+ },
+ {
+  "id": "satmath-ma3-scatterplots-11",
+  "stem": "The scatterplot shows the relationship between x and y for the 10 data points in data set A. Data set B is created by multiplying the y-value of each data point from data set A by 40. Which of the following equations is the most appropriate model for data set B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = 5(2.04)^{x} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = 40(2.04)^{x} + 40 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = 5(2.04)^{x} + 40 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 199(2.04)^{x} + 2.04 \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "First model data set A itself: the points pass through about (0, 3), (2, 20), (3, 43) and (4, 100), which fits \\( y = 5(2.04)^{x} \\) . Multiplying every y-value by 40 scales the whole output, so it multiplies the coefficient in front, not the exponent or the base: \\( 40 \\times 5 = 200 \\) , giving roughly \\( y = 200(2.04)^{x} \\) . Only one choice has a coefficient anywhere near 200.",
+  "whyWrong": {
+   "A": "This is the model for data set A itself, before the y-values were multiplied by 40.",
+   "B": "This multiplies the wrong thing. Scaling y by 40 does not turn the coefficient 5 into 40, and it does not add a constant 40 either.",
+   "C": "Adding 40 shifts every point up by 40; multiplying by 40 stretches them. At x = 4 data set B is near 4,000, and this predicts about 127."
+  },
+  "needsFigure": true,
+  "note": "Choice D carries a spurious additive 2.04; the exact transformed model is 200(2.04)^x, and D is the only choice with a coefficient of that size."
+ },
+ {
+  "id": "satmath-ma3-scatterplots-12",
+  "stem": "The line graph shows the number of customers who visited a restaurant each day during a four-day period in the summer. According to the line graph, for which day during this four-day period did the restaurant have the smallest number of customers who visited?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Day 1"
+   },
+   {
+    "label": "B",
+    "content": "Day 2"
+   },
+   {
+    "label": "C",
+    "content": "Day 3"
+   },
+   {
+    "label": "D",
+    "content": "Day 4"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Smallest number of customers means the lowest point on the graph, not the leftmost or the shortest gap between points. The graph rises from left to right the whole way, so the lowest point is the first one, Day 1, at about 22 customers.",
+  "whyWrong": {
+   "B": "Day 2 is slightly higher than Day 1, at about 27. It is close, but the graph still climbs between the two.",
+   "C": "Day 3 is around 47, well above the start.",
+   "D": "Day 4 is the highest point, about 56 &mdash; the largest number of customers, not the smallest."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-scatterplots-13",
+  "stem": "A group of 10 gardeners recorded data on the germination rates of their tomato crop for one growing season. The scatterplot shows the relationship between the number of tomato seeds planted, x, and the number of tomato seeds that germinated, y, for each of the gardeners. A line of best fit is also shown. Which of the following is the best interpretation of the slope of the line of best fit in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The number of tomato seeds planted is predicted to increase by 60 seeds every 100 days."
+   },
+   {
+    "label": "B",
+    "content": "The number of tomato seeds planted is predicted to increase by 300 seeds every 100 days."
+   },
+   {
+    "label": "C",
+    "content": "The number of tomato seeds that germinate is predicted to increase by 60 seeds for every additional 100 tomato seeds that are planted."
+   },
+   {
+    "label": "D",
+    "content": "The number of tomato seeds that germinate is predicted to increase by 300 seeds for every additional 100 tomato seeds that are planted."
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "A slope always says how much the vertical variable changes per unit of the horizontal variable, so here it is germinated seeds per seed planted &mdash; time is not a variable in this graph at all. The line climbs from about 20 to about 310 as x goes from 0 to 500, a rise of roughly 290 over 500, or about 0.6. That is 60 germinated seeds for every extra 100 planted.",
+  "whyWrong": {
+   "A": "Days appear nowhere on the axes, and it also has the slope describing the horizontal variable rather than the vertical one.",
+   "B": "Same two errors as A, with a slope of 3 on top of them.",
+   "D": "A slope of 3 would mean more seeds germinate than were planted. The line rises less steeply than the 45-degree direction, so the slope is below 1."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-lines-angles-3",
+  "stem": "In the figure, line q is parallel to line r, and both are intersected by line s. If y = 2x + 7, what is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "25"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "58"
+   },
+   {
+    "label": "D",
+    "content": "68"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The 57&deg; angle sits above line q on the right of the transversal, and y sits above line r on the left of it, so they are not the same angle. Slide 57&deg; down to line r as a corresponding angle: the angle above r on the right is also 57&deg;. y is its supplement along line r, so y = 180 &minus; 57 = 123. Then 123 = 2x + 7 gives 2x = 116 and x = 58.",
+  "whyWrong": {
+   "A": "25 comes from setting y = 57, treating the two labelled angles as equal. They are on opposite sides of the transversal, so they are supplementary, not equal.",
+   "B": "32 is 90 &minus; 58, from assuming the two labelled angles are complementary.",
+   "D": "68 comes from solving 2x + 7 = 143 or similar; check the subtraction, 180 &minus; 57 = 123, not 143."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-lines-angles-7",
+  "stem": "<p>In the figure shown, line r is parallel to line s, and line t intersects both lines. What is the value of x?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "121"
+   },
+   {
+    "label": "B",
+    "content": "90"
+   },
+   {
+    "label": "C",
+    "content": "31"
+   },
+   {
+    "label": "D",
+    "content": "180"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Only two different angle sizes exist in the whole figure, 121&deg; and 59&deg;, so the work is deciding which one x is. The 121&deg; angle is above r on the left of t; its vertical angle, below r on the right of t, is also 121&deg;. x sits below s on the right of t, the same position at the other parallel line, so it is a corresponding angle and equals 121.",
+  "whyWrong": {
+   "B": "90 assumes t meets the parallel lines at a right angle. The marked angles are 121&deg; and 59&deg;, so it does not.",
+   "C": "31 is 90 &minus; 59, treating the angles as complementary. Angles on a straight line are supplementary, so they pair to 180, not 90.",
+   "D": "180 is the full straight angle along line s, which is the sum of two of the four angles at that intersection, not one of them."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-lines-angles-9",
+  "stem": "<p>In the figure shown, lines r and s are parallel, and line t intersects both lines. What is the value of a?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "180"
+   },
+   {
+    "label": "B",
+    "content": "77"
+   },
+   {
+    "label": "C",
+    "content": "167"
+   },
+   {
+    "label": "D",
+    "content": "90"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "a sits above line s on the right of t, which is the same position as the 77&deg; angle above line r on the right of t. Parallel lines cut by a transversal make those corresponding angles equal, so a = 77. You can also get there along line s: the 77&deg; below s on the left is vertical to a.",
+  "whyWrong": {
+   "A": "180 is the straight angle along line s, the sum of a and the angle beside it, not a itself.",
+   "C": "167 is not the measure of any angle here; every angle in the figure is either 77&deg; or 103&deg;.",
+   "D": "90 would require t to be perpendicular to the parallel lines, but the marked angles are 77&deg; and 103&deg;."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-lines-angles-15",
+  "stem": "<p>In the figure, line q is parallel to line r, and both lines are intersected by line s. If y = 2x + 9, what is the value of x?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27"
+   },
+   {
+    "label": "B",
+    "content": "73"
+   },
+   {
+    "label": "C",
+    "content": "63"
+   },
+   {
+    "label": "D",
+    "content": "18"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "The 45&deg; angle is above q on the right of s; y is above r on the left of s. Those are not corresponding positions, so the two are not equal. Move 45&deg; down to r as a corresponding angle (above r, right of s), then take its supplement along line r: y = 180 &minus; 45 = 135. Now 135 = 2x + 9 gives 2x = 126 and x = 63.",
+  "whyWrong": {
+   "A": "27 comes from setting y = 45 and solving 45 = 2x + 9. That treats angles on opposite sides of the transversal as equal when they are supplementary.",
+   "B": "73 comes from using 155 in place of 180 &minus; 45; the supplement of 45 is 135.",
+   "D": "18 comes from y = 45 with a sign slip, solving 2x = 45 &minus; 9 instead of 2x = 135 &minus; 9."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma3-lines-angles-17",
+  "stem": "<p>In the figure, line p is parallel to line r, and line t intersects both lines. What is the value of x?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "36"
+   },
+   {
+    "label": "B",
+    "content": "72"
+   },
+   {
+    "label": "C",
+    "content": "180"
+   },
+   {
+    "label": "D",
+    "content": "252"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Both marked angles sit at the same intersection, where t crosses p: x is above p on the left of t, and 72&deg; is below p on the right of t. Angles in opposite corners of a crossing are vertical angles and are equal, so x = 72. Line r is not needed at all.",
+  "whyWrong": {
+   "A": "36 is half of 72, from treating the transversal as bisecting the angle.",
+   "C": "180 is the straight angle along p, which is x plus the angle next to it.",
+   "D": "252 is 180 + 72, from adding the straight angle to the marked angle instead of matching vertical angles."
+  },
+  "needsFigure": true,
+  "note": ""
+ }
+]

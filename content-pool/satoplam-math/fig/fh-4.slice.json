@@ -1,0 +1,772 @@
+[
+ {
+  "id": "satmath-ma2-functions-function-notation-17",
+  "stem": "The graph of \\( y = f(x) \\) is shown in the xy-plane. What is the value of \\( f(0) \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "-6"
+   },
+   {
+    "label": "C",
+    "content": "-2"
+   },
+   {
+    "label": "D",
+    "content": "4"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "\\( f(0) \\) is the output when the input is 0, so look at where the curve meets the y-axis (the vertical line x = 0). The curve crosses the y-axis at 5, so \\( f(0) = 5 \\) .",
+  "whyWrong": {
+   "B": "-6 is a y-value on the lower right branch of the curve, which sits at positive x. Nothing there has an input of 0.",
+   "C": "-2 is roughly where the lower branch levels off far to the right; it is a value the curve approaches for large x, not the value at x = 0.",
+   "D": "4 reads the crossing one gridline too low. The curve is at 4 slightly to the left of the y-axis, and it is still rising when it reaches x = 0."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-30",
+  "stem": "The graph gives the estimated population y, in thousands, of a town x years since 2007, where 0 &le; x &le; 5. Which of the following best describes the increase in the estimated population from x = 0 to x = 1?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated population at x = 1 is 3.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "B",
+    "content": "The estimated population at x = 1 is 2.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "C",
+    "content": "The estimated population at x = 1 is 1.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "D",
+    "content": "The estimated population at x = 1 is 0.5 times the estimated population at x = 0."
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read both values off the curve and divide, don't subtract. At x = 0 the curve is at 5 and at x = 1 it is at 7.5, so the ratio is \\( \\frac{7.5}{5} = 1.5 \\) . The choices all compare by a multiplier, so the 2.5-thousand rise is not itself the answer.",
+  "whyWrong": {
+   "A": "3.5 times 5 is 17.5, which is above the top of the graph. Nothing on the curve reaches that at x = 1.",
+   "B": "2.5 times 5 is 12.5. That is roughly where the curve is near x = 2, and 2.5 is the size of the rise in thousands, not the multiplier.",
+   "D": "A multiplier of 0.5 would halve the population to 2.5, but the curve rises between x = 0 and x = 1."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-33",
+  "stem": "The graph models the population, in thousands, of a town x years since 2003, where 0 &le; x &le; 15. Which statement is the best interpretation of the point (1, 4.24)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2003, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "B",
+    "content": "In 2004, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "C",
+    "content": "In 2017, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "D",
+    "content": "In 2018, the estimated population of the town was 4,240."
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "Translate each coordinate using the units the stem gives. x counts years since 2003, so x = 1 is 2004. y is in thousands, so 4.24 means 4.24 thousand, or 4,240 people.",
+  "whyWrong": {
+   "A": "2003 is the base year, which is x = 0, not x = 1.",
+   "C": "2017 is 14 years after 2003, so it would be the point with first coordinate 14.",
+   "D": "2018 is 15 years after 2003, the right-hand end of the domain, not x = 1."
+  },
+  "needsFigure": true,
+  "note": "The point (1, 4.24) is stated in the stem, so the interpretation follows from the units even without the curve."
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-37",
+  "stem": "The graph shows the momentum y, in newton-seconds, of an object x seconds after the object started moving, for 0 &le; x &le; 8. What is the average rate of change, in newton-seconds per second, in the momentum of the object from x = 2 to x = 6?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "1.5",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Average rate of change only uses the two endpoints, so the shape of the curve between them does not matter. The graph gives the point (2, 2) and the point (6, 8), so the rate is \\( \\frac{8 - 2}{6 - 2} = \\frac{6}{4} = 1.5 \\) newton-seconds per second. Dividing by the change in x is the step people skip; 6 on its own is the change in momentum, not the rate.",
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-42",
+  "stem": "The complete graph of \\( y = f(x) \\) is shown. For how many values of x does \\( f(x) = 0 \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "One"
+   },
+   {
+    "label": "C",
+    "content": "Two"
+   },
+   {
+    "label": "D",
+    "content": "Three"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "\\( f(x) = 0 \\) asks where the output is 0, which is where the curve meets the x-axis. The curve rises from below, flattens out at about y = -4 without ever reaching the axis there, then climbs and crosses the x-axis once near x = 10. One crossing means one value of x.",
+  "whyWrong": {
+   "A": "Zero would mean the curve never touches the x-axis, but it clearly passes through it on the right.",
+   "C": "Two counts the flat section near y = -4 as a second crossing. That part levels off below the axis and turns back upward without touching it.",
+   "D": "Three is the maximum a cubic-looking curve can have, but this graph only changes sign once. Count actual crossings, not bends."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-60",
+  "stem": "The graph shows the estimated boiling point y, in degrees Celsius, of a straight-chain alkane with a molecular weight of x grams per mole, where 1 &le; x &le; 280. Which statement is the best interpretation of the point (141.32, 172.26)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A straight-chain alkane with a molecular weight of 172.26 grams per mole has an estimated boiling point of 141.32 degrees Celsius."
+   },
+   {
+    "label": "B",
+    "content": "A straight-chain alkane with a molecular weight of 141.32 grams per mole has an estimated boiling point of 172.26 degrees Celsius."
+   },
+   {
+    "label": "C",
+    "content": "The minimum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an estimated boiling point of 172.26 degrees Celsius."
+   },
+   {
+    "label": "D",
+    "content": "The maximum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an estimated boiling point of 172.26 degrees Celsius."
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The first coordinate always goes with the quantity on the horizontal axis, which the stem says is molecular weight, and the second goes with the boiling point. So 141.32 grams per mole pairs with a boiling point of 172.26 degrees Celsius.",
+  "whyWrong": {
+   "A": "This swaps the coordinates, making the boiling point 141.32 and the weight 172.26.",
+   "C": "Nothing marks this point as a minimum. The curve keeps falling to the left of it, so smaller weights have lower boiling points.",
+   "D": "Nothing marks it as a maximum either. The curve continues to rise to the right, all the way to x = 280."
+  },
+  "needsFigure": true,
+  "note": "The point (141.32, 172.26) is given in the stem, so the interpretation follows from the axis labels."
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-61",
+  "stem": "The potential difference across a capacitor in an electric circuit is initially 16 volts and decreases with time, as shown in the graph. Which of the following is closest to the time, in seconds, from the initial measurement at which the potential difference across the capacitor is 15% of its initial value?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.43"
+   },
+   {
+    "label": "B",
+    "content": "0.85"
+   },
+   {
+    "label": "C",
+    "content": "2.41"
+   },
+   {
+    "label": "D",
+    "content": "3.41"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Turn the percentage into a voltage before you look at the graph. 15% of the initial 16 volts is \\( 0.15 \\times 16 = 2.4 \\) volts, so find where the curve is at height 2.4 and read the time below it. That happens just before x = 2.5, so 2.41 is the closest choice.",
+  "whyWrong": {
+   "A": "0.43 is roughly when the voltage has dropped BY about 15%, to 13.6 volts. The question asks when it is down TO 15% of the start.",
+   "B": "0.85 is the decimal 1 - 0.15 read as if it were already a time. It has no meaning on the horizontal axis.",
+   "D": "3.41 is 85% of the 4-second span shown, which uses the percentage on the wrong axis. At that time the voltage is well under 1 volt."
+  },
+  "needsFigure": true,
+  "note": "The parsed source attached a second, stray block of choices (f(x) = 0, f(x) = 7, f(x) = 5, f(x) = x + 5) to this question; it belongs to a different item whose stem does not appear on the page and is not part of this question."
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-66",
+  "stem": "The function t gives the estimated melting temperature, in degrees Celsius, of a DNA molecule as a function of the percent of guanine cytosine (GC) content, x, in the DNA molecule. The graph of \\( y = t(x) \\) is shown. According to the graph, which of the following statements is NOT true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "For each increase of x by 1, \\( t(x) \\) increases by approximately \\( \\frac{2}{5} \\) ."
+   },
+   {
+    "label": "B",
+    "content": "A DNA molecule with a GC content of 0% has an estimated melting temperature between 60&deg;C and 65&deg;C."
+   },
+   {
+    "label": "C",
+    "content": "A DNA molecule with a GC content of 95% has an estimated melting temperature between 100&deg;C and 105&deg;C."
+   },
+   {
+    "label": "D",
+    "content": "A DNA molecule with a GC content of 98% has an estimated melting temperature between 80&deg;C and 90&deg;C."
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Get the line's slope and intercept once, then test each statement. The line runs from about (0, 64) to about (100, 104), so it rises 40 over 100, a slope of 0.4, and \\( t(x) \\approx 0.4x + 64 \\) . At x = 98 that gives about 103 degrees, not something between 80 and 90, so D is the false statement. The question asks for the one that is NOT true, so the three correct readings are the wrong answers here.",
+  "whyWrong": {
+   "A": "A slope of 0.4 is exactly \\( \\frac{2}{5} \\) per 1% increase in GC content, so this is true.",
+   "B": "The line meets the vertical axis just above 64, which is inside the range 60 to 65, so this is true.",
+   "C": "At x = 95 the line is at about 102, inside the range 100 to 105, so this is true. Notice it is close to the temperature in choice D, which is what makes D's range clearly wrong."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-11",
+  "stem": "The graph of the quadratic function shown relates a car's stopping distance d, in feet, to its initial speed \\( \\nu \\) , in miles per hour (mph). Which of the following could be an equation for d?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( d = 2.2\\nu + 0.05\\nu^{2} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( d = 2.2\\nu - 0.05\\nu^{2} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( d = 100 + 2.2\\nu + 0.05\\nu^{2} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( d = 100 + 2.2\\nu - 0.05\\nu^{2} \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Two features of the curve pick the equation out. It starts at the origin, so there is no constant term: a car at 0 mph needs 0 feet to stop. And it bends upward and keeps rising, so the squared term must be positive. Checking the size: at 90 mph, \\( 2.2(90) + 0.05(90)^{2} = 198 + 405 = 603 \\) feet, which matches the graph's 600.",
+  "whyWrong": {
+   "B": "A negative squared term makes the curve bend downward and eventually fall. This graph curves upward throughout.",
+   "C": "The +100 puts the curve at 100 feet when the speed is 0, but the graph starts at the origin.",
+   "D": "This has both problems: a nonzero starting value and a downward bend."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-29",
+  "stem": "An object was launched upward from a platform. The graph shown models the height, y, of the object x seconds after it was launched. For which of the following intervals of time was the height of the object increasing for the entire interval?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "From x = 0 to x = 2"
+   },
+   {
+    "label": "B",
+    "content": "From x = 0 to x = 4"
+   },
+   {
+    "label": "C",
+    "content": "From x = 2 to x = 3"
+   },
+   {
+    "label": "D",
+    "content": "From x = 4 to x = 5"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The curve rises to its peak at (2, 50) and falls after that, so the only stretch where the height is going up the whole time ends at x = 2. \"For the entire interval\" is the key phrase: the interval cannot contain any part of the descent.",
+  "whyWrong": {
+   "B": "From 0 to 4 the object rises for the first 2 seconds and then falls for the next 2. It ends lower than its peak, so it is not increasing throughout.",
+   "C": "By x = 2 the object has already peaked, so from 2 to 3 it is falling.",
+   "D": "From 4 to 5 the object is close to the ground and dropping fast."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-43",
+  "stem": "The graph of a system of a linear and a quadratic equation is shown. Which system of equations is represented by the graph?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = -4x \\) <br/> \\( y = x^{2} + 8 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = -4x \\) <br/> \\( y = x^{2} - 8 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = 4x \\) <br/> \\( y = x^{2} + 8 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 4x \\) <br/> \\( y = x^{2} - 8 \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read each graph separately. The line goes through the origin and rises to the right, passing through about (1, 4), so its slope is positive: \\( y = 4x \\) . The parabola has its lowest point at (0, -8), which means the constant is -8, giving \\( y = x^{2} - 8 \\) . The x-intercepts near \\( \\pm 2.8 \\) confirm it, since \\( \\sqrt{8} \\approx 2.8 \\) .",
+  "whyWrong": {
+   "A": "Both parts are wrong: a slope of -4 falls to the right, and \\( x^{2} + 8 \\) has its minimum at +8, so that parabola never crosses the x-axis.",
+   "B": "The parabola is right, but \\( y = -4x \\) would slope down from left to right. The line shown rises.",
+   "C": "The line is right, but \\( y = x^{2} + 8 \\) sits entirely above the x-axis, while the graph's parabola dips to -8 and crosses the axis twice."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-45",
+  "stem": "In 2000, a census was taken to determine the population of a certain town. The graph gives the estimated population y, in thousands, of this town x years after the 2000 census was taken, where 0 &le; x &le; 5. Based on the graph, which of the following is the closest to the estimated population 2 years after the 2000 census was taken?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7,400"
+   },
+   {
+    "label": "B",
+    "content": "6,200"
+   },
+   {
+    "label": "C",
+    "content": "4,300"
+   },
+   {
+    "label": "D",
+    "content": "3,000"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Go up from x = 2 to the curve and read across: the height is a little above 4.3. The vertical axis is in thousands, so multiply by 1,000 to get about 4,300 people.",
+  "whyWrong": {
+   "A": "7,400 is the height of the curve near x = 4, not x = 2.",
+   "B": "6,200 is where the curve is at about x = 3.4. Check which gridline you started from.",
+   "D": "3,000 is the value at x = 0, the year of the census itself."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-127",
+  "stem": "The graph of a system of a linear equation and a quadratic equation is shown. A solution to the system is \\((x,y)\\). What is a possible value of \\(x\\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "6.4"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "A solution to a system is a point where the two graphs cross, so read off the \\(x\\)-coordinates of the intersection points, not anything about a single curve. The horizontal line meets the parabola at \\(x=4\\) and \\(x=6\\); of those, only 4 is offered.",
+  "whyWrong": {
+   "B": "5 is where the parabola peaks. The vertex is above the line, so it is not an intersection point.",
+   "C": "6.4 is the \\(y\\)-value of the horizontal line, not an \\(x\\)-coordinate.",
+   "D": "At \\(x=7\\) the parabola is below the line; the second crossing is at \\(x=6\\)."
+  },
+  "needsFigure": true,
+  "note": "Depends on the printed graph (a downward parabola with x-intercepts 2 and 8 and a horizontal line just above y = 6), which cannot be reproduced as a table. The last two choices are both printed with the label \"C)\"; transcribed here as C and D in printed order.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-quadratics-133",
+  "stem": "The graph of a system of a linear equation and a quadratic equation is shown. Which of the following is a solution \\((x,y)\\) to the system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\((-1,4)\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\((0,0)\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\((0,9)\\)"
+   },
+   {
+    "label": "D",
+    "content": "[missing in source]"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "EASY",
+  "whyCorrect": "A solution to a system has to lie on both graphs at once, which means an intersection point. The line and the parabola cross at the labeled point \\((-1,4)\\).",
+  "whyWrong": {
+   "B": "\\((0,0)\\) is the vertex of the parabola only. The line passes above it at \\(x=0\\), so the point is not on both graphs.",
+   "C": "\\((0,9)\\) is on neither graph &mdash; the line crosses the \\(y\\)-axis at 8 and the parabola at 0.",
+   "D": "This choice is missing from the printed book."
+  },
+  "needsFigure": true,
+  "note": "Choice D is blank in the book (the label \"D)\" is printed with no text). The graph is required: a parabola with vertex at the origin and a line through (-1,4) with y-intercept 8, intersecting at (-1,4).",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-quadratics-172",
+  "stem": "The graph gives the estimated revenue, in dollars, for a company when the price of the company&rsquo;s product is \\(x\\) dollars. What does the \\(y\\)-value of the vertex of the graph represent in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The price, in dollars, of the company&rsquo;s product"
+   },
+   {
+    "label": "B",
+    "content": "The minimum estimated revenue, in dollars"
+   },
+   {
+    "label": "C",
+    "content": "The maximum estimated revenue, in dollars"
+   },
+   {
+    "label": "D",
+    "content": "The estimated revenue, in dollars, when the price of the company&rsquo;s product is 0 dollars"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "The vertical axis is revenue, so the \\(y\\)-value of the vertex is a revenue figure. The parabola opens downward, so the vertex is the highest point on the graph &mdash; the maximum estimated revenue.",
+  "whyWrong": {
+   "A": "The price is measured on the horizontal axis, so it is the \\(x\\)-value of the vertex, not the \\(y\\)-value.",
+   "B": "The vertex is a minimum only for an upward-opening parabola. This one opens downward, so the vertex is a maximum.",
+   "D": "Revenue at a price of 0 dollars is the \\(y\\)-intercept, at the far left of the graph, not the vertex."
+  },
+  "needsFigure": true,
+  "note": "Requires the printed graph (a downward parabola peaking near x = 25 at roughly y = 620, returning to 0 near x = 50).",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-53",
+  "stem": "The graph of a system of two linear equations is shown. The solution to the system is \\((x, y)\\). What is the value of \\(y\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-5"
+   },
+   {
+    "label": "B",
+    "content": "-4"
+   },
+   {
+    "label": "C",
+    "content": "2"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "The solution of a graphed system is the point where the two lines cross, so read that point off the grid and report its second coordinate. The lines meet at \\((-4, 2)\\), so \\(y = 2\\). Do not read an intercept \u2014 the crossing point is what matters.",
+  "whyWrong": {
+   "A": "\\(-5\\) is near where the steeper line meets the \\(y\\)-axis, not where the two lines meet each other.",
+   "B": "\\(-4\\) is the \\(x\\)-coordinate of the intersection, not the \\(y\\)-coordinate.",
+   "D": "3 is the \\(y\\)-intercept of the shallower line; the lines cross to the left of the \\(y\\)-axis, lower down."
+  },
+  "needsFigure": true,
+  "note": "Depends on a coordinate-grid figure that cannot be reproduced as a table. In the printed graph the shallow line is y = x/4 + 3 and the steep line is y = -2x - 6, crossing at (-4, 2). The figure must be supplied before this question ships."
+ },
+ {
+  "id": "satmath-ma2-linear-functions-6",
+  "stem": "Lucia and John will work together to make 60 paper flowers for a school party. The line shown represents the possible combinations of time, in hours, spent by Lucia and John to fulfill this task.<br/>According to the graph, on average, how many paper flowers will Lucia make per hour?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "12"
+   },
+   {
+    "label": "D",
+    "content": "15"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Use the intercept that isolates Lucia. The line meets the <em>y</em>-axis at (0, 12): John works 0 hours, so Lucia alone makes all 60 flowers, and it takes her 12 hours. Her rate is therefore 60 &divide; 12 = 5 flowers per hour. The slope of the line is not the answer &mdash; it compares the two people's times, not flowers per hour.",
+  "whyWrong": {
+   "A": "This is John's rate, from the other intercept: he alone finishes in 15 hours, and 60 &divide; 15 = 4.",
+   "C": "12 is the number of hours Lucia needs, not the number of flowers she makes in one hour. You still have to divide 60 by it.",
+   "D": "15 is the number of hours John needs, read off the wrong axis and left undivided."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: a segment from (0, 12) to (15, 0); x-axis 'Time spent by John (hours)' 0 to about 17, y-axis 'Time spent by Lucia (hours)' 0 to about 15.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-13",
+  "stem": "Line \\(n\\) is shown in the <em>xy</em>-plane. Line \\(k\\) (not shown) is perpendicular to line \\(n\\). What is the slope of line \\(k\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(-\\frac{1}{5}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(-\\frac{1}{6}\\)"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "First read line \\(n\\) off the graph: it crosses the <em>y</em>-axis at (0, 5) and the <em>x</em>-axis at (-1, 0), so its slope is \\(\\frac{5-0}{0-(-1)} = 5\\). Perpendicular lines have slopes whose product is -1, so line \\(k\\) has slope \\(-\\frac{1}{5}\\) &mdash; flip the fraction <em>and</em> change the sign, not one or the other.",
+  "whyWrong": {
+   "B": "You flipped and negated a slope of 6, which comes from misreading the <em>y</em>-intercept as 6 instead of 5.",
+   "C": "5 is the slope of line n itself. A perpendicular line cannot have the same slope.",
+   "D": "This is a misread slope for n, and it is not perpendicular either."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: line n passes through (0, 5) and (-1, 0), i.e. y = 5x + 5, drawn over roughly -2 <= x <= 1.5; grid spans x from -9 to 9 and y from -5 to 13.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-15",
+  "stem": "The function \\(p\\) is defined by \\[ p(x) = -\\frac{5}{8}x + \\frac{21}{2}. \\]What is the graph of \\(y = p(x)\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Graph A"
+   },
+   {
+    "label": "B",
+    "content": "Graph B"
+   },
+   {
+    "label": "C",
+    "content": "Graph C"
+   },
+   {
+    "label": "D",
+    "content": "Graph D"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Two numbers settle it. The <em>y</em>-intercept is \\(\\frac{21}{2} = 10.5\\), and the slope is \\(-\\frac{5}{8}\\), so over the 10 units shown the line falls \\(\\frac{5}{8}(10) = 6.25\\), landing at about 4.25 when x = 10. Only the graph that starts at 10.5 and ends near 4 does both.",
+  "whyWrong": {
+   "A": "This starts at 10.5 but drops all the way to 0 at x = 10, a slope of about -1, far steeper than \\(-\\frac{5}{8}\\).",
+   "C": "This starts at the right height but only falls to 8, a slope of about \\(-\\frac{1}{4}\\) &mdash; too shallow.",
+   "D": "The slope here is about right, but the line starts near 9.5 instead of 10.5, so the intercept is wrong."
+  },
+  "needsFigure": true,
+  "note": "All four answer choices are graphs, so this needs four figures, not one. Verified data: every choice is a segment drawn for 0 <= x <= 10 on axes with y from 0 to 13. A goes from (0, 10.5) to (10, 0); B (correct) from (0, 10.5) to (10, 4.25); C from (0, 10.5) to (10, 8); D from (0, 9.5) to (10, 3).",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-18",
+  "stem": "A publishing company is preparing boxes of workbooks and textbooks for shipping. Each box of workbooks and textbooks will weigh a total of 40 pounds. The graph shown models the relationship between the number of textbooks x and the number of workbooks y that can be shipped in 1 box. Based on the graph, what is the weight, in pounds, of 1 textbook?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-26"
+   },
+   {
+    "label": "B",
+    "content": "10"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "2"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Use the intercept that removes the workbooks. The line meets the <em>x</em>-axis at (10, 0): 10 textbooks and no workbooks fill a 40-pound box, so one textbook weighs 40 &divide; 10 = 4 pounds. Reading the <em>y</em>-intercept instead gives the workbook weight, which is not what is asked.",
+  "whyWrong": {
+   "A": "Negative weight is impossible; this comes from treating a slope or a difference of intercepts as a weight.",
+   "B": "10 is the number of textbooks that fill a box, not the weight of one. You still have to divide 40 by it.",
+   "D": "2 pounds is the weight of one <em>workbook</em>, from the y-intercept of 20: 40 &divide; 20 = 2. You read the wrong axis."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: a segment from (0, 20) to (10, 0); x-axis 0 to about 13 (number of textbooks), y-axis 0 to about 23 (number of workbooks).",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-19",
+  "stem": "Which is an equation of the graph shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = x + 1"
+   },
+   {
+    "label": "B",
+    "content": "y = x &minus; 1"
+   },
+   {
+    "label": "C",
+    "content": "y = x + 3"
+   },
+   {
+    "label": "D",
+    "content": "y = x &minus; 3"
+   }
+  ],
+  "answerLabel": "C",
+  "difficulty": "EASY",
+  "whyCorrect": "All four choices have slope 1, so the only thing to read off the graph is where the line crosses the <em>y</em>-axis. It crosses at (0, 3), so b = 3 and the equation is y = x + 3. As a check, the <em>x</em>-intercept at (-3, 0) satisfies it.",
+  "whyWrong": {
+   "A": "An intercept of 1 would put the crossing point at (0, 1), well below where the line actually meets the axis.",
+   "B": "This crosses at (0, -1), below the origin; the graphed line crosses above it.",
+   "D": "You took the <em>x</em>-intercept, -3, and used it as b. The <em>y</em>-intercept is the value of y when x = 0, which is +3."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the line y = x + 3 drawn over roughly -4 <= x <= 1; grid spans x from -4 to 1.5 and y from -1.5 to 4.5.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-20",
+  "stem": "How many solutions \\((x, y)\\) does the system of three linear equations represented in the graph have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "1"
+   },
+   {
+    "label": "C",
+    "content": "2"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "A solution to the <em>system</em> has to satisfy all three equations at once, so it must be a point every line passes through. The two steep lines have the same slope and different intercepts, so they are parallel and share no point at all. It does not matter that the horizontal line crosses each of them &mdash; there is no point common to all three, so the system has 0 solutions.",
+  "whyWrong": {
+   "B": "There is no single point on all three lines; the two parallel lines never meet each other.",
+   "C": "2 counts the crossings visible on the graph (the horizontal line meets each steep line once). Those are intersections of pairs, not solutions of the three-equation system.",
+   "D": "3 assumes each pair of lines contributes a crossing, but the two parallel lines contribute none, and pairwise crossings are not solutions of the system anyway."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: three lines, y = 6, y = 5x + 3, and y = 5x - 1.1 (x-intercept about 0.22), drawn on axes x from 0 to about 2.4 and y from 0 to 7.5.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-25",
+  "stem": "The graph of the linear equation \\[ 15x + By = 60 \\]is shown, where B is a constant. What is the value of B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{3}{4}\\)"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "20"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Read the <em>y</em>-intercept off the graph &mdash; the line meets the <em>y</em>-axis at (0, 3) &mdash; and substitute that point into the equation: 15(0) + B(3) = 60, so 3B = 60 and B = 20. (The <em>x</em>-intercept is no help here: setting y = 0 gives 15x = 60, or x = 4, with B cancelling out entirely.)",
+  "whyWrong": {
+   "A": "\\(\\frac{3}{4}\\) is the size of the line's slope, read off the graph rather than substituted into the equation.",
+   "B": "3 is the <em>y</em>-intercept itself. It is the value of y at that point, not the coefficient multiplying y.",
+   "C": "4 is the <em>x</em>-intercept, which is 60 &divide; 15 and tells you nothing about B."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: the segment of 15x + 20y = 60 from (0, 3) to (4, 0); axes x from 0 to about 11 and y from 0 to about 7.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-linear-functions-31",
+  "stem": "Line \\(k\\) is shown in the <em>xy</em>-plane. Line \\(n\\) (not shown) is perpendicular to line \\(k\\) and passes through the point (2, 9). Which equation defines line \\(n\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(y = -\\frac{3}{2}x + 6\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(y = -\\frac{3}{2}x + 12\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(y = \\frac{3}{2}x + 6\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(y = \\frac{3}{2}x - 3\\)"
+   }
+  ],
+  "answerLabel": "B",
+  "difficulty": "MEDIUM",
+  "whyCorrect": "Line \\(k\\) rises 2 for every 3 across &mdash; it passes through (-8, -8) and (4, 0) &mdash; so its slope is \\(\\frac{2}{3}\\) and the perpendicular slope is \\(-\\frac{3}{2}\\). That rules out C and D immediately. Then force the line through (2, 9): \\(9 = -\\frac{3}{2}(2) + b\\) gives \\(9 = -3 + b\\), so b = 12.",
+  "whyWrong": {
+   "A": "The slope is right, but the intercept was found with the wrong sign: \\(9 = \\frac{3}{2}(2) + b\\) gives 6. Substituting x = 2 into \\(-\\frac{3}{2}x\\) gives -3, so b = 12.",
+   "C": "This is the negative reciprocal with the sign left unchanged, so it is not perpendicular to k.",
+   "D": "Same sign error on the slope, and (2, 9) does not satisfy it: \\(\\frac{3}{2}(2) - 3 = 0\\), not 9."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: line k is \\(y = \\frac{2}{3}x - \\frac{8}{3}\\), through (-8, -8) and (4, 0), drawn over roughly -11 <= x <= 9.5; grid spans x from -11 to 11 and y from -10 to 8.",
+  "answerValue": null
+ }
+]

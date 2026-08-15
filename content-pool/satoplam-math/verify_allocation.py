@@ -13,7 +13,8 @@ from collections import Counter
 import sim
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-tests = json.load(open(f"{HERE}/allocation.json"))
+SRC = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("-") else "allocation.json"
+tests = json.load(open(f"{HERE}/{SRC}"))
 
 errors, warnings = [], []
 
