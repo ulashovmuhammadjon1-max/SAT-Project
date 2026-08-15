@@ -1,0 +1,424 @@
+{
+ "flip": [
+  {
+   "id": "satmath-ma2-mean-median-mode-range-34",
+   "from": "D",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-scatterplots-22",
+   "from": "C",
+   "to": "A",
+   "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma3-expressions-18",
+   "from": "B",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-expressions-20",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-linear-equations-6",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-linear-equations-43",
+   "from": "B",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-linear-functions-29",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-percent-ratio-proportion-8",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-functions-function-notation-52",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-19",
+   "from": "C",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-51",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-60",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-98",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-140",
+   "from": "6",
+   "to": "(6,185)",
+   "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma2-quadratics-167",
+   "from": "D",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-182",
+   "from": "A",
+   "to": "-1146",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-185",
+   "from": "-11",
+   "to": "25",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-187",
+   "from": "672",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-unit-conversion-16",
+   "from": "A",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-areas-volumes-48",
+   "from": "C",
+   "to": "B",
+   "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma3-lines-angles-13",
+   "from": "121",
+   "to": "1057/9",
+   "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma3-triangles-5",
+   "from": "22/73",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-6",
+   "from": "D",
+   "to": "22/3",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-9",
+   "from": "90",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-10",
+   "from": "D",
+   "to": "35",
+   "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma3-trigonometry-9",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-circles-15",
+   "from": "16",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-13",
+   "from": "B",
+   "to": "40/3",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-14",
+   "from": "A",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-16",
+   "from": "B",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-17",
+   "from": "A",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-18",
+   "from": "D",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-20",
+   "from": "14",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-21",
+   "from": "B",
+   "to": "14",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-22",
+   "from": "40556",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-algebra-31",
+   "from": "D",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-42",
+   "from": "D",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-47",
+   "from": "C",
+   "to": "-32",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-53",
+   "from": "173",
+   "to": "171",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-58",
+   "from": "B",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-59",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-60",
+   "from": "162",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-61",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-65",
+   "from": "C",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-70",
+   "from": "18",
+   "to": "28",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-76",
+   "from": "C",
+   "to": "-600",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-82",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-83",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-88",
+   "from": "10",
+   "to": "12",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-90",
+   "from": "41/4",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-97",
+   "from": "D",
+   "to": "-11",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-99",
+   "from": "B",
+   "to": "10",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-108",
+   "from": "B",
+   "to": "\\sqrt{\\frac{5x-4z}{20x^2z^2}}",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-14",
+   "from": "A",
+   "to": "B",
+   "confidence": "medium"
+  },
+  {
+   "id": "sathard-geometry-25",
+   "from": "A",
+   "to": "1760",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-28",
+   "from": "29",
+   "to": "65",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-29",
+   "from": "A",
+   "to": "1520",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-30",
+   "from": "B",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-52",
+   "from": "-1.667",
+   "to": "5/3",
+   "confidence": "medium"
+  },
+  {
+   "id": "sathard-geometry-59",
+   "from": "55",
+   "to": "105",
+   "confidence": "medium"
+  },
+  {
+   "id": "sathard-geometry-78",
+   "from": "64",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-79",
+   "from": "A",
+   "to": "1520",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-108",
+   "from": "C",
+   "to": "3/4",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-119",
+   "from": "320",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-65",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-70",
+   "from": "D",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-76",
+   "from": "C",
+   "to": "A",
+   "confidence": "medium"
+  }
+ ],
+ "keep": [
+  "satmath-ma2-trigonometry-3",
+  "satmath-ma2-trigonometry-21"
+ ],
+ "unsettled": [],
+ "broken": [
+  {
+   "id": "satmath-ma2-quadratics-20",
+   "note": "BROKEN: no choice is correct. I checked the original page (pages/88c1f5d6-180270_ma2-027.png) and the book really does print '65x + 20 = -15x^2' with choices 1/4, 1/3, 3, 5, so this is the book's error, not a transcription slip. If the intended equation were -65x + 20 = -15x^2 the solutions would be 1/3 and 4, making B defensible, but that is a guess at the author's intent and 4 is not among the choices either. Needs a human decision."
+  },
+  {
+   "id": "sathard-advanced-math-57",
+   "note": "BROKEN as printed: no choice equals the derived value 0.2466. The stem's units and the choice set are inconsistent. Most likely intended item is t in months (or 'every 8 years'), which makes D (n=3) correct; A (0.22) is reachable only by changing the denominator from 8 to 9. Needs a human decision - do not ship as is."
+  }
+ ],
+ "held_contaminated": [
+  "satmath-ma2-functions-function-notation-64"
+ ]
+}
