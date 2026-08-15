@@ -62,8 +62,18 @@ for (const f of readdirSync(`${DIR}/out`)) {
   for (const q of JSON.parse(readFileSync(`${DIR}/out/${f}`, "utf8"))) slices.set(q.id, q);
 }
 
-const buckets = { flip: [], keep: [], split: [], missing: [] };
+// Adjudication and repair ran in parallel, so some of these questions were
+// replaced outright while they were being re-read — a question whose goal
+// sentence belongs to a different item has no right answer to adjudicate.
+// Those are retired now, and a retired row must not have its key rewritten.
+const liveIds = new Set(
+  (await sql`SELECT id FROM "Question" WHERE "moduleId" IS NOT NULL AND "isPublished" = true`)
+    .map((r) => r.id)
+);
+
+const buckets = { flip: [], keep: [], split: [], missing: [], retired: [] };
 for (const [id, q] of slices) {
+  if (!liveIds.has(id)) { buckets.retired.push({ q }); continue; }
   const a = round1.get(id), b = round2.get(id);
   if (!a || !b) { buckets.missing.push({ q }); continue; }
   const key = (q.choices.find((c) => c.isCorrect) || {}).label;
@@ -85,6 +95,8 @@ show("KEY IS WRONG — both readings agree against it, flipping", buckets.flip);
 show("KEY STANDS — adjudicator reached the stored answer", buckets.keep);
 show("UNSETTLED — three readings, no majority; left for a human", buckets.split);
 if (buckets.missing.length) console.log(`\nno adjudication yet: ${buckets.missing.length}`);
+if (buckets.retired.length)
+  console.log(`replaced while being adjudicated, key left alone: ${buckets.retired.length}`);
 
 if (!APPLY) {
   console.log("\nReport only. Re-run with --apply to write.");
