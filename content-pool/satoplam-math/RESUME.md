@@ -128,6 +128,16 @@ notes to collect them. Representative so far:
   P(−3, 5) lies in the shaded region; the region actually shaded is the wedge
   below both lines, which does not contain it.
 
+- **Answer not among the choices** — `ma2-quadratics-20`. `65x + 20 = -15x²`
+  solves to −1/3 and −4, while all four printed choices are positive, and no
+  positive x can satisfy it (left side positive, right side negative). The
+  choices fit `15x² − 65x + 20 = 0`, so the printed sign on the `65x` term is
+  wrong. Recorded `answerLabel: "NONE"` with all four choices refuted. Needs a
+  human decision: fix the sign or drop it.
+- **Two correct answers.** `ma2-quadratics-22` (−14 or −21) and `-32` (−10 or
+  −15) ask what a value "could be", and two values qualify. Either accept both
+  in `correctAnswerFR` or drop them.
+
 **Questions needing a figure** carry `needsFigure: true`. Agents were told to
 put their reading of the graph in `note`, never in the stem, so a prose
 description cannot leak the answer — CLAUDE.md rule 3. Those need a real
