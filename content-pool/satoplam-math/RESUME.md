@@ -6,10 +6,13 @@ difficulty structure recorded at the top of CLAUDE.md.
 
 ## Where it stands
 
-**Stage 1 (transcription) is RUNNING.** Twelve agents `mx-01` … `mx-12` are
-transcribing the 1,102 questions whose maths did not survive text extraction.
-Each appends to `out/mx-NN.jsonl` after every question, so progress is on disk
-even if every agent dies.
+**Stage 2 (transcription) is COMPLETE — 1,102 of 1,102.** All twelve agents
+finished. Every question was transcribed from its page image, solved
+independently of the printed key, given a difficulty and an explanation.
+
+**Stage 3 (verify the keys) is NEXT and has not started.** Nothing is in the
+database: production still carries the original 2,046 authored/EliteXSAT Math
+questions, and zero rows exist under `SATMATH:` or `SATHARD:`.
 
     python3 -c "import json,glob,os; [print(os.path.basename(f), sum(1 for _ in open(f))) for f in sorted(glob.glob('content-pool/satoplam-math/out/mx-*.jsonl'))]"
 
@@ -21,9 +24,9 @@ skips ids already in its JSONL, so it resumes exactly where it left off.
 1. **Parse** (done) — `parse_math.py` for Math 2.0/3.0, `parse_hard.py` for
    the Hard Book. Output `math_parsed.json` (1,641) and `hard_parsed.json`
    (361). **2,002 questions, 1,952 with a printed key.**
-2. **Transcribe** (running) — 1,102 questions flagged `needs_vision`. The
-   other 900 extracted cleanly and need no transcription.
-3. **Verify the keys** (next) — compare each agent's derived answer against
+2. **Transcribe** (DONE) — 1,102 questions in `out/mx-*.jsonl`. The other 900
+   extracted cleanly and need no transcription.
+3. **Verify the keys** (START HERE) — compare each agent's derived answer against
    `printed_keys.json`. Where they disagree, a second independent reader
    adjudicates, exactly as `explanations/apply_key_verdicts.mjs` does for R&W:
    flip only when two independent readings agree against the printed key,
