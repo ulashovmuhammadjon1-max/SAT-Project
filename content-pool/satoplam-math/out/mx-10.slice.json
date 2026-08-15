@@ -1,0 +1,2453 @@
+[
+ {
+  "id": "satmath-ma2-exponential-functions-31",
+  "book": "ma2",
+  "topic": "Exponential Functions",
+  "num": 31,
+  "exam": "May US 2024",
+  "page": 179,
+  "pdf_page": 11,
+  "src": "e04acbdf-170180_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "At the start of an experiment, the pressure\ninside a container was 19 pounds per square\ninch (psi). The pressure inside the container\ndoubled every 28 minutes after the start of\nthe experiment. Which equation represents\nthis situation, where y is the pressure, in\npsi, inside the container x minutes after the\nstart of the experiment?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 19(2) x 28"
+   },
+   {
+    "label": "B",
+    "content": "y = 19(28)2x"
+   },
+   {
+    "label": "C",
+    "content": "y = 19(x + 28)2"
+   },
+   {
+    "label": "D",
+    "content": "y = 19x2 + 28"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-mean-median-mode-range-8",
+  "book": "ma3",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 8,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 4,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "For a study, a research team measured\nthe heights of 380 king penguins from the\nKerguelen Islands and 190 king penguins\nfrom the Falkland Islands. The research\nteam determined that the mean height of\nthe 380 king penguins from the Kerguelen\nIslands was 87 centimeters and the mean\nheight of the 190 king penguins from the\nFalkland Islands was 93 centimeters. What\nwas the mean height, in centimeters, of all\n570 king penguins the research team mea-\nsured for this study?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "91"
+   },
+   {
+    "label": "B",
+    "content": "89"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "88"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-mean-median-mode-range-10",
+  "book": "ma3",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 10,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 4,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "a, 26, 29, b, 31, 47, c\nFor the given data set, the data values are\nlisted in ascending order, where a, b, and\nc are constants. For this data set, the mean\nis 36, the median is 29, and the range is 72.\nWhat is the value of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "54"
+   },
+   {
+    "label": "B",
+    "content": "72"
+   },
+   {
+    "label": "C",
+    "content": "81"
+   },
+   {
+    "label": "D",
+    "content": "98"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-1",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 1,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 6,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of\nbest fit for the data is also shown.\nx\ny\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\n2 4 6 8 10\nFor how many of the 9 data points is the\nactual y-value greater than the y-value pre-\ndicted by the line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-2",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 2,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 6,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The graph shows the number of internet\nusers worldwide y, in billion, x years after\n2007.\n0 1 2 3 4 5 6 7 8 9\n0\n1\n2\n3\n4\n5\n6\nx\ny\nWhich of the following is closest to the\nnumber of internet users worldwide, in\nbillions, 5 years after 2007?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1.4"
+   },
+   {
+    "label": "B",
+    "content": "2.4"
+   },
+   {
+    "label": "C",
+    "content": "3.4"
+   },
+   {
+    "label": "D",
+    "content": "4.4 95 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-3",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 3,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 7,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows data set A, which\nconsists of the weights y, in pounds, of a\nLabrador retriever puppy at various ages,\nx, in months. The equation of a line of\nbest fit for the relationship in data set A\ncan be written as y = \u22125.1 + 8.7x, where\n2 \u2265 x \u2265 6\nx\ny\n1 2 3 4 5 6 7 8 9 10\n10.0\n20.0\n30.0\n40.0\n50.0\n60.0\n70.0\nThe puppy was weighed again at 9 months\nold and weighed 52 pounds. Data set B\nconsists of all the data points in data set A\nas well as the data point (9, 52). The equa-\ntion of a line of best fit for data set B can\nbe written as y = r + st, where r and s are\nconstants and 2 \u2265 x \u2265 9. Assuming the\nequations of the lines of best fit are calcu-\nlated in the same way, which of the follow-\ning is the best estimate for the value of s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5.9"
+   },
+   {
+    "label": "B",
+    "content": "8.7"
+   },
+   {
+    "label": "C",
+    "content": "13.8"
+   },
+   {
+    "label": "D",
+    "content": "17.7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-4",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 4,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 7,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of best\nfit is also shown.\n1 2 3 4 5 6\n1\n2\n3\n4\n5\n6\nx\ny\nWhich of the following equations best rep-\nresents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0"
+   },
+   {
+    "label": "B",
+    "content": "y = 1.7"
+   },
+   {
+    "label": "C",
+    "content": "0.7"
+   },
+   {
+    "label": "D",
+    "content": "y = 1.7 + 0.7x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-5",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 5,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 7,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "230 240 250 260 270\n385\n420\n455\n490\n525\nt\nd\nWhich of the following equations is the\nmost appropriate linear model for the data\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "d = \u221262.1 + 2.02t"
+   },
+   {
+    "label": "B",
+    "content": "d = 162.1 + 2.02t"
+   },
+   {
+    "label": "C",
+    "content": "d = 357.8 + 2.02t"
+   },
+   {
+    "label": "D",
+    "content": "d = 392.8 + 2.02t 96 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-6",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 6,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 8,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "For the first 10 hours of an experiment, the\nscatterplot shows the temperature y, in de-\ngrees Fahrenheit (\u25e6F), of an object at vari-\nous times x, in hours, since the start of the\nexperiment. A line of best fit is also shown.\n0 2 4 6 8 10\n0\n150\n300\n450\n600\nTime (hours)\nTemperature\n(\n\u25e6\nF)\nWhich of the following is the best interpre-\ntation of the slope of the line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The predicted temperature increases at a constant rate of approximately 40\u25e6F per hour over the 10-hour pe- riod."
+   },
+   {
+    "label": "B",
+    "content": "The predicted temperature decreases at a constant rate of approximately 40\u25e6F per hour over the 10-hour pe- riod."
+   },
+   {
+    "label": "C",
+    "content": "The predicted temperature decreases at a constant rate of approximately 180\u25e6F per hour over the 10-hour pe- riod."
+   },
+   {
+    "label": "D",
+    "content": "The predicted temperature increases at a constant rate of approximately 180\u25e6F per hour over the 10-hour pe- riod."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-7",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 7,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 8,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6\n30\n50\n70\n90\n110\n130\n150\nAge (years)\nBody length (cm)\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year\nto 6 years old. A line of best fit is also\nshown. For a New Zealand fur seal at an\nage of 3 years old, what is the body length\npredicted by the line of best fit, to the near-\nest 10 cm?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "110",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-8",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 8,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 8,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6\n20\n40\n60\n80\n100\n120\n140\nAge (years)\nBody length (cm)\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year\nto 6 years old. A line of best fit is also\nshown. For a New Zealand fur seal at an\nage of 3 years old, what is the body length\npredicted by the line of best fit, to the near-\nest ?\n97",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "100",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-10",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 10,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 9,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "\u22125 \u22123 \u22121 1 3 5\n20\n40\n60\n80\nx\ny\n\u2022 The scatterplot has 13 data points.\n\u2022 The data points are in an exponential\npattern trending up from left to right.\n\u2022 The data points have the following\napproximate coordinates:\n(\u22124.3, 19) (\u22124, 19) (\u22123.5, 19)\n(\u22122.5, 20) (\u22121.7, 21) (\u22120.8, 23)\n(0, 24) (0.5, 25) (1.8, 30)\n(3, 42) (3.3, 46) (4, 49)\n(4.3, 57)\nWhich of the following equations is the\nmost appropriate model for the data\nshown in the scatterplot?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 24(1.55)x"
+   },
+   {
+    "label": "B",
+    "content": "y = 24(1.55)x + 18"
+   },
+   {
+    "label": "C",
+    "content": "y = (1.55)x + 23"
+   },
+   {
+    "label": "D",
+    "content": "y = 6(1.55)x + 18 98 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-11",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 11,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 10,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween x and y for the 10 data points in data\nset A.\nx\ny\n-4 -3 -2 -1 0 1 2 3 4\n0\n20\n40\n60\n80\n100\n120\n140\n160\nData set B is created by multiplying the y-\nvalue of each data point from data set A by\n40. Which of the following equations is the\nmost appropriate model for data set B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 5(2.04)x"
+   },
+   {
+    "label": "B",
+    "content": "y = 40(2.04)x + 40"
+   },
+   {
+    "label": "C",
+    "content": "y = 5(2.04)x + 40"
+   },
+   {
+    "label": "D",
+    "content": "y = 199(2.04)x + 2.04"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-12",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 12,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 10,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "Day\nd\na\ny\n1\nd\na\ny\n2\nd\na\ny\n3\nd\na\ny\n4\n0\n20\n40\n60\n80\n100\n120\nThe line graph shows the number of cus-\ntomers who visited a restaurant each day\nduring a four-day period in the summer.\nAccording to the line graph, for which\nday during this four-day period did the\nrestaurant have the smallest number of\ncustomers who visited?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Day 1"
+   },
+   {
+    "label": "B",
+    "content": "Day 2"
+   },
+   {
+    "label": "C",
+    "content": "Day 3"
+   },
+   {
+    "label": "D",
+    "content": "Day 4 99 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-scatterplots-13",
+  "book": "ma3",
+  "topic": "Scatterplots",
+  "num": 13,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 11,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "A group of 10 gardeners recorded data on\nthe germination rates of their tomato crop\nfor one growing season. The scatterplot\nshows the relationship between the num-\nber of tomato seeds planted, x, and the\nnumber of tomato seeds that germinated,\ny, for each of the gardeners. A line of best\nfit is also shown.\n200 400\n200\n400\nx\ny\nWhich of the following is the best interpre-\ntation of the slope of the line of best fit in\nthis context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The number of tomato seeds planted is predicted to increase by 60 seeds every 100 days."
+   },
+   {
+    "label": "B",
+    "content": "The number of tomato seeds planted is predicted to increase by 300 seeds every 100 days."
+   },
+   {
+    "label": "C",
+    "content": "The number of tomato seeds that ger- minate is predicted to increase by 60 seeds for every additional 100 tomato seeds that are planted."
+   },
+   {
+    "label": "D",
+    "content": "The number of tomato seeds that ger- minate is predicted to increase by 300 seeds for every additional 100 tomato seeds that are planted. 100 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-3",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 21,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In the figure, line q is parallel to line r, and\nboth are intersected by line s. If y = 2x + 7,\nwhat is the value of x?\nq\nr\ns\n57\u25e6\ny",
+  "choices": [
+   {
+    "label": "A",
+    "content": "25"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "58"
+   },
+   {
+    "label": "D",
+    "content": "68"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-4",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 21,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The measure of angle G is \u03c0\n10 radians. If\nthe measure of angle G is 9n in degrees,\nwhere n is a constant, what is the value of\nn?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "18 110 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-7",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 7,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 22,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r\ns\nt\n121\u25e6 59\u25e6\nx\u25e6\nNote: Figure not drawn to scale.\nIn the figure shown, line r is parallel to line\ns, and line t intersects both lines. What is\nthe value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "121"
+   },
+   {
+    "label": "B",
+    "content": "90"
+   },
+   {
+    "label": "C",
+    "content": "31"
+   },
+   {
+    "label": "D",
+    "content": "180"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-8",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 8,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 22,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A rectangle has a perimeter of 36 inches. If\nthe sum of the lengths of three sides of the\nrectangle is 21 inches, what is the length,\nin inches, of the fourth side?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "57"
+   },
+   {
+    "label": "C",
+    "content": "15"
+   },
+   {
+    "label": "D",
+    "content": "36"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-9",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 9,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 22,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r\ns\nt\n77\u25e6\n103\u25e6\na\u25e6\n77\u25e6\nNote: Figure not drawn to scale.\nIn the figure shown, lines r and s are par-\nallel, and line t intersects both lines. What\nis the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "180"
+   },
+   {
+    "label": "B",
+    "content": "77"
+   },
+   {
+    "label": "C",
+    "content": "167"
+   },
+   {
+    "label": "D",
+    "content": "90 111 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-10",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 10,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 23,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "a\n(b + c)\n= 55\nThe measure of angle K is \u03c0\n2(12)\nradians.\nThe measure of angle L is 12 times the\nmeasure of angle K. What is the measure,\nin degrees, of angle L?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "102"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "78"
+   },
+   {
+    "label": "D",
+    "content": "90"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-12",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 12,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 23,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangle ABC is similar to triangle DEF,\nwhere angle A corresponds to angle D and\nangle C corresponds to angle F. Angles C\nand F are right angles. If tan A =\n612\n35\n,\nwhat is the value of sin D?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "612 613"
+   },
+   {
+    "label": "B",
+    "content": "35 613"
+   },
+   {
+    "label": "C",
+    "content": "613 612"
+   },
+   {
+    "label": "D",
+    "content": "613 35"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-13",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 13,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 23,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r s\nt\na\u25e6\nb\u25e6\nc\u25e6\n\u2022 Clockwise from top left, the 3 lines are\nlabeled t, r, and s.\n\u2022 Line t intersects both line r and line s.\n\u2022 At the intersection of line t and line r,\n1 angle is labeled clockwise from top\nleft as follows:\n\u2013 Top right: a\u25e6\n\u2022 At the intersection of line t and line\ns, 2 angles are labeled clockwise from\ntop left as follows:\n\u2013 Top left: b\u25e6\n\u2013 Bottom left: c\u25e6\n\u2022 Note: Figure not drawn to scale.\nIn the figure, lines r and s are parallel and\nline t intersects both lines. If a = 4k + 57\nand b = k\n2 + 55, what is the value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "121",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-15",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 15,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 24,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "s\nq\nr\n45\u25e6\ny\u25e6\nNote: Figure not drawn to scale.;\nIn the figure, line q is parallel to line r,\nand both lines are intersected by line s. If\ny = 2x + 9, what is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27"
+   },
+   {
+    "label": "B",
+    "content": "73"
+   },
+   {
+    "label": "C",
+    "content": "63"
+   },
+   {
+    "label": "D",
+    "content": "18"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-17",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 17,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 24,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "p\nr\nt\nx\u25e6\n72\u25e6\nNote: Figure not drawn to scale\nIn the figure, line p is parallel to line r,\nand line t intersects both lines. What is the\nvalue of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "36"
+   },
+   {
+    "label": "B",
+    "content": "72"
+   },
+   {
+    "label": "C",
+    "content": "180"
+   },
+   {
+    "label": "D",
+    "content": "252 113 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-lines-angles-18",
+  "book": "ma3",
+  "topic": "Lines&Angles",
+  "num": 18,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 25,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r s\nk\nz\u25e6\ny\u25e6\nx\u25e6\nw\u25e6\nNote: Figure not drawn to scale\nIn the figure shown, line k intersects lines\nr and s. If w = 147, which additional piece\nof information is sufficient to prove that\nlines r and s are parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 33"
+   },
+   {
+    "label": "B",
+    "content": "y = 147"
+   },
+   {
+    "label": "C",
+    "content": "w + y = 180"
+   },
+   {
+    "label": "D",
+    "content": "y + z = 180 114 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-triangles-5",
+  "book": "ma3",
+  "topic": "Triangles",
+  "num": 5,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 27,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, the measure of angle A\nis 56\u25e6 and AC = 35. In triangle PQR, the\nmeasure of angle P is 56\u25e6 and PR = 105.\nWhich additional piece of information is\nsufficient to prove that triangle ABC is\nsimilar to triangle PQR?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "AB = 50 and PQ = 50"
+   },
+   {
+    "label": "B",
+    "content": "The measures of angle B and angle R are 32\u25e6 and 92\u25e6, respectively."
+   },
+   {
+    "label": "C",
+    "content": "The measures of angle B and angle Q are 56\u25e6 and 32\u25e6, respectively."
+   },
+   {
+    "label": "D",
+    "content": "AB = 50 and QR = 50 116 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "22/73",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-triangles-6",
+  "book": "ma3",
+  "topic": "Triangles",
+  "num": 6,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 28,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle RST, angle T is a right angle,\npoint L lies on RS, point K lies on ST, and\nLK is parallel to RT. If the length of RT\nis 72 units, the length of LK is 24 units,\nand the area of RST triangle is 396 square\nunits, what is the length of KT, in units?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-triangles-9",
+  "book": "ma3",
+  "topic": "Triangles",
+  "num": 9,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 28,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "a\n12\n14\nNote: Figure not drawn to scale\nWhich equation gives the relationship be-\ntween the side length of the triangle\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "122 + 142 = a2"
+   },
+   {
+    "label": "B",
+    "content": "a2 + 122 = 142"
+   },
+   {
+    "label": "C",
+    "content": "a + 12 = 14"
+   },
+   {
+    "label": "D",
+    "content": "12 + 14 = a"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "90",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-triangles-10",
+  "book": "ma3",
+  "topic": "Triangles",
+  "num": 10,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 28,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "X\nY Z\n35\u25e6\nNote: Figure not drawn to scale\nIn triangle XYZ, the measure of angle Y is\n90 degrees. Triangle RST (not shown) is\nsimilar to triangle XYZ such that R, S, and\nT correspond to X, Y, and Z, respectively.\nEach side of triangle RST is 19 times the\nlength of the corresponding side of trian-\ngle XYZ. What is the measure, in degrees,\nof one of the angles in triangle RST?\n117",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-triangles-11",
+  "book": "ma3",
+  "topic": "Triangles",
+  "num": 11,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 29,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A\nB\nC\nA\u2032\nB\u2032\nC\u2032\nNote: Figure not drawn to scale\nTriangles ABC and A\u2032B\u2032C\u2032 are shown. Tri-\nangle ABC is dilated by a scale factor of 6\nto form triangle A\u2032B\u2032C\u2032. If the length of AB\nis 18, what is the length of A\u2032B\u2032?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "24"
+   },
+   {
+    "label": "D",
+    "content": "108"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-1",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 1,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 31,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In the right triangle shown, what is the\nvalue o f cosA?\n43\n23\nB\nA\nC",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1 43"
+   },
+   {
+    "label": "B",
+    "content": "1 23"
+   },
+   {
+    "label": "C",
+    "content": "23 43"
+   },
+   {
+    "label": "D",
+    "content": "43 23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-3",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 3,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 31,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "K\nJ\nL\n55 y\u25e6\nNote: Figure not drawn to scale.\nIn triangle JKL, cos y\u25e6 =\n54\n55\n. What is the\nlength of KL?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "54",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-5",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 5,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "R\nQ\nS\nc y\u25e6\n10\n4\nNote: Figure not drawn to scale.\nIn triangle QRS, what is the value of\ntan y\u25e6?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c 4"
+   },
+   {
+    "label": "B",
+    "content": "c 10"
+   },
+   {
+    "label": "C",
+    "content": "4 10"
+   },
+   {
+    "label": "D",
+    "content": "10 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-6",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 6,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "4\n9\nc\nR\nQ\nS\ny\nIn triangle QRS, what is the value of\ntan(y)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c 9"
+   },
+   {
+    "label": "B",
+    "content": "4 9"
+   },
+   {
+    "label": "C",
+    "content": "c 4"
+   },
+   {
+    "label": "D",
+    "content": "9 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-7",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 7,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "59\nK\nJ\nL\ny\nIn triangle JKL, cos(y) = 58\n59. What is the\nlength of KL?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "58",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-8",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 8,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "Triangle ABC is similar to triangle DEF,\nwhere angle A corresponds to angle D and\nangle C corresponds to angle F. Angles C\nand F are right angles. If tan A =\n612\n35\n,\nwhat is the value of sin D?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "612 613"
+   },
+   {
+    "label": "B",
+    "content": "35 613"
+   },
+   {
+    "label": "C",
+    "content": "613 612"
+   },
+   {
+    "label": "D",
+    "content": "613 35"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-9",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 9,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "Triangle ABC is similar to triangle DEF,\nwhere angle A corresponds to angle D and\nangle C corresponds to angle F. Angles B\nand E are right angles. If cos A =\n14\n\u221a\n421\n,\nwhat is the value of\n1\nsinF",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15 \u221a 421"
+   },
+   {
+    "label": "B",
+    "content": "14 \u221a 421"
+   },
+   {
+    "label": "C",
+    "content": " \u221a 421 14"
+   },
+   {
+    "label": "D",
+    "content": " \u221a 421 15 121 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-trigonometry-10",
+  "book": "ma3",
+  "topic": "Trigonometry",
+  "num": 10,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 33,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "R\nS\nQ\n37\nNote: Figure not drawn to scale\nIn triangle QRS shown, QR < RS. Which\nexpression represents the length of QS?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "37 cosQ"
+   },
+   {
+    "label": "B",
+    "content": "37 sinQ"
+   },
+   {
+    "label": "C",
+    "content": "37 cosQ"
+   },
+   {
+    "label": "D",
+    "content": "37 sinQ 122 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-circles-2",
+  "book": "ma3",
+  "topic": "Circles",
+  "num": 2,
+  "exam": "September2025",
+  "page": null,
+  "pdf_page": 35,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Circles A and B are graphed in the xy-\nplane. Circle A is represented by the equa-\ntion (x + 8)2 + (y \u2212 8)2 = 64 and intersects\nthe x-axis at the point (r, s). Circle B has\nits center at (r, s) and has a radius of the\nsame length as circle A. Which equation\nrepresents circle B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x2 + (y + 8)2 = 64"
+   },
+   {
+    "label": "B",
+    "content": "x2 + (y \u2212 8)2 = 64"
+   },
+   {
+    "label": "C",
+    "content": "(x + 8)2 + y2 = 64"
+   },
+   {
+    "label": "D",
+    "content": "(x \u2212 8)2 + y2 = 64"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-circles-5",
+  "book": "ma3",
+  "topic": "Circles",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 35,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(-4, -7). Line k is tangent to this circle at the\npoint (-7, -8). What is the slope of line k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22123"
+   },
+   {
+    "label": "B",
+    "content": "\u22121 3"
+   },
+   {
+    "label": "C",
+    "content": "1 3"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-circles-15",
+  "book": "ma3",
+  "topic": "Circles",
+  "num": 15,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 36,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(\u22124, 1) and the point (\u22128, 4) lies on the\ncircle. Which equation represents this cir-\ncle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(x \u2212 4)2 + (y + 1)2 = 5"
+   },
+   {
+    "label": "B",
+    "content": "(x + 4)2 + (y \u2212 1)2 = 25"
+   },
+   {
+    "label": "C",
+    "content": "(x \u2212 4)2 + (y + 1)2 = 25"
+   },
+   {
+    "label": "D",
+    "content": "(x + 4)2 + (y \u2212 1)2 = 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "16",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-3",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 3,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 38,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A piece of string with a length of 108\ninches is cut into two parts. One part has\na length of x inches, and the other part has\na length of y inches. The value of x is 8\nmore than 4 times the value of y. What is\nthe value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "25"
+   },
+   {
+    "label": "B",
+    "content": "29"
+   },
+   {
+    "label": "C",
+    "content": "58"
+   },
+   {
+    "label": "D",
+    "content": "88"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-5",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 38,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The points (0, 15), (10, 8), and (10, 3) are\nshown in the xy-plane, where the x-axis\nand y-axis are measured in units.\n0 1 2 3 4 5 6 7 8 9 10 11\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nx\ny\nThese points define one of the bases of a\ntriangular prism. The distance between\nthe two bases of the prism is 20 units.\nWhat is the volume, in cubic units, of the\nprism?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "500",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-6",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 6,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 38,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Rectangles ABCD and EFGH are simi-\nlar. The length of each side of EFGH is 6\ntimes the length of the corresponding side\nof ABCD. The area of ABCD is 90 square\nunits. What is the area, in square units, of\nEFGH?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15"
+   },
+   {
+    "label": "B",
+    "content": "36"
+   },
+   {
+    "label": "C",
+    "content": "540"
+   },
+   {
+    "label": "D",
+    "content": "3, 240 127 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-7",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 7,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The width of a rectangle is 3 centimeters.\nThe length of the rectangle is 20 centime-\nters longer than the width. What is the\narea, in square centimeters, of this rectan-\ngle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "26"
+   },
+   {
+    "label": "C",
+    "content": "69"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-8",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 8,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "h(x) =\n1\n2\n(x)(77)\nThe given function h represents the area,\nin square inches, of a triangle with a base\nof x inches and a fixed height. What is the\nheight, in inches, of the triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1 77"
+   },
+   {
+    "label": "B",
+    "content": "77 2"
+   },
+   {
+    "label": "C",
+    "content": "77"
+   },
+   {
+    "label": "D",
+    "content": "154"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-9",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 9,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Cylinder Volume\n(cubic\nunits)\nRight circular\ncylinder A\n32\u03c0\nRight circular\ncylinder B\n4000\u03c0\nThe table shows the volume of two sim-\nilar solids, right circular cylinder A and\nright circular cylinder B. The radius of the\nright circular cylinder A is 4 units. The\nsurface area of right circular cylinder A is\nk\u03c0 square units, and the surface area of\nright circular cylinder B is n\u03c0 square units,\nwhere k and n are constants. What is the\nvalue of n \u2212 k? (The surface area of a right\ncircular cylinder with radius r and height\nh is 2\u03c0r2 + 2\u03c0rh.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1152",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-10",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 10,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Cube B has a volume of 216 cubic inches.\nThe length of each edge of cube A is k\ntimes the length of each edge of cube B. If\ncube A has a volume of 5,832 cubic inches,\nwhat is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "36"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-11",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 11,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A rectangle has an area of 48 square me-\nters and a length of 12 meters. What is the\nwidth, in meters, of the rectangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "576"
+   },
+   {
+    "label": "B",
+    "content": "36"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-12",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 12,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The length of the diagonal of a square is\n196\n\u221a\n2\n2\nunits. What is the area, in square\nunits, of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "19, 208"
+   },
+   {
+    "label": "B",
+    "content": "98"
+   },
+   {
+    "label": "C",
+    "content": "392"
+   },
+   {
+    "label": "D",
+    "content": "9, 604"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-13",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 13,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "In triangle RST, angle T is a right angle,\npoint L lies on RS, point K lies on ST, and\nLK is parallel to RT. If the length RT of\nis 63 units, the length of LK is 21 units,\nand the area of triangle RST is 630 square\nunits, what is the length of KT, in units?\n128",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-14",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 14,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A right square pyramid has a height of\n6 units and a volume of 128 cubic units.\nWhat is the length, in units, of one side of\nthe base of the pyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "256"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "64 3"
+   },
+   {
+    "label": "D",
+    "content": "8 \u221a 3 3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-15",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 15,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A rectangle has an area of 66 square me-\nters and a length of 11 meters. What is the\nwidth, in meters, of the rectangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "55"
+   },
+   {
+    "label": "C",
+    "content": "726"
+   },
+   {
+    "label": "D",
+    "content": "121"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-16",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 16,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The length of the diagonal of a square is\n186\n\u221a\n2\n2 units. What is the area, in square\nunits, of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8, 649"
+   },
+   {
+    "label": "B",
+    "content": "17, 298"
+   },
+   {
+    "label": "C",
+    "content": "93"
+   },
+   {
+    "label": "D",
+    "content": "372"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-17",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 17,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Cube B has a volume of 125 cubic inches.\nThe length of each edge of cube A is k\ntimes the length of each edge of cube B. If\ncube A has a volume of 3,375 cubic inches,\nwhat is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "25"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-18",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 18,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A right square pyramid has a height of\n6 units and a volume of 128 cubic units.\nWhat is the length, in units, of one side of\nthe base of the pyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "256"
+   },
+   {
+    "label": "C",
+    "content": "64 3"
+   },
+   {
+    "label": "D",
+    "content": "8 \u221a 3 3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-20",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 20,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A triangle has a base length of 48 centime-\nters and a height of 96 centimeters. What\nis the area, in square centimeters, of the\ntriangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2304"
+   },
+   {
+    "label": "B",
+    "content": "1152"
+   },
+   {
+    "label": "C",
+    "content": "4608"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "14",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-21",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 21,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 40,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A right circular cylinder has a height of\n16 inches and a volume of 3136\u03c0 cubic\ninches. What is the radius, in inches, of\nthis cylinder?\n129",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-22",
+  "book": "ma3",
+  "topic": "Areas&Volumes",
+  "num": 22,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 41,
+  "src": "fece5eb4-90133_ma3.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The length of a side of square X is 9 cen-\ntimeters. The area of rectangle Y is 32\nsquare centimeters. What is the total area,\nin square centimeters, of square X and\nrectangle Y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "145"
+   },
+   {
+    "label": "B",
+    "content": "113"
+   },
+   {
+    "label": "C",
+    "content": "82"
+   },
+   {
+    "label": "D",
+    "content": "81"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "40556",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-2",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 2,
+  "page": 7,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "Kyle invented a new temperature scale he\ncalled the Tutorllini scale. The function T(x)\ngives the temperature, in degrees Torte, that\ncorresponds to a temperature of x degrees\nCelsius.\nT(x) =\n3\n4\n\u0012\n26x\n7\n\u2212 800\n\u0013\n+ 15.50\nIf a temperature increased by 3.3 degrees\nTorte, by how much did the temperature\nincrease, in degrees Celsius?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1.18",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-3",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 3,
+  "page": 7,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the given system of equations, p is a\nconstant. If the system has no solution, what\nis the value of p?\n3\n2\ny \u2212\n1\n4\nx =\n2\n3\n\u2212\n3\n2\ny\n1\n6\nx +\n3\n6\n= py +\n9\n5",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "2",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-4",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 4,
+  "page": 7,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the given system of equations, t is a\nconstant. If the system has no solution, what\nis the value of t?\n4x \u2212 6y = 10y + 2\nty =\n1\n2\n+ 2x",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "8",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-5",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 5,
+  "page": 7,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "20\np\n=\n20\nq\n\u2212\n20\nr\n\u2212\n20\ns\nThe given equation relates the positive\nvariables p, q, r, and s. Which of the\nfollowing is equivalent to q?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "p + r + s"
+   },
+   {
+    "label": "B",
+    "content": "20(p + r + s) C prs pr + rs + ps D prs 20p + 20r + 20s 7"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-7",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 7,
+  "page": 8,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "f (x) = 3 + | \u2212 2x \u2212 x2\n|\ng(w) = \u2212\nw\nw \u2212 1\n\u2212 w + 5\nThe functions f and g are defined by the\ngiven equations. If f (\u22124) = c, where c is\na constant, what is the value of g(c)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-4.9",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-8",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 8,
+  "page": 8,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "The equation 9x + 5 = a(x + b), where a and\nb are constants, has no solutions. Which of\nthe following must be true?\nI. a = 9\nII. b = 5\nIII. b \u0338= 5\n9\nA I only\nB III only\nC I and III only\nD None of the above",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-9",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 9,
+  "page": 8,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the given pair of equations, a and b\nare constants. The graph of this pair\nof equations in the xy-plane is a pair of\nperpendicular lines. Which of the following\npairs of equations also represents a pair of\nperpendicular lines?\n(\n5x + 7y = 1\nax + by = 1\nA\n10x + 7y = 1\nax \u2212 2by = 1\nB\n10x + 7y = 1\nax + 2by = 1\nC\n10x + 7y = 1\n2ax + by = 1\nD\n5x \u2212 7y = 1\nax + by = 1\n8",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-12",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 12,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the system of equations below, a and c are\nconstants.\nax + y = c\n1\n2\nx +\n1\n3\ny =\n1\n6\nIf the system of equations has an infinite\nnumber of solutions (x, y), what is the value\nof a?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1.5",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-15",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 15,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "3 consecutive even integers are ordered from\nsmallest to largest. 5 times the first integer is\nat least 9 more than the sum of the second\nand third integers. What is the minimum\npossible value for the second integer?\n9",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "8",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-18",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 18,
+  "page": 10,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "\u221232x + 18y + 150 = 15y + 4x\n52 +\nw\n3\nx + 18y = \u221232\nIn the given system of equations, w is a\nconstant. The system has only one solution.\nFind the value that w is not equal to?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-648",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-24",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 24,
+  "page": 11,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "Line s is defined by x \u2212 4y = 24. Line t is\nperpendicular to line s in the xy-plane and\npasses through the points (k, 0) and (60, \u2212k).\nWhat is the value of k?\n11",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "48",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-25",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 25,
+  "page": 12,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "t =\n1\n2\nv\nFor the equation above, which of the\nfollowing is the graph of v as a function of\nt?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1 2 3 4 5 2 4 6 8 10"
+   },
+   {
+    "label": "B",
+    "content": "1 2 3 4 5 2 4 6 8 10"
+   },
+   {
+    "label": "C",
+    "content": "1 2 3 4 5 2 4 6 8 10"
+   },
+   {
+    "label": "D",
+    "content": "1 2 3 4 5 2 4 6 8 10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-26",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 26,
+  "page": 12,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x y\n0 n\n4 n + 21\n8 n + 42\nThere is a linear relationship between x\nand y. The table shows three values of\nx and their corresponding values of y in\nterms of a constant n. What is the slope of\nthe line in the xy-plane that represents this\nrelationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "21"
+   },
+   {
+    "label": "B",
+    "content": "2 C 21 4 D 4 21"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-27",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 27,
+  "page": 12,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, line r passes through the\npoints (3, 12) and (7, 13). Line s passes\nthrough the point (1, 2) and is perpendicular\nto line r. An equation of line s is ax + 7y = c,\nwhere a and c are constants. What is the\nvalue of c?\n12",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "42",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-29",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 29,
+  "page": 13,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "7x + 8y = 3\nThe given equation is one equation in a\nsystem of two linear equations. If the system\nof equations has at least one solution, which\nof the following equations could be the other\nequation in the system?\nI 14x + 16y = 12\nII 14x + 16y = 6\nA I only\nB II only\nC I and II\nD Neither I nor II",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-30",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 30,
+  "page": 13,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "a(4 \u2212 x) = 28 \u2212 7x\nIn the given equation, a is a constant. The\nequation has exactly one solution. Which of\nthe following CANNOT be the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "28"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-31",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 31,
+  "page": 13,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x\n7\n+\ny\n5\n=\n41\n35\nAn engineer connects resistors in series,\nwhere the resistors in the series have a total\nresistance of 41\n35 ohms. In this series, there\nare x resistors of type A, which each have\na resistance of a ohms, and y resistors of\ntype B, which each have a resistance of b\nohms. The given equation represents this\nsituation. According to this equation, what\nis the positive difference between the value\nof a and the value of b?\nA\n1\n35\nB\n2\n35\nC\n3\n35\nD\n12\n35\n13",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-33",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 33,
+  "page": 14,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "j(x \u2212 k) =\n3\n4\nx + 15\nIn the equation above, j and k are constants.\nIf the equation has infinitely many solutions\nfor x, what is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-20",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-34",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 34,
+  "page": 14,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x\ny\n1 2 3 4 5 6\n1\n2\n3\n4\n5\n6\nO\nG\nH\nR\nLine segment GH and point R are shown in\nthe xy-plane. If line \u2113 (not shown) contains\npoint R and is perpendicular to line segment\nGH, which of the following is an equation of\nline \u2113?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22124x + 3y = 6"
+   },
+   {
+    "label": "B",
+    "content": "\u22123x + 4y = 8"
+   },
+   {
+    "label": "C",
+    "content": "3x + 4y = 8"
+   },
+   {
+    "label": "D",
+    "content": "4x + 3y = 6 14"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-algebra-37",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 37,
+  "page": 15,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "2 4 6 8 10\n1\n1\n2\n3\n4\nThe graph shows the total amount of rainfall\ny, in centimeters, from the start of a 10-hour\nperiod, where x is the number of hours\nafter the start of the period. Which of\nthe following statements about the rainfall\nduring this time period is true?\nA The rate of rainfall was 2 centimeters\nper hour between x = 2 and x = 4.\nB The rate of rainfall was the greatest\nbetween x = 4 and x = 10.\nC The rate of rainfall increased between\nx = 0 and x = 2.\nD The rate of rainfall was 0 centimeters\nper hour between x = 2 and x = 4.\n15",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-1",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 1,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, the quadrants are labeled as\nshown. The graph of the equation\ny = 3(x + a)2\n+ b\nwhere a and b are positive constants, has a\nvertex in which quadrant?\nI\nII\nIII IV\nA Quadrant I\nB Quadrant II\nC Quadrant III\nD Quadrant IV",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-2",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 2,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The solutions to x2 + 12x + 35 = 0 are r\nand s, where r < s. The solutions to x2 +\n12x + 27 = 0 are t and u, where t < u. The\nsolutions to x2 + 24x + c = 0, where c is a\nconstant, are r + u and s + t. What is the\nvalue of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "140",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-6",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 6,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "If x = 2n\n\u221a\n2xn + 35, where n is a positive\ninteger constant, what is the value of xn?\n18",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "7",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-7",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 7,
+  "page": 19,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "\u22121 1 2 3 4 5\n\u22121\n\u22122\n\u22123\n\u22124\n\u22125\n1\n2\n3\n4\n5\nThe graph of y = g(x) is shown, where the\nfunction g is defined by\ng(x) = f (x + a) + b\nand a and b are constants. If the function f\nis defined by f (x) = x3, what is the value of\na + b?\nA \u22125\nB \u22121\nC 1\nD 5",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-8",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 8,
+  "page": 19,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "(3x + p)(5x2\n\u2212 45)(2x2\n\u2212 16x + 6p) = 0\nIn the given equation, p is a positive\nconstant. The sum of the solutions to the\nequation is 20\n3 . What is the value of p?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "4",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-9",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 9,
+  "page": 19,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x) = ax2\n+ 6x + c\nIn the given quadratic function, a and c are\nconstants. The graph of y = f (x) in the\nxy-plane is a parabola that opens upward\nand has a vertex at the point (h, k), where h\nand k are constants. If k > 0 and f (\u22127) =\nf (5), which of the following must be true?\nI. c > 3\nII. a > 3\nA I only\nB II only\nC I and II\nD Neither I nor II",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-10",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 10,
+  "page": 19,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "Function f is a quadratic function. The\ngraph of y = f (x) in the xy-plane has a\nvertex at (9, \u22127), contains the point (8, \u22129),\nand has a y-intercept at (0, a). The graph of\ny = 6 \u00b7 f (x) has a y-intercept at (0, b). What\nis the positive difference between a and b?\n19",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "845",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-11",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 11,
+  "page": 20,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "\u22124 \u22122 2 4\n\u22124\n\u22122\n2\n4\ny = f (x)\nThe graph of y = f (x) is shown in the\nxy-plane. If the function g is defined by\ng(x) = (x + 3)(x \u2212 1)\nfor which of the following values of x is\nf (x) > g(x)?\nA \u22123\nB \u22122\nC 1\nD 2",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-12",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 12,
+  "page": 20,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "34z14\n+ bz7\n+ 70\nIn the given expression, b is a positive\ninteger. If qz7 + r is a factor of expression,\nwhere q and r are positive integers, what is\nthe highest possible value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "2381",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-13",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 13,
+  "page": 20,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "\u22124 \u22123 \u22122 \u22121 1 2 3 4\n20\n40\n60\n80\n100\nWhich of the following could be the\nequation of the graph shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = (x + 2)2(x \u2212 3)2"
+   },
+   {
+    "label": "B",
+    "content": "y = (x \u2212 2)2(x + 3)2"
+   },
+   {
+    "label": "C",
+    "content": "y = 2(x + 2)2(x \u2212 3)2"
+   },
+   {
+    "label": "D",
+    "content": "y = 2(x \u2212 2)2(x + 3)2 20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-14",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 14,
+  "page": 21,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "\u22124 \u22123 \u22122 \u22121 1 2 3 4 5\n\u22124\n\u22123\n\u22122\n\u22121\n1\n2\n3\n4\nAn equation for the graph shown is\ny = a(x + 3)(x + b)\nwhere a and b are constants. What is the\nvalue of ab?\nA \u22122\nB \u2212\n4\n3\nC\n1\n2\nD 8",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-16",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 16,
+  "page": 21,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x)\nThe graph of f (x) is the result of shifting the\ngraph of g(x) 3 units to the right and 3 units\nup. If the equation of f (x) is\nf (x) = x2\n+ 4x\nwhat is the equation of g(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(x \u2212 5)2 + 1"
+   },
+   {
+    "label": "B",
+    "content": "(x \u2212 5)2 \u2212 7"
+   },
+   {
+    "label": "C",
+    "content": "(x + 5)2 \u2212 7"
+   },
+   {
+    "label": "D",
+    "content": "(x + 5)2 \u2212 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-advanced-math-17",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 17,
+  "page": 21,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "3\n\u22124\n\u22126\n(3, \u22124)\n0, \u22126)\n(r, s)\nThe xy-plane above shows two points of\nintersection of the graphs of a linear function\nand a quadratic function. The vertex of the\ngraph of the quadratic function is at (3, \u22124)\nand (r, s) is one of the points of intersection\nof the graphs. What is the value of r?\n21",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "4.5",
+  "needs_vision": true
+ }
+]

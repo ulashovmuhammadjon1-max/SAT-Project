@@ -1,0 +1,2858 @@
+[
+ {
+  "id": "satmath-ma2-triangles-42",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 42,
+  "exam": "December US 2024",
+  "page": 333,
+  "pdf_page": 65,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A B\nC\nd\n60\u25e6\nX Y\nZ\nNote: Figure not drawn to scale\nFor the triangles shown, triangle ABC di-\nlated by a factor of 5 to obtain triangle\nXY Z, where d = 19. What is the measure,\nin degrees, of angle X?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "12"
+   },
+   {
+    "label": "B",
+    "content": "55"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "65"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-43",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 43,
+  "exam": "November US 2024",
+  "page": 333,
+  "pdf_page": 65,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nThe line segment shown in the xy-plane rep-\nresents one of the legs of a right triangle.\nThe area of this triangle is 48\n\u221a\n13 square\nunits. What is the length, in units, of the\nother leg of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "16"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "3 \u221a 13"
+   },
+   {
+    "label": "D",
+    "content": "24"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-44",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 44,
+  "exam": "December US 2024",
+  "page": 333,
+  "pdf_page": 65,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "B\nA\nC\n28\nNote: Figure not drawn to scale\nFor triangle ABC, the length of AB is\n11 less than the length of AC. Point D\n(not shown) lies on AC such that BD (not\nshown) is perpendicular to AC. What is the\nvalue of BC\nBD\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "28/17",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-45",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 45,
+  "exam": "December US 2024",
+  "page": 333,
+  "pdf_page": 65,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A C\nB\n10 cm\nh\nNote: Figure not drawn to scale\nThe area of triangle ABC is 220 square cen-\ntimeters. What is the height h, in centime-\nters, of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "10"
+   },
+   {
+    "label": "B",
+    "content": "22"
+   },
+   {
+    "label": "C",
+    "content": "44"
+   },
+   {
+    "label": "D",
+    "content": "88 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-46",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 46,
+  "exam": "December 2024",
+  "page": 334,
+  "pdf_page": 66,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "a\u25e6\n24\u25e6\nNote: Figure not drawn to scale\nIn the right triangle shown, what is the value\nof a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "24"
+   },
+   {
+    "label": "B",
+    "content": "66"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "76"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-47",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 47,
+  "exam": "December 2024",
+  "page": 334,
+  "pdf_page": 66,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "L\nJ\nK\n90\nNote: Figure not drawn to scale\nIn right triangle JKL, the tangent of \u0338 L is\n3\n4\n. What is the length of JK?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 35 16"
+   },
+   {
+    "label": "B",
+    "content": " 15 4"
+   },
+   {
+    "label": "C",
+    "content": "54"
+   },
+   {
+    "label": "C",
+    "content": "72"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-53",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 53,
+  "exam": "March US 2025",
+  "page": 335,
+  "pdf_page": 67,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "x\ny\ny\nNote: Figure not drawn to scale.\nThe triangle shown has one side with a\nlength of x inches and two sides each with\na length of y inches. The perimeter of the\ntriangle is 47 inches. Which equation repre-\nsents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x + y = 47"
+   },
+   {
+    "label": "B",
+    "content": "x + 2y = 47"
+   },
+   {
+    "label": "C",
+    "content": "2x + y = 47"
+   },
+   {
+    "label": "D",
+    "content": "2x + 2y = 47 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-54",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 54,
+  "exam": "March US 2025",
+  "page": 336,
+  "pdf_page": 68,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, point D is the midpoint\nof segment AB and point E is the midpoint\nof segment BC. If BD = 8 and DE = 14,\nwhat is the length of segment AC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28"
+   },
+   {
+    "label": "B",
+    "content": "26"
+   },
+   {
+    "label": "C",
+    "content": "22"
+   },
+   {
+    "label": "D",
+    "content": "16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-57",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 57,
+  "exam": "May 2025",
+  "page": 336,
+  "pdf_page": 68,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A\nB\nC\nD\nNote: Figure not drawn to scale\nIn the figure, AD and BC intersect at point\nD. The measure of \u0338 ABD is w\u25e6\n, the mea-\nsure of \u0338 CAD is z\u25e6\n, and AD = 178. If\ncos w\u25e6\n=\n9\n41\n, what is the value of tan z\u25e6\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "40/9",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-59",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 59,
+  "exam": "June 2025",
+  "page": 337,
+  "pdf_page": 69,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In isosceles triangle ABC, sides AB and\nAC are congruent. Point D divides side BC\nsuch that the length of BD is 2\n7\nof the length\nof BC. Point E lies on side AB and point\nF lies on side AC such that when segments\nDE and DF are drawn, angle BED is con-\ngruent to angle CFD. If the length of BE\nis 14, what is the length of CF?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28"
+   },
+   {
+    "label": "B",
+    "content": "35"
+   },
+   {
+    "label": "C",
+    "content": "49"
+   },
+   {
+    "label": "D",
+    "content": "98"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-60",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 60,
+  "exam": "June US 2025",
+  "page": 337,
+  "pdf_page": 69,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The perimeter of an obtuse triangle is 27\nmeters. The lengths of two sides of this tri-\nangle are 5 meters and 9 meters. What is\nthe length, in meters, of the third side of\nthis triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "13"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "18"
+   },
+   {
+    "label": "D",
+    "content": "22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-1",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 341,
+  "pdf_page": 73,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "3\nD\nE\nF\n4\nIn triangle DEF, point G (not shown) lies\non DE. If the measure of \u0338 DFG is x\u25e6\n, and\nthe measure of \u0338 GFE is y\u25e6\n, what is the value\nof cos x\u25e6\n\u2212 sin y\u25e6\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "0",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-2",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 2,
+  "exam": "November 2023",
+  "page": 341,
+  "pdf_page": 73,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "x\nheight\nof the\nramp\nlength of the ramp\n\u03b8\nAccording to a US law ramps for use by the\ngeneral public must form an angle with level\nground such that tan\u03b8 < 1\n12\n. If the ramp in\nthe figure conforms to this law and has a\nheight of 22.3 inches, what is the least pos-\nsible value of x, in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "268",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-3",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 3,
+  "exam": "March 2024",
+  "page": 341,
+  "pdf_page": 73,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "x\nheight of\nthe ramp\nlength of the ramp\n\u03b8\nAccording to a US law, ramps for use by\nthe general public must form an angle with\nground such that tan \u03b8 \u2264 1\n12\n. If the ramp\nin the figure above conforms to this law and\nheight of the ramp is 28.2 inches, what is the\nleast possible value of x in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "339",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-4",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 4,
+  "exam": "March 2024",
+  "page": 341,
+  "pdf_page": 73,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "A C\nB\n53\n54\nNote: Figure not drawn to a scale.\nWhat is the value of cos A in the triangle\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 53"
+   },
+   {
+    "label": "B",
+    "content": " 1 54"
+   },
+   {
+    "label": "C",
+    "content": " 53 54"
+   },
+   {
+    "label": "D",
+    "content": " 54 53 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-6",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 6,
+  "exam": "May US 2024",
+  "page": 342,
+  "pdf_page": 74,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In \u25b3ABC, \u0338 B is a right angle and the\nlength of BC is 204 millimeters. If\ncos A =\n3\n5\n,\nwhat is the length, in millimeters, of AB ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "255"
+   },
+   {
+    "label": "B",
+    "content": "204"
+   },
+   {
+    "label": "C",
+    "content": "153"
+   },
+   {
+    "label": "D",
+    "content": "51"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-7",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 7,
+  "exam": "May 2024",
+  "page": 342,
+  "pdf_page": 74,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In right triangle RST, the sum of the mea-\nsures of angle R and angle S is 90 degrees.\nThe value of sin(R) is 3\n\u221a\n17\n13\n. What is the\nvalue of cos(S)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 4 \u221a 17 51"
+   },
+   {
+    "label": "B",
+    "content": " 3 \u221a 17 13"
+   },
+   {
+    "label": "C",
+    "content": " 13 \u221a 17 51"
+   },
+   {
+    "label": "D",
+    "content": " 3 \u221a 17 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-8",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 8,
+  "exam": "August 2024",
+  "page": 342,
+  "pdf_page": 74,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "The measure of angle C is\n5\u03c0\n4\nradians. What\nis the value of cos C?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 \u221a 2 2"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 1 2"
+   },
+   {
+    "label": "C",
+    "content": " \u221a 2 2"
+   },
+   {
+    "label": "D",
+    "content": " \u221a 3 2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-9",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 9,
+  "exam": "August US 2024",
+  "page": 343,
+  "pdf_page": 75,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "Z\nX\nY\n29\n37\nTriangle XY Z shown is a right triangle.\nWhich of the following has the same value\nas sinX?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "cos Y"
+   },
+   {
+    "label": "B",
+    "content": "cos X"
+   },
+   {
+    "label": "C",
+    "content": "tan Y"
+   },
+   {
+    "label": "D",
+    "content": "tan X"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-10",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 10,
+  "exam": "August US 2024",
+  "page": 343,
+  "pdf_page": 75,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "T S\nR\n79\nIn the triangle shown RS =\n\u221a\n157. What is\nthe value of sinR?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "78/79",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-14",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 14,
+  "exam": "October US 2024",
+  "page": 344,
+  "pdf_page": 76,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "X\nZ Y\n23\n28\nTriangle XY Z shown is a right triangle.\nWhich of the following has the same value\nas sinX?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "tan X"
+   },
+   {
+    "label": "B",
+    "content": "tan Y"
+   },
+   {
+    "label": "C",
+    "content": "cos X"
+   },
+   {
+    "label": "D",
+    "content": "cos Y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-15",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 15,
+  "exam": "November 2024",
+  "page": 344,
+  "pdf_page": 76,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "39\n22\nc\nx\u25e6\nIn the right triangle shown, c is a constant.\nThe value of sin x\u25e6\n=\nk\nc\n, where k is a con-\nstant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "22",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-16",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 16,
+  "exam": "November US 2024",
+  "page": 344,
+  "pdf_page": 76,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "35\n28\nc\nx\u25e6\nNote: Figure not drawn to scale\nIn the right triangle shown, c is a constant.\nThe value of sin x\u25e6\n=\nk\nc\n, where k is a con-\nstant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "28",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-17",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 17,
+  "exam": "October US 2024",
+  "page": 345,
+  "pdf_page": 77,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In triangle JKL, cos(K) =\n36\n60\nand angles j\nis a right angle. What is the value of cos L?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "4/5",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-18",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 18,
+  "exam": "December US 2024",
+  "page": 345,
+  "pdf_page": 77,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "40\n39\nx\u25e6\nNote: Figure not drawn to scale\nIn the right triangle shown, the value of\ntan x\u25e6\nis\nc\n39\n. What is the value of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "79"
+   },
+   {
+    "label": "B",
+    "content": "40"
+   },
+   {
+    "label": "C",
+    "content": "39"
+   },
+   {
+    "label": "D",
+    "content": "1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-19",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 19,
+  "exam": "December 2024",
+  "page": 345,
+  "pdf_page": 77,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In the right triangle RST, the sum of the\nmeasures of angle R and S is 90 degrees.\nThe value of sin(R) is\n2\n\u221a\n10\n7\n. What is the\nvalue of cos(S)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 3 \u221a 10 20"
+   },
+   {
+    "label": "B",
+    "content": " 2 \u221a 10 7"
+   },
+   {
+    "label": "C",
+    "content": " 7 \u221a 10 20"
+   },
+   {
+    "label": "D",
+    "content": " 2 \u221a 10 3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-20",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 20,
+  "exam": "March 2025",
+  "page": 345,
+  "pdf_page": 77,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "The measure of angle B is\n3\u03c0\n4\nradians. What\nis the value of sin B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 \u221a 3 2"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 \u221a 2 2"
+   },
+   {
+    "label": "C",
+    "content": " 1 2"
+   },
+   {
+    "label": "D",
+    "content": " \u221a 2 2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-21",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 21,
+  "exam": "March US 2025",
+  "page": 346,
+  "pdf_page": 78,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "x\n\u03b8\nheight\nof the\nramp\nlength of the ramp\nNote: Figure not drawn to scale.\nAccording to a US law, ramps for use by\nthe general public must form an angle with\nlevel ground such that tan \u03b8 < 1\n12\n. If the\nramp in the figure conforms to this law and\nhas a height of 29.1 inches, what is the least\npossible value of x, in inches?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "350",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-trigonometry-23",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 23,
+  "exam": "June US 2025",
+  "page": 346,
+  "pdf_page": 78,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "For two acute angles, \u0338 Q and \u0338 R,\ncos(Q) = sin(R).\nThe measures, in degrees, of \u0338 Q and \u0338 R are\nx + 61 and 4x + 4, respectively. What is the\nvalue of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "19"
+   },
+   {
+    "label": "C",
+    "content": "23"
+   },
+   {
+    "label": "D",
+    "content": "29"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-2",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 348,
+  "pdf_page": 80,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "x2\n\u2212 10x + y2\n\u2212 6y \u2212 47 = 0\nIn the xy-plane, the graph of the given equa-\ntion is a circle. If this circle is inscribed in a\nsquare, what is the perimeter of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18"
+   },
+   {
+    "label": "B",
+    "content": "36"
+   },
+   {
+    "label": "C",
+    "content": "72"
+   },
+   {
+    "label": "D",
+    "content": "188"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-5",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 5,
+  "exam": "August US 2023",
+  "page": 349,
+  "pdf_page": 81,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(2, \u22125) and has a radius of 3. An equation\nof this circle is\nx2\n+ y2\n+ ax + by + c = 0,\nwhere a, b, and c are constants. What is the\nvalue of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "20",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-7",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 7,
+  "exam": "November 2023",
+  "page": 349,
+  "pdf_page": 81,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "x2\n\u2212 4x + y2\n\u2212 12y \u2212 81 = 0\nIn the xy-plane, the graph of the given equa-\ntion is a circle. If this circle is inscribed in a\nsquare, what is the perimeter of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "22"
+   },
+   {
+    "label": "B",
+    "content": "44"
+   },
+   {
+    "label": "C",
+    "content": "88"
+   },
+   {
+    "label": "D",
+    "content": "324"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-8",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 8,
+  "exam": "November 2023",
+  "page": 349,
+  "pdf_page": 81,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(-3,-8). Line k is tangent to this circle at\nthe point (-5,-9). What is the slope of line\nk?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-2"
+   },
+   {
+    "label": "B",
+    "content": "-1 2"
+   },
+   {
+    "label": "C",
+    "content": "1 2"
+   },
+   {
+    "label": "D",
+    "content": "2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-9",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 9,
+  "exam": "December 2023",
+  "page": 350,
+  "pdf_page": 82,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "M N\nP\nPoints M, N, and P lie on the circle shown.\nOn this circle, minor arc MN has a length\nof 39 centimeters and major arc MPN has\na length of 195 centimeters. What is the\ncircumference, in centimeters, of the circle\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "39"
+   },
+   {
+    "label": "B",
+    "content": "156"
+   },
+   {
+    "label": "C",
+    "content": "195"
+   },
+   {
+    "label": "D",
+    "content": "234"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-11",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 11,
+  "exam": "March 2024",
+  "page": 350,
+  "pdf_page": 82,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "x2\n\u2212 4x + y2\n\u2212 12y \u2212 81 = 0\nIn the xy-plane, the graph of the given equa-\ntion is a circle. If this circle is inscribed in a\nsquare, what is the perimeter of the square?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "22"
+   },
+   {
+    "label": "B",
+    "content": "44"
+   },
+   {
+    "label": "C",
+    "content": "88"
+   },
+   {
+    "label": "D",
+    "content": "324"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-15",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 15,
+  "exam": "May 2024",
+  "page": 351,
+  "pdf_page": 83,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Point N lies on a unit circle in the xy-\nplane and has coordinates (1, 0). Point O is\nthe center of the circle and has coordinates\n(0, 0). Point M also lies on the unit cir-\ncle, and the measure of angle NOM is 272\u03c0\n3\nradians. If the coordinates of point M are\n(a, b), where a and b are constants, what is\nthe value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 2"
+   },
+   {
+    "label": "B",
+    "content": " \u221a 3 2"
+   },
+   {
+    "label": "C",
+    "content": "\u2212 1 2"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 \u221a 3 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-16",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 16,
+  "exam": "May 2024",
+  "page": 351,
+  "pdf_page": 83,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(\u22122, \u22124). Line k is tangent to this circle\nat the point (\u22125, \u22125). What is the slope of\nline k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22123"
+   },
+   {
+    "label": "B",
+    "content": "\u22121 3"
+   },
+   {
+    "label": "C",
+    "content": "1 3"
+   },
+   {
+    "label": "D",
+    "content": "3 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-17",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 17,
+  "exam": "June 2024",
+  "page": 352,
+  "pdf_page": 84,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "x2\n\u2212 6x + y2\n\u2212 12y \u2212 36 = 0\nIn the xy\u2212plane, the graph of the given\nequation is a circle. If this circle is inscribed\nin a square, what is the perimeter of the\nsquare?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18"
+   },
+   {
+    "label": "B",
+    "content": "36"
+   },
+   {
+    "label": "C",
+    "content": "72"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-22",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 22,
+  "exam": "August US 2024",
+  "page": 353,
+  "pdf_page": 85,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has a diameter with\nendpoints (a,11) and (a, d), where a and d\nare constants. An equation of this circle is\n(x \u2212 a)2\n+ (y \u2212 17)2\n= r2\n,\nwhere r is a positive constant. What is the\nvalue of d?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "17"
+   },
+   {
+    "label": "D",
+    "content": "23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-24",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 24,
+  "exam": "October US 2024",
+  "page": 353,
+  "pdf_page": 85,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "(x + 3)2\n+ (y \u2212 18)2\n= 169\nThe graph of the given equation is a circle\nin the xy-plane. The point (a, b) lies on the\ncircle. Which of the following is a possible\nvalue for a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-17"
+   },
+   {
+    "label": "B",
+    "content": "-12"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "18 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-25",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 25,
+  "exam": "October 2024",
+  "page": 354,
+  "pdf_page": 86,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(16, 17) and has a radius of 7k. Which equa-\ntion represents this circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(x \u2212 16)2 + (y \u2212 17)2 = 49k"
+   },
+   {
+    "label": "B",
+    "content": "(x \u2212 16)2 + (y \u2212 17)2 = 49k2"
+   },
+   {
+    "label": "C",
+    "content": "(x \u2212 16)2 + (y \u2212 17)2 = 7k"
+   },
+   {
+    "label": "D",
+    "content": "(x \u2212 16)2 + (y \u2212 17)2 = 7k2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-26",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 26,
+  "exam": "November 2024",
+  "page": 354,
+  "pdf_page": 86,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle has center O, and a points A and\nB lie on the circle. The measure of arc AB\nis 20\u25e6\n, and the length of this arc is 4 inches.\nWhat is the circumference, in inches, of the\ncircle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "16"
+   },
+   {
+    "label": "D",
+    "content": "72"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-29",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 29,
+  "exam": "November US 2024",
+  "page": 355,
+  "pdf_page": 87,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(3, 7). Line t is tangent to this circle at the\npoint (a, \u22124), where a is a constant. The\nslope of line t is 5\n4\n. What is the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 43 4"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 29 5"
+   },
+   {
+    "label": "C",
+    "content": " 59 5"
+   },
+   {
+    "label": "D",
+    "content": " 67 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-31",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 31,
+  "exam": "December US 2024",
+  "page": 355,
+  "pdf_page": 87,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "c(r) =\n2\n5\n(2\u03c0r)\nThe function c gives the partial length, in\ncentimeters (cm), of the circumference of a\ncircle with a radius that measures r cm. Ac-\ncording to the function, for each increase 18\ncm in the length of radius, this partial length\nof circumference increases by k\u03c0 cm. What\nis the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "14.4",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-34",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 34,
+  "exam": "December 2024",
+  "page": 356,
+  "pdf_page": 88,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The circle K has a radius of 2 millimeters\n(mm). Circle L has an area of 144\u03c0 mm2\n.\nWhat is the total area, in mm2\n, of circle K\nand L?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "14\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "28\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "56\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "148\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-36",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 36,
+  "exam": "March US 2025",
+  "page": 356,
+  "pdf_page": 88,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Circle T has a radius of 35 millimeters (mm).\nWhat is the area of circle T, in mm2\n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "35\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "70\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "140\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "1,225\u03c0 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-38",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 38,
+  "exam": "March US 2025",
+  "page": 357,
+  "pdf_page": 89,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(14, 19) and has a radius of 7k. Which equa-\ntion represents this circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(x \u2212 14)2 + (y \u2212 19)2 = 49k"
+   },
+   {
+    "label": "B",
+    "content": "(x \u2212 14)2 + (y \u2212 19)2 = 49k2"
+   },
+   {
+    "label": "C",
+    "content": "(x \u2212 14)2 + (y \u2212 19)2 = 7k"
+   },
+   {
+    "label": "D",
+    "content": "(x \u2212 14)2 + (y \u2212 19)2 = 7k2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-39",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 39,
+  "exam": "May 2025",
+  "page": 357,
+  "pdf_page": 89,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has center (28, 5)\nand y-intercepts (0, \u221216) and (0, 26). What\nis the radius of this circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "35"
+   },
+   {
+    "label": "B",
+    "content": "26"
+   },
+   {
+    "label": "C",
+    "content": "21"
+   },
+   {
+    "label": "D",
+    "content": "16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-40",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 40,
+  "exam": "May 2025",
+  "page": 357,
+  "pdf_page": 89,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n\u22122\n2\n4\n6\n8\n10\n12\n14\nx\ny\nCircle A shown is defined by the equation\nx2\n+ (y \u2212 5)2\n= 7.\nCircle B (not shown) has the same radius\nbut is translated 91 units to the right. If the\nequation of circle B is (x\u2212h)2\n+(y\u2212k)2\n= a,\nwhere h, k, and a are constants, what is the\nvalue of 4a?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "28",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-41",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 41,
+  "exam": "May 2025",
+  "page": 358,
+  "pdf_page": 90,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with coor-\ndinates (1, 0) and point B with coordinates\n(\n5\n\u221a\n34\n, \u2212\n3\n\u221a\n34\n). If the measure of angle AOB\nis p radians, what is the value of\ncosp\nsinp\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-5/3",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-42",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 42,
+  "exam": "June 2025",
+  "page": 358,
+  "pdf_page": 90,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with coor-\ndinates (1, 0) and point B with coordinates\n\u0012\n\u2212\n5\n\u221a\n89\n,\n8\n\u221a\n89\n\u0013\n. If the measure of angle\nAOB is w radians, what is the value of\ntan w?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-8/5",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-43",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 43,
+  "exam": "June US 2025",
+  "page": 358,
+  "pdf_page": 90,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle has center Q, and points A and\nB lie on the circle. The measure of arc AB\nis 60\u25e6\n, and the length of this arc is 4 inches.\nWhat is the circumference, in inches, of the\ncircle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "16"
+   },
+   {
+    "label": "D",
+    "content": "24"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-46",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 46,
+  "exam": "June US 2025",
+  "page": 359,
+  "pdf_page": 91,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Circle N has a radius of 6 millimeters (mm).\nCircle M has an area of 121\u03c0 mm2\n. What is\nthe total area, in mm2\n, of circles N and M?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "17\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "133\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "145\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "157\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-circles-47",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 47,
+  "exam": "June US 2025",
+  "page": 359,
+  "pdf_page": 91,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle in the xy-plane has its center at\n(\u22127, 3) and has a radius of 9. An equation\nof this circle is\nx2\n+ y2\n+ ax + by + c = 0,\nwhere a, b, and c are constants. What is the\nvalue of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-23",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-1",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 1,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 9,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n7x(x + 4)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7x2 + 4"
+   },
+   {
+    "label": "B",
+    "content": "7x2 + 28x"
+   },
+   {
+    "label": "C",
+    "content": "8x2 + 4"
+   },
+   {
+    "label": "D",
+    "content": "8x2 + 11x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-2",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 2,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 9,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "65 =\n2K\nv2\nFor an object with a mass of 65 kilograms,\nthe given equation relates the kinetic en-\nergy K, in joules, of the object to the ob-\nject\u2019s speed v, in meters per second, where\nK and v are positive. Which equation cor-\nrectly expresses this object\u2019s speed, in me-\nters per second, in terms of the object\u2019s ki-\nnetic energy, in joules?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "v = 2K 652"
+   },
+   {
+    "label": "B",
+    "content": "v = 652 2K"
+   },
+   {
+    "label": "C",
+    "content": "v = q 65 2k"
+   },
+   {
+    "label": "D",
+    "content": "v = q 2K 65"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-5",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 9,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n(8nr2 + 2nr) + (4n2r + 3nr)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "12n2r2 + 5nr"
+   },
+   {
+    "label": "B",
+    "content": "12n3r3 + 5n2r2"
+   },
+   {
+    "label": "C",
+    "content": "32n3r3 + 6n2r2"
+   },
+   {
+    "label": "D",
+    "content": "8nr2 + 4n2r + 5nr"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-7",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 7,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 10,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n6x(x + 7)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6x2 + 7x"
+   },
+   {
+    "label": "B",
+    "content": "6x2 + 42x"
+   },
+   {
+    "label": "C",
+    "content": "7x2 + 7x"
+   },
+   {
+    "label": "D",
+    "content": "6x2 + 13x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-8",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 8,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 10,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "b \u2212 38 =\nx\ny\nThe given equation relates the positive\nnumbers b, x, and y. Which equation cor-\nrectly expresses x in terms of b and y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = by \u2212 38"
+   },
+   {
+    "label": "B",
+    "content": "x = b\u221238 y"
+   },
+   {
+    "label": "C",
+    "content": "x = by \u2212 38y"
+   },
+   {
+    "label": "D",
+    "content": "x = by\u221238 y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-9",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 9,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 10,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression represents the product\nof (x\u22129y8z4) and (x5z4 + y3z\u22127)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x\u22124y8z8 + y3z\u22127"
+   },
+   {
+    "label": "B",
+    "content": "4\u22124z8 + x\u22129z\u22123"
+   },
+   {
+    "label": "C",
+    "content": "x\u22124y8z8 + x\u22129y11z\u22123"
+   },
+   {
+    "label": "D",
+    "content": "x\u22124z8 + y11z\u22123"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-12",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 12,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 10,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n(3x3 \u2212 8x + 5) \u2212 (4x6 + 9x \u2212 2)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22124x6 + 3x3 \u2212 17x + 7"
+   },
+   {
+    "label": "B",
+    "content": "\u2212x9 \u2212 17x \u2212 7"
+   },
+   {
+    "label": "C",
+    "content": "\u2212x9 \u2212 x + 3"
+   },
+   {
+    "label": "D",
+    "content": "\u22124x6 + 3x3 + x + 3 10 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-13",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 13,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 11,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\nv4 \u2212 590v3?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "v3(v + 590)"
+   },
+   {
+    "label": "B",
+    "content": "(c2 + 59)(v2 \u2212 10)"
+   },
+   {
+    "label": "C",
+    "content": "(v2 \u2212 59)(v2 \u2212 10)"
+   },
+   {
+    "label": "D",
+    "content": "v3(v \u2212 590)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-14",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 14,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 11,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "b \u2212 19 =\nx\ny\nThe given equation relates the positive\nnumbers b, x, and y. Which equation cor-\nrectly expresses x in terms of b and y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = (b\u221219) y"
+   },
+   {
+    "label": "B",
+    "content": "x = by \u2212 19y"
+   },
+   {
+    "label": "C",
+    "content": "x = (by\u221219) y"
+   },
+   {
+    "label": "D",
+    "content": "x = by \u2212 19"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-16",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 16,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 11,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression represents the product\nof (x\u22129y6z5) and (x4z5 + y8z\u22127)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x\u22125y6z10 + y8z\u22127"
+   },
+   {
+    "label": "B",
+    "content": "x\u22125y6z10 + x\u22129y14z\u22122"
+   },
+   {
+    "label": "C",
+    "content": "x\u22125z10 + x\u22129z\u22122"
+   },
+   {
+    "label": "D",
+    "content": "x\u22125z10 + y14z\u22122"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-17",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 17,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 11,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "18qrt \u2212 2qrs + 10rst = 0\nIn the given equation, q, r, s, and t are posi-\ntive, and\nq\nt is greater than 5. Which expres-\nsion is equivalent to s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u22129qt q \u2212 5t"
+   },
+   {
+    "label": "B",
+    "content": " 9qt q \u2212 5t"
+   },
+   {
+    "label": "C",
+    "content": "18qrt"
+   },
+   {
+    "label": "D",
+    "content": " 2qt q \u2212 5t"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-18",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 18,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 11,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "If 5c = 15, what is the value of 5c \u2212 8?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "67"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "23 11 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-20",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 20,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 12,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "5a =\n4b2\na\n\u2212 20a\nThe given equation relates the positive\nvariables a and b. Which equation cor-\nrectly expresses a in terms of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = 4b 25"
+   },
+   {
+    "label": "B",
+    "content": "a = 4b2 25"
+   },
+   {
+    "label": "C",
+    "content": "a = 2b 5"
+   },
+   {
+    "label": "D",
+    "content": "a = 2b2 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-21",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 21,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 12,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n4x(5xy)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "20x2y"
+   },
+   {
+    "label": "B",
+    "content": "4x2y"
+   },
+   {
+    "label": "C",
+    "content": "20x2y2"
+   },
+   {
+    "label": "D",
+    "content": "5x2y2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-22",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 22,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 12,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n72t2s3 \u2212 48t3s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4t2s(18ts \u2212 12s)"
+   },
+   {
+    "label": "B",
+    "content": "4t2s(18s2 \u2212 12t)"
+   },
+   {
+    "label": "C",
+    "content": "4ts(18s2 \u2212 12ts)"
+   },
+   {
+    "label": "D",
+    "content": "4ts(18t2s2 \u2212 12t)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-23",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 23,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 12,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "b2\n+ 4c = 7d\nThe given equation relates the real num-\nbers b, c, and d, where d > 4\n7c. Which\nequation correctly expresses b in terms of\nc and d?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "b = 7d + 4c 2"
+   },
+   {
+    "label": "B",
+    "content": "b = 7d \u2212 4c 2"
+   },
+   {
+    "label": "C",
+    "content": "b = \u00b1 \u221a 7d + 4c"
+   },
+   {
+    "label": "D",
+    "content": "b = \u00b1 \u221a 7d \u2212 4c"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-expressions-24",
+  "book": "ma3",
+  "topic": "Expressions",
+  "num": 24,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 12,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "f (x) = 2x + 3\ng(x) = 7x \u2212 2\nh(x) = 5x + 6\nThe functions f, g, and h are defined as\nshown. If f (x) \u00b7 g(x) \u2212 h(x) = ax2 + bx +\nc, where a, b, and c are constants, what is\nthe value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22125"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "22 12 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-1",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 1,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 14,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If x\u221217\n18 = x\u221217\n6 , what is the value of\nx + 17 ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "17"
+   },
+   {
+    "label": "D",
+    "content": "34"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-3",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 14,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 4 +\n5(7 \u2212 x)\n2\n=\n8(7 \u2212 x)\n3\n, what is the\nvalue of 7 \u2212 x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "24",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-6",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 6,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 14,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If |16 \u2212 2x| = 58, which of the following is\na value of 8 \u2212 x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "29"
+   },
+   {
+    "label": "D",
+    "content": "42"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-8",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 8,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 14,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "|a + 10| = 21\nWhat is a possible solution to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-21"
+   },
+   {
+    "label": "B",
+    "content": "-10"
+   },
+   {
+    "label": "C",
+    "content": "0"
+   },
+   {
+    "label": "D",
+    "content": "11 14 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-11",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 11,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 15,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "1.5c + 3d = 42\nThe given equation describes the relation-\nship between the number of cats, c, and the\nnumberof dogs, d, that can be cared for at\na pet care business during a week. If the\nbusiness cares for 14 dogs during a week,\nhow many cats can it care for during this\nweek?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "42"
+   },
+   {
+    "label": "C",
+    "content": "21"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-14",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 14,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 15,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "g = 14 \u2212\nx\n23\nThe equation shown gives the estimated\namount of gas g, in gallons, that remains\nin the gas tank of a car after being driven\nx miles, where 0 \u2264 x \u2264 322. What is the\nestimated amount of gas, in gallons, that\nremains in the gas tank of the car when\nx = 230?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "14"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "4 15 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-19",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 19,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 16,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "g = 13 \u2212\nx\n29\nThe equation shown gives the estimated\namount of gas g, in gallons, that remains\nin the gas tank of a car after being driven\nx miles, where 0 \u2264 x \u2264 377. What is the\nestimated amount of gas, in gallons, that\nremains in the gas tank of the car when\nx = 290?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "13"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-20",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 20,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 16,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "What is the slope of the graph of y = 7\n12 x\nin the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "7 12"
+   },
+   {
+    "label": "C",
+    "content": "\u2212 7 12"
+   },
+   {
+    "label": "D",
+    "content": "12 7 16 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-26",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 26,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 17,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "1.5c + 3d = 108\nThe given equation describes the relation-\nship between the number of cats, c, and the\nnumber of dogs, d, that can be cared for at\na pet care business during a week. If the\nbusiness cares for 36 dogs during a week,\nhow many cats can it care for during this\nweek?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "54"
+   },
+   {
+    "label": "C",
+    "content": "0"
+   },
+   {
+    "label": "D",
+    "content": "108"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-27",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 27,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 17,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "6(t + 7) \u2212 8(t + 7) = 38\nWhat value of t is the solution to the given\nequation?\n17",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-26",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-31",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 31,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 18,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A chemist combines 25 grams of com-\npound A, 35 grams of compound B, and x\ngrams of compound C. The resulting mix-\nture has a mass of 125 grams. Find the\nvalue of x.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "25"
+   },
+   {
+    "label": "B",
+    "content": "65"
+   },
+   {
+    "label": "C",
+    "content": "35"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-32",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 32,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 18,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Carmen needs at least 100 signatures to\nsubmit a petition. If Carmen already has\n51 signatures, what is the minimum num-\nber of additional signatures Carmen needs\nto submit the petition?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "41"
+   },
+   {
+    "label": "B",
+    "content": "151"
+   },
+   {
+    "label": "C",
+    "content": "49"
+   },
+   {
+    "label": "D",
+    "content": "51"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-33",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 33,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 18,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "There are a total of 340 seats in a school\nauditorium. During an assembly, students\noccupied 50% of the seats in the audito-\nrium. How many seats did the students\noccupy during this assembly?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "290"
+   },
+   {
+    "label": "B",
+    "content": "25"
+   },
+   {
+    "label": "C",
+    "content": "170"
+   },
+   {
+    "label": "D",
+    "content": "50"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-35",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 35,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 19,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 5c = 15, what is the value of 5c \u2212 8?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "67"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-37",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 37,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 19,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "The function f is defined by f (x) = x\n5 + 9.\nFor what value of x does f (x) = 13?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "20"
+   },
+   {
+    "label": "B",
+    "content": "-32"
+   },
+   {
+    "label": "C",
+    "content": "-13"
+   },
+   {
+    "label": "D",
+    "content": "-22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-40",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 40,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 19,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 9x + 4 = 67, what is the value of\n90x + 40?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "70"
+   },
+   {
+    "label": "C",
+    "content": "130"
+   },
+   {
+    "label": "D",
+    "content": "670"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-42",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 42,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 19,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "During hibernation, American black bears\ndo not eat or replenish calories. A cer-\ntain black bear weighed 293 pounds when\nentering hibernation and lost weight at a\nmean rate of 0.9 pounds per day. At this\nrate, how many days after entering hiber-\nnation would the black bear weigh 230\npounds?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "57"
+   },
+   {
+    "label": "B",
+    "content": "63"
+   },
+   {
+    "label": "C",
+    "content": "70"
+   },
+   {
+    "label": "D",
+    "content": "207 19 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-43",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 43,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 20,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x\n5\n+\ny\n9\n=\n47\n45\nAn engineer connects resistors in series,\nwhere the resistors in the series have a to-\ntal resistance of 47\n45 ohms. In this series,\nthere are x resistors of type A, which each\nhave a resistance of a ohms, and y resis-\ntors of type B, which each have a resistance\nof b ohms. The given equation represents\nthis situation. According to this equation,\nwhat is the positive difference between the\nvalue of a and the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "47"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "47 45"
+   },
+   {
+    "label": "D",
+    "content": "4 45"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-44",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 44,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 20,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "b(6 \u2212 x) = 5x + 12\nIn the equation above, b is a constant. The\nequation has exactly one solution for x.\nWhich of the following CANNOT be a\nvalue of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-5"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-equations-48",
+  "book": "ma3",
+  "topic": "Linear Equations",
+  "num": 48,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 21,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 2x = 8, what is the value of 10x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9"
+   },
+   {
+    "label": "B",
+    "content": "13"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "40 21 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-4",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 24,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x2\n+ y + 3 = 3\n8x + 16 \u2212 y = 0\nThe solution to the given system of equa-\ntions is (x, y). What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-16"
+   },
+   {
+    "label": "B",
+    "content": "-4"
+   },
+   {
+    "label": "C",
+    "content": "2"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-6",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 6,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 24,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "y = (x \u2212 6)(x + 5)\ny = 11x \u2212 66\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 2y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "-5"
+   },
+   {
+    "label": "C",
+    "content": "-6"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ }
+]

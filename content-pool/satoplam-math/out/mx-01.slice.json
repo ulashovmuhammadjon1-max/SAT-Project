@@ -1,0 +1,2914 @@
+[
+ {
+  "id": "satmath-ma2-mean-median-mode-range-7",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 7,
+  "exam": "June 2023",
+  "page": 270,
+  "pdf_page": 2,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table summarizes the UV index value\nrecorded by a research assistant at noon\neach day for 49 days.\nUV index Number of days\n1 9\n2 15\n3 12\n4 13\nAccordinhg to the table, a UV index value\nof 1 was recorded on how many days?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "40"
+   },
+   {
+    "label": "D",
+    "content": "49 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-9",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 9,
+  "exam": "March 2024",
+  "page": 271,
+  "pdf_page": 3,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The bar graph shows the number of trees\nplanted for 4 separate plots of land on a\ntree farm.\nP\nl\no\nt\n1\nP\nl\no\nt\n2\nP\nl\no\nt\n3\nP\nl\no\nt\n4\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\nTrees\nplanted\nWhat is the maximum number of trees\nplanted on one of these 4 plots of land?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "100"
+   },
+   {
+    "label": "B",
+    "content": "95"
+   },
+   {
+    "label": "C",
+    "content": "85"
+   },
+   {
+    "label": "D",
+    "content": "78"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-12",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 12,
+  "exam": "August US 2023",
+  "page": 272,
+  "pdf_page": 4,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "10 11 12 13 14 15 16 17\nThe dot plot shown gives the distribution of\nvalues in a data set. What is the minimum\nvalue in the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-13",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 13,
+  "exam": "March 2024",
+  "page": 272,
+  "pdf_page": 4,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the frequency of values\nin a data set.\nValue Frequency\n11 9\n18 1\n25 9\n32 15\nWhat is the minimum value of the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "18"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-15",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 15,
+  "exam": "May 2024",
+  "page": 272,
+  "pdf_page": 4,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the frequency of values\nin a data set.\nValue Frequency\n13 8\n20 1\n27 8\n34 6\nWhat is the minimum value of the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "20 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "13",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-20",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 20,
+  "exam": "May 2024",
+  "page": 274,
+  "pdf_page": 6,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the frequency of each value\nin a data set.\nValue Frequency\n120 3\n130 8\n140 18\n150 8\n160 1\nWhat is the minimum value of the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "120"
+   },
+   {
+    "label": "D",
+    "content": "160"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-21",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 21,
+  "exam": "December US 2024",
+  "page": 274,
+  "pdf_page": 6,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "1, 4, 7, 10, 33\nWhat is the mean of the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "11"
+   },
+   {
+    "label": "C",
+    "content": "17"
+   },
+   {
+    "label": "D",
+    "content": "33"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-24",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 24,
+  "exam": "October 2024",
+  "page": 275,
+  "pdf_page": 7,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Frequency\nScore\nTeam A\n20 25 30 35 40 45 50\n10\n20\n30\n40\n50\nFrequency Score\nTeam B\n20 25 30 35 40 45 50\n10\n20\n30\n40\n50\nThe histograms summarize the distributions\nof scores for team A and team B. Which\nstatement best compares the standard de-\nviations of scores for these teams?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The standard deviation of scores for team A is less than the standard de- viation of scores for team B."
+   },
+   {
+    "label": "B",
+    "content": "The standard deviation of scores for team A is greater than the standard de- viation of scores for team B."
+   },
+   {
+    "label": "C",
+    "content": "The standard deviation of scores for team A is equal to the standard devia- tion of scores for team B."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the standard deviations. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-25",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 25,
+  "exam": "October US 2024",
+  "page": 276,
+  "pdf_page": 8,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the distribution of heights\nof, centimeters, of 25 objects.\nHeight Frequency\n0 to 100 8\n101 to 200 6\n201 to 300 5\n301 to 400 4\n401 to 500 2\nWhich of the following could be the median\nheight of these objects?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "355"
+   },
+   {
+    "label": "B",
+    "content": "255"
+   },
+   {
+    "label": "C",
+    "content": "155"
+   },
+   {
+    "label": "D",
+    "content": "55"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-28",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 28,
+  "exam": "November US 2024",
+  "page": 277,
+  "pdf_page": 9,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The bar graph shows the frequency\nof each data value in a data set.\n1 2 3 4 5 6\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\nData value\nFrequency\nWhat is the frequency of data value 2 in this\ndata set?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "6",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-30",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 30,
+  "exam": "October US 2024",
+  "page": 277,
+  "pdf_page": 9,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Number of\nqueen ants\nNumber of\ncolonies\n1 11\n2 9\n3 7\n4 6\n5 6\nScientists collected acorns that each housed\na colony of a particular species and then an-\nalyzed each colony\u2019s structure. For these\ncolonies, the table summarizes the number\nof queen ants per colony. For these colonies,\nwhat is the median number of queen ants\nper colony?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-34",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 34,
+  "exam": "December 2024",
+  "page": 279,
+  "pdf_page": 11,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Task\nTime\n(minutes)\nA 8\nB 6\nC 14\nD 11\nE 11\nThe table shows the amount of time it took a\nparticipant in a study to complete each of 5\ntasks. What was the mean time, in minutes,\nfor this participant to complete a task?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "10"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "9.5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-35",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 35,
+  "exam": "March 2025",
+  "page": 279,
+  "pdf_page": 11,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the frequency of values\nin a data set.\nValue Frequency\n20 6\n26 1\n32 6\n38 3\nWhat is the minimum value of the data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "26"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-38",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 38,
+  "exam": "March US 2025",
+  "page": 280,
+  "pdf_page": 12,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "28, 28, 29, 30, 32, 33, 37\nWhat is the mean of the data set shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28"
+   },
+   {
+    "label": "B",
+    "content": "30"
+   },
+   {
+    "label": "C",
+    "content": "31"
+   },
+   {
+    "label": "D",
+    "content": "37"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-39",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 39,
+  "exam": "May 2025",
+  "page": 280,
+  "pdf_page": 12,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The weight of each object in two groups, A\nand B, was recorded. The histograms rep-\nresent the distributions of weight, in grams,\nfor the objects in groups A and B.\nNumber\nof\nobjects\nWeight (grams)\nGroup A\n1 2 3 4 5\n2\n4\n6\n8\n10\n12\nNumber\nof\nobjects\nWeight (grams)\nGroup B\n9 10 11 12 13 14\n2\n4\n6\n8\n10\n12\nThe mean weight of the objects in group A\nis equal to 2.1, and the mean weight of the\nobjects in group B is equal to 11.1. Which\nof the following statements about the stan-\ndard deviations of weight for the objects in\nthese two groups is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The standard deviation of weight for the objects in group A is less than the standard deviation of weight for the ob- jects in group B."
+   },
+   {
+    "label": "B",
+    "content": "The standard deviation of weight for the objects in group A is equal to the standard deviation of weight for the ob- jects in group B."
+   },
+   {
+    "label": "C",
+    "content": "The standard deviation of weight for the objects in group A is greater than the standard deviation of weight for the objects in group B."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the standard deviations of weight for the objects in these two groups."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-41",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 41,
+  "exam": "May 2025",
+  "page": 281,
+  "pdf_page": 13,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "15 20 25 30 35 40 45 50\n0\n10\n20\n30\n40\n50\nScore\nFrequency Team A\n15 20 25 30 35 40 45 50\n0\n10\n20\n30\n40\n50\nScore\nFrequency\nTeam B\nThe histogram summarize the distributions\nof scores for team A and team B. Which\nstatement best compares the standard de-\nviations of scores for these teams?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The standard deviation of scores for team A is less than the standard de- viation of scores for team B."
+   },
+   {
+    "label": "B",
+    "content": "The standard deviation of scores for team A is greater than the standard de- viation of scores for team B."
+   },
+   {
+    "label": "C",
+    "content": "The standard deviation of scores for team A is equal to the standard devia- tion of scores for team B."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the standard deviations."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-43",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 43,
+  "exam": "June US 2025",
+  "page": 282,
+  "pdf_page": 14,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Task Time (minutes)\nA 8\nB 5\nC 12\nD 10\nE 10\nThe table shows the amount of time it took a\nparticipant in a study to complete each of 5\ntasks. What was the mean time, in minutes,\nfor this participant to complete a task?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-44",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 44,
+  "exam": "June US 2025",
+  "page": 282,
+  "pdf_page": 14,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A list of 10 data values is shown.\n10, 14, 22, 6, 24, 26, 14, 8, 8, 8\nWhat is the mean of these data?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "14"
+   },
+   {
+    "label": "D",
+    "content": "20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-46",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 46,
+  "exam": "March 2024",
+  "page": 283,
+  "pdf_page": 15,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The bar graph shows the number of trees planted for 4 separate plots of and on a tree farm.\nWhat is the maximum number of trees on one of these plots of land?\nPlot 1 Plot 2 Plot 3 Plot 4\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\nTrees\nplanted",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "90",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-47",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 47,
+  "exam": "August 2024",
+  "page": 283,
+  "pdf_page": 15,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Values\nData set A\nfrequency\nData set B\nfrequency\nData set C\nfrequency\nData set D\nfrequency\n40 0 0 8 8\n43 2 3 3 4\n46 4 3 3 2\n49 8 8 0 0\nThe table shows the frequencies of the data values for four data sets. Which data set has the\ngreatest mean?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Data set A B) Data set B C) Data set C D) Data set D "
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-1",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 287,
+  "pdf_page": 19,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y.\n1 2 3 4\n5\n10\n15\n20\n25\n30\nx\ny\nWhich of the following equations is the\nmost appropriate linear model for the data\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = \u22126 + 28x"
+   },
+   {
+    "label": "B",
+    "content": "y = 6 \u2212 28x"
+   },
+   {
+    "label": "C",
+    "content": "y = 28 + 6x"
+   },
+   {
+    "label": "D",
+    "content": "y = 28 \u2212 6x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-2",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 2,
+  "exam": "August US 2023",
+  "page": 287,
+  "pdf_page": 19,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relation-\nship between two variables, x and\ny. A line of best fit is also shown.\n2 4 6 8 10 12 14 16 18 20\n2\n4\n6\n8\n10\n12\n14\n16\nO\nx\ny\nWhat data point has an actual y- value that\nis 2 less than the y-value predicted by the\nline of best fit for corresponding x-value?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(2,12)"
+   },
+   {
+    "label": "B",
+    "content": "(6,14)"
+   },
+   {
+    "label": "C",
+    "content": "(10,12)"
+   },
+   {
+    "label": "D",
+    "content": "(18,4) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-3",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 3,
+  "exam": "August US 2023",
+  "page": 288,
+  "pdf_page": 20,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "2004 2006 2008 2010\n2\n4\n6\n8\nTeam A\nTeam B\nYear\nNumber\nof\ngames\nwon\nThe line graphs show the number of games\nwon by two football teams from 2004 to\n2010. For how many of the years shown was\nthe number of games won by Team A greater\nthan the number of games won by Team B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-4",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 4,
+  "exam": "March 2024",
+  "page": 288,
+  "pdf_page": 20,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of best\nfit is also shown.\n2 4 6 8 10\n200\n400\n600\n800\nx\ny\nWhich of the following best represents the\nline of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 77 + 0.01x"
+   },
+   {
+    "label": "B",
+    "content": "y = 77 + 0.79x"
+   },
+   {
+    "label": "C",
+    "content": "y = 77 + 68.9x"
+   },
+   {
+    "label": "D",
+    "content": "y = 77 + 78.9x "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-5",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 5,
+  "exam": "March 2024",
+  "page": 289,
+  "pdf_page": 21,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of best\nfit is also shown.\nO 1 2 3 4 5 6 7 8\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nWhich of the following equations best rep-\nresents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 3.5 + 1.8x"
+   },
+   {
+    "label": "B",
+    "content": "y = \u22122.4 + 1.55x"
+   },
+   {
+    "label": "C",
+    "content": "y = 3.4 + 1.55x"
+   },
+   {
+    "label": "D",
+    "content": "y = 2.4 \u2212 1.5x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-6",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 6,
+  "exam": "March 2024",
+  "page": 289,
+  "pdf_page": 21,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "\u22125\u22124\u22123\u22122\u22121 1 2 3 4 5\n5\n10\n15\n20\n25\n30\nx\ny\nThe scatterplot shows the relationship be-\ntween two variables, x and y. Which of the\nequations is the most appropriate model for\nthe data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = x2 \u2212 8"
+   },
+   {
+    "label": "B",
+    "content": "y = x2 + 8"
+   },
+   {
+    "label": "C",
+    "content": "y = (x \u2212 8)2"
+   },
+   {
+    "label": "D",
+    "content": "y = (x + 8)2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-7",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 7,
+  "exam": "May US 2024",
+  "page": 290,
+  "pdf_page": 22,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6 7 8\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nWhich of the following equations best rep-\nresents the of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 3.3 + 1.6x"
+   },
+   {
+    "label": "B",
+    "content": "y = 3.3 \u2212 1.6"
+   },
+   {
+    "label": "C",
+    "content": "y = \u22123.3 + 1.6x"
+   },
+   {
+    "label": "D",
+    "content": "y = \u22123.3 \u2212 1.6x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-8",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 8,
+  "exam": "October 2024",
+  "page": 290,
+  "pdf_page": 22,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "2 4 6 8 10 12 14 16\n2\n4\n6\n8\n10\n12\n14\n16\nO x\ny\nWhich of the following is closest to the slope\nof this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22123.3"
+   },
+   {
+    "label": "B",
+    "content": "\u22121.1"
+   },
+   {
+    "label": "C",
+    "content": "1.1"
+   },
+   {
+    "label": "D",
+    "content": "3.3 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-9",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 9,
+  "exam": "June 2024",
+  "page": 291,
+  "pdf_page": 23,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y.\n1 2 3 4 5 6 7 8 9 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nx\ny\nWhich of the following equations is the\nmost appropriate linear model for the data\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 8.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 \u2212 8.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = 8.7 + 0.8x"
+   },
+   {
+    "label": "D",
+    "content": "y = 8.7 \u2212 0.8x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-10",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 10,
+  "exam": "August 2024",
+  "page": 291,
+  "pdf_page": 23,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of best\nfit is also shown.\n\u221214\u221212\u221210 \u22128 \u22126 \u22124 \u22122\n2\n4\n6\n8\n10\n12\n14\n16\n18\n20\nx\ny\nWhich of the following equations best rep-\nresents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = x \u2212 19.9"
+   },
+   {
+    "label": "B",
+    "content": "y = x \u2212 19.9"
+   },
+   {
+    "label": "C",
+    "content": "y = x \u2212 5.7"
+   },
+   {
+    "label": "D",
+    "content": "y = \u2212x+5.7 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-11",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 11,
+  "exam": "June 2024",
+  "page": 292,
+  "pdf_page": 24,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y.\n1 2 3\n3 4 5 6 7 8 9 10\n1\n2\n3\n3\n4\n5\n6\n7\n8\n9\n10\nx\ny\nWhich of the following equations is the\nmost appropriate linear model for the data\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 8.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 \u2212 8.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = 8.7 + 0.8x"
+   },
+   {
+    "label": "D",
+    "content": "y = 8.7 \u2212 0.8x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-12",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 12,
+  "exam": "August 2024",
+  "page": 292,
+  "pdf_page": 24,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6 7 8\n10\n20\n30\n40\n50\n60\n70\n80\nx\ny\nTime (days since June 1)\nTemperature(\n\u25e6\nF)\nDuring which of the following time periods\ndid the greatest increase in recorded temper-\nature take place?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "From x = 6 to x = 7"
+   },
+   {
+    "label": "B",
+    "content": "From x = 5 to x = 6"
+   },
+   {
+    "label": "C",
+    "content": "From x = 2 to x = 3"
+   },
+   {
+    "label": "D",
+    "content": "From x = 1 to x = 2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-13",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 13,
+  "exam": "August US 2024",
+  "page": 293,
+  "pdf_page": 25,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "100 110 120 130\n13\n13.5\n14\n14.5\n15\nx\ny\nThe scatterplot shows the relationship be-\ntween two variables,x and y, for the dataset\nP. A line of best fit for the data is also\nshown. Data set Q is created by adding 540-\nunits to the value of x for each data point\nfrom the data set P. Which of the following\ncould be an equation of a line of best fit for\nthe data set Q?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22123 + 35 1301 x"
+   },
+   {
+    "label": "B",
+    "content": "9 + 1 131 x"
+   },
+   {
+    "label": "C",
+    "content": "18 + 1 131 x"
+   },
+   {
+    "label": "D",
+    "content": "26 + 35 1301 x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-14",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 14,
+  "exam": "October US 2024",
+  "page": 293,
+  "pdf_page": 25,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y.\nO 1,000 2,000 3,000 4,000 5,000\n1,000\n2,000\n3,000\n4,000\n5,000\nx\ny\nWhich of the following equations is the most\nappropriate model for the data shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = \u2212582 + 1.2x"
+   },
+   {
+    "label": "B",
+    "content": "y = 582 \u2212 1.2x"
+   },
+   {
+    "label": "C",
+    "content": "y = \u2212582(1.2)x"
+   },
+   {
+    "label": "D",
+    "content": "y = 582(1.2)x "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-15",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 15,
+  "exam": "October US 2024",
+  "page": 294,
+  "pdf_page": 26,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "In the given scatterplot, a line of best fit for\nthe data is shown.\n1 2 3 4 5 6 7 8 9 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nx\ny\nWhich of the following is closest to the slope\nof this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22127"
+   },
+   {
+    "label": "B",
+    "content": "\u22120.7"
+   },
+   {
+    "label": "C",
+    "content": "0.7"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-16",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 16,
+  "exam": "October US 2024",
+  "page": 294,
+  "pdf_page": 26,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\n120\n130\n140\nx\ny\nThe scatterplot shows the body length, in\ncentimeters (cm), of of a New Zealand fur\nseal from an age of 1 to 6 years old. A line\nof best fit is also shown. For a New Zealand\nfur seal at an age of 3 years old, what is the\nbody length in centimeters predicted by the\nline of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "110",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-17",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 17,
+  "exam": "November 2024",
+  "page": 295,
+  "pdf_page": 27,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6 7 8 9 10\n200\n400\n600\n800\nx\nWhich of the following best represents the\nline of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 148.13 + 0.02x"
+   },
+   {
+    "label": "B",
+    "content": "y = 148.13 + 0.59x"
+   },
+   {
+    "label": "C",
+    "content": "y = 148.13 + 48.61x"
+   },
+   {
+    "label": "D",
+    "content": "y = 148.13 + 58.61x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-18",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 18,
+  "exam": "December 2024",
+  "page": 295,
+  "pdf_page": 27,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "O 1 2 3 4 5 6 7 8\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nWhich of the following is closest to the slope\nof the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221211.19"
+   },
+   {
+    "label": "B",
+    "content": "\u22120.84"
+   },
+   {
+    "label": "C",
+    "content": "0.84"
+   },
+   {
+    "label": "D",
+    "content": "11.19 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-19",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 19,
+  "exam": "December 2024",
+  "page": 296,
+  "pdf_page": 28,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "In the given scatterplot, a line of best fit\nfor the data is shown.\n1 2 3 4 5 6\n1\n2\n3\n4\n5\n6\nx-axis\ny-axisData Points\nBest Fit Line\nWhich of the following equations best rep-\nresents this line of best fit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 1.1x"
+   },
+   {
+    "label": "B",
+    "content": "y = \u22121.1x"
+   },
+   {
+    "label": "C",
+    "content": "y = 5.2"
+   },
+   {
+    "label": "D",
+    "content": "y = \u22125.2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-20",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 20,
+  "exam": "December 2024",
+  "page": 296,
+  "pdf_page": 28,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6\n2\n4\n6\n8\n10\n12\n13\nx-axis\ny-axis\nThe graph models the number of active\nprojects a company was working on x\nmonths after the end of November 2011,\nwhere 0 \u2265 x \u2265 6. According to the\nmodel, what is the predicted number of ac-\ntive projects the company was working on\nat the end of November 2011?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "12 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-21",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 21,
+  "exam": "March 2025",
+  "page": 297,
+  "pdf_page": 29,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6 7 8\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nWhich of the following equations best rep-\nresents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.8 + 1.7x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.8 \u2212 1.7x"
+   },
+   {
+    "label": "C",
+    "content": "y = \u22120.8 + 1.7x"
+   },
+   {
+    "label": "D",
+    "content": "y = \u22120.8 \u2212 1.7x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-22",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 22,
+  "exam": "March US 2025",
+  "page": 297,
+  "pdf_page": 29,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "15 30 45\n15\n30\n45\n60\nx\ny\nThe scatterplot shows the relationship be-\ntween two variables, x and y, for data set A.\nA line of best fit for the data is also shown.\nData set B is created by subtracting 9 units\nfrom the value of y for each data point from\ndata set A. Which of the following is closest\nto the y-coordinate of the y-intercept of the\nline of best fit for data set B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "45.57"
+   },
+   {
+    "label": "B",
+    "content": "53"
+   },
+   {
+    "label": "C",
+    "content": "59.62"
+   },
+   {
+    "label": "D",
+    "content": "62.75 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-23",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 23,
+  "exam": "March 2025",
+  "page": 298,
+  "pdf_page": 30,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "The scatterplot shows the relationship be-\ntween two variables, x and y. A line of best\nfit is also shown.\n1 2 3 4 5 6 7 8 9\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nWhich of the following equations best rep-\nresents the line of best fit shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 0.6 + 1.5x"
+   },
+   {
+    "label": "B",
+    "content": "y = 0.6 \u2212 1.5x"
+   },
+   {
+    "label": "C",
+    "content": "y = \u22120.6 + 1.5x"
+   },
+   {
+    "label": "C",
+    "content": "y = \u22120.6 \u2212 1.5x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-24",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 24,
+  "exam": "June US 2025",
+  "page": 298,
+  "pdf_page": 30,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "1 2 3 4 5 6\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n110\n120\n130\n140\nx\ny\nThe scatterplot shows 5 measurements of\nthe body length, in centimeters (cm), of a\nNew Zealand fur seal from an age of 1 year to\n6 years old. A line of best fit is also shown.\nFor a New Zealand fur seal at an age of 3\nyears old, what is the body length predicted\nby the line of best fit, to the nearest 10 cm?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "100",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-scatterplots-25",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 25,
+  "exam": "November 2023",
+  "page": 298,
+  "pdf_page": 30,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "2 4 6 8 10 12 14\n2\n4\n6\n8\n10\nx\ny\nWhich of the following equations is the\nmost appropriate linear model for the data\nshown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = \u22122x"
+   },
+   {
+    "label": "B",
+    "content": "y = \u2212x"
+   },
+   {
+    "label": "C",
+    "content": "y = x"
+   },
+   {
+    "label": "D",
+    "content": "y = 2x  Questions 26 and 27 refer to the following information The line graph shows the amount, in millions of dollars, that the National Science Foundation (NFS) granted to museums in Minnesota for the years 2000 through 2006. 2000 2001 2002 2003 2004 2005 2006 0 1 2 3 4 3.9 2.3 3.2 1.6 2.1 3.4 1.0 Year Grant amount (in millions of dollars) NSF Grants to Museums in Minnesota"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-1",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 313,
+  "pdf_page": 45,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "c\nd\nb\na\ne\nw\u25e6\nx\u25e6\ny\u25e6\nz\u25e6\nv\u25e6\nNote: Figure not drawn to scale\nIn the figure, parallel lines a and b are inter-\nsected by lines c, d, and e. If x = 49, y = 136,\nand v < z, which statement about x and w\nmust be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x < w"
+   },
+   {
+    "label": "B",
+    "content": "x > w"
+   },
+   {
+    "label": "C",
+    "content": "x = w"
+   },
+   {
+    "label": "D",
+    "content": "x + w = 90"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-4",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 4,
+  "exam": "August US 2023",
+  "page": 313,
+  "pdf_page": 45,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "For two acute angles, \u0338 A and \u0338 B,\ncos A = sin B.\nThe measures, in degrees, of \u0338 A and \u0338 B are\nx + 8 and 4x + 2, respectively. What is the\nvalue of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "37"
+   },
+   {
+    "label": "B",
+    "content": "34"
+   },
+   {
+    "label": "C",
+    "content": "16"
+   },
+   {
+    "label": "D",
+    "content": "2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-6",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 6,
+  "exam": "December 2023",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "For two acute angles \u0338 Q and \u0338 R, cos Q =\nsin R. The measures, in degrees, of \u0338 Q and\n\u0338 R are x+21 and 4x+9, respectively. What\nis the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "30"
+   },
+   {
+    "label": "D",
+    "content": "69"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-8",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 8,
+  "exam": "March 2024",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The measure of angle R is\n2\u03c0\n3\nradians. The\nmeasure of angle T is\n13\u03c0\n18\nradians greater\nthan the measure of angle R. What is the\nmeasure of angle T, in degrees?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "120"
+   },
+   {
+    "label": "B",
+    "content": "130"
+   },
+   {
+    "label": "C",
+    "content": "250"
+   },
+   {
+    "label": "D",
+    "content": "500"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-11",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 11,
+  "exam": "March 2024",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "w\u25e6\nz\u25e6\nNote: Figure not drawn to scale.\nIn the figure, two lines intersect at a point.\nIf w = 150, what is the value of z?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "30"
+   },
+   {
+    "label": "B",
+    "content": "50"
+   },
+   {
+    "label": "C",
+    "content": "75"
+   },
+   {
+    "label": "D",
+    "content": "150 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-12",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 12,
+  "exam": "May 2024",
+  "page": 315,
+  "pdf_page": 47,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r s\nt\nx\u25e6\ny\u25e6\nNote: Figure not drawn to scale\nIn the figure shown, line r is parallel to line\ns, and both lines are intersected by line t. If\nx = 2w+24, y = 5w+29, and 7w = a,where\na is a constant, what is the value of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "127",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-14",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 14,
+  "exam": "June 2024",
+  "page": 315,
+  "pdf_page": 47,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r\ns\nn\n164\u25e6\nx\u25e6\nIn the figure, line n intersects lines r and s.\nLine r is parallel to line s. What is the value\nof x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "164",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-16",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 16,
+  "exam": "June 2024",
+  "page": 316,
+  "pdf_page": 48,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r\ns\n138\u25e6\nx\u25e6\nIn the figure, line n intersects lines r and s.\nLine r is parallel to line s. What is the value\nof x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "138",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-17",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 17,
+  "exam": "August 2024",
+  "page": 316,
+  "pdf_page": 48,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The difference between the measure of an-\ngle A and the measure of angle B is \u2212\n3\n4\n\u03c0\nradians. Which expression shows the differ-\nence between the measure of angle A and\nthe measure of angle B, in degrees?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 3 4 \u00b7 180\u25e6 \u03c0"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 3 4 \u03c0 \u00b7 \u03c0 180\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "\u2212 3 4 \u03c0 \u00b7 180\u25e6 \u03c0"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 3 4 \u03c0 \u00b7 360\u25e6 \u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-19",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 19,
+  "exam": "August 2024",
+  "page": 316,
+  "pdf_page": 48,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "c\nd\nb\na\ne\nh\u25e6\nd\u25e6\ng\u25e6\np\u25e6\nj\u25e6\nNote: Figure not drawn to scale\nIn the figure, parallel lines r and s are in-\ntersected by lines t, u, and w. If d = 42,\ng = 143, and h > d, which statement about\nj and p must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "j = p"
+   },
+   {
+    "label": "B",
+    "content": "j + p = 90"
+   },
+   {
+    "label": "C",
+    "content": "j > p"
+   },
+   {
+    "label": "D",
+    "content": "j < p "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-20",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 20,
+  "exam": "August US 2024",
+  "page": 317,
+  "pdf_page": 49,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "p\nq\nt\nx\u25e6\n142\u25e6\nNote: Figure drawn not to scale\nIn the figure, line p is parallel to line q, and\nt intersects both of them. What is the value\nof x + 142?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "52"
+   },
+   {
+    "label": "B",
+    "content": "90"
+   },
+   {
+    "label": "C",
+    "content": "142"
+   },
+   {
+    "label": "D",
+    "content": "180"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-21",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 21,
+  "exam": "August US 2024",
+  "page": 317,
+  "pdf_page": 49,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "m\nn\nq\u25e6\nr\u25e6\nt\u25e6\ns\u25e6\n135\u25e6\nk\nIn the figure shown, line m is parallel to line\nn, and line k intersects both lines. Which of\nthe following statements is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "q = 135"
+   },
+   {
+    "label": "B",
+    "content": "r = 135"
+   },
+   {
+    "label": "C",
+    "content": "s = 135"
+   },
+   {
+    "label": "D",
+    "content": "t = 135"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-23",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 23,
+  "exam": "October US 2024",
+  "page": 317,
+  "pdf_page": 49,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "q\nr\ns\ny\n61\u25e6\nNote: Figure not drawn to scale\nIn the figure, line q is parallel to line r,\nand both lines are intersected by line s. If\ny = 2x + 9, what is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "26"
+   },
+   {
+    "label": "B",
+    "content": "35"
+   },
+   {
+    "label": "C",
+    "content": "55"
+   },
+   {
+    "label": "D",
+    "content": "65 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-24",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 24,
+  "exam": "October 2024",
+  "page": 318,
+  "pdf_page": 50,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, the measure of angle A\nis 47\u25e6\n, the measure of angle B is 90\u25e6\n, and\nthe measure of angle C is (k\n2\n)\u25e6\n. What is the\nvalue of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "43"
+   },
+   {
+    "label": "B",
+    "content": "45"
+   },
+   {
+    "label": "C",
+    "content": "86"
+   },
+   {
+    "label": "D",
+    "content": "94"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-27",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 27,
+  "exam": "December 2024",
+  "page": 318,
+  "pdf_page": 50,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "w\u25e6\nz\u25e6\nNote: Figure not drawn to scale.\nIn the figure, two lines intersect at a point.\nIf w = 128, what is the value of z?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28"
+   },
+   {
+    "label": "B",
+    "content": "52"
+   },
+   {
+    "label": "C",
+    "content": "64"
+   },
+   {
+    "label": "D",
+    "content": "128 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-28",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 28,
+  "exam": "October US 2024",
+  "page": 319,
+  "pdf_page": 51,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "w\u25e6\nx\u25e6\ny\u25e6\nz\u25e6\n35\u25e6\nl\nj\nk\nNote: Figure not drawn to scale\nIn the figure shown, line l intersects lines j\nand k. Which additional piece of informa-\ntion is sufficient to prove that lines j and k\nare parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "w = 35\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "x = 145\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "y = 35\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "z = 145\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-29",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 29,
+  "exam": "November 2024",
+  "page": 319,
+  "pdf_page": 51,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "x\u25e6\ny\u25e6\nt\nk\nl\nIn the figure shown, the lines l and k are\nparallel and line t intersects both lines. If\nx > 154, which of the following must be\ntrue?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y < 26"
+   },
+   {
+    "label": "B",
+    "content": "y > 26"
+   },
+   {
+    "label": "C",
+    "content": "x + y < 180"
+   },
+   {
+    "label": "D",
+    "content": "x + y > 180"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-30",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 30,
+  "exam": "December 2024",
+  "page": 319,
+  "pdf_page": 51,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "q\nr\ns\ny\n74\u25e6\nNote: Figure not drawn to scale\nIn the figure, line q is parallel to line r,\nand both lines are intersected by line s. If\ny = 2x + 8, what is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "33"
+   },
+   {
+    "label": "B",
+    "content": "41"
+   },
+   {
+    "label": "C",
+    "content": "49"
+   },
+   {
+    "label": "D",
+    "content": "59"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-31",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 31,
+  "exam": "March 2025",
+  "page": 319,
+  "pdf_page": 51,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r s\nk\nw\u25e6\nx\u25e6\ny\u25e6\nz\u25e6\nIn the figure shown, line k intersects lines r\nand s. If w = 146\u25e6\n, which additional piece of\ninformation is sufficient to prove that lines\nr and s are parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 34"
+   },
+   {
+    "label": "B",
+    "content": "y = 146"
+   },
+   {
+    "label": "C",
+    "content": "w + y = 180"
+   },
+   {
+    "label": "D",
+    "content": "y + z = 180 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-32",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 32,
+  "exam": "March 2025",
+  "page": 320,
+  "pdf_page": 52,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The difference between the measure of an-\ngle A and the measure of angle B is \u2212 5\n12\n\u03c0\nradians. Which expression shows the differ-\nence between the measure of angle A and\nthe measure of angle B, in degrees?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 5 12 \u03c0 \u00b7 180\u25e6 \u03c0"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 5 12 \u03c0 \u00b7 \u03c0 180\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "\u2212 5 12 \u03c0 \u00b7 \u03c0 360\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 5 12 \u03c0 \u00b7 360\u25e6 \u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-33",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 33,
+  "exam": "May 2025",
+  "page": 320,
+  "pdf_page": 52,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "j\nk\n54\u25e6\nz\ny\nw\nx\nIn the figure shown, line t intersects lines j\nand k. Which additional piece of informa-\ntion is sufficient to prove that lines j and k\nare parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "w = 54"
+   },
+   {
+    "label": "B",
+    "content": "x = 126"
+   },
+   {
+    "label": "C",
+    "content": "y = 54"
+   },
+   {
+    "label": "D",
+    "content": "z = 126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-34",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 34,
+  "exam": "May 2025",
+  "page": 320,
+  "pdf_page": 52,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, the measure of angle A\nis 34\u25e6\nand the measure of angle B is 90\u25e6\n.\nWhat is the measure, in degrees, of angle\nC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "34"
+   },
+   {
+    "label": "B",
+    "content": "56"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "180"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-35",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 35,
+  "exam": "May 2025",
+  "page": 320,
+  "pdf_page": 52,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In \u25b3DEF, the measure of \u0338 D is 114\u25e6\n.\nWhich of the following could be the mea-\nsure, in degrees, of \u0338 E?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "115"
+   },
+   {
+    "label": "B",
+    "content": "90"
+   },
+   {
+    "label": "C",
+    "content": "67"
+   },
+   {
+    "label": "D",
+    "content": "65"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-36",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 36,
+  "exam": "May 2025",
+  "page": 320,
+  "pdf_page": 52,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "l\nm\nk\nx\u25e6\n111\u25e6\nNote: Figure not drawn to scale.\nIn the figure, line l is parallel to line m.\nWhat is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "31"
+   },
+   {
+    "label": "B",
+    "content": "69"
+   },
+   {
+    "label": "C",
+    "content": "111"
+   },
+   {
+    "label": "D",
+    "content": "131 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-lines-angles-37",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 37,
+  "exam": "June 2025",
+  "page": 321,
+  "pdf_page": 53,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "r\ns\nt\n44\u25e6\nx\nIn the figure shown, line r is parallel to line\ns. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "30"
+   },
+   {
+    "label": "B",
+    "content": "45"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "90"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-2",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 2,
+  "exam": "June 2023",
+  "page": 323,
+  "pdf_page": 55,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangle ABC is similar to triangle DEF,\nwhere angle A corresponds to angle D and\nangles C and F are right angles. The\nlength AB is 2.4 times the length of DE. If\ntan A =\n21\n20\n, what is the value of sin D?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "21/29",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-6",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 6,
+  "exam": "August US 2023",
+  "page": 324,
+  "pdf_page": 56,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The area of a triangle is equal to x2\nsquare\ninches. The base of triangle is 5+2x inches,\nand the height of the triangle is x\u22122 inches.\nWhat is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2.5"
+   },
+   {
+    "label": "B",
+    "content": "2.7"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-9",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 9,
+  "exam": "December 2023",
+  "page": 325,
+  "pdf_page": 57,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The area of a triangle is equal to x2\nsquare\ncentimeters. The length of the base of the\ntriangle is 2x + 16 centimeters, and the\nheight of the triangle x \u2212 6 centimeters.\nWhat is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "24",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-11",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 11,
+  "exam": "March 2024",
+  "page": 325,
+  "pdf_page": 57,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A C\nB\n10 cm\nh\nThe area of triangle ABC is 30 square cen-\ntimeters. What is the height h, in centime-\nters, of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-13",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 13,
+  "exam": "March 2024",
+  "page": 326,
+  "pdf_page": 58,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In right triangle RST, the sum of the mea-\nsures of angle R and angle S is 90 degrees.\nThe value of sin(R) is 4\n\u221a\n2\n9\n. What is the value\nof cos(S)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 4 \u221a 2 9"
+   },
+   {
+    "label": "B",
+    "content": " 4 \u221a 2 7"
+   },
+   {
+    "label": "C",
+    "content": " 7 \u221a 2 8"
+   },
+   {
+    "label": "D",
+    "content": " 9 \u221a 2 8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-14",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 14,
+  "exam": "March 2024",
+  "page": 326,
+  "pdf_page": 58,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In \u25b3ABC, \u0338 B is a right angle and the\nlength of BC is 248 millimeters. If cos A =\n3\n5\n, what is the length, in millimeters, of AB?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "62"
+   },
+   {
+    "label": "B",
+    "content": "186"
+   },
+   {
+    "label": "C",
+    "content": "248"
+   },
+   {
+    "label": "D",
+    "content": "310"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-18",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 18,
+  "exam": "May 2024",
+  "page": 327,
+  "pdf_page": 59,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In isosceles triangle ABC, sides AB and\nAC are congruent. Point D divides BC such\nthat the length of BD is 5\n7\nof the length of\nBC. Point E lies on side AB and point F\nlies on side AC such that when segments\nDE and DF are drawn, angle BED is con-\ngruent to angle CFD. If the length of BE\nis 10, what is the length of CF?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "50"
+   },
+   {
+    "label": "D",
+    "content": "70"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-19",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 19,
+  "exam": "May US 2024",
+  "page": 327,
+  "pdf_page": 59,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In a triangle ABC, the measure of angle\nA is 48\u25e6\n, the measure of angle B is 90\u25e6\n, and\nthe measure of angle C is (k\n2\n)\u25e6\n. What is the\nvalue of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "42"
+   },
+   {
+    "label": "B",
+    "content": "45"
+   },
+   {
+    "label": "C",
+    "content": "84"
+   },
+   {
+    "label": "D",
+    "content": "96"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-20",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 20,
+  "exam": "May US 2024",
+  "page": 327,
+  "pdf_page": 59,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A perimeter of an isosceles right triangle\nis 38 + 38\n\u221a\n2 inches. What is the length, in\ninches, of the hypotenuse of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "19"
+   },
+   {
+    "label": "B",
+    "content": "19 \u221a 2"
+   },
+   {
+    "label": "C",
+    "content": "38"
+   },
+   {
+    "label": "D",
+    "content": "38 \u221a 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-21",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 21,
+  "exam": "June 2024",
+  "page": 327,
+  "pdf_page": 59,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In right triangle ABC, angles A and B are\nacute, side AC has a length of 21.7, and\ntanB = 1\n8\n. What is the length of side BC,\nrounded to the nearest tenth?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "470.9"
+   },
+   {
+    "label": "B",
+    "content": "173.6"
+   },
+   {
+    "label": "C",
+    "content": "4.7"
+   },
+   {
+    "label": "D",
+    "content": "2.7 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-22",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 22,
+  "exam": "June 2024",
+  "page": 328,
+  "pdf_page": 60,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In right triangle ABC, angles A and B are\nacute. Side AC has a length of 21.2, and\ntan B = 1\n6\nWhat is the length of side BC,\nrounded to the nearest tenth?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3.5"
+   },
+   {
+    "label": "B",
+    "content": "4.6"
+   },
+   {
+    "label": "C",
+    "content": "127.2"
+   },
+   {
+    "label": "D",
+    "content": "449.4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-23",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 23,
+  "exam": "June 2024",
+  "page": 328,
+  "pdf_page": 60,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "66\nx\n30\u25e6\nNote: Figure not drawn to scale.\nIn the triangle shown, what is the value of\nx?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "22"
+   },
+   {
+    "label": "B",
+    "content": "22 \u221a 3"
+   },
+   {
+    "label": "C",
+    "content": "66 \u221a 3"
+   },
+   {
+    "label": "D",
+    "content": "132"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-24",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 24,
+  "exam": "June 2024",
+  "page": 328,
+  "pdf_page": 60,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "For triangle PQR and triangle STU, an-\ngles P and S each measure 30\u25e6\n. QR = 16\nand TU = 12. Which additional piece(s) of\ninformation is(are) sufficient to prove that\ntriangle PQR is similar to triangle STU?\nI. The length of PQ is 1\n3\nthe length of ST.\nII. The length of PR is 1\n3\nthe length of SU.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I is sufficient, but II is not."
+   },
+   {
+    "label": "B",
+    "content": "II is sufficient, but I is not."
+   },
+   {
+    "label": "C",
+    "content": "I is sufficient, and II is sufficient."
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II is sufficient."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-25",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 25,
+  "exam": "August 2024",
+  "page": 328,
+  "pdf_page": 60,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangle QRS is similar to triangle FGH\nsuch that Q, R, and S correspond to F, G,\nand H, respectively. Each side of triangle\nFGH has 1\n4\nthe length of its corresponding\nside in triangle QRS. In triangle FGH, the\nmeasure of angle F is 35\u25e6\n, the measure of\nangle G is 8\u25e6\n, and FG = a. In triangle QRS,\nthe measure of angle Q is b\u25e6\nand QR = 20.\nWhat is the value of a + b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "40",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-26",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 26,
+  "exam": "August 2024",
+  "page": 329,
+  "pdf_page": 61,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The area of a triangle is equal to x2\nsquare\ncentimeters. The length of the base of the\ntriangle is 2x + 12.5 centimeters, and the\nheight of the triangle is x \u2212 5 centimeters.\nWhat is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "25",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-27",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 27,
+  "exam": "August 2024",
+  "page": 329,
+  "pdf_page": 61,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle FGH and triangle KLM, the\nmeasures of angles G and L are each 60\u25e6\n.\nThe lengths of GH and LM are each 34\ncentimeters, and\nGH\nGF\n=\nLM\nLK\n. Which addi-\ntional piece of information would be neces-\nsary to prove that triangle FGH is congru-\nent to triangle KLM?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The lengths of FG and KM are each 17 centimeters."
+   },
+   {
+    "label": "B",
+    "content": "The measures of angles H amd M are each 30\u25e6 ."
+   },
+   {
+    "label": "C",
+    "content": "The measures of angles F amd K are each 90\u25e6 ."
+   },
+   {
+    "label": "D",
+    "content": "No additional information is necessary."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-29",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 29,
+  "exam": "August 2024",
+  "page": 329,
+  "pdf_page": 61,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "If the perimeter of an equilateral triangle\nwith a height of 46 units is a\n\u221a\n3 units, what\nis the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "46"
+   },
+   {
+    "label": "B",
+    "content": "92"
+   },
+   {
+    "label": "C",
+    "content": "2,116 3"
+   },
+   {
+    "label": "D",
+    "content": "4,232 3 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-32",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 32,
+  "exam": "October 2024",
+  "page": 330,
+  "pdf_page": 62,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The perimeter of an isosceles right trian-\ngle is 18 + 18\n\u221a\n2 inches. What is the length,\nin inches, of the hypotenuse of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9"
+   },
+   {
+    "label": "B",
+    "content": "9 \u221a 2"
+   },
+   {
+    "label": "C",
+    "content": "18"
+   },
+   {
+    "label": "D",
+    "content": "18 \u221a 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-34",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 34,
+  "exam": "October US 2024",
+  "page": 331,
+  "pdf_page": 63,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "37\n37\nx\nIn the right triangle shown, what is the value\nof x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u221a 2"
+   },
+   {
+    "label": "B",
+    "content": " \u221a 37"
+   },
+   {
+    "label": "C",
+    "content": " \u221a 74"
+   },
+   {
+    "label": "D",
+    "content": "37 \u221a 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-36",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 36,
+  "exam": "November 2024",
+  "page": 331,
+  "pdf_page": 63,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A\nB C\n32\nFor triangle ABC, the length of of AB is\n11 less than the length of AC. Point D\n(not shown) lies on AC such that BD (not\nshown) is perpendicular to AC. What is the\nvalue of\nBC\nBD\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "32/21",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-40",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 40,
+  "exam": "November US 2024",
+  "page": 332,
+  "pdf_page": 64,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The table gives the perimeters of similar\ntriangles TUV and XY Z, where TU corre-\nsponds to XY . The length of TU is 16.\nPerimeter\nTriangle TUV 44\nTriangle XY Z 352\nWhat is the length of XY ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "16"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "128"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-triangles-41",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 41,
+  "exam": "November US 2024",
+  "page": 332,
+  "pdf_page": 64,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The area of a triangle is 270 square cen-\ntimeters. The length of the base of the\ntriangle is 12 centimeters greater than the\nheight of the triangle. What is the height,\nin centimeters, of the triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15"
+   },
+   {
+    "label": "B",
+    "content": "18"
+   },
+   {
+    "label": "C",
+    "content": "30"
+   },
+   {
+    "label": "D",
+    "content": "36 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ }
+]

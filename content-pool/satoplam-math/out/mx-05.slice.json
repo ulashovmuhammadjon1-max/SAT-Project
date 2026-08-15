@@ -1,0 +1,2857 @@
+[
+ {
+  "id": "satmath-ma2-functions-function-notation-15",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 15,
+  "exam": "March 2024",
+  "page": 158,
+  "pdf_page": 70,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "2 4 6 8 10 12 14\n2\n4\n6\n8\n10\nx\ny\nThe graph models the population, in thou-\nsands, of a town x years since 2004, where\n0 \u2264 x \u2264 15. Which statement is the best\ninterpretation of the point (1, 5.30)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2019, the estimated population of the town was 5, 300."
+   },
+   {
+    "label": "B",
+    "content": "In 2018, the estimated population of the town was 5, 300."
+   },
+   {
+    "label": "C",
+    "content": "In 2005, the estimated population of the town was 5, 300."
+   },
+   {
+    "label": "D",
+    "content": "In 2004, the estimated population of the town was 5, 300."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-16",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 16,
+  "exam": "March 2024",
+  "page": 158,
+  "pdf_page": 70,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = 8+\n\u221a\nx.\nWhat is the value of f(36)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "17"
+   },
+   {
+    "label": "D",
+    "content": "26"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-17",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 17,
+  "exam": "March 2024",
+  "page": 158,
+  "pdf_page": 70,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n\u22128\n\u22127\n\u22126\n\u22125\n\u22124\n\u22123\n\u22122\n\u22121\n1\n2\n3\n4\n5\n6\n7\n8\nO\nx\ny\nThe graph of y = f(x) is shown in the xy\nplane. What is the value of f(0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "-6"
+   },
+   {
+    "label": "C",
+    "content": "-2"
+   },
+   {
+    "label": "D",
+    "content": "4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-19",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 19,
+  "exam": "March 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = 4x2\n.\nWhat is the value of f(11)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "44"
+   },
+   {
+    "label": "B",
+    "content": "52"
+   },
+   {
+    "label": "C",
+    "content": "88"
+   },
+   {
+    "label": "D",
+    "content": "484"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-21",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 21,
+  "exam": "March 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = |x\u22126x|.\nWhat value of a satisfies f(7)\u2212f(a) = \u221215?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221222"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "10"
+   },
+   {
+    "label": "D",
+    "content": "75"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-22",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 22,
+  "exam": "March 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function g is defined by\ng(x) =\n\u221a\n5x + 1.\nWhat is the value of g(7)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6 5"
+   },
+   {
+    "label": "B",
+    "content": "36 5"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "36"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-24",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 24,
+  "exam": "May 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "7|x \u2212 7|= 42\nWhat is the sum of the solutions to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22126"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "14"
+   },
+   {
+    "label": "D",
+    "content": "49"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-25",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 25,
+  "exam": "May 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function h is defined by h(x) = 5|x|.\nWhat is the value of h(\u22123)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221215"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "8"
+   },
+   {
+    "label": "D",
+    "content": "15 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-28",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 28,
+  "exam": "May US 2024",
+  "page": 160,
+  "pdf_page": 72,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = 5+\n\u221a\nx.\nWhat is the value of f(64)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "13"
+   },
+   {
+    "label": "C",
+    "content": "21"
+   },
+   {
+    "label": "D",
+    "content": "37"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-29",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 29,
+  "exam": "May 2024",
+  "page": 160,
+  "pdf_page": 72,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "If f(x) = x + 2 and g(x) = 2x, what is\nthe value of 3f(\u22125) \u2212 g(\u22125)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221219"
+   },
+   {
+    "label": "B",
+    "content": "\u22123"
+   },
+   {
+    "label": "C",
+    "content": "1"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-30",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 30,
+  "exam": "June 2024",
+  "page": 160,
+  "pdf_page": 72,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "1 2 3 4 5\n2\n4\n6\n8\n10\n12\nx\ny\nThe graph gives the estimated population y,\nin thousands, of a town x years since 2007,\nwhere 0 \u2264 x \u2264 5. Which of the following\nbest describes the increase in the estimated\npopulation from x = 0 to x = 1?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated population at x = 1 is 3.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "B",
+    "content": "The estimated population at x = 1 is 2.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "C",
+    "content": "The estimated population at x = 1 is 1.5 times the estimated population at x = 0."
+   },
+   {
+    "label": "D",
+    "content": "The estimated population at x = 1 is 0.5 times the estimated population at x = 0. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-31",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 31,
+  "exam": "June 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = x3\n+17.\nWhat is the value of f(2)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "25",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-32",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 32,
+  "exam": "June 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function g is defined by g(x) =\nx\n2\n.\nFor what value of x does g(x) = 244?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "488",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-33",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 33,
+  "exam": "August 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "2 4 6 8 10 12 14\n2\n4\n6\n8\n10\nx\ny\nThe graph models the population, in thou-\nsands, of a town x years since 2003, where\n0 \u2264 x \u2264 15. Which statement is the best\ninterpretation of the point (1, 4.24)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2003, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "B",
+    "content": "In 2004, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "C",
+    "content": "In 2017, the estimated population of the town was 4,240."
+   },
+   {
+    "label": "D",
+    "content": "In 2018, the estimated population of the town was 4,240."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-35",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 35,
+  "exam": "June 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = x3\n+14.\nWhat is the value of f(2)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "22",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-37",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 37,
+  "exam": "August US 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "1 2 3 4 5 6 7 8 9\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nx\ny\nThe graph shows the momentum y, in\nnewton-seconds, of an object x seconds after\nobject started moving, for 0 \u2264 x \u2264 8. What\nis the average rate of change, in newton-\nseconds per second, in the momentum of the\nobject from x = 2 to x = 6?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "3/2",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-39",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 39,
+  "exam": "August 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function k is defined by\nk(x) = x3\n+ 700.\nWhat is the value of k(x) when x = 2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "700"
+   },
+   {
+    "label": "B",
+    "content": "705"
+   },
+   {
+    "label": "C",
+    "content": "706"
+   },
+   {
+    "label": "D",
+    "content": "708"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-42",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 42,
+  "exam": "August US 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "2 4 6 8 10 12\n\u22128\n\u22126\n\u22124\n\u22122\n2\n4\n6\n8\nx\ny\nThe complete graph of y = f(x) is shown.\nFor how many values of x does f(x) = 0?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "One"
+   },
+   {
+    "label": "C",
+    "content": "Two"
+   },
+   {
+    "label": "D",
+    "content": "Three "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-44",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 44,
+  "exam": "October US 2024",
+  "page": 163,
+  "pdf_page": 75,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n\u221216\n\u221214\n\u221212\n\u221210\n\u22128\n\u22126\n\u22124\n\u22122\n2\n4\n6\n8\n10\n12\n14\n16\nx\ny\nThe graph of y = f(x)\u2212k is shown in the xy-\nplane. If k, a, and b are positive constants,\nwhich equation could define f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = (x \u2212 a)2 (x + b)"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = (x + a)2 (x \u2212 b)"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = (x \u2212 a)2 (x + b)2"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = (x + a)2 (x \u2212 b)2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-46",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 46,
+  "exam": "October US 2024",
+  "page": 163,
+  "pdf_page": 75,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "g(x) =\n2\n7\nx +\n8\n5\nh(x) = 5x \u2212 7\nThe functions g and h are defined by the\nequations shown. Which expression is equiv-\nalent to g(x) \u00b7 h(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 10x2 7 \u2212 56 5"
+   },
+   {
+    "label": "B",
+    "content": " 10x2 7 + 13x 6 \u2212 56 5"
+   },
+   {
+    "label": "C",
+    "content": " 10x2 7 \u2212 6x \u2212 56 5"
+   },
+   {
+    "label": "D",
+    "content": " 10x2 7 + 6x \u2212 56 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-47",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 47,
+  "exam": "November 2024",
+  "page": 163,
+  "pdf_page": 75,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "2 4 6 8 10\n5\n10\n15\n20\nx\ny\nThe system of two equations, y = 16\nx\nand\ny = 16x, is graphed in the xy-plane as\nshown. Which ordered pair is a solution to\nthis system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 16)"
+   },
+   {
+    "label": "C",
+    "content": "(1, 16)"
+   },
+   {
+    "label": "D",
+    "content": "(16, 16) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-48",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 48,
+  "exam": "November 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The graph of a polynomial function y =\nf(x) in the xy-plane passes through the\npoint (5, 7). What is the value of f(5)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "12"
+   },
+   {
+    "label": "D",
+    "content": "35"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-49",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 49,
+  "exam": "November 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The functions g and h are defined by the\ngiven equations.\ng(x) =\np\n(x \u2212 11)2 + 45\nh(x) =\n3\n\u221a\n64 +\nx2\n2\nIf the value of g(8) = t, where t is a constant,\nwhat is the value of h(t)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3 \u221a 6"
+   },
+   {
+    "label": "B",
+    "content": "22"
+   },
+   {
+    "label": "C",
+    "content": "31"
+   },
+   {
+    "label": "D",
+    "content": "51"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-51",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 51,
+  "exam": "November US 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = x3\n+27.\nWhat is the value of f(2)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "35",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-52",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 52,
+  "exam": "November US 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The table shows selected values from the\nfunction f.\nx f(x)\n-1\n1\n69\n0 1\n1 69\n2 4,761\nWhich of the following is the best descrip-\ntion of function f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Increasing linear"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Decreasing exponential"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-54",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 54,
+  "exam": "December 2024",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function h is defined by h(x) = 7|x|.\nWhat is the value of h(\u22122)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-14"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "14"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-58",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 58,
+  "exam": "March 2025",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) =\n|x|\na\n\u201314\nwhere a < 0. What is the product of f(15a)\nand f(8a)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "638",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-60",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 60,
+  "exam": "March US 2025",
+  "page": 166,
+  "pdf_page": 78,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "50 100 150 200 250\n\u2212200\n\u2212150\n\u2212100\n\u221250\n50\n100\n150\n200\n250\n300\nx\ny\nThe graph shows the estimated boiling point\ny, in degrees Celsius, of a straight-chain\nalkane with a molecular weight of x grams\nper mole, where 1 \u2264 x \u2264 280. Which state-\nment is the best interpretation of the point\n(141.32, 172.26)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A straight-chain alkane with a molecu- lar weight of 172.26 grams per mole has an estimated boiling point of 141.32 de- grees Celsius."
+   },
+   {
+    "label": "B",
+    "content": "A straight-chain alkane with a molecu- lar weight of 141.32 grams per mole has an estimated boiling point of 172.26 de- grees Celsius."
+   },
+   {
+    "label": "C",
+    "content": "The minimum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an esti- mated boiling point of 172.26 degrees Celsius."
+   },
+   {
+    "label": "D",
+    "content": "The maximum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an esti- mated boiling point of 172.26 degrees Celsius."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-61",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 61,
+  "exam": "March US 2025",
+  "page": 166,
+  "pdf_page": 78,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "1 2 3 4\n2\n4\n6\n8\n10\n12\n14\n16\n18\n20\nx\ny\nThe potential difference across a capacitor\nin an electric circuit is initially 16 volts and\ndecreases with time, as shown in the graph.\nWhich of the following is closest to the time,\nin seconds, from the initial measurement at\nwhich the potential difference across the ca-\npacitor is 15% of its initial value?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.43"
+   },
+   {
+    "label": "B",
+    "content": "0.85"
+   },
+   {
+    "label": "C",
+    "content": "2.41"
+   },
+   {
+    "label": "D",
+    "content": "3.41"
+   },
+   {
+    "label": "A",
+    "content": "f(x) = 0"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 7"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 5"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = x + 5"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-62",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 62,
+  "exam": "March US 2025",
+  "page": 166,
+  "pdf_page": 78,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) =\n|x|\na\n\u221214,\nwhere a < 0. What is the product of\nf(\u221215a) and f(8a)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "638",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-63",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 63,
+  "exam": "March 2025",
+  "page": 167,
+  "pdf_page": 79,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) =\n|x|\na\n\u221216,\nwhere a < 0. What is the product of f(17a)\nand f(8a)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "792",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-64",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 64,
+  "exam": "May 2025",
+  "page": 167,
+  "pdf_page": 79,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "1 2 3 4 5 6 7 8 9 10\n1\n2\n3\n4\n5\n6\n7\n8\nx\ny\nTime (hours)\nTotal\nrainfall\n(centimeters)\nThe graph shows the total amount of rainfall\ny, in centimeters, from the start of a 10-hour\nperiod, where x is the number of hours after\nthe start of the period. Which of the follow-\ning statements about the rainfall during this\ntime period is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The rate of rainfall was 2 centimeters per hour between x = 2 and x = 4."
+   },
+   {
+    "label": "B",
+    "content": "The rate of rainfall was the greatest be- tween x = 4 and x = 10."
+   },
+   {
+    "label": "C",
+    "content": "The rate of rainfall increased between x = 0 and x = 2."
+   },
+   {
+    "label": "D",
+    "content": "The rate of rainfall was 0 centimeters per hour between x = 2 and x = 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-65",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 65,
+  "exam": "May 2025",
+  "page": 167,
+  "pdf_page": 79,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "g(x) = x3\n+ ax2\n+ bx + c\nThe function g is defined by the given equa-\ntion, where a, b, and c are integer constants.\nThe zeros of the function are \u22122, \u22127, and 6.\nWhat is the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221284"
+   },
+   {
+    "label": "B",
+    "content": "\u22123"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "84"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-66",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 66,
+  "exam": "May 2025",
+  "page": 167,
+  "pdf_page": 79,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "0 20 40 60 80 100\n60\n70\n80\n90\n100\n110\nGC content (%)\nMelting\ntemperature\n(\u00b0C)\nThe function t gives the estimated melting\ntemperature, in degrees Celsius, of a DNA\nmolecule as a function of the percent of gua-\nnine cytosine (GC) content, x, in the DNA\nmolecule. The graph of y = t(x) is shown.\nAccording to the graph, which of the follow-\ning statements is NOT true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "For each increase of x by 1, t(x) in- creases by approximately 2 5"
+   },
+   {
+    "label": "B",
+    "content": "A DNA molecule with a GC content of 0% has an estimated melting tempera- ture between 60\u25e6 C and 65\u25e6 C."
+   },
+   {
+    "label": "C",
+    "content": "A DNA molecule with a GC content of 95% has an estimated melting temper- ature between 100\u25e6 C and 105\u25e6 C."
+   },
+   {
+    "label": "D",
+    "content": "A DNA molecule with a GC content of 98% has an estimated melting temper- ature between 80\u25e6 C and 90\u25e6 C. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-67",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 67,
+  "exam": "June 2025",
+  "page": 168,
+  "pdf_page": 80,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "1 2 3 4\n400\n800\n1,200\nx\ny\nThe graph models the number of online\nnewsletter subscribers at the end of every\nsix-month period, where x is the number of\nsix-month periods since the end of January\n1995 and 0 \u2264 x \u2264 4. Which statement is\nthe best interpretation of the point (1, 600)\nin this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated number of online newsletter subscribers at the end of the first six-month period was 600."
+   },
+   {
+    "label": "B",
+    "content": "The estimated number of online newsletter subscribers increased every six months by 600 subscribers."
+   },
+   {
+    "label": "C",
+    "content": "The estimated number of online newsletter subscribers at the end of January 1995 was 600."
+   },
+   {
+    "label": "D",
+    "content": "The estimated number of online newsletter subscribers at the end of January 1996 was 600."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-69",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 69,
+  "exam": "June 2025",
+  "page": 168,
+  "pdf_page": 80,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The table shows selected values from the\nfunction f.\nx f(x)\n\u22121\n1\n50\n0 1\n1 50\n2 2,500\nWhich of the following is the best descrip-\ntion of function f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Increasing linear"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Decreasing exponential"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-70",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 70,
+  "exam": "June US 2025",
+  "page": 168,
+  "pdf_page": 80,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f(z) = 2z3\n+8z2\n+17 For the given function\nf, the graph of y = f(z) in the xy-plane\npasses through the point (0, b), where b is a\nconstant. What is the value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "17",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-71",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 71,
+  "exam": "June US 2025",
+  "page": 168,
+  "pdf_page": 80,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For the linear function p, p(c) = \u22122, where\nc is a constant, p(5) = 34, and the slope\nof the graph of y = p(x) in the xy-plane is\n6. For the linear function t, t(c) = \u22124 and\nt(6) = 52. What is the slope of the graph of\ny = t(x) in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22121"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "8 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-1",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "4x2\n+ kx + 9 = 0\nIn the given equation, k is a positive con-\nstant. The equation has exactly one real so-\nlution. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "12",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-2",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "h(t) = \u22124.9t2\n+ 10t\nThe function h models the height h(t), in\nmeters, of a football t seconds after it is\nkicked. What is the interpretation of h(2) =\n0.40 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The football has a maximum height of 0.40 meter"
+   },
+   {
+    "label": "B",
+    "content": "The football has a maximum height of 2 meters"
+   },
+   {
+    "label": "C",
+    "content": "The football has a height of 0.40 meter 2 seconds after it is kicked"
+   },
+   {
+    "label": "D",
+    "content": "The football has a height of 2 meters 0.40 second after it is kicked"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-3",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 3,
+  "exam": "March US 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n\u2212 x \u2212 12 = 0\nWhat is the sum of the solutions to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-7"
+   },
+   {
+    "label": "B",
+    "content": "-1"
+   },
+   {
+    "label": "C",
+    "content": "1"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-4",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 4,
+  "exam": "March US 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "3x2\n\u2212 2x \u2212 7 = 0\nWhat is the sum of the solutions to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "2/3",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-5",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 5,
+  "exam": "June 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "18x2\n+ 24x + c = 0\nIn the given equation, c is a constant. The\nequation has exactly one solution. What is\nthe value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "8",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-6",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 6,
+  "exam": "June 2023",
+  "page": 202,
+  "pdf_page": 24,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function g is a quadratic function. In\nthe xy-plane, the graph of y = g(x) has a\nvertex at (-1, -4) and passes through the\npoints (-2, -43) and (1, -160). What is the\nvalues of g(0) \u2212 g(2)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-121"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "117"
+   },
+   {
+    "label": "D",
+    "content": "312 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-7",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 7,
+  "exam": "June 2023",
+  "page": 203,
+  "pdf_page": 25,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "An auditorium has seats for 3,200 people.\nTickets to attend a show at the auditorium\ncurrently cost $8.00. For each $1.00 increase\nto the ticket price, 100 fewer tickets will be\nsold. This situation can be modeled by the\nequation \u2212100x2\n+ 2, 400x = 25600 where\nx represents the increase in ticket price, in\ndollar , and y represents the revenue, in dol-\nlars, from ticket sales. If the equation is\ngraphed in the xy-plane, at what value of x\nis the maximum of the graph?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "32"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "24"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-8",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 8,
+  "exam": "June 2023",
+  "page": 203,
+  "pdf_page": 25,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x + 1\n5x2\n=\nk\nx\nIn the given equation, k is a constant. The\nsolution to the given equation is 1\n174. What\nis the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "35",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-9",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 9,
+  "exam": "June 2023",
+  "page": 203,
+  "pdf_page": 25,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "If (x+3)2\n= 30, what is the value of x2\n+6x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "21"
+   },
+   {
+    "label": "B",
+    "content": "30"
+   },
+   {
+    "label": "C",
+    "content": "39"
+   },
+   {
+    "label": "D",
+    "content": "60"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-10",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 10,
+  "exam": "August US 2023",
+  "page": 203,
+  "pdf_page": 25,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "What is the solution to the equation 2\n\u221a\nx =\n3?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1"
+   },
+   {
+    "label": "B",
+    "content": "3 2"
+   },
+   {
+    "label": "C",
+    "content": "9 4"
+   },
+   {
+    "label": "D",
+    "content": "9 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-11",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 11,
+  "exam": "August US 2023",
+  "page": 203,
+  "pdf_page": 25,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "10 20 30 40 50 60 70 80 90\n100\n200\n300\n400\n500\n600\n700\n\u03bd\nd\nSpeed (mph)\nStopping\ndistance\n(feet)\nThe graph quadratic function shown relates\na car\u2019s stopping distance d, in feet, to its ini-\ntial speed \u03bd, in miles per hour (mph). Which\nof the following could be an equation for d?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "d = 2.2\u03bd + 0.05\u03bd2"
+   },
+   {
+    "label": "B",
+    "content": "d = 2.2\u03bd \u2212 0.05\u03bd2"
+   },
+   {
+    "label": "C",
+    "content": "d = 100 + 2.2\u03bd + 0.05\u03bd2"
+   },
+   {
+    "label": "D",
+    "content": "d = 100 + 2.2\u03bd \u2212 0.05\u03bd2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-12",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 12,
+  "exam": "August US 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n\u2212 4x \u2212 1 = 0\nA solution to the given equation is x =\n\u221a\nk + 2. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "5",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-13",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 13,
+  "exam": "August US 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "3x2\n\u2212 4x + 7 = 0\nHow many distinct real solutions does the\ngiven equation have",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-14",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 14,
+  "exam": "November 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "In the equation 10x2\n+ 50x + c = 0, c is\na constant. If the equation has exactly one\nsolution, what is the value of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "5 2"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "125 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-15",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 15,
+  "exam": "November 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The solutions to x2\n+ 10x + 23 = 0 are\nr and s, where r < s. The solutions to\nx2\n+ 10x + 17 = 0 are t and u, where t < u.\nThe solutions to x2\n+ 20x + c = 0, where c\nis a constant are r + u and s + t. What is\nthe value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "98",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-16",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 16,
+  "exam": "December 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "1\nx\n+\n1\nx \u2212 3\n=\n6\nx2 \u2212 3x\nWhat are all the solutions to the given equa-\ntion?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-1 and 6"
+   },
+   {
+    "label": "B",
+    "content": "0 and 3"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "9 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-17",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 17,
+  "exam": "December 2023",
+  "page": 204,
+  "pdf_page": 26,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n\u2212 12x + c = 0\nIn the given equation, c is a constant. The\nequation has no real solutions if c > n.\nWhat is the least possible value of n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-36"
+   },
+   {
+    "label": "B",
+    "content": "-12"
+   },
+   {
+    "label": "C",
+    "content": "12"
+   },
+   {
+    "label": "D",
+    "content": "36 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-18",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 18,
+  "exam": "December 2023",
+  "page": 205,
+  "pdf_page": 27,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "22x2\n+ (22s + r)x + rs = 0\nIn the given equation, r and s are positive\nconstants. The product of the solutions to\nthe given equation is krs, where k is a con-\nstant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1/22",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-19",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 19,
+  "exam": "December 2023",
+  "page": 205,
+  "pdf_page": 27,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = \u22124x2\n\u2212 23\ny = qx \u2212 19\nIn the given system of equations, q is a pos-\nitive constant. The graphs of the equations\nin the given system intersect at exactly one\npoint (x, y), in the xy-plane. What is the\nvalue of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-42"
+   },
+   {
+    "label": "B",
+    "content": "-27"
+   },
+   {
+    "label": "C",
+    "content": "-8"
+   },
+   {
+    "label": "D",
+    "content": "-1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-20",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 20,
+  "exam": "March 2024",
+  "page": 205,
+  "pdf_page": 27,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "What value of x is the solution to the equa-\ntion 65x + 20 = \u221215x2\n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 4"
+   },
+   {
+    "label": "B",
+    "content": " 1 3"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-22",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 22,
+  "exam": "March 2024",
+  "page": 205,
+  "pdf_page": 27,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is defined by\nf(x) = ax2\n+ bx + c\nwhere a, b, and c are constants and 1 <\na < 4. The graph of y = f(x) in the xy-\nplane passes through the points (12, 0) and\n(\u22124, 0). If a is an integer, what could be the\nvalue of a + b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-14",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-23",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 23,
+  "exam": "March 2024",
+  "page": 205,
+  "pdf_page": 27,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n\u2212 10x + 24 = 0\nHow many distinct real solutions does the\ngiven equation have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-24",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 24,
+  "exam": "March 2024",
+  "page": 206,
+  "pdf_page": 28,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = \u2212\n1\n4\nx2\n+ x + 28\nThe given equation models a company\u2019s ac-\ntive projects over 6 months, where y is\nthe estimated number of active projects x\nmonths after the end of April 2012, where\n0 \u2264 x \u2264 6. Which statement is the best in-\nterpretation of the y-intercept of the graph\nof this equation in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "At the end of April 2012, the estimated number of active projects was 0."
+   },
+   {
+    "label": "B",
+    "content": "At the end of April 2012, the estimated number of active projects was 28."
+   },
+   {
+    "label": "C",
+    "content": "At the end of May 2012, the estimated number of active projects was 0."
+   },
+   {
+    "label": "D",
+    "content": "At the end of May 2012, the estimated number of active projects was 28."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-25",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 25,
+  "exam": "March 2024",
+  "page": 206,
+  "pdf_page": 28,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u221216(5x \u2212 3)2\n+ 4(5x \u2212 4)2\nThe given expression can be rewritten as\na\n6\nx2\n+\nb\n6\nx +\nc\n6\n,\nwhere a, b, and c are constants. What is the\nvalue of a + b + c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212360"
+   },
+   {
+    "label": "B",
+    "content": "\u2212180"
+   },
+   {
+    "label": "C",
+    "content": "\u221260"
+   },
+   {
+    "label": "D",
+    "content": "\u221210"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-27",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 27,
+  "exam": "March 2024",
+  "page": 206,
+  "pdf_page": 28,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u221216(5x \u2212 2)2\n+ 6(5x \u2212 3)2\nThe given expression can be rewritten as\na\n6\nx2\n+\nb\n6\nx +\nc\n6\n,\nwhere a,b, and c are constants. Wat is the\nvalue of a + b + c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212720"
+   },
+   {
+    "label": "B",
+    "content": "\u2212360"
+   },
+   {
+    "label": "C",
+    "content": "\u2212120"
+   },
+   {
+    "label": "D",
+    "content": "\u221220"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-29",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 29,
+  "exam": "March 2024",
+  "page": 207,
+  "pdf_page": 29,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "1 2 3 4 5 6 7 8 9 10\n10\n20\n30\n40\n50\n60\n70\nTime (seconds)\nHeight\nabove\nthe\nground\n(meters)\nAn object was launched upward from a plat-\nform. The graphs shown models the height,\ny, of the object x seconds after it was\nlaunched. For which of the following inter-\nvals of time was the height of the object in-\ncreasing for the entire interval?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "From x=0 to x=2"
+   },
+   {
+    "label": "B",
+    "content": "From x=0 to x=4"
+   },
+   {
+    "label": "C",
+    "content": "From x=2 to x=3"
+   },
+   {
+    "label": "D",
+    "content": "From x=4 to x=5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-30",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 30,
+  "exam": "March 2024",
+  "page": 207,
+  "pdf_page": 29,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "f(x) = 14x2\n\u2212 35x + 7\nThe given equation defines the function f.\nFor what values of x does f(x) reach its min-\nimum?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1.25"
+   },
+   {
+    "label": "B",
+    "content": "1.75"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "35"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-31",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 31,
+  "exam": "March 2024",
+  "page": 207,
+  "pdf_page": 29,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "An object is kicked from a platform. The\nequation h = \u22124.9t2\n+ 13t + 15 represents\nthis situation, where the h is the height of\nthe object above the ground, in meters, t\nseconds after it is kicked. Which number\nrepresents the height, in meters, from which\nthe object was kicked?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "4.9"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "15"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-32",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 32,
+  "exam": "March 2024",
+  "page": 207,
+  "pdf_page": 29,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is defined by f(x) = ax2\n+\nbx + c, where a, b, and c are constants and\n1 < a < 4. The graph of y = f(x) in the\nxy-plane passes through the points (11, 0),\nand (\u22125, 0). If a is an integer, what could\nbe the value of a + b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-10",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-33",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 33,
+  "exam": "May 2024",
+  "page": 207,
+  "pdf_page": 29,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The y-intercept of the graph of y = 2x2\n+27\nis (0, y). What is the value of y?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "27",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-34",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 34,
+  "exam": "March 2024",
+  "page": 208,
+  "pdf_page": 30,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = 6x2\n\u2212 48x + 98\ny + 4 = 0\nHow many solutions are there to the given\nsystem of equations have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "There is exactly 1 solution."
+   },
+   {
+    "label": "B",
+    "content": "There are exactly 2 solutions."
+   },
+   {
+    "label": "C",
+    "content": "There are exactly 3 solutions."
+   },
+   {
+    "label": "D",
+    "content": "There are no solutions."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-36",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 36,
+  "exam": "May US 2024",
+  "page": 208,
+  "pdf_page": 30,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is a quadratic function. In\nthe xy-plane, the graph of y = f(x) has\na vertex at (1,9) and passes through the\npoints (2,33) and (-1,105). What is the\nvalue of f(\u22122) \u2212 f(0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "81"
+   },
+   {
+    "label": "B",
+    "content": "129"
+   },
+   {
+    "label": "C",
+    "content": "192"
+   },
+   {
+    "label": "D",
+    "content": "225"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-37",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 37,
+  "exam": "May US 2024",
+  "page": 208,
+  "pdf_page": 30,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = x \u2212 c\ny = \u22128(x \u2212 10)2\nIn the given system of equations, c is a con-\nstant. The system has two distinct real so-\nlutions. Which of the following could be the\nvalue of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "319 32"
+   },
+   {
+    "label": "D",
+    "content": "15"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-38",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 38,
+  "exam": "May US 2024",
+  "page": 208,
+  "pdf_page": 30,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = \u2212\n1\n4\nx2\n+ x + 29\nThe given equation models a company\u2019s ac-\ntive projects 6 months, where y is the esti-\nmated number of active projects x months\nafter the end of April 2013, where 0 \u2264 x \u2264 6.\nWhich statement is the best interpretation\nof the y-intercept of the graph of this equa-\ntion in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "At the end of April 2013, the estimated number of active projects was 0."
+   },
+   {
+    "label": "B",
+    "content": "At the end of April 2013, the estimated number of active projects was 29."
+   },
+   {
+    "label": "C",
+    "content": "At the end of May 2013, the estimated number of active projects was 0."
+   },
+   {
+    "label": "D",
+    "content": "At the end of May 2013, the estimated number of active projects was 29. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-39",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 39,
+  "exam": "May US 2024",
+  "page": 209,
+  "pdf_page": 31,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n+ 11x + 19 = 0\nOne solution to the given equation can be\nwritten as x =\n\u221211 \u2212\n\u221a\nk\n2\n, where k is a con-\nstant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "45",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-41",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 41,
+  "exam": "May 2024",
+  "page": 209,
+  "pdf_page": 31,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n= 2, 601\nHow many distinct real solutions does the\ngiven equation have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-42",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 42,
+  "exam": "May 2024",
+  "page": 209,
+  "pdf_page": 31,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The expression (9x \u2212 28)(15x + 4) is equiv-\nalent to the expression ax2\n+ bx + c, where\na, b, and c are constants. What is the value\nof b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-384",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-43",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 43,
+  "exam": "May US 2024",
+  "page": 209,
+  "pdf_page": 31,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u22124 \u22123 \u22122 \u22121 1 2 3 4\n\u22128\n\u22127\n\u22126\n\u22125\n\u22124\n\u22123\n\u22122\n\u22121\n1\n2\n3\n4\n5\nx\ny\nThe graph of a system of a linear and a\nquadratic equation is shown, Which system\nof equations is represented by the graph?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = \u22124x y = x2 + 8"
+   },
+   {
+    "label": "B",
+    "content": "y = \u22124x y = x2 \u2212 8"
+   },
+   {
+    "label": "C",
+    "content": "y = 4x y = x2 + 8"
+   },
+   {
+    "label": "D",
+    "content": "y = 4x y = x2 \u2212 8 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-44",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 44,
+  "exam": "May 2024",
+  "page": 210,
+  "pdf_page": 32,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "Which of the following expressions is (are)\na factor of 4x2\n+ 31x \u2212 45?\nI. x \u2212 9\nII. 4x \u2212 5",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-45",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 45,
+  "exam": "May 2024",
+  "page": 210,
+  "pdf_page": 32,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "Population\n(in\nthousands)\n1 2 3 4 5\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nx\ny\nIn 2000, a census was taken to determine the\npopulation of a certain town. The graph\ngives the estimated population y, in thou-\nsands, of this town x years after the 2000\ncensus was taken, where 0 \u2264 x \u2264 5. Based\non the graph, which of the following is the\nclosest to the estimated population 2 years\nafter the 2000 census was taken?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7,400"
+   },
+   {
+    "label": "B",
+    "content": "6,200"
+   },
+   {
+    "label": "C",
+    "content": "4,300"
+   },
+   {
+    "label": "D",
+    "content": "3,000"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-46",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 46,
+  "exam": "May 2024",
+  "page": 210,
+  "pdf_page": 32,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "Which quadratic equation has exactly one\ndistinct real solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x2 \u2212 22 = 0"
+   },
+   {
+    "label": "B",
+    "content": "x2 \u2212 11x = 0"
+   },
+   {
+    "label": "C",
+    "content": "x2 \u2212 11x + 121 = 0"
+   },
+   {
+    "label": "D",
+    "content": "x2 \u2212 22x + 121 = 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-47",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 47,
+  "exam": "August US 2024",
+  "page": 210,
+  "pdf_page": 32,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is defined by\nf(x) = \u22125x2\n\u2212 7.\nWhat is the value of f(\u22121)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-12"
+   },
+   {
+    "label": "B",
+    "content": "-2"
+   },
+   {
+    "label": "C",
+    "content": "2"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-49",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 49,
+  "exam": "May 2024",
+  "page": 211,
+  "pdf_page": 33,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "f(x) = x + 4\ng(x) = 3x2\n\u2212 rx + 48\nThe functions f and g are given. In function\ng, r is a constant. If f(x)\u00b7g(x) = 3x3\n+192,\nwhat is the value of r?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "12",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-50",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 50,
+  "exam": "August US 2024",
+  "page": 211,
+  "pdf_page": 33,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = \u22120.5\ny = x2\n+ 10x + a\nIn the given system of equations, a is a pos-\nitive integer constant. The system has no\nreal solutions. What is the least possible\nvalue of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "25",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-51",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 51,
+  "exam": "August US 2024",
+  "page": 211,
+  "pdf_page": 33,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = 2x2\n\u2212 19x + 40\ny = x + a\nIn the given system of equations, a is a con-\nstant. The graph of the equations in the\ngiven system intersect at exactly one point\n(x, y), in the xy-plane. What is the value of\nx?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-10"
+   },
+   {
+    "label": "B",
+    "content": "-5"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-52",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 52,
+  "exam": "June 2024",
+  "page": 211,
+  "pdf_page": 33,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "If 4x2\n\u2212 24x \u2212 36 = 0, what is the value of\nx2\n\u2212 6x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-53",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 53,
+  "exam": "June 2024",
+  "page": 211,
+  "pdf_page": 33,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f(x) = 1\n9\n(x \u2212 4)2\n+ 5 gives\na toy car\u2019s height above the ground f(x) in\ninches, x seconds after it started moving on\nan elevated track, where 0 \u2264 x \u2264 10. Which\nof the following is the best interpretation of\nthe vertex of the graph of y = f(x) in the\nxy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The toy car\u2019s minimum height was 5 inches above the ground."
+   },
+   {
+    "label": "B",
+    "content": "The toy car\u2019s minimum height was 4 inches above the ground."
+   },
+   {
+    "label": "C",
+    "content": "The toy car\u2019s height was 5 inches above the ground when it started moving."
+   },
+   {
+    "label": "D",
+    "content": "The toy car\u2019s height was 4 inches above the ground when it started moving. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-54",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 54,
+  "exam": "August US 2024",
+  "page": 212,
+  "pdf_page": 34,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is defined by\nf(x) = ax2\n+ bx + c,\nwhere a,b and c are constants. The graph\nof y = f(x) in the xy-plane passes through\nthe points (9,0) and (-2,0). If a is an integer\ngreater than 1, which of the following could\nbe the value of a + b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "-6"
+   },
+   {
+    "label": "D",
+    "content": "-12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-56",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 56,
+  "exam": "June 2024",
+  "page": 212,
+  "pdf_page": 34,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "f(x) = (x \u2212 2)2\n+ 9\nWhat is the minimum value of the given\nfunction?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-57",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 57,
+  "exam": "June 2024",
+  "page": 212,
+  "pdf_page": 34,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "What is the y-intercept of the graph of\ny = 2x2\n+ 6x + 3 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 2)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 3)"
+   },
+   {
+    "label": "C",
+    "content": "(0, 6)"
+   },
+   {
+    "label": "D",
+    "content": "(0, 9)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-58",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 58,
+  "exam": "August 2024",
+  "page": 212,
+  "pdf_page": 34,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = x2\n\u2212 18x + 51\nThe given equation relates the variables x\nand y. For what value of x does the value of\ny reach its minimum?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-18"
+   },
+   {
+    "label": "B",
+    "content": "9"
+   },
+   {
+    "label": "C",
+    "content": "18"
+   },
+   {
+    "label": "D",
+    "content": "51"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-59",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 59,
+  "exam": "June 2024",
+  "page": 212,
+  "pdf_page": 34,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "1\ncx\n=\nx\n152\n+\n1\nc\nIn the given equation, c is a constant. If the\nequation has exactly one solution, what is\nthe value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-38",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-60",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 60,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = 2x2\n\u2212 23x + 64\ny = x + a\nIn the given system of equations, a is a con-\nstant. The graphs of the equations in the\ngiven system intersect at exactly one point,\n(x, y), in the xy\u2212plane. What is the value\nof x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-8"
+   },
+   {
+    "label": "B",
+    "content": "-6"
+   },
+   {
+    "label": "C",
+    "content": "6"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-61",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 61,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "If 4x2\n\u2212 12x \u2212 24 = 0, what is the value\nof x2\n\u2212 3x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "4"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-62",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 62,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "f(x) = (x \u2212 4)2\n+ 11\nWhat is the minimum value of the given\nfunction?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "11"
+   },
+   {
+    "label": "D",
+    "content": "15"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-63",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 63,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "For the quadratic function f, the table\nshows three values of x and their corre-\nsponding values of f(x). Which equation\ndefines f?\nx f(x)\n\u22121 4\n0 12\n1 22",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 5x2 + 5x + 12"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 9x2 + x + 12"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 9x2 \u2212 x + 12"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = x2 + 9x + 12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-64",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 64,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The function f is defined by f(x) = 4x2\n.\nWhat is the value of f(11)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "44"
+   },
+   {
+    "label": "B",
+    "content": "52"
+   },
+   {
+    "label": "C",
+    "content": "88"
+   },
+   {
+    "label": "D",
+    "content": "484"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma2-quadratics-65",
+  "book": "ma2",
+  "topic": "Quadratics",
+  "num": 65,
+  "exam": "June 2024",
+  "page": 213,
+  "pdf_page": 35,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u22124x2\n+ bx \u2212 25 = 0\nIn the given equation, b is a positive integer.\nThe equation has no real solution. What is\nthe largest possible value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "19",
+  "needs_vision": true
+ }
+]

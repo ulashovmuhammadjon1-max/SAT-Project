@@ -25,6 +25,7 @@ Numbering restarts per topic, so a question's identity is (topic, number) —
 never the number alone. The answer tables are keyed the same way.
 """
 import json
+import os
 import re
 import subprocess
 import sys
@@ -136,11 +137,15 @@ def shredded(text):
 
 
 def parse_pdf(pdf):
+    # `page` is the number PRINTED on the page, which is what a reader needs to
+    # find a question. Math 3.0 prints none, so it stays None and the PDF's own
+    # index is kept alongside as `pdf_page` — without it those questions cannot
+    # be located or rendered, which is how 263 of them ended up unreachable.
     recs, topic, page = [], None, None
     cur = None
     mode = "q"          # "q" while reading questions, "key" inside an answer table
     keys = {}
-    for ptext in pages_of(pdf):
+    for pdf_page, ptext in enumerate(pages_of(pdf), 1):
         for raw in ptext.split("\n"):
             line = raw.rstrip()
             s = line.strip()
@@ -173,7 +178,8 @@ def parse_pdf(pdf):
                 if cur:
                     recs.append(cur)
                 cur = {"topic": topic, "num": int(m.group(1)), "exam": m.group(2),
-                       "page": page, "body": [], "choices": []}
+                       "page": page, "pdf_page": pdf_page,
+                       "src": os.path.basename(pdf), "body": [], "choices": []}
                 continue
             if cur is None:
                 continue
@@ -226,7 +232,8 @@ def main():
         body = "\n".join(r["body"]).strip()
         qs.append({
             "id": f"satmath-{book}-{topic.lower().replace(' ', '-').replace('&', '-').replace(';', '').replace('(', '').replace(')', '').replace(',', '')}-{num}",
-            "book": book, "topic": topic, "num": num, "exam": r["exam"], "page": r["page"],
+            "book": book, "topic": topic, "num": num, "exam": r["exam"],
+            "page": r["page"], "pdf_page": r["pdf_page"], "src": r["src"],
             "domain": DOMAIN_OF[topic], "skill": SKILL_OF[topic],
             "body": body,
             "choices": [c for c in r["choices"]],

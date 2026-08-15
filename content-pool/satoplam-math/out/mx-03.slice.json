@@ -1,0 +1,2858 @@
+[
+ {
+  "id": "satmath-ma3-linear-system-of-equations-8",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 8,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 25,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "An artist made 13 pieces of pottery using\n42 pounds of clay. The pottery included\nonly bowls and vases. Each bowl used\n2 pounds of clay and each vase used 4\npounds of clay. How many vases did the\nartist make?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "7"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-10",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 10,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 25,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5(9x + 7 +\nc\n5\n) = 45x\nIn the given equation, c is a constant.\nThe equation has infinitely many solu-\ntions. What is the value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-35",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-17",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 17,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 26,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "(x + k) +\n9\n2\n(y + t) + 19 = 0\n(x + k) \u2212\n9\n2\n(y + t) \u2212 19 = 0\nIn the given system of equations, k and t\nare constants. The solution to this system\nis (x, y). What is the value of 18(y + t)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-76"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "38"
+   },
+   {
+    "label": "D",
+    "content": "9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-20",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 20,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 26,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "For a study, a research team measured\nthe heights of 380 king penguins from the\nKerguelen Islands and 190 king penguins\nfrom the Falkland Islands. The research\nteam determined that the mean height of\nthe 380 king penguins from the Kerguelen\nIslands was 87 centimeters and the mean\nheight of the 190 king penguins from the\nFalkland Islands was 93 centimeters. What\nwas the mean height, in centimeters, of all\n570 king penguins the research team mea-\nsured for this study?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "91"
+   },
+   {
+    "label": "B",
+    "content": "89"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "88"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-21",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 21,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 26,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "y =\n1\n2\nx \u2212 7\n1\n2\ny = 3x + 2\nThe solution to the given equations is\n(x, y). What is the value of (y \u2212 x)?\n26",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-6",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-22",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 22,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 27,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "ax \u2212 by = 52\n2ax \u2212 8y = 48\nIn the given system of equations, a and b\nare constants. The graphs of these equa-\ntions in the xy-plane intersect at the point\n(2, 4). What is the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "-8"
+   },
+   {
+    "label": "D",
+    "content": "-3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-24",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 24,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 27,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x2\n+ y2\n= 36\ny = mx +\nb\n4\nIn the given system of equations, m and b\nare negative constants. In the xy-plane, the\ngraphs of the equations in the given sys-\ntem intersect at the point (\u22125, y), where\ny < 0. Which expression represents the\nvalue of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 5m 4 + \u221a 11 4"
+   },
+   {
+    "label": "B",
+    "content": " 5m 4 \u2212 \u221a 11 4"
+   },
+   {
+    "label": "C",
+    "content": "\u221220m + 4 \u221a 11"
+   },
+   {
+    "label": "D",
+    "content": "20m \u2212 4 \u221a 11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-25",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 25,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 27,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A biologist mixed a solution that is 0.3%\nsodium chloride by mass with a solution\nthat is 0.15% sodium chloride by mass to\nobtain a new solution, which has a mass\nof 80 grams and contains 0.21 grams of\nsodium chloride. How many grams of\n0.3% sodium chloride solution did the bi-\nologist use?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.14"
+   },
+   {
+    "label": "B",
+    "content": "20"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "79.86"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-27",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 27,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 27,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "In the given system of equations, t is a con-\nstant. If the system has no solution, what\nis the value of t?\n4x \u2212 6y = 10y + 2\nty =\n1\n2\n+ 2x\n27",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "8",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-28",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 28,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 28,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "\u22122\n\u22121 1 2 3 4 5 6 7 8 9\n\u22122\n\u22121\n1\n2\n3\n4\n5\n6\n7\n8\n9\nx\ny\nThe graph of a system of a linear equation\nand a nonlinear equation is shown. What\nis the solution (x, y) to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(4,0)"
+   },
+   {
+    "label": "B",
+    "content": "(5,4)"
+   },
+   {
+    "label": "C",
+    "content": "(0,0)"
+   },
+   {
+    "label": "D",
+    "content": "(0,5)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-30",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 30,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 28,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "\u22122\u22121 1 2 3 4 5 6 7 8 9\n\u22122\n\u22121\n1\n2\n3\n4\n5\n6\n7\n8\n9\nx\ny\nThe graph of a system of a linear equation\nand a nonlinear equation is shown. What\nis the solution (x, y) to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(4,0)"
+   },
+   {
+    "label": "B",
+    "content": "(5,4)"
+   },
+   {
+    "label": "C",
+    "content": "(0,0)"
+   },
+   {
+    "label": "D",
+    "content": "(0,5) 28 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-31",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 31,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 29,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x\ny\n-6 -4 -2 2 4 6 8\n-8\n-6\n-4\n-2\n2\n4\n6\n8\n10\nThe graph of a system of a linear equation\nand a nonlinear equation is shown. What\nis the solution (x, y)to this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(0, \u22122)"
+   },
+   {
+    "label": "C",
+    "content": "(\u22122, 2)"
+   },
+   {
+    "label": "D",
+    "content": "(3, 0)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-system-of-equations-33",
+  "book": "ma3",
+  "topic": "Linear System of Equations",
+  "num": 33,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 29,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x + 5 = 14\ny = 3x2\n+ 3\nAt what point (x, y) do the graphs of the\nequations in the given system intersect?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(9, 243)"
+   },
+   {
+    "label": "B",
+    "content": "(14, 591)"
+   },
+   {
+    "label": "C",
+    "content": "(9, 246)"
+   },
+   {
+    "label": "D",
+    "content": "(14, 3) 29 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-1",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 1,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 31,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function f (x) = \u221230x + 310 gives the\npredicted height above the ground f (x),\nin feet,of a model airplane a minutes after\nit begins to descend. What is the predicted\nheight above the ground, in feet, of the\nmodel airplane 2 minutes after it begins to\ndescend?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "60"
+   },
+   {
+    "label": "B",
+    "content": "250"
+   },
+   {
+    "label": "C",
+    "content": "280"
+   },
+   {
+    "label": "D",
+    "content": "370"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-2",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 2,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 31,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x\ny\nTime since initial deposit (months)\nBank\naccount\nbalance\n(dollars)\n0 2 4 6 8 10\n0.0\n10.0\n20.0\n30.0\n40.0\n50.0\n60.0\n70.0\n80.0\nA bank account was opened with an ini-\ntial deposit. Over the next several months,\nregular deposits were made into this ac-\ncount, and there were no withdrawals\nmade during this time. The graph of the\nfunction f shown, where y = f (x), esti-\nmates the account balance, in dollars, in\nthis bank account x months since the ini-\ntial deposit. To the nearest whole dollar,\nwhat is the amount of the initial deposit\nestimated by the graph?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "15",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-4",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 31,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function f is defined by f (x) =\n25x + 70. What is the value of f (x) when\nx = 2",
+  "choices": [
+   {
+    "label": "A",
+    "content": "50"
+   },
+   {
+    "label": "B",
+    "content": "97"
+   },
+   {
+    "label": "C",
+    "content": "120"
+   },
+   {
+    "label": "D",
+    "content": "190"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-6",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 6,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "What is the slope of the graph of\n60x \u2212 10y = \u221248 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-6"
+   },
+   {
+    "label": "B",
+    "content": "\u22125 4"
+   },
+   {
+    "label": "C",
+    "content": "5 4"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-12",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 12,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 32,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function m is defined by\nm(x) = 3x + 6 and the function p is de-\nfined by p(x) = 6 \u2212 x What is the value of\n2m(6) \u2212 p(6)?\n32",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "48",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-15",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 15,
+  "exam": " August 2025",
+  "page": null,
+  "pdf_page": 33,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "What is the slope of the graph of\n48x \u2212 6y = \u221232 in the xy \u2212 plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-8"
+   },
+   {
+    "label": "B",
+    "content": "\u22123 2"
+   },
+   {
+    "label": "C",
+    "content": "3 2"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-17",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 17,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 33,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function f is defined by\nf (x) = 7x \u2212 65. If the point (k, 2k) lies\non the graph of y = f (x) in the xy-plane,\nwhere k is a constant, what is the value of\nk?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "165"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-18",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 18,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 33,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Charles saves\n3\n5\nof the $225 he earns each\nweek from his summer job. If Charles\ncontinues to save at this rate, how much\nmoney, in dollars, will Charles save in 3\nweeks?\n33",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "405",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-20",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 20,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 34,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x g(x)\n1 44\n2 38\n3 32\n4 26\nFor the linear function g, the table shows\nfour values of x and their corresponding\nvalues of g(x). The function can be writ-\nten as g(x) = mx + b, where m and b are\nconstants. What is the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "22"
+   },
+   {
+    "label": "C",
+    "content": "44"
+   },
+   {
+    "label": "D",
+    "content": "y = \u22127 3 x + 125 3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-22",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 22,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 34,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "There is a linear relationship between the\nmass of an object attached to a vertical\nspring and the length of the spring exten-\nsion. The table shows data collected after\ncertain objects were each attached to the\nspring.\nMass of object Length of spring extension\n20 grams 7 cm\n60 grams 21 cm\nWhat is the length of the spring extension,\nin centimeters, when a 50 gram object is at-\ntached to the spring?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "24.5"
+   },
+   {
+    "label": "B",
+    "content": "34"
+   },
+   {
+    "label": "C",
+    "content": "14"
+   },
+   {
+    "label": "D",
+    "content": "17.5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-24",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 24,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 35,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x\ny\n-8 -6 -4 -2 0 2 4 6 8\n-10\n-8\n-6\n-4\n-2\n0\n2\n\u2022 The line slants gradually up from left\nto right.\n\u2022 The line passes through the following\npoints:\n\u2013 (-6,-8)\n\u2013 (0,-7)\n\u2013 (6,-6)\nThe graph of the linear function f is\nshown, where y = f (x). What is the slope\nof the graph of f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 6"
+   },
+   {
+    "label": "B",
+    "content": "-7"
+   },
+   {
+    "label": "C",
+    "content": "- 1 6"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-25",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 25,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 35,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "In the given equation, q, r, s, and t are posi-\ntive, and\nq\nt is greater than 5. Which expres-\nsion is equivalent to s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u22129qt q \u2212 5t"
+   },
+   {
+    "label": "B",
+    "content": " 9qt q \u2212 5t"
+   },
+   {
+    "label": "C",
+    "content": "18qrt"
+   },
+   {
+    "label": "D",
+    "content": " 2qt q \u2212 5t"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-29",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 29,
+  "exam": " August 2025",
+  "page": null,
+  "pdf_page": 36,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A company developed a plan to set the\nselling price of a product. The com-\npany determined that for a selling price of\n$120.00, zero products would be sold. For\neach $2.50 decrease in the selling price, the\nnumber of products sold would increase\nby one. For a revenue of exactly $1,437.50,\nwhich of the following could be the num-\nber of products sold? (revenue = price x\nnumber of products sold)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "23"
+   },
+   {
+    "label": "B",
+    "content": "24"
+   },
+   {
+    "label": "C",
+    "content": "527"
+   },
+   {
+    "label": "D",
+    "content": "1440"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-30",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 30,
+  "exam": " October 2025",
+  "page": null,
+  "pdf_page": 36,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "In the xy-plane, what is the slope of the\nline that passes through the points (0,0)\nand (13,14)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "13"
+   },
+   {
+    "label": "B",
+    "content": "14 13"
+   },
+   {
+    "label": "C",
+    "content": "13 14"
+   },
+   {
+    "label": "D",
+    "content": "14"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-functions-31",
+  "book": "ma3",
+  "topic": "Linear Functions",
+  "num": 31,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 36,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x y\n\u22122s 17\n\u2212s 14\ns 8\nThe table shows three values of a and their\ncorresponding values of y, where s is a\nconstant. There is a linear relationship be-\ntween a and y. Which of the following\nequations represents this relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "sx + 3y = 11s"
+   },
+   {
+    "label": "B",
+    "content": "3x + sy = 11s"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-2",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 2,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 38,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "x\ny\nO\nThe graphs of y = \u22123x + 7 and y = x \u2212 5\nare shown. Point P (not shown) has co-\nordinates (-3, 5) and lies in the shaded re-\ngion. The coordinates of P satisfy which of\nthe following inequality?\nI. y < \u22123x + 7\nII. y > x \u2212 5",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "f(x)",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-3",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 3,
+  "exam": " August 2025",
+  "page": null,
+  "pdf_page": 38,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A number x is less than 8 more than 1\n2\ntimes the value of a number y. If y is an in-\nteger and x = 17, what is the least possible\nvalue of y?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "f(x)",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-6",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 6,
+  "exam": " September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y > 2x \u2212 90\ny < \u2212\n1\n6\nx \u2212 8\nFor which of the following tables are all the\nvalues of x and their corresponding val-\nues of y solutions to the given system of\ninequalities?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x y 18 -8 24 -9 30 -10"
+   },
+   {
+    "label": "B",
+    "content": " x y 18 -14 24 -15 30 -16"
+   },
+   {
+    "label": "C",
+    "content": " x y 18 -11 24 -12 30 -13"
+   },
+   {
+    "label": "D",
+    "content": " x y 18 -57 24 -58 30 -59"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-7",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 7,
+  "exam": " September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y >\n9\n2\nx + b\nIn the given inequality, b is a positive con-\nstant. Which of the following does NOT\ncontain any points (x, y) in the xy-plane\nthat are solutions to this inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The region where x > 0 and y > 0"
+   },
+   {
+    "label": "B",
+    "content": "The region where x < 0 and y < 0"
+   },
+   {
+    "label": "C",
+    "content": "The region where x < 0 and y > 0"
+   },
+   {
+    "label": "D",
+    "content": "The region where x > 0 and y < 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-8",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 8,
+  "exam": " September 2025",
+  "page": null,
+  "pdf_page": 39,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y >\n9\n7\nx + b\nIn the given inequality, b is a positive con-\nstant. Which of the following does NOT\ncontain any points (x, y) in the xy-plane\nthat are solutions to this inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The region where x < 0 and y < 0"
+   },
+   {
+    "label": "B",
+    "content": "The region where x < 0 and y > 0"
+   },
+   {
+    "label": "C",
+    "content": "The region where x > 0 and y > 0"
+   },
+   {
+    "label": "D",
+    "content": "The region where x > 0 and y < 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-13",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 13,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 41,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y > 2x \u2212 72\ny <\n\u22121\n6\nx \u2212 9\nFor which of the following tables are all the\nvalues of x and their corresponding val-\nues of y solutions to the given system of\ninequalities?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x y 12 -11 18 -12 24 -13"
+   },
+   {
+    "label": "B",
+    "content": " x y 12 -14 18 -15 24 -16"
+   },
+   {
+    "label": "C",
+    "content": " x y 12 -57 18 -58 24 -59"
+   },
+   {
+    "label": "D",
+    "content": " x y 12 -8 18 -9 24 -10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-15",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 15,
+  "exam": " October 2025",
+  "page": null,
+  "pdf_page": 41,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "Carmen needs at least 100 signatures to\nsubmit a petition. If Carmen already has\n51 signatures, what is the minimum num-\nber of additional signatures Carmen needs\nto submit the petition?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "41"
+   },
+   {
+    "label": "B",
+    "content": "151"
+   },
+   {
+    "label": "C",
+    "content": "49"
+   },
+   {
+    "label": "D",
+    "content": "51 41 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "c",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-linear-inequalities-17",
+  "book": "ma3",
+  "topic": "Linear Inequalities",
+  "num": 17,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 42,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "An agricultural scientist needs to collect at\nleast 200 soil samples in a certain area for a\nstudy on soil quality. If the scientist has\nalready collected 168 soil samples, what\nis the minimum number of additional soil\nsamples the scientist needs to collect for\nthe study?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "368"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "148"
+   },
+   {
+    "label": "D",
+    "content": "32"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-4",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 48,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "Which expression is a factor of\nx5 + x4y + xy8 + y9?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x4 + y8"
+   },
+   {
+    "label": "B",
+    "content": "x4 + y9"
+   },
+   {
+    "label": "C",
+    "content": "x5 + y8"
+   },
+   {
+    "label": "D",
+    "content": "x5 + y9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-5",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 5,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 48,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "Which equation is equivalent to\nv4 \u2212 450v3?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(v2 \u2212 45)(v2 \u2212 10)"
+   },
+   {
+    "label": "B",
+    "content": "(v2 + 45)(v2 \u2212 10)"
+   },
+   {
+    "label": "C",
+    "content": "v3(v + 450)"
+   },
+   {
+    "label": "D",
+    "content": "v3(v \u2212 450)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-8",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 8,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 49,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u22128\n\u22127\n\u22126\n\u22125\n\u22124\n\u22123\n\u22122\n\u22121 1 2 3 4 5 6 7 8\n\u22128\n\u22127\n\u22126\n\u22125\n\u22124\n\u22123\n\u22122\n\u22121\n1\n2\n3\n4\n5\n6\n7\n8\nx\ny\nThe graph of the polynomial function f is\nshown, where y = f (x). What is the value\nof f (5)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "\u22123"
+   },
+   {
+    "label": "D",
+    "content": "0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-9",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 9,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 49,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u22124(v \u2212 9)(v \u2212 2)(v + 7) = 0\nWhat value of v is a solution to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22122"
+   },
+   {
+    "label": "B",
+    "content": "7"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "\u22124"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-10",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 10,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 49,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u22121 1\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\nO\nx\ny\nThe graph of the polynomial function f,\nwhere y = f (x), is shown. The y-intercept\nof the graph is (0, y). What is the value of\ny?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "5",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-11",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 11,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 49,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "Which expression is a factor of\n3x2 + 57x + 15?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3x2"
+   },
+   {
+    "label": "B",
+    "content": "5x"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "57x 49 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-12",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 12,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 50,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "5a =\n4b2\na\n\u2212 20a\nThe given equation relates the positive\nvariables a and b. Which equation cor-\nrectly expresses a in terms of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = 4b 25"
+   },
+   {
+    "label": "B",
+    "content": "a = 4b2 25"
+   },
+   {
+    "label": "C",
+    "content": "a = 2b 5"
+   },
+   {
+    "label": "D",
+    "content": "a = 2b2 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-polynomials-13",
+  "book": "ma3",
+  "topic": "Polynomials",
+  "num": 13,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 50,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "x\n(x \u2212 1)(x + 1)\n=\n25\n16x\nWhich value is a solution to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 5 3"
+   },
+   {
+    "label": "B",
+    "content": " 1 6"
+   },
+   {
+    "label": "C",
+    "content": " 5 18"
+   },
+   {
+    "label": "D",
+    "content": "1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-1",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 1,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u221a\nw + 22 = 28\nWhat is the solution to the given equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "12"
+   },
+   {
+    "label": "D",
+    "content": "36"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-2",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 2,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "For what value of a is\na\n\u221a\nr42 equivalent to\nr6/7, where r > 1.",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "49",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-3",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "53 =\n2K\nv2\nFor an object with a mass of 53 kilograms,\nthe given equation relates the kinetic en-\nergy K, in joules, of the object to the ob-\nject\u2019s speed u, in meters per second, where\nK and v are positive. Which equation cor-\nrectly expresses this object\u2019s speed, in me-\nters per second, in terms of the object\u2019s ki-\nnetic energy, in joules?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "v = q 2K 53"
+   },
+   {
+    "label": "B",
+    "content": "v = q 53 2k"
+   },
+   {
+    "label": "C",
+    "content": "v = 532 2K"
+   },
+   {
+    "label": "D",
+    "content": "v = 2K 532"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-4",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 4,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The expression\n7\np\np5\np\npt+3\n, where t is a con-\nstant, is equivalent to 7\np\np2 for all positive\nvalues of p. What is the value of t?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221215 7"
+   },
+   {
+    "label": "B",
+    "content": "\u221227 7"
+   },
+   {
+    "label": "C",
+    "content": "\u221224 7"
+   },
+   {
+    "label": "D",
+    "content": "\u221218 7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-5",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 5,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u221a\nx2 = 24 \u2212 5x",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "4"
+   },
+   {
+    "label": "C",
+    "content": "19"
+   },
+   {
+    "label": "D",
+    "content": "30"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-6",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 6,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 52,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n1\n5y8\n,\nwhere y > 1?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " y\u22128 5"
+   },
+   {
+    "label": "B",
+    "content": "(5y)\u22128"
+   },
+   {
+    "label": "C",
+    "content": "5y\u22128"
+   },
+   {
+    "label": "D",
+    "content": "5 y\u22128 52 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponents-radicals-7",
+  "book": "ma3",
+  "topic": "Exponents&Radicals",
+  "num": 7,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 53,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "\u221a\nx2 = 80 \u2212 9x\nWhat is the solution to the given equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "71"
+   },
+   {
+    "label": "C",
+    "content": "90"
+   },
+   {
+    "label": "D",
+    "content": "8 53 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-1",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 1,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 55,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) =\n7x3 + 6. What is the value of f (2) ?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "62",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-2",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 2,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 55,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function g is defined by g(x) = 19 \u2212 x.\nWhat is the value of g(4)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "15"
+   },
+   {
+    "label": "C",
+    "content": "19"
+   },
+   {
+    "label": "D",
+    "content": "23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-3",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 55,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u221210 \u22128 \u22126 \u22124 \u22122 2 4 6 8 10\n2\n4\n6\n8\n10\n12\nx\ny\n\u2022 Moving from left to right, the curve\npasses from quadrant 2 to quadrant 1\n\u2022 The curve has 2 relative minimums\nand 1 relative maximum.\n\u2022 The curve passes through the follow-\ning points:\n\u2022 (negative 3 comma 4)\n\u2022 (0 comma 7)\n\u2022 (3 comma 4)\nThe graph of the function f is shown,\nwhere y = f (x). What is the value of\nf(0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22127"
+   },
+   {
+    "label": "B",
+    "content": "\u22123"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "7 55 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-4",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 56,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf (x) = 25x + 20. What is the value of f (x)\nwhen x = 2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "47"
+   },
+   {
+    "label": "B",
+    "content": "50"
+   },
+   {
+    "label": "C",
+    "content": "70"
+   },
+   {
+    "label": "D",
+    "content": "90"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-5",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 56,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u221210\u22128 \u22126 \u22124 \u22122 2 4 6 8 10\n2\n4\n6\n8\n10\n12\nx\nf (x)\nThe graph of the function f is shown,\nwhere y = f (). What is the value of f (0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "\u22122"
+   },
+   {
+    "label": "D",
+    "content": "\u22126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-6",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 6,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 56,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u22128 \u22126 \u22124 \u22122 2 4 6 8\n\u22128\n\u22126\n\u22124\n\u22122\n2\n4\n6\n8\nx\ny\nThe graph of the polynomial function f is\nshown, where y = f (x). What is the value\nof f (2)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "0"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "\u22123"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-13",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 13,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function h is defined by\nh(x) = 5(9x \u2212 10). What is the value of\nh(10)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "400"
+   },
+   {
+    "label": "B",
+    "content": "10"
+   },
+   {
+    "label": "C",
+    "content": "50"
+   },
+   {
+    "label": "D",
+    "content": "90 57 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-14",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 14,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 58,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function A(b) = 7b2 gives the area of a\nright triangle, in square centimeters (cm2),\nif the length of its base is b cm and the\nlength of its height is 14 times the length\nof its base. Which of the following is the\nbest interpretation of A(18) = 2,268?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "If the length of the base of the trian- gle is 2,268 cm, then the length of the height of the triangle is 18 cm."
+   },
+   {
+    "label": "B",
+    "content": "If the length of the base of the triangle is 18 cm, then the length of the height of the triangle is 2,268 cm."
+   },
+   {
+    "label": "C",
+    "content": "If the length of the base of the triangle is 18 cm, then the area of the triangle is 2,268 cm2."
+   },
+   {
+    "label": "D",
+    "content": "If the length of the base of the triangle is 2,268 cm, then the area of the trian- gle is 18 cm2."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-16",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 16,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 58,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf (x) = 2x3 +\n1\n3\nx2 \u2212 x. What is the value\nof f (1)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4 3"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "10 3"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-17",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 17,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 58,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "Function f is defined as f (x) = (2x \u2212 5)2,\nand function g is defined as\ng(x) = 2(2x + 7). Which of the following\nis equivalent to f (x) + g(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4x2 \u2212 16x + 11"
+   },
+   {
+    "label": "B",
+    "content": "4x2 \u2212 16x + 39"
+   },
+   {
+    "label": "C",
+    "content": "4x2 \u2212 6x + 39"
+   },
+   {
+    "label": "D",
+    "content": "4x2 + 24x + 11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-20",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 20,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 59,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = x3 + 7.\nWhat is the value of f (2)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "15",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-21",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 21,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 59,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) =\n1\n8x\n.\nWhat is the value of f (x) when x = 9?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1/72",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-22",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 22,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 59,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u22126 \u22124 \u22122 2 4 6\n\u22128\n\u22126\n\u22124\n\u22122\n2\n4\n6\n8\nx\ny\nThe complete graph of y = f (x) is shown.\nFor how many values of x does f (x) = 0?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "One"
+   },
+   {
+    "label": "B",
+    "content": "Two"
+   },
+   {
+    "label": "C",
+    "content": "Three"
+   },
+   {
+    "label": "D",
+    "content": "Four"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-23",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 23,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 59,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function is defined by f (x) =\nx + 11\n5\n,\nand f (a) = \u221218, where a is a constant.\nWhat is the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212101"
+   },
+   {
+    "label": "B",
+    "content": "\u221279"
+   },
+   {
+    "label": "C",
+    "content": "\u221279 5"
+   },
+   {
+    "label": "D",
+    "content": "\u22127 5 59 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-2",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 2,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 61,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "\u22124 \u22123 \u22122 \u22121 1 2 3 4\n\u22126\n\u22124\n\u22122\n2\n4\n6\n8\n10\nx\ny\nThe graph of the function f is shown,\nwhere y = f (x). What is the value of f (0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "\u22122"
+   },
+   {
+    "label": "D",
+    "content": "\u22126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-5",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 62,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = ax \u2212 b,\nwhere a and b are constants. In the xy-\nplane, the graph of y = f (x) passes\nthrough the points (c, 4) and (2c, 114),\nwhere c is a constant. Which of the fol-\nlowing could be the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "110"
+   },
+   {
+    "label": "D",
+    "content": "118"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-6",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 6,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 62,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = ax \u2212 b,\nwhere a and b are constants. In the xy-\nplane, the graph of y = f (x) passes\nthrough the points (c, 5) and (2c, 137),\nwhere c is a constant. Which of the fol-\nlowing could be the value of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "16"
+   },
+   {
+    "label": "C",
+    "content": "132"
+   },
+   {
+    "label": "D",
+    "content": "142"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-10",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 10,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "2 4 6 8 10\n300\n600\n900\n1,200\n1,500\n1,800\nx\ny\nThe graph shows the estimated number\nof cell phone subscribers, y, in a town x\nyears since 1990. Which equation repre-\nsents the exponential relationship between\nthe number of cell phone subscribers in the\ntown and the number of years since 1990,\nwhere 0 \u2264 x \u2264 10?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 370(0.17)x"
+   },
+   {
+    "label": "B",
+    "content": "y = 370(1.17)x"
+   },
+   {
+    "label": "C",
+    "content": "y = 1779(0.83)x"
+   },
+   {
+    "label": "D",
+    "content": "y = 1779(1.83)x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-12",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 12,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "g(x) =\n1\n11\n(5(2)x\n+ 4)\nThe function g is defined by the given\nequation. For all values of x, the value of\ng(x) is greater than k, where k is a constant.\nWhat is the greatest possible value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "4 1"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "9 11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-15",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 15,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The population of a certain city doubled\nevery 75 years from 1651 to 1951. The pop-\nulation of this city was 160,000 in 1951.\nWhat was the population of this city in\n1651?\n63",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "10000",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-23",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 23,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "g(x) =\n1\n11\n(6(2)x\n+ 7)\nThe function g is defined by the given\nequation. For all values of x, the value of\ng(x) is greater than k, where k is a con-\nstant. What is the greatest possible value\nof k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0"
+   },
+   {
+    "label": "B",
+    "content": "13 11"
+   },
+   {
+    "label": "C",
+    "content": "7 11"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-26",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 26,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf (x) = 2x3 +\n1\n3\nx2 \u2212 x. What is the value\nof f (1)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4 3"
+   },
+   {
+    "label": "B",
+    "content": "2"
+   },
+   {
+    "label": "C",
+    "content": "10 3"
+   },
+   {
+    "label": "D",
+    "content": "6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-27",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 27,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = a(4)x,\nwhere a is a positive constant. In the\nxy-plane, the graph of y = f (x) passes\nthrough the point (0,13). What is the value\nof f (0)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "1"
+   },
+   {
+    "label": "C",
+    "content": "13"
+   },
+   {
+    "label": "D",
+    "content": "9 65 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-32",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 32,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "y = 9(\na\n7\n)x+c\n\u2212 b\nHow many times does the graph of the\ngiven equation in the xy-plane cross the\nx-axis, where a, b, and c are positive con-\nstants such that a > 7 and b < c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "One"
+   },
+   {
+    "label": "C",
+    "content": "Two"
+   },
+   {
+    "label": "D",
+    "content": "Three"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-33",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 33,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function h is defined by h(x) = ax + b,\nwhere a and b are positive constants. The\ngraph of y = h(x) in the xy-plane passes\nthrough the points (0, 10) and (2, 13).\nWhat is the value of ab?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "13"
+   },
+   {
+    "label": "B",
+    "content": "18"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "26 66 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-34",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 34,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 67,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf (x) = 56(0.19)x. For any positive inte-\nger n, the value of f (n) is p% less than the\nvalue of f (n \u2212 1). What is the value of p?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "19"
+   },
+   {
+    "label": "B",
+    "content": "44"
+   },
+   {
+    "label": "C",
+    "content": "56"
+   },
+   {
+    "label": "D",
+    "content": "81 67 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-1",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 1,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "1\ncx\n=\nx\n96\n+\n1\nc\nIn the given equation, c is a constant. If the\nequation has exactly one solution, what is\nthe value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-24",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-2",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 2,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2 \u2212 9x + 1 = 0\nWhat is the one solution to the given equa-\ntion?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9+ \u221a 77 2"
+   },
+   {
+    "label": "B",
+    "content": "9+ \u221a 85 2"
+   },
+   {
+    "label": "C",
+    "content": "\u22129+ \u221a 77 2"
+   },
+   {
+    "label": "D",
+    "content": "\u22129+ \u221a 85 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-5",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 5,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "f (x) = 4x2 + 56x + 197\nThe function g is defined by g(x) = f (x +\n6). What is the minimum value of g(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221213"
+   },
+   {
+    "label": "B",
+    "content": "\u22127"
+   },
+   {
+    "label": "C",
+    "content": "1"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-6",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 6,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "(x \u2212 k)2 = (k \u2212 4a)(x \u2212 k)\nIn the given equation, a and k are con-\nstants, where k > 4a The sum of the so-\nlutions to the equation is 3k + 37 What is\nthe value of a?\n69",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-37/4",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-7",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 7,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "If (1\n2 x \u2212 21\n2 )2 \u2212 81 = 0, what is the value of\n(x \u2212 21)2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "324"
+   },
+   {
+    "label": "B",
+    "content": "162"
+   },
+   {
+    "label": "C",
+    "content": "21"
+   },
+   {
+    "label": "D",
+    "content": "9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-8",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 8,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y = 7x2 \u2212 bx \u2212 6\nWhich of the following equations is equal\nto the given equation above, where b is a\npositive constant.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 7(x \u2212 b 14)2 \u2212 6 \u2212 b2 28"
+   },
+   {
+    "label": "B",
+    "content": "y = 7(x \u2212 b 14)2 \u2212 6"
+   },
+   {
+    "label": "C",
+    "content": "y = 7(x + b 14)2 \u2212 6 \u2212 b2 28"
+   },
+   {
+    "label": "D",
+    "content": "y = 7(x + b 14)2 \u2212 6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-9",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 9,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u2212x2 + bx \u2212 49 = 0\nIn the given equation, b is an integer. The\nequation has no real solution. What is least\npossible value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-13",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-10",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 10,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "x2\n\u2212 9x + 1 = 0\nWhat is one of the solutions to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9+ \u221a 77 2"
+   },
+   {
+    "label": "B",
+    "content": "9+ \u221a 85 2"
+   },
+   {
+    "label": "C",
+    "content": "\u22129+ \u221a 77 2"
+   },
+   {
+    "label": "D",
+    "content": "\u22129+ \u221a 85 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-11",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 11,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "y \u2212 x = 46\ny = x2\n\u2212 44x\nThe graphs of the equations in the given\nsystem intersect at the point (x, y) in the\nxy-plane. What is a possible value of y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "46"
+   },
+   {
+    "label": "B",
+    "content": "47"
+   },
+   {
+    "label": "C",
+    "content": "91"
+   },
+   {
+    "label": "D",
+    "content": "92"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-12",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 12,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 70,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u22125x2\n\u2212 x + 9 = 0\nWhat is the greatest solution to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22121 5 + \u221a 181 5"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 1 10 + \u221a 181 10"
+   },
+   {
+    "label": "C",
+    "content": "\u22121 5 \u2212 \u221a 181 5"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 1 10 \u2212 \u221a 181 10 70 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-13",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 13,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "If (x + 2)2 = 28, what is the value of\nx2 + 4x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "56"
+   },
+   {
+    "label": "B",
+    "content": "28"
+   },
+   {
+    "label": "C",
+    "content": "32"
+   },
+   {
+    "label": "D",
+    "content": "24"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-14",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 14,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "1\n78\nx2\n+ (s \u2212\n1\n78\nt)x \u2212 st = 0\nIn the given equation, s and t are positive\nconstants. The product of the solutions to\nthe given equation is \u22122kst, where k is a\nconstant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "39",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-16",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 16,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "kx2\n\u2212 16x = 27x2\n\u2212 8\nIn the given equation, k is an integer con-\nstant. If the equation has two distinct\nreal solutions, what is the greatest possible\nvalue of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-17",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 17,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "The expression x2 + kx + 14, where k is\na constant, can be rewritten as\n(x + n)(x + 7), where n is a constant. What\nis the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "5"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-18",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 18,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "\u22125x2\n\u2212 x + 9 = 0\nWhat is the greatest solution to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22121 5 + \u221a 181 5"
+   },
+   {
+    "label": "B",
+    "content": "\u2212 1 10 + \u221a 181 10"
+   },
+   {
+    "label": "C",
+    "content": "\u22121 5 \u2212 \u221a 181 5"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 1 10 \u2212 \u221a 181 10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "satmath-ma3-quadratics-19",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 19,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "In the xy-plane, the graph of the equa-\ntion y = \u2212x2 + 7x \u2212 104 intersects the line\ny = c at exactly one point. What is the\nvalue of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212367 4"
+   },
+   {
+    "label": "B",
+    "content": "\u22127 2"
+   },
+   {
+    "label": "C",
+    "content": "\u2212104"
+   },
+   {
+    "label": "D",
+    "content": "\u2212465 4 71 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ }
+]

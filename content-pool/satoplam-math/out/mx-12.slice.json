@@ -1,0 +1,1826 @@
+[
+ {
+  "id": "sathard-geometry-29",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 29,
+  "page": 52,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A line intersects two parallel lines, forming\nfour acute angles and four obtuse angles.\nThe measure of one of the acute angles is\n(9x \u2212 490)\u25e6. The sum of the measures of one\nof the acute angles and three of the obtuse\nangles is (\u221218x + w)\u25e6. What is the value of\nw?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-30",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 30,
+  "page": 52,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In isosceles triangle ABC, sides AB and AC\nare congruent. Point D divides side BC such\nthat the length of BD is 4\n7 of the length of BC.\nPoint E lies on side AB and point F lies on\nside AC such that when segments DE and\nDF are drawn, angle BED is congruent to\nangle CFD. If the length of BE is 8, what is\nthe length of CF?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "14"
+   },
+   {
+    "label": "C",
+    "content": "32"
+   },
+   {
+    "label": "D",
+    "content": "56"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-32",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 32,
+  "page": 52,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "The perimeter of an isosceles right triangle\nis 52 + 52\n\u221a\n2 inches. What is the length, in\ninches, of the hypotenuse of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "26"
+   },
+   {
+    "label": "B",
+    "content": "26 \u221a 2"
+   },
+   {
+    "label": "C",
+    "content": "52"
+   },
+   {
+    "label": "D",
+    "content": "52 \u221a 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "52",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-37",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 37,
+  "page": 53,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "x\ny\n-8 -6 -4 -2 0 2 4 6 8\n2\n4\n6\n8\n10\n12\n14\n16\nThe line segment shown in the xy-plane\nrepresents one of the legs of a right triangle.\nThe area of this triangle is 48\n\u221a\n13 square\nunits. What is the length, in units, of the\nother leg of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "16"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "3 \u221a 13"
+   },
+   {
+    "label": "D",
+    "content": "6 \u221a 13"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-38",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 38,
+  "page": 53,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "",
+  "choices": [
+   {
+    "label": "A",
+    "content": "right circular cone has a volume of 2,700\u03c0 cubic centimeters and the area of its base is 225\u03c0 square centimeters. What is the slant height, in centimeters, of this cone? A) 12"
+   },
+   {
+    "label": "B",
+    "content": "15"
+   },
+   {
+    "label": "C",
+    "content": "36"
+   },
+   {
+    "label": "D",
+    "content": "39"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-39",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 39,
+  "page": 53,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "P\nT\nQ\nS\nR\nx\nA property owner wants to find the length\nx, in feet, across a pond as represented in\nthe figure. PR intersects ST at point Q, and\n\u2220PTQ is congruent to \u2220RSQ. The lengths\nrepresented by PQ, TQ, QS, and RS were\ndetermined to be 4,200 feet, 8,400 feet, 1,400\nfeet, and 1,600 feet, respectively. What is the\nvalue of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "9600",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-40",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 40,
+  "page": 53,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right square pyramid has a surface area of\n75,264 square inches, which includes a base\narea of 36,864 square inches. What is the\nslant height, in inches, of this pyramid?\n53",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "100",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-42",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 42,
+  "page": 54,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "The volume of a right rectangular prism\nwith a square base is 2,448 cubic centimeters.\nIf the area of the square base is 144 square\ncentimeters, what is the area, in square\ncentimeters, of one of the four lateral faces\nof the prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "17"
+   },
+   {
+    "label": "B",
+    "content": "204"
+   },
+   {
+    "label": "C",
+    "content": "540"
+   },
+   {
+    "label": "D",
+    "content": "816"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-43",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 43,
+  "page": 54,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right square pyramid has a height of 11\ncentimeters (cm). A second right square\npyramid has a height of 22 centimeters. The\narea of the bases of each of the two pyramids\nis 100 cm2. Which of the following is closest\nto the difference in the surface area of the\nsecond pyramid and the surface area of the\nfirst pyramid, in cm2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "209"
+   },
+   {
+    "label": "B",
+    "content": "220"
+   },
+   {
+    "label": "C",
+    "content": "367"
+   },
+   {
+    "label": "D",
+    "content": "551"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-44",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 44,
+  "page": 54,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "t u w\nr\ns\nj\u25e6\ng\u25e6\nd\u25e6\nh\u25e6\np\u25e6\nIn the figure, parallel lines r and s are\nintersected by lines t, u, and w. If d = 42,\ng = 143, and h > d, which statement about j\nand p must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "j = p"
+   },
+   {
+    "label": "B",
+    "content": "j + p = 90"
+   },
+   {
+    "label": "C",
+    "content": "j > p"
+   },
+   {
+    "label": "D",
+    "content": "j < p"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-45",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 45,
+  "page": 54,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right triangular pyramid has exactly six\nedges. Each of these edges is 96 centimeters\nlong. If the surface area of the pyramid is\nk\n\u221a\n3 square centimeters, what is the value of\nk?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "9216",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-46",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 46,
+  "page": 54,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right rectangular prism has a base area of\n28p square centimeters cm2\n\u0001\n. The length of\nthe base of the rectangular prism is 12 cm,\nand the height of the rectangular prism is 4\ncm. Which expression represents the surface\narea, in cm2, of the right rectangular prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 512p 3"
+   },
+   {
+    "label": "B",
+    "content": " 224p 3 + 96"
+   },
+   {
+    "label": "C",
+    "content": "56p + 192"
+   },
+   {
+    "label": "D",
+    "content": "560p + 96 54"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-47",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 47,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Volume(cubic units)\nCylinder A 72\u03c0\nCylinder B 4, 608\u03c0\nThe table shows the volume of two similar\nsolids, right circular cylinder A and right\ncircular cylinder B.The radius of right\ncircular cylinder A is 3 units. The surface\narea of right circular cylinder A is k\u03c0 square\nunits, and the surface area of right circular\ncylinder B is n\u03c0 square units, where k and\nn are constants. What is the value of n \u2212 k?\n(The surface area of a right circular cylinder\nwith radius r and height h is 2\u03c0r2 + 2\u03c0rh.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "990",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-48",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 48,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "x2\n\u2212 6x + y2\n\u2212 12y \u2212 36 = 0\nIn the xy-plane, the graph of the given\nequation is a circle. If this circle is inscribed\nin a square, what is the perimeter of the\nsquare?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18"
+   },
+   {
+    "label": "B",
+    "content": "36"
+   },
+   {
+    "label": "C",
+    "content": "72"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-49",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 49,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "(x + 3)2 + (y \u2212 18)2 = 169\nThe graph of the given equation is a circle\nin the xy-plane. The point (a, b) lies on the\ncircle. Which of the following is a possible\nvalue for a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-16"
+   },
+   {
+    "label": "B",
+    "content": "-10"
+   },
+   {
+    "label": "C",
+    "content": "3"
+   },
+   {
+    "label": "D",
+    "content": "10 E) 16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-50",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 50,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "x2\n\u2212 16x + y2\n\u2212 10y \u2212 55 = 0\nIn the xy-plane, the graph of the given\nequation is a circle. If this circle is inscribed\nin a square, what is the perimeter of the\nsquare?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "24"
+   },
+   {
+    "label": "B",
+    "content": "48"
+   },
+   {
+    "label": "C",
+    "content": "96"
+   },
+   {
+    "label": "D",
+    "content": "220"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-51",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 51,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A circle in the xy-plane has a diameter with\nendpoints (a, 11) and (a, d), where a and\nd are constants. An equation of this circle\nis (x \u2212 a)2 + (y \u2212 17)2 = r2, where r is a\npositive constant. What is the value of d?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "17"
+   },
+   {
+    "label": "D",
+    "content": "23"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-52",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 52,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with\ncoordinates (1, 0) and point B with\ncoordinates ( 5\n\u221a\n34\n, \u2212 3\n\u221a\n34\n). If the measure\nof angle AOB is p radians, what is the value\nof\ncos p\nsin p ?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-1.667",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-53",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 53,
+  "page": 55,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, a unit circle with center\nat the origin O contains point A with\ncoordinates (1, 0) and point B with\ncoordinates\n\u0010\n\u2212 5\n\u221a\n89\n, 8\n\u221a\n89\n\u0011\n. If the measure of\nangle AOB is w radians, what is the value of\ntan w?\n55",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "-1.6",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-54",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 54,
+  "page": 56,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Volume (cubic units)\nCylinder A 112\u03c0\nCylinder B 3, 024\u03c0\nThe table shows the volume of two similar\nsolids, right circular cylinder A and right\ncircular cylinder B. The radius of right\ncircular cylinder A is 4 units. The surface\narea of right circular cylinder A is k\u03c0 square\nunits, and the surface area of right circular\ncylinder B is n\u03c0 square units, where k and\nn are constants. What is the value of n \u2212 k?\n(The surface area of a right circular cylinder\nwith radius r and height h is 2\u03c0r2 + 2\u03c0rh.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "704",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-55",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 55,
+  "page": 56,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right triangular prism has a base of 28p\nsquare centimeters (cm2). The length of the\nrectangular prism is 12 cm, and the height\nof the rectangular prism is 4 cm. Which\nexpression represents the surface area, in\ncm2, of the right rectangular prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 512p 3"
+   },
+   {
+    "label": "B",
+    "content": " 224p 3 + 96"
+   },
+   {
+    "label": "C",
+    "content": "56p + 192"
+   },
+   {
+    "label": "D",
+    "content": "560p + 96"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-57",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 57,
+  "page": 56,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "2x2\n+ 2y2\n+ tx + ty \u2212 78 = 0\nThe given equation, where t is a positive\nconstant, defines a circle in the xy-plane. The\nradius of this circle is\n\u221a\n41. What is the value\nof t?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "4",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-58",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 58,
+  "page": 56,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Pool\nx ft\nThe figure shows a rectangular pool\nsurrounded by a concrete path that is x feet\n(ft) wide on all sides. The pool is 21 ft long\nand 13 ft wide. The area of the concrete path\nis 240 ft\u00b2. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "40"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-59",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 59,
+  "page": 56,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\ny\u25e6\nI\nI\nx\u25e6\nz\u25e6II\nII\nTwo isosceles triangles are shown above. If\n180 \u2212 z = 3y and y = 50, what is the value\nof x?\n56",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "55",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-61",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 61,
+  "page": 57,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "10\n20\n1.5\n3\nThe solid in the figure below is the shaded\npart of a cone with a height of 10 cm\nobtained by cutting its top parallel to the\nbase, 10 cm from its tip. The volume of the\nsolid is",
+  "choices": [
+   {
+    "label": "A",
+    "content": "188.52 cm3"
+   },
+   {
+    "label": "B",
+    "content": "23.57 cm3"
+   },
+   {
+    "label": "C",
+    "content": "164.93 cm3"
+   },
+   {
+    "label": "D",
+    "content": "145.29 cm3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-63",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 63,
+  "page": 57,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "O\nA\nB\nC\nThe area of an isosceles right triangle\ninscribed in the circle with center at O and\nradius 5\n\u221a\n2 is",
+  "choices": [
+   {
+    "label": "A",
+    "content": "100"
+   },
+   {
+    "label": "B",
+    "content": "50"
+   },
+   {
+    "label": "C",
+    "content": "10 \u221a 2"
+   },
+   {
+    "label": "D",
+    "content": "25 \u221a 2 E) 50 \u221a 2 57"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-65",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 65,
+  "page": 58,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, a circle has center C with\ncoordinates (p, 8), where p is a constant.\nPoints G and H lie on the circle. Point G\nhas coordinates (p + 3\n\u221a\n5, 14), and point H\nhas coordinates (q, 8), where q is a constant\ngreater than p. What is the area, in square\nunits, of triangle CGH?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27 \u221a 5"
+   },
+   {
+    "label": "B",
+    "content": "27"
+   },
+   {
+    "label": "C",
+    "content": "5 \u221a 27"
+   },
+   {
+    "label": "D",
+    "content": "27 \u221a 6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-66",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 66,
+  "page": 58,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, the line y = 3x \u2212 14 is\ntangent to a circle with center (h, 1). Which\nof the following is a possible value for h if the\ncenter lies to the right of the tangent line?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2"
+   },
+   {
+    "label": "B",
+    "content": "3"
+   },
+   {
+    "label": "C",
+    "content": "5"
+   },
+   {
+    "label": "D",
+    "content": "7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-69",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 69,
+  "page": 58,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "P Q\nR S\nO\nIn the circle above, chord RS is parallel to\ndiameter PQ. If the length of RS is 3\n4 of the\nlength of PQ and the distance between the\nchord and the diameter is 2\n\u221a\n7, what is the\nradius of the circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "3 \u221a 7"
+   },
+   {
+    "label": "C",
+    "content": "8"
+   },
+   {
+    "label": "D",
+    "content": "4 \u221a 7 58"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-70",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 70,
+  "page": 59,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "The ratio of the internal angles of triangle A\nis 1:2:3. Triangle B is an equilateral triangle\nwith a side of 12 cm. If the area of triangle A\nand B are equal and the perimeter of triangle\nA is m\n\u221a\n2 + n\n\u221a\n6, what is the value of m + n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6"
+   },
+   {
+    "label": "B",
+    "content": "12"
+   },
+   {
+    "label": "C",
+    "content": "18"
+   },
+   {
+    "label": "D",
+    "content": "24"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-73",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 73,
+  "page": 59,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "a\na + 1\na + 2\na + 3\na + 4\nx\u25e6\nO\nThe figure above shows a semicircle with the\nlengths of the adjacent arcs a, a + 1, a + 2,\na + 3, and a + 4. If the value of x is 42, what\nis the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-76",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 76,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right triangular pyramid has exactly six\nedges. Each of these edges is 96 centimeters\nlong. If the surface area of the pyramid is\nk\n\u221a\n3 square centimeters, what is the value of\nk?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "9216",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-77",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 77,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right triangular prism has a base of 28p\nsquare centimeters (cm2). The length of the\nrectangular prism is 12 cm, and the height\nof the rectangular prism is 4 cm. Which\nexpression represents the surface area, in\ncm2, of the right rectangular prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 512p 3"
+   },
+   {
+    "label": "B",
+    "content": " 224p 3 + 96"
+   },
+   {
+    "label": "C",
+    "content": "56p + 192"
+   },
+   {
+    "label": "D",
+    "content": "560p + 96"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-78",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 78,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right square pyramid has a total surface\narea of 36,864 square inches, and the\ncombined surface area of the four lateral\nfaces of this pyramid is 20,480 square inches.\nWhat is the height, in inches, of this\npyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "48"
+   },
+   {
+    "label": "B",
+    "content": "64"
+   },
+   {
+    "label": "C",
+    "content": "80"
+   },
+   {
+    "label": "D",
+    "content": "128"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "64",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-79",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 79,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A line intersects two parallel lines, forming\nfour acute angles and four obtuse angles.\nThe measure of one of the acute angles is\n(9x \u2212 490). The sum of the measures of one\nof the acute angles and three of the obtuse\nangles is (\u221218x + w). What is the value of\nw?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-80",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 80,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right triangular prism has a base of 28p\nsquare centimeters (cm2). The length of the\nrectangular prism is 12 cm, and the height\nof the rectangular prism is 4 cm. Which\nexpression represents the surface area, in\ncm2, of the right rectangular prism?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 512p 3"
+   },
+   {
+    "label": "B",
+    "content": " 224p 3 + 96"
+   },
+   {
+    "label": "C",
+    "content": "56p + 192"
+   },
+   {
+    "label": "D",
+    "content": "560p + 96"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-81",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 81,
+  "page": 60,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Right rectangular prism X is similar to right\nrectangular prism Y. The surface area of\nright rectangular prism X is 59 cm2, and the\nsurface area of right rectangular prism Y is\n1,475 cm2. The volume of right rectangular\nprism Y is 1,500 cm3. What is the sum of the\nvolumes, in cm3, of right rectangular prism\nX and right rectangular prism Y?\n60",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1512",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-82",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 82,
+  "page": 61,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "l\nw\nh\nThe figure shown is a right rectangular\npyramid, where l = 18 units, w = 9 units,\nand h = 12 units. What is the surface area,\nin square units, of the pyramid?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "297 + 27 \u221a 73"
+   },
+   {
+    "label": "B",
+    "content": "162 + 54 \u221a 73"
+   },
+   {
+    "label": "C",
+    "content": "162 + 27 \u221a 193"
+   },
+   {
+    "label": "D",
+    "content": "324 + 18 \u221a 73"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-84",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 84,
+  "page": 61,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A right square pyramid has a height of 11\ncentimeters (cm). A second right square\npyramid has a height of 22 centimeters. The\narea of the base of each of the two pyramids\nis 100 cm2. Which of the following is closest\nto the difference in the surface area of the\nsecond pyramid and the surface area of the\nfirst pyramid, in cm2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "209"
+   },
+   {
+    "label": "B",
+    "content": "220"
+   },
+   {
+    "label": "C",
+    "content": "367"
+   },
+   {
+    "label": "D",
+    "content": "551"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-85",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 85,
+  "page": 61,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nP\nQ R\nA B\nC\nL\nA circle is inscribed in an equilateral triangle\nas shown above. Point L is the center of the\ncircle. Points A, B, and C all lie on the circle\nand the sides of the triangle. The perimeter\nof the triangle is 90\n\u221a\n3. The length of arc AC\nis equal to k\u03c0. What is the value of k?\n61",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "10",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-86",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 86,
+  "page": 62,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Volume (cubic units)\nCylinder A 112\u03c0\nCylinder B 3, 024\u03c0\nThe table shows the volume of two similar\nsolids, right circular cylinder A and right\ncircular cylinder B. The radius of right\ncircular cylinder A is 4 units. The surface\narea of right circular cylinder A is k\u03c0 square\nunits, and the surface area of right circular\ncylinder B is n\u03c0 square units, where k and\nn are constants. What is the value of n \u2212 k?\n(The surface area of a right circular cylinder\nwith radius r and height h is 2\u03c0r2 + 2\u03c0rh.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "704",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-87",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 87,
+  "page": 62,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Volume (cubic units)\nCylinder A 112\u03c0\nCylinder B 3, 024\u03c0\nThe table shows the volume of two similar\nsolids, right circular cylinder A and right\ncircular cylinder B. The radius of right\ncircular cylinder A is 4 units. The surface\narea of right circular cylinder A is k\u03c0 square\nunits, and the surface area of right circular\ncylinder B is n\u03c0 square units, where k and\nn are constants. What is the value of n \u2212 k?\n(The surface area of a right circular cylinder\nwith radius r and height h is 2\u03c0r2 + 2\u03c0rh.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "704",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-88",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 88,
+  "page": 62,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "5x2 \u2212 40px + 5y2 + 70py = 325p2\nIn the xy-plane, the graph of the given\nequation is a circle, where p is a constant.\nThe center of the circle is (\u22128, 14). If a square\nis inscribed in the circle, what is the area of\nthe square?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1040",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-89",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 89,
+  "page": 62,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In triangle DEF, angle F is a right angle,\npoint Q lies on DE, point J lies on EF, and\nQJ is parallel to DF. If the length of EF is\n45 units, the length of FJ is 24 units, and\nthe area of triangle DEF is 630 square units,\nwhat is the perimeter of triangle QEJ, in\nunits?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "294 5"
+   },
+   {
+    "label": "B",
+    "content": "63"
+   },
+   {
+    "label": "C",
+    "content": "441 5"
+   },
+   {
+    "label": "D",
+    "content": "126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-94",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 94,
+  "page": 63,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "x\ny\n-4 -2 0 2 4 6\n-4\n-2\n0\n2\n4\n6\n8\n10\nWhat is the area, in square units, of the\ntriangle formed by connecting the three\npoints shown?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "25",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-95",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 95,
+  "page": 63,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nA\nB\nC\ny\nx\n5 7\nThe area of triangle ABC above is at least 48\nbut no more than 60. If y is an integer, what\nis one possible value of x?\n63",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "10/3;15/4;25/6",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-101",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 101,
+  "page": 65,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\n28\nB\nA\nC\nFor triangle ABC, the length of AB is 11\nless than the length of AC. Point D (not\nshown) lies on AC such that BD (not shown)\nis perpendicular to AC. What is the value of\nBC\nBD ?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "2",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-102",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 102,
+  "page": 65,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "x\ny\n2 4 6 8 10 12 14\n2\n4\n6\n8\n10\n12\n14\nO\nThe three points shown define a circle. The\ncircumference of this circle is k\u03c0, where k is\na constant. What is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "6",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-103",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 103,
+  "page": 65,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A circle has center A, and points B and C\nlie on the circle. Line segments BD and CD\nare tangent to the circle at points B and C,\nrespectively. The measure of angle BDC is\n120\u25e6. The length of line segment CD is 12\ninches. What is the area of the region that is\nboth inside quadrilateral ABDC and outside\nthe circle, in square inches? (Round your\nanswer to the nearest hundredth of a square\ninch)\n65",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "23.22",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-108",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 108,
+  "page": 67,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A C\nB\nD\nO\nF E\n30\u25e6\nIn the figure above, O is the center of the\ncircle and AC is tangent to the circle at D. If\ntriangle ABC is equilateral, what is the ratio\nFE\nAC\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-109",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 109,
+  "page": 67,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "O\nA\nB\nC\nIn the figure below, if the radius of circle O\nis 10, what is the length of diagonal AC of\nrectangle OABC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u221a 2"
+   },
+   {
+    "label": "B",
+    "content": " \u221a 10"
+   },
+   {
+    "label": "C",
+    "content": "5 \u221a 2"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": null,
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-110",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 110,
+  "page": 67,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Two identical rectangular prisms each have\na height of 90 centimeters (cm). The base\nof each prism is a square, and the surface\narea of each prism is K cm2. If the prisms\nare glued together along a square base,\nthe resulting prism has a surface area of\n92\n47\nK cm2. What is the side length, in cm, of\neach square base?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-111",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 111,
+  "page": 67,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "C\nA\nB\nP\nx\nx\nIn the figure above, the area of triangle ABC\nis equal to 2x2. What is the cosine of \u2220BCP?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1/ \u221a 10"
+   },
+   {
+    "label": "B",
+    "content": "3/ \u221a 10"
+   },
+   {
+    "label": "C",
+    "content": "1/3"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "B",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-112",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 112,
+  "page": 67,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Radius Height\nCylinder A R H\nCylinder B 4R 3H + 24\nCylinders A and B are similar. The volume\nof cylinder A is 1176\u03c0 cm3. If the surface\nareas of cylinder B and A are n\u03c0 cm2 and\nk\u03c0 cm2, respectively, what is the value of (n -\nk)?\n67",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "6510",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-116",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 116,
+  "page": 68,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "B\nA C\nF\nD E\nO\nIn the diagram below, OB=OA, AB=BC, the\nmeasure of angle FAO = 30\u25e6, DE is parallel\nto AC, and AB = 58. What is the length of\nBE?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "116 3"
+   },
+   {
+    "label": "B",
+    "content": "29"
+   },
+   {
+    "label": "C",
+    "content": "87 2"
+   },
+   {
+    "label": "D",
+    "content": "58"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-118",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 118,
+  "page": 68,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In isosceles triangle RST, SR = ST and the\nlength of RT is 76. If tan(\u2220R) = 2\n35, what is\nthe area of triangle RST?\n68",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "2888/35q",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-geometry-119",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 119,
+  "page": 69,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "The perimeter of an isosceles right triangle\nis 48 + 48\n\u221a\n2 inches. What is the length, in\ninches, of the hypotenuse of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "24"
+   },
+   {
+    "label": "B",
+    "content": "24 \u221a 2"
+   },
+   {
+    "label": "C",
+    "content": "48"
+   },
+   {
+    "label": "D",
+    "content": "48 \u221a 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "320",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-8",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 8,
+  "page": 75,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A real estate company offers a series of\nthree webinars. 1,250 people attended the\nfirst webinar. 68% of the people who\nattended the first webinar attended the\nsecond webinar, and 32% of the people\nwho attended the first and second webinars\nattended the third webinar. How many\npeople attended all three webinars?\n75",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "272",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-12",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 12,
+  "page": 76,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "a, 26, 29, b, 33, 49, c\nFor the given data set, the data values are\nlisted in ascending order, where a, b, and c\nare constants. For this data set, the mean\nis 36, the median is 29, and the range is 72.\nWhat is the value of c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "53"
+   },
+   {
+    "label": "B",
+    "content": "72"
+   },
+   {
+    "label": "C",
+    "content": "79"
+   },
+   {
+    "label": "D",
+    "content": "98 76"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-14",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 14,
+  "page": 77,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "Data set A consists of 18 different values that\nhave a minimum of 12, a maximum of 80,\na mean of 46 and a standard deviation of\n17. The values 12 and 80 are removed from\nthe set to create data set B, which consists of\n16 different values. Which of the following\nstatements is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of data set B is greater than"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-46",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 46,
+  "page": 77,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "B) The mean of data set B is less than 46.\nC) The standard deviation of data set B is\ngreater than 17.\nD) The standard deviation of data set B is\nless than 17.",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "A",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-18",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 18,
+  "page": 78,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The mass of object A is 450% of the mass of\nobject B, and the mass of object A is 0.090%\nof the mass of object C. If the mass of object\nC is p% of the mass of object B, what is the\nvalue of\np\n1,000?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "500",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-24",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 24,
+  "page": 79,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The mass of object A is 483% of the mass of\nobject B, and the mass of object A is 0.069%\nof the mass of object C. If the mass of object\nC is p% of the mass of object B, what is the\nvalue of\np\n1, 000\n?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "700",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-27",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 27,
+  "page": 80,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "In a collection of items, 10% are red, 25%\nare green, 35% are blue, and 30% are yellow.\nIf there are 40 green items, how many blue\nitems are in the collection?\n(A) 14\n(B) 16\n(C) 48\n(D) 56",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-31",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 31,
+  "page": 80,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "For the positive quantities h, j, and k, 94% of\nh is equivalent to 47% of j, and j is equivalent\nto 30% of k. What percentage of k is h?\n(Disregard the % sign when entering your\nanswer. For example, if you answer is 39%,\nenter 39).\n80",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "15",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-41",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 41,
+  "page": 82,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A set of five consecutive even integers is\nordered from least to greatest. The sum of\nthe first and fourth even integers is 5,860%\nmore than the quotient of the fifth even\ninteger and 30. The first even integer is p%\nless than the fifth even integer, where p is a\nconstant. What is the value p?\n82",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "1.07",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-48",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 48,
+  "page": 84,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The graph below shows the distribution\nof all stars within 12 light-years of Earth\nby total energy output per second, or\nluminosity.\nLuminosity of Stars within 12 Light-Years\n1\n> 10\n3\n1 \u2212 10\n6\n0.1 \u2212 1\n5\n0.01 \u2212 0.1\n7\n0.001 \u2212 0.01\n9\n< 0.001\nNumber of stars\n0 2 4 6 8 10\nWhich of the following could be the\nmedian luminosity of all the stars within 12\nlight-years of Earth?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.18"
+   },
+   {
+    "label": "B",
+    "content": "0.052"
+   },
+   {
+    "label": "C",
+    "content": "0.0063"
+   },
+   {
+    "label": "D",
+    "content": "0.0003"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-49",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 49,
+  "page": 84,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The histograms shown summarize two data\nsets, X and Y. Each data set consists of 25\nwhole numbers. In each histogram, the first\ninterval represents the frequency of whole\nnumbers greater than or equal to 70, but less\nthan 75. The second interval represents the\nfrequency of whole numbers greater than or\nequal to 75, but less than 80, and so on. What\nis the largest possible difference between\nthe median of data set Y and the mean of\ndata set X?\nData set X\nWhole number\nFrequency\n70 75 80 85 90 95 100\n2\n4\n6\n8\n10\nData set Y\nWhole number\nFrequency\n70 75 80 85 90 95 100\n2\n4\n6\n8\n10\n84",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "18",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-51",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 51,
+  "page": 85,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "Data set A consists of 20 different values that\nhave a minimum of 22, a maximum of 86,\na mean of 54, and a standard deviation of\n15. The values 22 and 86 are removed from\nthe set to create data set B, which consists of\n18 different values. Which of the following\nstatements is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of data set B is greater than"
+   }
+  ],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-64",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 64,
+  "page": 87,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A biologist mixed a solution that is 0.3%\nsodium chloride by mass with a solution that\nis 0.15% sodium chloride by mass to obtain a\nnew solution, which has a mass of 80 grams\nand contains 0.21 grams of sodium chloride.\nHow many grams of 0.3% sodium chloride\nsolution did the biologist use?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.14"
+   },
+   {
+    "label": "B",
+    "content": "20"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "79.86 87"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "60",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-65",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 65,
+  "page": 88,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The tables give the distribution of daily\ntravel times between two towns for bus A\nand bus B over a 40-day period.\nBus A\nTime (min) Frequency\n44 5\n45 10\n47 15\n48 10\nBus B\nTime (min) Frequency\n25 5\n30 10\n35 15\n40 10\nWhich statement correctly compares the\nstandard deviations of travel times for bus\nA and bus B?\nA The standard deviation of travel times\nfor bus A is less than the standard\ndeviation of travel times for bus B.\nB The standard deviation of travel times\nfor bus B is less than the standard\ndeviation of travel times for bus A.\nC The standard deviation of travel times\nfor bus A is equal to the standard\ndeviation of travel times for bus B.\nD There is not enough information to\ncompare these standard deviations.",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-66",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 66,
+  "page": 88,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A biologist mixed a solution that is 0.3%\nsodium chloride by mass with a solution that\nis 0.15% sodium chloride by mass to obtain a\nnew solution, which has a mass of 80 grams\nand contains 0.21 grams of sodium chloride.\nHow many grams of 0.3% sodium chloride\nsolution did the biologist use?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.14"
+   },
+   {
+    "label": "B",
+    "content": "20"
+   },
+   {
+    "label": "C",
+    "content": "60"
+   },
+   {
+    "label": "D",
+    "content": "79.86"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "key": "60",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-67",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 67,
+  "page": 88,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "The scatter plot and the line of best fit of data\nset A with the equation y = 0.07x2 + 0.05x +\n6.33 is shown. If the point h is removed\nfrom data set A to create data set B with\nthe equation y = ax2 + bx + c, which of the\nfollowing is true?\nI. a > 0.07\nII. c < 6.33\nA I only\nB II only\nC I and II\nD Neither I nor II\n88",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-69",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 69,
+  "page": 89,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "Data set A consists of 20 different values that\nhave a minimum of 22, a maximum of 86,\na mean of 54, and a standard deviation of\n15. The values 22 and 86 are removed from\nthe set to create data set B, which consists of\n18 different values. Which of the following\nstatements is true?\nA The mean of data set B is greater than",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-70",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 70,
+  "page": 89,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A survey was conducted in Arlington to\nestimate the percent of adult residents who\nsupport the addition of a gas station at a\npopular intersection in their town. Based\non the survey, it is estimated that 51%\nof all adult residents of Arlington support\nthe addition of a gas station at a popular\nintersection in their town, with an associated\nmargin of error of 7%. Which of the\nfollowing is the most appropriate conclusion\nabout all adult residents of Arlington?\nA The addition of a gas station at a\npopular intersection in the town is\nsupported by more than 58% of all\nadult residents of Arlington.\nB Plausible values for the percent of\nall adult residents of Arlington who\nsupport the addition of a gas station at\na popular intersection in their town are\nbetween 44% and 58%.\nC Plausible values for the percent of\nall adult residents of Arlington who\nsupport the addition of a gas station at\na popular intersection in their town are\neither less than 44% or more than 58%.\nD The addition of a gas station at a\npopular intersection in the town is\nsupported by exactly 44% of all adult\nresidents of Arlington.\n89",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-73",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 73,
+  "page": 90,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "To determine if age and gender are related\nto pet ownership at his school, Mark\nselected a random sample of 50 male 14-\nto 15-year-old students from the school\nand a random sample of 60 female 17- to\n18-year-old students from the school. For\neach student, he recorded the student\u2019s age,\ngender, and whether the student owned a\npet. Which of the following provides the\nbest explanation for why Mark cannot draw\na valid conclusion from this study?\nA The sample sizes are too small.\nB The two samples are not of equal size.\nC Mark will be unable to tell whether a\ndifference in pet ownership is related\nto age because the two age groups are\ntoo close in age.\nD Mark will be unable to tell whether a\ndifference in pet ownership is related\nto gender because of the difference in\nage. Similarly, he will be unable to tell\nwhether a difference in pet ownership\nis related to age.\n90",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-74",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 74,
+  "page": 91,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "A development company is advertising that\nthe mean area of the apartments in a new\ncomplex is 1,450 square feet. The complex\nconsists of 10 buildings with a total of 1,000\napartments. A sample of 50 apartments\nwill be selected from the complex to test\nthe company\u2019s statement about the mean\napartment area. Which of the following is\nan unbiased sampling method?\nA Select the first 50 apartments built.\nB Select the first 50 apartments that are\noccupied.\nC Select at random 5 top-floor\napartments from each of the buildings.\nD Select at random 50 apartments from\nall the apartments in the 10 buildings.",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "D",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-76",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 76,
+  "page": 91,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "For which of the following sets of 9 data\npoints is the median less than the mean?\nA A\nB B\nC C\nD D\n91",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "C",
+  "needs_vision": true
+ },
+ {
+  "id": "sathard-problem-solving-78",
+  "book": "hard",
+  "topic": "Problem Solving",
+  "num": 78,
+  "page": 92,
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "difficulty": "HARD",
+  "body": "Two data sets each containing 20 integers are summarized in histograms. For the histogram, the\nfirst interval represents the frequency of integers greater than or equal to 40, but less than 50. The\nsecond interval represents the frequency of integers greater than or equal to 30, but less than 40,\nand so on. The mean of Data Set A is equal to a. The mean of Data Set B is equal to b. What is the\nsmallest possible value of\nb\na\n?\nData Set A\nInteger\nFrequency\n20 30 40 50 60 70\n1\n2\n3\n4\n5\n6\n7\n8\n9\nData Set B\nInteger\nFrequency\n20 30 40 50 60 70\n1\n2\n3\n4\n5\n6\n7\n8\n9\n92",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "key": "83/122",
+  "needs_vision": true
+ }
+]
