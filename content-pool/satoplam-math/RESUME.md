@@ -87,6 +87,27 @@ band rather than guessing it, and a reject line for incoming questions
 stricter than the detect line. The R&W build skipped this and shipped 33
 same-test duplicates.
 
+## Defects the transcribers are finding — repair before allocation
+
+Agents record these in each record's `note`; grep the JSONL for non-empty
+notes to collect them. Representative so far:
+
+- **Incomplete stems.** `linear-equations-54` drops the whole second half of a
+  definition ("...divided by the time over which the speed changes") and a
+  noun from the next sentence. It happens to stay answerable on units alone,
+  which is exactly why a checker would not catch it. Needs repair or replacing.
+- **Choices mislabelled in the book.** `linear-system-of-equations-3` prints
+  its fourth choice as "E)". The parser also merged C and D into one string
+  there — the same failure the key-vs-type cross-check flags.
+- **Duplicate choices.** `expressions-51` prints A and D identically.
+- **Exact duplicate questions inside one book**, e.g. four pairs in the linear
+  slice alone. See the recycling section above.
+
+**Questions needing a figure** carry `needsFigure: true`. Agents were told to
+put their reading of the graph in `note`, never in the stem, so a prose
+description cannot leak the answer — CLAUDE.md rule 3. Those need a real
+figure built (matplotlib to base64 PNG) or must be dropped at allocation.
+
 ## Known gaps
 
 - ~~30 Areas&Volumes answers on book page 382~~ **CLOSED.** The user supplied
