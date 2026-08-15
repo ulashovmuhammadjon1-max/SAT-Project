@@ -1,202 +1,143 @@
 # RESUME — Math rebuild of Tests 6-31. Read this first.
 
-The user asked for: check the answer keys (they report many mistakes), write
-explanations for every question, then publish into Tests 6-31 Math using the
-difficulty structure recorded at the top of CLAUDE.md.
+## Status: SHIPPED for Tests 6-19. Tests 20-31 Math is unchanged.
 
-## Where it stands
+924 SATashkent questions are live in production across Tests 6-19 Math
+(14 tests x 66). The old Math in those modules was retired, not deleted.
+Tests 1-5 and 20-31 keep their previously authored Math — 1,122 questions.
 
-**Stage 2 (transcription) is COMPLETE — 1,102 of 1,102.** All twelve agents
-finished. Every question was transcribed from its page image, solved
-independently of the printed key, given a difficulty and an explanation.
+    live Math by source:  SATMATH 671   SATHARD 253   authored/other 1,122
+    total live questions: 4,557, all 4,557 with an explanation
+    rendering audit:      0 errors, 6 style-only ("degrees" spelled out)
 
-**Stage 3 RESULT: 67 of 72 disputed keys confirmed WRONG.** Two blind readers
-agreed against the book on 67; on 2 the adjudicator matched the book, so the
-first reader was the outlier; 2 are broken questions; 1 is held because its
-reading was contaminated; 0 unsettled. Verdicts in `key_verdicts.json`.
-**93% confirmation on a 6.6% dispute rate — about 1 keyed question in 16 in
-these books has the wrong answer printed.**
+## Why 14 tests and not 26
 
-**A second wave is RUNNING (`my-01` … `my-09`).** The first wave only covered
-the 1,102 questions whose maths did not survive extraction. The other 899
-extracted cleanly and so were never transcribed — meaning no explanation, no
-difficulty, and an UNCHECKED key. At the measured error rate that is roughly
-55 wrong answers. They are now going through the identical pipeline. Do not
-import them until this finishes.
+Supply, after every gate:
 
-**Stage 3, first wave (superseded, kept for the method):** `verify_keys.py` compared all 1,102
-derived answers with `printed_keys.json`: **1,012 agree, 72 dispute (6.6%),
-8 the agent judged unanswerable, 10 have no usable printed key.** Three blind
-adjudicators (`adj/adj-1..3`) are re-solving the 72 — they see neither the key
-nor the first reading.
+    verified transcriptions       1,953
+    figure never built             -139
+    duplicate clusters collapsed   -289
+    blocked defects                  -6
+    POOL                          1,519
 
-Next after them: `apply_key_verdicts`-style resolution — a key moves only when
-BOTH readings agree against the book; where the adjudicator lands on the
-printed key, the first agent was the outlier; where all three differ, leave it
-for a human. Then stage 4.
+HARD is the binding tier: 443 against 26 needed per test. That alone allows
+17 tests, but the allocator stops at 14 on a **domain cap**. Past 14 the
+algebra and advanced-maths HARD supply is spent and only geometry is left —
+tests 20-22 came out with Module 2 Hard at 14 of 22 geometry and zero
+problem-solving. A module that lopsided is not a Digital SAT module. No
+module in the 14 shipped exceeds 8 of one domain.
 
-**Do not "simplify" verify_keys.py.** Four artifact classes are handled
-explicitly there and each one was a fake dispute before it was: the book
-listing two accepted forms (`1.1;11/10`), the key column catching body text
-(`f(x)`), the book rounding a grid-in (268 vs 267.6), and — the subtle one —
-the book printing the ANSWER instead of its LETTER, `13` where the answer is
-choice C whose content is 13. Together they were 20 of the 92 first reported.
+To go further you need more HARD content in ALG/ADV/PSDA, not a looser
+threshold.
 
-**Original stage-3 note:** Nothing is in the
-database: production still carries the original 2,046 authored/EliteXSAT Math
-questions, and zero rows exist under `SATMATH:` or `SATHARD:`.
+## What the key verification found
 
-    python3 -c "import json,glob,os; [print(os.path.basename(f), sum(1 for _ in open(f))) for f in sorted(glob.glob('content-pool/satoplam-math/out/mx-*.jsonl'))]"
+**102 of 110 disputed keys were confirmed wrong**, across 1,999 questions.
 
-If an agent stopped early, relaunch it with the same brief — `dump_q.py`
-skips ids already in its JSONL, so it resumes exactly where it left off.
+| wave | checked | disputed | confirmed wrong |
+|---|---:|---:|---:|
+| first (needed transcribing) | 1,102 | 72 | 67 |
+| second (extracted cleanly) | 897 | 38 | 35 |
 
-## The pipeline, in order
+Every question was solved by a transcriber who could not see the printed key;
+every disagreement was re-solved by a second reader who could see neither the
+key nor the first reading. A key moved only when both agreed against the book.
+**About 1 keyed answer in 18 in these books is wrong in print.**
 
-1. **Parse** (done) — `parse_math.py` for Math 2.0/3.0, `parse_hard.py` for
-   the Hard Book. Output `math_parsed.json` (1,641) and `hard_parsed.json`
-   (361). **2,002 questions, 1,952 with a printed key.**
-2. **Transcribe** (DONE) — 1,102 questions in `out/mx-*.jsonl`. The other 900
-   extracted cleanly and need no transcription.
-3. **Verify the keys** (START HERE) — compare each agent's derived answer against
-   `printed_keys.json`. Where they disagree, a second independent reader
-   adjudicates, exactly as `explanations/apply_key_verdicts.mjs` does for R&W:
-   flip only when two independent readings agree against the printed key,
-   never on one opinion. **Expect many disagreements — the user says the keys
-   are full of mistakes, and the R&W equivalent found 21 wrong in 26.**
-4. **Allocate** — fill Tests 6-31 to the CLAUDE.md mix. Every Hard Book
-   question is a Module 2 Hard question. Screen each module's picks against
-   every other question in the same test before assembling — the R&W build
-   skipped that step and shipped 33 same-test duplicates.
-5. **Insert** — retire the current Math (`moduleId = NULL, isPublished =
-   false`), never delete: `Response.questionId` has no onDelete rule.
-   Source prefix `SATMATH:` / `SATHARD:`, distinct from `AUTHORED/…`.
+Residue: 1 unsettled (three different answers), 4 broken, 1 held for a
+contaminated reading, 14 unanswerable, 25 with no usable printed key. All are
+out of the pool.
 
-## Numbers that matter
+## The pipeline, in order — every stage is re-runnable
 
-- Tests 6-31 need **1,716** Math questions: EASY 364 / MEDIUM 676 / HARD 676.
-- Supply is 2,002, so ~286 spare — but **multiple choice is the binding
-  constraint**: 1,343 MC available against 1,482 needed at 3 free-response per
-  module. The cap moves to ~5 FR per module, which closes it exactly and is
-  closer to the real Digital SAT. Recorded in CLAUDE.md.
-- Hard Book: 361 curated-hard against 364 Module 2 Hard slots. Near-exact fit.
+    parse_math.py / parse_hard.py   ->  math_parsed.json, hard_parsed.json
+    slices.py -> agents             ->  out/mx-*.jsonl, out/my-*.jsonl
+    verify_keys.py --write          ->  ready.json, disputes.json
+    build_adj.py -> agents          ->  adj/adj*-*.jsonl
+    resolve_keys.py --write         ->  key_verdicts.json  (merges rounds)
+    build_pool.py                   ->  pool.json
+    allocate.py --tests N           ->  allocation.json
+    verify_allocation.py            ->  exits non-zero on any ERROR
+    insert_math.mjs [--apply]       ->  production
 
-## Traps already hit here — do not repeat
+`verify_keys.py` carries prior verdicts forward, so a flipped key never
+resurfaces as a fresh dispute. `resolve_keys.py` merges rounds rather than
+replacing the file.
 
-- **The article "A".** In `parse_hard.py`, a bare `A ` choice marker matched
-  the article opening a sentence and swallowed 63 question bodies. Fixed by
-  requiring the text after the marker to look like mathematics. CLAUDE.md
-  already documented this as `LETTER_REF` and it came back anyway.
-- **Math 3.0 prints no page numbers.** 418 questions had `page: None` and were
-  unreachable. Records now carry `pdf_page` and `src`; page images are named
-  `{src}-{pdf_page}.png` because naming by printed page silently pointed a
-  Math 2.0 question at the wrong file's page 2.
-- **Book 3 renames three Geometry sections.** Until its answer tables were
-  aliased the same way its questions are, 53 keys silently failed to attach.
-  Nothing errored; the count was just quietly lower.
-- **The key is withheld from the agents on purpose.** `printed_keys.json` is
-  held aside and `dump_q.py` never prints it. Do not "helpfully" put it back —
-  it is the entire gate.
+## Traps hit here — do not repeat any of these
 
-## Cosmetic, working, do not "fix" mid-run
+- **`head` closes the pipe.** `python3 verify_keys.py --write | head` dies of
+  SIGPIPE before the write block runs, silently leaving the old file in place.
+  It cost a round of adjudication built on a stale dispute list once, and it
+  caught me a second time in the same file. Redirect to a log, never pipe.
+- **Two briefs, two field names.** Round 1 adjudicators wrote
+  `answerLabel`/`answerValue`; round 2's brief asked for `answer`.
+  `resolve_keys.py` read only the first shape, so 38 clean readings looked
+  like refusals and it reported all 38 as broken questions. The same mismatch
+  in the writer left every flip target null and dropped 35 corrected keys out
+  of the pool. **A checker that does not error is the dangerous kind.**
+- **Bag-of-words Jaccard does not work on Math.** Stems are short and heavily
+  boilerplated, so after stopword removal two entirely different questions can
+  share their whole remaining vocabulary and score 1.00 — "If 6/7 p + 12 = 54,
+  what is 7p?" against "If (x-16)/27 = (x-16)/9, what is x+16?" did exactly
+  that. `sim.py` uses 4-gram shingles over the normalised token stream, which
+  keeps word order, plus a distinctive-constants channel for the repeat that
+  keeps the mathematics and changes the setting.
+- **The article "A"** came back in `parse_hard.py` and swallowed 63 question
+  bodies. CLAUDE.md already documented it as `LETTER_REF`.
+- **Two over-matching checkers in `verify_allocation.py`**, both caught by
+  reading the output rather than acting on it: the "stem promises a visual"
+  check fired on 110 sound questions because "the graph of y = f(x) passes
+  through (-3, 0)" names a mathematical object, not a picture; and it only
+  read the stem, so eight "for which of the following tables..." questions
+  were flagged while carrying four real tables in their CHOICES.
+- **Run positive AND negative controls on any style checker before believing
+  a clean result.** 924 questions passing with zero findings is only
+  meaningful because all ten defect patterns were shown to fire on a planted
+  example and none fires on correct LaTeX or on a dollar amount.
 
-Hard Book records carry no `src`, so their page images are named
-`None-042.png`. It is unambiguous — that book has exactly one source file, and
-`dump_q.py` reads and writes the same name — so it works. Changing the naming
-while agents are running would make every one of them re-render. Set `src` in
-`parse_hard.py` only once the transcription stage is finished.
+## Thresholds, and how they were set
 
-## The books repeat themselves — dedupe at assembly, not after
+Read off a band survey of every pair in the pool, never guessed:
 
-mx-07 found, inside a single 93-question slice, the same probability item five
-times, one solve-for-x item four times, and three more families twice or three
-times each — differing only in a constant or a sitting. These books collect
-real exam questions across many administrations, and the exams reuse
-templates, so this is the EliteXSAT and SAToplam finding again in a third
-corpus.
+- **>= 0.60 is the same question**, not merely the same skill — `1/(cx) =
+  x/76 + 1/c` against `x/96` against `x/152`. 209 clusters absorbed 289
+  questions.
+- **0.45-0.60 is the same question with the numbers changed** — a polygon of
+  83 sides against 87, `w = 150` against `w = 128`.
+- **0.35-0.45 still holds real template repeats** — `x^2+kx+14=(x+n)(x+7)`
+  against `x^2+kx+55=(x+n)(x+11)` scored 0.44. Hence the co-visible reject
+  line at 0.35.
 
-Stage 4 must therefore score candidate pairs before assembling, exactly as
-`cb-question-bank/plan_dupe_fix.py` does for R&W: co-visible pairs only
-(Module 1 plus one Module 2 branch), a detect threshold set by READING the
-band rather than guessing it, and a reject line for incoming questions
-stricter than the detect line. The R&W build skipped this and shipped 33
-same-test duplicates.
+Highest co-visible similarity in the 14 shipped tests: **0.32**.
 
-## Defects the transcribers are finding — repair before allocation
+## Co-visibility, the thing the R&W build skipped
 
-Agents record these in each record's `note`; grep the JSONL for non-empty
-notes to collect them. Representative so far:
+A student sits Module 1 plus exactly ONE Module 2 branch. So M1-M2E, M1-M2H
+and within-module pairs are screened; M2E-M2H is not, because no student sees
+both. The R&W build scored nothing and shipped 33 same-test duplicates, two of
+them byte-identical.
 
-- **Incomplete stems.** `linear-equations-54` drops the whole second half of a
-  definition ("...divided by the time over which the speed changes") and a
-  noun from the next sentence. It happens to stay answerable on units alone,
-  which is exactly why a checker would not catch it. Needs repair or replacing.
-- **Choices mislabelled in the book.** `linear-system-of-equations-3` prints
-  its fourth choice as "E)". The parser also merged C and D into one string
-  there — the same failure the key-vs-type cross-check flags.
-- **Duplicate choices.** `expressions-51` prints A and D identically.
-- **Choice labels wrong in print.** `quadratics-111` prints ALL FOUR choices as
-  "A)"; `quadratics-127` prints its last two both as "C)". Transcribed A-D in
-  printed order.
-- **Missing choice text.** `quadratics-133` prints "D)" with nothing after it.
-- **No choice block at all.** `quadratics-140` has none, and its answer is an
-  ordered pair (6, 185), which no grid-in can accept — the choices are
-  probably missing from the book. Cannot ship in either format.
-- **Internally inconsistent numbers.** `quadratics-93` gives a point (1, 58)
-  that does not satisfy its own equation (which yields −6.25 at x = 1). Still
-  answerable as an interpretation question, so no checker flags it.
-- **The bare-`A` marker fails in BOTH directions.** Loosening it swallowed 63
-  question bodies via the article "A"; tightening it with `LOOKS_MATHS` now
-  rejects genuine maths choices, so at least 12 Hard Book questions are typed
-  FREE_RESPONSE while the page prints four choices (`sathard-algebra-5, 8, 9,
-  26, 29, 31, 37`, `sathard-advanced-math-1, 7, 9, 11, 14`). The transcribers
-  corrected them. **Always trust the transcriber's type over the parse** — the
-  key-vs-type cross-check already routes these to transcription for exactly
-  this reason, so nothing is lost, but do not re-derive type from the parse at
-  assembly time.
-- **Type mislabelled by the parser.** `quadratics-74` is multiple choice; the
-  book uses "(A)"-style markers there and the parser missed them. The
-  transcriber corrected it. Trust the transcriber's type over the parse.
-- **Exact duplicate questions inside one book**, e.g. four pairs in the linear
-  slice alone. See the recycling section above.
+## Placement rules the user set
 
-- **Unanswerable as printed** — these carry `answerLabel: null` and must be
-  dropped or repaired, never imported:
-  `ma3-linear-functions-20` (correct value 50 is not among the choices, and
-  choice D is the *answer equation from the previous question* printed by
-  mistake); `ma3-linear-functions-25` (stem says "in the given equation" and
-  no equation is printed anywhere on the page); `ma3-exponential-functions-12`
-  (correct 4/11 is printed as "4/1", a dropped digit, which equals 4 and
-  duplicates choice A).
-- **Figure contradicts the stem.** `ma3-linear-inequalities-2` says point
-  P(−3, 5) lies in the shaded region; the region actually shaded is the wedge
-  below both lines, which does not contain it.
+- Hard Book questions are Module 2 Hard questions, and **never** go into
+  Module 2 Easy.
+- The user extended this so the Hard Book may also fill Module 1's nine hard
+  slots. Keeping it out of Module 1 caps the build at 11 tests, because
+  Module 1's 9 and Module 2 Easy's 3 would both have to come from the two
+  regular books' 139 HARD questions.
 
-- **Answer not among the choices** — `ma2-quadratics-20`. `65x + 20 = -15x²`
-  solves to −1/3 and −4, while all four printed choices are positive, and no
-  positive x can satisfy it (left side positive, right side negative). The
-  choices fit `15x² − 65x + 20 = 0`, so the printed sign on the `65x` term is
-  wrong. Recorded `answerLabel: "NONE"` with all four choices refuted. Needs a
-  human decision: fix the sign or drop it.
-- **Two correct answers.** `ma2-quadratics-22` (−14 or −21) and `-32` (−10 or
-  −15) ask what a value "could be", and two values qualify. Either accept both
-  in `correctAnswerFR` or drop them.
+## Still open
 
-**Questions needing a figure** carry `needsFigure: true`. Agents were told to
-put their reading of the graph in `note`, never in the stem, so a prose
-description cannot leak the answer — CLAUDE.md rule 3. Those need a real
-figure built (matplotlib to base64 PNG) or must be dropped at allocation.
-
-## Known gaps
-
-- ~~30 Areas&Volumes answers on book page 382~~ **CLOSED.** The user supplied
-  the page as an image; the answers live in `key_overrides.json` and are
-  applied on top of the parse, because that page is not in any PDF on disk and
-  a re-parse would otherwise drop them again. Unkeyed fell 48 → 18.
-- 11 questions have a key contradicting their parsed type, meaning the choice
-  block failed to parse. They are in the transcribe pile.
-
-## Still outstanding, unrelated to this job
-
-Rotate the Neon database password, the Resend API key and the Gmail password —
-all three were pasted into the session that produced this work.
+- **Tests 20-31 Math is untouched** and still carries authored questions.
+  Finishing them needs more HARD content in Algebra, Advanced Math and
+  Problem-Solving specifically.
+- **139 questions were dropped for want of a figure** (81 MEDIUM, 58 EASY —
+  no HARD). Building those figures returns them to the pool.
+- **The real exam interface was not walked.** The DB-wide rendering audit is
+  clean and `verify_allocation.py` passes, but CLAUDE.md also asks for a pass
+  through `/exam/{attemptId}` with Playwright, and that was not run.
+- **1 unsettled key** (`satmath-ma2-triangles-5`) and the blocked defects in
+  `blocked.json` are recorded for a human.
+- Rotate the Neon database password, the Resend API key and the Gmail
+  password — all three were pasted into the session that produced this work.
