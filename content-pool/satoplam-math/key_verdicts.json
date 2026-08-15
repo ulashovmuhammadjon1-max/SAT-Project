@@ -401,13 +401,231 @@
    "from": "C",
    "to": "A",
    "confidence": "medium"
+  },
+  {
+   "id": "satmath-ma2-lines-angles-25",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-circles-20",
+   "from": "C",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-linear-equations-23",
+   "from": "A",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-linear-system-of-equations-19",
+   "from": "A",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-22",
+   "from": "B",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-50",
+   "from": "-47",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-advanced-math-84",
+   "from": "18",
+   "to": "19",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-31",
+   "from": "108",
+   "to": "80",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-62",
+   "from": "A",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-74",
+   "from": "B",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-geometry-106",
+   "from": "161",
+   "to": "64",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-4",
+   "from": "A",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-15",
+   "from": "D",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-28",
+   "from": "13",
+   "to": "14",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-42",
+   "from": "B",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-57",
+   "from": "0.1872",
+   "to": "19459",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-60",
+   "from": "20",
+   "to": "14",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-63",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-68",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-71",
+   "from": "C",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-72",
+   "from": "D",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "sathard-problem-solving-77",
+   "from": "0.32",
+   "to": "1",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-40",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-183",
+   "from": "-1146",
+   "to": "19",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-184",
+   "from": "19",
+   "to": "-11",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-quadratics-186",
+   "from": "25",
+   "to": "672",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-percent-ratio-proportion-62",
+   "from": "90",
+   "to": "900",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-percent-ratio-proportion-67",
+   "from": "B",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma2-linear-equations-105",
+   "from": "-563/630",
+   "to": "-563/6300",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-research-organizingmargin-of-error-2",
+   "from": "D",
+   "to": "B",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-research-organizingmargin-of-error-4",
+   "from": "18",
+   "to": "15",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-1",
+   "from": "D",
+   "to": "C",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-7",
+   "from": "A",
+   "to": "D",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-triangles-8",
+   "from": "B",
+   "to": "A",
+   "confidence": "high"
+  },
+  {
+   "id": "satmath-ma3-areas-volumes-19",
+   "from": "A",
+   "to": "D",
+   "confidence": "high"
   }
  ],
  "keep": [
   "satmath-ma2-trigonometry-3",
   "satmath-ma2-trigonometry-21"
  ],
- "unsettled": [],
+ "unsettled": [
+  {
+   "id": "satmath-ma2-triangles-5",
+   "book": "C",
+   "first": "D",
+   "second": "A",
+   "note": "Figure-dependent; the transcriber's note is truncated mid-sentence and never states what s, y and z label. The assignment above is the only one I found under which exactly one choice is a non-vacuous sufficient condition, which is why I am confident in A but only at medium."
+  }
+ ],
  "broken": [
   {
    "id": "satmath-ma2-quadratics-20",
@@ -416,6 +634,14 @@
   {
    "id": "sathard-advanced-math-57",
    "note": "BROKEN as printed: no choice equals the derived value 0.2466. The stem's units and the choice set are inconsistent. Most likely intended item is t in months (or 'every 8 years'), which makes D (n=3) correct; A (0.22) is reachable only by changing the denominator from 8 to 9. Needs a human decision - do not ship as is."
+  },
+  {
+   "id": "satmath-ma3-exponential-functions-8",
+   "note": "Defective as printed. A base-4 power is always positive and the leading coefficient is +5, so f is positive everywhere; the sign of the answer cannot be negative. Choice D is the exact negative of the true value, consistent with a dropped minus sign on the 5 in the stem (f(x) = -5(4)^(-x/6) would make D correct). Needs a human fix or removal."
+  },
+  {
+   "id": "sathard-geometry-1",
+   "note": "Defective as printed. D (462) is AB^2 and B (231sqrt(2)) is what sqrt(231)*sqrt(2) becomes if the radical is dropped from the 231 - either is a plausible typesetting loss of a radical, which is itself a reason not to guess. Needs a human fix (most likely D -> sqrt(462)) or removal."
   }
  ],
  "held_contaminated": [

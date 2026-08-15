@@ -17,7 +17,7 @@ disputes = {r["id"]: r for r in json.load(open(f"{HERE}/disputes.json"))}
 contaminated = set(json.load(open(f"{HERE}/contaminated.json"))["ids"])
 
 adj = {}
-for f in sorted(glob.glob(f"{HERE}/adj/adj-*.jsonl")):
+for f in sorted(glob.glob(f"{HERE}/adj/adj*-*.jsonl")):
     for line in open(f):
         if line.strip():
             try:
@@ -49,13 +49,25 @@ def same(a, b):
     return abs(float(x) - float(y)) <= 0.005 * max(1.0, abs(float(y)))
 
 
+def verdict(rec):
+    """An adjudicator's answer, whichever field shape its brief asked for.
+
+    Round 1 wrote answerLabel/answerValue to mirror the transcription records;
+    round 2's brief asked for a single `answer`. Reading only the first shape
+    made every round-2 reading look like a refusal to answer, which the
+    resolver then classified as 38 broken questions — a silent, total
+    misreading of a clean run.
+    """
+    return rec.get("answerLabel") or rec.get("answerValue") or rec.get("answer")
+
+
 flip, keep, split, broken, missing, held = [], [], [], [], [], []
 for qid, d in disputes.items():
     a = adj.get(qid)
     if not a: missing.append(d); continue
     if qid in contaminated: held.append((d, a)); continue
-    first = d.get("answerLabel") or d.get("answerValue")
-    second = a.get("answerLabel") or a.get("answerValue")
+    first = verdict(d)
+    second = verdict(a)
     key = d.get("printed_key")
     # An adjudicator who declines to answer is reporting a broken question,
     # not casting a vote.
@@ -83,15 +95,25 @@ for title, rows in (("UNSETTLED", split), ("BROKEN", broken)):
               f"2nd {str(a.get('answerLabel') or a.get('answerValue'))[:8]}")
 
 if "--write" in sys.argv:
-    out = {"flip": [{"id": d["id"], "from": d.get("printed_key"),
-                     "to": a.get("answerLabel") or a.get("answerValue"),
+    new = {"flip": [{"id": d["id"], "from": d.get("printed_key"),
+                     "to": verdict(a),
                      "confidence": a.get("confidence")} for d, a in flip],
            "keep": [d["id"] for d, _ in keep],
            "unsettled": [{"id": d["id"], "book": d.get("printed_key"),
-                          "first": d.get("answerLabel") or d.get("answerValue"),
-                          "second": a.get("answerLabel") or a.get("answerValue"),
+                          "first": verdict(d), "second": verdict(a),
                           "note": a.get("note", "")} for d, a in split],
            "broken": [{"id": d["id"], "note": a.get("note", "")} for d, a in broken],
            "held_contaminated": [d["id"] for d, _ in held]}
-    json.dump(out, open(f"{HERE}/key_verdicts.json", "w"), indent=1)
-    print(f"\nwrote key_verdicts.json")
+    # disputes.json holds only the round now being resolved, so the verdicts
+    # from earlier rounds must be carried forward rather than overwritten —
+    # they are what keeps an already-flipped key from resurfacing as a fresh
+    # dispute in verify_keys.py.
+    path = f"{HERE}/key_verdicts.json"
+    out = json.load(open(path)) if os.path.exists(path) else {}
+    for bucket, rows in new.items():
+        prior = [r for r in out.get(bucket, [])
+                 if (r if isinstance(r, str) else r["id"]) not in disputes]
+        out[bucket] = prior + rows
+    json.dump(out, open(path, "w"), indent=1)
+    print("\nwrote key_verdicts.json  " +
+          "  ".join(f"{k} {len(v)}" for k, v in out.items()))

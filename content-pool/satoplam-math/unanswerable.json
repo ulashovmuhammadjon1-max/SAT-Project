@@ -226,5 +226,116 @@
   "needsFigure": true,
   "note": "DEFECTIVE as printed - the scatter plot it depends on is missing. Page 88 of the Math Hard Book prints this question with no figure at all, and there is none on the facing pages. How dropping a single point h changes the leading coefficient and the y-intercept of a quadratic fit depends entirely on where h sits relative to the curve, so no answer can be derived. Either the figure has to be supplied or the item should be dropped. No answer recorded.",
   "printed_key": "C"
+ },
+ {
+  "id": "satmath-ma3-linear-functions-26",
+  "stem": "For certain air temperatures, the table gives wind chill temperatures for two different wind speeds.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Air temperature</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wind chill temperature at wind speed 5 mph</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wind chill temperature at wind speed 15 mph</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15&deg;F</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">29&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18&deg;F</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20&deg;F</td></tr></table>According to the table, what is the wind chill temperature, in degrees Fahrenheit (&deg;F), when the air temperature is 26 degrees Fahrenheit (&deg;F) and the wind speed is 15 mph? (Disregard the degree symbol when entering your answer.)",
+  "choices": [],
+  "answerValue": null,
+  "difficulty": "EASY",
+  "whyCorrect": "This question cannot be answered from the table as printed: the table lists air temperatures of 27&deg;F, 29&deg;F and 31&deg;F only, and no relationship is given that would let you extrapolate to 26&deg;F (the 15 mph column rises 3 then 2, so it is not even linear).",
+  "note": "DEFECTIVE as printed. The stem asks for an air temperature of 26&deg;F, which does not appear in the table (27, 29, 31 are the only rows). Note that 26 does appear as a wind chill value in the 5 mph column of the 31&deg;F row; if the intended row is that one, the 15 mph answer would be 20. Do not import without a corrected stem.",
+  "answerLabel": null,
+  "needsFigure": false,
+  "printed_key": "18"
+ },
+ {
+  "id": "sathard-algebra-14",
+  "stem": "22x - 21y = 43<br/>5x + 14y = 59<br/><br/>The solution to the given system of equations is \\( (x, y) = \\left(\\frac{p}{826}, \\frac{w}{59}\\right) \\) , where p and w are integers. What is the value of p + w?",
+  "choices": [],
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "note": "DEFECTIVE AS PRINTED. Solving the system exactly gives x = 1841/413 and y = 1083/413, where 413 = 7 x 59. Since 826 = 2 x 413, x = 3682/826 and p = 3682 is an integer, but y = w/59 forces w = 1083/7, which is not an integer, and 1083 = 3 x 19^2 shares no factor with 7. So no integer w exists and the question cannot be answered as printed. The self-consistent repair is to print both denominators as 413, giving p = 1841, w = 1083 and p + w = 2924. The book also writes \"where p and q are integers\" while the expression uses w, so a letter is wrong too.",
+  "answerLabel": null,
+  "needsFigure": false,
+  "whyWrong": null,
+  "printed_key": "3836"
+ },
+ {
+  "id": "sathard-algebra-32",
+  "stem": "A company is considering placing an advertisement on Website R. Website R charges no initial fee, but charges the same amount as Website P every time the advertisement is clicked. Which of the following graphs represents the cost y, in dollars, of placing an advertisement that receives x clicks on Website R?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Graph A"
+   },
+   {
+    "label": "B",
+    "content": "Graph B"
+   },
+   {
+    "label": "C",
+    "content": "Graph C"
+   },
+   {
+    "label": "D",
+    "content": "Graph D"
+   }
+  ],
+  "answerLabel": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "needsFigure": true,
+  "note": "UNANSWERABLE AS PRINTED. The stem sets the per-click price equal to Website P's, but Website P is never defined anywhere on the page \u2014 it belonged to a companion question that was not carried across. Measured readings of the four graphs (x axis ticked 60 and 120 clicks): A is a line through the origin reaching about 25 dollars at 120 clicks (slope about 0.21); B starts at about 12 dollars at 0 clicks, so it charges an initial fee and is ruled out by the stem; C passes through the origin and reaches about 48 dollars at 120 clicks (slope 0.40); D passes through the origin and reaches about 18 dollars at 120 clicks (slope 0.15). B can be eliminated, but nothing in the printed text distinguishes A, C and D. Needs the Website P price restored, or drop.",
+  "answerValue": null,
+  "whyWrong": null,
+  "printed_key": "A"
+ },
+ {
+  "id": "sathard-advanced-math-71",
+  "stem": "\\[ -16(5x - 3)^{2} + 4(5x - 2)^{2} \\]The given expression can be rewritten as \\( \\frac{(a+b+c)(a-b+c)}{100} \\) , where a, b, and c are constants. What is the value of the expression?",
+  "choices": [],
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "note": "DEFECTIVE AS PRINTED, and the book knows it: the page itself carries the parenthetical \"(Note: Transcription ambiguous, using calculated value based on standard rewriting interpretation)\" inside the question text. The question also asks for \"the value of the expression\", which is a function of x and has no single value. The mathematics that is recoverable: -16(5x-3)^2 + 4(5x-2)^2 = 4[(5x-2)^2 - (10x-6)^2] = -4(5x-4)(15x-8) = -300x^2 + 400x - 128. Nothing in the printed target form matches that, so a, b and c cannot be identified. Drop or replace.",
+  "answerLabel": null,
+  "needsFigure": false,
+  "whyWrong": null,
+  "printed_key": "231.84"
+ },
+ {
+  "id": "sathard-problem-solving-62",
+  "stem": "The scatterplot shows the relationship between the square footage of 12 clothing stores and their annual sales, in millions of dollars. According to the trend shown in the data, which of the following is the best prediction for the annual sales, in millions of dollars, of a clothing store that has 8 thousand square feet?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4.1"
+   },
+   {
+    "label": "B",
+    "content": "5.4"
+   },
+   {
+    "label": "C",
+    "content": "7.5"
+   },
+   {
+    "label": "D",
+    "content": "10.2"
+   }
+  ],
+  "answerLabel": null,
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "DEFECT: unanswerable as printed. The question depends entirely on a scatterplot, and no scatterplot appears anywhere on the page (checked pages 87 and 88 of the PDF). No answer can be derived; the item needs its figure supplied or must be dropped.",
+  "printed_key": "B"
+ },
+ {
+  "id": "satmath-ma2-quadratics-170",
+  "stem": "<p>\\[ z(kz - 112) = 0 \\]</p><p>In the given equation, \\(k\\) is an integer constant. If the equation has two distinct real solutions, what is the greatest possible value of \\(k\\)?</p>",
+  "choices": [],
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "As printed the question has no answer. The equation factors immediately: \\(z = 0\\) or \\(kz = 112\\). For any nonzero integer \\(k\\) the second factor gives \\(z = \\frac{112}{k}\\), which is never 0, so there are two distinct real solutions for every nonzero \\(k\\) &mdash; there is no greatest one. Only \\(k = 0\\) fails, since then the equation reduces to \\(-112z = 0\\) with the single solution \\(z = 0\\).",
+  "note": "DEFECTIVE as printed. With the right side equal to 0 the equation has two distinct real solutions for every nonzero integer k, so 'the greatest possible value of k' does not exist. The intended item almost certainly has a nonzero right side (compare Quadratics #121 in the same book, x(kx - 40) = -8, which does have a greatest k). Needs the source SAT item checked before use.",
+  "answerLabel": null,
+  "whyWrong": {},
+  "needsFigure": false,
+  "printed_key": "3135"
  }
 ]

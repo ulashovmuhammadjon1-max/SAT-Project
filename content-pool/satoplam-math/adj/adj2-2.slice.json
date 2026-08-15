@@ -1,0 +1,341 @@
+[
+ {
+  "id": "sathard-problem-solving-60",
+  "type": "FREE_RESPONSE",
+  "stem": "A data set consists of 5 numbers. The minimum is 5 and the range is 25. If we delete the minimum the median will not change, but if we delete the maximum the median will decrease by 1 unit. If the mean of the data set is 15, what is the median of the data set?",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": "The book prints \"delete the maximum\" twice; the first clause must read \"delete the minimum\", as it does in the identical question 28 of this book. Transcribed with that repair."
+ },
+ {
+  "id": "sathard-problem-solving-63",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "For which of the following sets of 9 data points is the median less than the mean?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "B",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "C",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "D",
+    "content": "Dot plot over 1 to 5"
+   }
+  ],
+  "needsFigure": true,
+  "book_note": "Each choice is a dot plot over 1 to 5 with 9 points. A: 1 appears 4 times, 2 twice, 3, 4 and 5 once each. B: 1 once, 2 once, 3 twice, 4 three times, 5 twice. C: 1 once, 2 twice, 3 three times, 4 twice, 5 once. D: 1 once, 2 once, 3 once, 4 twice, 5 four times."
+ },
+ {
+  "id": "sathard-problem-solving-68",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "In 2005, Aster earned 12% more than in 2004, and in 2006 Aster earned 6% more than in 2005. If Aster earned <em>y</em> times as much in 2004 as in 2006, which of the following is closest to the value of <em>y</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.5000"
+   },
+   {
+    "label": "B",
+    "content": "0.7200"
+   },
+   {
+    "label": "C",
+    "content": "0.8423"
+   },
+   {
+    "label": "D",
+    "content": "1.1872"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-problem-solving-71",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The value of a painting increased by 186% from the end of 2011 to the end of 2012 and then decreased by 21% from the end of 2012 to the end of 2013. What was the net percentage increase in the value of the painting from the end of 2011 to the end of 2013?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "125.94%"
+   },
+   {
+    "label": "B",
+    "content": "146.9%"
+   },
+   {
+    "label": "C",
+    "content": "165.00%"
+   },
+   {
+    "label": "D",
+    "content": "246.00%"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-problem-solving-72",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The area of a rectangular region is increasing at a rate of 210 square feet per hour. Which of the following is closest to this rate in square meters per minute? (Use 1 meter = 3.28 feet.)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.33"
+   },
+   {
+    "label": "B",
+    "content": "1.07"
+   },
+   {
+    "label": "C",
+    "content": "11.48"
+   },
+   {
+    "label": "D",
+    "content": "19.52"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "sathard-problem-solving-77",
+  "type": "FREE_RESPONSE",
+  "stem": "For 100 neurons, the table summarizes the distribution of classification and cell body diameter.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Classification</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\" colspan=\"3\">Cell body diameter (micrometers)</th></tr><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Less than 20</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">20 to 30</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Greater than 30</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Sensory neuron</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">12</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Motor neuron</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">17</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Interneuron</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">32</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td></tr></table>One of these neurons will be selected at random. What is the probability of selecting a neuron with a cell body diameter that is less than or equal to 30 micrometers, given that it is not classified as a motor neuron? (Express your answer as a decimal or fraction, not as a percent.)",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": "DEFECT, two of them: the table entries sum to 92, not the 100 neurons the stem claims, and the conditional probability comes out to exactly 1 because neither non-motor row has any neuron above 30 micrometers. Needs repair before use."
+ },
+ {
+  "id": "satmath-ma2-quadratics-40",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "\\[f(x) = \\sqrt{5x + 6}\\]The function <em>f</em> is defined by the given equation. If \\(f(a) = -5a\\), where <em>a</em> is a constant, what is the value of <em>a</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{3}{5}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{2}{5}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(-\\frac{2}{5}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(-\\frac{3}{5}\\)"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-183",
+  "type": "FREE_RESPONSE",
+  "stem": "<p>The product of a positive number \\(x\\) and the number that is 7 less than \\(x\\) is equal to 228. What is the value of \\(x\\)?</p>",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-184",
+  "type": "FREE_RESPONSE",
+  "stem": "<p>The graph of the quadratic function \\(y = f(x)\\) in the xy-plane intersects the x-axis when \\(x = 39\\) and when \\(x = p\\), where \\(p\\) is a constant. The maximum value of \\(y = f(x)\\) occurs at the point \\((14, m)\\), where \\(m\\) is a constant. What is the value of \\(p\\)?</p>",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-quadratics-186",
+  "type": "FREE_RESPONSE",
+  "stem": "<p>A club plans to sell tote bags. The club members estimate they will sell 80 tote bags when the bags are priced at $9 each. For every price increase of $1, they estimate they will sell 8 fewer bags. What is the estimated revenue, in dollars, when the bags are priced at $12 each? (revenue = price &times; number of bags sold)</p>",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-percent-ratio-proportion-62",
+  "type": "FREE_RESPONSE",
+  "stem": "<p>A researcher investigated two species of mites: a predator and its prey. At the start of a week, there was an equal number of the two species. At the end of the week, the number of prey had increased by 2,700% of the number of prey at the start of the week, and the number of predators had increased by 180% of the number of predators at the start of the week. The number of prey at the end of the week was \\(p\\%\\) greater than the number of predators at the end of the week. What is the value of \\(p\\)?</p>",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-percent-ratio-proportion-67",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "<p>For three counties, the table summarizes the number of residents who voted, by county and by candidate, during a 2016 US gubernatorial election. In 2016, the total number of residents in all three of these counties was 960,000, and the total area of these three counties was 1,949 square miles.</p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\"></th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Candidate 1</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Candidate 2</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Other candidates</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Total</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">County A</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">35,954</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">34,777</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1,640</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">72,371</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">County B</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">165,973</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">77,837</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">6,862</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">250,672</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">County C</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">46,475</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">54,235</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2,026</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">102,736</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Total</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">248,402</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">166,849</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">10,528</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">425,779</td></tr></table><p>For these three counties, which of the following is closest to the number of residents who voted per square mile?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "650"
+   },
+   {
+    "label": "B",
+    "content": "493"
+   },
+   {
+    "label": "C",
+    "content": "218"
+   },
+   {
+    "label": "D",
+    "content": "127"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma2-linear-equations-105",
+  "type": "FREE_RESPONSE",
+  "stem": "What value of \\( w \\) is the solution to the equation 0.7w &minus; 0.57 = 7(w &minus; 0.001)?",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": "DEFECT SUSPECTED. The numbers as printed give the exact value &minus;563/6300 &asymp; &minus;0.089365, which no SAT grid-in would ask for &mdash; it needs rounding and 563/6300 does not reduce. The digits were checked against the page image and are as shown. Likely a misprinted constant; needs a human decision before shipping."
+ },
+ {
+  "id": "satmath-ma3-research-organizingmargin-of-error-2",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "A science club from a certain high school in Ohio conducted an experiment to study the effects of smell on taste. A sample of 125 students was selected at random from the high school to participate in the experiment. First, the students tasted a pureed food sample while wearing covered goggles and nose plugs. Then, the students tasted the same pureed food sample without nose plugs. 50 students were able to correctly identify the pureed food sample while wearing nose plugs. Which of the following is the largest population to which the results of the experiment can be generalized?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The 50 students who were able to correctly identify the pureed food sample while wearing nose plugs"
+   },
+   {
+    "label": "B",
+    "content": "All students from the high school"
+   },
+   {
+    "label": "C",
+    "content": "The 125 students who participated in the experiment"
+   },
+   {
+    "label": "D",
+    "content": "All students from high schools in Ohio"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-research-organizingmargin-of-error-4",
+  "type": "FREE_RESPONSE",
+  "stem": "For certain air temperatures, the table gives wind chill temperatures for two different wind speeds.<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Air temperature</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wind chill temperature at wind speed 5 mph</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Wind chill temperature at wind speed 15 mph</th></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">27&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">15&deg;F</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">29&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">24&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18&deg;F</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">31&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">26&deg;F</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20&deg;F</td></tr></table>According to the table, what is the wind chill temperature, in degrees Fahrenheit (&deg;F), when the air temperature is 27 degrees Fahrenheit (&deg;F) and the wind speed is 15 mph? (Disregard the degree symbol when entering your answer.)",
+  "choices": [],
+  "needsFigure": false,
+  "book_note": "DEFECT in the book: the stem asks for an air temperature of 26 degrees F, but the table's rows are 27, 29 and 31 - 26 does not appear, so the question is unanswerable as printed. Transcribed with 27 (the nearest row, and the only repair that leaves the table untouched), which gives 15. Needs a human decision before shipping."
+ },
+ {
+  "id": "satmath-ma3-triangles-1",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "The length of each side of triangle \\(A\\) is 270 millimeters. The length of each side of triangle \\(B\\) is double the length of each side of triangle \\(A\\). What is the length, in millimeters, of each side of triangle \\(B\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "270"
+   },
+   {
+    "label": "B",
+    "content": "272"
+   },
+   {
+    "label": "C",
+    "content": "540"
+   },
+   {
+    "label": "D",
+    "content": "1,080"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-triangles-7",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "In right triangle \\(ABC\\), angle \\(B\\) is a right angle and the measure of angle \\(A\\) is 56&deg;. What is the measure of \\(\\angle C\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "124&deg;"
+   },
+   {
+    "label": "B",
+    "content": "146&deg;"
+   },
+   {
+    "label": "C",
+    "content": "56&deg;"
+   },
+   {
+    "label": "D",
+    "content": "34&deg;"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": "The printed figure adds nothing beyond the stated right angle at B and 56 degrees at A."
+ },
+ {
+  "id": "satmath-ma3-triangles-8",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "A triangle has a base length of 48 centimeters and a height of 96 centimeters. What is the area, in square centimeters, of the triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2,304"
+   },
+   {
+    "label": "B",
+    "content": "1,152"
+   },
+   {
+    "label": "C",
+    "content": "4,608"
+   },
+   {
+    "label": "D",
+    "content": "144"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": ""
+ },
+ {
+  "id": "satmath-ma3-areas-volumes-19",
+  "type": "MULTIPLE_CHOICE",
+  "stem": "Circle \\(K\\) has a radius of 8 millimeters (mm). Circle \\(L\\) has an area of \\(144\\pi\\) mm<sup>2</sup>. What is the total area, in mm<sup>2</sup>, of circles \\(K\\) and \\(L\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(40\\pi\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(20\\pi\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(80\\pi\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(208\\pi\\)"
+   }
+  ],
+  "needsFigure": false,
+  "book_note": "DEFECT: the book prints circle L's area as \"144 mm^2\" without pi, which makes the total 64pi + 144, not among the four choices. Restored the pi, as in satmath-ma3-circles-3. This item is also an exact duplicate of satmath-ma3-circles-12 and a near-duplicate of satmath-ma3-circles-3 - ship at most one of the three."
+ }
+]
