@@ -1,0 +1,469 @@
+[
+ {
+  "id": "sathard-geometry-24",
+  "stem": "For the right circular cone shown, B is a point on the circumference of the base, and the length of segment AB (not shown) is 84 centimeters. If the height of the cone is 42 centimeters and the volume of the cone is \\( k\\pi \\) cubic centimeters, what is the value of k?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [],
+  "answerValue": "74088",
+  "difficulty": "HARD",
+  "needsFigure": true,
+  "whyCorrect": "AB runs from the apex to a point on the base circle, so it is the slant height, and slant height, height and radius form a right triangle. That gives \\( r^{2} = 84^{2} - 42^{2} = 7056 - 1764 = 5292 \\) &mdash; and notice you never need r itself, only \\( r^{2} \\) . Then \\( V = \\frac{1}{3}\\pi r^{2}h = \\frac{1}{3}\\pi(5292)(42) = 74{,}088\\pi \\) , so k = 74,088.",
+  "note": "Measured reading of the figure: a right circular cone standing point-up, apex labelled A, with a dashed vertical segment from A to the centre of the base marking the height, and B marked as a point on the base circle at the left.",
+  "answerLabel": null,
+  "whyWrong": null
+ },
+ {
+  "id": "sathard-geometry-31",
+  "stem": "In the figure shown, point T lies on segment SW, and segment TU is parallel to segment VW. The measure of angle V is 26&deg;, and the measure of angle STU is 74&deg;. What is the value of \\( p - r \\) ?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [],
+  "answerValue": "80",
+  "difficulty": "HARD",
+  "needsFigure": true,
+  "whyCorrect": "Treat SW as a transversal of the parallel segments TU and VW: angle STU and the angle at W open the same way on the same side, so they are corresponding angles and r = 74. Then look at trapezoid TUVW: UV is a transversal of the same two parallel segments, so the angles at U and V are same-side interior angles and add to 180, giving p = 180 - 26 = 154. Therefore p - r = 154 - 74 = 80.",
+  "note": "Measured reading of the figure: S is at the top, W at the lower left with T on segment SW between them, U is to the right of T and V at the lower right, forming trapezoid TUVW with TU parallel to WV. The angle marked p is the interior angle at U, and r is the interior angle at W.",
+  "answerLabel": null,
+  "whyWrong": null
+ },
+ {
+  "id": "sathard-geometry-41",
+  "stem": "Note: Figure not drawn to scale.<br/>In the given figure, <em>NP</em> is the diameter of semicircle <em>O</em>. Angles <em>Q</em>, <em>R</em>, and <em>S</em> are right angles, and point <em>P</em> is the midpoint of <em>NQ</em>. If <em>PQ</em> = 52 feet and <em>NS</em> = 18 feet, the area of the figure can be expressed as \\(a\\pi + b\\) square feet, where <em>a</em> and <em>b</em> are integers. What is the value of \\(a - b\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "-1534",
+  "difficulty": "HARD",
+  "whyCorrect": "Because <em>P</em> is the midpoint of <em>NQ</em>, \\(NP = PQ = 52\\), so \\(NQ = 104\\) and the semicircle has radius 26. The figure is the rectangle <em>NQRS</em> plus the semicircle: rectangle \\(= 104 \\cdot 18 = 1872\\), semicircle \\(= \\frac{1}{2}\\pi(26)^2 = 338\\pi\\). So \\(a = 338\\), \\(b = 1872\\), and \\(a - b = -1534\\). The trap is using 52 as the diameter instead of half of <em>NQ</em>.",
+  "needsFigure": true,
+  "note": "Figure: rectangle NQRS with N top-left, Q top-right, R bottom-right, S bottom-left; a semicircle with centre O sits on top of side NQ with diameter NP, P lying between O and Q on NQ. Answer is negative because b is much larger than a."
+ },
+ {
+  "id": "sathard-geometry-60",
+  "stem": "In the figure above, <em>AB</em> = <em>AD</em>, <em>BC</em> = <em>CD</em>, <em>BE</em> = 4, <em>BC</em> = 8, and <em>AC</em> = 12. What is the area of triangle <em>ABD</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(96 - 32\\sqrt{3}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(48 - 16\\sqrt{3}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(24 - 8\\sqrt{3}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(12 - 4\\sqrt{3}\\)"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "<em>ABCD</em> is a kite, so diagonal <em>AC</em> is the perpendicular bisector of <em>BD</em>: the diagonals meet at right angles at <em>E</em> and \\(BD = 2(BE) = 8\\). Right triangle <em>BEC</em> gives \\(EC = \\sqrt{8^2 - 4^2} = 4\\sqrt{3}\\), so the height from <em>A</em> is \\(AE = AC - EC = 12 - 4\\sqrt{3}\\). Then the area of <em>ABD</em> is \\(\\frac{1}{2}(BD)(AE) = \\frac{1}{2}(8)(12 - 4\\sqrt{3}) = 48 - 16\\sqrt{3}\\).",
+  "whyWrong": {
+   "A": "This is \\((BD)(AE)\\) with the \\(\\frac{1}{2}\\) of the triangle-area formula left out.",
+   "C": "This uses \\(BE = 4\\) as the whole base instead of \\(BD = 8\\); <em>E</em> is the midpoint of <em>BD</em>, so the base is twice <em>BE</em>.",
+   "D": "\\(12 - 4\\sqrt{3}\\) is <em>AE</em> itself, the height of the triangle, not its area."
+  },
+  "needsFigure": true,
+  "note": "Figure: kite ABCD with A at the left vertex, C at the right vertex, B above and D below; diagonals AC and BD cross at E."
+ },
+ {
+  "id": "sathard-geometry-62",
+  "stem": "A futuristic football is built from two right circular cones and a right circular cylinder with internal measurements represented by the figure above. Of the following, which is closest to the volume of the football, in cubic inches?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "56.1"
+   },
+   {
+    "label": "B",
+    "content": "169.6"
+   },
+   {
+    "label": "C",
+    "content": "197.9"
+   },
+   {
+    "label": "D",
+    "content": "226.2"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The solid is one cylinder plus two identical cones, all sharing the radius 3 in. The cylinder holds \\(\\pi(3)^2(6) = 54\\pi\\); each cone holds \\(\\frac{1}{3}\\pi(3)^2(3) = 9\\pi\\), so the two together add \\(18\\pi\\). The total is \\(72\\pi \\approx 226.2\\) cubic inches.",
+  "whyWrong": {
+   "A": "\\(18\\pi \\approx 56.5\\) is the two cones alone, with the cylinder body left out.",
+   "B": "\\(54\\pi \\approx 169.6\\) is the cylinder alone, with both pointed ends left out.",
+   "C": "\\(63\\pi \\approx 197.9\\) counts the cylinder and only one cone; the football has a cone at each end."
+  },
+  "needsFigure": true,
+  "note": "Figure: a vertical cylinder of height 6 in with a cone attached at each end; the label on the top face is a radius of 3 in, and each cone has height 3 in."
+ },
+ {
+  "id": "sathard-geometry-64",
+  "stem": "Note: Figure not drawn to scale.<br/>In the figure, \\(\\angle ABD = w^\\circ\\), \\(\\angle CAD = z^\\circ\\), and \\(\\cos w = \\frac{9}{41}\\). What is the value of \\(\\tan z\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "40/9",
+  "difficulty": "HARD",
+  "whyCorrect": "The altitude from the right angle splits the triangle into two triangles similar to the original, and the quick consequence is \\(z = w\\): in right triangle <em>ABD</em>, \\(\\angle BAD = 90^\\circ - w\\), and since \\(\\angle BAC = 90^\\circ\\), \\(z = 90^\\circ - \\angle BAD = w\\). From \\(\\cos w = \\frac{9}{41}\\), the triangle is a 9-40-41 right triangle, so \\(\\sin w = \\frac{40}{41}\\) and \\(\\tan z = \\tan w = \\frac{40}{9}\\).",
+  "needsFigure": true,
+  "note": "Figure: right triangle ABC with the right angle at A (bottom left), B at the top, C at the bottom right; D lies on BC with AD perpendicular to BC."
+ },
+ {
+  "id": "sathard-geometry-68",
+  "stem": "In the figure above, <em>P</em> and <em>N</em> are the centers of the circles and <em>PN</em> = 6. What is the area of the intersection?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(18\\pi - 9\\sqrt{3}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(24\\pi - 9\\sqrt{3}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(24\\pi - 18\\sqrt{3}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(36\\pi - 18\\sqrt{3}\\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Each circle passes through the other's center, so both radii equal \\(PN = 6\\). The common chord subtends a \\(120^\\circ\\) angle at each center, so one circular segment is sector minus triangle: \\(\\frac{1}{2}(6)^2\\left(\\frac{2\\pi}{3}\\right) - \\frac{1}{2}(6)^2\\sin 120^\\circ = 12\\pi - 9\\sqrt{3}\\). The lens is two such segments, one from each circle: \\(24\\pi - 18\\sqrt{3}\\).",
+  "whyWrong": {
+   "A": "This uses a half circle, \\(18\\pi\\), in place of the \\(120^\\circ\\) sector and then counts only one segment.",
+   "B": "This doubles the sector correctly but subtracts the triangle only once; each of the two segments has its own triangle to remove.",
+   "D": "\\(36\\pi\\) is the area of an entire circle, not two \\(120^\\circ\\) sectors; only a third of each circle lies on the sector side of the chord."
+  },
+  "needsFigure": true,
+  "note": "Figure: two congruent overlapping circles with centres P (left) and N (right), each passing through the other's centre; the shaded lens is their overlap and PN is drawn across it."
+ },
+ {
+  "id": "sathard-geometry-71",
+  "stem": "Note: Figure not drawn to scale.<br/>In quadrilateral <em>KLMN</em> shown, <em>KL</em> = 3, <em>LM</em> = 3, <em>KN</em> = 27, and <em>MN</em> = 27. Diagonals <em>KM</em> and <em>LN</em> (not shown) intersect at point <em>G</em> (not shown), where <em>GK</em> = 1 and <em>GM</em> = 1. If the length of diagonal <em>LN</em> is \\(\\sqrt{p} + \\sqrt{w}\\), where <em>p</em> and <em>w</em> are integers, what is the value of \\(p + w\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "736",
+  "difficulty": "HARD",
+  "whyCorrect": "Both <em>L</em> and <em>N</em> are equidistant from <em>K</em> and <em>M</em>, so <em>KLMN</em> is a kite and <em>LN</em> is the perpendicular bisector of <em>KM</em>. That makes triangles <em>LGK</em> and <em>NGK</em> right triangles with leg \\(GK = 1\\): \\(LG = \\sqrt{3^2 - 1^2} = \\sqrt{8}\\) and \\(NG = \\sqrt{27^2 - 1^2} = \\sqrt{728}\\). Since <em>G</em> lies between <em>L</em> and <em>N</em>, \\(LN = \\sqrt{8} + \\sqrt{728}\\), so \\(p + w = 736\\).",
+  "needsFigure": true,
+  "note": "Figure: quadrilateral KLMN drawn with M top left, N top right, L at the left and K at the bottom; the diagonals are not drawn."
+ },
+ {
+  "id": "sathard-geometry-74",
+  "stem": "In the figure, \\(\\overline{AC}\\) is a diameter of the circle with center <em>O</em>, and <em>AC</em> = 10. Triangle \\(\\triangle ACB\\) is equilateral. The length of <em>BP</em> is <em>n</em> times the length of <em>AO</em>. What is the value of <em>n</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\sqrt{5}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\sqrt{3}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\sqrt{3} - 1\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(\\sqrt{5} - 1\\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "<em>AO</em> is the radius, 5. Segment <em>BO</em> is the altitude of the equilateral triangle of side 10, so \\(BO = \\sqrt{10^2 - 5^2} = 5\\sqrt{3}\\). <em>P</em> lies on the circle along <em>BO</em>, so \\(PO = 5\\) and \\(BP = 5\\sqrt{3} - 5\\). Dividing by \\(AO = 5\\) gives \\(n = \\sqrt{3} - 1\\).",
+  "whyWrong": {
+   "A": "This mis-simplifies \\(\\sqrt{75}\\) as \\(5\\sqrt{5}\\) instead of \\(5\\sqrt{3}\\) (75 is \\(25 \\cdot 3\\)), and also forgets to cut off the radius.",
+   "B": "\\(\\sqrt{3}\\) is \\(BO \\div AO\\), the whole altitude. <em>P</em> is on the circle, so the radius \\(PO = 5\\) still has to be subtracted.",
+   "D": "This subtracts the radius correctly but carries the same \\(\\sqrt{75} = 5\\sqrt{5}\\) simplification error."
+  },
+  "needsFigure": true,
+  "note": "Figure: circle with centre O and horizontal diameter AC; B is above the circle, joined to A and C, and the segment from B to O crosses the circle at the point taken as P. The book's figure does not actually label P."
+ },
+ {
+  "id": "sathard-geometry-90",
+  "stem": "In the figure above, what is the length of <em>NQ</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2.2"
+   },
+   {
+    "label": "B",
+    "content": "2.3"
+   },
+   {
+    "label": "C",
+    "content": "2.4"
+   },
+   {
+    "label": "D",
+    "content": "2.5"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Triangle <em>MNP</em> is right-angled at <em>N</em> with legs 3 and 4, so \\(MP = 5\\). The area can be written two ways: \\(\\frac{1}{2}(3)(4)\\) using the legs, or \\(\\frac{1}{2}(MP)(NQ)\\) using the hypotenuse and the altitude to it. Setting them equal gives \\(NQ = \\frac{3 \\cdot 4}{5} = 2.4\\).",
+  "whyWrong": {
+   "A": "There is no computation here that gives 2.2; it is a near-miss for a student measuring the figure instead of using the area relation.",
+   "B": "Same trap as A &mdash; the altitude is exactly \\(\\frac{12}{5}\\), so a value of 2.3 means the relationship was estimated rather than computed.",
+   "D": "2.5 is half the hypotenuse, which is the length of the <em>median</em> from <em>N</em> to <em>MP</em>. <em>NQ</em> is perpendicular to <em>MP</em>, and in a non-isosceles right triangle the altitude and the median are different segments."
+  },
+  "needsFigure": true,
+  "note": "Figure: triangle MNP with the right angle at N, MN = 3, NP = 4, and Q the foot of the perpendicular from N to MP."
+ },
+ {
+  "id": "sathard-geometry-93",
+  "stem": "Note: Figure not drawn to scale.<br/>In the figure shown, point <em>B</em> lies on line segment <em>DF</em>, point <em>E</em> lies on line segment <em>AC</em>, line segments <em>AB</em> and <em>DE</em> intersect at point <em>W</em>, and line segments <em>BC</em> and <em>EF</em> intersect at point <em>X</em>. The measure of \\(\\angle A\\) is 40&deg;, the measure of \\(\\angle C\\) is 60&deg;, the measure of \\(\\angle D\\) is 68&deg;, and the measure of \\(\\angle FBC\\) is 72&deg;. What is the measure, in degrees, of \\(\\angle AED\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "56",
+  "difficulty": "HARD",
+  "whyCorrect": "Work down to the angle at <em>B</em> first. In triangle <em>ABC</em>, \\(\\angle ABC = 180 - 40 - 60 = 80^\\circ\\), and since <em>D</em>, <em>B</em>, <em>F</em> are collinear, \\(\\angle DBA = 180 - 80 - 72 = 28^\\circ\\). Now use triangle <em>DBW</em>: \\(\\angle DWB = 180 - 68 - 28 = 84^\\circ\\), and \\(\\angle AWE\\) is vertical to it, so it is also 84&deg;. Finally, in triangle <em>AWE</em>, \\(\\angle AEW = 180 - 40 - 84 = 56^\\circ\\), and <em>D</em> lies on ray <em>EW</em>, so \\(\\angle AED = 56^\\circ\\).",
+  "needsFigure": true,
+  "note": "Figure: A, E, C left to right along a horizontal line; D upper left, B top centre, F upper right with D, B, F collinear. Segment AB crosses DE at W and segment BC crosses EF at X."
+ },
+ {
+  "id": "sathard-geometry-97",
+  "stem": "In the figure above, \\(\\tan B = \\frac{3}{4}\\). If <em>BC</em> = 15 and <em>DA</em> = 4, what is the length of <em>DE</em>?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "6",
+  "difficulty": "HARD",
+  "whyCorrect": "Triangle <em>ABC</em> has its right angle at <em>A</em>, and \\(\\tan B = \\frac{CA}{BA} = \\frac{3}{4}\\), so it is a 3-4-5 triangle scaled by 3: \\(CA = 9\\) and \\(BA = 12\\). Since <em>D</em> lies on <em>BA</em> with \\(DA = 4\\), \\(BD = 12 - 4 = 8\\). Triangle <em>BDE</em> is similar to triangle <em>BAC</em> (both right-angled, sharing angle <em>B</em>), so \\(DE = \\frac{3}{4}(BD) = \\frac{3}{4}(8) = 6\\).",
+  "needsFigure": true,
+  "note": "Figure: right triangle with B at the lower left, A at the lower right and the right angle at A, C directly above A; D is on BA and E is on BC with DE perpendicular to BA."
+ },
+ {
+  "id": "sathard-geometry-104",
+  "stem": "Point <em>Q</em> is the center of the circle. Point <em>A</em>, point <em>B</em>, and point <em>C</em> all lie on the circle. Point <em>D</em> lies on segment <em>AC</em> as shown. Segment <em>BD</em> is perpendicular to segment <em>AC</em>. In the figure shown, <em>AB</em> = 58 and <em>AD</em> = 40. If a point within the figure is selected at random, what is the probability that the point is within the shaded region? (Express your answer as a decimal or fraction, not as a percent.) Round your answer to the nearest thousandth.",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "0.682",
+  "difficulty": "HARD",
+  "whyCorrect": "<em>AC</em> passes through the center, so it is a diameter and angle <em>ABC</em> is a right angle. In right triangle <em>ABD</em>, \\(BD = \\sqrt{58^2 - 40^2} = 42\\), and the geometric-mean relation \\(AB^2 = AD \\cdot AC\\) gives \\(AC = \\frac{3364}{40} = 84.1\\), so the radius is 42.05. The circle's area is \\(\\pi(42.05)^2 \\approx 5554.97\\) and the triangle's is \\(\\frac{1}{2}(84.1)(42) = 1766.1\\); the shaded part is everything outside the triangle, so the probability is \\(\\frac{5554.97 - 1766.1}{5554.97} \\approx 0.682\\).",
+  "needsFigure": true,
+  "note": "Figure: circle with centre Q; horizontal diameter AC with A at the left and C at the right, B on the upper arc, D on AC with BD perpendicular to AC. Everything inside the circle except triangle ABC is shaded."
+ },
+ {
+  "id": "sathard-geometry-106",
+  "stem": "The measure of angle <em>BDC</em>, in radians, is equal to \\(\\frac{a\\pi}{b}\\) where <em>a</em> and <em>b</em> are positive integer constants. What is the smallest possible value of \\(a + b\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "64",
+  "difficulty": "HARD",
+  "whyCorrect": "With <em>D</em> at the center, <em>DA</em>, <em>DB</em> and <em>DC</em> are all radii, so triangles <em>ABD</em> and <em>ACD</em> are isosceles and their base angles match the marked ones: \\(\\angle DAB = \\angle DBA = 19^\\circ\\) and \\(\\angle DAC = \\angle DCA = 19^\\circ\\). That makes the inscribed angle \\(\\angle BAC = 38^\\circ\\), and a central angle is twice the inscribed angle on the same arc, so \\(\\angle BDC = 76^\\circ\\). In radians that is \\(\\frac{76\\pi}{180} = \\frac{19\\pi}{45}\\), and in lowest terms \\(a + b = 19 + 45 = 64\\).",
+  "needsFigure": true,
+  "note": "DEFECT: the printed stem is only the last sentence &mdash; everything else is in the figure, and the figure never states that D is the centre of the circle, which is required to fix the answer. Figure: circle with A on the top arc, B lower left and C lower right on the circle, D marked inside at the centre; segments AB, AC, DB, DC are drawn and the angles ABD and ACD are each marked 19 degrees. Answer 64 assumes D is the centre; without that statement the angle is not determined."
+ },
+ {
+  "id": "sathard-problem-solving-4",
+  "stem": "Each of the three data sets represented by the three dot plots has 18 values. The median of data sets <em>A</em>, <em>B</em>, and <em>C</em> are <em>a</em>, <em>b</em>, and <em>c</em> respectively. What is the relationship between <em>a</em>, <em>b</em>, and <em>c</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(a < b < c\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(c < b < a\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(b < c < a\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(a = b = c\\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "With 18 values, each median is the average of the 9th and 10th values. Counting up from the left in each plot, the 9th and 10th dots all land on 5 in all three data sets, so \\(a = b = c = 5\\). The plots differ in spread &mdash; A has a stray value at 9, C is spread across 1 through 9 &mdash; but spread does not move the middle.",
+  "whyWrong": {
+   "A": "This reads the widths of the plots rather than their centers. C is the most spread out, but its middle two values are still 5.",
+   "B": "Same error in reverse: A's long right tail at 9 pulls the <em>mean</em> up, not the median.",
+   "C": "There is no ordering at all here; all three middles coincide."
+  },
+  "needsFigure": true,
+  "note": "Dot plot counts, x = 1..10. Data Set A: 2:1, 3:2, 4:4, 5:5, 6:3, 7:2, 9:1. Data Set B: 3:3, 4:4, 5:5, 6:3, 7:3. Data Set C: 1:1, 2:1, 3:3, 4:3, 5:3, 6:3, 7:1, 8:2, 9:1. Each totals 18."
+ },
+ {
+  "id": "sathard-problem-solving-5",
+  "stem": "The dot plot represents 13 values in data set A. Data set B is created by adding 39 to each of the values in data set A. Which of the following correctly compares the median and standard deviations of data sets A and B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The median of data set B is equal to the median of data set A, and the standard deviation of data set B is equal to the standard deviation of data set A."
+   },
+   {
+    "label": "B",
+    "content": "The median of data set B is greater than the median of data set A, and the standard deviation of data set B is equal to the standard deviation of data set A."
+   },
+   {
+    "label": "C",
+    "content": "The median of data set B is greater than the median of data set A, and the standard deviation of data set B is greater than the standard deviation of data set A."
+   },
+   {
+    "label": "D",
+    "content": "The median of data set B is less than the median of data set A, and the standard deviation of data set B is equal to the standard deviation of data set A."
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Adding the same number to every value slides the whole distribution 39 units to the right. Every measure of center moves with it, so the median goes up by 39. Standard deviation measures how far values sit from their mean, and those distances are unchanged by a shift, so it stays the same.",
+  "whyWrong": {
+   "A": "The median does change &mdash; every value, including the middle one, is 39 larger.",
+   "C": "Standard deviation would only grow if the values spread out from one another. Adding a constant moves them together, keeping every gap identical.",
+   "D": "Adding a positive number cannot lower the median."
+  },
+  "needsFigure": true,
+  "note": "Dot plot for data set A (13 values): 33 appears 4 times, 34 three times, 35 three times, 36 twice, 37 once. The plot is not actually needed to answer the question."
+ },
+ {
+  "id": "sathard-problem-solving-63",
+  "stem": "For which of the following sets of 9 data points is the median less than the mean?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "B",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "C",
+    "content": "Dot plot over 1 to 5"
+   },
+   {
+    "label": "D",
+    "content": "Dot plot over 1 to 5"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The median falls below the mean when the data trail off to the right: a few large values drag the average up while the middle value stays put. Only plot A has that shape &mdash; its values bunch at 1 with a thin tail out to 5, giving a median of 2 against a mean of \\(\\frac{20}{9} \\approx 2.22\\).",
+  "whyWrong": {
+   "B": "This one is left-skewed: the bulk sits at 4 and 5 with a tail down to 1, so the mean (about 3.44) is pulled below the median of 4.",
+   "C": "Symmetric about 3, so the median and the mean are both exactly 3, not one less than the other.",
+   "D": "Left-skewed as well &mdash; four values at 5 with a thin tail down to 1 &mdash; giving a mean of about 3.78 against a median of 4."
+  },
+  "needsFigure": true,
+  "note": "Each choice is a dot plot over 1 to 5 with 9 points. A: 1 appears 4 times, 2 twice, 3, 4 and 5 once each. B: 1 once, 2 once, 3 twice, 4 three times, 5 twice. C: 1 once, 2 twice, 3 three times, 4 twice, 5 once. D: 1 once, 2 once, 3 once, 4 twice, 5 four times."
+ },
+ {
+  "id": "sathard-problem-solving-75",
+  "stem": "The graph below shows the distribution of all stars within 12 light-years of Earth by total energy output per second, or luminosity. Which of the following could be the median luminosity of all the stars within 12 light-years of Earth?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.18"
+   },
+   {
+    "label": "B",
+    "content": "0.052"
+   },
+   {
+    "label": "C",
+    "content": "0.0063"
+   },
+   {
+    "label": "D",
+    "content": "0.0003"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Add the bars: \\(9 + 7 + 5 + 6 + 3 + 1 = 31\\) stars, so the median is the 16th star counting from the dimmest. The dimmest band (below 0.001) holds 9 stars, taking positions 1 through 9, and the next band (0.001 to 0.01) holds 7, taking positions 10 through 16. The 16th star therefore lies in the 0.001-to-0.01 band, and only 0.0063 falls in it.",
+  "whyWrong": {
+   "A": "0.18 sits in the 0.1-to-1 band, which covers positions 22 through 27 &mdash; well past the middle.",
+   "B": "0.052 sits in the 0.01-to-0.1 band, positions 17 through 21. It is one band too bright.",
+   "D": "0.0003 is below 0.001, in the dimmest band, which only reaches position 9."
+  },
+  "needsFigure": true,
+  "note": "The graph is not printed with this question; it appears with the identical question 48 on PDF page 84 as a horizontal bar chart titled \"Luminosity of Stars within 12 Light-Years\", number of stars per luminosity band: greater than 10: 1; 1 to 10: 3; 0.1 to 1: 6; 0.01 to 0.1: 5; 0.001 to 0.01: 7; less than 0.001: 9."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-2",
+  "stem": "In the figure, \\(RT = TU\\), the measure of angle \\(VST\\) is 23&deg; and the measure of angle \\(RVS\\) is 44&deg;. What is the value of \\(x\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "138",
+  "difficulty": "HARD",
+  "whyCorrect": "Work in triangle \\(USV\\) first. Because \\(T\\) lies on segment \\(US\\), angle \\(VST\\) and angle \\(VSU\\) are the same angle, so the angle at \\(S\\) is 23&deg;. Because \\(U\\), \\(V\\), \\(R\\) are collinear, angle \\(UVS\\) = 180&deg; &minus; 44&deg; = 136&deg;. That leaves angle \\(SUV\\) = 180 &minus; 136 &minus; 23 = 21&deg;. Now use \\(RT = TU\\): triangle \\(RTU\\) is isosceles, so its base angles at \\(U\\) and \\(R\\) are both 21&deg;, and \\(x = 180 - 21 - 21 = 138\\).",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Needs the figure. Reading of the page image: U, V, R lie on one horizontal line in that order; S is above and right of R; segment US passes through T; segment TR runs from T down to R and crosses segment VS; x&deg; marks the angle at T between ray TU and ray TR, inside triangle RTU. Labelled \"Figure not drawn to scale\" is not printed for this item."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-38",
+  "stem": "In the figure shown, point \\(T\\) lies on segment \\(SW\\), and segment \\(TU\\) is parallel to segment \\(VW\\). The measure of angle \\(V\\) is 26&deg;, and the measure of angle \\(STU\\) is 74&deg;. What is the value of \\(p - r\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "80",
+  "difficulty": "HARD",
+  "whyCorrect": "Line \\(SW\\) cuts the two parallel segments \\(TU\\) and \\(VW\\), so angle \\(STU\\) and angle \\(SWV\\) are corresponding angles: \\(r = 74\\). Segment \\(UV\\) cuts the same pair of parallels, so angle \\(TUV\\) and angle \\(UVW\\) are same-side interior angles and add to 180&deg;: \\(p = 180 - 26 = 154\\). Therefore \\(p - r = 154 - 74 = 80\\). (Check with the quadrilateral \\(TUVW\\): its angles are 106, 154, 26 and 74, totalling 360.)",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Needs the figure. Reading of the page image: \\(TUVW\\) is a trapezoid with \\(W\\) bottom-left, \\(V\\) bottom-right, \\(T\\) upper-left and \\(U\\) upper-right; \\(TU\\) is parallel to \\(WV\\); \\(S\\) sits above \\(T\\) on the extension of \\(WT\\). \\(p^\\circ\\) labels the interior angle at \\(U\\) (angle \\(TUV\\)) and \\(r^\\circ\\) labels the interior angle at \\(W\\) (angle \\(TWV\\)). Derived values: \\(p = 154\\), \\(r = 74\\)."
+ },
+ {
+  "id": "satmath-ma2-triangles-5",
+  "stem": "In the figure shown, \\(B\\) and \\(C\\) lie on \\(\\overline{AD}\\), \\(E\\) lies on \\(\\overline{DF}\\), and \\(\\overline{CE}\\) is parallel to \\(\\overline{AF}\\). Which of the following is enough to prove that \\(\\triangle BDE\\) is similar to \\(\\triangle EDC\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(w + y = x + z\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(w + x = y + z\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(s + x = z\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(s + x = y\\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The two triangles already share the angle at \\(D\\), so one more matching pair settles it. In the correspondence \\(B \\to E\\), \\(D \\to D\\), \\(E \\to C\\), that pair is angle \\(DEB\\) with angle \\(DCE\\). Angle \\(DEB\\) is split by \\(\\overline{EC}\\) into \\(x\\) and \\(s\\), so it measures \\(s + x\\), and angle \\(DCE\\) is \\(w\\). Because \\(\\overline{CE} \\parallel \\overline{AF}\\), corresponding angles give \\(w = y\\). So the needed condition, \\(s + x = w\\), is the same as \\(s + x = y\\).",
+  "whyWrong": {
+   "A": "The parallel lines already force \\(w = y\\) and \\(x = z\\), so this reduces to \\(w = x\\) &mdash; it makes \\(\\triangle DCE\\) isosceles but says nothing about where \\(B\\) sits.",
+   "B": "This reduces to \\(w + x = w + x\\), which is true no matter what. A statement that is always true cannot prove anything.",
+   "C": "Since \\(x = z\\), this reduces to \\(s = 0\\), which would mean \\(\\overline{EB}\\) and \\(\\overline{EC}\\) are the same ray &mdash; impossible in this figure."
+  },
+  "needsFigure": true,
+  "note": "Needs the figure. Reading of the page image: \\(\\triangle ADF\\) has \\(D\\) at the top, \\(A\\) bottom-left, \\(F\\) bottom-right; \\(B\\) and \\(C\\) lie on \\(\\overline{AD}\\) with \\(C\\) above \\(B\\); \\(E\\) lies on \\(\\overline{DF}\\); \\(\\overline{CE}\\) is drawn parallel to \\(\\overline{AF}\\) and \\(\\overline{BE}\\) is also drawn. Labels: \\(w^\\circ\\) is angle \\(DCE\\), \\(x^\\circ\\) is angle \\(DEC\\), \\(s^\\circ\\) is angle \\(CEB\\), \\(y^\\circ\\) is angle \\(DAF\\) at \\(A\\), \\(z^\\circ\\) is angle \\(AFD\\) at \\(F\\)."
+ },
+ {
+  "id": "satmath-ma2-triangles-17",
+  "stem": "In the figure, \\(RT = TU\\), the measure of angle \\(VST\\) is 23&deg;, and the measure of angle \\(RVS\\) is 34&deg;. What is the value of \\(x\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "158",
+  "difficulty": "HARD",
+  "whyCorrect": "Start in triangle \\(USV\\). \\(T\\) lies on \\(\\overline{US}\\), so angle \\(VST\\) is the same as angle \\(VSU\\) = 23&deg;. \\(U\\), \\(V\\), \\(R\\) are collinear, so angle \\(UVS\\) = 180 &minus; 34 = 146&deg;. That leaves angle \\(SUV\\) = 180 &minus; 146 &minus; 23 = 11&deg;. Now \\(RT = TU\\) makes triangle \\(RTU\\) isosceles, so both base angles are 11&deg;, and \\(x = 180 - 11 - 11 = 158\\).",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Needs the figure. Reading of the page image: U, V, R lie on one horizontal line in that order; S is above and right of R; segment US passes through T; segment TR runs from T down to R and crosses segment VS; x&deg; marks the angle at T between ray TU and ray TR. Near-duplicate of ma2 Lines&Angles #2, the same figure with angle RVS = 44&deg;; do not place both in one test."
+ }
+]

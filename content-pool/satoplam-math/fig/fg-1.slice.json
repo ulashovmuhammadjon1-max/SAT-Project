@@ -1,0 +1,517 @@
+[
+ {
+  "id": "satmath-ma2-triangles-44",
+  "stem": "For triangle ABC, the length of \\(\\overline{AB}\\) is 11 less than the length of \\(\\overline{AC}\\). Point D (not shown) lies on \\(\\overline{AC}\\) such that \\(\\overline{BD}\\) (not shown) is perpendicular to \\(\\overline{AC}\\). What is the value of \\(\\frac{BC}{BD}\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "28/17",
+  "difficulty": "HARD",
+  "whyCorrect": "From the figure AC = 28, so AB = 28 - 11 = 17. The altitude BD drawn to the hypotenuse splits the right triangle into two triangles each similar to the original: in triangle BDC and triangle ABC, angle C is shared and both have a right angle, so they are similar with BDC corresponding to ABC. Matching the sides, BC corresponds to AC and BD corresponds to AB, so \\(\\frac{BC}{BD} = \\frac{AC}{AB} = \\frac{28}{17}\\). You never have to find BC itself, which is the irrational \\(\\sqrt{495}\\) \u2014 the similarity does all the work.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle ABC with the right angle marked at B; A at the top left, B at the bottom left directly below A, C at the bottom right. The hypotenuse AC is labeled 28. 'Note: Figure not drawn to scale'. Answer 28/17 = 1.647..., so 1.647 or 1.65 would also be acceptable grid-ins."
+ },
+ {
+  "id": "satmath-ma2-triangles-57",
+  "stem": "In the figure, \\(\\overline{AD}\\) and \\(\\overline{BC}\\) intersect at point D. The measure of angle ABD is \\(w^{\\circ}\\), the measure of angle CAD is \\(z^{\\circ}\\), and AD = 178. If \\(\\cos w^{\\circ} = \\frac{9}{41}\\), what is the value of \\(\\tan z^{\\circ}\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "40/9",
+  "difficulty": "HARD",
+  "whyCorrect": "The key is that the two angles are equal. In right triangle ABD the angles at D and B are 90&deg; and \\(w^{\\circ}\\), so angle BAD is \\((90 - w)^{\\circ}\\); and because angle BAC is a right angle, angle CAD = 90 - (90 - w) = w. So \\(z = w\\) and you only need \\(\\tan w^{\\circ}\\). From \\(\\cos w^{\\circ} = \\frac{9}{41}\\), the legs are 9 and 40 (since \\(9^{2}+40^{2}=41^{2}\\)), so \\(\\tan w^{\\circ} = \\frac{40}{9}\\). AD = 178 is not needed at all.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure: right triangle with the right angle marked at A (bottom left); C is at the bottom right and B is above A. Segment AD runs from A to point D on the hypotenuse BC, with a right angle marked at D. 'Note: Figure not drawn to scale'. Answer 40/9 = 4.444..., so 4.444 or 4.44 would also grid in correctly."
+ },
+ {
+  "id": "sathard-geometry-37",
+  "stem": "The line segment shown in the <em>xy</em>-plane represents one of the legs of a right triangle. The area of this triangle is \\(48\\sqrt{13}\\) square units. What is the length, in units, of the other leg of this triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "16"
+   },
+   {
+    "label": "B",
+    "content": "32"
+   },
+   {
+    "label": "C",
+    "content": "\\(3\\sqrt{13}\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(6\\sqrt{13}\\)"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "First get the length of the drawn leg from its endpoints with the distance formula: the horizontal change is 9 and the vertical change is 6, so the length is \\(\\sqrt{9^{2}+6^{2}}=\\sqrt{117}=3\\sqrt{13}\\). For a right triangle the two legs are the base and the height, so \\(\\frac{1}{2}(3\\sqrt{13})(L)=48\\sqrt{13}\\). Multiply by 2 and divide by \\(3\\sqrt{13}\\): \\(L=\\frac{96\\sqrt{13}}{3\\sqrt{13}}=32\\). The \\(\\sqrt{13}\\) cancels entirely, which is the sign you set it up correctly.",
+  "whyWrong": {
+   "A": "This is what you get if you write the area as (leg)(leg) instead of \\(\\frac{1}{2}\\)(leg)(leg) &mdash; it is exactly half of the right answer.",
+   "C": "This is the length of the leg already drawn, not the other one.",
+   "D": "This doubles the drawn leg. Doubling is not what the area equation asks for; you have to divide the doubled area by the drawn leg, and the radical cancels when you do."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: a line segment in the xy-plane from (-5, 3) to (4, 9), drawn on a grid with x from -8 to 8 and y from 0 to 16."
+ },
+ {
+  "id": "sathard-geometry-39",
+  "stem": "A property owner wants to find the length \\(x\\), in feet, across a pond as represented in the figure. <em>PR</em> intersects <em>ST</em> at point <em>Q</em>, and angle <em>PTQ</em> is congruent to angle <em>RSQ</em>. The lengths represented by <em>PQ</em>, <em>TQ</em>, <em>QS</em>, and <em>RS</em> were determined to be 4,200 feet, 8,400 feet, 1,400 feet, and 1,600 feet, respectively. What is the value of \\(x\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "9600",
+  "difficulty": "HARD",
+  "whyCorrect": "Angles <em>PQT</em> and <em>RQS</em> are vertical angles, so they are congruent, and you are told angle <em>PTQ</em> is congruent to angle <em>RSQ</em>. That makes triangle <em>PTQ</em> similar to triangle <em>RSQ</em>, with <em>P</em> matching <em>R</em>, <em>T</em> matching <em>S</em>, and <em>Q</em> matching <em>Q</em>. The scale factor comes from the pair of corresponding sides you know completely: <em>TQ</em> : <em>SQ</em> = 8,400 : 1,400 = 6. The distance across the pond is <em>PT</em>, which corresponds to <em>RS</em>, so \\(x = 6 \\times 1{,}600 = 9{,}600\\) feet.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: two segments PR and ST crossing at Q. T is below P on the left (PT spans the pond, labelled x, drawn as a lens/oval shape); S is upper right and R is lower right, so PR runs from upper left down to lower right and ST runs from lower left up to upper right, crossing at Q."
+ },
+ {
+  "id": "sathard-geometry-44",
+  "stem": "In the figure, parallel lines <em>r</em> and <em>s</em> are intersected by lines <em>t</em>, <em>u</em>, and <em>w</em>. If d = 42, g = 143, and h &gt; d, which statement about j and p must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(j=p\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(j+p=90\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(j\\gt p\\)"
+   },
+   {
+    "label": "D",
+    "content": "\\(j\\lt p\\)"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Work with the angle each slanted line makes with the horizontal parallel lines. Because <em>r</em> and <em>s</em> are parallel, the angle a line makes at <em>r</em> is the same angle it makes at <em>s</em>, so h describes the tilt of line <em>u</em> and d describes the tilt of line <em>w</em>, while g describes the tilt of line <em>t</em>. Where two slanted lines meet, the angle between them is the difference of their tilts: \\(j = g - h = 143 - h\\) and \\(p = g - d = 143 - 42 = 101\\). Since h &gt; 42, subtracting h takes away more than subtracting 42 does, so \\(j \\lt 101 = p\\).",
+  "whyWrong": {
+   "A": "This would require h = d. You are told h &gt; d, which is exactly the condition that forces the two angles apart.",
+   "B": "p is already 101 on its own, so \\(j+p\\) cannot be 90 for any positive j.",
+   "C": "This reverses the inequality. A larger h means a steeper line <em>u</em> relative to <em>t</em>, which makes the angle between them <em>smaller</em>, not larger."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: horizontal parallel lines r (upper) and s (lower). Line t descends steeply left-to-right, line u ascends steeply left-to-right, and they cross above r with angle j marked in the upward-opening region between them. g is marked at t's intersection with r, in the region above r and right of t. h is marked at u's intersection with s, above s and right of u. Line w ascends left-to-right on the right side; d is marked at its intersection with r, above r and right of w. Lines t and w cross below s, with p marked in the downward-opening region between them."
+ },
+ {
+  "id": "sathard-geometry-58",
+  "stem": "The figure shows a rectangular pool surrounded by a concrete path that is x feet (ft) wide on all sides. The pool is 21 ft long and 13 ft wide. The area of the concrete path is 240 ft<sup>2</sup>. What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "40"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The path adds x to each of the four sides, so the outer rectangle is \\((21+2x)\\) by \\((13+2x)\\) - the width is added twice to each dimension, not once. The path is the outer rectangle minus the pool: \\((21+2x)(13+2x)-21(13)=240\\), so \\((21+2x)(13+2x)=513\\). Expanding gives \\(4x^{2}+68x+273=513\\), or \\(x^{2}+17x-60=0\\), which factors as \\((x-3)(x+20)=0\\). A width must be positive, so x = 3.",
+  "whyWrong": {
+   "B": "This is 2x, the total amount added to each dimension of the pool, not the width of the path itself.",
+   "C": "This is the other root of the quadratic with its sign flipped. \\(x=-20\\) solves the equation algebraically but a path cannot have negative width, so it is rejected.",
+   "D": "This doubles the rejected root, combining both errors above - the negative solution kept, then multiplied by 2."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: a shaded rectangle (the concrete path) with a smaller unshaded rectangle labelled 'Pool' centred inside it, and a vertical segment from the top of the outer rectangle to the top of the pool labelled 'x ft'. All dimensions are given in the stem, so the figure is illustrative."
+ },
+ {
+  "id": "sathard-geometry-59",
+  "stem": "Two isosceles triangles are shown above. If 180 &minus; z = 3y and y = 50, what is the value of x?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "105",
+  "difficulty": "HARD",
+  "whyCorrect": "The angles of the right-hand triangle sum to 180, and its two tick-marked sides are congruent, so its two base angles are equal and together they measure \\(180-z\\). You are handed that quantity directly: \\(180-z=3y=3(50)=150\\), so each base angle is 75. The angle marked x is not that base angle - it sits on the other side of the slanted segment, between the segment and the upward continuation of the vertical line, so it is the base angle's supplement: \\(x=180-75=105\\). You never need z or the left-hand triangle at all.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed, and the answer turns on one detail of it. Two vertical lines bound the figure. Four segments meet at a single point between them: two run left to the left-hand vertical line (marked with single ticks, forming the left isosceles triangle with apex angle y inside), two run right to the right-hand vertical line (marked with double ticks, forming the right isosceles triangle with apex angle z inside). The label x sits ABOVE the upper right-hand segment and to the LEFT of the right vertical line, i.e. in the wedge between that segment and the part of the vertical line running upward past the vertex - so x is the EXTERIOR angle there, 105, not the interior base angle, 75. If the printed key is 75, the disagreement is over exactly this label placement. Also note the four segments bend at the shared point (the upper-left segment does not continue as the lower-right one), so y and z are not vertical angles and there is no contradiction with y = 50."
+ },
+ {
+  "id": "sathard-geometry-61",
+  "stem": "The solid in the figure is the shaded part of a cone with a height of 10 cm obtained by cutting its top parallel to the base, 10 cm from its tip. The volume of the solid is",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(188.52\\) cm<sup>3</sup>"
+   },
+   {
+    "label": "B",
+    "content": "\\(23.57\\) cm<sup>3</sup>"
+   },
+   {
+    "label": "C",
+    "content": "\\(164.93\\) cm<sup>3</sup>"
+   },
+   {
+    "label": "D",
+    "content": "\\(145.29\\) cm<sup>3</sup>"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The shaded solid is a frustum: the whole cone (radius 3, height 20) with the small top cone (radius 1.5, height 10) removed. Work with the difference rather than memorising a frustum formula: \\(\\frac{1}{3}\\pi(3)^{2}(20)-\\frac{1}{3}\\pi(1.5)^{2}(10)=60\\pi-7.5\\pi=52.5\\pi\\). That evaluates to about 164.93 cubic centimeters. The check that the setup is right is that the small cone is similar to the big one - half the radius and half the height.",
+  "whyWrong": {
+   "A": "\\(60\\pi\\) is the volume of the entire cone, before the top is cut off. You still have to remove the small cone.",
+   "B": "\\(7.5\\pi\\) is the volume of the small cone that was cut away, not the piece that remains.",
+   "D": "This is not produced by any correct route; it is close enough to the answer to look plausible. If you got it, check that you used the full cone's height of 20, not 10, and subtracted the small cone rather than averaging the two radii."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: a cone standing point-up, total height 20 marked on the right, the top 10 cm marked on the left, a horizontal cut 10 cm from the tip where the radius is 1.5, and a base radius of 3. The frustum below the cut is shaded. The radii 1.5 and 3 appear only in the figure, so the question is unanswerable without it."
+ },
+ {
+  "id": "sathard-geometry-73",
+  "stem": "The figure above shows a semicircle with the lengths of the adjacent arcs a, a + 1, a + 2, a + 3, and a + 4. If the value of x is 42, what is the value of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7"
+   },
+   {
+    "label": "B",
+    "content": "8"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Central angles are proportional to the arcs they cut off, and the five arcs make up a semicircle, so their central angles total 180 degrees. The five arcs sum to \\(a+(a+1)+(a+2)+(a+3)+(a+4)=5a+10\\), and \\(x^{\\circ}\\) is the central angle belonging to the arc of length \\(a+4\\). So \\(\\frac{a+4}{5a+10}=\\frac{42}{180}\\). Cross-multiplying, \\(180a+720=210a+420\\), giving \\(30a=300\\) and a = 10. Check: the arcs are 10, 11, 12, 13, 14, totalling 60, and \\(\\frac{14}{60}(180)=42\\).",
+  "whyWrong": {
+   "A": "With a = 7 the arcs total 45 and the last arc is 11, giving a central angle of \\(\\frac{11}{45}(180)=44\\), not 42.",
+   "B": "With a = 8 the arcs total 50 and the last arc is 12, giving \\(\\frac{12}{50}(180)=43.2\\).",
+   "C": "With a = 9 the arcs total 55 and the last arc is 13, giving \\(\\frac{13}{55}(180)\\approx 42.5\\) - close, which is why it is offered, but not exact."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: a semicircle with centre O on the flat side, divided into five arcs by four radii. Going from the left end of the diameter to the right end the arcs are labelled a, a + 1, a + 2, a + 3, a + 4. The central angle of the last arc (a + 4), nearest the right end of the diameter, is labelled x degrees. Without the figure there is nothing telling the student which arc x belongs to."
+ },
+ {
+  "id": "sathard-geometry-85",
+  "stem": "A circle is inscribed in an equilateral triangle as shown above. Point L is the center of the circle. Points A, B, and C all lie on the circle and the sides of the triangle. The perimeter of the triangle is \\(90\\sqrt{3}\\). The length of arc <em>AC</em> is equal to \\(k\\pi\\). What is the value of k?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "10",
+  "difficulty": "HARD",
+  "whyCorrect": "Each side of the equilateral triangle is \\(\\frac{90\\sqrt{3}}{3}=30\\sqrt{3}\\), and the inradius of an equilateral triangle is \\(\\frac{s}{2\\sqrt{3}}=\\frac{30\\sqrt{3}}{2\\sqrt{3}}=15\\). For the arc you need the central angle <em>ALC</em>. A and C are the points where the circle touches the two sides meeting at vertex Q, and a radius drawn to a point of tangency is perpendicular to the side, so quadrilateral <em>QALC</em> has two right angles and its angle at Q is 60 degrees; the remaining angle <em>ALC</em> is 360 &minus; 90 &minus; 90 &minus; 60 = 120 degrees. The arc is therefore \\(\\frac{120}{360}\\cdot 2\\pi(15)=10\\pi\\), so k = 10.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: an equilateral triangle PQR with P at the top, Q at the lower left and R at the lower right, and its inscribed circle centred at L. A is the point of tangency on side PQ, B the point of tangency on side PR, and C the point of tangency on side QR. Arc AC is the minor arc, the one on the Q side that does not contain B."
+ },
+ {
+  "id": "sathard-geometry-94",
+  "stem": "What is the area, in square units, of the triangle formed by connecting the three points shown?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "24.5",
+  "difficulty": "HARD",
+  "whyCorrect": "None of the three sides is horizontal or vertical, so there is no easy base and height - use the shoelace formula on the coordinates instead: \\(\\frac{1}{2}\\left|x_{1}(y_{2}-y_{3})+x_{2}(y_{3}-y_{1})+x_{3}(y_{1}-y_{2})\\right|\\). With the points in the order shown that is \\(\\frac{1}{2}\\left|(-3)(3-(-3))+5(-3-4)+4(4-3)\\right|=\\frac{1}{2}\\left|-18-35+4\\right|=\\frac{49}{2}=24.5\\). If you would rather avoid the formula, box the triangle in the 8-by-7 rectangle that just contains it (area 56) and subtract the three right triangles in the corners, which come to 31.5.",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: an xy-grid with x from -4 to 6 and y from -4 to 10, with three plotted points at (-3, 4), (5, 3) and (4, -3). The coordinates appear only in the figure."
+ },
+ {
+  "id": "sathard-geometry-95",
+  "stem": "The area of triangle <em>ABC</em> above is at least 48 but no more than 60. If y is an integer, what is one possible value of x?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "3.75",
+  "difficulty": "HARD",
+  "whyCorrect": "The base <em>AC</em> is 5 + 7 = 12 and the height is y, so the area is \\(\\frac{1}{2}(12)y=6y\\). Requiring \\(48 \\le 6y \\le 60\\) gives \\(8 \\le y \\le 10\\), so the integer y can be 8, 9 or 10. The segment marked x is perpendicular to <em>AC</em> at a point 5 units from A, so the small triangle it forms with vertex A is similar to triangle <em>ABC</em>: \\(\\frac{x}{y}=\\frac{5}{12}\\), giving \\(x=\\frac{5y}{12}\\). Taking y = 9 gives \\(x=\\frac{45}{12}=3.75\\). The other allowed values are \\(\\frac{10}{3}\\) (from y = 8) and \\(\\frac{25}{6}\\) (from y = 10).",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: right triangle ABC with the right angle at C, A at the lower left, C at the lower right and B directly above C. Along AC, a vertical segment labelled x rises from a point on AC to meet AB, meeting AC at a right angle; the part of AC from A to its foot is labelled 5 and the part from the foot to C is labelled 7. The side BC is labelled y. Only y = 9 gives a terminating decimal, so 3.75 is recorded; 10/3 and 25/6 are equally valid."
+ },
+ {
+  "id": "sathard-geometry-101",
+  "stem": "For triangle <em>ABC</em> shown, the length of <em>AB</em> is 11 less than the length of <em>AC</em>. Point D (not shown) lies on <em>AC</em> such that <em>BD</em> (not shown) is perpendicular to <em>AC</em>. What is the value of \\(\\frac{BC}{BD}\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "28/17",
+  "difficulty": "HARD",
+  "whyCorrect": "The right angle is at B and the hypotenuse <em>AC</em> is 28, so AB = 28 &minus; 11 = 17. <em>BD</em> is the altitude drawn from the right angle to the hypotenuse, and its length satisfies \\(BD=\\frac{AB\\cdot BC}{AC}\\) - the area of the triangle computed two ways. Substituting, \\(\\frac{BC}{BD}=\\frac{BC\\cdot AC}{AB\\cdot BC}=\\frac{AC}{AB}=\\frac{28}{17}\\). The BC cancels, so you never have to compute it (it is \\(3\\sqrt{55}\\), which would only make the arithmetic messy).",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: right triangle ABC with the right angle at B, A at the top, B at the lower left and C at the lower right, with the hypotenuse AC labelled 28. The right angle and the length 28 appear only in the figure."
+ },
+ {
+  "id": "sathard-geometry-102",
+  "stem": "The three points shown define a circle. The circumference of this circle is \\(k\\pi\\), where k is a constant. What is the value of k?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "9"
+   },
+   {
+    "label": "D",
+    "content": "12"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Two of the points share the x-coordinate 12, so the chord joining them is vertical and the center lies on its perpendicular bisector, the horizontal line y = 7. Write the center as (h, 7) and set the distances to two of the points equal: \\((h-12)^{2}+3^{2}=(h-9)^{2}\\). Expanding gives \\(-24h+153=-18h+81\\), so h = 12 and the center is (12, 7) with radius 3. The circumference is \\(2\\pi(3)=6\\pi\\), so k = 6.",
+  "whyWrong": {
+   "A": "3 is the radius. Circumference is \\(2\\pi r\\), so the coefficient of \\(\\pi\\) is 6.",
+   "C": "9 is \\(r^{2}\\), the coefficient of \\(\\pi\\) in the <em>area</em>, not the circumference.",
+   "D": "This uses the diameter 6 in place of the radius in \\(2\\pi r\\), doubling the circumference."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: an xy-grid with both axes running from 0 to about 15, with three plotted points at (12, 10), (9, 7) and (12, 4). The coordinates appear only in the figure."
+ },
+ {
+  "id": "sathard-geometry-108",
+  "stem": "In the figure above, O is the center of the circle and <em>AC</em> is tangent to the circle at D. If triangle <em>ABC</em> is equilateral, what is the ratio \\(\\frac{FE}{AC}\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "3/4",
+  "difficulty": "HARD",
+  "whyCorrect": "Put D at the origin with <em>AC</em> along the x-axis, so \\(A=(-\\tfrac{s}{2},0)\\), \\(C=(\\tfrac{s}{2},0)\\) and \\(B=(0,\\tfrac{s\\sqrt{3}}{2})\\) for side s. The circle is tangent to <em>AC</em> at D, so its center is straight above D and its radius r satisfies 2r = height of the triangle, giving \\(r=\\frac{s\\sqrt{3}}{4}\\). Substituting the line <em>AB</em> into \\(x^{2}+y^{2}-2ry=0\\) gives \\(4t^{2}-5t+1=0\\) for the parameter t, whose roots are t = 1 (the point B) and \\(t=\\frac{1}{4}\\) (the point F). So F is a quarter of the way from A to B, at \\(x=-\\frac{3s}{8}\\), and by symmetry E is at \\(x=\\frac{3s}{8}\\). Then \\(FE=\\frac{3s}{4}\\) and \\(\\frac{FE}{AC}=\\frac{3}{4}\\).",
+  "whyWrong": {},
+  "needsFigure": true,
+  "note": "Figure needed: equilateral triangle ABC with base AC horizontal at the bottom and apex B at the top, and a circle passing through B and tangent to AC at D, the midpoint of AC. O is the circle's centre, on segment BD. The circle cuts AB at F and BC at E, and the horizontal chord FE is drawn; the angle between FO and FE at F is marked 30 degrees. Points D, E and F exist only in the figure."
+ },
+ {
+  "id": "sathard-geometry-109",
+  "stem": "In the figure, if the radius of circle O is 10, what is the length of diagonal <em>AC</em> of rectangle <em>OABC</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\sqrt{2}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\sqrt{10}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(5\\sqrt{2}\\)"
+   },
+   {
+    "label": "D",
+    "content": "10"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "You are given neither side of the rectangle, which is the hint that you are not meant to compute them. The vertices of rectangle <em>OABC</em> are the center O and the point B on the circle, so the diagonal <em>OB</em> is a radius, 10. A rectangle's two diagonals are always equal, so <em>AC</em> = <em>OB</em> = 10. That holds no matter what shape the rectangle is.",
+  "whyWrong": {
+   "A": "Far too small - the rectangle has one vertex at the centre and one on the circle, so its diagonal is exactly the radius, 10.",
+   "B": "Also far too small; \\(\\sqrt{10}\\approx 3.16\\) would fit inside a circle of radius about 1.6, not 10.",
+   "C": "\\(5\\sqrt{2}\\approx 7.07\\) is the diagonal of a square with side 5, which is what you get by assuming the rectangle is a square whose sides are half the radius. Nothing in the problem says the sides are 5, and you do not need them."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: a circle with centre O. Rectangle OABC has O at the centre of the circle, A directly above O, B up and to the right on the circle, and C to the right of O; the diagonal AC is drawn. The fact that B lies on the circle appears only in the figure and is what makes the problem work."
+ },
+ {
+  "id": "sathard-geometry-111",
+  "stem": "In the figure above, the area of triangle <em>ABC</em> is equal to \\(2x^{2}\\). What is the cosine of angle <em>BCP</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{1}{\\sqrt{10}}\\)"
+   },
+   {
+    "label": "B",
+    "content": "\\(\\frac{3}{\\sqrt{10}}\\)"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{1}{3}\\)"
+   },
+   {
+    "label": "D",
+    "content": "3"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "<em>BP</em> is the height of triangle <em>ABC</em> onto base <em>AC</em>, and both <em>BP</em> and <em>AP</em> equal x. So \\(\\frac{1}{2}(AC)(x)=2x^{2}\\) gives AC = 4x, and therefore PC = 4x &minus; x = 3x. Now work inside right triangle <em>BPC</em>, right-angled at P: the legs are BP = x and PC = 3x, so \\(BC=\\sqrt{x^{2}+9x^{2}}=x\\sqrt{10}\\). Cosine of the angle at C is adjacent over hypotenuse, \\(\\frac{3x}{x\\sqrt{10}}=\\frac{3}{\\sqrt{10}}\\).",
+  "whyWrong": {
+   "A": "This is \\(\\frac{BP}{BC}\\), the side opposite the angle over the hypotenuse - that is the sine of angle <em>BCP</em>, not the cosine.",
+   "C": "This is \\(\\frac{BP}{PC}\\), opposite over adjacent, which is the tangent.",
+   "D": "This is \\(\\frac{PC}{BP}\\), the reciprocal of the tangent. A cosine can never exceed 1, so this can be ruled out on sight."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: triangle ABC with A at the lower left, C at the lower right and B above, between them but nearer A. The altitude BP is drawn from B perpendicular to AC, meeting it at P; the segment AP is labelled x and the segment BP is labelled x. Both x labels appear only in the figure."
+ },
+ {
+  "id": "sathard-geometry-116",
+  "stem": "In the diagram, OB = OA, AB = BC, the measure of angle <em>FAO</em> is 30&deg;, <em>DE</em> is parallel to <em>AC</em>, and AB = 58. What is the length of <em>BE</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\(\\frac{116}{3}\\)"
+   },
+   {
+    "label": "B",
+    "content": "29"
+   },
+   {
+    "label": "C",
+    "content": "\\(\\frac{87}{2}\\)"
+   },
+   {
+    "label": "D",
+    "content": "58"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Put F at the origin with A = (-a, 0), C = (a, 0), B = (0, b) and O = (0, t) on <em>BF</em>. Angle <em>FAO</em> = 30&deg; gives \\(t=\\frac{a}{\\sqrt{3}}\\), and OA = OB gives \\(a^{2}+t^{2}=(b-t)^{2}\\), i.e. \\(t=\\frac{b^{2}-a^{2}}{2b}\\). Setting those equal reduces to \\(\\tan 2\\varphi=-\\sqrt{3}\\) for the base angle \\(\\varphi\\) at A, so \\(\\varphi = 60^{\\circ}\\) and the triangle is in fact equilateral with every side 58. Then \\(a = 29\\), \\(b=29\\sqrt{3}\\) and \\(t=\\frac{29}{\\sqrt{3}}\\), which is one third of the way up from <em>AC</em> to B. Since <em>DE</em> is parallel to <em>AC</em>, E sits two thirds of the way down <em>BC</em> from B, so \\(BE=\\frac{2}{3}(58)=\\frac{116}{3}\\).",
+  "whyWrong": {
+   "B": "29 is half of 58, the answer if you assume O is the midpoint of <em>BF</em> and so E the midpoint of <em>BC</em>. O is one third of the way up, not halfway.",
+   "C": "\\(\\frac{87}{2}=\\frac{3}{4}(58)\\), which comes from placing <em>DE</em> a quarter of the way down from B rather than two thirds.",
+   "D": "58 is the whole of <em>BC</em>. E is an interior point of that side, so <em>BE</em> must be shorter."
+  },
+  "needsFigure": true,
+  "note": "Figure needed: triangle ABC with B at the top, A at the lower left and C at the lower right. A vertical segment BF runs from B to F on AC. O lies on BF, and the horizontal segment DE through O meets AB at D and BC at E. Segment AO is also drawn from A to O. All of D, E, F and O exist only in the figure."
+ },
+ {
+  "id": "sathard-problem-solving-76",
+  "stem": "For which of the following sets of 9 data points is the median less than the mean?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A"
+   },
+   {
+    "label": "B",
+    "content": "B"
+   },
+   {
+    "label": "C",
+    "content": "C"
+   },
+   {
+    "label": "D",
+    "content": "D"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Median below mean means the data are pulled to the right by a few high values, so look for the plot with its bulk on the left and a tail stretching right. Set A has four dots at 1, two at 2 and one each at 3, 4 and 5: the fifth value in order is 2, while the mean is \\(\\frac{4(1)+2(2)+3+4+5}{9}=\\frac{20}{9}\\approx 2.22\\). Median 2 is less than mean 2.22. In set B the median is 4 against a mean of about 3.44, in set C the plot is symmetric so median and mean are both 3, and in set D the median is 4 against a mean of about 3.78 - all three have the median at or above the mean.",
+  "whyWrong": {
+   "B": "Set B is left-skewed (1, 2, 3, 3, 4, 4, 4, 5, 5): median 4, mean \\(\\frac{31}{9}\\approx 3.44\\), so the median is greater than the mean.",
+   "C": "Set C (1, 2, 2, 3, 3, 3, 4, 4, 5) is symmetric about 3, so the median equals the mean rather than falling below it.",
+   "D": "Set D (1, 2, 3, 4, 4, 5, 5, 5, 5) is left-skewed: median 4, mean \\(\\frac{34}{9}\\approx 3.78\\)."
+  },
+  "needsFigure": true,
+  "note": "DEFECTIVE as printed on page 91: the four dot plots are missing and the answer choices are printed as the bare letters 'A', 'B', 'C', 'D'. It is a reprint of Problem Solving #63 on page 87, where the plots do appear. Dot counts from that printing, each set totalling 9 points on a number line labelled 1 to 5 - A: 4, 2, 1, 1, 1; B: 1, 1, 2, 3, 2; C: 1, 2, 3, 2, 1; D: 1, 1, 1, 2, 4. The answer recorded is derived from those. Either restore the four plots or bank #63 instead."
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-35",
+  "stem": "The graph of a system of two linear equations is shown. If a third equation, x + 2y = -8, is added to this system, how many solutions will the resulting system of three equations have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "A solution of the three-equation system has to satisfy all three at once, so start from the point where the two graphed lines cross and test it in the new equation. That point does not satisfy \\(x + 2y = -8\\). In fact the new line is parallel to one of the graphed lines (same \\(x + 2y\\) form, different constant), so it never meets it anywhere \u2014 there is no common point at all.",
+  "whyWrong": {
+   "B": "One solution would need the new line to pass through the existing intersection point. Substituting that point into \\(x + 2y = -8\\) does not work.",
+   "C": "Straight lines cannot give two common points unless they coincide, in which case there would be infinitely many.",
+   "D": "Infinitely many would require all three equations to describe the same line, and the graphed lines already have different slopes."
+  },
+  "needsFigure": true,
+  "note": "Depends on a coordinate-grid figure that cannot be reproduced as a table. Reading the printed graph, the two lines are the horizontal line y = -4 and the line x + 2y = -2 (through about (-10,4) and (10,-6)), so they meet at (6,-4); that point fails x + 2y = -8, and the new line is parallel to x + 2y = -2. The figure must be supplied before this question ships."
+ },
+ {
+  "id": "satmath-ma3-lines-angles-13",
+  "stem": "<p>In the figure, lines r and s are parallel and line t intersects both lines. If \\( a = 4k + 57 \\) and \\( b = \\frac{k}{2} + 55 \\) , what is the value of c?</p><p><em>Note: Figure not drawn to scale.</em></p>",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "117.44",
+  "difficulty": "HARD",
+  "whyCorrect": "Place the three angles first. a and b are both between the parallel lines and both on the same side of t, so they are same-side interior angles and a + b = 180. b and c share line s, so they are a linear pair and b + c = 180 &mdash; which makes c equal to a. Solving \\( (4k + 57) + \\left(\\frac{k}{2} + 55\\right) = 180 \\) gives \\( \\frac{9k}{2} = 68 \\) , so \\( k = \\frac{136}{9} \\) and \\( c = a = 4k + 57 = \\frac{1057}{9} \\approx 117.44 \\) .",
+  "needsFigure": true,
+  "note": "The numbers do not come out whole: k = 136/9 and c = 1057/9 = 117.444..., so the intended answer is probably a round number and one of the printed constants is likely mistyped. Answer recorded as the exact consequence of the stem as printed."
+ },
+ {
+  "id": "sathard-algebra-25",
+  "stem": "<p>\\[ t = \\frac{1}{2}v \\]</p><p>For the equation above, which of the following is the graph of v as a function of t?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Graph A"
+   },
+   {
+    "label": "B",
+    "content": "Graph B"
+   },
+   {
+    "label": "C",
+    "content": "Graph C"
+   },
+   {
+    "label": "D",
+    "content": "Graph D"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "\"v as a function of t\" means t goes on the horizontal axis, so solve for v first: \\( v = 2t \\) . That is a line through the origin with slope 2, rising 2 units for each 1 unit right and reaching v = 10 at t = 5. Graph A is the only one that does this. Reading the equation as it stands, with slope \\( \\frac{1}{2} \\) , is the trap.",
+  "whyWrong": {
+   "B": "This line is far too shallow &mdash; it climbs only about 2 units across the whole width, a slope near \\( \\frac{1}{2} \\) of \\( \\frac{1}{2} \\) .",
+   "C": "This has slope 1, the average of the two numbers rather than either of them.",
+   "D": "This is steeper than slope 2, reaching 10 by t = 3."
+  },
+  "needsFigure": true,
+  "note": "The four choices are graphs; they must be supplied as images. Choice text here is a placeholder."
+ }
+]

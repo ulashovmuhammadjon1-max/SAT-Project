@@ -19,13 +19,36 @@ from fractions import Fraction
 HERE = os.path.dirname(os.path.abspath(__file__))
 keys = json.load(open(f"{HERE}/printed_keys.json"))
 
+WAVE = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--wave=")), "*")
+
+seen = set()
 rows = []
-for f in sorted(glob.glob(f"{HERE}/out/mx-*.jsonl")):
+for f in sorted(glob.glob(f"{HERE}/out/{WAVE}.jsonl")):
     for line in open(f):
         line = line.strip()
-        if line:
-            try: rows.append(json.loads(line))
-            except Exception: pass
+        if not line:
+            continue
+        try: r = json.loads(line)
+        except Exception: continue
+        # A relaunched agent can re-append an id it had already written; the
+        # later line is the one it stands behind.
+        if r.get("id") in seen:
+            rows = [x for x in rows if x.get("id") != r["id"]]
+        seen.add(r.get("id"))
+        rows.append(r)
+
+# Verdicts already settled by blind adjudication outrank the printed key: a
+# question whose key was flipped must not reappear here as a fresh dispute.
+VERDICTS = json.load(open(f"{HERE}/key_verdicts.json")) if os.path.exists(f"{HERE}/key_verdicts.json") else {}
+for v in VERDICTS.get("flip", []):
+    keys[v["id"]] = v["to"]
+def _ids(bucket):
+    """A verdict bucket holds either bare ids or {"id": …} records."""
+    return {v if isinstance(v, str) else v["id"] for v in VERDICTS.get(bucket, [])}
+
+
+SETTLED = _ids("keep")
+EXCLUDE = _ids("broken") | _ids("held_contaminated")
 
 
 # A printed key can be several things that are NOT a disagreement:
@@ -58,8 +81,12 @@ ready, disputes, unanswerable, nokey, rounded, value_keyed = [], [], [], [], [],
 for r in rows:
     printed = keys.get(r["id"])
     mine_l, mine_v = r.get("answerLabel"), r.get("answerValue")
+    if r["id"] in EXCLUDE:
+        continue
     if not mine_l and mine_v in (None, ""):
         unanswerable.append((r, printed)); continue
+    if r["id"] in SETTLED:
+        ready.append((r, printed)); continue
     ptxt = str(printed).strip()
     if printed in (None, "") or (GARBAGE.search(ptxt) and ptxt.upper() not in ("A","B","C","D")):
         nokey.append(r); continue

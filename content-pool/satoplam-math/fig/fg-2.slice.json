@@ -1,0 +1,600 @@
+[
+ {
+  "id": "sathard-algebra-34",
+  "stem": "Line segment GH and point R are shown in the xy-plane. If line \\( \\ell \\) (not shown) contains point R and is perpendicular to line segment GH, which of the following is an equation of line \\( \\ell \\) ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( -4x + 3y = 6 \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( -3x + 4y = 8 \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( 3x + 4y = 8 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( 4x + 3y = 6 \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Read the two endpoints off the grid: G is at (0, 3) and H at (4, 0), so segment GH has slope \\( \\frac{0 - 3}{4 - 0} = -\\frac{3}{4} \\) and the perpendicular slope is \\( \\frac{4}{3} \\) . Line \\( \\ell \\) passes through R at (0, 2), so \\( y = \\frac{4}{3}x + 2 \\) . Clearing the fraction gives \\( 3y = 4x + 6 \\) , that is \\( -4x + 3y = 6 \\) . Checking a choice quickly: put x = 0 and see whether y = 2.",
+  "whyWrong": {
+   "B": "Its slope is \\( \\frac{3}{4} \\) , the negative of GH's slope rather than the negative reciprocal, and at x = 0 it gives y = 2 by coincidence.",
+   "C": "Its slope is \\( -\\frac{3}{4} \\) , which is parallel to GH, not perpendicular.",
+   "D": "Its slope is \\( -\\frac{4}{3} \\) : the fraction is flipped but the sign is wrong, so it is perpendicular to the wrong line."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "sathard-algebra-37",
+  "stem": "The graph shows the total amount of rainfall y, in centimeters, from the start of a 10-hour period, where x is the number of hours after the start of the period. Which of the following statements about the rainfall during this time period is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The rate of rainfall was 2 centimeters per hour between x = 2 and x = 4."
+   },
+   {
+    "label": "B",
+    "content": "The rate of rainfall was the greatest between x = 4 and x = 10."
+   },
+   {
+    "label": "C",
+    "content": "The rate of rainfall increased between x = 0 and x = 2."
+   },
+   {
+    "label": "D",
+    "content": "The rate of rainfall was 0 centimeters per hour between x = 2 and x = 4."
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The graph plots the <em>total</em> rainfall so far, so the rate of rainfall is the graph's steepness, not its height. Between x = 2 and x = 4 the graph is flat at 2 centimeters: the total is not growing, so no rain fell and the rate was 0 centimeters per hour.",
+  "whyWrong": {
+   "A": "2 is the height of the graph over that stretch, the total accumulated, not the slope. The slope there is zero.",
+   "B": "From x = 4 to x = 10 the graph rises only about 0.6 centimeters in 6 hours, a rate of about 0.1. The steepest stretch is the first two hours, at about 1 centimeter per hour.",
+   "C": "From x = 0 to x = 2 the graph is a straight line, so the rate is constant. The total rises, but a constant slope means an unchanging rate."
+  },
+  "needsFigure": true,
+  "note": "The slice records this as free response; the book prints four choices."
+ },
+ {
+  "id": "sathard-advanced-math-7",
+  "stem": "<p>The graph of \\( y = g(x) \\) is shown, where the function g is defined by</p><p>\\[ g(x) = f(x + a) + b \\]</p><p>and a and b are constants. If the function f is defined by \\( f(x) = x^{3} \\) , what is the value of \\( a + b \\) ?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "&minus;5"
+   },
+   {
+    "label": "B",
+    "content": "&minus;1"
+   },
+   {
+    "label": "C",
+    "content": "1"
+   },
+   {
+    "label": "D",
+    "content": "5"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "With \\( f(x) = x^{3} \\) , \\( g(x) = (x + a)^{3} + b \\) . The graph of \\( y = x^{3} \\) has its flat centre at the origin, so on the shifted graph that centre sits at \\( (-a, b) \\) . The picture shows the flattening at (4, &minus;1), so \\( -a = 4 \\) and \\( b = -1 \\) , giving a = &minus;4 and \\( a + b = -5 \\) . The sign flip on a is the whole question: \\( x + a \\) inside the function moves the graph in the opposite direction.",
+  "whyWrong": {
+   "B": "&minus;1 is b by itself, with the horizontal shift left out.",
+   "C": "1 comes from reading the shift as (4, &minus;1) but then taking a = &minus;4 with b = +... check the vertical shift: the centre is below the x-axis, so b is negative.",
+   "D": "5 reads the centre as (&minus;4, 1), reversing both shifts; \\( (x + a)^{3} \\) with positive a moves the graph left, not right."
+  },
+  "needsFigure": true,
+  "note": "The slice records this as free response; the book prints four choices."
+ },
+ {
+  "id": "sathard-advanced-math-11",
+  "stem": "<p>The graph of \\( y = f(x) \\) is shown in the xy-plane. If the function g is defined by</p><p>\\[ g(x) = (x + 3)(x - 1) \\]</p><p>for which of the following values of x is \\( f(x) &gt; g(x) \\) ?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "&minus;3"
+   },
+   {
+    "label": "B",
+    "content": "&minus;2"
+   },
+   {
+    "label": "C",
+    "content": "1"
+   },
+   {
+    "label": "D",
+    "content": "2"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "You do not need a formula for f &mdash; just compare heights at each candidate x. g is an upward parabola with zeros at &minus;3 and 1, so it is negative in between and positive outside. At x = &minus;2, g(&minus;2) = (1)(&minus;3) = &minus;3, while the graph puts f near its maximum, well above the x-axis. So f(&minus;2) is comfortably greater than g(&minus;2).",
+  "whyWrong": {
+   "A": "At x = &minus;3, g is exactly 0 and f is at or barely above the axis; this is the boundary, not a clear win.",
+   "C": "At x = 1, g is again 0 and f is close to the axis, so the inequality is not securely satisfied here.",
+   "D": "At x = 2, g(2) = (5)(1) = 5 while f has already dropped below the x-axis, so f is smaller."
+  },
+  "needsFigure": true,
+  "note": "As drawn, f's zeros are slightly outside &minus;3 and 1 (about &minus;3.4 and 1.4), which would make choices A and C true as well; the question only has a single answer if f's zeros are exactly &minus;3 and 1, in which case f = &minus;g. B is correct on either reading. The slice records this as free response; the book prints four choices."
+ },
+ {
+  "id": "sathard-advanced-math-13",
+  "stem": "Which of the following could be the equation of the graph shown?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( y = (x + 2)^{2}(x - 3)^{2} \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( y = (x - 2)^{2}(x + 3)^{2} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( y = 2(x + 2)^{2}(x - 3)^{2} \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( y = 2(x - 2)^{2}(x + 3)^{2} \\)"
+   }
+  ],
+  "answerLabel": "C",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Two features decide it. The curve touches the x-axis without crossing at x = &minus;2 and x = 3, so the factors are \\( (x + 2)^{2} \\) and \\( (x - 3)^{2} \\) &mdash; note the sign flip, a zero at &minus;2 comes from \\( (x + 2) \\) . That leaves A and C, separated by their height: at x = 0, A gives \\( 4 \\cdot 9 = 36 \\) but the graph is up near 70, and C gives \\( 2 \\cdot 4 \\cdot 9 = 72 \\) . C also matches the local maximum of about 78.",
+  "whyWrong": {
+   "A": "The zeros are right, but every value is half what the graph shows: it would peak near 39, not near 78.",
+   "B": "Its zeros are at 2 and &minus;3, the mirror image of the graph's.",
+   "D": "Same wrong zeros as B, with the correct vertical stretch applied to the wrong shape."
+  },
+  "needsFigure": true,
+  "note": ""
+ },
+ {
+  "id": "sathard-advanced-math-14",
+  "stem": "<p>An equation for the graph shown is</p><p>\\[ y = a(x + 3)(x + b) \\]</p><p>where a and b are constants. What is the value of ab?</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "&minus;2"
+   },
+   {
+    "label": "B",
+    "content": "\\( -\\frac{4}{3} \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( \\frac{1}{2} \\)"
+   },
+   {
+    "label": "D",
+    "content": "8"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "The graph crosses the x-axis at &minus;3 and 4. The factor \\( (x + 3) \\) already accounts for the zero at &minus;3, so \\( (x + b) \\) must vanish at x = 4, which means b = &minus;4 &mdash; the sign flips. For a, use the y-intercept: the curve passes through (0, &minus;4), and \\( a(3)(-4) = -12a = -4 \\) gives \\( a = \\frac{1}{3} \\) . So \\( ab = \\frac{1}{3}(-4) = -\\frac{4}{3} \\) .",
+  "whyWrong": {
+   "A": "&minus;2 comes from misreading the y-intercept as &minus;6, which would make \\( a = \\frac{1}{2} \\) .",
+   "C": "\\( \\frac{1}{2} \\) is a value of a from that same misreading, not the product ab.",
+   "D": "8 keeps b = 4 instead of &minus;4 (forgetting that a zero at 4 needs the factor x &minus; 4) and pairs it with a = 2."
+  },
+  "needsFigure": true,
+  "note": "The slice records this as free response; the book prints four choices."
+ },
+ {
+  "id": "sathard-advanced-math-17",
+  "stem": "The xy-plane above shows two points of intersection of the graphs of a linear function and a quadratic function. The vertex of the graph of the quadratic function is at (3, &minus;4) and (r, s) is one of the points of intersection of the graphs. What is the value of r?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "4.5",
+  "difficulty": "HARD",
+  "whyCorrect": "Build both functions from the figure. The line passes through (0, &minus;6) and the vertex (3, &minus;4), so its slope is \\( \\frac{2}{3} \\) and \\( y = \\frac{2}{3}x - 6 \\) . The parabola has vertex (3, &minus;4) and x-intercepts at 0 and 6, so \\( y = A(x - 3)^{2} - 4 \\) with \\( 9A = 4 \\) , that is \\( A = \\frac{4}{9} \\) . Setting them equal, \\( \\frac{4}{9}(x - 3)^{2} = \\frac{2}{3}(x - 3) \\) , and factoring out \\( (x - 3) \\) leaves \\( \\frac{4}{9}(x - 3) = \\frac{2}{3} \\) , so \\( x - 3 = \\frac{3}{2} \\) and r = 4.5. Factoring rather than expanding keeps the known root x = 3 out of the way.",
+  "needsFigure": true,
+  "note": "The stem alone does not fix the parabola's leading coefficient; it has to be read off the figure, where the curve meets the x-axis at 0 and 6, giving A = 4/9."
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-79",
+  "stem": "The graph of line \\(g\\) is shown in the <em>xy</em>-plane. Line \\(k\\) is defined by 165x + py = w, where \\(p\\) and \\(w\\) are constants. If line \\(k\\) is graphed in this <em>xy</em>-plane, resulting in the graph of a system of two linear equations, the system of two linear equations will have infinitely many solutions. What is the value of \\(p + w\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "270",
+  "difficulty": "HARD",
+  "whyCorrect": "Infinitely many solutions means line \\(k\\) <em>is</em> line \\(g\\), so read \\(g\\) off the graph and force the coefficients to match. From the two marked points, \\(g\\) has slope \\(\\frac{1-12}{0-(-9)} = -\\frac{11}{9}\\) and \\(y\\)-intercept 1, so \\(g\\) is \\(y = -\\frac{11}{9}x + 1\\), i.e. 11x + 9y = 9. Line \\(k\\) is 165x + py = w, and 165 = 15 &times; 11, so multiply the whole equation of \\(g\\) by 15: 165x + 135y = 135. That gives p = 135 and w = 135, so p + w = 270.",
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: line g passes through the marked points (-9, 12) and (0, 1); grid spans x from -15 to 1 and y from 0 to 15.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-83",
+  "stem": "The graph of line \\(g\\) is shown in the <em>xy</em>-plane. Line \\(k\\) is defined by the equation 165x + py = w, where \\(p\\) and \\(w\\) are constants. If line \\(k\\) is graphed in this <em>xy</em>-plane, resulting in the graph of a system of two linear equations, the system will have infinitely many solutions. What is the value of \\(p + w\\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "300",
+  "difficulty": "HARD",
+  "whyCorrect": "Infinitely many solutions means line \\(k\\) is the same line as \\(g\\), so write \\(g\\) in the same form and scale it. The marked points give slope \\(\\frac{1-12}{0-(-10)} = -\\frac{11}{10}\\) and \\(y\\)-intercept 1, so \\(g\\) is \\(y = -\\frac{11}{10}x + 1\\), or 11x + 10y = 10. Since 165 = 15 &times; 11, multiply through by 15: 165x + 150y = 150. So p = 150, w = 150, and p + w = 300.",
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: line g passes through the marked points (-10, 12) and (0, 1); grid spans x from -15 to 1 and y from 0 to 16.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-85",
+  "stem": "The graph of line \\(h\\) is shown in the <em>xy</em>-plane. Line \\(k\\) (not shown) is defined by sx + 40y = t, where s and t are constants. If line \\(k\\) is graphed in this <em>xy</em>-plane, the result is a graph of two linear equations. This system of two linear equations has no solution. Which of the following is NOT a possible value of t?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "200"
+   },
+   {
+    "label": "B",
+    "content": "64"
+   },
+   {
+    "label": "C",
+    "content": "&minus;8"
+   },
+   {
+    "label": "D",
+    "content": "&minus;320"
+   }
+  ],
+  "answerLabel": "D",
+  "difficulty": "HARD",
+  "whyCorrect": "No solution means line \\(k\\) is parallel to \\(h\\) but is <em>not</em> the same line &mdash; that second half is what the question turns on. Line \\(h\\) runs through (-5, 0) and (0, -8), so its slope is \\(-\\frac{8}{5}\\) and h is 8x + 5y = -40. Matching slopes in sx + 40y = t forces \\(-\\frac{s}{40} = -\\frac{8}{5}\\), so s = 64, and multiplying h by 8 gives 64x + 40y = -320. That single value of t makes k identical to h (infinitely many solutions), so t = -320 is the one value ruled out.",
+  "whyWrong": {
+   "A": "With s = 64, t = 200 gives a line parallel to h and distinct from it, so the system has no solution &mdash; exactly what the question allows.",
+   "B": "64 is the value of s, not a forbidden t. As a t value it gives a distinct parallel line, which is fine.",
+   "C": "t = -8 also gives a distinct parallel line. Any t except -320 works."
+  },
+  "needsFigure": true,
+  "note": "Depends on a graph. Verified data for rebuilding it: line h passes through (-5, 0) and (0, -8), drawn as a segment across roughly -5 <= x <= 0; grid spans x from -13 to 3 and y from -13 to 7.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-59",
+  "stem": "The figure shows a rectangular pool surrounded by a concrete path that is x feet (ft) wide on all sides. The pool is 21 ft long and 13 ft wide. The area of the concrete path is 240 \\(\\text{ft}^2\\). What is the value of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3"
+   },
+   {
+    "label": "B",
+    "content": "6"
+   },
+   {
+    "label": "C",
+    "content": "20"
+   },
+   {
+    "label": "D",
+    "content": "40"
+   }
+  ],
+  "answerLabel": "A",
+  "difficulty": "HARD",
+  "whyCorrect": "The path runs along both sides, so each outer dimension grows by 2x, not x: the outer rectangle is (21 + 2x) by (13 + 2x). The path is the outer area minus the pool: \\((21+2x)(13+2x) - 273 = 240\\). Expanding gives \\(4x^2 + 68x - 240 = 0\\), or \\(x^2 + 17x - 60 = 0\\), which factors as (x + 20)(x - 3) = 0. A width must be positive, so x = 3.",
+  "whyWrong": {
+   "B": "6 is 2x, the total added to each dimension, not the width of the path itself.",
+   "C": "20 comes from the rejected root -20 with the sign dropped; it would make the outer rectangle 61 by 53.",
+   "D": "40 is twice that rejected root and is far too large: the path alone would be thousands of square feet."
+  },
+  "needsFigure": true,
+  "note": "Stem refers to a figure. Verified data for rebuilding it: a large white rectangle labelled 'Concrete path width = x ft' with a smaller shaded rectangle centred inside it labelled 'Pool', plus the caption 'Note: Figure not drawn to scale.' No measurements are printed in the figure.",
+  "answerValue": null
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-66",
+  "stem": "The figure shown is a right rectangular pyramid, where \\(l = 18\\) units, \\(w = 9\\) units, and \\(h = 12\\) units. What is the surface area, in square units, of the pyramid?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "527.69",
+  "difficulty": "HARD",
+  "whyCorrect": "A rectangular pyramid has two different pairs of triangular faces, each pair needing its own slant height, plus the rectangular base. Base: 18 &times; 9 = 162. The faces standing on the 9-unit edges have slant height \\(\\sqrt{12^2 + 9^2} = 15\\) (using half of 18), contributing \\(2 \\cdot \\frac{1}{2}(9)(15) = 135\\). The faces on the 18-unit edges have slant height \\(\\sqrt{12^2 + 4.5^2} = \\sqrt{164.25} \\approx 12.82\\), contributing \\(2 \\cdot \\frac{1}{2}(18)(12.82) \\approx 230.69\\). The total is about 527.69. Using h itself as the slant height is the usual mistake &mdash; it gives 162 + 108 + 216 = 486.",
+  "needsFigure": true,
+  "note": "Answer is not a clean number: exactly \\(297 + 9\\sqrt{657} \\approx 527.688\\), which is unusual for a grid-in and worth a human check. Stem refers to a figure. Verified data for rebuilding it: a right rectangular pyramid drawn in perspective with the vertical segment from apex to base centre labelled h, the front-right base edge labelled w and the front-left base edge labelled l; the hidden base edges and diagonals are dotted. No measurements appear in the figure itself.",
+  "whyWrong": {}
+ },
+ {
+  "id": "satmath-ma2-scatterplots-13",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, for the data set <em>P</em>. A line of best fit for the data is also shown. Data set <em>Q</em> is created by adding 540 units to the value of <em>x</em> for each data point from the data set <em>P</em>. Which of the following could be an equation of a line of best fit for the data set <em>Q</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( -3 + \\frac{35}{1301}x \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( 9 + \\frac{1}{131}x \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( 18 + \\frac{1}{131}x \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( 26 + \\frac{35}{1301}x \\)"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Sliding every point 540 units to the right shifts the line right by 540 but does not tilt it, so the slope is unchanged and only the constant moves. First get the slope from the graph: the drawn line climbs from about 14.2 at x = 100 to about 14.95 at x = 130, a rise of 0.75 over a run of 30, or about 0.027 \u2014 that is \\( \\frac{35}{1301} \\), not \\( \\frac{1}{131} \\approx 0.0076 \\). Then apply the shift: replacing <em>x</em> by x - 540 lowers the constant by \\( 540 \\times \\frac{35}{1301} \\approx 14.5 \\), and the original constant is about 14.2 - 100(0.027) &asymp; 11.5, leaving about -3.",
+  "whyWrong": {
+   "B": "The slope \\( \\frac{1}{131} \\) is about a third of the slope drawn on the graph, so this line is far too flat whatever its constant is.",
+   "C": "Same wrong slope as choice B.",
+   "D": "This has the right slope but the constant has been moved the wrong way. Shifting the data to larger <em>x</em> must <em>decrease</em> the value at x = 0, not raise it by about 14.5."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from about 95 to 132 and y from 13 to 15.2, with a line of best fit from about (98, 14.2) to (130, 14.95). Points approximately (102, 14.4), (105, 14.6), (108, 14.5), (113, 14.6), (117, 14.8), (118, 14.7), (127, 14.9), (128, 15.0), (130, 15.05). The book prints the choices without a leading \"y =\"."
+ },
+ {
+  "id": "satmath-ma2-scatterplots-22",
+  "stem": "The scatterplot shows the relationship between two variables, <em>x</em> and <em>y</em>, for data set <em>A</em>. A line of best fit for the data is also shown. Data set <em>B</em> is created by subtracting 9 units from the value of <em>y</em> for each data point from data set <em>A</em>. Which of the following is closest to the <em>y</em>-coordinate of the <em>y</em>-intercept of the line of best fit for data set <em>B</em>?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "45.57"
+   },
+   {
+    "label": "B",
+    "content": "53"
+   },
+   {
+    "label": "C",
+    "content": "59.62"
+   },
+   {
+    "label": "D",
+    "content": "62.75"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Lowering every <em>y</em>-value by 9 slides the whole line down 9 units without tilting it, so the new intercept is the old intercept minus 9. Get the old one by extending the drawn line back to the <em>y</em>-axis: it passes through roughly (12, 45) and (37, 20), a slope of about -1, so at x = 0 it is near 57 \u2014 and the only choice 9 below a value in that region is 45.57. The trap is that the line starts well to the right of the <em>y</em>-axis, so the intercept has to be extrapolated, not read.",
+  "whyWrong": {
+   "B": "53 would require the original line to cross at 62, which is above the top of the plotted <em>y</em>-axis and far above where the drawn line is heading.",
+   "C": "59.62 is roughly the <em>original</em> intercept region, so this is the answer you get by forgetting to subtract the 9.",
+   "D": "62.75 is higher still, and would need a much steeper line than the one drawn."
+  },
+  "needsFigure": true,
+  "note": "Scatterplot, x from 0 to about 50 and y from 0 to 60, with a line of best fit through about (12, 45) and (37, 20). Points approximately (12, 45), (13, 45), (15, 42), (16, 41), (17, 39), (22, 32), (25, 30), (28, 24), (29, 31), (30, 25), (33, 30), (36, 20). A least-squares fit to those readings gives intercept 56 and slope -0.97, so the shifted intercept is about 47, nearest to choice A."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-1",
+  "stem": "In the figure, parallel lines <em>a</em> and <em>b</em> are intersected by lines <em>c</em>, <em>d</em>, and <em>e</em>. If x = 49, y = 136, and v &lt; z, which statement about <em>x</em> and <em>w</em> must be true?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x &lt; w"
+   },
+   {
+    "label": "B",
+    "content": "x &gt; w"
+   },
+   {
+    "label": "C",
+    "content": "x = w"
+   },
+   {
+    "label": "D",
+    "content": "x + w = 90"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Look for the two triangles that <em>x</em> and <em>w</em> each sit in. Line <em>c</em> cuts both parallel lines, so the angle it makes with <em>b</em> and the angle it makes with <em>a</em> are equal \u2014 and each of those triangles has that same angle, 180 - 136 = 44 degrees, as a second angle. In the triangle containing <em>x</em>, the third angle is <em>v</em>, so x = 180 - 44 - v = 136 - v. In the triangle containing <em>w</em>, the third angle is <em>z</em>, so w = 136 - z by exactly the same count. Since v &lt; z, subtracting the smaller number leaves the larger result, so x &gt; w. (As a check, x = 49 forces v = 87, and z must then exceed 87.)",
+  "whyWrong": {
+   "A": "This is the comparison you get by carrying v &lt; z straight through to x and w, but both appear <em>subtracted</em> from 136, which flips the inequality.",
+   "C": "x = w would require v = z, and the problem states v &lt; z.",
+   "D": "x + w = 136 - v + 136 - z = 272 - (v + z), which is only 90 if v + z = 182 \u2014 nothing in the problem forces that."
+  },
+  "needsFigure": true,
+  "note": "Figure: two parallel vertical lines, a on the left and b on the right, crossed by three slanted lines. Line d runs down to the right across both, meeting a at the point where v is marked (right of a, below d). Line c runs up to the right across both, meeting b at the point where y is marked (right of b, below c). Lines c and d meet to the right of b at the point where x is marked (the wedge opening rightward). Line e runs down to the right across both, meeting b where z is marked (right of b, below e); c and e meet to the left of a, at the point where w is marked (the wedge opening leftward)."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-19",
+  "stem": "In the figure, parallel lines <em>r</em> and <em>s</em> are intersected by lines <em>t</em>, <em>u</em>, and <em>w</em>. If d = 42, g = 143, and h &gt; d, which statement about <em>j</em> and <em>p</em> must be true?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "j = p"
+   },
+   {
+    "label": "B",
+    "content": "j + p = 90"
+   },
+   {
+    "label": "C",
+    "content": "j &gt; p"
+   },
+   {
+    "label": "D",
+    "content": "j &lt; p"
+   }
+  ],
+  "answerLabel": "D",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Both <em>j</em> and <em>p</em> are the third angle of a triangle that has line <em>t</em> as one side, and both triangles borrow the same angle from <em>t</em>. Because <em>r</em> and <em>s</em> are parallel, the angle <em>t</em> makes with each of them is the same, so each triangle contains an angle of 180 - 143 = 37 degrees on that side. The triangle holding <em>j</em> has <em>h</em> as its remaining angle, giving j = 180 - 37 - h = 143 - h; the triangle holding <em>p</em> has <em>d</em>, giving p = 143 - d = 101. Since h &gt; d, more is being subtracted in the first case, so j &lt; p.",
+  "whyWrong": {
+   "A": "j = p would require h = d, and the problem states h &gt; d.",
+   "B": "j + p = (143 - h) + (143 - d) = 286 - (h + d), which equals 90 only if h + d = 196 \u2014 nothing given forces that.",
+   "C": "This carries h &gt; d straight through to j and p, but both are formed by <em>subtracting</em> those angles from 143, which reverses the inequality."
+  },
+  "needsFigure": true,
+  "note": "DEFECT: the stem names the parallel lines r and s and the transversals t, u, w, but the printed figure labels the two horizontal parallel lines d and e and the three slanted lines a, b, c - and \"d\" is also used as an angle name in the same figure. Figure as it should read: two horizontal parallel lines, r above and s below. Line t descends from upper left to lower right, crossing r then s. Lines u and w both descend from upper right to lower left; u crosses r to the left of t's crossing and s well to the left, w crosses r well to the right and s just right of t's crossing. Angle j is the upward-opening wedge where t and u meet above r; g is at t's crossing of r, above r and right of t; d is at w's crossing of r, above r and right of w; h is at u's crossing of s, above s and right of u; p is the downward-opening wedge where t and w meet below s."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-28",
+  "stem": "In the figure shown, line <em>l</em> intersects lines <em>j</em> and <em>k</em>. Which additional piece of information is sufficient to prove that lines <em>j</em> and <em>k</em> are parallel?<br/><br/>Note: Figure not drawn to scale.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "w = 35&deg;"
+   },
+   {
+    "label": "B",
+    "content": "x = 145&deg;"
+   },
+   {
+    "label": "C",
+    "content": "y = 35&deg;"
+   },
+   {
+    "label": "D",
+    "content": "z = 145&deg;"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "A fact only proves the lines parallel if it links the two intersections; a fact that is already forced within one intersection tells you nothing. The angle <em>w</em> sits above <em>k</em> on the right of <em>l</em>, exactly the position the 35-degree angle occupies above <em>j</em>, so <em>w</em> and 35 are corresponding angles. Corresponding angles are equal precisely when the lines are parallel, so w = 35&deg; settles it.",
+  "whyWrong": {
+   "B": "<em>x</em> is vertical to <em>w</em>, so x = 145&deg; would force w = 145&deg;, which is not 35&deg; \u2014 that would prove the lines are <em>not</em> parallel.",
+   "C": "<em>y</em> is vertical to the 35-degree angle at the same intersection, so y = 35&deg; is true no matter what line <em>k</em> does. It adds nothing.",
+   "D": "<em>z</em> forms a straight angle with the 35-degree angle along line <em>j</em>, so z = 145&deg; is automatically true and says nothing about <em>k</em>."
+  },
+  "needsFigure": true,
+  "note": "Figure: two roughly horizontal lines, k above and j below, both crossed by a line l rising from lower left to upper right. At l's crossing of k: w is marked above k to the right of l, x below k to the left of l. At l's crossing of j: 35 degrees is marked above j to the right of l, y below j to the left of l, z below j to the right of l."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-31",
+  "stem": "In the figure shown, line <em>k</em> intersects lines <em>r</em> and <em>s</em>. If w = 146&deg;, which additional piece of information is sufficient to prove that lines <em>r</em> and <em>s</em> are parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 34"
+   },
+   {
+    "label": "B",
+    "content": "y = 146"
+   },
+   {
+    "label": "C",
+    "content": "w + y = 180"
+   },
+   {
+    "label": "D",
+    "content": "y + z = 180"
+   }
+  ],
+  "answerLabel": "B",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Only a fact that ties the two intersections together can prove parallelism. The angle <em>y</em> occupies the same corner at line <em>s</em> that <em>w</em> occupies at line <em>r</em> \u2014 above <em>k</em> and to the right of the vertical line \u2014 so <em>w</em> and <em>y</em> are corresponding angles. They are equal exactly when the lines are parallel, so y = 146 does it.",
+  "whyWrong": {
+   "A": "<em>x</em> and <em>w</em> lie on the same side of line <em>r</em>, split by <em>k</em>, so x = 180 - 146 = 34 is already forced. It says nothing about <em>s</em>.",
+   "C": "w + y = 180 would make y = 34, not 146, which would prove the lines are <em>not</em> parallel.",
+   "D": "<em>y</em> and <em>z</em> lie on the same side of line <em>s</em>, split by <em>k</em>, so their sum is 180 whatever <em>r</em> does."
+  },
+  "needsFigure": true,
+  "note": "Figure: two vertical lines, r on the left and s on the right, crossed by a line k descending from upper left to lower right. At k's crossing of r: w is marked to the right of r and above k, x to the right of r and below k. At k's crossing of s: y is marked to the right of s and above k, z to the right of s and below k."
+ },
+ {
+  "id": "satmath-ma2-lines-angles-33",
+  "stem": "In the figure shown, line <em>t</em> intersects lines <em>j</em> and <em>k</em>. Which additional piece of information is sufficient to prove that lines <em>j</em> and <em>k</em> are parallel?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "w = 54"
+   },
+   {
+    "label": "B",
+    "content": "x = 126"
+   },
+   {
+    "label": "C",
+    "content": "y = 54"
+   },
+   {
+    "label": "D",
+    "content": "z = 126"
+   }
+  ],
+  "answerLabel": "A",
+  "answerValue": null,
+  "difficulty": "HARD",
+  "whyCorrect": "Three of these facts are already true no matter how the lines are drawn, so they cannot prove anything. The angle <em>w</em> sits above <em>j</em> on the right of <em>t</em>, the same corner the 54-degree angle occupies above <em>k</em>, so <em>w</em> and 54 are corresponding angles \u2014 equal exactly when <em>j</em> and <em>k</em> are parallel.",
+  "whyWrong": {
+   "B": "<em>x</em> is vertical to <em>w</em>, so x = 126 would force w = 126, contradicting the 54 needed for parallel lines.",
+   "C": "<em>y</em> is vertical to the 54-degree angle at the same intersection, so y = 54 holds regardless and says nothing about <em>j</em>.",
+   "D": "<em>z</em> and the 54-degree angle form a straight angle along <em>k</em>, so z = 126 is automatic."
+  },
+  "needsFigure": true,
+  "note": "Figure: two roughly horizontal lines, j above and k below, crossed by a line t rising from lower left to upper right. At t's crossing of j: w is marked above j to the right of t, x below j to the left of t. At t's crossing of k: 54 degrees is marked above k to the right of t, y below k to the left of t, z below k to the right of t. Same template as Lines&Angles question 28 in this book."
+ },
+ {
+  "id": "satmath-ma2-triangles-36",
+  "stem": "For triangle <em>ABC</em>, the length of <em>AB</em> is 11 less than the length of <em>AC</em>. Point <em>D</em> (not shown) lies on <em>AC</em> such that <em>BD</em> (not shown) is perpendicular to <em>AC</em>. What is the value of \\( \\frac{BC}{BD} \\)?",
+  "choices": [],
+  "answerLabel": null,
+  "answerValue": "32/21",
+  "difficulty": "HARD",
+  "whyCorrect": "The figure gives AC = 32 and marks the right angle at <em>B</em>, so AB = 32 - 11 = 21. Now use area twice: with the legs as base and height the area is \\( \\frac{1}{2}(AB)(BC) \\), and with the hypotenuse as base it is \\( \\frac{1}{2}(AC)(BD) \\). Setting these equal gives \\( BD = \\frac{AB \\cdot BC}{AC} \\), so \\( \\frac{BC}{BD} = \\frac{BC \\cdot AC}{AB \\cdot BC} = \\frac{AC}{AB} = \\frac{32}{21} \\). The length of <em>BC</em> cancels, so you never have to compute it.",
+  "needsFigure": true,
+  "note": "Figure: right triangle ABC with the right angle at B, A at the top left, B at the lower left and C at the lower right; the hypotenuse AC is labelled 32. Decimal equivalent about 1.5238. Book prints \"the length of of AB\".",
+  "whyWrong": {}
+ },
+ {
+  "id": "sathard-advanced-math-18",
+  "stem": "The graph of \\( y = f(x) - k \\) is shown in the <em>xy</em>-plane. If \\(k\\), \\(a\\), and \\(b\\) are positive constants, which equation could define \\(f\\)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\\( f(x) = (x-a)^2(x+b) \\)"
+   },
+   {
+    "label": "B",
+    "content": "\\( f(x) = (x+a)^2(x-b) \\)"
+   },
+   {
+    "label": "C",
+    "content": "\\( f(x) = (x-a)^2(x+b)^2 \\)"
+   },
+   {
+    "label": "D",
+    "content": "\\( f(x) = (x+a)^2(x-b)^2 \\)"
+   }
+  ],
+  "answerLabel": "D",
+  "whyCorrect": "Start from the end behaviour. The curve rises on the left and on the right, so the degree is even &mdash; that alone kills both cubic choices. Then use the two minimum points: they sit at the same height, and \\( y = f(x)-k \\) is just \\(f\\) pushed down \\(k\\) units, so \\(f\\) itself has two equal minimum values, each equal to 0. A quartic whose two minima are both 0 is a perfect square with two double roots, one at a negative \\(x\\) (about \\(-1.5\\)) and one at a positive \\(x\\) (about 5), which is what \\( f(x)=(x+a)^2(x-b)^2 \\) gives with \\(a\\) and \\(b\\) positive.",
+  "whyWrong": {
+   "A": "This is a cubic with a positive leading coefficient, so it falls without bound on the left; the graph shown rises on the left. A cubic also has only one local minimum, not two.",
+   "B": "Same problem as A &mdash; degree 3, so the left end goes down instead of up, and there is only one local minimum.",
+   "C": "This has the same shape as the correct choice (a double root at a positive \\(x\\) and a double root at a negative \\(x\\)), so it is not distinguishable from D; see the note."
+  },
+  "needsFigure": true,
+  "note": "DEFECT: choices C and D are equivalent. With a and b any positive constants, (x-a)^2(x+b)^2 and (x+a)^2(x-b)^2 both describe a quartic with one positive and one negative double root, so both fit the graph. The item has two correct answers.",
+  "answerValue": null,
+  "difficulty": "HARD"
+ },
+ {
+  "id": "sathard-advanced-math-97",
+  "stem": "In the <em>xy</em>-plane above, the function \\(f\\) is defined by \\( f(x) = 2x^3+3x^2+ax+b \\), where \\(a\\) and \\(b\\) are constants. If the graph of \\(f\\) intersects the <em>x</em>-axis at three points, what is the value of \\(a\\)?",
+  "choices": [],
+  "answerValue": "-11",
+  "whyCorrect": "Read the two labelled zeros, \\( x = -3 \\) and \\( x = 2 \\), off the graph. For \\( 2x^3+3x^2+ax+b \\) the three zeros sum to \\( -\\frac{3}{2} \\), so the third zero is \\( -\\frac{3}{2}-(-3)-2 = -\\frac{1}{2} \\). That makes \\( f(x) = 2(x+3)(x-2)\\left(x+\\frac{1}{2}\\right) = (x+3)(x-2)(2x+1) \\); expanding gives \\( 2x^3+3x^2-11x-6 \\), so \\( a = -11 \\) (and \\( b = -6 \\), matching the labelled <em>y</em>-intercept).",
+  "needsFigure": true,
+  "note": "Depends on the graph: the cubic is drawn with x-intercepts labelled -3 and 2, a third unlabelled crossing between them, and y-intercept -6.",
+  "answerLabel": null,
+  "difficulty": "HARD"
+ }
+]
