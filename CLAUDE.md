@@ -1,5 +1,42 @@
 # Project memory
 
+## MATH TEST DIFFICULTY STRUCTURE, tests 6-31 (set by the user — reuse, do not ask again)
+
+The per-module difficulty mix for the Math rebuild from the SATashkent books.
+The user specified this once; it is recorded so it never has to be re-sent.
+
+| module | EASY | MEDIUM | HARD | the user's wording |
+|---|---|---|---|---|
+| Math Module 1 (STANDARD) | 3 | 10 | 9 | "3 easy questions 10 medium, the rest hard" |
+| Math Module 2 Easy | 10 | 9 | 3 | "10 easy questions 3 hard rest medium" |
+| Math Module 2 Hard | 1 | 7 | 14 | "1 easy 7 medium the rest hard" |
+
+22 per module, 66 per test. Across tests 6-31 that is EASY 364 / MEDIUM 676 /
+HARD 676 = 1,716 questions.
+
+**Every Math Hard Book question is a Module 2 Hard question** — the user's
+instruction, and it fits: the book holds 361 curated-hard items against 364
+Module 2 Hard slots needing HARD.
+
+Difficulty for the other two books is assigned by judgement, since those books
+do not label it.
+
+### The free-response cap has to move, and why
+CLAUDE.md's standing rule is "≤3 free-response per Math module; target exactly
+3", taken from Test 1. The books are free-response heavy — 659 FR of 2,002 —
+so holding 3 leaves multiple choice **139 short** of the 1,482 needed. Raising
+the cap to ~5 per module closes it exactly and is *closer* to the real Digital
+SAT, which carries about 5-6 student-produced responses in each 22-question
+module. Use ~5 for this rebuild; the old 3 stands for authored content.
+
+### The keys in these books are NOT trustworthy
+The user reports "a lot of mistakes in the answer keys". Treat the printed key
+as a claim to be checked, never as truth — the same posture that found 21
+wrong keys in 26 disputed SAToplam R&W items. Every answer is verified
+independently (sympy where the mathematics allows it, a derivation otherwise)
+before the question ships, and a disagreement goes to review rather than to a
+student.
+
 ## R&W TEST DIFFICULTY STRUCTURE (set by the user — reuse, do not ask again)
 
 The per-module difficulty mix for every rebuilt Reading & Writing test. The
