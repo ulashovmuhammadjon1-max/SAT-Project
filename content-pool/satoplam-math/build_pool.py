@@ -38,7 +38,7 @@ pool = [q for q in pool if q["id"] not in blocked]
 print(f"blocked by hand      {len(blocked)}")
 
 figs = {}
-for f in sorted(glob.glob(f"{HERE}/fig/fg-*.jsonl")):
+for f in sorted(glob.glob(f"{HERE}/fig/f*-*.jsonl")):
     for line in open(f):
         if line.strip():
             try:

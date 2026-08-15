@@ -118,10 +118,10 @@ def _():
     txt(ax, (0, 1.78), r"$r$")
     txt(ax, (1.2, 1.78), r"$s$")
     txt(ax, (2.18, 1.55), r"$t$")
-    txt(ax, (-0.20, -0.92), r"$x^\circ$")          # left of r, below t
-    txt(ax, (1.00, 0.86), r"$y^\circ$")            # left of s, above t
+    txt(ax, (-0.20, -1.02), "$x$\u00b0")          # left of r, below t
+    txt(ax, (1.00, 0.86), "$y$\u00b0")            # left of s, above t
     ax.set_xlim(-1.15, 2.45)
-    ax.set_ylim(-1.85, 2.00)
+    ax.set_ylim(-1.95, 2.00)
     return (fig,
             "Two parallel vertical lines r and s cut by a transversal t that "
             "rises to the right; one angle is marked at each intersection, "
@@ -135,8 +135,8 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.25, r"$r$", r"$s$")
     seg(ax, (0.2875, 1.45), (2.725, -0.5))         # slope -0.8
     txt(ax, (2.80, -0.62), r"$n$")
-    txt(ax, (1.10, 1.15), r"$164^\circ$")          # above r, right of n
-    txt(ax, (2.24, 0.16), r"$x^\circ$")            # above s, right of n
+    txt(ax, (1.10, 1.15), "164\u00b0")          # above r, right of n
+    txt(ax, (2.24, 0.16), "$x$\u00b0")            # above s, right of n
     ax.set_xlim(-0.25, 3.7)
     ax.set_ylim(-0.95, 1.75)
     return (fig,
@@ -151,8 +151,8 @@ def _():
     fig, ax = newax(5.0, 3.0)
     two_parallels(ax, 1, 0, 0, 3.0, r"$r$", r"$s$")
     seg(ax, (0.6, -0.4), (2.5, 1.5))               # slope +1
-    txt(ax, (1.70, 1.16), r"$138^\circ$")          # above r, left of n
-    txt(ax, (0.70, 0.16), r"$x^\circ$")            # above s, left of n
+    txt(ax, (1.70, 1.16), "138\u00b0")          # above r, left of n
+    txt(ax, (0.70, 0.16), "$x$\u00b0")            # above s, left of n
     ax.set_xlim(-0.25, 3.5)
     ax.set_ylim(-0.7, 1.75)
     return (fig,
@@ -170,8 +170,8 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.0, r"$p$", r"$q$")
     seg(ax, (0.48, 1.35), (3.04, -0.45))           # slope -0.70
     txt(ax, (0.40, 1.50), r"$t$")
-    txt(ax, (2.12, 0.16), r"$x^\circ$")            # above q, left of t
-    txt(ax, (2.66, 0.16), r"$142^\circ$")          # above q, right of t
+    txt(ax, (1.96, 0.16), "$x$\u00b0")            # above q, left of t
+    txt(ax, (2.66, 0.16), "142\u00b0")          # above q, right of t
     ax.set_xlim(-0.25, 3.5)
     ax.set_ylim(-0.75, 1.75)
     return (fig,
@@ -186,14 +186,14 @@ def _():
     fig, ax = newax(5.0, 3.2)
     two_parallels(ax, 1, 0, 0, 3.2, r"$m$", r"$n$")
     seg(ax, (0.75, 1.23), (2.35, -0.37))           # slope -1, m at .98, n at 1.98
-    txt(ax, (0.68, 1.38), r"$k$")
-    txt(ax, (0.70, 1.16), r"$q^\circ$")            # above m, left of k
-    txt(ax, (1.20, 0.80), r"$r^\circ$")            # below m, right of k
-    txt(ax, (2.22, 0.16), r"$s^\circ$")            # above n, right of k
-    txt(ax, (1.58, -0.20), r"$135^\circ$")         # below n, left of k
-    txt(ax, (2.34, -0.18), r"$t^\circ$")           # below n, right of k
+    txt(ax, (0.70, 1.42), r"$k$")
+    txt(ax, (0.54, 1.13), "$q$\u00b0")            # above m, left of k
+    txt(ax, (1.38, 0.82), "$r$\u00b0")            # below m, right of k
+    txt(ax, (2.22, 0.16), "$s$\u00b0")            # above n, right of k
+    txt(ax, (1.58, -0.20), "135\u00b0")         # below n, left of k
+    txt(ax, (2.42, -0.17), "$t$\u00b0")           # below n, right of k
     ax.set_xlim(-0.25, 3.7)
-    ax.set_ylim(-0.60, 1.60)
+    ax.set_ylim(-0.60, 1.68)
     return (fig,
             "Two parallel horizontal lines m and n cut by a transversal k; "
             "four angles are labelled with letters and one with a degree "
@@ -207,7 +207,7 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.2, r"$q$", r"$r$")
     seg(ax, (1.10, -0.44), (2.30, 1.44))           # r at 1.38, q at 2.02
     txt(ax, (2.38, 1.57), r"$s$")
-    txt(ax, (2.32, 1.16), r"$61^\circ$")           # above q, right of s
+    txt(ax, (2.50, 1.14), "61\u00b0")           # above q, right of s
     txt(ax, (1.12, 0.17), r"$y$")                  # above r, left of s
     ax.set_xlim(-0.25, 3.7)
     ax.set_ylim(-0.65, 1.80)
@@ -223,8 +223,8 @@ def _():
     fig, ax = newax(3.6, 3.2)
     seg(ax, (-1, 1), (1, -1))
     seg(ax, (-1, -1), (1, 1))
-    txt(ax, (0.02, 0.40), r"$w^\circ$")
-    txt(ax, (0.03, -0.40), r"$z^\circ$")
+    txt(ax, (0.02, 0.40), "$w$\u00b0")
+    txt(ax, (0.03, -0.40), "$z$\u00b0")
     ax.set_xlim(-1.25, 1.25)
     ax.set_ylim(-1.25, 1.25)
     return (fig,
@@ -240,8 +240,8 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.2, r"$l$", r"$k$")
     seg(ax, (0.53, 1.55), (2.60, -0.28))           # l at .96, k at 2.24
     txt(ax, (0.44, 1.68), r"$t$")
-    txt(ax, (1.22, 1.16), r"$x^\circ$")            # above l, right of t
-    txt(ax, (1.94, 0.16), r"$y^\circ$")            # above k, left of t
+    txt(ax, (1.22, 1.16), "$x$\u00b0")            # above l, right of t
+    txt(ax, (1.84, 0.16), "$y$\u00b0")            # above k, left of t
     ax.set_xlim(-0.25, 3.7)
     ax.set_ylim(-0.55, 1.90)
     return (fig,
@@ -257,7 +257,7 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.2, r"$q$", r"$r$")
     seg(ax, (1.10, -0.44), (2.30, 1.44))
     txt(ax, (2.38, 1.57), r"$s$")
-    txt(ax, (2.32, 1.16), r"$74^\circ$")
+    txt(ax, (2.50, 1.14), "74\u00b0")
     txt(ax, (1.12, 0.17), r"$y$")
     ax.set_xlim(-0.25, 3.7)
     ax.set_ylim(-0.65, 1.80)
@@ -274,8 +274,8 @@ def _():
     two_parallels(ax, 1, 0, 0, 3.2, r"$l$", r"$m$")
     seg(ax, (1.02, 1.22), (2.83, -0.41))           # l at 1.26, m at 2.37
     txt(ax, (2.92, -0.54), r"$k$")
-    txt(ax, (1.50, 1.16), r"$x^\circ$")            # above l, right of k
-    txt(ax, (2.02, -0.22), r"$111^\circ$")         # below m, left of k
+    txt(ax, (1.60, 1.16), "$x$\u00b0")            # above l, right of k
+    txt(ax, (2.02, -0.22), "111\u00b0")         # below m, left of k
     ax.set_xlim(-0.25, 3.7)
     ax.set_ylim(-0.75, 1.55)
     return (fig,
@@ -320,7 +320,7 @@ def _():
     rightangle(ax, P0, (1, 0), (0, 1), 0.075)
     txt(ax, (-0.10, 0.40), r"$x$")
     txt(ax, (0.50, -0.11), r"$66$")
-    txt(ax, (0.80, 0.055), r"$30^\circ$", fontsize=12)
+    txt(ax, (0.80, 0.055), "30\u00b0", fontsize=12)
     ax.set_xlim(-0.22, 1.12)
     ax.set_ylim(-0.24, 0.90)
     return (fig,
@@ -355,7 +355,7 @@ def _():
     txt(ax, (-0.17, 0.03), r"$A$")
     txt(ax, (1.17, 0.03), r"$B$")
     txt(ax, (0.50, -1.22), r"$C$")
-    txt(ax, (0.20, -0.16), r"$60^\circ$", fontsize=12)
+    txt(ax, (0.325, -0.235), "60\u00b0", fontsize=11)
     txt(ax, (0.10, -0.55), r"$d$")
     k = 1.55
     X = (1.95, 0.28)
@@ -381,7 +381,7 @@ def _():
     fig, ax = plt.subplots(figsize=(5.0, 4.7))
     ax.set_aspect("equal")
     ax.axis("off")
-    g = dict(color="#c2c2cf", lw=0.7, zorder=0)
+    g = dict(color="#c6c6c6", lw=0.7, zorder=0)
     for gx in range(-9, 10):
         ax.plot([gx, gx], [0, 16.6], **g)
     for gy in range(0, 17):
@@ -427,7 +427,7 @@ def _():
     txt(ax, (10.55, -0.32), r"$C$")
     txt(ax, (4.5, 3.85), r"$B$")
     txt(ax, (5.15, 1.75), r"$h$")
-    txt(ax, (4.85, -0.62), "10 cm", fontsize=12)
+    txt(ax, (5.20, -0.66), "10 cm", fontsize=12)
     caption(ax, NOTSCALE, 5.0, -1.35)
     ax.set_xlim(-1.3, 11.3)
     ax.set_ylim(-2.55, 4.45)
@@ -444,8 +444,8 @@ def _():
     P0, P1, P2 = (0, 0), (0, 1.0), (1.37, 0)
     seg(ax, P0, P1); seg(ax, P0, P2); seg(ax, P1, P2)
     rightangle(ax, P0, (1, 0), (0, 1), 0.085)
-    txt(ax, (0.17, 0.84), r"$24^\circ$", fontsize=12)
-    txt(ax, (1.12, 0.075), r"$a^\circ$", fontsize=12)
+    txt(ax, (0.155, 0.735), "24\u00b0", fontsize=11)
+    txt(ax, (1.055, 0.085), "$a$\u00b0", fontsize=11)
     caption(ax, NOTSCALE, 0.68, -0.20)
     ax.set_xlim(-0.18, 1.55)
     ax.set_ylim(-0.62, 1.16)
@@ -515,7 +515,7 @@ def ramp(ax, W, H, theta_pos, height_text, length_rotated, arc):
             "length of the ramp", rotation=ang, fontsize=12,
             rotation_mode="anchor")
     else:
-        txt(ax, (W * 0.45, H + 0.30 * W * 0.35), "length of the ramp",
+        txt(ax, (W * 0.53, H + 0.26 * W * 0.35), "length of the ramp",
             fontsize=12)
 
 
@@ -561,7 +561,7 @@ def _():
     txt(ax, (2.07, -0.03), r"$C$")
     txt(ax, (2.05, 1.62), r"$B$")
     txt(ax, (0.95, -0.16), r"$53$")
-    txt(ax, (0.85, 0.86), r"$54$")
+    txt(ax, (0.78, 0.94), r"$54$")
     caption(ax, "Note: Figure not drawn to a scale.", 0.95, -0.40)
     ax.set_xlim(-0.35, 2.30)
     ax.set_ylim(-0.90, 1.82)
@@ -600,7 +600,7 @@ def _():
     txt(ax, (-0.15, -0.03), r"$T$")
     txt(ax, (1.39, -0.03), r"$S$")
     txt(ax, (1.24, 1.14), r"$R$")
-    txt(ax, (0.55, 0.55), r"$79$")
+    txt(ax, (0.51, 0.61), r"$79$")
     ax.set_xlim(-0.30, 1.58)
     ax.set_ylim(-0.24, 1.30)
     return (fig,

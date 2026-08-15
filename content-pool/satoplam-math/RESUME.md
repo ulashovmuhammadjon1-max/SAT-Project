@@ -1,34 +1,47 @@
 # RESUME — Math rebuild of Tests 6-31. Read this first.
 
-## Status: SHIPPED for Tests 6-19. Tests 20-31 Math is unchanged.
+## Status: COMPLETE. Every usable question from the books is live.
 
-924 SATashkent questions are live in production across Tests 6-19 Math
-(14 tests x 66). The old Math in those modules was retired, not deleted.
-Tests 1-5 and 20-31 keep their previously authored Math — 1,122 questions.
+    SATashkent questions live   1,638
+      in Tests 6-21 Math        1,056   (16 tests x 66)
+      Question Bank only          582   (moduleId NULL, isPublished true)
+    total live questions        5,187, all with an explanation
+    rendering audit             0 errors, 6 style-only
+    duplicate sources           0
+    MC without one correct      0
+    malformed FR answers        0
 
-    live Math by source:  SATMATH 671   SATHARD 253   authored/other 1,122
-    total live questions: 4,557, all 4,557 with an explanation
-    rendering audit:      0 errors, 6 style-only ("degrees" spelled out)
+The old Math in Tests 6-21 was retired, not deleted. Tests 1-5 and 22-31 keep
+their previously authored Math.
 
-## Why 14 tests and not 26
+**The 582 bank-only questions are the ones no module could hold.** The Question
+Bank selects on `isPublished` alone and never joins Module (see
+`src/server/actions/student/question-bank.ts`), so `moduleId = NULL` plus
+`isPublished = true` makes a question drillable and searchable without
+belonging to a mock test. Retired questions are the same shape with
+`isPublished = false`, so the two populations stay distinguishable.
+
+All 227 figures were built, so **nothing is dropped for want of a picture**.
+
+## Why 16 tests and not 26
 
 Supply, after every gate:
 
     verified transcriptions       1,953
-    figure never built             -139
-    duplicate clusters collapsed   -289
-    blocked defects                  -6
-    POOL                          1,519
+    figures built and attached     +224 attached, 0 still missing
+    duplicate clusters collapsed   -286
+    blocked defects                  -9
+    POOL                          1,638   (EASY 501, MEDIUM 696, HARD 441)
 
-HARD is the binding tier: 443 against 26 needed per test. That alone allows
-17 tests, but the allocator stops at 14 on a **domain cap**. Past 14 the
-algebra and advanced-maths HARD supply is spent and only geometry is left —
-tests 20-22 came out with Module 2 Hard at 14 of 22 geometry and zero
-problem-solving. A module that lopsided is not a Digital SAT module. No
-module in the 14 shipped exceeds 8 of one domain.
+HARD is the binding tier: 441 against 26 needed per test. Tests 6-19 were
+built under a domain cap of 9 and every module in them sits at or under 8 of
+one domain — essentially the Digital SAT's own shape. Tests 20-21 needed the
+cap raised to 14 and show it: Module 2 Hard is 14 of 22 geometry with no
+problem-solving, because by then the algebra and advanced-maths HARD supply
+is gone and geometry is what remains.
 
-To go further you need more HARD content in ALG/ADV/PSDA, not a looser
-threshold.
+Everything the books hold beyond that is in the Question Bank, so no verified
+question is sitting unused.
 
 ## What the key verification found
 
@@ -129,11 +142,15 @@ them byte-identical.
 
 ## Still open
 
-- **Tests 20-31 Math is untouched** and still carries authored questions.
-  Finishing them needs more HARD content in Algebra, Advanced Math and
-  Problem-Solving specifically.
-- **139 questions were dropped for want of a figure** (81 MEDIUM, 58 EASY —
-  no HARD). Building those figures returns them to the pool.
+- **Tests 22-31 Math is untouched** and still carries authored questions.
+  HARD is why: 441 in the pool against 26 per test caps the build at 16, and
+  the recovered figures were all MEDIUM and EASY. Finishing them needs more
+  HARD content in Algebra, Advanced Math and Problem-Solving specifically —
+  no re-tuning gets there.
+- **Tests 20 and 21 carry a domain skew.** Module 2 Hard is 14 of 22 geometry,
+  because the algebra and advanced-maths HARD supply is spent by then. Shipped
+  at the user's direction, with `--cap 14` passed on the command line so the
+  choice is visible rather than buried.
 - **The real exam interface was not walked.** The DB-wide rendering audit is
   clean and `verify_allocation.py` passes, but CLAUDE.md also asks for a pass
   through `/exam/{attemptId}` with Playwright, and that was not run.

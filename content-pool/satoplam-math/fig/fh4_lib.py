@@ -22,7 +22,7 @@ def new_fig(w=5.0, h=3.6, dpi=110):
 
 def cross_axes(ax, xlim, ylim, xticks=None, yticks=None, grid=True,
                xlabel="x", ylabel="y", origin_label=True, gridstep=1,
-               gridstepy=None, equal=True):
+               gridstepy=None, equal=True, xtick_labels=None, ytick_labels=None):
     """SAT-style xy-plane: axes through the origin with arrowheads."""
     ax.set_xlim(*xlim)
     ax.set_ylim(*ylim)
@@ -51,12 +51,14 @@ def cross_axes(ax, xlim, ylim, xticks=None, yticks=None, grid=True,
         for t in xticks:
             ax.plot([t, t], [-0.09 * (ylim[1] - ylim[0]) / 10, 0.09 * (ylim[1] - ylim[0]) / 10],
                     color="black", lw=1.0, zorder=3)
-            ax.text(t, -0.03 * (ylim[1] - ylim[0]), str(t), ha="center", va="top", fontsize=8)
+            lab = (xtick_labels or {}).get(t, str(t))
+            ax.text(t, -0.03 * (ylim[1] - ylim[0]), lab, ha="center", va="top", fontsize=8)
     if yticks:
         for t in yticks:
             ax.plot([-0.09 * (xlim[1] - xlim[0]) / 10, 0.09 * (xlim[1] - xlim[0]) / 10], [t, t],
                     color="black", lw=1.0, zorder=3)
-            ax.text(-0.02 * (xlim[1] - xlim[0]), t, str(t), ha="right", va="center", fontsize=8)
+            lab = (ytick_labels or {}).get(t, str(t))
+            ax.text(-0.02 * (xlim[1] - xlim[0]), t, lab, ha="right", va="center", fontsize=8)
     if origin_label:
         ax.text(-0.015 * (xlim[1] - xlim[0]), -0.02 * (ylim[1] - ylim[0]), "O",
                 ha="right", va="top", fontsize=9, style="italic")
