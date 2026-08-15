@@ -1,0 +1,2675 @@
+[
+ {
+  "id": "satmath-ma2-linear-system-of-equations-5",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 5,
+  "exam": "June 2023",
+  "page": 51,
+  "pdf_page": 52,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "mx + ky = \u221283\n2x + ky = 22\nIn the given system of equations, m and k\nare constants. The graph of these equations\nin the xy-plane intersect at the point (5,y).\nWhat is the value of m?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-7",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 7,
+  "exam": "August US 2023",
+  "page": 52,
+  "pdf_page": 53,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "2x + y = 8\nax + 3y = 24\nIn the given system of equations, a is a con-\nstant. The system has infinitely many solu-\ntions. What is the value of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-9",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 9,
+  "exam": "August US 2023",
+  "page": 52,
+  "pdf_page": 53,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x + y = 12\nx \u2212 3y = 0\nThe solution to the given system is (x, y).\nWhat is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-10",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 10,
+  "exam": "November 2023",
+  "page": 52,
+  "pdf_page": 53,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "4x \u2212 16y = 8\nOne of the two equations in a system of lin-\near equations is given. The system has no\nsolution. Which equation could be the sec-\nond equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2212 8y = 0"
+   },
+   {
+    "label": "B",
+    "content": " 1 2 x \u2212 2y = 1"
+   },
+   {
+    "label": "C",
+    "content": " 1 2 x \u2212 2y = 0"
+   },
+   {
+    "label": "D",
+    "content": "x \u2212 4y = 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-12",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 12,
+  "exam": "November 2023",
+  "page": 53,
+  "pdf_page": 54,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "4x \u2212 16y = 8\nOne of the two equations in the system of\nlinear equations is given. The system has\nno solution. Which of the following be the\nsecond equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2212 8y = 0"
+   },
+   {
+    "label": "B",
+    "content": " 1 2 x \u2212 2y = 1"
+   },
+   {
+    "label": "C",
+    "content": " 1 2 x \u2212 2y = 0"
+   },
+   {
+    "label": "D",
+    "content": "x \u2212 4y = 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-13",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 13,
+  "exam": "March 2024",
+  "page": 53,
+  "pdf_page": 54,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which system of linear equations has no\nsolution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22122x + 8y = \u22125 2x \u2212 8y = 5"
+   },
+   {
+    "label": "B",
+    "content": "2x \u2212 8y = 5 3x + 9y = 6"
+   },
+   {
+    "label": "C",
+    "content": "2x \u2212 8y = 5 \u22126x + 24y = \u221215"
+   },
+   {
+    "label": "D",
+    "content": "\u22122x + 8y = 5 4x \u2212 16y = 10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-14",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 14,
+  "exam": "March 2024",
+  "page": 53,
+  "pdf_page": 54,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x \u2212 4y = 5\nx = 7\nWhat is the solution (x, y) to the given sys-\ntem of equations?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(7, 4)"
+   },
+   {
+    "label": "B",
+    "content": "(7, 12)"
+   },
+   {
+    "label": "C",
+    "content": "(7, \u221212)"
+   },
+   {
+    "label": "D",
+    "content": "(7, \u22124)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-16",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 16,
+  "exam": "March 2024",
+  "page": 53,
+  "pdf_page": 54,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x + 4y = \u221216\n5x + 20y = 0\n3x + 12y = 34\nThe given equations are graphed in the xy-\nplane. How many solutions (x, y) does the\nsystem of three equations have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-17",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 17,
+  "exam": "March 2024",
+  "page": 54,
+  "pdf_page": 55,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5x = 50y \u2212 125\nOne of the two equations in a system of lin-\near equations is given. The system has no\nsolution. Which equation could be the sec-\nond equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 2y"
+   },
+   {
+    "label": "B",
+    "content": " 1 5 x = 2y"
+   },
+   {
+    "label": "C",
+    "content": "x = 10y \u221225"
+   },
+   {
+    "label": "D",
+    "content": " x 5 = 10y\u221225"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-18",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 18,
+  "exam": "March 2024",
+  "page": 54,
+  "pdf_page": 55,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x + 5y = \u221218\n6x + 30y = 0\n4x + 20y = 28\nThe given equations are graphed in the xy-\nplane. How many solutions (x, y) does the\nsystem of equations have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-21",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 21,
+  "exam": "March 2024",
+  "page": 54,
+  "pdf_page": 55,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Two customers bought the same kind of\ncheese and milk at a store. The first cus-\ntomer paid 12.45 dollars for 1 pound of\ncheese and 2 gallons of milk. The second\ncustomer paid 19.70 dollars for 3 pounds of\ncheese and 1 gallon of milk. Whats is the\ncost, in dollars, of 1 gallon of milk?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3.53"
+   },
+   {
+    "label": "B",
+    "content": "4.15"
+   },
+   {
+    "label": "C",
+    "content": "4.93"
+   },
+   {
+    "label": "D",
+    "content": "5.39"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-22",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 22,
+  "exam": "May 2024",
+  "page": 54,
+  "pdf_page": 55,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "9x + 5y = 19\n\u22129x \u2212 3y = 7\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 2y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-23",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 23,
+  "exam": "May US 2024",
+  "page": 55,
+  "pdf_page": 56,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which system of linear equations has no\nsolution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22125x + 9y = \u22128 5x \u2212 9y = 8"
+   },
+   {
+    "label": "B",
+    "content": "5x \u2212 9y = 8 6x + 10y = 9"
+   },
+   {
+    "label": "C",
+    "content": "5x + 9y = 8 \u2212 15x + 27y = \u221224"
+   },
+   {
+    "label": "D",
+    "content": "\u22125x + 9y = 8 10x \u2212 18y = 16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-24",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 24,
+  "exam": "May 2024",
+  "page": 55,
+  "pdf_page": 56,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "31(x \u2212 n) = 31y + 31n\nOne of the equations in a system of two lin-\near equations is given, where n is a posi-\ntive constant. The system has no solution.\nWhich equation could be the second equa-\ntion in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3x \u2212 3y = 6n"
+   },
+   {
+    "label": "B",
+    "content": "3x + 3y = 3n"
+   },
+   {
+    "label": "C",
+    "content": "3x + 3y = 6n"
+   },
+   {
+    "label": "D",
+    "content": "3x \u2212 3y = 3n"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-25",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 25,
+  "exam": "May 2024",
+  "page": 55,
+  "pdf_page": 56,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "At what point (x, y) do the graphs of the\nequations y = 2x + 4 and y = 3x \u2212 6 inter-\nsect in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(2,3)"
+   },
+   {
+    "label": "B",
+    "content": "(3,2)"
+   },
+   {
+    "label": "C",
+    "content": "(10,24)"
+   },
+   {
+    "label": "D",
+    "content": "(24,10)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-26",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 26,
+  "exam": "May 2024",
+  "page": 55,
+  "pdf_page": 56,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "2x + 5y = 3\n8x + 20y = 12\nFor each real number r, which of the follow-\ning points lies on the graph of each equation\nin the xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u0012 r, \u2212 5r 2 + 3 2 \u0013"
+   },
+   {
+    "label": "B",
+    "content": " \u0012 r, 2r 5 + 3 5 \u0013"
+   },
+   {
+    "label": "C",
+    "content": " \u0010r 4 + 3, \u2212 r 4 + 12 \u0011"
+   },
+   {
+    "label": "D",
+    "content": " \u0012 \u2212 5r 2 + 3 2 , r \u0013"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-27",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 27,
+  "exam": "May US 2024",
+  "page": 55,
+  "pdf_page": 56,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x \u2212 2y = 5\nx = 7\nWhat is the solution (x, y) to the given sys-\ntem of equations?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(7,8)"
+   },
+   {
+    "label": "B",
+    "content": "(7,14)"
+   },
+   {
+    "label": "C",
+    "content": "(7,-8)"
+   },
+   {
+    "label": "D",
+    "content": "(7,-14) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-30",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 30,
+  "exam": "August 2024",
+  "page": 56,
+  "pdf_page": 57,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "x = 2 + 8y\nx = 4 \u2212 8y\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 2x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-31",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 31,
+  "exam": "August US 2024",
+  "page": 56,
+  "pdf_page": 57,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x + 5y = 21\ny = 3\nWhat is the solution (x, y) to the given sys-\ntem of equations?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(3,7)"
+   },
+   {
+    "label": "B",
+    "content": "(3, 7 5 )"
+   },
+   {
+    "label": "C",
+    "content": "(8 5 , 3)"
+   },
+   {
+    "label": "D",
+    "content": "(2,3)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-34",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 34,
+  "exam": "August US 2024",
+  "page": 57,
+  "pdf_page": 58,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which system of linear equations has in-\nfinitely many solutions?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "4x + 2y = 12 4x + 8y = 48"
+   },
+   {
+    "label": "B",
+    "content": "x + 2y = 12 x + 8y = 48"
+   },
+   {
+    "label": "C",
+    "content": "x + 2y = 12 4x + 8y = 48"
+   },
+   {
+    "label": "D",
+    "content": "4x + 2y = 12 x + 8y = 48"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-36",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 36,
+  "exam": "August US 2024",
+  "page": 57,
+  "pdf_page": 58,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3.5x + 1.2y = 8\n17.5x + 6y = 40\nHow many solutions does the given system\nof equations have",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-37",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 37,
+  "exam": "August US 2024",
+  "page": 58,
+  "pdf_page": 59,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "(x \u2212 2) \u2212 8(y + 3) = 123\n(x \u2212 2) + 8(y + 3) = 432\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 10(x\u22122)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-38",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 38,
+  "exam": "August US 2024",
+  "page": 58,
+  "pdf_page": 59,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5x + 7y = 8\n30x + 42y = 48\nFor each real number r, which of the follow-\ning points lies on the graph of each equation\nin the xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, \u2212 5r 7 + 8 7 )"
+   },
+   {
+    "label": "B",
+    "content": "(\u2212 5r 7 + 8 7 , r)"
+   },
+   {
+    "label": "C",
+    "content": "(\u2212 5r 7 + 8, 5r 7 + 48)"
+   },
+   {
+    "label": "D",
+    "content": "( r 6 + 8, \u2212 r 6 + 48)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-40",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 40,
+  "exam": "October US 2024",
+  "page": 58,
+  "pdf_page": 59,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "y = 5x + 7\ny = \u22124x \u2212 11\nThe solution to the given system of equa-\ntions is (x, y). What is the value of y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221218"
+   },
+   {
+    "label": "B",
+    "content": "\u22124"
+   },
+   {
+    "label": "C",
+    "content": "\u22123"
+   },
+   {
+    "label": "D",
+    "content": "\u22122"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-41",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 41,
+  "exam": "October 2024",
+  "page": 58,
+  "pdf_page": 59,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "7x + 4y = 3\n35x + 20y = 15\nFor each real number r, which of the follow-\ning points lies on the graph of each equation\nin the xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u0010r 5 + 3, \u2212 r 5 + 15 \u0011"
+   },
+   {
+    "label": "B",
+    "content": "(\u2212 4r 7 + 3 7 , r)"
+   },
+   {
+    "label": "C",
+    "content": " \u0012 r, 7r 4 + 3 4 \u0013"
+   },
+   {
+    "label": "D",
+    "content": " \u0012 r, \u2212 4r 7 + 3 7 \u0013 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-42",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 42,
+  "exam": "October 2024",
+  "page": 59,
+  "pdf_page": 60,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "y = 6x + 16\n\u22127x \u2212 y = 36\nWhat is the solution (x, y) to the given sys-\ntem of equations?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(\u22124, \u22128)"
+   },
+   {
+    "label": "B",
+    "content": " \u0012 \u2212 20 13 , \u2212 80 13 \u0013"
+   },
+   {
+    "label": "C",
+    "content": "(4, 40)"
+   },
+   {
+    "label": "D",
+    "content": "(20, 136)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-43",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 43,
+  "exam": "October US 2024",
+  "page": 59,
+  "pdf_page": 60,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "2x = 20y \u2212 8\nOne of the two equations in a system of lin-\near equations is given. The system has no\nsolution. Which equation could be the sec-\nond equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 5y"
+   },
+   {
+    "label": "B",
+    "content": " 1 2 x = 5y"
+   },
+   {
+    "label": "C",
+    "content": "x = 10y \u2212 4"
+   },
+   {
+    "label": "D",
+    "content": " 1 2 x = 10y \u2212 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-46",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 46,
+  "exam": "October US 2024",
+  "page": 59,
+  "pdf_page": 60,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "6x + 3y = 5\nThe given equation is one equation in a sys-\ntem of two linear equations. If the system\nof equations has at least one solution, which\nof the following equations could be the other\nequation in the system?\nI. 9x + 4.5y = 7.5\nII. 9x \u2212 4.5y = 7.5",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I and II "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-47",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 47,
+  "exam": "November 2024",
+  "page": 60,
+  "pdf_page": 61,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "45x + 33y \u2212 200 = \u2212359\n2wx + 11y = \u221253\nIn the given system of equations, w is a con-\nstant. The system has infinitely many solu-\ntions. What is the value of w?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-51",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 51,
+  "exam": "December US 2024",
+  "page": 60,
+  "pdf_page": 61,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5x + 8y = 9\n15x + 24y = 27\nFor each real number r, which of the follow-\ning points on the graph of each equation on\nthe xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, \u2212 5r 8 + 9 8 )"
+   },
+   {
+    "label": "B",
+    "content": "(\u2212 5r 8 + 9 8 , r)"
+   },
+   {
+    "label": "C",
+    "content": "(\u2212 5r 8 + 9, 5r 8 + 27)"
+   },
+   {
+    "label": "D",
+    "content": "( r 3 + 9, \u2212 r 3 + 27) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-52",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 52,
+  "exam": "December US 2024",
+  "page": 61,
+  "pdf_page": 62,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A carnival receives $10 for each adult ad-\nmission ticket sold and $5 for each child\nadmission sold. On a particular day, the\ncarnival received a total of $4,100 from sell-\ning adult and child admission tickets. If 220\nadult admission tickets were sold on that\nday, how many child tickets were sold?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-56",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 56,
+  "exam": "December 2024",
+  "page": 61,
+  "pdf_page": 62,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If x + 4y = 41 and 7x \u2212 20y = \u221297, what is\nthe value of y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-57",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 57,
+  "exam": "December 2024",
+  "page": 62,
+  "pdf_page": 63,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "13(x \u2212 n) = 13y + 13n\nOne of the equations in a system of two lin-\near equations is given, where n is a posi-\ntive constant. The system has no solution.\nWhich equation could be the second equa-\ntion in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2x\u22122y = 4n"
+   },
+   {
+    "label": "B",
+    "content": "2x+2y = 2n"
+   },
+   {
+    "label": "C",
+    "content": "2x+2y = 4n"
+   },
+   {
+    "label": "D",
+    "content": "2x\u22122y = 2n"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-58",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 58,
+  "exam": "June 2023",
+  "page": 62,
+  "pdf_page": 63,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "(x \u2212 3) \u2212 8(y + 9) = 129\n(x \u2212 3) + 8(y + 9) = 432\nThe solution to the given equation is (x, y).\nWhat is the value of 8(x \u2212 3)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-61",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 61,
+  "exam": "March 2024",
+  "page": 62,
+  "pdf_page": 63,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "At a constant temperature, a scuba diver\ncombines two different concentrations of ni-\ntrox mix (oxygen-nitrogen gas mixture) to\nfill a tank to a total pressure of 130 atmo-\nspheres (atm), of which 34% is contributed\nby oxygen. Nitrox mix A contributes x atm\nof pressure to the tank, of which 22% is\ncontributed by oxygen. Nitrox mix B con-\ntributes y atm of pressure to the tank, of\nwhich 48% is contributed by oxygen. Which\nsystem of equations represents this situa-\ntion?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x + y = 130 0.48x + 0.22y = 0.34(130)"
+   },
+   {
+    "label": "B",
+    "content": "x + y = 130 0.22x + 0.48y = 0.34(130)"
+   },
+   {
+    "label": "C",
+    "content": "x + y = 0.34(130) 0.48x + 0.22y = 130"
+   },
+   {
+    "label": "D",
+    "content": "x + y = 0.34(130) 0.22x + 0.48y = 130 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-62",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 62,
+  "exam": "March 2025",
+  "page": 63,
+  "pdf_page": 64,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "7y = \u22126x + 2, 550\n24x \u2212 28y = 1, 800\nThe solution to the given system of equa-\ntions is (x, y). What is the value of x + y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-63",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 63,
+  "exam": "March 2025",
+  "page": 63,
+  "pdf_page": 64,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x = 45y \u2212 27\nOne of the two equations in a system of\nlinear equations is given. The system has\nno solution in this system. Which equation\ncould be the second equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = 5y"
+   },
+   {
+    "label": "B",
+    "content": " 1 3 x = 5y"
+   },
+   {
+    "label": "C",
+    "content": "x = 15y \u2212 9"
+   },
+   {
+    "label": "D",
+    "content": " 1 3 x = 15y\u22129"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-66",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 66,
+  "exam": "May 2025",
+  "page": 63,
+  "pdf_page": 64,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x + 6y = 17\n\u22123x \u2212 4y = 5\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 2y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-71",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 71,
+  "exam": "June 2025",
+  "page": 64,
+  "pdf_page": 65,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If the equations \u22129x + y = 17 and 9x + y =\n17 are graphed in the xy-plane, at what\npoint (x, y) do the graphs intersect?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 17)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 9)"
+   },
+   {
+    "label": "C",
+    "content": "(9, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(17, 0)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-74",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 74,
+  "exam": "June US 2025",
+  "page": 65,
+  "pdf_page": 66,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "\u2212x \u2212 wy = \u2212357\n2x \u2212 wy = 51\nIn the given system of equations, w is a\nconstant. In the xy-plane, the graphs of\nthese equations intersect at the point (q, 17),\nwhere q is a constant. What is the value of\nw?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-75",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 75,
+  "exam": "June US 2025",
+  "page": 65,
+  "pdf_page": 66,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "30x = 1, 800y \u2212 3, 600\nOne of the two equations in a system of lin-\near equations is given. The system has no\nsolution. Which equation could be the sec-\nond equation in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 30 x = 2y"
+   },
+   {
+    "label": "B",
+    "content": " 1 30 x = 60y \u2212 120"
+   },
+   {
+    "label": "C",
+    "content": "x = 2y"
+   },
+   {
+    "label": "D",
+    "content": "x = 60y \u2212 120"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-77",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 77,
+  "exam": "June US 2025",
+  "page": 65,
+  "pdf_page": 66,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5x + 4y = 3\n15x + 12y = 9\nFor each real number r, which of the follow-\ning points lies on the graph of each equation\nin the xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, \u2212 4r 5 + 3 5 )"
+   },
+   {
+    "label": "B",
+    "content": "(r, 5r 4 + 3 4 )"
+   },
+   {
+    "label": "C",
+    "content": "(\u2212 4r 5 + 3 5 , r)"
+   },
+   {
+    "label": "D",
+    "content": "( r 3 + 3, \u2212 r 3 + 9)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-78",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 78,
+  "exam": "June 2023",
+  "page": 65,
+  "pdf_page": 66,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "y = 5x\ny = 2x + 2\nHow many solutions does the given system\nof equations have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-2",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 70,
+  "pdf_page": 71,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Line k passes through the points (1,1) and\n(2,6) in the xy-plane. If the equation for the\nline k is written in the form y = mx + b,\nwhere m and b are constants, what is the\nvalue of m?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-5",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 5,
+  "exam": "March US 2023",
+  "page": 70,
+  "pdf_page": 71,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function m is defined by\nm(x) = 30x + 120.\nWhat is the slope of the graph of y = m(x)\nin the xy-plane?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-7",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 7,
+  "exam": "June 2023",
+  "page": 71,
+  "pdf_page": 72,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A business consultant charges $408 for the\nfirst hour and $204 for each additional hour\nof work. Which of the following functions\ngives the charge C(h), in dollars, for h hours\nof work, where h is a positive integer?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "C(h) = 204h + 204"
+   },
+   {
+    "label": "B",
+    "content": "C(h) = 204h + 408"
+   },
+   {
+    "label": "C",
+    "content": "C(h) = 408h + 204"
+   },
+   {
+    "label": "D",
+    "content": "C(h) = 408h + 612"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-8",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 8,
+  "exam": "June 2023",
+  "page": 71,
+  "pdf_page": 72,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "To make a bookcase, a worker charged a\none-time fee plus $17 per hour worked.\nThe equation 17h+45 = 164 represents this\nsituation, where h is the number of hours\nworked. Which of the following is the best\ninterpretation of 164 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The one time fee, in dollars"
+   },
+   {
+    "label": "B",
+    "content": "The number of hours worked"
+   },
+   {
+    "label": "C",
+    "content": "The charge per hour, in dollars"
+   },
+   {
+    "label": "D",
+    "content": "The total charge, in dollars"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-9",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 9,
+  "exam": "June 2023",
+  "page": 71,
+  "pdf_page": 72,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x y\n0 n\n4 n + 19\n8 n + 38\nThere is a linear relationship between x and\ny. The table shows three values of x and\ntheir corresponding values of y in terms of\na constant n. What is the slope of the line\nthat represents this relationship in the xy-\nplane?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-10",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 10,
+  "exam": "June 2023",
+  "page": 72,
+  "pdf_page": 73,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "What is the y-intercept of the graph of\n3x + 2y = 96 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0,5)"
+   },
+   {
+    "label": "B",
+    "content": "(0,6)"
+   },
+   {
+    "label": "C",
+    "content": "(0,32)"
+   },
+   {
+    "label": "D",
+    "content": "(0,48)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-11",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 11,
+  "exam": "June 2023",
+  "page": 72,
+  "pdf_page": 73,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "For the linear function f, the graph of\ny = f(x) in the xy-plane passes through the\npoints (0,2) and (3,3). What is the slope of\ny = f(x)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-14",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 14,
+  "exam": "August US 2023",
+  "page": 72,
+  "pdf_page": 73,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A line in the xy-plane passes through the\npoints (0, 12) and (1, 14). The equation of\nthe line is y = mx + b, where m and b are\nconstants. What is the value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-16",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 16,
+  "exam": "August US 2023",
+  "page": 73,
+  "pdf_page": 74,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The average price, in dollar, when adjusted\nfor inflation, of a US domestics airline ticket\neach quarter of a year can be modeled by\nthe equation y = \u22125x + 500, where x is the\nnumber of quarters after the last quarter of\n1999, and x \u2264 20. Which graph represents\nthis model?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 4 8 12 16 20 100 200 300 400 500 600 x y"
+   },
+   {
+    "label": "B",
+    "content": " 4 8 12 16 20 100 200 300 400 500 600 x y"
+   },
+   {
+    "label": "C",
+    "content": " 4 8 12 16 20 100 200 300 400 500 600 x y"
+   },
+   {
+    "label": "D",
+    "content": " 4 8 12 16 20 100 200 300 400 500 600 x y "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-17",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 17,
+  "exam": "August US 2023",
+  "page": 74,
+  "pdf_page": 75,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "p = 873 \u2212 88t\nThe given equation models the approximate\npressure p, in pounds per square inch, in an\nastronaut\u2019s oxygen tank during a spacewalk\nthat lasts for t hours, where t \u2264 9. What\nwould be the tank pressure, in pounds per\nsquare inch, at the and of a spacewalk that\nlasted 1 hour?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "829"
+   },
+   {
+    "label": "B",
+    "content": "785"
+   },
+   {
+    "label": "C",
+    "content": "741"
+   },
+   {
+    "label": "D",
+    "content": "697"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-21",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 21,
+  "exam": "August US 2023",
+  "page": 75,
+  "pdf_page": 76,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Demarcus has 200 Japanese yen (JPY).\nHe needs to exchange Hong Kong dollars\n(HKD) for more JPY. The exchange rate is\n14 JPY for every HKD. Which function f\ngives the total amount, in JPY, Demarcus\nwill have after exchanging x HKD?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 14 \u2212 200x"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 14 + 200x"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 200 \u2212 14x"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = 200 + 14x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-22",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 22,
+  "exam": "August US 2023",
+  "page": 75,
+  "pdf_page": 76,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "In the xy-plane, the graph of the linear func-\ntion f contains the points (5, 7) and (3, 11).\nWhich equation defines f, where y = f(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 1 2 x + 9 2"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = \u2212 1 2 x + 19 2"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 2x \u2212 3"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = \u22122x + 17"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-23",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 23,
+  "exam": "August US 2023",
+  "page": 75,
+  "pdf_page": 76,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "w(t) = 3.1t \u2212 1.7\nThe function w models the weight, in\npounds, of a certain pig t months after it\nwas born, where 1 \u2264 t \u2264 36. Which state-\nment is the best interpretation of w(7) = 20\nin this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The pig weighed 20 pounds 7 months after it was born."
+   },
+   {
+    "label": "B",
+    "content": "The pig weighed 7 pounds 20 months after it was born."
+   },
+   {
+    "label": "C",
+    "content": "The pig\u2019s weight increased by 20 pounds during the 7th month after it was born."
+   },
+   {
+    "label": "D",
+    "content": "The pig\u2019s weight increased by 7 pounds during the 20th month after it was born."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-26",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 26,
+  "exam": "November 2023",
+  "page": 76,
+  "pdf_page": 77,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "For the linear function f, the graph of\ny = f(x) in the xy-plane passes through the\npoints (0,5) and (7,7). What is the slope of\ny = f(x)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-27",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 27,
+  "exam": "November 2023",
+  "page": 76,
+  "pdf_page": 77,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function f is defined by the equation\nf(x) = 100x + 2. What is the value of f(x)\nwhen x = 8?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "110"
+   },
+   {
+    "label": "B",
+    "content": "116"
+   },
+   {
+    "label": "C",
+    "content": "800"
+   },
+   {
+    "label": "D",
+    "content": "802"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-28",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 28,
+  "exam": "November 2023",
+  "page": 76,
+  "pdf_page": 77,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "An equation of the line in the xy-plane\nthat contains the points (0,2) and (8,0) is\nax + by = 1, where a and b are constants.\nWhat is the value of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-29",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 29,
+  "exam": "November 2023",
+  "page": 76,
+  "pdf_page": 77,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A business consultant charges $444 for the\nfirst hour and $222 for each additional hour\nof work. Which of the following functions\ngives the charges C(h), in dollars, for h\nhours of work, where h is a positive integer?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "C(h) = 222h + 222"
+   },
+   {
+    "label": "B",
+    "content": "C(h) = 222h + 444"
+   },
+   {
+    "label": "C",
+    "content": "C(h) = 444h + 222"
+   },
+   {
+    "label": "D",
+    "content": "C(h) = 444h + 666 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-32",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 32,
+  "exam": "December 2023",
+  "page": 77,
+  "pdf_page": 78,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A linear model estimates the population\nof a city from 1991 to 2015. The model es-\ntimates the population was 59 thousands in\n1991, 222 thousand in 2011, and x thousand\nin 2015. To the nearest whole number, what\nis the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-34",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 34,
+  "exam": "December 2023",
+  "page": 77,
+  "pdf_page": 78,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "When the linear function h is graphed in\nthe xy-plane, where y = h(x), its slope is -2.\nIf h(5) = 3, which equation defines h?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "h(x) = \u22122x + 5"
+   },
+   {
+    "label": "B",
+    "content": "h(x) = \u22122x + 13"
+   },
+   {
+    "label": "C",
+    "content": "h(x) = \u22122x + 3"
+   },
+   {
+    "label": "D",
+    "content": "h(x) = \u22122x \u2212 7 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-35",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 35,
+  "exam": "December 2023",
+  "page": 78,
+  "pdf_page": 79,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The cost of renting a piece of constructing\nequipment for up to 5 days is $350 for the\nfirst day and $175 for each additional day.\nWhich of the following equations gives the\ncost y, in dollars, of renting the equipment\nfor x days, where x is a positive integer and\nx \u2264 5?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 175x + 175"
+   },
+   {
+    "label": "B",
+    "content": "y = 350x \u2212 175"
+   },
+   {
+    "label": "C",
+    "content": "y = 175x + 350"
+   },
+   {
+    "label": "D",
+    "content": "y = 350x + 175"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-36",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 36,
+  "exam": "December 2023",
+  "page": 78,
+  "pdf_page": 79,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Harper deposited a fixed amount into her\nbank account each month. The function\nf(t) = 50 + 55t gives the amount, in dol-\nlars, in Harper\u2019s bank account t monthly\ndeposits. What is the best interpretation of\n55 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "With each monthly deposit, the amount in Harper\u2019s bank account in- creased by $55"
+   },
+   {
+    "label": "B",
+    "content": "Harper made a total of 55 monthly de- posits"
+   },
+   {
+    "label": "C",
+    "content": "Before Harper made any monthly de- posits, the amount in her bank account was $55"
+   },
+   {
+    "label": "D",
+    "content": "After 1 monthly deposit, the amount in Harper\u2019s bank account was $55"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-40",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 40,
+  "exam": "March 2024",
+  "page": 79,
+  "pdf_page": 80,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Line r is defined by the equation\n4x \u2212 5y = 8.\nLine s is parallel to line r in the xy-plane.\nWhat is the slope of line s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 5 4"
+   },
+   {
+    "label": "B",
+    "content": " 4 5"
+   },
+   {
+    "label": "C",
+    "content": "\u22124"
+   },
+   {
+    "label": "D",
+    "content": "\u22125"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-42",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 42,
+  "exam": "March 2024",
+  "page": 79,
+  "pdf_page": 80,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Alex engages in up to 3 types of exercise\neach week for a total of 9 hours while train-\ning for a triathlon. Alex swims for the same\nnumber of minutes each week. The equa-\ntion y = 540 \u2212 x \u2212 200 represents the situa-\ntion where Alex bikes for x minutes during\na week and runs for any remaining train-\ning time, y, in minutes. If this equation is\ngraphed in the xy\u2212plane, which statement\nis the best interpretation of the x\u2212intercept\nof the graph?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "During a week when Alex swims for 340 minutes, he bikes for 200 minutes."
+   },
+   {
+    "label": "B",
+    "content": "Each week, Alex bikes and runs for a total of 340 minutes."
+   },
+   {
+    "label": "C",
+    "content": "During a week when Alex doesn\u2019t bike, he runs for 340 minutes."
+   },
+   {
+    "label": "D",
+    "content": "During a week when Alex doesn\u2019t run, he bikes for 340 minutes."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-43",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 43,
+  "exam": "March 2024",
+  "page": 79,
+  "pdf_page": 80,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The cost to rent a bus from Company X\nis $750 for the first 2 hours and an addi-\ntional $50 per hour for each hour after the\nfirst 2 hours. If the total cost to rent the\nbus from Company X for t hours, where\nt > 2, is $1,050, which equation represents\nthis situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "750(t \u2212 2) + 50t = 1, 050"
+   },
+   {
+    "label": "B",
+    "content": "750(2t) + 50t = 1, 050"
+   },
+   {
+    "label": "C",
+    "content": "750 + 50(t \u2212 2) = 1, 050"
+   },
+   {
+    "label": "D",
+    "content": "750 + 50(2t) = 1, 050 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-44",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 44,
+  "exam": "March 2024",
+  "page": 80,
+  "pdf_page": 81,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "During hibernation, American black bears\ndo not eat or replenish calories. A certain\nblack bear weighed 389 pounds when enter-\ning hibernation and lost weight at a rate of\n0.9 pound per day. At this rate, how many\ndays after entering hibernation did the black\nbear weigh 380 pounds?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-47",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 47,
+  "exam": "March 2024",
+  "page": 80,
+  "pdf_page": 81,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "19.5x + 29.75y = 394\nOdalys ordered much and river rock, which\ncost a total of $394, for her home. The given\nequation represents the relationship between\nthe number of cubic yards of much, x, and\nthe number of tons of river rock, y, Odalys\nordered. How much more, in dollars, did a\nton of river rock cost Odalys than a cubic\nyard of much?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-48",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 48,
+  "exam": "March 2024",
+  "page": 81,
+  "pdf_page": 82,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "In the xy-plane, line \u2113 passes through the\npoint (0, 0) and is parallel to the line repre-\nsented by the equation y = 6x + 3. If line \u2113\nalso passes through the point (3, d), what is\nthe value of d?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-50",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 50,
+  "exam": "March 2024",
+  "page": 81,
+  "pdf_page": 82,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "f(x) = 5x \u2212 9\nFunction f is defined by the given equation.\nThe function g is defined by\ng(x) = f(x)(3x \u2212 2).\nWhat is the x-coordinate of the x-intercept\nof the graph of y = g(x) in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 11 8"
+   },
+   {
+    "label": "B",
+    "content": " 9 5"
+   },
+   {
+    "label": "C",
+    "content": " 7 2"
+   },
+   {
+    "label": "D",
+    "content": " 11 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-51",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 51,
+  "exam": "March 2024",
+  "page": 81,
+  "pdf_page": 82,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "y = \u22122x + 70 Which table gives the val-\nues of x and the corresponding values of y\nfor the given equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x y 0 0 1 2 2 4"
+   },
+   {
+    "label": "B",
+    "content": " x y 0 0 1 72 2 74"
+   },
+   {
+    "label": "C",
+    "content": " x y 0 0 1 72 2 144"
+   },
+   {
+    "label": "D",
+    "content": " x y 0 70 1 68 2 66 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-52",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 52,
+  "exam": "March 2024",
+  "page": 82,
+  "pdf_page": 83,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "\u22122\n\u22124\n\u22126\n\u22128\n\u221210\n\u221212\n\u221214 \u22121\n\u22123\n\u22125\n\u22127\n\u22129\n\u221211\n\u221213\nThe point (v, \u22127) lies on the line shown.\nWhat is the value of v?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u2212 84 13"
+   },
+   {
+    "label": "B",
+    "content": " 13 14"
+   },
+   {
+    "label": "C",
+    "content": " 83 14"
+   },
+   {
+    "label": "D",
+    "content": " 280 13"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-53",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 53,
+  "exam": "March 2024",
+  "page": 82,
+  "pdf_page": 83,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A linear function f give company\u2019s profit, in\ndollars, for selling x items. The company\u2019s\nprofit is $320 when it sells 6 items, and its\nprofit is $640 when it sells 10 items. Which\nequation defines f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 180x \u2212 640"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 64x"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 80x \u2212 10"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = 80x \u2212 160"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-54",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 54,
+  "exam": "March 2024",
+  "page": 82,
+  "pdf_page": 83,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x g(x)\n\u221225 4\n\u22129 0\n15 6\nThe table shows three values of x and their\ncorresponding values of g(x), where\ng(x) =\nf(x)\nx + 5\nand f is a linear function. What is the\ny\u2212coordinate of the y\u2212intercept of the\ngraph of y = f(x) in the xy-plane?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-59",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 59,
+  "exam": "March 2024",
+  "page": 83,
+  "pdf_page": 84,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The function f is defined by\nf(x) = \u221212x + 28.\nWhat is the y-coordinate of the y intercept\nof the graph y = f(x) in the xy-plane?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-61",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 61,
+  "exam": "May 2024",
+  "page": 83,
+  "pdf_page": 84,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Javier deposits $45 in a savings account\nat the end of each week. At the beginning\nof the 1st week of a year there was $700 in\nthat savings account. How much money, in\ndollars, will be in the account at the end of\nthe 6th week of the year?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "430"
+   },
+   {
+    "label": "B",
+    "content": "745"
+   },
+   {
+    "label": "C",
+    "content": "751"
+   },
+   {
+    "label": "D",
+    "content": "970 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-62",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 62,
+  "exam": "May US 2024",
+  "page": 84,
+  "pdf_page": 85,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "g(x) = 3(16x \u2212 17)\nWhat is the y-coordinate of the y-intercept\nof the graph of y = g(x)\u22125 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-56"
+   },
+   {
+    "label": "B",
+    "content": "-51"
+   },
+   {
+    "label": "C",
+    "content": "-22"
+   },
+   {
+    "label": "D",
+    "content": "-17"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-64",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 64,
+  "exam": "May 2024",
+  "page": 84,
+  "pdf_page": 85,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "The cost of renting a piece of equipment\nis $64n for the first day and $32n for each\nadditional day, where n is a positive integer.\nWhich of the following functions gives the\ncost C(x) in dollars, of renting this equip-\nment for x days, where x is a positive inte-\nger?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "C(x) = 32nx + 32n"
+   },
+   {
+    "label": "B",
+    "content": "C(x) = 32nx + 64n"
+   },
+   {
+    "label": "C",
+    "content": "C(x) = 64nx + 32n"
+   },
+   {
+    "label": "D",
+    "content": "C(x) = 64nx \u2212 32n"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-67",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 67,
+  "exam": "May US 2024",
+  "page": 85,
+  "pdf_page": 86,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Number\nof cars\nMaximum number of\npassengers and crew\n4 164\n6 242\n8 320\nThe table shows the linear relationship be-\ntween the number of cars, c, on a commuter\ntrain and the maximum number of passen-\ngers and crew, p, that the train can carry.\nWhich equation represents the linear rela-\ntionship between c and p?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "39c\u2212p = \u22128"
+   },
+   {
+    "label": "B",
+    "content": "39c \u2212 p = 8"
+   },
+   {
+    "label": "C",
+    "content": "39p\u2212c = \u22128"
+   },
+   {
+    "label": "D",
+    "content": "39p \u2212 c = 8"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-69",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 69,
+  "exam": "May US 2024",
+  "page": 85,
+  "pdf_page": 86,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "17.5x + 28.75y = 530\nOdalys ordered much and river rock, which\ncost a total of $530, for her home. The given\nequation represents the relationship between\nthe number of cubic yards of much, x, and\nthe number of tons of river rock, y, Odalys\nordered. How much more, in dollars, did a\nton of river rock cost Odalys than a cubic\nyard of much?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-70",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 70,
+  "exam": "May 2024",
+  "page": 85,
+  "pdf_page": 86,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "n(x) = 2(x + 8) + (x \u2212 8)\nThe function n is defined as shown. For\nwhat value of x is n(x) = 35?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-74",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 74,
+  "exam": "May 2024",
+  "page": 86,
+  "pdf_page": 87,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "During a specific 2-hour period of the day,\nthe mean photosynthetic rate, P(x), of a\nplant species increases at a constant rate in\nterms of the photochemical energy available,\nx. During this period, P(300) = 9.8, and the\nmean photosynthetic rate increases by 0.13\nmicromoles per meter squared per second\n(\u00b5mol\u00b7m\u22122\n\u00b7s\u22121\n) when the photochemical en-\nergy available increases by 5 \u00b5mol\u00b7m\u22122\n\u00b7s\u22121\n.\nWhich equation gives the mean photosyn-\nthetic rate, in \u00b5mol \u00b7 m\u22122\n\u00b7 s\u22121\n, in terms\nof the photochemical energy available, in\n\u00b5mol \u00b7 m\u22122\n\u00b7 s\u22121\n, during this period?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "P(x) = 0.026x + 9.8"
+   },
+   {
+    "label": "B",
+    "content": "P(x) = 0.026x + 2"
+   },
+   {
+    "label": "C",
+    "content": "P(x) = 9.8x + 0.026"
+   },
+   {
+    "label": "D",
+    "content": "P(x) = 9.8x \u2212 2, 930.2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-76",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 76,
+  "exam": "May 2024",
+  "page": 87,
+  "pdf_page": 88,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Distance\n(miles)\nAverage time\n(minutes)\n0.06 3\n0.28 14\n0.34 17\nThe table gives the average time t in min-\nutes, it takes Adriana to travel a certain dis-\ntance d in miles. Which equation could rep-\nresent this linear relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "t = 1 50 d"
+   },
+   {
+    "label": "B",
+    "content": "t = 1 2 d"
+   },
+   {
+    "label": "C",
+    "content": "t = 2d"
+   },
+   {
+    "label": "D",
+    "content": "t = 50d"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-77",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 77,
+  "exam": "May 2024",
+  "page": 87,
+  "pdf_page": 88,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "T(x) = 61 \u2212 8x\nThe function T estimates the temperature,\nin degrees Fahrenheit (\u00b0F), in a certain city\none day in January, where x is the number of\nhours after 10 a.m. and 1 \u2264 x \u2264 7 . What is\nthe best interpretation of T(5) = 21 in this\ncontext?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5 hours after 10 a.m., the function es- timates that the temperature is 21 \u00b0F."
+   },
+   {
+    "label": "B",
+    "content": "5 hours before 10 a.m., the function es- timates that the temperature decreased 21 \u00b0F."
+   },
+   {
+    "label": "C",
+    "content": "5 hours after 10 a.m., the function esti- mates that the temperature decreased 21 \u00b0F."
+   },
+   {
+    "label": "D",
+    "content": "5 hours before 10 a.m., the function es- timates that the temperature is 21 \u00b0F."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-78",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 78,
+  "exam": "May 2024",
+  "page": 87,
+  "pdf_page": 88,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "x y\n\u22122s 20\n\u2212s 16\ns 8\nThe table shows three values of x and their\ncorresponding values of y, where s is a con-\nstant. There is a linear relationship between\nx and y. Which of the following equations\nrepresents this relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "sx + 4y = 12s"
+   },
+   {
+    "label": "B",
+    "content": "4x + sy = 12s"
+   },
+   {
+    "label": "C",
+    "content": "4x + sy = 12"
+   },
+   {
+    "label": "D",
+    "content": "sx + 4y = 12"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-80",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 80,
+  "exam": "May 2024",
+  "page": 88,
+  "pdf_page": 89,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A botanist wants to plant certain types of\noak trees and pine trees in a 600-foot-long\nrow. Each of these oak trees requires 40\nfeet of space to grow, and each of these pine\ntrees requires 30 feet of space to grow. The\nequation 40x + 30y = 600 models the possi-\nble number of oak trees, x, and pine trees,\ny, that the botanist can plant. Which graph\nrepresents this relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " O Number of pine trees Number of oak trees 5 10 15 20 25 30 35 40 5 10 15 20 25 30 35 40 x y"
+   },
+   {
+    "label": "B",
+    "content": " O Number of pine trees Number of oak trees 5 10 15 20 25 30 35 40 5 10 15 20 25 30 35 40 x y"
+   },
+   {
+    "label": "C",
+    "content": " O Number of pine trees Number of oak trees 2 6 10 14 18 2 4 6 8 10 12 14 16 18 20 x y"
+   },
+   {
+    "label": "D",
+    "content": " O Number of pine trees Number of oak trees 2 6 10 14 18 2 4 6 8 10 12 14 16 18 20 x y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-82",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 82,
+  "exam": "May 2024",
+  "page": 88,
+  "pdf_page": 89,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A computer repair specialist charges $160\nfor the first two hours of repair plus an\nhourly fee for each additional hour. The to-\ntal cost for 4 hours of repair is $240. Which\nfunction f gives the total cost, in dollars,\nfor x hours of repair, where x \u2265 2 ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 40x + 80"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 40x + 160"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 60x"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = 60x + 160 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-83",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 83,
+  "exam": "May US 2024",
+  "page": 89,
+  "pdf_page": 90,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Line r is defined by the equation\n4x \u2212 7y = 3.\nLine s is parallel to line r in the xy-plane.\nWhat is the slope of line s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 7 4"
+   },
+   {
+    "label": "B",
+    "content": " 4 7"
+   },
+   {
+    "label": "C",
+    "content": "-4"
+   },
+   {
+    "label": "D",
+    "content": "-7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-84",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 84,
+  "exam": "June 2024",
+  "page": 89,
+  "pdf_page": 90,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "Eli used wax to make candles. The func-\ntion f(x) = \u221215x + 60 approximates the\nweight, in ounces, of wax Eli had remaining\nafter making x candles. Which statement\nis the best interpretation of the y-intercept\nof the graph of y = f(x) in the xy-plane in\nthis context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Eli had approximately 15 ounces of wax when he began to make the candles."
+   },
+   {
+    "label": "B",
+    "content": "Eli used approximately 15 ounces of wax for each candle."
+   },
+   {
+    "label": "C",
+    "content": "Eli had approximately 60 ounces of wax when he began to make the candles."
+   },
+   {
+    "label": "D",
+    "content": "Eli used approximately 60 ounces of wax for each candle."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-85",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 85,
+  "exam": "June 2024",
+  "page": 89,
+  "pdf_page": 90,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "f(x) = 8x + b\nFor the linear function f, b is a constant and\nf(0) = 11. What is the value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-86",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 86,
+  "exam": "June 2024",
+  "page": 89,
+  "pdf_page": 90,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "5x \u2212 4y = \u221220\nFor the given equation, which table gives\nthree values of x and their corresponding\nvalues of y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x 0 4 8 y 5 10 15"
+   },
+   {
+    "label": "B",
+    "content": " x 0 4 8 y 15 10 5"
+   },
+   {
+    "label": "C",
+    "content": " x 5 10 15 y 0 4 8"
+   },
+   {
+    "label": "D",
+    "content": " x 5 10 15 y 8 4 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-functions-87",
+  "book": "ma2",
+  "topic": "Linear Functions",
+  "num": 87,
+  "exam": "June 2024",
+  "page": 89,
+  "pdf_page": 90,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LF",
+  "body": "A carpenter charges a flat rate of $234 for\nthe first 3 hours of work and $65 for each\nadditional hours of work. Which equation\ngives the total amount y, in dollars, that the\ncarpenter charges for x hours of work, where\nx > 3?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 65x + 39"
+   },
+   {
+    "label": "B",
+    "content": "y = 234x + 65"
+   },
+   {
+    "label": "C",
+    "content": "y = 65x + 234"
+   },
+   {
+    "label": "D",
+    "content": "y = 234x + 429 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-1",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 362,
+  "pdf_page": 4,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A right circular cylinder has a height of 6\ninches. The radius of the base of the cylin-\nder is 5 inches. What is the volume, in cubic\ninches, of the cylinder?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "10\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "30\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "50\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "150\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-8",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 8,
+  "exam": "March 2024",
+  "page": 363,
+  "pdf_page": 5,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A hemisphere is half of a sphere. If a hemi-\nsphere has a radius of 50 inches, which of the\nfollowing is closest to the volume, in cubic\ninches, of this hemisphere?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5,200"
+   },
+   {
+    "label": "B",
+    "content": "20,900"
+   },
+   {
+    "label": "C",
+    "content": "196,300"
+   },
+   {
+    "label": "D",
+    "content": "261,800 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-9",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 9,
+  "exam": "December 2023",
+  "page": 364,
+  "pdf_page": 6,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "The table gives the areas and perimeters\nof two similar rectangles, where n is a con-\nstant.\nArea\n(square\ninches)\nPerimeter\n(inches)\nRectangle A 2,450 490\nRectangle B 9,800 n\nWhat is the value of n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "980"
+   },
+   {
+    "label": "B",
+    "content": "1,960"
+   },
+   {
+    "label": "C",
+    "content": "3,920"
+   },
+   {
+    "label": "D",
+    "content": "4,900"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-10",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 10,
+  "exam": "March 2024",
+  "page": 364,
+  "pdf_page": 6,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "To study fluctuations in leaf water poten-\ntial, samples of wood were taken from 25\ntrees and cut in the shape of a cube. The\nlength of the edge of one of these cubes is\n2.00 centimeters. If this cube has a mass of\n2.72 grams, what is the density of this cube,\nin grams per cubic centimeter?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-16",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 16,
+  "exam": "March 2024",
+  "page": 365,
+  "pdf_page": 7,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A polygon has 16 sides has a perimeter of\n126. The length of one side is 6 inches. The\nother 15 sides have equal lengths. What is\nthe length, in inches, of one of the 15 sides\nwith equal lengths?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-19",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 19,
+  "exam": "May US 2024",
+  "page": 366,
+  "pdf_page": 8,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A hemisphere is half of a sphere. If a hemi-\nsphere has a radius of 20 inches, which of the\nfollowing is closest to the volume, in cubic\ninches, of this hemisphere?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "800"
+   },
+   {
+    "label": "B",
+    "content": "3,400"
+   },
+   {
+    "label": "C",
+    "content": "12,600"
+   },
+   {
+    "label": "D",
+    "content": "16,800"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-areas-volumes-21",
+  "book": "ma2",
+  "topic": "Areas&Volumes",
+  "num": 21,
+  "exam": "May 2024",
+  "page": 367,
+  "pdf_page": 9,
+  "src": "ad3c1ae5-360381_ma2",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A cube has an edge length of 82 inches.\nA solid sphere with a radius of 41 inches is\ninside the cube, such that the sphere touches\nthe center of each face of the cube. To the\nnearest cubic inch, what is the volume of\nthe space in the cube not taken up by the\nsphere?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "262, 672"
+   },
+   {
+    "label": "B",
+    "content": "288, 532"
+   },
+   {
+    "label": "C",
+    "content": "334, 846"
+   },
+   {
+    "label": "D",
+    "content": "546, 087"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ }
+]

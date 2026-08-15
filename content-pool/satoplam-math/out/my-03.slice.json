@@ -1,0 +1,2726 @@
+[
+ {
+  "id": "satmath-ma3-functions-function-notation-8",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 8,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = 20x3.\nThe graph of y = f (\u2212x) + c in the\nxy-plane, where c is a positive integer con-\nstant, has an x-intercept at (r, 0) and a\ny-intercept at (0, t), where r and t are con-\nstants. Which of the following must be\ntrue about r and t?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "r > 0 and t > 0"
+   },
+   {
+    "label": "B",
+    "content": "r > 0 and t < 0"
+   },
+   {
+    "label": "C",
+    "content": "r < 0 and t > 0"
+   },
+   {
+    "label": "D",
+    "content": "r < 0 and t < 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-9",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 9,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f (x) = 5(g(x)) \u2212 3\ng(x) = |13x \u2212 9|\nThe functions f and g are defined by the\ngiven equations. What is the value of\nf (\u221210)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "692"
+   },
+   {
+    "label": "B",
+    "content": "139"
+   },
+   {
+    "label": "C",
+    "content": "698"
+   },
+   {
+    "label": "D",
+    "content": "-53"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-10",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 10,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = 11x3.\nThe graph of y = f (\u2212x) + c in the xy-\nplane, where is c a positive integer con-\nstant, has an x-intercept at (r, 0) and a y-\nintercept at (0, t), where and are constants.\nWhich of the following must be true about\nr and t?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "r < 0 and t < 0"
+   },
+   {
+    "label": "B",
+    "content": "r < 0 and t > 0"
+   },
+   {
+    "label": "C",
+    "content": "r > 0 and t > 0"
+   },
+   {
+    "label": "D",
+    "content": "r > 0 and t < 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-11",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 11,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function w is defined by\nw(r) = 1\nr\u22128 \u2212 r\u22125\n\u2212r+4.25. What is the greatest\npossible value of r such that w(r) = 0?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-12",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 12,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 57,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f (x) = 3d(26x + 27) + 18\nWhich of the following represents the x-\nintercept of the graph of y = f (x) + 6 in\nthe xy-plane, where d is a constant?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(81d + 24, 0)"
+   },
+   {
+    "label": "B",
+    "content": "(\u221281d\u221224 78d , 0)"
+   },
+   {
+    "label": "C",
+    "content": "(6 \u2212 81d+18 78d , 0)"
+   },
+   {
+    "label": "D",
+    "content": "( \u221245 78d+6, 0)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-15",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 15,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 58,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f (x) = \u221240x + 340 gives the\npredicted height above the ground f (x),\nin feet, of a model airplane a minutes after\nit begins to descend. What is the predicted\nheight above the ground, in feet, of the\nmodel airplane 3 minutes after it begins to\ndescend?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "120"
+   },
+   {
+    "label": "B",
+    "content": "220"
+   },
+   {
+    "label": "C",
+    "content": "300"
+   },
+   {
+    "label": "D",
+    "content": "460"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-18",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 18,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 58,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "Harper deposited a fixed amount into her\nbank account each month. The function\nf (t) = 400 + 30t gives the amount, in\ndollars, in Harper\u2019s bank account after t\nmonthly deposits. What is the best inter-\npretation of 30 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "With each monthly deposit, the amount in Harper\u2019s bank account in- creased by $30."
+   },
+   {
+    "label": "B",
+    "content": "Before Harper made any monthly de- posits, the amount in her bank ac- count was $30."
+   },
+   {
+    "label": "C",
+    "content": "After one monthly deposit, the amount in Harper\u2019s bank account was $30."
+   },
+   {
+    "label": "D",
+    "content": "Harper made a total of 30 monthly deposits. 58 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-functions-function-notation-19",
+  "book": "ma3",
+  "topic": "Functions&Function Notation",
+  "num": 19,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 59,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "0 4 8 12 16 20 24\n$ 0\n$ 50\n$ 100\n$ 150\n$ 200\n$ 250\n$ 300\n$ 350\n(0, 275)\n(24, 75)\nThe graph shown gives the estimated\nvalue, in dollars, of a mountain bike as a\nfunction of the number of months since it\nwas purchased. What is the best interpre-\ntation of the y-intercept of the graph in this\ncontext?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated value of the bike de- creased by approximately 2.75% each year after it was purchased."
+   },
+   {
+    "label": "B",
+    "content": "The estimated value of the bike had decreased by $275 in the 24 months after it was purchased."
+   },
+   {
+    "label": "C",
+    "content": "The estimated value of the bike 24 months after it was purchased was $275."
+   },
+   {
+    "label": "D",
+    "content": "The estimated value of the bike was $275 when it was purchased."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-1",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 1,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 61,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "Anton is selling toys from his toy collec-\ntion. When he started selling the toys,\nthere were 2,800 toys in the collection. At\nthe end of each week for 3 weeks after An-\nton started selling the toys, the number of\ntoys in the collection had decreased by 1/2\nof the toys in the collection at the end of\nthe previous week. Which equation gives\nthe number of toys, c, in the collection w\nweeks after Anton started selling the toys,\nwhere 0 \u2264 w \u2264 36.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c = w 1 2"
+   },
+   {
+    "label": "B",
+    "content": "c = 2800w"
+   },
+   {
+    "label": "C",
+    "content": "c = 1400(1 2)w"
+   },
+   {
+    "label": "D",
+    "content": "c = 2800(1 2)w"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-3",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 61,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "P(t) = 1, 200(1.06)t\nThe function P gives the estimated num-\nber of sea lions in a certain area, where t\nis the number of years since a study be-\ngan. What is the best interpretation of\nP(0) = 1, 200 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated number of sea lions in the area increased by 1,200 each year during the study."
+   },
+   {
+    "label": "B",
+    "content": "The estimated number of sea lions in the area increased by 106 each year during the study."
+   },
+   {
+    "label": "C",
+    "content": "The estimated number of sea lions in the area was 1,200 when the study be- gan."
+   },
+   {
+    "label": "D",
+    "content": "The estimated number of sea lions in the area was 106 when the study be- gan."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-4",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 4,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 61,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f (x) = 20(2)x + 6(2)x\nThe function f is defined by the given\nequation. Which of the following equiva-\nlent forms of f displays, as a coefficient or\na base, the y-coordinate of the y-intercept\nof the graph of y = f (x) in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 80(2)x\u22122 + 24(2)x\u22122"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 2(10(2)x + 3(2)x)"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 20(4) x 2 + 6(4)x 2"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 26(2)x 61 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-7",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 7,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 62,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "P(t) = 1, 900(1.07)t\nThe function P gives the estimated num-\nber of sea lions in a certain area, where t\nis the number of years since a study be-\ngan. What is the best interpretation of P(0)\n= 1,900 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated number of sea lions in the area increased by 1,900 each year during the study."
+   },
+   {
+    "label": "B",
+    "content": "The estimated number of sea lions in the area increased by 107 each year during the study."
+   },
+   {
+    "label": "C",
+    "content": "The estimated number of sea lions in the area was 1,900 when the study be- gan."
+   },
+   {
+    "label": "D",
+    "content": "The estimated number of sea lions in the area was 107 when the study be- gan."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-8",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 8,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 62,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = 5(4)\n\u2212x\n6 .\nWhat is the value of f (12)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221280"
+   },
+   {
+    "label": "B",
+    "content": "\u221240"
+   },
+   {
+    "label": "C",
+    "content": "\u2212 1 400"
+   },
+   {
+    "label": "D",
+    "content": "\u2212 5 16"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-9",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 9,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 62,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The number of bacteria in a growth\nmedium is expected to increase by 160%\nevery 2 hours during a period of observa-\ntion. The number of bacteria in the growth\nmedium was estimated to be 8,000 when\nthe period of observation began. Which\nfunction P gives the expected number of\nbacteria in this growth medium t hours\nafter the period of observation began?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "P(t) = 8000(1.60) t 2"
+   },
+   {
+    "label": "B",
+    "content": "P(t) = 8000(1.60)2t"
+   },
+   {
+    "label": "C",
+    "content": "P(t) = 8000(2.60) t 2"
+   },
+   {
+    "label": "D",
+    "content": "P(t) = 8000(2.60)2t 62 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-11",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 11,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A researcher observes a sample of a nu-\nclide. An exponential model estimates\nthat the mass, in grams, of the sample\ndecreases by 23% every 21.87 minutes.\nWhich of the following equations could\nrepresent this model, where M is the es-\ntimated mass, in grams, of the sample t\nminutes after the researcher began observ-\ning the sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "M = 100(0.77) t 21.87"
+   },
+   {
+    "label": "B",
+    "content": "M = 100(0.23) t 21.87"
+   },
+   {
+    "label": "C",
+    "content": "M = 100(0.23)t+21.87"
+   },
+   {
+    "label": "D",
+    "content": "M = 100(0.77)t+21.87"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-13",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 13,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A beaker containing a liquid is placed on a\ntable. The function\ng(t) = 295 + (364 \u2212 295)(2.72)\u22120.104t gives\nthe approximate temperature, in kelvins,\nof the liquid t minutes after the beaker\nwas placed on the table. According to this\nfunction, what was the approximate tem-\nperature, in kelvins, of the liquid when the\nbeaker was placed on the table?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-14",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 14,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 63,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = ax + b,\nwhere a and b are constants and a > 0. In\nthe xy-plane, the graph of y = f (x) has\na y-intercept at (0,-22) and passes through\nthe point (2,41). What is the value of a + b?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-16",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 16,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A certain investment account offers a spe-\ncial interest rate for the first 4 months the\naccount is open followed by a lower inter-\nest rate for the remainder of the time the\naccount is open. Bennett opened one of\nthese accounts with an original account\nbalance of $900 and did not make any\nother deposits or withdrawals. 4 months\nafter Bennett opened the account, the bal-\nance had increased by 0.6% of the original\nbalance. 6 months after Bennett opened\nthe account, the balance had increased by\nan additional 0.1% of the balance at the\nend of the first 4 months. Every 2 months\nafter the first 6 months, the balance had\nincreased by an additional 0.1% of the bal-\nance 2 months before. Which of the follow-\ning equations could represent the account\nbalance B(x), in dollars, x months after the\naccount was opened, where x \u2265 4?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "B(x) = 905.40(1.001)2x\u22128"
+   },
+   {
+    "label": "B",
+    "content": "B(x) = 905.40(1.001) x 2 \u22124 2"
+   },
+   {
+    "label": "C",
+    "content": "B(x) = 905.40(1.001) x 2 \u22124"
+   },
+   {
+    "label": "D",
+    "content": "B(x) = 905.40(1.001)2x\u22124"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-17",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 17,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A beaker containing a liquid is placed\non a table. The function g(t) = 297 +\n(363 \u2212 297)(2.72)\u22120.103t gives the approx-\nimate temperature, in kelvins, of the liq-\nuid t minutes after the beaker was placed\non the table. According to this function,\nwhat was the approximate temperature, in\nkelvins, of the liquid when the beaker was\nplaced on the table?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-18",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 18,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = ax + b,\nwhere a and b are constants and a > 0. In\nthe xy-plane, the graph of y = f (x) has a\ny-intercept at (0, -22) and passes through\nthe point (2, 26). What is the value of a + b?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-19",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 19,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The population of a certain city doubled\nevery 75 years from 1657 to 1957. The pop-\nulation of this city was 240,000 in 1957.\nWhat was the population of this city in\n1657?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-20",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 20,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A certain investment account offers a spe-\ncial interest rate for the first months the ac-\ncount is open followed by a lower interest\nrate for the remainder of the time the ac-\ncount is open. Bennett opened one of these\naccounts with an original account balance\nof $600and did not make any other de-\nposits or withdrawals. 6 months after Ben-\nnett opened the account, the balance had\nincreased by 0.4% of the original balance. 8\nmonths after Bennett opened the account,\nthe balance had increased by an additional\n0.3% of the balance at the end of the first\n6 months. Every 2 months after the first 8\nmonths, the balance had increased by an\nadditional of 0.3% the balance 2 months\nbefore. Which of the following equations\ncould represent the account balance B(x),\nin dollars, x months after the account was\nopened, where x \u2265 6?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "B(x) = 602.40(1.003) x 2 \u22126"
+   },
+   {
+    "label": "B",
+    "content": "B(x) = 602.40(1.003) x 2 \u22123"
+   },
+   {
+    "label": "C",
+    "content": "B(x) = 602.40(1.003)2x\u221212"
+   },
+   {
+    "label": "D",
+    "content": "B(x) = 602.40(1.003)2x\u22126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-21",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 21,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 64,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "What is the y-intercept of the graph of\ny = 6x + 12 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 6)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 12)"
+   },
+   {
+    "label": "C",
+    "content": "(0, 18)"
+   },
+   {
+    "label": "D",
+    "content": "(0, 13) 64 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-22",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 22,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A researcher observes a sample of a nu-\nclide. An exponential model estimates\nthat the mass, in grams, of the sample\ndecreases by 27% every 14.07 minutes.\nWhich of the following equations could\nrepresent this model, where M is the es-\ntimated mass, in grams, of the sample t\nminutes after the researcher began observ-\ning the sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "M = 100(0.27) t 14.07"
+   },
+   {
+    "label": "B",
+    "content": "M = 100(0.27)t+14.07"
+   },
+   {
+    "label": "C",
+    "content": "M = 100(0.73) t 14.07"
+   },
+   {
+    "label": "D",
+    "content": "M = 100(0.73)t+14.07"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-24",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 24,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The y-intercept of the graph of\ny = 6(1.85)x in the xy-plane is (0, y). What\nis the value of y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-25",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 25,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 65,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A model estimates that the initial num-\nber of photons in an X-ray beam is 800\nwhen the beam reaches the surface of a\ncertain material. The model also estimates\nthat when the beam passes through this\nmaterial, the number of photons in the\nbeam decreases by 50% for each 7 mil-\nlimeters of the material the beam passes\nthrough. Which equation represents this\nmodel, where I is the estimated number\nof photons in the beam when the beam\nreaches a point a millimeters from the sur-\nface?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I = 800(7) x 2"
+   },
+   {
+    "label": "B",
+    "content": "I = 800(0.5)x"
+   },
+   {
+    "label": "C",
+    "content": "I = 800(2) x 7"
+   },
+   {
+    "label": "D",
+    "content": "I = 800(0.5) x 7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-28",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 28,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f (x) = 4000(0.90)x\nA conservation scientist implemented a\nprogram to reduce a certain invasive insect\npopulation in an area. The given function\nestimates this insect species\u2019 population x\nyears after 2008, where x \u2264 8. Which of\nthe following is the best interpretation of\n4000 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The estimated percent decrease in the insect population for this species and area every 8 years after 2008"
+   },
+   {
+    "label": "B",
+    "content": "The estimated initial insect popula- tion for this species and area in 2008"
+   },
+   {
+    "label": "C",
+    "content": "The estimated percent decrease in the insect population for this species and area each year after 2008"
+   },
+   {
+    "label": "D",
+    "content": "The estimated insect population for this species and area 8 years after 2008"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-29",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 29,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For x = 0, y has a value of 200. The value\nof y increases by 40% for every increase of\n1 in the value of x. Which equation repre-\nsents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 200(x)40"
+   },
+   {
+    "label": "B",
+    "content": "y = 200(1.40)x"
+   },
+   {
+    "label": "C",
+    "content": "y = 200(40)x"
+   },
+   {
+    "label": "D",
+    "content": "y = 200(x)1.40"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-30",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 30,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f (x) = bx + c,\nwhere b and c are positive constants. In\nthe xy-plane, the graph of y = f (x) passes\nthrough the point (0, 25). What is the\nvalue of f (0)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-exponential-functions-31",
+  "book": "ma3",
+  "topic": "Exponential Functions",
+  "num": 31,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 66,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The relationship between the variables x\nand y is defined by an exponential equa-\ntion. When x = 0, the value of y is 40, and\nfor every increase in the value of x by 1,\nthe corresponding value of y increases by\n50% of its previous value. Which equation\nrepresents this relationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 40(1.50)x"
+   },
+   {
+    "label": "B",
+    "content": "y = 40(1.05)x"
+   },
+   {
+    "label": "C",
+    "content": "y = 50(1.40)x"
+   },
+   {
+    "label": "D",
+    "content": "y = 50(1.04)x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-3",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 3,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "For a certain type of rope, the equation\ny = 900ax2, where a is a constant, gives the\nestimated breaking strength y, in pounds,\nof a rope with a circumference of x inches.\nBased on this equation, if a rope of this\ntype has a circumference of 2.75 inches,\nit has an estimated breaking strength of\n9,528.75 pounds. What is the estimated\nbreaking strength, in pounds, of a rope of\nthis type that has a circumference of 8.50\ninches?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-4",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 4,
+  "exam": "August 2025",
+  "page": null,
+  "pdf_page": 69,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "(x + k)2 + 31 = 31\nIn the given equation, k is a constant.\nHow many distinct real solutions does this\nequation have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-15",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 15,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 71,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "A quadratic function gives the estimated\nlength of daylight d(t), in hours, in a cer-\ntain city t months after March 1, where\n0 \u2264 t \u2264 7. According to the function, the\nestimated length of daylight is 13.44 hours\n5 months after March 1 and the maximum\nestimated length of daylight is 13.89 hours\n3.5 months after March 1. Based on this\nfunction, what is the estimated length of\ndaylight, in hours, on March 1?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-30",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 30,
+  "exam": "September 2025",
+  "page": null,
+  "pdf_page": 73,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "A quadratic function gives the estimated\nlength of daylight d(t), in hours, in a cer-\ntain city t months after March 1, where\n0 \u2264 t \u2264 7. According to the function, the\nestimated length of daylight is 12.66 hours\n6 months after March 1 and the maximum\nestimated length of daylight is 13.91 hours\n3.5 months after March 1. Based on this\nfunction, what is the estimated length of\ndaylight, in hours, on March 1?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-32",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 32,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 74,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "A quadratic function models the height,\nin feet, of an object above the ground in\nterms of the time, in seconds, after the ob-\nject was launched. The model estimates\nthat the object was launched from an ini-\ntial height of 0.00 feet above the ground\nand was at a maximum height of 207.36\nfeet above the ground 3.6 seconds after it\nwas launched. The model also estimates\nthat the object was at a height of 184.32\nfeet above the ground x seconds after it\nwas launched. What is a possible value of\nx?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-quadratics-39",
+  "book": "ma3",
+  "topic": "Quadratics",
+  "num": 39,
+  "exam": "October 2025",
+  "page": null,
+  "pdf_page": 75,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "ADV",
+  "skill": "ADV-NE",
+  "body": "For a certain type of rope, the equation\ny = 900ax2, where a is a constant, gives the\nestimated breaking strength y, in pounds,\nof a rope with a circumference of x inches.\nBased on this equation, if a rope of this\ntype has a circumference of 1.75 inches,\nit has an estimated breaking strength of\n3,858.75 pounds. What is the estimated\nbreaking strength, in pounds, of a rope of\nthis type that has a circumference of 3.50\ninches?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-1",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 1,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "An entomologist placed an initial popula-\ntion of 40 Tenebrio molitor, a type of beetle,\ninto a habitat and monitored the popula-\ntion over time. When the number of Tene-\nbrio molitor in the habitat reached 170%\nof the initial population, the entomologist\nmoved 75% of the Tenebrio molitor to a\nsecond habitat. How many Tenebrio moli-\ntor did the entomologist move to the sec-\nond habitat at this time?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-2",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 2,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A certain bonefish can swim at a maxi-\nmum speed of 17 meters per second. At\nthis maximum speed, how many meters\nwould this bonefish swim in 10 seconds?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-3",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 3,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "An object\u2019s speed is increasing at a rate\nof 6.80 meters per second squared. What\nis this rate in miles per minute squared,\nrounded to the nearest tenth? (Use 1\nmile=1,609 meters.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-5",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 5,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "On a plot of land, 48.0% of the square\nfootage is farmland and the remaining\nsquare footage is pasture. There are build-\nings on exactly 23.5% of the square footage\nof the farmland, and there are buildings\non exactly 16.0% of the square footage of\nthe pasture. If there are buildings on ex-\nactly p% of the square footage of the plot\nof land, what is the value of p?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-6",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 6,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "For the positive quantities h, j, and k, 11%\nof h is equivalent to 33% of j, and j is equiv-\nalent to 14% of k. What percentage of k is\nh? (Disregard the % sign when entering\nyour answer. For example, if your answer\nis 39%, enter 39)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-7",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 7,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 80,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "An object travels x inches in y seconds.\nAt this rate, which expression represents\nthe time, in seconds, it takes the object to\ntravel a distance of 22x inches?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "22 y"
+   },
+   {
+    "label": "B",
+    "content": " y 22"
+   },
+   {
+    "label": "C",
+    "content": "22y"
+   },
+   {
+    "label": "D",
+    "content": "22 + y 80 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-11",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 11,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 81,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "For the positive quantities h, j, and k, 12%\nof h is equivalent to 95% of j, and j is equiv-\nalent to 24% of k. What percentage of k is\nh? (Disregard the % sign when entering\nyour answer. For example, if your answer\nis 39%, enter 39)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-percent-ratio-proportion-12",
+  "book": "ma3",
+  "topic": "Percent; Ratio&Proportion",
+  "num": 12,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 81,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "For the positive quantities h, j, and k, 13%\nof h is equivalent to 19% of j, and j is equiv-\nalent to of 91% of k . What percentage of k\nis h? (Disregard the % sign when entering\nyour answer. For example, if your answer\nis 39% , enter 39)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-1",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 1,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 84,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A certain town has an area of 13,753,344\nsquare yards. What is the area, in\nsquare miles, of this town? (1 mile = 1,760\nyards)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7,814.4"
+   },
+   {
+    "label": "B",
+    "content": "2.11"
+   },
+   {
+    "label": "C",
+    "content": "3,708.55"
+   },
+   {
+    "label": "D",
+    "content": "4.44"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-2",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 2,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 84,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A dog\u2019s mass is 24 kilograms. What is\nthe dog\u2019s mass, in grams? (1 kilogram =\n1,000 grams)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-3",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 3,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 84,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "The area of a rectangular region is increas-\ning at a rate of 210 square feet per hour.\nWhich of the following is closest to this\nrate in square meters per minute? (Use 1\nmeter = 3.28 feet.)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.33"
+   },
+   {
+    "label": "B",
+    "content": "1.07"
+   },
+   {
+    "label": "C",
+    "content": "11.48"
+   },
+   {
+    "label": "D",
+    "content": "19.52"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-4",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 4,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 84,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A certain town has an area of 12,669,184\nsquare yards. What is the area, in square\nmiles, of this town?(1 mile = 1,760 yards)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2.02"
+   },
+   {
+    "label": "B",
+    "content": "7198.4"
+   },
+   {
+    "label": "C",
+    "content": "4.09"
+   },
+   {
+    "label": "D",
+    "content": "3559.38"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-5",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 5,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 84,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "The area of a rectangular region is increas-\ning at a rate of 190 square feet per hour.\nWhich of the following is closest to this\nrate in square meters per minute? (Use 1\nmeter = 3.28 feet.)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "10.39"
+   },
+   {
+    "label": "B",
+    "content": "0.97"
+   },
+   {
+    "label": "C",
+    "content": "0.29"
+   },
+   {
+    "label": "D",
+    "content": "17.66"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-7",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 7,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 85,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A triathlon is a multisport race consisting\nof three different legs. A triathlon partici-\npant completed the cycling leg with an av-\nerage speed of 19.3 miles per hour. What\nwas the average speed, in yards per hour,\nof the participant during the cycling leg?\n(1 mile = 1760 yards)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "33968"
+   },
+   {
+    "label": "B",
+    "content": "91.2"
+   },
+   {
+    "label": "C",
+    "content": "57.9"
+   },
+   {
+    "label": "D",
+    "content": "5280"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-8",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 8,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 85,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A length of 450 meters is equal to how\nmany decimeters? (1 meter = 10 decime-\nters)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-unit-conversion-9",
+  "book": "ma3",
+  "topic": "Unit Conversion",
+  "num": 9,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 85,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-RP",
+  "body": "A certain town has an area of 4.29 square\nmiles. What is the area, in square yards, of\nthis town? (1 mile = 1760 yards)",
+  "choices": [
+   {
+    "label": "A",
+    "content": "410"
+   },
+   {
+    "label": "B",
+    "content": "7,550"
+   },
+   {
+    "label": "C",
+    "content": "722,051"
+   },
+   {
+    "label": "D",
+    "content": "13,288,704 85 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-probability-1",
+  "book": "ma3",
+  "topic": "Probability",
+  "num": 1,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 87,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Survey Results\nAnnuals 159\nPerennials 295\nA total of 454 gardeners selected at ran-\ndom were asked if they preferred peren-\nnials or annuals. The results of the sur-\nvey are shown in the table above. Accord-\ning to these results, if 5,448 gardeners were\nchoosing plants, how many more would\nprefer perennials than would prefer annu-\nals?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "136"
+   },
+   {
+    "label": "B",
+    "content": "1632"
+   },
+   {
+    "label": "C",
+    "content": "1908"
+   },
+   {
+    "label": "D",
+    "content": "3540"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-probability-2",
+  "book": "ma3",
+  "topic": "Probability",
+  "num": 2,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 87,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table summarizes the distribution of age\nand assigned group for 90 participants in a\nstudy.\n0\u20139 years 10\u201319 years 20+ years Total\nGroup A 15 11 4 30\nGroup B 4 5 21 30\nGroup C 11 14 5 30\nTotal 30 30 30 90\nOne of these participants will be selected\nat random. What is the probability of\nselecting a participant from group A,\ngiven that the participant is at least 10\nyears of age?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1 6"
+   },
+   {
+    "label": "B",
+    "content": "1 4"
+   },
+   {
+    "label": "C",
+    "content": "11 30"
+   },
+   {
+    "label": "D",
+    "content": "1 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-probability-4",
+  "book": "ma3",
+  "topic": "Probability",
+  "num": 4,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 88,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A department store sells pants in three\nlengths: short, regular, and long. The ta-\nble summarizes the distribution of pant\nlength, by color, for all the pants in the\nstore.\nBlack Brown Blue Total\nShort 25 14 24 63\nRegular 23 15 22 60\nLong 20 19 19 58\nTotal 68 48 65 181\nA pair of pants is selected at random.\nWhat is the probability of selecting a pair\nof pants that is brown, given that the pair\nof pants is regular length? (Express your\nanswer as a decimal or fraction, not as a\npercent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma3-probability-5",
+  "book": "ma3",
+  "topic": "Probability",
+  "num": 5,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 88,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Each of 185 animals can be classified as\none of three species, as shown in the fre-\nquency table.\nClassification Frequency\nspecies X 112\nspecies Y 3\nspecies Z 70\nIf one of the animals is selected at random,\nwhat is the probability of selecting an ani-\nmal of species Y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "70 185"
+   },
+   {
+    "label": "B",
+    "content": "3 185"
+   },
+   {
+    "label": "C",
+    "content": "182 185"
+   },
+   {
+    "label": "D",
+    "content": "112 185"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-probability-6",
+  "book": "ma3",
+  "topic": "Probability",
+  "num": 6,
+  "exam": "October 2025 ",
+  "page": null,
+  "pdf_page": 88,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the distribution of peo-\nple in a certain city by age group.\nAge group Proportion\nLess than 18 years old 26%\n18-40 years old 21%\n41-65 years old 29%\nGreater than 65 years old 24%\nIf a person in this city is selected at ran-\ndom, which of the following is closest to\nthe probability of selecting a person who\nis greater than 65 years old, given that the\nperson is at least 18 years old?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.24"
+   },
+   {
+    "label": "B",
+    "content": "0.32"
+   },
+   {
+    "label": "C",
+    "content": "0.50"
+   },
+   {
+    "label": "D",
+    "content": "0.92 88 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-mean-median-mode-range-1",
+  "book": "ma3",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 1,
+  "exam": "September 2025 ",
+  "page": null,
+  "pdf_page": 90,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The dot plots represent the distributions\nof values in data sets A and B.\nData Set A Data Set B\n4 5 6 7 8 9 10 4 5 6 7 8 9 10\nWhich of the following statements must be\ntrue?\nI. The median of data set A is equal to\nthe median of data set B.\nII. The standard deviation of data set A\nis equal to the standard deviation of\ndata set B.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I and II"
+   },
+   {
+    "label": "B",
+    "content": "I only"
+   },
+   {
+    "label": "C",
+    "content": "II only"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma3-mean-median-mode-range-2",
+  "book": "ma3",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 2,
+  "exam": "August 2025 ",
+  "page": null,
+  "pdf_page": 90,
+  "src": "63bd2cfa-190_ma3.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A farmer gave two groups of chickens dif-\nferent types of chicken feed for a month\nto measure the effect on egg production.\nThe lists give the number of eggs col-\nlected from each chicken in each of the\ntwo groups.\nGroup G: 8, 16, 18, 18, 24\nGroup H: 16, 18, 18, 24\nWhich statement correctly compares the\nmedian number of eggs collected for\ngroup G and the median number of eggs\ncollected for group H?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The median number of eggs collected for group G is equal to the median number of eggs collected for group H."
+   },
+   {
+    "label": "B",
+    "content": "The median number of eggs collected for group G is greater than the me- dian number of eggs collected for group H."
+   },
+   {
+    "label": "C",
+    "content": "The median number of eggs collected for group G is less than the median number of eggs collected for group H."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the median number of eggs collected for group G and the median number of eggs collected for group H."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-1",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 127,
+  "pdf_page": 39,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "In the xy-plane, which of the following does\nNOT contain any points (x, y) that are so-\nlutions to 7x + 4y > 12?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The region where x > 0 and y > 0"
+   },
+   {
+    "label": "B",
+    "content": "The region where x < 0 and y > 0"
+   },
+   {
+    "label": "C",
+    "content": "The region where x < 0 and y < 0"
+   },
+   {
+    "label": "D",
+    "content": "The region where x > 0 and y < 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-3",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 3,
+  "exam": "June 2023",
+  "page": 127,
+  "pdf_page": 39,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "In December 2017, the lowest temperature\nrecorded in a certain city was 40 degrees\nFahrenheit (F\u25e6\n) and the highest tempera-\nture recorded was 90\u25e6\nF. Which inequality\nis true for all values of t, where t represents\nany temperature in F\u25e6\n, recorded in the city\nin December?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "40 \u2264 t \u2264 90"
+   },
+   {
+    "label": "B",
+    "content": "t \u2264 40"
+   },
+   {
+    "label": "C",
+    "content": "t \u2264 50"
+   },
+   {
+    "label": "D",
+    "content": "t \u2265 90"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-4",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 4,
+  "exam": "December 2023",
+  "page": 127,
+  "pdf_page": 39,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A model estimates that a gray whale travels\n73 to 78 miles each day during its migration.\nBased on this model, which inequality repre-\nsents the estimated total number of miles,x,\na gray whale could travel in 31 days of its\nmigration?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(73)(31) \u2264 x \u2264 (78)(31)"
+   },
+   {
+    "label": "B",
+    "content": "73 + 31 \u2264 x \u2264 78 + 31"
+   },
+   {
+    "label": "C",
+    "content": "73 \u2264 31x \u2264 78"
+   },
+   {
+    "label": "D",
+    "content": "73 \u2264 31 + x \u2264 78 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-6",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 6,
+  "exam": "March 2024",
+  "page": 128,
+  "pdf_page": 40,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "The minimum value of x is 11 less than 8\ntimes another number n. Which inequality\nshows the possible values of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2264 8n \u2212 11"
+   },
+   {
+    "label": "B",
+    "content": "x \u2265 8n \u2212 11"
+   },
+   {
+    "label": "C",
+    "content": "x \u2264 11 \u2212 8n"
+   },
+   {
+    "label": "D",
+    "content": "x \u2265 11 \u2212 8n"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-7",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 7,
+  "exam": "November 2023",
+  "page": 128,
+  "pdf_page": 40,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y \u2264 x + 9\ny \u2265 \u22122x \u2212 9\nWhich point (x, y) is a solution to the given\nsystem of inequalities in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0,-10)"
+   },
+   {
+    "label": "B",
+    "content": "(0,10)"
+   },
+   {
+    "label": "C",
+    "content": "(-7,0)"
+   },
+   {
+    "label": "D",
+    "content": "(7,0)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-8",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 8,
+  "exam": "May 2024",
+  "page": 128,
+  "pdf_page": 40,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "An arborist measured and recorded the\nheights of red maple trees in a certain area.\nOf the red maple tree heights recorded in\nthis area, the minimum was 42 feet and the\nmaximum was 57 feet. Which inequality is\ntrue for all possible values of t, where t rep-\nresents the recorded height, in feet, of a red\nmaple tree in this area?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "t \u2264 42"
+   },
+   {
+    "label": "B",
+    "content": "t \u2265 57"
+   },
+   {
+    "label": "C",
+    "content": "t \u2265 99"
+   },
+   {
+    "label": "D",
+    "content": "42 \u2264 t \u2264 57 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-10",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 10,
+  "exam": "March 2024",
+  "page": 129,
+  "pdf_page": 41,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y \u2264 x + 2\ny \u2265 \u22123x \u2212 4\nWhich point (x, y) is a solution to the given\nsystem of inequalities in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, \u22128)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 8)"
+   },
+   {
+    "label": "C",
+    "content": "(\u22128, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(8, 0)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-13",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 13,
+  "exam": "March 2024",
+  "page": 129,
+  "pdf_page": 41,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y \u2264 x + 2\ny \u2265 \u22124x \u2212 6\nWhich point (x, y) is a solution to the given\nsystem of inequalities in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, \u221212)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 12)"
+   },
+   {
+    "label": "C",
+    "content": "(\u221212, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(12, 0) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-14",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 14,
+  "exam": "May US 2024",
+  "page": 130,
+  "pdf_page": 42,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "In a set of four consecutive odd integers,\nwhere the integers are ordered from least\nto greatest, the first integer is represented\nby x. The product of 18 and the fourth\nodd integer is at most 22 less than the sum\nof the first and third odd integers. Which\ninequality represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18(x + 6)\u2264x + (x + 4) \u2212 22"
+   },
+   {
+    "label": "B",
+    "content": "18(x + 6)\u226522 \u2212 (x + (x + 4))"
+   },
+   {
+    "label": "C",
+    "content": "18(x + 4)\u2264x + (x + 3) \u2212 22"
+   },
+   {
+    "label": "D",
+    "content": "18(x + 4)\u226522 \u2212 (x + (x + 3))"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-15",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 15,
+  "exam": "June 2024",
+  "page": 130,
+  "pdf_page": 42,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "During a portion of a flight, a small air-\nplane\u2019s cruising speed varied between 180\nmiles per hour and 190 miles per hour.\nWhich inequality best represents this sit-\nuation, where s is the cruising speed, in\nmiles per hour, during this portion of the\nflight?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "s \u2264 10"
+   },
+   {
+    "label": "B",
+    "content": "s \u2264 180"
+   },
+   {
+    "label": "C",
+    "content": "s \u2264 190"
+   },
+   {
+    "label": "D",
+    "content": "180 \u2264 s \u2264 190"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-16",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 16,
+  "exam": "June 2024",
+  "page": 130,
+  "pdf_page": 42,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "During a portion of a flight, a small air-\nplane\u2019s cruising speed varied between 125\nmiles per hour and 135 miles per hour.\nWhich inequality best represents this sit-\nuation, where s is the cruising speed, in\nmiles per hour, during this portion of the\nflight?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "s \u2264 10"
+   },
+   {
+    "label": "B",
+    "content": "s \u2264 125"
+   },
+   {
+    "label": "C",
+    "content": "s \u2264 135"
+   },
+   {
+    "label": "D",
+    "content": "125 \u2264 s \u2264 135"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-18",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 18,
+  "exam": "August 2024",
+  "page": 131,
+  "pdf_page": 43,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A newspaper stand sells magazines for $5\neach and newspapers for $2 each. The stand\nneeds to sell m magazines and n newspapers\nfor a combined total value of at least $150\neach day to cover operation costs. Which\ninequality represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5m + 2n \u2264 150"
+   },
+   {
+    "label": "B",
+    "content": "5m + 2n \u2265 150"
+   },
+   {
+    "label": "C",
+    "content": "7mn \u2264 150"
+   },
+   {
+    "label": "D",
+    "content": "7mn \u2265 150"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-19",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 19,
+  "exam": "August 2024",
+  "page": 131,
+  "pdf_page": 43,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y < \u22126x \u2212 22\ny > \u22124x \u2212 7\nFor what of the following tables are all the\nvalues of x and their corresponding values of\ny solutions to the given system of inequali-\nties?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x -9 -10 -12 y 27 51 -4"
+   },
+   {
+    "label": "B",
+    "content": " x -9 -10 -12 y 32 36 -4"
+   },
+   {
+    "label": "C",
+    "content": " x -9 -10 -12 y 28 36 48"
+   },
+   {
+    "label": "D",
+    "content": " x -9 -10 -12 y 30 37 48"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-20",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 20,
+  "exam": "August 2024",
+  "page": 131,
+  "pdf_page": 43,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "The water depth in a certain river is 78.7\nfeet (ft). During a 30-day period, the water\ndepth in this river is predicted to increase\nby a minimum of 1 ft and a maximum of 3\nft. What is the predicted maximum water\ndepth, in feet, during this time?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "75.7"
+   },
+   {
+    "label": "B",
+    "content": "77.7"
+   },
+   {
+    "label": "C",
+    "content": "79.7"
+   },
+   {
+    "label": "D",
+    "content": "81.7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-22",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 22,
+  "exam": "August 2024",
+  "page": 132,
+  "pdf_page": 44,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A model estimates that a gray whale travels\n72 to 77 miles each day during its migration.\nBased on this model, which inequality rep-\nresents the estimated total number of miles,\nx, a gray whale could travel in 14 days of its\nmigration?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(72)(14) \u2264 x \u2264 (77)(14)"
+   },
+   {
+    "label": "B",
+    "content": "72 + 14 \u2264 x \u2264 77 + 14"
+   },
+   {
+    "label": "C",
+    "content": "72 \u2264 14x \u2264 77"
+   },
+   {
+    "label": "D",
+    "content": "72 \u2264 14 + x \u2264 77"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-23",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 23,
+  "exam": "October US 2024",
+  "page": 132,
+  "pdf_page": 44,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A plant nursery classifies a perennial species\nas tall if its typical height when fully grown\nis more than 100 centimeters. Each of the\nfollowing inequalities represent the possi-\nble heights h, in centimeters, for a specific\nperennial species when fully grown. Which\ninequality represents the possible heights\nh, in centimeters, of a tall perennial flower\nspecies?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "107 < h < 158"
+   },
+   {
+    "label": "B",
+    "content": "76 < h < 100"
+   },
+   {
+    "label": "C",
+    "content": "41 < h < 95"
+   },
+   {
+    "label": "D",
+    "content": "16 < h < 91"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-24",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 24,
+  "exam": "October US 2024",
+  "page": 132,
+  "pdf_page": 44,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A shopper goes to a pet store to buy dog\nfood and treats. The shopper has $20. Each\ncan of food costs $1.87, and each bag of\ntreats costs $2.37. Which inequality repre-\nsents the relationship between the number\nof cans of food, c, and the number of bags\nof treats, t, the shopper can buy?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1.87c + 2.37t \u2264 20"
+   },
+   {
+    "label": "B",
+    "content": "1.87c + 2.37t \u2265 20"
+   },
+   {
+    "label": "C",
+    "content": "2.37c + 1.87t \u2264 20"
+   },
+   {
+    "label": "D",
+    "content": "2.37c + 1.87t \u2265 20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-25",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 25,
+  "exam": "October 2024",
+  "page": 132,
+  "pdf_page": 44,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A geologist estimates that the volume of\na boulder is greater than 12.7 cubic feet\nbut less than 15.7 cubic feet. The geologist\nalso estimates that the boulder weighs 160\npounds per cubic foot of volume. Which\ninequality represents this situation, where\nx represents the estimated total weight, in\npounds, of the boulder?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "160 \u2212 15.7 < x < 160 \u2212 12.7"
+   },
+   {
+    "label": "B",
+    "content": "160 + 12.7 < x < 160 + 15.7"
+   },
+   {
+    "label": "C",
+    "content": "160(12.7) < x < 160(15.7)"
+   },
+   {
+    "label": "D",
+    "content": " 160 15.7 < x < 160 12.7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-28",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 28,
+  "exam": "October US 2024",
+  "page": 133,
+  "pdf_page": 45,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A botanist estimates the number of oak\ntrees in a forest to be at least 2600 and\nno more than 3200. Which inequality best\nrepresents the number oak trees, x, in the\nforest?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2264 600"
+   },
+   {
+    "label": "B",
+    "content": "x \u2264 2600"
+   },
+   {
+    "label": "C",
+    "content": "2600 \u2264 x \u2264 3200"
+   },
+   {
+    "label": "D",
+    "content": "x \u2264 2600 or x \u2265 3200"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-29",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 29,
+  "exam": "October US 2024",
+  "page": 133,
+  "pdf_page": 45,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "If x \u2265 \u22126 represent all solutions to the\ninequality ax \u2212 27 \u2264 15, where a is a con-\nstant, what is the greatest possible value of\na?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-30",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 30,
+  "exam": "November 2024",
+  "page": 133,
+  "pdf_page": 45,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "Cristina was elected to the city council.\nEach city council person is required to at-\ntend at least 21 of the 27 scheduled meetings\nin a year to keep their position. Which in-\nequality represents the number of city coun-\ncil meetings, x, Cristina must attend ia year\nto keep her position on the city council?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2264 21"
+   },
+   {
+    "label": "B",
+    "content": "x \u2265 48"
+   },
+   {
+    "label": "C",
+    "content": "21 \u2264 x \u2264 27"
+   },
+   {
+    "label": "D",
+    "content": "27 \u2264 x \u2264 48"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-31",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 31,
+  "exam": "November 2024",
+  "page": 133,
+  "pdf_page": 45,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "To cut a lawn, Antwan charges a fee of\n$10.00 for his equipment and $8.50 per hour\nspent cutting lawn. Taylor charges a fee\nof $7.00 for his equipment and $9.50 per\nhour spent cutting a lawn. If x represents\nthe number of hours spent cutting a lawn,\nwhat are the value of x for which Taylor\u2019s\ntotal charge is greater than Antwan\u2019s total\ncharge?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2 \u2264 x \u2264 3"
+   },
+   {
+    "label": "B",
+    "content": "3 \u2264 x \u2264 4"
+   },
+   {
+    "label": "C",
+    "content": "x < 2"
+   },
+   {
+    "label": "D",
+    "content": "x > 3 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-33",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 33,
+  "exam": "November US 2024",
+  "page": 134,
+  "pdf_page": 46,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y > 5x \u2212 6\nFor which of the following tables are all the\nvalues of x and their corresponding values of\ny solutions to the given inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x y 3 3 5 13 8 28"
+   },
+   {
+    "label": "B",
+    "content": " x y 3 9 5 19 8 34"
+   },
+   {
+    "label": "C",
+    "content": " x y 3 11 5 21 8 39"
+   },
+   {
+    "label": "D",
+    "content": " x y 3 -9 5 -19 8 -34"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-35",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 35,
+  "exam": "December US 2024",
+  "page": 134,
+  "pdf_page": 46,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A soccer team\u2019s goal is to earn at least\n$1,320 by selling coupon books. The team\nearns $12 from selling each coupon book.\nWhich of the following inequalities describes\nthe possible values for the number of coupon\nbooks, n, the team can sell to meet the goal?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "n + 12 \u2264 1320"
+   },
+   {
+    "label": "B",
+    "content": "n + 12 \u2265 1320"
+   },
+   {
+    "label": "C",
+    "content": "12n \u2264 1320"
+   },
+   {
+    "label": "D",
+    "content": "12n \u2265 1320"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-36",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 36,
+  "exam": "December 2024",
+  "page": 134,
+  "pdf_page": 46,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "When several resistors are connected in se-\nries in a circuit, the total resistance of the\ncircuit is the sum of the resistances of these\nresistors. A certain circuit consists of 8 resis-\ntors connected in series, where the resistance\nof each resistor is positive. This circuit has\na total resistance of 130 ohms. The total\nresistance of 3 resistors in this circuit is 90\nohms. Which inequality best represents all\npossible values of the resistance x, in ohms,\nof one of the other 5 resistors in this circuit?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0 < x < 8"
+   },
+   {
+    "label": "B",
+    "content": "0 < x < 40"
+   },
+   {
+    "label": "C",
+    "content": "40 < x < 90"
+   },
+   {
+    "label": "D",
+    "content": "40 < x < 130 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-37",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 37,
+  "exam": "December 2024",
+  "page": 135,
+  "pdf_page": 47,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "Sabrina has a goal to save at least 240 USD.\nSabrina has already saved 180 USD. If x\nrepresents the additional amount of money,\nin dollars, Sabrina needs to save to meet\nher goal, which inequality represents this\nsituation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x 180 \u2265 240"
+   },
+   {
+    "label": "B",
+    "content": "180x \u2265 240"
+   },
+   {
+    "label": "C",
+    "content": "180 + x \u2265 240"
+   },
+   {
+    "label": "D",
+    "content": "180 \u2212 x \u2265 240"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-39",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 39,
+  "exam": "March 2025",
+  "page": 135,
+  "pdf_page": 47,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A school is ordering tablet computers for\nits students. The tablets cost $164 each,\nand 6% tax is added to the total cost of\nthe order. If the school can spend no more\nthan 44,800 dollars on the tablets, including\ntax, what is the maximum number of tablets\nthat the school can order?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-41",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 41,
+  "exam": "March US 2025",
+  "page": 135,
+  "pdf_page": 47,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A shopper is purchasing oranges that cost\n$0.67 each. If the shopper has a coupon for\n$2 off the entire purchase and there is no\nsales tax, which inequality represents the\nnumber of oranges, x, that the shopper can\npurchase for no more than $12?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.67x + 2 \u2264 12"
+   },
+   {
+    "label": "B",
+    "content": "0.67x + 2 \u2265 12"
+   },
+   {
+    "label": "C",
+    "content": "0.67x \u2212 2 \u2264 12"
+   },
+   {
+    "label": "D",
+    "content": "0.67x \u2212 2 \u2265 12 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-42",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 42,
+  "exam": "March US 2025",
+  "page": 136,
+  "pdf_page": 48,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y \u2264 5x \u2212 21\nWhich point (x, y) is a solution to the given\ninequality in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(\u22125, \u221221)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 21)"
+   },
+   {
+    "label": "C",
+    "content": "(5, \u221221)"
+   },
+   {
+    "label": "D",
+    "content": "(6, 21)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-43",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 43,
+  "exam": "March US 2025",
+  "page": 136,
+  "pdf_page": 48,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "In a set of four consecutive odd integers,\nwhere the integers are ordered from least\nto greatest, the first integer is represented\nby x. The product of 28 and the third odd\ninteger in the set is at most the value of\n50 less than the sum of the first and fourth\nodd integers in the set. What is the greatest\npossible value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-44",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 44,
+  "exam": "March 2025",
+  "page": 136,
+  "pdf_page": 48,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A school is ordering tablet computers for its\nstudents. The tablets cost $170 each, and\n7% tax is added to the total cost of the or-\nder. If the school can spend no more than\n$53, 400 on the tablets, including tax, what\nis the maximum number of tablets that the\nschool can order?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-46",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 46,
+  "exam": "May 2025",
+  "page": 136,
+  "pdf_page": 48,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y \u2264 x + 3\ny \u2265 \u22123x \u2212 7\nWhich point (x, y) is a solution to the given\nsystem of inequalities in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, \u221214)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 14)"
+   },
+   {
+    "label": "C",
+    "content": "(\u221214, 0)"
+   },
+   {
+    "label": "D",
+    "content": "(14, 0) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-48",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 48,
+  "exam": "May 2025",
+  "page": 137,
+  "pdf_page": 49,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A landscaper will plant two types of shrubs,\nhydrangeas and winter hazels, in a park.\nThere will be no more than 244 total shrubs\nplanted, and the number of hydrangeas\nplanted will be at most three times the num-\nber of winter hazels planted. Which of the\nfollowing systems of inequalities best repre-\nsents this situation, where h is the number\nof hydrangeas that will be planted and w\nis the number of winter hazels that will be\nplanted?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "h + w \u2264 244 h \u2264 3w"
+   },
+   {
+    "label": "B",
+    "content": "h + w \u2264 244 3h \u2265 w"
+   },
+   {
+    "label": "C",
+    "content": "h + w \u2265 244 h \u2264 3w"
+   },
+   {
+    "label": "D",
+    "content": "h + w \u2265 244 3h \u2265 w"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-51",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 51,
+  "exam": "May 2025",
+  "page": 138,
+  "pdf_page": 50,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "y > 5x \u2212 4\nFor which of the following tables are all the\nvalues of x and their corresponding values of\ny solutions to the given inequality?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x y 4 11 6 21 9 36"
+   },
+   {
+    "label": "B",
+    "content": " x y 4 16 6 26 9 41"
+   },
+   {
+    "label": "C",
+    "content": " x y 4 21 6 31 9 46"
+   },
+   {
+    "label": "D",
+    "content": " x y 4 21 6 21 9 41"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-52",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 52,
+  "exam": "June 2025",
+  "page": 138,
+  "pdf_page": 50,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A plant nursery classifies a perennial flower\nspecies as tall if its typical height when\nfully grown is more than 100 centimeters.\nEach of the following inequalities represents\nthe possible heights h, in centimeters, for a\nspecific perennial flower species when fully\ngrown. Which inequality represents the pos-\nsible heights h, in centimeters, for a tall\nperennial flower species?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18 < h < 95"
+   },
+   {
+    "label": "B",
+    "content": "41 < h < 89"
+   },
+   {
+    "label": "C",
+    "content": "84 < h < 100"
+   },
+   {
+    "label": "D",
+    "content": "110 < h < 158"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-53",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 53,
+  "exam": "June US 2025",
+  "page": 138,
+  "pdf_page": 50,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "For a certain classification, the positive mass\nm, in grams, of an object must be less than\n510 grams. Which inequality represents this\nsituation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "m > 510"
+   },
+   {
+    "label": "B",
+    "content": "m < 0"
+   },
+   {
+    "label": "C",
+    "content": "\u2212510 < m < 0"
+   },
+   {
+    "label": "D",
+    "content": "0 < m < 510"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-55",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 55,
+  "exam": "June US 2025",
+  "page": 139,
+  "pdf_page": 51,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "A car travels at a speed of at least 25 miles\nper hour but no more than 50 miles per hour\nfor a certain part of a trip. Which inequal-\nity represents this situation, where x is the\nspeed of the car, in miles per hour, on this\npart of the trip?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x \u2265 25"
+   },
+   {
+    "label": "B",
+    "content": "x \u2265 50"
+   },
+   {
+    "label": "C",
+    "content": "25 \u2264 x \u2264 50"
+   },
+   {
+    "label": "D",
+    "content": "x \u2264 75"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-inequalities-56",
+  "book": "ma2",
+  "topic": "Linear Inequalities",
+  "num": 56,
+  "exam": "October US 2024",
+  "page": 139,
+  "pdf_page": 51,
+  "src": "67c94270-90170_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LI",
+  "body": "In a set of four consecutive odd integers,\nwhere the integers are ordered from least\nto greatest, the first integer is represented\nby x. The product of 28 and the third odd\ninteger in the set is at most the value of\n50 less than the sum of the first and fourth\nodd integers in the set. What is the greatest\npossible value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-2",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 2,
+  "exam": "November 2023",
+  "page": 145,
+  "pdf_page": 57,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "Time(years) Total amount (dollars)\n0 604.00\n1 607.62\n2 611.27\nSam opened a savings account at a bank.\nThe table shows the exponential relation-\nship between the time. t, in years, since Sam\nopened the account and the total amount, n,\nin dollars, in the account. If Sam made no\nadditional deposits or withdrawals, which of\nthe following equations best represents the\nrelationship between t and n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "n = 0.006(1 + 604)t"
+   },
+   {
+    "label": "B",
+    "content": "n = 604(1 + 0.006)t"
+   },
+   {
+    "label": "C",
+    "content": "n = (1 + 0.006)t"
+   },
+   {
+    "label": "D",
+    "content": "n = (1 + 604)t"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-3",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 3,
+  "exam": "December 2023",
+  "page": 145,
+  "pdf_page": 57,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The graph of the polynomial function f\nin the xy-plane, where y = f(x), has x-\nintercepts of (-7,0) and (9,0). Which of the\nfollowing must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(0) = \u22127"
+   },
+   {
+    "label": "B",
+    "content": "f(9) = \u22127"
+   },
+   {
+    "label": "C",
+    "content": "f(\u22127) = 0"
+   },
+   {
+    "label": "D",
+    "content": "f(\u22127) = 9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-7",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 7,
+  "exam": "May 2024",
+  "page": 146,
+  "pdf_page": 58,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The graph of the function f in the\nxy\u2212plane, where y = f(x), has\nx\u2212intercepts of (\u22125, 0), (3, 0), and (6, 0).\nWhich of the following must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(0) = \u22125"
+   },
+   {
+    "label": "B",
+    "content": "f(0) = 3"
+   },
+   {
+    "label": "C",
+    "content": "f(5) = 0"
+   },
+   {
+    "label": "D",
+    "content": "f(6) = 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ }
+]

@@ -1,0 +1,2590 @@
+[
+ {
+  "id": "satmath-ma2-mean-median-mode-range-4",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 4,
+  "exam": "August US 2023",
+  "page": 270,
+  "pdf_page": 2,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Scientists examined water samples from dif-\nferent water springs. For these samples, the\npartial pressure of carbon dioxide in a closed\nsystem (limited carbon dioxide supply) had\na minimum of 0.014 atmosphere (atm) and\na maximum of 0.180 atm. The partial pres-\nsure of carbon dioxide in an open system\n(unlimited carbon dioxide supply) had a\nminimum of 0.00049 atm and a maximum\nof 0.05900 atm. Which statement best com-\npares the range of the partial pressure of\ncarbon dioxide for closed systems and open\nsystems?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The range for closed systems is less than the range for open systems."
+   },
+   {
+    "label": "B",
+    "content": "The range for closed systems is greater than the range for open systems."
+   },
+   {
+    "label": "C",
+    "content": "The ranges are equal."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the ranges."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-5",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 5,
+  "exam": "May 2024",
+  "page": 270,
+  "pdf_page": 2,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The list gives the mass, in grams, of 5 ruffed\nlemurs:\n3, 910; 3, 910; 3, 130; 3, 950; 3, 150.\nWhat is the mean mass, in grams, of these\n5 ruffed lemurs?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-6",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 6,
+  "exam": "March US 2023",
+  "page": 270,
+  "pdf_page": 2,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the yearly snowfall in cen-\ntimeters (cm) in Toronto for 9 years.\nYear Snowfall(cm)\n2002 114.9\n2003 129.6\n2004 134.9\n2005 162.6\n2006 32.4\n2007 114.1\n2008 216.5\n2009 89.0\n2010 45.6\nWhat was the median snowfall in cm in\nToronto for these years?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "32.4"
+   },
+   {
+    "label": "B",
+    "content": "114.9"
+   },
+   {
+    "label": "C",
+    "content": "115.5"
+   },
+   {
+    "label": "D",
+    "content": "184.1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-8",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 8,
+  "exam": "August US 2023",
+  "page": 271,
+  "pdf_page": 3,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "1 2 3 4 5 6 7 8 9 10\nA data set containing 9 values is summa-\nrized in the dot plot shown. Which of the\nfollowing statements about the relationship\nbetween the mean and the median of the\ndata set must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean is equal to the median."
+   },
+   {
+    "label": "B",
+    "content": "The mean is less than to the median."
+   },
+   {
+    "label": "C",
+    "content": "The mean is greater than to the me- dian."
+   },
+   {
+    "label": "D",
+    "content": "The relationship between the mean and the median cannot be determined from this dot plot."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-10",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 10,
+  "exam": "August US 2023",
+  "page": 271,
+  "pdf_page": 3,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Scientists placed 50 temperature probes\nalong a coral reef. The dot plot gives the\ntemperature readings from 49 of the 50\nprobes.\n79.97 79.98 79.99 80 80.01 80.02 80.03\nTemperature (\u00b0F)\nThe temperature reading from the probe not\nrecorded in the dot plot was 73.27 degrees\nFahrenheit(\u25e6\nF). Which statement correctly\ncompares the mean temperature reading of\nthe 49 probes recorded in the dot plot to the\nmean temperature reading of all 50 probes?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean temperature reading of the 49 probes is greater than the mean tem- perature reading of all 50 probes."
+   },
+   {
+    "label": "B",
+    "content": "The mean temperature reading of the 49 probes is less than the mean tem- perature reading of all 50 probes."
+   },
+   {
+    "label": "C",
+    "content": "The mean temperature reading of the 49 probes is the same as the mean tem- perature reading of all 50 probes."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the means. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-11",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 11,
+  "exam": "May US 2024",
+  "page": 272,
+  "pdf_page": 4,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "6, 6, 12, 16, 35\nWhat is the median of the data shown?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-14",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 14,
+  "exam": "May 2024",
+  "page": 272,
+  "pdf_page": 4,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "80 90 100 110 120 130 140\nNumber of units sold per day\nA store owner recorded the number of units\nof a certain product that were sold per day\nfor 28 days. What is the minimum number\nof units of this product sold per day for these\n28 days?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-16",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 16,
+  "exam": "August US 2024",
+  "page": 273,
+  "pdf_page": 5,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Ari examined a set of 86 plants. The light-\nest plant has a mass of 2.8 kilograms (kg)\nand the heaviest plant has a mass of 6.2 kg.\nChihiro examined the same set of 86 plants\nand also an additional plant with a mass\nof 11.7 kg. Which of the following must be\ntrue about the set of plants that Ari ex-\namined and the set of plants that Chihiro\nexamined?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The standard deviation of the masses, in kg, of the plants that Ari examined is greater than the standard deviation of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "B",
+    "content": "The range of the masses, in kg, of the plants that Ari examined is greater than the range of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "C",
+    "content": "The median of the masses, in kg, of the plants that Ari examined is less than the median of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "D",
+    "content": "The mean of the masses, in kg, of the plants that Ari examined is less than the mean of the masses, in kg, of the plants that Chihiro examined."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-17",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 17,
+  "exam": "December 2024",
+  "page": 273,
+  "pdf_page": 5,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The list gives the number of individuals in\neach of 6 groups of ring-tailed lemurs.\n17, 4, 20, 17, 18, 6\nWhat is the range of the numbers of individ-\nuals for the 6 groups of ring-tailed lemurs?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-18",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 18,
+  "exam": "October US 2024",
+  "page": 273,
+  "pdf_page": 5,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Number\nof birds\nNumber\nof days\n14 3\n15 3\n16 4\n17 1\n18 3\n19 9\nA science class studied the feeding behavior\nof the birds that visited a bird feeder each\nschool day for a period of time. The table\nsummarizes the number of birds the class\nobserved visiting the bird feeder each school\nday during this period of time. What is the\nmedian number of birds the class observed\nvisiting the bird feeder each school day dur-\ning this period of time?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-19",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 19,
+  "exam": "May 2024",
+  "page": 273,
+  "pdf_page": 5,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Data set A: 8, 11, 12, 15, 21, 27\nData set B: 9, 12, 13, 16, 22, h\nData sets A and B each consist of 6 values\nas shown, where h is a constant. If the stan-\ndard deviation of data set A is greater than\nthe standard deviation of data set B, which\nof the following could be the value of h?\nI. 23\nII. 28\nIII.29",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "III only"
+   },
+   {
+    "label": "D",
+    "content": "II or III "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-22",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 22,
+  "exam": "May US 2024",
+  "page": 274,
+  "pdf_page": 6,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "720 722 724 726 728 730 732\nOrbital period (days)\nA data set of the orbital periods, rounded\nto the nearest whole number of Earth days\nfor 13 of Jupiter\u2019s moons is represented in\nthe dot plot. An additional moon with an\norbital period of 628 days is added to the\noriginal data set to create a new data set\nof 14 orbital periods. Which statement best\ncompares the mean and median of the new\ndata set to the mean and median of the orig-\ninal data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of the new data set is equal to the mean of the original data set, and the median of the new data set is equal to the median of the original data set."
+   },
+   {
+    "label": "B",
+    "content": "The mean of the new data set is equal to the mean of original data set, and the median of the new data set is less than the median of the original data set."
+   },
+   {
+    "label": "C",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is less than the median of the original data set."
+   },
+   {
+    "label": "D",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is equal to the median of the original data set. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-23",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 23,
+  "exam": "October US 2024",
+  "page": 275,
+  "pdf_page": 7,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "x y\n85 6\n90 5\n95 10\nTotal 21\nAri will add a 135-year-old stamp to her\noriginal collection, creating a new collection\nof 22 stamps. Which statement correctly\ncompares the mean ages and median ages\nof Ari\u2019s original and new collections?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean age for the new collection is greater than the mean age for the orig- inal collection, and the median age for the new collection is greater than the median age for the original collection."
+   },
+   {
+    "label": "B",
+    "content": "The mean age for the new collection is greater than the mean age for the orig- inal collection, but the median age is the same for the original and new col- lections."
+   },
+   {
+    "label": "C",
+    "content": "The mean age for the new collection is less than the mean age for the original collection, and the median age for the new collection is less than the median age for the original collection."
+   },
+   {
+    "label": "D",
+    "content": "The median age for the new collection is greater than the median age for the original collection, but the mean age is the same for the original and new col- lections."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-26",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 26,
+  "exam": "June 2024",
+  "page": 276,
+  "pdf_page": 8,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Data set A: 5, 8, 11, 11, 14, 20\nData set B: 5, 8, 11, 11, 14, 20, 41\nTwo data sets are shown. Which statement\nbest compares the medians of the data sets?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The median of data set A is greater than the median of data set B."
+   },
+   {
+    "label": "B",
+    "content": "The median of data set A is less than the median of data set B."
+   },
+   {
+    "label": "C",
+    "content": "The medians of data sets A and B are equal."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the medians."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-27",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 27,
+  "exam": "October US 2024",
+  "page": 276,
+  "pdf_page": 8,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Weight(pounds) Frequency\n13 12\n14 10\n15 3\n16 5\n17 7\n19 12\n18 13\n20 9\nThe frequency table summarizes a data set\nof the weights rounded to the nearest pound\n71 Ardeotis kori birds. A weight of 32\npounds is added to the original data set, cre-\nating a new data set of the weights, rounded\nto the nearest pound, of 72 Ardeotis kori\nbirds. Which statement best compares the\nmean and the median of the new data set\nto the mean and median of the original data\nsat?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of the new data set is greater than the mean of the original data set, and the median of the new data set is greater than the median of the original data set."
+   },
+   {
+    "label": "B",
+    "content": "The mean of the new data set is greater than the mean of the original data set, and the medians of the two data sets are equal."
+   },
+   {
+    "label": "C",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is less than the median of the original data set."
+   },
+   {
+    "label": "D",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is greater than the median of the original data set. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-29",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 29,
+  "exam": "June 2024",
+  "page": 277,
+  "pdf_page": 9,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "An environmental scientist is investigat-\ning the volatility of 175 organic compounds\nby finding the boiling point of each com-\npound. The mean boiling point of all 175\ncompounds is 167 degrees Celsius. The sci-\nentist classifies each of these compounds\nas either semivolatile or volatile. Of the 175\ncompounds, 50 compounds were classified as\nsemivolatile, and these 50 compounds have\na mean boiling point of 327 degrees Celsius.\nThe remaining 125 compounds were classi-\nfied as volatile. What is the mean boiling\npoint, in degrees Celsius, of the 125 com-\npounds classified as volatile compounds?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-31",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 31,
+  "exam": "October US 2024",
+  "page": 278,
+  "pdf_page": 10,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Each of the following frequency tables repre-\nsent a data set. Which of the following fre-\nquency tables represents the data set with\nthe smallest standard deviation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " Value Frequency 3 0 4 10 5 55 6 10 7 0"
+   },
+   {
+    "label": "B",
+    "content": " Value Frequency 3 11 4 17 5 19 6 17 7 11"
+   },
+   {
+    "label": "C",
+    "content": " Value Frequency 3 15 4 15 5 15 6 15 7 15"
+   },
+   {
+    "label": "D",
+    "content": " Value Frequency 3 28 4 7 5 5 6 7 7 28"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-32",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 32,
+  "exam": "November 2024",
+  "page": 278,
+  "pdf_page": 10,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Data set F consists of 55 integers, where\nthe value of each integer is between 150 and\n260. Data set G consists of the same 55 in-\ntegers in F as well as the integer 10. Which\nof the following must be less for data set G\nthan for data set F?\nI. The mean\nII. The median",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-33",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 33,
+  "exam": "November US 2024",
+  "page": 278,
+  "pdf_page": 10,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "DatasetA : 2, 2, 2, 5, 5, 8, 11, 11, 14, 14, 14\nDatasetB : 2, 5, 5, 8, 8, 8, 8, 8, 11, 11, 14\nData set A and data set B each have 11 val-\nues. Which of the following statements best\ncompares the median of data set A and the\nmedian of data set B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The median of data set A is greater than the median of data set B."
+   },
+   {
+    "label": "B",
+    "content": "The median of data set A is less than the median of data set B."
+   },
+   {
+    "label": "C",
+    "content": "The medians of data sets A and B are equal"
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the medians. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-36",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 36,
+  "exam": "March 2025",
+  "page": 279,
+  "pdf_page": 11,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The list gives the mass, in grams, of 5 ruffed\nlemurs.\n3, 810; 3, 810; 3, 030; 3, 850; 3, 050\nWhat is the mean mass, in grams, of these\n5 ruffed lemurs?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-37",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 37,
+  "exam": "May 2025",
+  "page": 279,
+  "pdf_page": 11,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Mass (grams) Frequency\n10 12\n20 6\n30 8\n40 9\nThe frequency table summarizes the mass,\nin grams, of 35 objects. What is the mean\nmass, in grams, of these objects?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-40",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 40,
+  "exam": "June 2025",
+  "page": 280,
+  "pdf_page": 12,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A survey of the daily commuting times, in\nminutes, of seven different Chicago-based\nemployees at a certain company yielded a\ndata set consisting of the values 31, 13, 44,\n32, 53, 22, and 44. A survey of the daily\ncommuting times, in minutes, of seven dif-\nferent San Francisco-based employees at the\nsame company yielded a data set consisting\nof the values 46, 31, 19, 33, 48, x, and 38.\nIf the means of the two data sets are equal,\nwhat is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-42",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 42,
+  "exam": "June 2025",
+  "page": 281,
+  "pdf_page": 13,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Ari examined a set of 86 plants. The light-\nest plant had a mass of 2.8 kilograms (kg)\nand the heaviest plant had a mass of 6.3 kg.\nChihiro examined the same set of 86 plants\nand also an additional plant with a mass\nof 11.6 kg. Which of the following must be\ntrue about the set of plants that Ari ex-\namined and the set of plants that Chihiro\nexamined?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The standard deviation of the masses, in kg, of the plants that Ari examined is greater than the standard deviation of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "B",
+    "content": "The range of the masses, in kg, of the plants that Ari examined is greater than the range of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "C",
+    "content": "The median of the masses, in kg, of the plants that Ari examined is less than the median of the masses, in kg, of the plants that Chihiro examined."
+   },
+   {
+    "label": "D",
+    "content": "The mean of the masses, in kg, of the plants that Ari examined is less than the mean of the masses, in kg, of the plants that Chihiro examined. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-45",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 45,
+  "exam": "June US 2025",
+  "page": 282,
+  "pdf_page": 14,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "720 722 724 726 728 730 732\nOrbital period (days)\nA data set of the orbital periods, rounded\nto the nearest whole number of Earth days,\nfor 13 of Jupiter\u2019s moons is represented in\nthe dot plot. An additional moon with an\norbital period of 251 days is added to the\noriginal data set to create a new data set\nof 14 orbital periods. Which statement best\ncompares the mean and median of the new\ndata set to the mean and median of the orig-\ninal data set?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of the new data set is equal to the mean of the original data set, and the median of the new data set is equal to the median of the original data set."
+   },
+   {
+    "label": "B",
+    "content": "The mean of the new data set is equal to the mean of the original data set, and the median of the new data set is less than the median of the original data set."
+   },
+   {
+    "label": "C",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is less than the median of the original data set."
+   },
+   {
+    "label": "D",
+    "content": "The mean of the new data set is less than the mean of the original data set, and the median of the new data set is equal to the median of the original data set. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-48",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 48,
+  "exam": "August 2024",
+  "page": 284,
+  "pdf_page": 16,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Value Data set A frequency Data set B frequency\n40 2 8\n43 4 7\n46 5 5\n49 7 4\n52 8 2\nData set A and data set B each consist of 26 values. The table shows the frequencies of the\nvalues for each data set. Which of the following statements best compares the means of the two\ndata sets?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The mean of data set A is greater than the mean of data set B."
+   },
+   {
+    "label": "B",
+    "content": "The mean of data set A is less than the mean of data set B."
+   },
+   {
+    "label": "C",
+    "content": "The mean of data set A is equal to the mean of data set B."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the means of the data sets."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-49",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 49,
+  "exam": "November US 2024",
+  "page": 284,
+  "pdf_page": 16,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The values in data sets X and Y are shown in the table.\nData set X 13 13 14 14 15 16 16 17 17\nData set Y 2 2 3 3 4 5 5 6 6\nThe standard deviation of data set X is q, and the standard deviation of data set Y is s. Which\nof the following statements about the standard deviation of the data sets is true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "q < s"
+   },
+   {
+    "label": "B",
+    "content": "q > s"
+   },
+   {
+    "label": "C",
+    "content": "q = s"
+   },
+   {
+    "label": "D",
+    "content": "The relationship between q and s cannot be determined. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-scatterplots-26",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 26,
+  "exam": "August US 2023",
+  "page": 299,
+  "pdf_page": 31,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "In 2002, the NFS granted a total of ap-\nproximately 39 million dollars to US muse-\nums. Which of the following is closest to the\npercentage of this total that was granted to\nmuseums in Minnesota?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.1%"
+   },
+   {
+    "label": "B",
+    "content": "1.2%"
+   },
+   {
+    "label": "C",
+    "content": "8.2%"
+   },
+   {
+    "label": "D",
+    "content": "12.2%"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-scatterplots-27",
+  "book": "ma2",
+  "topic": "Scatterplots",
+  "num": 27,
+  "exam": "August US 2023",
+  "page": 299,
+  "pdf_page": 31,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-DI",
+  "body": "What is the approximate average rate of\nchange of the amount, in millions of dollars\nper year, that the NFS granted to museums\nin Minnesota from 2000 to 2006?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-2.07"
+   },
+   {
+    "label": "B",
+    "content": "-0.48"
+   },
+   {
+    "label": "C",
+    "content": "0.41"
+   },
+   {
+    "label": "D",
+    "content": "0.82 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-1",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 1,
+  "exam": "May 2024",
+  "page": 301,
+  "pdf_page": 33,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A company conducted a study concerning\nthe time spent on extracurricular activities\nby students in grades 6, 7, and 8 and their\nlevel of school spirit. A total of 90 students\nwere selected at random from all students\nin grades 6, 7, and 8 in a large school dis-\ntrict in the US. The selected students were\nasked to report their level of school spirit\nas either low, medium, or high. The table\nsummarizes the distribution of their selected\nstudents by grade.\nGrade 6 7 8\nNumber of\nstudents\n30 26 34\nIf the results of the study suggest a relation-\nship between the self-reported level of school\nspirit and the amount of time spent on ex-\ntracurricular activities by students in grades\n6, 7, and 8, which of the following aspects of\nthe study will prevent the results from be-\ning generalized to all students in grades 6,\n7, and 8 in the US?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The selected students are not all from the same school."
+   },
+   {
+    "label": "B",
+    "content": "The number of selected students is too small."
+   },
+   {
+    "label": "C",
+    "content": "The number of selected students from each grade is different."
+   },
+   {
+    "label": "D",
+    "content": "The students were not selected at ran- dom from all students in grades 6, 7, and 8."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-2",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 2,
+  "exam": "March 2024",
+  "page": 301,
+  "pdf_page": 33,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A machine fills bags with approximately 10\nounces of cranberries. To test the accuracy\nof the filling process, 148 bags of cranber-\nries were selected at random and weighed.\nBased on the sample, it is estimated that\nthe average weight of all bags of cranberries\nfilled by the machine in an 8-hour period is\n9.89 ounces, with an associated margin of\nerror of 0.14 ounce. Which of the following\nis the best interpretation of this estimate?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Plausible values for the average weight of all bags of cranberries filled by the machine are between 9.75 ounces and 10.03 ounces."
+   },
+   {
+    "label": "B",
+    "content": "Plausible values for the average weight of all bags of cranberries filled by the machine are less than 9.75 ounces or greater than 10.03 ounces."
+   },
+   {
+    "label": "C",
+    "content": "The average weight of all bags of cran- berries filled by the machine is greater than 9.99 ounces."
+   },
+   {
+    "label": "D",
+    "content": "The average weight of all bags of cran- berries filled by the machine is less than 9.99 ounces. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-3",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 3,
+  "exam": "December 2023",
+  "page": 302,
+  "pdf_page": 34,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A town manager selected 2 random sam-\nples of residents in the town to estimate the\npercentage of all residents that planned to\nvote in favor of a new business in the down-\ntown area. Based on the first sample, he\nestimated that 75% of the residents in town\nplanned to vote in favor, with an associate\nmargin of error of 8.3%. Based on the sec-\nond sample, he estimated that 83% of the\nresidents in the town planned to vote in fa-\nvor, with an associated margin of error of\n6.7%. Assuming the margins of error were\ncalculated the same way, which of the fol-\nlowing best explains why the first sample\nobtained a larger margin of error than the\nsecond sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The first sample contained fewer resi- dents than the second sample."
+   },
+   {
+    "label": "B",
+    "content": "The first sample contained more resi- dents than the second sample."
+   },
+   {
+    "label": "C",
+    "content": "The first sample contained a lower per- centage of residents that planned to vote in favor of a new business in the downtown area"
+   },
+   {
+    "label": "D",
+    "content": "The first sample contained higher per- centage of residents that planned to vote in favor of a new business in the downtown area"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-4",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 4,
+  "exam": "August US 2024",
+  "page": 302,
+  "pdf_page": 34,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A district board in a certain state is propos-\ning a change to the time school starts to all\nhigh schools in the district. A sample of 353\nhigh school students were selected from all\nhigh school students in the district.The se-\nlected students were asked if they approved\nof the proposed change, and 300 students re-\nsponded that they did not approve. Which\nof the following is the largest population\nthat the results of the survey can be gener-\nalized?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "All high school students in the district"
+   },
+   {
+    "label": "B",
+    "content": "The 353 students who were surveyed"
+   },
+   {
+    "label": "C",
+    "content": "The 300 students that responded that they did not approve of the proposed change"
+   },
+   {
+    "label": "D",
+    "content": "All high school students in the state "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-5",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 5,
+  "exam": "August US 2024",
+  "page": 303,
+  "pdf_page": 35,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A company that produces only one type\nof item wants to estimate the percent on\nthe items produced in a typical week that\nare defective. A random sample of 400 of\nthe items produced in a certain week were\ntested. Based on the sample, it is estimated\nthat 8.5% of all items produced by the com-\npany in this week were defective, with an\nassociated margin of error of 2.73%. Based\non the estimate and associated margin of\nerror, which of the following is the most\nappropriate conclusion about all items pro-\nduced by the company during this week.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "A 2.73% of all items are defective."
+   },
+   {
+    "label": "B",
+    "content": "It is plausible that between 5.77% and 11.23% of the items are defective."
+   },
+   {
+    "label": "C",
+    "content": "8.5% of all items are defective."
+   },
+   {
+    "label": "D",
+    "content": "It is plausible that more than 11.23% of the items are defective."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-6",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 6,
+  "exam": "June 2024",
+  "page": 303,
+  "pdf_page": 35,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "To estimate the proportion of a population\nthat has a certain characteristic, a random\nsample was selected from the population.\nBased on the sample, it is estimated that\nthe proportion of the population that has\nthe characteristic is 0.2, with an associated\nmargin of error of 0.08. Based on this es-\ntimate and margin of error, which of the\nfollowing is the most appropriate conclusion\nabout the proportion of the population that\nhas the characteristic?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It is plausible that the proportion is be- tween 0.12 and 0.28."
+   },
+   {
+    "label": "B",
+    "content": "It is plausible that the proportion is less than 0.12."
+   },
+   {
+    "label": "C",
+    "content": "The proportion is exactly 0.2."
+   },
+   {
+    "label": "D",
+    "content": "It is plausible that the proportion is greater than 0.28. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-7",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 7,
+  "exam": "August US 2024",
+  "page": 304,
+  "pdf_page": 36,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The manager of a gym selected a sample\nof 139 members at random to estimate the\npercentage of the gym\u2019s members that would\ncontinue to pay for a membership if the price\nincreased. From the survey, the manager es-\ntimates that 82% of the gym\u2019s members\nwould continue to pay for membership if the\nprice increased, with associated margin of\nerror of 6.39%. If the survey is repeated\nwith a random sample of 278 members and\nthe results are calculated in the same way,\nwhich of the following will be the most likely\neffect of using the larger random sample\ncompared to the smaller random sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The margin of error will be lower"
+   },
+   {
+    "label": "B",
+    "content": "The margin of error will be higher"
+   },
+   {
+    "label": "C",
+    "content": "The estimate of the percentage of the gym\u2019s members that would continue to pay for a membership if the price in- creased will be lower"
+   },
+   {
+    "label": "D",
+    "content": "The estimate of the percentage of the gym\u2019s members that would continue to pay for a membership if the price in- creased will be higher"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-8",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 8,
+  "exam": "October US 2024",
+  "page": 304,
+  "pdf_page": 36,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A machine fills bags with approximately 29\nounces of walnuts. To test the accuracy of\nthe filling process, 169 bags of walnuts were\nselected at random and weighed. Based on\nthe sample, it is estimated that the aver-\nage weight of all bags of walnuts filled by\nthe machine in an 8-hour period is 28.88\nounces, with an associated margin of error\nof 0.13 ounce. Which of the following is the\nbest interpretation of this estimate?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Plausible values for the average weight of all bags of walnuts filled by the ma- chine are between 28.75 ounces and 29.01 ounces."
+   },
+   {
+    "label": "B",
+    "content": "Plausible values for the average weight of all bags of walnuts filled by the ma- chine are less than 28.75 ounces or greater than 29.01 ounces."
+   },
+   {
+    "label": "C",
+    "content": "The average weight of all bags of wal- nuts filled by the machine is less than 28.99 ounces."
+   },
+   {
+    "label": "D",
+    "content": "The average weight of all bags of wal- nuts filled by the machine is greater than 28.99 ounces. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-9",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 9,
+  "exam": "October US 2024",
+  "page": 305,
+  "pdf_page": 37,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A researcher is designing a study to investi-\ngate the average number of hours a student\nat a high school spends reading per day.\nThe researcher will report the average num-\nber of hours a student at the high school\nspends reading with an associated margin\nof error. The researcher is considering using\na random sample of either 105 or 210 stu-\ndents from the high school. Which of the\nfollowing could be the most likely effect of\nusing the larger random sample compared\nto the smaller random sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The reported margin of error would be lower."
+   },
+   {
+    "label": "B",
+    "content": "The reported margin of error would be higher."
+   },
+   {
+    "label": "C",
+    "content": "The reported average number of hours would be lower."
+   },
+   {
+    "label": "D",
+    "content": "The reported average number of hours would be higher."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-10",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 10,
+  "exam": "October US 2024",
+  "page": 305,
+  "pdf_page": 37,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A survey was conducted in Franklin to es-\ntimate number of adult residents who sup-\nported the addition of a parking garage in\ntheir town. Based on the survey, it is es-\ntimated that 77% of all adult residents of\nFranklin support the addition of a parking\ngarage in their town, with an associated\nmargin of error of 5%. Which of the fol-\nlowing is the most appropriate conclusion\nabout all adult residents of Franklin?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Plausible values for the percent of all adult residents of Franklin who sup- port the addition of a parking garage in their town are between 72% and 82%"
+   },
+   {
+    "label": "B",
+    "content": "The addition of a parking garage in the town is supported by exactly 72% of all adult residents of Franklin"
+   },
+   {
+    "label": "C",
+    "content": "Plausible values for the percent of all adult residents of Franklin who sup- port the addition of a parking garage in their town are either less than 72% or more than 82%"
+   },
+   {
+    "label": "D",
+    "content": "The addition of a parking garage in the town is supported by more than 82% of all adult residents of Franklin "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-11",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 11,
+  "exam": "December 2024",
+  "page": 306,
+  "pdf_page": 38,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A research manager selected 2 random sam-\nples of ovens of a certain type to estimate\nthe average amount of time this type of\noven takes to preheat to 325 degrees Fahren-\nheit (\u25e6\nF). The research manager recorded\nthe amount of time, in minutes, each oven\ntakes to preheat to 325 (\u25e6\nF). Based on the\nfirst sample, the research manager estimated\nthat this type of oven takes an average of\n15.2 minutes to preheat to 325 (\u25e6\nF), with\nan associated margin of error of 1 minute.\nBased on the second sample, the research\nmanager estimated that this type of oven\ntakes an average of 15.4 minutes to preheat\nto 325 (\u25e6\nF), with an associated margin of\nerror of 2.2 minutes. Assuming the margins\nof error were calculated the same way, which\nof the following best explains why the first\nsample obtained a smaller margin of error\nthan the second sample?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The first sample contained more ovens than the second sample"
+   },
+   {
+    "label": "B",
+    "content": "The first sample contained fewer ovens than the second sample."
+   },
+   {
+    "label": "C",
+    "content": "The first sample took more time on av- erage to preheat to 325(\u25e6 F) than the second sample."
+   },
+   {
+    "label": "D",
+    "content": "The first sample took less time on av- erage to preheat to 325(\u25e6 F) than the second sample."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-12",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 12,
+  "exam": "June 2025",
+  "page": 306,
+  "pdf_page": 38,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A survey was conducted in Madison to es-\ntimate the percent of adult residents who\nsupport the addition of streetlights at every\ncorner in their town. Based on the survey,\nit is estimated that 40% of all adult resi-\ndents of Madison support the addition of\nstreetlights at every corner in their town,\nwith an associated margin of error of 6%.\nWhich of the following is the most appro-\npriate conclusion about all adult residents\nof Madison?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Plausible values for the percent of all adult residents of Madison who support the addition of streetlights at every cor- ner in their town are between 34% and 46%."
+   },
+   {
+    "label": "B",
+    "content": "The addition of streetlights at every corner in the town is supported by ex- actly 34% of all adult residents of Madi- son."
+   },
+   {
+    "label": "C",
+    "content": "Plausible values for the percent of all adult residents of Madison who support the addition of streetlights at every cor- ner in their town are either less than 34% or more than 46%."
+   },
+   {
+    "label": "D",
+    "content": "The addition of streetlights at every corner in the town is supported by more than 46% of all adult residents of Madison. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-research-organizingmargin-of-error-13",
+  "book": "ma2",
+  "topic": "Research organizing(Margin of Error;",
+  "num": 13,
+  "exam": "June US 2025",
+  "page": 307,
+  "pdf_page": 39,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A group of 40 employees selected at ran-\ndom from all the employees at a company\nwere surveyed about the number of books\nthey read last year. From the data collected,\nit was estimated that the mean number of\nbooks employees at the company read last\nyear is 6.8, with an associated margin of\nerror of 1.1. Which of the following is the\nmost appropriate conclusion?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It is plausible that the actual mean number of books employees at the com- pany read last year is less than 5.7."
+   },
+   {
+    "label": "B",
+    "content": "It is plausible that the actual mean number of books employees at the com- pany read last year is between 5.7 and 7.9."
+   },
+   {
+    "label": "C",
+    "content": "It is plausible that every employee at the company read between 6.8 and 10.1 books last year."
+   },
+   {
+    "label": "D",
+    "content": "It is plausible that the actual mean number of books employees at the com- pany read last year is greater than 7.9. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-2",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 2,
+  "exam": "November 2023",
+  "page": 313,
+  "pdf_page": 45,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "U R\nS\nV\nT\nx\u25e6\nIn the figure, RT = TU, the measure of an-\ngle V ST is 23\u25e6\nand the measure of angle\nRV S is 44\u25e6\n. What is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-3",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 3,
+  "exam": "March 2024",
+  "page": 313,
+  "pdf_page": 45,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A polygon has exactly 73 sides. If the mea-\nsure of each of the 73 interior angles of this\npolygon is (180p)\u25e6\n, what is the value of p?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-5",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 5,
+  "exam": "November 2023",
+  "page": 313,
+  "pdf_page": 45,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Quadrilaterals PQRS and WXY Z are sim-\nilar, where P, Q, and R corresponds to W,\nX, and Y , respectively. The measure of \u0338 S\nis 105\u25e6\n, PS=25, and WZ=5. What is the\nmeasure of \u0338 Z?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "21\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "75\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "105\u25e6 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-7",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 7,
+  "exam": "March 2024",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Two lines intersect at exactly one point,\nforming two acute angles and two obtuse\nangles. The measure of one of these angles\nis (9x \u2212 190)\u25e6\n. Which of the following could\nNOT be the sum of the measures of any two\nof these angles?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(\u221218x + 380)\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "(\u221218x + 740)\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "(18x \u2212 380)\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "180\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-9",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 9,
+  "exam": "March 2024",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Quadrilaterals PQRS and WXY Z are sim-\nilar where P, Q, and R correspond to W, X,\nand Y , respectively. THe measure of \u0338 S is\n135\u25e6\n, PS = 45, and WZ = 9. What is the\nmeasure of \u0338 Z?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "5\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "27\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "45\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "135\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-10",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 10,
+  "exam": "March 2024",
+  "page": 314,
+  "pdf_page": 46,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A polygon has exactly 83 sides. If the mea-\nsures of each of the 83 interior angles of this\npolygon is (180p)\u25e6\n, what value of p?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-13",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 13,
+  "exam": "May US 2024",
+  "page": 315,
+  "pdf_page": 47,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Quadrilateral P\u2032\nQ\u2032\nR\u2032\nS\u2032\nis similar to quadri-\nlateral PQRS where P, Q, R, and S cor-\nrespond to P\u2032\n, Q\u2032\n, R\u2032\n, and S\u2032\n, respectively.\nThe measure of angle P is 45\u25e6\n, the measure\nof angle Q is 70\u25e6\n, and the measure of angle R\nis 90\u25e6\n. The length of each side of P\u2032\nQ\u2032\nR\u2032\nS\u2032\nis 3 times the length of each corresponding\nside of PQRS. What is the measure of angle\nP\u2032\n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "45\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "60\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "135\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-15",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 15,
+  "exam": "June 2024",
+  "page": 315,
+  "pdf_page": 47,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "S Q\nR\nP\nNote: Figure not drawn to scale\nIn triangle PQR, QR is extended to point S.\nThe measure of \u0338 PQR is 142\u25e6\n, and the mea-\nsure of \u0338 PRS is 166\u25e6\n. What is the measure\nof \u0338 QPR?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "14\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "19\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "24\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "38\u25e6 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-18",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 18,
+  "exam": "August US 2024",
+  "page": 316,
+  "pdf_page": 48,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle PQR, the measures of angle P is\n(3x+5)\u25e6\n, the measure of angle Q is (2x+9)\u25e6\n,\nand the measure of angle R is (4y + 5)\u25e6\n.\nIf side QR is extended through point R to\npoint S, and the measure of angle PRS is\n(x + y)\u25e6\n, what is the value of x + y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-22",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 22,
+  "exam": "October US 2024",
+  "page": 317,
+  "pdf_page": 49,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In \u25b3JKL, the measures of both \u0338 J and\n\u0338 K are equal, and the measure of \u0338 L is\n134\u25e6\n. What is the measure of \u0338 J?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "23\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "46\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "67\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "90\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-25",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 25,
+  "exam": "October 2024",
+  "page": 318,
+  "pdf_page": 50,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A line intersects two parallel lines, forming\nfour acute angles and four obtuse angles.\nThe measure of one of these eight angles is\n(7x \u2212 250)\u25e6\n. The sum of the measures of\nfour of the eight angles is k. Which of the\nfollowing could NOT be equivalent to k, for\nall values of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221214x + 1, 540"
+   },
+   {
+    "label": "B",
+    "content": "14x \u2212 320"
+   },
+   {
+    "label": "C",
+    "content": "\u221228x + 1, 720"
+   },
+   {
+    "label": "D",
+    "content": "360"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-26",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 26,
+  "exam": "October US 2024",
+  "page": 318,
+  "pdf_page": 50,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A line intersects two parallel lines, forming\nfour acute and four obtuse angles. The mea-\nsure of one of the acute angles is (7x\u2212619)\u25e6\n.\nThe sum of the measure of one of the\nacute and three of the obtuse angles is\n(\u221214x + w)\u25e6\n. What is the value of w?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-lines-angles-38",
+  "book": "ma2",
+  "topic": "Lines&Angles",
+  "num": 38,
+  "exam": "June US 2025",
+  "page": 321,
+  "pdf_page": 53,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "W V\nS\nT U\np\u25e6\nr\u25e6\nNote: Figure not drawn to scale.\nIn the figure shown, point T lies on segment\nSW, and segment TU is parallel to segment\nV W. The measure of angle V is 26\u25e6\n, and\nthe measure of angle STU is 74\u25e6\n. What is\nthe value of p \u2212 r?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-1",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 323,
+  "pdf_page": 55,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangles ABC and DEF are congruent,\nwhere A corresponds to D, and B and E\nare right angles. The measure of angle A is\n62\u25e6\n. What is the value of angle F?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "28\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "62\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "90\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "118\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-3",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 3,
+  "exam": "June 2023",
+  "page": 323,
+  "pdf_page": 55,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle RST, the measure of angle R\nis 10 degrees and the measure of angle T is\n50 degrees. Point L lies on RS, point K lies\non ST, and LK is parallel to RT. What\nis the measure, in degrees, of angle SKL?\n(Disregard the degree symbol when entering\nyour answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-4",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 4,
+  "exam": "August US 2023",
+  "page": 323,
+  "pdf_page": 55,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In the figure shown, line segments AC and\nDE are parallel. The measure of angle ACB\nis 58\u25e6\n, and AB = 1.5DB.\nA\nB\nC\nD E\nWhat is the measure, in degrees, of angle\nDEB? (Disregard the degree symbol when\nentering your answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-5",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 5,
+  "exam": "August US 2023",
+  "page": 324,
+  "pdf_page": 56,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A\nD\nF\nB\nC E\nw\u25e6 x\u25e6\ns\u25e6\nz\u25e6\ny\u25e6\nIn figure shown, B and C lie on AD, E lies\non DF, and CE is parallel to AF. Which of\nthe following is enough to prove that \u25b3BDE\nis similar to \u25b3EDC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "w + y = x + z"
+   },
+   {
+    "label": "B",
+    "content": "w + x = y + z"
+   },
+   {
+    "label": "C",
+    "content": "s + x = z"
+   },
+   {
+    "label": "D",
+    "content": "s + x = y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-7",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 7,
+  "exam": "November 2023",
+  "page": 324,
+  "pdf_page": 56,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A triangle has a base length of 82 centime-\nters and a height of 164 centimeters. What\nis the area, in square centimeters, of the\ntriangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "246"
+   },
+   {
+    "label": "B",
+    "content": "3,362"
+   },
+   {
+    "label": "C",
+    "content": "6,724"
+   },
+   {
+    "label": "D",
+    "content": "13,448"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-8",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 8,
+  "exam": "December 2023",
+  "page": 324,
+  "pdf_page": 56,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle RST, the measure of angle R\nis 11 degrees and the measure of angle T\nis 77 degrees. Point L lies on RS, point\nK lies on ST, and LK is parallel to RT.\nWhat is the measure, in degrees, of angle\nSKL?(Disregard the degree symbol when\nentering the answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-10",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 10,
+  "exam": "March 2024",
+  "page": 325,
+  "pdf_page": 57,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangles ABC and DEF are congruent,\nwhere A corresponds to D, and B and E\nare right angles. The measure of angle A\nis 27\u25e6\n. What is the measure, in degrees, of\nangle F?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-12",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 12,
+  "exam": "May US 2024",
+  "page": 325,
+  "pdf_page": 57,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangles ABC and DEF are congruent,\nwhere A corresponds to D, and D, and B\nand E are right angles. The measure of\nangle A is 71\u25e6\n. What is the measure, in\ndegrees, of angle F?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-15",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 15,
+  "exam": "May 2024",
+  "page": 326,
+  "pdf_page": 58,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC and triangle DEF, sides\nAB and DE each have a side length of 6\ninches, and angles A and D each have an\nangle measure of 40\u25e6\n. Which of the follow-\ning additional pieces of information is(are)\nsufficient to prove whether triangle ABC is\ncongruent to triangle DEF?\nI. The measures of angles B and C are equal.\nII. The lengths of sides AC and DF are\nequal.\nIII. The lengths of sides BC and EF are\nequal.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I is sufficient, but II and III are not."
+   },
+   {
+    "label": "B",
+    "content": "II is sufficient, but I and III are not."
+   },
+   {
+    "label": "C",
+    "content": "III is sufficient, but I and II are not."
+   },
+   {
+    "label": "D",
+    "content": "II is sufficient and III is sufficient, but I is not."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-16",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 16,
+  "exam": "May US 2024",
+  "page": 326,
+  "pdf_page": 58,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangles ABC and DEF are similar. Each\nside length of triangle ABC is 2 times the\ncorresponding side length of triangle DEF.\nThe area of triangle ABC is 300 square\ncentimeters. What is the area, in square\ncentimeters, of triangle DEF?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-17",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 17,
+  "exam": "May 2024",
+  "page": 327,
+  "pdf_page": 59,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "U R\nS\nT\nV\nx\u25e6\nNote: Figure not drawn to scale\nIn the figure, RT = TU, the measure of an-\ngle V ST is 23\u25e6\n, and the measure of angle\nRV S is 34\u25e6\n. What is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-28",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 28,
+  "exam": "August US 2024",
+  "page": 329,
+  "pdf_page": 61,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "Triangles ABC and DEF are similar, where\nA corresponds to D, and B corresponds to\nE. The measure of angle A is 26\u25e6\n, and\nAB = 4. Which of the following statements\nmust be true?\nI. The measure of angle D is 26\u25e6\nI. DE = 4",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "II only"
+   },
+   {
+    "label": "C",
+    "content": "I and II"
+   },
+   {
+    "label": "D",
+    "content": "Neither I nor II"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-30",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 30,
+  "exam": "August US 2024",
+  "page": 330,
+  "pdf_page": 62,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A triangle inequality theorem states that\nthe sum of any two sides of a triangle must\nbe greater than the length of the third side.\nIf a triangle has side length of 8 and 13,\nwhich of inequality represents the possible\nlength, x, of the third side of the triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x < 21"
+   },
+   {
+    "label": "B",
+    "content": "x > 21"
+   },
+   {
+    "label": "C",
+    "content": "5 < x < 21"
+   },
+   {
+    "label": "D",
+    "content": "x < 5 or x > 21"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-31",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 31,
+  "exam": "August 2024",
+  "page": 330,
+  "pdf_page": 62,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The perimeter of an equilateral triangle is\n642 centimeters. The three vertices of the\ntriangle lie on a circle. The radius of the cir-\ncle is w\n\u221a\n3 centimeters. What is the value\nof w?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-33",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 33,
+  "exam": "October US 2024",
+  "page": 330,
+  "pdf_page": 62,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In \u25b3FGH, the measure of \u0338 F and \u0338 G are\neach 39\u25e6\n. What is the measure of \u0338 H?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "78\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "102\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "129\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "141\u25e6 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-35",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 35,
+  "exam": "October US 2024",
+  "page": 331,
+  "pdf_page": 63,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "A\nB\nC\nD\nE\nIn the figure shown AB =\n\u221a\n89 units, AC =\n8 units, and CE = 24 units. What is the\narea, in square units, of triangle ADE?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-37",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 37,
+  "exam": "November 2024",
+  "page": 331,
+  "pdf_page": 63,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, angle B is a right an-\ngle. The length of side AB is 10\n\u221a\n39 and\nthe length of side BC is 24\n\u221a\n39. What is\nthe length of side AC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "14 \u221a 39"
+   },
+   {
+    "label": "B",
+    "content": "26 \u221a 39"
+   },
+   {
+    "label": "C",
+    "content": "34 \u221a 39"
+   },
+   {
+    "label": "D",
+    "content": " \u221a 24 \u00b7 39 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-38",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 38,
+  "exam": "November US 2024",
+  "page": 332,
+  "pdf_page": 64,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC and triangle DEF, AB\nand DE are each equal to 5 centimeters,\nand angles A and D each have measure\n35\u25e6\n. Which additional piece of information\nis sufficient to prove that triangle ABC is\ncongruent to triangle DEF?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The lengths of sides BC and EF are equal."
+   },
+   {
+    "label": "B",
+    "content": "The lengths of sides AC and DF are equal."
+   },
+   {
+    "label": "C",
+    "content": "The measures of angles B and C are equal."
+   },
+   {
+    "label": "D",
+    "content": "No additional information is necessary to prove that the two triangles are con- gruent."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-39",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 39,
+  "exam": "November US 2024",
+  "page": 332,
+  "pdf_page": 64,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "M\nL Q\nP\nR\nNote: Figure not drawn to scale\nIn the figure, LQ intersects MP at point R,\nand LM is parallel to PQ. The lengths of\nMR, LR, and RP are 9, 10, and 19, respec-\ntively. What is the length of LQ?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 280 19"
+   },
+   {
+    "label": "B",
+    "content": " 190 9"
+   },
+   {
+    "label": "C",
+    "content": " 271 9"
+   },
+   {
+    "label": "D",
+    "content": " 280 9"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-48",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 48,
+  "exam": "December 2024",
+  "page": 334,
+  "pdf_page": 66,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "X Y\nZ\nNote: Figure not drawn to scale.\nIn the figure shown, the measure of angle X\nis 52\u25e6\n. The length of XY is 24 units and the\nlength of XZ is 17 units. What is the area,\nin square units, of triangle XY Z?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "204"
+   },
+   {
+    "label": "B",
+    "content": "408"
+   },
+   {
+    "label": "C",
+    "content": "204 sin 52\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "408 sin 52\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-49",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 49,
+  "exam": "December 2024",
+  "page": 334,
+  "pdf_page": 66,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "x feet\nP\nT\nQ S\nR\nNote: Figure not drawn to scale.\nA property owner wants to find the length\nx, in feet, across a pond as represented in\nthe figure. PR intersects ST at point Q,\nand \u25b3PTQ is similar to \u25b3RSQ. The length\nrepresented by PQ, TQ, QS, and RS were\ndetermined to be 4,200 feet, 8,400 feet, 1,400\nfeet, and 1,600 feet, respectively. What is\nthe value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-50",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 50,
+  "exam": "March 2025",
+  "page": 335,
+  "pdf_page": 67,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "30\u25e6\nA\nB C\nIn triangle ABC, BC = 36\n\u221a\n3. What is the\nvalue of cos A?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-51",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 51,
+  "exam": "March 2025",
+  "page": 335,
+  "pdf_page": 67,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, the measure of angle A\nis 52\u25e6\nand AC = 35. In triangle PQR, the\nmeasure of angle P is 52\u25e6\nand PR = 105.\nWhich additional piece of information is suf-\nficient to prove that triangle ABC is similar\nto triangle PQR?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "AB = 30 and PQ = 30"
+   },
+   {
+    "label": "B",
+    "content": "AB = 30 and QR = 90"
+   },
+   {
+    "label": "C",
+    "content": "The measures of angle B and angle R are 34\u25e6 and 94\u25e6 , respectively."
+   },
+   {
+    "label": "D",
+    "content": "The measures of angle B and angle Q are 52\u25e6 and 34\u25e6 , respectively."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-52",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 52,
+  "exam": "March 2025",
+  "page": 335,
+  "pdf_page": 67,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "The perimeter of an equilateral triangle is\n876 centimeters. The three vertices of the\ntriangle lie on a circle. The radius of the cir-\ncle is w\n\u221a\n3 centimeters. What is the value\nof w?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-55",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 55,
+  "exam": "March 2025",
+  "page": 336,
+  "pdf_page": 68,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle RST, the measure of angle R\nis 39\u25e6\n; the measure of angle S is x\u25e6\n, and the\nmeasure of angle T is (5x \u2212 3)\u25e6\n. Point L\nlies on RS, point K lies on ST, and LK is\nparallel to RT. What is the measure, in de-\ngrees, of angle SKL? (Disregard the degree\nsymbol when entering your answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-56",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 56,
+  "exam": "March 2025",
+  "page": 336,
+  "pdf_page": 68,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC, the measure of angle A\nis 58\u25e6\nand AC = 30. In triangle PQR, the\nmeasure of angle P is 58\u25e6\nand PR = 120.\nWhich additional piece of information is suf-\nficient to prove that triangle ABC is similar\nto triangle PQR?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "AB = 35 and PQ = 35"
+   },
+   {
+    "label": "B",
+    "content": "AB = 35 and QR = 140"
+   },
+   {
+    "label": "C",
+    "content": "The measures of angle B and angle R are 34\u25e6 and 88\u25e6 , respectively"
+   },
+   {
+    "label": "D",
+    "content": "The measures of angle B and angle Q are 58\u25e6 and 34\u25e6 , respectively"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-58",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 58,
+  "exam": "June 2025",
+  "page": 337,
+  "pdf_page": 69,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle FGH, the measure of angle F is\n63\u25e6\n. Which additional piece of information\nis sufficient to prove that triangle FGH is a\nright triangle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The length of FH is 63."
+   },
+   {
+    "label": "B",
+    "content": "The length of GH is 126."
+   },
+   {
+    "label": "C",
+    "content": "The measure of angle H is 27\u25e6 ."
+   },
+   {
+    "label": "D",
+    "content": "The sum of the measures of angles F, G, and H is 180\u25e6 ."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-61",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 61,
+  "exam": "June US 2025",
+  "page": 337,
+  "pdf_page": 69,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle DEF, the measure of angle D\nis 47\u25e6\nand the measure of angle E is 97\u25e6\n.\nIn triangle RST, the measure of angle R\nis 47\u25e6\nand the measure of angle S is 97\u25e6\n.\nWhich of the following additional pieces of\ninformation is needed to determine whether\ntriangle DEF is similar to triangle RST?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The measure of angle F"
+   },
+   {
+    "label": "B",
+    "content": "The measure of angle T"
+   },
+   {
+    "label": "C",
+    "content": "The measure of angle F and the mea- sure of angle T"
+   },
+   {
+    "label": "D",
+    "content": "No additional information is needed. "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-62",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 62,
+  "exam": "June US 2025",
+  "page": 338,
+  "pdf_page": 70,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "B\nC\nA\n30\u25e6\n124\nIn the right triangle shown, what is the value\nof tan A?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-triangles-63",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 63,
+  "exam": "June US 2025",
+  "page": 338,
+  "pdf_page": 70,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "In triangle ABC and triangle DEF, sides\nAB and DE each have a side length of 10\ninches, and angles A and D each have an\nangle measure of 40\u00b0. Which of the follow-\ning additional pieces of information is(are)\nsufficient to prove whether triangle ABC is\ncongruent to triangle DEF?\nI. The measures of angles B and C are equal.\nII. The lengths of sides AC and DF are\nequal.\nIII. The lengths of sides BC and EF are\nequal.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I is sufficient, but II and III are not."
+   },
+   {
+    "label": "B",
+    "content": "II is sufficient, but I and III are not."
+   },
+   {
+    "label": "C",
+    "content": "III is sufficient, but I and II are not."
+   },
+   {
+    "label": "D",
+    "content": "II is sufficient and III is sufficient, but I is not."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-triangles-64",
+  "book": "ma2",
+  "topic": "Triangles",
+  "num": 64,
+  "exam": "March US 2025",
+  "page": 338,
+  "pdf_page": 70,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-LA",
+  "body": "C\nB D\nA E\nNote: Figure not drawn to scale.\nIn the figure shown, triangle CAE is simi-\nlar to triangle CBD. The measure of angle\nCBD is 57\u25e6\n, and AE = 21(BD). What is\nthe measure of angle CAE?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(21 \u00b7 57)\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "(21 + 57)\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "57\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "21\u25e6 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-5",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 5,
+  "exam": "May 2024",
+  "page": 342,
+  "pdf_page": 74,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "x\n14 27\nNote: Figure not drawn to scale\nIn the triangle shown. What is the value of\ncosx?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-11",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 11,
+  "exam": "August US 2024",
+  "page": 343,
+  "pdf_page": 75,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "2 cos (90 \u2212 a)\u25e6\n\u00b7 cos b\u25e6\n+ sin (a + y)\u25e6\n\u00b7\nsin (90 \u2212 b)\u25e6\nIn the given expression, a and b are con-\nstants such that sin a\u25e6\n= 0.5, cos b\u25e6\n= 0.99,\nand 0 < b < 90. What is the value of the\ngiven expression when y = 0?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-12",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 12,
+  "exam": "October US 2024",
+  "page": 343,
+  "pdf_page": 75,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "C\nA\nB\n12 24\nNote: Figure not drawn to scale\nRight triangle ABC is shown. What is the\nvalue of sin A?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-13",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 13,
+  "exam": "October 2024",
+  "page": 344,
+  "pdf_page": 76,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "53\nT S\nR\nNote: Figure not drawn to scale\nIn the triangle shown, RS =\n\u221a\n105. What is\nthe value of sin R?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-22",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 22,
+  "exam": "May 2025",
+  "page": 346,
+  "pdf_page": 78,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "47\nR S\nQ\nNote: Figure not drawn to scale.\nIn triangle QRS shown, QR < RS. Which\nexpression represents the length of QS",
+  "choices": [
+   {
+    "label": "A",
+    "content": "47 cos Q"
+   },
+   {
+    "label": "B",
+    "content": "47 sin Q"
+   },
+   {
+    "label": "C",
+    "content": " 47 cos Q"
+   },
+   {
+    "label": "D",
+    "content": " 47 sin Q"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-trigonometry-24",
+  "book": "ma2",
+  "topic": "Trigonometry",
+  "num": 24,
+  "exam": "May 2024",
+  "page": 346,
+  "pdf_page": 78,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-TR",
+  "body": "In triangle XY Z, angle Y is a right an-\ngle, the measure of angle Z is 39\u25e6\n, and the\nlength of Y Z is 22 units. If the area, in\nsquare units, of triangle XY Z can be repre-\nsented by the expression k tan 39\u25e6\n, where k\nis a constant, what is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-circles-1",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 348,
+  "pdf_page": 80,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "What is the diameter of the circle in the\nxy-plane with equation\n(x \u2212 5)2\n+ (y \u2212 4)2\n= 64.",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-circles-3",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 3,
+  "exam": "June 2023",
+  "page": 348,
+  "pdf_page": 80,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "(x + 3)2\n+ (y \u2212 4)2\n= 25\nIn the xy-plane, the graph of the given equa-\ntion is a circle. Which point lies on this cir-\ncle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(\u22123, 4)"
+   },
+   {
+    "label": "B",
+    "content": "(3, \u22124)"
+   },
+   {
+    "label": "C",
+    "content": "( \u221a 11 + 3, \u221a 14 \u2212 4)"
+   },
+   {
+    "label": "D",
+    "content": "( \u221a 11 \u2212 3, \u221a 14 + 4)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-4",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 4,
+  "exam": "August US 2023",
+  "page": 348,
+  "pdf_page": 80,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Circle A has equation\n(x \u2212 3)2\n+ (y + 1)2\n= 16.\nIn the xy-plane, circle B is obtained by\ntranslating circle A to the right 2 units.\nWhich equation represents circle B?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(x \u2212 5)2 + (y + 1)2 = 16"
+   },
+   {
+    "label": "B",
+    "content": "(x \u2212 3)2 + (y \u2212 1)2 = 16"
+   },
+   {
+    "label": "C",
+    "content": "(x \u2212 3)2 + (y + 3)2 = 16"
+   },
+   {
+    "label": "D",
+    "content": "(x \u2212 1)2 + (y + 1)2 = 16 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-6",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 6,
+  "exam": "August US 2023",
+  "page": 349,
+  "pdf_page": 81,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A C\nB\nO\nP\nIn the figure, AC is a diameter of the cir-\ncle with center O, and AC = 10. Triangle\n\u25b3ACB is equilateral. The length of BP is\nn times the length of AO. What is the value\nof n?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " \u221a 5"
+   },
+   {
+    "label": "B",
+    "content": " \u221a 3"
+   },
+   {
+    "label": "C",
+    "content": " \u221a 3 \u2212 1"
+   },
+   {
+    "label": "D",
+    "content": " \u221a 5 \u2212 1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-10",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 10,
+  "exam": "March 2024",
+  "page": 350,
+  "pdf_page": 82,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "What is the center of the circle in the xy-\nplane defined by the equation\n(x \u2212 9)2\n+ (y + 6)2\n= 81?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(\u22129, \u22126)"
+   },
+   {
+    "label": "B",
+    "content": "(\u22129, 6)"
+   },
+   {
+    "label": "C",
+    "content": "(9, \u22126)"
+   },
+   {
+    "label": "D",
+    "content": "(9, 6)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-12",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 12,
+  "exam": "March 2024",
+  "page": 350,
+  "pdf_page": 82,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Circle A in the xy-plane has the equation\n(x + 7)2\n+ (y \u2212 7)2\n= 9.\nCircle B has the same center as circle A.\nThe radius of circle B is two times the ra-\ndius of circle A. The equation defining circle\nB in the xy-plane is (x + 7)2\n+ (y \u2212 7)2\n= k,\nwhere k is a constant. What is the value of\nk?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-circles-13",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 13,
+  "exam": "May US 2024",
+  "page": 351,
+  "pdf_page": 83,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "What is the center of the circle in the xy-\nplane defined by the equation\n(x \u2212 1)2\n+ (y + 7)2\n= 1?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(-1,-7)"
+   },
+   {
+    "label": "B",
+    "content": "(-1,7)"
+   },
+   {
+    "label": "C",
+    "content": "(1,-7)"
+   },
+   {
+    "label": "D",
+    "content": "(1,7)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-14",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 14,
+  "exam": "May 2024",
+  "page": 351,
+  "pdf_page": 83,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "A circle has diameters AC and BD. The\ncircumference of the circle is 84\u03c0, and the\nlength of arc DA is 2 times the length of arc\nAB. What is the length of arc BC?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "14\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "21\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "28\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-circles-18",
+  "book": "ma2",
+  "topic": "Circles",
+  "num": 18,
+  "exam": "June 2024",
+  "page": 352,
+  "pdf_page": 84,
+  "src": "279b02ec-270360_ma2.pdf",
+  "domain": "GT",
+  "skill": "GT-AV",
+  "body": "Point F lies on a unit circle in the xy-\nplane and has coordinates (1, 0). Point G is\nthe center of the circle and has coordinates\n(0, 0). Point H also lies on the circle and has\ncoordinates (\u22121, y), where y is a constant.\nWhich of the following could be the positive\nmeasure of angle FGH, in radians?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 27\u03c0 2"
+   },
+   {
+    "label": "B",
+    "content": " 29\u03c0 2"
+   },
+   {
+    "label": "C",
+    "content": "24\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "25\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ }
+]

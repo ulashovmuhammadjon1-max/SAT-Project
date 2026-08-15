@@ -1,0 +1,2352 @@
+[
+ {
+  "id": "satmath-ma2-polynomials-10",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 10,
+  "exam": "August 2024",
+  "page": 146,
+  "pdf_page": 58,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "f(x) = 3(x \u2212 a)(x \u2212 b)(x \u2212 c)\nThe function f is defined by the given equa-\ntion, where a, b, and c are distinct constants.\nWhen a < x < b, the value of f(x) is posi-\ntive. The graph of y = f(x) in the xy-plane\ncontains the point (r, s), where r and s are\nconstants. If s = 8, which of the following\ncould be true?\nI. r < a\nII. b < r < c\nIII. r > c",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I only"
+   },
+   {
+    "label": "B",
+    "content": "III only"
+   },
+   {
+    "label": "C",
+    "content": "I and III only"
+   },
+   {
+    "label": "D",
+    "content": "II and III only "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-12",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 12,
+  "exam": "August 2024",
+  "page": 147,
+  "pdf_page": 59,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The function p is defined by\np(x) = (x + 6)2\n\u2212 b\n\u0001\n(x + 6)2\n\u2212 c\n\u0001\n,\nwhere a, b, and c are constants. In the\nxy\u2212plane, the graph of y = p(x) passes\nthrough the points (-7,24) and (0,899).\nWhat is the value of p(\u221212) + p(\u22125)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-14",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 14,
+  "exam": "October US 2024",
+  "page": 147,
+  "pdf_page": 59,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The function f is defined by\nf(x) = (x \u2212 8)(x \u2212 5)(x \u2212 3).\nIn the xy-plane, the graph of y = g(x) is the\nresult of translating the graph of y = f(x)\nup 3 units. What is the value of g(0)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-17",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 17,
+  "exam": "December US 2024",
+  "page": 147,
+  "pdf_page": 59,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The graph of the polynomial function f\nin the xy-plane, where y = f(x), has x-\nintercepts of (-5, 0) and (6, 0). Which of\nthe followings must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(0) = \u22125"
+   },
+   {
+    "label": "B",
+    "content": "f(6) = \u22125"
+   },
+   {
+    "label": "C",
+    "content": "f(\u22125) = 0"
+   },
+   {
+    "label": "D",
+    "content": "f(\u22125) = 6 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-18",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 18,
+  "exam": "December US 2024",
+  "page": 148,
+  "pdf_page": 60,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "(x \u2212 16)(x + 10)(x + 7)(x + 17) = 0\nWhat is the positive solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-19",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 19,
+  "exam": "December 2024",
+  "page": 148,
+  "pdf_page": 60,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "(x + 16)(\u2212x + 12)(x + 7)(x + 13) = 0\nWhat is the positive solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-21",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 21,
+  "exam": "December 2024",
+  "page": 148,
+  "pdf_page": 60,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "The function p is defined by\np(x) = a((x + 5)2\n\u2212 b)((x + 5)2\n\u2212 c),\nwhere a, b, and c are constants. In the xy-\nplane, the graph of y = p(x) passes through\nthe points (-6,30) and (0,342). What is the\nvalue of p(\u221210) + p(\u22124)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-polynomials-27",
+  "book": "ma2",
+  "topic": "Polynomials",
+  "num": 27,
+  "exam": "June US 2025",
+  "page": 149,
+  "pdf_page": 61,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "In the xy-plane, the graph of function f,\nwhere y = f(x), has exactly 8 x-intercepts.\nOne of these x-intercepts is (17, 0). The\nrational function g is defined by\ng(x) =\nf(x)\nx \u2212 17\n.\nIn the xy-plane, how many x-intercepts does\nthe graph of y = g(x) have?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-exponents-radicals-5",
+  "book": "ma2",
+  "topic": "Exponents&Radicals",
+  "num": 5,
+  "exam": "March 2024",
+  "page": 151,
+  "pdf_page": 63,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-EQ",
+  "body": "f(x) = 9x \u2212 7\nFunction f is defined by the given equation.\nThe function g is defined by\ng(x) = f(x) \u2212 (7x \u2212 2).\nWhats is the x-coordinate of the x-intercept\nof the graph of y = g(x) ing the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 9 16"
+   },
+   {
+    "label": "B",
+    "content": " 7 9"
+   },
+   {
+    "label": "C",
+    "content": " 5 2"
+   },
+   {
+    "label": "D",
+    "content": " 9 2 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-1",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 155,
+  "pdf_page": 67,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "g(x) = 2(16x \u2212 17)\nWhat is the y-intercept of the graph of y =\ng(x) \u2212 3 in the xy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-37"
+   },
+   {
+    "label": "B",
+    "content": "-34"
+   },
+   {
+    "label": "C",
+    "content": "-20"
+   },
+   {
+    "label": "D",
+    "content": "-17"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-5",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 5,
+  "exam": "August US 2023",
+  "page": 156,
+  "pdf_page": 68,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "x y\n0 0\n2 2\n8 4\n18 6\nWhich graph best models the relationship\nbetween x and y in the given table?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 2 4 6 8 10 2 4 6 x y"
+   },
+   {
+    "label": "B",
+    "content": " 2 4 6 8 10 2 4 6 x y"
+   },
+   {
+    "label": "C",
+    "content": " \u22122 2 4 6 8 \u22122 2 4 x y"
+   },
+   {
+    "label": "D",
+    "content": " \u22122 2 4 6 8 \u22122 2 4 x y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-10",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 10,
+  "exam": "November 2023",
+  "page": 157,
+  "pdf_page": 69,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "p(v) = 15v\nThe function p gives the relationship be-\ntween the instantaneous power p(v), in\nwatts, and the potential difference v, in\nvolts, for a current of 150 amperes. Which\nstatement is the best interpretation of\np(3) = 450 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "For a potential difference of 3 volts, the instantaneous power is 450 watts."
+   },
+   {
+    "label": "B",
+    "content": "For a current of 3 amperes, the instan- taneous power is 450 watts."
+   },
+   {
+    "label": "C",
+    "content": "For an instantaneous power of 3 watts, the potential difference is 450 volts."
+   },
+   {
+    "label": "D",
+    "content": "For a current of 150 amperes, the po- tential difference is 450 volts."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-12",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 12,
+  "exam": "December 2023",
+  "page": 157,
+  "pdf_page": 69,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The cost of renting a piece of constructing\nequipment for up to 5 days is $350 for the\nfirst day and $175 for each additional day.\nWhich of the following equations gives the\ncost y, in dollars, of renting the equipment\nfor x days, where x is a positive integer and\nx \u2264 5?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "y = 175x + 175"
+   },
+   {
+    "label": "B",
+    "content": "y = 350x \u2212 175"
+   },
+   {
+    "label": "C",
+    "content": "y = 175x + 350"
+   },
+   {
+    "label": "D",
+    "content": "y = 350x + 175"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-14",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 14,
+  "exam": "December 2023",
+  "page": 157,
+  "pdf_page": 69,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A proposal for a construction project was in-\ncluded on a city election ballot. A TV news\nreport stated that 4 times as many people\nvoted of the proposal as people who voted\nagainst it. An internet article reported that\n10,500 more people voted in favor of the\nproposal than voted against it. Based on\nthese data, how many people voted against\nthe proposal?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-18",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 18,
+  "exam": "March 2024",
+  "page": 158,
+  "pdf_page": 70,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "x g(x)\n-23 2\n-9 0\n19 4\nThe table shows three values of x and cor-\nresponding values of g(x), where\ng(x) =\nf(x)\nx + 2\nand f is a linear function.What is the y-\ncoordinate of the y-intercept of the graph\nof y = f(x) in the xy-plane?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-20",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 20,
+  "exam": "March 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For x > 0, the function f is defined as\nfollows:\nf(x) equals 111% of x\nWhich of the following could describe this\nfunction?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Decreasing exponential"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Increasing linear"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-23",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 23,
+  "exam": "May 2024",
+  "page": 159,
+  "pdf_page": 71,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf(x) = (x \u2212 9)(x \u2212 6)(x \u2212 5).\nIn the xy-plane, the graph of y = g(x) is the\nresult of translating the graph of y = f(x)\nup 4 units. What is the value of g(0)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-26",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 26,
+  "exam": "May 2024",
+  "page": 160,
+  "pdf_page": 72,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "Liam has $150 in an account. Each year he\nexpects to have 2.8% more money in the ac-\ncount than he had the previous year. Which\nof the following models best describes how\nLiam expects the money in his account to\nchange over time?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Decreasing exponential"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Increasing linear"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-27",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 27,
+  "exam": "May 2024",
+  "page": 160,
+  "pdf_page": 72,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by\nf(x) = a\n\u221a\nb \u2212 x,\nwhere a and b are constants. In the xy-\nplane, the graph of y = f(x) passes through\nthe point (22, 0), and f(\u221222) < 0. Which of\nthe following must be true?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a < 0"
+   },
+   {
+    "label": "B",
+    "content": "b < 0"
+   },
+   {
+    "label": "C",
+    "content": "f(0) = \u221222"
+   },
+   {
+    "label": "D",
+    "content": "f(0) = 22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-34",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 34,
+  "exam": "June 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "x \u221220 \u22128 10\ng(x) 4 0 6\nThe table shows three values of x and their\ncorresponding values of g(x), where g(x) =\nf(x)\nx+5\nand f is a linear function. What is the\ny\u2212intercept of the graph of y = f(x) in the\nxy\u2212plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0,-8)"
+   },
+   {
+    "label": "B",
+    "content": "(0,5)"
+   },
+   {
+    "label": "C",
+    "content": "(0,8)"
+   },
+   {
+    "label": "D",
+    "content": "(0,40)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-36",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 36,
+  "exam": "August 2024",
+  "page": 161,
+  "pdf_page": 73,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For x > 0, the function f is defined as\nfollows:\nf(x) equals 300% of x\nWhich of the following could describe this\nfunction?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Decreasing exponential"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Increasing linear "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-38",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 38,
+  "exam": "August 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function g is defined as\ng(x) =\n2x \u2212 4\n(x + 11)(x \u2212 6)\nIf g(a + 5) = 0, where a is a constant, what\nis the value of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-40",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 40,
+  "exam": "August 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For the function h, h(0) = 0 and h(7) = 4.\nWhich equation defines h?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "h(x) = 7 4 x"
+   },
+   {
+    "label": "B",
+    "content": "h(x) = 7 4 x + 7"
+   },
+   {
+    "label": "C",
+    "content": "h(x) = 4 7 x"
+   },
+   {
+    "label": "D",
+    "content": "h(x) = 4 7 x + 4"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-41",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 41,
+  "exam": "August 2024",
+  "page": 162,
+  "pdf_page": 74,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "|x \u2212 8|= \u2212|x \u2212 8|+20\nWhat is the sum of the solutions to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-43",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 43,
+  "exam": "October 2024",
+  "page": 163,
+  "pdf_page": 75,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function f is defined by f(x) = 5+\n\u221a\nx.\nWhat is the value of f(144)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-45",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 45,
+  "exam": "October US 2024",
+  "page": 163,
+  "pdf_page": 75,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For the function f, for every increase of 2 in\nthe value of x, the value of f(x) increase by\na factor of c, where c is a constant. Which\nof the following equivalent forms of function\nf displays the value of c as the base of the\ncoefficient?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f(x) = 26(2)6 x"
+   },
+   {
+    "label": "B",
+    "content": "f(x) = 26(8)2 x"
+   },
+   {
+    "label": "C",
+    "content": "f(x) = 26(64)x"
+   },
+   {
+    "label": "D",
+    "content": "f(x) = 26(4096) x 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-50",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 50,
+  "exam": "November 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For x > 0, the function f is defined as\nfollows:\nf(x) equals 110% of x\nWhich of the following could describe this\nfunction?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Decreasing exponential"
+   },
+   {
+    "label": "B",
+    "content": "Decreasing linear"
+   },
+   {
+    "label": "C",
+    "content": "Increasing exponential"
+   },
+   {
+    "label": "D",
+    "content": "Increasing linear"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-53",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 53,
+  "exam": "December US 2024",
+  "page": 164,
+  "pdf_page": 76,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "The function k is defined by\nk(s) =\n\u221a\ns + 110.\nIf k(53p) = p, where p is a constant, what is\nthe value of p?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-55",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 55,
+  "exam": "December 2024",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "x f(x)\n-37 4\n-9 0\n33 6\nThe table shows three values of x and their\ncorresponding values of f(x), where\nf(x) =\nkx + 45\nx + 2\nand k is a constant. What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-56",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 56,
+  "exam": "March 2025",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f(x) = 22\nFor the given linear function f, which table\ngives three values of x and their correspond-\ning values of f(x)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " x f(x) 0 0 1 0 2 0"
+   },
+   {
+    "label": "B",
+    "content": " x f(x) 0 22 1 22 2 22"
+   },
+   {
+    "label": "C",
+    "content": " x f(x) 0 0 1 22 2 44"
+   },
+   {
+    "label": "D",
+    "content": " x f(x) 0 0 1 11 2 22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-57",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 57,
+  "exam": "March 2025",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A rectangle has a length that is 92 times\nits width. The function y = (92w)(w) rep-\nresents this situation, where y is the area,\nin square feet, of the rectangle and y > 0.\nWhich of the following is the best interpre-\ntation of 92w in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The length of the rectangle, in feet"
+   },
+   {
+    "label": "B",
+    "content": "The area of the rectangle, in square feet"
+   },
+   {
+    "label": "C",
+    "content": "The difference between length and the width of the rectangle, in feet"
+   },
+   {
+    "label": "D",
+    "content": "The width of rectangle, in feet"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-59",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 59,
+  "exam": "March 2025",
+  "page": 165,
+  "pdf_page": 77,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "A rectangle has a length that is 49 times\nits width. The function y = (49w)(w) rep-\nresents this situation, where y is the area,\nin square feet, of the rectangle and y > 0.\nWhich of the following is the best interpre-\ntation of 49w in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The length of the rectangle, in feet"
+   },
+   {
+    "label": "B",
+    "content": "The area of the rectangle, in square feet"
+   },
+   {
+    "label": "C",
+    "content": "The difference between the length and the width of the rectangle, in feet"
+   },
+   {
+    "label": "D",
+    "content": "The width of the rectangle, in feet "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-68",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 68,
+  "exam": "June US 2025",
+  "page": 168,
+  "pdf_page": 80,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "f(x) = 5(x \u2212 1)(x \u2212 5)(x \u2212 10)\nIf the given function f is graphed in the\nxy-plane, where y = f(x), what is the x-\ncoordinate of an x-intercept of the graph?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-72",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 72,
+  "exam": "November 2023",
+  "page": 169,
+  "pdf_page": 81,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For certain air temperatures, the table gives wind chill temperatures for two different wind\nspeeds.\nAir temperature Wind chill temperature at Wind chill temperature at\n(\u00b0F) wind speed 20 mph wind speed 60 mph\n33\u00b0F 21\u00b0F 15\u00b0F\n34\u00b0F 23\u00b0F 16\u00b0F\n35\u00b0F 24\u00b0F 17\u00b0F\nAccording to the table what is the wind chill temperature, in degrees Fahrenheit (\u25e6\nF), when the\nair temperature is 33 \u25e6\nF and the wind speed is 20 miles per hour (mph)? (Disregard the degree\nsymbol when entering your answer)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-functions-function-notation-73",
+  "book": "ma2",
+  "topic": "Functions&Function Notation",
+  "num": 73,
+  "exam": "December US 2024",
+  "page": 169,
+  "pdf_page": 81,
+  "src": "67c94270-90170_ma2",
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "body": "For certain air temperature, table gives wind chill temperatures for two different wind speeds.\nAir temperature\nWind chill temperature\nat wind speed 15 mph\nWind chill temperature\nat wind speed 45 mph\n26\u25e6\nF 14\u25e6\nF 7\u25e6\nF\n30\u25e6\nF 19\u25e6\nF 12\u25e6\nF\n34\u25e6\nF 24\u25e6\nF 18\u25e6\nF\nAccording to the table, what is the wind chill temperature, in degrees Fahrenheit (\u25e6\nF), when the\nair temperature is 26\u25e6\nF and the wind speed is 15 miles per hour (mph)? (Disregard the degree\nsymbol when entering your answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "sathard-algebra-1",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 1,
+  "page": 7,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, line k and the line l are\nperpendicular and intersect at the point\n(2, 8). If line k is defined by the equation\ny = mx + b, where m and b are constants and\nm > 1, which of the following points lies on\nline l?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(3, 8 \u2212 1 m )"
+   },
+   {
+    "label": "B",
+    "content": "(3, 8 + 1 m )"
+   },
+   {
+    "label": "C",
+    "content": "(3, 8 \u2212 m)"
+   },
+   {
+    "label": "D",
+    "content": "(3, 8 + m)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 7
+ },
+ {
+  "id": "sathard-algebra-6",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 6,
+  "page": 8,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "Energy per Gram of Typical Macronutrients\nMacronutrient Food calories Kilojoules\nProtein 4.0 16.7\nFat 9.0 37.7\nCarbohydrate 4.0 16.7\nThe table above gives the typical amounts\nof energy per gram, expressed in both\nfood calories and kilojoules, of the three\nmacronutrients in food. If the 180 food\ncalories in a granola bar come entirely from p\ngrams of protein, f grams of fat, and c grams\nof carbohydrate, which of the following\nexpresses f in terms of p and c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f = 20 + 4 9 (p + c)"
+   },
+   {
+    "label": "B",
+    "content": "f = 20 \u2212 4 9 (p + c)"
+   },
+   {
+    "label": "C",
+    "content": "f = 20 \u2212 4 9 (p \u2212 c)"
+   },
+   {
+    "label": "D",
+    "content": "f = 20 + 9 4 (p + c)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 8
+ },
+ {
+  "id": "sathard-algebra-10",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 10,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "For each real number r, which of the\nfollowing points (x, y) lies on the graph of\nboth equations in the xy-plane for the given\nsystem?\n3x + 2y = 6\n6x + 4y = 12",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, 3 \u2212 3 2 r)"
+   },
+   {
+    "label": "B",
+    "content": "(r, 3 \u2212 r 2 )"
+   },
+   {
+    "label": "C",
+    "content": "(3 \u2212 r, 3 \u2212 3 2 r)"
+   },
+   {
+    "label": "D",
+    "content": "(3, 2 \u2212 3 2 r)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 9
+ },
+ {
+  "id": "sathard-algebra-11",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 11,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "In a set of four consecutive odd integers,\nwhere the integers are ordered from the least\nto the highest, the first integer is represented\nby z. The product of 24 and the third odd\ninteger in the set is at most the value of\n86 less than the sum of the first and fourth\nodd integers in the set. What is the highest\npossible value of z?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 9
+ },
+ {
+  "id": "sathard-algebra-13",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 13,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "Lines k and l are perpendicular. If the point\n(4, m) and (9, m + 3) lies on line k and line\nk and l intersect at (9, m + 3), which of the\nfollowing can lie on line l?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(m \u2212 6, \u22124)"
+   },
+   {
+    "label": "B",
+    "content": "(m + 9, 24)"
+   },
+   {
+    "label": "C",
+    "content": "(21, m \u2212 17)"
+   },
+   {
+    "label": "D",
+    "content": "(24, m + 12)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 9
+ },
+ {
+  "id": "sathard-algebra-14",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 14,
+  "page": 9,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "22x \u2212 21y = 43\n5x + 14y = 59\nThe solution to the given system of\nequations is (x, y) = ( p\n826, w\n59), where p\nand q are integers. What is the value of\np + w?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 9
+ },
+ {
+  "id": "sathard-algebra-16",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 16,
+  "page": 10,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x y\n\u22122s 17\n\u2212s 14\ns 8\nThe table shows three values of x and their\ncorresponding values of y. There is a\nlinear relationship between x and y. Which\nof the following equations represents this\nrelationship?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "sx + 3y = 11s"
+   },
+   {
+    "label": "B",
+    "content": "3x + sy = 11s"
+   },
+   {
+    "label": "C",
+    "content": "3x + sy = 11"
+   },
+   {
+    "label": "D",
+    "content": "sx + 3y = 11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 10
+ },
+ {
+  "id": "sathard-algebra-17",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 17,
+  "page": 10,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "A cooking school is offering a promotion\nwhere the first class is free, the second\nclass is half off the regular price, and the\nremaining classes are regularly priced. If\nthe regular price of a class is $22.80, which\nfunction f gives the total cost, in dollars, of\nx classes taken using this promotion, where\nx > 2?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 22.80(x \u2212 1) + 11.40"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 22.80(x \u2212 2) + 11.40"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 22.80(x \u2212 1) + 11.40(x \u2212 2)"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 22.80(x \u2212 2) + 11.40(x \u2212 1)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 10
+ },
+ {
+  "id": "sathard-algebra-19",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 19,
+  "page": 10,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "5x + 8y = 9\n15x + 24y = 27\nFor each real number r, which of the\nfollowing points is on the graph of each\nequation in the xy-plane for the given\nsystem?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, \u2212 5r 8 + 9 8 )"
+   },
+   {
+    "label": "B",
+    "content": "(\u2212 5r 8 + 9 8 , r)"
+   },
+   {
+    "label": "C",
+    "content": "(\u2212 5r 8 + 9, 5r 8 + 27)"
+   },
+   {
+    "label": "D",
+    "content": "( r 3 + 9, \u2212 r 3 + 27) 10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 10
+ },
+ {
+  "id": "sathard-algebra-20",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 20,
+  "page": 11,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "A beekeeper\u2019s initial observation of the\npopulation of a certain bee colony was 1,100\nbees. The beekeeper set a goal to increase the\npopulation to 2,600 bees. The beekeeper uses\na model that predicts the population of this\nbee colony begins at 1,100 and increases by\n120 bees per week in the first two weeks after\nthe initial observation, and then increases by\n180 bees per week until the beekeeper\u2019s goal\nis reached. According to this model, at the\nend of week w after the initial observation,\nwhere w > 2, which of the following\nfunctions gives the predicted number of bees\nstill needed to reach the beekeeper\u2019s goal?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "p(w) = 2, 600 \u2212 180w"
+   },
+   {
+    "label": "B",
+    "content": "p(w) = 2, 480 + 180w"
+   },
+   {
+    "label": "C",
+    "content": "p(w) = 1, 620 \u2212 180w"
+   },
+   {
+    "label": "D",
+    "content": "p(w) = \u2212120 + 180w"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 11
+ },
+ {
+  "id": "sathard-algebra-21",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 21,
+  "page": 11,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "During a specific 2-hour period of the day,\nthe mean photosynthetic rate, P(x), of a\nplant species increases at a constant rate in\nterms of the photochemical energy available,\nx. During this period, P(300) = 9.8, and the\nmean photosynthetic rate increases by 0.13\nmicromoles per meter squared per second\n(\u00b5mol \u00b7 m\u22122 \u00b7 s\u22121) when the photochemical\nenergy available increases by 5 \u00b5mol \u00b7 m\u22122 \u00b7\ns\u22121. Which equation gives the mean\nphotosynthetic rate, in \u00b5mol \u00b7 m\u22122 \u00b7 s\u22121, in\nterms of the photochemical energy available,\nin \u00b5mol \u00b7 m\u22122 \u00b7 s\u22121, during this period?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "P(x) = 0.026x + 9.8"
+   },
+   {
+    "label": "B",
+    "content": "P(x) = 0.026x + 2"
+   },
+   {
+    "label": "C",
+    "content": "P(x) = 9.8x + 0.026"
+   },
+   {
+    "label": "D",
+    "content": "P(x) = 9.8x \u2212 2, 930.2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 11
+ },
+ {
+  "id": "sathard-algebra-22",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 22,
+  "page": 11,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x g(x)\n\u221227 3\n\u22129 0\n21 5\nThe table shows three values of x and their\ncorresponding values of g(x), where g(x) =\nf (x)\nx+3 and f is a linear function. What is the\ny-intercept of the graph of y = f (x) in the\nxy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(0, 36)"
+   },
+   {
+    "label": "B",
+    "content": "(0, 12)"
+   },
+   {
+    "label": "C",
+    "content": "(0, 4)"
+   },
+   {
+    "label": "D",
+    "content": "(0, \u22129)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 11
+ },
+ {
+  "id": "sathard-algebra-23",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 23,
+  "page": 11,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "x y\n\u22127 d + 3\n\u22124 4k + 6d\n1 \u2212 3d 8\nThe table shows three values of x and\ntheir corresponding values of y for the\nlinear relationship between x and y. The\nx-intercept of the line occurs when x = \u22124.\nThe number d is a negative constant. The\nnumber k is a constant. What is the value\nof dk?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 11
+ },
+ {
+  "id": "sathard-algebra-28",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 28,
+  "page": 13,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "Number of cars Max passengers/crew\n2 102\n6 294\n10 486\nThe table shows the linear relationship\nbetween the number of cars, c, on a\ncommuter train and the maximum number\nof passengers and crew, p, that the train can\ncarry. Which equation represents the linear\nrelationship between c and p?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "48p \u2212 c = \u22126"
+   },
+   {
+    "label": "B",
+    "content": "48c \u2212 p = 6"
+   },
+   {
+    "label": "C",
+    "content": "48p \u2212 c = 6"
+   },
+   {
+    "label": "D",
+    "content": "48c \u2212 p = \u22126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 13
+ },
+ {
+  "id": "sathard-algebra-32",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 32,
+  "page": 14,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "A company is considering placing an\nadvertisement on Website R. Website R\ncharges no initial fee, but charges the\nsame amount as Website P every time the\nadvertisement is clicked. Which of the\nfollowing graphs represents the cost y, in\ndollars, of placing an advertisement that\nreceives x clicks on Website R?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "60 120 15 30"
+   },
+   {
+    "label": "B",
+    "content": "60 120 15 30"
+   },
+   {
+    "label": "C",
+    "content": "60 120 25 50"
+   },
+   {
+    "label": "D",
+    "content": "60 120 10 20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 14
+ },
+ {
+  "id": "sathard-algebra-35",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 35,
+  "page": 15,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "During the first 5.00 seconds after a car\nstarted moving, its speed increased to 12.0\nmeters per second. From 5.00 seconds to\n13.0 seconds after the car started moving, its\nspeed increased from 12.0 meters per second\nto 25.0 meters per second. To the nearest\nhundredth, what is the positive difference\nbetween the average rate of change of the\nspeed of the car, in meters per second per\nsecond, during the first 5.00 seconds after the\ncar started moving and the average rate of\nchange of the speed of the car, in meters per\nsecond per second, from 5.00 seconds to 13.0\nseconds after the car started moving?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 15
+ },
+ {
+  "id": "sathard-algebra-36",
+  "book": "hard",
+  "topic": "Algebra",
+  "num": 36,
+  "page": 15,
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "difficulty": "HARD",
+  "body": "7kx + 13my = 20.5\n6kx + 5my = \u221248\nIn the given system of equations, k and m\nare constants. The system has a solution of\n(2, y). What is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 15
+ },
+ {
+  "id": "sathard-advanced-math-3",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 3,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "If x = 2n\n\u221a\n2xn + 35, where n is a positive\ninteger constant, what is the value of xn?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 18
+ },
+ {
+  "id": "sathard-advanced-math-4",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 4,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "O\nThe graph of y = f (x) is shown in the\nxy-plane. If a, b, and c are positive constants,\nwhich of the following equations could\ndefine the function f?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = \u2212a(x + b)(x + c)"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = \u2212a(x \u2212 b)(x \u2212 c)"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = a(x + b)(x + c)"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = a(x \u2212 b)(x \u2212 c)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 18
+ },
+ {
+  "id": "sathard-advanced-math-5",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 5,
+  "page": 18,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function f is defined by f (x) = |x|\na ,\nwhere a < 0. What is the product of f (17a)\nand f (8a)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 18
+ },
+ {
+  "id": "sathard-advanced-math-15",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 15,
+  "page": 21,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function f is defined by f (x) = \u2212ax + b,\nwhere a and b are constants. In the xy-plane,\nthe graph of y = f (x) \u2212 12 has a y-intercept\nat (0, \u221275\n7 ). The product of a and b is 320.\nWhat is the value of a?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 21
+ },
+ {
+  "id": "sathard-advanced-math-20",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 20,
+  "page": 22,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "For the function f, for every increase in 1\n2 in\nthe value of x, the value of f (x) increases by\na factor of c, where c is a constant. Which\nof the following equivalent forms of the\nfunction f displays the value of c as the base\nor the coefficient?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 38(2)6x"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 38(8)2x"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 38(64)x"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 38(4, 096) x 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 22
+ },
+ {
+  "id": "sathard-advanced-math-22",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 22,
+  "page": 22,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "For the function f, for each increase in the\nvalue of x by c, where c is a positive constant,\nthe value of f (x) increases by a factor of 16.\nWhich of the following equivalent forms of\nthe function f displays 1\nc as a coefficient of\nx?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 139(16 1 3 ) 1 2 x"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 139(8)2x"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 139(82) 1 2 x"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 139(64 2 3 ) 1 8 x 22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 22
+ },
+ {
+  "id": "sathard-advanced-math-23",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 23,
+  "page": 23,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x) = 250(5)x\nThe function f is defined by the given\nequation. If g(x) = f (x \u2212 2), which of the\nfollowing equations defines the function g?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "g(x) = 10(5)x"
+   },
+   {
+    "label": "B",
+    "content": "g(x) = 125(5)x"
+   },
+   {
+    "label": "C",
+    "content": "g(x) = 250(25)x"
+   },
+   {
+    "label": "D",
+    "content": "g(x) = 250(10)x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 23
+ },
+ {
+  "id": "sathard-advanced-math-25",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 25,
+  "page": 23,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "z(w) = (0.829)2w\nThe function z is defined by the equation\nshown. The value of z(w) decreases by p%\nfor each increase by 1 in the value of w.\nWhich of the following is closest to the value\nof p?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 23
+ },
+ {
+  "id": "sathard-advanced-math-26",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 26,
+  "page": 23,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "(x \u2212 k)2\n= (k \u2212 5a)(x \u2212 k)\nIn the given equation, a and k are constants,\nwhere k > 5a. The sum of the solutions to\nthe equation is 3k + 32. What is the value of\na?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 23
+ },
+ {
+  "id": "sathard-advanced-math-34",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 34,
+  "page": 24,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function p is defined by p(x) = a((x +\n6)2 \u2212 b)((x + 6)2 \u2212 c), where a, b, and c are\nconstants. In the xy-plane, the graph of\ny = p(x) passes through the points (\u22127, 24)\nand (0, 899). What is the value of p(\u221212) +\np(\u22125)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 24
+ },
+ {
+  "id": "sathard-advanced-math-37",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 37,
+  "page": 24,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "A quadratic function models the height, in\nfeet, of an object above the ground in terms\nof the time, in seconds, after the object was\nlaunched. According to the model, the object\nwas launched from a height of 0 feet and\nreached its maximum height of 1,600 feet 10\nseconds after it was launched. Based on the\nmodel, what was the height, in feet, of the\nobject 7 seconds after it was launched?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 24
+ },
+ {
+  "id": "sathard-advanced-math-39",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 39,
+  "page": 25,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "A chemical reaction in a closed container\nproduces a gas, and the volume V of gas\nproduced over time t (in minutes) can be\nmodeled by a quadratic function. At t = 5.0\nminutes, the volume of gas produced is 40.0\nliters, and at t = 15.0 minutes, the volume\nof gas produced is 160.0 liters. If the reaction\nstarts at t = 0 without gas produced, what\nwill be the volume of gas produced at t =\n25.0 minutes?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "375.2 liters"
+   },
+   {
+    "label": "B",
+    "content": "483.6 liters"
+   },
+   {
+    "label": "C",
+    "content": "423.3 liters"
+   },
+   {
+    "label": "D",
+    "content": "333.5 liters"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 25
+ },
+ {
+  "id": "sathard-advanced-math-49",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 49,
+  "page": 27,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x) = 4\u2212(2+x)\nWhich of the following equivalent forms of\nthe given function displays the y-coordinate\nof the y-intercept of its graph in the xy-plane\nas a constant?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 1 16 ( 1 4 )x"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = ( 1 4 )(2+x)"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 2\u22122(2+x)"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 4\u2212(2\u2212x)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 27
+ },
+ {
+  "id": "sathard-advanced-math-50",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 50,
+  "page": 27,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The equation of a parabola is given, where\na, b, and c are constants. In the xy-plane,\nthe parabola has vertex (5, \u22129) and has zero\nx-intercepts. Which of the following could\nbe the value of a \u2212 b \u2212 c?\nA \u221247\nB \u22125\nC 9\nD 23",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 27
+ },
+ {
+  "id": "sathard-advanced-math-52",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 52,
+  "page": 27,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x) = 3\u22122(x+1)\nWhich of the following equivalent forms of\nthe given function f displays, as the base\nor the coefficient, the y-coordinate of the\ny-intercept of the graph of y = f (x) in the\nxy-plane?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = ( 1 3 )(2x+2)"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 1 9 ( 1 3 )2x"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 81(\u2212 1 2 x \u2212 1 2 )"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 3(\u22122x\u22122)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 27
+ },
+ {
+  "id": "sathard-advanced-math-54",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 54,
+  "page": 28,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function p is defined by\np(x) = a((x + 5)2\n\u2212 b)((x + 5)2\n\u2212 c)\nwhere a, b, and c are constants. In the\nxy-plane, the graph of y = p(x) passes\nthrough the points (\u22124, 34) and (0, 150).\nWhat is the value of p(\u221210) + p(\u22124)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 28
+ },
+ {
+  "id": "sathard-advanced-math-62",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 62,
+  "page": 29,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function q is defined by\nq(x) = a|x \u2212 9|2\n\u2212 87|x \u2212 9| + b\nwhere a and b are constants and a > b > 87.\nIf q(639) = h and q(\u2212621) = k, where h\nand k are constants, what is the value of\n9(\u2212639)h\u2212k + 621(9)k\u2212h?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 29
+ },
+ {
+  "id": "sathard-advanced-math-66",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 66,
+  "page": 30,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "f (x) = 15(b)x\nIn the given function, b is a positive constant.\nFor every increase in the value of x by 1,\nthe value of f (x) increases by c%, where\n0 < c < 100. Which expression gives the\nvalue of c in terms of b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1 + b 100"
+   },
+   {
+    "label": "B",
+    "content": "b + 100"
+   },
+   {
+    "label": "C",
+    "content": "100(b + 1)"
+   },
+   {
+    "label": "D",
+    "content": "100(b \u2212 1)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 30
+ },
+ {
+  "id": "sathard-advanced-math-68",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 68,
+  "page": 31,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function f is defined by\nf (x) = abx\nwhere a, b, and n are constants, and b and n\nare integers. If f (4) = 5 and f (7) = 135,\nwhat is the value of f (9)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 31
+ },
+ {
+  "id": "sathard-advanced-math-71",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 71,
+  "page": 31,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "\u221216(5x \u2212 3)2\n+ 4(5x \u2212 2)2\nThe given expression can be rewritten\nas\n(a+b+c)(a\u2212b+c)\n100 ? (Note: Transcription\nambiguous, using calculated value based on\nstandard rewriting interpretation). Where\na, b, c are constants. What is the value of the\nexpression?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 31
+ },
+ {
+  "id": "sathard-advanced-math-73",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 73,
+  "page": 31,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The graph of functions f and g are\nparabolas, such that g(x) = 6f (x). The\nvertex of f (x) is at (2, 10). The y-intercept\nof f (x) and g(x) is at (0, b) and (0, c),\nrespectively. If the point (3, 78) is on the\ngraph of g(x), what is the value of b \u2212 c?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "-60"
+   },
+   {
+    "label": "B",
+    "content": "-110"
+   },
+   {
+    "label": "C",
+    "content": "-130"
+   },
+   {
+    "label": "D",
+    "content": "-200 31"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 31
+ },
+ {
+  "id": "sathard-advanced-math-80",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 80,
+  "page": 33,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "An acceptable noise criterion rating for the\nbackground noise in a school classroom is\n30. For a noise criterion rating of 30, the\nequation\ny = 19(0.978)x\u221250\n+ 37\ngives the estimated sound pressure level,\ny in decibels, as a function of the octave\nband center frequency, x, in hertz, where\nx \u2265 50. Which of the following is the best\ninterpretation of 37 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "37 is 19 less than the estimated sound pressure level, in decibels, at an octave band frequency of 50"
+   },
+   {
+    "label": "B",
+    "content": "37 is 19 less than the estimated sound pressure level, in decibels, at an octave band frequency of 0"
+   },
+   {
+    "label": "C",
+    "content": "37 is the estimated sound pressure level, in decibels, at an octave band frequency of 50"
+   },
+   {
+    "label": "D",
+    "content": "37 is the estimated sound pressure level, in decibels, at an octave band frequency of 0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 33
+ },
+ {
+  "id": "sathard-advanced-math-84",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 84,
+  "page": 34,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The quadratic function can be used to model\nthe height, in meters, of an object above the\nground in terms of time, in seconds, after the\nobject was launched into the air. The object\nreached a height of 148 meters 2 seconds and\na maximum height of 340 meters 10 seconds\nafter it was launched. Based on the model,\nwhat was the longest time period when the\nobject reached a height of 97 meters?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 34
+ },
+ {
+  "id": "sathard-advanced-math-85",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 85,
+  "page": 34,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The exponential function f is defined by\nf (x) = abx\nwhere a and b are positive. If f (n \u2212 1) =\nf (n) + 61\n100 f (n \u2212 1), where n is a constant,\nwhat is the value of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 34
+ },
+ {
+  "id": "sathard-advanced-math-91",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 91,
+  "page": 35,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "For the function f, for each increase in the\nvalue of x by 4, the value of f (x) increases\nby a factor of m. Which of the following\nequivalent forms displays m as a constant or\ncoefficient?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "f (x) = 13(100)2x"
+   },
+   {
+    "label": "B",
+    "content": "f (x) = 13(1000) x 3"
+   },
+   {
+    "label": "C",
+    "content": "f (x) = 13(10 6 5 )6x"
+   },
+   {
+    "label": "D",
+    "content": "f (x) = 13(100000 6 5 ) 1 4 x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 35
+ },
+ {
+  "id": "sathard-advanced-math-92",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 92,
+  "page": 35,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function f is defined by\nf (x) = abx\nwhere a, b, and x are constants, and a, b, and\nx are integers. If f (2) = 6 and f (5) = 162,\nwhat is the value of f (7)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 35
+ },
+ {
+  "id": "sathard-advanced-math-102",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 102,
+  "page": 37,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "A certain investment account offers a special\ninterest rate for the first 4 months the\naccount is open followed by a lower interest\nrate for the remainder of the time the account\nis open. Akeyla opened one of these\naccounts with an original account balance\nof $700.00 and did not make any other\ndeposits or withdrawals. 4 months after\nAkeyla opened the account, the balance had\nincreased by 0.6% of the original balance. 6\nmonths after Akeyla opened the account, the\nbalance had increased by an additional 0.1%\nof the balance at the end of the first 4 months.\nEvery 2 months after the first 6 months, the\nbalance had increased by an additional 0.1%\nof the balance 2 months before. Which of\nthe following equations could represent the\naccount balance B(x) in dollars, x months\nafter the account was opened, where x \u2265 4?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "B(x) = 704.20(1.001) x \u2212 4 2"
+   },
+   {
+    "label": "B",
+    "content": "B(x) = 700.00(1.001) x \u2212 4 2"
+   },
+   {
+    "label": "C",
+    "content": "B(x) = 704.20(1.001)2(x\u22124)"
+   },
+   {
+    "label": "D",
+    "content": "B(x) = 700.00(1.001)2(x\u22124) 37"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 37
+ },
+ {
+  "id": "sathard-advanced-math-106",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 106,
+  "page": 39,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "An exponential function f is defined by\nf (x) = cx, where c is a constant greater than\n1. If f (6) = 25 \u00b7 f (4), what is the value of c?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 39
+ },
+ {
+  "id": "sathard-advanced-math-113",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 113,
+  "page": 40,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "At different times on a certain day, a\nmanager at a theme park recorded the\nnumber of visitors. An exponential model\ngives the estimated number of visitors, V, at\nthe theme park t hours after the theme park\nopened, where t \u2264 3. Based on the model,\n85 visitors were estimated to be at the theme\npark when it opened, and every 30 minutes\nthe estimated number of visitors increased\nby 140% of the estimated number of visitors\n30 minutes earlier. Which of the following\nequations best represents this model?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "V = 85(1.40) t 2"
+   },
+   {
+    "label": "B",
+    "content": "V = 85(1.40)2t"
+   },
+   {
+    "label": "C",
+    "content": "V = 85(2.40) t 2"
+   },
+   {
+    "label": "D",
+    "content": "V = 85(2.40)2t"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 40
+ },
+ {
+  "id": "sathard-advanced-math-115",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 115,
+  "page": 41,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "A certain investment account offers a special\ninterest rate for the first 6 months the\naccount is open followed by a lower interest\nrate for the remainder of the time the account\nis open. Bennett opened one of these\naccounts with an original account balance of\n$600 and did not make any other deposits or\nwithdrawals. 6 months after Bennett opened\nthe account, the balance had increased by\n0.4% of the original balance. 8 months after\nBennett opened the account, the balance\nhad increased by an additional 0.3% of the\nbalance at the end of the first 6 months.\nEvery 2 months after the first 8 months, the\nbalance had increased by an additional 0.3%\nof the balance 2 months before. Which of\nthe following equations could represent the\naccount balance B(x), in dollars, x months\nafter the account was opened, where x \u2265 6?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "B(x) = 602.40(1.003) x 2 \u22126"
+   },
+   {
+    "label": "B",
+    "content": "B(x) = 602.40(1.003) x \u2212 6 2"
+   },
+   {
+    "label": "C",
+    "content": "B(x) = 602.40(1.003)2x\u221212"
+   },
+   {
+    "label": "D",
+    "content": "B(x) = 602.40(1.003)2x\u22126"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 41
+ },
+ {
+  "id": "sathard-advanced-math-119",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 119,
+  "page": 42,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "The function p is defined by p(x) = a((x +\n6)2 \u2212 b)((x + 6)2 \u2212 c), where a, b, and c are\nconstants. In the xy-plane, the graph of\ny = p(x) passes through the points (\u22127, 24)\nand (0, 899). What is the value of p(\u221212) +\np(\u22125)?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 42
+ },
+ {
+  "id": "sathard-advanced-math-120",
+  "book": "hard",
+  "topic": "Advanced Math",
+  "num": 120,
+  "page": 42,
+  "domain": "ADV",
+  "skill": "ADV-NF",
+  "difficulty": "HARD",
+  "body": "z(w) = (0.829)2w\nThe function z is defined by the equation\nshown. The value of z(w) decreases by p%\nfor each increase by 1 in the value of w.\nWhich of the following is closest to the value\nof p?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 42
+ },
+ {
+  "id": "sathard-geometry-1",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 1,
+  "page": 47,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In the xy-plane, a circle has center C with\ncoordinates (h, k). Points A and B lie on the\ncircle. Point A has coordinates (h + 1, k +\n\u221a\n230), and \u2220ACB is a right angle. What is\nthe length of AB?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "231 \u221a 3"
+   },
+   {
+    "label": "B",
+    "content": "231 \u221a 2"
+   },
+   {
+    "label": "C",
+    "content": "2 \u221a 230"
+   },
+   {
+    "label": "D",
+    "content": "462"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 47
+ },
+ {
+  "id": "sathard-geometry-3",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 3,
+  "page": 47,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A line intersects two parallel lines, forming\nfour acute angles and four obtuse angles.\nThe measure of one of these eight angles is\n(7x \u2212 250)\u25e6. The sum of the measures of\nfour of the eight angles is k\u25e6. Which of the\nfollowing could NOT be equivalent to k, for\nall values of x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221214x + 1, 540"
+   },
+   {
+    "label": "B",
+    "content": "14x \u2212 320"
+   },
+   {
+    "label": "C",
+    "content": "\u221228x + 1, 720"
+   },
+   {
+    "label": "D",
+    "content": "360"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 47
+ },
+ {
+  "id": "sathard-geometry-4",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 4,
+  "page": 47,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In triangle ABC and triangle DEF, sides AB\nand DE each have a side length of 10 inches,\nand angles A and D each have an angle\nmeasure of 40\u00b0. Which of the following\nadditional pieces of information is (are)\nsufficient to prove whether triangle ABC is\ncongruent to triangle DEF?\nI. The measures of angles B and C are\nequal.\nII. The lengths of sides AC and DF are\nequal.\nIII. The lengths of sides BC and EF are\nequal.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "I is sufficient, but II and III are not."
+   },
+   {
+    "label": "B",
+    "content": "II is sufficient, but I and III are not."
+   },
+   {
+    "label": "C",
+    "content": "III is sufficient, but I and II are not."
+   },
+   {
+    "label": "D",
+    "content": "II is sufficient and III is sufficient, but I is not."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 47
+ },
+ {
+  "id": "sathard-geometry-5",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 5,
+  "page": 47,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In triangle RST, the measure of angle R is\n39\u00b0, the measure of angle S is x\u25e6, and the\nmeasure of angle T is (8x \u2212 3)\u25e6. Point L lies\non RS, point K lies on ST, and LK is parallel\nto RT. What is the measure, in degrees, of\nangle SKL? (Disregard the degree symbol\nwhen entering your answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 47
+ },
+ {
+  "id": "sathard-geometry-7",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 7,
+  "page": 48,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nA\nB\nC\nD\nE\n90\u25e6 90\u25e6\nIn the figure shown, AB =\n\u221a\n89 units, AC =\n8 units, and CE = 24 units. What is the area,\nin square units, of triangle ADE?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 48
+ },
+ {
+  "id": "sathard-geometry-11",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 11,
+  "page": 49,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nB\nC\nA\nE\nD\nIn the figure shown, points A, B, C, and E\nlie on the circle, and AB < BC. Segment AC\nis perpendicular to segment BE at point D,\nand BD =\n\u221a\n346. The diameter of the circle\nis 175. If CD\nAD = r what is the value of r?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 49
+ },
+ {
+  "id": "sathard-geometry-13",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 13,
+  "page": 49,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Right rectangular prism X is similar to right\nrectangular prism Y. The surface area of right\nrectangular prism X is 52 square centimeters\ncm2, and the surface area of right rectangular\nprism Y is 3,328 cm2. The volume of right\nrectangular prism X is 10.5 cubic centimeters\ncm3. What is the volume, in cm3, of right\nrectangular prism Y?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 49
+ },
+ {
+  "id": "sathard-geometry-15",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 15,
+  "page": 49,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A polygon has exactly 87 sides. If the\nmeasure of each of the 87 interior angles of\nthis polygon is (180p)\u25e6, what is the value of\np?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 49
+ },
+ {
+  "id": "sathard-geometry-19",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 19,
+  "page": 50,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A circle is inscribed in a square such that\nthe circumference of the circle touches the\nmidpoint of each side of the square. The\nlength of the diagonal of the square is 228\nunits. What is the area, in square units, of\nthe circle?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6, 498\u03c0"
+   },
+   {
+    "label": "B",
+    "content": "12, 996\u03c0"
+   },
+   {
+    "label": "C",
+    "content": "25, 992\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "51, 984\u03c0"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 50
+ },
+ {
+  "id": "sathard-geometry-21",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 21,
+  "page": 50,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Point F lies on a unit circle in the xy-plane\nand has coordinates (1, 0). Point G is the\ncenter of the circle and has coordinates (0,\n0). Point H also lies on the circle and has\ncoordinates (\u22121, y), where y is a constant.\nWhich of the following could be the positive\nmeasure of angle FGH, in radians?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "27\u03c0 2"
+   },
+   {
+    "label": "B",
+    "content": "29\u03c0 2"
+   },
+   {
+    "label": "C",
+    "content": "24\u03c0"
+   },
+   {
+    "label": "D",
+    "content": "25\u03c0 50"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 50
+ },
+ {
+  "id": "sathard-geometry-22",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 22,
+  "page": 51,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "A rectangular region of land is divided into\n88 square lots of equal area R, in square\nunits. The length of the region is 5.5 times\nthe width of the region. If the width of the\nregion is x\n\u221a\nR units, what is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 51
+ },
+ {
+  "id": "sathard-geometry-23",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 23,
+  "page": 51,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "The perimeter of an equilateral triangle is\n876 centimeters. The three vertices of the\ntriangle lie on a circle. The radius of the\ncircle is w\n\u221a\n3 centimeters. What is the value\nof w?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 51
+ },
+ {
+  "id": "sathard-geometry-24",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 24,
+  "page": 51,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nB\nA\n\u2022\nFor the right circular cone shown, B is a\npoint on the circumference of the base, and\nthe length of segment AB (not shown) is 84\ncentimeters. If the height of the cone is 42\ncentimeters and the volume of the cone is k\u03c0\ncubic centimeters, what is the value of k?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 51
+ },
+ {
+  "id": "sathard-geometry-27",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 27,
+  "page": 51,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "In triangle RST, the measure of angle R is\n18 degrees and the measure of angle T is\n72 degrees. Point L lies on RS, point K\nlies on ST, and LK is parallel to RT. What\nis the measure, in degrees, of angle SKL?\n(Disregard the degree symbol when entering\nyour answer.)",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 51
+ },
+ {
+  "id": "sathard-geometry-31",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 31,
+  "page": 52,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Note: Figure not drawn to scale.\nS\nT\nU\nV\nW\np\u25e6\nr\u25e6\nIn the figure shown, point T lies on segment\nSW, and segment TU is parallel to segment\nVW. The measure of angle V is 26\u00b0, and the\nmeasure of angle STU is 74\u00b0. What is the\nvalue of p \u2212 r?",
+  "choices": [],
+  "type": "FREE_RESPONSE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 52
+ },
+ {
+  "id": "sathard-geometry-33",
+  "book": "hard",
+  "topic": "Geometry",
+  "num": 33,
+  "page": 52,
+  "domain": "GT",
+  "skill": "GT-AV",
+  "difficulty": "HARD",
+  "body": "Triangles PQR and LMN are graphed in the\nxy-plane. Triangle PQR has vertices P, Q,\nand R at (5, 2), (5, 4), and (7, 2); respectively.\nTriangle LMN has vertices L, M, and N at\n(5, 2), (5, 4 + k), and (7 + k, 2), respectively,\nwhere k is a positive constant. If the measure\nof \u2220Q is t\u25e6, what is the measure of \u2220N?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(90 \u2212 (t \u2212 k))\u25e6"
+   },
+   {
+    "label": "B",
+    "content": "(90 \u2212 (t + k))\u25e6"
+   },
+   {
+    "label": "C",
+    "content": "(90 \u2212 t)\u25e6"
+   },
+   {
+    "label": "D",
+    "content": "(90 + k)\u25e6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE",
+  "src": "711bc634-Math_Hard_Book.pdf",
+  "pdf_page": 52
+ }
+]

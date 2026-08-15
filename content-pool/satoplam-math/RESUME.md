@@ -10,7 +10,21 @@ difficulty structure recorded at the top of CLAUDE.md.
 finished. Every question was transcribed from its page image, solved
 independently of the printed key, given a difficulty and an explanation.
 
-**Stage 3 (verify the keys) is RUNNING.** `verify_keys.py` compared all 1,102
+**Stage 3 RESULT: 67 of 72 disputed keys confirmed WRONG.** Two blind readers
+agreed against the book on 67; on 2 the adjudicator matched the book, so the
+first reader was the outlier; 2 are broken questions; 1 is held because its
+reading was contaminated; 0 unsettled. Verdicts in `key_verdicts.json`.
+**93% confirmation on a 6.6% dispute rate — about 1 keyed question in 16 in
+these books has the wrong answer printed.**
+
+**A second wave is RUNNING (`my-01` … `my-09`).** The first wave only covered
+the 1,102 questions whose maths did not survive extraction. The other 899
+extracted cleanly and so were never transcribed — meaning no explanation, no
+difficulty, and an UNCHECKED key. At the measured error rate that is roughly
+55 wrong answers. They are now going through the identical pipeline. Do not
+import them until this finishes.
+
+**Stage 3, first wave (superseded, kept for the method):** `verify_keys.py` compared all 1,102
 derived answers with `printed_keys.json`: **1,012 agree, 72 dispute (6.6%),
 8 the agent judged unanswerable, 10 have no usable printed key.** Three blind
 adjudicators (`adj/adj-1..3`) are re-solving the 72 — they see neither the key

@@ -1,0 +1,2607 @@
+[
+ {
+  "id": "satmath-ma2-probability-1",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 1,
+  "exam": "June 2023",
+  "page": 263,
+  "pdf_page": 85,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A certain book has 250 pages, and 21 of\nthese pages have an illustration. If one of\nthe book\u2019s pages is selected at random, what\nis the probability of selecting a page with an\nillustration? (Express your answer as a dec-\nimal or fraction, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-3",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 3,
+  "exam": "March 2024",
+  "page": 263,
+  "pdf_page": 85,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "There are 20 marbles in the bag: 8 red\nmarbles, 10 green marbles, and 2 blue mar-\nbles. if one of these marbles is selected at\nrandom, what is the probability of selecting\na red marble?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2/20"
+   },
+   {
+    "label": "B",
+    "content": "8/20"
+   },
+   {
+    "label": "C",
+    "content": "10/20"
+   },
+   {
+    "label": "D",
+    "content": "12/20"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-4",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 4,
+  "exam": "May 2024",
+  "page": 263,
+  "pdf_page": 85,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A choir of 48 singers has 12 members who\nsing bass. If one singer from the choir is\nselected at random, what is the probability\nof selecting a singer who sings bass?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 48"
+   },
+   {
+    "label": "B",
+    "content": " 12 48"
+   },
+   {
+    "label": "C",
+    "content": " 36 48"
+   },
+   {
+    "label": "D",
+    "content": " 48 48"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-5",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 5,
+  "exam": "May 2024",
+  "page": 263,
+  "pdf_page": 85,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table shows the distribution of people\nin a certain city by age group.\nAge group Proportion\nLess than 18 years old 27%\n18\u201340 years old 24%\n41\u201365 years old 28%\nGreater than 65 years old 21%\nIf a person in this city is selected at random,\nwhich of the following is closest to the prob-\nability of selecting a person who is greater\nthan 65 years old, given that the person is\nat least 18 years old?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0.21"
+   },
+   {
+    "label": "B",
+    "content": "0.29"
+   },
+   {
+    "label": "C",
+    "content": "0.35"
+   },
+   {
+    "label": "D",
+    "content": "0.41"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-7",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 7,
+  "exam": "December US 2024",
+  "page": 264,
+  "pdf_page": 86,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A sleep study consisted of 59 participants,\nof which 53 participants each had an av-\nerage of more than 120 minutes of rapid\neye movement (REM) sleep per night. If\na participant from this study is selected at\nrandom, what is the probability of selecting\na participant that had an average of more\nthan 120 minutes of REM sleep per night?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "53/100"
+   },
+   {
+    "label": "B",
+    "content": "59/100"
+   },
+   {
+    "label": "C",
+    "content": "53/59"
+   },
+   {
+    "label": "D",
+    "content": "59/53"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-10",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 10,
+  "exam": "May 2025",
+  "page": 264,
+  "pdf_page": 86,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Hakim has a bag of 50 tiles, where 45 are la-\nbeled with a letter and 5 are black. If Hakim\nselects a tile from the bag at random, what\nis the probability of selecting a black tie?\n(Express your answer as a decimal or frac-\ntion, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-11",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 11,
+  "exam": "June US 2025",
+  "page": 264,
+  "pdf_page": 86,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Each rock in a collection of 70 rocks was\nclassified as either igneous, metamorphic,\nor sedimentary, as shown in the frequency\ntable.\nClassification Frequency\nigneous 10\nmetamorphic 38\nsedimentary 22\nIf one of these rocks is selected at random,\nwhat is the probability of selecting a rock\nthat is igneous?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 10 70"
+   },
+   {
+    "label": "B",
+    "content": " 10 60"
+   },
+   {
+    "label": "C",
+    "content": " 10 38"
+   },
+   {
+    "label": "D",
+    "content": " 10 22"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-13",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 13,
+  "exam": "August US 2023",
+  "page": 265,
+  "pdf_page": 87,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table summarizes the distribution of age and assigned group for participants in a study.\n0-9 years 10-19 years 20+ years Total\nGroup A 14 19 27 60\nGroup B 27 7 26 60\nGroup C 19 34 7 60\nTotal 60 60 60 180\nOne of these participants will be selected at random. What is the probability of selecting a\nparticipant from group A, given that the participant is at least 10 years of age? (Express your\nanswer as a decimal or fraction, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-14",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 14,
+  "exam": "August 2024",
+  "page": 265,
+  "pdf_page": 87,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A bin contains a mixture of T-shirts for two sports teams. The table shows the number of\nT-shirts in the bin, classified by size and sports team.\nFlames Panthers Total\nSmall 6 9 15\nMedium 24 33 57\nLarge 18 24 42\nTotal 48 66 114\nOne T-shirt from the bin will be selected at random. What is the probability of selecting a\nT-shirt that is medium, given that the T-shirt is a Flames T-shirt? (Express your answer as a\ndecimal or fraction, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-15",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 15,
+  "exam": "June 2024",
+  "page": 265,
+  "pdf_page": 87,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "The table summarizes the distribution of age and assigned group for 105 participants in a study.\n0-9 years 10-19 years 20+ years Total\nGroup A 5 19 11 35\nGroup B 4 8 23 35\nGroup C 26 8 1 35\nTotal 35 35 35 105\nOne of these participants will be selected at random. What is the probability of selecting a\nparticipant from group A, given that the participant is at least 10 years of age",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 2 7"
+   },
+   {
+    "label": "B",
+    "content": " 3 7"
+   },
+   {
+    "label": "C",
+    "content": " 19 35"
+   },
+   {
+    "label": "D",
+    "content": " 6 7 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-16",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 16,
+  "exam": "October 2024",
+  "page": 266,
+  "pdf_page": 88,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Live north of\nCenter St.\nLive south of\nCenter St.\nTotal\nLess than 45 years old 13 12 25\nAt least 45 years old 22 88 110\nTotal 35 100 135\nThe table summarizes members of a local organization by age and whether they live north or\nsouth of Center St. If a member of the organization is selected at random, what is the probability\nthat the selected member is at least 45 years old?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 25 135"
+   },
+   {
+    "label": "B",
+    "content": " 35 135"
+   },
+   {
+    "label": "C",
+    "content": " 100 135"
+   },
+   {
+    "label": "D",
+    "content": " 110 135"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-probability-17",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 17,
+  "exam": "August US 2023",
+  "page": 266,
+  "pdf_page": 88,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "A researcher calculated the mitochondrial genome sizes g, in kilobase pairs (kbp), and the number\nof mitochondrial genes for 34 different species. The table summarizes these data.\nNumber of Mitochondrial Genome Size (kbp)\nmitochondrial genes g < 16 16 \u2264 g < 18 18 \u2264 g < 20 g \u2265 20 Total\n36 or less 3 0 0 0 3\n37 1 19 0 0 20\n38 or more 2 0 4 0 6\nTotal 6 19 4 0 29\nOne of these species is selected at random. What is the probability of selecting a species with\na mitochondrial genome size greater than or equal to 18 kbp, given that it has 37 or more\nmitochondrial genes?\n(Express your answer as a decimal or fraction, not as a percent.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-18",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 18,
+  "exam": "November US 2024",
+  "page": 266,
+  "pdf_page": 88,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "For 100 neurons, the table summarizes the distribution of classification and cell body diame-\nter:\nClassification\nCell body diameter (micrometers)\nLess than 20 20 to 30 Greater than 30\nSensory neuron 13 7 3\nMotor neuron 0 15 18\nInterneuron 10 34 0\nOne of these neurons will be selected at random. What is the probability of selecting a neuron\nwith a cell body diameter that is less than or equal to 30 micrometers, given that it is not\nclassified as a motor neuron?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-probability-19",
+  "book": "ma2",
+  "topic": "Probability",
+  "num": 19,
+  "exam": "November 2024",
+  "page": 267,
+  "pdf_page": 89,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Even\nintegers\nOdd\nintegers\nTotal\nList A 12 44 56\nList B 40 4 44\nTotal 52 48 100\nThe given table shows the number of even and odd integers contained in list A and list B. No\ninteger is contained in both lists. What fraction of even integers represented in the table are in\nlist A?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 12 52"
+   },
+   {
+    "label": "B",
+    "content": " 12 56"
+   },
+   {
+    "label": "C",
+    "content": " 52 100"
+   },
+   {
+    "label": "D",
+    "content": " 52 56 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-1",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 269,
+  "pdf_page": 91,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "Each of the frequency tables represents a\ndata set.\nData Set 1\nValue Frequency\n3 1\n4 0\n5 2\n6 4\n7 2\nData Set 2\n3 2\n4 3\n5 2\n6 1\n7 1\nWhich statement best compares the medi-\nans of two data sets?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The median of data set 2 is greater than the median of data set 1."
+   },
+   {
+    "label": "B",
+    "content": "The median of data set 1 is greater than the median of data set 2."
+   },
+   {
+    "label": "C",
+    "content": "The medians are the same."
+   },
+   {
+    "label": "D",
+    "content": "There is not enough information to compare the medians."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-2",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 269,
+  "pdf_page": 91,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "168 170 172 174 176 178\nEstimated market value\n(in thousand of dollars)\nThe dot plot shows the estimated market\nvalues for 15 houses in a neighborhood.\nWhat is the maximum estimated market\nvalue, in thousands of dollars, for the data\nset?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-mean-median-mode-range-3",
+  "book": "ma2",
+  "topic": "Mean, Median, Mode, Range",
+  "num": 3,
+  "exam": "March US 2023",
+  "page": 269,
+  "pdf_page": 91,
+  "src": "88c1f5d6-180270_ma2",
+  "domain": "PSDA",
+  "skill": "PSDA-ST",
+  "body": "38 39 40 41 42 43 44 45 46\nThe dot plot shows the 9 values of a data set\nwith a mean value of a and a median value\nof b. The value of 46 is removed to create a\nnew data set of 8 values with a mean value\nof y and a median value of z. Which state-\nment best compares the mean values and the\nmedian values for the two data sets.",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = y and b < z"
+   },
+   {
+    "label": "B",
+    "content": "a = y and b > z"
+   },
+   {
+    "label": "C",
+    "content": "a < y and b = z"
+   },
+   {
+    "label": "D",
+    "content": "a > y and b = z "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-1",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 8,
+  "pdf_page": 9,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "The ratio of a person\u2019s weight on Earth to\nthe person\u2019s weight on the Moon is constant.\nAn astronaut who weighs 540 newtons on\nEarth weighs 90 newtons on the Moon. An-\nother astronaut weighs w newtons on Earth.\nWhich of the following expressions repre-\nsents this astronaut\u2019s weight, in newtons,\non the Moon?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "6w"
+   },
+   {
+    "label": "B",
+    "content": "0.6w"
+   },
+   {
+    "label": "C",
+    "content": " 6 w"
+   },
+   {
+    "label": "D",
+    "content": " w 6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-3",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 3,
+  "exam": "March US 2023",
+  "page": 8,
+  "pdf_page": 9,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Jaqueline spent $150 for supplies and gas\nto start a lawn-mowing service. She charges\n$25 for each lawn she mows. In the first\nweek Jaqueline made $50 after the cost of\nsupplies and gas was deducted. Which equa-\ntion represents this situation, where x is the\nnumber of lawns Jaqueline mowed during\nthe first week?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "25x \u2212 150 = 50"
+   },
+   {
+    "label": "B",
+    "content": "50 \u2212 25x = 150"
+   },
+   {
+    "label": "C",
+    "content": "150 \u2212 25x = 50"
+   },
+   {
+    "label": "D",
+    "content": "25x + 50 = 150"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-9",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 9,
+  "exam": "November 2023",
+  "page": 9,
+  "pdf_page": 10,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "If 2x + 3 = 9, what is the value of 4x \u2212 4?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-expressions-13",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 13,
+  "exam": "November 2023",
+  "page": 10,
+  "pdf_page": 11,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "A total of 6 squares each have side length\nr. A total of 3 equilateral triangle each\nhave side length t. None of these squares\nand triangles shares a side. The sum of the\nperimeters of all these squares and trian-\ngles is 75. Which equation represents this\nsituation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "18r + 12t = 75"
+   },
+   {
+    "label": "B",
+    "content": "24r + 9t = 75"
+   },
+   {
+    "label": "C",
+    "content": "3r + 6t = 75"
+   },
+   {
+    "label": "D",
+    "content": "6r + 3t = 75"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-15",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 15,
+  "exam": "December 2023",
+  "page": 11,
+  "pdf_page": 12,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n15(x + 10)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15x + 10"
+   },
+   {
+    "label": "B",
+    "content": "15x + 150"
+   },
+   {
+    "label": "C",
+    "content": "15x + 25"
+   },
+   {
+    "label": "D",
+    "content": "15x + 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-20",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 20,
+  "exam": "March 2024",
+  "page": 12,
+  "pdf_page": 13,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to 16(x+5)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "16x + 5"
+   },
+   {
+    "label": "B",
+    "content": "16x + 80"
+   },
+   {
+    "label": "C",
+    "content": "16x + 21"
+   },
+   {
+    "label": "D",
+    "content": "16x + 11"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-22",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 22,
+  "exam": "March 2024",
+  "page": 12,
+  "pdf_page": 13,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "x = 2a(b + 5)\nThe given equation relates the positive num-\nbers a, b, and x. Which equation correctly\nexpresses a in terms of b and x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = x 2 \u2212 (b + 5)"
+   },
+   {
+    "label": "B",
+    "content": "a = x 2(b + 5)"
+   },
+   {
+    "label": "C",
+    "content": "a = 2(b + 5) x"
+   },
+   {
+    "label": "D",
+    "content": "a = 2x(b + 5)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-23",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 23,
+  "exam": "March 2024",
+  "page": 12,
+  "pdf_page": 13,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "x = 2a(b + 3)\nThe given equation relates positive numbers\nx,a, and b. Which equation correctly ex-\npresses a in terms of b and x?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = x 2 \u22124b + 3"
+   },
+   {
+    "label": "B",
+    "content": "a = x 2(b + 3)"
+   },
+   {
+    "label": "C",
+    "content": "a = 2(b + 3) x"
+   },
+   {
+    "label": "D",
+    "content": "a = 2x(b + 3)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-32",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 32,
+  "exam": "June 2024",
+  "page": 14,
+  "pdf_page": 15,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "A piece of string with a length of 35 inches\nis cut into two parts. One part has a length\nof x inches, and the other part has a length\nof y inches. The value of x is 5 more than\n2 times the value of y. What is the value of\nx?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-expressions-37",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 37,
+  "exam": "August 2024",
+  "page": 15,
+  "pdf_page": 16,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "If\na = 3k + 4r and b = 9k \u2212 12r + 6,\nwhich expression is equivalent to a \u2212 b?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22126k + 16r \u2212 6"
+   },
+   {
+    "label": "B",
+    "content": "\u22126k + 16r + 6"
+   },
+   {
+    "label": "C",
+    "content": "\u22126k \u2212 8r + 6"
+   },
+   {
+    "label": "D",
+    "content": "\u22126k \u2212 8r \u2212 6"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-38",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 38,
+  "exam": "August 2024",
+  "page": 15,
+  "pdf_page": 16,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "(9y + 9) \u2212 (5y + 7)\nThe given expression is equivalent to by + c,\nwhere b and c are constants. What is the\nvalue of b?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-expressions-40",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 40,
+  "exam": "August 2024",
+  "page": 15,
+  "pdf_page": 16,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to\n15(x + 10)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15x + 10"
+   },
+   {
+    "label": "B",
+    "content": "15x + 150"
+   },
+   {
+    "label": "C",
+    "content": "15x + 25"
+   },
+   {
+    "label": "D",
+    "content": "15x + 5 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-43",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 43,
+  "exam": "August US 2024",
+  "page": 16,
+  "pdf_page": 17,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "On average, a certain tree grows 51 centime-\nters every m months. At this rate, which\nexpression represents the number of cen-\ntimeters, on average, the tree grows every k\nyears?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 17m 4k"
+   },
+   {
+    "label": "B",
+    "content": " 17k 4m"
+   },
+   {
+    "label": "C",
+    "content": " 612m k"
+   },
+   {
+    "label": "D",
+    "content": " 612k m"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-53",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 53,
+  "exam": "October 2024",
+  "page": 18,
+  "pdf_page": 19,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "The total mass, in kilograms, of r identi-\ncal objects is t. Which expression represents\nthe total mass, in kilograms, of 146r of these\nobjects?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "146 \u2212 t"
+   },
+   {
+    "label": "B",
+    "content": "146 + t"
+   },
+   {
+    "label": "C",
+    "content": " t 146"
+   },
+   {
+    "label": "D",
+    "content": "146t"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-60",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 60,
+  "exam": "November 2024",
+  "page": 19,
+  "pdf_page": 20,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "One gallon of sealant costs $23 and will\ncover 250 square feet of a surface. A deck\nhas a total surface area of d square feet.\nWhich of the following represents the cost\nc, in dollars, of the sealant needed to cover\nthe deck twice?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c = 250d 23"
+   },
+   {
+    "label": "B",
+    "content": "c = 500d 23"
+   },
+   {
+    "label": "C",
+    "content": "c = 23( d 125 )"
+   },
+   {
+    "label": "D",
+    "content": "c = 23( d 250 ) "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-61",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 61,
+  "exam": "December 2024",
+  "page": 20,
+  "pdf_page": 21,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "PC = N(44 \u2212 C)\nThe given equation relates the variables\nP, N, and C. Which expression represents\nthe value of C for distinct positive values of\nP and N?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " C(N + P) N"
+   },
+   {
+    "label": "B",
+    "content": " PC 44 \u2212 C"
+   },
+   {
+    "label": "C",
+    "content": " 44N N + P"
+   },
+   {
+    "label": "D",
+    "content": " 44N P + 1"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-64",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 64,
+  "exam": "December 2024",
+  "page": 20,
+  "pdf_page": 21,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "On average, a certain tree grows 87 centime-\nters every m months. At this rate, which\nexpression represents the number of cen-\ntimeters, on average, the tree grows every k\nyears?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 29m 4k"
+   },
+   {
+    "label": "B",
+    "content": " 29k 4m"
+   },
+   {
+    "label": "C",
+    "content": " 1, 044m k"
+   },
+   {
+    "label": "D",
+    "content": " 1, 044k m"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-70",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 70,
+  "exam": "March US 2025",
+  "page": 21,
+  "pdf_page": 22,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "f =\n(10x)2\n7g\nThe given equation relates the positive num-\nbers f, x, and g. Which equation correctly\nexpresses x in terms of f and g?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = \u221a 7fg 10"
+   },
+   {
+    "label": "B",
+    "content": "x = 10 \u221a 7fg"
+   },
+   {
+    "label": "C",
+    "content": "x = r 7fg 10"
+   },
+   {
+    "label": "D",
+    "content": "x = \u221a 7fg \u2212 10"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-72",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 72,
+  "exam": "March 2025",
+  "page": 22,
+  "pdf_page": 23,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "q \u2212 34r = s\nThe given equation relates the positive num-\nbers q, r, and s. Which equation correctly\nexpresses q in terms of r and s?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "q = s \u2212 34r"
+   },
+   {
+    "label": "B",
+    "content": "q = s + 34r"
+   },
+   {
+    "label": "C",
+    "content": "q = 34rs"
+   },
+   {
+    "label": "D",
+    "content": "q = \u2212 s 34r"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-74",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 74,
+  "exam": "March 2025",
+  "page": 22,
+  "pdf_page": 23,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Which expression is equivalent to 15(x+10)?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15x + 10"
+   },
+   {
+    "label": "B",
+    "content": "15x + 150"
+   },
+   {
+    "label": "C",
+    "content": "15x + 25"
+   },
+   {
+    "label": "D",
+    "content": "15x + 5"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-78",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 78,
+  "exam": "May 2025",
+  "page": 23,
+  "pdf_page": 24,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "P = N(34 \u2212 C)\nThe given equation relates the variables P,\nN, and C. Which expression represents the\nvalue of C for distinct positive values of P\nand N?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "C + P N"
+   },
+   {
+    "label": "B",
+    "content": "34 + P N"
+   },
+   {
+    "label": "C",
+    "content": "34 \u2212 P C"
+   },
+   {
+    "label": "D",
+    "content": "34 \u2212 P N"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-81",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 81,
+  "exam": "June 2025",
+  "page": 23,
+  "pdf_page": 24,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "11m = 7(n + p)\nThe given equation relates the positive num-\nbers m, n, and p. Which equation correctly\ngives n in terms of m and p?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "n = 7p 11m"
+   },
+   {
+    "label": "B",
+    "content": "n = 11m 7 \u2212 p"
+   },
+   {
+    "label": "C",
+    "content": "n = 7(11m) + p"
+   },
+   {
+    "label": "D",
+    "content": "n = 11m \u2212 7 \u2212 p"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-84",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 84,
+  "exam": "June 2025",
+  "page": 24,
+  "pdf_page": 25,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "One gallon of sealant costs $13 and will\ncover 300 square feet of a surface. A deck\nhas a total surface area of d square feet.\nWhich equation represents the cost c, in\ndollars, of the sealant needed to cover the\ndeck twice?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c = 300d 13"
+   },
+   {
+    "label": "B",
+    "content": "c = 600d 13"
+   },
+   {
+    "label": "C",
+    "content": "c = 13 \u0012 d 150 \u0013"
+   },
+   {
+    "label": "D",
+    "content": "c = 13 \u0012 d 300 \u0013"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-90",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 90,
+  "exam": "June US 2025",
+  "page": 25,
+  "pdf_page": 26,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "One gallon of sealant costs $29 and will\ncover 300 square feet of a surface. A deck\nhas a total surface area of d square feet.\nWhich equation represents the cost c, in\ndollars, of the sealant needed to cover the\ndeck twice?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c = 300d 29"
+   },
+   {
+    "label": "B",
+    "content": "c = 600d 29"
+   },
+   {
+    "label": "C",
+    "content": "c = 29 \u0012 d 150 \u0013"
+   },
+   {
+    "label": "D",
+    "content": "c = 29 \u0012 d 300 \u0013"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-91",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 91,
+  "exam": "November US 2024",
+  "page": 25,
+  "pdf_page": 26,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "A machine makes 9-inch, 8-inch, and 3-inch\nparts. During a certain day, the number of\n9-inch parts that the machine makes is 4\ntimes the number n of 8-inch parts, and the\nnumber of 3-inch parts is 15. During this\nday, the machine makes 100 parts in total.\nWhich equation represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "9(4n) + 8n + 3(15) = 100"
+   },
+   {
+    "label": "B",
+    "content": "9n + 8n + 3n = 100"
+   },
+   {
+    "label": "C",
+    "content": "4n + 15 = 100"
+   },
+   {
+    "label": "D",
+    "content": "5n + 15 = 100"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-92",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 92,
+  "exam": "December US 2024",
+  "page": 25,
+  "pdf_page": 26,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "Hassan put up wire fencing along each edge\nof a rectangular garden with a length of x\nfeet and a width of y feet. Hassan put up\na total of 44 feet of wire fencing. Which\nequation represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2x + 2y = 44"
+   },
+   {
+    "label": "B",
+    "content": "x + y = 44"
+   },
+   {
+    "label": "C",
+    "content": "2xy = 44"
+   },
+   {
+    "label": "D",
+    "content": "xy = 44 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-expressions-93",
+  "book": "ma2",
+  "topic": "Expressions",
+  "num": 93,
+  "exam": "June 2025",
+  "page": 26,
+  "pdf_page": 27,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ADV-EQ",
+  "body": "A machine makes 8-inch, 5-inch, and 7-inch\nparts. During a certain day, the number\nof 8-inch parts that the machine makes is\n3 times the number n of 5-inch parts, and\nthe number of 7-inch parts is 12. During\nthis day, the machine makes 100 parts total.\nWhich equation represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "8(3n) + 5n + 7(12) = 100"
+   },
+   {
+    "label": "B",
+    "content": "8n + 5n + 7n = 100"
+   },
+   {
+    "label": "C",
+    "content": "3n + 12 = 100"
+   },
+   {
+    "label": "D",
+    "content": "4n + 12 = 100"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-2",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 30,
+  "pdf_page": 31,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which equation has no solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "x = x + 1"
+   },
+   {
+    "label": "B",
+    "content": "x = 2x + 2"
+   },
+   {
+    "label": "C",
+    "content": "x + 1 = x + 1"
+   },
+   {
+    "label": "D",
+    "content": "x + 1 = 2x + 2"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-4",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 4,
+  "exam": "March US 2023",
+  "page": 30,
+  "pdf_page": 31,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "|15 \u2212 x|\u22129 = 0\nWhat are all positive solutions to the given\nequation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22126 and \u221224"
+   },
+   {
+    "label": "B",
+    "content": "\u22126 and 24"
+   },
+   {
+    "label": "C",
+    "content": "6 and \u221224"
+   },
+   {
+    "label": "D",
+    "content": "6 and 24"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-5",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 5,
+  "exam": "March US 2023",
+  "page": 30,
+  "pdf_page": 31,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "ax \u2212 y = bxy\nThe given equation relates the positive num-\nbers a,b,x,and y. Which equation correctly\nexpresses a in terms of b, x,and y?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "a = bxy + y x"
+   },
+   {
+    "label": "B",
+    "content": "a = bxy \u2212 y x"
+   },
+   {
+    "label": "C",
+    "content": "a = x bxy + y"
+   },
+   {
+    "label": "D",
+    "content": "a = x bxy \u2212 y"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-9",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 9,
+  "exam": "August US 2023",
+  "page": 31,
+  "pdf_page": 32,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "The cost to rent a bus from Company X\nis $950 for the first 3 hours and an addi-\ntional $50 per hour for each hour after the\nfirst 3 hours. If the total cost to rent the\nbus from Company X for t hours is 1, 250,\nwhich equation represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "950 + 50(t \u2212 3) = 1, 250"
+   },
+   {
+    "label": "B",
+    "content": "950 + 50(3t) = 1, 250"
+   },
+   {
+    "label": "C",
+    "content": "950(t \u2212 3) + 50t = 1, 250"
+   },
+   {
+    "label": "D",
+    "content": "950(3t) + 50t = 1, 250"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-10",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 10,
+  "exam": "August US 2023",
+  "page": 31,
+  "pdf_page": 32,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "6(x \u2212 9) = 11(x \u2212 9)\nwhat value of x is the solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-11",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 11,
+  "exam": "August US 2023",
+  "page": 31,
+  "pdf_page": 32,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n10x = 10 have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-12",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 12,
+  "exam": "November 2023",
+  "page": 31,
+  "pdf_page": 32,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "|6x \u2212 3|= |5x|\nWhat is the smallest solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-13",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 13,
+  "exam": "November 2023",
+  "page": 31,
+  "pdf_page": 32,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "9x + x = 2x + x + 5\nWhich of the following equations lies the\nsame solution as the given equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "7x = 5"
+   },
+   {
+    "label": "B",
+    "content": "7x = \u22125"
+   },
+   {
+    "label": "C",
+    "content": "11x = 5"
+   },
+   {
+    "label": "D",
+    "content": "11x = \u22125 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-14",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 14,
+  "exam": "December 2023",
+  "page": 32,
+  "pdf_page": 33,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "12x = 65 \u2212 x\nWhat value of x is the solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-16",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 16,
+  "exam": "November 2023",
+  "page": 32,
+  "pdf_page": 33,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 2x + 3 = 9, what is the value of 4x \u2212 4?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-17",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 17,
+  "exam": "March 2024",
+  "page": 32,
+  "pdf_page": 33,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 2x + 3 = 9, what is the value of 4x \u2212 4?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-18",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 18,
+  "exam": "March 2024",
+  "page": 32,
+  "pdf_page": 33,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If \u22129(15 \u2212 3x) + 5 = \u221210(15 \u2212 3x) + 21,\nwhat is the value of 15 \u2212 3x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-20",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 20,
+  "exam": "March 2024",
+  "page": 32,
+  "pdf_page": 33,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A veterinarian recommends that each day a\ncertain cat should eat 24 calories per pound\nof the cat\u2019s weight, plus an additional 14\ncalories. Which equation represents this\nsituation, where c is the total number of\ncalories the veterinarian recommends the\ncat should eat each day if the cat\u2019s weight\nis x pounds?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "c = 24x"
+   },
+   {
+    "label": "B",
+    "content": "c = 38x"
+   },
+   {
+    "label": "C",
+    "content": "c = 14x + 24"
+   },
+   {
+    "label": "D",
+    "content": "c = 24x + 14 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-21",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 21,
+  "exam": "March 2024",
+  "page": 33,
+  "pdf_page": 34,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n9x + 6 = 5x + 4x + 12 have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-22",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 22,
+  "exam": "March 2024",
+  "page": 33,
+  "pdf_page": 34,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Raheem bought 3 shirts that were each the\nsame price. He used a coupon for $30 off\nthe entire purchase. The cost for the entire\npurchase after using the coupon was $15.\nWhat was the original price, in dollars, for\n1 shirt?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-24",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 24,
+  "exam": "May 2024",
+  "page": 33,
+  "pdf_page": 34,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "13x = 42 \u2212 x\nWhat value of x is the solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-32",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 32,
+  "exam": "May US 2024",
+  "page": 34,
+  "pdf_page": 35,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "|x \u2212 9|+81 = 99\nWhat is the sum of the solutions to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-33",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 33,
+  "exam": "May US 2024",
+  "page": 34,
+  "pdf_page": 35,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "The cost to rent a bus from Company X\nis $950 for the first 2 hours and an addi-\ntional $50 per hour for each hour after the\nfirst 2 hours. If the total cost to rent the\nbus from Company X for t hours, where\nt > 2 is $1,250, which equation represents\nthis situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "950(t \u2212 2) + 50t = 1, 250"
+   },
+   {
+    "label": "B",
+    "content": "950(2t) + 50t = 1, 250"
+   },
+   {
+    "label": "C",
+    "content": "950 + 50(t \u2212 2) = 1, 250"
+   },
+   {
+    "label": "D",
+    "content": "950 + 50(2t) = 1, 250 "
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-35",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 35,
+  "exam": "June 2024",
+  "page": 35,
+  "pdf_page": 36,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which equation has no solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u221219x \u2212 1 7 = \u221219x \u2212 1 7"
+   },
+   {
+    "label": "B",
+    "content": "\u221219x \u2212 1 7 = \u221219x + 1 7"
+   },
+   {
+    "label": "C",
+    "content": "\u221219x \u2212 1 7 = 19x \u2212 1 7"
+   },
+   {
+    "label": "D",
+    "content": "\u221219x \u2212 1 7 = 19x + 1 7"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-38",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 38,
+  "exam": "June 2024",
+  "page": 35,
+  "pdf_page": 36,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Raheem bought 9 shirts that were each the\nsame price. He used a coupon for $54 off\nthe entire purchase. The cost for the entire\npurchase after using the coupon was $108.\nWhat was the original price, in dollars, for\n1 shirt?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-44",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 44,
+  "exam": "August 2024",
+  "page": 36,
+  "pdf_page": 37,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n6x + 4 = 6x + 8 have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Exactly one"
+   },
+   {
+    "label": "D",
+    "content": "Zero"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-47",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 47,
+  "exam": "August 2024",
+  "page": 37,
+  "pdf_page": 38,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "7x \u2212 6x + 130 = 260\nWhat value of x is the solution to the given\nequation?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-49",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 49,
+  "exam": "August US 2024",
+  "page": 37,
+  "pdf_page": 38,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A teacher is creating an assignment worth\n28 points. The assignments will consist of\nquestions worth 1 point and questions worth\n2 points. Which equation represents this\nsituation, where x represents the number\nof 1-point questions and y represents the\nnumber of 2 points questions?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3xy = 28"
+   },
+   {
+    "label": "B",
+    "content": "3(x + y) = 28"
+   },
+   {
+    "label": "C",
+    "content": "2x + y = 28"
+   },
+   {
+    "label": "D",
+    "content": "x + 2y = 28"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-52",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 52,
+  "exam": "August US 2024",
+  "page": 37,
+  "pdf_page": 38,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Raheem bought 9 shirts that were each the\nsame price. He used a coupon for $54 off\nthe entire purchase. The cost for the entire\npurchase after using the coupon was $108.\nWhat was the original price, in dollars, for\n1 shirt?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-55",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 55,
+  "exam": "August US 2024",
+  "page": 38,
+  "pdf_page": 39,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n5x + 3 = 5x + 7 have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-57",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 57,
+  "exam": "October US 2024",
+  "page": 38,
+  "pdf_page": 39,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "13x + 50 = 180\nWhich equation has the same solution as the\ngiven equation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "13x = 50"
+   },
+   {
+    "label": "B",
+    "content": "13x = 80"
+   },
+   {
+    "label": "C",
+    "content": "13x = 130"
+   },
+   {
+    "label": "D",
+    "content": "13x = 180"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-58",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 58,
+  "exam": "October US 2024",
+  "page": 38,
+  "pdf_page": 39,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which equation has no solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "3(x \u2212 1) = \u22123(\u2212x + 1)"
+   },
+   {
+    "label": "B",
+    "content": "3(x \u2212 1) = \u22123(\u2212x \u2212 1)"
+   },
+   {
+    "label": "C",
+    "content": "3(x \u2212 1) = 4(x \u2212 1)"
+   },
+   {
+    "label": "D",
+    "content": "3(x \u2212 1) = 4(\u2212x + 1)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-60",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 60,
+  "exam": "October US 2024",
+  "page": 38,
+  "pdf_page": 39,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Sophia bought confetti and balloons for $56.\nEach package of confetti costs $3, and each\nballoon costs $1. If Sophia bought 10 pack-\nages of confetti, how many balloons did she\nbuy?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-61",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 61,
+  "exam": "October 2024",
+  "page": 39,
+  "pdf_page": 40,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "In 2010, a skating team had a total of 35\nskaters, each classified as either advanced\nor intermediate. From 2010 to 2020, the\nnumber of advanced skaters on the team\nincreased by approximately 53%, and the\nnumber of intermediate skaters on the team\nincreased by approximately 44%. The total\nnumber of skaters on the team increased by\napproximately 49%. Which equation best\nrepresents this situation, where a represents\nthe number of advanced skaters on the team\nin 2010 and b represents the number of in-\ntermediate skaters on the team in 2010?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "1.53a + 1.49b = 35(1.44)"
+   },
+   {
+    "label": "B",
+    "content": "1.49a + 0.53b = 35(1.44)"
+   },
+   {
+    "label": "C",
+    "content": "1.53a + 1.44b = 35(1.49)"
+   },
+   {
+    "label": "D",
+    "content": "1.44a + 1.53b = 35(1.49)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-64",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 64,
+  "exam": "October US 2024",
+  "page": 39,
+  "pdf_page": 40,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "The equation d = 33w + 100 gives the total\namount of money d, in dollars, that James\nplans to save w weeks after he starts to\nsave. What is the total amount of money,\nin dollars, he plans to save in 10 weeks?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "380"
+   },
+   {
+    "label": "B",
+    "content": "430"
+   },
+   {
+    "label": "C",
+    "content": "480"
+   },
+   {
+    "label": "D",
+    "content": "530"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-65",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 65,
+  "exam": "October US 2024",
+  "page": 39,
+  "pdf_page": 40,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which of the following equations has ex-\nactly one solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": " 1 44 + x = x"
+   },
+   {
+    "label": "B",
+    "content": " 1 44 + x = \u2212x \u2212 1 44"
+   },
+   {
+    "label": "C",
+    "content": " 1 44 \u2212 x = 1 44 \u2212 x"
+   },
+   {
+    "label": "D",
+    "content": " 1 44 \u2212 x = \u2212x"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-67",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 67,
+  "exam": "October US 2024",
+  "page": 40,
+  "pdf_page": 41,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "0.10x + 0.20y = 0.19(x + y)\nThe equation gives a volume x, in gallons,\nof a 10% salt water solution that could be\nmixed with a volume y, in gallons of a 20%\nsaltwater solution to produce a 19% salt-\nwater solution. According to this equation,\nwhat volume, in gallons, of the 20% saltwa-\nter solution could be mixed with 50.0 gal-\nlons of 10% saltwater solution to produce a\n19% saltwater solution? (Assume that the\nvolume of the mixture is the sum of the vol-\numes of the two solutions before they were\nmixed.)",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-68",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 68,
+  "exam": "October US 2024",
+  "page": 40,
+  "pdf_page": 41,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "4(x \u2212 3) = 13 + 2(x \u2212 3)\nIf x is the solution to the given equation,\nwhat is the value of x \u2212 3?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-71",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 71,
+  "exam": "October US 2024",
+  "page": 40,
+  "pdf_page": 41,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solution does the equation\n5x + 3 = 5x have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-74",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 74,
+  "exam": "November 2024",
+  "page": 41,
+  "pdf_page": 42,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Casey is raising h horses and g goats. Each\nhorse requires 2 acres of land, and each goat\nrequires 1 acre of land. The h horses and\ng goats require 21 acres of land. Which\nequation represents this situation?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "2g + h = 21"
+   },
+   {
+    "label": "B",
+    "content": "g + 2h = 21"
+   },
+   {
+    "label": "C",
+    "content": "g + h 2 = 21"
+   },
+   {
+    "label": "D",
+    "content": " g 2 + h = 21"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-76",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 76,
+  "exam": "November US 2024",
+  "page": 41,
+  "pdf_page": 42,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n17(x \u2212 16) = \u221216(x + 17) have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinetely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-79",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 79,
+  "exam": "December US 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n7x \u2212 19 = 19 \u2212 7x have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-80",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 80,
+  "exam": "December US 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "6(x \u2212 4) = (x \u2212 4) + 6\nIf x is the solution to the given equation,\nwhat is the value of x \u2212 4?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-81",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 81,
+  "exam": "December 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Raheem bought 9 shirts that were each the\nsame price. He used a coupon for $54 off\nthe entire purchase. The cost for the entire\npurchase after using the coupon was $108.\nWhat was the original price, in dollars, for\n1 shirt?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-82",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 82,
+  "exam": "December 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 9 \u2212 4(4 \u2212 9x) = 2 \u2212 5(4 \u2212 9x), what\nis the value of 4 \u2212 9x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-83",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 83,
+  "exam": "December 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "a(7x \u2212 14) + 5a = 7(ax \u2212 2a) \u2212 35\nIn the given equation, a is a constant.\nThe equation has infinitely many solutions.\nWhat are all possible values of a?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "0 only"
+   },
+   {
+    "label": "B",
+    "content": "-7 only"
+   },
+   {
+    "label": "C",
+    "content": "Any real number"
+   },
+   {
+    "label": "C",
+    "content": "No real number"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-84",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 84,
+  "exam": "December 2024",
+  "page": 42,
+  "pdf_page": 43,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "d = 15t\nThe given equation relates the distance d, in\ninches, of an object from its starting position\nto the time t, in seconds, since the object\nstarted moving. What is the rate of change\nof the object\u2019s distance from its starting po-\nsition over time?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "15t inches per second"
+   },
+   {
+    "label": "B",
+    "content": "15 inches per second"
+   },
+   {
+    "label": "C",
+    "content": " 1 15 inches per second"
+   },
+   {
+    "label": "D",
+    "content": " 1 15t inches per second"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-86",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 86,
+  "exam": "December 2024",
+  "page": 43,
+  "pdf_page": 44,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "The rectangular region of land is divided\ninto 40 square lots of equal area R, in square\nunits. The length of the region is 1.6 times\nthe width of the region. If the width of the\nregion is x\n\u221a\nR units, what is the value of x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-87",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 87,
+  "exam": "December 2024",
+  "page": 43,
+  "pdf_page": 44,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A company that manufactures staplers cal-\nculates its monthly profit, in dollars, by sub-\ntracting its fixed monthly costs, in dollars,\nfrom its monthly sales revenue, in dollars.\nThe equation\n11, 000 = 2.00x \u2212 6, 500\nrepresents this situation for a month where x\nstaplers are manufactured and sold. Which\nstatement is the best interpretation of 2.00x\nin this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The monthly sales revenue, in dollars, from selling x staplers"
+   },
+   {
+    "label": "B",
+    "content": "The monthly sales revenues, in dollars, from each stapler sold."
+   },
+   {
+    "label": "C",
+    "content": "The monthly cost, in dollars, of manu- facturing each stapler."
+   },
+   {
+    "label": "D",
+    "content": "The monthly cost, in dollars, of manu- facturing x staplers."
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-88",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 88,
+  "exam": "March 2025",
+  "page": 43,
+  "pdf_page": 44,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 7 + x = 3, what is the value of 56 + 8x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-93",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 93,
+  "exam": "March 2025",
+  "page": 44,
+  "pdf_page": 45,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "In one week in 2017, a technician earned\na total of $1, 055 by working at her regu-\nlar job and at a second job doing part-time\nwork. The equation 20h + 17c = 1, 055 rep-\nresents this situation, where h is the number\nof hours worked at her regular job and c is\nthe number hours at her second job. Which\nof the following is the best interpretation of\n20 in this context?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The amount, in dollars, the technician earned for each hour regular job"
+   },
+   {
+    "label": "B",
+    "content": "The amount, in dollars, the technician earned for each hour second job"
+   },
+   {
+    "label": "C",
+    "content": "The number of weeks the technician worked at her regular job"
+   },
+   {
+    "label": "D",
+    "content": "The number of weeks the technician worked at her second job"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-94",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 94,
+  "exam": "March US 2025",
+  "page": 44,
+  "pdf_page": 45,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "If 7 + x = 4, what is the value of 42 + 6x?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-95",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 95,
+  "exam": "March 2025",
+  "page": 44,
+  "pdf_page": 45,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "2x \u2212 3 = 2x\nHow many solutions does the equation have?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Zero"
+   },
+   {
+    "label": "B",
+    "content": "Exactly one"
+   },
+   {
+    "label": "C",
+    "content": "Exactly two"
+   },
+   {
+    "label": "D",
+    "content": "Infinitely many"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-102",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 102,
+  "exam": "May 2025",
+  "page": 45,
+  "pdf_page": 46,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "A gym charges its members a one-time $34\nenrollment fee and a membership fee of $16\nper month. If there are no charges other\nthan the enrollment fee and the membership\nfee, after how many months will a member\nhave been charged a total of $178 at the\ngym?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-105",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 105,
+  "exam": "May 2025",
+  "page": 46,
+  "pdf_page": 47,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "What value of w is the solution to the equa-\ntion 0.7w \u2212 0.57 = 7(w \u2212 0.001)?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-107",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 107,
+  "exam": "May 2025",
+  "page": 46,
+  "pdf_page": 47,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "For a set of three consecutive integers, the\nresult of subtracting the greatest integer\nfrom the sum of the other two integers is\n48. What is the value of the greatest of the\nthree integers?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-112",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 112,
+  "exam": "June 2025",
+  "page": 47,
+  "pdf_page": 48,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "Which equation has no solution?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "63x + 36 = 9(7x + 4)"
+   },
+   {
+    "label": "B",
+    "content": "63x + 4 = 7x + 4"
+   },
+   {
+    "label": "C",
+    "content": "63x + 360 = 9(7x + 16)"
+   },
+   {
+    "label": "D",
+    "content": "63x + 51 = \u221263x \u2212 51"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-equations-115",
+  "book": "ma2",
+  "topic": "Linear Equations",
+  "num": 115,
+  "exam": "June US 2025",
+  "page": 47,
+  "pdf_page": 48,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "How many solutions does the equation\n4(16x \u2212 20) = \u221216(5 \u2212 4x)\nhave?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Exactly one"
+   },
+   {
+    "label": "B",
+    "content": "Exactly two"
+   },
+   {
+    "label": "C",
+    "content": "Infinitely many"
+   },
+   {
+    "label": "D",
+    "content": "Zero"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-1",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 1,
+  "exam": "March US 2023",
+  "page": 51,
+  "pdf_page": 52,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "5x + 4y = 44\n3x \u2212 7y = 17\nThe solution to the given system of equa-\ntions is (x, y). What is the value of 8x\u22123y?",
+  "choices": [],
+  "type": "FREE_RESPONSE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-2",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 2,
+  "exam": "March US 2023",
+  "page": 51,
+  "pdf_page": 52,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "2x \u2212 2y = 2\nOne of the two linear equation in a system is\ngiven.The system has exactly one solution.\nWhich equation could be the second equa-\ntion in this system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\u22128x + 8y = 3"
+   },
+   {
+    "label": "B",
+    "content": "3x \u2212 3y = 8"
+   },
+   {
+    "label": "C",
+    "content": "\u221210x + 8y = 5"
+   },
+   {
+    "label": "D",
+    "content": "\u2212x + y = \u22121"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ },
+ {
+  "id": "satmath-ma2-linear-system-of-equations-4",
+  "book": "ma2",
+  "topic": "Linear System of Equations",
+  "num": 4,
+  "exam": "June 2023",
+  "page": 51,
+  "pdf_page": 52,
+  "src": "9e751874-190_ma2",
+  "domain": "ALG",
+  "skill": "ALG-LE",
+  "body": "3x + 5y = 8\n9x + 15y = 24\nFor each real number, r which of the follow-\ning points lies on the graph of each equation\nin the xy-plane for the given system?",
+  "choices": [
+   {
+    "label": "A",
+    "content": "(r, \u2212 5r 3 + 8 3 )"
+   },
+   {
+    "label": "B",
+    "content": "(r, 3r 5 + 8 5 )"
+   },
+   {
+    "label": "C",
+    "content": "(\u2212 5r 3 + 8 3 , r)"
+   },
+   {
+    "label": "D",
+    "content": "( r 3 + 8, \u2212 r 3 + 24)"
+   }
+  ],
+  "type": "MULTIPLE_CHOICE"
+ }
+]
