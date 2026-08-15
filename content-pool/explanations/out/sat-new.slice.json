@@ -1,0 +1,170 @@
+[
+ {
+  "id": "d018422e-68b4-4cde-bf63-8540c240f349",
+  "source": "SAT:satoplam-rhetorical-synthesis-29",
+  "test": "Test 24",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 25,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 25,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses information from the given sentences to emphasize a difference between Water Line and Seven Earth Mountain?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Maya Lin is an American artist known for her memorials and large-scale installation artworks.</li><li>She became famous in 1982 when she completed the Vietnam Veterans Memorial, which consists of two 246-foot granite walls.</li><li>She completed Water Line in 2006.</li><li>It is an installation composed of aluminum tubing that fills an entire gallery room.</li><li>She completed Seven Earth Mountain in 2015.</li><li>It is an installation composed of soil that fills an entire gallery room.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "After completing the Vietnam Veterans Memorial, Maya Lin completed Water Line, another large-scale work.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "The sprawling size of Maya Lin’s Vietnam Veterans Memorial is echoed in Water Line, a work made of aluminum tubing that fills an entire gallery room.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Maya Lin’s Water Line is composed of aluminum tubing; Seven Earth Mountain, by contrast, is composed of soil.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Maya Lin is known for her memorials and installation art, such as Water Line and Seven Earth Mountain.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "436ddd1d-73a8-4522-b16e-22022f0bdff4",
+  "source": "SAT:satoplam-rhetorical-synthesis-33",
+  "test": "Test 16",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 26,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 26,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice most effectively uses information from the given sentences to emphasize the location of the figures in Lost in the Shuffle?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Calida Garcia Rawles is an African American painter.</li><li>She is known for her large-scale, hyperrealistic paintings depicting African American figures in water.</li><li>The painting Lightness of Being (24 &times; 30 in) depicts a young man with his arms outstretched floating on the right side of the canvas.</li><li>Lost in the Shuffle (36 &times; 24 in) depicts two young men with their arms outstretched floating in the bottom left and upper right corners of the canvas.</li><li>She paints the water with vivid blue colors, including periwinkle and cobalt.</li><li>The mood in the paintings is placid.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "While the number of figures may differ, constant among Rawles’s hyperrealistic works is the placid mood that the paintings evoke.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "In Rawles’s painting Lost in the Shuffle, two young men are depicted in the bottom left and upper right corners of the canvas.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "At by inches, Rawles’s Lost in the Shuffle is even larger than the sizable 24- by-30-inch painting Lightness of Being.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Rawles captures the water in paintings such as Lightness of Being and Lost in the Shuffle in vivid hues of periwinkle and cobalt.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "44315d9d-9d87-4017-af88-29794c3b42ed",
+  "source": "SAT:satoplam-rhetorical-synthesis-23",
+  "test": "Test 17",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 26,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 26,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice most effectively uses information from the given sentences to explain the concept of torsional heating?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Generally, an object will heat up when twisted.</li><li>The twisting of an object is known as torsion.</li><li>A 2019 study led by researchers Zunfeng Liu and Ray Baughman tested the torsional heating of various fibers.</li><li>When ethylene propylene diene monomer (EPDM) rubber fiber was twisted, its average surface temperature increased by 12°C.</li><li>When four-ply nickel-titanium (NiTi) wire was twisted, its average surface temperature increased by 30.4°C.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "An object’s average surface temperature will generally change due to torsion.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Torsional heating is the process by which an object increases in temperature when it is twisted.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Researchers determined that when both fibers were twisted, the surface temperature of four-ply NiTi wire increased more than that of EPDM rubber.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "In 2019, researchers studied the effect of torsional heating on various fibers, like EPDM rubber and four-ply NiTi wire.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "28b1e11d-3cf1-4d6f-b287-5f101439500c",
+  "source": "SAT:satoplam-rhetorical-synthesis-44",
+  "test": "Test 27",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 26,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 26,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses information from the given sentences to emphasize when she collected both of the samples?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Ynés Mexía was a Mexican American botanist.</li><li>Between 1917 and 1938, she collected over 150,000 botanical samples throughout the Americas.</li><li>She collected a sample of Achyrocline vauthieriana in Minas Gerais, Brazil, on May 3, 1930.</li><li>She collected a sample of Vernonia liatroides in Jalisco, Mexico, on February 14, 1927.</li><li>These specimens are members of the Asteraceae family.</li><li>They can now be viewed online at the C.V. Starr Virtual Herbarium.</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Thousands of botanical samples collected by Ynés Mexía can now be found in one place: online at the C.V. Starr Virtual Herbarium.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "On May in 1930, Ynés Mexía added a new specimen to her growing collection of botanical samples: Achyrocline vauthieriana of the Asteraceae family.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "While both specimens collected by Ynés Mexía are members of the same family, Achyrocline vauthieriana was found in Minas Gerais and Vernonia liatroides was found in Jalisco.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Ynés Mexía collected a sample of Achyrocline vauthieriana in May of 1930, after collecting Vernonia liatroides in February of 1927.",
+    "isCorrect": true
+   }
+  ]
+ }
+]

@@ -1,0 +1,548 @@
+[
+ {
+  "id": "8c80130d-cbd5-4708-9835-66dab7773ead",
+  "source": "SAT:satoplam-command-of-evidence-support-42",
+  "test": "Test 19",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 13,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 13,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which finding from the study, if true, would most directly support the team’s conclusion?",
+  "passage": "<p>Neurobiologists Laura Cuaya, Raúl Hernández-Pérez, and colleagues investigated the language detection abilities of eighteen dogs raised in similar settings. The researchers monitored the brain activity of Grog (a border collie), Alma (a mixed breed), and other dogs while the animals listened to three recordings: one of The Little Prince being read in Spanish, the second in Hungarian, and a third made up of short, randomly selected fragments of the first two, scrambled so that they didn’t resemble human speech. Each dog was familiar with either Spanish or Hungarian, but not both. The team concluded that the amount of previous language exposure a dog has received may influence its ability to distinguish familiar languages from unfamiliar ones.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Although the dogs’ general hearing sensitivity declined with age, dogs of all ages showed more brain activity in response to hearing the language they were accustomed to than in response to hearing the other language.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "The difference between the pattern of brain activity a dog showed when hearing the language it was accustomed to and the pattern of brain activity it showed when hearing the language it was not accustomed to was greatest among older dogs.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The similarity between the pattern of brain activity a dog showed in response to hearing the scrambled recording and the pattern of brain activity it showed in response to hearing the language it was not accustomed to was greatest among older dogs.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Dogs showed a different pattern of brain activity when hearing the language they were accustomed to than when hearing the scrambled recording, and the difference in brain activity increased with the age of the dog scanned.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "b5471fa4-fe7c-496e-947c-ae295d65fdaa",
+  "source": "SAT:satoplam-rhetorical-synthesis-176",
+  "test": "Test 30",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 27,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 27,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Most of the plant and bird species in Oahu, Hawaii, are non-native.</li><li>In a 2019 study, researchers wanted to know what role non-native birds play in dispersing plant seeds in Oahu.</li><li>Researchers catalogued plant seeds found in fecal samples from non-native birds.</li><li>Psydrax odorata, a flowering shrub, was one of fifteen native species catalogued.</li><li>Cestrum nocturnum, a nightshade, was one of twenty-nine non-native species catalogued.</li><li>Researchers concluded that non-native birds play a vital role in dispersing the seeds of native and non-native plants.</li></ul><p>The student wants to emphasize the order in which the supercontinents were formed.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Most plant species found in Oahu, Hawall, like Cestrum nocturnum, are nonnative.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Though Psydrax odorata and Cestrum nocturnum can both be found in Oahu, Hawaii, only the former plant is native.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "A 2019 study catalogued plant seeds found in bird fecal samples in Oahu, Hawaii, to determine what role non-native birds play in seed dispersal.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Seeds from Psydrax odorata and Cestrum nocturnum plants were found in the fecal samples of non-native Hawaiian birds, according to a 2019 study.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "832c0dc6-8d53-416a-ab23-1aec9952b4f8",
+  "source": "SAT:satoplam-underlined-purpose-40",
+  "test": "Test 22",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 6,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 6,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice best describes the function of the references to \"population density\" and \"average commuting distance\" in the text as a whole?",
+  "passage": "<p>Copenhagen has high pedestrian traffic, but simply replicating a feature of Copenhagen associated with walkability—e.g., its human-scaled architecture—may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals’ decision-making about whether to walk is insufficiently robust; some studies emphasize the role of population density, others the role of average commuting distance, and so on, but walking decisions are made in complex contexts in which multiple conditions and needs inform individuals’ choices.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "They identify factors that Alfonzo argues have been overemphasized in studies of decision-making about walking but that the text asserts are relevant to most people’s walking decisions.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "They illustrate factors that researchers believe people consider when making walking decisions in most contexts but that the text argues are unique to walking decisions made by people in Copenhagen.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "They are examples of factors that studies suggest are important in people’s decision-making about walking but that the text claims most people rarely consider when making walking decisions.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "They represent factors that have been identified as important influences on walking decisions but that the text suggests are merely some of the many factors that may contribute to people’s decision-making about walking.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "8ae5648d-b63d-4bc8-ba5f-3b3c26f68ab0",
+  "source": "SAT:satoplam-quotation-51",
+  "test": "Test 17",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 11,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 11,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which quotation from a study of irrigation best supports the student’s claim?",
+  "passage": "<p>A student is writing a research paper on the history of irrigation in the United States, situating the development of the Bear River Reservoir (created in Amador County, California, in 1900) in a large historical context. The student claims that innovation in irrigation practices throughout the United States has led to designs with increased efficiency.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "\"While the low humidity of Southern California’s desert areas makes irrigation a requirement if agriculture is to be a success there, the relatively high humidity in the northern parts of the state makes such practices less necessary.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "\"The importance of irrigation infrastructure in the United States today cannot be overstated, since it is the most widely utilized means of conveying water for food production. Accordingly, any increase in the efficiency of irrigation, however small, would be of significant economic and social value.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "\"The irrigation system developed by the Hohokam people in the 7th century CE in what is now Arizona was simple but applied hydraulic engineering design features that are still in use today.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "\"Competition for water as a scarce economic resource inspired the development of sprinkler irrigation systems, which have contributed to the reduction of water used for irrigation in the United States to 45% of the total water usage of its population. Comparatively, 70% of the world’s water usage is dedicated to irrigation.\"",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "e4e464de-a677-4476-9793-028c21e53f1f",
+  "source": "SAT:satoplam-main-purpose-41",
+  "test": "Test 29",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 6,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 6,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>The following text is adapted from Matthew Arnold’s 1869 nonfiction book Culture and Anarchy. The Times (a British newspaper), replying to some foreign strictures on the dress, looks, and behaviour of the English abroad, urges that the English ideal is that every one should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like, the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It argues that what is beautiful is a matter of fact rather than opinion.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "It analyzes the unique sense of taste of the English.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It indicates that opinion regarding culture shift over time.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It makes a claim about one of the principal effects of culture.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "acc8849f-026c-4625-9d91-51f446ba80da",
+  "source": "SAT:satoplam-transitions-191",
+  "test": "Test 29",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 22,
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 22,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>Known as an \"empire on which the sun never sets,\" the Spanish Empire once controlled portions of five continents. Its legacy can still be seen, and heard, in the Spanish-speaking nation of Cuba, which gained its independence from Spain in the nineteenth century. _____ a former colony’s tie to the Spanish Empire is so tenuous that Spanish is seldom spoken there; an example is Sardinia, which ceased to be part of the empire in 1720.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Sometimes,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "On the other hand,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "At the same time,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "In addition,",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "1e4fe6e4-026f-434c-b614-b4e680831c03",
+  "source": "SAT:satoplam-command-of-evidence-support-12",
+  "test": "Test 30",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 12,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 12,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which finding, if true, would most directly support the researchers’ conclusion?",
+  "passage": "<p>Periods of subfreezing temperatures in Alaska have been growing shorter in response to climate warming, potentially enabling increased carbon dioxide (CO2) absorption through greater productivity of creeping dogwood (Cornus canadensis) plants and other vegetation, but also potentially enabling increased CO2 output through greater heterotrophic respiration (CO2 generated by the activity of soil microorganisms). Hydrologist Yonghong Yi and her colleagues developed a model incorporating numerous inputs—years of solar radiation and snow cover data among them—to evaluate the effects of warming on the CO2 balance in Alaska, concluding that net CO2 is likely to increase if warming hastens spring snow melt.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Early snow melt reduces the amount of soil moisture available for the growth of plant species such as C. canadensis, and it raises the rate of heterotrophic respiration.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Early snow melt extends the period in which plant species such as C. canadensis can absorb CO2, but has no effect on the rate of heterotrophic respiration.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Early snow melt slows the growth of plant species such as C. canadensis by reducing soil insulation, and it suppresses heterotrophic respiration.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Early snow melt amplifies the effect of solar radiation on the growth of plant species such as C. canadensis and on the rate of heterotrophic respiration.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "082f1dfb-62ec-4dc7-a7c2-eb6047bf1a78",
+  "source": "SAT:satoplam-rhetorical-synthesis-188",
+  "test": "Test 20",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 27,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 27,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice most effectively uses relevant Information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Digital Light Synthesis (DI.S) is a form of additive manufactiring that utilizes light to rapidly cure liquid resin into high-quality, 3D objects.</li><li>Step 1: Ultraviolet (UV) light images are projected up into a pool of liquid resin. where the object’s first layer takes shape.</li><li>Step 2: The partially cured resin object is raised, leaving a thin space (a \"dead zone) beneath it for oxygen and liquid resin to flow through.</li><li>Step 3: The UV light passes through the dead zoneand partially cures additional layers of the object -maintaining the flow of resin-and partially cures additional layers of the object.</li><li>Step 4: When the resin object is complete, it is baked in an oven to complete the curing.</li></ul><p>The student wants to describe how DL.S cures 3D objects.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "DLS cures 3D objects by passing through a \"dead zone,\" adding layers to the object, then curing the object in an oven.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "In DLS, UV light is projected into layers of liquid resin until the resin solidifies and passes through a \"dead zone,\" wherein the curing is completed.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "In DLS. UV light Images are projected into a liquid resin pool to cure a 3D object layer by layer: once solidified,the object is baked in an oven.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "DLS is a form of additive manufacturing that creates a \"dead zone\" in which UV light solidifies layer by layer before being baked in an oven, creating a highquality, 3D object.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "7e938039-017b-410e-ac00-02129b217ce5",
+  "source": "SAT:satoplam-main-purpose-40",
+  "test": "Test 21",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 6,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 6,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>Founded in New York City in 1904, the Hispanic Society of America is dedicated to the arts and cultures of Spanish-speaking and Portuguese-speaking regions around the world. Since its founding, it has acquired more than 18,000 objects for its permanent collection. More recently founded US-based institutions devoted to Latino cultures include the Latino Cultural Center. Located in Dallas, it focuses on Latino cultures and art in the United States.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To trace the founding of two institutions, including how they acquired funding to purchase artworks",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "To present information about two institutions, including each institution’s area of focus",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "To trace a historical development that encouraged the founding of two institutions",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "To draw a contrast between the collection sizes of two institutions",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "3c9a0d5d-0b97-4a61-8691-95ae9f1a18f4",
+  "source": "SAT:satoplam-transitions-171",
+  "test": "Test 21",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 24,
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 24,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>In astrophysics, a ring of debris orbiting a larger object within the object’s Roche limit is expected to persist as a ring, whereas a ring of debris orbiting outside this limit would likely accrete into a satellite (e.g., a moon). Bruno Morgado and colleagues, _____ detected a dense ring of material orbiting the trans-Neptunian object Quaoar at a distance of 2,500 miles, well outside the calculated Roche limit of 1,100 miles, that has remained intact.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "likewise,",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "for example,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "fittingly,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "though,",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "60389e40-eedf-4d94-bf31-01d1f0035351",
+  "source": "SAT:satoplam-transitions-169",
+  "test": "Test 28",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 23,
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 23,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>In an ekphrastic poem, a poet explores a work of visual art, such as a drawing, sculpture, or painting. Elizabeth Alexander’s 2011 poem \"Walking,\" for example, meditates on Charles Alston’s 1963 painting Walking; Cornelius Eady’s 2001 poem \"Jacob Lawrence. Summer Street Scene,\" _____ takes a painting as its subject: Jacob Lawrence’s 1948 work Summer Street Scene in Harlem.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "nevertheless,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "conversely,",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "likewise,",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "hence,",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "20034098-9829-4a78-8ed9-34804c2a1ac8",
+  "source": "SAT:satoplam-main-purpose-36",
+  "test": "Test 21",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 7,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 7,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>The following text is adapted from Matthew Arnold’s 1869 nonfiction book Culture and Anarchy. The Times (a British newspaper), replying to some foreign strictures on the dress, looks, and behaviour of the English abroad, urges that the English ideal is that every one should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like, the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It makes a claim about one of the principal effects of culture.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It asserts that what is beautiful is a matter of objective truth rather than subjective perception.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "It implies that opinions regarding culture evolve over time.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "It explains differences in matters of taste between the English and others.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "20eee368-a4df-4616-8f2c-65d882cd5c94",
+  "source": "SAT:satoplam-quotation-56",
+  "test": "Test 29",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 11,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 11,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
+  "passage": "<p>The Clouds is a 423 BCE play by Aristophanes, originally written in ancient Greek. At the time, professional intellectuals called sophists taught customers rhetorical techniques to use in public speaking, along with providing instruction in other subjects. In the play, Aristophanes satirizes sophists as having an exaggerated sense of their own wisdom, as seen when the character</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Socrates, a sophist, says to a new customer, “Come, then, take care that, whenever I propound any clever dogma about abstruse matters, you [seize] immediately.\"",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Strepsiades says of a sophist business, “There dwell men who in speaking of the heavens persuade people that it is an oven, and that it encompasses us, and that we are the embers. These men teach, if one give them money, to conquer in speaking, right or wrong.\"",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Socrates, a sophist, says to a potential customer, “Is the power of speaking, pray, implanted in your nature?”",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Strepsiades encourages his son to learn to be a sophist, saying, “Reform your habits as quickly as possible, and go and learn what I advise.",
+    "isCorrect": false
+   }
+  ]
+ }
+]

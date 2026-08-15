@@ -1,0 +1,548 @@
+[
+ {
+  "id": "74ec067c-8ada-48c8-a147-bd9a5f76a478",
+  "source": "SAT:satoplam-rhetorical-synthesis-142",
+  "test": "Test 18",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 26,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 26,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Uranus has twenty-seven moons, including Oberon and Miranda.</li><li>Oberon completes an orbit of Uranus in 13.46 Earth days on average.</li><li>Miranda completes an orbit of Uranus in 1.41 Earth days on average.</li><li>German mathematician and astronomer Johannes Kepler (1571-1630) described the orbits of planets as elliptical in shape rather than circular.</li><li>Kepler published three laws of planetary motion to describe the orbits of planets around the Sun.</li><li>Kepler’s laws also apply to the elliptical orbits of natural satellites (e.g.. moons).</li></ul><p>The student wants to contrast the orbits of the two moons.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Miranda completes its orbit of Uranus many times faster than Oberon does.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Kepler’s three laws of planetary motion describe the orbits of planets and natural satellites, including those of Oberon and Miranda.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Oberon’s orbit of Uranus is elliptical in shape and takes, on average, 13.46 Earth days, while Miranda’s orbit of Uranus is circular in shape and takes, on average, 1.41 Earth days.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Uranus’s moons, specifically Oberon and Miranda, orbit their planet in the same way the planets orbit the Sun.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "a47d1b31-1f48-43c9-a7af-121d18bafbd8",
+  "source": "SAT:satoplam-command-of-evidence-weaken-2",
+  "test": "Test 31",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 12,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 12,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which finding, if true, would undermine the genetic paleontologists’ proposal?",
+  "passage": "<p>Dinosaurs, with the exception of the ancestors of birds, disappeared during a mass extinction 65 million years ago when an asteroid struck the Earth. Because a high metabolic rate has generally been suggested as one of the key advantages when it comes to surviving mass extinctions, some genetic palaeontologists have proposed that birds survived while non-avian dinosaurs did not because of the birds’ increased metabolic capacity.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The metabolisms of non-avian dinosaurs may have decreased over time.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Because some non-avian dinosaurs moved quickly, they likely had high metabolic rates.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Birds have some of the highest metabolism rates of any creatures on Earth.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Many dinosaurs with very high metabolic rates went extinct 65 million years ago.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "ddf23cd5-f2b2-4632-9fd2-ff8cdbfd4774",
+  "source": "SAT:satoplam-main-purpose-37",
+  "test": "Test 17",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 6,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 6,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>Founded in Long Beach, California, in 1996, the Museum of Latin American Art is dedicated to modern and contemporary art by Latin American artists and Latino artists in the United States. Since its founding, it has acquired more than 1,300 objects for its permanent collection. More recently founded US-based institutions devoted to Latino cultures include the National Hispanic Cultural Center. Located in Albuquerque, it focuses on the literature, art, and cultures of Latin America as well as Latino communities in the United States.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To trace the founding of two institutions, including how they acquired funding to purchase artworks.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "To draw a contrast between the collection sizes of two institutions.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "To present information about two institutions, including each institution’s area of focus.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "To trace a historical development that encouraged the founding of two institutions.",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "0d9e02c5-a1bc-48f5-b1d6-46a2cbe5c3ca",
+  "source": "SAT:satoplam-transitions-180",
+  "test": "Test 31",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 24,
+  "skill": "EOI-TR",
+  "skill_name": "Transitions",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 24,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "passage": "<p>A 1990 study of schooling fish observed the fish mimicking the behavior of school-mates rapidly swimming away from a predator. This is an example of an information cascade that benefits the collective. _____ the animal world is at times susceptible to the spread of misinformation, often with unfavorable results: a 2010 study of semipalmated sandpipers concluded that fleeing in response to flock-mates’ false alarms caused the birds to abandon safe nesting grounds unnecessarily.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In other words,",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Conversely,",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Indeed,",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "Consequently,",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "c1740143-ae60-4290-8bd2-423d38f73bc3",
+  "source": "SAT:satoplam-rhetorical-synthesis-170",
+  "test": "Test 23",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 27,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 27,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Modularity of mind is the notion that the mind is at least partly composed of innate neural structures (modules) that perform fast, necessary tasks.</li><li>1983: cognitive scientist Jerry A. Fodor hypothesized that low-level cognitive systems (e.g., perception, language) are modular.</li><li>In Fodorian modularity, high-level systems (e.g.,reasoning) are not modular.</li><li>2003: cognitive scientist Peter Carruthers proposed the massive modularity hypothesis (MMH).</li><li>MMH expands modularity to include all cognitive systems.</li></ul><p>The student wants to compare Fodor’s hypothesis with Carruthers’s.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "In 2003, Carruthers proposed the massive modularity hypothesis, disagreeing with Fodor’s earlier hypothesis that the mind is composed of innate neural structures.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "In considering some but not all cognitive systems modular, Fodorian modularity is not as expansive in its definition of modularity as MMH is.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "The hypotheses of Fodor and Carruthers differ in whether they consider low-level cognitive systems, such as perception and language, modular.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Following Fodor’s 1983 hypothesis, Carruthers proposed that modularity of mind Includes all cognitive systems.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "f0f1fe58-18b2-49f8-a8eb-680a41db48aa",
+  "source": "SAT:satoplam-words-in-contenxt-synonyms-19",
+  "test": "Test 30",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 4,
+  "skill": "CAS-WV",
+  "skill_name": "Words in Context",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 4,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "As used in the text, what does the word \"good\" most nearly mean?",
+  "passage": "<p>The following text is from Charles Chesnutt’ s 1905 novel The Colonel’ s Dream. Mr. French and Mr. Kirby work together. Mr. French, the senior partner, who sat opposite Kirby, was an older man-a safe guess would have placed him somewhere in the debatable ground between forty and fifty; of a good height, as could be seen even from the seated figure, the upper part of which was held erect with the unconscious ease which one associates with military training.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Well-behaved",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Considerable",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Capable",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Reliable",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "id": "7e92ecfd-4048-4e67-93c7-48a143175e92",
+  "source": "SAT:satoplam-rhetorical-synthesis-171",
+  "test": "Test 17",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 27,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 27,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Carbon can exist in several distinct structural forms called allotropes.</li><li>Graphite is a carbon allotrope.</li><li>Graphite is composed of stacked graphene sheets.</li><li>Each graphene sheet is composed of carbon atoms arranged in a flat honeycomb pattern.</li><li>Carbon nanotubes are carbon allotropes.</li><li>They are composed of one or more graphene sheets wrapped into acylindrical shape.</li></ul><p>The student wants to emphasize a difference between carbon nanotubes and graphite.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Composed of sheets wrapped into a cylindrical shape, carbon nanotubes contrast with graphite, a carbon allotrope composed of graphene sheets.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Graphite and carbon nanotubes are allotropes composed of stacked or wrapped graphene sheets, but carbon can exist in several distinct structural forms.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Unlike carbon nanotubes, which are composed of sheets of carbon atoms arranged in a flat honeycomb pattern, graphite is a cylindrical carbon allotrope.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "The graphene sheets in graphite are stacked, whereas in carbon nanotubes, they form a cylinder.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "ff1919de-61ba-455f-8456-52ed04e93aa1",
+  "source": "SAT:satoplam-command-of-evidence-weaken-13",
+  "test": "Test 20",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 13,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 13,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which finding, if true, would most directly challenge the second team’s claim?",
+  "passage": "<p>Veronica L. Bura, Akito Y. Kawahara, and Jayne E. Yack investigated the evolution and function of sound production in silk moth and hawk moth caterpillars. They found that during harmless simulated attacks on caterpillars, 33% of the tested species produced sound, which ranged from clicks in Antheraea pernyi to whistles in Phyllosphingia dissimilis. A second research team has claimed that caterpillars use these sounds primarily to communicate with other members of their species.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Among the caterpillar species that produced sound in response to simulated attacks, no individuals produced sound in the minute before the attacks, but the vast majority of individuals produced sound once the simulated attacks began.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "Most of the caterpillar species that were found to not produce sound in response to simulated attacks have been observed producing sound during encounters with other members of their species.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "Caterpillars that were found to produce sounds in response to simulated attacks are typically solitary and were tested in isolation.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The sounds caterpillars produced in response to the simulated attacks lacked acoustic characteristics that would make them audible to bats, lizards, or birds, some of the most frequent predators of caterpillars.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "569da34b-8a8f-4381-aac3-0ee8fa2adab0",
+  "source": "SAT:satoplam-command-of-evidence-weaken-18",
+  "test": "Test 18",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 13,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 13,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which finding, if true, would most directly weaken the hypothesis presented in the text?",
+  "passage": "<p>Some metals contain tungsten carbide nanoparticles (WC-NPs), which can leach into waterways and soils via wastewater. In a 2018 study, Mikael T. Ekvall and colleagues found that WC-NPs can accumulate in the bodies of water lice (Asellus aquaticus). While bioaccumulation of manufactured nanoparticles may be inherently worrisome, it has been hypothesized that WC-NP bioaccumulation in invertebrates like A. aquaticus could serve a valuable proxy role, obviating the need for manufacturers to conduct costly and intrusive sampling of vertebrate species—such as Perez’s frogs (Pelophylax perezi), commonly used in regulatory compliance testing—for nanoparticle bioaccumulation, as environmental protection laws currently require.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Compared with P. perezi, A. aquaticus can accumulate detectable WC-NP concentrations with significantly fewer negative effects.",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "The rate of WC-NP uptake in A. aquaticus differs from the rate of WC-NP uptake in P. perezi in a way that is not yet well understood by researchers.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "A. aquaticus has been shown to accumulate several other types of manufactured nanoparticles in addition to WC-NPs, whereas P. perezi has been shown to accumulate only WC-NPs.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "When A. aquaticus and P. perezi are exposed to similar levels of WC-NPs, concentrations of WC-NPs in animals of both species show little variation from individual to individual.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "7df521fb-6f54-4794-afec-cfc2feb87477",
+  "source": "SAT:satoplam-main-purpose-33",
+  "test": "Test 28",
+  "mo": 1,
+  "branch": "STANDARD",
+  "qo": 7,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 7,
+  "m_order": 1,
+  "m_difficulty": "STANDARD",
+  "stem": "Which choice best states the main purpose of the text?",
+  "passage": "<p>Founded in New York City in 1969, El Museo del Barrio is dedicated to the visual arts and cultures of Latin America and of Latino communities in the United States. Since its founding, it has acquired more than 8,500 objects for its permanent collection. More recently founded US-based institutions devoted to Latino cultures include the Emma S. Barrientos Mexican American Cultural Center. Located in Austin, Texas, it focuses on Mexican American art and culture.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "To trace the founding of two institutions, including how they acquired funding to purchase artworks",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "To trace a historical development that encouraged the founding of two institutions",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "To present information about two institutions, including each institution’s area of focus",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "To draw a contrast between the collection sizes of two institutions",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "7df91b20-db7f-40f8-a7d0-88780ce4d91e",
+  "source": "SAT:satoplam-form-structure-and-sense-7",
+  "test": "Test 22",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 18,
+  "skill": "SEC-FS",
+  "skill_name": "Form, Structure, and Sense",
+  "difficulty": "EASY",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "SEC",
+  "q_order": 18,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "passage": "<p>To divorce his first wife and marry Anne Boylyn, King Henry VIII of England separated from the Catholic Church in 1534. He then established his own religion, the Church of England, which would also become known as Protestantism. This decision would send England into centuries of turmoil as _____ , some Catholic and some Protestant, would enforce their preferred religion and persecute their subjects if they did not follow suit.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "England’s following monarchs",
+    "isCorrect": true
+   },
+   {
+    "label": "B",
+    "content": "English rulers that followed",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "British kings that later ruled",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "England’s later-ruling kings",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "9b4d35b9-4120-4afb-8537-2b054b4ca9e0",
+  "source": "SAT:satoplam-overall-structure-9",
+  "test": "Test 16",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 7,
+  "skill": "CAS-TS",
+  "skill_name": "Text Structure and Purpose",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "CAS",
+  "q_order": 7,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "passage": "<p>Like all species of baleen whales, the humpback whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the humpback whale small—it can have a mass as high as 30,000 kg—it is one of the smaller baleen whales and is much smaller than the northern right whale, which can weigh a whopping 80,000 kg and consume as much as 24,000 kg of krill per day.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "It describes a characteristic shared by all baleen whales and then illustrates a difference between the humpback whale and the northern right whale that is relevant to that characteristic.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "It discusses a unique feature of the humpback whale and how the lack of that feature in the northern right whale explains differences in the two species’ behavior.",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "It draws a distinction between the sizes of the humpback whale and the northern right whale and then presents a feature that they have in common.",
+    "isCorrect": true
+   },
+   {
+    "label": "D",
+    "content": "It details a relationship between humpback and northern right whales and krill and then discusses an unexpected consequence of a change in baleen whale populations.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "cc6c856a-b9db-47ec-806e-d3a8b2d09f37",
+  "source": "SAT:satoplam-quotation-4",
+  "test": "Test 21",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 12,
+  "skill": "INI-CE",
+  "skill_name": "Command of Evidence",
+  "difficulty": "MEDIUM",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "INI",
+  "q_order": 12,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which quotation from I Know Why the Caged Bird Sings most effectively supports this claim?",
+  "passage": "<p>I Know Why the Caged Bird Sings is a 1969 novel written by Maya Angelou. In the novel, the main character struggles to accept her African American race while growing up in the Southern United States.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "“The dress I wore was light purple. As I’d watched Momma make it, putting fancy stitching on the waist, I knew that when I put it on, I’d look like one of the sweet little white girls who were everyone’s dream of what was right with the world.”",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "“When people saw me wearing it, they were going to run up to me and say, ‘Marguerite [sometimes it was ‘dear Marguerite’], forgive us, please, we didn’t know who you were,’ and I would answer generously, ‘No, you couldn’t have known. Of course I forgive you.”",
+    "isCorrect": false
+   },
+   {
+    "label": "C",
+    "content": "“Wouldn’t they be surprised when one day I woke out of my black ugly dream, and my real hair, which was long and blonde, would take the place of the kinky mass that Momma wouldn’t let me straighten?”",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "“If growing up is painful for the Southern Black girl, being aware of her difference is worse. It is an unnecessary insult.”",
+    "isCorrect": true
+   }
+  ]
+ }
+]

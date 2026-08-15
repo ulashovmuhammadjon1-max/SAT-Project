@@ -151,6 +151,18 @@ def main():
     # this catches whatever slipped through. The later test keeps its slot's
     # difficulty rather than being bumped again, because it was already set to
     # the intended tier when it was inserted.
+    # Questions named explicitly for replacement. These are the ones the
+    # explanation agents found by READING — a goal sentence pasted from another
+    # question, a choice that is the literal string "None of the above", a
+    # passage that contradicts itself because a decimal comma turned 1,408 m
+    # into 14,08. No pattern finds these; a person has to notice them. They
+    # cannot be repaired from the database because the missing text only exists
+    # in the source books, so they are swapped out for sound questions instead.
+    forced = {}
+    fpath = os.path.join(HERE, "force_replace.json")
+    if os.path.exists(fpath):
+        forced = {f["id"]: f["why"] for f in json.load(open(fpath))}
+
     seen_src, dup_src = {}, set()
     for q in sorted(live, key=lambda r: (int(re.sub(r"\D", "", r["test"])), r["m_order"])):
         if q["source"] in seen_src:
@@ -233,7 +245,7 @@ def main():
             broken = ((FIGURE_REF.search(q["stem"]) and "<table" not in body
                        and "<img" not in body)
                       or ("underlined" in q["stem"].lower() and "<u>" not in body))
-            if broken or q["id"] in dup_src:
+            if broken or q["id"] in dup_src or q["id"] in forced:
                 victims[q["id"]] = (0.0, q, None)
 
         # Nothing wrong with this test — checked only after the defect scan, so
@@ -245,6 +257,9 @@ def main():
             want_skill = v["skill_name"]
             want_diff = (v["difficulty"] if v["id"] in dup_src
                          else NEXT_TIER[v["difficulty"]])
+            if v["id"] in forced:
+                notes.append(f"  replaced {v['test']} M{v['m_order']}{v['branch']} "
+                             f"q{v['q_order']}: {forced[v['id']]}")
             cands = by_skill_diff.get((want_skill, want_diff), [])
             # Some cells are genuinely empty — Rhetorical Synthesis/HARD has
             # nothing left unused. The books leave a further tranche of
