@@ -1,10 +1,33 @@
 # Project memory
 
-## MATH REBUILD OF TESTS 6-31 IS IN PROGRESS — read content-pool/satoplam-math/RESUME.md
+## MATH REBUILD: Tests 6-19 SHIPPED, Tests 20-31 NOT — read content-pool/satoplam-math/RESUME.md
 
-That file is the live state of the job: which stage is running, how to check
-progress, how to resume a stopped agent, and the traps already hit. Read it
-before touching anything under `content-pool/satoplam-math/`.
+924 SATashkent questions are live across Tests 6-19 Math. Tests 20-31 still
+carry the previously authored Math. RESUME.md is the finished record — the
+pipeline, why it stops at 14 tests, and the traps hit. Read it before touching
+anything under `content-pool/satoplam-math/`.
+
+**Why it stops at 14 and not 26, because this will be asked again:** not a
+threshold, a domain cap. HARD is the binding tier (443 in the pool against 26
+per test). Past 14 tests the Algebra and Advanced-Math HARD supply is spent and
+only Geometry is left, so Module 2 Hard came out 14 of 22 geometry with zero
+problem-solving. Finishing Tests 20-31 needs more HARD content in ALG/ADV/PSDA
+specifically — no re-tuning gets there.
+
+**The books' printed keys are wrong about once in 18.** 110 disputes across
+1,999 questions, 102 confirmed wrong by a second blind reader. This is a worse
+rate than the SAToplam R&W books (21 of 26 disputed, on a 2.1% dispute rate)
+and far worse than questions authored for this project (3 in 1,044). Treat any
+bought content as unverified until it has been through the independent-solve
+gate.
+
+**A checker that does not error is the dangerous kind.** Two field-name
+mismatches between an agent brief and the script reading its output made a
+clean 38-question adjudication round report as 38 broken questions, and then
+silently dropped 35 corrected keys out of the pool. Neither raised an
+exception. Before believing a clean checker result, run positive AND negative
+controls through it — that is the only reason 924 questions passing with zero
+style findings means anything.
 
 ## MATH TEST DIFFICULTY STRUCTURE, tests 6-31 (set by the user — reuse, do not ask again)
 
