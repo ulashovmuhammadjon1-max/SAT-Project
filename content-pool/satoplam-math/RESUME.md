@@ -110,6 +110,15 @@ notes to collect them. Representative so far:
 - **Internally inconsistent numbers.** `quadratics-93` gives a point (1, 58)
   that does not satisfy its own equation (which yields −6.25 at x = 1). Still
   answerable as an interpretation question, so no checker flags it.
+- **The bare-`A` marker fails in BOTH directions.** Loosening it swallowed 63
+  question bodies via the article "A"; tightening it with `LOOKS_MATHS` now
+  rejects genuine maths choices, so at least 12 Hard Book questions are typed
+  FREE_RESPONSE while the page prints four choices (`sathard-algebra-5, 8, 9,
+  26, 29, 31, 37`, `sathard-advanced-math-1, 7, 9, 11, 14`). The transcribers
+  corrected them. **Always trust the transcriber's type over the parse** — the
+  key-vs-type cross-check already routes these to transcription for exactly
+  this reason, so nothing is lost, but do not re-derive type from the parse at
+  assembly time.
 - **Type mislabelled by the parser.** `quadratics-74` is multiple choice; the
   book uses "(A)"-style markers there and the parser missed them. The
   transcriber corrected it. Trust the transcriber's type over the parse.
