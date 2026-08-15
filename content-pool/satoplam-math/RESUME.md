@@ -73,8 +73,10 @@ while agents are running would make every one of them re-render. Set `src` in
 
 ## Known gaps
 
-- 30 Areas&Volumes answers (Math 2.0 questions 43-72) sit on book page **382**,
-  one page past the last upload. Ask the user for it.
+- ~~30 Areas&Volumes answers on book page 382~~ **CLOSED.** The user supplied
+  the page as an image; the answers live in `key_overrides.json` and are
+  applied on top of the parse, because that page is not in any PDF on disk and
+  a re-parse would otherwise drop them again. Unkeyed fell 48 → 18.
 - 11 questions have a key contradicting their parsed type, meaning the choice
   block failed to parse. They are in the transcribe pile.
 

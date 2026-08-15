@@ -242,6 +242,30 @@ def main():
             "needs_vision": shredded(body + "\n" + "\n".join(c["content"] for c in r["choices"])) or key_disagrees,
         })
 
+    # Answers that exist in the printed book but not in any PDF we hold —
+    # currently the tail of the Math 2.0 Areas&Volumes table on page 382,
+    # supplied by the user as an image. Applied last so a re-parse cannot drop
+    # them, and refusing to overwrite a key the parser did find, so a genuine
+    # conflict surfaces instead of being silently resolved.
+    ovpath = os.path.join(HERE if 'HERE' in dir() else os.path.dirname(os.path.abspath(__file__)),
+                          "key_overrides.json")
+    if os.path.exists(ovpath):
+        n = 0
+        for cell, answers in json.load(open(ovpath)).items():
+            if cell.startswith("_"):
+                continue
+            bk, tp = cell.split("|")
+            for q in qs:
+                a = answers.get(str(q["num"]))
+                if a and q["book"] == bk and q["topic"] == tp:
+                    if q["key"] and q["key"] != a:
+                        print(f"  !! override conflict {q['id']}: book {q['key']} vs override {a}")
+                        continue
+                    q["key"] = a
+                    n += 1
+        if n:
+            print(f"{n} answer(s) applied from key_overrides.json")
+
     from collections import Counter
     print(f"\nquestions           {len(qs)}")
     print(f"  with an answer    {sum(1 for q in qs if q['key'])}")
