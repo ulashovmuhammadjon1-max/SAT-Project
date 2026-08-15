@@ -100,6 +100,19 @@ notes to collect them. Representative so far:
   its fourth choice as "E)". The parser also merged C and D into one string
   there — the same failure the key-vs-type cross-check flags.
 - **Duplicate choices.** `expressions-51` prints A and D identically.
+- **Choice labels wrong in print.** `quadratics-111` prints ALL FOUR choices as
+  "A)"; `quadratics-127` prints its last two both as "C)". Transcribed A-D in
+  printed order.
+- **Missing choice text.** `quadratics-133` prints "D)" with nothing after it.
+- **No choice block at all.** `quadratics-140` has none, and its answer is an
+  ordered pair (6, 185), which no grid-in can accept — the choices are
+  probably missing from the book. Cannot ship in either format.
+- **Internally inconsistent numbers.** `quadratics-93` gives a point (1, 58)
+  that does not satisfy its own equation (which yields −6.25 at x = 1). Still
+  answerable as an interpretation question, so no checker flags it.
+- **Type mislabelled by the parser.** `quadratics-74` is multiple choice; the
+  book uses "(A)"-style markers there and the parser missed them. The
+  transcriber corrected it. Trust the transcriber's type over the parse.
 - **Exact duplicate questions inside one book**, e.g. four pairs in the linear
   slice alone. See the recycling section above.
 
