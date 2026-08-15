@@ -1,9 +1,11 @@
-# SAToplam Math 2.0 and 3.0 — parsed, not yet imported
+# SATashkent Math books — parsed, not yet imported
 
-Two editions of the "Real Exam Questions Collection" Math book from the same
-publisher as the R&W books already in the bank (`@satashkent`).
+Three books from the same publisher as the R&W books already in the bank
+(`@satashkent`): two editions of the "Real Exam Questions Collection" Math
+book, and the "Math Hard Book", a curated set of the hardest real questions.
 
     python3 parse_math.py math_parsed.json ma2=<pdf> … ma3=<pdf> …
+    python3 parse_hard.py hard_parsed.json <Math_Hard_Book.pdf>
 
 ## What is in `math_parsed.json`
 
@@ -16,7 +18,25 @@ publisher as the R&W books already in the bank (`@satashkent`).
 | multiple choice | 1,177 |
 | free response | 464 |
 | math survived text extraction | 755 |
-| **math needs transcribing by eye** | **886** |
+| **math needs transcribing by eye** | **898** |
+
+### Math Hard Book (`hard_parsed.json`)
+
+| | |
+|---|---:|
+| questions | **361** |
+| with an answer from the book's key | 359 |
+| multiple choice | 166 |
+| free response | 195 |
+| math survived text extraction | 157 |
+| **math needs transcribing by eye** | **204** |
+
+Four chapters — Algebra 37, Advanced Math 123, Geometry 121, Problem Solving
+80 — every one curated as a hard question, so the whole book imports at
+`difficulty: HARD`. That matters: HARD is the scarce tier in this project, and
+Rhetorical Synthesis/HARD was already exhausted on the R&W side.
+
+**Grand total across the three books: 2,002 questions, 1,952 keyed.**
 
 Each record carries `book`, `topic`, `num`, `exam` (the sitting it came from,
 e.g. "March US 2025"), `page`, `domain`, `skill`, `body`, `choices`, `key`,
@@ -78,9 +98,29 @@ So a query can always tell where a question came from.
   scan sees is `Research organizing(Margin of Error;`. That truncated string is
   used as the topic key deliberately, rather than papered over.
 
+## The article-"A" bug, reintroduced and caught
+
+The Hard Book uses two choice markers — `A)` for prose and a bare `A ` when the
+choice is mathematics. Accepting the bare form on letter-sequence alone
+matched the **article "A"** opening a sentence: "A cooking school is offering a
+promotion…" became choice A and swallowed the question body on **63
+questions**. CLAUDE.md already records this exact failure under `LETTER_REF`,
+and it came back in a new file anyway.
+
+The sequencing rule alone could not fix it, because the article usually
+appears in the first body line — exactly when the parser is still expecting A.
+The bare form now additionally requires the text to look like mathematics,
+which is the only thing the two cases genuinely differ on. Empty bodies: 63 → 1.
+
+A second cross-check catches what remains: the book's key settles the question
+type, so where the parsed choice count disagrees with it, the extraction
+failed rather than the key being wrong. 58 such questions in the Hard Book,
+mostly TeX collapsing all four choices onto one extracted line. They are
+flagged for transcription instead of being imported broken.
+
 ## Next step
 
-Transcribe the 886 flagged questions from page images, hand-writing
+Transcribe the 1,102 flagged questions (898 + 204) from page images, hand-writing
 `\( … \)` and `\frac{}{}` per question, and verify every answer independently
 of the book's key — the same gate the explanations pipeline uses, for the same
-reason. Then import all 1,641 under `SATMATH:`.
+reason. Then import all 2,002 under `SATMATH:` (Hard Book rows as `SATHARD:`).

@@ -216,6 +216,13 @@ def main():
     qs = []
     for (book, topic, num), r in sorted(all_q.items()):
         topic = SAME_TOPIC.get(topic, topic)
+        _k, _ch = all_keys.get((book, topic, num)), r["choices"]
+        # The book's own key settles the question type, and where the parsed
+        # choices disagree with it the extraction failed rather than the key
+        # being wrong: TeX regularly collapses all four choices onto one line,
+        # or strands a choice letter beside a fraction numerator. Either way a
+        # person has to read it, so it joins the transcribe pile.
+        key_disagrees = bool(_k) and ((_k in ("A", "B", "C", "D")) != (len(_ch) == 4))
         body = "\n".join(r["body"]).strip()
         qs.append({
             "id": f"satmath-{book}-{topic.lower().replace(' ', '-').replace('&', '-').replace(';', '').replace('(', '').replace(')', '').replace(',', '')}-{num}",
@@ -225,7 +232,7 @@ def main():
             "choices": [c for c in r["choices"]],
             "type": "MULTIPLE_CHOICE" if len(r["choices"]) == 4 else "FREE_RESPONSE",
             "key": all_keys.get((book, topic, num)),
-            "needs_vision": shredded(body + "\n" + "\n".join(c["content"] for c in r["choices"])),
+            "needs_vision": shredded(body + "\n" + "\n".join(c["content"] for c in r["choices"])) or key_disagrees,
         })
 
     from collections import Counter
