@@ -1,0 +1,86 @@
+[
+ {
+  "id": "56c87eec-f29f-4104-9db0-9b6c914a851c",
+  "source": "SAT:satoplam-rhetorical-synthesis-134",
+  "test": "Test 16",
+  "mo": 2,
+  "branch": "HARD",
+  "qo": 26,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 26,
+  "m_order": 2,
+  "m_difficulty": "HARD",
+  "stem": "Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Hyde Park is a 1931 color linocut print by Canadian artist Sybil Andrews.</li><li>It depicts a tranquil, everyday scene (a spring day in a city park).</li><li>Amanzi Amthatha (\"The cold water takes him\") is a 2001 black-and-white linocut print by South African artist Nomathemba Tana.</li><li>It features a scene with an explicitly political point of view (a Xhosa warrior fighting British colonial rule).</li><li>Relief painting is a technique in which an image is carved onto a printing block, covered in ink or paint, and stamped onto paper.</li><li>Lino cutting is a type of relief Printing that uses linoleum tile as the printing block.</li></ul><p>The student wants to contrast the subject matter of the two prints.</p>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "The print by Tana is a black-and-white linocut; by contrast, Andrews’s is a relief print.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Tana’s print expresses an explicitly political point of view, while Andrews’s depicts a tranquil, everyday scene.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Andrews made Hyde Park in 1931, while Tana made Amanzi Amthatha (\"The cold water takes him\") later, in 2001.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "The scenes depicted in both works were first carved onto a printing block, then stamped onto paper; however, one work is a linocut, while the other is a relief print.",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "id": "1992a1d2-f5a0-499a-8bf5-afedeeb5130f",
+  "source": "SAT:satoplam-rhetorical-synthesis-111",
+  "test": "Test 17",
+  "mo": 2,
+  "branch": "EASY",
+  "qo": 25,
+  "skill": "EOI-RS",
+  "skill_name": "Rhetorical Synthesis",
+  "difficulty": "HARD",
+  "type": "MULTIPLE_CHOICE",
+  "correctAnswerFR": null,
+  "subject": "READING_WRITING",
+  "domain": "EOI",
+  "q_order": 25,
+  "m_order": 2,
+  "m_difficulty": "EASY",
+  "stem": "Which choice most effectively uses information from the given sentences to introduce Reginald Fessenden and what he is known for?",
+  "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Thomas Edison is regarded as one of the most important inventors in US history.</li><li>Having received little formal schooling, Edison relied on specialist employees at his various laboratories and offices to complete the technical work for many of his inventions.</li><li>Reginald Fessenden was an electronic communications specialist who worked at the Edison Machine Works manufacturing company.</li><li>He is best known for pioneering radio technology that led to the first transmission of speech by radio.</li><li>Frank J. Sprague was a naval officer who worked at the Menlo Park laboratory.</li><li>He is best known for being the father of electric traction</li></ul>",
+  "choices": [
+   {
+    "label": "A",
+    "content": "Reginald Fessenden, an electronic communications specialist, worked at the Edison Machine Works manufacturing company.",
+    "isCorrect": false
+   },
+   {
+    "label": "B",
+    "content": "Reginald Fessenden, an electronic communications specialist and former employee of Thomas Edison, is known for pioneering radio technology that led to the first transmission of speech by radio.",
+    "isCorrect": true
+   },
+   {
+    "label": "C",
+    "content": "Having received little formal education, Thomas Edison depended on specialized employees, including Reginald Fessenden and Frank J. Sprague, for many of his inventions.",
+    "isCorrect": false
+   },
+   {
+    "label": "D",
+    "content": "Thomas Edison’s historic success would not have been possible without naval officer Frank J. Sprague, who is known for being the father of electric traction.",
+    "isCorrect": false
+   }
+  ]
+ }
+]
