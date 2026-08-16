@@ -61,14 +61,6 @@ const SAT_NAV: NavItem[] = [
 /**
  * The IELTS ecosystem's navigation.
  *
- * The four skills get their own entries because they are how an IELTS student
- * thinks about their preparation — not as filters over a question bank, but as
- * four separate things to get better at. Icons are skill-specific rather than
- * reused from the SAT set, where a book icon for Listening would mislead.
- */
-/**
- * The IELTS ecosystem's navigation.
- *
  * Writing and Speaking only. The other two skills, the question bank, practice
  * tests, vocabulary and the plan are deliberately absent: this product is the
  * free human-review loop, and a sidebar advertising sections that do not exist
@@ -81,6 +73,7 @@ const IELTS_NAV: NavItem[] = [
   { href: "/ielts/speaking", label: "Speaking", icon: Mic },
   { href: "/ielts/feedback", label: "My Feedback", icon: MessageSquareText },
   { href: "/ielts/leaderboard", label: "Leaderboard", icon: Trophy },
+  { href: "/ielts/invite", label: "Invite Friends", icon: UserPlus },
   { href: "/community", label: "Community", icon: MessagesSquare },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

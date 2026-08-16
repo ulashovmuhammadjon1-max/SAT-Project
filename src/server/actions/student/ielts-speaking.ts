@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { saveAudioRecording } from "@/lib/ielts/audio-storage";
+import { getReviewAllowance, outOfReviewsMessage } from "@/lib/ielts/economy";
 
 export interface SpeakingResult {
   ok?: boolean;
@@ -99,6 +100,11 @@ export async function submitSpeaking(testId: string): Promise<SpeakingResult> {
   if (submission.status !== "PENDING") {
     return { error: "This test has already been sent for review." };
   }
+
+  // Recording is always free; it is sending the interview to a human that
+  // costs a review. A student who runs out mid-practice keeps every take.
+  const allowance = await getReviewAllowance(user.id);
+  if (allowance.remaining <= 0) return { error: outOfReviewsMessage(allowance) };
 
   await prisma.$transaction([
     prisma.ieltsSpeakingSubmission.update({

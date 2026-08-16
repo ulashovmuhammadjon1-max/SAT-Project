@@ -14,7 +14,20 @@ import { Button } from "@/components/ui/button";
  * (permissions, insecure origin), so failure selects the text instead of
  * silently doing nothing.
  */
-export function ReferralLink({ link, reward }: { link: string; reward: number }) {
+export function ReferralLink({
+  link,
+  reward,
+  shareText,
+}: {
+  link: string;
+  /** Coins both sides earn. Ignored when `shareText` is given. */
+  reward?: number;
+  /**
+   * What the share sheet says. The IELTS side does not pay in coins — it pays
+   * in free human reviews — so the sentence cannot be built from a coin figure.
+   */
+  shareText?: string;
+}) {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,7 +45,9 @@ export function ReferralLink({ link, reward }: { link: string; reward: number })
   async function share() {
     const data = {
       title: "SATForge",
-      text: `Free SAT prep with a personalized plan — join me on SATForge and we both get ${reward} coins.`,
+      text:
+        shareText ??
+        `Free SAT prep with a personalized plan — join me on SATForge and we both get ${reward ?? 0} coins.`,
       url: link,
     };
     try {

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { getReviewAllowance } from "@/lib/ielts/economy";
+import { ReviewBalance } from "@/components/ielts/review-balance";
 import { REVIEWER_CLAIM, SPEAKING_PRODUCT_NAME } from "@/lib/ielts/constants";
 import { formatBand } from "@/lib/ielts/bands";
 
@@ -23,7 +25,7 @@ const STATUS_LABEL: Record<string, string> = {
 export default async function IeltsSpeakingPage() {
   const user = await requireUser();
 
-  const [papers, submissions] = await Promise.all([
+  const [papers, submissions, allowance] = await Promise.all([
     prisma.ieltsTest.findMany({
       where: { status: "PUBLISHED", sections: { some: { skill: "SPEAKING" } } },
       orderBy: { title: "asc" },
@@ -43,6 +45,7 @@ export default async function IeltsSpeakingPage() {
         _count: { select: { recordings: true } },
       },
     }),
+    getReviewAllowance(user.id),
   ]);
 
   const byTest = new Map<string, (typeof submissions)[number]>();
@@ -64,6 +67,8 @@ export default async function IeltsSpeakingPage() {
           Free &middot; {REVIEWER_CLAIM.SPEAKING}
         </Badge>
       </div>
+
+      <ReviewBalance allowance={allowance} />
 
       <div className="grid gap-3 sm:grid-cols-2">
         {papers.map((paper) => {

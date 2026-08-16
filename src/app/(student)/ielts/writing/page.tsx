@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { getReviewAllowance } from "@/lib/ielts/economy";
+import { ReviewBalance } from "@/components/ielts/review-balance";
 import { REVIEWER_CLAIM, WRITING_SUGGESTED_MINUTES } from "@/lib/ielts/constants";
 import { formatBand } from "@/lib/ielts/bands";
 
@@ -23,7 +25,7 @@ const STATUS_LABEL: Record<string, string> = {
 export default async function IeltsWritingPage() {
   const user = await requireUser();
 
-  const [papers, submissions] = await Promise.all([
+  const [papers, submissions, allowance] = await Promise.all([
     prisma.ieltsTest.findMany({
       where: { status: "PUBLISHED", sections: { some: { skill: "WRITING" } } },
       orderBy: { title: "asc" },
@@ -39,6 +41,7 @@ export default async function IeltsWritingPage() {
       orderBy: { submittedAt: "desc" },
       include: { review: { select: { overallBand: true } } },
     }),
+    getReviewAllowance(user.id),
   ]);
 
   // Latest submission per task, so each card shows where that task stands.
@@ -57,6 +60,8 @@ export default async function IeltsWritingPage() {
           Free &middot; {REVIEWER_CLAIM.WRITING}
         </Badge>
       </div>
+
+      <ReviewBalance allowance={allowance} />
 
       {papers.map((paper) => (
         <section key={paper.id} className="space-y-3">

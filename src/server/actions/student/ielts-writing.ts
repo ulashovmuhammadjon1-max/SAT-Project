@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { getReviewAllowance, outOfReviewsMessage } from "@/lib/ielts/economy";
 import { countWords } from "@/lib/ielts/answers";
 
 export interface WritingResult {
@@ -103,6 +104,11 @@ export async function submitWriting(partId: string, text: string): Promise<Writi
   if (existing && existing.status !== "PENDING") {
     return { error: "This response has already been sent for review." };
   }
+
+  // Checked here rather than in the editor: the button is hidden when the
+  // allowance is spent, but a hidden button is a hint, not a rule.
+  const allowance = await getReviewAllowance(user.id);
+  if (allowance.remaining <= 0) return { error: outOfReviewsMessage(allowance) };
 
   const row = await prisma.ieltsWritingSubmission.upsert({
     where: { attemptId_partId: { attemptId: attempt.id, partId } },
