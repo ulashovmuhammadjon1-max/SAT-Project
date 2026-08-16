@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import {
-  Headphones, BookOpenText, PenLine, Mic, ArrowRight,
-  CheckCircle2, LineChart, UserCheck,
+  ArrowRight, Headphones, BookOpenText, PenLine, Mic,
+  MessageSquareText, Target, CalendarClock,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -9,188 +10,184 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { getExamContext } from "@/lib/exam/mode";
+import { loadIeltsDashboard } from "@/lib/ielts/dashboard";
 import { formatBand, PRACTICE_DISCLAIMER } from "@/lib/ielts/bands";
-import { REVIEWER_CLAIM, SKILL_SHAPE } from "@/lib/ielts/constants";
 
-export const metadata = { title: "IELTS Academic" };
+export const metadata = { title: "IELTS Dashboard" };
 export const dynamic = "force-dynamic";
 
 const SKILL_ICON = {
-  LISTENING: Headphones,
-  READING: BookOpenText,
-  WRITING: PenLine,
-  SPEAKING: Mic,
+  LISTENING: Headphones, READING: BookOpenText, WRITING: PenLine, SPEAKING: Mic,
 } as const;
 
-export default async function IeltsLandingPage() {
-  const user = await requireUser();
+const SKILL_HREF = {
+  LISTENING: "/ielts/listening", READING: "/ielts/reading",
+  WRITING: "/ielts/writing", SPEAKING: "/ielts/speaking",
+} as const;
 
-  const [publishedCount, latest] = await Promise.all([
-    prisma.ieltsTest.count({ where: { status: "PUBLISHED", module: "ACADEMIC" } }),
-    prisma.ieltsAttempt.findFirst({
-      where: { userId: user.id },
-      orderBy: { createdAt: "desc" },
-      select: {
-        id: true, overallBand: true, listeningBand: true,
-        readingBand: true, writingBand: true, speakingBand: true, status: true,
-      },
-    }),
+function greeting() {
+  const h = new Date().getHours();
+  if (h < 12) return "Good morning";
+  if (h < 18) return "Good afternoon";
+  return "Good evening";
+}
+
+export default async function IeltsDashboardPage() {
+  const user = await requireUser();
+  const exam = await getExamContext();
+
+  // A student who has not added IELTS gets the public overview instead of an
+  // empty dashboard — the page only means something with a profile behind it.
+  if (!exam?.hasIelts) redirect("/ielts/overview");
+
+  const [data, profile] = await Promise.all([
+    loadIeltsDashboard(user.id),
+    prisma.user.findUnique({ where: { id: user.id }, select: { name: true } }),
   ]);
 
+  const firstName = profile?.name?.split(" ")[0] ?? "there";
+
   return (
-    <div className="space-y-10">
-      <section className="space-y-5">
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="navy">IELTS Academic</Badge>
-          <Badge variant="outline" className="border-emerald-600/40 text-emerald-700">
-            100% free
-          </Badge>
+    <div className="space-y-8">
+      {/* Hero — the student's own numbers, not a marketing pitch. */}
+      <section className="space-y-4">
+        <p className="text-sm text-muted-foreground">
+          {greeting()}, <span className="font-medium text-foreground">{firstName}</span>
+        </p>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="space-y-1">
+            <Badge variant="navy">IELTS Academic</Badge>
+            <h1 className="font-display text-3xl font-semibold tracking-tight">
+              {data.currentOverall != null
+                ? `Band ${formatBand(data.currentOverall)}`
+                : "Let's find your starting band"}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              {data.profile.targetBand != null ? (
+                <>Target <span className="font-medium text-foreground">Band {formatBand(data.profile.targetBand)}</span></>
+              ) : (
+                "Set a target band to shape your plan"
+              )}
+              {data.focus && (
+                <> · Next focus <span className="font-medium text-foreground">{data.focus.label}</span></>
+              )}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Button asChild>
+              <Link href="/ielts/plan">
+                Continue my IELTS plan <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
+            {!data.profile.onboarded && (
+              <Button asChild variant="outline">
+                <Link href="/ielts/setup">Set up my goals</Link>
+              </Button>
+            )}
+          </div>
         </div>
-        <div className="space-y-3">
-          <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            IELTS Academic
-          </h1>
-          <p className="max-w-2xl text-base text-muted-foreground">
-            Prepare for IELTS with realistic practice, full-length tests, and completely
-            free human feedback.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <Button asChild size="lg">
-            <Link href="/ielts/tests">
-              Start practising <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="/ielts/resources">Test format and band descriptors</Link>
-          </Button>
+
+        <div className="flex flex-wrap gap-2 text-xs">
+          {data.profile.daysToExam != null && (
+            <Badge variant="outline">
+              <CalendarClock className="h-3 w-3" />
+              {data.profile.daysToExam > 0
+                ? `${data.profile.daysToExam} days to your test`
+                : "Test date passed"}
+            </Badge>
+          )}
+          {data.profile.studyMinutesPerDay != null && (
+            <Badge variant="outline">
+              <Target className="h-3 w-3" /> {data.profile.studyMinutesPerDay} min/day
+            </Badge>
+          )}
         </div>
       </section>
 
-      {latest && (
-        <Card className="border-navy-900/15 bg-secondary/40">
-          <CardContent className="flex flex-wrap items-center justify-between gap-4 py-5">
-            <div>
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                Your most recent practice
-              </p>
-              <p className="font-display text-2xl font-semibold">
-                {latest.overallBand != null
-                  ? `Estimated overall band ${formatBand(latest.overallBand)}`
-                  : "In progress"}
-              </p>
-            </div>
-            <Button asChild variant="outline">
-              <Link href="/ielts/progress">View progress</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      )}
-
-      <section className="space-y-4">
-        <h2 className="font-display text-xl font-semibold">The four components</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {(["LISTENING", "READING", "WRITING", "SPEAKING"] as const).map((skill) => {
-            const shape = SKILL_SHAPE[skill];
-            const Icon = SKILL_ICON[skill];
+      {/* Per-skill standing. Four cards, each a way in to that skill. */}
+      <section className="space-y-3">
+        <h2 className="font-display text-lg font-semibold">Your progress</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {data.standings.map((s) => {
+            const Icon = SKILL_ICON[s.skill];
             return (
-              <Card key={skill} className="lift">
-                <CardHeader className="flex flex-row items-center gap-3 space-y-0">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-900 text-white">
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <CardTitle className="text-base">{shape.label}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <p className="text-sm text-muted-foreground">{shape.blurb}</p>
-                  <div className="flex flex-wrap gap-2 text-xs">
-                    <Badge variant="outline">
-                      {shape.parts} {shape.partNoun}
-                    </Badge>
-                    {shape.questions && (
-                      <Badge variant="outline">{shape.questions} questions</Badge>
-                    )}
-                    <Badge variant="outline">
-                      {skill === "SPEAKING" ? "11–14 min" : `${shape.minutes} min`}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <Link key={s.skill} href={SKILL_HREF[s.skill]} className="group">
+                <Card className="h-full transition-colors group-hover:border-navy-900/30">
+                  <CardContent className="space-y-2 py-5">
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Icon className="h-4 w-4" />
+                      <span className="text-xs font-medium uppercase tracking-wide">
+                        {s.label}
+                      </span>
+                    </div>
+                    <p className="font-display text-3xl font-semibold tabular-nums">
+                      {formatBand(s.band)}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {s.attempts === 0
+                        ? "Not assessed yet"
+                        : `${s.attempts} assessed ${s.attempts === 1 ? "attempt" : "attempts"}`}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>
       </section>
 
-      {/* The differentiator. Deliberately describes the band the reviewer
-          achieved rather than any examiner status, which SATForge cannot
-          verify and does not claim. */}
-      <section className="space-y-4 rounded-2xl border border-emerald-600/25 bg-emerald-50/60 p-6 dark:bg-emerald-950/20">
-        <div className="flex flex-wrap items-center gap-2">
-          <UserCheck className="h-5 w-5 text-emerald-700" />
-          <h2 className="font-display text-xl font-semibold">Free human feedback</h2>
-          <Badge className="bg-emerald-600 text-white hover:bg-emerald-600">$0</Badge>
-        </div>
-        <p className="max-w-2xl text-sm text-muted-foreground">
-          Submit your Writing and Speaking practice and get feedback from experienced
-          high-scoring reviewers. No subscription, no credits, no hidden fees, no
-          premium tier.
-        </p>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold">Writing</p>
-            <p className="text-sm text-muted-foreground">{REVIEWER_CLAIM.WRITING}.</p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-4">
-            <p className="text-sm font-semibold">Speaking</p>
-            <p className="text-sm text-muted-foreground">{REVIEWER_CLAIM.SPEAKING}.</p>
-          </div>
-        </div>
-        <p className="text-xs text-muted-foreground">
-          This is human IELTS practice feedback, not official IELTS scoring.
-        </p>
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="font-display text-xl font-semibold">What you get</h2>
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {[
-            "Full-length IELTS Academic practice tests",
-            "Computer-style Listening with single-play audio",
-            "Computer-style Reading with a split passage and question pane",
-            "Timed Writing with a live word count",
-            "Three-part Speaking practice you record and submit",
-            "Human Writing feedback, free",
-            "Human Speaking feedback, free",
-            "Progress tracking and estimated band scores",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 lg:grid-cols-2">
         <Card>
-          <CardContent className="space-y-1 py-5">
-            <LineChart className="h-4 w-4 text-muted-foreground" />
-            <p className="font-display text-2xl font-semibold">{publishedCount}</p>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0">
+            <CardTitle className="text-base">Full practice tests</CardTitle>
+            <Badge variant="outline">{data.publishedTests} available</Badge>
+          </CardHeader>
+          <CardContent className="space-y-3">
             <p className="text-sm text-muted-foreground">
-              published {publishedCount === 1 ? "paper" : "papers"}
+              Listening, Reading, Writing and Speaking in one sitting, timed the way the
+              computer-delivered test is.
             </p>
+            <Button asChild variant={data.inProgressAttemptId ? "default" : "outline"}>
+              <Link href="/ielts/tests">
+                {data.inProgressAttemptId ? "Continue your test" : "Browse tests"}
+              </Link>
+            </Button>
           </CardContent>
         </Card>
-        <Card className="sm:col-span-2">
-          <CardContent className="flex h-full flex-col justify-center gap-2 py-5">
-            <p className="text-sm font-medium">Bands 0.0 to 9.0</p>
-            <p className="text-sm text-muted-foreground">
-              Listening and Reading are marked automatically. Writing and Speaking are
-              scored by a human reviewer against the four official criteria.
-            </p>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0">
+            <CardTitle className="text-base">Human feedback</CardTitle>
+            <MessageSquareText className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <div>
+                <p className="font-display text-2xl font-semibold tabular-nums">
+                  {data.readyWritingReviews}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Writing {data.readyWritingReviews === 1 ? "review" : "reviews"} ready
+                  {data.pendingWritingReviews > 0 && ` · ${data.pendingWritingReviews} pending`}
+                </p>
+              </div>
+              <div>
+                <p className="font-display text-2xl font-semibold tabular-nums">
+                  {data.readySpeakingReviews}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Speaking {data.readySpeakingReviews === 1 ? "review" : "reviews"} ready
+                  {data.pendingSpeakingReviews > 0 && ` · ${data.pendingSpeakingReviews} pending`}
+                </p>
+              </div>
+            </div>
+            <Button asChild variant="outline">
+              <Link href="/ielts/feedback">Open feedback</Link>
+            </Button>
           </CardContent>
         </Card>
-      </section>
+      </div>
 
       <p className="border-t border-border pt-4 text-xs text-muted-foreground">
         {PRACTICE_DISCLAIMER}

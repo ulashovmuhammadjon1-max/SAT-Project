@@ -48,6 +48,28 @@ enum DailyGoalType {
   MINUTES
 }
 
+/// An exam a student can prepare for. Stored as an array on the user, so
+/// adding a third exam later is a new value rather than a new column.
+enum ExamKind {
+  SAT
+  IELTS
+}
+
+/// What the dashboard is currently showing. BOTH is its own mode rather than
+/// "no filter", because the combined dashboard is a different layout with a
+/// balanced plan, not the two exams' dashboards stacked.
+enum ExamMode {
+  SAT
+  IELTS
+  BOTH
+}
+
+enum ExamPriority {
+  SAT
+  IELTS
+  EQUAL
+}
+
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -79,6 +101,25 @@ model User {
   dailyGoalType      DailyGoalType?
   dailyGoalValue     Int?
   onboardedAt        DateTime?
+
+  // --- Which exams this account is preparing for -------------------------
+  //
+  // Two distinct ideas, deliberately two columns. `preparationExams` is what
+  // the student is working towards and decides what data exists; `activeExam`
+  // is what they are looking at right now and decides what the dashboard
+  // renders. A student preparing for both and currently viewing IELTS has
+  // preparationExams = [SAT, IELTS] and activeExam = IELTS. Collapsing them
+  // into one field would make "switch to IELTS for a minute" indistinguishable
+  // from "stop preparing for the SAT".
+  //
+  // The default is SAT-only so every account that existed before this shipped
+  // keeps exactly the dashboard it had, with no backfill and no onboarding
+  // replay.
+  preparationExams ExamKind[] @default([SAT])
+  activeExam       ExamMode   @default(SAT)
+  /// Only meaningful in BOTH mode: which exam gets the larger share of the
+  /// daily study time when the exam dates alone do not settle it.
+  examPriority     ExamPriority @default(EQUAL)
 
   // --- Legal ------------------------------------------------------------
   /// When this account accepted the Terms and Privacy Policy, and which
@@ -153,6 +194,7 @@ model User {
   announcementsMade  Announcement[]    @relation("AnnouncementCreatedBy")
   adaptiveConfigsSet AdaptiveConfig[]  @relation("AdaptiveConfigUpdatedBy")
 
+  ieltsProfile             IeltsStudentProfile?
   ieltsAttempts            IeltsAttempt[]
   ieltsWritingSubmissions  IeltsWritingSubmission[]
   ieltsSpeakingSubmissions IeltsSpeakingSubmission[]
@@ -1810,4 +1852,40 @@ model IeltsScoreConversion {
 
   @@unique([testId, module, skill, rawScore])
   @@index([module, skill])
+}
+
+/// The IELTS half of a student's goals, mirroring the SAT fields that live
+/// directly on `User`.
+///
+/// A separate table rather than more nullable columns on `User`: the SAT
+/// fields are there for historical reasons, and repeating that pattern would
+/// leave one row carrying two exams' worth of optional state. It also means a
+/// student who never touches IELTS has no IELTS row at all, which is the
+/// cleanest possible answer to "is this student preparing for IELTS".
+model IeltsStudentProfile {
+  id     String @id @default(cuid())
+  userId String @unique
+
+  /// 4.0 to 9.0 in half steps.
+  targetBand Float?
+  examDate   DateTime?
+  /// university | work | immigration | other
+  reason     String?
+
+  /// Self-reported or diagnosed starting point, per skill.
+  currentListening Float?
+  currentReading   Float?
+  currentWriting   Float?
+  currentSpeaking  Float?
+  currentOverall   Float?
+  /// Where the starting point came from: self | previous | diagnostic.
+  levelSource      String?
+
+  studyMinutesPerDay Int?
+  onboardedAt        DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
