@@ -1,0 +1,619 @@
+{
+ "title": "IELTS Listening Practice 1",
+ "slug": "listening-practice-1",
+ "module": "ACADEMIC",
+ "status": "DRAFT",
+ "skill": "LISTENING",
+ "durationMinutes": 30,
+ "sourceNote": "listening",
+ "parts": [
+  {
+   "partNumber": 1,
+   "title": "Part 1",
+   "instructions": "Listen and answer questions 1–10.",
+   "audioUrl": null,
+   "transcript": null,
+   "groups": [
+    {
+     "type": "FORM_COMPLETION",
+     "instructions": "Write ONE WORD AND/OR A NUMBER for each answer.",
+     "wordLimit": "ONE WORD AND/OR A NUMBER",
+     "maxWords": 1,
+     "maxNumbers": 1,
+     "bodyHtml": "<p>Oz Campervans - Customer Quote Form</p><h4>Contact Details</h4><p>Name: Caroline Smith</p><p>Address: 14 Grey St, Forest Hill</p><ul><li>Tel: {{1}}</li><li>Email: {{2}}</li></ul><p>NB: Send written quote by post</p><h4>Booking Information</h4><ul><li>Number of people in group: three</li><li>Type of campervan selected: &#x27;The Explorer&#x27; (need to supply an extra {{3}})</li><li>Price: {{4}} $ per day</li></ul><p>NB: Price includes all bedding and {{5}} equipment</p><ul><li>Optional extras selected: a {{6}} and a {{7}}</li><li>Driving to: Huonville in Tasmania</li><li>Pickup from: the {{8}} branch in Hobart</li><li>Length of hire: 2 weeks</li></ul><h4>Insurance requirements</h4><ul><li>Youngest driver (Caroline): {{9}} years old</li><li>Drivers&#x27; licences issued in: {{10}}</li></ul>",
+     "optionsJson": null,
+     "leftHeading": null,
+     "rightHeading": null,
+     "questions": [
+      {
+       "number": 1,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Tel: __1__",
+       "optionsJson": null,
+       "correctAnswer": "0491570156",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 2,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Email: __2__",
+       "optionsJson": null,
+       "correctAnswer": "post",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 3,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "need to supply an extra __3__",
+       "optionsJson": null,
+       "correctAnswer": "bed",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 4,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "__4__ $ per day",
+       "optionsJson": null,
+       "correctAnswer": "39",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 5,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Price includes all bedding and __5__ equipment",
+       "optionsJson": null,
+       "correctAnswer": "kitchen",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 6,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Optional extras selected: a __6__",
+       "optionsJson": null,
+       "correctAnswer": "heater",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 7,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "and a __7__",
+       "optionsJson": null,
+       "correctAnswer": "microwave",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 8,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Pickup from: the __8__ branch in Hobart",
+       "optionsJson": null,
+       "correctAnswer": "airport",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 9,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Youngest driver (Caroline): __9__ years old",
+       "optionsJson": null,
+       "correctAnswer": "49",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 10,
+       "type": "FORM_COMPLETION",
+       "promptHtml": "Drivers' licences issued in: __10__",
+       "optionsJson": null,
+       "correctAnswer": "Australia",
+       "acceptedAnswers": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "partNumber": 2,
+   "title": "Part 2",
+   "instructions": "Listen and answer questions 11–20.",
+   "audioUrl": null,
+   "transcript": null,
+   "groups": [
+    {
+     "type": "MULTIPLE_CHOICE_SINGLE",
+     "instructions": "Choose the correct letter, A, B or C.",
+     "wordLimit": null,
+     "maxWords": null,
+     "maxNumbers": null,
+     "bodyHtml": null,
+     "optionsJson": null,
+     "leftHeading": null,
+     "rightHeading": null,
+     "questions": [
+      {
+       "number": 11,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "The sports centre has just opened a new",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "dance studio"
+        },
+        {
+         "key": "B",
+         "text": "swimming pool"
+        },
+        {
+         "key": "C",
+         "text": "cafe"
+        }
+       ],
+       "correctAnswer": "A",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 12,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "The sports facilities are used most",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "at weekends"
+        },
+        {
+         "key": "B",
+         "text": "on weekday evenings"
+        },
+        {
+         "key": "C",
+         "text": "during the day from Monday to Friday"
+        }
+       ],
+       "correctAnswer": "B",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 13,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "Classes are cheaper if you pay",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "in cash"
+        },
+        {
+         "key": "B",
+         "text": "for several in advance"
+        },
+        {
+         "key": "C",
+         "text": "by credit card"
+        }
+       ],
+       "correctAnswer": "B",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 14,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "The sports centre recently won an award for",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "the range of training in different sports"
+        },
+        {
+         "key": "B",
+         "text": "the amount of information on its website"
+        },
+        {
+         "key": "C",
+         "text": "the quality of the advice offered by its instructors"
+        }
+       ],
+       "correctAnswer": "C",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 15,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "Today the sports department is offering",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "a free hour with a personal trainer"
+        },
+        {
+         "key": "B",
+         "text": "a free ticket to the cup final"
+        },
+        {
+         "key": "C",
+         "text": "free membership for 20 people"
+        }
+       ],
+       "correctAnswer": "A",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 16,
+       "type": "MULTIPLE_CHOICE_SINGLE",
+       "promptHtml": "According to the speaker, why do many people stop exercising?",
+       "optionsJson": [
+        {
+         "key": "A",
+         "text": "Their friends do not share the experience with them"
+        },
+        {
+         "key": "B",
+         "text": "Their job or studies take up too much of their time"
+        },
+        {
+         "key": "C",
+         "text": "They cannot see any results"
+        }
+       ],
+       "correctAnswer": "A",
+       "acceptedAnswers": null
+      }
+     ]
+    },
+    {
+     "type": "MATCHING_FEATURES",
+     "instructions": "Which benefit does each of the following sports activities bring? Choose FOUR answers from the box and write the correct letter, A-F.",
+     "wordLimit": null,
+     "maxWords": null,
+     "maxNumbers": null,
+     "bodyHtml": null,
+     "optionsJson": [
+      {
+       "key": "A",
+       "text": "better reaction times"
+      },
+      {
+       "key": "B",
+       "text": "improved concentration"
+      },
+      {
+       "key": "C",
+       "text": "increased arm power"
+      },
+      {
+       "key": "D",
+       "text": "Increased leg power"
+      },
+      {
+       "key": "E",
+       "text": "increased speed"
+      },
+      {
+       "key": "F",
+       "text": "reduced stress"
+      }
+     ],
+     "leftHeading": "Sports activities",
+     "rightHeading": "Benefits",
+     "questions": [
+      {
+       "number": 17,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "general training",
+       "optionsJson": null,
+       "correctAnswer": "D",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 18,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "weight training",
+       "optionsJson": null,
+       "correctAnswer": "B",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 19,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "aerobics class",
+       "optionsJson": null,
+       "correctAnswer": "F",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 20,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "squash",
+       "optionsJson": null,
+       "correctAnswer": "A",
+       "acceptedAnswers": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "partNumber": 3,
+   "title": "Part 3",
+   "instructions": "Listen and answer questions 21–30.",
+   "audioUrl": null,
+   "transcript": null,
+   "groups": [
+    {
+     "type": "FLOWCHART_COMPLETION",
+     "instructions": "Complete the flow-chart below. Choose FIVE answers from the box and write the correct letter, A-G.",
+     "wordLimit": null,
+     "maxWords": null,
+     "maxNumbers": null,
+     "bodyHtml": "<p>European bee: Varroa mite</p><h4>How the Varroa mite attacks</h4><p>The mite moves from the bee to {{21}}</p><p class=\"flow-arrow\">&darr;</p><p>The mite travels to {{22}} on a new host.</p><p class=\"flow-arrow\">&darr;</p><p>Inside, the mite enters the honeycomb cell.</p><p class=\"flow-arrow\">&darr;</p><p>The mite uses {{23}} to hide its smell.</p><p class=\"flow-arrow\">&darr;</p><p>The mite feeds on {{24}} of the bee larva.</p><p class=\"flow-arrow\">&darr;</p><p>The mite reproduces and moves on.</p><p class=\"flow-arrow\">&darr;</p><p>The bee is left weakened and with {{25}}</p>",
+     "optionsJson": [
+      {
+       "key": "A",
+       "text": "the blood"
+      },
+      {
+       "key": "B",
+       "text": "a flower"
+      },
+      {
+       "key": "C",
+       "text": "the hive"
+      },
+      {
+       "key": "D",
+       "text": "the honey"
+      },
+      {
+       "key": "E",
+       "text": "a honeycomb cell"
+      },
+      {
+       "key": "F",
+       "text": "the queen bee"
+      },
+      {
+       "key": "G",
+       "text": "a virus"
+      }
+     ],
+     "leftHeading": null,
+     "rightHeading": null,
+     "questions": [
+      {
+       "number": 21,
+       "type": "FLOWCHART_COMPLETION",
+       "promptHtml": "The mite moves from the bee to __21__",
+       "optionsJson": null,
+       "correctAnswer": "a flower",
+       "acceptedAnswers": [
+        "B"
+       ]
+      },
+      {
+       "number": 22,
+       "type": "FLOWCHART_COMPLETION",
+       "promptHtml": "The mite travels to __22__ on a new host.",
+       "optionsJson": null,
+       "correctAnswer": "the hive",
+       "acceptedAnswers": [
+        "C"
+       ]
+      },
+      {
+       "number": 23,
+       "type": "FLOWCHART_COMPLETION",
+       "promptHtml": "The mite uses __23__ to hide its smell.",
+       "optionsJson": null,
+       "correctAnswer": "the honey",
+       "acceptedAnswers": [
+        "D"
+       ]
+      },
+      {
+       "number": 24,
+       "type": "FLOWCHART_COMPLETION",
+       "promptHtml": "The mite feeds on __24__ of the bee larva.",
+       "optionsJson": null,
+       "correctAnswer": "the blood",
+       "acceptedAnswers": [
+        "A"
+       ]
+      },
+      {
+       "number": 25,
+       "type": "FLOWCHART_COMPLETION",
+       "promptHtml": "The bee is left weakened and with __25__",
+       "optionsJson": null,
+       "correctAnswer": "a virus",
+       "acceptedAnswers": [
+        "G"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "MATCHING_FEATURES",
+     "instructions": "What problem do the speakers identify with each of the following types of bee? Choose FIVE answers from the box and write the correct letter, A-G.",
+     "wordLimit": null,
+     "maxWords": null,
+     "maxNumbers": null,
+     "bodyHtml": null,
+     "optionsJson": [
+      {
+       "key": "A",
+       "text": "could introduce pests"
+      },
+      {
+       "key": "B",
+       "text": "needs a warm climate"
+      },
+      {
+       "key": "C",
+       "text": "not much is known about it"
+      },
+      {
+       "key": "D",
+       "text": "numbers are too few to help farmers"
+      },
+      {
+       "key": "E",
+       "text": "spreads weeds"
+      },
+      {
+       "key": "F",
+       "text": "too aggressive"
+      },
+      {
+       "key": "G",
+       "text": "unable to produce honey"
+      }
+     ],
+     "leftHeading": "Types of bee",
+     "rightHeading": "Problems",
+     "questions": [
+      {
+       "number": 26,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "European Bumblebee",
+       "optionsJson": null,
+       "correctAnswer": "E",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 27,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "Blue Banded Bee",
+       "optionsJson": null,
+       "correctAnswer": "C",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 28,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "Africanised Bee",
+       "optionsJson": null,
+       "correctAnswer": "F",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 29,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "Australian Stingless Bee",
+       "optionsJson": null,
+       "correctAnswer": "B",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 30,
+       "type": "MATCHING_FEATURES",
+       "promptHtml": "Canadian Leafcutter Bee",
+       "optionsJson": null,
+       "correctAnswer": "D",
+       "acceptedAnswers": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "partNumber": 4,
+   "title": "Part 4",
+   "instructions": "Listen and answer questions 31–40.",
+   "audioUrl": null,
+   "transcript": null,
+   "groups": [
+    {
+     "type": "NOTE_COMPLETION",
+     "instructions": "Write ONE WORD ONLY for each answer.",
+     "wordLimit": "ONE WORD ONLY",
+     "maxWords": 1,
+     "maxNumbers": 0,
+     "bodyHtml": "<h4>Using natural building materials</h4><p>With all methods of building using natural materials, a good {{31}} is needed</p><h4>Rammed earth</h4><ul><li>A framework made from wood filled with soil</li><li>The best soil has large quantities of {{32}}</li></ul><h4>Adobe (mud brick)</h4><ul><li>The most suitable soil for adobe bricks contains lots of {{33}}</li><li>Advantages: cheap and {{34}}</li><li>little {{35}} is needed for brick-making</li><li>Disadvantage: a lot of water, time and {{36}} are required</li></ul><h4>Straw bales</h4><ul><li>Bales: large rectangular blocks of straw</li><li>A {{37}} needs to be constructed first</li><li>The bales are covered with plaster for protection against {{38}}</li><li>Advantage: the bales act as efficient insulation</li></ul><h4>Bamboo</h4><ul><li>This is a versatile material</li><li>Advantage: the shape of the bamboo stalks gives them {{39}}</li><li>Disadvantages: not widely available; risk of {{40}}</li></ul>",
+     "optionsJson": null,
+     "leftHeading": null,
+     "rightHeading": null,
+     "questions": [
+      {
+       "number": 31,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "a good __31__ is needed",
+       "optionsJson": null,
+       "correctAnswer": "foundation",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 32,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "The best soil has large quantities of __32__",
+       "optionsJson": null,
+       "correctAnswer": "sand",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 33,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "The most suitable soil for adobe bricks contains lots of __33__",
+       "optionsJson": null,
+       "correctAnswer": "clay",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 34,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "Advantages -cheap and __34__",
+       "optionsJson": null,
+       "correctAnswer": "convenient",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 35,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "little __35__ is needed for brick-making",
+       "optionsJson": null,
+       "correctAnswer": "training",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 36,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "a lot of water, time and __36__ are required",
+       "optionsJson": null,
+       "correctAnswer": "labor",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 37,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "A __37__ needs to be constructed first",
+       "optionsJson": null,
+       "correctAnswer": "roof",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 38,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "The bales are covered with plaster for protection against __38__",
+       "optionsJson": null,
+       "correctAnswer": "insects",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 39,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "the shape of the bamboo stalks gives them __39__",
+       "optionsJson": null,
+       "correctAnswer": "strength",
+       "acceptedAnswers": null
+      },
+      {
+       "number": 40,
+       "type": "NOTE_COMPLETION",
+       "promptHtml": "risk of __40__",
+       "optionsJson": null,
+       "correctAnswer": "fire",
+       "acceptedAnswers": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "findings": [
+  "Q2: the answer 'post' appears in the group body — it has been printed instead of gapped, so the student sees it"
+ ]
+}
