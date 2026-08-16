@@ -14,7 +14,34 @@
 import { neon } from "@neondatabase/serverless";
 import { randomUUID } from "crypto";
 
-const sql = neon(process.env.PROD_URL);
+/**
+ * Two drivers, one interface.
+ *
+ * Production is reached over Neon's HTTP API because this sandbox blocks the
+ * raw Postgres port; local dev is ordinary TCP Postgres, which Neon's driver
+ * cannot speak. Both expose `.query(text, params)` returning an array of rows,
+ * so nothing below this line knows which one it is talking to.
+ *
+ *   PROD_URL='postgresql://…'     node seed_prompts.mjs --apply   # production
+ *   LOCAL_URL='postgresql://…'    node seed_prompts.mjs --apply   # local dev
+ */
+async function makeSql() {
+  if (process.env.PROD_URL) {
+    const q = neon(process.env.PROD_URL);
+    return { query: (text, params) => q.query(text, params) };
+  }
+  const url = process.env.LOCAL_URL || process.env.DATABASE_URL;
+  if (!url) throw new Error("Set PROD_URL (production) or LOCAL_URL (local dev).");
+  const { default: pg } = await import("pg");
+  const client = new pg.Client({ connectionString: url });
+  await client.connect();
+  return {
+    query: async (text, params) => (await client.query(text, params)).rows,
+    end: () => client.end(),
+  };
+}
+
+const sql = await makeSql();
 const APPLY = process.argv.includes("--apply");
 
 const TABLE =
@@ -223,3 +250,5 @@ const check = await sql.query(
     WHERE s.skill IN ('WRITING','SPEAKING')
     GROUP BY t.title, t.status, s.skill ORDER BY s.skill, t.title`);
 console.table(check);
+
+await sql.end?.();

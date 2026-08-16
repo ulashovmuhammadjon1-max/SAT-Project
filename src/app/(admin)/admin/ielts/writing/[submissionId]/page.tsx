@@ -37,6 +37,24 @@ export default async function ReviewWritingPage({
   const minWords = part?.minWords ?? (part?.partNumber === 1 ? 150 : 250);
   const short = submission.wordCount < minWords;
 
+  // Did this student sit both tasks in one go? If so the reviewer also gives
+  // the paper a band, so the sibling's band is needed to show the weighting.
+  const siblings = await prisma.ieltsWritingSubmission.findMany({
+    where: { attemptId: submission.attemptId, id: { not: submission.id } },
+    select: { partId: true, review: { select: { overallBand: true } } },
+  });
+  const attempt = await prisma.ieltsAttempt.findUnique({
+    where: { id: submission.attemptId },
+    select: { writingBand: true },
+  });
+  const wholeMock =
+    siblings.length > 0 && part
+      ? {
+          taskNumber: part.partNumber,
+          otherTaskBand: siblings[0].review?.overallBand ?? null,
+        }
+      : null;
+
   return (
     <div className="space-y-5">
       <Link href="/admin/ielts/writing"
@@ -84,9 +102,12 @@ export default async function ReviewWritingPage({
         <IeltsReviewForm
           kind="WRITING"
           submissionId={submission.id}
+          wholeMock={wholeMock}
           initial={
             submission.review
               ? {
+                  overall: submission.review.overallBand,
+                  attemptOverall: attempt?.writingBand ?? null,
                   bands: {
                     task: submission.review.taskBand,
                     coherence: submission.review.coherenceBand,

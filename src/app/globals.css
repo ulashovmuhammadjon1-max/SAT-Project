@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* `.theme-light-scope` re-declares the light tokens on an element deep inside
+     the page, which is how the testing rooms stay light for a student who runs
+     the rest of the site in dark mode. The `exam-*` palette is already fixed,
+     but any shared component that uses `bg-background` or `border-input` — a
+     shadcn Button, say — would otherwise follow the site theme and render a
+     dark control on a light kiosk. Custom properties are inherited, so setting
+     them on the room's root element beats `.dark` on `<html>` for everything
+     inside it without touching specificity. */
+  :root,
+  .theme-light-scope {
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 

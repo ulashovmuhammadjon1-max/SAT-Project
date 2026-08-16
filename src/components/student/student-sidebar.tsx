@@ -80,6 +80,7 @@ const IELTS_NAV: NavItem[] = [
   { href: "/ielts/writing", label: "Writing", icon: PenLine },
   { href: "/ielts/speaking", label: "Speaking", icon: Mic },
   { href: "/ielts/feedback", label: "My Feedback", icon: MessageSquareText },
+  { href: "/ielts/leaderboard", label: "Leaderboard", icon: Trophy },
   { href: "/community", label: "Community", icon: MessagesSquare },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

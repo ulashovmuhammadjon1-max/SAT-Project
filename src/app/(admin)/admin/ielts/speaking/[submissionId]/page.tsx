@@ -104,6 +104,7 @@ export default async function ReviewSpeakingPage({
           initial={
             submission.review
               ? {
+                  overall: submission.review.overallBand,
                   bands: {
                     fluency: submission.review.fluencyBand,
                     lexical: submission.review.lexicalBand,

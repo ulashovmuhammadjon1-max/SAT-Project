@@ -23,13 +23,28 @@ async function canReview(kind: "WRITING" | "SPEAKING") {
   return { userId: user.id, ok: true as const };
 }
 
-/** Every criterion must be a real half band between 0 and 9. */
-function validBands(values: number[]): string | null {
+/**
+ * Every criterion must be a WHOLE band between 0 and 9.
+ *
+ * An examiner awards 6 or 7 on Lexical Resource, never 6.5 — the half bands
+ * exist only in the average of the four. The UI already offers whole bands
+ * only; this is the server-side half of that rule, because the action is
+ * callable without the form.
+ */
+function validCriterionBands(values: number[]): string | null {
   for (const v of values) {
     if (!Number.isFinite(v)) return "Give a band for every criterion.";
     if (v < 0 || v > 9) return "Bands run from 0 to 9.";
-    if (Math.round(v * 2) !== v * 2) return "Bands go in half steps: 6, 6.5, 7.";
+    if (!Number.isInteger(v)) return "Each criterion is a whole band: 5, 6, 7.";
   }
+  return null;
+}
+
+/** An overall band, by contrast, is reported in half steps. */
+function validOverall(v: number | undefined): string | null {
+  if (v === undefined) return null;
+  if (!Number.isFinite(v) || v < 0 || v > 9) return "Bands run from 0 to 9.";
+  if (Math.round(v * 2) !== v * 2) return "Bands go in half steps: 6, 6.5, 7.";
   return null;
 }
 
@@ -40,6 +55,17 @@ export interface WritingReviewInput {
   coherenceBand: number;
   lexicalBand: number;
   grammarBand: number;
+  /**
+   * The band for this task, when the reviewer disagrees with the average of
+   * the four criteria. The average is a guide, not a verdict.
+   */
+  overallOverride?: number;
+  /**
+   * The band for the whole Writing paper, when the student sat both tasks as
+   * one mock. Task 2's double weight produces the default; a human who has
+   * read both scripts may set it directly instead.
+   */
+  attemptOverride?: number;
   overallFeedback?: string;
   didWell?: string;
   toImprove?: string;
@@ -55,7 +81,10 @@ export async function submitWritingReview(input: WritingReviewInput): Promise<Re
   if (!auth.ok) return { error: "You are not approved to review Writing." };
 
   const bands = [input.taskBand, input.coherenceBand, input.lexicalBand, input.grammarBand];
-  const bad = validBands(bands);
+  const bad =
+    validCriterionBands(bands) ??
+    validOverall(input.overallOverride) ??
+    validOverall(input.attemptOverride);
   if (bad) return { error: bad };
 
   const submission = await prisma.ieltsWritingSubmission.findUnique({
@@ -66,10 +95,12 @@ export async function submitWritingReview(input: WritingReviewInput): Promise<Re
 
   // The four criteria carry equal weight WITHIN a task; Task 2's double weight
   // applies when the two tasks are combined, not here.
-  const overall = writingTaskBand({
-    task: input.taskBand, coherence: input.coherenceBand,
-    lexical: input.lexicalBand, grammar: input.grammarBand,
-  });
+  const overall =
+    input.overallOverride ??
+    writingTaskBand({
+      task: input.taskBand, coherence: input.coherenceBand,
+      lexical: input.lexicalBand, grammar: input.grammarBand,
+    });
 
   await prisma.$transaction(async (tx) => {
     await tx.ieltsWritingReview.upsert({
@@ -106,7 +137,7 @@ export async function submitWritingReview(input: WritingReviewInput): Promise<Re
     await tx.ieltsWritingSubmission.update({
       where: { id: submission.id }, data: { status: "COMPLETE" },
     });
-    await rollUpWriting(tx, submission.attemptId);
+    await rollUpWriting(tx, submission.attemptId, input.attemptOverride);
   });
 
   revalidatePath("/admin/ielts/writing");
@@ -120,10 +151,14 @@ export async function submitWritingReview(input: WritingReviewInput): Promise<Re
  * Task 2 counts twice. With only one task reviewed there is nothing to weight,
  * so that task's own band stands — reporting a half-finished paper as if both
  * tasks were in would understate a student who has written one good essay.
+ *
+ * `override` is the reviewer's own judgement of the paper as a whole, offered
+ * when the student sat both tasks as one mock. It wins over the arithmetic.
  */
 async function rollUpWriting(
   tx: Parameters<Parameters<typeof prisma.$transaction>[0]>[0],
-  attemptId: string
+  attemptId: string,
+  override?: number
 ) {
   const rows = await tx.ieltsWritingSubmission.findMany({
     where: { attemptId },
@@ -142,8 +177,8 @@ async function rollUpWriting(
     if (numberOf.get(r.partId) === 2) t2 = r.review.overallBand;
   }
   const band =
-    t1 != null && t2 != null ? toHalfBand((t1 + t2 * 2) / 3)
-      : t2 ?? t1 ?? null;
+    override ??
+    (t1 != null && t2 != null ? toHalfBand((t1 + t2 * 2) / 3) : t2 ?? t1 ?? null);
   if (band == null) return;
 
   await tx.ieltsAttempt.update({
@@ -158,6 +193,8 @@ export interface SpeakingReviewInput {
   lexicalBand: number;
   grammarBand: number;
   pronunciationBand: number;
+  /** The reviewer's own band for the interview, overriding the average. */
+  overallOverride?: number;
   overallFeedback?: string;
   fluencyNotes?: string;
   vocabularyNotes?: string;
@@ -173,7 +210,7 @@ export async function submitSpeakingReview(input: SpeakingReviewInput): Promise<
   if (!auth.ok) return { error: "You are not approved to review Speaking." };
 
   const bands = [input.fluencyBand, input.lexicalBand, input.grammarBand, input.pronunciationBand];
-  const bad = validBands(bands);
+  const bad = validCriterionBands(bands) ?? validOverall(input.overallOverride);
   if (bad) return { error: bad };
 
   const submission = await prisma.ieltsSpeakingSubmission.findUnique({
@@ -182,10 +219,12 @@ export async function submitSpeakingReview(input: SpeakingReviewInput): Promise<
   });
   if (!submission) return { error: "Submission not found." };
 
-  const overall = speakingBand({
-    fluency: input.fluencyBand, lexical: input.lexicalBand,
-    grammar: input.grammarBand, pronunciation: input.pronunciationBand,
-  });
+  const overall =
+    input.overallOverride ??
+    speakingBand({
+      fluency: input.fluencyBand, lexical: input.lexicalBand,
+      grammar: input.grammarBand, pronunciation: input.pronunciationBand,
+    });
 
   await prisma.$transaction(async (tx) => {
     const data = {

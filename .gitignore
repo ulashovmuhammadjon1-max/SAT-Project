@@ -55,3 +55,6 @@ scratchpad/
 # dump_q.py, and several hundred PNGs do not belong in git history.
 content-pool/satoplam-math/pages/
 content-pool/satoplam-math/render.log
+
+# IELTS speaking recordings written by local dev
+/storage/ielts-audio/
