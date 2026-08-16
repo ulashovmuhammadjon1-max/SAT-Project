@@ -15,8 +15,12 @@ export default async function StudentSettingsPage() {
 
   const record = await readProfile(user.id);
 
+  // Settings edits the SAT answers only; the track and the IELTS answers are
+  // set during onboarding and changed from the IELTS side, so they are carried
+  // through as defaults rather than surfaced here.
   const initial: OnboardingProfile = record
     ? {
+        ...EMPTY_PROFILE,
         goal: record.onboardingGoal,
         currentScore: record.currentScore,
         targetScore: record.targetScore,

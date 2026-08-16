@@ -1884,6 +1884,13 @@ model IeltsStudentProfile {
   studyMinutesPerDay Int?
   onboardedAt        DateTime?
 
+  /// WRITING | SPEAKING — which of the two skills the student said worries
+  /// them more, so the plan can lead with it. Added after the table shipped:
+  /// every other query on this model uses an explicit select that omits it,
+  /// and the one read that needs it is guarded, so a database without the
+  /// column degrades to "no preference" instead of throwing P2022.
+  focusSkill String?
+
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())

@@ -31,7 +31,6 @@ import { EMPTY_PROFILE, type OnboardingProfile } from "@/lib/validations/onboard
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "summit-onboarding";
-const TOTAL_STEPS = 12;
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function OnboardingWizard({ referralCode = null }: { referralCode?: string | null }) {
@@ -50,7 +49,7 @@ export function OnboardingWizard({ referralCode = null }: { referralCode?: strin
         const saved = JSON.parse(raw) as { step?: number; profile?: OnboardingProfile };
         if (saved.profile) setProfile({ ...EMPTY_PROFILE, ...saved.profile });
         // Never restore straight onto the account step; the answers matter more.
-        if (typeof saved.step === "number") setStep(Math.min(Math.max(saved.step, 0), TOTAL_STEPS - 2));
+        if (typeof saved.step === "number") setStep(Math.max(saved.step, 0));
       }
     } catch {
       // Unreadable storage just means starting fresh.
@@ -71,7 +70,7 @@ export function OnboardingWizard({ referralCode = null }: { referralCode?: strin
 
   const goNext = useCallback(() => {
     setDirection(1);
-    setStep((s) => Math.min(s + 1, TOTAL_STEPS - 1));
+    setStep((s) => s + 1);
   }, []);
 
   const goBack = useCallback(() => {
@@ -92,8 +91,15 @@ export function OnboardingWizard({ referralCode = null }: { referralCode?: strin
     () => buildSteps({ profile, patch, selectAndAdvance, referralCode }),
     [profile, patch, selectAndAdvance, referralCode]
   );
-  const current = steps[step];
-  const isAccountStep = step === TOTAL_STEPS - 1;
+  // The step list changes length with the track — SAT alone is twelve
+  // questions, both exams is nineteen — so the count is read off the built
+  // list rather than a constant. Clamped because a student can go back to the
+  // chooser and pick a shorter track while standing on a step that no longer
+  // exists.
+  const total = steps.length;
+  const index = Math.min(step, total - 1);
+  const current = steps[index];
+  const isAccountStep = index === total - 1;
 
   if (!hydrated) {
     return (
@@ -138,13 +144,13 @@ export function OnboardingWizard({ referralCode = null }: { referralCode?: strin
             <motion.div
               className="h-full rounded-full bg-gradient-to-r from-primary to-[hsl(250_84%_60%)]"
               initial={false}
-              animate={{ width: `${((step + 1) / TOTAL_STEPS) * 100}%` }}
+              animate={{ width: `${((index + 1) / total) * 100}%` }}
               transition={{ duration: 0.45, ease: EASE }}
             />
           </div>
 
           <span className="shrink-0 text-sm font-semibold tabular-nums text-muted-foreground">
-            {step + 1}/{TOTAL_STEPS}
+            {index + 1}/{total}
           </span>
         </div>
       </header>
@@ -154,7 +160,7 @@ export function OnboardingWizard({ referralCode = null }: { referralCode?: strin
         <div className="relative w-full max-w-xl">
           <AnimatePresence custom={direction} initial={false}>
             <motion.div
-              key={step}
+              key={index}
               custom={direction}
               initial={{ opacity: 0, x: direction * 40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -260,6 +266,75 @@ function buildSteps({
   patch: (p: Partial<OnboardingProfile>) => void;
   selectAndAdvance: (p: Partial<OnboardingProfile>) => void;
   referralCode: string | null;
+}): Step[] {
+  const track = profile.track;
+  return [
+    // 1 — Which exam. Asked first because it decides which of the two
+    // question sets is worth asking at all: a 1450 target means nothing to
+    // someone sitting IELTS, and a Task 2 word count means nothing to someone
+    // sitting the SAT.
+    {
+      emoji: "🧭",
+      title: "What are you preparing for?",
+      subtitle: "This decides what we ask next and what your plan is built around.",
+      canContinue: track !== null,
+      content: (
+        <div className="space-y-3">
+          {(
+            [
+              { v: "SAT", icon: "📘", t: "SAT", s: "Practice tests, a question bank and a personalised plan" },
+              { v: "IELTS", icon: "🗣️", t: "IELTS", s: "Writing and Speaking, marked by a person, free" },
+              { v: "BOTH", icon: "🎯", t: "Both", s: "Two separate plans, and a switch between them any time" },
+            ] as const
+          ).map((o, i) => (
+            <OptionCard
+              key={o.v}
+              index={i}
+              icon={o.icon}
+              title={o.t}
+              subtitle={o.s}
+              selected={track === o.v}
+              onSelect={() => selectAndAdvance({ track: o.v })}
+            />
+          ))}
+          <p className="pt-1 text-center text-xs text-muted-foreground">
+            You can switch between the two at any time afterwards — this only decides
+            which questions we ask now.
+          </p>
+        </div>
+      ),
+    },
+
+    ...(track === "IELTS" ? [] : satSteps({ profile, patch, selectAndAdvance })),
+    ...(track === "IELTS" || track === "BOTH"
+      ? ieltsSteps({ profile, patch, selectAndAdvance })
+      : []),
+
+    // Account — always last, whichever track was taken.
+    {
+      emoji: "🎉",
+      title: track === "BOTH" ? "Both plans are ready" : "Your plan is ready",
+      subtitle: "Create your account to save it and start your first module.",
+      canContinue: true,
+      content: <AccountStep profile={profile} referralCode={referralCode} />,
+    },
+  ];
+}
+
+/**
+ * The SAT questions.
+ *
+ * Unchanged from before the IELTS track existed — a student picking SAT sees
+ * exactly the wizard they would have seen.
+ */
+function satSteps({
+  profile,
+  patch,
+  selectAndAdvance,
+}: {
+  profile: OnboardingProfile;
+  patch: (p: Partial<OnboardingProfile>) => void;
+  selectAndAdvance: (p: Partial<OnboardingProfile>) => void;
 }): Step[] {
   return [
     // 1 — Welcome / motivation
@@ -515,19 +590,232 @@ function buildSteps({
       content: <DailyGoalStep profile={profile} patch={patch} />,
     },
 
-    // 12 — Account
+  ];
+}
+
+
+/**
+ * The IELTS questions.
+ *
+ * Deliberately about Writing and Speaking only. SATForge does not mark
+ * Listening or Reading, and asking a student to rate skills the plan cannot
+ * then help with promises something the product does not deliver — the surest
+ * way to make a personalised plan feel generic.
+ */
+function ieltsSteps({
+  profile,
+  patch,
+  selectAndAdvance,
+}: {
+  profile: OnboardingProfile;
+  patch: (p: Partial<OnboardingProfile>) => void;
+  selectAndAdvance: (p: Partial<OnboardingProfile>) => void;
+}): Step[] {
+  const i = profile.ielts;
+  const setI = (p: Partial<typeof i>) => patch({ ielts: { ...i, ...p } });
+  const pickI = (p: Partial<typeof i>) => selectAndAdvance({ ielts: { ...i, ...p } });
+  const both = profile.track === "BOTH";
+
+  return [
+    // Why IELTS — the reason sets the band that actually matters. A university
+    // offer is a hard threshold; "for work" usually is not.
     {
-      emoji: "🎉",
-      title: "Your plan is ready",
-      subtitle: "Create your account to save it and start your first module.",
+      emoji: "🌍",
+      title: both ? "Now for IELTS — why do you need it?" : "Why do you need IELTS?",
+      subtitle: "The band you need depends on what it is for.",
+      canContinue: i.reason !== null,
+      content: (
+        <div className="space-y-3">
+          {(
+            [
+              { v: "UNIVERSITY", icon: "🎓", t: "University admission", s: "Usually a fixed band, often with a per-skill minimum" },
+              { v: "WORK", icon: "💼", t: "Work or professional registration", s: "A required band for a job or a licence" },
+              { v: "IMMIGRATION", icon: "🛂", t: "Immigration or a visa", s: "A points threshold to clear" },
+              { v: "OTHER", icon: "✨", t: "Something else", s: "Personal goal, or keeping options open" },
+            ] as const
+          ).map((o, n) => (
+            <OptionCard
+              key={o.v}
+              index={n}
+              icon={o.icon}
+              title={o.t}
+              subtitle={o.s}
+              selected={i.reason === o.v}
+              onSelect={() => pickI({ reason: o.v })}
+            />
+          ))}
+        </div>
+      ),
+    },
+
+    // Target band.
+    {
+      emoji: "🎯",
+      title: "What band are you aiming for?",
+      subtitle: "Overall. We will work back from this to what each task needs.",
+      canContinue: i.targetBand !== null,
+      content: <BandGrid value={i.targetBand} onSelect={(b) => pickI({ targetBand: b })} />,
+    },
+
+    // Where they are starting from.
+    {
+      emoji: "📍",
+      title: "Where are you starting from?",
+      subtitle: "An honest answer makes the plan useful. Nobody else sees this.",
+      canContinue: i.levelSource !== null,
+      content: (
+        <div className="space-y-3">
+          {(
+            [
+              { v: "NEVER_TAKEN", icon: "🌱", t: "I have never taken IELTS", s: "We will start you with a diagnostic task" },
+              { v: "PREVIOUS_TEST", icon: "📄", t: "I have a real IELTS result", s: "From a test I actually sat" },
+              { v: "MOCK_OR_TEACHER", icon: "📝", t: "A mock or my teacher's estimate", s: "Not official, but a real assessment" },
+            ] as const
+          ).map((o, n) => (
+            <OptionCard
+              key={o.v}
+              index={n}
+              icon={o.icon}
+              title={o.t}
+              subtitle={o.s}
+              selected={i.levelSource === o.v}
+              onSelect={() => pickI({ levelSource: o.v })}
+            />
+          ))}
+        </div>
+      ),
+    },
+
+    // Current bands — only worth asking when there is something to report.
+    ...(i.levelSource && i.levelSource !== "NEVER_TAKEN"
+      ? [
+          {
+            emoji: "📊",
+            title: "What did you get for Writing and Speaking?",
+            subtitle: "Just these two — they are the ones we mark.",
+            canContinue: i.currentWriting !== null && i.currentSpeaking !== null,
+            content: (
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold">Writing</p>
+                  <BandGrid value={i.currentWriting} onSelect={(b) => setI({ currentWriting: b })} />
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold">Speaking</p>
+                  <BandGrid value={i.currentSpeaking} onSelect={(b) => setI({ currentSpeaking: b })} />
+                </div>
+              </div>
+            ),
+          } satisfies Step,
+        ]
+      : []),
+
+    // Which of the two to lead with.
+    {
+      emoji: "🪜",
+      title: "Which one worries you more?",
+      subtitle: "We will front-load your plan with it. You will practise both either way.",
+      canContinue: i.focusSkill !== null,
+      content: (
+        <div className="space-y-3">
+          {(
+            [
+              { v: "WRITING", icon: "✍️", t: "Writing", s: "Task 1 and Task 2, marked on four criteria" },
+              { v: "SPEAKING", icon: "🎙️", t: "Speaking", s: "Three parts, recorded and marked on four criteria" },
+            ] as const
+          ).map((o, n) => (
+            <OptionCard
+              key={o.v}
+              index={n}
+              icon={o.icon}
+              title={o.t}
+              subtitle={o.s}
+              selected={i.focusSkill === o.v}
+              onSelect={() => pickI({ focusSkill: o.v })}
+            />
+          ))}
+        </div>
+      ),
+    },
+
+    // When the test is.
+    {
+      emoji: "📅",
+      title: "When is your IELTS test?",
+      subtitle: "A rough month is enough. Skip it if you have not booked yet.",
       canContinue: true,
-      content: <AccountStep profile={profile} referralCode={referralCode} />,
+      content: (
+        <MonthPicker value={i.examMonth} onChange={(v) => setI({ examMonth: v })} />
+      ),
+    },
+
+    // Time — asked separately from the SAT answer, because a student doing both
+    // is budgeting one evening across two exams, not doubling their day.
+    {
+      emoji: "⏳",
+      title: both ? "How much of that time goes to IELTS?" : "How much time can you give this?",
+      subtitle: both
+        ? "On top of your SAT study. Be realistic — a plan you keep beats a plan you admire."
+        : "Pick something you will actually keep to. Consistency beats intensity.",
+      canContinue: i.studyMinutesPerDay !== null,
+      content: (
+        <div className="space-y-3">
+          {(
+            [
+              { v: 15, t: "15 minutes a day", s: "One Speaking answer, or a Task 1 plan" },
+              { v: 30, t: "30 minutes a day", s: "A full Task 1, or half a Task 2" },
+              { v: 60, t: "1 hour a day", s: "A complete Task 2 with time to check it" },
+              { v: 120, t: "2+ hours a day", s: "A full Writing paper and a Speaking test" },
+            ] as const
+          ).map((o, n) => (
+            <OptionCard
+              key={o.v}
+              index={n}
+              title={o.t}
+              subtitle={o.s}
+              selected={i.studyMinutesPerDay === o.v}
+              onSelect={() => pickI({ studyMinutesPerDay: o.v })}
+            />
+          ))}
+        </div>
+      ),
     },
   ];
 }
 
+/** Bands 4.0 to 9.0 in half steps, as a grid rather than a slider. */
+function BandGrid({
+  value,
+  onSelect,
+}: {
+  value: number | null;
+  onSelect: (band: number) => void;
+}) {
+  const bands = Array.from({ length: 11 }, (_, n) => 4 + n * 0.5);
+  return (
+    <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
+      {bands.map((b) => (
+        <button
+          key={b}
+          type="button"
+          onClick={() => onSelect(b)}
+          aria-pressed={value === b}
+          className={cn(
+            "rounded-xl border py-3 text-base font-semibold tabular-nums transition-colors",
+            value === b
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-border hover:bg-secondary"
+          )}
+        >
+          {Number.isInteger(b) ? b : b.toFixed(1)}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 /* -------------------------------------------------------------------------- */
-/* Step 11 — daily goal                                                        */
+/* Daily goal                                                                  */
 /* -------------------------------------------------------------------------- */
 
 const QUESTION_PRESETS = [10, 20, 30, 50];

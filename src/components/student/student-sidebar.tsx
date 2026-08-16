@@ -69,6 +69,7 @@ const SAT_NAV: NavItem[] = [
  */
 const IELTS_NAV: NavItem[] = [
   { href: "/ielts", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/ielts/plan", label: "My IELTS Plan", icon: Target },
   { href: "/ielts/writing", label: "Writing", icon: PenLine },
   { href: "/ielts/speaking", label: "Speaking", icon: Mic },
   { href: "/ielts/feedback", label: "My Feedback", icon: MessageSquareText },
@@ -91,6 +92,7 @@ const BOTH_NAV: NavItem[] = [
   { href: "/tests", label: "Practice Tests", icon: BookOpen },
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+  { href: "/ielts/plan", label: "My IELTS Plan", icon: Target },
   { href: "/ielts/writing", label: "IELTS Writing", icon: PenLine },
   { href: "/ielts/speaking", label: "IELTS Speaking", icon: Mic },
   { href: "/ielts/feedback", label: "IELTS Feedback", icon: MessageSquareText },

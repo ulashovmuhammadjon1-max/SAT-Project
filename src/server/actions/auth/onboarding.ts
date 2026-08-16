@@ -53,6 +53,18 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // A month-precision answer is stored as midnight UTC on the 1st, so date
   // comparisons in the admin panel don't drift with the viewer's timezone.
   const satDate = profile.satMonth ? new Date(`${profile.satMonth}-01T00:00:00.000Z`) : null;
+  const ieltsDate = profile.ielts.examMonth
+    ? new Date(`${profile.ielts.examMonth}-01T00:00:00.000Z`)
+    : null;
+
+  // The track chosen on the first screen decides two different things, which
+  // is why it lands in two columns. `preparationExams` is what the student is
+  // working towards and governs what data exists; `activeExam` is what they
+  // are looking at right now. Picking one exam never removes the other from
+  // the switcher — it only decides which questions were worth asking.
+  const track = profile.track ?? "SAT";
+  const preparationExams =
+    track === "BOTH" ? (["SAT", "IELTS"] as const) : ([track] as const);
 
   const base = {
     name,
@@ -82,6 +94,8 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
         dailyGoalType: profile.dailyGoalType,
         dailyGoalValue: profile.dailyGoalValue,
         onboardedAt: new Date(),
+        preparationExams: [...preparationExams],
+        activeExam: track,
       },
       select: { id: true },
     });
@@ -110,6 +124,30 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // failure is logged and swallowed: a student must never be told their signup
   // failed because a welcome bonus could not be written.
   if (createdUserId) {
+    // The IELTS answers, when they were asked for. Separate row, separate
+    // failure: a student whose IELTS profile cannot be written still has an
+    // account and can answer again from the IELTS side.
+    if (track !== "SAT") {
+      try {
+        await prisma.ieltsStudentProfile.create({
+          data: {
+            userId: createdUserId,
+            reason: profile.ielts.reason?.toLowerCase() ?? null,
+            targetBand: profile.ielts.targetBand,
+            examDate: ieltsDate,
+            currentWriting: profile.ielts.currentWriting,
+            currentSpeaking: profile.ielts.currentSpeaking,
+            levelSource: profile.ielts.levelSource?.toLowerCase() ?? null,
+            studyMinutesPerDay: profile.ielts.studyMinutesPerDay,
+            focusSkill: profile.ielts.focusSkill,
+            onboardedAt: new Date(),
+          },
+        });
+      } catch (error) {
+        console.error("[onboarding] Could not save the IELTS profile", error);
+      }
+    }
+
     await grantSignupRewards(createdUserId, input.referralCode ?? null);
 
     try {

@@ -14,6 +14,35 @@ export const DAILY_GOAL_TYPES = ["QUESTIONS", "MINUTES"] as const;
 export const SECTIONS = ["READING", "WRITING", "MATH"] as const;
 export const WEAK_AREAS = ["READING", "WRITING", "MATH", "VOCABULARY", "TIME_MANAGEMENT"] as const;
 
+/**
+ * Which exam (or exams) the student is here for.
+ *
+ * Chosen first, before anything else, because it decides which questions are
+ * even worth asking: a target of 1450 means nothing to someone sitting IELTS,
+ * and a Task 2 word count means nothing to someone sitting the SAT.
+ */
+export const EXAM_TRACKS = ["SAT", "IELTS", "BOTH"] as const;
+
+/** Why someone needs IELTS. Drives the target band the plan aims at. */
+export const IELTS_REASONS = ["UNIVERSITY", "WORK", "IMMIGRATION", "OTHER"] as const;
+
+/**
+ * The two skills SATForge marks. Deliberately not four: this product does not
+ * do Listening or Reading, and asking a student to rate skills we cannot help
+ * with would promise something the plan then fails to deliver.
+ */
+export const IELTS_SKILLS = ["WRITING", "SPEAKING"] as const;
+
+/** Where a self-reported band came from — it changes how much to trust it. */
+export const IELTS_LEVEL_SOURCES = ["NEVER_TAKEN", "PREVIOUS_TEST", "MOCK_OR_TEACHER"] as const;
+
+/** Bands a student can claim or aim at: 4.0 to 9.0 in half steps. */
+const band = z
+  .number()
+  .min(4)
+  .max(9)
+  .refine((n) => Math.round(n * 2) === n * 2, "Bands move in half steps");
+
 /** SAT scores are reported in 10-point increments from 400 to 1600. */
 const satScore = z
   .number()
@@ -26,7 +55,46 @@ const satScore = z
  * Everything the wizard collects. All fields are optional because a student can
  * skip any question — only the account credentials at the end are required.
  */
+/**
+ * The IELTS half of the wizard.
+ *
+ * A separate object rather than more nullable columns on the SAT profile: the
+ * two exams share a student and nothing else, and flattening them would make
+ * every field need a comment saying which exam it belongs to.
+ */
+export const ieltsOnboardingSchema = z.object({
+  reason: z.enum(IELTS_REASONS).nullable().default(null),
+  targetBand: band.nullable().default(null),
+  levelSource: z.enum(IELTS_LEVEL_SOURCES).nullable().default(null),
+  currentWriting: band.nullable().default(null),
+  currentSpeaking: band.nullable().default(null),
+  /** Month precision, like the SAT date. */
+  examMonth: z
+    .string()
+    .regex(/^\d{4}-(0[1-9]|1[0-2])$/, "Expected YYYY-MM")
+    .nullable()
+    .default(null),
+  focusSkill: z.enum(IELTS_SKILLS).nullable().default(null),
+  studyMinutesPerDay: z.number().int().min(5).max(600).nullable().default(null),
+});
+
+export type IeltsOnboarding = z.infer<typeof ieltsOnboardingSchema>;
+
+export const EMPTY_IELTS: IeltsOnboarding = {
+  reason: null,
+  targetBand: null,
+  levelSource: null,
+  currentWriting: null,
+  currentSpeaking: null,
+  examMonth: null,
+  focusSkill: null,
+  studyMinutesPerDay: null,
+};
+
 export const onboardingProfileSchema = z.object({
+  /** SAT, IELTS or both. Decides which of the two question sets is asked. */
+  track: z.enum(EXAM_TRACKS).nullable().default(null),
+  ielts: ieltsOnboardingSchema.default(EMPTY_IELTS),
   goal: z.enum(ONBOARDING_GOALS).nullable().default(null),
   currentScore: satScore.nullable().default(null),
   targetScore: satScore.nullable().default(null),
@@ -53,6 +121,8 @@ export const onboardingProfileSchema = z.object({
 export type OnboardingProfile = z.infer<typeof onboardingProfileSchema>;
 
 export const EMPTY_PROFILE: OnboardingProfile = {
+  track: null,
+  ielts: EMPTY_IELTS,
   goal: null,
   currentScore: null,
   targetScore: null,

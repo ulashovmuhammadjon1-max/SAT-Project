@@ -44,7 +44,20 @@ const SKILLS: IeltsSkill[] = ["LISTENING", "READING", "WRITING", "SPEAKING"];
 
 export async function loadIeltsDashboard(userId: string): Promise<IeltsDashboardData> {
   const [profile, attempts, writing, speaking, publishedTests] = await Promise.all([
-    prisma.ieltsStudentProfile.findUnique({ where: { userId } }),
+    // Explicit select, deliberately. A whole-row fetch asks the database for
+    // every column `schema.prisma` knows about, so the day a column is added
+    // to this model and the migration has not been applied yet, this page
+    // starts throwing P2022 for every student. Naming the columns means this
+    // query only breaks if one of THESE goes missing.
+    prisma.ieltsStudentProfile.findUnique({
+      where: { userId },
+      select: {
+        targetBand: true, examDate: true, reason: true,
+        currentListening: true, currentReading: true,
+        currentWriting: true, currentSpeaking: true, currentOverall: true,
+        levelSource: true, studyMinutesPerDay: true, onboardedAt: true,
+      },
+    }),
     prisma.ieltsAttempt.findMany({
       where: { userId },
       orderBy: { createdAt: "desc" },
