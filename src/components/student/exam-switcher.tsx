@@ -24,19 +24,18 @@ import {
  */
 export function ExamSwitcher({
   active,
-  canSwitch,
   className,
 }: {
   active: ExamMode;
-  /** False when the account only has one exam — nothing to switch between. */
-  canSwitch: boolean;
   className?: string;
 }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
-  if (!canSwitch) return null;
-
+  // Shown to every account. Both exams are open to everyone, so this is how a
+  // student discovers IELTS exists — gating it behind an account that already
+  // had two exams meant nobody would ever find it. Picking one enrols them on
+  // the spot; there is no setup step to complete first.
   const modes: ExamMode[] = ["SAT", "IELTS", "BOTH"];
   const label: Record<ExamMode, string> = { SAT: "SAT", IELTS: "IELTS", BOTH: "Both" };
 

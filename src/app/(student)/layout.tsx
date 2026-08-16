@@ -12,9 +12,9 @@ export default async function StudentLayout({ children }: { children: React.Reac
 
   return (
     <div className="flex min-h-screen bg-secondary/30">
-      <StudentSidebar activeExam={exam.active} canSwitch={exam.canSwitch} />
+      <StudentSidebar activeExam={exam.active} />
       <div className="flex min-w-0 flex-1 flex-col">
-        <StudentTopbar activeExam={exam.active} canSwitch={exam.canSwitch} />
+        <StudentTopbar activeExam={exam.active} />
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <StudentContainer>{children}</StudentContainer>
         </main>

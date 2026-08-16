@@ -67,7 +67,7 @@ export default async function IeltsDashboardPage() {
               {data.profile.targetBand != null ? (
                 <>Target <span className="font-medium text-foreground">Band {formatBand(data.profile.targetBand)}</span></>
               ) : (
-                "Set a target band to shape your plan"
+                "No target band set yet"
               )}
               {data.focus && (
                 <> · Next focus <span className="font-medium text-foreground">{data.focus.label}</span></>
@@ -81,8 +81,11 @@ export default async function IeltsDashboardPage() {
               </Link>
             </Button>
             {!data.profile.onboarded && (
+              // Optional, always. Nobody is asked anything to start using
+              // IELTS — a target band only sharpens the plan, it does not
+              // unlock it.
               <Button asChild variant="outline">
-                <Link href="/ielts/setup">Set up my goals</Link>
+                <Link href="/ielts/plan">Set a target band</Link>
               </Button>
             )}
           </div>

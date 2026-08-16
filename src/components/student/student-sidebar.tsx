@@ -29,7 +29,6 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { ExamSwitcher } from "@/components/student/exam-switcher";
 
 interface NavItem {
   href: string;
@@ -127,13 +126,7 @@ const NAV_FOR: Record<ExamMode, NavItem[]> = {
   BOTH: BOTH_NAV,
 };
 
-export function StudentSidebar({
-  activeExam = "SAT",
-  canSwitch = false,
-}: {
-  activeExam?: ExamMode;
-  canSwitch?: boolean;
-}) {
+export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }) {
   const pathname = usePathname();
   const nav = NAV_FOR[activeExam];
   const home = activeExam === "IELTS" ? "/ielts" : "/dashboard";
@@ -146,12 +139,6 @@ export function StudentSidebar({
         </span>
         <span className="font-display text-base font-semibold">SATForge</span>
       </Link>
-
-      {canSwitch && (
-        <div className="border-b border-border px-4 py-3">
-          <ExamSwitcher active={activeExam} canSwitch={canSwitch} />
-        </div>
-      )}
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-3">
         {nav.map((item) => {

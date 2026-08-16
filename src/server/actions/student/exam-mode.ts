@@ -21,12 +21,13 @@ const HOME: Record<ExamMode, string> = {
 };
 
 /**
- * Switch which exam the dashboard is showing.
+ * Switch which exam the dashboard is showing, enrolling if needed.
  *
- * Refuses a mode the student is not preparing for. The switcher only offers
- * legitimate options, but the check belongs on the server: a hand-made request
- * would otherwise put an account into IELTS mode with no IELTS profile behind
- * it, and every IELTS page would then render an empty shell.
+ * Both exams are open to every account, so this never refuses: choosing IELTS
+ * from a SAT-only account adds IELTS and lands the student in it. That is the
+ * whole onboarding story for an existing user — one click, no questions. A
+ * target band and a test date sharpen the plan later but are never required to
+ * start.
  */
 export async function setActiveExam(mode: ExamMode): Promise<ExamModeResult> {
   const user = await requireUser();
@@ -36,17 +37,30 @@ export async function setActiveExam(mode: ExamMode): Promise<ExamModeResult> {
   });
   if (!row) return { error: "Account not found." };
 
-  const preparing = row.preparationExams;
-  const hasSat = preparing.includes("SAT");
-  const hasIelts = preparing.includes("IELTS");
+  // Both exams are open to every account, so picking one from the switcher
+  // enrols the student on the spot. There is no gate and no questionnaire:
+  // an existing SAT student who wants to look at IELTS clicks IELTS and is
+  // there. Goals can be filled in later from the plan page, or never.
+  const wanted: ExamKind[] =
+    mode === "SAT" ? ["SAT"] : mode === "IELTS" ? ["IELTS"] : ["SAT", "IELTS"];
+  const missing = wanted.filter((e) => !row.preparationExams.includes(e));
+  const preparing = [...row.preparationExams, ...missing];
 
-  if (mode === "SAT" && !hasSat) return { error: "You are not preparing for the SAT yet." };
-  if (mode === "IELTS" && !hasIelts) return { error: "You are not preparing for IELTS yet." };
-  if (mode === "BOTH" && !(hasSat && hasIelts)) {
-    return { error: "Add both exams first." };
-  }
-
-  await prisma.user.update({ where: { id: user.id }, data: { activeExam: mode } });
+  await prisma.$transaction(async (tx) => {
+    await tx.user.update({
+      where: { id: user.id },
+      data: { activeExam: mode, preparationExams: preparing },
+    });
+    if (missing.includes("IELTS")) {
+      // An empty profile row, so the dashboard has somewhere to write a
+      // target band the first time the student sets one.
+      await tx.ieltsStudentProfile.upsert({
+        where: { userId: user.id },
+        create: { userId: user.id },
+        update: {},
+      });
+    }
+  });
 
   // The sidebar, hero and plan all change, so the whole student area is stale.
   revalidatePath("/", "layout");
@@ -91,7 +105,7 @@ export async function addExam(exam: ExamKind): Promise<ExamModeResult> {
   });
 
   revalidatePath("/", "layout");
-  return { ok: true, redirectTo: exam === "IELTS" ? "/ielts/setup" : "/dashboard" };
+  return { ok: true, redirectTo: exam === "IELTS" ? "/ielts" : "/dashboard" };
 }
 
 /**
