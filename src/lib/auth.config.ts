@@ -1,5 +1,7 @@
 import type { NextAuthConfig } from "next-auth";
 
+import type { UserRole } from "@/types/next-auth";
+
 /**
  * Edge-compatible config (no bcrypt, no Prisma adapter, no Credentials provider).
  * Used by middleware for session checks; the full config in `auth.ts` extends this
@@ -23,14 +25,14 @@ export default {
     jwt({ token, user }) {
       if (user) {
         token.id = user.id as string;
-        token.role = (user as { role: "STUDENT" | "ADMIN" }).role;
+        token.role = (user as { role: UserRole }).role;
       }
       return token;
     },
     session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string;
-        session.user.role = token.role as "STUDENT" | "ADMIN";
+        session.user.role = token.role as UserRole;
       }
       return session;
     },

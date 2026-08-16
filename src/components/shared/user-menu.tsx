@@ -23,7 +23,7 @@ export function UserMenu({
   name?: string | null;
   email?: string | null;
   image?: string | null;
-  role?: "STUDENT" | "ADMIN" | null;
+  role?: "STUDENT" | "ADMIN" | "REVIEWER" | null;
 }) {
   return (
     <DropdownMenu>

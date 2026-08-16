@@ -20,6 +20,7 @@ import {
   CalendarDays,
   Trophy,
   MessagesSquare,
+  Globe2,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -29,6 +30,7 @@ const NAV = [
   { href: "/daily", label: "Daily Challenge", icon: CalendarDays },
   { href: "/plan", label: "My SAT Plan", icon: Target },
   { href: "/tests", label: "Practice Tests", icon: BookOpen },
+  { href: "/ielts", label: "IELTS", icon: Globe2 },
   { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
   { href: "/community", label: "Community", icon: MessagesSquare },

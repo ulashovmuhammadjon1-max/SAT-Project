@@ -17,6 +17,10 @@ datasource db {
 enum Role {
   STUDENT
   ADMIN
+  /// Reviews IELTS Writing and Speaking submissions. Strictly narrower than
+  /// ADMIN: a reviewer sees only the submissions assigned to them, and nothing
+  /// in the SAT admin surface.
+  REVIEWER
 }
 
 /// Answers collected by the pre-signup onboarding wizard. Stored on the user
@@ -148,6 +152,13 @@ model User {
   vocabWordsCreated  VocabWord[]       @relation("VocabCreatedBy")
   announcementsMade  Announcement[]    @relation("AnnouncementCreatedBy")
   adaptiveConfigsSet AdaptiveConfig[]  @relation("AdaptiveConfigUpdatedBy")
+
+  ieltsAttempts            IeltsAttempt[]
+  ieltsWritingSubmissions  IeltsWritingSubmission[]
+  ieltsSpeakingSubmissions IeltsSpeakingSubmission[]
+  ieltsReviewerProfile     IeltsReviewerProfile?
+  ieltsWritingReviews      IeltsWritingReview[]  @relation("IeltsWritingReviewer")
+  ieltsSpeakingReviews     IeltsSpeakingReview[] @relation("IeltsSpeakingReviewer")
 
   @@index([role])
   @@index([countryCode])
@@ -1261,4 +1272,542 @@ model Partner {
   updatedAt   DateTime @updatedAt
 
   @@index([isPublished, order])
+}
+
+// ---------------------------------------------------------------------------
+// IELTS Academic
+//
+// A parallel content and attempt tree rather than an extension of the SAT one.
+// The two exams disagree on nearly everything that matters structurally: a
+// module has a fixed 22/27 questions where an IELTS part does not, the SAT is
+// adaptive where IELTS is not, SAT questions are all machine-marked where
+// IELTS Writing and Speaking are human-marked, and an IELTS answer is often a
+// typed phrase judged against a list of accepted spellings rather than a
+// choice id. Bending `Question` to cover both would put a dozen nullable
+// columns on the hottest table in the app.
+//
+// Nothing here touches an existing model except `Role`, which gains REVIEWER.
+// ---------------------------------------------------------------------------
+
+/// Academic only for v1. GENERAL_TRAINING exists so the column never has to be
+/// migrated later; nothing reads it yet.
+enum IeltsModule {
+  ACADEMIC
+  GENERAL_TRAINING
+}
+
+enum IeltsSkill {
+  LISTENING
+  READING
+  WRITING
+  SPEAKING
+}
+
+/// How strictly the engine behaves. REALISTIC is the exam: audio plays once,
+/// the clock cannot be paused, nothing is revealed until submission. PRACTICE
+/// relaxes replay and reveals answers as you go.
+enum IeltsAttemptMode {
+  REALISTIC
+  PRACTICE
+}
+
+enum IeltsAttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  ABANDONED
+  /// Objective sections are marked but Writing/Speaking await a human.
+  AWAITING_REVIEW
+  COMPLETE
+}
+
+/// The documented IELTS Academic question formats. The engine renders one
+/// component per value, so adding a format means adding a component, not a
+/// migration.
+enum IeltsQuestionType {
+  MULTIPLE_CHOICE_SINGLE
+  MULTIPLE_CHOICE_MULTI
+  TRUE_FALSE_NOT_GIVEN
+  YES_NO_NOT_GIVEN
+  MATCHING_INFORMATION
+  MATCHING_HEADINGS
+  MATCHING_FEATURES
+  MATCHING_SENTENCE_ENDINGS
+  MATCHING_GENERAL
+  PLAN_MAP_DIAGRAM_LABEL
+  FORM_COMPLETION
+  NOTE_COMPLETION
+  TABLE_COMPLETION
+  FLOWCHART_COMPLETION
+  SUMMARY_COMPLETION
+  SENTENCE_COMPLETION
+  SHORT_ANSWER
+  DIAGRAM_LABEL_COMPLETION
+}
+
+enum IeltsTestStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+/// A publishable IELTS paper. A "full test" carries all four skills; a
+/// single-skill paper carries one, which is what the Practice cards start.
+model IeltsTest {
+  id          String          @id @default(cuid())
+  title       String
+  slug        String          @unique
+  module      IeltsModule     @default(ACADEMIC)
+  status      IeltsTestStatus @default(DRAFT)
+  description String?
+  /// 1 easiest … 5 hardest. Shown on the selection card.
+  difficulty  Int             @default(3)
+
+  sections IeltsSection[]
+  attempts IeltsAttempt[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, module])
+}
+
+/// One skill within a paper. Listening and Reading carry parts; Writing carries
+/// two tasks; Speaking carries three parts.
+model IeltsSection {
+  id     String     @id @default(cuid())
+  testId String
+  skill  IeltsSkill
+  /// Ordering among sections of the same paper.
+  order  Int        @default(0)
+  /// Whole-section clock. Reading is 60, Writing 60. Listening is paced per
+  /// part instead, so this is the fallback ceiling rather than the rule.
+  durationMinutes Int
+  instructions    String?
+
+  test  IeltsTest   @relation(fields: [testId], references: [id], onDelete: Cascade)
+  parts IeltsPart[]
+
+  attempts IeltsSectionAttempt[]
+
+  @@unique([testId, skill])
+  @@index([testId])
+}
+
+/// A Listening part, a Reading passage, a Writing task, or a Speaking part.
+model IeltsPart {
+  id        String @id @default(cuid())
+  sectionId String
+  /// 1-4 for Listening, 1-3 for Reading and Speaking, 1-2 for Writing.
+  partNumber Int
+  title      String?
+  instructions String?
+
+  /// Reading passage body, as rich HTML. Null for other skills.
+  passageHtml String?
+  /// Writing task prompt, as rich HTML. Null for other skills.
+  promptHtml  String?
+  /// The Task 1 chart/diagram, or a Listening/Reading figure.
+  imageUrl    String?
+  imageAlt    String?
+
+  /// Listening audio for this part. Served through a signed route, never as a
+  /// public URL, so a student cannot fetch it ahead of the test.
+  audioUrl      String?
+  audioDuration Int?
+  /// Admin- and reviewer-only. Never sent to a student's browser.
+  transcript    String?
+
+  /// Speaking timings, in seconds.
+  prepSeconds  Int?
+  speakSeconds Int?
+
+  /// Writing minimum word count: 150 for Task 1, 250 for Task 2.
+  minWords Int?
+
+  section   IeltsSection        @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  groups    IeltsQuestionGroup[]
+  questions IeltsQuestion[]
+
+  @@unique([sectionId, partNumber])
+  @@index([sectionId])
+}
+
+/// A run of questions sharing one instruction line and one answer format —
+/// "Questions 7-10: Complete the notes below. NO MORE THAN TWO WORDS."
+///
+/// IELTS instructions attach to a block, not to a single question, and the
+/// word limit is printed once above the block. Modelling that as a group keeps
+/// the limit in one place instead of copied onto every row, where it would
+/// eventually disagree with itself.
+model IeltsQuestionGroup {
+  id     String            @id @default(cuid())
+  partId String
+  order  Int               @default(0)
+  type   IeltsQuestionType
+  /// "Complete the notes below." — printed above the block.
+  instructions String
+  /// "NO MORE THAN TWO WORDS AND/OR A NUMBER", shown to the student and
+  /// enforced by the answer validator.
+  wordLimit    String?
+  maxWords     Int?
+  maxNumbers   Int?
+  /// Shared body for the block: a summary with gaps, a table, a flow chart.
+  /// Gaps are marked `{{7}}` with the question number.
+  bodyHtml     String?
+  /// Options shared across the block — the heading list for Matching
+  /// Headings, the feature list for Matching Features. `[{key, text}]`.
+  optionsJson  Json?
+  imageUrl     String?
+  imageAlt     String?
+
+  part      IeltsPart       @relation(fields: [partId], references: [id], onDelete: Cascade)
+  questions IeltsQuestion[]
+
+  @@index([partId, order])
+}
+
+/// One numbered question. `number` is the 1-40 number the student sees, unique
+/// within its section, which is what the navigation bar and the answer sheet
+/// both key on.
+model IeltsQuestion {
+  id      String @id @default(cuid())
+  partId  String
+  groupId String?
+  /// 1-40 within the section.
+  number  Int
+  type    IeltsQuestionType
+
+  /// The question text. Empty for a gap inside a group body, where the prompt
+  /// IS the surrounding text.
+  promptHtml String?
+  /// Per-question choices for multiple choice: `[{key, text}]`.
+  optionsJson Json?
+
+  /// The canonical answer. A choice key for multiple choice, the expected text
+  /// for a completion.
+  correctAnswer String
+  /// Every other answer marked right: alternative spellings, contractions,
+  /// with/without an article. `string[]`.
+  acceptedAnswers Json?
+  /// Multi-answer questions expect a set; order does not matter. `string[]`.
+  correctAnswerSet Json?
+  /// Off by default: IELTS accepts either case for a typed answer.
+  caseSensitive Boolean @default(false)
+
+  explanation String?
+  /// Where in the passage or audio the answer comes from. Shown in review.
+  answerLocation String?
+
+  /// Free-form analytics tags: topic, sub-skill, anything worth slicing on.
+  metadata Json?
+
+  part     IeltsPart           @relation(fields: [partId], references: [id], onDelete: Cascade)
+  group    IeltsQuestionGroup? @relation(fields: [groupId], references: [id], onDelete: SetNull)
+  answers  IeltsAnswer[]
+
+  @@index([partId, number])
+  @@index([groupId])
+}
+
+/// One sitting of one paper. A full test links all four skills under a single
+/// attempt so the overall band can be computed once every part is in.
+model IeltsAttempt {
+  id     String             @id @default(cuid())
+  userId String
+  testId String
+  mode   IeltsAttemptMode   @default(REALISTIC)
+  status IeltsAttemptStatus @default(IN_PROGRESS)
+  /// Which skills this sitting covers — a full test is all four, a Reading
+  /// practice is one. `IeltsSkill[]`.
+  skills Json
+
+  startedAt   DateTime  @default(now())
+  submittedAt DateTime?
+
+  listeningRaw  Int?
+  listeningBand Float?
+  readingRaw    Int?
+  readingBand   Float?
+  writingBand   Float?
+  speakingBand  Float?
+  /// The four components combined under IELTS rounding.
+  overallBand   Float?
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  test     IeltsTest @relation(fields: [testId], references: [id])
+  sections IeltsSectionAttempt[]
+  answers  IeltsAnswer[]
+  writingSubmissions  IeltsWritingSubmission[]
+  speakingSubmission  IeltsSpeakingSubmission?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, status])
+  @@index([testId])
+}
+
+model IeltsSectionAttempt {
+  id        String @id @default(cuid())
+  attemptId String
+  sectionId String
+
+  startedAt   DateTime  @default(now())
+  submittedAt DateTime?
+  /// Server-side deadline. The client clock is a display; this is what
+  /// actually decides whether an answer still counts, so a reloaded page or a
+  /// tampered timer cannot buy extra minutes.
+  expiresAt   DateTime?
+  timeSpentSeconds Int @default(0)
+
+  /// Listening only: which part is playing, and whether its audio has run.
+  currentPart Int @default(1)
+  /// Part numbers whose audio has already played. Once a part is in here its
+  /// audio will not be served again in REALISTIC mode. `number[]`.
+  playedParts Json?
+
+  rawScore   Int?
+  totalCount Int?
+  band       Float?
+
+  attempt IeltsAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  section IeltsSection @relation(fields: [sectionId], references: [id])
+
+  @@unique([attemptId, sectionId])
+}
+
+model IeltsAnswer {
+  id         String @id @default(cuid())
+  attemptId  String
+  questionId String
+
+  /// What the student typed or selected. A choice key, a typed phrase, or a
+  /// JSON array for a multi-answer question.
+  value      String?
+  isCorrect  Boolean?
+  flagged    Boolean  @default(false)
+  answeredAt DateTime?
+
+  attempt  IeltsAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question IeltsQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([attemptId, questionId])
+  @@index([questionId])
+}
+
+/// Highlights and notes a student makes on a Reading passage. Kept per attempt
+/// so they vanish with the sitting rather than leaking into the next one.
+model IeltsPassageMark {
+  id        String @id @default(cuid())
+  attemptId String
+  partId    String
+  /// Character offsets into the passage's plain text.
+  startOffset Int
+  endOffset   Int
+  quote       String
+  note        String?
+  createdAt   DateTime @default(now())
+
+  @@index([attemptId, partId])
+}
+
+enum IeltsReviewStatus {
+  PENDING
+  ASSIGNED
+  IN_REVIEW
+  COMPLETE
+  RETURNED
+}
+
+/// One Writing task response awaiting or holding a human review.
+model IeltsWritingSubmission {
+  id        String @id @default(cuid())
+  attemptId String
+  partId    String
+  userId    String
+
+  responseText String
+  wordCount    Int
+  submittedAt  DateTime @default(now())
+
+  status IeltsReviewStatus @default(PENDING)
+
+  attempt IeltsAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  user    User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  review  IeltsWritingReview?
+
+  @@unique([attemptId, partId])
+  @@index([userId, status])
+  @@index([status])
+}
+
+model IeltsWritingReview {
+  id           String @id @default(cuid())
+  submissionId String @unique
+  reviewerId   String
+
+  /// Task Achievement (Task 1) / Task Response (Task 2).
+  taskBand      Float
+  coherenceBand Float
+  lexicalBand   Float
+  grammarBand   Float
+  /// The four criteria averaged and rounded to the nearest half band.
+  overallBand   Float
+
+  overallFeedback   String?
+  didWell           String?
+  toImprove         String?
+  vocabularyNotes   String?
+  grammarNotes      String?
+  coherenceNotes    String?
+  taskResponseNotes String?
+  nextSteps         String?
+
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  submission  IeltsWritingSubmission  @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  reviewer    User                    @relation("IeltsWritingReviewer", fields: [reviewerId], references: [id])
+  annotations IeltsWritingAnnotation[]
+
+  @@index([reviewerId])
+}
+
+/// An inline comment anchored to a span of the student's own text.
+model IeltsWritingAnnotation {
+  id       String @id @default(cuid())
+  reviewId String
+  startOffset Int
+  endOffset   Int
+  quote       String
+  comment     String
+  /// praise | issue | suggestion — drives the colour of the underline.
+  kind        String @default("issue")
+  createdAt   DateTime @default(now())
+
+  review IeltsWritingReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+
+  @@index([reviewId])
+}
+
+/// The whole three-part Speaking sitting, submitted as one package.
+model IeltsSpeakingSubmission {
+  id        String @id @default(cuid())
+  attemptId String @unique
+  userId    String
+
+  submittedAt DateTime          @default(now())
+  status      IeltsReviewStatus @default(PENDING)
+
+  attempt    IeltsAttempt              @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  user       User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recordings IeltsSpeakingRecording[]
+  review     IeltsSpeakingReview?
+
+  @@index([userId, status])
+  @@index([status])
+}
+
+model IeltsSpeakingRecording {
+  id           String @id @default(cuid())
+  submissionId String
+  partId       String
+  /// Which prompt inside the part this answers. Part 2 has exactly one.
+  questionIndex Int    @default(0)
+  promptText    String
+
+  /// Served through a signed route, never a public URL.
+  audioUrl        String
+  durationSeconds Int
+  createdAt       DateTime @default(now())
+
+  submission IeltsSpeakingSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  comments   IeltsSpeakingComment[]
+
+  @@index([submissionId])
+}
+
+model IeltsSpeakingReview {
+  id           String @id @default(cuid())
+  submissionId String @unique
+  reviewerId   String
+
+  fluencyBand       Float
+  lexicalBand       Float
+  grammarBand       Float
+  pronunciationBand Float
+  overallBand       Float
+
+  overallFeedback    String?
+  fluencyNotes       String?
+  vocabularyNotes    String?
+  grammarNotes       String?
+  pronunciationNotes String?
+  strongPoints       String?
+  weaknesses         String?
+  howToImprove       String?
+
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  submission IeltsSpeakingSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  reviewer   User                    @relation("IeltsSpeakingReviewer", fields: [reviewerId], references: [id])
+
+  @@index([reviewerId])
+}
+
+/// A reviewer comment pinned to a moment in a recording.
+model IeltsSpeakingComment {
+  id          String @id @default(cuid())
+  recordingId String
+  atSeconds   Int
+  comment     String
+  createdAt   DateTime @default(now())
+
+  recording IeltsSpeakingRecording @relation(fields: [recordingId], references: [id], onDelete: Cascade)
+
+  @@index([recordingId])
+}
+
+/// A verified reviewer. Nobody self-certifies: an admin sets `approved`, and
+/// the review queue only ever offers work to approved reviewers.
+model IeltsReviewerProfile {
+  id     String @id @default(cuid())
+  userId String @unique
+
+  canReviewWriting  Boolean @default(false)
+  canReviewSpeaking Boolean @default(false)
+  /// The band the reviewer themselves achieved, shown to students as
+  /// "Reviewed by a Band 8 IELTS writer". Never described as examiner status.
+  writingBand  Float?
+  speakingBand Float?
+
+  approved     Boolean   @default(false)
+  approvedById String?
+  approvedAt   DateTime?
+  bio          String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([approved])
+}
+
+/// Raw-score to band, configurable per paper because the real conversion
+/// varies by form. A single hardcoded table would quietly misreport every
+/// paper it was not built from.
+model IeltsScoreConversion {
+  id       String      @id @default(cuid())
+  /// Null means "the default table for this skill", used when a paper has no
+  /// table of its own.
+  testId   String?
+  module   IeltsModule @default(ACADEMIC)
+  skill    IeltsSkill
+  rawScore Int
+  band     Float
+
+  @@unique([testId, module, skill, rawScore])
+  @@index([module, skill])
 }

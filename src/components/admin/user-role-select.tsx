@@ -1,5 +1,6 @@
 "use client";
 
+import type { Role } from "@prisma/client";
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -7,7 +8,7 @@ import { toast } from "sonner";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { updateUserRole } from "@/server/actions/admin/users";
 
-export function UserRoleSelect({ userId, role }: { userId: string; role: "STUDENT" | "ADMIN" }) {
+export function UserRoleSelect({ userId, role }: { userId: string; role: Role }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -17,7 +18,7 @@ export function UserRoleSelect({ userId, role }: { userId: string; role: "STUDEN
       disabled={isPending}
       onValueChange={(v) =>
         startTransition(async () => {
-          const result = await updateUserRole(userId, v as "STUDENT" | "ADMIN");
+          const result = await updateUserRole(userId, v as Role);
           if (result.error) {
             toast.error(result.error);
             return;
@@ -31,6 +32,7 @@ export function UserRoleSelect({ userId, role }: { userId: string; role: "STUDEN
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="STUDENT">Student</SelectItem>
+        <SelectItem value="REVIEWER">Reviewer</SelectItem>
         <SelectItem value="ADMIN">Admin</SelectItem>
       </SelectContent>
     </Select>
