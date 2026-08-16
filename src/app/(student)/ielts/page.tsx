@@ -22,9 +22,14 @@ const SKILL_ICON = {
 } as const;
 
 const SKILL_HREF = {
-  LISTENING: "/ielts/listening", READING: "/ielts/reading",
+  LISTENING: "/ielts/writing", READING: "/ielts/writing",
   WRITING: "/ielts/writing", SPEAKING: "/ielts/speaking",
 } as const;
+
+// Only the two human-reviewed skills are part of this product, so the
+// dashboard reports those. Listening and Reading stay in the data model for
+// later without being advertised here.
+const SHOWN_SKILLS = new Set(["WRITING", "SPEAKING"]);
 
 function greeting() {
   const h = new Date().getHours();
@@ -76,18 +81,13 @@ export default async function IeltsDashboardPage() {
           </div>
           <div className="flex flex-wrap gap-2">
             <Button asChild>
-              <Link href="/ielts/plan">
-                Continue my IELTS plan <ArrowRight className="ml-1 h-4 w-4" />
+              <Link href="/ielts/writing">
+                Start writing <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </Button>
-            {!data.profile.onboarded && (
-              // Optional, always. Nobody is asked anything to start using
-              // IELTS — a target band only sharpens the plan, it does not
-              // unlock it.
-              <Button asChild variant="outline">
-                <Link href="/ielts/plan">Set a target band</Link>
-              </Button>
-            )}
+            <Button asChild variant="outline">
+              <Link href="/ielts/speaking">Record speaking</Link>
+            </Button>
           </div>
         </div>
 
@@ -111,8 +111,8 @@ export default async function IeltsDashboardPage() {
       {/* Per-skill standing. Four cards, each a way in to that skill. */}
       <section className="space-y-3">
         <h2 className="font-display text-lg font-semibold">Your progress</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {data.standings.map((s) => {
+        <div className="grid gap-3 sm:grid-cols-2">
+          {data.standings.filter((s) => SHOWN_SKILLS.has(s.skill)).map((s) => {
             const Icon = SKILL_ICON[s.skill];
             return (
               <Link key={s.skill} href={SKILL_HREF[s.skill]} className="group">
@@ -140,25 +140,7 @@ export default async function IeltsDashboardPage() {
         </div>
       </section>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0">
-            <CardTitle className="text-base">Full practice tests</CardTitle>
-            <Badge variant="outline">{data.publishedTests} available</Badge>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <p className="text-sm text-muted-foreground">
-              Listening, Reading, Writing and Speaking in one sitting, timed the way the
-              computer-delivered test is.
-            </p>
-            <Button asChild variant={data.inProgressAttemptId ? "default" : "outline"}>
-              <Link href="/ielts/tests">
-                {data.inProgressAttemptId ? "Continue your test" : "Browse tests"}
-              </Link>
-            </Button>
-          </CardContent>
-        </Card>
-
+      <div className="grid gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0">
             <CardTitle className="text-base">Human feedback</CardTitle>

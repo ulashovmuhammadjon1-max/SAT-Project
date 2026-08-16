@@ -21,8 +21,6 @@ import {
   CalendarDays,
   Trophy,
   MessagesSquare,
-  Headphones,
-  BookOpenText,
   PenLine,
   Mic,
   MessageSquareText,
@@ -68,26 +66,21 @@ const SAT_NAV: NavItem[] = [
  * four separate things to get better at. Icons are skill-specific rather than
  * reused from the SAT set, where a book icon for Listening would mislead.
  */
+/**
+ * The IELTS ecosystem's navigation.
+ *
+ * Writing and Speaking only. The other two skills, the question bank, practice
+ * tests, vocabulary and the plan are deliberately absent: this product is the
+ * free human-review loop, and a sidebar advertising sections that do not exist
+ * is worse than a short one. Icons are skill-specific rather than reused from
+ * the SAT set.
+ */
 const IELTS_NAV: NavItem[] = [
   { href: "/ielts", label: "Dashboard", icon: LayoutDashboard, exact: true },
-  { href: "/ielts/daily", label: "Daily Challenge", icon: CalendarDays },
-  { href: "/ielts/plan", label: "My IELTS Plan", icon: Target },
-  { href: "/ielts/tests", label: "Practice Tests", icon: BookOpen },
-  { href: "/ielts/question-bank", label: "Question Bank", icon: ListChecks },
-  { href: "/ielts/listening", label: "Listening", icon: Headphones },
-  { href: "/ielts/reading", label: "Reading", icon: BookOpenText },
   { href: "/ielts/writing", label: "Writing", icon: PenLine },
   { href: "/ielts/speaking", label: "Speaking", icon: Mic },
-  { href: "/ielts/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
-  { href: "/ielts/feedback", label: "Human Feedback", icon: MessageSquareText },
+  { href: "/ielts/feedback", label: "My Feedback", icon: MessageSquareText },
   { href: "/community", label: "Community", icon: MessagesSquare },
-  { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
-  { href: "/achievements", label: "Achievements", icon: Award },
-  { href: "/bookmarks", label: "Bookmarks", icon: Bookmark },
-  { href: "/events", label: "Events", icon: CalendarRange },
-  { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
-  { href: "/invite", label: "Invite Friends", icon: UserPlus },
-  { href: "/ielts/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 
@@ -101,13 +94,12 @@ const BOTH_NAV: NavItem[] = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/daily", label: "Daily Challenge", icon: CalendarDays },
   { href: "/plan", label: "My SAT Plan", icon: Target },
-  { href: "/ielts/plan", label: "My IELTS Plan", icon: Target },
-  { href: "/tests", label: "SAT Tests", icon: BookOpen },
-  { href: "/ielts/tests", label: "IELTS Tests", icon: BookOpen },
-  { href: "/practice", label: "SAT Question Bank", icon: ListChecks },
-  { href: "/ielts/question-bank", label: "IELTS Question Bank", icon: ListChecks },
-  { href: "/ielts/feedback", label: "Human Feedback", icon: MessageSquareText },
+  { href: "/tests", label: "Practice Tests", icon: BookOpen },
+  { href: "/practice", label: "Question Bank", icon: ListChecks },
   { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+  { href: "/ielts/writing", label: "IELTS Writing", icon: PenLine },
+  { href: "/ielts/speaking", label: "IELTS Speaking", icon: Mic },
+  { href: "/ielts/feedback", label: "IELTS Feedback", icon: MessageSquareText },
   { href: "/community", label: "Community", icon: MessagesSquare },
   { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
   { href: "/achievements", label: "Achievements", icon: Award },
