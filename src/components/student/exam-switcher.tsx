@@ -32,12 +32,17 @@ export function ExamSwitcher({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
-  // Shown to every account. Both exams are open to everyone, so this is how a
-  // student discovers IELTS exists — gating it behind an account that already
-  // had two exams meant nobody would ever find it. Picking one enrols them on
-  // the spot; there is no setup step to complete first.
-  const modes: ExamMode[] = ["SAT", "IELTS", "BOTH"];
+  // SAT and IELTS only. "Both" is a preparation preference, not a product:
+  // there is no third interface to switch into, and offering it here asked the
+  // student to pick a *view* when what they meant was a *goal*. Preparing for
+  // both is set in onboarding and settings, and such a student still looks at
+  // one exam at a time through this control.
+  const modes: ExamMode[] = ["SAT", "IELTS"];
   const label: Record<ExamMode, string> = { SAT: "SAT", IELTS: "IELTS", BOTH: "Both" };
+
+  // A student in BOTH mode has no segment lit. Show them as being in whichever
+  // exam their own home page belongs to rather than leaving the control blank.
+  const shown: ExamMode = active === "BOTH" ? "SAT" : active;
 
   const change = (mode: ExamMode) => {
     if (mode === active) return;
@@ -64,7 +69,7 @@ export function ExamSwitcher({
         )}
       >
         {modes.map((mode) => {
-          const isActive = mode === active;
+          const isActive = mode === shown;
           return (
             <button
               key={mode}
@@ -87,7 +92,7 @@ export function ExamSwitcher({
       </div>
 
       <div className={cn("sm:hidden", className)}>
-        <Select value={active} onValueChange={(v) => change(v as ExamMode)} disabled={isPending}>
+        <Select value={shown} onValueChange={(v) => change(v as ExamMode)} disabled={isPending}>
           <SelectTrigger className="h-8 w-[104px] text-xs" aria-label="Choose exam">
             <SelectValue />
           </SelectTrigger>
