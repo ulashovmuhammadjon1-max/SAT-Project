@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { IeltsReviewForm } from "@/components/admin/ielts-review-form";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
+import { promptImageSrc } from "@/lib/ielts/image-storage";
 
 export const metadata = { title: "Review Writing" };
 export const dynamic = "force-dynamic";
@@ -29,12 +30,14 @@ export default async function ReviewWritingPage({
   const part = await prisma.ieltsPart.findUnique({
     where: { id: submission.partId },
     select: {
-      partNumber: true, title: true, promptHtml: true, minWords: true,
+      id: true, partNumber: true, title: true, promptHtml: true, minWords: true,
+      imageUrl: true, imageAlt: true,
       section: { select: { test: { select: { title: true } } } },
     },
   });
 
   const minWords = part?.minWords ?? (part?.partNumber === 1 ? 150 : 250);
+  const figure = part ? promptImageSrc(part.id, part.imageUrl) : null;
   const short = submission.wordCount < minWords;
 
   // Did this student sit both tasks in one go? If so the reviewer also gives
@@ -84,6 +87,16 @@ export default async function ReviewWritingPage({
             </p>
             <div className="space-y-2 text-sm leading-relaxed [&_li]:ml-5 [&_li]:list-disc [&_table]:text-xs"
               dangerouslySetInnerHTML={{ __html: part?.promptHtml ?? "" }} />
+            {/* Task 1's figure. Without it the reviewer is marking a
+                description of a chart they cannot see, which is not a review. */}
+            {figure && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={figure}
+                alt={part?.imageAlt ?? "The figure for this task"}
+                className="mt-3 max-w-full rounded border border-border bg-white"
+              />
+            )}
           </div>
 
           <div className="rounded-lg border border-border bg-card p-4">

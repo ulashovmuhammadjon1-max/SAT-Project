@@ -24,6 +24,7 @@ export function NavButton({
   disabled,
   variant = "primary",
   type = "button",
+  action,
 }: {
   children: ReactNode;
   onClick?: () => void;
@@ -31,12 +32,20 @@ export function NavButton({
   /** "ghost" is for the secondary action sitting beside a primary one. */
   variant?: "primary" | "ghost";
   type?: "button" | "submit";
+  /**
+   * A stable name for this control, e.g. "next" or "submit". The bottom bar
+   * reflows as its status text changes ("Saving…" becoming "Draft saved"
+   * shifts every button left), so anything driving this UI needs a handle that
+   * does not move with the label.
+   */
+  action?: string;
 }) {
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
+      data-action={action}
       className={cn(
         "h-[34px] rounded-full px-5 text-[13px] font-medium transition-colors disabled:pointer-events-none disabled:opacity-50",
         variant === "primary"

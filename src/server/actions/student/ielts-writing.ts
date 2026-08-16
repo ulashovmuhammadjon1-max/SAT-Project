@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
-import { getReviewAllowance, outOfReviewsMessage } from "@/lib/ielts/economy";
+import { canSubmitForAttempt, outOfReviewsMessage } from "@/lib/ielts/economy";
 import { countWords } from "@/lib/ielts/answers";
 
 export interface WritingResult {
@@ -106,9 +106,10 @@ export async function submitWriting(partId: string, text: string): Promise<Writi
   }
 
   // Checked here rather than in the editor: the button is hidden when the
-  // allowance is spent, but a hidden button is a hint, not a rule.
-  const allowance = await getReviewAllowance(user.id);
-  if (allowance.remaining <= 0) return { error: outOfReviewsMessage(allowance) };
+  // allowance is spent, but a hidden button is a hint, not a rule. Adding a
+  // second task to a sitting already paid for is free — see `economy.ts`.
+  const gate = await canSubmitForAttempt(user.id, attempt.id);
+  if (!gate.ok) return { error: outOfReviewsMessage(gate.allowance) };
 
   const row = await prisma.ieltsWritingSubmission.upsert({
     where: { attemptId_partId: { attemptId: attempt.id, partId } },

@@ -135,14 +135,14 @@ export function SpeakingInterview({
       centreLabel={`Question ${index + 1} of ${prompts.length}`}
       actions={
         <>
-          {index > 0 && <NavButton variant="ghost" onClick={() => setIndex(index - 1)}>Back</NavButton>}
+          {index > 0 && <NavButton variant="ghost" action="prev-question" onClick={() => setIndex(index - 1)}>Back</NavButton>}
           {!isLast ? (
-            <NavButton onClick={() => setIndex(index + 1)} disabled={!answered}>
+            <NavButton action="next-question" onClick={() => setIndex(index + 1)} disabled={!answered}>
               Next
             </NavButton>
           ) : (
             !locked && (
-              <NavButton onClick={onSubmit} disabled={pending || done.size === 0}>
+              <NavButton action="submit" onClick={onSubmit} disabled={pending || done.size === 0}>
                 {pending ? "Sending…" : "Submit"}
               </NavButton>
             )

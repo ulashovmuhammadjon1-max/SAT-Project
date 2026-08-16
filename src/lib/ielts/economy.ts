@@ -20,9 +20,18 @@ import { prisma } from "@/lib/prisma";
  *
  * ## One pool, both skills
  *
- * A Writing task and a Speaking interview each consume one review. The user's
+ * A Writing paper and a Speaking interview each consume one review. The user's
  * rule was "the first review costs nothing", not "the first of each kind", and
  * two separate allowances would let a student take two free reviews.
+ *
+ * ## One paper, one review — not one essay, one review
+ *
+ * The unit is the sitting (`IeltsAttempt`), not the submission. A full
+ * practice is two essays and one paper band, so charging it two reviews would
+ * put the thing this product is best at out of reach of a student's free one.
+ * The same rule then means Task 1 and Task 2 of the same paper cost one review
+ * whether they are written in a single sitting or a week apart, which is the
+ * only version of the rule that does not punish someone for stopping halfway.
  */
 
 /** Friends who must qualify to buy one review, after the free one. */
@@ -49,20 +58,24 @@ export interface ReviewAllowance {
 }
 
 export async function getReviewAllowance(userId: string): Promise<ReviewAllowance> {
-  const [qualifiedFriends, writingUsed, speakingUsed] = await Promise.all([
+  const [qualifiedFriends, writingSittings, speakingUsed] = await Promise.all([
     prisma.referral.count({ where: { referrerId: userId, status: "REWARDED" } }),
-    // A submission counts the moment it leaves the student's hands. Counting
-    // only completed reviews would let one student queue twenty essays against
+    // Distinct sittings, so a full practice's two essays cost one review.
+    // A submission counts the moment it leaves the student's hands: counting
+    // only completed reviews would let one student queue twenty papers against
     // a single entitlement while the first is still being marked.
-    prisma.ieltsWritingSubmission.count({
+    prisma.ieltsWritingSubmission.findMany({
       where: { userId, status: { not: "PENDING" } },
+      select: { attemptId: true },
+      distinct: ["attemptId"],
     }),
+    // `IeltsSpeakingSubmission.attemptId` is unique, so one row is one sitting.
     prisma.ieltsSpeakingSubmission.count({
       where: { userId, status: { not: "PENDING" } },
     }),
   ]);
 
-  const used = writingUsed + speakingUsed;
+  const used = writingSittings.length + speakingUsed;
   const earned = Math.floor(qualifiedFriends / FRIENDS_PER_REVIEW);
   const allowance = FREE_REVIEWS + earned;
   const remaining = Math.max(0, allowance - used);
@@ -77,6 +90,26 @@ export async function getReviewAllowance(userId: string): Promise<ReviewAllowanc
     friendsNeeded: FRIENDS_PER_REVIEW - towardNext,
     onFreeReview: used < FREE_REVIEWS,
   };
+}
+
+/**
+ * May this student send work from this particular sitting?
+ *
+ * A sitting already paid for is free to add to — submitting Task 2 after Task 1
+ * of the same paper must not be refused, and must not be charged twice.
+ */
+export async function canSubmitForAttempt(
+  userId: string,
+  attemptId: string
+): Promise<{ ok: true } | { ok: false; allowance: ReviewAllowance }> {
+  const alreadyPaid = await prisma.ieltsWritingSubmission.findFirst({
+    where: { userId, attemptId, status: { not: "PENDING" } },
+    select: { id: true },
+  });
+  if (alreadyPaid) return { ok: true };
+
+  const allowance = await getReviewAllowance(userId);
+  return allowance.remaining > 0 ? { ok: true } : { ok: false, allowance };
 }
 
 /**
