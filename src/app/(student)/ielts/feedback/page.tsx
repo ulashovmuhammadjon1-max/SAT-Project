@@ -48,7 +48,10 @@ export default async function IeltsFeedbackPage() {
     prisma.ieltsWritingSubmission.findMany({
       where: { userId: user.id, status: { not: "PENDING" } },
       orderBy: { submittedAt: "desc" },
-      include: { review: true },
+      include: {
+        review: true,
+        attempt: { select: { id: true, writingBand: true } },
+      },
     }),
     prisma.ieltsSpeakingSubmission.findMany({
       where: { userId: user.id, status: { not: "PENDING" } },
@@ -65,6 +68,18 @@ export default async function IeltsFeedbackPage() {
     },
   });
   const partOf = new Map(parts.map((p) => [p.id, p]));
+
+  // The band the reviewer gave the Writing paper as a whole, shown only when
+  // the student actually sat both tasks together. With one task there is no
+  // paper band to report — the task's own band is the whole story, and showing
+  // it twice under two names would imply a second judgement that was not made.
+  const paperBands = new Map<string, number>();
+  for (const s of writing) {
+    const siblings = writing.filter((w) => w.attemptId === s.attemptId);
+    if (siblings.length > 1 && s.attempt.writingBand != null) {
+      paperBands.set(s.attemptId, s.attempt.writingBand);
+    }
+  }
 
   const empty = writing.length === 0 && speaking.length === 0;
 
@@ -102,6 +117,32 @@ export default async function IeltsFeedbackPage() {
           <h2 className="flex items-center gap-2 font-display text-lg font-semibold">
             <PenLine className="h-4 w-4" /> Writing
           </h2>
+
+          {[...paperBands.entries()].map(([attemptId, band]) => {
+            const first = writing.find((w) => w.attemptId === attemptId);
+            const title = first ? partOf.get(first.partId)?.section.test.title : null;
+            return (
+              <Card key={attemptId} className="border-navy-900/20 bg-secondary/40">
+                <CardContent className="flex flex-wrap items-center justify-between gap-3 py-4">
+                  <div>
+                    <p className="text-sm font-semibold">{title} — whole paper</p>
+                    <p className="text-xs text-muted-foreground">
+                      Both tasks together, with Task 2 carrying twice the weight.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                      Writing band
+                    </p>
+                    <p className="font-display text-3xl font-semibold tabular-nums">
+                      {formatBand(band)}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+
           {writing.map((s) => {
             const part = partOf.get(s.partId);
             const r = s.review;
