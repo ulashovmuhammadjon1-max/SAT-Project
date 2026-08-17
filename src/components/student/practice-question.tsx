@@ -166,7 +166,7 @@ export function PracticeQuestion({
                 >
                   {grading ? "Checking…" : "Check answer"}
                 </Button>
-                <SATTutor questionId={question.id} questionType={question.type} />
+                <SATTutor questionId={question.id} />
               </div>
             ) : (
               <div className="flex flex-col items-start gap-3">
@@ -178,7 +178,7 @@ export function PracticeQuestion({
                     </Button>
                   )}
                 </div>
-                {!isCorrect && <SATTutor questionId={question.id} questionType={question.type} />}
+                {!isCorrect && <SATTutor questionId={question.id} />}
               </div>
             )}
           </CardContent>

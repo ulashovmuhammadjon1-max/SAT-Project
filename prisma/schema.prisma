@@ -1899,10 +1899,16 @@ model IeltsStudentProfile {
   updatedAt DateTime @updatedAt
 }
 
+/// One row per student per UTC day, counting SAT-tutor hints spent that day.
+///
+/// `@db.Date` matches 013_tutor_usage.sql, which declares the column DATE. Left
+/// as a bare DateTime the generated client and the hand-applied migration
+/// disagree about the column type, and the next `prisma migrate` wants to
+/// rewrite a table it did not create.
 model TutorUsage {
   id           String   @id @default(cuid())
   userId       String
-  date         DateTime // Date of the request (UTC)
+  date         DateTime @db.Date
   requestCount Int      @default(0)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt

@@ -1,144 +1,131 @@
 "use client";
 
-import { useState } from "react";
-import { Loader, MessageCircle, Send, AlertCircle } from "lucide-react";
+import { useEffect, useState, useTransition } from "react";
+import { AlertCircle, Loader2, Send, Sparkles, X } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { askSATTutor } from "@/server/actions/student/sat-tutor";
-import { cn } from "@/lib/utils";
+import { askSATTutor, getTutorBudget } from "@/server/actions/student/sat-tutor";
 
-interface SATTutorProps {
-  questionId: string;
-  questionType: "MULTIPLE_CHOICE" | "FREE_RESPONSE";
-}
-
-export function SATTutor({ questionId, questionType }: SATTutorProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState("");
-  const [tutorResponse, setTutorResponse] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+/**
+ * The SAT tutor panel.
+ *
+ * Deliberately a hint box and not a chat: a conversation invites a student to
+ * keep asking until the model concedes the answer, which is the one thing this
+ * must not do. One question in, one hint out, and the budget on screen the
+ * whole time so the cost of asking is never a surprise.
+ */
+export function SATTutor({ questionId }: { questionId: string }) {
+  const [open, setOpen] = useState(false);
+  const [note, setNote] = useState("");
+  const [hint, setHint] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [remainingRequests, setRemainingRequests] = useState<number | null>(null);
+  const [remaining, setRemaining] = useState<number | null>(null);
+  const [pending, startTransition] = useTransition();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!message.trim() || isLoading) return;
+  // Fetched on open rather than on mount: a student who never asks for a hint
+  // should not cost a query on every practice question they load.
+  useEffect(() => {
+    if (!open || remaining !== null) return;
+    let cancelled = false;
+    getTutorBudget()
+      .then((b) => !cancelled && setRemaining(b.remaining))
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [open, remaining]);
 
-    setIsLoading(true);
+  function ask() {
     setError(null);
-    setTutorResponse(null);
-
-    try {
-      const response = await askSATTutor(questionId, message);
-
-      if (response.ok && response.message) {
-        setTutorResponse(response.message);
-        setMessage("");
-      } else if (response.error) {
-        setError(response.error);
+    startTransition(async () => {
+      const res = await askSATTutor(questionId, note);
+      if (res.remaining !== undefined) setRemaining(res.remaining);
+      if (res.ok && res.message) {
+        setHint(res.message);
+        setNote("");
+      } else {
+        setError(res.error ?? "The tutor is unavailable right now.");
       }
+    });
+  }
 
-      if (response.remainingRequests !== undefined) {
-        setRemainingRequests(response.remainingRequests);
-      }
-    } catch (err) {
-      setError("Something went wrong. Please try again.");
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  if (!isOpen) {
+  if (!open) {
     return (
-      <Button
-        onClick={() => setIsOpen(true)}
-        variant="outline"
-        size="sm"
-        className="gap-2"
-      >
-        <MessageCircle className="h-4 w-4" />
-        Get Help
-        {remainingRequests !== null && (
-          <span className="ml-1 text-xs text-muted-foreground">
-            ({remainingRequests} left)
-          </span>
-        )}
+      <Button variant="outline" size="sm" className="gap-2" onClick={() => setOpen(true)}>
+        <Sparkles className="h-4 w-4" />
+        Stuck? Get a hint
       </Button>
     );
   }
 
+  const exhausted = remaining === 0;
+
   return (
-    <div className="border border-amber-200 bg-amber-50 dark:border-amber-900/30 dark:bg-amber-900/10 rounded-lg p-4 space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-sm flex items-center gap-2">
-          <MessageCircle className="h-4 w-4" />
-          SAT Tutor
-        </h3>
-        <Button
-          onClick={() => {
-            setIsOpen(false);
-            setTutorResponse(null);
-            setError(null);
-          }}
-          variant="ghost"
-          size="sm"
-        >
-          ✕
-        </Button>
+    <div className="space-y-3 rounded-xl border border-border bg-secondary/40 p-4">
+      <div className="flex items-center justify-between gap-2">
+        <p className="flex items-center gap-2 text-sm font-semibold">
+          <Sparkles className="h-4 w-4" />
+          SAT tutor
+        </p>
+        <div className="flex items-center gap-2">
+          {remaining !== null && (
+            <span className="text-xs tabular-nums text-muted-foreground">
+              {remaining} left today
+            </span>
+          )}
+          <Button
+            variant="ghost"
+            size="sm"
+            aria-label="Close the tutor"
+            onClick={() => {
+              setOpen(false);
+              setHint(null);
+              setError(null);
+            }}
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
 
-      {remainingRequests !== null && (
-        <p className="text-xs text-muted-foreground">
-          Free tier: {remainingRequests} requests remaining today
+      {error && (
+        <p className="flex items-start gap-2 rounded-lg bg-destructive/10 p-3 text-xs text-destructive">
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+          {error}
         </p>
       )}
 
-      {error && (
-        <div className="flex gap-2 rounded-md bg-red-50 dark:bg-red-900/20 p-3">
-          <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-          <p className="text-xs text-red-600 dark:text-red-400">{error}</p>
+      {hint ? (
+        <div className="space-y-3">
+          {/* Plain text, not MathContent: the prompt forbids LaTeX, and running
+              model output through a renderer would execute markup the model
+              chose rather than markup we wrote. */}
+          <p className="whitespace-pre-wrap rounded-lg border border-border bg-card p-3 text-sm leading-relaxed">
+            {hint}
+          </p>
+          {!exhausted && (
+            <Button variant="outline" size="sm" onClick={() => setHint(null)}>
+              Ask something else
+            </Button>
+          )}
         </div>
-      )}
-
-      {tutorResponse && (
-        <div className="space-y-2">
-          <p className="text-xs text-muted-foreground">Tutor's hint:</p>
-          <div className="bg-white dark:bg-card rounded p-3 border border-border text-sm leading-relaxed">
-            {tutorResponse}
-          </div>
-          <Button
-            onClick={() => {
-              setTutorResponse(null);
-              setMessage("");
-            }}
-            variant="outline"
-            size="sm"
-            className="w-full"
-          >
-            Ask another question
-          </Button>
-        </div>
-      )}
-
-      {!tutorResponse && (
-        <form onSubmit={handleSubmit} className="space-y-2">
+      ) : (
+        <>
           <Textarea
-            placeholder="What do you need help understanding about this question?"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            disabled={isLoading}
-            className="min-h-24 text-sm"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            disabled={pending || exhausted}
+            maxLength={500}
+            rows={3}
+            placeholder="What is confusing you? (optional — you can just ask for a nudge)"
+            className="text-sm"
           />
-          <Button
-            type="submit"
-            disabled={isLoading || !message.trim()}
-            className="w-full gap-2"
-          >
-            {isLoading ? (
+          <Button size="sm" className="gap-2" disabled={pending || exhausted} onClick={ask}>
+            {pending ? (
               <>
-                <Loader className="h-4 w-4 animate-spin" />
-                Getting help...
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Thinking…
               </>
             ) : (
               <>
@@ -147,11 +134,11 @@ export function SATTutor({ questionId, questionType }: SATTutorProps) {
               </>
             )}
           </Button>
-        </form>
+        </>
       )}
 
-      <p className="text-xs text-muted-foreground border-t pt-2">
-        💡 The tutor gives hints, not answers. Work through the problem yourself!
+      <p className="border-t border-border pt-2 text-xs text-muted-foreground">
+        Hints only — the tutor will not tell you the answer, so you still get the practice.
       </p>
     </div>
   );

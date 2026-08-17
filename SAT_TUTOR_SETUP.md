@@ -1,164 +1,120 @@
-# SAT Tutor AI Setup Guide
+# SAT Tutor — setup and operation
 
-The SATForge app now includes a free SAT tutor powered by Google's Gemini API.
+A hint button on every Question Bank question, answered by Google's Gemini free
+tier. Verified working end to end on 2026-08-17.
 
-## 🎯 Features
+## What a student gets
 
-- **Free tier**: 5 tutor requests per user per day
-- **Smart hints**: AI provides guidance without giving away answers
-- **Rate-limited**: Prevents abuse and keeps costs to zero for small user bases
-- **Available in Practice**: Students can ask for help on any practice question
+One hint at a time, 2–3 sentences, capped at **5 per student per UTC day**. The
+prompt forbids naming the correct choice or giving the final number, so the
+question still has to be worked. Four question shapes were probed against the
+live model — Math multiple-choice, student-produced response, Reading & Writing
+with a passage, and a question carrying a figure — and none of the hints leaked
+the answer.
 
-## 🔧 Setup Steps
+## Setup
 
-### 1. Get a Gemini API Key (Free)
+### 1. Get a key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Click "Get API Key" → "Create API Key in new project"
-3. Copy your API key (starts with `AI...`)
+<https://aistudio.google.com/app/apikey> → **Get API key** → create one in a new
+project.
 
-### 2. Add to Environment Variables
+### 2. Put it in the environment
 
-Add to your `.env.local` (local dev) or production environment:
+This repo reads `.env` (not `.env.local`). `.gitignore` covers `.env*`, so it
+will not be committed.
 
 ```bash
-GEMINI_API_KEY=YOUR_API_KEY_HERE
+GEMINI_API_KEY="AIza…"
 ```
 
-**Important**: Never commit this to git. It should only be in:
-- `.env.local` (local dev, not committed)
-- Environment variables on your hosting platform (Vercel, etc.)
+Optionally pin a model — the default is `gemini-flash-lite-latest`:
 
-### 3. Apply Database Migration
-
-Before running the app, apply the migration to add the `TutorUsage` table:
-
-**Local development:**
 ```bash
-npx prisma migrate dev --name tutor_usage
+GEMINI_MODEL="gemini-flash-latest"
 ```
 
-**Production (using Neon HTTP API):**
-The migration file is at `prisma/migrations/manual/013_tutor_usage.sql`. Apply it using:
+### 3. Apply the migration
+
+**Do not run `prisma migrate dev`.** This repo keeps hand-applied SQL in
+`prisma/migrations/manual/`, and `migrate dev` tries to read that directory as a
+migration and fails with P3015. Apply the SQL directly:
+
 ```bash
-psql $DATABASE_URL < prisma/migrations/manual/013_tutor_usage.sql
+# local dev
+PGPASSWORD=postgres psql -h localhost -U postgres -d sat_platform \
+  -v ON_ERROR_STOP=1 -f prisma/migrations/manual/013_tutor_usage.sql
+
+npx prisma generate
 ```
 
-Or via Neon dashboard → SQL Editor.
+For production, run the same file against the Neon database — the SQL editor in
+the Neon dashboard is the simplest route.
 
-### 4. Start the App
+### 4. Restart
 
 ```bash
 npm run dev
 ```
 
-Visit `/practice/[questionId]` and click "Get Help" to test the tutor.
+Open any question under `/practice/<id>` and click **Stuck? Get a hint**.
 
----
+## Deploying
 
-## 💡 How It Works
+1. Set `GEMINI_API_KEY` in the host's environment variables (Vercel: Project →
+   Settings → Environment Variables).
+2. Apply `013_tutor_usage.sql` to the production database.
 
-1. **Student clicks "Get Help"** on a practice question
-2. **Rate limit check**: Server checks if student has requests left today
-3. **API call**: If allowed, question is sent to Gemini with a tutor prompt
-4. **Response**: AI provides a 2-3 sentence hint or guidance
-5. **Tracking**: Usage is logged in `TutorUsage` table for daily limit enforcement
+Order matters only in that the table must exist before a student clicks the
+button; until it does the panel says the tutor is not set up rather than
+throwing. Nothing else in the app touches `TutorUsage`, so an unapplied
+migration cannot break another page — see the schema rule in CLAUDE.md.
 
-## 📊 Rate Limiting
+## Cost
 
-- **Limit**: 5 requests per user per day
-- **Resets**: At UTC midnight (00:00 UTC)
-- **Cost**: ~Free for small user bases (Gemini free tier: 15 requests/min, generous quota)
+The free tier covers this comfortably. Each hint is roughly 400–900 input tokens
+and under 100 output. At the 5/day cap, a thousand daily active students who all
+spend their full budget is ~5,000 calls a day; the constraint you would hit
+first is the per-minute rate limit, not a bill.
 
-To adjust the limit, edit `src/server/actions/student/sat-tutor.ts`:
-```typescript
-const DAILY_LIMIT = 5; // Change this number
+## Changing the limits
+
+`src/server/actions/student/sat-tutor.ts`:
+
+- `DAILY_LIMIT` — hints per student per UTC day.
+- `MODEL` — model alias, overridden by `GEMINI_MODEL`.
+- `buildPrompt()` — the tutor's instructions, including the no-answer rules.
+
+## Things that will bite you
+
+**The model name goes stale.** The first version of this file hardcoded
+`gemini-1.5-flash`, which Google has retired; every call returned 404. The
+default is now a `-latest` alias for that reason. To see what a key can actually
+reach:
+
+```bash
+curl -s "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY" \
+  | grep -o '"models/[^"]*"'
 ```
 
-## 🚀 Production Deployment
+**`tsc` does not catch `"use server"` violations.** A `"use server"` module may
+only export async functions. Exporting a plain `const` from one typechecks fine
+and then fails at page load with *"Only async functions are allowed to be
+exported in a 'use server' file"*. It cost a debugging round here; if the tutor
+button vanishes from the page, check the dev server log for that message before
+anything else.
 
-### Vercel
+**Failed calls do not cost the student a hint.** The budget is only spent after
+the model has answered. If you refactor `askSATTutor`, keep the spend after the
+call, not before — losing one of five hints to a transient 503 reads as the
+product being broken.
 
-1. Go to Project Settings → Environment Variables
-2. Add `GEMINI_API_KEY` with your API key
-3. Redeploy
-4. Apply the migration to your production database (Neon dashboard)
+## Troubleshooting
 
-### Other Platforms
-
-1. Set `GEMINI_API_KEY` in your platform's env var config
-2. Apply the migration SQL to your database
-3. Deploy as normal
-
----
-
-## ⚠️ Troubleshooting
-
-### "GEMINI_API_KEY not configured"
-- Check that your `.env.local` or environment variables include the key
-- Restart the dev server after adding the variable
-
-### "TutorUsage relation not found" 
-- You haven't run the migration yet
-- Run `npx prisma migrate dev --name tutor_usage`
-
-### Rate limit shows 0 requests every time
-- Restart the app if you just added the env variable
-- Check the database migration ran successfully
-
-### "Could not reach the tutor service right now"
-- Your API key might be invalid
-- Gemini API might be temporarily down
-- Check your internet connection
-
----
-
-## 💰 Cost
-
-- **Free tier**: 15 requests per minute, generous daily quota
-- **Your cost**: $0 for up to ~500 active users with this 5-req/day limit
-- **Paid tier**: If you exceed free quota, Gemini charges ~$0.0075 per 1K input tokens
-
-For 5 requests/day × 500 users × 25 days/month ≈ 62,500 requests = ~$0.47/month at scale.
-
----
-
-## 🔐 Security
-
-- API key is only accessed on the server (never exposed to client)
-- Student questions are sent to Google; review your privacy policy if needed
-- Rate limiting prevents token depletion
-- User context is optional and user-provided
-
----
-
-## 📝 Customization
-
-### Change the Tutor Prompt
-
-Edit `src/server/actions/student/sat-tutor.ts` in the `callGeminiAPI` function:
-
-```typescript
-const prompt = `You are a friendly SAT tutor. A student is working on this question:
-...
-`;
-```
-
-### Change the Daily Limit
-
-Edit the same file:
-```typescript
-const DAILY_LIMIT = 10; // e.g., 10 requests per day
-```
-
-### Change the Model
-
-To use a different Gemini model (e.g., `gemini-pro`, `gemini-2-flash`):
-
-```typescript
-const GEMINI_MODEL = "gemini-2-flash"; // faster, cheaper
-```
-
----
-
-Need help? Check the component at `src/components/student/sat-tutor.tsx` or the action at `src/server/actions/student/sat-tutor.ts`.
+| Symptom | Cause |
+|---|---|
+| "not configured yet — GEMINI_API_KEY is not set" | Key missing from `.env`, or the server was not restarted after adding it |
+| "API key was rejected" | Key is wrong, or the Generative Language API is not enabled on the project |
+| "model (…) is unavailable" | That model name is retired — list the available ones with the curl above |
+| "not set up yet — its database migration has not been run" | `013_tutor_usage.sql` has not been applied to this database |
+| Button missing entirely | Check the dev log for the `"use server"` export error |
