@@ -101,18 +101,27 @@ export default async function VerifyEmailPage({
         <MailCheck className="h-6 w-6" />
       </span>
       <div className="space-y-1.5">
-        <h1 className="font-display text-2xl font-semibold tracking-tight">Check your inbox</h1>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">
+          Confirm your email to finish
+        </h1>
         <p className="text-sm text-muted-foreground">
           {address?.email ? (
             <>
               We sent a confirmation link to{" "}
-              <span className="font-medium text-foreground">{address.email}</span>. Click it and
-              your account is ready.
+              <span className="font-medium text-foreground">{address.email}</span>.{" "}
+              <span className="font-medium text-foreground">
+                Your account is not active until you click it
+              </span>{" "}
+              — you will not be able to practise, take a test or appear as a student until then.
             </>
           ) : (
             <>
-              We sent you a confirmation link. Click it and your account is ready. Sign in first if
-              you want us to send another.
+              We sent you a confirmation link.{" "}
+              <span className="font-medium text-foreground">
+                Your account is not active until you click it
+              </span>{" "}
+              — you will not be able to practise or take a test until then. Sign in first if you
+              want us to send another.
             </>
           )}
         </p>

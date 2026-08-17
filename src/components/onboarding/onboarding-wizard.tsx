@@ -314,7 +314,8 @@ function buildSteps({
     {
       emoji: "🎉",
       title: track === "BOTH" ? "Both plans are ready" : "Your plan is ready",
-      subtitle: "Create your account to save it and start your first module.",
+      subtitle:
+        "Create your account to save it. We will email you a link to confirm your address — your account is not active until you click it.",
       canContinue: true,
       content: <AccountStep profile={profile} referralCode={referralCode} />,
     },
@@ -1030,8 +1031,15 @@ function AccountStep({
         </Button>
       </form>
 
+      {/* Stated next to the button rather than only on the screen after it.
+          Someone who mistypes their address has already lost the account by the
+          time a "check your inbox" page tells them the link matters — the
+          warning has to arrive while the field is still in front of them. */}
       <p className="text-center text-xs leading-relaxed text-muted-foreground">
-        Free to start. No credit card required.
+        Free to start. No credit card required. Use an address you can open now:{" "}
+        <span className="font-medium text-foreground">
+          your account stays inactive until you confirm it by email.
+        </span>
       </p>
     </div>
   );

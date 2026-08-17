@@ -1,17 +1,26 @@
 import { Prisma } from "@prisma/client";
 
 /**
- * Accounts created before this were never asked to confirm an address.
+ * Accounts created before this are grandfathered: they count as students and
+ * they can sign in, whether or not they ever confirmed an address.
  *
  * One constant, used by two things that must agree: the access gate in
  * `lib/session.ts` and the analytics predicate below. If they ever disagreed,
  * the admin panel would report a population different from the one that can
  * actually sign in, which is the worst kind of wrong — plausible and quiet.
  *
- * It is the moment the gate shipped, not a round date: a cutoff even a few
- * hours ahead would excuse the accounts it is meant to catch.
+ * Moved forward from the date confirmation first shipped (2026-08-09) to the
+ * moment this change did. The earlier cutoff would have dropped every account
+ * created in the week between, including real students who had simply not got
+ * round to clicking the link, and losing existing students to a reporting
+ * change is a worse outcome than counting a few unconfirmed ones for one more
+ * cycle. Everyone from here on has to confirm.
+ *
+ * Deliberately a fixed timestamp rather than something computed at runtime: a
+ * moving cutoff would grandfather every new signup forever, which is exactly
+ * the bug this is meant to close.
  */
-export const VERIFICATION_REQUIRED_FROM = new Date("2026-08-09T02:31:00.000Z");
+export const VERIFICATION_REQUIRED_FROM = new Date("2026-08-17T09:10:00.000Z");
 
 /**
  * Who counts as a student.
