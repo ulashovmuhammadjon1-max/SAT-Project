@@ -26,6 +26,20 @@ const DAILY_LIMIT = 5;
  */
 const MODEL = process.env.GEMINI_MODEL || "gemini-flash-lite-latest";
 
+/**
+ * What the student is asking for.
+ *
+ * `hint` is for a question still in front of them — during a module, or in the
+ * Question Bank before they commit. It must not reveal the answer.
+ *
+ * `explain` is for the review screen, where the correct answer is already on
+ * the page next to it. A hint there would be absurd — the student can see the
+ * answer and wants to know *why*. So explain mode is told the key and works
+ * through it, which is also what makes it a safe stand-in for the questions
+ * that have no authored Explanation row.
+ */
+export type TutorMode = "hint" | "explain";
+
 export interface TutorResponse {
   ok?: boolean;
   error?: string;
@@ -96,9 +110,11 @@ interface QuestionForTutor {
   choices: { label: string; content: string }[];
   passage: { content: string } | null;
   hasImage: boolean;
+  /** Only populated for `explain` — the student can already see it there. */
+  answer: string | null;
 }
 
-function buildPrompt(q: QuestionForTutor, studentNote: string): string {
+function buildPrompt(q: QuestionForTutor, studentNote: string, mode: TutorMode): string {
   const parts: string[] = [];
 
   if (q.passage) {
@@ -129,21 +145,43 @@ function buildPrompt(q: QuestionForTutor, studentNote: string): string {
     );
   }
 
+  if (mode === "explain" && q.answer) {
+    // Given, not asked for. Left to work it out the model can reach a different
+    // answer from the marked one and then argue for it — and an explanation
+    // that confidently contradicts the key on screen teaches the error. The
+    // grading is already done and displayed; the job here is the route to it.
+    parts.push(`THE CORRECT ANSWER, already shown to the student: ${q.answer}`);
+  }
+
   if (studentNote) {
     parts.push(`WHAT THE STUDENT SAID THEY ARE STUCK ON:\n${studentNote}`);
   }
 
   parts.push(
-    [
-      "You are an SAT tutor. Give ONE short hint — 2-3 sentences, under 60 words.",
-      "",
-      "Rules:",
-      "- Never state or imply which choice is correct, and never give the final numeric answer.",
-      "- Name the concept being tested and the FIRST step the student should take.",
-      "- Address the student directly as 'you'. Be warm and brief.",
-      "- Plain prose only: no markdown, no headings, no bullet points, no LaTeX.",
-      "- If the student's note shows a specific misunderstanding, correct that misunderstanding.",
-    ].join("\n")
+    mode === "hint"
+      ? [
+          "You are an SAT tutor. Give ONE short hint — 2-3 sentences, under 60 words.",
+          "",
+          "Rules:",
+          "- Never state or imply which choice is correct, and never give the final numeric answer.",
+          "- Name the concept being tested and the FIRST step the student should take.",
+          "- Address the student directly as 'you'. Be warm and brief.",
+          "- Plain prose only: no markdown, no headings, no bullet points, no LaTeX.",
+          "- If the student's note shows a specific misunderstanding, correct that misunderstanding.",
+        ].join("\n")
+      : [
+          "You are an SAT tutor. The student has already answered this question and can see",
+          "the correct answer. Explain how to get there, in under 120 words.",
+          "",
+          "Rules:",
+          "- Work through the reasoning in order, so the student could repeat it unaided.",
+          "- Explain why the correct answer is right, then name the single most tempting",
+          "  wrong choice and the specific mistake that leads to it.",
+          "- Do not contradict the correct answer given above. If your own working disagrees",
+          "  with it, say plainly that the question looks wrong rather than arguing either way.",
+          "- Address the student directly as 'you'.",
+          "- Plain prose only: no markdown, no headings, no bullet points, no LaTeX.",
+        ].join("\n")
   );
 
   return parts.join("\n\n");
@@ -232,7 +270,8 @@ async function callGemini(prompt: string): Promise<string> {
  */
 export async function askSATTutor(
   questionId: string,
-  studentNote?: string
+  studentNote?: string,
+  mode: TutorMode = "hint"
 ): Promise<TutorResponse> {
   const user = await requireUser();
 
@@ -264,7 +303,11 @@ export async function askSATTutor(
       stem: true,
       type: true,
       imageUrl: true,
-      choices: { select: { label: true, content: true }, orderBy: { order: "asc" } },
+      correctAnswerFR: true,
+      choices: {
+        select: { label: true, content: true, isCorrect: true },
+        orderBy: { order: "asc" },
+      },
       passage: { select: { content: true } },
     },
   });
@@ -273,6 +316,24 @@ export async function askSATTutor(
 
   const note = (studentNote ?? "").trim().slice(0, 500);
 
+  // Read only in explain mode, and never sent to the model in hint mode — the
+  // key must not be in the context at all when the rule is "do not reveal it".
+  let answer: string | null = null;
+  if (mode === "explain") {
+    const keyed = question.choices.find((c) => c.isCorrect);
+    if (keyed) {
+      answer = `${keyed.label}) ${toPlainText(keyed.content)}`;
+    } else if (question.correctAnswerFR) {
+      try {
+        const parsed = JSON.parse(question.correctAnswerFR) as unknown;
+        // Stored as a JSON-encoded array of accepted answers — see CLAUDE.md.
+        answer = Array.isArray(parsed) ? parsed.join(" or ") : String(parsed);
+      } catch {
+        answer = question.correctAnswerFR;
+      }
+    }
+  }
+
   let hint: string;
   try {
     hint = await callGemini(
@@ -280,11 +341,13 @@ export async function askSATTutor(
         {
           stem: question.stem,
           type: question.type,
-          choices: question.choices,
+          choices: question.choices.map((c) => ({ label: c.label, content: c.content })),
           passage: question.passage,
           hasImage: Boolean(question.imageUrl),
+          answer,
         },
-        note
+        note,
+        mode
       )
     );
   } catch (err) {

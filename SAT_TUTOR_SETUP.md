@@ -5,12 +5,36 @@ tier. Verified working end to end on 2026-08-17.
 
 ## What a student gets
 
-One hint at a time, 2–3 sentences, capped at **5 per student per UTC day**. The
-prompt forbids naming the correct choice or giving the final number, so the
-question still has to be worked. Four question shapes were probed against the
-live model — Math multiple-choice, student-produced response, Reading & Writing
-with a passage, and a question carrying a figure — and none of the hints leaked
-the answer.
+Capped at **5 requests per student per UTC day**, shared across every surface.
+The tutor has two modes, and which one a screen uses is decided by whether the
+answer is already on it.
+
+| where | mode | behaviour |
+|---|---|---|
+| `/practice/<id>`, before submitting | `hint` | 2–3 sentences. Names the concept and the first step, never the answer. |
+| Question Bank session, **after** the reveal | `explain` | Full reasoning, the tempting wrong choice, and the mistake behind it. |
+| `/review/<attemptId>` | `explain` | Same, on every question of a finished test. |
+
+Hint mode is the one with something to protect, and the key is not merely
+withheld from the reply — it is never put in the model's context at all. Four
+question shapes were probed against the live model (Math multiple-choice,
+student-produced response, Reading & Writing with a passage, and one carrying a
+figure) and none of the hints leaked the answer.
+
+Explain mode is given the marked key rather than left to derive one, so it
+cannot confidently argue for a different answer than the page is showing — the
+failure mode CLAUDE.md records from the explanations pipeline. It also fills a
+real gap: both the review page and the session runner used to say only *"no
+explanation has been published for this question yet"*.
+
+### Not in the timed full-length exam, and why
+
+`src/lib/plan/generate.ts` builds each student's study plan from `Response`
+rows joined to `Attempt`. A hint during a scored module inflates the accuracy
+for that skill, so the plan then under-prioritises the very thing the student
+needed help with — and the scaled score and the adaptive Module 2 branch are
+both computed from the same answers. Every placement above is either untimed
+practice or strictly after grading, so none of them can move a score.
 
 ## Setup
 
