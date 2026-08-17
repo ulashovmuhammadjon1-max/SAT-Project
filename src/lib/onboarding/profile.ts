@@ -1,4 +1,5 @@
 import { Prisma } from "@prisma/client";
+import { countedStudentWhere } from "@/lib/counted-students";
 
 import { prisma } from "@/lib/prisma";
 
@@ -96,14 +97,14 @@ const EMPTY_AUDIENCE: AudienceData = {
 export async function readAudience(): Promise<AudienceData> {
   try {
     const [students, scores, study] = await Promise.all([
-      prisma.user.findMany({ where: { role: "STUDENT" }, select: AUDIENCE_SELECT }),
+      prisma.user.findMany({ where: countedStudentWhere, select: AUDIENCE_SELECT }),
       prisma.user.aggregate({
-        where: { role: "STUDENT" },
+        where: countedStudentWhere,
         _avg: { targetScore: true, currentScore: true },
         _count: { targetScore: true, currentScore: true },
       }),
       prisma.user.aggregate({
-        where: { role: "STUDENT" },
+        where: countedStudentWhere,
         _avg: { studyMinutesPerDay: true },
         _count: { studyMinutesPerDay: true },
       }),

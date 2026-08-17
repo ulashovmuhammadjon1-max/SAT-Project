@@ -3,6 +3,7 @@ import { Gift, UserPlus, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
+import { countedStudentWhere } from "@/lib/counted-students";
 import { requireAdmin } from "@/lib/session";
 import { FREE_REVIEWS, FRIENDS_PER_REVIEW } from "@/lib/ielts/economy";
 import { shortName } from "@/lib/leaderboard";
@@ -27,7 +28,7 @@ export default async function AdminIeltsEconomyPage() {
     prisma.ieltsSpeakingSubmission.count({ where: { status: { not: "PENDING" } } }),
     prisma.referral.count({ where: { status: "REWARDED" } }),
     prisma.referral.count({ where: { status: "PENDING" } }),
-    prisma.user.count({ where: { role: "STUDENT" } }),
+    prisma.user.count({ where: countedStudentWhere }),
   ]);
 
   const reviewsSpent = writingSent + speakingSent;

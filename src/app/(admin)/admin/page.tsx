@@ -3,12 +3,13 @@ import { FileText, ListChecks, SpellCheck2, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { prisma } from "@/lib/prisma";
+import { countedStudentWhere } from "@/lib/counted-students";
 
 export const metadata = { title: "Admin Overview" };
 
 export default async function AdminOverviewPage() {
   const [userCount, questionCount, vocabCount, pendingUploads, recentUploads] = await Promise.all([
-    prisma.user.count({ where: { role: "STUDENT" } }),
+    prisma.user.count({ where: countedStudentWhere }),
     prisma.question.count(),
     prisma.vocabWord.count(),
     prisma.pDFUpload.count({ where: { status: { in: ["PENDING", "PROCESSING", "NEEDS_REVIEW"] } } }),

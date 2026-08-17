@@ -1,4 +1,9 @@
 import { prisma } from "@/lib/prisma";
+import {
+  awaitingVerificationWhere,
+  countedStudentSql,
+  countedStudentWhere,
+} from "@/lib/counted-students";
 
 /**
  * Operating statistics for the admin panel.
@@ -116,6 +121,8 @@ export interface AdminStatistics {
   activeLast30: number;
   questionsAnsweredAllTime: number;
   sessions: SessionStats;
+  /** Signups since the cutoff that have not confirmed an address. */
+  unverified: UnverifiedStats;
 }
 
 const asNumber = (v: unknown): number => (v == null ? 0 : Number(v));
@@ -128,15 +135,30 @@ const asNumber = (v: unknown): number => (v == null ? 0 : Number(v));
  * the classic way a funnel ends up widening at the bottom.
  */
 async function buildFunnel(): Promise<FunnelStep[]> {
-  const [signedUp, onboarded, verified, started, completed] = await Promise.all([
-    prisma.user.count({ where: { role: "STUDENT" } }),
-    prisma.user.count({ where: { role: "STUDENT", onboardedAt: { not: null } } }),
-    prisma.user.count({ where: { role: "STUDENT", emailVerified: { not: null } } }),
+  // Every stage is scoped to counted students. Restricting only the top of the
+  // funnel would let an unverified account that somehow has an attempt widen a
+  // lower step, and a funnel that gets broader further down is worse than no
+  // funnel — it reads as a bug in the product rather than in the query.
+  //
+  // Applied as a relation filter (`user: countedStudentWhere`) rather than by
+  // loading the id list and passing `userId: { in: [...] }`. The id list would
+  // work and would also mean shipping every student id to the application on
+  // every page load, which is the exact pattern this file's own header calls
+  // out as the thing not to do.
+  const inScope = { user: countedStudentWhere };
+
+  const [signedUp, onboarded, started, completed] = await Promise.all([
+    prisma.user.count({ where: countedStudentWhere }),
+    prisma.user.count({ where: { ...countedStudentWhere, onboardedAt: { not: null } } }),
     prisma.attempt
-      .findMany({ where: {}, select: { userId: true }, distinct: ["userId"] })
+      .findMany({ where: inScope, select: { userId: true }, distinct: ["userId"] })
       .then((rows) => rows.length),
     prisma.attempt
-      .findMany({ where: { status: "SUBMITTED" }, select: { userId: true }, distinct: ["userId"] })
+      .findMany({
+        where: { ...inScope, status: "SUBMITTED" },
+        select: { userId: true },
+        distinct: ["userId"],
+      })
       .then((rows) => rows.length),
   ]);
 
@@ -148,13 +170,66 @@ async function buildFunnel(): Promise<FunnelStep[]> {
     note,
   });
 
+  // "Confirmed email" is gone as a step: it is now a precondition of appearing
+  // here at all, so it would always read 100% and tell nobody anything. The
+  // people it used to describe are in the awaiting-verification panel instead.
   return [
-    step("Signed up", signedUp, "student accounts created"),
+    step("Signed up", signedUp, "confirmed student accounts"),
     step("Finished onboarding", onboarded, "answered the plan questions"),
-    step("Confirmed email", verified, "clicked the confirmation link"),
     step("Started a test", started, "opened at least one practice test"),
     step("Completed a test", completed, "submitted a full test"),
   ];
+}
+
+/**
+ * Signups that have not confirmed an address yet.
+ *
+ * Its own block rather than a number on the funnel, because the useful question
+ * is not "how many" but "is delivery working": a pile of week-old unconfirmed
+ * accounts that all finished onboarding means real people are being lost to a
+ * mail problem, not that spam is being filtered out correctly.
+ */
+export interface UnverifiedStats {
+  total: number;
+  /** Signed up in the last 7 days — the ones plausibly still in progress. */
+  last7: number;
+  /** Older than 7 days and still unconfirmed. Effectively lost. */
+  stale: number;
+  /** Got through onboarding but never confirmed: real people, stuck. */
+  onboarded: number;
+  /** The oldest unconfirmed signup, for spotting the day delivery broke. */
+  oldestAt: Date | null;
+}
+
+async function buildUnverified(): Promise<UnverifiedStats> {
+  const weekAgo = new Date(Date.now() - 7 * 86_400_000);
+  const [total, last7, onboarded, oldest] = await Promise.all([
+    prisma.user.count({ where: awaitingVerificationWhere }),
+    // AND, not a spread: `awaitingVerificationWhere` already constrains
+    // `createdAt`, and spreading a second `createdAt` replaces that bound
+    // instead of narrowing it. It happens to be harmless while `weekAgo` is
+    // later than the cutoff, which is exactly the kind of accident that stops
+    // being true without anyone noticing.
+    prisma.user.count({
+      where: { AND: [awaitingVerificationWhere, { createdAt: { gte: weekAgo } }] },
+    }),
+    prisma.user.count({
+      where: { ...awaitingVerificationWhere, onboardedAt: { not: null } },
+    }),
+    prisma.user.findFirst({
+      where: awaitingVerificationWhere,
+      orderBy: { createdAt: "asc" },
+      select: { createdAt: true },
+    }),
+  ]);
+
+  return {
+    total,
+    last7,
+    stale: total - last7,
+    onboarded,
+    oldestAt: oldest?.createdAt ?? null,
+  };
 }
 
 /** Signups per ISO week for the last 12 weeks, oldest first. */
@@ -162,7 +237,7 @@ async function signupsByWeek(): Promise<TrendPoint[]> {
   const rows = await prisma.$queryRaw<{ week: Date; n: bigint }[]>`
     SELECT date_trunc('week', "createdAt") AS week, COUNT(*)::bigint AS n
       FROM "User"
-     WHERE role = 'STUDENT'
+     WHERE ${countedStudentSql()}
        AND "createdAt" >= now() - interval '12 weeks'
      GROUP BY 1
      ORDER BY 1
@@ -182,7 +257,7 @@ async function signupComparison(): Promise<SignupComparison> {
            END AS bucket,
            COUNT(*)::bigint AS n
       FROM "User"
-     WHERE role = 'STUDENT'
+     WHERE ${countedStudentSql()}
        AND "createdAt" >= date_trunc('week', now()) - interval '1 week'
      GROUP BY 1
   `;
@@ -463,7 +538,7 @@ export async function getStudentActivity(limit = 200): Promise<StudentActivityRo
            (SELECT COUNT(*) FROM "Booking" b WHERE b."userId" = u.id)::bigint AS booked,
            (SELECT COUNT(*) FROM "Booking" b WHERE b."userId" = u.id AND b.status = 'COMPLETED')::bigint AS attended
       FROM "User" u
-     WHERE u.role = 'STUDENT'
+     WHERE ${countedStudentSql("u")}
      ORDER BY u."createdAt" DESC
      LIMIT ${limit}
   `;
@@ -508,6 +583,7 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
     activeLast30,
     answeredAgg,
     sessions,
+    unverified,
   ] = await Promise.all([
     buildFunnel(),
     signupsByWeek(),
@@ -518,20 +594,32 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
     questionOutliers(minAttempts),
     prisma.studyActivity
       .findMany({
-        where: { date: { gte: new Date(Date.now() - 7 * 86_400_000) }, questionsAnswered: { gt: 0 } },
+        where: {
+          date: { gte: new Date(Date.now() - 7 * 86_400_000) },
+          questionsAnswered: { gt: 0 },
+          user: countedStudentWhere,
+        },
         select: { userId: true },
         distinct: ["userId"],
       })
       .then((r) => r.length),
     prisma.studyActivity
       .findMany({
-        where: { date: { gte: new Date(Date.now() - 30 * 86_400_000) }, questionsAnswered: { gt: 0 } },
+        where: {
+          date: { gte: new Date(Date.now() - 30 * 86_400_000) },
+          questionsAnswered: { gt: 0 },
+          user: countedStudentWhere,
+        },
         select: { userId: true },
         distinct: ["userId"],
       })
       .then((r) => r.length),
-    prisma.studyActivity.aggregate({ _sum: { questionsAnswered: true } }),
+    prisma.studyActivity.aggregate({
+      _sum: { questionsAnswered: true },
+      where: { user: countedStudentWhere },
+    }),
     sessionStats(),
+    buildUnverified(),
   ]);
 
   return {
@@ -548,5 +636,6 @@ export async function getAdminStatistics(minAttempts = 5): Promise<AdminStatisti
     activeLast30,
     questionsAnsweredAllTime: answeredAgg._sum.questionsAnswered ?? 0,
     sessions,
+    unverified,
   };
 }

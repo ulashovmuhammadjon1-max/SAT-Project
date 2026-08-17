@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { VERIFICATION_REQUIRED_FROM } from "@/lib/counted-students";
 
 export async function getCurrentUser() {
   const session = await auth();
@@ -23,12 +24,9 @@ export async function requireUser() {
  * student. The backfill in `prisma/migrations/manual/002` is a tidy-up, not a
  * prerequisite.
  *
- * It is the moment this shipped, not a round date in the future: a cutoff even
- * a few hours ahead would excuse the accounts the gate is meant to catch.
- */
-const VERIFICATION_REQUIRED_FROM = new Date("2026-08-09T02:31:00.000Z");
-
-/**
+ * Now shared with the admin analytics predicate — see `lib/counted-students`
+ * for why the two must not be allowed to drift.
+ *
  * Signed in *and* confirmed their email address.
  *
  * Read from the database rather than the session token on purpose: the JWT is

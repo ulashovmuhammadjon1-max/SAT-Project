@@ -36,7 +36,16 @@ export default async function AdminStatisticsPage() {
 
       {/* ---- headline numbers ------------------------------------------- */}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <Metric icon={Users} label="Students" value={signedUp} sub="accounts created" />
+        <Metric
+          icon={Users}
+          label="Students"
+          value={signedUp}
+          sub={
+            stats.unverified.total
+              ? `${stats.unverified.total} more awaiting confirmation`
+              : "confirmed accounts"
+          }
+        />
         <Metric
           icon={TrendingUp}
           label="Active this week"
@@ -65,7 +74,9 @@ export default async function AdminStatisticsPage() {
         <CardContent className="space-y-3">
           <p className="-mt-2 text-sm text-muted-foreground">
             Each row counts <strong>distinct students</strong>, so someone who has taken six tests
-            counts once. The gap between two rows is where people are dropping out.
+            counts once. The gap between two rows is where people are dropping out. Only students
+            who have confirmed their email are counted, plus everyone who signed up before
+            confirmation was introduced.
           </p>
           {stats.funnel.map((step) => (
             <div key={step.label} className="space-y-1">
@@ -83,6 +94,61 @@ export default async function AdminStatisticsPage() {
           ))}
         </CardContent>
       </Card>
+
+      {/* ---- awaiting confirmation --------------------------------------- */}
+      {/* Hidden entirely at zero. A card reading "0 awaiting confirmation" is a
+          row of furniture on a page whose job is to show the exceptions. */}
+      {stats.unverified.total > 0 && (
+        <Card className={cn(stats.unverified.stale > 0 && "border-amber-500/40")}>
+          <CardHeader>
+            <CardTitle>Awaiting email confirmation</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="-mt-2 text-sm text-muted-foreground">
+              Signed up but never confirmed, so they are excluded from every figure above.
+              The number worth watching is not the total — it is how many are{" "}
+              <strong>stale</strong> and how many got as far as{" "}
+              <strong>finishing onboarding</strong>. Someone who answered all the plan
+              questions and then never arrived is a real student lost to a mail problem,
+              not a junk signup.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <MiniStat label="Total" value={stats.unverified.total} note="unconfirmed accounts" />
+              <MiniStat
+                label="Last 7 days"
+                value={stats.unverified.last7}
+                note="may still be in progress"
+              />
+              <MiniStat
+                label="Stale"
+                value={stats.unverified.stale}
+                note="older than a week"
+                warn={stats.unverified.stale > 0}
+              />
+              <MiniStat
+                label="Finished onboarding"
+                value={stats.unverified.onboarded}
+                note="real people, stuck"
+                warn={stats.unverified.onboarded > 0}
+              />
+            </div>
+            {stats.unverified.oldestAt && (
+              <p className="text-xs text-muted-foreground">
+                Oldest unconfirmed signup:{" "}
+                <span className="tabular-nums">
+                  {stats.unverified.oldestAt.toLocaleDateString(undefined, {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })}
+                </span>
+                . If that date is close to when many of these arrived, check email delivery
+                rather than the signup form.
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       {/* ---- trends ------------------------------------------------------ */}
       <div className="grid gap-4 lg:grid-cols-2">
@@ -349,6 +415,37 @@ function OutlierTable({
         )}
       </CardContent>
     </Card>
+  );
+}
+
+/**
+ * A figure inside a card that already has its own heading, so it carries no
+ * icon and no card of its own — nesting `Metric` here would double the border.
+ */
+function MiniStat({
+  label,
+  value,
+  note,
+  warn = false,
+}: {
+  label: string;
+  value: number;
+  note: string;
+  warn?: boolean;
+}) {
+  return (
+    <div className="rounded-lg border border-border p-3">
+      <p className="text-xs text-muted-foreground">{label}</p>
+      <p
+        className={cn(
+          "font-display text-2xl font-semibold tabular-nums",
+          warn && value > 0 && "text-amber-600 dark:text-amber-400"
+        )}
+      >
+        {value}
+      </p>
+      <p className="text-xs text-muted-foreground">{note}</p>
+    </div>
   );
 }
 
