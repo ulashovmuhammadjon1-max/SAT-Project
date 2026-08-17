@@ -28,7 +28,6 @@ import {
 import { toast } from "sonner";
 
 import { MathContent, renderMathContent } from "@/components/shared/math-content";
-import { SATTutor } from "@/components/student/sat-tutor";
 import { CalculatorPanel } from "@/components/exam/calculator-panel";
 import { HighlightableContent } from "@/components/exam/highlightable-content";
 import { QuestionPalette, type QuestionOutcome } from "@/components/exam/question-palette";
@@ -505,9 +504,7 @@ export function PracticeSession({
             )}
           </div>
 
-          {result && (
-            <ExplanationPanel result={result} questionType={q.type} questionId={q.id} />
-          )}
+          {result && <ExplanationPanel result={result} questionType={q.type} />}
         </div>
       </div>
     </div>
@@ -680,11 +677,9 @@ export function PracticeSession({
 function ExplanationPanel({
   result,
   questionType,
-  questionId,
 }: {
   result: SubmitAnswerResult;
   questionType: SessionQuestion["type"];
-  questionId: string;
 }) {
   return (
     <section
@@ -733,11 +728,6 @@ function ExplanationPanel({
           <ExplanationNote label="Common mistake" text={result.commonMistakes} tone="warn" />
         )}
         {result.tips && <ExplanationNote label="Tip" text={result.tips} tone="info" />}
-
-        {/* Only after the answer is revealed, so it can never affect the mark.
-            The surface is overridden because this panel sits inside the exam
-            chrome, which is always light and on its own tokens. */}
-        <SATTutor questionId={questionId} mode="explain" surface="testing" />
       </div>
     </section>
   );

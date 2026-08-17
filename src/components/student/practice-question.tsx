@@ -12,7 +12,6 @@ import { MathContent } from "@/components/shared/math-content";
 import { cn } from "@/lib/utils";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
 import { submitQuestionAnswer } from "@/server/actions/student/question-bank";
-import { SATTutor } from "@/components/student/sat-tutor";
 
 interface PracticeQuestionData {
   id: string;
@@ -157,28 +156,22 @@ export function PracticeQuestion({
             )}
 
             {!submitted ? (
-              <div className="space-y-3">
-                <Button
-                  onClick={check}
-                  disabled={
-                    grading || (question.type === "MULTIPLE_CHOICE" ? !selected : !freeResponse)
-                  }
-                >
-                  {grading ? "Checking…" : "Check answer"}
-                </Button>
-                <SATTutor questionId={question.id} />
-              </div>
+              <Button
+                onClick={check}
+                disabled={
+                  grading || (question.type === "MULTIPLE_CHOICE" ? !selected : !freeResponse)
+                }
+              >
+                {grading ? "Checking…" : "Check answer"}
+              </Button>
             ) : (
-              <div className="flex flex-col items-start gap-3">
-                <div className="flex items-center gap-3">
-                  <Badge variant={isCorrect ? "success" : "destructive"}>{isCorrect ? "Correct" : "Incorrect"}</Badge>
-                  {nextQuestionId && (
-                    <Button asChild size="sm">
-                      <Link href={`/practice/${nextQuestionId}`}>Next question</Link>
-                    </Button>
-                  )}
-                </div>
-                {!isCorrect && <SATTutor questionId={question.id} />}
+              <div className="flex items-center gap-3">
+                <Badge variant={isCorrect ? "success" : "destructive"}>{isCorrect ? "Correct" : "Incorrect"}</Badge>
+                {nextQuestionId && (
+                  <Button asChild size="sm">
+                    <Link href={`/practice/${nextQuestionId}`}>Next question</Link>
+                  </Button>
+                )}
               </div>
             )}
           </CardContent>

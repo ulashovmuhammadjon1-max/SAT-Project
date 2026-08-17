@@ -202,8 +202,6 @@ model User {
   ieltsWritingReviews      IeltsWritingReview[]  @relation("IeltsWritingReviewer")
   ieltsSpeakingReviews     IeltsSpeakingReview[] @relation("IeltsSpeakingReviewer")
 
-  tutorUsage TutorUsage[]
-
   @@index([role])
   @@index([countryCode])
   @@index([gradeLevel])
@@ -1897,24 +1895,4 @@ model IeltsStudentProfile {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-}
-
-/// One row per student per UTC day, counting SAT-tutor hints spent that day.
-///
-/// `@db.Date` matches 013_tutor_usage.sql, which declares the column DATE. Left
-/// as a bare DateTime the generated client and the hand-applied migration
-/// disagree about the column type, and the next `prisma migrate` wants to
-/// rewrite a table it did not create.
-model TutorUsage {
-  id           String   @id @default(cuid())
-  userId       String
-  date         DateTime @db.Date
-  requestCount Int      @default(0)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([userId, date])
-  @@index([userId])
 }

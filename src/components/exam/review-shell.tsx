@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MathContent } from "@/components/shared/math-content";
-import { SATTutor } from "@/components/student/sat-tutor";
 import { cn, formatDuration } from "@/lib/utils";
 import { toPassageHtml } from "@/lib/exam/passage-html";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
@@ -475,17 +474,8 @@ function ReviewDetail({ item }: { item: ReviewItem }) {
               )}
             </div>
           ) : (
-            <p className="text-sm text-muted-foreground">
-              No explanation has been published for this question yet — ask the tutor below.
-            </p>
+            <p className="text-sm text-muted-foreground">No explanation has been published for this question yet.</p>
           )}
-
-          {/* Offered on every question, not only the ones missing an
-              explanation: a student who did not follow the authored one is
-              exactly who needs it rephrased, and that is invisible from here. */}
-          <div className="border-t border-border pt-4">
-            <SATTutor questionId={item.questionId} mode="explain" />
-          </div>
         </CardContent>
       </Card>
     </div>
