@@ -6,6 +6,31 @@ import { requireUser } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 
+/**
+ * The columns a live module actually renders.
+ *
+ * `imageUrl` is deliberately absent. Most figures are stored as base64 `data:`
+ * URIs, and including the column drags them through the render and into the
+ * page payload — 898 KB on the heaviest module in the bank, rebuilt on every
+ * open. Whether a question *has* a figure is fetched separately as a set of
+ * ids, and the client is handed `/api/question-image/<id>` instead, which the
+ * browser then caches.
+ *
+ * Answer columns (`correctAnswerFR`) stay out for a different reason: sending
+ * them to a live attempt would hand the student the key.
+ */
+const LIVE_QUESTION_SELECT = {
+  id: true,
+  type: true,
+  stem: true,
+  order: true,
+  choices: {
+    select: { id: true, label: true, content: true, order: true },
+    orderBy: { order: "asc" },
+  },
+  passage: { select: { id: true, title: true, content: true } },
+} as const;
+
 export default async function ExamPage({ params }: { params: { attemptId: string } }) {
   const user = await requireUser();
 
@@ -25,7 +50,7 @@ export default async function ExamPage({ params }: { params: { attemptId: string
     include: {
       module: {
         include: {
-          questions: { orderBy: { order: "asc" }, include: { choices: { orderBy: { order: "asc" } }, passage: true } },
+          questions: { orderBy: { order: "asc" }, select: LIVE_QUESTION_SELECT },
         },
       },
     },
@@ -37,10 +62,7 @@ export default async function ExamPage({ params }: { params: { attemptId: string
       include: {
         module: {
           include: {
-            questions: {
-              orderBy: { order: "asc" },
-              include: { choices: { orderBy: { order: "asc" } }, passage: true },
-            },
+            questions: { orderBy: { order: "asc" }, select: LIVE_QUESTION_SELECT },
           },
         },
       },
@@ -48,6 +70,17 @@ export default async function ExamPage({ params }: { params: { attemptId: string
   }
 
   const existingResponses = await prisma.response.findMany({ where: { moduleAttemptId: moduleAttempt.id } });
+
+  // Which questions have a figure, as ids only. Asking for `imageUrl` itself
+  // would pull every base64 payload in the module back into the render.
+  const withImage = new Set(
+    (
+      await prisma.question.findMany({
+        where: { moduleId: moduleAttempt.module.id, imageUrl: { not: null } },
+        select: { id: true },
+      })
+    ).map((q) => q.id)
+  );
 
   // Never send `isCorrect` / `correctAnswerFR` to the client during a live attempt —
   // that would leak answers. Review mode (after submission) is the only place
@@ -62,7 +95,7 @@ export default async function ExamPage({ params }: { params: { attemptId: string
       id: q.id,
       type: q.type,
       stem: q.stem,
-      imageUrl: q.imageUrl,
+      imageUrl: withImage.has(q.id) ? `/api/question-image/${q.id}` : null,
       order: q.order,
       passage: q.passage ? { id: q.passage.id, title: q.passage.title, content: q.passage.content } : null,
       choices: q.choices.map((c) => ({ id: c.id, label: c.label, content: c.content, order: c.order })),

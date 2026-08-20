@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { PracticeQuestion } from "@/components/student/practice-question";
 import { prisma } from "@/lib/prisma";
+import { questionImageSrc } from "@/lib/question-image";
 import { requireUser } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
@@ -36,7 +37,7 @@ export default async function PracticeQuestionPage({ params }: { params: { quest
       question={{
         id: question.id,
         stem: question.stem,
-        imageUrl: question.imageUrl,
+        imageUrl: questionImageSrc(question.id, question.imageUrl),
         type: question.type,
         difficulty: question.difficulty,
         domain: question.domain.name,

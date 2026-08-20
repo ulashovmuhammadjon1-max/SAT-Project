@@ -118,6 +118,20 @@ export function PracticeQuestion({
           <CardContent className="space-y-4 p-5">
             <MathContent html={question.stem} className="block text-[15px] leading-relaxed" />
 
+            {/* The figure was accepted as a prop and then never rendered, so
+                every graph, table-image and diagram question on this page has
+                been unanswerable — the stem says "the graph shown" and nothing
+                is shown. The exam and review screens both drew it correctly;
+                only this one dropped it. */}
+            {question.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={question.imageUrl}
+                alt="Figure for this question"
+                className="max-w-full rounded-lg border border-border bg-white"
+              />
+            )}
+
             {question.type === "MULTIPLE_CHOICE" ? (
               <div className="space-y-2">
                 {question.choices.map((choice) => {

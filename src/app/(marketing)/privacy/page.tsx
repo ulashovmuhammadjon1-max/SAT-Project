@@ -5,7 +5,14 @@ export const metadata = {
   title: "Privacy Policy",
   description: "What SATForge collects, why, and how to get it deleted.",
 };
-export const dynamic = "force-dynamic";
+/**
+ * Cached for an hour rather than rendered per visitor.
+ *
+ * The only dynamic thing on the page is the contact address from `getSettings`,
+ * which changes about never. `force-dynamic` was making a public, essentially
+ * static legal page pay for a server render on every hit.
+ */
+export const revalidate = 3600;
 
 /**
  * Privacy policy.

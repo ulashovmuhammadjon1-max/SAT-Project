@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PracticeSession, type SessionQuestion } from "@/components/student/qb-session";
 import { prisma } from "@/lib/prisma";
+import { questionImageSrc } from "@/lib/question-image";
 import { requireUser } from "@/lib/session";
 import {
   generateMistakeSession,
@@ -161,7 +162,7 @@ export default async function PracticeSessionPage({
         domainName: q.domain.name,
         skillName: q.skill.name,
         stem: q.stem,
-        imageUrl: q.imageUrl,
+        imageUrl: questionImageSrc(q.id, q.imageUrl),
         passage: q.passage,
         choices: q.choices,
         saved: saved.has(q.id),

@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 
 import { ReviewShell } from "@/components/exam/review-shell";
 import { prisma } from "@/lib/prisma";
+import { questionImageSrc } from "@/lib/question-image";
 import { requireUser } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
@@ -76,7 +77,7 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     subject: subjectByModuleAttemptId[r.moduleAttemptId] ?? "READING_WRITING",
     stem: r.question.stem,
     passage: r.question.passage ? { title: r.question.passage.title, content: r.question.passage.content } : null,
-    imageUrl: r.question.imageUrl,
+    imageUrl: questionImageSrc(r.question.id, r.question.imageUrl),
     type: r.question.type,
     difficulty: r.question.difficulty,
     domain: r.question.domain.name,
