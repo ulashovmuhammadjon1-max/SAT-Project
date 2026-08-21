@@ -7,6 +7,7 @@ import {
   UploadCloud,
   ListChecks,
   Globe2,
+  Microscope,
   PenLine,
   Mic,
   BookOpenText,
@@ -67,6 +68,7 @@ const IELTS_NAV: AdminNavItem[] = [
   { href: "/admin/ielts/writing", label: "Writing Reviews", icon: PenLine },
   { href: "/admin/ielts/speaking", label: "Speaking Reviews", icon: Mic },
   { href: "/admin/ielts/economy", label: "Reviews & Invites", icon: UserPlus },
+  { href: "/admin/ielts/essays", label: "Task 2 Essays", icon: Microscope },
   { href: "/admin/ielts/papers", label: "Papers", icon: Globe2 },
 ];
 

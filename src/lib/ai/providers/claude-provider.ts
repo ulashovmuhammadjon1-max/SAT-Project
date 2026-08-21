@@ -70,7 +70,7 @@ const explanationSchema = z.object({
   relatedConcepts: z.string(),
 });
 
-function zodToJsonSchema(schema: z.ZodTypeAny): Record<string, unknown> {
+export function zodToJsonSchema(schema: z.ZodTypeAny): Record<string, unknown> {
   // Minimal, hand-rolled conversion covering only the node types used above —
   // avoids adding a zod-to-json-schema dependency for a handful of shapes.
   if (schema instanceof z.ZodObject) {

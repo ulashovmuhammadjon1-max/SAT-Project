@@ -115,8 +115,8 @@ model User {
   // The default is SAT-only so every account that existed before this shipped
   // keeps exactly the dashboard it had, with no backfill and no onboarding
   // replay.
-  preparationExams ExamKind[] @default([SAT])
-  activeExam       ExamMode   @default(SAT)
+  preparationExams ExamKind[]   @default([SAT])
+  activeExam       ExamMode     @default(SAT)
   /// Only meaningful in BOTH mode: which exam gets the larger share of the
   /// daily study time when the exam dates alone do not settle it.
   examPriority     ExamPriority @default(EQUAL)
@@ -199,8 +199,9 @@ model User {
   ieltsWritingSubmissions  IeltsWritingSubmission[]
   ieltsSpeakingSubmissions IeltsSpeakingSubmission[]
   ieltsReviewerProfile     IeltsReviewerProfile?
-  ieltsWritingReviews      IeltsWritingReview[]  @relation("IeltsWritingReviewer")
-  ieltsSpeakingReviews     IeltsSpeakingReview[] @relation("IeltsSpeakingReviewer")
+  ieltsWritingReviews      IeltsWritingReview[]      @relation("IeltsWritingReviewer")
+  ieltsSpeakingReviews     IeltsSpeakingReview[]     @relation("IeltsSpeakingReviewer")
+  ieltsEssaysAuthored      IeltsEssay[]              @relation("IeltsEssayAuthor")
 
   @@index([role])
   @@index([countryCode])
@@ -1416,11 +1417,11 @@ model IeltsTest {
 /// One skill within a paper. Listening and Reading carry parts; Writing carries
 /// two tasks; Speaking carries three parts.
 model IeltsSection {
-  id     String     @id @default(cuid())
-  testId String
-  skill  IeltsSkill
+  id              String     @id @default(cuid())
+  testId          String
+  skill           IeltsSkill
   /// Ordering among sections of the same paper.
-  order  Int        @default(0)
+  order           Int        @default(0)
   /// Whole-section clock. Reading is 60, Writing 60. Listening is paced per
   /// part instead, so this is the fallback ceiling rather than the rule.
   durationMinutes Int
@@ -1437,11 +1438,11 @@ model IeltsSection {
 
 /// A Listening part, a Reading passage, a Writing task, or a Speaking part.
 model IeltsPart {
-  id        String @id @default(cuid())
-  sectionId String
+  id           String  @id @default(cuid())
+  sectionId    String
   /// 1-4 for Listening, 1-3 for Reading and Speaking, 1-2 for Writing.
-  partNumber Int
-  title      String?
+  partNumber   Int
+  title        String?
   instructions String?
 
   /// Reading passage body, as rich HTML. Null for other skills.
@@ -1466,7 +1467,7 @@ model IeltsPart {
   /// Writing minimum word count: 150 for Task 1, 250 for Task 2.
   minWords Int?
 
-  section   IeltsSection        @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  section   IeltsSection         @relation(fields: [sectionId], references: [id], onDelete: Cascade)
   groups    IeltsQuestionGroup[]
   questions IeltsQuestion[]
 
@@ -1482,10 +1483,10 @@ model IeltsPart {
 /// the limit in one place instead of copied onto every row, where it would
 /// eventually disagree with itself.
 model IeltsQuestionGroup {
-  id     String            @id @default(cuid())
-  partId String
-  order  Int               @default(0)
-  type   IeltsQuestionType
+  id           String            @id @default(cuid())
+  partId       String
+  order        Int               @default(0)
+  type         IeltsQuestionType
   /// "Complete the notes below." — printed above the block.
   instructions String
   /// "NO MORE THAN TWO WORDS AND/OR A NUMBER", shown to the student and
@@ -1512,7 +1513,7 @@ model IeltsQuestionGroup {
 /// within its section, which is what the navigation bar and the answer sheet
 /// both key on.
 model IeltsQuestion {
-  id      String @id @default(cuid())
+  id      String            @id @default(cuid())
   partId  String
   groupId String?
   /// 1-40 within the section.
@@ -1521,31 +1522,31 @@ model IeltsQuestion {
 
   /// The question text. Empty for a gap inside a group body, where the prompt
   /// IS the surrounding text.
-  promptHtml String?
+  promptHtml  String?
   /// Per-question choices for multiple choice: `[{key, text}]`.
   optionsJson Json?
 
   /// The canonical answer. A choice key for multiple choice, the expected text
   /// for a completion.
-  correctAnswer String
+  correctAnswer    String
   /// Every other answer marked right: alternative spellings, contractions,
   /// with/without an article. `string[]`.
-  acceptedAnswers Json?
+  acceptedAnswers  Json?
   /// Multi-answer questions expect a set; order does not matter. `string[]`.
   correctAnswerSet Json?
   /// Off by default: IELTS accepts either case for a typed answer.
-  caseSensitive Boolean @default(false)
+  caseSensitive    Boolean @default(false)
 
-  explanation String?
+  explanation    String?
   /// Where in the passage or audio the answer comes from. Shown in review.
   answerLocation String?
 
   /// Free-form analytics tags: topic, sub-skill, anything worth slicing on.
   metadata Json?
 
-  part     IeltsPart           @relation(fields: [partId], references: [id], onDelete: Cascade)
-  group    IeltsQuestionGroup? @relation(fields: [groupId], references: [id], onDelete: SetNull)
-  answers  IeltsAnswer[]
+  part    IeltsPart           @relation(fields: [partId], references: [id], onDelete: Cascade)
+  group   IeltsQuestionGroup? @relation(fields: [groupId], references: [id], onDelete: SetNull)
+  answers IeltsAnswer[]
 
   @@index([partId, number])
   @@index([groupId])
@@ -1575,12 +1576,12 @@ model IeltsAttempt {
   /// The four components combined under IELTS rounding.
   overallBand   Float?
 
-  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  test     IeltsTest @relation(fields: [testId], references: [id])
-  sections IeltsSectionAttempt[]
-  answers  IeltsAnswer[]
-  writingSubmissions  IeltsWritingSubmission[]
-  speakingSubmission  IeltsSpeakingSubmission?
+  user               User                     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  test               IeltsTest                @relation(fields: [testId], references: [id])
+  sections           IeltsSectionAttempt[]
+  answers            IeltsAnswer[]
+  writingSubmissions IeltsWritingSubmission[]
+  speakingSubmission IeltsSpeakingSubmission?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -1594,16 +1595,16 @@ model IeltsSectionAttempt {
   attemptId String
   sectionId String
 
-  startedAt   DateTime  @default(now())
-  submittedAt DateTime?
+  startedAt        DateTime  @default(now())
+  submittedAt      DateTime?
   /// Server-side deadline. The client clock is a display; this is what
   /// actually decides whether an answer still counts, so a reloaded page or a
   /// tampered timer cannot buy extra minutes.
-  expiresAt   DateTime?
-  timeSpentSeconds Int @default(0)
+  expiresAt        DateTime?
+  timeSpentSeconds Int       @default(0)
 
   /// Listening only: which part is playing, and whether its audio has run.
-  currentPart Int @default(1)
+  currentPart Int   @default(1)
   /// Part numbers whose audio has already played. Once a part is in here its
   /// audio will not be served again in REALISTIC mode. `number[]`.
   playedParts Json?
@@ -1627,7 +1628,7 @@ model IeltsAnswer {
   /// JSON array for a multi-answer question.
   value      String?
   isCorrect  Boolean?
-  flagged    Boolean  @default(false)
+  flagged    Boolean   @default(false)
   answeredAt DateTime?
 
   attempt  IeltsAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
@@ -1643,9 +1644,9 @@ model IeltsAnswer {
 /// Highlights and notes a student makes on a Reading passage. Kept per attempt
 /// so they vanish with the sitting rather than leaking into the next one.
 model IeltsPassageMark {
-  id        String @id @default(cuid())
-  attemptId String
-  partId    String
+  id          String   @id @default(cuid())
+  attemptId   String
+  partId      String
   /// Character offsets into the passage's plain text.
   startOffset Int
   endOffset   Int
@@ -1677,8 +1678,8 @@ model IeltsWritingSubmission {
 
   status IeltsReviewStatus @default(PENDING)
 
-  attempt IeltsAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  user    User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempt IeltsAttempt        @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  user    User                @relation(fields: [userId], references: [id], onDelete: Cascade)
   review  IeltsWritingReview?
 
   @@unique([attemptId, partId])
@@ -1711,8 +1712,8 @@ model IeltsWritingReview {
   startedAt   DateTime  @default(now())
   completedAt DateTime?
 
-  submission  IeltsWritingSubmission  @relation(fields: [submissionId], references: [id], onDelete: Cascade)
-  reviewer    User                    @relation("IeltsWritingReviewer", fields: [reviewerId], references: [id])
+  submission  IeltsWritingSubmission   @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  reviewer    User                     @relation("IeltsWritingReviewer", fields: [reviewerId], references: [id])
   annotations IeltsWritingAnnotation[]
 
   @@index([reviewerId])
@@ -1720,14 +1721,14 @@ model IeltsWritingReview {
 
 /// An inline comment anchored to a span of the student's own text.
 model IeltsWritingAnnotation {
-  id       String @id @default(cuid())
-  reviewId String
+  id          String   @id @default(cuid())
+  reviewId    String
   startOffset Int
   endOffset   Int
   quote       String
   comment     String
   /// praise | issue | suggestion — drives the colour of the underline.
-  kind        String @default("issue")
+  kind        String   @default("issue")
   createdAt   DateTime @default(now())
 
   review IeltsWritingReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
@@ -1744,8 +1745,8 @@ model IeltsSpeakingSubmission {
   submittedAt DateTime          @default(now())
   status      IeltsReviewStatus @default(PENDING)
 
-  attempt    IeltsAttempt              @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  user       User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempt    IeltsAttempt             @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  user       User                     @relation(fields: [userId], references: [id], onDelete: Cascade)
   recordings IeltsSpeakingRecording[]
   review     IeltsSpeakingReview?
 
@@ -1754,9 +1755,9 @@ model IeltsSpeakingSubmission {
 }
 
 model IeltsSpeakingRecording {
-  id           String @id @default(cuid())
-  submissionId String
-  partId       String
+  id            String @id @default(cuid())
+  submissionId  String
+  partId        String
   /// Which prompt inside the part this answers. Part 2 has exactly one.
   questionIndex Int    @default(0)
   promptText    String
@@ -1803,7 +1804,7 @@ model IeltsSpeakingReview {
 
 /// A reviewer comment pinned to a moment in a recording.
 model IeltsSpeakingComment {
-  id          String @id @default(cuid())
+  id          String   @id @default(cuid())
   recordingId String
   atSeconds   Int
   comment     String
@@ -1824,8 +1825,8 @@ model IeltsReviewerProfile {
   canReviewSpeaking Boolean @default(false)
   /// The band the reviewer themselves achieved, shown to students as
   /// "Reviewed by a Band 8 IELTS writer". Never described as examiner status.
-  writingBand  Float?
-  speakingBand Float?
+  writingBand       Float?
+  speakingBand      Float?
 
   approved     Boolean   @default(false)
   approvedById String?
@@ -1895,4 +1896,173 @@ model IeltsStudentProfile {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// ---------------------------------------------------------------------------
+// IELTS Writing Task 2 — Band 8+ model-essay library ("Essay Analyzer")
+//
+// Admin-curated teaching material, not student submissions. An admin writes or
+// pastes a Band 8+ Task 2 essay, the model deconstructs it into annotations and
+// reusable ideas, the admin corrects that, and only then does it reach a
+// student. Nothing here is ever written by a student — the student-facing
+// submission path is IeltsWritingSubmission and is deliberately separate.
+// ---------------------------------------------------------------------------
+
+/// Where an essay is in the curation pipeline.
+///
+/// NEEDS_REVIEW is the important one: the model has produced annotations and a
+/// human has not yet checked them. An essay may never reach a student from that
+/// state, which is what keeps the AI an assistant rather than the author.
+enum IeltsEssayStatus {
+  DRAFT
+  ANALYZING
+  NEEDS_REVIEW
+  READY
+  PUBLISHED
+}
+
+/// The four things a student can learn from a model essay. Deliberately closed:
+/// the legend, the highlight colours and the learning panel all key off it, so
+/// a fifth category is a schema change and a design decision, not a free-text
+/// value someone can invent in an admin form.
+enum IeltsEssayAnnotationCategory {
+  GRAMMAR
+  VOCABULARY
+  COHESION
+  COLLOCATION
+}
+
+/// Who put an annotation there. Kept because an admin needs to see at a glance
+/// what the model claimed versus what a human added by hand.
+enum IeltsAnnotationSource {
+  AI
+  ADMIN
+}
+
+model IeltsEssay {
+  id        String @id @default(cuid())
+  title     String
+  /// The Task 2 prompt the essay answers.
+  question  String @db.Text
+  /// The essay exactly as the admin supplied it. Never rewritten — annotations
+  /// are a layer of offsets over this string, so any edit invalidates them.
+  essayText String @db.Text
+
+  /// Always TASK_2. Stored rather than assumed so the constraint is visible in
+  /// the data and a future Task 1 library cannot quietly land in this table.
+  taskType String @default("TASK_2")
+
+  /// 8.0, 8.5 or 9.0 only. Enforced by a CHECK constraint in the migration as
+  /// well as in Zod — a band floor that lives only in a form is not a rule.
+  band Float
+
+  topic    String
+  subtopic String?
+  tags     String[] @default([])
+
+  status IeltsEssayStatus @default(DRAFT)
+
+  /// SHA-256 of `essayText` when the annotations were produced.
+  ///
+  /// Offsets point into an exact string. If an admin edits a single character
+  /// every annotation after that point silently shifts, and a highlight lands
+  /// on the wrong words — which teaches the student something false. Comparing
+  /// this against the current text is how the UI knows to demand a re-analysis
+  /// instead of rendering drifted highlights.
+  analyzedTextHash String?
+  /// Why the last analysis failed, for the admin. Never shown to students.
+  analysisError    String?
+
+  wordCount   Int       @default(0)
+  publishedAt DateTime?
+
+  createdById String?
+  createdBy   User?   @relation("IeltsEssayAuthor", fields: [createdById], references: [id], onDelete: SetNull)
+
+  annotations IeltsEssayAnnotation[]
+  ideas       IeltsEssayIdea[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, band])
+  @@index([topic])
+  @@index([publishedAt])
+}
+
+/// One highlighted span. Offsets are character indices into
+/// `IeltsEssay.essayText`, half-open [startOffset, endOffset), matching the
+/// convention IeltsWritingAnnotation already uses for reviewer marks.
+///
+/// `quote` duplicates the span deliberately: it is the integrity check. If it
+/// stops matching the text at those offsets, the annotation is stale and must
+/// not be rendered.
+model IeltsEssayAnnotation {
+  id      String @id @default(cuid())
+  essayId String
+
+  category IeltsEssayAnnotationCategory
+  /// Free text within a category — "relative_clause", "concessive_clause",
+  /// "topic_specific", "contrast". Not an enum because the useful taxonomy is
+  /// still being learned and an admin may type a better label than we guessed.
+  subtype  String
+
+  quote       String @db.Text
+  startOffset Int
+  endOffset   Int
+
+  explanation String  @db.Text
+  /// Why an IELTS candidate should care — the teaching, as opposed to the
+  /// description.
+  ieltsValue  String? @db.Text
+  /// e.g. "play a crucial role in + noun/gerund". Only where a pattern is
+  /// genuinely reusable.
+  pattern     String?
+
+  /// The model's own confidence. Null for anything a human wrote.
+  confidence Float?
+  source     IeltsAnnotationSource @default(AI)
+  /// An admin has looked at this and kept it. Publishing requires every
+  /// annotation to be reviewed.
+  reviewed   Boolean               @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  essay IeltsEssay @relation(fields: [essayId], references: [id], onDelete: Cascade)
+
+  @@index([essayId, category])
+  @@index([essayId, startOffset])
+}
+
+/// A reusable argument lifted out of the essay.
+///
+/// Separate from annotations because an idea is not a span of text — it is a
+/// claim the essay makes, which a student should be able to reuse on a
+/// different question. Offsets are optional and only point at where the idea
+/// surfaces, for the "jump to it in the essay" affordance.
+model IeltsEssayIdea {
+  id      String @id @default(cuid())
+  essayId String
+
+  claim       String  @db.Text
+  explanation String  @db.Text
+  consequence String? @db.Text
+  /// Only when the essay actually contains one. The model is told not to
+  /// invent examples.
+  example     String? @db.Text
+
+  startOffset Int?
+  endOffset   Int?
+
+  order    Int                   @default(0)
+  source   IeltsAnnotationSource @default(AI)
+  reviewed Boolean               @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  essay IeltsEssay @relation(fields: [essayId], references: [id], onDelete: Cascade)
+
+  @@index([essayId])
 }

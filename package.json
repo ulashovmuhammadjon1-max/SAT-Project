@@ -15,7 +15,9 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:studio": "prisma studio",
     "check:scoring": "tsx scripts/check-scoring.ts",
-    "scores:recompute": "tsx scripts/recompute-scores.ts"
+    "scores:recompute": "tsx scripts/recompute-scores.ts",
+    "check:essay-offsets": "tsx scripts/check-essay-offsets.ts",
+    "check:essay-segments": "tsx scripts/check-essay-segments.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
