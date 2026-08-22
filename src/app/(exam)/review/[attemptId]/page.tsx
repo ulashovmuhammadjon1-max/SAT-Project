@@ -2,7 +2,6 @@ import { notFound, redirect } from "next/navigation";
 
 import { ReviewShell } from "@/components/exam/review-shell";
 import { prisma } from "@/lib/prisma";
-import { questionImageSrc } from "@/lib/question-image";
 import { requireUser } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
@@ -24,16 +23,69 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
   if (!attempt || attempt.userId !== user.id) notFound();
   if (attempt.status !== "SUBMITTED") redirect(`/exam/${attempt.id}`);
 
+  // Named columns rather than whole rows.
+  //
+  // A full test review is 54+ questions, and `include` on each of question,
+  // explanation, passage, domain and skill pulled every column of all five —
+  // including `Question.imageUrl`, which holds base64 figures up to 898 KB. The
+  // page then threw that straight away, because the page replaces it
+  // with a short route URL. Fetching hundreds of kilobytes of base64 in order to
+  // discard it costs Neon egress on the way out and Vercel Active CPU to
+  // serialize, twice over, on every single review.
+  //
+  // Every explanation field IS used by this page, so those stay. `tableData`,
+  // the audit columns and the foreign keys are not, so they go.
   const responses = await prisma.response.findMany({
     where: { attemptId: attempt.id },
-    include: {
+    select: {
+      id: true,
+      questionId: true,
+      moduleAttemptId: true,
+      selectedChoiceId: true,
+      freeResponseAnswer: true,
+      isCorrect: true,
+      flagged: true,
+      changedAnswerCount: true,
+      timeSpentSeconds: true,
+      order: true,
       question: {
-        include: { choices: { orderBy: { order: "asc" } }, domain: true, skill: true, explanation: true, passage: true },
+        select: {
+          id: true,
+          stem: true,
+          type: true,
+          difficulty: true,
+          order: true,
+          correctAnswerFR: true,
+          // Presence only — the bytes are served by /api/question-image.
+          imageUrl: false,
+          choices: {
+            select: { id: true, label: true, content: true, isCorrect: true },
+            orderBy: { order: "asc" },
+          },
+          domain: { select: { name: true } },
+          skill: { select: { name: true } },
+          passage: { select: { title: true, content: true } },
+          explanation: {
+            select: {
+              content: true, whyCorrect: true, whyWrongJson: true,
+              commonMistakes: true, tips: true, relatedConcepts: true,
+            },
+          },
+        },
       },
-      selectedChoice: true,
     },
     orderBy: { order: "asc" },
   });
+
+  // Which of these questions carry a figure, as ids only.
+  const withImage = new Set(
+    (
+      await prisma.question.findMany({
+        where: { id: { in: responses.map((r) => r.questionId) }, imageUrl: { not: null } },
+        select: { id: true },
+      })
+    ).map((q) => q.id)
+  );
 
   const subjectByModuleAttemptId = Object.fromEntries(
     attempt.moduleAttempts.map((ma) => [ma.id, ma.module.subject])
@@ -77,7 +129,7 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     subject: subjectByModuleAttemptId[r.moduleAttemptId] ?? "READING_WRITING",
     stem: r.question.stem,
     passage: r.question.passage ? { title: r.question.passage.title, content: r.question.passage.content } : null,
-    imageUrl: questionImageSrc(r.question.id, r.question.imageUrl),
+    imageUrl: withImage.has(r.question.id) ? `/api/question-image/${r.question.id}` : null,
     type: r.question.type,
     difficulty: r.question.difficulty,
     domain: r.question.domain.name,
