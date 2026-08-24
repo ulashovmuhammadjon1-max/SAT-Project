@@ -1,20 +1,15 @@
 import { Prisma } from "@prisma/client";
 
 /**
- * Accounts created before this are grandfathered: they count as students and
- * they can sign in, whether or not they ever confirmed an address.
+ * Accounts created before this are grandfathered: they can sign in whether or
+ * not they ever confirmed an address (see the gate in `lib/session.ts`).
  *
- * One constant, used by two things that must agree: the access gate in
- * `lib/session.ts` and the analytics predicate below. If they ever disagreed,
- * the admin panel would report a population different from the one that can
- * actually sign in, which is the worst kind of wrong — plausible and quiet.
- *
- * Moved forward from the date confirmation first shipped (2026-08-09) to the
- * moment this change did. The earlier cutoff would have dropped every account
- * created in the week between, including real students who had simply not got
- * round to clicking the link, and losing existing students to a reporting
- * change is a worse outcome than counting a few unconfirmed ones for one more
- * cycle. Everyone from here on has to confirm.
+ * Used to also gate the analytics student count (`countedStudentWhere`
+ * below), until that was relaxed to count every `STUDENT` role regardless of
+ * verification. It still defines `awaitingVerificationWhere`, the "stuck in
+ * verification" population shown as its own callout on the statistics page —
+ * accounts before this date were never asked to verify, so they were never
+ * "awaiting" it.
  *
  * Deliberately a fixed timestamp rather than something computed at runtime: a
  * moving cutoff would grandfather every new signup forever, which is exactly
@@ -25,23 +20,24 @@ export const VERIFICATION_REQUIRED_FROM = new Date("2026-08-17T09:10:00.000Z");
 /**
  * Who counts as a student.
  *
- * A student is counted when they have confirmed their address, **or** when
- * their account predates the day confirmation was introduced. The second half
- * is what keeps the existing roll intact: those people were never asked to
- * verify, so excluding them would silently delete real students from every
- * chart on the day this shipped.
+ * Every account with role `STUDENT` counts, confirmed or not. This used to
+ * exclude unconfirmed signups from after `VERIFICATION_REQUIRED_FROM`, on the
+ * reasoning that an unconfirmed address is "an address someone typed, not a
+ * student" — reversed on the user's explicit instruction: unconfirmed
+ * students should still appear in the students section. `awaitingVerificationWhere`
+ * below still identifies that same population for the separate "stuck in
+ * verification" callout on the statistics page — that diagnostic is still
+ * useful, it just no longer subtracts from the headline count.
  *
- * Everyone signing up from now on has to confirm before they appear. An
- * unconfirmed address is not a student — it is an address someone typed, and
- * counting it inflates every funnel, every country split and every average on
- * the page.
+ * This intentionally no longer agrees with the login gate in `lib/session.ts`,
+ * which still blocks sign-in until an address is confirmed (grandfathered
+ * accounts excepted) — the count reported here can include people who cannot
+ * yet sign in. That was flagged as a risk when the two were first tied
+ * together; it is accepted now because the counting change was explicit and
+ * the login gate was not part of it.
  */
 export const countedStudentWhere = {
   role: "STUDENT",
-  OR: [
-    { emailVerified: { not: null } },
-    { createdAt: { lt: VERIFICATION_REQUIRED_FROM } },
-  ],
 } satisfies Prisma.UserWhereInput;
 
 /**
@@ -66,5 +62,5 @@ export const awaitingVerificationWhere = {
  */
 export function countedStudentSql(alias: string | null = null): Prisma.Sql {
   const p = alias ? `${alias}.` : "";
-  return Prisma.sql`${Prisma.raw(`${p}role`)} = 'STUDENT' AND (${Prisma.raw(`${p}"emailVerified"`)} IS NOT NULL OR ${Prisma.raw(`${p}"createdAt"`)} < ${VERIFICATION_REQUIRED_FROM.toISOString()}::timestamptz)`;
+  return Prisma.sql`${Prisma.raw(`${p}role`)} = 'STUDENT'`;
 }
