@@ -68,7 +68,7 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   meetingProvider: "manual",
   staticMeetingUrl: "",
   eventCost: 0,
-  contactEmail: "",
+  contactEmail: "scholarlyhub.space@gmail.com",
   operatorName: "Scholarly",
 };
 

@@ -1213,7 +1213,7 @@ function Footer() {
               Privacy Policy
             </Link>
             <a
-              href="mailto:satforge.org@gmail.com"
+              href="mailto:scholarlyhub.space@gmail.com"
               className="text-muted-foreground hover:text-foreground"
             >
               Contact
