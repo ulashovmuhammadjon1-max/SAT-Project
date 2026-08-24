@@ -1,8 +1,5 @@
-import Anthropic from "@anthropic-ai/sdk";
 import { createHash } from "crypto";
 import { z } from "zod";
-
-import { zodToJsonSchema } from "@/lib/ai/providers/claude-provider";
 
 /**
  * Deconstructing a Band 8+ Task 2 essay into teaching material.
@@ -12,12 +9,57 @@ import { zodToJsonSchema } from "@/lib/ai/providers/claude-provider";
  * it. That is a product rule, and it is also the only honest way to ship
  * language teaching — a confident wrong annotation teaches the error.
  *
- * Same provider, model and structured-output shape as the PDF ingestion
- * pipeline (`lib/ai/providers/claude-provider.ts`); this is a second caller of
- * that infrastructure, not a second copy of it.
+ * Runs on the Gemini free tier via a plain `fetch` against the Generative
+ * Language REST API — deliberately its own caller, not a shared helper with
+ * `lib/ai/providers/claude-provider.ts` (the PDF ingestion pipeline stays on
+ * Claude; this is the one part of the product asked to run on Gemini instead,
+ * nothing else). The quote-verification pipeline below (`resolveAnalysis`,
+ * `locateQuote`) is what actually keeps a wrong annotation from reaching a
+ * student, not the choice of model — it silently drops any quote that isn't
+ * really in the essay, so a weaker free model produces a shorter library, not
+ * a broken one.
  */
 
-const MODEL = "claude-opus-5";
+const MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+
+/** Gemini's structured-output schema (an OpenAPI subset, not JSON Schema) for `analysisSchema` below. */
+const GEMINI_RESPONSE_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    annotations: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          category: { type: "STRING", enum: ["GRAMMAR", "VOCABULARY", "COHESION", "COLLOCATION"] },
+          subtype: { type: "STRING" },
+          quote: { type: "STRING" },
+          occurrence: { type: "NUMBER" },
+          explanation: { type: "STRING" },
+          ieltsValue: { type: "STRING" },
+          pattern: { type: "STRING", nullable: true },
+          confidence: { type: "NUMBER" },
+        },
+        required: ["category", "subtype", "quote", "occurrence", "explanation", "ieltsValue", "confidence"],
+      },
+    },
+    ideas: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          claim: { type: "STRING" },
+          explanation: { type: "STRING" },
+          consequence: { type: "STRING", nullable: true },
+          example: { type: "STRING", nullable: true },
+          anchorQuote: { type: "STRING", nullable: true },
+        },
+        required: ["claim", "explanation"],
+      },
+    },
+  },
+  required: ["annotations", "ideas"],
+} as const;
 
 export const ANNOTATION_CATEGORIES = ["GRAMMAR", "VOCABULARY", "COHESION", "COLLOCATION"] as const;
 export type AnnotationCategory = (typeof ANNOTATION_CATEGORIES)[number];
@@ -215,18 +257,17 @@ export async function analyzeEssay(params: {
   topic: string;
   band: number;
 }): Promise<EssayAnalysis> {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     // No heuristic fallback on purpose. A regex "analyser" would produce
     // exactly the false positives this feature exists to avoid, and a library
     // of confidently-wrong grammar notes is worse than an empty one. The admin
     // can still annotate by hand.
     throw new EssayAnalysisError(
-      "AI analysis is not configured — ANTHROPIC_API_KEY is not set. Annotations can still be added by hand."
+      "AI analysis is not configured — GEMINI_API_KEY is not set. Annotations can still be added by hand."
     );
   }
 
-  const client = new Anthropic({ apiKey });
   const userContent = [
     `TOPIC: ${params.topic}`,
     `BAND: ${params.band}`,
@@ -238,48 +279,57 @@ export async function analyzeEssay(params: {
     params.essayText,
   ].join("\n");
 
-  let message;
+  let json: {
+    candidates?: {
+      content?: { parts?: { text?: string }[] };
+      finishReason?: string;
+    }[];
+  };
   try {
-    const stream = client.messages.stream({
-      model: MODEL,
-      max_tokens: 32000,
-      thinking: { type: "adaptive" },
-      output_config: {
-        effort: "high",
-        format: {
-          type: "json_schema",
-          schema: { name: "ielts_essay_analysis", schema: zodToJsonSchema(analysisSchema) },
-        },
-      },
-      system: SYSTEM_PROMPT,
-      messages: [{ role: "user", content: userContent }],
-    });
-    message = await stream.finalMessage();
-  } catch (err) {
-    if (err instanceof Anthropic.RateLimitError) {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents: [{ role: "user", parts: [{ text: userContent }] }],
+          generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: GEMINI_RESPONSE_SCHEMA,
+          },
+        }),
+      }
+    );
+
+    if (res.status === 429) {
       throw new EssayAnalysisError("The AI service is rate limited right now. Try again shortly.");
     }
-    if (err instanceof Anthropic.AuthenticationError) {
-      throw new EssayAnalysisError("The AI API key was rejected. Check ANTHROPIC_API_KEY.");
+    if (res.status === 401 || res.status === 403) {
+      throw new EssayAnalysisError("The AI API key was rejected. Check GEMINI_API_KEY.");
     }
-    if (err instanceof Anthropic.APIError) {
-      throw new EssayAnalysisError(`The AI service returned an error (${err.status}).`);
+    if (!res.ok) {
+      throw new EssayAnalysisError(`The AI service returned an error (${res.status}).`);
     }
+    json = await res.json();
+  } catch (err) {
+    if (err instanceof EssayAnalysisError) throw err;
     throw new EssayAnalysisError("Could not reach the AI service. Try again.");
   }
 
-  if (message.stop_reason === "refusal") {
+  const candidate = json.candidates?.[0];
+  if (candidate?.finishReason === "SAFETY" || candidate?.finishReason === "RECITATION") {
     throw new EssayAnalysisError("The model declined to analyse this essay.");
   }
 
-  const textBlock = message.content.find((b) => b.type === "text");
-  if (!textBlock || textBlock.type !== "text") {
+  const text = candidate?.content?.parts?.[0]?.text;
+  if (!text) {
     throw new EssayAnalysisError("The AI returned no analysis. Try again.");
   }
 
   let raw: z.infer<typeof analysisSchema>;
   try {
-    raw = analysisSchema.parse(JSON.parse(textBlock.text));
+    raw = analysisSchema.parse(JSON.parse(text));
   } catch {
     throw new EssayAnalysisError("The AI returned malformed analysis. Try re-analysing.");
   }
