@@ -113,7 +113,7 @@ export function layout(bodyHtml: string): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
 <table role="presentation" width="100%" style="max-width:520px;background:#111a30;border:1px solid #1e2b4a;border-radius:16px;padding:32px;">
 <tr><td>
-<p style="margin:0 0 24px;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">SAT<span style="color:#608ffa;">Forge</span></p>
+<p style="margin:0 0 24px;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Scholarly</p>
 ${bodyHtml}
 <p style="margin:32px 0 0;padding-top:20px;border-top:1px solid #1e2b4a;font-size:12px;color:#8a97b1;">
 Free SAT preparation. Real strategy. No paywall on the essentials.
