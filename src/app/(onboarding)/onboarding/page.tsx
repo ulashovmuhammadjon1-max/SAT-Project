@@ -6,7 +6,7 @@ import { auth } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Get started",
-  description: "Build your personalised Digital SAT study plan in about a minute.",
+  description: "Build your personalised study plan — SAT, IELTS, or both — in about a minute.",
 };
 
 export default async function OnboardingPage({

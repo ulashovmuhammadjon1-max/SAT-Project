@@ -10,7 +10,9 @@ import {
   Brain,
   CheckCircle2,
   ClipboardList,
+  FlaskConical,
   GraduationCap,
+  Languages,
   Layers,
   LineChart,
   MonitorPlay,
@@ -188,7 +190,7 @@ function Hero() {
                 <span className="h-1.5 w-1.5 rounded-full bg-success" />
               </span>
               <span className="text-left">
-                Free SAT prep
+                Free academic community
                 <span className="mx-1.5 text-border">•</span>
                 <span className="whitespace-nowrap">Built for ambitious students</span>
               </span>
@@ -197,18 +199,18 @@ function Hero() {
 
           <Reveal delay={0.08}>
             <h1 className="mt-6 font-display text-[2.7rem] font-bold leading-[0.98] tracking-[-0.02em] text-balance sm:text-[3.5rem] lg:text-[3.5rem] xl:text-[4rem]">
-              Master the SAT.
+              Learn like a scholar.
               <br />
               <span className="bg-gradient-to-r from-primary via-[hsl(250_84%_60%)] to-[hsl(266_84%_60%)] bg-clip-text text-transparent">
-                Build skills beyond it.
+                SAT, IELTS &amp; beyond.
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground text-balance lg:mx-0 lg:text-lg">
-              Practice with adaptive SAT tests, identify exactly what to improve, and get a personalized study plan
-              from a 1580 SAT scorer — completely free.
+              Adaptive SAT practice, full IELTS preparation, financial literacy, and mentorship from real
+              scorers — one free academic community, with research programmes on the way.
             </p>
           </Reveal>
 
@@ -230,7 +232,7 @@ function Hero() {
                 className="h-12 rounded-full border-border/80 px-7 text-[15px] backdrop-blur"
                 asChild
               >
-                <Link href={PLAN_CTA_HREF}>Get My Free SAT Plan</Link>
+                <Link href={PLAN_CTA_HREF}>Get My Free Study Plan</Link>
               </Button>
             </div>
           </Reveal>
@@ -427,10 +429,10 @@ function OpensDoors() {
     <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <Reveal direction="up">
         <div className="rounded-2xl border border-border/60 bg-card/60 px-6 py-7 backdrop-blur sm:px-8">
-          <p className="text-center font-display text-lg font-semibold">The SAT opens doors.</p>
+          <p className="text-center font-display text-lg font-semibold">Strong scores open doors.</p>
           <p className="mx-auto mt-1 max-w-xl text-center text-sm text-muted-foreground">
-            A strong score is one of the few things a student anywhere in the world can control —
-            and it is read by admissions offices everywhere.
+            An SAT score, an IELTS band — these are among the few things a student anywhere in the
+            world can control, and they are read by admissions offices everywhere.
           </p>
           <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {UNIVERSITIES.map((u) => (
@@ -485,7 +487,7 @@ function MentorshipCard({ className }: { className?: string }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 2. More than SAT prep                                                       */
+/* 2. More than test prep                                                      */
 /* -------------------------------------------------------------------------- */
 
 /**
@@ -504,10 +506,22 @@ const PILLARS = [
     label: "Every week",
   },
   {
+    icon: Languages,
+    title: "IELTS Preparation",
+    body: "Full Writing and Speaking practice with band-scored feedback, whole-mark criteria, cue cards, and a leaderboard — the same account, the same community.",
+    label: "Live now",
+  },
+  {
     icon: Wallet,
     title: "Financial Literacy",
     body: "Learn how money, inflation, interest rates, banking, investing, and the economy actually affect your everyday life.",
     label: "Monthly",
+  },
+  {
+    icon: FlaskConical,
+    title: "Student Research",
+    body: "Research programmes where students investigate real questions with guidance from mentors — and build the kind of work universities actually notice.",
+    label: "Coming soon",
   },
   {
     icon: GraduationCap,
@@ -522,10 +536,10 @@ function BeyondSat() {
     <section id="mentorship" className="scroll-mt-24 py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          label="More than SAT prep"
+          label="More than test prep"
           icon={Sparkles}
-          title="Build skills that go beyond the test."
-          body="Scholarly is building a free academic community where students can prepare for the SAT, learn about economics and financial literacy, analyze real practice tests, and learn directly from experienced mentors and professors."
+          title="Build skills that go beyond any exam."
+          body="Scholarly is a free academic community, not a single test. Prepare for the SAT and IELTS, learn economics and financial literacy, join research programmes and expert lectures, and learn directly from experienced mentors and professors."
         />
 
         <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2" delay={0.05}>
@@ -560,7 +574,7 @@ function BeyondSat() {
                 </span>
               </div>
 
-              <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">Your Own SAT Plan</h3>
+              <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">Your Own Study Plan</h3>
               <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
                 Get personalized guidance from a 1580 SAT scorer and build a study plan around your score, target,
                 timeline, and weaknesses.
@@ -599,7 +613,7 @@ function Ecosystem() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <p className="text-center text-[13px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-            Built for the official Digital SAT ecosystem
+            SAT practice built around the official Digital SAT ecosystem
           </p>
         </Reveal>
 
@@ -1020,6 +1034,10 @@ function Vocabulary() {
 
 const FAQS = [
   {
+    q: "Is Scholarly only for the SAT?",
+    a: "No. The SAT engine is the most built-out part, but the same free account includes full IELTS preparation — Writing and Speaking practice with band-scored feedback — plus financial literacy sessions and 1-on-1 mentorship. Research programmes and expert lectures are coming next. Pick SAT, IELTS, or both during setup.",
+  },
+  {
     q: "How close to Bluebook is the test interface really?",
     a: "Close enough that the muscle memory transfers. We match the two-panel layout, the annotation and cross-out tools, the Question Menu, the Check Your Work review page, the button placement and wording, and the actual colour values. It is a rebuild, not a skin — but it is our rebuild, not College Board software.",
   },
@@ -1151,8 +1169,8 @@ function Footer() {
               <span className="font-display text-[17px] font-semibold tracking-tight">Scholarly</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              An independent Digital SAT preparation platform: adaptive full-length tests, a Bluebook-accurate exam
-              interface, and analytics that tell you what to study next.
+              A free academic community: adaptive SAT practice, full IELTS preparation, financial
+              literacy, and mentorship — with research programmes and expert lectures on the way.
             </p>
           </div>
 
@@ -1177,6 +1195,11 @@ function Footer() {
               <li>
                 <a href="#vocabulary" className="transition-colors hover:text-foreground">
                   Vocabulary
+                </a>
+              </li>
+              <li>
+                <a href="#mentorship" className="transition-colors hover:text-foreground">
+                  Community
                 </a>
               </li>
             </ul>

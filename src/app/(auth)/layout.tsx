@@ -19,11 +19,11 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           <div />
           <div className="max-w-md space-y-4">
             <p className="font-display text-3xl font-semibold leading-tight text-balance">
-              Practice the exact way you&apos;ll test.
+              One community. Every ambition.
             </p>
             <p className="text-navy-200">
-              Full-length adaptive Digital SAT practice tests, a Bluebook-accurate exam interface, and
-              analytics that show exactly what to study next.
+              Adaptive SAT practice, full IELTS preparation, financial literacy, and mentorship —
+              with analytics that show exactly what to study next.
             </p>
           </div>
           <p className="text-sm text-navy-300">© {new Date().getFullYear()} Scholarly</p>

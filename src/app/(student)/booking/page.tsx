@@ -11,7 +11,7 @@ import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { getBookingContext, getOpenSlots } from "@/server/actions/student/bookings";
 
-export const metadata = { title: "Get Your Free SAT Plan" };
+export const metadata = { title: "Get Your Free Study Plan" };
 export const dynamic = "force-dynamic";
 
 const COVERED = [
@@ -56,7 +56,7 @@ export default async function BookingPage() {
   if (existing) {
     return (
       <div className="mx-auto max-w-2xl space-y-6">
-        <h1 className="font-display text-2xl font-semibold tracking-tight">Get Your Free SAT Plan</h1>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Get Your Free Study Plan</h1>
         <Card>
           <CardContent className="space-y-3 p-6">
             <p className="font-medium">You already have a session booked.</p>
@@ -76,7 +76,7 @@ export default async function BookingPage() {
     <div className="mx-auto max-w-3xl space-y-8">
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-          Get Your Free SAT Plan
+          Get Your Free Study Plan
         </h1>
         <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
           Meet 1-on-1 with a 1580 SAT scorer and build a study plan around your score, target,

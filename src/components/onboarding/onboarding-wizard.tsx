@@ -30,7 +30,7 @@ import { registerWithOnboarding } from "@/server/actions/auth/onboarding";
 import { EMPTY_PROFILE, type OnboardingProfile } from "@/lib/validations/onboarding";
 import { cn } from "@/lib/utils";
 
-const STORAGE_KEY = "summit-onboarding";
+const STORAGE_KEY = "scholarly-onboarding";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function OnboardingWizard({ referralCode = null }: { referralCode?: string | null }) {

@@ -80,7 +80,7 @@ export default async function MyBookingsPage({
               Book a free 1-on-1 with a 1580 scorer to build your study plan.
             </p>
             <Button asChild>
-              <Link href="/booking">Get My Free SAT Plan</Link>
+              <Link href="/booking">Get My Free Study Plan</Link>
             </Button>
           </CardContent>
         </Card>

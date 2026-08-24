@@ -8,7 +8,7 @@ export default function LoginPage() {
     <div className="space-y-6">
       <div className="space-y-1.5">
         <h1 className="font-display text-2xl font-semibold tracking-tight">Welcome back</h1>
-        <p className="text-sm text-muted-foreground">Sign in to continue your SAT prep.</p>
+        <p className="text-sm text-muted-foreground">Sign in to continue where you left off.</p>
       </div>
       <Suspense>
         <LoginForm />

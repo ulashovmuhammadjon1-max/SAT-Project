@@ -36,7 +36,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
   const shareText =
     `I scored ${data.total} on ${data.testTitle} at Scholarly` +
     (data.improvement && data.improvement > 0 ? ` — up ${data.improvement} points.` : ".") +
-    ` Free SAT practice: scholarly.space`;
+    ` Free SAT & IELTS prep: scholarly.space`;
 
   async function share() {
     // The Web Share API is the good path on a phone, which is where this gets
@@ -105,7 +105,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
         )}
 
         <p className="mt-5 text-center text-[11px] text-white/50">
-          Free, non-profit SAT practice · scholarly.space
+          Free, non-profit academic prep · scholarly.space
         </p>
       </div>
 

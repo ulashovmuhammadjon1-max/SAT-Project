@@ -47,7 +47,7 @@ export function ReferralLink({
       title: "Scholarly",
       text:
         shareText ??
-        `Free SAT prep with a personalized plan — join me on Scholarly and we both get ${reward ?? 0} coins.`,
+        `Free SAT & IELTS prep with a personalized plan — join me on Scholarly and we both get ${reward ?? 0} coins.`,
       url: link,
     };
     try {

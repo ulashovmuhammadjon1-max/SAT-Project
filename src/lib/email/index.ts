@@ -116,7 +116,7 @@ export function layout(bodyHtml: string): string {
 <p style="margin:0 0 24px;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Scholarly</p>
 ${bodyHtml}
 <p style="margin:32px 0 0;padding-top:20px;border-top:1px solid #1e2b4a;font-size:12px;color:#8a97b1;">
-Free SAT preparation. Real strategy. No paywall on the essentials.
+Free academic preparation. Real strategy. No paywall on the essentials.
 </p>
 </td></tr></table></td></tr></table></body></html>`;
 }
