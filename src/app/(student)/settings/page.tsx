@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { StudyPlanForm } from "@/components/student/study-plan-form";
@@ -9,6 +11,8 @@ import { asSection, asWeakArea, EMPTY_PROFILE, type OnboardingProfile } from "@/
 
 export const metadata = { title: "Settings" };
 export const dynamic = "force-dynamic";
+
+const SUPPORT_EMAIL = "ulashovmuhammadjo1@gmail.com";
 
 export default async function StudentSettingsPage() {
   const user = await requireUser();
@@ -85,6 +89,25 @@ export default async function StudentSettingsPage() {
         </CardHeader>
         <CardContent>
           <StudyPlanForm initial={initial} />
+        </CardContent>
+      </Card>
+
+      <Card className="max-w-lg">
+        <CardHeader>
+          <CardTitle className="text-base">Contact support</CardTitle>
+          <CardDescription>
+            Stuck on something, found a bug, or have feedback? Email us directly and we&apos;ll get
+            back to you.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <a
+            href={`mailto:${SUPPORT_EMAIL}`}
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
+          >
+            <Mail className="h-4 w-4" />
+            {SUPPORT_EMAIL}
+          </a>
         </CardContent>
       </Card>
     </div>
