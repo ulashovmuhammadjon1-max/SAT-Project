@@ -24,7 +24,7 @@ export const dynamic = "force-dynamic";
  */
 export default async function IeltsInvitePage() {
   const user = await requireUser();
-  const host = headers().get("host") ?? "satforge.org";
+  const host = headers().get("host") ?? "scholarly.space";
   const proto = headers().get("x-forwarded-proto") ?? "https";
 
   const [summary, allowance] = await Promise.all([
@@ -125,7 +125,7 @@ export default async function IeltsInvitePage() {
             link={summary.link}
             shareText={
               "Free IELTS Writing and Speaking practice, marked by a real person — " +
-              "join me on SATForge."
+              "join me on Scholarly."
             }
           />
           <p className="text-xs text-muted-foreground">

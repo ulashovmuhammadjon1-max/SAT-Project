@@ -3,7 +3,7 @@ import { getSettings } from "@/lib/settings";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "What SATForge collects, why, and how to get it deleted.",
+  description: "What Scholarly collects, why, and how to get it deleted.",
 };
 /**
  * Cached for an hour rather than rendered per visitor.
@@ -31,7 +31,7 @@ export default async function PrivacyPage() {
     <LegalLayout title="Privacy Policy" updated="9 August 2026">
       <Section title="The short version">
         <p>
-          SATForge is free and we do not sell anything, so we have no reason to sell your data — and
+          Scholarly is free and we do not sell anything, so we have no reason to sell your data — and
           we don&apos;t. We collect what the product needs to build your study plan and nothing we
           have no use for. You can ask us to delete your account and everything attached to it at
           any time, and we will.
@@ -40,7 +40,7 @@ export default async function PrivacyPage() {
 
       <Section title="Who we are">
         <p>
-          SATForge ({settings.operatorName}) operates satforge.org. For anything in this policy,
+          Scholarly ({settings.operatorName}) operates scholarly.space. For anything in this policy,
           including data deletion requests, contact{" "}
           {contact ? (
             <a href={`mailto:${contact}`} className="text-primary underline-offset-4 hover:underline">
@@ -83,7 +83,7 @@ export default async function PrivacyPage() {
         </ul>
         <p>
           We do not use advertising trackers, we do not build a profile of you for anyone else, and
-          we do not ask for your address, phone number or payment details — SATForge is free, so
+          we do not ask for your address, phone number or payment details — Scholarly is free, so
           there is nothing to pay.
         </p>
       </Section>
@@ -98,7 +98,7 @@ export default async function PrivacyPage() {
 
       <Section title="If you are under 18">
         <p>
-          Most SAT students are. SATForge is intended for students aged 13 and over. If you are
+          Most SAT students are. Scholarly is intended for students aged 13 and over. If you are
           under the age where your country lets you agree to this on your own — 13 in the US, 16 in
           much of Europe — please ask a parent or guardian to read this with you before signing up.
         </p>
@@ -164,7 +164,7 @@ export default async function PrivacyPage() {
           cannot be tampered with from the client.
         </p>
         <p>
-          No system is perfect. If you find a security problem in SATForge, please tell us rather
+          No system is perfect. If you find a security problem in Scholarly, please tell us rather
           than anyone else, and we will fix it and credit you if you want us to.
         </p>
       </Section>

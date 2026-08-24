@@ -5,7 +5,7 @@ import type { ComponentType, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * The pieces every SATForge testing surface is built from — practice tests,
+ * The pieces every Scholarly testing surface is built from — practice tests,
  * Question Bank practice, and post-test review.
  *
  * These live outside `components/exam` on purpose: the exam shell used to own

@@ -44,10 +44,10 @@ export function ReferralLink({
 
   async function share() {
     const data = {
-      title: "SATForge",
+      title: "Scholarly",
       text:
         shareText ??
-        `Free SAT prep with a personalized plan — join me on SATForge and we both get ${reward ?? 0} coins.`,
+        `Free SAT prep with a personalized plan — join me on Scholarly and we both get ${reward ?? 0} coins.`,
       url: link,
     };
     try {

@@ -33,7 +33,7 @@ const hash = (token: string) => createHash("sha256").update(token).digest("hex")
 
 function origin(): string {
   const h = headers();
-  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "satforge.org";
+  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "scholarly.space";
   const proto = h.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   return `${proto}://${host}`;
 }
@@ -73,20 +73,20 @@ export async function sendVerificationEmail(input: {
 
   await sendEmail({
     to: email,
-    subject: "Confirm your email for SATForge",
+    subject: "Confirm your email for Scholarly",
     text:
       `Hi ${firstName},\n\n` +
-      `Confirm this address to finish setting up your SATForge account. ` +
+      `Confirm this address to finish setting up your Scholarly account. ` +
       `The link works once and expires in 24 hours.\n\n${link}\n\n` +
-      `If you didn't sign up for SATForge, you can ignore this email.`,
+      `If you didn't sign up for Scholarly, you can ignore this email.`,
     html: layout(
       para(`Hi ${firstName},`) +
         para(
-          "Confirm this address to finish setting up your SATForge account. The link works once and expires in 24 hours.",
+          "Confirm this address to finish setting up your Scholarly account. The link works once and expires in 24 hours.",
         ) +
         button(link, "Confirm my email") +
         para(
-          `<span style="color:#8a97b1;font-size:13px;">If you didn't sign up for SATForge, ignore this email — no account will be used.</span>`,
+          `<span style="color:#8a97b1;font-size:13px;">If you didn't sign up for Scholarly, ignore this email — no account will be used.</span>`,
         ),
     ),
   });

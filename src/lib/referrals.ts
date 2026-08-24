@@ -167,7 +167,7 @@ export async function qualifyReferral(referralId: string): Promise<{ paid: boole
       userId: referral.referrerId,
       amount: settings.referralRewardCoins,
       type: "REFERRAL_REWARD",
-      description: "Friend joined SATForge",
+      description: "Friend joined Scholarly",
       referralId: referral.id,
       idempotencyKey: `referral:${referral.id}`,
     });

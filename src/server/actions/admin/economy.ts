@@ -99,7 +99,7 @@ const settingsSchema = z.object({
     .max(200)
     .refine((v) => v === "" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v), "Enter a valid email address")
     .default(""),
-  operatorName: z.string().trim().min(1).max(120).default("SATForge"),
+  operatorName: z.string().trim().min(1).max(120).default("Scholarly"),
   bookingRefundHours: z.coerce.number().int().min(0).max(720).nullable(),
   instagramHandle: z.string().trim().min(1).max(64),
   telegramHandle: z.string().trim().min(1).max(64),

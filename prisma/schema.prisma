@@ -129,7 +129,7 @@ model User {
   termsAcceptedAt DateTime?
   termsVersion    String?
 
-  // --- SATForge Coins ---------------------------------------------------
+  // --- Scholarly Coins ---------------------------------------------------
   // Cached balance for fast reads. The CoinTransaction ledger is the record
   // of truth; this column is only ever written inside the same transaction
   // that writes a ledger row (see lib/coins.ts).
@@ -592,7 +592,7 @@ enum BookingStatus {
 
 /// What kind of session a slot/booking is.
 ///
-/// SATForge will run financial-literacy classes, expert lectures and weekly
+/// Scholarly will run financial-literacy classes, expert lectures and weekly
 /// test-analysis sessions alongside 1-on-1 guidance, so the booking system is
 /// typed from the start rather than hard-coded to SAT tutoring.
 enum SessionType {
@@ -1028,7 +1028,7 @@ model ChatMessage {
 }
 
 // ---------------------------------------------------------------------------
-// SATForge Coins — engagement currency
+// Scholarly Coins — engagement currency
 //
 // Coins are internal, not money, and must never be mutated from the client.
 // `User.coinBalance` is the fast read used by the UI; `CoinTransaction` is the

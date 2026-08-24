@@ -115,7 +115,7 @@ export function DashboardCoinsCard({
   return (
     <Card>
       <CardContent className="p-5">
-        <p className="text-sm font-medium text-muted-foreground">SATForge Coins</p>
+        <p className="text-sm font-medium text-muted-foreground">Scholarly Coins</p>
         <div className="mt-1">
           <CoinAmount value={balance} size="lg" />
         </div>

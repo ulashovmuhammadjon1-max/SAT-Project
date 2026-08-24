@@ -150,5 +150,5 @@ VALUES
   ('chan_math',     'math',     'Math help',          'Stuck on a question? Post a screenshot and ask.',        2, false),
   ('chan_rw',       'reading-writing', 'Reading & Writing help', 'Grammar rules, passages, vocabulary.',        3, false),
   ('chan_resources','resources','Resources',          'Share notes, PDFs and anything that helped you.',        4, false),
-  ('chan_announce', 'announcements', 'Announcements', 'Updates from the SATForge team.',                        0, true)
+  ('chan_announce', 'announcements', 'Announcements', 'Updates from the Scholarly team.',                        0, true)
 ON CONFLICT ("slug") DO NOTHING;

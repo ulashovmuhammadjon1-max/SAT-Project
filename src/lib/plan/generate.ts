@@ -380,7 +380,7 @@ function buildMilestones(
     {
       id: "diagnostic",
       label: "Answer 25 questions",
-      detail: "Enough for SATForge to find your real weak spots",
+      detail: "Enough for Scholarly to find your real weak spots",
       target: 25,
       current: Math.min(evidenceCount, 25),
       done: evidenceCount >= 25,

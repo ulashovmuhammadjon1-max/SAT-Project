@@ -8,7 +8,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <SessionProvider>
       {/*
-        Deep navy is the SATForge brand, so dark is the default — that is what
+        Deep navy is the Scholarly brand, so dark is the default — that is what
         a visitor who never touches the switch sees, and what the marketing
         site and every product screenshot show.
 

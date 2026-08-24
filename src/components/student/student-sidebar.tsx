@@ -128,7 +128,7 @@ export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-900 text-white">
           <GraduationCap className="h-4 w-4" />
         </span>
-        <span className="font-display text-base font-semibold">SATForge</span>
+        <span className="font-display text-base font-semibold">Scholarly</span>
       </Link>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-3">

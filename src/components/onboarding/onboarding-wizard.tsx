@@ -341,7 +341,7 @@ function satSteps({
     // 1 — Welcome / motivation
     {
       emoji: "👋",
-      title: "Welcome to SATForge",
+      title: "Welcome to Scholarly",
       subtitle: "First, what brings you here? This shapes the plan we build for you.",
       canContinue: profile.goal !== null,
       content: (
@@ -598,7 +598,7 @@ function satSteps({
 /**
  * The IELTS questions.
  *
- * Deliberately about Writing and Speaking only. SATForge does not mark
+ * Deliberately about Writing and Speaking only. Scholarly does not mark
  * Listening or Reading, and asking a student to rate skills the plan cannot
  * then help with promises something the product does not deliver — the surest
  * way to make a personalised plan feel generic.

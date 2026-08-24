@@ -409,7 +409,7 @@ function StreakBand() {
  * university's wordmark on a commercial-looking page implies a partnership or
  * endorsement that does not exist; naming them in a factual sentence about
  * what SAT scores are used for does not. The caption is worded to make the
- * claim about the test, never about SATForge.
+ * claim about the test, never about Scholarly.
  */
 const UNIVERSITIES = [
   "Harvard",
@@ -525,7 +525,7 @@ function BeyondSat() {
           label="More than SAT prep"
           icon={Sparkles}
           title="Build skills that go beyond the test."
-          body="SATForge is building a free academic community where students can prepare for the SAT, learn about economics and financial literacy, analyze real practice tests, and learn directly from experienced mentors and professors."
+          body="Scholarly is building a free academic community where students can prepare for the SAT, learn about economics and financial literacy, analyze real practice tests, and learn directly from experienced mentors and professors."
         />
 
         <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2" delay={0.05}>
@@ -617,7 +617,7 @@ function Ecosystem() {
         <Reveal delay={0.15}>
           <p className="mx-auto mt-9 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
             <ShieldCheck className="mr-1 inline h-3.5 w-3.5 align-[-2px]" />
-            SATForge is an independent study platform. We are not affiliated with, authorized by, or endorsed by the
+            Scholarly is an independent study platform. We are not affiliated with, authorized by, or endorsed by the
             College Board, Khan Academy, or Desmos. SAT&reg; and Bluebook&trade; are trademarks of their respective
             owners and are referenced here only to describe the exam format our practice material follows.
           </p>
@@ -720,7 +720,7 @@ function Features() {
     <section id="features" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          label="Why SATForge"
+          label="Why Scholarly"
           icon={Sparkles}
           title="Everything you need, nothing you don't"
           body="Six systems that work together — so practice actually converts into points instead of hours."
@@ -862,7 +862,7 @@ function Analytics() {
               icon={BarChart3}
               label="Analytics"
               title="Stop guessing what to study"
-              body="Most students practise what they're already good at. SATForge points at the thing that's actually costing you points."
+              body="Most students practise what they're already good at. Scholarly points at the thing that's actually costing you points."
             />
 
             <RevealGroup className="mt-8 grid gap-4 sm:grid-cols-2" stagger={0.07}>
@@ -1028,7 +1028,7 @@ const FAQS = [
     a: "Yes. Module 1 performance is measured against a configurable threshold, and Module 2 routes to the easy or hard form accordingly. Section scores are scaled with the routing taken into account, which is why a capped easy module cannot produce a top score here — same as the real exam.",
   },
   {
-    q: "Is SATForge affiliated with the College Board?",
+    q: "Is Scholarly affiliated with the College Board?",
     a: "No. We are completely independent. SAT® and Bluebook™ are trademarks of the College Board, which does not sponsor or endorse this platform. We reference them only to describe the exam format our material follows.",
   },
   {
@@ -1148,7 +1148,7 @@ function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white">
                 <GraduationCap className="h-[18px] w-[18px]" />
               </span>
-              <span className="font-display text-[17px] font-semibold tracking-tight">SATForge</span>
+              <span className="font-display text-[17px] font-semibold tracking-tight">Scholarly</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               An independent Digital SAT preparation platform: adaptive full-length tests, a Bluebook-accurate exam
@@ -1220,7 +1220,7 @@ function Footer() {
             </a>
           </p>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            &copy; {new Date().getFullYear()} SATForge. SAT&reg; is a trademark registered by the College Board, which
+            &copy; {new Date().getFullYear()} Scholarly. SAT&reg; is a trademark registered by the College Board, which
             is not affiliated with and does not endorse this platform. Bluebook&trade; is a trademark of the College
             Board. All other marks belong to their respective owners.
           </p>

@@ -144,7 +144,7 @@ export const googleMeetProvider: MeetingProvider = {
         body: JSON.stringify({
           summary: req.title,
           description:
-            `SATForge 1-on-1 SAT guidance with ${req.studentName}.\n` +
+            `Scholarly 1-on-1 SAT guidance with ${req.studentName}.\n` +
             `Booking reference: ${req.bookingId}`,
           start: { dateTime: req.startsAt.toISOString() },
           end: { dateTime: end.toISOString() },
@@ -153,7 +153,7 @@ export const googleMeetProvider: MeetingProvider = {
           // conference instead of creating a second one.
           conferenceData: {
             createRequest: {
-              requestId: `satforge-${req.bookingId}`,
+              requestId: `scholarly-${req.bookingId}`,
               conferenceSolutionKey: { type: "hangoutsMeet" },
             },
           },

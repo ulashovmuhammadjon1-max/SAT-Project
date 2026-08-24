@@ -451,7 +451,7 @@ function DecisionDialog({
                   : target.decision === "REJECT"
                   ? "e.g. That slot is reserved for students sitting the March test — please pick a time in April."
                   : target.decision === "REVOKE"
-                    ? "e.g. We could not find you following @satforge_org on Instagram. Follow the account and reply, and we will approve this again."
+                    ? "e.g. We could not find you following @scholarly_space on Instagram. Follow the account and reply, and we will approve this again."
                     : target.decision === "CANCEL"
                       ? "e.g. Your mentor is ill. Please rebook any open slot and we will prioritise you."
                       : "e.g. Bring your last practice test score to the session."

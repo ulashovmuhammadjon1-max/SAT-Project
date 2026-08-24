@@ -8,7 +8,7 @@ import { LocalTime } from "@/components/shared/local-time";
 import { getWallet } from "@/server/actions/student/wallet";
 import { cn } from "@/lib/utils";
 
-export const metadata = { title: "SATForge Coins" };
+export const metadata = { title: "Scholarly Coins" };
 export const dynamic = "force-dynamic";
 
 /** Icon per ledger entry type, so the history scans without reading every row. */
@@ -27,7 +27,7 @@ export default async function WalletPage() {
   return (
     <div className="mx-auto max-w-3xl space-y-6">
       <div>
-        <h1 className="font-display text-2xl font-semibold tracking-tight">SATForge Coins</h1>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Scholarly Coins</h1>
         <p className="text-sm text-muted-foreground">
           Earn coins by growing the community. Spend them on 1-on-1 guidance.
         </p>

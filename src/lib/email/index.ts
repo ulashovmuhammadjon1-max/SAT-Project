@@ -12,7 +12,7 @@
  *
  *   RESEND_API_KEY   Resend. Free tier covers 3,000 emails a month, which is
  *                    far beyond what this platform needs. Sending from your own
- *                    domain requires verifying satforge.org in their dashboard.
+ *                    domain requires verifying scholarly.space in their dashboard.
  *
  *   SMTP_URL         Any SMTP server, e.g. Gmail with an app password:
  *                    smtp://user%40gmail.com:app-password@smtp.gmail.com:465
@@ -39,7 +39,7 @@ export interface EmailResult {
 }
 
 function fromAddress(): string {
-  return process.env.EMAIL_FROM || "SATForge <onboarding@resend.dev>";
+  return process.env.EMAIL_FROM || "Scholarly <onboarding@resend.dev>";
 }
 
 async function sendViaResend(msg: EmailMessage): Promise<EmailResult> {
@@ -107,7 +107,7 @@ export function emailConfigured(): boolean {
   return Boolean(process.env.RESEND_API_KEY);
 }
 
-/** Shared wrapper so every SATForge email looks like the same product. */
+/** Shared wrapper so every Scholarly email looks like the same product. */
 export function layout(bodyHtml: string): string {
   return `<!doctype html><html><body style="margin:0;padding:24px;background:#0a1120;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">

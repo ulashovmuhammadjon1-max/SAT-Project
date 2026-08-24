@@ -38,7 +38,7 @@ const firstNameOf = (name: string) => name.trim().split(/\s+/)[0] || "there";
 /** Reason block, in both the plain-text and HTML bodies, or nothing at all. */
 function reasonText(reason?: string | null): string {
   const r = reason?.trim();
-  return r ? `\nNote from the SATForge team:\n${r}\n` : "";
+  return r ? `\nNote from the Scholarly team:\n${r}\n` : "";
 }
 
 function reasonHtml(reason?: string | null): string {
@@ -53,7 +53,7 @@ function reasonHtml(reason?: string | null): string {
     .replace(/\n/g, "<br/>");
   return (
     `<div style="margin:0 0 14px;padding:14px 16px;background:#0d1730;border-left:3px solid #2549ea;border-radius:8px;">` +
-    `<p style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#8a97b1;">Note from the SATForge team</p>` +
+    `<p style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#8a97b1;">Note from the Scholarly team</p>` +
     `<p style="margin:0;font-size:15px;line-height:1.6;color:#d6dcea;">${safe}</p></div>`
   );
 }
@@ -73,9 +73,9 @@ export async function sendBookingApproved(args: DecisionArgs) {
       `Duration: ${args.durationMinutes} minutes\n` +
       (args.meetingUrl ? `Join: ${args.meetingUrl}\n` : `A join link will be sent before the session.\n`) +
       reasonText(args.reason) +
-      `\nRemember to follow @satforge_org on Instagram and join the Telegram channel — ` +
+      `\nRemember to follow @scholarly_space on Instagram and join the Telegram channel — ` +
       `volunteers check this before each session.\n\n` +
-      `Need to cancel? Do it from My Sessions on satforge.org.`,
+      `Need to cancel? Do it from My Sessions on scholarly.space.`,
     html: layout(
       para(`Hi ${first},`) +
         para(`Your <strong style="color:#ffffff;">${label}</strong> has been approved.`) +
@@ -107,7 +107,7 @@ export async function sendBookingRejected(args: DecisionArgs) {
       `Your request for a ${label} on ${when} was not approved.\n` +
       reasonText(args.reason) +
       refund +
-      `\nYou can book another time from satforge.org/booking.`,
+      `\nYou can book another time from scholarly.space/booking.`,
     html: layout(
       para(`Hi ${first},`) +
         para(`Your request for a <strong style="color:#ffffff;">${label}</strong> on ${when} was not approved.`) +
@@ -117,7 +117,7 @@ export async function sendBookingRejected(args: DecisionArgs) {
               `Your <strong style="color:#ffffff;">${args.refunded} coin${args.refunded === 1 ? "" : "s"}</strong> ${args.refunded === 1 ? "has" : "have"} been returned to your balance.`,
             )
           : "") +
-        button("https://satforge.org/booking", "Pick another time"),
+        button("https://scholarly.space/booking", "Pick another time"),
     ),
   }).catch((e) => console.error("[booking] rejection email failed", e));
 }
@@ -188,17 +188,17 @@ export async function sendBookingCancelledByAdmin(args: DecisionArgs) {
     subject: `Cancelled: ${label}`,
     text:
       `Hi ${first},\n\n` +
-      `Your ${label} on ${when} has been cancelled by the SATForge team. ` +
+      `Your ${label} on ${when} has been cancelled by the Scholarly team. ` +
       `Sorry for the disruption.\n` +
       reasonText(args.reason) +
       (args.refunded
         ? `\nYour ${args.refunded} coin${args.refunded === 1 ? "" : "s"} ${args.refunded === 1 ? "has" : "have"} been returned to your balance.\n`
         : "") +
-      `\nYou can rebook any open time from satforge.org/booking.`,
+      `\nYou can rebook any open time from scholarly.space/booking.`,
     html: layout(
       para(`Hi ${first},`) +
         para(
-          `Your <strong style="color:#ffffff;">${label}</strong> on ${when} has been cancelled by the SATForge team. Sorry for the disruption.`,
+          `Your <strong style="color:#ffffff;">${label}</strong> on ${when} has been cancelled by the Scholarly team. Sorry for the disruption.`,
         ) +
         reasonHtml(args.reason) +
         (args.refunded
@@ -206,7 +206,7 @@ export async function sendBookingCancelledByAdmin(args: DecisionArgs) {
               `Your <strong style="color:#ffffff;">${args.refunded} coin${args.refunded === 1 ? "" : "s"}</strong> ${args.refunded === 1 ? "has" : "have"} been returned to your balance.`,
             )
           : "") +
-        button("https://satforge.org/booking", "Book another time"),
+        button("https://scholarly.space/booking", "Book another time"),
     ),
   }).catch((e) => console.error("[booking] cancellation email failed", e));
 }

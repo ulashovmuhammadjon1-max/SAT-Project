@@ -184,7 +184,7 @@ async function grantSignupRewards(userId: string, rawReferralCode: string | null
         userId,
         amount: settings.signupBonusCoins,
         type: "SIGNUP_BONUS",
-        description: "Welcome to SATForge",
+        description: "Welcome to Scholarly",
         idempotencyKey: `signup:${userId}`,
       });
     }

@@ -83,7 +83,7 @@ export function BookingList({ bookings }: { bookings: BookingRow[] }) {
               {b.statusReason && (
                 <div className="border-t px-5 py-3">
                   <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                    Note from the SATForge team
+                    Note from the Scholarly team
                   </p>
                   <p className="mt-1 whitespace-pre-line text-sm">{b.statusReason}</p>
                 </div>

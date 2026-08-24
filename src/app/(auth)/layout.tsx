@@ -9,7 +9,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-900 text-white">
             <GraduationCap className="h-5 w-5" />
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight">SATForge</span>
+          <span className="font-display text-lg font-semibold tracking-tight">Scholarly</span>
         </Link>
         <div className="mx-auto w-full max-w-sm animate-fade-up">{children}</div>
       </div>
@@ -26,7 +26,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
               analytics that show exactly what to study next.
             </p>
           </div>
-          <p className="text-sm text-navy-300">© {new Date().getFullYear()} SATForge</p>
+          <p className="text-sm text-navy-300">© {new Date().getFullYear()} Scholarly</p>
         </div>
       </div>
     </div>

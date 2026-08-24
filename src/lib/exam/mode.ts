@@ -1,7 +1,7 @@
 /**
  * Which exam ecosystem the student is currently in.
  *
- * SATForge hosts two complete preparation products under one account. This
+ * Scholarly hosts two complete preparation products under one account. This
  * module is the single place that answers "SAT, IELTS, or both?", so a page
  * never has to guess and two pages can never disagree.
  *

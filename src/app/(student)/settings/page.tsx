@@ -66,7 +66,7 @@ export default async function StudentSettingsPage() {
         <CardHeader>
           <CardTitle className="text-base">Appearance</CardTitle>
           <CardDescription>
-            SATForge is dark by default. Pick whatever is easiest on your eyes — the choice is
+            Scholarly is dark by default. Pick whatever is easiest on your eyes — the choice is
             remembered on this device. The exam interface always keeps its own fixed appearance so
             practice tests look like the real thing.
           </CardDescription>

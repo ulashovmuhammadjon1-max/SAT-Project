@@ -27,7 +27,7 @@ export const EXAM_TRACKS = ["SAT", "IELTS", "BOTH"] as const;
 export const IELTS_REASONS = ["UNIVERSITY", "WORK", "IMMIGRATION", "OTHER"] as const;
 
 /**
- * The two skills SATForge marks. Deliberately not four: this product does not
+ * The two skills Scholarly marks. Deliberately not four: this product does not
  * do Listening or Reading, and asking a student to rate skills we cannot help
  * with would promise something the plan then fails to deliver.
  */

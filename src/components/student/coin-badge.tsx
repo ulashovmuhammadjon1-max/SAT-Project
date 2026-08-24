@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The SATForge Coins mark.
+ * The Scholarly Coins mark.
  *
  * One component so the coin reads identically on the dashboard, the wallet, the
  * booking page and the invite page. The gradient and glow are the same electric
@@ -65,7 +65,7 @@ export function CoinBadge({ balance, className }: { balance: number; className?:
     >
       <CoinIcon className="h-3.5 w-3.5" />
       {balance}
-      <span className="sr-only">SATForge Coins</span>
+      <span className="sr-only">Scholarly Coins</span>
     </span>
   );
 }

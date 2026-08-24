@@ -19,7 +19,7 @@
  * both call sites.
  */
 
-const STORAGE_KEY = "satforge-qb-session:1";
+const STORAGE_KEY = "scholarly-qb-session:1";
 
 /** Bumped when the stored shape changes; older records are discarded on read. */
 const VERSION = 2;

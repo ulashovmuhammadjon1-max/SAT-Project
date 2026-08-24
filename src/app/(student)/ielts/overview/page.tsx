@@ -143,7 +143,7 @@ export default async function IeltsLandingPage() {
       </section>
 
       {/* The differentiator. Deliberately describes the band the reviewer
-          achieved rather than any examiner status, which SATForge cannot
+          achieved rather than any examiner status, which Scholarly cannot
           verify and does not claim. */}
       <section className="space-y-4 rounded-2xl border border-emerald-600/25 bg-emerald-50/60 p-6 dark:bg-emerald-950/20">
         <div className="flex flex-wrap items-center gap-2">

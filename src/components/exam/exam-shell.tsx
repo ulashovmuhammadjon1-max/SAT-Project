@@ -159,7 +159,7 @@ export function ExamShell({
   // They do survive a refresh, which is the case that actually matters.
   // `:2` because annotations are now keyed by region (passage *or* stem) —
   // entries written by the previous shape would land on the wrong offsets.
-  const storageKey = `satforge-annotations:2:${moduleAttemptId}`;
+  const storageKey = `scholarly-annotations:2:${moduleAttemptId}`;
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
   const [annotationsHydrated, setAnnotationsHydrated] = useState(false);
   const [notesPanelOpen, setNotesPanelOpen] = useState(false);

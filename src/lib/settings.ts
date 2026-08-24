@@ -63,13 +63,13 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   bookingBaseCost: 10,
   bookingCostIncrement: 5,
   bookingRefundHours: 24,
-  instagramHandle: "satforge_org",
-  telegramHandle: "satforgeorg",
+  instagramHandle: "scholarly_space",
+  telegramHandle: "scholarlyspace",
   meetingProvider: "manual",
   staticMeetingUrl: "",
   eventCost: 0,
   contactEmail: "",
-  operatorName: "SATForge",
+  operatorName: "Scholarly",
 };
 
 export type SettingKey = keyof PlatformSettings;

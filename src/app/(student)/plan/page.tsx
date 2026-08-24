@@ -71,7 +71,7 @@ export default async function PlanPage() {
               <p className="mt-1 text-muted-foreground">
                 You&apos;ve answered {plan.evidenceCount}{" "}
                 {plan.evidenceCount === 1 ? "question" : "questions"} so far. Once you pass 15,
-                SATForge rebuilds this plan around the skills you actually miss.
+                Scholarly rebuilds this plan around the skills you actually miss.
               </p>
               <Button asChild size="sm" className="mt-3">
                 <Link href="/practice">

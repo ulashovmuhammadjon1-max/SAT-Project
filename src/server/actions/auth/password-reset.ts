@@ -35,7 +35,7 @@ const hash = (token: string) => createHash("sha256").update(token).digest("hex")
 
 function origin(): string {
   const h = headers();
-  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "satforge.org";
+  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "scholarly.space";
   const proto = h.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   return `${proto}://${host}`;
 }
@@ -68,10 +68,10 @@ export async function requestPasswordReset(rawEmail: string): Promise<RequestRes
 
     await sendEmail({
       to: email,
-      subject: "Reset your SATForge password",
+      subject: "Reset your Scholarly password",
       text:
         `Hi ${firstName},\n\n` +
-        `Use this link to set a new SATForge password. It expires in one hour ` +
+        `Use this link to set a new Scholarly password. It expires in one hour ` +
         `and can only be used once.\n\n${link}\n\n` +
         `If you didn't ask for this, you can ignore this email — your password ` +
         `has not changed.`,

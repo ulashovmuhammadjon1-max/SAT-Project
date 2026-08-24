@@ -115,7 +115,7 @@ export default async function ResultsPage({ params }: { params: { attemptId: str
       <div className="grid gap-4 lg:grid-cols-[minmax(0,22rem)_1fr]">
         <ScoreCard
           data={{
-            studentName: user.name ?? "SATForge student",
+            studentName: user.name ?? "Scholarly student",
             testTitle: attempt.test.title,
             total: attempt.totalScaledScore ?? 0,
             rw: attempt.rwScaledScore,

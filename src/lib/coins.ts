@@ -3,7 +3,7 @@ import { Prisma, type CoinTxnType, type PrismaClient } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 
 /**
- * The SATForge Coins ledger.
+ * The Scholarly Coins ledger.
  *
  * Every balance change in the product goes through `credit` or `debit`. Both
  * write a `CoinTransaction` row and update `User.coinBalance` inside a single

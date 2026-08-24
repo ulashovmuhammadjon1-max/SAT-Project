@@ -97,7 +97,7 @@ export default async function IeltsLeaderboardPage({
       <p className="text-xs text-muted-foreground">
         {board.participants} {board.participants === 1 ? "student" : "students"} on this board.
         Names are shown as a first name and last initial; email addresses and the work itself are
-        never shown. Bands are SATForge practice estimates, not official IELTS results.
+        never shown. Bands are Scholarly practice estimates, not official IELTS results.
       </p>
     </div>
   );

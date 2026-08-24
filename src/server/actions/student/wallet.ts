@@ -82,7 +82,7 @@ export async function getMyReferrals() {
   // Build the link from the request host so it is correct in local dev,
   // preview deploys and production without a hard-coded domain.
   const h = headers();
-  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "satforge.org";
+  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "scholarly.space";
   const proto = h.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
 
   const [summary, settings] = await Promise.all([

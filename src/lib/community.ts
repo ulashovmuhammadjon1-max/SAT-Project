@@ -47,14 +47,14 @@ export async function getCommunityRequirements(): Promise<CommunityRequirement[]
   return [
     {
       id: "instagram",
-      label: "Follow SATForge on Instagram",
+      label: "Follow Scholarly on Instagram",
       handle: `@${settings.instagramHandle}`,
       href: `https://instagram.com/${settings.instagramHandle}`,
       verification: "attested",
     },
     {
       id: "telegram",
-      label: "Join the SATForge Telegram",
+      label: "Join the Scholarly Telegram",
       handle: `@${settings.telegramHandle}`,
       href: `https://t.me/${settings.telegramHandle}`,
       verification: telegramConfigured() ? "verified" : "attested",

@@ -56,7 +56,7 @@ export async function linkTelegram(payload: TelegramLoginPayload): Promise<Teleg
     // The unique index on telegramUserId is the guard that stops one Telegram
     // account vouching for several site accounts.
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
-      return { ok: false, error: "That Telegram account is already linked to another SATForge account." };
+      return { ok: false, error: "That Telegram account is already linked to another Scholarly account." };
     }
     throw error;
   }

@@ -3,7 +3,7 @@ import { getSettings } from "@/lib/settings";
 
 export const metadata = {
   title: "Terms of Use",
-  description: "The rules for using SATForge — short, and in plain English.",
+  description: "The rules for using Scholarly — short, and in plain English.",
 };
 /**
  * Cached for an hour rather than rendered per visitor.
@@ -30,13 +30,13 @@ export default async function TermsPage() {
     <LegalLayout title="Terms of Use" updated="9 August 2026">
       <Section title="The short version">
         <p>
-          SATForge is free. Use it to study, don&apos;t abuse it, don&apos;t redistribute what is on
+          Scholarly is free. Use it to study, don&apos;t abuse it, don&apos;t redistribute what is on
           it, and be decent to the people running it. That&apos;s essentially all of it — the rest is
           detail.
         </p>
       </Section>
 
-      <Section title="Using SATForge">
+      <Section title="Using Scholarly">
         <p>
           You need an account, and you must give a real email address so we can reach you about your
           sessions. One account per person. You are responsible for what happens under your account,
@@ -55,7 +55,7 @@ export default async function TermsPage() {
           the app are estimates, not predictions, and are labelled as such.
         </p>
         <p>
-          SATForge is not affiliated with, endorsed by, or connected to the College Board, which
+          Scholarly is not affiliated with, endorsed by, or connected to the College Board, which
           administers the SAT. &ldquo;SAT&rdquo; is their trademark; we use it only to describe what
           this platform prepares you for.
         </p>
@@ -63,15 +63,15 @@ export default async function TermsPage() {
 
       <Section title="Using the material">
         <p>
-          Everything on SATForge is here for you to study with, personally, as much as you like.
+          Everything on Scholarly is here for you to study with, personally, as much as you like.
           Please do not republish it, sell it, feed it into another product, or scrape the site in
           bulk — that is the fastest way to make a free platform stop being free.
         </p>
       </Section>
 
-      <Section title="SATForge Coins">
+      <Section title="Scholarly Coins">
         <p>
-          Coins are points inside SATForge for booking sessions. They are{" "}
+          Coins are points inside Scholarly for booking sessions. They are{" "}
           <strong className="text-foreground">not money</strong>. They cannot be bought, sold,
           exchanged, transferred between accounts, or cashed out, and they have no value outside
           this site.
@@ -123,7 +123,7 @@ export default async function TermsPage() {
 
       <Section title="Ending it">
         <p>
-          You can stop using SATForge whenever you like and ask us to delete your account. We may
+          You can stop using Scholarly whenever you like and ask us to delete your account. We may
           close an account that breaks these terms. If we ever shut the service down, we will give
           notice so you can take your data with you.
         </p>
@@ -131,7 +131,7 @@ export default async function TermsPage() {
 
       <Section title="Liability">
         <p>
-          SATForge is provided as-is, free of charge. We are not liable for exam results, missed
+          Scholarly is provided as-is, free of charge. We are not liable for exam results, missed
           deadlines, or decisions you make based on the site. We are, of course, still responsible
           for things the law does not let us disclaim.
         </p>

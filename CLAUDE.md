@@ -478,7 +478,7 @@ and filter. Backfilled by `content-pool/test-15-build/backfill_difficulty.mjs`; 
 reads 882/882/882 across STANDARD/EASY/HARD with zero mismatches. Use the newer inserter.
 
 ## Test 6 is built and PUBLISHED; Test 7 needs 38 Math MC and nothing else
-`Test 6` (`b7cf096a-090d-4286-a128-9ec428e6de32`), 147 questions, live on satforge.org. Full
+`Test 6` (`b7cf096a-090d-4286-a128-9ec428e6de32`), 147 questions, live on scholarly.space. Full
 detail in `content-pool/test-6-7-build/MANIFEST.md`.
 
 **The finding that matters most for any future build: the EliteXSAT corpus recycles heavily.**

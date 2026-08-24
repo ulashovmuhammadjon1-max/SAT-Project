@@ -206,7 +206,7 @@ export function SpeakingRecorder({
       // identical to a permission problem unless it is named.
       toast.error(
         window.isSecureContext === false
-          ? "Recording needs a secure connection (https). Open SATForge over https and try again."
+          ? "Recording needs a secure connection (https). Open Scholarly over https and try again."
           : "This browser cannot record audio. Try Chrome, Edge, Firefox or Safari."
       );
       setPhase("idle");
@@ -230,7 +230,7 @@ export function SpeakingRecorder({
           ? "Microphone access was blocked. Allow it in the address bar, then try again."
           : name === "NotFoundError"
             ? "No microphone was found. Plug one in or pick a different input device."
-            : "SATForge could not start your microphone."
+            : "Scholarly could not start your microphone."
       );
       setPhase("idle");
       return;

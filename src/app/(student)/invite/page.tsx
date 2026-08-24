@@ -19,7 +19,7 @@ export default async function InvitePage() {
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight">Invite friends</h1>
         <p className="text-sm text-muted-foreground">
-          SATForge is free because it grows by word of mouth. Bring someone with you.
+          Scholarly is free because it grows by word of mouth. Bring someone with you.
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export default async function InvitePage() {
           <p className="font-medium text-foreground">How it works</p>
           <ol className="mt-2 list-decimal space-y-1 pl-5">
             <li>Share your link with a friend.</li>
-            <li>They create a SATForge account through it.</li>
+            <li>They create a Scholarly account through it.</li>
             <li>
               You get {r.rewardPerReferral} coins automatically — check your{" "}
               <Link href="/wallet" className="font-medium text-primary underline-offset-4 hover:underline">

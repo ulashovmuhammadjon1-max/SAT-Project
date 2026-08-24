@@ -379,7 +379,7 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
     durationMinutes: slot.durationMinutes,
     studentName: snapshot.name,
     studentEmail: snapshot.email,
-    title: "SATForge 1-on-1 SAT guidance",
+    title: "Scholarly 1-on-1 SAT guidance",
   });
   if (meeting.url) {
     await prisma.booking
@@ -522,9 +522,9 @@ async function sendBookingConfirmation(args: {
       (args.coinsSpent > 0
         ? `Coins held: ${args.coinsSpent} — returned in full if the request is not approved.\n`
         : "") +
-      `\nRemember to follow @satforge_org on Instagram and join the Telegram channel — ` +
+      `\nRemember to follow @scholarly_space on Instagram and join the Telegram channel — ` +
       `volunteers check this before approving.\n\n` +
-      `Changed your mind? Withdraw it from My Sessions on satforge.org.`,
+      `Changed your mind? Withdraw it from My Sessions on scholarly.space.`,
     html: layout(
       para(`Hi ${firstName},`) +
         para(

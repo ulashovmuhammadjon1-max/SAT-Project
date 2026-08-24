@@ -87,14 +87,14 @@ export const SPEAKING_CRITERIA = [
  * How reviewers are described to students.
  *
  * Deliberately about the band the reviewer achieved, never about examiner
- * status, which SATForge cannot verify and does not claim.
+ * status, which Scholarly cannot verify and does not claim.
  */
 export const REVIEWER_CLAIM = {
   WRITING: "Reviewed by a Band 8 IELTS writer",
   SPEAKING: "Reviewed by a Band 9 IELTS speaker",
 } as const;
 
-export const SPEAKING_PRODUCT_NAME = "SATForge Speaking Practice";
+export const SPEAKING_PRODUCT_NAME = "Scholarly Speaking Practice";
 
 /** Human-readable labels for every supported question type. */
 export const QUESTION_TYPE_LABEL: Record<string, string> = {

@@ -34,9 +34,9 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
   const [copied, setCopied] = useState(false);
 
   const shareText =
-    `I scored ${data.total} on ${data.testTitle} at SATForge` +
+    `I scored ${data.total} on ${data.testTitle} at Scholarly` +
     (data.improvement && data.improvement > 0 ? ` — up ${data.improvement} points.` : ".") +
-    ` Free SAT practice: satforge.org`;
+    ` Free SAT practice: scholarly.space`;
 
   async function share() {
     // The Web Share API is the good path on a phone, which is where this gets
@@ -44,7 +44,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
     // back to the clipboard rather than surfacing an error.
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
-        await navigator.share({ text: shareText, url: "https://satforge.org" });
+        await navigator.share({ text: shareText, url: "https://scholarly.space" });
         return;
       } catch {
         /* dismissed — fall through to copying */
@@ -67,7 +67,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
     <div className="space-y-3">
       {/* The card itself — self-contained so a screenshot crops cleanly. */}
       <div
-        id="satforge-score-card"
+        id="scholarly-score-card"
         className="overflow-hidden rounded-2xl bg-gradient-to-br from-navy-900 via-navy-900 to-primary/40 p-6 text-white shadow-lg"
       >
         <div className="flex items-start justify-between gap-4">
@@ -77,7 +77,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
               {data.testTitle} · {data.dateLabel}
             </p>
           </div>
-          <p className="shrink-0 font-display text-sm font-semibold tracking-tight">SATForge</p>
+          <p className="shrink-0 font-display text-sm font-semibold tracking-tight">Scholarly</p>
         </div>
 
         <div className="mt-6 flex items-end gap-3">
@@ -105,7 +105,7 @@ export function ScoreCard({ data }: { data: ScoreCardData }) {
         )}
 
         <p className="mt-5 text-center text-[11px] text-white/50">
-          Free, non-profit SAT practice · satforge.org
+          Free, non-profit SAT practice · scholarly.space
         </p>
       </div>
 

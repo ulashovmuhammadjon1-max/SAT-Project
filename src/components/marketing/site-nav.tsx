@@ -44,7 +44,7 @@ export function SiteNav() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white shadow-soft">
             <GraduationCap className="h-[18px] w-[18px]" />
           </span>
-          <span className="font-display text-[17px] font-semibold tracking-tight">SATForge</span>
+          <span className="font-display text-[17px] font-semibold tracking-tight">Scholarly</span>
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">

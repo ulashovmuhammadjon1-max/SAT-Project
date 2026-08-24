@@ -183,7 +183,7 @@ export function BookingForm({
           1. Join the community
         </h2>
         <p className="mt-0.5 text-sm text-muted-foreground">
-          SATForge stays free because the community grows. Please do both before booking.
+          Scholarly stays free because the community grows. Please do both before booking.
         </p>
         <div className="mt-4 space-y-2">
           {context.requirements.map((r) => {

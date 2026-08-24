@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 
 /**
- * Switching between SATForge's two preparation products.
+ * Switching between Scholarly's two preparation products.
  *
  * Deliberately not styled as a nav item. Choosing SAT or IELTS changes the
  * sidebar, the hero, the plan, the question bank and the analytics — it is a

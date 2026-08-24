@@ -25,7 +25,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   //
   // `updateAge` makes the expiry sliding: any request more than a day after the
   // token was issued re-issues it with a fresh 30-day window. A student who
-  // uses SATForge even once a month stays signed in indefinitely; one who
+  // uses Scholarly even once a month stays signed in indefinitely; one who
   // disappears for 30 days is asked to sign in again.
   session: {
     strategy: "jwt",

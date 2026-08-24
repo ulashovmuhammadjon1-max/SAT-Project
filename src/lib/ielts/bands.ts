@@ -5,7 +5,7 @@
  * so it is deliberately free of database and React imports and is unit-testable
  * on its own.
  *
- * Nothing here produces an official IELTS score. SATForge reports a practice
+ * Nothing here produces an official IELTS score. Scholarly reports a practice
  * estimate; `PRACTICE_DISCLAIMER` is the wording that must accompany it.
  */
 
@@ -13,8 +13,8 @@ export const IELTS_BAND_MIN = 0;
 export const IELTS_BAND_MAX = 9;
 
 export const PRACTICE_DISCLAIMER =
-  "SATForge IELTS scores are practice estimates and are not official IELTS results. " +
-  "SATForge is independent of IELTS, British Council, IDP and Cambridge.";
+  "Scholarly IELTS scores are practice estimates and are not official IELTS results. " +
+  "Scholarly is independent of IELTS, British Council, IDP and Cambridge.";
 
 /** Every band a student can be given, 0.0 to 9.0 in half steps. */
 export const BAND_STEPS: readonly number[] = Array.from(

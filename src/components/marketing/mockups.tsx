@@ -58,7 +58,7 @@ export function BluebookMockup({ className }: { className?: string }) {
   const reduced = useReducedMotion();
 
   return (
-    <BrowserChrome label="satforge.org/exam">
+    <BrowserChrome label="scholarly.space/exam">
       <div className={cn("bg-exam-bg text-exam-text", className)}>
         <div className="bg-exam-strip py-1 text-center text-[7px] font-medium uppercase tracking-[0.08em] text-white">
           This is a practice test
@@ -183,7 +183,7 @@ const HEAT = [72, 45, 88, 61, 93, 38, 79, 55, 84, 67, 41, 90, 58, 76, 62, 87, 49
 /** Analytics dashboard preview with real charts. */
 export function AnalyticsMockup({ className }: { className?: string }) {
   return (
-    <BrowserChrome label="satforge.org/analytics">
+    <BrowserChrome label="scholarly.space/analytics">
       <div className={cn("space-y-3 bg-secondary/30 p-3", className)}>
         <div className="grid grid-cols-3 gap-2.5">
           {[

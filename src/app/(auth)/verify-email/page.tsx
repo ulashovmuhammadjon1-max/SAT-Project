@@ -40,7 +40,7 @@ export default async function VerifyEmailPage({
             <p className="text-sm text-muted-foreground">
               {result.alreadyVerified
                 ? "This address was confirmed already. You're all set."
-                : "Thanks — your account is ready. Everything on SATForge is open to you now."}
+                : "Thanks — your account is ready. Everything on Scholarly is open to you now."}
             </p>
           </div>
           <Link
