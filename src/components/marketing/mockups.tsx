@@ -148,7 +148,7 @@ export function BluebookMockup({ className }: { className?: string }) {
         </div>
 
         <div className="flex items-center justify-between border-t border-exam-border bg-exam-header px-3 py-1.5">
-          <p className="text-[7px] font-medium">Muhammad U.</p>
+          <p className="text-[7px] font-medium">Aziza K.</p>
           <span className="flex items-center gap-1 rounded bg-exam-strip px-2 py-0.5 text-[7px] font-medium text-white">
             Question 7 of 27 <ChevronUp className="h-2 w-2" />
           </span>
