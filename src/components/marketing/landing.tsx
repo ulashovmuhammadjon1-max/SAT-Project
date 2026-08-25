@@ -209,9 +209,8 @@ function Hero() {
 
           <Reveal delay={0.16}>
             <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground text-balance lg:mx-0 lg:text-lg">
-              Adaptive SAT practice, full IELTS preparation, financial literacy, and 1-on-1 mentorship
-              from founder Muhammadjon Ulashov, a 1580 SAT scorer — one free academic community, with
-              research programmes on the way.
+              Adaptive SAT practice, full IELTS preparation, financial literacy, and mentorship from real
+              scorers — one free academic community, with research programmes on the way.
             </p>
           </Reveal>
 
@@ -468,10 +467,10 @@ function MentorshipCard({ className }: { className?: string }) {
 
         <div className="min-w-[190px] flex-1">
           <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-primary">
-            Free 1-on-1 with the founder
+            Free 1-on-1 guidance
           </p>
           <p className="mt-1 text-[15px] font-medium leading-snug text-balance">
-            Personalized study plan from Muhammadjon Ulashov — Scholarly&apos;s founder, 1580 SAT scorer
+            Personalized SAT plan from a 1580 scorer
           </p>
         </div>
 
@@ -577,8 +576,8 @@ function BeyondSat() {
 
               <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">Your Own Study Plan</h3>
               <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
-                Get personalized guidance from Muhammadjon Ulashov — Scholarly&apos;s founder and a 1580 SAT
-                scorer — and build a study plan around your score, target, timeline, and weaknesses.
+                Get personalized guidance from a 1580 SAT scorer and build a study plan around your score, target,
+                timeline, and weaknesses.
               </p>
 
               <Link
