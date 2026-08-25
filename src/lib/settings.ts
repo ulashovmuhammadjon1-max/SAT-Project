@@ -64,7 +64,7 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   bookingCostIncrement: 5,
   bookingRefundHours: 24,
   instagramHandle: "scholarly_space",
-  telegramHandle: "scholarlyspace",
+  telegramHandle: "ulashovmuhammadjon",
   meetingProvider: "manual",
   staticMeetingUrl: "",
   eventCost: 0,
