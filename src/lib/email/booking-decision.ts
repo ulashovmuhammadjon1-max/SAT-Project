@@ -73,7 +73,7 @@ export async function sendBookingApproved(args: DecisionArgs) {
       `Duration: ${args.durationMinutes} minutes\n` +
       (args.meetingUrl ? `Join: ${args.meetingUrl}\n` : `A join link will be sent before the session.\n`) +
       reasonText(args.reason) +
-      `\nRemember to follow @scholarly_space on Instagram and join the Telegram channel — ` +
+      `\nRemember to follow @scholarly_space on Instagram and our founder on Telegram — ` +
       `volunteers check this before each session.\n\n` +
       `Need to cancel? Do it from My Sessions on scholarly.space.`,
     html: layout(

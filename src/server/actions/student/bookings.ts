@@ -522,7 +522,7 @@ async function sendBookingConfirmation(args: {
       (args.coinsSpent > 0
         ? `Coins held: ${args.coinsSpent} — returned in full if the request is not approved.\n`
         : "") +
-      `\nRemember to follow @scholarly_space on Instagram and join the Telegram channel — ` +
+      `\nRemember to follow @scholarly_space on Instagram and our founder on Telegram — ` +
       `volunteers check this before approving.\n\n` +
       `Changed your mind? Withdraw it from My Sessions on scholarly.space.`,
     html: layout(

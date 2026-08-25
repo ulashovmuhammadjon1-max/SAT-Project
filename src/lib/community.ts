@@ -54,7 +54,7 @@ export async function getCommunityRequirements(): Promise<CommunityRequirement[]
     },
     {
       id: "telegram",
-      label: "Join the Scholarly Telegram",
+      label: "Follow our founder on Telegram",
       handle: `@${settings.telegramHandle}`,
       href: `https://t.me/${settings.telegramHandle}`,
       verification: telegramConfigured() ? "verified" : "attested",

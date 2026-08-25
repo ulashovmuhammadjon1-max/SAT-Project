@@ -38,7 +38,7 @@ export default async function EventsPage() {
             <CalendarRange className="mx-auto mb-3 h-10 w-10 text-muted-foreground" />
             <p className="font-medium">No events scheduled yet</p>
             <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
-              The weekly practice-test review and guest lectures will show up here. Follow the
+              The weekly practice-test review and guest lectures will show up here. Follow our founder's
               Telegram channel and you&apos;ll hear about them first.
             </p>
           </CardContent>
