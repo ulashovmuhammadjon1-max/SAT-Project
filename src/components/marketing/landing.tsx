@@ -201,7 +201,7 @@ function Hero() {
             <h1 className="mt-6 font-display text-[2.7rem] font-bold leading-[0.98] tracking-[-0.02em] text-balance sm:text-[3.5rem] lg:text-[3.5rem] xl:text-[4rem]">
               Learn like a scholar.
               <br />
-              <span className="bg-gradient-to-r from-primary via-[hsl(250_84%_60%)] to-[hsl(266_84%_60%)] bg-clip-text text-transparent">
+              <span className="text-gradient-animated bg-gradient-to-r from-primary via-[hsl(266_84%_62%)] to-[hsl(320_80%_58%)] bg-[length:200%_auto] bg-clip-text text-transparent">
                 SAT, IELTS &amp; beyond.
               </span>
             </h1>
@@ -504,30 +504,40 @@ const PILLARS = [
     title: "Weekly SAT Analysis",
     body: "Break down difficult questions, understand common mistakes, and learn how to approach the SAT more effectively.",
     label: "Every week",
+    tint: "bg-primary/10 text-primary",
+    chip: "border-primary/25 text-primary",
   },
   {
     icon: Languages,
     title: "IELTS Preparation",
     body: "Full Writing and Speaking practice with band-scored feedback, whole-mark criteria, cue cards, and a leaderboard — the same account, the same community.",
     label: "Live now",
+    tint: "bg-[hsl(266_84%_60%)]/10 text-[hsl(266_84%_60%)]",
+    chip: "border-[hsl(266_84%_60%)]/30 text-[hsl(266_84%_60%)]",
   },
   {
     icon: Wallet,
     title: "Financial Literacy",
     body: "Learn how money, inflation, interest rates, banking, investing, and the economy actually affect your everyday life.",
     label: "Monthly",
+    tint: "bg-warning/15 text-warning",
+    chip: "border-warning/30 text-warning",
   },
   {
     icon: FlaskConical,
     title: "Student Research",
     body: "Research programmes where students investigate real questions with guidance from mentors — and build the kind of work universities actually notice.",
     label: "Coming soon",
+    tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
+    chip: "border-[hsl(190_84%_42%)]/30 text-[hsl(190_84%_42%)]",
   },
   {
     icon: GraduationCap,
     title: "Learn From Experts",
     body: "Guest lectures and conversations with university professors and other experts, bringing real academic perspectives directly to students.",
     label: "Coming soon",
+    tint: "bg-[hsl(340_78%_56%)]/10 text-[hsl(340_78%_56%)]",
+    chip: "border-[hsl(340_78%_56%)]/30 text-[hsl(340_78%_56%)]",
   },
 ];
 
@@ -545,12 +555,22 @@ function BeyondSat() {
         <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2" delay={0.05}>
           {PILLARS.map((p) => (
             <RevealItem key={p.title}>
-              <HoverLift className="flex h-full flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-soft">
+              <HoverLift className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-soft">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-foreground/70">
+                  <span
+                    className={cn(
+                      "flex h-10 w-10 items-center justify-center rounded-xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110",
+                      p.tint
+                    )}
+                  >
                     <p.icon className="h-[18px] w-[18px]" />
                   </span>
-                  <span className="rounded-full border border-border/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                  <span
+                    className={cn(
+                      "rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em]",
+                      p.chip
+                    )}
+                  >
                     {p.label}
                   </span>
                 </div>
@@ -617,16 +637,31 @@ function Ecosystem() {
           </p>
         </Reveal>
 
-        <RevealGroup className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
-          {ECOSYSTEM.map((e) => (
-            <RevealItem key={e.name}>
-              <div className="text-center opacity-70 transition-opacity hover:opacity-100">
-                <p className="font-display text-lg font-semibold tracking-tight sm:text-xl">{e.name}</p>
-                <p className="text-[11px] text-muted-foreground">{e.sub}</p>
-              </div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <Reveal delay={0.08}>
+          {/* The track holds the list twice — the animation slides one full
+              copy's width and loops, so the strip scrolls forever. aria-hidden
+              on the duplicate keeps screen readers from reading it twice. */}
+          <div className="marquee mt-8">
+            <div className="marquee-track items-center">
+              {[false, true].map((dup) => (
+                <div
+                  key={dup ? "dup" : "main"}
+                  aria-hidden={dup || undefined}
+                  className="flex items-center gap-x-14 pr-14"
+                >
+                  {ECOSYSTEM.map((e) => (
+                    <div key={e.name} className="text-center opacity-70 transition-opacity hover:opacity-100">
+                      <p className="whitespace-nowrap font-display text-lg font-semibold tracking-tight sm:text-xl">
+                        {e.name}
+                      </p>
+                      <p className="whitespace-nowrap text-[11px] text-muted-foreground">{e.sub}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal delay={0.15}>
           <p className="mx-auto mt-9 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
@@ -673,7 +708,7 @@ function Stats() {
           {STATS.map((s) => (
             <RevealItem key={s.label}>
               <div className="text-center">
-                <p className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+                <p className="bg-gradient-to-br from-primary to-[hsl(266_84%_60%)] bg-clip-text font-display text-3xl font-semibold tracking-tight text-transparent sm:text-4xl">
                   <CountUp value={s.value} prefix={s.prefix} suffix={s.suffix} />
                 </p>
                 <p className="mt-1.5 text-sm text-muted-foreground">{s.label}</p>
@@ -694,36 +729,42 @@ const FEATURES = [
   {
     icon: MonitorPlay,
     title: "Bluebook-accurate interface",
+    tint: "bg-primary/10 text-primary",
     body: "The same two-panel layout, annotation tools, cross-out, question menu and review page — down to the colours and spacing. Test day should feel like a Tuesday.",
     accent: "from-primary/15 to-primary/0",
   },
   {
     icon: Layers,
     title: "Real adaptive modules",
+    tint: "bg-[hsl(266_84%_60%)]/10 text-[hsl(266_84%_60%)]",
     body: "Module 2 routes to easy or hard based on your Module 1 performance, using the same threshold logic as the real exam. Your score means what it says.",
     accent: "from-[hsl(266_84%_60%)]/15 to-transparent",
   },
   {
     icon: Zap,
     title: "Instant explanations",
+    tint: "bg-warning/15 text-warning",
     body: "Every question carries a written explanation, why the right answer works, and the trap the other three were setting.",
     accent: "from-warning/15 to-transparent",
   },
   {
     icon: BarChart3,
     title: "Performance analytics",
+    tint: "bg-success/10 text-success",
     body: "Score trends, per-domain accuracy, pacing, and a predicted total that updates with every session you finish.",
     accent: "from-success/15 to-transparent",
   },
   {
     icon: Target,
     title: "Mistake tracking",
+    tint: "bg-destructive/10 text-destructive",
     body: "Every miss is filed by skill and revisited. Guessed answers and changed answers are flagged separately, because they are different problems.",
     accent: "from-destructive/15 to-transparent",
   },
   {
     icon: BookOpen,
     title: "Vocabulary system",
+    tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
     body: "Spaced repetition over the words the Digital SAT actually tests — plus any word you add yourself.",
     accent: "from-[hsl(190_84%_50%)]/15 to-transparent",
   },
@@ -752,7 +793,12 @@ function Features() {
                     )}
                   />
                   <div className="relative">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-secondary/60 text-primary">
+                    <span
+                      className={cn(
+                        "flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110",
+                        f.tint
+                      )}
+                    >
                       <f.icon className="h-5 w-5" />
                     </span>
                     <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">{f.title}</h3>

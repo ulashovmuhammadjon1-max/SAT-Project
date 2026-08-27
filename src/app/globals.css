@@ -359,6 +359,41 @@ mark.sat-highlight.is-active {
     );
     animation: shimmer 1.6s infinite;
   }
+
+  /* Slow pan across an oversized gradient. Pair with bg-clip-text and a
+     bg-[length:200%_auto] gradient — the text appears to shimmer through its
+     colours without any layout work per frame. */
+  .text-gradient-animated {
+    animation: gradient-pan 6s ease-in-out infinite alternate;
+  }
+
+  /* Infinite horizontal scroll for a strip of logos/labels. The track holds
+     the content TWICE; translating by -50% then snapping back is seamless
+     because the second copy is pixel-identical to the first. Fades at the
+     edges via mask so items enter and leave softly. Hover pauses it — the
+     names are links-in-spirit and a moving target is unreadable. */
+  .marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 30s linear infinite;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes gradient-pan {
+  from { background-position: 0% center; }
+  to   { background-position: 100% center; }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /*
