@@ -41,6 +41,14 @@ export async function createClass(formData: FormData): Promise<{ ok?: boolean; e
   });
   if (!parsed.success) return { error: "Fill in the class name, school and teacher name." };
 
+  // If the teacher already has an account, link it now — their Teacher Panel
+  // lights up immediately. Otherwise the class is claimed by email the first
+  // time that address registers and opens /teach.
+  const teacherEmail = parsed.data.teacherEmail ? parsed.data.teacherEmail.toLowerCase() : null;
+  const teacherUser = teacherEmail
+    ? await prisma.user.findUnique({ where: { email: teacherEmail }, select: { id: true } })
+    : null;
+
   // Collisions over a 32^6 space are vanishingly rare; retry a few times
   // rather than pretend they are impossible.
   for (let attempt = 0; attempt < 5; attempt++) {
@@ -52,7 +60,8 @@ export async function createClass(formData: FormData): Promise<{ ok?: boolean; e
           name: parsed.data.name,
           school: parsed.data.school,
           teacherName: parsed.data.teacherName,
-          teacherEmail: parsed.data.teacherEmail || null,
+          teacherEmail,
+          teacherUserId: teacherUser?.id ?? null,
         },
       });
       revalidatePath("/admin/schools");

@@ -228,19 +228,38 @@ type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL";
 /** Which product a path belongs to; exam pages fall back to activeExam. */
 function productFor(pathname: string, activeExam: ExamMode): Product {
   if (pathname.startsWith("/research")) return "RESEARCH";
-  if (pathname.startsWith("/class")) return "SCHOOL";
+  if (pathname.startsWith("/class") || pathname.startsWith("/teach")) return "SCHOOL";
   return activeExam === "IELTS" ? "IELTS" : "SAT";
 }
 
-export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }) {
+export function StudentSidebar({
+  activeExam = "SAT",
+  teaching = false,
+}: {
+  activeExam?: ExamMode;
+  /** True when a class is linked to this account — shows the Teacher Panel. */
+  teaching?: boolean;
+}) {
   const pathname = usePathname();
   const product = productFor(pathname, activeExam);
-  const groups =
+  const baseGroups =
     product === "RESEARCH"
       ? RESEARCH_GROUPS
       : product === "SCHOOL"
         ? SCHOOL_GROUPS
         : GROUPS_FOR[activeExam];
+  // Teachers see their panel in every product's sidebar, right before
+  // Settings — a teacher checking on their class should never have to hunt.
+  const groups = teaching
+    ? [
+        ...baseGroups.slice(0, -1),
+        {
+          label: "Teaching",
+          items: [{ href: "/teach", label: "Teacher Panel", icon: GraduationCap, badge: "New" }],
+        },
+        baseGroups[baseGroups.length - 1],
+      ]
+    : baseGroups;
   const home = activeExam === "IELTS" ? "/ielts" : "/dashboard";
 
   return (
