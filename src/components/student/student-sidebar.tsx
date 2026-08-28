@@ -35,6 +35,7 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
+import { ClassSwitcher, type SwitcherClass } from "@/components/classroom/class-switcher";
 import { setActiveExam } from "@/server/actions/student/exam-mode";
 import { cn } from "@/lib/utils";
 
@@ -43,6 +44,8 @@ interface NavItem {
   label: string;
   icon: typeof LayoutDashboard;
   exact?: boolean;
+  /** Extra prefix that also lights this item up (child routes of an exact href). */
+  also?: string;
   /** Small pill next to the label, for genuinely new programmes. */
   badge?: string;
 }
@@ -199,35 +202,64 @@ const RESEARCH_GROUPS: NavGroup[] = [
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
-const SCHOOL_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/class", label: "My Class", icon: School, exact: true }] },
-  {
-    label: "Class",
-    items: [{ href: "/class/leaderboard", label: "Class Leaderboard", icon: Trophy }],
-  },
-  {
-    label: "Teachers",
+/**
+ * The School sidebar is class-aware: inside /classes/{id} it grows a "This
+ * class" block, so the nav always answers "which class am I in" together with
+ * the switcher above it.
+ */
+function schoolGroups(pathname: string): NavGroup[] {
+  const classId = pathname.match(/^\/classes\/([^/]+)/)?.[1];
+  return [
+    { label: null, items: [{ href: "/classes", label: "All Classes", icon: School, exact: true }] },
+    ...(classId
+      ? [
+          {
+            label: "This class",
+            items: [
+              {
+                href: `/classes/${classId}`,
+                label: "Assignments",
+                icon: ListChecks,
+                exact: true,
+                also: `/classes/${classId}/assignments`,
+              },
+              { href: `/classes/${classId}/leaderboard`, label: "Class Leaderboard", icon: Trophy },
+            ],
+          },
+        ]
+      : []),
+    {
+      label: "Teachers",
     items: [{ href: "/schools", label: "For Teachers", icon: GraduationCap }],
-  },
-  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
-];
+    },
+    { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+  ];
+}
 
 type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL";
 
 /** Which product a path belongs to; exam pages fall back to activeExam. */
 function productFor(pathname: string, activeExam: ExamMode): Product {
   if (pathname.startsWith("/research")) return "RESEARCH";
-  if (pathname.startsWith("/class") || pathname.startsWith("/teach")) return "SCHOOL";
+  if (
+    pathname.startsWith("/class") ||
+    pathname.startsWith("/classes") ||
+    pathname.startsWith("/teach")
+  )
+    return "SCHOOL";
   return activeExam === "IELTS" ? "IELTS" : "SAT";
 }
 
 export function StudentSidebar({
   activeExam = "SAT",
   teaching = false,
+  classes = [],
 }: {
   activeExam?: ExamMode;
   /** True when a class is linked to this account — shows the Teacher Panel. */
   teaching?: boolean;
+  /** The student's classes, for the School product's switcher. */
+  classes?: SwitcherClass[];
 }) {
   const pathname = usePathname();
   const product = productFor(pathname, activeExam);
@@ -235,7 +267,7 @@ export function StudentSidebar({
     product === "RESEARCH"
       ? RESEARCH_GROUPS
       : product === "SCHOOL"
-        ? SCHOOL_GROUPS
+        ? schoolGroups(pathname)
         : GROUPS_FOR[activeExam];
   // Teachers see their panel in every product's sidebar, right before
   // Settings — a teacher checking on their class should never have to hunt.
@@ -265,6 +297,10 @@ export function StudentSidebar({
           Research, and School. */}
       <ProductMenu activeExam={activeExam} product={product} />
 
+      {/* Inside School, the class is the unit everything hangs off — the
+          switcher keeps "which class am I in?" answered at all times. */}
+      {product === "SCHOOL" && <ClassSwitcher classes={classes} />}
+
       <nav className="flex-1 space-y-4 overflow-y-auto p-3">
         {groups.map((group, gi) => (
           <div key={group.label ?? `plain-${gi}`} className="space-y-0.5">
@@ -275,8 +311,11 @@ export function StudentSidebar({
             )}
             {group.items.map((item) => {
               // `exact` matters for the dashboards: without it, /ielts would
-              // light up for every /ielts/* route at once.
-              const active = item.exact ? pathname === item.href : pathname.startsWith(item.href);
+              // light up for every /ielts/* route at once. `also` lets an
+              // exact item still own a child subtree (assignment pages).
+              const active =
+                (item.exact ? pathname === item.href : pathname.startsWith(item.href)) ||
+                (item.also ? pathname.startsWith(item.also) : false);
               return (
                 <Link
                   key={`${item.href}-${item.label}`}
@@ -351,7 +390,7 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
     { key: "SAT", icon: BookOpen, onSelect: () => goExam("SAT") },
     { key: "IELTS", icon: PenLine, onSelect: () => goExam("IELTS") },
     { key: "RESEARCH", icon: FlaskConical, href: "/research", badge: "New" },
-    { key: "SCHOOL", icon: School, href: "/class", badge: "New" },
+    { key: "SCHOOL", icon: School, href: "/classes", badge: "New" },
   ];
 
   return (

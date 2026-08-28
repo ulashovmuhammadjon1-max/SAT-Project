@@ -1,5 +1,12 @@
 "use server";
 
+import {
+  assignmentKind,
+  deriveStatus,
+  isDone,
+  type AssignmentKind,
+  type SubmissionStatus,
+} from "@/lib/classroom/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 
@@ -157,22 +164,25 @@ async function weakestSkills(userIds: string[], limit = 5) {
 
 export interface AssignmentStudentStatus {
   userId: string;
+  status: SubmissionStatus;
   done: boolean;
   /** Scaled score for a test assignment; percent correct for a question set. */
   score: number | null;
   /** Question sets: how many of the assigned questions this student answered. */
   answered: number;
+  /** When a free-form task was handed in. */
+  submittedAt: Date | null;
   /** What the student handed in on a free-form task. */
   note: string | null;
-  fileName: string | null;
-  /** Where the teacher downloads that file from. */
-  submissionHref: string | null;
+  files: { id: string; name: string; size: number }[];
 }
 
 export interface AssignmentStatus {
   id: string;
+  classId: string;
   title: string;
   instructions: string | null;
+  kind: AssignmentKind;
   testId: string | null;
   testTitle: string | null;
   dueAt: Date | null;
@@ -190,6 +200,7 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
     orderBy: { createdAt: "desc" },
     select: {
       id: true,
+      classId: true,
       title: true,
       instructions: true,
       testId: true,
@@ -198,7 +209,14 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
       attachmentName: true,
       questionIds: true,
       test: { select: { title: true } },
-      completions: { select: { userId: true, note: true, fileName: true } },
+      completions: {
+        select: {
+          userId: true,
+          note: true,
+          submittedAt: true,
+          files: { select: { id: true, name: true, size: true }, orderBy: { createdAt: "asc" } },
+        },
+      },
     },
   });
   if (assignments.length === 0) return [];
@@ -228,51 +246,104 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
   const latest = new Map<string, boolean>();
   for (const a of qAttempts) latest.set(`${a.userId}:${a.questionId}`, a.isCorrect);
 
-  return assignments.map((a) => ({
-    id: a.id,
-    title: a.title,
-    instructions: a.instructions,
-    testId: a.testId,
-    testTitle: a.test?.title ?? null,
-    dueAt: a.dueAt,
-    createdAt: a.createdAt,
-    attachmentName: a.attachmentName,
-    attachmentHref: a.attachmentName ? `/api/assignments/${a.id}/attachment` : null,
-    questionCount: a.questionIds.length,
-    perStudent: memberIds.map((userId) => {
-      const completion = a.completions.find((c) => c.userId === userId);
-      const submission = {
-        note: completion?.note ?? null,
-        fileName: completion?.fileName ?? null,
-        submissionHref: completion?.fileName
-          ? `/api/assignments/${a.id}/submission/${userId}`
-          : null,
-      };
+  return assignments.map((a) => {
+    const kind = assignmentKind(a);
+    return {
+      id: a.id,
+      classId: a.classId,
+      title: a.title,
+      instructions: a.instructions,
+      kind,
+      testId: a.testId,
+      testTitle: a.test?.title ?? null,
+      dueAt: a.dueAt,
+      createdAt: a.createdAt,
+      attachmentName: a.attachmentName,
+      attachmentHref: a.attachmentName ? `/api/assignments/${a.id}/attachment` : null,
+      questionCount: a.questionIds.length,
+      perStudent: memberIds.map((userId) => {
+        const completion = a.completions.find((c) => c.userId === userId);
+        const answered = a.questionIds.filter((q) => latest.has(`${userId}:${q}`)).length;
+        const testDone = attempts.filter((t) => t.testId === a.testId && t.userId === userId);
 
-      if (a.testId) {
-        const done = attempts.filter((t) => t.testId === a.testId && t.userId === userId);
-        const best = done.reduce<number | null>(
-          (b, t) => (t.totalScaledScore == null ? b : Math.max(b ?? 0, t.totalScaledScore)),
-          null,
-        );
-        return { userId, done: done.length > 0, score: best, answered: 0, ...submission };
-      }
+        const status = deriveStatus({
+          kind,
+          dueAt: a.dueAt,
+          submittedAt: completion?.submittedAt ?? null,
+          hasWork: Boolean(completion),
+          answered,
+          total: a.questionIds.length,
+          testSubmitted: a.testId ? testDone.length > 0 : false,
+        });
 
-      if (a.questionIds.length > 0) {
-        const seen = a.questionIds.filter((q) => latest.has(`${userId}:${q}`));
-        const correct = seen.filter((q) => latest.get(`${userId}:${q}`)).length;
+        let score: number | null = null;
+        if (kind === "TEST") {
+          score = testDone.reduce<number | null>(
+            (b, t) => (t.totalScaledScore == null ? b : Math.max(b ?? 0, t.totalScaledScore)),
+            null,
+          );
+        } else if (kind === "QUESTIONS" && answered > 0) {
+          const correct = a.questionIds.filter((q) => latest.get(`${userId}:${q}`)).length;
+          score = Math.round((correct / answered) * 100);
+        }
+
         return {
           userId,
-          done: seen.length === a.questionIds.length,
-          score: seen.length ? Math.round((correct / seen.length) * 100) : null,
-          answered: seen.length,
-          ...submission,
+          status,
+          done: isDone(status),
+          score,
+          answered,
+          submittedAt: completion?.submittedAt ?? null,
+          note: completion?.note ?? null,
+          files: completion?.files ?? [],
         };
-      }
+      }),
+    };
+  });
+}
 
-      return { userId, done: Boolean(completion), score: null, answered: 0, ...submission };
-    }),
-  }));
+export interface AssignmentTracking {
+  assignment: Omit<AssignmentStatus, "perStudent">;
+  className: string;
+  students: (AssignmentStudentStatus & { name: string | null; email: string })[];
+}
+
+/** One assignment's full submission picture, for the teacher's detail page. */
+export async function getAssignmentTracking(assignmentId: string): Promise<AssignmentTracking | null> {
+  const user = await requireUser();
+  const assignment = await prisma.classAssignment.findFirst({
+    where: { id: assignmentId, class: { teacherUserId: user.id } },
+    select: {
+      classId: true,
+      class: {
+        select: {
+          name: true,
+          memberships: {
+            orderBy: { joinedAt: "asc" },
+            select: { user: { select: { id: true, name: true, email: true } } },
+          },
+        },
+      },
+    },
+  });
+  if (!assignment) return null;
+
+  const members = assignment.class.memberships.map((m) => m.user);
+  const statuses = await assignmentStatuses(assignment.classId, members.map((m) => m.id));
+  const target = statuses.find((s) => s.id === assignmentId);
+  if (!target) return null;
+
+  const { perStudent, ...meta } = target;
+  const byId = new Map(perStudent.map((p) => [p.userId, p]));
+  return {
+    assignment: meta,
+    className: assignment.class.name,
+    students: members.map((m) => ({
+      ...(byId.get(m.id) as AssignmentStudentStatus),
+      name: m.name,
+      email: m.email,
+    })),
+  };
 }
 
 export interface ClassAnalytics {

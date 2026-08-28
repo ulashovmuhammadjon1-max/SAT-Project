@@ -197,7 +197,14 @@ export function AssignmentForm({
   );
 }
 
-export function DeleteAssignmentButton({ assignmentId }: { assignmentId: string }) {
+export function DeleteAssignmentButton({
+  assignmentId,
+  redirectTo,
+}: {
+  assignmentId: string;
+  /** Where to land after deleting — the tracking page ceases to exist. */
+  redirectTo?: string;
+}) {
   const router = useRouter();
   const [pending, start] = useTransition();
   return (
@@ -213,7 +220,8 @@ export function DeleteAssignmentButton({ assignmentId }: { assignmentId: string 
           if (res.error) toast.error(res.error);
           else {
             toast.success("Assignment removed.");
-            router.refresh();
+            if (redirectTo) router.push(redirectTo);
+            else router.refresh();
           }
         });
       }}

@@ -1,5 +1,6 @@
 import { requireVerifiedUser } from "@/lib/session";
 import { examContextOrDefault } from "@/lib/exam/mode";
+import { prisma } from "@/lib/prisma";
 import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 import { StudentContainer } from "@/components/student/student-container";
@@ -10,11 +11,22 @@ export default async function StudentLayout({ children }: { children: React.Reac
   // Resolved once here and passed down, so the sidebar and the topbar cannot
   // disagree about which exam the student is in.
   const exam = await examContextOrDefault();
-  const teaching = await isTeacher(user.id, user.email ?? null);
+  const [teaching, memberships] = await Promise.all([
+    isTeacher(user.id, user.email ?? null),
+    prisma.classMembership.findMany({
+      where: { userId: user.id, class: { isArchived: false } },
+      orderBy: { joinedAt: "asc" },
+      select: { class: { select: { id: true, name: true, teacherName: true } } },
+    }),
+  ]);
 
   return (
     <div className="flex min-h-screen bg-secondary/30">
-      <StudentSidebar activeExam={exam.active} teaching={teaching} />
+      <StudentSidebar
+        activeExam={exam.active}
+        teaching={teaching}
+        classes={memberships.map((m) => m.class)}
+      />
       <div className="flex min-w-0 flex-1 flex-col">
         <StudentTopbar activeExam={exam.active} />
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">

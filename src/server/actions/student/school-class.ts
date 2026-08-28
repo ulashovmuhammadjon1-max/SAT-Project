@@ -7,8 +7,11 @@ import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 
 /**
- * Joining a class. A code is something a teacher writes on a whiteboard, so
- * matching is forgiving: case-insensitive, spaces and dashes ignored.
+ * Joining and leaving classes. Everything else the student sees — the class
+ * list, class home, assignments, submissions — lives in classroom.ts.
+ *
+ * A code is something a teacher writes on a whiteboard, so matching is
+ * forgiving: case-insensitive, spaces and dashes ignored.
  */
 
 const codeSchema = z.string().trim().min(4).max(24);
@@ -17,7 +20,9 @@ function normalize(code: string): string {
   return code.toUpperCase().replace(/[\s-]/g, "");
 }
 
-export async function joinClass(rawCode: unknown): Promise<{ ok?: boolean; error?: string; className?: string }> {
+export async function joinClass(
+  rawCode: unknown,
+): Promise<{ ok?: boolean; error?: string; classId?: string; className?: string; teacherName?: string }> {
   const user = await requireUser();
 
   const parsed = codeSchema.safeParse(rawCode);
@@ -26,7 +31,7 @@ export async function joinClass(rawCode: unknown): Promise<{ ok?: boolean; error
 
   const cls = await prisma.schoolClass.findFirst({
     where: { code, isArchived: false },
-    select: { id: true, name: true, school: true },
+    select: { id: true, name: true, school: true, teacherName: true },
   });
   if (!cls) return { error: "No class with that code. Check it with your teacher." };
 
@@ -37,149 +42,18 @@ export async function joinClass(rawCode: unknown): Promise<{ ok?: boolean; error
     update: {},
   });
 
-  revalidatePath("/class");
-  return { ok: true, className: `${cls.name} — ${cls.school}` };
+  revalidatePath("/classes");
+  return {
+    ok: true,
+    classId: cls.id,
+    className: `${cls.name} — ${cls.school}`,
+    teacherName: cls.teacherName,
+  };
 }
 
 export async function leaveClass(classId: string): Promise<{ ok?: boolean; error?: string }> {
   const user = await requireUser();
   await prisma.classMembership.deleteMany({ where: { classId, userId: user.id } });
-  revalidatePath("/class");
+  revalidatePath("/classes");
   return { ok: true };
-}
-
-export interface MyClass {
-  id: string;
-  name: string;
-  school: string;
-  teacherName: string;
-  classmates: number;
-}
-
-export async function getMyClasses(): Promise<MyClass[]> {
-  const user = await requireUser();
-  const memberships = await prisma.classMembership.findMany({
-    where: { userId: user.id },
-    orderBy: { joinedAt: "desc" },
-    select: {
-      class: {
-        select: {
-          id: true,
-          name: true,
-          school: true,
-          teacherName: true,
-          isArchived: true,
-          _count: { select: { memberships: true } },
-        },
-      },
-    },
-  });
-  return memberships
-    .filter((m) => !m.class.isArchived)
-    .map((m) => ({
-      id: m.class.id,
-      name: m.class.name,
-      school: m.class.school,
-      teacherName: m.class.teacherName,
-      classmates: m.class._count.memberships,
-    }));
-}
-
-export interface MyAssignment {
-  id: string;
-  className: string;
-  title: string;
-  instructions: string | null;
-  testId: string | null;
-  testTitle: string | null;
-  dueAt: Date | null;
-  done: boolean;
-  /** The teacher's uploaded worksheet, if there is one. */
-  attachmentName: string | null;
-  /** A hand-picked Question Bank set: how many, how many answered, where to go. */
-  questionCount: number;
-  questionsAnswered: number;
-  practiceHref: string | null;
-  /** What this student already handed in, so the form opens with it. */
-  submittedNote: string | null;
-  submittedFileName: string | null;
-  submissionHref: string | null;
-}
-
-/** Every assignment across the student's classes, with their own status. */
-export async function getMyAssignments(): Promise<MyAssignment[]> {
-  const user = await requireUser();
-  const rows = await prisma.classAssignment.findMany({
-    where: { class: { isArchived: false, memberships: { some: { userId: user.id } } } },
-    orderBy: { createdAt: "desc" },
-    select: {
-      id: true,
-      title: true,
-      instructions: true,
-      testId: true,
-      dueAt: true,
-      attachmentName: true,
-      questionIds: true,
-      subject: true,
-      class: { select: { name: true } },
-      test: { select: { title: true } },
-      completions: {
-        where: { userId: user.id },
-        select: { note: true, fileName: true },
-      },
-    },
-  });
-  if (rows.length === 0) return [];
-
-  const testIds = rows.map((r) => r.testId).filter((t): t is string => t !== null);
-  const submitted = testIds.length
-    ? await prisma.attempt.findMany({
-        where: { userId: user.id, testId: { in: testIds }, status: "SUBMITTED" },
-        select: { testId: true },
-      })
-    : [];
-  const submittedTests = new Set(submitted.map((a) => a.testId));
-
-  // One query covers every question-set assignment: which of the assigned
-  // questions this student has answered at least once.
-  const allQuestionIds = [...new Set(rows.flatMap((r) => r.questionIds))];
-  const answered = allQuestionIds.length
-    ? await prisma.questionAttempt.findMany({
-        where: { userId: user.id, questionId: { in: allQuestionIds } },
-        select: { questionId: true },
-        distinct: ["questionId"],
-      })
-    : [];
-  const answeredIds = new Set(answered.map((a) => a.questionId));
-
-  return rows.map((r) => {
-    const answeredHere = r.questionIds.filter((id) => answeredIds.has(id)).length;
-    const isSet = r.questionIds.length > 0;
-    return {
-      id: r.id,
-      className: r.class.name,
-      title: r.title,
-      instructions: r.instructions,
-      testId: r.testId,
-      testTitle: r.test?.title ?? null,
-      dueAt: r.dueAt,
-      done: r.testId
-        ? submittedTests.has(r.testId)
-        : isSet
-          ? answeredHere === r.questionIds.length
-          : r.completions.length > 0,
-      attachmentName: r.attachmentName,
-      questionCount: r.questionIds.length,
-      questionsAnswered: answeredHere,
-      practiceHref: isSet
-        ? `/practice/session?subject=${r.subject ?? "READING_WRITING"}&size=${r.questionIds.length}` +
-          `&ids=${r.questionIds.join(",")}`
-        : null,
-      submittedNote: r.completions[0]?.note ?? null,
-      submittedFileName: r.completions[0]?.fileName ?? null,
-      submissionHref: r.completions[0]?.fileName
-        ? `/api/assignments/${r.id}/submission/${user.id}`
-        : null,
-    };
-  });
 }

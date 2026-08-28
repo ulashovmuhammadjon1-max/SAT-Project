@@ -31,16 +31,25 @@ export async function GET(
         { assignment: { class: { teacherUserId: userId } } },
       ],
     },
-    select: { fileName: true, fileData: true },
+    select: {
+      fileName: true,
+      fileData: true,
+      // New-style uploads: serve the newest file so pre-redesign links keep
+      // resolving to something sensible.
+      files: { orderBy: { createdAt: "desc" }, take: 1, select: { name: true, data: true } },
+    },
   });
-  if (!completion?.fileData) {
+  const source = completion?.files[0] ?? (completion?.fileData
+    ? { name: completion.fileName ?? "submission", data: completion.fileData }
+    : null);
+  if (!source) {
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
-  const file = decodeDataUri(completion.fileData);
+  const file = decodeDataUri(source.data);
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
 
-  const name = safeFilename(completion.fileName, "submission");
+  const name = safeFilename(source.name, "submission");
   return new NextResponse(file.body, {
     headers: {
       "Content-Type": file.contentType,

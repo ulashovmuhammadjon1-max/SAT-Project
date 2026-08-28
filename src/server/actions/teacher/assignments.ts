@@ -104,7 +104,7 @@ async function notifyClass(assignmentId: string) {
         ? `Attached file: ${assignment.attachmentName}`
         : null;
 
-  const url = "https://scholarly.space/class";
+  const url = "https://scholarly.space/classes";
 
   for (const m of assignment.class.memberships) {
     const email = m.user.email;
@@ -209,7 +209,7 @@ export async function createAssignment(input: {
   await notifyClass(created.id);
 
   revalidatePath("/teach");
-  revalidatePath("/class");
+  revalidatePath("/classes");
   return { ok: true, notified: created.class._count.memberships };
 }
 
@@ -224,7 +224,7 @@ export async function deleteAssignment(assignmentId: string): Promise<{ ok?: boo
   }
   await prisma.classAssignment.delete({ where: { id: assignmentId } });
   revalidatePath("/teach");
-  revalidatePath("/class");
+  revalidatePath("/classes");
   return { ok: true };
 }
 
@@ -238,67 +238,6 @@ export async function getAssignableTests(): Promise<{ id: string; title: string 
   });
 }
 
-// ---------------------------------------------------------------------------
-// Student side
-// ---------------------------------------------------------------------------
-
-const submitSchema = z.object({
-  assignmentId: z.string().min(1),
-  note: z.string().trim().max(1000).optional().or(z.literal("")),
-  file: fileSchema,
-});
-
-/**
- * Mark a task done, optionally with the work attached.
- *
- * Only free-form tasks are self-reported. A test or question-set assignment
- * completes itself from real answers, so letting a student tick it off would
- * make the teacher's "done" column mean two different things at once.
- */
-export async function markAssignmentDone(input: {
-  assignmentId: string;
-  note?: string;
-  file?: { name: string; dataUrl: string } | null;
-}): Promise<{ ok?: boolean; error?: string }> {
-  const user = await requireUser();
-
-  const parsed = submitSchema.safeParse(input);
-  if (!parsed.success) {
-    return { error: parsed.error.issues[0]?.message ?? "Check what you are submitting." };
-  }
-  const { assignmentId, note, file } = parsed.data;
-
-  const assignment = await prisma.classAssignment.findUnique({
-    where: { id: assignmentId },
-    select: {
-      id: true,
-      testId: true,
-      questionIds: true,
-      class: { select: { memberships: { where: { userId: user.id }, select: { id: true } } } },
-    },
-  });
-  if (!assignment || assignment.class.memberships.length === 0) {
-    return { error: "That task is not in one of your classes." };
-  }
-  if (assignment.testId) {
-    return { error: "This one completes itself when you submit the linked practice test." };
-  }
-  if (assignment.questionIds.length > 0) {
-    return { error: "This one completes itself once you have answered every assigned question." };
-  }
-
-  const work = {
-    note: note || null,
-    fileName: file?.name ?? null,
-    fileData: file?.dataUrl ?? null,
-  };
-  await prisma.assignmentCompletion.upsert({
-    where: { assignmentId_userId: { assignmentId, userId: user.id } },
-    create: { assignmentId, userId: user.id, ...work },
-    update: work,
-  });
-
-  revalidatePath("/class");
-  revalidatePath("/teach");
-  return { ok: true };
-}
+// The student side of submissions lives in
+// src/server/actions/student/classroom.ts — drafts, multi-file uploads,
+// submit and unsubmit are all there, behind the same membership checks.
