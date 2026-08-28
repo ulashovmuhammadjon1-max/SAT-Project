@@ -179,7 +179,7 @@ export function AssignmentForm({
             value={attachment}
             onChange={setAttachment}
             label="Upload a worksheet"
-            hint="PDF, PNG, JPG or WEBP — up to 4MB. Your class can open it from their assignment list."
+            hint="PDF, PNG, JPG or WEBP — up to 10MB. Your class can open it from their assignment list."
           />
         </div>
       </div>

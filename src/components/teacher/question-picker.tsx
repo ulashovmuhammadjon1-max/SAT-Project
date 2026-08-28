@@ -192,7 +192,7 @@ export function QuestionPicker({
       {picked.length > 0 && (
         <ul className="divide-y divide-border rounded-xl border border-border">
           {picked.map((q, i) => (
-            <li key={q.id} className="p-3">
+            <li key={q.id} className="p-3.5">
               <div className="flex flex-wrap items-start gap-2">
                 <span className="mt-0.5 w-6 shrink-0 text-sm tabular-nums text-muted-foreground">
                   {i + 1}.
@@ -204,66 +204,69 @@ export function QuestionPicker({
                       {q.difficulty.charAt(0) + q.difficulty.slice(1).toLowerCase()}
                     </Badge>
                   </div>
+
+                  {/* The whole question, visible without extra clicks — the
+                      point of a preview is reading what you assign. */}
+                  {q.passage && (
+                    <>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="ghost"
+                        className="mt-1.5 h-6 px-2 text-xs text-muted-foreground"
+                        onClick={() => setOpenId(openId === q.id ? null : q.id)}
+                      >
+                        {openId === q.id ? "Hide passage" : "Show passage"}
+                      </Button>
+                      {openId === q.id && (
+                        <div className="mt-1.5 max-h-64 overflow-y-auto rounded-lg bg-secondary/40 p-3 text-sm leading-relaxed">
+                          <MathContent html={q.passage} />
+                        </div>
+                      )}
+                    </>
+                  )}
+
                   <div className="mt-1.5 text-sm leading-relaxed [&_table]:my-2 [&_table]:text-xs">
                     <MathContent html={q.stem} />
                   </div>
 
-                  {openId === q.id && (
-                    <div className="mt-3 space-y-2 rounded-lg bg-secondary/40 p-3">
-                      {q.passage && (
-                        <div className="max-h-56 overflow-y-auto border-b border-border pb-2 text-sm leading-relaxed">
-                          <MathContent html={q.passage} />
-                        </div>
-                      )}
-                      {q.imageUrl && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={q.imageUrl} alt="" className="max-h-56 rounded-md" />
-                      )}
-                      {q.choices.length > 0 ? (
-                        <ul className="space-y-1 text-sm">
-                          {q.choices.map((c) => (
-                            <li
-                              key={c.label}
-                              className={c.isCorrect ? "font-medium text-success" : "text-muted-foreground"}
-                            >
-                              <span className="mr-1.5">{c.label}.</span>
-                              <MathContent html={c.content} />
-                              {c.isCorrect && <span className="ml-1.5 text-xs">← answer</span>}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-sm">
-                          <span className="text-muted-foreground">Student-produced response. Answer: </span>
-                          <span className="font-medium text-success">
-                            {formatFreeResponse(q.correctAnswerFR)}
-                          </span>
-                        </p>
-                      )}
-                    </div>
+                  {q.imageUrl && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={q.imageUrl} alt="" className="mt-2 max-h-56 rounded-md" />
+                  )}
+
+                  {q.choices.length > 0 ? (
+                    <ul className="mt-2 space-y-1 text-sm">
+                      {q.choices.map((c) => (
+                        <li
+                          key={c.label}
+                          className={c.isCorrect ? "font-medium text-success" : "text-muted-foreground"}
+                        >
+                          <span className="mr-1.5">{c.label}.</span>
+                          <MathContent html={c.content} />
+                          {c.isCorrect && <span className="ml-1.5 text-xs">← answer</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2 text-sm">
+                      <span className="text-muted-foreground">Student-produced response. Answer: </span>
+                      <span className="font-medium text-success">
+                        {formatFreeResponse(q.correctAnswerFR)}
+                      </span>
+                    </p>
                   )}
                 </div>
 
-                <div className="flex shrink-0 gap-1">
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="ghost"
-                    className="h-7 px-2 text-xs"
-                    onClick={() => setOpenId(openId === q.id ? null : q.id)}
-                  >
-                    {openId === q.id ? "Hide" : "Answer"}
-                  </Button>
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="ghost"
-                    className="h-7 px-2 text-destructive hover:text-destructive"
-                    onClick={() => update(picked.filter((p) => p.id !== q.id))}
-                  >
-                    <Trash2 className="h-3.5 w-3.5" />
-                  </Button>
-                </div>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="ghost"
+                  className="h-7 shrink-0 px-2 text-destructive hover:text-destructive"
+                  onClick={() => update(picked.filter((p) => p.id !== q.id))}
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </Button>
               </div>
             </li>
           ))}

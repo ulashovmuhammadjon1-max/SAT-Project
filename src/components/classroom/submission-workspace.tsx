@@ -66,7 +66,7 @@ export function SubmissionWorkspace({
         assignmentId,
         note,
         keepFileIds: kept.map((f) => f.id),
-        newFiles: added.map((f) => ({ name: f.name, dataUrl: f.dataUrl })),
+        newFiles: added.map((f) => ({ name: f.name, url: f.url, size: f.size })),
         submit,
       });
       if (res.error) {

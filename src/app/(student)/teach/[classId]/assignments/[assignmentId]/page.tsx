@@ -4,8 +4,10 @@ import { Download, Paperclip } from "lucide-react";
 
 import { StatusBadge } from "@/components/classroom/status-badge";
 import { DeleteAssignmentButton } from "@/components/teacher/assignment-form";
+import { QuestionList } from "@/components/teacher/question-list";
 import { formatBytes, formatDue } from "@/lib/classroom/status";
 import { getAssignmentTracking } from "@/server/actions/teacher/classes";
+import { getAssignmentQuestions } from "@/server/actions/teacher/question-sets";
 import { requireUser } from "@/lib/session";
 
 export const metadata = { title: "Assignment" };
@@ -25,6 +27,11 @@ export default async function TeachAssignmentPage({
   const tracking = await getAssignmentTracking(params.assignmentId);
   if (!tracking || tracking.assignment.classId !== params.classId) notFound();
   const { assignment: a, students } = tracking;
+
+  // The exact questions in a Question Bank set — a teacher re-reading what
+  // they assigned should never have to re-run the picker to see them.
+  const questions =
+    a.kind === "QUESTIONS" ? await getAssignmentQuestions(params.assignmentId) : [];
 
   const count = (statuses: string[]) => students.filter((s) => statuses.includes(s.status)).length;
   const stats = [
@@ -152,6 +159,20 @@ export default async function TeachAssignmentPage({
           )}
         </div>
       </div>
+
+      {questions.length > 0 && (
+        <section>
+          <h2 className="font-display text-lg font-semibold tracking-tight">
+            The questions in this set
+          </h2>
+          <p className="mt-0.5 text-sm text-muted-foreground">
+            Exactly what your students see, with the answers marked.
+          </p>
+          <div className="mt-3 rounded-2xl border border-border/70 bg-card shadow-soft">
+            <QuestionList questions={questions} />
+          </div>
+        </section>
+      )}
     </div>
   );
 }

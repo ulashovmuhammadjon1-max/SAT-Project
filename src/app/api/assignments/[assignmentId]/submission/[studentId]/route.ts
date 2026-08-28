@@ -46,6 +46,10 @@ export async function GET(
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
+  if (source.data.startsWith("https://")) {
+    return NextResponse.redirect(source.data, 307);
+  }
+
   const file = decodeDataUri(source.data);
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
 

@@ -38,6 +38,13 @@ export async function GET(
   });
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
 
+  // Blob-backed files (everything since the 10MB upgrade) are stored as a
+  // URL: send the caller there rather than proxying megabytes through this
+  // function. The URL is unguessable; this route is where access is decided.
+  if (file.data.startsWith("https://")) {
+    return NextResponse.redirect(file.data, 307);
+  }
+
   const decoded = decodeDataUri(file.data);
   if (!decoded) return NextResponse.json({ error: "Not found." }, { status: 404 });
 

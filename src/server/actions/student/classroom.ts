@@ -331,10 +331,16 @@ export async function getAssignmentWorkspace(assignmentId: string): Promise<Stud
 /* Saving and submitting                                                      */
 /* -------------------------------------------------------------------------- */
 
-/** ~4MB decoded per file; five files under the 25MB action body limit. */
-const FILE_MAX_CHARS = 5_600_000;
 const MAX_FILES = 5;
-const FILE_PATTERN = /^data:(image\/(png|jpe?g|webp)|application\/pdf);base64,[A-Za-z0-9+/=]+$/;
+const MAX_FILE_BYTES = 10 * 1024 * 1024;
+
+/**
+ * Files arrive as Blob URLs, not payloads: the browser uploads straight to
+ * Blob storage (the /api/assignments/upload token route enforces type and
+ * the 10MB cap there), and only the URL reaches this action. The host check
+ * stops anything that is not our blob store from being stored as a "file".
+ */
+const BLOB_URL = /^https:\/\/[a-zA-Z0-9-]+\.public\.blob\.vercel-storage\.com\//;
 
 const saveSchema = z.object({
   assignmentId: z.string().min(1),
@@ -345,10 +351,8 @@ const saveSchema = z.object({
     .array(
       z.object({
         name: z.string().trim().min(1).max(200),
-        dataUrl: z
-          .string()
-          .regex(FILE_PATTERN, "Files must be PDF, PNG, JPG or WEBP.")
-          .max(FILE_MAX_CHARS, "Each file must be under 4MB."),
+        url: z.string().regex(BLOB_URL, "Upload files through the upload box.").max(1000),
+        size: z.coerce.number().int().min(0).max(MAX_FILE_BYTES).default(0),
       }),
     )
     .max(MAX_FILES)
@@ -375,7 +379,7 @@ export async function saveWork(input: {
   assignmentId: string;
   note?: string;
   keepFileIds?: string[];
-  newFiles?: { name: string; dataUrl: string }[];
+  newFiles?: { name: string; url: string; size: number }[];
   submit: boolean;
 }): Promise<SaveWorkResult> {
   const user = await requireUser();
@@ -435,12 +439,7 @@ export async function saveWork(input: {
   }
   for (const f of d.newFiles) {
     await prisma.submissionFile.create({
-      data: {
-        completionId: completion.id,
-        name: f.name,
-        data: f.dataUrl,
-        size: Math.round((f.dataUrl.length - f.dataUrl.indexOf(",") - 1) * 0.75),
-      },
+      data: { completionId: completion.id, name: f.name, data: f.url, size: f.size },
     });
   }
 

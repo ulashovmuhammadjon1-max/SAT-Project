@@ -34,6 +34,12 @@ export async function GET(
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
+  // Blob-backed attachments are stored as a URL — redirect instead of
+  // proxying the bytes. Access was already decided above.
+  if (assignment.attachmentData.startsWith("https://")) {
+    return NextResponse.redirect(assignment.attachmentData, 307);
+  }
+
   const file = decodeDataUri(assignment.attachmentData);
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
 

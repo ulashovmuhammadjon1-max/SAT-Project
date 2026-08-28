@@ -22,17 +22,18 @@ import { requireUser } from "@/lib/session";
  * Any of the three can carry an uploaded file and a due date.
  */
 
-/** ~4MB of file becomes ~5.4MB of base64 — the peer-mentor certificate cap. */
-const FILE_MAX = 5_600_000;
-const FILE_PATTERN = /^data:(image\/(png|jpe?g|webp)|application\/pdf);base64,[A-Za-z0-9+/=]+$/;
+/**
+ * Attachments arrive as Blob URLs — the browser uploads directly to Blob
+ * storage (type and the 10MB cap are enforced by the token route), and only
+ * the URL reaches this action. The host check keeps anything that is not our
+ * blob store from being stored as an "attachment".
+ */
+const BLOB_URL = /^https:\/\/[a-zA-Z0-9-]+\.public\.blob\.vercel-storage\.com\//;
 
 const fileSchema = z
   .object({
     name: z.string().trim().min(1).max(200),
-    dataUrl: z
-      .string()
-      .regex(FILE_PATTERN, "Attach a PDF, PNG, JPG or WEBP file.")
-      .max(FILE_MAX, "The file must be under 4MB."),
+    url: z.string().regex(BLOB_URL, "Upload the file through the attach box.").max(1000),
   })
   .nullable()
   .optional();
@@ -143,7 +144,7 @@ export async function createAssignment(input: {
   instructions?: unknown;
   testId?: unknown;
   dueAt?: string | null;
-  attachment?: { name: string; dataUrl: string } | null;
+  attachment?: { name: string; url: string } | null;
   questionIds?: string[];
   subject?: string | null;
 }): Promise<{ ok?: boolean; error?: string; notified?: number }> {
@@ -199,7 +200,7 @@ export async function createAssignment(input: {
       testId: d.testId || null,
       dueAt: d.dueAt ?? null,
       attachmentName: d.attachment?.name ?? null,
-      attachmentData: d.attachment?.dataUrl ?? null,
+      attachmentData: d.attachment?.url ?? null,
       questionIds,
       subject,
     },
