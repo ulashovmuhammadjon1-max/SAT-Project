@@ -39,7 +39,10 @@ export interface EmailResult {
 }
 
 function fromAddress(): string {
-  return process.env.EMAIL_FROM || "Scholarly <onboarding@resend.dev>";
+  // Default to the verified production domain, not Resend's test sender —
+  // onboarding@resend.dev may only email the account owner, so with
+  // EMAIL_FROM unset every student email was rejected 403 in silence.
+  return process.env.EMAIL_FROM || "Scholarly <noreply@scholarly.space>";
 }
 
 async function sendViaResend(msg: EmailMessage): Promise<EmailResult> {
