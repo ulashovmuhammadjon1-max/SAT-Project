@@ -3,7 +3,9 @@ import {
   BookMarked, Brain, Coins, FlaskConical, Languages, LineChart, Sparkles,
 } from "lucide-react";
 
+import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
+import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +15,7 @@ export const metadata = {
     "The Scholarly Journal — student research from the community: published work and projects in progress, by area.",
 };
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 /**
  * Research areas. `match` is tested against the free-text `field` a student
@@ -71,7 +73,7 @@ export default async function JournalPage({
 }: {
   searchParams: { area?: string };
 }) {
-  const projects = await getProjects();
+  const [projects, user] = await Promise.all([getProjects(), getCurrentUser()]);
   const selected: AreaSlug | null = AREAS.some((a) => a.slug === searchParams.area)
     ? (searchParams.area as AreaSlug)
     : null;
@@ -80,7 +82,7 @@ export default async function JournalPage({
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteNav />
+      {user ? <AppReturnBar backHref="/research" backLabel="Back to Research" /> : <SiteNav />}
       <main className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[hsl(190_84%_42%)]">
           The Scholarly Journal

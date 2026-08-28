@@ -196,13 +196,6 @@ const RESEARCH_GROUPS: NavGroup[] = [
       { href: "/journal", label: "The Journal", icon: Microscope },
     ],
   },
-  {
-    label: "Community",
-    items: [
-      { href: "/community", label: "Community", icon: MessagesSquare },
-      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck },
-    ],
-  },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
@@ -210,11 +203,7 @@ const SCHOOL_GROUPS: NavGroup[] = [
   { label: null, items: [{ href: "/class", label: "My Class", icon: School, exact: true }] },
   {
     label: "Class",
-    items: [
-      { href: "/class/leaderboard", label: "Class Leaderboard", icon: Trophy },
-      { href: "/tests", label: "Full-Length Tests", icon: BookOpen },
-      { href: "/practice", label: "Question Bank", icon: ListChecks },
-    ],
+    items: [{ href: "/class/leaderboard", label: "Class Leaderboard", icon: Trophy }],
   },
   {
     label: "Teachers",

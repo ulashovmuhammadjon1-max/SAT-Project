@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { BarChart3, CheckCircle2, ClipboardList, School, Users2 } from "lucide-react";
 
+import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
+import { getCurrentUser } from "@/lib/session";
 
 export const metadata = {
   title: "For Schools",
@@ -33,10 +35,13 @@ const STEPS = [
   "You get a progress view of your class, and we stay one message away.",
 ];
 
-export default function SchoolsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function SchoolsPage() {
+  const user = await getCurrentUser();
   return (
     <div className="min-h-screen bg-background">
-      <SiteNav />
+      {user ? <AppReturnBar backHref="/class" backLabel="Back to My Class" /> : <SiteNav />}
       <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">
           <School className="mr-1 inline h-3.5 w-3.5 align-[-2px]" />
@@ -85,6 +90,7 @@ export default function SchoolsPage() {
           </a>
         </div>
 
+        {!user && (
         <p className="mt-12 text-sm text-muted-foreground">
           Curious what your students would be using?{" "}
           <Link href="/" className="font-medium text-primary underline-offset-4 hover:underline">
@@ -96,6 +102,7 @@ export default function SchoolsPage() {
           </Link>
           .
         </p>
+        )}
       </main>
     </div>
   );
