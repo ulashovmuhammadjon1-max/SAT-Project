@@ -1,4 +1,5 @@
-import { Mail } from "lucide-react";
+import Link from "next/link";
+import { GraduationCap, Mail } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -6,6 +7,7 @@ import { StudyPlanForm } from "@/components/student/study-plan-form";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { readProfile } from "@/lib/onboarding/profile";
 import { requireUser } from "@/lib/session";
+import { isTeacher } from "@/server/actions/teacher/classes";
 import { initials } from "@/lib/utils";
 import { asSection, asWeakArea, EMPTY_PROFILE, type OnboardingProfile } from "@/lib/validations/onboarding";
 
@@ -17,7 +19,10 @@ const SUPPORT_EMAIL = "ulashovmuhammadjo1@gmail.com";
 export default async function StudentSettingsPage() {
   const user = await requireUser();
 
-  const record = await readProfile(user.id);
+  const [record, teaching] = await Promise.all([
+    readProfile(user.id),
+    isTeacher(user.id, user.email ?? null),
+  ]);
 
   // Settings edits the SAT answers only; the track and the IELTS answers are
   // set during onboarding and changed from the IELTS side, so they are carried
@@ -91,6 +96,27 @@ export default async function StudentSettingsPage() {
           <StudyPlanForm initial={initial} />
         </CardContent>
       </Card>
+
+      {teaching && (
+        <Card className="max-w-lg border-success/40">
+          <CardHeader>
+            <CardTitle className="text-base">Teaching</CardTitle>
+            <CardDescription>
+              A class is linked to this account. Track your students&apos; practice, tests and
+              scores from your Teacher Panel.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Link
+              href="/teach"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              <GraduationCap className="h-4 w-4" />
+              Open Teacher Panel
+            </Link>
+          </CardContent>
+        </Card>
+      )}
 
       <Card className="max-w-lg">
         <CardHeader>

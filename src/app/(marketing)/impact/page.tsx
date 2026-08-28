@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
+import { getCurrentUser } from "@/lib/session";
 import { countedStudentWhere } from "@/lib/counted-students";
 import { prisma } from "@/lib/prisma";
 
@@ -15,9 +17,10 @@ export const metadata = {
  * Every number on this page is computed from the live database on render —
  * nothing is typed in, so nothing can quietly go stale or get inflated. That
  * is the whole point: a claim anyone can check is worth more than a bigger
- * claim nobody can. Cached for an hour; the numbers only ever grow.
+ * claim nobody can. Rendered per request so a signed-in visitor gets the
+ * in-app return bar instead of the marketing nav.
  */
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 async function getImpact() {
   try {
@@ -63,7 +66,7 @@ async function queryImpact() {
 const fmt = (n: number) => n.toLocaleString("en-US");
 
 export default async function ImpactPage() {
-  const d = await getImpact();
+  const [d, user] = await Promise.all([getImpact(), getCurrentUser()]);
 
   const STATS: { value: string; label: string; sub: string }[] = [
     { value: d ? fmt(d.students) : "—", label: "Students", sub: "registered accounts" },
@@ -76,7 +79,7 @@ export default async function ImpactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteNav />
+      {user ? <AppReturnBar backHref="/dashboard" backLabel="Back to dashboard" /> : <SiteNav />}
       <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Impact</p>
         <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -103,6 +106,7 @@ export default async function ImpactPage() {
           ))}
         </div>
 
+        {!user && (
         <p className="mt-10 text-sm text-muted-foreground">
           Want to be part of it?{" "}
           <Link href="/onboarding" className="font-medium text-primary underline-offset-4 hover:underline">
@@ -114,6 +118,7 @@ export default async function ImpactPage() {
           </Link>
           .
         </p>
+        )}
       </main>
     </div>
   );

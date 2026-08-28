@@ -1,7 +1,7 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import { LayoutDashboard, LogOut, Settings, User as UserIcon } from "lucide-react";
+import { GraduationCap, LayoutDashboard, LogOut, Settings, User as UserIcon } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -19,11 +19,14 @@ export function UserMenu({
   email,
   image,
   role,
+  teaching = false,
 }: {
   name?: string | null;
   email?: string | null;
   image?: string | null;
   role?: "STUDENT" | "ADMIN" | "REVIEWER" | null;
+  /** True when a school class is linked to this account's email. */
+  teaching?: boolean;
 }) {
   return (
     <DropdownMenu>
@@ -49,6 +52,13 @@ export function UserMenu({
             <Settings className="mr-2 h-4 w-4" /> Settings
           </a>
         </DropdownMenuItem>
+        {teaching && (
+          <DropdownMenuItem asChild>
+            <a href="/teach">
+              <GraduationCap className="mr-2 h-4 w-4" /> Teacher Panel
+            </a>
+          </DropdownMenuItem>
+        )}
         {role === "ADMIN" && (
           <DropdownMenuItem asChild>
             <a href="/admin">

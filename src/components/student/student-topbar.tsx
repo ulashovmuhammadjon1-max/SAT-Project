@@ -4,6 +4,7 @@ import { Flame } from "lucide-react";
 import { ExamSwitcher } from "@/components/student/exam-switcher";
 import { ThemeToggleCompact } from "@/components/shared/theme-toggle";
 import { UserMenu } from "@/components/shared/user-menu";
+import { isTeacher } from "@/server/actions/teacher/classes";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 
@@ -15,6 +16,7 @@ export async function StudentTopbar({ activeExam = "SAT" }: { activeExam?: ExamM
     where: { id: sessionUser.id },
     select: { name: true, email: true, image: true, currentStreak: true, role: true },
   });
+  const teaching = user ? await isTeacher(sessionUser.id, user.email ?? null) : false;
 
   return (
     <header className="flex h-16 items-center justify-between border-b border-border bg-background/80 px-4 backdrop-blur sm:px-6">
@@ -30,7 +32,13 @@ export async function StudentTopbar({ activeExam = "SAT" }: { activeExam?: ExamM
           {user?.currentStreak ?? 0} day streak
         </div>
         <ThemeToggleCompact />
-        <UserMenu name={user?.name} email={user?.email} image={user?.image} role={user?.role} />
+        <UserMenu
+          name={user?.name}
+          email={user?.email}
+          image={user?.image}
+          role={user?.role}
+          teaching={teaching}
+        />
       </div>
     </header>
   );

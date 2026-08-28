@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { BadgeCheck, GraduationCap, Sparkles } from "lucide-react";
 
+import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
+import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 
 export const metadata = {
@@ -18,7 +20,7 @@ export const metadata = {
  * Open roles are listed deliberately: a team page with vacancies reads as an
  * institution that is growing, not a finished list of friends.
  */
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 interface Mentor {
   name: string;
@@ -80,11 +82,11 @@ const OPEN_ROLES = [
 ];
 
 export default async function TeamPage() {
-  const [mentors, core] = await Promise.all([getMentors(), getCoreMembers()]);
+  const [mentors, core, user] = await Promise.all([getMentors(), getCoreMembers(), getCurrentUser()]);
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteNav />
+      {user ? <AppReturnBar backHref="/dashboard" backLabel="Back to dashboard" /> : <SiteNav />}
       <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Team</p>
         <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
