@@ -2217,6 +2217,16 @@ model ClassAssignment {
   dueAt        DateTime?
   createdAt    DateTime  @default(now())
 
+  /// One teacher-uploaded file (PDF or image), stored as a data URI on the row.
+  attachmentName String?
+  attachmentData String? @db.Text
+
+  /// A hand-picked Question Bank set. Soft references on purpose: retiring a
+  /// question shrinks the set rather than breaking the assignment.
+  questionIds String[]
+  /// Which Question Bank subject the set opens in, derived at creation.
+  subject     String?
+
   class       SchoolClass            @relation(fields: [classId], references: [id], onDelete: Cascade)
   test        Test?                  @relation("AssignmentTest", fields: [testId], references: [id], onDelete: SetNull)
   completions AssignmentCompletion[]
@@ -2229,6 +2239,11 @@ model AssignmentCompletion {
   assignmentId String
   userId       String
   completedAt  DateTime @default(now())
+
+  /// The student's submitted work: a short note and one uploaded file.
+  note     String? @db.Text
+  fileName String?
+  fileData String? @db.Text
 
   assignment ClassAssignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
   user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)

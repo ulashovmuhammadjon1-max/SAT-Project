@@ -94,6 +94,16 @@ export interface MyAssignment {
   testTitle: string | null;
   dueAt: Date | null;
   done: boolean;
+  /** The teacher's uploaded worksheet, if there is one. */
+  attachmentName: string | null;
+  /** A hand-picked Question Bank set: how many, how many answered, where to go. */
+  questionCount: number;
+  questionsAnswered: number;
+  practiceHref: string | null;
+  /** What this student already handed in, so the form opens with it. */
+  submittedNote: string | null;
+  submittedFileName: string | null;
+  submissionHref: string | null;
 }
 
 /** Every assignment across the student's classes, with their own status. */
@@ -102,10 +112,21 @@ export async function getMyAssignments(): Promise<MyAssignment[]> {
   const rows = await prisma.classAssignment.findMany({
     where: { class: { isArchived: false, memberships: { some: { userId: user.id } } } },
     orderBy: { createdAt: "desc" },
-    include: {
+    select: {
+      id: true,
+      title: true,
+      instructions: true,
+      testId: true,
+      dueAt: true,
+      attachmentName: true,
+      questionIds: true,
+      subject: true,
       class: { select: { name: true } },
       test: { select: { title: true } },
-      completions: { where: { userId: user.id }, select: { id: true } },
+      completions: {
+        where: { userId: user.id },
+        select: { note: true, fileName: true },
+      },
     },
   });
   if (rows.length === 0) return [];
@@ -119,14 +140,46 @@ export async function getMyAssignments(): Promise<MyAssignment[]> {
     : [];
   const submittedTests = new Set(submitted.map((a) => a.testId));
 
-  return rows.map((r) => ({
-    id: r.id,
-    className: r.class.name,
-    title: r.title,
-    instructions: r.instructions,
-    testId: r.testId,
-    testTitle: r.test?.title ?? null,
-    dueAt: r.dueAt,
-    done: r.testId ? submittedTests.has(r.testId) : r.completions.length > 0,
-  }));
+  // One query covers every question-set assignment: which of the assigned
+  // questions this student has answered at least once.
+  const allQuestionIds = [...new Set(rows.flatMap((r) => r.questionIds))];
+  const answered = allQuestionIds.length
+    ? await prisma.questionAttempt.findMany({
+        where: { userId: user.id, questionId: { in: allQuestionIds } },
+        select: { questionId: true },
+        distinct: ["questionId"],
+      })
+    : [];
+  const answeredIds = new Set(answered.map((a) => a.questionId));
+
+  return rows.map((r) => {
+    const answeredHere = r.questionIds.filter((id) => answeredIds.has(id)).length;
+    const isSet = r.questionIds.length > 0;
+    return {
+      id: r.id,
+      className: r.class.name,
+      title: r.title,
+      instructions: r.instructions,
+      testId: r.testId,
+      testTitle: r.test?.title ?? null,
+      dueAt: r.dueAt,
+      done: r.testId
+        ? submittedTests.has(r.testId)
+        : isSet
+          ? answeredHere === r.questionIds.length
+          : r.completions.length > 0,
+      attachmentName: r.attachmentName,
+      questionCount: r.questionIds.length,
+      questionsAnswered: answeredHere,
+      practiceHref: isSet
+        ? `/practice/session?subject=${r.subject ?? "READING_WRITING"}&size=${r.questionIds.length}` +
+          `&ids=${r.questionIds.join(",")}`
+        : null,
+      submittedNote: r.completions[0]?.note ?? null,
+      submittedFileName: r.completions[0]?.fileName ?? null,
+      submissionHref: r.completions[0]?.fileName
+        ? `/api/assignments/${r.id}/submission/${user.id}`
+        : null,
+    };
+  });
 }

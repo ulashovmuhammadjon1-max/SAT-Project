@@ -155,6 +155,20 @@ async function weakestSkills(userIds: string[], limit = 5) {
   return rows.map((r) => ({ skill: r.skill, total: Number(r.total), correct: Number(r.correct) }));
 }
 
+export interface AssignmentStudentStatus {
+  userId: string;
+  done: boolean;
+  /** Scaled score for a test assignment; percent correct for a question set. */
+  score: number | null;
+  /** Question sets: how many of the assigned questions this student answered. */
+  answered: number;
+  /** What the student handed in on a free-form task. */
+  note: string | null;
+  fileName: string | null;
+  /** Where the teacher downloads that file from. */
+  submissionHref: string | null;
+}
+
 export interface AssignmentStatus {
   id: string;
   title: string;
@@ -163,17 +177,28 @@ export interface AssignmentStatus {
   testTitle: string | null;
   dueAt: Date | null;
   createdAt: Date;
-  /** Per student: done + score when the assignment is a test. */
-  perStudent: { userId: string; done: boolean; score: number | null }[];
+  attachmentName: string | null;
+  /** Where the teacher re-downloads their own upload. */
+  attachmentHref: string | null;
+  questionCount: number;
+  perStudent: AssignmentStudentStatus[];
 }
 
 async function assignmentStatuses(classId: string, memberIds: string[]): Promise<AssignmentStatus[]> {
   const assignments = await prisma.classAssignment.findMany({
     where: { classId },
     orderBy: { createdAt: "desc" },
-    include: {
+    select: {
+      id: true,
+      title: true,
+      instructions: true,
+      testId: true,
+      dueAt: true,
+      createdAt: true,
+      attachmentName: true,
+      questionIds: true,
       test: { select: { title: true } },
-      completions: { select: { userId: true } },
+      completions: { select: { userId: true, note: true, fileName: true } },
     },
   });
   if (assignments.length === 0) return [];
@@ -187,6 +212,22 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
       })
     : [];
 
+  // And one for every question-set assignment: who answered which of the
+  // assigned questions, and whether they got it right.
+  const allQuestionIds = [...new Set(assignments.flatMap((a) => a.questionIds))];
+  const qAttempts =
+    allQuestionIds.length && memberIds.length
+      ? await prisma.questionAttempt.findMany({
+          where: { userId: { in: memberIds }, questionId: { in: allQuestionIds } },
+          select: { userId: true, questionId: true, isCorrect: true },
+          orderBy: { createdAt: "asc" },
+        })
+      : [];
+  // Latest answer per (student, question) wins — the ascending order above
+  // means a later attempt overwrites an earlier one.
+  const latest = new Map<string, boolean>();
+  for (const a of qAttempts) latest.set(`${a.userId}:${a.questionId}`, a.isCorrect);
+
   return assignments.map((a) => ({
     id: a.id,
     title: a.title,
@@ -195,16 +236,41 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
     testTitle: a.test?.title ?? null,
     dueAt: a.dueAt,
     createdAt: a.createdAt,
+    attachmentName: a.attachmentName,
+    attachmentHref: a.attachmentName ? `/api/assignments/${a.id}/attachment` : null,
+    questionCount: a.questionIds.length,
     perStudent: memberIds.map((userId) => {
+      const completion = a.completions.find((c) => c.userId === userId);
+      const submission = {
+        note: completion?.note ?? null,
+        fileName: completion?.fileName ?? null,
+        submissionHref: completion?.fileName
+          ? `/api/assignments/${a.id}/submission/${userId}`
+          : null,
+      };
+
       if (a.testId) {
         const done = attempts.filter((t) => t.testId === a.testId && t.userId === userId);
         const best = done.reduce<number | null>(
           (b, t) => (t.totalScaledScore == null ? b : Math.max(b ?? 0, t.totalScaledScore)),
           null,
         );
-        return { userId, done: done.length > 0, score: best };
+        return { userId, done: done.length > 0, score: best, answered: 0, ...submission };
       }
-      return { userId, done: a.completions.some((c) => c.userId === userId), score: null };
+
+      if (a.questionIds.length > 0) {
+        const seen = a.questionIds.filter((q) => latest.has(`${userId}:${q}`));
+        const correct = seen.filter((q) => latest.get(`${userId}:${q}`)).length;
+        return {
+          userId,
+          done: seen.length === a.questionIds.length,
+          score: seen.length ? Math.round((correct / seen.length) * 100) : null,
+          answered: seen.length,
+          ...submission,
+        };
+      }
+
+      return { userId, done: Boolean(completion), score: null, answered: 0, ...submission };
     }),
   }));
 }

@@ -3,19 +3,39 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
+import { layout, para, sendEmail } from "@/lib/email";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 
 /**
  * Teacher-set assignments.
  *
- * Two kinds, decided by whether a practice test is linked:
+ * Three kinds, decided by what the teacher attaches:
  *  - test assignments: completion is DERIVED from a submitted attempt of that
  *    test, so it cannot be faked by ticking a box and the teacher sees the
  *    actual score next to the name;
- *  - free-form tasks ("watch the lecture", "bring your essay"): students mark
- *    them done themselves.
+ *  - question-set assignments: a hand-picked set of Question Bank questions,
+ *    completion derived from having answered all of them;
+ *  - free-form tasks ("read this PDF", "bring your essay"): students mark them
+ *    done themselves, optionally uploading the work as proof.
+ *
+ * Any of the three can carry an uploaded file and a due date.
  */
+
+/** ~4MB of file becomes ~5.4MB of base64 — the peer-mentor certificate cap. */
+const FILE_MAX = 5_600_000;
+const FILE_PATTERN = /^data:(image\/(png|jpe?g|webp)|application\/pdf);base64,[A-Za-z0-9+/=]+$/;
+
+const fileSchema = z
+  .object({
+    name: z.string().trim().min(1).max(200),
+    dataUrl: z
+      .string()
+      .regex(FILE_PATTERN, "Attach a PDF, PNG, JPG or WEBP file.")
+      .max(FILE_MAX, "The file must be under 4MB."),
+  })
+  .nullable()
+  .optional();
 
 async function requireOwnClass(classId: string) {
   const user = await requireUser();
@@ -35,7 +55,87 @@ const createSchema = z.object({
   instructions: z.string().trim().max(2000).optional().or(z.literal("")),
   testId: z.string().optional().or(z.literal("")),
   dueAt: z.coerce.date().optional().nullable(),
+  attachment: fileSchema,
+  questionIds: z.array(z.string().min(1)).max(50).default([]),
+  subject: z.enum(["MATH", "READING_WRITING"]).optional().nullable(),
 });
+
+/**
+ * Tell the class a task exists.
+ *
+ * Best-effort and deliberately non-fatal: the assignment is already saved by
+ * the time this runs, and a mail provider having a bad minute must not turn a
+ * successful post into an error the teacher has to puzzle over. Sends are
+ * sequential — a class is tens of students, not thousands, and Resend's free
+ * tier rate-limits bursts.
+ */
+async function notifyClass(assignmentId: string) {
+  const assignment = await prisma.classAssignment.findUnique({
+    where: { id: assignmentId },
+    select: {
+      title: true,
+      instructions: true,
+      dueAt: true,
+      attachmentName: true,
+      questionIds: true,
+      testId: true,
+      test: { select: { title: true } },
+      class: {
+        select: {
+          name: true,
+          school: true,
+          teacherName: true,
+          memberships: { select: { user: { select: { name: true, email: true } } } },
+        },
+      },
+    },
+  });
+  if (!assignment) return;
+
+  const due = assignment.dueAt
+    ? assignment.dueAt.toLocaleDateString("en-GB", { day: "numeric", month: "long" })
+    : null;
+
+  const what = assignment.testId
+    ? `Practice test: ${assignment.test?.title ?? "assigned test"}`
+    : assignment.questionIds.length > 0
+      ? `${assignment.questionIds.length} Question Bank questions`
+      : assignment.attachmentName
+        ? `Attached file: ${assignment.attachmentName}`
+        : null;
+
+  const url = "https://scholarly.space/class";
+
+  for (const m of assignment.class.memberships) {
+    const email = m.user.email;
+    if (!email) continue;
+    const firstName = m.user.name?.trim().split(/\s+/)[0] ?? "there";
+    await sendEmail({
+      to: email,
+      subject: `New assignment in ${assignment.class.name}: ${assignment.title}`,
+      text:
+        `Hi ${firstName},\n\n` +
+        `${assignment.class.teacherName} posted a new assignment in ${assignment.class.name}.\n\n` +
+        `${assignment.title}\n` +
+        (what ? `${what}\n` : "") +
+        (due ? `Due ${due}\n` : "") +
+        (assignment.instructions ? `\n${assignment.instructions}\n` : "") +
+        `\nOpen it here: ${url}\n`,
+      html: layout(
+        para(`Hi ${firstName},`) +
+          para(
+            `<strong>${assignment.class.teacherName}</strong> posted a new assignment in ` +
+              `${assignment.class.name} — ${assignment.class.school}.`,
+          ) +
+          para(`<strong>${assignment.title}</strong>`) +
+          (what ? para(what) : "") +
+          (due ? para(`Due ${due}`) : "") +
+          (assignment.instructions ? para(assignment.instructions) : "") +
+          `<p style="margin:24px 0;"><a href="${url}" style="display:inline-block;background:#2549ea;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;">Open the assignment</a></p>`,
+      ),
+    });
+  }
+}
 
 export async function createAssignment(input: {
   classId: string;
@@ -43,7 +143,10 @@ export async function createAssignment(input: {
   instructions?: unknown;
   testId?: unknown;
   dueAt?: string | null;
-}): Promise<{ ok?: boolean; error?: string }> {
+  attachment?: { name: string; dataUrl: string } | null;
+  questionIds?: string[];
+  subject?: string | null;
+}): Promise<{ ok?: boolean; error?: string; notified?: number }> {
   const parsed = createSchema.safeParse(input);
   if (!parsed.success) {
     return { error: parsed.error.issues[0]?.message ?? "Check the assignment details." };
@@ -54,30 +157,60 @@ export async function createAssignment(input: {
     return { error: "That class is not linked to your account." };
   }
 
-  if (parsed.data.testId) {
+  const d = parsed.data;
+  if (d.testId && d.questionIds.length > 0) {
+    return { error: "Assign either a whole practice test or a set of questions, not both." };
+  }
+  if (d.testId) {
     const test = await prisma.test.findFirst({
-      where: { id: parsed.data.testId, status: "PUBLISHED" },
+      where: { id: d.testId, status: "PUBLISHED" },
       select: { id: true },
     });
     if (!test) return { error: "That practice test does not exist or is not published." };
   }
-  if (parsed.data.dueAt && parsed.data.dueAt.getTime() < Date.now()) {
+
+  // Ids come from the teacher's own preview, but they arrive over the wire —
+  // confirm every one is a real published question before it becomes homework
+  // a student cannot open.
+  let questionIds: string[] = [];
+  let subject = d.subject ?? null;
+  if (d.questionIds.length > 0) {
+    const found = await prisma.question.findMany({
+      where: { id: { in: d.questionIds }, isPublished: true },
+      select: { id: true, domain: { select: { subject: true } } },
+    });
+    if (found.length === 0) {
+      return { error: "Those questions are no longer available. Preview a new set." };
+    }
+    const valid = new Set(found.map((q) => q.id));
+    questionIds = d.questionIds.filter((id) => valid.has(id));
+    subject = found[0].domain.subject;
+  }
+
+  if (d.dueAt && d.dueAt.getTime() < Date.now()) {
     return { error: "The due date is already in the past." };
   }
 
-  await prisma.classAssignment.create({
+  const created = await prisma.classAssignment.create({
     data: {
-      classId: parsed.data.classId,
-      title: parsed.data.title,
-      instructions: parsed.data.instructions || null,
-      testId: parsed.data.testId || null,
-      dueAt: parsed.data.dueAt ?? null,
+      classId: d.classId,
+      title: d.title,
+      instructions: d.instructions || null,
+      testId: d.testId || null,
+      dueAt: d.dueAt ?? null,
+      attachmentName: d.attachment?.name ?? null,
+      attachmentData: d.attachment?.dataUrl ?? null,
+      questionIds,
+      subject,
     },
+    select: { id: true, class: { select: { _count: { select: { memberships: true } } } } },
   });
+
+  await notifyClass(created.id);
 
   revalidatePath("/teach");
   revalidatePath("/class");
-  return { ok: true };
+  return { ok: true, notified: created.class._count.memberships };
 }
 
 export async function deleteAssignment(assignmentId: string): Promise<{ ok?: boolean; error?: string }> {
@@ -105,14 +238,42 @@ export async function getAssignableTests(): Promise<{ id: string; title: string 
   });
 }
 
-/** Student side: tick off a free-form task. */
-export async function markAssignmentDone(assignmentId: string): Promise<{ ok?: boolean; error?: string }> {
+// ---------------------------------------------------------------------------
+// Student side
+// ---------------------------------------------------------------------------
+
+const submitSchema = z.object({
+  assignmentId: z.string().min(1),
+  note: z.string().trim().max(1000).optional().or(z.literal("")),
+  file: fileSchema,
+});
+
+/**
+ * Mark a task done, optionally with the work attached.
+ *
+ * Only free-form tasks are self-reported. A test or question-set assignment
+ * completes itself from real answers, so letting a student tick it off would
+ * make the teacher's "done" column mean two different things at once.
+ */
+export async function markAssignmentDone(input: {
+  assignmentId: string;
+  note?: string;
+  file?: { name: string; dataUrl: string } | null;
+}): Promise<{ ok?: boolean; error?: string }> {
   const user = await requireUser();
+
+  const parsed = submitSchema.safeParse(input);
+  if (!parsed.success) {
+    return { error: parsed.error.issues[0]?.message ?? "Check what you are submitting." };
+  }
+  const { assignmentId, note, file } = parsed.data;
+
   const assignment = await prisma.classAssignment.findUnique({
     where: { id: assignmentId },
     select: {
       id: true,
       testId: true,
+      questionIds: true,
       class: { select: { memberships: { where: { userId: user.id }, select: { id: true } } } },
     },
   });
@@ -122,11 +283,21 @@ export async function markAssignmentDone(assignmentId: string): Promise<{ ok?: b
   if (assignment.testId) {
     return { error: "This one completes itself when you submit the linked practice test." };
   }
+  if (assignment.questionIds.length > 0) {
+    return { error: "This one completes itself once you have answered every assigned question." };
+  }
+
+  const work = {
+    note: note || null,
+    fileName: file?.name ?? null,
+    fileData: file?.dataUrl ?? null,
+  };
   await prisma.assignmentCompletion.upsert({
     where: { assignmentId_userId: { assignmentId, userId: user.id } },
-    create: { assignmentId, userId: user.id },
-    update: {},
+    create: { assignmentId, userId: user.id, ...work },
+    update: work,
   });
+
   revalidatePath("/class");
   revalidatePath("/teach");
   return { ok: true };
