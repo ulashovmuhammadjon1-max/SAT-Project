@@ -17,6 +17,9 @@ const PUBLIC_ROUTES = [
   "/verify-email",
   "/terms",
   "/privacy",
+  // The whole point of the impact page is that anyone — an admissions
+  // officer included — can open it without an account.
+  "/impact",
 ];
 
 export default auth((req) => {
