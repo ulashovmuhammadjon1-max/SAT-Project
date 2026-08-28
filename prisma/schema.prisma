@@ -208,6 +208,7 @@ model User {
   hostedSlots           MentorSlot[]           @relation("SlotHost")
   classMemberships      ClassMembership[]
   classesTaught         SchoolClass[]          @relation("ClassTeacher")
+  assignmentCompletions AssignmentCompletion[]
 
   @@index([role])
   @@index([countryCode])
@@ -331,6 +332,7 @@ model Test {
   attempts Attempt[]
 
   @@index([status, type])
+  classAssignments ClassAssignment[] @relation("AssignmentTest")
 }
 
 model Module {
@@ -2169,6 +2171,7 @@ model SchoolClass {
 
   teacher     User?             @relation("ClassTeacher", fields: [teacherUserId], references: [id], onDelete: SetNull)
   memberships ClassMembership[]
+  assignments ClassAssignment[]
 
   @@index([teacherUserId])
 }
@@ -2200,4 +2203,36 @@ model TeamMember {
   createdAt DateTime @default(now())
 
   @@index([isActive, order])
+}
+
+/// A task a teacher set for their class. When `testId` is set, completion is
+/// derived from a submitted attempt of that test; otherwise students tick it
+/// off themselves via AssignmentCompletion.
+model ClassAssignment {
+  id           String    @id @default(cuid())
+  classId      String
+  title        String
+  instructions String?   @db.Text
+  testId       String?
+  dueAt        DateTime?
+  createdAt    DateTime  @default(now())
+
+  class       SchoolClass            @relation(fields: [classId], references: [id], onDelete: Cascade)
+  test        Test?                  @relation("AssignmentTest", fields: [testId], references: [id], onDelete: SetNull)
+  completions AssignmentCompletion[]
+
+  @@index([classId])
+}
+
+model AssignmentCompletion {
+  id           String   @id @default(cuid())
+  assignmentId String
+  userId       String
+  completedAt  DateTime @default(now())
+
+  assignment ClassAssignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, userId])
+  @@index([userId])
 }

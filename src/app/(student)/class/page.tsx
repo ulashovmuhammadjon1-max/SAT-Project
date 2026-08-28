@@ -1,8 +1,9 @@
 import { School, Users } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AssignmentList } from "@/components/student/assignment-list";
 import { JoinClassForm } from "@/components/student/join-class-form";
-import { getMyClasses } from "@/server/actions/student/school-class";
+import { getMyAssignments, getMyClasses } from "@/server/actions/student/school-class";
 import { requireUser } from "@/lib/session";
 
 export const metadata = { title: "My Class" };
@@ -10,7 +11,7 @@ export const dynamic = "force-dynamic";
 
 export default async function ClassPage() {
   await requireUser();
-  const classes = await getMyClasses();
+  const [classes, assignments] = await Promise.all([getMyClasses(), getMyAssignments()]);
 
   return (
     <div className="space-y-6">
@@ -38,6 +39,20 @@ export default async function ClassPage() {
           <JoinClassForm />
         </CardContent>
       </Card>
+
+      {assignments.length > 0 && (
+        <Card className="max-w-2xl">
+          <CardHeader>
+            <CardTitle className="text-base">Assignments from your teacher</CardTitle>
+            <CardDescription>
+              Test assignments complete themselves when you submit the test — no box to tick.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <AssignmentList assignments={assignments} />
+          </CardContent>
+        </Card>
+      )}
 
       {classes.length > 0 && (
         <Card className="max-w-xl">

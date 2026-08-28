@@ -84,3 +84,49 @@ export async function getMyClasses(): Promise<MyClass[]> {
       classmates: m.class._count.memberships,
     }));
 }
+
+export interface MyAssignment {
+  id: string;
+  className: string;
+  title: string;
+  instructions: string | null;
+  testId: string | null;
+  testTitle: string | null;
+  dueAt: Date | null;
+  done: boolean;
+}
+
+/** Every assignment across the student's classes, with their own status. */
+export async function getMyAssignments(): Promise<MyAssignment[]> {
+  const user = await requireUser();
+  const rows = await prisma.classAssignment.findMany({
+    where: { class: { isArchived: false, memberships: { some: { userId: user.id } } } },
+    orderBy: { createdAt: "desc" },
+    include: {
+      class: { select: { name: true } },
+      test: { select: { title: true } },
+      completions: { where: { userId: user.id }, select: { id: true } },
+    },
+  });
+  if (rows.length === 0) return [];
+
+  const testIds = rows.map((r) => r.testId).filter((t): t is string => t !== null);
+  const submitted = testIds.length
+    ? await prisma.attempt.findMany({
+        where: { userId: user.id, testId: { in: testIds }, status: "SUBMITTED" },
+        select: { testId: true },
+      })
+    : [];
+  const submittedTests = new Set(submitted.map((a) => a.testId));
+
+  return rows.map((r) => ({
+    id: r.id,
+    className: r.class.name,
+    title: r.title,
+    instructions: r.instructions,
+    testId: r.testId,
+    testTitle: r.test?.title ?? null,
+    dueAt: r.dueAt,
+    done: r.testId ? submittedTests.has(r.testId) : r.completions.length > 0,
+  }));
+}
