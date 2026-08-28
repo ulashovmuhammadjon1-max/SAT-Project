@@ -20,6 +20,7 @@ const PUBLIC_ROUTES = [
   // The whole point of the impact page is that anyone — an admissions
   // officer included — can open it without an account.
   "/impact",
+  "/team",
 ];
 
 export default auth((req) => {

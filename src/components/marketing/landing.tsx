@@ -1274,6 +1274,11 @@ function Footer() {
                   Our impact
                 </Link>
               </li>
+              <li>
+                <Link href="/team" className="transition-colors hover:text-foreground">
+                  Team
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
