@@ -182,9 +182,65 @@ const GROUPS_FOR: Record<ExamMode, NavGroup[]> = {
   BOTH: BOTH_GROUPS,
 };
 
+/**
+ * Research and School are products of their own: opening one swaps the whole
+ * sidebar to that product's navigation, exactly like switching exams — so a
+ * student on /class is *in* School, not in an exam with a page borrowed.
+ */
+const RESEARCH_GROUPS: NavGroup[] = [
+  { label: null, items: [{ href: "/research", label: "Research Home", icon: FlaskConical, exact: true }] },
+  {
+    label: "Programme",
+    items: [
+      { href: "/research/guide", label: "Proposal Guide", icon: BookOpen },
+      { href: "/journal", label: "The Journal", icon: Microscope },
+    ],
+  },
+  {
+    label: "Community",
+    items: [
+      { href: "/community", label: "Community", icon: MessagesSquare },
+      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck },
+    ],
+  },
+  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+];
+
+const SCHOOL_GROUPS: NavGroup[] = [
+  { label: null, items: [{ href: "/class", label: "My Class", icon: School, exact: true }] },
+  {
+    label: "Class",
+    items: [
+      { href: "/class/leaderboard", label: "Class Leaderboard", icon: Trophy },
+      { href: "/tests", label: "Full-Length Tests", icon: BookOpen },
+      { href: "/practice", label: "Question Bank", icon: ListChecks },
+    ],
+  },
+  {
+    label: "Teachers",
+    items: [{ href: "/schools", label: "For Teachers", icon: GraduationCap }],
+  },
+  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+];
+
+type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL";
+
+/** Which product a path belongs to; exam pages fall back to activeExam. */
+function productFor(pathname: string, activeExam: ExamMode): Product {
+  if (pathname.startsWith("/research")) return "RESEARCH";
+  if (pathname.startsWith("/class")) return "SCHOOL";
+  return activeExam === "IELTS" ? "IELTS" : "SAT";
+}
+
 export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }) {
   const pathname = usePathname();
-  const groups = GROUPS_FOR[activeExam];
+  const product = productFor(pathname, activeExam);
+  const groups =
+    product === "RESEARCH"
+      ? RESEARCH_GROUPS
+      : product === "SCHOOL"
+        ? SCHOOL_GROUPS
+        : GROUPS_FOR[activeExam];
   const home = activeExam === "IELTS" ? "/ielts" : "/dashboard";
 
   return (
@@ -199,7 +255,7 @@ export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }
       {/* Which programme this sidebar is showing. SAT by default; the chevron
           opens the other programmes — IELTS (switches the whole sidebar),
           Research, and School. */}
-      <ProductMenu activeExam={activeExam} />
+      <ProductMenu activeExam={activeExam} product={product} />
 
       <nav className="flex-1 space-y-4 overflow-y-auto p-3">
         {groups.map((group, gi) => (
@@ -247,32 +303,48 @@ export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }
 }
 
 /**
- * The programme menu, closed by default: the sidebar shows one programme (SAT
- * unless the student switched) and a single chevron reveals the rest — IELTS,
- * Research, School. Choosing IELTS/SAT swaps the whole sidebar via the same
- * server action the old segmented switcher used; Research and School are
- * ordinary links.
+ * The programme menu, closed by default: the sidebar shows one product and a
+ * single chevron reveals the other three. SAT/IELTS switch the stored exam
+ * mode (and navigate to that exam's home); Research and School navigate to
+ * their own product homes — the sidebar re-derives the product from the URL.
  */
-function ProductMenu({ activeExam }: { activeExam: ExamMode }) {
+function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: Product }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
 
-  const current = activeExam === "IELTS" ? "IELTS" : "SAT";
-  const otherExam: ExamMode = current === "SAT" ? "IELTS" : "SAT";
+  const META: Record<Product, { label: string; short: string }> = {
+    SAT: { label: "SAT Prep", short: "SAT" },
+    IELTS: { label: "IELTS Prep", short: "IE" },
+    RESEARCH: { label: "Research", short: "RS" },
+    SCHOOL: { label: "School", short: "SC" },
+  };
 
-  const switchExam = (mode: ExamMode) => {
+  const goExam = (mode: ExamMode) => {
     startTransition(async () => {
+      // Already in that exam mode but viewing another product: just go home.
+      if (mode === activeExam || (mode === "SAT" && activeExam === "BOTH")) {
+        setOpen(false);
+        router.push(mode === "IELTS" ? "/ielts" : "/dashboard");
+        return;
+      }
       const result = await setActiveExam(mode);
       if (result.error) {
         toast.error(result.error);
         return;
       }
       setOpen(false);
-      if (result.redirectTo) router.push(result.redirectTo);
+      router.push(result.redirectTo ?? (mode === "IELTS" ? "/ielts" : "/dashboard"));
       router.refresh();
     });
   };
+
+  const options: { key: Product; icon: typeof BookOpen; onSelect?: () => void; href?: string; badge?: string }[] = [
+    { key: "SAT", icon: BookOpen, onSelect: () => goExam("SAT") },
+    { key: "IELTS", icon: PenLine, onSelect: () => goExam("IELTS") },
+    { key: "RESEARCH", icon: FlaskConical, href: "/research", badge: "New" },
+    { key: "SCHOOL", icon: School, href: "/class", badge: "New" },
+  ];
 
   return (
     <div className="border-b border-border p-3">
@@ -283,9 +355,9 @@ function ProductMenu({ activeExam }: { activeExam: ExamMode }) {
         className="flex w-full items-center gap-2.5 rounded-xl border border-border bg-secondary/50 px-3 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-md bg-navy-900 text-[10px] font-bold text-white">
-          {current === "SAT" ? "SAT" : "IE"}
+          {META[product].short}
         </span>
-        {current === "SAT" ? "SAT Prep" : "IELTS Prep"}
+        {META[product].label}
         <ChevronDown
           className={cn(
             "ml-auto h-4 w-4 text-muted-foreground transition-transform duration-200",
@@ -296,37 +368,37 @@ function ProductMenu({ activeExam }: { activeExam: ExamMode }) {
 
       {open && (
         <div className="mt-1.5 space-y-0.5 rounded-xl border border-border bg-card p-1.5 shadow-soft">
-          <button
-            type="button"
-            disabled={pending}
-            onClick={() => switchExam(otherExam)}
-            className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:opacity-60"
-          >
-            {otherExam === "IELTS" ? <PenLine className="h-4 w-4" /> : <BookOpen className="h-4 w-4" />}
-            {otherExam === "IELTS" ? "IELTS Prep" : "SAT Prep"}
-          </button>
-          <Link
-            href="/research"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-          >
-            <FlaskConical className="h-4 w-4" />
-            Research
-            <span className="ml-auto rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
-              New
-            </span>
-          </Link>
-          <Link
-            href="/class"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-          >
-            <School className="h-4 w-4" />
-            School
-            <span className="ml-auto rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
-              New
-            </span>
-          </Link>
+          {options
+            .filter((o) => o.key !== product)
+            .map((o) =>
+              o.href ? (
+                <Link
+                  key={o.key}
+                  href={o.href}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                >
+                  <o.icon className="h-4 w-4" />
+                  {META[o.key].label}
+                  {o.badge && (
+                    <span className="ml-auto rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
+                      {o.badge}
+                    </span>
+                  )}
+                </Link>
+              ) : (
+                <button
+                  key={o.key}
+                  type="button"
+                  disabled={pending}
+                  onClick={o.onSelect}
+                  className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:opacity-60"
+                >
+                  <o.icon className="h-4 w-4" />
+                  {META[o.key].label}
+                </button>
+              ),
+            )}
         </div>
       )}
     </div>

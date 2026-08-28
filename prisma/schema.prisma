@@ -2185,3 +2185,19 @@ model ClassMembership {
   @@unique([classId, userId])
   @@index([userId])
 }
+
+/// A member of the public team page, managed from the admin panel. `photo` is
+/// an inline data URI portrait; `order` controls display position.
+model TeamMember {
+  id        String   @id @default(cuid())
+  name      String
+  title     String
+  email     String?
+  photo     String?
+  bio       String?
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  @@index([isActive, order])
+}

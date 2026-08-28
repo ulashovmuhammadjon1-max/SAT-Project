@@ -26,6 +26,27 @@ interface Mentor {
   subjects: string[];
 }
 
+interface CoreMember {
+  name: string;
+  title: string;
+  email: string | null;
+  photo: string | null;
+  bio: string | null;
+}
+
+async function getCoreMembers(): Promise<CoreMember[]> {
+  try {
+    return await prisma.teamMember.findMany({
+      where: { isActive: true },
+      orderBy: [{ order: "asc" }, { createdAt: "asc" }],
+      select: { name: true, title: true, email: true, photo: true, bio: true },
+    });
+  } catch (error) {
+    console.error("[team] core members unavailable", error);
+    return [];
+  }
+}
+
 async function getMentors(): Promise<Mentor[]> {
   try {
     const rows = await prisma.peerMentorApplication.findMany({
@@ -59,7 +80,7 @@ const OPEN_ROLES = [
 ];
 
 export default async function TeamPage() {
-  const mentors = await getMentors();
+  const [mentors, core] = await Promise.all([getMentors(), getCoreMembers()]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -94,6 +115,46 @@ export default async function TeamPage() {
             </p>
           </div>
         </section>
+
+        {/* Core team — managed from the admin panel */}
+        {core.length > 0 && (
+          <section className="mt-12">
+            <h2 className="font-display text-xl font-semibold tracking-tight">Core team</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {core.map((m) => (
+                <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+                  <div className="flex items-center gap-3">
+                    {m.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={m.photo}
+                        alt={m.name}
+                        className="h-12 w-12 rounded-xl border border-border object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary font-display text-lg font-semibold text-muted-foreground">
+                        {m.name.slice(0, 1)}
+                      </span>
+                    )}
+                    <div className="min-w-0">
+                      <p className="truncate font-medium">{m.name}</p>
+                      <p className="truncate text-sm text-primary">{m.title}</p>
+                    </div>
+                  </div>
+                  {m.bio && <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>}
+                  {m.email && (
+                    <a
+                      href={`mailto:${m.email}`}
+                      className="mt-2 block truncate text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                    >
+                      {m.email}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Peer mentors — live from the database */}
         <section className="mt-12">

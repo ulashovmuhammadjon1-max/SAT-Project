@@ -62,6 +62,7 @@ const SAT_NAV: AdminNavItem[] = [
   { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },
   { href: "/admin/research", label: "Research", icon: FlaskConical },
   { href: "/admin/schools", label: "Schools", icon: School },
+  { href: "/admin/team", label: "Team Page", icon: Users },
   { href: "/admin/economy", label: "Economy", icon: Coins },
   { href: "/admin/partners", label: "Partners", icon: Handshake },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
