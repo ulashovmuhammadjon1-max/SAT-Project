@@ -206,6 +206,8 @@ model User {
   researchProposals     ResearchProposal[]
   peerMentorApplication PeerMentorApplication?
   hostedSlots           MentorSlot[]           @relation("SlotHost")
+  classMemberships      ClassMembership[]
+  classesTaught         SchoolClass[]          @relation("ClassTeacher")
 
   @@index([role])
   @@index([countryCode])
@@ -2145,4 +2147,41 @@ model PeerMentorApplication {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([status])
+}
+
+// ---------------------------------------------------------------------------
+// Schools programme
+// ---------------------------------------------------------------------------
+
+/// A class a teacher runs, joined by students with a short code. Admin-created
+/// during the pilot phase; the teacher is prose (name/contact) because pilot
+/// teachers may not have accounts yet — `teacherUserId` links one later.
+model SchoolClass {
+  id            String   @id @default(cuid())
+  code          String   @unique
+  name          String
+  school        String
+  teacherName   String
+  teacherEmail  String?
+  teacherUserId String?
+  isArchived    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  teacher     User?             @relation("ClassTeacher", fields: [teacherUserId], references: [id], onDelete: SetNull)
+  memberships ClassMembership[]
+
+  @@index([teacherUserId])
+}
+
+model ClassMembership {
+  id       String   @id @default(cuid())
+  classId  String
+  userId   String
+  joinedAt DateTime @default(now())
+
+  class SchoolClass @relation(fields: [classId], references: [id], onDelete: Cascade)
+  user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([classId, userId])
+  @@index([userId])
 }

@@ -24,6 +24,7 @@ import {
   BadgeCheck,
   CalendarCheck,
   FlaskConical,
+  School,
   TrendingUp,
   UserPlus,
 } from "lucide-react";
@@ -60,6 +61,7 @@ const SAT_NAV: AdminNavItem[] = [
   { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
   { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },
   { href: "/admin/research", label: "Research", icon: FlaskConical },
+  { href: "/admin/schools", label: "Schools", icon: School },
   { href: "/admin/economy", label: "Economy", icon: Coins },
   { href: "/admin/partners", label: "Partners", icon: Handshake },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },

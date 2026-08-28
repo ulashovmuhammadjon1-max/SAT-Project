@@ -21,6 +21,8 @@ const PUBLIC_ROUTES = [
   // officer included — can open it without an account.
   "/impact",
   "/team",
+  "/schools",
+  "/journal",
 ];
 
 export default auth((req) => {

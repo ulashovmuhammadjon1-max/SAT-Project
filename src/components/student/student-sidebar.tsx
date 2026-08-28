@@ -21,6 +21,8 @@ import {
   GraduationCap,
   Award,
   CalendarDays,
+  ChevronDown,
+  School,
   Trophy,
   MessagesSquare,
   PenLine,
@@ -29,7 +31,11 @@ import {
   Microscope,
 } from "lucide-react";
 
-import { ExamSwitcher } from "@/components/student/exam-switcher";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+
+import { setActiveExam } from "@/server/actions/student/exam-mode";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -47,15 +53,6 @@ interface NavGroup {
   label: string | null;
   items: NavItem[];
 }
-
-/**
- * The two cross-exam programmes. Listed in every mode: research and mentoring
- * are properties of the community, not of one exam.
- */
-const OPPORTUNITIES: NavItem[] = [
-  { href: "/research", label: "Research", icon: FlaskConical, badge: "New" },
-  { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
-];
 
 const SAT_GROUPS: NavGroup[] = [
   { label: null, items: [{ href: "/dashboard", label: "Home", icon: LayoutDashboard, exact: true }] },
@@ -90,10 +87,10 @@ const SAT_GROUPS: NavGroup[] = [
     label: "Mentorship",
     items: [
       { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
+      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
       { href: "/wallet", label: "Coins", icon: Coins },
     ],
   },
-  { label: "Opportunities", items: OPPORTUNITIES },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
@@ -122,7 +119,10 @@ const IELTS_GROUPS: NavGroup[] = [
       { href: "/ielts/invite", label: "Invite Friends", icon: UserPlus },
     ],
   },
-  { label: "Opportunities", items: OPPORTUNITIES },
+  {
+    label: "Mentorship",
+    items: [{ href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" }],
+  },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
@@ -169,10 +169,10 @@ const BOTH_GROUPS: NavGroup[] = [
     label: "Mentorship",
     items: [
       { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
+      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
       { href: "/wallet", label: "Coins", icon: Coins },
     ],
   },
-  { label: "Opportunities", items: OPPORTUNITIES },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
@@ -196,11 +196,10 @@ export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }
         <span className="font-display text-base font-semibold">Scholarly</span>
       </Link>
 
-      {/* Product switcher, OnePrep-style: which exam this whole sidebar is
-          about. SAT is the default for every account until they choose. */}
-      <div className="border-b border-border p-3">
-        <ExamSwitcher active={activeExam} className="w-full justify-center" />
-      </div>
+      {/* Which programme this sidebar is showing. SAT by default; the chevron
+          opens the other programmes — IELTS (switches the whole sidebar),
+          Research, and School. */}
+      <ProductMenu activeExam={activeExam} />
 
       <nav className="flex-1 space-y-4 overflow-y-auto p-3">
         {groups.map((group, gi) => (
@@ -244,5 +243,92 @@ export function StudentSidebar({ activeExam = "SAT" }: { activeExam?: ExamMode }
         ))}
       </nav>
     </aside>
+  );
+}
+
+/**
+ * The programme menu, closed by default: the sidebar shows one programme (SAT
+ * unless the student switched) and a single chevron reveals the rest — IELTS,
+ * Research, School. Choosing IELTS/SAT swaps the whole sidebar via the same
+ * server action the old segmented switcher used; Research and School are
+ * ordinary links.
+ */
+function ProductMenu({ activeExam }: { activeExam: ExamMode }) {
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const [pending, startTransition] = useTransition();
+
+  const current = activeExam === "IELTS" ? "IELTS" : "SAT";
+  const otherExam: ExamMode = current === "SAT" ? "IELTS" : "SAT";
+
+  const switchExam = (mode: ExamMode) => {
+    startTransition(async () => {
+      const result = await setActiveExam(mode);
+      if (result.error) {
+        toast.error(result.error);
+        return;
+      }
+      setOpen(false);
+      if (result.redirectTo) router.push(result.redirectTo);
+      router.refresh();
+    });
+  };
+
+  return (
+    <div className="border-b border-border p-3">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-2.5 rounded-xl border border-border bg-secondary/50 px-3 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+      >
+        <span className="flex h-6 w-6 items-center justify-center rounded-md bg-navy-900 text-[10px] font-bold text-white">
+          {current === "SAT" ? "SAT" : "IE"}
+        </span>
+        {current === "SAT" ? "SAT Prep" : "IELTS Prep"}
+        <ChevronDown
+          className={cn(
+            "ml-auto h-4 w-4 text-muted-foreground transition-transform duration-200",
+            open && "rotate-180"
+          )}
+        />
+      </button>
+
+      {open && (
+        <div className="mt-1.5 space-y-0.5 rounded-xl border border-border bg-card p-1.5 shadow-soft">
+          <button
+            type="button"
+            disabled={pending}
+            onClick={() => switchExam(otherExam)}
+            className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:opacity-60"
+          >
+            {otherExam === "IELTS" ? <PenLine className="h-4 w-4" /> : <BookOpen className="h-4 w-4" />}
+            {otherExam === "IELTS" ? "IELTS Prep" : "SAT Prep"}
+          </button>
+          <Link
+            href="/research"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            <FlaskConical className="h-4 w-4" />
+            Research
+            <span className="ml-auto rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
+              New
+            </span>
+          </Link>
+          <Link
+            href="/class"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            <School className="h-4 w-4" />
+            School
+            <span className="ml-auto rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
+              New
+            </span>
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
