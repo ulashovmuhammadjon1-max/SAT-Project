@@ -284,6 +284,11 @@ export function BookingForm({
                         minute: "2-digit",
                       })}
                       <span className="ml-1.5 text-xs text-muted-foreground">{s.durationMinutes}m</span>
+                      {s.hostName && (
+                        <span className="ml-1.5 text-xs font-medium text-[hsl(266_84%_60%)]">
+                          · {s.hostName.split(/\s+/)[0]}
+                        </span>
+                      )}
                     </button>
                   );
                 })}

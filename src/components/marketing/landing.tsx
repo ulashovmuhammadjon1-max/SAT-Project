@@ -527,7 +527,7 @@ const PILLARS = [
     icon: FlaskConical,
     title: "Student Research",
     body: "Research programmes where students investigate real questions with guidance from mentors — and build the kind of work universities actually notice.",
-    label: "Coming soon",
+    label: "Applications open",
     tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
     chip: "border-[hsl(190_84%_42%)]/30 text-[hsl(190_84%_42%)]",
   },
@@ -1268,6 +1268,11 @@ function Footer() {
                 <a href="#faq" className="transition-colors hover:text-foreground">
                   FAQ
                 </a>
+              </li>
+              <li>
+                <Link href="/impact" className="transition-colors hover:text-foreground">
+                  Our impact
+                </Link>
               </li>
             </ul>
           </div>

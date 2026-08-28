@@ -203,6 +203,10 @@ model User {
   ieltsSpeakingReviews     IeltsSpeakingReview[]     @relation("IeltsSpeakingReviewer")
   ieltsEssaysAuthored      IeltsEssay[]              @relation("IeltsEssayAuthor")
 
+  researchProposals     ResearchProposal[]
+  peerMentorApplication PeerMentorApplication?
+  hostedSlots           MentorSlot[]           @relation("SlotHost")
+
   @@index([role])
   @@index([countryCode])
   @@index([gradeLevel])
@@ -622,10 +626,16 @@ model MentorSlot {
   title       String?
   description String?     @db.Text
 
+  /// Who hosts this slot. Null means the founder/admin — which is every slot
+  /// that existed before the peer-mentor programme, with no backfill needed.
+  hostId String?
+  host   User?   @relation("SlotHost", fields: [hostId], references: [id], onDelete: SetNull)
+
   bookings Booking[]
 
   @@unique([startsAt])
   @@index([startsAt])
+  @@index([hostId])
 }
 
 model Booking {
@@ -2065,4 +2075,74 @@ model IeltsEssayIdea {
   essay IeltsEssay @relation(fields: [essayId], references: [id], onDelete: Cascade)
 
   @@index([essayId])
+}
+
+// ---------------------------------------------------------------------------
+// Research programme
+// ---------------------------------------------------------------------------
+
+enum ResearchProposalStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+/// A student's application to the research programme: their topic, why it
+/// matters to them, and what they already know. Reviewed by an admin; the
+/// decision and note are shown back to the student.
+model ResearchProposal {
+  id         String                 @id @default(cuid())
+  userId     String
+  title      String
+  field      String
+  question   String                 @db.Text
+  motivation String                 @db.Text
+  experience String?                @db.Text
+  status     ResearchProposalStatus @default(PENDING)
+  adminNote  String?                @db.Text
+  decidedAt  DateTime?
+  createdAt  DateTime               @default(now())
+  updatedAt  DateTime               @default(now()) @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+  @@index([userId])
+}
+
+// ---------------------------------------------------------------------------
+// Peer-mentor programme
+// ---------------------------------------------------------------------------
+
+enum PeerMentorStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+/// A student's application to become a peer mentor. One row per student —
+/// re-applying after a rejection updates it — so "is this student an approved
+/// mentor" is a single-row read, and that APPROVED status *is* the role that
+/// unlocks hosting sessions.
+model PeerMentorApplication {
+  id        String           @id @default(cuid())
+  userId    String           @unique
+  headline  String
+  bio       String           @db.Text
+  satScore  Int?
+  ieltsBand Float?
+  subjects  String[]         @default([])
+  telegram  String?
+  /// [{ name, dataUrl }] — score-report uploads as inline data URIs, the same
+  /// storage approach as question figures (no Blob token dependency).
+  certificates Json          @default("[]")
+  status    PeerMentorStatus @default(PENDING)
+  adminNote String?          @db.Text
+  decidedAt DateTime?
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @default(now()) @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status])
 }

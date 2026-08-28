@@ -49,6 +49,8 @@ export interface OpenSlot {
   startsAt: Date;
   durationMinutes: number;
   sessionType: SessionType;
+  /** Peer mentor hosting this slot; null means the founder. */
+  hostName: string | null;
 }
 
 /** Future slots that are published, not blocked, and not already taken. */
@@ -65,6 +67,7 @@ export async function getOpenSlots(): Promise<OpenSlot[]> {
       durationMinutes: true,
       sessionType: true,
       capacity: true,
+      host: { select: { name: true } },
       _count: { select: { bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } } } } },
     },
   });
@@ -72,7 +75,7 @@ export async function getOpenSlots(): Promise<OpenSlot[]> {
   // live count rather than on "has any booking row".
   return slots
     .filter((s) => s._count.bookings < s.capacity)
-    .map(({ _count, capacity, ...rest }) => rest);
+    .map(({ _count, capacity, host, ...rest }) => ({ ...rest, hostName: host?.name ?? null }));
 }
 
 export interface BookingContext {

@@ -21,7 +21,9 @@ import {
   ScrollText,
   GraduationCap,
   AlertTriangle,
+  BadgeCheck,
   CalendarCheck,
+  FlaskConical,
   TrendingUp,
   UserPlus,
 } from "lucide-react";
@@ -56,6 +58,8 @@ const SAT_NAV: AdminNavItem[] = [
   { href: "/admin/content-health", label: "Content Health", icon: AlertTriangle },
   { href: "/admin/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
   { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
+  { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },
+  { href: "/admin/research", label: "Research", icon: FlaskConical },
   { href: "/admin/economy", label: "Economy", icon: Coins },
   { href: "/admin/partners", label: "Partners", icon: Handshake },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
