@@ -45,7 +45,10 @@ assert split_area(x**2, x**4, -1, 1) == sp.Rational(4, 15) and num(9) == sp.Rati
 assert split_area(x, x**5, -1, 1) == sp.Rational(2, 3) and num(10) == sp.Rational(2, 3)
 a11 = split_area(sp.sin(x), sp.cos(x), 0, sp.pi)
 assert sp.simplify(a11 - 2 * sp.sqrt(2)) == 0 and key(11) == "2*sqrt(2)"
-assert split_area(sp.sin(x), sp.Integer(0), 0, 2 * sp.pi) == 4 and num(12) == 4
+assert sorted(sp.solve(x**3 - 9 * x, x)) == [-3, 0, 3]
+assert split_area(x**3 - 9 * x, sp.Integer(0), -3, 3) == sp.Rational(81, 2)
+assert sp.Abs(sp.integrate(x**3 - 9 * x, (x, 0, 3))) == sp.Rational(81, 4)
+assert num(12) == sp.Rational(81, 2)
 assert split_area(sp.cos(x), sp.Integer(0), 0, 2 * sp.pi) == 4 and num(13) == 4
 assert split_area(x**3 - 4 * x, sp.Integer(0), -2, 2) == 8 and num(14) == 8
 assert split_area(sp.Abs(x), x**2, -1, 1) == sp.Rational(1, 3) and num(15) == sp.Rational(1, 3)
@@ -75,7 +78,12 @@ assert key(21).startswith("both x^3 and x are odd")
 # q22 only two meeting points
 assert sorted(sp.solve((x**2 - 1) - (1 - x**2), x)) == [-1, 1]
 assert key(22).startswith("no, because the curves meet only at x = -1 and x = 1")
-assert sp.integrate(x - x**3, (x, 0, 1)) == sp.Rational(1, 4) and num(23) == sp.Rational(1, 4)
+assert sp.solve(sp.Eq(sp.sin(x), sp.sin(2 * x)), x) is not None
+assert sp.simplify(sp.sin(sp.pi / 3) - sp.sin(2 * sp.pi / 3)) == 0
+assert split_area(sp.sin(x), sp.sin(2 * x), 0, sp.pi) == sp.Rational(5, 2)
+assert sp.Abs(sp.integrate(sp.sin(x) - sp.sin(2 * x), (x, 0, sp.pi / 3))) == sp.Rational(1, 4)
+assert sp.Abs(sp.integrate(sp.sin(x) - sp.sin(2 * x), (x, sp.pi / 3, sp.pi))) == sp.Rational(9, 4)
+assert num(23) == sp.Rational(5, 2)
 assert key(24).startswith("int from -1 to 0 of (x^3 - x) dx")
 # q25 tangency: a double root, so no enclosed region
 assert sp.solve(x**2 - (2 * x - 1), x) == [1]

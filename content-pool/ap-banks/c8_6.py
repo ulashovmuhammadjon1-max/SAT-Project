@@ -71,12 +71,12 @@ QUESTIONS = [
    "sqrt(2) - 1",
    "2"], ans=0,
    why="They cross at x = pi/4, and the two pieces contribute sqrt(2) - 1 and 1 + sqrt(2)."),
- dict(q="What is the area of the region between y = sin(x) and the x-axis from x = 0 to x = 2pi?", choices=[
-   "4",
+ dict(q="What is the area of the region between y = x^3 - 9x and the x-axis?", choices=[
    "0",
-   "2",
-   "2pi"], ans=0,
-   why="The sine changes sign at pi, and each half-period contributes 2."),
+   "81/4",
+   "81/2",
+   "243/4"], ans=2,
+   why="The zeros are -3, 0, and 3, and each of the two pieces contributes 81/4."),
  dict(q="What is the area of the region between y = cos(x) and the x-axis from x = 0 to x = 2pi?", choices=[
    "0",
    "1",
@@ -137,12 +137,12 @@ QUESTIONS = [
    "yes, because both are parabolas",
    "no, because the curves never meet"], ans=0,
    why="Setting the two equal gives 2x^2 = 2, so the only meeting points are the endpoints of the region."),
- dict(q="What is the area of the region between y = x and y = x^3 from x = 0 to x = 1?", choices=[
+ dict(q="What is the area of the region between y = sin(x) and y = sin(2x) from x = 0 to x = pi?", choices=[
+   "0",
    "1/4",
-   "1/3",
-   "1/2",
-   "3/4"], ans=0,
-   why="On [0, 1] the line stays above the cubic, so a single integral of x - x^3 suffices and gives 1/4."),
+   "9/4",
+   "5/2"], ans=3,
+   why="They cross at x = pi/3 inside the interval, and the two pieces contribute 1/4 and 9/4."),
  dict(q="Which expression gives the area enclosed by y = x^3 and y = x?", choices=[
    "int from -1 to 0 of (x^3 - x) dx + int from 0 to 1 of (x - x^3) dx",
    "int from -1 to 1 of (x - x^3) dx",
