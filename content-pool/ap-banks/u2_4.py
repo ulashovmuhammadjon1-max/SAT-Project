@@ -1,0 +1,283 @@
+# 2.4 Price Elasticity of Supply — 50 questions
+TOPIC = ("2.4", "Price Elasticity of Supply", 2)
+QUESTIONS = [
+ dict(q="Price elasticity of supply measures", choices=[
+   "how responsive quantity supplied is to a change in the good's price",
+   "how responsive price is to a change in cost",
+   "the slope of the demand curve",
+   "producers' total revenue",
+   "how income affects supply"], ans=0,
+   why="PES is the responsiveness of quantity supplied to price."),
+ dict(q="The formula for price elasticity of supply is", choices=[
+   "% change in price ÷ % change in quantity supplied",
+   "% change in quantity supplied ÷ % change in price",
+   "quantity supplied ÷ price",
+   "change in revenue ÷ change in cost",
+   "marginal cost ÷ price"], ans=1,
+   why="PES = %ΔQs / %ΔP."),
+ dict(q="Price elasticity of supply is normally", choices=[
+   "negative, because supply slopes downward",
+   "positive, because price and quantity supplied move together",
+   "always exactly 1",
+   "always zero",
+   "undefined"], ans=1,
+   why="The law of supply makes the ratio positive."),
+ dict(q="Supply is ELASTIC when PES is", choices=[
+   "less than 1", "greater than 1", "equal to 0", "equal to 1", "negative"], ans=1,
+   why="PES > 1 means quantity supplied responds proportionally more than price."),
+ dict(q="Supply is INELASTIC when PES is", choices=[
+   "greater than 1", "less than 1", "equal to 1", "infinite", "negative"], ans=1,
+   why="PES < 1 means quantity supplied responds proportionally less than price."),
+ dict(q="A perfectly inelastic supply curve is", choices=[
+   "horizontal", "vertical", "upward sloping at 45 degrees", "downward sloping", "curved"], ans=1,
+   why="Vertical supply means quantity cannot change no matter the price."),
+ dict(q="A perfectly elastic supply curve is", choices=[
+   "vertical", "horizontal", "steeply upward sloping", "downward sloping", "backward bending"], ans=1,
+   why="Horizontal supply means producers will supply any amount at one price but none below it."),
+ dict(q="The single most important determinant of price elasticity of supply is", choices=[
+   "consumer income",
+   "the time producers have to adjust output",
+   "the price of substitutes in consumption",
+   "the number of buyers",
+   "consumer tastes"], ans=1,
+   why="Time to reallocate resources and expand capacity dominates supply elasticity."),
+ dict(q="Supply is generally MORE elastic in the long run because firms can", choices=[
+   "raise prices freely",
+   "build capacity, enter the industry, and reallocate all inputs",
+   "ignore costs",
+   "reduce demand",
+   "avoid taxes"], ans=1,
+   why="Given time, all inputs become variable and entry is possible."),
+ dict(q="If price rises 10% and quantity supplied rises 30%, PES equals", choices=[
+   "0.33", "1.0", "3.0", "10", "30"], ans=2,
+   why="30% / 10% = 3, elastic supply."),
+ dict(q="If price rises 25% and quantity supplied rises 5%, supply is", choices=[
+   "elastic, PES = 5",
+   "inelastic, PES = 0.2",
+   "unit elastic",
+   "perfectly elastic",
+   "perfectly inelastic"], ans=1,
+   why="5% / 25% = 0.2, less than 1 — inelastic."),
+ dict(q="Which good is most likely to have highly INELASTIC supply in the short run?", choices=[
+   "T-shirts",
+   "Beachfront land in a fixed location",
+   "Paper cups",
+   "Bottled water",
+   "Plastic containers"], ans=1,
+   why="A fixed quantity of land cannot be expanded in response to price."),
+ dict(q="Which good is most likely to have ELASTIC supply?", choices=[
+   "Original Van Gogh paintings",
+   "Land in Manhattan",
+   "Mass-produced plastic toys with spare factory capacity",
+   "Tickets to a stadium with fixed seats for tonight",
+   "Antique furniture"], ans=2,
+   why="Spare capacity and easily obtained inputs make supply responsive."),
+ dict(q="Supply of tickets for a specific concert on a specific night is best described as", choices=[
+   "perfectly elastic",
+   "perfectly inelastic, since seat capacity is fixed",
+   "unit elastic",
+   "downward sloping",
+   "highly elastic"], ans=1,
+   why="A fixed venue capacity means quantity cannot respond to price at all."),
+ dict(q="Available spare production capacity tends to make supply", choices=[
+   "less elastic", "more elastic", "perfectly inelastic", "vertical", "unrelated to price"], ans=1,
+   why="Idle capacity lets firms expand output quickly when price rises."),
+ dict(q="A firm operating at full capacity will have supply that is", choices=[
+   "more elastic than a firm with idle capacity",
+   "less elastic, since it cannot easily produce more",
+   "perfectly elastic",
+   "downward sloping",
+   "unaffected by capacity"], ans=1,
+   why="Without room to expand, quantity supplied cannot respond much to price."),
+ dict(q="Goods that can be stored easily tend to have supply that is", choices=[
+   "less elastic",
+   "more elastic, since inventories can be released when prices rise",
+   "perfectly inelastic",
+   "vertical",
+   "negative"], ans=1,
+   why="Inventory gives producers a fast way to respond to price changes."),
+ dict(q="Agricultural crops typically have very inelastic supply within a single growing season because", choices=[
+   "farmers ignore prices",
+   "output is largely determined by planting decisions made months earlier",
+   "demand is inelastic",
+   "crops cannot be sold",
+   "governments fix quantities"], ans=1,
+   why="Once planted, the harvest quantity cannot respond to in-season prices."),
+ dict(q="If PES equals 0, then a price increase causes quantity supplied to", choices=[
+   "rise proportionally",
+   "not change at all",
+   "fall",
+   "become infinite",
+   "double"], ans=1,
+   why="Perfectly inelastic supply does not respond to price."),
+ dict(q="If PES is infinite, the supply curve is", choices=[
+   "vertical", "horizontal", "steep", "downward sloping", "unit elastic"], ans=1,
+   why="Perfectly elastic supply is horizontal at a single price."),
+ dict(q="Compared with a steep supply curve, a flatter supply curve over the same price range indicates supply that is", choices=[
+   "less elastic", "more elastic", "perfectly inelastic", "negative", "identical"], ans=1,
+   why="A flatter curve means quantity responds more to a given price change."),
+ dict(q="When supply is more inelastic than demand, the burden of a per-unit tax falls", choices=[
+   "mostly on consumers",
+   "mostly on producers",
+   "entirely on the government",
+   "equally in every case",
+   "on nobody"], ans=1,
+   why="The less elastic side of the market bears more of the tax burden."),
+ dict(q="Supply elasticity affects how much of a demand increase shows up as a price rise: the more INELASTIC supply is,", choices=[
+   "the smaller the price increase",
+   "the larger the price increase and the smaller the quantity increase",
+   "the larger the quantity increase",
+   "the less prices matter",
+   "the flatter the supply curve"], ans=1,
+   why="Inelastic supply cannot expand, so extra demand mostly raises price."),
+ dict(q="A sudden surge in demand for housing in a city with strict building limits will mainly cause", choices=[
+   "a large increase in the quantity of housing",
+   "a large increase in housing prices, since supply is inelastic",
+   "a fall in prices",
+   "no change in the market",
+   "a leftward shift of demand"], ans=1,
+   why="Restricted, inelastic supply channels a demand increase into price."),
+ dict(q="Which factor does NOT typically influence price elasticity of supply?", choices=[
+   "Time available to adjust production",
+   "Availability of spare capacity",
+   "Ease of storing the good",
+   "Consumer income",
+   "Mobility of factors of production"], ans=3,
+   why="Consumer income shifts demand; it is not a supply-elasticity determinant."),
+ dict(q="If factors of production can be moved easily between industries, supply will tend to be", choices=[
+   "more inelastic", "more elastic", "perfectly inelastic", "vertical", "unaffected"], ans=1,
+   why="Mobile resources let output expand quickly when price rises."),
+ dict(q="Using the midpoint formula, price rises from $4 to $6 and quantity supplied rises from 80 to 120. The percentage change in quantity supplied is", choices=[
+   "50%", "40%", "33%", "25%", "20%"], ans=1,
+   why="40 / average 100 = 40%."),
+ dict(q="Continuing that example ($4 → $6), the midpoint percentage change in price is", choices=[
+   "50%", "40%", "33%", "25%", "20%"], ans=1,
+   why="2 / average 5 = 40%."),
+ dict(q="With a 40% quantity change and a 40% price change, price elasticity of supply equals", choices=[
+   "0.4", "1.0", "1.6", "4.0", "0"], ans=1,
+   why="40% / 40% = 1 — unit elastic supply."),
+ dict(q="A PES of exactly 1 means", choices=[
+   "quantity supplied does not respond to price",
+   "quantity supplied changes by the same percentage as price",
+   "supply is vertical",
+   "supply is horizontal",
+   "the supply curve slopes downward"], ans=1,
+   why="Unit elastic supply: equal percentage changes."),
+ dict(q="Which of the following would make the supply of coffee more elastic over a five-year horizon than over one month?", choices=[
+   "Coffee trees take years to mature, so growers can plant more over time",
+   "Coffee demand rises",
+   "Storage is impossible",
+   "Prices are fixed",
+   "Consumers switch to tea"], ans=0,
+   why="Given years, producers can expand planted capacity — a longer horizon raises PES."),
+ dict(q="Why do economists usually treat market-period (immediate) supply as perfectly inelastic?", choices=[
+   "Producers refuse to sell",
+   "There is no time to change the quantity already produced",
+   "Demand is fixed",
+   "Prices are controlled",
+   "Costs are zero"], ans=1,
+   why="In the very short run, output on hand cannot be altered."),
+ dict(q="Which statement about elasticity of supply is TRUE?", choices=[
+   "It is normally negative",
+   "It measures the responsiveness of quantity supplied to price and is normally positive",
+   "It equals the slope of the demand curve",
+   "It is always greater than 1",
+   "It depends on consumer tastes"], ans=1,
+   why="PES is positive and measures supply-side responsiveness."),
+ dict(q="A supply curve passing through the origin as a straight line has PES", choices=[
+   "equal to 0 everywhere",
+   "equal to 1 everywhere",
+   "greater than 1 at low prices only",
+   "less than 1 everywhere",
+   "undefined"], ans=1,
+   why="Any straight line through the origin is unit elastic at all points."),
+ dict(table=dict(headers=["Price", "Quantity supplied"],
+   rows=[["$5", "100"], ["$6", "110"]]),
+   q="Using the table and simple percentage changes from the initial values, price elasticity of supply is", choices=[
+   "0.2", "0.5", "1.0", "2.0", "5.0"], ans=1,
+   why="Quantity rises 10%, price rises 20%; 10/20 = 0.5 — inelastic."),
+ dict(table=dict(headers=["Price", "Quantity supplied"],
+   rows=[["$5", "100"], ["$6", "110"]]),
+   q="Based on that elasticity value, supply over this range is", choices=[
+   "elastic", "inelastic", "unit elastic", "perfectly elastic", "perfectly inelastic"], ans=1,
+   why="PES of 0.5 is below 1 — inelastic."),
+ dict(q="An increase in demand for a good with perfectly inelastic supply will change", choices=[
+   "quantity only", "price only", "both price and quantity equally", "neither", "only producer costs"], ans=1,
+   why="With a vertical supply curve, all adjustment occurs through price."),
+ dict(q="An increase in demand for a good with perfectly elastic supply will change", choices=[
+   "price only", "quantity only", "both equally", "neither", "only consumer income"], ans=1,
+   why="With a horizontal supply curve, price stays fixed and quantity adjusts."),
+ dict(q="Firms in an industry with very high start-up costs and long construction times will show supply that is", choices=[
+   "highly elastic in the short run",
+   "highly inelastic in the short run",
+   "perfectly elastic always",
+   "downward sloping",
+   "unrelated to time"], ans=1,
+   why="Slow, costly capacity expansion means limited short-run responsiveness."),
+ dict(q="Which of the following best explains why manufactured goods usually have more elastic supply than natural resources?", choices=[
+   "Manufacturers face no costs",
+   "Production can be scaled up with additional inputs, while resource deposits are geologically fixed",
+   "Consumers prefer manufactured goods",
+   "Natural resources are cheaper",
+   "Manufactured goods are necessities"], ans=1,
+   why="Reproducible production expands with inputs; fixed deposits do not."),
+ dict(q="If PES = 2, a 6% increase in price will change quantity supplied by", choices=[
+   "+3%", "+6%", "+12%", "−12%", "+2%"], ans=2,
+   why="%ΔQs = 2 × 6% = 12% increase."),
+ dict(q="If PES = 0.5, a 10% fall in price will change quantity supplied by", choices=[
+   "−5%", "−10%", "−20%", "+5%", "+20%"], ans=0,
+   why="0.5 × 10% = 5% decrease in quantity supplied."),
+ dict(q="Government policies that make it easier to obtain business licenses will tend to make industry supply", choices=[
+   "less elastic", "more elastic", "vertical", "downward sloping", "unchanged"], ans=1,
+   why="Easier entry lets quantity respond faster to price."),
+ dict(q="Which market most likely has the MOST elastic supply?", choices=[
+   "Original historic buildings",
+   "Downloadable software copies",
+   "Fresh fish caught today",
+   "Land in a city center",
+   "Rare gemstones"], ans=1,
+   why="Digital copies can be reproduced at near-zero extra cost in unlimited quantity."),
+ dict(q="Producers' ability to switch quickly between making two products raises the elasticity of supply of each because", choices=[
+   "costs disappear",
+   "resources can be redirected to whichever good has the higher price",
+   "demand becomes inelastic",
+   "prices become fixed",
+   "output becomes fixed"], ans=1,
+   why="Flexible production makes quantity supplied more responsive to relative prices."),
+ dict(q="Which of the following is TRUE about supply elasticity and time?", choices=[
+   "Supply is most elastic in the market period",
+   "Supply becomes progressively more elastic moving from the market period to the short run to the long run",
+   "Supply elasticity does not change with time",
+   "Supply is always perfectly elastic",
+   "Supply becomes more inelastic over time"], ans=1,
+   why="More time means more adjustment margins and greater elasticity."),
+ dict(q="An unexpected freeze destroys much of the orange crop. Because supply is inelastic in the short run, the market will most likely see", choices=[
+   "a small price change and a large quantity change",
+   "a large price increase with limited ability to replace output",
+   "no change in price",
+   "a rightward shift in supply",
+   "a fall in the price of oranges"], ans=1,
+   why="Inelastic short-run supply means the shock hits price hard."),
+ dict(q="Elasticity of supply matters for tax incidence because", choices=[
+   "it determines which side can more easily avoid the tax by changing quantity",
+   "it sets the tax rate",
+   "it determines consumer income",
+   "it eliminates deadweight loss",
+   "it fixes the equilibrium price"], ans=0,
+   why="The more elastic side escapes more of the burden by adjusting quantity."),
+ dict(q="If both supply and demand are highly elastic, imposing a per-unit tax will produce", choices=[
+   "a small deadweight loss",
+   "a large reduction in quantity traded and a large deadweight loss",
+   "no change in quantity",
+   "revenue but no distortion",
+   "an increase in quantity"], ans=1,
+   why="When both sides respond strongly, the tax cuts quantity sharply, enlarging deadweight loss."),
+ dict(q="Which statement correctly compares PED and PES?", choices=[
+   "Both are typically negative",
+   "PED is typically negative while PES is typically positive",
+   "Both are typically positive",
+   "PES is typically negative while PED is positive",
+   "Neither depends on time"], ans=1,
+   why="Demand slopes down (negative ratio); supply slopes up (positive ratio)."),
+]
+assert len(QUESTIONS) == 50, len(QUESTIONS)
