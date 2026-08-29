@@ -28,7 +28,7 @@ import { requireUser } from "@/lib/session";
  * the URL reaches this action. The host check keeps anything that is not our
  * blob store from being stored as an "attachment".
  */
-const BLOB_URL = /^https:\/\/[a-zA-Z0-9-]+\.public\.blob\.vercel-storage\.com\//;
+const BLOB_URL = /^https:\/\/[a-zA-Z0-9.-]+\.blob\.vercel-storage\.com\//;
 
 const fileSchema = z
   .object({

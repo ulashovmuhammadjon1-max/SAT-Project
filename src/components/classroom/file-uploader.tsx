@@ -87,7 +87,9 @@ export function FileUploader({
       setInFlight((m) => ({ ...m, [file.name]: 0 }));
       try {
         const blob = await upload(file.name, file, {
-          access: "public",
+          // The store is private: the URL alone opens nothing — the
+          // class-scoped download routes are the only door to these files.
+          access: "private",
           handleUploadUrl: "/api/assignments/upload",
           onUploadProgress: ({ percentage }) =>
             setInFlight((m) => ({ ...m, [file.name]: Math.round(percentage) })),

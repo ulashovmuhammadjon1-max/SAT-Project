@@ -340,7 +340,7 @@ const MAX_FILE_BYTES = 10 * 1024 * 1024;
  * the 10MB cap there), and only the URL reaches this action. The host check
  * stops anything that is not our blob store from being stored as a "file".
  */
-const BLOB_URL = /^https:\/\/[a-zA-Z0-9-]+\.public\.blob\.vercel-storage\.com\//;
+const BLOB_URL = /^https:\/\/[a-zA-Z0-9.-]+\.blob\.vercel-storage\.com\//;
 
 const saveSchema = z.object({
   assignmentId: z.string().min(1),

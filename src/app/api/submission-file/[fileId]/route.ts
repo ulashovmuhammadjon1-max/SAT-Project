@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { auth } from "@/lib/auth";
+import { streamPrivateBlob } from "@/lib/classroom/blob";
 import { decodeDataUri, safeFilename } from "@/lib/data-uri";
 import { prisma } from "@/lib/prisma";
 
@@ -38,11 +39,11 @@ export async function GET(
   });
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
 
-  // Blob-backed files (everything since the 10MB upgrade) are stored as a
-  // URL: send the caller there rather than proxying megabytes through this
-  // function. The URL is unguessable; this route is where access is decided.
+  // Blob-backed files (everything since the 10MB upgrade) live in a PRIVATE
+  // store: the URL alone opens nothing, so this route streams the bytes out
+  // after deciding access — it is the only door to the file.
   if (file.data.startsWith("https://")) {
-    return NextResponse.redirect(file.data, 307);
+    return streamPrivateBlob(file.data, file.name);
   }
 
   const decoded = decodeDataUri(file.data);

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { auth } from "@/lib/auth";
+import { streamPrivateBlob } from "@/lib/classroom/blob";
 import { decodeDataUri, safeFilename } from "@/lib/data-uri";
 import { prisma } from "@/lib/prisma";
 
@@ -47,7 +48,7 @@ export async function GET(
   }
 
   if (source.data.startsWith("https://")) {
-    return NextResponse.redirect(source.data, 307);
+    return streamPrivateBlob(source.data, source.name);
   }
 
   const file = decodeDataUri(source.data);

@@ -52,7 +52,9 @@ export function FileDrop({
     setProgress(0);
     try {
       const blob = await upload(file.name, file, {
-        access: "public",
+        // Private store: the URL alone opens nothing — the download
+        // routes are the only door.
+        access: "private",
         handleUploadUrl: "/api/assignments/upload",
         onUploadProgress: ({ percentage }) => setProgress(Math.round(percentage)),
       });

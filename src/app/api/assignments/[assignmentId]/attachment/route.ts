@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { auth } from "@/lib/auth";
+import { streamPrivateBlob } from "@/lib/classroom/blob";
 import { decodeDataUri, safeFilename } from "@/lib/data-uri";
 import { prisma } from "@/lib/prisma";
 
@@ -34,10 +35,10 @@ export async function GET(
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
-  // Blob-backed attachments are stored as a URL — redirect instead of
-  // proxying the bytes. Access was already decided above.
+  // Blob-backed attachments live in a private store — stream them out here,
+  // after the access decision above. The URL alone opens nothing.
   if (assignment.attachmentData.startsWith("https://")) {
-    return NextResponse.redirect(assignment.attachmentData, 307);
+    return streamPrivateBlob(assignment.attachmentData, assignment.attachmentName);
   }
 
   const file = decodeDataUri(assignment.attachmentData);
