@@ -115,7 +115,7 @@ QUESTIONS = [
    choices=[
      "sin(t)/(1 - cos(t))",
      "(1 - cos(t))/sin(t)",
-     "sin(t)/(1 + cos(t))",
+     "cos(t)/(1 - sin(t))",
      "-sin(t)/(1 - cos(t))"], ans=0,
    why="dy/dt = sin(t) and dx/dt = 1 - cos(t), so dy/dx is their quotient."),
  dict(q="For the cycloid x = t - sin(t), y = 1 - cos(t), the slope of the tangent line at t = pi/2 is",
