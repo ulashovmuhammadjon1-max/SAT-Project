@@ -39,6 +39,18 @@ The inserter derives each row's id from `(subject, topic, order)`, so re-running
 it updates rows in place instead of duplicating them. Editing a module and
 re-exporting is therefore the correct way to fix a live question.
 
+## NEVER read `QUESTIONS` directly — the shuffle is load-bearing
+
+The `ans` index in a module file is **not** the index a student should see. Keys
+are written wherever was convenient while authoring, and they cluster hard: one
+Calculus module has 20 of its 25 keys at index 0, one economics module has 38 of
+50 at index 1. `export_units.py` is what disperses them.
+
+So any code that consumes a module — a PDF builder, a preview tool, a new
+inserter — **must go through the exporter**, or it will emit a bank whose answer
+is the first choice four times out of five. Nothing currently bypasses it; this
+is written down so nothing starts to.
+
 ## Answer keys are shuffled at export, not written balanced
 
 Hand-authored banks cluster hard on one letter — Unit 1's raw distribution was
