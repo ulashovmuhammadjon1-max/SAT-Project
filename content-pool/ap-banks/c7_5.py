@@ -5,10 +5,10 @@
 TOPIC = ("7.5", "Approximating Solutions Using Euler's Method", 7)
 QUESTIONS = [
  dict(q="Let dy/dx = x + y with y(0) = 1. Using Euler's method with one step of size h = 0.5, what is the approximation of y(0.5)?", choices=[
-   "1.5",
    "1.25",
+   "1.5",
    "2",
-   "2.5"], ans=0,
+   "2.5"], ans=1,
    why="One step gives 1 + 0.5*(0 + 1) = 1.5."),
  dict(q="Let dy/dx = x + y with y(0) = 1. Using Euler's method with two steps of size h = 0.5, what is the approximation of y(1)?", choices=[
    "2",
@@ -35,10 +35,10 @@ QUESTIONS = [
    "4"], ans=0,
    why="One step gives 4 + 1*(0 - 4) = 0."),
  dict(q="Let dy/dx = x - y with y(0) = 4. Using Euler's method with two steps of size h = 1, what is the approximation of y(2)?", choices=[
+   "-1",
    "0",
    "1",
-   "2",
-   "-1"], ans=1,
+   "2"], ans=2,
    why="After the first step y is 0 at x = 1, and the second step gives 0 + 1*(1 - 0) = 1."),
  dict(q="Let dy/dx = xy with y(1) = 2. Using Euler's method with one step of size h = 0.5, what is the approximation of y(1.5)?", choices=[
    "2.5",
@@ -53,10 +53,10 @@ QUESTIONS = [
    "5.25"], ans=3,
    why="After one step y is 3 at x = 1.5, and the second step gives 3 + 0.5*(1.5*3) = 5.25."),
  dict(q="Euler's method is to be used to approximate y(2) starting from x = 0 using four steps of equal size. What step size h should be used?", choices=[
-   "0.5",
    "0.25",
+   "0.5",
    "2",
-   "4"], ans=0,
+   "4"], ans=1,
    why="The interval has length 2, and dividing it into four equal steps gives h = 2/4 = 0.5."),
  dict(q="Euler's method approximates a solution by", choices=[
    "following the tangent line at each point for one step of length h and then recomputing the slope",
@@ -89,10 +89,10 @@ QUESTIONS = [
    "1.331"], ans=2,
    why="The first step gives 1.1, and the second gives 1.1 + 0.1*(1.1)^2 = 1.221."),
  dict(q="Let dy/dx = x + y with y(1) = 2. Using Euler's method with two steps of size h = -0.5, what is the approximation of y(0)?", choices=[
+   "-0.5",
    "0",
    "0.5",
-   "1",
-   "-0.5"], ans=0,
+   "1"], ans=1,
    why="Stepping backward gives 2 + (-0.5)(1 + 2) = 0.5 at x = 0.5, then 0.5 + (-0.5)(0.5 + 0.5) = 0."),
  dict(q="Let dy/dx = 2x with y(0) = 1, whose exact solution is y = x^2 + 1. Using Euler's method with two steps of size h = 0.5, the approximation of y(1) is 1.5. By how much does this differ from the exact value?", choices=[
    "0",
@@ -119,10 +119,10 @@ QUESTIONS = [
    "7"], ans=2,
    why="The first step gives 3 + 0.5*2 = 4, and the second gives 4 + 0.5*(2*4 - 4) = 6."),
  dict(q="Let dy/dx = x^2 - y with y(2) = 1. Using Euler's method with one step of size h = 0.1, what is the approximation of y(2.1)?", choices=[
-   "1.3",
-   "1.4",
    "0.7",
-   "1.03"], ans=0,
+   "1.03",
+   "1.3",
+   "1.4"], ans=2,
    why="One step gives 1 + 0.1*(4 - 1) = 1.3."),
  dict(q="Let dy/dx = y/2 with y(0) = 4. Using Euler's method with three steps of size h = 1, what is the approximation of y(3)?", choices=[
    "6",

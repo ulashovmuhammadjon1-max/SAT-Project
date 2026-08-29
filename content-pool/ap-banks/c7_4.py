@@ -53,10 +53,10 @@ QUESTIONS = [
    "constant"], ans=0,
    why="At (0, 1) the slope is 1 > 0, and d^2y/dx^2 = dy/dx = y is also positive there."),
  dict(q="For dy/dx = x + y, what is the value of d^2y/dx^2 at the point (0, 1) on a solution curve?", choices=[
-   "2",
    "0",
    "1",
-   "3"], ans=0,
+   "2",
+   "3"], ans=2,
    why="Differentiating gives d^2y/dx^2 = 1 + dy/dx = 1 + x + y, which is 1 + 0 + 1 = 2 at that point."),
  dict(q="Which differential equation has exactly one equilibrium solution, the line y = -3?", choices=[
    "dy/dx = y + 3",

@@ -53,10 +53,10 @@ QUESTIONS = [
    "y = e^x"], ans=0,
    why="Separating gives -1/y = x + C, and y(0) = 1 forces C = -1, so y = 1/(1 - x)."),
  dict(q="Let y be the solution of dy/dx = y^2 with y(0) = 1. What is y(1/2)?", choices=[
-   "2",
    "1/2",
+   "2/3",
    "3/2",
-   "2/3"], ans=0,
+   "2"], ans=3,
    why="The solution is y = 1/(1 - x), and 1/(1 - 1/2) = 2."),
  dict(q="Let y be the solution of dy/dx = y^2 with y(0) = 1. What is the largest interval containing x = 0 on which the solution exists?", choices=[
    "x < 1",
@@ -95,10 +95,10 @@ QUESTIONS = [
    "y = 2e^(x^2)"], ans=0,
    why="The general solution is y = C*e^(x^3), and y(0) = C = 2."),
  dict(q="Let y be the solution of dy/dx = 2x with y(1) = 5. What is y(2)?", choices=[
+   "4",
    "8",
    "9",
-   "4",
-   "10"], ans=0,
+   "10"], ans=1,
    why="The solution is y = x^2 + 4, and 4 + 4 = 8."),
  dict(q="Let y be the solution of dy/dx = xy with y(0) = 2. What is y(1)?", choices=[
    "2*sqrt(e)",
