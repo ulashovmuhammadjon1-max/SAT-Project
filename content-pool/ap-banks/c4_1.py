@@ -110,13 +110,13 @@ QUESTIONS = [
      "the average value of f near x = a"], ans=0,
    why="The derivative at a point is by definition the slope of the tangent line there."),
 
- dict(q="A differentiable function f satisfies f(10) = 25 and f'(10) = -3. The best estimate of f(10.5) is",
+ dict(q="A baby's weight is W(t) pounds at age t months. Which of the following quantities is measured in pounds per month?",
    choices=[
-     "23.5",
-     "22",
-     "26.5",
-     "28"], ans=0,
-   why="Using the rate of change, f(10.5) is about 25 + (-3)(0.5) = 23.5."),
+     "W'(9)",
+     "W(9)",
+     "W(9) - W(6)",
+     "the value of t for which W(t) = 20"], ans=0,
+   why="Only the derivative divides pounds by months; W(9) and the difference W(9) - W(6) are both weights in pounds, and the last quantity is a time in months."),
 
  dict(q="A car's fuel use is modeled by g(x), the number of gallons of gasoline consumed after driving x miles. The units of g'(x) are",
    choices=[

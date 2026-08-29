@@ -13,9 +13,9 @@ assert sp.Rational(109, 10) - 10 == sp.Rational(9, 10)
 assert sp.nsimplify((sp.Rational(109, 10) - 10) / sp.Rational(1, 5)) == sp.Rational(9, 2)
 assert float(sp.Rational(9, 2)) == 4.5
 
-# q14: local linear estimate f(10.5) ~ f(10) + f'(10)*0.5 = 25 - 3*0.5.
-assert sp.nsimplify(25 + sp.Rational(-3) * sp.Rational(1, 2)) == sp.Rational(47, 2)
-assert float(sp.Rational(47, 2)) == 23.5
+# q14 is a units-identification item (which quantity is in pounds per month) and has
+# no computation to check; the tangent-line estimate that used to sit here was moved
+# out because it repeated the linearization template that topic 4.6 owns.
 
 # q18: A(s) = s^2 so A'(s) = 2s and A'(4) = 8; A(4) = 16 is the distractor.
 A = s**2
@@ -45,4 +45,4 @@ for i, q in enumerate(c4_1.QUESTIONS, 1):
     assert q["why"].strip().endswith("."), i
     assert "$" not in q["q"] and all("$" not in c for c in q["choices"]), i
 
-print("c4_1: 25 questions, 5 numeric keys verified with sympy, structure OK")
+print("c4_1: 25 questions, 4 numeric keys verified with sympy, structure OK")
