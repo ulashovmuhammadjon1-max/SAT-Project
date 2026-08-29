@@ -209,6 +209,7 @@ model User {
   classMemberships      ClassMembership[]
   classesTaught         SchoolClass[]          @relation("ClassTeacher")
   assignmentCompletions AssignmentCompletion[]
+  apAttempts            ApQuestionAttempt[]
 
   @@index([role])
   @@index([countryCode])
@@ -2255,6 +2256,48 @@ model AssignmentCompletion {
 
   @@unique([assignmentId, userId])
   @@index([userId])
+}
+
+// ---------------------------------------------------------------------------
+// AP prep — its own light question store: five choices, a unit/topic
+// taxonomy, no Domain/Skill rows. Kept apart from the SAT Question Bank.
+// ---------------------------------------------------------------------------
+
+model ApQuestion {
+  id           String   @id @default(cuid())
+  /// 'MICRO' | 'MACRO' | 'CALC_AB' | 'CALC_BC'
+  subject      String
+  unit         Int
+  /// CED topic code, e.g. "1.1"
+  topic        String
+  topicTitle   String
+  order        Int      @default(0)
+  stem         String   @db.Text
+  /// Optional data table: {"headers": [...], "rows": [[...], ...]}
+  tableJson    String?  @db.Text
+  /// Exactly five choices, A-E, as a JSON array of strings
+  choicesJson  String   @db.Text
+  correctIndex Int
+  explanation  String?  @db.Text
+  createdAt    DateTime @default(now())
+
+  attempts ApQuestionAttempt[]
+
+  @@index([subject, unit, topic])
+}
+
+model ApQuestionAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  questionId  String
+  chosenIndex Int
+  isCorrect   Boolean
+  createdAt   DateTime @default(now())
+
+  user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question ApQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([userId, questionId])
 }
 
 model SubmissionFile {

@@ -236,11 +236,26 @@ function schoolGroups(pathname: string): NavGroup[] {
   ];
 }
 
-type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL";
+const AP_GROUPS: NavGroup[] = [
+  { label: null, items: [{ href: "/ap", label: "AP Home", icon: Award, exact: true }] },
+  {
+    label: "Subjects",
+    items: [
+      { href: "/ap/macroeconomics", label: "AP Macroeconomics", icon: BookOpen },
+      { href: "/ap/microeconomics", label: "AP Microeconomics", icon: BookOpen },
+      { href: "/ap/calculus-ab", label: "AP Calculus AB", icon: BookOpen },
+      { href: "/ap/calculus-bc", label: "AP Calculus BC", icon: BookOpen },
+    ],
+  },
+  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+];
+
+type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL" | "AP";
 
 /** Which product a path belongs to; exam pages fall back to activeExam. */
 function productFor(pathname: string, activeExam: ExamMode): Product {
   if (pathname.startsWith("/research")) return "RESEARCH";
+  if (pathname.startsWith("/ap")) return "AP";
   if (
     pathname.startsWith("/class") ||
     pathname.startsWith("/classes") ||
@@ -266,9 +281,11 @@ export function StudentSidebar({
   const baseGroups =
     product === "RESEARCH"
       ? RESEARCH_GROUPS
-      : product === "SCHOOL"
-        ? schoolGroups(pathname)
-        : GROUPS_FOR[activeExam];
+      : product === "AP"
+        ? AP_GROUPS
+        : product === "SCHOOL"
+          ? schoolGroups(pathname)
+          : GROUPS_FOR[activeExam];
   // Teachers see their panel in every product's sidebar, right before
   // Settings — a teacher checking on their class should never have to hunt.
   const groups = teaching
@@ -363,6 +380,7 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
   const META: Record<Product, { label: string; short: string }> = {
     SAT: { label: "SAT Prep", short: "SAT" },
     IELTS: { label: "IELTS Prep", short: "IE" },
+    AP: { label: "AP Prep", short: "AP" },
     RESEARCH: { label: "Research", short: "RS" },
     SCHOOL: { label: "School", short: "SC" },
   };
@@ -389,6 +407,7 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
   const options: { key: Product; icon: typeof BookOpen; onSelect?: () => void; href?: string; badge?: string }[] = [
     { key: "SAT", icon: BookOpen, onSelect: () => goExam("SAT") },
     { key: "IELTS", icon: PenLine, onSelect: () => goExam("IELTS") },
+    { key: "AP", icon: Award, href: "/ap", badge: "New" },
     { key: "RESEARCH", icon: FlaskConical, href: "/research", badge: "New" },
     { key: "SCHOOL", icon: School, href: "/classes", badge: "New" },
   ];
