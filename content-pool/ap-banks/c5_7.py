@@ -158,11 +158,7 @@ QUESTIONS = [
    "f has an inflection point at x = 4",
    "f is decreasing on an interval containing x = 4"], ans=0,
    why="A negative second derivative at a stationary point gives a peak, and by continuity of f'' the graph is concave down nearby."),
- dict(q="For f(x) = x^3 - 3x^2 + 3x, the second derivative test at x = 1",
-   choices=[
-   "is inconclusive, and f has no relative extremum there",
-   "shows a relative minimum",
-   "shows a relative maximum",
-   "does not apply, since f'(1) is not 0"], ans=0,
-   why="f'(x) = 3(x - 1)^2 is zero at 1 and f''(1) = 0, but f' never changes sign, so f is increasing throughout."),
+ dict(q="For f(x) = x^2(x - 4), the second derivative test gives a relative maximum at x = 0 and a relative minimum at",
+   choices=["x = 8/3", "x = 4", "x = 2", "x = 4/3"], ans=0,
+   why="f'(x) = 3x^2 - 8x = x(3x - 8) vanishes at 0 and 8/3, and f''(x) = 6x - 8 is -8 at 0 and 8 at 8/3."),
 ]
