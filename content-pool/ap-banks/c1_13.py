@@ -41,7 +41,7 @@ QUESTIONS = [
    "0", "1/4", "1/2", "2"], ans=1,
    why="The conjugate leaves 1/(sqrt(x + 4) + 2), whose value at 0 is 1/4."),
  dict(q="Let f(x) = sin(3x)/x for x not equal to 0 and f(0) = k. What value of k makes f continuous at x = 0?", choices=[
-   "0", "1", "3", "1/3"], ans=2,
+   "0", "1/3", "1", "3"], ans=3,
    why="Writing it as 3 sin(3x)/(3x) and using that sin(u)/u approaches 1 gives a limit of 3."),
  dict(q="Let f(x) = (1 - cos(x))/x for x not equal to 0 and f(0) = k. What value of k makes f continuous at x = 0?", choices=[
    "-1", "0", "1/2", "1"], ans=1,

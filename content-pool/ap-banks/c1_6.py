@@ -32,7 +32,7 @@ QUESTIONS = [
    "0", "1/2", "1", "2"], ans=2,
    why="The conjugate turns the numerator into 2x, leaving 2/(sqrt(1 + x) + sqrt(1 - x)), which approaches 2/2 = 1."),
  dict(q="Evaluate lim as x -> 0 of (1/(x + 3) - 1/3)/x.", choices=[
-   "-1/9", "-1/3", "1/9", "1/3"], ans=0,
+   "-1/3", "-1/9", "1/9", "1/3"], ans=1,
    why="Combining over the common denominator 3(x + 3) gives -x/(3x(x + 3)) = -1/(3(x + 3)), which approaches -1/9."),
  dict(q="Evaluate lim as x -> 2 of (1/x - 1/2)/(x - 2).", choices=[
    "-1/2", "-1/4", "1/4", "1/2"], ans=1,
