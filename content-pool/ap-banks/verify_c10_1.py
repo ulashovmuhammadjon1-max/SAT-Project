@@ -7,6 +7,8 @@ each is stated in a comment below.
 
 Run: python3 verify_c10_1.py
 """
+import re
+
 import sympy as sp
 
 import c10_1
@@ -27,9 +29,11 @@ def expect(i, text):
 
 # --- pairwise non-equivalence of numeric choices ------------------------------
 def numeric_value(s):
+    """Numeric value of a choice, ignoring a leading 'converges to' if present."""
+    s = re.sub(r"^(the series |the sum )?converges to ", "", s.strip())
     try:
         return sp.nsimplify(sp.sympify(s.replace("^", "**")))
-    except (sp.SympifyError, TypeError, ValueError, SyntaxError):
+    except (sp.SympifyError, TypeError, ValueError, SyntaxError, AttributeError):
         return None
 
 

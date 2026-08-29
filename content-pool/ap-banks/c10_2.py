@@ -90,17 +90,17 @@ QUESTIONS = [
    why="The series is 2*sum from n=1 of (2/3)^n = 2*((2/3)/(1/3)) = 4."),
 
  dict(q="Written as a fraction in lowest terms, the repeating decimal 0.777... equals", choices=[
+   "7/11",
    "7/10",
    "7/9",
-   "7/8",
-   "77/99"], ans=1,
+   "7/8"], ans=2,
    why="It is the geometric series with a = 7/10 and r = 1/10, whose sum is (7/10)/(9/10) = 7/9."),
 
  dict(q="Written as a fraction in lowest terms, the repeating decimal 0.363636... equals", choices=[
-   "4/11",
+   "12/35",
    "9/25",
-   "18/49",
-   "36/99"], ans=0,
+   "4/11",
+   "18/49"], ans=2,
    why="It is the geometric series with a = 36/100 and r = 1/100, giving 36/99 = 4/11 in lowest terms."),
 
  dict(q="sum from n=0 to infinity of 3(-1)^n", choices=[
@@ -168,7 +168,7 @@ QUESTIONS = [
 
  dict(q="sum from n=1 to infinity of 3(-5/4)^n", choices=[
    "converges to -5/3",
-   "converges to -15/9",
+   "converges to -3/4",
    "converges to 4/3",
    "diverges"], ans=3,
    why="The ratio has |r| = 5/4 > 1, so the terms do not approach 0 and the series diverges."),
