@@ -141,6 +141,29 @@ class Checker:
             assert not same, f"q{i}: distractor {c!r} equals the key"
         self.checked.add(i)
 
+    def ck_pt(self, i, expected):
+        """Key is an ordered pair `(a, b)`: compare componentwise."""
+        expected = [sp.sympify(c) for c in expected]
+
+        def as_seq(s):
+            v = P(s)
+            return [sp.sympify(c) for c in v]
+
+        got = as_seq(self.key(i))
+        assert len(got) == len(expected) and all(
+            sp.simplify(u - v) == 0 for u, v in zip(got, expected)
+        ), f"q{i}: key {self.key(i)!r} != {expected}"
+        for c in self._others(i):
+            try:
+                other = as_seq(c)
+            except Exception:
+                continue
+            same = len(other) == len(expected) and all(
+                sp.simplify(u - v) == 0 for u, v in zip(other, expected)
+            )
+            assert not same, f"q{i}: distractor {c!r} equals the key"
+        self.checked.add(i)
+
     def ck_num(self, i, expected, tol=sp.Rational(1, 1000)):
         """Key is a rounded decimal: compare numerically, distractors too."""
         got = P(self.key(i))

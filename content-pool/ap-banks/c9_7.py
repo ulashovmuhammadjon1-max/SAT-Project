@@ -51,8 +51,8 @@ QUESTIONS = [
  dict(q="For the polar curve r = 2, the slope of the tangent line at theta = pi/4 is",
    choices=[
      "-1",
-     "1",
      "0",
+     "1",
      "2"], ans=0,
    why="The curve is the circle x = 2cos(theta), y = 2sin(theta), whose slope is -cos(theta)/sin(theta) = -1 at theta = pi/4."),
  dict(q="For the polar curve r = theta, dy/dx =",
@@ -71,10 +71,10 @@ QUESTIONS = [
    why="The numerator is 1 + 0 = 1 and the denominator is 0 - pi/2, so the slope is -2/pi."),
  dict(q="For the cardioid r = 1 + cos(theta), the slope of the tangent line at theta = pi/2 is",
    choices=[
-     "1",
+     "-2",
      "-1",
      "0",
-     "-2"], ans=0,
+     "1"], ans=3,
    why="dy/dtheta = -1 and dx/dtheta = -1 at theta = pi/2, so the slope is 1."),
  dict(q="For the polar curve r = 2sin(theta), the tangent line at theta = pi/2 is",
    choices=[
@@ -142,8 +142,8 @@ QUESTIONS = [
  dict(q="For the polar curve r = sin(2theta), the slope of the tangent line at theta = pi/4 is",
    choices=[
      "-1",
-     "1",
      "0",
+     "1",
      "2"], ans=0,
    why="At theta = pi/4, dr/dtheta = 2cos(2theta) = 0 and r = 1, so the slope is (r cos(theta))/(-r sin(theta)) = -1."),
  dict(q="The distance from the origin to the point with polar coordinates (r, theta) is",
@@ -155,10 +155,10 @@ QUESTIONS = [
    why="r may be negative in polar coordinates, and the distance is its absolute value."),
  dict(q="For the polar curve r = 3 + 2sin(theta), the value of dy/dtheta at theta = 0 is",
    choices=[
-     "3",
-     "2",
      "0",
-     "5"], ans=0,
+     "2",
+     "3",
+     "5"], ans=2,
    why="y = (3 + 2sin(theta))sin(theta), so dy/dtheta = 2cos(theta)sin(theta) + (3 + 2sin(theta))cos(theta), which is 3 at theta = 0."),
  dict(q="If a point has polar coordinates (r, theta) and rectangular coordinates (x, y), then",
    choices=[
