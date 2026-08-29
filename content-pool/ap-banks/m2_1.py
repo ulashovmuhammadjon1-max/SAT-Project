@@ -60,7 +60,7 @@ QUESTIONS = [
    "supply goods in the product market",
    "neither earn nor spend income"], ans=1,
    why="Households own the resources and sell them to firms, then spend the resulting income on output."),
- dict(q="In the circular flow model, firms", choices=[
+ dict(q="Within the circular flow, a business firm is best described as an economic unit that", choices=[
    "sell labor to households",
    "buy resources in the factor market and sell goods and services in the product market",
    "collect taxes",
