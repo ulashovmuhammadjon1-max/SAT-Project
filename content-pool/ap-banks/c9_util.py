@@ -165,14 +165,18 @@ class Checker:
         for j in range(len(vals)):
             for k in range(j + 1, len(vals)):
                 a, b_ = vals[j][1], vals[k][1]
-                if isinstance(a, sp.Tuple) and isinstance(b_, sp.Tuple):
+                seq = (sp.Tuple, tuple, list)
+                if isinstance(a, seq) and isinstance(b_, seq):
                     same = len(a) == len(b_) and all(
                         sp.simplify(u - v) == 0 for u, v in zip(a, b_)
                     )
-                elif isinstance(a, sp.Tuple) or isinstance(b_, sp.Tuple):
+                elif isinstance(a, seq) or isinstance(b_, seq):
                     same = False
                 else:
-                    same = sp.simplify(a - b_) == 0
+                    try:
+                        same = sp.simplify(a - b_) == 0
+                    except TypeError:  # relationals and other non-numeric parses
+                        same = a == b_
                 assert not same, (
                     f"q{i}: choices {vals[j][0]!r} and {vals[k][0]!r} are equivalent"
                 )
