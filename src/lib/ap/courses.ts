@@ -17,7 +17,19 @@ export interface ApUnit {
   weight?: string;
   /** One line on what the unit covers. */
   blurb?: string;
-  topics?: { code: string; title: string }[];
+  topics?: ApTopic[];
+}
+
+export interface ApTopic {
+  code: string;
+  title: string;
+  /**
+   * Calculus only. Units 1-8 are shared by AB and BC, but a handful of topics
+   * inside them (integration by parts, Euler's method, arc length, ...) are
+   * examined on BC alone. Flagging the topic rather than splitting the unit
+   * keeps one outline as the single source of truth for both courses.
+   */
+  bcOnly?: boolean;
 }
 
 export interface ApCourse {
@@ -224,19 +236,200 @@ const MACRO_UNITS: ApUnit[] = [
 // ---------------------------------------------------------------------------
 
 const CALC_UNITS: ApUnit[] = [
-  { number: 1, title: "Limits and Continuity", blurb: "Limits, asymptotes, continuity, and the squeeze theorem." },
-  { number: 2, title: "Differentiation: Definition and Fundamental Properties", blurb: "The derivative, power/product/quotient rules." },
-  { number: 3, title: "Differentiation: Composite, Implicit, and Inverse Functions", blurb: "The chain rule, implicit differentiation, inverses." },
-  { number: 4, title: "Contextual Applications of Differentiation", blurb: "Rates of change, related rates, linearization, L'Hospital." },
-  { number: 5, title: "Analytical Applications of Differentiation", blurb: "Extrema, concavity, curve sketching, optimization." },
-  { number: 6, title: "Integration and Accumulation of Change", blurb: "Riemann sums, antiderivatives, the fundamental theorem." },
-  { number: 7, title: "Differential Equations", blurb: "Slope fields, separation of variables, exponential models." },
-  { number: 8, title: "Applications of Integration", blurb: "Average value, area, volume, and arc length." },
+  {
+    number: 1,
+    title: "Limits and Continuity",
+    weight: "10-12% (AB) / 4-7% (BC)",
+    blurb: "Limits, asymptotes, continuity, and the squeeze theorem.",
+    topics: [
+      { code: "1.1", title: "Introducing Calculus: Can Change Occur at an Instant?" },
+      { code: "1.2", title: "Defining Limits and Using Limit Notation" },
+      { code: "1.3", title: "Estimating Limit Values from Graphs" },
+      { code: "1.4", title: "Estimating Limit Values from Tables" },
+      { code: "1.5", title: "Determining Limits Using Algebraic Properties of Limits" },
+      { code: "1.6", title: "Determining Limits Using Algebraic Manipulation" },
+      { code: "1.7", title: "Selecting Procedures for Determining Limits" },
+      { code: "1.8", title: "Determining Limits Using the Squeeze Theorem" },
+      { code: "1.9", title: "Connecting Multiple Representations of Limits" },
+      { code: "1.10", title: "Exploring Types of Discontinuities" },
+      { code: "1.11", title: "Defining Continuity at a Point" },
+      { code: "1.12", title: "Confirming Continuity over an Interval" },
+      { code: "1.13", title: "Removing Discontinuities" },
+      { code: "1.14", title: "Connecting Infinite Limits and Vertical Asymptotes" },
+      { code: "1.15", title: "Connecting Limits at Infinity and Horizontal Asymptotes" },
+      { code: "1.16", title: "Working with the Intermediate Value Theorem" },
+    ],
+  },
+  {
+    number: 2,
+    title: "Differentiation: Definition and Fundamental Properties",
+    weight: "10-12% (AB) / 4-7% (BC)",
+    blurb: "The derivative, and the power, product, and quotient rules.",
+    topics: [
+      { code: "2.1", title: "Defining Average and Instantaneous Rates of Change at a Point" },
+      { code: "2.2", title: "Defining the Derivative of a Function and Using Derivative Notation" },
+      { code: "2.3", title: "Estimating Derivatives of a Function at a Point" },
+      { code: "2.4", title: "Connecting Differentiability and Continuity" },
+      { code: "2.5", title: "Applying the Power Rule" },
+      { code: "2.6", title: "Derivative Rules: Constant, Sum, Difference, and Constant Multiple" },
+      { code: "2.7", title: "Derivatives of cos x, sin x, e^x, and ln x" },
+      { code: "2.8", title: "The Product Rule" },
+      { code: "2.9", title: "The Quotient Rule" },
+      { code: "2.10", title: "Finding the Derivatives of Tangent, Cotangent, Secant, and Cosecant" },
+    ],
+  },
+  {
+    number: 3,
+    title: "Differentiation: Composite, Implicit, and Inverse Functions",
+    weight: "9-13% (AB) / 4-7% (BC)",
+    blurb: "The chain rule, implicit differentiation, and inverses.",
+    topics: [
+      { code: "3.1", title: "The Chain Rule" },
+      { code: "3.2", title: "Implicit Differentiation" },
+      { code: "3.3", title: "Differentiating Inverse Functions" },
+      { code: "3.4", title: "Differentiating Inverse Trigonometric Functions" },
+      { code: "3.5", title: "Selecting Procedures for Calculating Derivatives" },
+      { code: "3.6", title: "Calculating Higher-Order Derivatives" },
+    ],
+  },
+  {
+    number: 4,
+    title: "Contextual Applications of Differentiation",
+    weight: "10-15% (AB) / 6-9% (BC)",
+    blurb: "Rates of change, related rates, linearization, L'Hospital's rule.",
+    topics: [
+      { code: "4.1", title: "Interpreting the Meaning of the Derivative in Context" },
+      { code: "4.2", title: "Straight-Line Motion: Connecting Position, Velocity, and Acceleration" },
+      { code: "4.3", title: "Rates of Change in Applied Contexts Other Than Motion" },
+      { code: "4.4", title: "Introduction to Related Rates" },
+      { code: "4.5", title: "Solving Related Rates Problems" },
+      { code: "4.6", title: "Approximating Values of a Function Using Local Linearity and Linearization" },
+      { code: "4.7", title: "Using L'Hospital's Rule for Determining Limits of Indeterminate Forms" },
+    ],
+  },
+  {
+    number: 5,
+    title: "Analytical Applications of Differentiation",
+    weight: "15-18% (AB) / 8-11% (BC)",
+    blurb: "Extrema, concavity, curve sketching, and optimization.",
+    topics: [
+      { code: "5.1", title: "Using the Mean Value Theorem" },
+      { code: "5.2", title: "Extreme Value Theorem, Global Versus Local Extrema, and Critical Points" },
+      { code: "5.3", title: "Determining Intervals on Which a Function Is Increasing or Decreasing" },
+      { code: "5.4", title: "Using the First Derivative Test to Determine Relative Extrema" },
+      { code: "5.5", title: "Using the Candidates Test to Determine Absolute Extrema" },
+      { code: "5.6", title: "Determining Concavity of Functions over Their Domains" },
+      { code: "5.7", title: "Using the Second Derivative Test to Determine Extrema" },
+      { code: "5.8", title: "Sketching Graphs of Functions and Their Derivatives" },
+      { code: "5.9", title: "Connecting a Function, Its First Derivative, and Its Second Derivative" },
+      { code: "5.10", title: "Introduction to Optimization Problems" },
+      { code: "5.11", title: "Solving Optimization Problems" },
+      { code: "5.12", title: "Exploring Behaviors of Implicit Relations" },
+    ],
+  },
+  {
+    number: 6,
+    title: "Integration and Accumulation of Change",
+    weight: "17-20% (AB) / 17-20% (BC)",
+    blurb: "Riemann sums, antiderivatives, and the fundamental theorem.",
+    topics: [
+      { code: "6.1", title: "Exploring Accumulations of Change" },
+      { code: "6.2", title: "Approximating Areas with Riemann Sums" },
+      { code: "6.3", title: "Riemann Sums, Summation Notation, and Definite Integral Notation" },
+      { code: "6.4", title: "The Fundamental Theorem of Calculus and Accumulation Functions" },
+      { code: "6.5", title: "Interpreting the Behavior of Accumulation Functions Involving Area" },
+      { code: "6.6", title: "Applying Properties of Definite Integrals" },
+      { code: "6.7", title: "The Fundamental Theorem of Calculus and Definite Integrals" },
+      { code: "6.8", title: "Finding Antiderivatives and Indefinite Integrals: Basic Rules and Notation" },
+      { code: "6.9", title: "Integrating Using Substitution" },
+      { code: "6.10", title: "Integrating Functions Using Long Division and Completing the Square" },
+      { code: "6.11", title: "Integrating Using Integration by Parts", bcOnly: true },
+      { code: "6.12", title: "Integrating Using Linear Partial Fractions", bcOnly: true },
+      { code: "6.13", title: "Evaluating Improper Integrals", bcOnly: true },
+      { code: "6.14", title: "Selecting Techniques for Antidifferentiation" },
+    ],
+  },
+  {
+    number: 7,
+    title: "Differential Equations",
+    weight: "6-12% (AB) / 6-9% (BC)",
+    blurb: "Slope fields, separation of variables, exponential models.",
+    topics: [
+      { code: "7.1", title: "Modeling Situations with Differential Equations" },
+      { code: "7.2", title: "Verifying Solutions for Differential Equations" },
+      { code: "7.3", title: "Sketching Slope Fields" },
+      { code: "7.4", title: "Reasoning Using Slope Fields" },
+      { code: "7.5", title: "Approximating Solutions Using Euler's Method", bcOnly: true },
+      { code: "7.6", title: "Finding General Solutions Using Separation of Variables" },
+      { code: "7.7", title: "Finding Particular Solutions Using Initial Conditions and Separation of Variables" },
+      { code: "7.8", title: "Exponential Models with Differential Equations" },
+      { code: "7.9", title: "Logistic Models with Differential Equations", bcOnly: true },
+    ],
+  },
+  {
+    number: 8,
+    title: "Applications of Integration",
+    weight: "10-15% (AB) / 6-9% (BC)",
+    blurb: "Average value, area between curves, volume, and arc length.",
+    topics: [
+      { code: "8.1", title: "Finding the Average Value of a Function on an Interval" },
+      { code: "8.2", title: "Connecting Position, Velocity, and Acceleration Using Integrals" },
+      { code: "8.3", title: "Using Accumulation Functions and Definite Integrals in Applied Contexts" },
+      { code: "8.4", title: "Finding the Area Between Curves Expressed as Functions of x" },
+      { code: "8.5", title: "Finding the Area Between Curves Expressed as Functions of y" },
+      { code: "8.6", title: "Finding the Area Between Curves That Intersect at More Than Two Points" },
+      { code: "8.7", title: "Volumes with Cross Sections: Squares and Rectangles" },
+      { code: "8.8", title: "Volumes with Cross Sections: Triangles and Semicircles" },
+      { code: "8.9", title: "Volume with Disc Method: Revolving Around the x- or y-Axis" },
+      { code: "8.10", title: "Volume with Disc Method: Revolving Around Other Axes" },
+      { code: "8.11", title: "Volume with Washer Method: Revolving Around the x- or y-Axis" },
+      { code: "8.12", title: "Volume with Washer Method: Revolving Around Other Axes" },
+      { code: "8.13", title: "The Arc Length of a Smooth, Planar Curve and Distance Traveled", bcOnly: true },
+    ],
+  },
 ];
 
 const CALC_BC_ONLY: ApUnit[] = [
-  { number: 9, title: "Parametric Equations, Polar Coordinates, and Vector-Valued Functions", blurb: "BC only — calculus beyond y = f(x)." },
-  { number: 10, title: "Infinite Sequences and Series", blurb: "BC only — convergence tests, Taylor and Maclaurin series." },
+  {
+    number: 9,
+    title: "Parametric Equations, Polar Coordinates, and Vector-Valued Functions",
+    weight: "11-12% (BC)",
+    blurb: "BC only - calculus beyond y = f(x).",
+    topics: [
+      { code: "9.1", title: "Defining and Differentiating Parametric Equations" },
+      { code: "9.2", title: "Second Derivatives of Parametric Equations" },
+      { code: "9.3", title: "Finding Arc Lengths of Curves Given by Parametric Equations" },
+      { code: "9.4", title: "Defining and Differentiating Vector-Valued Functions" },
+      { code: "9.5", title: "Integrating Vector-Valued Functions" },
+      { code: "9.6", title: "Solving Motion Problems Using Parametric and Vector-Valued Functions" },
+      { code: "9.7", title: "Defining Polar Coordinates and Differentiating in Polar Form" },
+      { code: "9.8", title: "Finding the Area of a Region Bounded by a Single Polar Curve" },
+      { code: "9.9", title: "Finding the Area of the Region Bounded by Two Polar Curves" },
+    ],
+  },
+  {
+    number: 10,
+    title: "Infinite Sequences and Series",
+    weight: "17-18% (BC)",
+    blurb: "BC only - convergence tests, Taylor and Maclaurin series.",
+    topics: [
+      { code: "10.1", title: "Defining Convergent and Divergent Infinite Series" },
+      { code: "10.2", title: "Working with Geometric Series" },
+      { code: "10.3", title: "The nth Term Test for Divergence" },
+      { code: "10.4", title: "Integral Test for Convergence" },
+      { code: "10.5", title: "Harmonic Series and p-Series" },
+      { code: "10.6", title: "Comparison Tests for Convergence" },
+      { code: "10.7", title: "Alternating Series Test for Convergence" },
+      { code: "10.8", title: "Ratio Test for Convergence" },
+      { code: "10.9", title: "Determining Absolute or Conditional Convergence" },
+      { code: "10.10", title: "Alternating Series Error Bound" },
+      { code: "10.11", title: "Finding Taylor Polynomial Approximations of Functions" },
+      { code: "10.12", title: "Lagrange Error Bound" },
+      { code: "10.13", title: "Radius and Interval of Convergence of Power Series" },
+      { code: "10.14", title: "Finding Taylor or Maclaurin Series for a Function" },
+      { code: "10.15", title: "Representing Functions as Power Series" },
+    ],
+  },
 ];
 
 export const AP_COURSES: ApCourse[] = [
@@ -265,7 +458,10 @@ export const AP_COURSES: ApCourse[] = [
     short: "Calc AB",
     blurb: "Limits, derivatives, integrals, and the fundamental theorem.",
     gradient: "from-rose-500 to-pink-600",
-    units: CALC_UNITS,
+    units: CALC_UNITS.map((u) => ({
+      ...u,
+      topics: u.topics?.filter((t) => !t.bcOnly),
+    })),
   },
   {
     code: "CALC_BC",
