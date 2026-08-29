@@ -30,8 +30,26 @@ LOCAL = {
 }
 
 
+# Only these words may appear in something treated as mathematics.  Without this
+# guard, prose parses silently: "0 to pi" becomes 0*to*pi = 0, and so does
+# "0 to 2pi", which made two different answer choices look equivalent.
+ALLOWED_WORDS = {
+    "sqrt", "ln", "log", "exp", "sin", "cos", "tan", "sec", "csc", "cot",
+    "arcsin", "arccos", "arctan", "pi", "e", "t", "theta", "x", "y", "a", "b",
+    "r", "C",
+}
+WORD_RE = re.compile(r"[A-Za-z]+")
+
+
 def P(s):
-    """Parse one plain-text math expression into a sympy expression."""
+    """Parse one plain-text math expression into a sympy expression.
+
+    Raises ValueError if the string contains any word that is not mathematical
+    notation, so prose choices are skipped rather than silently mis-parsed.
+    """
+    bad = [w for w in WORD_RE.findall(s) if w not in ALLOWED_WORDS]
+    if bad:
+        raise ValueError(f"not pure mathematics ({bad[0]!r}): {s!r}")
     return parse_expr(s, local_dict=LOCAL, transformations=TRANSFORMS)
 
 
