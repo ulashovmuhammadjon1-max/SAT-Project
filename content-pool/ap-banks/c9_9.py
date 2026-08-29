@@ -1,0 +1,186 @@
+# CALC 9.9 Finding the Area of the Region Bounded by Two Polar Curves
+# — 25 questions.  Answers verified with sympy; see verify_c9_9.py.
+# The area between an outer curve R and an inner curve r is
+# (1/2) int (R^2 - r^2) dtheta, taken between the angles where they meet.
+# Questions 1, 2, 3, 4, 5, 7, 9, 13, 14, 15, 17, 23 and 25 name limits, a
+# set-up, an error or a condition rather than a single number; verify_c9_9.py
+# pins each key by content and confirms the mathematics with sympy, including
+# the value of every set-up integral.
+TOPIC = ("9.9", "Finding the Area of the Region Bounded by Two Polar Curves", 9)
+QUESTIONS = [
+ dict(q="If R(theta) >= r(theta) >= 0 for a <= theta <= b, the area of the region inside r = R(theta) and outside r = r(theta) is",
+   choices=[
+     "(1/2) int from a to b of (R^2 - r^2) dtheta",
+     "(1/2) int from a to b of (R - r)^2 dtheta",
+     "int from a to b of (R^2 - r^2) dtheta",
+     "(1/2) int from a to b of (R - r) dtheta"], ans=0,
+   why="Each thin sector contributes (1/2)R^2 dtheta minus (1/2)r^2 dtheta, so the squares are subtracted, not the radii."),
+ dict(q="A student finds the area between r = 3 and r = 1 as (1/2) int from 0 to 2pi of (3 - 1)^2 dtheta = 4pi. The error is that",
+   choices=[
+     "the difference of the squares is needed, not the square of the difference; the area is 8pi",
+     "the factor 1/2 should be omitted",
+     "the limits should be 0 to pi",
+     "there is no error"], ans=0,
+   why="(1/2) int of (9 - 1) dtheta = 8pi, the area of the annulus between circles of radius 1 and 3."),
+ dict(q="The curves r = 2 and r = 4cos(theta) intersect at",
+   choices=[
+     "theta = pi/3 and theta = -pi/3",
+     "theta = pi/6 and theta = -pi/6",
+     "theta = pi/2 and theta = -pi/2",
+     "theta = 0 only"], ans=0,
+   why="4cos(theta) = 2 gives cos(theta) = 1/2."),
+ dict(q="The curves r = 1 + cos(theta) and r = 1 intersect (away from the pole) at",
+   choices=[
+     "theta = pi/2 and theta = 3pi/2",
+     "theta = 0 and theta = pi",
+     "theta = pi/3 and theta = 5pi/3",
+     "theta = pi only"], ans=0,
+   why="1 + cos(theta) = 1 gives cos(theta) = 0."),
+ dict(q="Other than at the pole, the curves r = sin(theta) and r = cos(theta) intersect at",
+   choices=[
+     "theta = pi/4",
+     "theta = pi/2",
+     "theta = pi/3",
+     "theta = 0"], ans=0,
+   why="sin(theta) = cos(theta) gives tan(theta) = 1."),
+ dict(q="The area of the region inside r = 3 and outside r = 1 is",
+   choices=[
+     "8pi",
+     "4pi",
+     "2pi",
+     "9pi"], ans=0,
+   why="(1/2) int from 0 to 2pi of (9 - 1) dtheta = 8pi."),
+ dict(q="Which of the following gives the area of the region inside r = 4cos(theta) and outside r = 2?",
+   choices=[
+     "(1/2) int from -pi/3 to pi/3 of (16cos(theta)^2 - 4) dtheta",
+     "(1/2) int from -pi/3 to pi/3 of (4cos(theta) - 2)^2 dtheta",
+     "(1/2) int from 0 to 2pi of (16cos(theta)^2 - 4) dtheta",
+     "(1/2) int from -pi/6 to pi/6 of (16cos(theta)^2 - 4) dtheta"], ans=0,
+   why="The curves meet at theta = -pi/3 and pi/3, and between those angles the circle r = 4cos(theta) is outside r = 2."),
+ dict(q="The area of the region inside r = 4cos(theta) and outside r = 2 is",
+   choices=[
+     "4pi/3 + 2sqrt(3)",
+     "4pi/3 - 2sqrt(3)",
+     "2pi/3 + sqrt(3)",
+     "8pi/3 + 2sqrt(3)"], ans=0,
+   why="(1/2) int from -pi/3 to pi/3 of (16cos^2(theta) - 4) dtheta = 4pi/3 + 2sqrt(3)."),
+ dict(q="Which of the following gives the area of the region inside the cardioid r = 1 + cos(theta) and outside the circle r = 1?",
+   choices=[
+     "(1/2) int from -pi/2 to pi/2 of ((1 + cos(theta))^2 - 1) dtheta",
+     "(1/2) int from -pi/2 to pi/2 of (cos(theta))^2 dtheta",
+     "(1/2) int from 0 to 2pi of ((1 + cos(theta))^2 - 1) dtheta",
+     "(1/2) int from -pi/2 to pi/2 of (1 - (1 + cos(theta))^2) dtheta"], ans=0,
+   why="The curves meet where cos(theta) = 0, and the cardioid is the outer curve for -pi/2 <= theta <= pi/2."),
+ dict(q="The area of the region inside the cardioid r = 1 + cos(theta) and outside the circle r = 1 is",
+   choices=[
+     "2 + pi/4",
+     "2 - pi/4",
+     "4 + pi/2",
+     "pi/4"], ans=0,
+   why="(1/2) int from -pi/2 to pi/2 of (2cos(theta) + cos^2(theta)) dtheta = 2 + pi/4."),
+ dict(q="The area of the region inside the limacon r = 2 + cos(theta) and outside the circle r = 2 is",
+   choices=[
+     "4 + pi/4",
+     "4 - pi/4",
+     "8 + pi/2",
+     "pi/4"], ans=0,
+   why="The curves meet where cos(theta) = 0, and (1/2) int from -pi/2 to pi/2 of (4cos(theta) + cos^2(theta)) dtheta = 4 + pi/4."),
+ dict(q="The area of the region lying inside both r = 1 and r = 2cos(theta) is",
+   choices=[
+     "2pi/3 - sqrt(3)/2",
+     "2pi/3 + sqrt(3)/2",
+     "pi/3 - sqrt(3)/2",
+     "pi - sqrt(3)"], ans=0,
+   why="The circles meet at theta = +/-pi/3, and splitting the integral there gives 2pi/3 - sqrt(3)/2."),
+ dict(q="The area of the region lying inside both r = 1 and r = 2cos(theta) is given by",
+   choices=[
+     "2 times [(1/2) int from 0 to pi/3 of 1 dtheta + (1/2) int from pi/3 to pi/2 of (2cos(theta))^2 dtheta]",
+     "(1/2) int from 0 to pi/2 of ((2cos(theta))^2 - 1) dtheta",
+     "(1/2) int from 0 to pi/3 of ((2cos(theta))^2 - 1) dtheta",
+     "2 times (1/2) int from 0 to pi/2 of 1 dtheta"], ans=0,
+   why="Inside both means the smaller radius bounds the region, and which curve is smaller switches at the intersection angle pi/3."),
+ dict(q="Before setting up the integral for the area of a region bounded by two polar curves, it is necessary to",
+   choices=[
+     "find the values of theta at which the curves intersect, since they determine the limits and which curve is outer",
+     "convert both curves to rectangular form",
+     "check that both curves pass through the origin",
+     "differentiate both curves"], ans=0,
+   why="The limits of integration are the intersection angles, and the outer curve can change from one to the other across them."),
+ dict(q="Solving f(theta) = g(theta) can miss an intersection point of two polar curves because",
+   choices=[
+     "both curves may pass through the pole at different values of theta, so the pole is a common point that the equation does not reveal",
+     "polar curves never intersect more than twice",
+     "the equation always has infinitely many solutions",
+     "r must be positive"], ans=0,
+   why="The pole has every angle as a valid coordinate, so each curve can reach it at its own theta and the equation f = g need not hold there."),
+ dict(q="The area of the region inside r = 2sin(theta) and outside r = 1 is",
+   choices=[
+     "pi/3 + sqrt(3)/2",
+     "pi/3 - sqrt(3)/2",
+     "2pi/3 + sqrt(3)",
+     "pi/6 + sqrt(3)/4"], ans=0,
+   why="The curves meet at theta = pi/6 and 5pi/6, and (1/2) int of (4sin^2(theta) - 1) between them is pi/3 + sqrt(3)/2."),
+ dict(q="Which of the following gives the area of the region inside r = 2sin(theta) and outside r = 1?",
+   choices=[
+     "(1/2) int from pi/6 to 5pi/6 of (4sin(theta)^2 - 1) dtheta",
+     "(1/2) int from 0 to pi of (4sin(theta)^2 - 1) dtheta",
+     "(1/2) int from pi/6 to 5pi/6 of (2sin(theta) - 1)^2 dtheta",
+     "(1/2) int from pi/3 to 2pi/3 of (4sin(theta)^2 - 1) dtheta"], ans=0,
+   why="2sin(theta) = 1 at theta = pi/6 and 5pi/6, and the sine circle is the outer curve between them."),
+ dict(q="To three decimal places, the area of the region inside r = 1 + sin(theta) and outside r = 1 is",
+   choices=[
+     "0.785",
+     "2.215",
+     "2.785",
+     "5.571"], ans=2,
+   why="The curves meet at theta = 0 and pi, and (1/2) int from 0 to pi of (2sin(theta) + sin^2(theta)) dtheta = 2 + pi/4 = 2.785."),
+ dict(q="The area of the region lying inside both r = 3sin(theta) and r = 3cos(theta) is",
+   choices=[
+     "9pi/8 - 9/4",
+     "9pi/8",
+     "9pi/4 - 9/2",
+     "9pi/8 + 9/4"], ans=0,
+   why="The curves meet at theta = pi/4, and by symmetry the area is int from 0 to pi/4 of 9sin^2(theta) dtheta = 9pi/8 - 9/4."),
+ dict(q="The area of the region lying inside both r = 1 + cos(theta) and r = 1 is",
+   choices=[
+     "5pi/4 - 2",
+     "5pi/4 + 2",
+     "3pi/4 - 2",
+     "pi - 2"], ans=0,
+   why="The unit circle bounds the region for -pi/2 <= theta <= pi/2 and the cardioid bounds it for pi/2 <= theta <= 3pi/2, giving pi/2 + (3pi/4 - 2) = 5pi/4 - 2."),
+ dict(q="The area of the region between the circles r = 2 and r = 5 is",
+   choices=[
+     "21pi",
+     "9pi",
+     "42pi",
+     "23pi"], ans=0,
+   why="(1/2) int from 0 to 2pi of (25 - 4) dtheta = 21pi, which is 25pi - 4pi."),
+ dict(q="The area of the region inside r = 4 and outside r = 4cos(theta) is",
+   choices=[
+     "12pi",
+     "8pi",
+     "16pi",
+     "4pi"], ans=0,
+   why="The circle r = 4cos(theta) has radius 2 and lies entirely inside r = 4, so the area is 16pi - 4pi = 12pi."),
+ dict(q="Away from the pole, the curves r = 1 + cos(theta) and r = 3cos(theta) intersect at",
+   choices=[
+     "theta = pi/3 and theta = -pi/3",
+     "theta = pi/2 and theta = -pi/2",
+     "theta = pi/6 and theta = -pi/6",
+     "theta = 0 only"], ans=0,
+   why="1 + cos(theta) = 3cos(theta) gives cos(theta) = 1/2."),
+ dict(q="The area of the region lying inside both r = 2 and r = 4sin(theta) is",
+   choices=[
+     "8pi/3 - 2sqrt(3)",
+     "8pi/3 + 2sqrt(3)",
+     "4pi/3 - sqrt(3)",
+     "4pi - 2sqrt(3)"], ans=0,
+   why="The circles meet at theta = pi/6 and 5pi/6, and splitting the integral there gives 8pi/3 - 2sqrt(3)."),
+ dict(q="The formula (1/2) int from a to b of (R^2 - r^2) dtheta gives the area between two polar curves only when",
+   choices=[
+     "R(theta) >= r(theta) >= 0 throughout [a, b], so that the same curve stays outside",
+     "both curves pass through the pole",
+     "R and r are both increasing on [a, b]",
+     "b - a = 2pi"], ans=0,
+   why="If the curves cross inside the interval, the outer curve changes and the integral must be split at the crossing."),
+]
