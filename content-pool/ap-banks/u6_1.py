@@ -95,12 +95,12 @@ QUESTIONS = [
    "output rises above the efficient level",
    "the government collects revenue"], ans=1,
    why="The reduced quantity is where the loss comes from."),
- dict(q="Rent control is an example of", choices=[
-   "a price floor", "a price ceiling", "a per-unit tax", "a subsidy", "a quota"], ans=1,
-   why="It caps the rent landlords may charge."),
- dict(q="The minimum wage is an example of", choices=[
-   "a price ceiling", "a price floor in the labor market", "a tax", "a subsidy", "a quota"], ans=1,
-   why="It sets a legal minimum price for labor."),
+ dict(q="A market has demand P = 20 - Q and supply P = Q. Total surplus at the competitive equilibrium is", choices=[
+   "$50", "$100", "$150", "$200", "$400"], ans=1,
+   why="Equilibrium is Q = 10 at P = 10, giving consumer surplus of 50 and producer surplus of 50."),
+ dict(q="In that market, if output is held at 6 units instead of the efficient 10, the deadweight loss is", choices=[
+   "$8", "$16", "$32", "$40", "$64"], ans=1,
+   why="Marginal benefit is 14 and marginal cost is 6 at Q = 6, so the lost surplus is half of 4 times 8."),
  dict(q="A per-unit tax on a good causes the quantity traded to", choices=[
    "rise above the efficient level",
    "fall below the efficient level, creating a deadweight loss",
@@ -125,22 +125,30 @@ QUESTIONS = [
    "a surplus",
    "a shortage"], ans=1,
    why="Deadweight loss comes from changed behavior, and none occurs here."),
- dict(q="Tax incidence describes", choices=[
-   "who legally writes the cheque to the government",
-   "how the burden of a tax is actually shared between buyers and sellers",
-   "the size of the tax",
-   "the tax revenue collected",
-   "the deadweight loss"], ans=1,
-   why="Legal and economic incidence can differ entirely."),
- dict(q="The side of the market with the more inelastic curve bears", choices=[
-   "less of the tax burden", "more of the tax burden", "none of the burden", "exactly half", "all of the burden always"], ans=1,
-   why="Being less able to change behavior, it cannot escape the tax."),
- dict(q="If demand is perfectly inelastic and supply is upward sloping, a per-unit tax is borne", choices=[
-   "entirely by sellers", "entirely by buyers", "equally", "by the government", "by no one"], ans=1,
-   why="Buyers do not reduce their purchases at all, so the full tax passes to them."),
- dict(q="If supply is perfectly elastic and demand is downward sloping, a per-unit tax is borne", choices=[
-   "entirely by sellers", "entirely by buyers", "equally", "mostly by sellers", "by no one"], ans=1,
-   why="Sellers will not supply at all below the pre-tax price, so the price rises by the full tax."),
+ dict(q="Total surplus is maximized at the competitive quantity because at any smaller quantity", choices=[
+   "producers capture too much of the surplus",
+   "there remain units buyers value more than they cost to produce",
+   "marginal cost exceeds marginal benefit",
+   "consumer surplus is zero",
+   "the price is above the demand curve"], ans=1,
+   why="Every unmade unit whose marginal benefit exceeds its marginal cost is surplus left on the table."),
+ dict(q="On the demand curve P = 20 - Q, consumer surplus when the price falls from $12 to $8 rises by", choices=[
+   "$4", "$16", "$32", "$40", "$72"], ans=3,
+   why="Surplus goes from 32 at a quantity of 8 to 72 at a quantity of 12."),
+ dict(q="A trade between a buyer and a seller creates surplus whenever", choices=[
+   "the buyer's willingness to pay exceeds the seller's willingness to accept",
+   "the price is set by the government",
+   "the seller's cost exceeds the buyer's valuation",
+   "both parties pay the same amount",
+   "the good is scarce"], ans=0,
+   why="The gap between what the unit is worth to the buyer and what it costs the seller is the surplus the trade creates."),
+ dict(q="An efficient market outcome is one in which it is impossible to", choices=[
+   "raise one person's surplus without lowering another's",
+   "produce any output at all",
+   "achieve equality of income",
+   "earn accounting profit",
+   "lower the price"], ans=0,
+   why="With every mutually beneficial trade already made, further gains can only come at someone else's expense."),
  dict(q="A per-unit subsidy on a good causes quantity traded to", choices=[
    "fall below the efficient level",
    "rise above the efficient level, creating a deadweight loss",

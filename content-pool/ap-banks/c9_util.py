@@ -101,6 +101,18 @@ class Checker:
         """Like ck but choices may be integrals in bank notation."""
         self.ck(i, expected, parse=value_of)
 
+    def ck_num(self, i, expected, tol=sp.Rational(1, 1000)):
+        """Key is a rounded decimal: compare numerically, distractors too."""
+        got = P(self.key(i))
+        assert abs(sp.N(got - expected)) <= tol, f"q{i}: key {self.key(i)!r} != {sp.N(expected)}"
+        for c in self._others(i):
+            try:
+                other = P(c)
+            except Exception:
+                continue
+            assert abs(sp.N(other - expected)) > tol, f"q{i}: distractor {c!r} equals the key"
+        self.checked.add(i)
+
     def ck_int(self, i, lo, hi, integrand, coeff=1):
         c, l, h, f = PI_(self.key(i))
         assert sp.simplify(c - coeff) == 0, f"q{i}: coefficient {c} != {coeff}"
@@ -131,19 +143,36 @@ class Checker:
         self.checked.add(i)
 
     def distinct(self, i):
-        """Pairwise non-equivalence for every choice that parses."""
+        """Pairwise non-equivalence for every choice that parses.
+
+        Integrals are compared as (coefficient, limits, integrand) rather than
+        evaluated, so a set-up question is checked without asking sympy for a
+        closed form it may not have.
+        """
         vals = []
         for c in self._q(i)["choices"]:
             try:
-                vals.append((c, value_of(c)))
+                vals.append((c, sp.Tuple(*PI_(c))))
+                continue
+            except ValueError:
+                pass
+            except Exception:
+                continue
+            try:
+                vals.append((c, P(c)))
             except Exception:
                 pass
         for j in range(len(vals)):
             for k in range(j + 1, len(vals)):
-                try:
-                    same = sp.simplify(vals[j][1] - vals[k][1]) == 0
-                except TypeError:  # tuples/points: compare structurally
-                    same = vals[j][1] == vals[k][1]
+                a, b_ = vals[j][1], vals[k][1]
+                if isinstance(a, sp.Tuple) and isinstance(b_, sp.Tuple):
+                    same = len(a) == len(b_) and all(
+                        sp.simplify(u - v) == 0 for u, v in zip(a, b_)
+                    )
+                elif isinstance(a, sp.Tuple) or isinstance(b_, sp.Tuple):
+                    same = False
+                else:
+                    same = sp.simplify(a - b_) == 0
                 assert not same, (
                     f"q{i}: choices {vals[j][0]!r} and {vals[k][0]!r} are equivalent"
                 )

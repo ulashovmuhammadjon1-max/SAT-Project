@@ -257,7 +257,7 @@ QUESTIONS = [
    'a higher price level with the same output',
    'a movement down along the AD curve',
    'a leftward shift of short-run aggregate supply',
-   'a fall in the price of one good'], ans=1,
+   'a fall in the price of one good'], ans=0,
    why='A shift means the quantity of real GDP demanded changes at every possible price level.'),
  dict(q='Net exports are most likely to increase if', choices=[
    "incomes rise sharply among a country's trading partners",
