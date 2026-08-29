@@ -26,91 +26,91 @@ QUESTIONS = [
    "converges only if the terms alternate"], ans=0,
    why="Absolute convergence implies convergence; this is why testing |a_n| is worth doing at all."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/n", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/n.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges absolutely but not conditionally"], ans=1,
    why="The alternating series test gives convergence while the absolute series is the divergent harmonic series."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/n^2", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/n^2.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges, but neither absolutely nor conditionally"], ans=0,
    why="The absolute series is the convergent p-series with p = 2."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/sqrt(n)", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/sqrt(n).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "the alternating series test does not apply"], ans=1,
    why="1/sqrt(n) decreases to 0, but the absolute series is a p-series with p = 1/2, which diverges."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/n^3", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/n^3.", choices=[
    "converges conditionally",
    "converges absolutely",
    "diverges",
    "converges only because the terms alternate"], ans=1,
    why="The absolute series is a p-series with p = 3 > 1, so convergence does not depend on the signs."),
 
- dict(q="sum from n=1 to infinity of (-1)^n*n/(n+1)", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n*n/(n+1).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges, since the terms alternate"], ans=2,
    why="The terms have absolute value approaching 1, so the series fails the nth term test and neither kind of convergence occurs."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/n!", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/n!.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges, but the absolute series diverges"], ans=0,
    why="sum 1/n! converges (to e - 1 starting at n = 1), so the convergence is absolute."),
 
- dict(q="sum from n=1 to infinity of (-1)^n/2^n", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n/2^n.", choices=[
    "converges conditionally",
    "converges absolutely",
    "diverges",
    "converges only for even n"], ans=1,
    why="The absolute series is geometric with r = 1/2, so it converges and the convergence is absolute."),
 
- dict(q="sum from n=2 to infinity of (-1)^n*ln(n)/n", choices=[
+ dict(q="Classify the series sum from n=2 to infinity of (-1)^n*ln(n)/n.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "the alternating series test does not apply"], ans=1,
    why="ln(n)/n decreases to 0 past n = 3, but sum ln(n)/n diverges by the integral test."),
 
- dict(q="sum from n=2 to infinity of (-1)^n/ln(n)", choices=[
+ dict(q="Classify the series sum from n=2 to infinity of (-1)^n/ln(n).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges absolutely, since 1/ln(n) < 1/n"], ans=1,
    why="1/ln(n) decreases to 0, but 1/ln(n) exceeds 1/n, so the absolute series diverges by comparison."),
 
- dict(q="sum from n=1 to infinity of (-1)^(n+1)/(2n - 1)", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^(n+1)/(2n - 1).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "converges absolutely to pi/4"], ans=1,
    why="It converges to pi/4 by the alternating series test, while sum 1/(2n-1) diverges by comparison with the harmonic series."),
 
- dict(q="sum from n=1 to infinity of sin(n)/n^2", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of sin(n)/n^2.", choices=[
    "converges absolutely, since |sin(n)|/n^2 <= 1/n^2",
    "converges conditionally",
    "diverges, since sin(n) oscillates",
    "cannot be classified without knowing the signs of sin(n)"], ans=0,
    why="Comparison with the convergent p-series 1/n^2 settles the absolute series, and the erratic signs never matter."),
 
- dict(q="sum from n=1 to infinity of (-1)^n*2n/(n^2 + 1)", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n*2n/(n^2 + 1).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "the alternating series test does not apply"], ans=1,
    why="The terms decrease to 0, but a limit comparison of 2n/(n^2+1) with 1/n gives 2, so the absolute series diverges."),
 
- dict(q="sum from n=1 to infinity of (-1)^n*3^n/n!", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n*3^n/n!.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
@@ -152,21 +152,21 @@ QUESTIONS = [
    "False; no alternating series converges"], ans=2,
    why="Alternating says nothing about the absolute series, and 1/n^2 converges, so that series is absolutely convergent."),
 
- dict(q="sum from n=2 to infinity of (-1)^n/(n*ln(n))", choices=[
+ dict(q="Classify the series sum from n=2 to infinity of (-1)^n/(n*ln(n)).", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "the alternating series test does not apply, since ln(n) increases"], ans=1,
    why="The terms decrease to 0, but the integral test shows sum 1/(n*ln(n)) diverges."),
 
- dict(q="sum from n=1 to infinity of cos(n)/n^3", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of cos(n)/n^3.", choices=[
    "converges absolutely",
    "converges conditionally",
    "diverges",
    "cannot be classified, since the terms do not alternate regularly"], ans=0,
    why="|cos(n)|/n^3 <= 1/n^3, a convergent p-series, so the series converges absolutely."),
 
- dict(q="sum from n=1 to infinity of (-1)^n*arctan(n)/n^2", choices=[
+ dict(q="Classify the series sum from n=1 to infinity of (-1)^n*arctan(n)/n^2.", choices=[
    "converges absolutely, since arctan(n)/n^2 <= (pi/2)/n^2",
    "converges conditionally",
    "diverges, since arctan(n) approaches pi/2",
