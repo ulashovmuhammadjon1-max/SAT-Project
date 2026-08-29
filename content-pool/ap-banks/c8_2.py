@@ -19,15 +19,15 @@ QUESTIONS = [
    why="Total distance adds up motion in both directions, which requires integrating the speed |v(t)|."),
  dict(q="A particle has velocity v(t) = t - 3 for 0 <= t <= 5. What is its displacement?", choices=[
    "-2.5",
+   "0",
    "2.5",
-   "6.5",
-   "0"], ans=0,
+   "6.5"], ans=0,
    why="The integral of t - 3 from 0 to 5 is 12.5 - 15 = -2.5."),
  dict(q="A particle has velocity v(t) = t - 3 for 0 <= t <= 5. What is the total distance it travels?", choices=[
-   "6.5",
-   "2.5",
    "-2.5",
-   "5"], ans=0,
+   "2.5",
+   "5",
+   "6.5"], ans=3,
    why="The velocity changes sign at t = 3, and the two pieces contribute 4.5 and 2, for a total of 6.5."),
  dict(q="A particle has velocity v(t) = t^2 - 4 for 0 <= t <= 3. What is its displacement?", choices=[
    "-3",
@@ -36,10 +36,10 @@ QUESTIONS = [
    "9"], ans=0,
    why="The integral of t^2 - 4 from 0 to 3 is 9 - 12 = -3."),
  dict(q="A particle has velocity v(t) = t^2 - 4 for 0 <= t <= 3. What is the total distance it travels?", choices=[
-   "23/3",
+   "7/3",
    "3",
    "16/3",
-   "7/3"], ans=0,
+   "23/3"], ans=3,
    why="The velocity changes sign at t = 2, contributing 16/3 on [0, 2] and 7/3 on [2, 3]."),
  dict(q="A particle has velocity v(t) = sin(t) for 0 <= t <= 2pi. What is its displacement?", choices=[
    "0",
@@ -54,28 +54,28 @@ QUESTIONS = [
    "2pi"], ans=0,
    why="The velocity changes sign at t = pi, and each half-period contributes 2 to the integral of |sin(t)|."),
  dict(q="A particle has velocity v(t) = 4 - 2t for 0 <= t <= 4. What is its displacement?", choices=[
+   "-8",
    "0",
-   "8",
    "4",
-   "-8"], ans=0,
+   "8"], ans=1,
    why="The integral is 16 - 16 = 0, since the particle returns to its starting position."),
  dict(q="A particle has velocity v(t) = 4 - 2t for 0 <= t <= 4. What is the total distance it travels?", choices=[
-   "8",
    "0",
    "4",
-   "16"], ans=0,
+   "8",
+   "16"], ans=2,
    why="The velocity changes sign at t = 2, and each piece contributes 4 to the integral of |v|."),
  dict(q="A particle has velocity v(t) = t^2 - 5t + 6 for 0 <= t <= 4. What is its displacement?", choices=[
+   "14/3",
    "16/3",
    "17/3",
-   "14/3",
-   "6"], ans=0,
+   "6"], ans=1,
    why="An antiderivative is t^3/3 - 5t^2/2 + 6t, whose value at 4 is 16/3 and at 0 is 0."),
  dict(q="A particle has velocity v(t) = t^2 - 5t + 6 for 0 <= t <= 4. What is the total distance it travels?", choices=[
-   "17/3",
-   "16/3",
    "14/3",
-   "19/3"], ans=0,
+   "16/3",
+   "17/3",
+   "19/3"], ans=2,
    why="The velocity changes sign at t = 2 and t = 3, and the three pieces contribute 14/3, 1/6, and 5/6."),
  dict(q="For a particle moving on a line, when is the total distance traveled equal to the magnitude of the displacement?", choices=[
    "when the velocity does not change sign on the interval",
@@ -84,10 +84,10 @@ QUESTIONS = [
    "only when the acceleration is zero"], ans=0,
    why="If the particle never reverses direction, all of the motion accumulates in one direction and the two quantities agree."),
  dict(q="A particle has velocity v(t) = 3t^2 and position s(0) = 2. What is s(2)?", choices=[
-   "10",
+   "6",
    "8",
-   "12",
-   "6"], ans=0,
+   "10",
+   "12"], ans=2,
    why="Integrating gives s(t) = t^3 + 2, so s(2) = 8 + 2 = 10."),
  dict(q="A particle has acceleration a(t) = 6t and velocity v(0) = 1. What is v(t)?", choices=[
    "v(t) = 3t^2 + 1",
@@ -138,10 +138,10 @@ QUESTIONS = [
    "e^2 - 2"], ans=0,
    why="The velocity is nonnegative on this interval, so the distance equals the displacement e^2 - 1 - 2."),
  dict(q="A particle has velocity v(t) = 2t - 6 and position s(0) = 4. What is s(5)?", choices=[
+   "-5",
    "-1",
-   "9",
    "1",
-   "-5"], ans=0,
+   "9"], ans=1,
    why="Integrating gives s(t) = t^2 - 6t + 4, so s(5) = 25 - 30 + 4 = -1."),
  dict(q="A particle has velocity v(t) = t - 3 for 0 <= t <= 5. What are its average velocity and its average speed on that interval?", choices=[
    "average velocity -0.5 and average speed 1.3",
