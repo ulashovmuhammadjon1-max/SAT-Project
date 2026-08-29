@@ -5,7 +5,7 @@ Run:  python3 verify_c9_9.py
 import sympy as sp
 
 import c9_9
-from c9_util import Checker, th
+from unit9_util import Checker, th
 
 C = Checker(c9_9)
 
