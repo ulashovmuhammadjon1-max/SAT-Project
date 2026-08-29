@@ -46,12 +46,12 @@ QUESTIONS = [
    "1/6",
    "1/5"], ans=0,
    why="The side is x - x^2, and the integral of (x - x^2)^2 from 0 to 1 is 1/30."),
- dict(q="The base of a solid is the region between y = x and y = x^2. Cross sections perpendicular to the x-axis are rectangles whose height is twice the base. What is the volume?", choices=[
-   "1/30",
+ dict(q="The base of a solid is the region between y = x and y = x^3 for 0 <= x <= 1. Cross sections perpendicular to the x-axis are rectangles whose height is twice the base. What is the volume?", choices=[
    "1/15",
-   "2/15",
-   "1/6"], ans=1,
-   why="The area is 2 times the base squared, so the volume is twice the 1/30 obtained with squares."),
+   "8/105",
+   "16/105",
+   "32/105"], ans=2,
+   why="The side is x - x^3, whose square integrates to 8/105, and the height doubles that to 16/105."),
  dict(q="The base of a solid is the disk x^2 + y^2 = 4. Cross sections perpendicular to the x-axis are squares. What is the volume?", choices=[
    "32/3",
    "64/3",
@@ -76,12 +76,12 @@ QUESTIONS = [
    "8",
    "12"], ans=2,
    why="The area is 3x^2, and the integral from 0 to 2 is 8."),
- dict(q="The base of a solid is the region bounded by y = x, y = 0, and x = 2. Cross sections perpendicular to the x-axis are squares whose DIAGONAL lies in the base. What is the volume?", choices=[
-   "2/3",
-   "4/3",
-   "8/3",
-   "8"], ans=1,
-   why="A square of diagonal d has area d^2/2, so the integrand is x^2/2 and the integral from 0 to 2 is 4/3."),
+ dict(q="The base of a solid is the region bounded by y = x^2, y = 0, and x = 2. Cross sections perpendicular to the x-axis are squares whose DIAGONAL lies in the base. What is the volume?", choices=[
+   "8/5",
+   "16/5",
+   "32/5",
+   "32/3"], ans=1,
+   why="A square of diagonal d has area d^2/2, so the integrand is x^4/2 and the integral from 0 to 2 is 16/5."),
  dict(q="Which integral gives the volume of the solid whose base is the region between y = 4 - x^2 and the x-axis, with square cross sections perpendicular to the x-axis?", choices=[
    "int from -2 to 2 of (4 - x^2)^2 dx",
    "int from -2 to 2 of (4 - x^2) dx",
@@ -100,12 +100,12 @@ QUESTIONS = [
    "pi",
    "4"], ans=0,
    why="The side is sin(x), and the integral of sin^2(x) over a half period is pi/2."),
- dict(q="The base of a solid is the region between y = 4 - x^2 and the x-axis. Cross sections perpendicular to the x-axis are rectangles of constant height 5. What is the volume?", choices=[
-   "32/3",
-   "80/3",
-   "512/15",
-   "160/3"], ans=3,
-   why="The area is 5(4 - x^2), and 5 times the area 32/3 of the base region is 160/3."),
+ dict(q="The base of a solid is the region between y = 9 - x^2 and the x-axis. Cross sections perpendicular to the x-axis are rectangles of constant height 5. What is the volume?", choices=[
+   "36",
+   "90",
+   "180",
+   "360"], ans=2,
+   why="The base region has area 36, and multiplying by the constant height 5 gives 180."),
  dict(q="If x and y are measured in centimeters, the volume computed from square cross sections has units of", choices=[
    "cubic centimeters",
    "square centimeters",
@@ -118,12 +118,12 @@ QUESTIONS = [
    "the limits of integration are wrong",
    "there is no error"], ans=0,
    why="The factor pi comes from the area of a circle and has no place in the area of a square."),
- dict(q="The base of a solid is the region between y = x and y = x^2. Cross sections perpendicular to the x-axis are rectangles of constant height 2. What is the volume?", choices=[
-   "1/15",
-   "1/6",
-   "1/3",
-   "2/3"], ans=2,
-   why="The area is 2(x - x^2), and twice the base area 1/6 is 1/3."),
+ dict(q="The base of a solid is the region bounded by y = sqrt(x), y = 0, and x = 9. Cross sections perpendicular to the x-axis are rectangles of constant height 2. What is the volume?", choices=[
+   "12",
+   "18",
+   "36",
+   "72"], ans=2,
+   why="The base region has area 18, and multiplying by the constant height 2 gives 36."),
  dict(q="The base of a solid is the region bounded by y = 1/x, y = 0, x = 1, and x = 3. Cross sections perpendicular to the x-axis are squares. What is the volume?", choices=[
    "2/3",
    "ln(3)",
