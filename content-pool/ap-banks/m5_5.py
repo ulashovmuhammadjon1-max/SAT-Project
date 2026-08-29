@@ -1,0 +1,362 @@
+# MACRO 5.5 Crowding Out — 50 questions
+# Every number worked out:
+#   LF table (loanable funds, $ billions at each real interest rate):
+#     r=3%: Qd private 900, Qs 600.  r=4%: Qd 800, Qs 700.  r=5%: Qd 700, Qs 800.
+#     r=6%: Qd 600, Qs 900.  r=7%: Qd 500, Qs 1,000.
+#     Private demand and supply are equal at r = 4.5%? Check: demand falls 100 per point,
+#     supply rises 100 per point, so they cross where 800 - 100x = 700 + 100x with x in
+#     points above 4%: 100 = 200x, x = 0.5, r = 4.5%, Q = 750. To keep every question on a
+#     tabulated row, questions use only the listed rows and the government-borrowing case:
+#     if the government borrows $200b, total demand at each rate is private + 200:
+#     r=4%: 1,000 vs supply 700; r=5%: 900 vs 800; r=6%: 800 vs 900. Total demand equals
+#     supply where 1,000 - 100x = 700 + 100x, x = 1.5, so r = 5.5% and Q = 850.
+#     At r = 5.5% private demand is 800 - 150 = 650, down from 750, so private borrowing
+#     falls by $100 billion while total borrowing rises by $100 billion. Crowding out
+#     is therefore $100 billion of the $200 billion borrowed.
+#   Investment sensitivity example: investment falls $30b when r rises 1 point; a 2-point
+#     rise cuts investment $60b.
+TOPIC = ("5.5", "Crowding Out", 5)
+LF = dict(
+    headers=["Real interest rate (%)", "Private quantity demanded ($b)", "Quantity supplied ($b)"],
+    rows=[["3", "900", "600"], ["4", "800", "700"], ["5", "700", "800"], ["6", "600", "900"], ["7", "500", "1,000"]],
+)
+QUESTIONS = [
+ dict(q="Crowding out refers to", choices=[
+   "the displacement of government spending by private spending",
+   "the reduction in private investment caused by government borrowing that raises the real interest rate",
+   "the exit of firms from a competitive market",
+   "the effect of inflation on real wages",
+   "the loss of jobs to foreign competition"], ans=1,
+   why="Deficit-financed government spending competes for loanable funds and pushes the real interest rate up."),
+ dict(q="In the loanable funds market, government borrowing to finance a deficit", choices=[
+   "increases the supply of loanable funds",
+   "increases the demand for loanable funds",
+   "decreases the demand for loanable funds",
+   "has no effect on either curve",
+   "shifts the supply curve left only if taxes rise"], ans=1,
+   why="The government becomes an additional borrower alongside private firms."),
+ dict(q="An increase in the demand for loanable funds causes the real interest rate to", choices=[
+   "fall and the quantity of funds to fall",
+   "rise and the equilibrium quantity of loanable funds to rise",
+   "rise and the quantity to fall",
+   "stay constant",
+   "become negative"], ans=1,
+   why="A rightward demand shift moves equilibrium up along the supply curve."),
+ dict(q="The main channel by which crowding out reduces future output is that", choices=[
+   "consumption falls permanently",
+   "a smaller capital stock accumulates because private investment was displaced",
+   "the labor force shrinks",
+   "the money supply falls",
+   "exports become cheaper"], ans=1,
+   why="Less investment today means fewer machines and structures tomorrow, so long-run growth is slower."),
+ dict(q="Complete crowding out would mean that", choices=[
+   "government spending has no effect on the interest rate",
+   "the increase in government spending is offset dollar for dollar by a decrease in private spending, leaving aggregate demand unchanged",
+   "private investment rises by the amount of the deficit",
+   "the money supply falls to zero",
+   "taxes rise automatically"], ans=1,
+   why="If the fall in interest-sensitive spending exactly matches the fiscal stimulus, output does not change."),
+ dict(q="Partial crowding out means that expansionary fiscal policy", choices=[
+   "has no effect on real GDP",
+   "raises real GDP, but by less than the simple spending multiplier predicts",
+   "raises real GDP by more than the multiplier predicts",
+   "reduces the price level",
+   "always lowers the interest rate"], ans=1,
+   why="Some private spending is displaced, so the net demand increase is smaller than the initial injection."),
+ dict(q="Crowding out is likely to be weakest when", choices=[
+   "the economy is at full employment",
+   "the economy is deep in a recession with idle resources and abundant unused savings",
+   "investment is highly sensitive to the interest rate",
+   "the central bank is tightening",
+   "the money supply is falling"], ans=1,
+   why="With ample idle funds and weak private borrowing, government borrowing raises rates very little."),
+ dict(q="Crowding out is likely to be strongest when", choices=[
+   "the economy is deep in recession",
+   "the economy is near full employment and investment is highly responsive to the interest rate",
+   "the central bank fully accommodates the borrowing",
+   "private saving rises sharply",
+   "the government runs a surplus"], ans=1,
+   why="Near capacity, extra borrowing competes for scarce funds and sensitive investment falls a lot."),
+ dict(q="Refer to the table. Without government borrowing, at a real interest rate of 5 percent there is", table=LF, choices=[
+   "a shortage of $100 billion",
+   "a surplus of $100 billion of loanable funds",
+   "equilibrium",
+   "a shortage of $200 billion",
+   "a surplus of $300 billion"], ans=1,
+   why="Quantity supplied of $800 billion exceeds private quantity demanded of $700 billion by $100 billion."),
+ dict(q="Refer to the table. Without government borrowing, at a real interest rate of 4 percent there is", table=LF, choices=[
+   "a surplus of $100 billion",
+   "a shortage of $100 billion of loanable funds",
+   "equilibrium",
+   "a shortage of $300 billion",
+   "a surplus of $200 billion"], ans=1,
+   why="Private quantity demanded of $800 billion exceeds quantity supplied of $700 billion by $100 billion."),
+ dict(q="Refer to the table. The private-market equilibrium real interest rate lies", table=LF, choices=[
+   "below 3 percent",
+   "between 4 and 5 percent",
+   "between 6 and 7 percent",
+   "above 7 percent",
+   "exactly at 3 percent"], ans=1,
+   why="A shortage at 4% and a surplus at 5% place the crossing between them."),
+ dict(q="Refer to the table. If the government borrows an additional $200 billion, total quantity demanded at a real interest rate of 5 percent equals", table=LF, choices=[
+   "$500 billion", "$700 billion", "$800 billion", "$900 billion", "$1,000 billion"], ans=3,
+   why="Private demand of $700 billion plus government borrowing of $200 billion is $900 billion."),
+ dict(q="Refer to the table. If the government borrows an additional $200 billion, the equilibrium real interest rate will", table=LF, choices=[
+   "fall below 4 percent",
+   "rise to somewhere between 5 and 6 percent",
+   "stay unchanged",
+   "fall to 3 percent",
+   "rise above 7 percent"], ans=1,
+   why="Adding $200 billion to demand leaves a shortage at 5% and a surplus at 6%, so the new rate lies between them."),
+ dict(q="If a rise of one percentage point in the real interest rate reduces investment by $30 billion, a two-percentage-point rise reduces investment by", choices=[
+   "$15 billion", "$30 billion", "$45 billion", "$60 billion", "$90 billion"], ans=3,
+   why="Two points times $30 billion per point is $60 billion."),
+ dict(q="Government spending financed by higher taxes rather than borrowing", choices=[
+   "causes more crowding out through the loanable funds market",
+   "causes less interest-rate crowding out, since the government does not add to loan demand",
+   "eliminates all effects on private spending",
+   "raises the money supply",
+   "always raises investment"], ans=1,
+   why="Tax finance avoids the extra borrowing, though it still reduces private disposable income."),
+ dict(q="Crowding out is an argument that expansionary fiscal policy", choices=[
+   "has an unlimited multiplier effect",
+   "is less effective than the simple multiplier model suggests",
+   "always reduces the price level",
+   "is more effective than monetary policy in every case",
+   "cannot change aggregate demand at all in the short run"], ans=1,
+   why="The interest-rate response offsets part of the demand increase."),
+ dict(q="A central bank that buys bonds while the government runs a large deficit will", choices=[
+   "intensify crowding out",
+   "reduce crowding out by supplying reserves that hold the interest rate down",
+   "raise the real interest rate",
+   "reduce aggregate demand",
+   "lower the money supply"], ans=1,
+   why="Accommodative monetary policy offsets the upward pressure on rates from government borrowing."),
+ dict(q="The crowding-out effect operates through changes in", choices=[
+   "the price of imports",
+   "the real interest rate and interest-sensitive private spending",
+   "the natural rate of unemployment",
+   "the money multiplier",
+   "the labor force participation rate"], ans=1,
+   why="Interest-sensitive spending such as business investment and housing is what gets displaced."),
+ dict(q="In addition to business investment, government borrowing can crowd out", choices=[
+   "government transfer payments",
+   "interest-sensitive consumer spending such as purchases of housing and automobiles",
+   "the money supply",
+   "tax revenue",
+   "the labor force"], ans=1,
+   why="Consumer durables are typically financed, so higher rates reduce them too."),
+ dict(q="An increase in private saving in response to a government deficit would", choices=[
+   "worsen crowding out",
+   "reduce crowding out by increasing the supply of loanable funds",
+   "raise the real interest rate further",
+   "reduce the quantity of loanable funds",
+   "have no effect"], ans=1,
+   why="More saving shifts supply right, offsetting some of the rise in the interest rate."),
+ dict(q="The idea that households save more when the government borrows, anticipating future taxes, is known as", choices=[
+   "the Fisher effect",
+   "Ricardian equivalence",
+   "the crowding-in effect",
+   "monetary neutrality",
+   "the multiplier effect"], ans=1,
+   why="If saving rises one for one with the deficit, deficit finance has no effect on the interest rate."),
+ dict(q="Crowding in refers to the possibility that", choices=[
+   "government borrowing always reduces investment",
+   "government spending on infrastructure raises the expected return on private capital and thus private investment",
+   "taxes raise saving",
+   "the money supply expands automatically",
+   "investment falls when interest rates fall"], ans=1,
+   why="Public capital can complement private capital rather than compete with it."),
+ dict(q="If government borrowing raises the domestic real interest rate, financial capital from abroad will", choices=[
+   "flow out of the country",
+   "flow into the country, seeking the higher return",
+   "be unaffected",
+   "flow out only if inflation rises",
+   "be prohibited"], ans=1,
+   why="Higher returns attract foreign lenders into domestic financial assets."),
+ dict(q="An inflow of foreign financial capital caused by higher domestic interest rates will, in the foreign exchange market,", choices=[
+   "increase the supply of the domestic currency and depreciate it",
+   "increase the demand for the domestic currency and appreciate it",
+   "have no effect on the exchange rate",
+   "reduce demand for the domestic currency",
+   "reduce the interest rate immediately"], ans=1,
+   why="Foreigners must buy the domestic currency to purchase domestic assets."),
+ dict(q="An appreciation of the domestic currency caused by government borrowing will", choices=[
+   "raise net exports",
+   "reduce net exports, since exports become more expensive abroad and imports cheaper at home",
+   "leave net exports unchanged",
+   "raise the trade surplus",
+   "lower the price level abroad"], ans=1,
+   why="A stronger currency makes domestic goods less competitive."),
+ dict(q="The reduction in net exports caused by a deficit-driven currency appreciation is sometimes called", choices=[
+   "crowding in",
+   "international crowding out",
+   "monetary neutrality",
+   "the liquidity trap",
+   "the balanced budget multiplier"], ans=1,
+   why="The displaced private spending is the export sector rather than domestic investment."),
+ dict(q="Twin deficits refers to the observation that", choices=[
+   "budget deficits and trade deficits often occur together",
+   "inflation and unemployment rise together",
+   "two governments borrow simultaneously",
+   "saving and investment both fall",
+   "the money supply doubles"], ans=0,
+   why="A budget deficit that raises interest rates and appreciates the currency tends to widen the trade deficit."),
+ dict(q="Crowding out is less of a concern for the long run when government borrowing finances", choices=[
+   "current consumption transfers",
+   "productive public investment that raises the economy's future capacity",
+   "interest payments only",
+   "salary increases for existing employees",
+   "a one-time rebate"], ans=1,
+   why="Public capital can offset the lost private capital in the economy's future production capacity."),
+ dict(q="In a liquidity trap where interest rates cannot fall further and are essentially fixed, crowding out is likely to be", choices=[
+   "complete",
+   "very small, because government borrowing does not push rates up appreciably",
+   "larger than usual",
+   "the same as at full employment",
+   "impossible to determine"], ans=1,
+   why="With rates pinned near zero and idle savings, the fiscal expansion is not offset by rising rates."),
+ dict(q="If investment is completely insensitive to the interest rate, crowding out through the investment channel would be", choices=[
+   "complete",
+   "zero, since higher interest rates would not reduce investment",
+   "larger than the deficit",
+   "equal to the deficit",
+   "negative"], ans=1,
+   why="Crowding out requires investment to respond to the interest rate."),
+ dict(q="The supply of loanable funds comes primarily from", choices=[
+   "government borrowing",
+   "private saving by households and firms, plus any inflow of foreign saving",
+   "the sale of government bonds",
+   "consumption spending",
+   "the trade deficit alone"], ans=1,
+   why="Saving is the source of funds available to borrowers."),
+ dict(q="The demand for loanable funds comes primarily from", choices=[
+   "household saving",
+   "firms borrowing to finance investment and governments borrowing to finance deficits",
+   "central bank reserves",
+   "exports",
+   "tax revenue"], ans=1,
+   why="Borrowers demand funds; savers supply them."),
+ dict(q="An increase in the government budget surplus will, in the loanable funds market,", choices=[
+   "increase demand for funds and raise the real interest rate",
+   "increase the supply of national saving, lowering the real interest rate and raising private investment",
+   "have no effect",
+   "raise the price level",
+   "reduce investment"], ans=1,
+   why="Public saving adds to national saving, which is crowding in rather than crowding out."),
+ dict(q="Suppose the government increases spending by $100 billion and private investment falls by $40 billion as a result. This illustrates", choices=[
+   "complete crowding out",
+   "partial crowding out, with a net demand increase of $60 billion",
+   "crowding in",
+   "Ricardian equivalence",
+   "monetary neutrality"], ans=1,
+   why="Only part of the fiscal injection is offset by lower investment."),
+ dict(q="If a $100 billion increase in government purchases is accompanied by a $100 billion decline in private investment, aggregate demand will", choices=[
+   "rise by $100 billion",
+   "be essentially unchanged, an example of complete crowding out",
+   "fall by $100 billion",
+   "rise by the multiplier times $100 billion",
+   "fall by the multiplier times $100 billion"], ans=1,
+   why="The two changes exactly offset, so total spending is unaffected."),
+ dict(q="Which of the following would reduce the extent of crowding out from a given deficit?", choices=[
+   "an increase in the interest sensitivity of investment",
+   "an inflow of foreign saving that increases the supply of loanable funds",
+   "a fall in private saving",
+   "monetary tightening",
+   "an economy operating at full employment"], ans=1,
+   why="More funds available means the interest rate rises less for the same government borrowing."),
+ dict(q="Which of the following would increase the extent of crowding out from a given deficit?", choices=[
+   "an inflow of foreign financial capital",
+   "a decrease in household saving",
+   "an accommodative central bank",
+   "a deep recession with idle savings",
+   "investment that ignores interest rates"], ans=1,
+   why="A smaller supply of loanable funds means the same borrowing pushes rates up more."),
+ dict(q="In the long run, persistent crowding out affects the economy's", choices=[
+   "short-run aggregate supply only",
+   "long-run aggregate supply, which grows more slowly because the capital stock is smaller",
+   "money supply only",
+   "natural rate of unemployment only",
+   "price level only"], ans=1,
+   why="Less capital accumulation means slower growth of potential output."),
+ dict(q="On a production possibilities curve, crowding out is best represented as", choices=[
+   "a movement outward of the curve",
+   "a shift toward more current consumption goods and fewer capital goods, slowing future outward shifts",
+   "a movement inside the curve",
+   "a movement along the vertical axis only",
+   "no change at all"], ans=1,
+   why="Displacing investment shifts production away from capital goods, which reduces future growth."),
+ dict(q="A government that raises spending while the central bank raises interest rates to prevent inflation will experience", choices=[
+   "no crowding out",
+   "more crowding out than if the central bank had held rates constant",
+   "crowding in",
+   "a fall in the price level",
+   "an increase in private investment"], ans=1,
+   why="Deliberate tightening adds to the interest-rate rise and displaces more private spending."),
+ dict(q="If a country can borrow freely at a world interest rate that it cannot influence, government borrowing will mainly", choices=[
+   "raise the domestic interest rate sharply",
+   "be financed by foreign saving, raising foreign claims on the country rather than raising domestic rates much",
+   "eliminate private investment",
+   "reduce the money supply",
+   "cause deflation"], ans=1,
+   why="In a small open economy the loanable funds supply is very elastic at the world rate."),
+ dict(q="National saving is defined as", choices=[
+   "household saving only",
+   "private saving plus public saving",
+   "government spending minus taxes",
+   "investment plus consumption",
+   "GDP minus exports"], ans=1,
+   why="Public saving is the budget surplus, which adds to private saving to fund investment."),
+ dict(q="A budget deficit reduces national saving because", choices=[
+   "households save less by law",
+   "public saving is negative, subtracting from private saving",
+   "investment rises",
+   "the money supply falls",
+   "the trade balance improves"], ans=1,
+   why="A deficit means the government dissaves, drawing down the pool available for investment."),
+ dict(q="If national saving falls and investment demand is unchanged, the real interest rate will", choices=[
+   "fall", "rise", "stay the same", "become zero", "be indeterminate"], ans=1,
+   why="A leftward shift in the supply of loanable funds raises the equilibrium rate."),
+ dict(q="A government deficit that lowers national saving in a closed economy must lead to", choices=[
+   "more investment",
+   "less investment, since in a closed economy investment equals national saving",
+   "no change in investment",
+   "higher consumption forever",
+   "an increase in exports"], ans=1,
+   why="Without access to foreign funds, investment is limited to what the country saves."),
+ dict(q="Crowding out is a stronger argument against deficit spending that finances", choices=[
+   "public research infrastructure",
+   "current consumption, which adds nothing to future productive capacity",
+   "new highways",
+   "workforce training",
+   "port modernization"], ans=1,
+   why="Borrowing that displaces investment without creating public capital reduces future output."),
+ dict(q="Evidence that crowding out is occurring after a fiscal expansion would include", choices=[
+   "falling real interest rates and rising investment",
+   "rising real interest rates accompanied by falling private investment",
+   "falling real interest rates and falling investment",
+   "no change in interest rates",
+   "an increase in the money supply"], ans=1,
+   why="The mechanism runs from higher rates to lower interest-sensitive spending."),
+ dict(q="A government that finances a deficit by selling bonds to the central bank rather than to the public", choices=[
+   "causes more crowding out",
+   "avoids much of the interest-rate rise but expands the money supply and risks inflation",
+   "reduces the money supply",
+   "eliminates the deficit",
+   "lowers the price level"], ans=1,
+   why="Monetization substitutes an inflation cost for the crowding-out cost."),
+ dict(q="Which statement about crowding out and the multiplier is correct?", choices=[
+   "Crowding out makes the observed multiplier larger.",
+   "Crowding out makes the observed multiplier smaller than the simple formula predicts.",
+   "Crowding out makes the multiplier exactly one.",
+   "Crowding out has no relation to the multiplier.",
+   "Crowding out applies only to tax changes."], ans=1,
+   why="Interest-rate feedback offsets part of each round of induced spending."),
+ dict(q="A deficit-financed spending program during a deep recession is more likely than the same program at full employment to", choices=[
+   "cause complete crowding out",
+   "raise real GDP substantially, because idle savings and weak private loan demand limit the rise in interest rates",
+   "cause hyperinflation",
+   "raise the natural rate of unemployment",
+   "reduce the money supply"], ans=1,
+   why="The state of the economy determines how much of the stimulus survives the interest-rate response."),
+]
