@@ -152,19 +152,15 @@ QUESTIONS = [
    "many firms have identical costs",
    "marginal cost rises steeply"], ans=1,
    why="Falling average cost throughout means one firm serves the market most cheaply."),
- dict(q="For a natural monopoly, requiring the firm to set price equal to marginal cost would", choices=[
-   "yield positive economic profit",
-   "cause a loss, because marginal cost lies below average total cost when average cost is falling",
-   "have no effect on profit",
-   "maximize the firm's profit",
-   "eliminate the deadweight loss and the loss to the firm at once"], ans=1,
-   why="Regulators must either subsidize the firm or accept a higher, average-cost price."),
- dict(q="Fair-return or average-cost pricing regulation sets price equal to", choices=[
-   "marginal cost", "average total cost, allowing a normal profit", "marginal revenue", "zero", "the monopoly price"], ans=1,
-   why="It removes economic profit while keeping the firm viable."),
- dict(q="Socially optimal pricing regulation sets price equal to", choices=[
-   "average total cost", "marginal cost", "marginal revenue", "average variable cost", "the unregulated price"], ans=1,
-   why="P = MC is the allocatively efficient condition."),
+ dict(q="A monopolist currently sells 40 units at $30. To sell the 41st unit it must drop the price to $29.50 on every unit. Marginal revenue for that unit is", choices=[
+   "$29.50", "$9.50", "$20.00", "$30.00", "-$0.50"], ans=1,
+   why="It gains $29.50 on the new unit but loses $0.50 on each of the 40 already sold, so 29.50 - 20 = $9.50."),
+ dict(q="A monopolist's demand is P = 80 - 2Q with constant marginal cost of $8. Its profit-maximizing quantity is", choices=[
+   "9", "18", "20", "36", "40"], ans=1,
+   why="MR = 80 - 4Q; setting that equal to 8 gives Q = 18."),
+ dict(q="For the monopolist facing P = 80 - 2Q with marginal cost $8, the price charged is", choices=[
+   "$8", "$18", "$36", "$44", "$80"], ans=3,
+   why="Demand at Q = 18 gives P = 80 - 2(18) = $44."),
  dict(q="A monopolist's profit-maximizing output compared with the allocatively efficient output is", choices=[
    "larger", "smaller", "the same", "zero", "unrelated"], ans=1,
    why="Efficiency requires P = MC, which lies to the right of MR = MC."),

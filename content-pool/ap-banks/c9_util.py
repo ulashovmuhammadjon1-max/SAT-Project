@@ -35,6 +35,26 @@ def P(s):
     return parse_expr(s, local_dict=LOCAL, transformations=TRANSFORMS)
 
 
+def V(s):
+    """Parse a vector written as `<a, b>` into a sympy Tuple."""
+    s = s.strip()
+    if not (s.startswith("<") and s.endswith(">")):
+        raise ValueError(f"not a vector in bank notation: {s!r}")
+    inner, parts, depth, cur = s[1:-1], [], 0, ""
+    for ch in inner:
+        if ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth -= 1
+        if ch == "," and depth == 0:
+            parts.append(cur)
+            cur = ""
+        else:
+            cur += ch
+    parts.append(cur)
+    return sp.Tuple(*[P(p) for p in parts])
+
+
 INT_RE = re.compile(
     r"^\s*(?:\(\s*)?(?P<pre>[-+0-9/.()\s*]*?)\s*(?:\)\s*)?"
     r"int\s+from\s+(?P<lo>.+?)\s+to\s+(?P<hi>.+?)\s+of\s+(?P<f>.+?)\s+d(?:t|theta|x)\s*$"
@@ -101,6 +121,24 @@ class Checker:
         """Like ck but choices may be integrals in bank notation."""
         self.ck(i, expected, parse=value_of)
 
+    def ck_vec(self, i, expected):
+        """Key is a vector `<a, b>`: compare componentwise, distractors too."""
+        expected = sp.Tuple(*expected)
+        got = V(self.key(i))
+        assert len(got) == len(expected) and all(
+            sp.simplify(u - v) == 0 for u, v in zip(got, expected)
+        ), f"q{i}: key {self.key(i)!r} != {expected}"
+        for c in self._others(i):
+            try:
+                other = V(c)
+            except Exception:
+                continue
+            same = len(other) == len(expected) and all(
+                sp.simplify(u - v) == 0 for u, v in zip(other, expected)
+            )
+            assert not same, f"q{i}: distractor {c!r} equals the key"
+        self.checked.add(i)
+
     def ck_num(self, i, expected, tol=sp.Rational(1, 1000)):
         """Key is a rounded decimal: compare numerically, distractors too."""
         got = P(self.key(i))
@@ -151,6 +189,13 @@ class Checker:
         """
         vals = []
         for c in self._q(i)["choices"]:
+            try:
+                vals.append((c, V(c)))
+                continue
+            except ValueError:
+                pass
+            except Exception:
+                continue
             try:
                 vals.append((c, sp.Tuple(*PI_(c))))
                 continue

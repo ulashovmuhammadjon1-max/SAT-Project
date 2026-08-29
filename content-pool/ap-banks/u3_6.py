@@ -4,7 +4,7 @@
 #   Firm B: P=14 ATC=14 AVC=9  -> zero economic profit, long-run equilibrium
 #   Firm C: P=12 ATC=17 AVC=10 -> loss but operates in short run, exit in long run
 #   Firm D: P=8  ATC=15 AVC=11 -> shut down now, exit in long run
-TOPIC = ("3.6", "Firms' Entry and Exit Decisions in the Long Run", 3)
+TOPIC = ("3.6", "Firms' Entry and Exit Decisions", 3)
 ENTRY = dict(headers=["Firm", "Price", "ATC", "AVC"],
              rows=[["A", "$20", "$16", "$11"], ["B", "$14", "$14", "$9"],
                    ["C", "$12", "$17", "$10"], ["D", "$8", "$15", "$11"]])
