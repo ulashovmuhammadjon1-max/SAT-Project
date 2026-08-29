@@ -11,6 +11,7 @@ BURG = dict(headers=["Unit", "MU of hamburgers (utils)", "MU of pretzels (utils)
 BOOK = dict(headers=["Unit", "MU of books (utils)", "MU of pens (utils)"],
             rows=[["1st", "24", "8"], ["2nd", "18", "7"], ["3rd", "12", "4"], ["4th", "6", "2"]])
 
+TOPIC = ("1.6", "Marginal Analysis and Consumer Choice", 1)
 QUESTIONS = [
  dict(q="In consumer choice theory, utility means", choices=[
    "the price of a good",

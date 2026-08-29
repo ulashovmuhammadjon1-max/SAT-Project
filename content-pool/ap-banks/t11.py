@@ -1,5 +1,6 @@
 # 1.1 Basic Economic Concepts: Scarcity — 50 questions
 # Each: q, choices (5, A-E), ans (0-4), why (one line, for the answer key)
+TOPIC = ("1.1", "Scarcity", 1)
 QUESTIONS = [
  dict(q="Scarcity exists because", choices=[
    "governments print too little money",

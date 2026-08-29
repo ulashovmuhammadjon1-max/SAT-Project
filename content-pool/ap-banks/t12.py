@@ -1,4 +1,5 @@
 # 1.2 Resource Allocation and Economic Systems — 50 questions
+TOPIC = ("1.2", "Resource Allocation and Economic Systems", 1)
 QUESTIONS = [
  dict(q="The three fundamental questions every economy must answer are", choices=[
    "when, where, and why to produce",

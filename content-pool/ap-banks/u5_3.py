@@ -122,9 +122,9 @@ QUESTIONS = [
    "impossible to evaluate",
    "profit maximizing but not cost minimizing"], ans=1,
    why="12/6 = 30/15 = 2, so the least-cost rule holds."),
- dict(q="An increase in the market wage causes a competitive firm to", choices=[
-   "shift its labor demand curve left",
-   "move up along its labor demand curve, hiring fewer workers",
+ dict(q="When the going wage rises and nothing else changes, a wage-taking firm responds by", choices=[
+   "shifting its labor demand curve left",
+   "moving up along its unchanged labor demand curve and hiring fewer workers",
    "shift its labor demand curve right",
    "hire more workers",
    "leave employment unchanged"], ans=1,

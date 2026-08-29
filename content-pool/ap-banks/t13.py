@@ -1,5 +1,6 @@
 # 1.3 Production Possibilities Curve (PPC) — 50 questions
 # Optional "table": dict(headers=[...], rows=[[...], ...]) rendered above the stem.
+TOPIC = ("1.3", "Production Possibilities Curve", 1)
 QUESTIONS = [
  dict(q="The production possibilities curve (PPC) shows", choices=[
    "the combinations of two goods consumers wish to buy",

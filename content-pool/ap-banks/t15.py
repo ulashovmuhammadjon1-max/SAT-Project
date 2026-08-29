@@ -7,6 +7,7 @@ MBTAB = dict(headers=["Glass of lemonade", "Marginal benefit"],
 TUTAB = dict(headers=["Slices of pizza", "Total utility (utils)"],
              rows=[["1", "10"], ["2", "18"], ["3", "24"], ["4", "28"], ["5", "30"]])
 
+TOPIC = ("1.5", "Cost-Benefit Analysis", 1)
 QUESTIONS = [
  dict(q="Cost-benefit analysis is a technique used to", choices=[
    "measure only the monetary costs of a project",

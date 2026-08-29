@@ -9,6 +9,7 @@ OUT2 = dict(headers=["", "Steel (tons)", "Coal (tons)"], rows=[["Japan", "1200",
 INP1 = dict(headers=["Hours to produce one unit", "Car", "Truck"], rows=[["United States", "3", "6"], ["Brazil", "2", "2"]])
 OUT3 = dict(headers=["Per day", "Cakes", "Pies"], rows=[["Maya", "8", "4"], ["Leo", "6", "6"]])
 
+TOPIC = ("1.4", "Comparative Advantage and Trade", 1)
 QUESTIONS = [
  dict(q="Absolute advantage is the ability to", choices=[
    "produce a good at the lowest opportunity cost",
