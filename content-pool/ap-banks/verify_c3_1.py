@@ -80,30 +80,43 @@ check(23, [-6 * cos(2 * x) ** 2 * sin(2 * x), 3 * cos(2 * x) ** 2,
 check(25, [R(3, 5), R(4, 5), R(5, 4), 4], d(sqrt(x**2 + 9)).subs(x, 4))
 
 # --- composite questions from the table ------------------------------------
-# h = f(g(x)) at 2 and k = g(f(x)) at 2, built with sympy's own chain rule.
+# Rather than asserting the chain-rule formula, build actual polynomials that
+# hit the table's values and slopes at x = 2 and x = 3, then let sympy
+# differentiate the real composites f(g(x)) and g(f(x)).
 u = sp.Symbol("u")
-fu, gu = sp.Function("f"), sp.Function("g")
 
-h15 = sp.diff(fu(gu(u)), u).subs(u, 2)
-h15 = h15.subs({sp.Derivative(gu(u), u).subs(u, 2): T[2]["gp"]})
-h15 = h15.subs({sp.Subs(sp.Derivative(fu(u), u), u, gu(2)): sp.Symbol("fp_at_g2")})
-# The substitution above is fragile across sympy versions, so the value is also
-# computed directly from the definition and the two must agree.
-h15_direct = T[3]["fp"] * T[2]["gp"]
-assert T[2]["g"] == 3, "q15: g(2) must be 3 for f'(g(2)) to be f'(3)"
-check(15, [5, 12, 20, 30], h15_direct)
 
-assert T[2]["f"] == 3, "q16: f(2) must be 3 for g'(f(2)) to be g'(3)"
-k16_direct = T[3]["gp"] * T[2]["fp"]
-check(16, [24, 18, 12, 6], k16_direct)
-assert h15_direct != k16_direct, "q15 and q16 should differ: composition order matters"
+def fit(conditions):
+    """Lowest-degree polynomial matching the given (point, value, slope) data."""
+    n = 2 * len(conditions)
+    coeffs = sp.symbols(f"a0:{n}")
+    p = sum(c * u**i for i, c in enumerate(coeffs))
+    eqs = []
+    for pt, val, slope in conditions:
+        eqs.append(sp.Eq(p.subs(u, pt), val))
+        eqs.append(sp.Eq(sp.diff(p, u).subs(u, pt), slope))
+    sol = sp.solve(eqs, coeffs, dict=True)[0]
+    return sp.expand(p.subs(sol))
 
-# q24: h(x) = f(x^3) with f'(8) = 2.
-h24 = sp.diff(fu(u**3), u)
-h24 = h24.subs(u, 2).doit()
-inner = sp.diff(u**3, u).subs(u, 2)
-assert inner == 12, f"q24: inner derivative {inner}"
-check(24, [2, 6, 12, 24], 2 * inner)
+
+F = fit([(2, T[2]["f"], T[2]["fp"]), (3, T[3]["f"], T[3]["fp"])])
+G = fit([(2, T[2]["g"], T[2]["gp"]), (3, T[3]["g"], T[3]["gp"])])
+for pt in (2, 3):
+    assert F.subs(u, pt) == T[pt]["f"] and sp.diff(F, u).subs(u, pt) == T[pt]["fp"]
+    assert G.subs(u, pt) == T[pt]["g"] and sp.diff(G, u).subs(u, pt) == T[pt]["gp"]
+
+h15 = sp.diff(F.subs(u, G), u).subs(u, 2)
+check(15, [5, 12, 20, 30], h15)
+k16 = sp.diff(G.subs(u, F), u).subs(u, 2)
+check(16, [24, 18, 12, 6], k16)
+assert h15 != k16, "q15 and q16 should differ: composition order matters"
+
+# q24: h(x) = f(x^3) with f'(8) = 2, checked against two unrelated such f.
+for f24 in (2 * u, u**2 / 8, 2 * u + (u - 8) ** 2 * sp.cos(u)):
+    assert sp.simplify(sp.diff(f24, u).subs(u, 8) - 2) == 0, f"q24 setup: {f24}"
+    val = sp.diff(f24.subs(u, u**3), u).subs(u, 2)
+    assert sp.simplify(val - 24) == 0, f"q24: got {val} for {f24}"
+check(24, [2, 6, 12, 24], 24)
 
 # q14: the missing factor really is 4.
 assert sp.diff(sin(4 * x), x) == 4 * cos(4 * x) != cos(4 * x)
