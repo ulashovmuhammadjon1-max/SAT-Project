@@ -36,8 +36,10 @@ def P(s):
 
 
 def V(s):
-    """Parse a vector written as `<a, b>` into a sympy Tuple."""
+    """Parse a vector written as `<a, b>` (optionally `+ C`) into a sympy Tuple."""
     s = s.strip()
+    if s.endswith("+ C"):  # the vector constant of integration
+        s = s[:-3].strip()
     if not (s.startswith("<") and s.endswith(">")):
         raise ValueError(f"not a vector in bank notation: {s!r}")
     inner, parts, depth, cur = s[1:-1], [], 0, ""
