@@ -121,6 +121,8 @@ export async function getTopicSession(
 
 const answerSchema = z.object({
   questionId: z.string().min(1),
+  // Econ questions carry five choices (A-E), Calculus four (A-D); the real
+  // bound is the question's own choice count, checked after the lookup.
   chosenIndex: z.number().int().min(0).max(4),
 });
 
@@ -143,9 +145,14 @@ export async function answerApQuestion(input: {
 
   const q = await prisma.apQuestion.findUnique({
     where: { id: parsed.data.questionId },
-    select: { id: true, correctIndex: true, explanation: true },
+    select: { id: true, correctIndex: true, explanation: true, choicesJson: true },
   });
   if (!q) return { error: "That question no longer exists." };
+
+  const choiceCount = (JSON.parse(q.choicesJson) as string[]).length;
+  if (parsed.data.chosenIndex >= choiceCount) {
+    return { error: "Pick one of the listed choices." };
+  }
 
   const isCorrect = parsed.data.chosenIndex === q.correctIndex;
   await prisma.apQuestionAttempt.create({

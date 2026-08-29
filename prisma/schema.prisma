@@ -2275,7 +2275,8 @@ model ApQuestion {
   stem         String   @db.Text
   /// Optional data table: {"headers": [...], "rows": [[...], ...]}
   tableJson    String?  @db.Text
-  /// Exactly five choices, A-E, as a JSON array of strings
+  /// The answer choices as a JSON array of strings: five (A-E) for the
+  /// economics exams, four (A-D) for Calculus, matching each exam's format.
   choicesJson  String   @db.Text
   correctIndex Int
   explanation  String?  @db.Text

@@ -24,8 +24,14 @@ const id = (q) =>
 
 let n = 0;
 for (const q of questions) {
-  if (!Array.isArray(q.choices) || q.choices.length !== 5) {
-    console.error(`FAILED: ${q.topic} #${q.order} does not have five choices`);
+  // Econ uses five choices (A-E); Calculus uses four (A-D), matching each
+  // exam's real format. Anything else is an authoring mistake.
+  if (!Array.isArray(q.choices) || (q.choices.length !== 4 && q.choices.length !== 5)) {
+    console.error(`FAILED: ${q.topic} #${q.order} must have four or five choices`);
+    process.exit(1);
+  }
+  if (!Number.isInteger(q.correctIndex) || q.correctIndex < 0 || q.correctIndex >= q.choices.length) {
+    console.error(`FAILED: ${q.topic} #${q.order} has an out-of-range answer key`);
     process.exit(1);
   }
   await sql.query(
