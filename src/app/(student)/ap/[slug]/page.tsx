@@ -49,13 +49,25 @@ export default async function ApSubjectPage({ params }: { params: { slug: string
           const hasContent = topics.some((t) => (topicProgress.get(t.code)?.total ?? 0) > 0);
           return (
             <div key={unit.number} className="rounded-2xl border border-border/70 bg-card shadow-soft">
-              <div className="flex items-center gap-3 px-5 py-4">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-sm font-semibold text-primary">
+              <div className="flex items-start gap-3 px-5 py-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-sm font-semibold text-primary">
                   {unit.number}
                 </span>
-                <p className="min-w-0 flex-1 font-medium leading-snug">
-                  Unit {unit.number} — {unit.title}
-                </p>
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium leading-snug">
+                    Unit {unit.number} — {unit.title}
+                  </p>
+                  {unit.blurb && (
+                    <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+                      {unit.blurb}
+                    </p>
+                  )}
+                </div>
+                {unit.weight && (
+                  <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                    {unit.weight} of exam
+                  </span>
+                )}
                 {!hasContent && (
                   <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
                     <Clock className="h-3 w-3" /> Coming soon
