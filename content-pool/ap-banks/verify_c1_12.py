@@ -88,15 +88,17 @@ def main():
     assert breaks5 == sp.FiniteSet(-4, 3), breaks5
     assert key(5) == "x = 3 and x = -4"
 
-    # q9  tan(x) breaks exactly at the odd multiples of pi/2
-    assert sp.solveset(sp.cos(x), x, R) == sp.Union(
-        sp.ImageSet(sp.Lambda(sp.Dummy('n'), 2*sp.pi*sp.Dummy('n') + sp.pi/2), sp.S.Integers),
-        sp.ImageSet(sp.Lambda(sp.Dummy('n'), 2*sp.pi*sp.Dummy('n') + 3*sp.pi/2), sp.S.Integers),
-    ) or True  # the set form varies by sympy version; the sample check below is the real one
-    for k in range(-3, 4):
-        at = (2*k + 1)*sp.pi/2
-        assert sp.cos(at) == 0 and sp.tan(x).subs(x, at) is sp.zoo
-    assert sp.cos(sp.pi) == -1 and sp.tan(x).subs(x, sp.pi) == 0   # not a break
+    # q9  tan(x) breaks exactly at the odd multiples of pi/2.
+    # The symbolic form of solveset(cos(x)) varies between sympy versions, so
+    # this samples instead: every odd multiple of pi/2 must be a break, and the
+    # multiples of pi named by a distractor must not be.
+    for k in range(-4, 5):
+        odd = (2*k + 1)*sp.pi/2
+        assert sp.cos(odd) == 0, f"cos is not 0 at {odd}"
+        assert sp.tan(x).subs(x, odd) is sp.zoo, f"tan is finite at {odd}"
+        whole = k*sp.pi
+        assert sp.tan(x).subs(x, whole) == 0, f"tan should be defined at {whole}"
+    assert sp.tan(x).subs(x, 1) not in (sp.zoo, sp.nan)   # an integer is not a break
     assert key(9) == "at every odd multiple of pi/2, where cos(x) = 0"
 
     # q16  the piecewise seam at 2 matches from both sides
