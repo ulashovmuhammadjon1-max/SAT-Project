@@ -73,14 +73,14 @@ QUESTIONS = [
    "decrease demand and lower the real rate",
    "leave the market unchanged"], ans=1,
    why="Funds leaving the country shrink the domestic supply of loanable funds."),
- dict(q="In the loanable funds market, the demand for loanable funds comes from", choices=[
+ dict(q="In an open economy's loanable funds market, the demand for loanable funds comes from", choices=[
    "households saving",
    "borrowers such as firms financing investment and governments financing deficits",
    "the central bank alone",
    "foreign exporters",
    "workers seeking employment"], ans=1,
    why="Demand for funds is demand to borrow."),
- dict(q="In the loanable funds market, the supply of loanable funds comes from", choices=[
+ dict(q="In an open economy's loanable funds market, the supply of loanable funds comes from", choices=[
    "firms borrowing for investment",
    "national saving plus inflows of foreign financial capital",
    "government deficits",

@@ -32,14 +32,14 @@ QUESTIONS = [
    "the money supply",
    "the exchange rate"], ans=1,
    why="Loanable funds set the real rate, while the money market sets the nominal rate."),
- dict(q="In the loanable funds market, the supply of loanable funds comes from", choices=[
+ dict(q="In a closed economy's loanable funds market, the supply of loanable funds comes from", choices=[
    "firms borrowing to invest",
    "saving by households, firms, and government",
    "the central bank alone",
    "consumption spending",
    "imports"], ans=1,
    why="Funds available to lend originate in saving."),
- dict(q="In the loanable funds market, the demand for loanable funds comes from", choices=[
+ dict(q="In a closed economy's loanable funds market, the demand for loanable funds comes from", choices=[
    "household saving",
    "borrowers, principally firms financing investment and governments financing deficits",
    "the central bank",
