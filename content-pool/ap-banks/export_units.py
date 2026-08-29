@@ -29,16 +29,26 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("modules", nargs="+", help="module names, e.g. u2_1 u2_2")
     ap.add_argument("--subject", default="MICRO")
+    # Economics carries 50 questions per CED topic. Calculus carries 25: its CED
+    # subdivides far more finely (the disc and washer methods are four separate
+    # topics), so fifty would be padding. The count is still checked exactly --
+    # the point of the gate is that a short module cannot ship by accident.
+    ap.add_argument("--per-topic", type=int, default=None,
+                    help="questions required per topic; defaults to 25 for Calculus, 50 otherwise")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
+
+    expected = args.per_topic
+    if expected is None:
+        expected = 25 if args.subject.startswith("CALC") else 50
 
     out, dist, seen_stems = [], {c: 0 for c in "ABCDE"}, {}
     for mod_name in args.modules:
         m = importlib.import_module(mod_name)
         code, title, unit = m.TOPIC
         qs = m.QUESTIONS
-        if len(qs) != 50:
-            sys.exit(f"{mod_name}: expected 50 questions, found {len(qs)}")
+        if len(qs) != expected:
+            sys.exit(f"{mod_name}: expected {expected} questions, found {len(qs)}")
         rng = random.Random(int(code.replace(".", "")) * 7919)
         for i, item in enumerate(qs, 1):
             choices, ans = list(item["choices"]), item["ans"]
