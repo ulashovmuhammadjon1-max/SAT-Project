@@ -87,12 +87,12 @@ QUESTIONS = [
    "exactly equal to f'(2)",
    "an overestimate only if f is also increasing"], ans=0,
    why="Concave up means f' is increasing, so the secant slope over [2, 2.5] exceeds the tangent slope at the left endpoint."),
- dict(q="Suppose f is concave up on [1, 3]. Compared with the true value of f'(2), the estimate (f(2) - f(1.5))/0.5 is", choices=[
+ dict(q="Let g be a function that is concave up on [1, 3]. The backward difference (g(2) - g(1.5))/0.5, used as an estimate of g'(2), is", choices=[
    "an underestimate",
    "an overestimate",
-   "exactly equal to f'(2)",
-   "an underestimate only if f is also decreasing"], ans=0,
-   why="Concave up means f' is increasing, so the secant slope over [1.5, 2] is smaller than the tangent slope at the right endpoint."),
+   "exactly equal to g'(2)",
+   "an underestimate only if g is also decreasing"], ans=0,
+   why="Concave up means g' is increasing, so the secant slope over [1.5, 2] is smaller than the tangent slope at the right endpoint."),
  dict(q="For a smooth function, why is the symmetric estimate (f(a + h) - f(a - h))/(2h) usually more accurate than the one-sided estimate (f(a + h) - f(a))/h?", choices=[
    "The symmetric estimate averages the two one-sided estimates, so their opposite errors largely cancel",
    "The symmetric estimate uses a larger value of h",
