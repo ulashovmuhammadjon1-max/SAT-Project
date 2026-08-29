@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { TopicRunner } from "@/components/ap/topic-runner";
@@ -9,7 +8,13 @@ import { requireUser } from "@/lib/session";
 export const metadata = { title: "AP Practice" };
 export const dynamic = "force-dynamic";
 
-/** One topic's practice session. */
+/**
+ * One topic's practice session.
+ *
+ * This lives in the (exam) route group rather than under the student shell:
+ * practice gets the whole viewport, with no sidebar or topbar competing with
+ * the question, exactly like the practice test and Question Bank sessions.
+ */
 export default async function ApPracticePage({
   params,
 }: {
@@ -28,26 +33,12 @@ export default async function ApPracticePage({
   if (questions.length === 0) notFound();
 
   return (
-    <div className="space-y-6">
-      <nav className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
-        <Link href="/ap" className="hover:text-foreground">
-          AP Prep
-        </Link>
-        <span>/</span>
-        <Link href={`/ap/${course.slug}`} className="font-medium hover:text-foreground">
-          {course.name}
-        </Link>
-        <span>/</span>
-        <span className="text-foreground">
-          {params.topic} {topicMeta.title}
-        </span>
-      </nav>
-
-      <TopicRunner
-        questions={questions}
-        backHref={`/ap/${course.slug}`}
-        topicLabel={params.topic}
-      />
-    </div>
+    <TopicRunner
+      questions={questions}
+      backHref={`/ap/${course.slug}`}
+      topicLabel={params.topic}
+      topicTitle={topicMeta.title}
+      courseName={course.name}
+    />
   );
 }
