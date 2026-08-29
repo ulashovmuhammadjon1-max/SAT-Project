@@ -15,7 +15,7 @@ QUESTIONS = [
  dict(q="A point on the graph of f is an inflection point provided that f is continuous there and",
    choices=[
    "f'' changes sign there",
-   "f''  equals zero there",
+   "f'' equals zero there",
    "f' equals zero there",
    "f changes sign there"], ans=0,
    why="Concavity must actually change; f'' = 0 by itself is not enough."),
