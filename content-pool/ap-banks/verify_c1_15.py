@@ -41,7 +41,7 @@ LIMITS = [
     (8,  (4*x**2 - x)/(2*x**2 + 7),      -sp.oo,  2,                 "2"),
     (11, 1/x,                             sp.oo,  0,                 "0"),
     (12, sp.log(x)/x,                     sp.oo,  0,                 "0"),
-    (13, sp.sin(x)/x,                     sp.oo,  0,                 "0"),
+    (13, sp.sin(x)/x,                     sp.oo,  0,                 "y = 0"),
     (14, sp.exp(-x),                      sp.oo,  0,                 "0"),
     (15, sp.exp(x),                      -sp.oo,  0,                 "0"),
     (16, sp.atan(x),                      sp.oo,  sp.pi/2,           "pi/2"),

@@ -51,9 +51,9 @@ QUESTIONS = [
  dict(q="Evaluate lim as x -> infinity of ln(x)/x.", choices=[
    "0", "1", "e", "infinity"], ans=0,
    why="The logarithm grows much more slowly than x, so the quotient is driven to 0."),
- dict(q="Evaluate lim as x -> infinity of sin(x)/x.", choices=[
-   "-1", "0", "1", "the limit does not exist"], ans=1,
-   why="The numerator stays within [-1, 1] while the denominator grows, so the quotient is squeezed to 0."),
+ dict(q="Which horizontal asymptote does the graph of f(x) = sin(x)/x approach as x increases without bound?", choices=[
+   "y = -1", "y = 0", "y = 1", "there is none, because sin(x) keeps oscillating"], ans=1,
+   why="The numerator stays within [-1, 1] while the denominator grows, so the heights are squeezed to 0."),
  dict(q="Evaluate lim as x -> infinity of e^(-x).", choices=[
    "-infinity", "0", "1", "infinity"], ans=1,
    why="e^(-x) = 1/e^x, and the denominator grows without bound, so the graph has the horizontal asymptote y = 0."),
