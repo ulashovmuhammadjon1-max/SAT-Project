@@ -11,7 +11,7 @@ QUESTIONS = [
    "R = f(x) - k and r = g(x)",
    "R = k - f(x) and r = k - g(x)"], ans=0,
    why="Every distance is measured from the line y = k, so both radii shift by the same k."),
- dict(q="A region bounded above by y = f(x) and below by y = g(x) is revolved about the line y = k, which lies ABOVE the region. Which curve gives the outer radius?", choices=[
+ dict(q="The line y = k lies ABOVE a region bounded above by y = f(x) and below by y = g(x). When that region is revolved about y = k, which curve gives the outer radius?", choices=[
    "the lower curve g, because it is farther from the axis, giving R = k - g(x)",
    "the upper curve f, because it is always the outer one",
    "whichever curve has the larger values",
@@ -83,7 +83,7 @@ QUESTIONS = [
    "pi/6",
    "7*pi/6"], ans=0,
    why="Slicing horizontally, R = 2 - sqrt(y) and r = 1, and the integral on [0, 1] gives 5/6."),
- dict(q="Which integral gives the volume when the region bounded by y = x^2 and y = 4 is revolved about the line y = 5?", choices=[
+ dict(q="The region bounded by y = x^2 and y = 4 is revolved about the line y = 5. Which integral gives the volume?", choices=[
    "pi * int from -2 to 2 of ((5 - x^2)^2 - 1) dx",
    "pi * int from -2 to 2 of ((5 - x^2)^2 - 5^2) dx",
    "pi * int from -2 to 2 of ((x^2 - 5)^2 - 4^2) dx",
