@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BookOpen, CheckCircle2, Clock } from "lucide-react";
 
+import { isLiveSubject } from "@/lib/ap/catalog";
 import { courseBySlug } from "@/lib/ap/courses";
 import { getApProgress } from "@/server/actions/student/ap";
 import { requireUser } from "@/lib/session";
@@ -19,7 +20,11 @@ const pct = (a: number, b: number) => (b === 0 ? 0 : Math.round((a / b) * 100));
 export default async function ApSubjectPage({ params }: { params: { slug: string } }) {
   await requireUser();
   const course = courseBySlug(params.slug);
-  if (!course) notFound();
+  // A course outline is written before its questions are; until the catalog
+  // marks the subject live, the page must not exist. Without this check,
+  // adding a course to AP_COURSES publishes its whole outline immediately,
+  // and a student following it lands in an empty practice session.
+  if (!course || !isLiveSubject(course.code)) notFound();
 
   const progress = await getApProgress();
   const mine = progress.find((p) => p.subject === course.code);

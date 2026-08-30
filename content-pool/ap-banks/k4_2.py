@@ -253,7 +253,7 @@ QUESTIONS = [
          ["Party C", "18 percent", "18", "6"], ["Party D", "10 percent", "10", "2"]]),
    q="Using the same model, how many additional seats does the largest party gain by using single-member district plurality rules rather than proportional representation?", choices=[
    "22 seats",
-   "2 seats",
+   "8 seats",
    "10 seats",
    "30 seats",
    "40 seats"], ans=0,

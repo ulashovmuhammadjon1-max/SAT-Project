@@ -43,7 +43,7 @@ _T_NATION = dict(
     rows=[["Country W", "82%", "20"],
           ["Country X", "56%", "8"],
           ["Country Y", "29%", "250"],
-          ["Country Z", "91%", "55"]])
+          ["Country Z", "71%", "55"]])
 
 QUESTIONS = [
  dict(q="A political organization has a permanent population, governing institutions that exercise control over a defined territory, and recognition by other countries. The framework calls this organization a",
@@ -172,18 +172,18 @@ QUESTIONS = [
      "Country Y, because no group approaches a majority and the number of recognized groups is by far the largest",
      "Country W, because a single group holds a large majority",
      "Country X, because the largest group is just above half",
-     "Country Z, because it has the highest share for its largest group",
+     "Country Z, because more than half of its population belongs to a single group",
      "None, because the framework gives no figures for any country"], ans=0,
-   why="EK LEG-2.A.1d describes Nigeria as containing more than 250 ethnic groups with no single group dominant, and the table's Country Y is the only row with both a sub-thirty-percent largest group and a group count in the hundreds. The rows with 82, 56 and 91 percent all have a leading group far larger than that."),
+   why="EK LEG-2.A.1d describes Nigeria as containing more than 250 ethnic groups with no single group dominant, and the table's Country Y is the only row with both a sub-thirty-percent largest group and a group count in the hundreds. The rows with 82, 56 and 71 percent all have a leading group far larger than that."),
  dict(q="Using the same hypothetical figures, which state most resembles the framework's description of Russia, where the largest group is more than 80 percent of the population?",
    table=_T_NATION,
    choices=[
      "Country W, at 82 percent",
      "Country X, at 56 percent",
      "Country Y, at 29 percent",
-     "Country Z, at 91 percent, because that is closest to the whole population",
+     "Country Z, at 71 percent",
      "Country Y, because Russia contains many minority groups"], ans=0,
-   why="EK LEG-2.A.1e states that ethnic Russians are more than 80 percent of the population. Country W's 82 percent is the value just above that threshold; Country Z's 91 percent is more than 80 percent as well but is far from the framework's figure, and a match should be the closest value above the stated line, not merely any value above it."),
+   why="EK LEG-2.A.1e states that ethnic Russians are more than 80 percent of the population. Country W's 82 percent is the only value in the table above that line; 71, 56 and 29 percent all fall below it, and the number of minority groups a state recognizes says nothing about the size of its largest one."),
  dict(q="Two neighbouring states each contain a large community that speaks the same language and identifies with the same historical homeland. In the framework's terms, this community is best described as",
    choices=[
      "a nation divided across two states",

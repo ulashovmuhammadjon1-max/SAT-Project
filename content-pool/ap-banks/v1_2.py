@@ -242,7 +242,7 @@ QUESTIONS = [
      "Support for elite decision making is negligible in every age group",
      "The survey shows that younger respondents distrust all forms of representation equally",
      "The survey establishes that direct citizen decision produces better policy"], ans=0,
-   why="The largest figure in any column is 43, so no model reaches a majority anywhere, and the under-35 and 35-and-older columns differ on three of the four actors. The elite-leaning categories together draw 37 percent of all respondents, which is not negligible, and a preference survey cannot establish policy quality."),
+   why="The largest figure in any column is 43, so no model reaches a majority anywhere, and the under-35 and 35-and-older columns differ on all four actors, by as much as 13 points on direct citizen decision. The two filtered-decision categories, elected representatives and nonpartisan experts, together draw 48 percent of all respondents and 37 percent even among those under 35, which is not negligible, and a preference survey cannot establish policy quality."),
 
  dict(q="A student writes that participatory and pluralist democracy are the same model because both involve large numbers of people. What is the strongest objection?",
    choices=[
