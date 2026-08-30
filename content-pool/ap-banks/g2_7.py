@@ -327,7 +327,7 @@ QUESTIONS = [
    ans=0,
    why="The ratio moves from 106 to a peak of 118, a rise of 12 points, and stays near that level. A sex ratio at birth around 105 or 106 is the ordinary range, so a sustained value near 118 is evidence of a behavioural response to the limit rather than of biology."),
 
- dict(q="Components of population change are shown for four countries, all rates per 1,000. Using the table, which country's growth depends entirely on its immigration policy?",
+ dict(q="Four states report all three components of population change, in rates per 1,000. Using the table, which state would be losing people if it admitted no migrants at all?",
    table=dict(
      headers=["Country", "Crude birth rate", "Crude death rate", "Net migration rate"],
      rows=[
