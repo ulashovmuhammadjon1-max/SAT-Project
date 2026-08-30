@@ -250,9 +250,9 @@ QUESTIONS = [
      "40 percent",
      "60 percent",
      "50 percent",
-     "20 percent",
-     "0 percent"], ans=0,
-   why="Dividing that chamber's proportional seats by its total gives the share. The alternatives offer the complementary district share, the share for a different row, a misplaced decimal, and the share for the row that fills no seats proportionally."),
+     "44 percent",
+     "31 percent"], ans=0,
+   why="Dividing that chamber's proportional seats by its own total gives the share. The alternatives offer the complementary district share, another row's proportional share, and the same numerator divided by each of the other two rows' totals, so the item turns on using the right denominator."),
  dict(q="The table describes three hypothetical upper chambers. Which one matches the framework's description of Mexico's Senate?",
    table=_T_UP,
    choices=[
