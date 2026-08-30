@@ -1,5 +1,54 @@
 # Project memory
 
+## AP CALCULUS AND STATISTICS ARE TYPESET — the converter, and when it may be used
+
+`content-pool/ap-banks/mathfmt.py` turns the plain-text notation the AP briefs
+specified (`x^2`, `1/2`, `int from 0 to 4 of f(x) dx`) into KaTeX. 5,266 live
+questions across CALC_AB, CALC_BC and STATISTICS were converted in place;
+`content-pool/ap-banks/README.md` has the pipeline.
+
+**This does not repeal "never bulk auto-convert Math text to LaTeX."** That rule
+is about regex converters guessing at author intent, and it still stands. What
+makes this one allowable is that it is a parser with two gates, and the gates
+are the whole design:
+
+1. **The round trip is the safety property.** The parse tree is rendered BACK
+   to plain text and compared against the source fragment; one character of
+   difference and the fragment is left untouched. A conversion can therefore
+   only re-typeset a string, never change what it says. Across 29,104 strings
+   it produced 0 rejections — which is only meaningful because
+   `test_mathfmt.py` includes a control that corrupts the renderer on purpose
+   and asserts the gate fires.
+2. **KaTeX must be checked at `throwOnError: true`.** Production renders at
+   `throwOnError: false`, which shows a broken span as red source text instead
+   of failing, so a check that mirrors production sees nothing. The checker has
+   to be stricter than the site.
+
+### Convert the LIVE ROWS, never re-export, when content is already published
+`ApQuestionAttempt` (and `Response` on the SAT side) stores the *index* a
+student selected. Re-exporting re-runs the choice shuffle, so a moved choice
+silently rewrites what every past student appears to have answered. The
+scripts convert the stored strings in place and never write `correctIndex`.
+Verified afterwards by cross-checking all 5,750 live keys against their source
+modules: 0 mismatches, and every choice set still the same multiset.
+
+### Running it on the economics banks would have damaged them
+Measured before deciding, not assumed: on the 109 Micro/Macro/Psychology
+modules the same converter damages 557 strings — `300/6,000` split into a
+fraction, `$50 a year` read as `$50a`, CED codes like `EK 3.5.A.1` mangled,
+"an infinity of ideas" turned into ∞. Those banks are prose with numbers in
+it. **Measuring the blast radius on out-of-scope content is also how the one
+real in-scope defect was found**: `N = 18,500` was converting as
+`\(N = 18\),500`, and no smell pattern had been looking for it.
+
+### The residual sweep is what catches mangling; the smell list is not enough
+A fragment that parses *most* of an expression and stops produces the worst
+output — half typeset, half raw — and nothing in a "did it convert" metric
+sees it. Two structural guards handle it: never begin a fragment immediately
+after a dangling `^ _ / * + -`, and let an implicit-multiplication run continue
+into a short letter run (`2xh`) so it does not stop mid-expression. Both were
+found by reading output, not by a checker.
+
 ## MATH REBUILD: Tests 6-19 SHIPPED, Tests 20-31 NOT — read content-pool/satoplam-math/RESUME.md
 
 924 SATashkent questions are live across Tests 6-19 Math. Tests 20-31 still

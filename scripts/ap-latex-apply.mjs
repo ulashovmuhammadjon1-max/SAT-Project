@@ -23,42 +23,73 @@ if (!file) {
 const sql = neon(process.env.PROD_URL || process.env.DATABASE_URL);
 const patch = JSON.parse(readFileSync(file, "utf8"));
 
+// Batched, because one HTTP round trip per question over 5,266 questions is
+// slow enough that a half-finished run becomes the likely outcome, and a
+// half-converted bank is the one state worse than an unconverted one.
+const BATCH = 250;
 let written = 0;
-for (const p of patch) {
+let bad = 0;
+
+for (let i = 0; i < patch.length; i += BATCH) {
+  const chunk = patch.slice(i, i + BATCH);
+  const payload = JSON.stringify(
+    chunk.map((p) => ({
+      id: p.id,
+      stem: p.stem,
+      choices: JSON.stringify(p.choices),
+      explanation: p.explanation,
+      table: p.table ? JSON.stringify(p.table) : null,
+      correctIndex: p.correctIndex,
+      n: p.choices.length,
+    })),
+  );
+
   if (!apply) {
-    // A dry run reads the guard, it does not execute the write.
-    const [row] = await sql.query(
-      `SELECT "correctIndex", jsonb_array_length("choicesJson"::jsonb) AS n
-         FROM "ApQuestion" WHERE id = $1`,
-      [p.id],
+    // A dry run reads the guard; it does not execute the write.
+    const rows = await sql.query(
+      `SELECT p.id
+         FROM jsonb_to_recordset($1::jsonb)
+              AS p(id text, "correctIndex" int, n int)
+         LEFT JOIN "ApQuestion" q ON q.id = p.id
+        WHERE q.id IS NULL
+           OR q."correctIndex" <> p."correctIndex"
+           OR jsonb_array_length(q."choicesJson"::jsonb) <> p.n`,
+      [payload],
     );
-    if (!row) console.error(`MISSING: ${p.id}`);
-    else if (row.correctIndex !== p.correctIndex || row.n !== p.choices.length)
-      console.error(`GUARD WOULD FAIL: ${p.id}`);
+    for (const r of rows) console.error(`GUARD WOULD FAIL: ${r.id}`);
+    bad += rows.length;
     continue;
   }
-  const res = await sql.query(
-    `UPDATE "ApQuestion"
-        SET stem = $2, "choicesJson" = $3, explanation = $4, "tableJson" = $5
-      WHERE id = $1
-        AND "correctIndex" = $6
-        AND jsonb_array_length("choicesJson"::jsonb) = $7
-      RETURNING id`,
-    [
-      p.id, p.stem, JSON.stringify(p.choices), p.explanation,
-      p.table ? JSON.stringify(p.table) : null,
-      p.correctIndex, p.choices.length,
-    ],
+
+  const rows = await sql.query(
+    `UPDATE "ApQuestion" q
+        SET stem = p.stem,
+            "choicesJson" = p.choices,
+            explanation = p.explanation,
+            "tableJson" = p."table"
+       FROM jsonb_to_recordset($1::jsonb)
+            AS p(id text, stem text, choices text, explanation text,
+                 "table" text, "correctIndex" int, n int)
+      WHERE q.id = p.id
+        AND q."correctIndex" = p."correctIndex"
+        AND jsonb_array_length(q."choicesJson"::jsonb) = p.n
+      RETURNING q.id`,
+    [payload],
   );
-  if (res.length === 1) written++;
-  else {
-    console.error(`GUARD FAILED, not updated: ${p.id}`);
+  written += rows.length;
+  if (rows.length !== chunk.length) {
+    console.error(
+      `GUARD FAILED: batch at ${i} wrote ${rows.length} of ${chunk.length}`,
+    );
     process.exit(1);
   }
+  process.stdout.write(`\r${written}/${patch.length}`);
 }
 
 if (!apply) {
-  console.log(`dry run: ${patch.length} questions would be updated (pass --apply)`);
-  process.exit(0);
+  console.log(
+    `dry run: ${patch.length} questions would be updated, ${bad} would fail the guard`,
+  );
+  process.exit(bad ? 1 : 0);
 }
-console.log(`updated ${written} of ${patch.length} questions`);
+console.log(`\nupdated ${written} of ${patch.length} questions`);
