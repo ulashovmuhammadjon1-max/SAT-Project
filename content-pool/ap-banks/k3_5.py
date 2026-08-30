@@ -265,7 +265,7 @@ QUESTIONS = [
      "206",
      "120"], ans=0,
    why="Adding the episode column across all four rows gives the total. The alternatives arise from dropping a row, from adding a different column, and from reading the largest single row as though it were the total."),
- dict(q="Which conclusion does the same table best support?",
+ dict(q="Reading each row of the same table as a proportion rather than a count, which conclusion is best supported?",
    table=_T_PART,
    choices=[
      "As the form of participation becomes less conventional, the share of episodes aimed at overthrowing the regime rises",
