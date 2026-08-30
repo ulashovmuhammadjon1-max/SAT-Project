@@ -151,11 +151,11 @@ QUESTIONS = [
  dict(q="Both the regular veto and the pocket veto are classified by the course framework as",
    choices=[
      "formal powers that enable the president to check Congress",
-     "informal powers that enable the president to check Congress",
+     "informal tools of persuasion rather than powers of the office",
      "powers delegated to the president by statute",
      "powers exercised jointly with the Senate",
      "powers of foreign policy rather than of domestic policy"], ans=0,
-   why="EK 2.4.A.2.i calls vetoes and pocket vetoes formal powers that enable the president to check Congress. Their difference lies in whether an override is possible, not in their category."),
+   why="EK 2.4.A.2.i calls vetoes and pocket vetoes formal powers that enable the president to check Congress. Their difference lies in whether an override is possible, not in their category, and neither is a matter of persuasion."),
 
  dict(q="According to the course framework, executive orders",
    choices=[

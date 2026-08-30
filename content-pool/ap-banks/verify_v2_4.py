@@ -45,7 +45,7 @@ ANCHORS = {
  5: "but a pocket veto cannot be overridden",
  6: "A pocket veto has occurred, and Congress cannot override it",
  7: "leaves Congress no vote to take",
- 8: "formal powers that enable",
+ 8: "formal powers that enable the president to check Congress",
  9: "implied by the vested executive power or delegated by Congress",
  10: "An executive order, which allows the president to manage the federal government",
  11: "informs Congress and the public of the president's interpretation",
