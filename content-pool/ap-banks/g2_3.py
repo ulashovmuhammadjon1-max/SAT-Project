@@ -35,7 +35,7 @@
 # SUBNATIONAL units, which is why items 8, 13, 20 and 26 work below the national
 # scale.
 #
-# Six items carry a real `table=`; each one's arithmetic is recomputed from the
+# Five items carry a real `table=`; each one's arithmetic is recomputed from the
 # table in verify_g2_3.py. FIVE choices (A-E).
 TOPIC = ("2.3", "Population Composition", 2)
 
