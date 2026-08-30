@@ -8,7 +8,13 @@
  * full official outline can sit here while the banks are still being written.
  */
 
-export type ApSubjectCode = "MACRO" | "MICRO" | "CALC_AB" | "CALC_BC";
+export type ApSubjectCode =
+  | "MACRO"
+  | "MICRO"
+  | "CALC_AB"
+  | "CALC_BC"
+  | "STATISTICS"
+  | "PSYCHOLOGY";
 
 export interface ApUnit {
   number: number;
@@ -432,6 +438,189 @@ const CALC_BC_ONLY: ApUnit[] = [
   },
 ];
 
+
+// ---------------------------------------------------------------------------
+// AP Statistics — CED effective Fall 2026 (five units). Verified against the
+// official CED PDF; see content-pool/ap-banks/AP_STATS_CED.md for the source
+// and for how the retired nine-unit framework maps onto these units.
+// ---------------------------------------------------------------------------
+
+const STATS_UNITS: ApUnit[] = [
+  {
+    number: 1,
+    title: "Exploring One-Variable Data and Collecting Data",
+    blurb: "Describing distributions, summary statistics, and how data are collected.",
+    topics: [
+      { code: "1.1", title: "Introducing Statistics: What Can We Learn from Data?" },
+      { code: "1.2", title: "Variables" },
+      { code: "1.3", title: "Tabular Representation and Summary Statistics for One Categorical Variable" },
+      { code: "1.4", title: "Graphical Representations for One Categorical Variable" },
+      { code: "1.5", title: "Graphical Representations for One Quantitative Variable" },
+      { code: "1.6", title: "Descriptions for One Quantitative Variable Distributions" },
+      { code: "1.7", title: "Summary Statistics for One Quantitative Variable" },
+      { code: "1.8", title: "Graphical Representations of Summary Statistics for One Quantitative Variable" },
+      { code: "1.9", title: "Comparisons of the Distributions for One Quantitative Variable" },
+      { code: "1.10", title: "The Investigative Question Revisited and Data Collection" },
+      { code: "1.11", title: "Random Sampling" },
+      { code: "1.12", title: "Potential Problems with Sampling" },
+      { code: "1.13", title: "Experimental Design" },
+    ],
+  },
+  {
+    number: 2,
+    title: "Probability, Random Variables, and Probability Distributions",
+    blurb: "Randomness, probability rules, random variables, and probability distributions.",
+    topics: [
+      { code: "2.1", title: "Tabular and Graphical Representations for the Distributions of Two Categorical Variables" },
+      { code: "2.2", title: "Summary Statistics for Two Categorical Variables" },
+      { code: "2.3", title: "Estimating Probabilities Using Simulation" },
+      { code: "2.4", title: "Introduction to Probability" },
+      { code: "2.5", title: "Mutually Exclusive Events" },
+      { code: "2.6", title: "Conditional Probability" },
+      { code: "2.7", title: "Independent Events and Unions of Events" },
+      { code: "2.8", title: "Introduction to Random Variables and Probability Distributions" },
+      { code: "2.9", title: "Parameters of Random Variables" },
+      { code: "2.10", title: "The Binomial Distribution" },
+      { code: "2.11", title: "The Normal Distribution" },
+      { code: "2.12", title: "Sampling Distributions and the Central Limit Theorem" },
+    ],
+  },
+  {
+    number: 3,
+    title: "Inference for Categorical Data: Proportions",
+    blurb: "Confidence intervals and significance tests for proportions, including chi-square.",
+    topics: [
+      { code: "3.1", title: "Estimators" },
+      { code: "3.2", title: "Sampling Distributions for Sample Proportions" },
+      { code: "3.3", title: "Constructing a Confidence Interval for a Population Proportion" },
+      { code: "3.4", title: "Justifying a Claim Based on a Confidence Interval for a Population Proportion" },
+      { code: "3.5", title: "Setting Up a Test for a Population Proportion" },
+      { code: "3.6", title: "p-Values" },
+      { code: "3.7", title: "Carrying Out a Test for a Population Proportion" },
+      { code: "3.8", title: "Potential Errors When Performing Tests" },
+      { code: "3.9", title: "Sampling Distributions for the Difference Between Sample Proportions" },
+      { code: "3.10", title: "Constructing a Confidence Interval for the Difference Between Two Population Proportions" },
+      { code: "3.11", title: "Justifying a Claim Based on a Confidence Interval for the Difference Between Two Population Proportions" },
+      { code: "3.12", title: "Setting Up a Test for the Difference Between Two Population Proportions" },
+      { code: "3.13", title: "Carrying Out a Test for the Difference Between Two Population Proportions" },
+      { code: "3.14", title: "Setting Up a Chi-Square Test for Homogeneity or Independence" },
+      { code: "3.15", title: "Carrying Out a Chi-Square Test for Homogeneity or Independence" },
+    ],
+  },
+  {
+    number: 4,
+    title: "Inference for Quantitative Data: Means",
+    blurb: "Confidence intervals and significance tests for means, one-sample and two-sample.",
+    topics: [
+      { code: "4.1", title: "Sampling Distributions for Sample Means" },
+      { code: "4.2", title: "Constructing a Confidence Interval for a Population Mean or Population Mean Difference" },
+      { code: "4.3", title: "Justifying a Claim Based on a Confidence Interval for a Population Mean or Population Mean Difference" },
+      { code: "4.4", title: "Setting Up a Test for a Population Mean or Population Mean Difference" },
+      { code: "4.5", title: "Carrying Out a Test for a Population Mean or Population Mean Difference" },
+      { code: "4.6", title: "Sampling Distributions for the Difference Between Two Sample Means" },
+      { code: "4.7", title: "Constructing a Confidence Interval for the Difference Between Two Population Means" },
+      { code: "4.8", title: "Justifying a Claim Based on a Confidence Interval for the Difference Between Two Population Means" },
+      { code: "4.9", title: "Setting Up a Test for the Difference Between Two Population Means" },
+      { code: "4.10", title: "Carrying Out a Test for the Difference Between Two Population Means" },
+    ],
+  },
+  {
+    number: 5,
+    title: "Regression Analysis",
+    blurb: "Scatterplots, correlation, least-squares regression, and residual analysis.",
+    topics: [
+      { code: "5.1", title: "Graphical Representations Between Two Quantitative Variables" },
+      { code: "5.2", title: "Correlation" },
+      { code: "5.3", title: "Linear Regression Models" },
+      { code: "5.4", title: "Residuals" },
+      { code: "5.5", title: "Least-Squares Regression" },
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
+// AP Psychology — current CED (five units). Verified against the official CED;
+// see content-pool/ap-banks/AP_PSYCH_CED.md. This is the redesigned framework,
+// not the retired nine-unit one that most third-party material still describes.
+// ---------------------------------------------------------------------------
+
+const PSYCH_UNITS: ApUnit[] = [
+  {
+    number: 1,
+    title: "Biological Bases of Behavior",
+    weight: "15-25%",
+    blurb: "Genetics, the nervous and endocrine systems, sensation, and consciousness.",
+    topics: [
+      { code: "1.1", title: "Interaction of Heredity and Environment" },
+      { code: "1.2", title: "Overview of the Nervous System" },
+      { code: "1.3", title: "The Neuron and Neural Firing" },
+      { code: "1.4", title: "The Brain" },
+      { code: "1.5", title: "Sleep" },
+      { code: "1.6", title: "Sensation" },
+    ],
+  },
+  {
+    number: 2,
+    title: "Cognition",
+    weight: "15-25%",
+    blurb: "Perception, memory, thinking, problem solving, and intelligence.",
+    topics: [
+      { code: "2.1", title: "Perception" },
+      { code: "2.2", title: "Thinking, Problem-Solving, Judgments, and Decision-Making" },
+      { code: "2.3", title: "Introduction to Memory" },
+      { code: "2.4", title: "Encoding Memories" },
+      { code: "2.5", title: "Storing Memories" },
+      { code: "2.6", title: "Retrieving Memories" },
+      { code: "2.7", title: "Forgetting and Other Memory Challenges" },
+      { code: "2.8", title: "Intelligence and Achievement" },
+    ],
+  },
+  {
+    number: 3,
+    title: "Development and Learning",
+    weight: "15-25%",
+    blurb: "Lifespan development, classical and operant conditioning, and observational learning.",
+    topics: [
+      { code: "3.1", title: "Themes and Methods in Developmental Psychology" },
+      { code: "3.2", title: "Physical Development Across the Lifespan" },
+      { code: "3.3", title: "Gender and Sexual Orientation" },
+      { code: "3.4", title: "Cognitive Development Across the Lifespan" },
+      { code: "3.5", title: "Communication and Language Development" },
+      { code: "3.6", title: "Social-Emotional Development Across the Lifespan" },
+      { code: "3.7", title: "Classical Conditioning" },
+      { code: "3.8", title: "Operant Conditioning" },
+      { code: "3.9", title: "Social, Cognitive, and Neurological Factors in Learning" },
+    ],
+  },
+  {
+    number: 4,
+    title: "Social Psychology and Personality",
+    weight: "15-25%",
+    blurb: "Attribution, social influence, group behavior, and theories of personality.",
+    topics: [
+      { code: "4.1", title: "Attribution Theory and Person Perception" },
+      { code: "4.2", title: "Attitude Formation and Attitude Change" },
+      { code: "4.3", title: "Psychology of Social Situations" },
+      { code: "4.4", title: "Psychodynamic and Humanistic Theories of Personality" },
+      { code: "4.5", title: "Social-Cognitive and Trait Theories of Personality" },
+      { code: "4.6", title: "Motivation" },
+      { code: "4.7", title: "Emotion" },
+    ],
+  },
+  {
+    number: 5,
+    title: "Mental and Physical Health",
+    weight: "15-25%",
+    blurb: "Psychological disorders, treatment, health psychology, and positive psychology.",
+    topics: [
+      { code: "5.1", title: "Introduction to Health Psychology" },
+      { code: "5.2", title: "Positive Psychology" },
+      { code: "5.3", title: "Explaining and Classifying Psychological Disorders" },
+      { code: "5.4", title: "Selection of Categories of Psychological Disorders" },
+      { code: "5.5", title: "Treatment of Psychological Disorders" },
+    ],
+  },
+];
 export const AP_COURSES: ApCourse[] = [
   {
     code: "MACRO",
@@ -462,6 +651,24 @@ export const AP_COURSES: ApCourse[] = [
       ...u,
       topics: u.topics?.filter((t) => !t.bcOnly),
     })),
+  },
+  {
+    code: "STATISTICS",
+    slug: "statistics",
+    name: "AP Statistics",
+    short: "Statistics",
+    blurb: "Exploring data, designing studies, probability, and statistical inference.",
+    gradient: "from-sky-500 to-cyan-600",
+    units: STATS_UNITS,
+  },
+  {
+    code: "PSYCHOLOGY",
+    slug: "psychology",
+    name: "AP Psychology",
+    short: "Psychology",
+    blurb: "The scientific study of behavior and mental processes.",
+    gradient: "from-fuchsia-500 to-purple-600",
+    units: PSYCH_UNITS,
   },
   {
     code: "CALC_BC",
