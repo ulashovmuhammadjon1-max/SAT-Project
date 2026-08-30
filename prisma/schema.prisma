@@ -210,6 +210,8 @@ model User {
   classesTaught         SchoolClass[]          @relation("ClassTeacher")
   assignmentCompletions AssignmentCompletion[]
   apAttempts            ApQuestionAttempt[]
+  apSubjects            ApSubjectEnrollment[]
+  apTestAttempts        ApTestAttempt[]
 
   @@index([role])
   @@index([countryCode])
@@ -2299,6 +2301,60 @@ model ApQuestionAttempt {
   question ApQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@index([userId, questionId])
+}
+
+/// A subject a student has added to their personal list. The catalog can grow
+/// to thirty subjects without any student's sidebar growing at all.
+///
+/// Removing a subject deletes only this row. Question attempts and test
+/// attempts key on userId and the subject string, never on the enrollment, so
+/// dropping a subject and adding it back months later restores every answer,
+/// score and attempt intact.
+model ApSubjectEnrollment {
+  id      String   @id @default(cuid())
+  userId  String
+  /// Matches ApQuestion.subject. A string rather than an enum so that adding a
+  /// subject is a catalog edit, not a migration.
+  subject String
+  addedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, subject])
+  @@index([userId])
+}
+
+/// One sitting of one practice test.
+///
+/// The question ids are frozen at start, so a test a student is halfway
+/// through cannot change under them if the bank is edited. expiresAt is
+/// computed server-side from the test's configured duration, so the clock
+/// cannot be extended from the browser.
+model ApTestAttempt {
+  id              String    @id @default(cuid())
+  userId          String
+  subject         String
+  /// Identifies the test within its subject, e.g. "practice-1".
+  testSlug        String
+  /// 'IN_PROGRESS' | 'SUBMITTED'
+  status          String    @default("IN_PROGRESS")
+  /// JSON array of ApQuestion ids, in the order presented.
+  questionIdsJson String    @db.Text
+  /// {"<questionId>": <chosenIndex>} — persisted so a reload mid-exam does not
+  /// cost the student the sitting.
+  answersJson     String    @default("{}") @db.Text
+  /// ["<questionId>", ...] flagged for review.
+  markedJson      String    @default("[]") @db.Text
+  startedAt       DateTime  @default(now())
+  expiresAt       DateTime?
+  submittedAt     DateTime?
+  score           Int?
+  total           Int?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, subject])
+  @@index([userId, status])
 }
 
 model SubmissionFile {
