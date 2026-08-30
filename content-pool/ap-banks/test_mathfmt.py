@@ -141,6 +141,10 @@ NEGATIVE = [
     "Ratios of 2 to 3 are common in the data.",
     "Transfer payments make the after-tax, after-transfer distribution flatter.",
     "The pre-test and post-test scores differ.",
+    "Carbon-14 has a half-life of about 5730 years.",
+    "For that same 2-by-2 table, the degrees of freedom are",
+    "The stem-4 row holds five values.",
+    "A 3-by-3 table of 300 responses is shown.",
     # a bracket holding prose, which the variable-run rule must not split
     "The result (in units of dollars) is reported below.",
     "Use the rule (see the note) carefully.",

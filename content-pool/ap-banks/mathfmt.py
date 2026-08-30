@@ -1009,6 +1009,14 @@ def convert(text: str, rejects=None):
         if before and before[-1] in "^_/*+-":
             i += 1
             continue
+        # A sign written flush against a word or number on its left is the
+        # hyphen of a compound, not a minus: `Carbon-14`, `2-by-2`, `stem-4`.
+        # Nothing is lost by refusing here -- a real `x-1` starts its fragment
+        # at the `x`, never at the sign.
+        if (tok.kind == "op" and tok.val in ("-", "+", "+/-")
+                and tok.start > 0 and text[tok.start - 1].isalnum()):
+            i += 1
+            continue
         p = Parser(toks, i)
         try:
             node = p.chain()
