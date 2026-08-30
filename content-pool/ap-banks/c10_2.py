@@ -87,7 +87,7 @@ QUESTIONS = [
    "2",
    "4",
    "6"], ans=2,
-   why="The series is 2*sum from n=1 of (2/3)^n = 2*((2/3)/(1/3)) = 4."),
+   why="The series is 2*sum from n=1 to infinity of (2/3)^n = 2*((2/3)/(1/3)) = 4."),
 
  dict(q="Written as a fraction in lowest terms, the repeating decimal 0.777... equals", choices=[
    "7/11",
@@ -150,7 +150,7 @@ QUESTIONS = [
    "25 feet",
    "30 feet",
    "40 feet"], ans=3,
-   why="The distance is 10 + 2*sum from k=1 of 10(3/5)^k = 10 + 2(15) = 40 feet."),
+   why="The distance is 10 + 2*sum from k=1 to infinity of 10(3/5)^k = 10 + 2(15) = 40 feet."),
 
  dict(q="sum from n=0 to infinity of (e/3)^n equals", choices=[
    "3/(3 - e)",

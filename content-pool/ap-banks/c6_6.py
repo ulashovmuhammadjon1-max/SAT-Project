@@ -29,7 +29,7 @@ QUESTIONS = [
    "3",
    "19",
    "88"], ans=1,
-   why="Additivity gives int from 5 to 9 = 11 - 8 = 3."),
+   why="Additivity gives int from 5 to 9 of f(x) dx = 11 - 8 = 3."),
  dict(q="If int from 1 to 4 of f(x) dx = 6, what is int from 4 to 1 of f(x) dx?", choices=[
    "-6",
    "0",
@@ -71,7 +71,7 @@ QUESTIONS = [
    "3",
    "7",
    "10"], ans=0,
-   why="int from 3 to 7 = int from 0 to 7 - int from 0 to 3 = 2 - 5 = -3."),
+   why="int from 3 to 7 of f(x) dx = int from 0 to 7 of f(x) dx - int from 0 to 3 of f(x) dx = 2 - 5 = -3."),
  dict(q="Suppose f(x) <= g(x) for every x in [a, b], with a < b. Which statement must be true?", choices=[
    "int from a to b of f(x) dx <= int from a to b of g(x) dx",
    "int from a to b of f(x) dx >= int from a to b of g(x) dx",
@@ -119,7 +119,7 @@ QUESTIONS = [
    "-2",
    "2",
    "10"], ans=0,
-   why="int from 1 to 8 = 4 + 6 = 10, and reversing the limits negates it."),
+   why="int from 1 to 8 of f(x) dx = 4 + 6 = 10, and reversing the limits negates it."),
  dict(q="What is the value of int from 5 to 5 of (x^3 + 2x) dx?", choices=[
    "0",
    "135",
@@ -131,7 +131,7 @@ QUESTIONS = [
    "-4",
    "4",
    "10"], ans=1,
-   why="int from 2 to 6 = 7 - 3 = 4, and reversing the limits gives -4."),
+   why="int from 2 to 6 of f(x) dx = 7 - 3 = 4, and reversing the limits gives -4."),
  dict(q="What is the value of int from -3 to 3 of (x^3 + 4) dx?", choices=[
    "0",
    "12",

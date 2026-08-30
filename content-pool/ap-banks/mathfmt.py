@@ -89,9 +89,10 @@ GLUE = {"from", "to", "of", "as"}
 WEAK_STARTERS = {"a", "A", "I"}
 
 _NUM = re.compile(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?(?!\d)|\d+(?:\.\d+)?")
+_MONEY = re.compile(r"\$\d{1,3}(?:,\d{3})+(?:\.\d+)?(?!\d)|\$\d+(?:\.\d+)?")
 _WORD = re.compile(r"[A-Za-z]+")
 _MULTI_OPS = ["+/-", "<=", ">=", "!=", "->"]
-_SINGLE_OPS = set("+-*/^=<>()[]|,!_'")
+_SINGLE_OPS = set("+-*/^=<>()[]|,!_'" + "\u2212\u00d7\u00f7\u2248\u2192\u2264\u2265\u2260")
 _ELLIPSIS = "..."
 
 
@@ -124,6 +125,11 @@ def lex(s: str):
                 i += len(op)
                 break
         else:
+            m = _MONEY.match(s, i)
+            if m:
+                toks.append(Tok("money", m.group(), i, m.end()))
+                i = m.end()
+                continue
             m = _NUM.match(s, i)
             if m:
                 toks.append(Tok("num", m.group(), i, m.end()))
@@ -165,7 +171,7 @@ def lex(s: str):
                     # written flush against it (H0, p1, x2).
                     j = m.end()
                     dm = re.compile(r"\d+").match(s, j)
-                    if dm and not re.match(r"\d*\.", s[j:]):
+                    if dm and not re.match(r"\d+\.\d", s[j:]):
                         toks.append(Tok("var", (w, dm.group()), i, dm.end()))
                         i = dm.end()
                         continue
@@ -210,6 +216,24 @@ class Num(Node):
         # `{,}` keeps KaTeX from spacing a thousands separator as punctuation.
         return self.v.replace(",", "{,}")
 
+    def txt(self): return self.v
+
+
+class Run(Node):
+    """A letter run written flush in the source: `kx`, `xh`, `dA`. It is a
+    product, but it carries no whitespace and no signal of its own."""
+
+    def __init__(self, letters): self.letters = letters
+    def tex(self): return "".join(self.letters)
+    def txt(self): return "".join(self.letters)
+
+
+class Money(Node):
+    """`$1,120`. Not a signal on its own -- a bare price stays prose -- but it
+    may sit inside an expression so an equation is not cut in half at it."""
+
+    def __init__(self, v): self.v = v
+    def tex(self): return r"\$" + self.v[1:].replace(",", "{,}")
     def txt(self): return self.v
 
 
@@ -363,7 +387,7 @@ class Post(Node):
 class Neg(Node):
     strong = True
 
-    SIGN = {"+": "+", "-": "-", "+/-": r"\pm "}
+    SIGN = {"+": "+", "-": "-", "+/-": r"\pm ", "\u2212": "-"}
 
     def __init__(self, sign, arg): self.sign, self.arg = sign, arg
     def tex(self): return self.SIGN[self.sign] + self.arg.tex()
@@ -393,10 +417,13 @@ class Mul(Node):
     def tex(self):
         out = self.parts[0].tex()
         for op, p in zip(self.ops, self.parts[1:]):
-            if op == "*":
+            if op in ("*", TIMES):
                 rhs = p.tex()
-                out += (r" \cdot " + rhs if not rhs or rhs[0].isdigit()
-                        else _join(out, rhs))
+                if op == TIMES:
+                    out += r" \times " + rhs
+                else:
+                    out += (r" \cdot " + rhs if not rhs or rhs[0].isdigit()
+                            else _join(out, rhs))
             elif op == "":
                 # A differential trailing a product wants the thin space that
                 # every calculus text puts there: x\,dy, not xdy.
@@ -409,7 +436,7 @@ class Mul(Node):
     def txt(self):
         out = self.parts[0].txt()
         for op, p in zip(self.ops, self.parts[1:]):
-            out += ("*" if op == "*" else " " if op == "" else "/") + p.txt()
+            out += (" " if op == "" else op) + p.txt()
         return out
 
 
@@ -425,7 +452,8 @@ def _bare(node):
 class Frac(Node):
     strong = True
 
-    def __init__(self, num, den): self.num, self.den = num, den
+    def __init__(self, num, den, sep="/"):
+        self.num, self.den, self.sep = num, den, sep
 
     def tex(self):
         num, sign = self.num, ""
@@ -436,7 +464,7 @@ class Frac(Node):
         return sign + r"\frac{" + _bare(num) + "}{" + _bare(self.den) + "}"
 
     def txt(self):
-        return self.num.txt() + "/" + self.den.txt()
+        return self.num.txt() + self.sep + self.den.txt()
 
 
 class Chain(Node):
@@ -445,7 +473,9 @@ class Chain(Node):
     strong = True
     TEX = {"<=": r" \le ", ">=": r" \ge ", "!=": r" \ne ", "->": r" \to ",
            "=": " = ", "<": " < ", ">": " > ", "+": " + ", "-": " - ",
-           "+/-": r" \pm "}
+           "+/-": r" \pm ",
+           "\u2212": " - ", "\u2248": r" \approx ", "\u2192": r" \to ",
+           "\u2264": r" \le ", "\u2265": r" \ge ", "\u2260": r" \ne "}
 
     def __init__(self, parts, ops): self.parts, self.ops = parts, ops
 
@@ -513,7 +543,11 @@ class ParseError(Exception):
 # Parser
 # --------------------------------------------------------------------------
 
-RELOPS = {"=", "<", ">", "<=", ">=", "!=", "->"}
+RELOPS = {"=", "<", ">", "<=", ">=", "!=", "->",
+          "\u2248", "\u2192", "\u2264", "\u2265", "\u2260"}
+# Unicode spellings of operators the ASCII notation also has. Each keeps its
+# own character in txt(), so the round trip still compares like for like.
+MINUS = "\u2212"; TIMES = "\u00d7"; DIVIDE = "\u00f7"
 
 # Operators either side of a letter run that make it arithmetic rather than a
 # hyphenated English word. Deliberately excludes `,`, `(` and `)`.
@@ -533,11 +567,16 @@ STOPWORDS = {
     "st", "nd", "rd", "th",
     # unit abbreviations, which also sit flush against a number
     "cm", "mm", "km", "kg", "ml", "oz", "ft", "hr", "yr", "am", "pm", "sec",
+    "vs",
 }
 
 # Words that turn `sum` into an English noun rather than a summation sign.
 # "the third partial sum S_3" is not sigma-notation; "then sum a_n" is.
 SUM_IS_A_NOUN_AFTER = {"partial", "the", "a", "an", "its", "their", "whose"}
+
+# Determiners that make `infinity` the English noun rather than the symbol.
+# "an infinity of ideas" is not the point at the end of the number line.
+INFINITY_IS_A_NOUN_AFTER = {"an", "a", "the"}
 
 
 class Parser:
@@ -614,7 +653,7 @@ class Parser:
 
     def additive(self):
         parts, ops = [self.term()], []
-        while self.at_op("+", "-", "+/-"):
+        while self.at_op("+", "-", "+/-", MINUS):
             save = self.i
             op = self.eat().val
             try:
@@ -633,7 +672,7 @@ class Parser:
         what lets `/` become a real \\frac without guessing.
         """
         node = self.implicit()
-        while self.at_op("*", "/"):
+        while self.at_op("*", "/", TIMES, DIVIDE):
             save = self.i
             op = self.eat().val
             try:
@@ -641,7 +680,8 @@ class Parser:
             except ParseError:
                 self.i = save
                 break
-            node = Frac(node, rhs) if op == "/" else Mul([node, rhs], ["*"])
+            node = (Frac(node, rhs, op) if op in ("/", DIVIDE)
+                    else Mul([node, rhs], [op]))
         # `d/dx[f(x) g(x)]`: the differential closes the denominator, so the
         # operand the derivative acts on has to be re-attached here. Narrowed
         # to a differential denominator on purpose -- every other quotient
@@ -673,6 +713,11 @@ class Parser:
                 break
             if p.kind == "text" and not self._var_run():
                 break
+            # `50 a year`: the article is not a factor.
+            if (p.kind == "var" and p.val[0] in WEAK_STARTERS and not p.val[1]
+                    and not (self.peek(1) is not None and self.peek(1).kind == "op"
+                             and self.peek(1).val in ("_", "'", "^"))):
+                break
             if p.kind == "diff" and self.integrand:
                 break
             if p.kind == "op" and p.val not in ("(", "[", "|", "-"):
@@ -681,7 +726,13 @@ class Parser:
             if p.kind == "op" and p.val == "-":
                 break
             # `|` is only a factor when it opens a balanced group.
-            if getattr(parts[-1], "is_diff", False):
+            if getattr(parts[-1], "is_diff", False) or isinstance(parts[-1], Money):
+                break
+            # Two numbers side by side are never a product. `1 4 9 2 1 7 7 6`
+            # is a question ABOUT eight separate digits, and math mode would
+            # swallow the spaces and print 14921776 -- a conversion that
+            # round-trips clean and still destroys the question.
+            if isinstance(parts[-1], Num) and p.kind == "num":
                 break
             try:
                 parts.append(self.power())
@@ -716,6 +767,10 @@ class Parser:
         node = self.atom()
         while True:
             if self.at_op("'"):
+                nxt = self.peek(1)
+                if (nxt is not None and nxt.kind == "var" and nxt.val[0] == "s"
+                        and not nxt.val[1] and nxt.start == self.peek().end):
+                    return node          # possessive: `M's`, not a derivative
                 marks = ""
                 while self.at_op("'"):
                     marks += self.eat().val
@@ -795,7 +850,7 @@ class Parser:
                     self.depth = save_depth
                     self.i = save
                     raise
-            if p.val in ("-", "+", "+/-"):
+            if p.val in ("-", "+", "+/-", MINUS):
                 self.eat()
                 return Neg(p.val, self.power())
             raise ParseError(f"unexpected {p.val!r}")
@@ -806,12 +861,14 @@ class Parser:
             # brackets fails the whole fragment instead of being split up.
             if self._var_run():
                 self.eat()
-                parts = [Var(ch) for ch in p.val]
-                return Mul(parts, [""] * (len(parts) - 1))
+                return Run(list(p.val))
             raise ParseError(f"prose {p.val!r}")
         if p.kind == "ellipsis":
             self.eat()
             return Ellipsis_()
+        if p.kind == "money":
+            self.eat()
+            return Money(p.val)
         if p.kind == "num":
             self.eat()
             return Num(p.val)
@@ -825,6 +882,11 @@ class Parser:
             self.eat()
             return Named(p.val[0], GREEK[p.val[0]], p.val[1])
         if p.kind == "named":
+            if p.val in ("infinity", "inf"):
+                prev = self.peek(-1)
+                if (prev is not None and prev.kind == "text"
+                        and prev.val.lower() in INFINITY_IS_A_NOUN_AFTER):
+                    raise ParseError("`infinity` is a noun here")
             self.eat()
             return Named(p.val, NAMED[p.val])
         if p.kind == "namedsub":
@@ -952,13 +1014,30 @@ class Parser:
 # --------------------------------------------------------------------------
 
 def _norm(s: str) -> str:
-    return re.sub(r"\s+", "", s)
+    """Normalize for the round-trip comparison.
+
+    Whitespace is collapsed, EXCEPT between two letters, where it is a word
+    boundary. Stripping every space made the gate blind to the one way a
+    conversion can lose meaning while keeping every character: welding two
+    English words into one symbol run. `($900b vs $600b)` parsed as a product
+    and round-tripped clean under the old rule because `$900bvs$600b` has the
+    same characters as the source. It does not have the same spaces.
+    """
+    s = re.sub(r"\s+", " ", s)
+    out = []
+    for j, ch in enumerate(s):
+        if ch == " ":
+            if 0 < j < len(s) - 1 and s[j - 1].isalpha() and s[j + 1].isalpha():
+                out.append(" ")
+            continue
+        out.append(ch)
+    return "".join(out)
 
 
 def _startable(toks, i) -> bool:
     tok = toks[i]
-    if tok.kind in ("num", "greek", "greeksub", "named", "namedsub", "func",
-                    "bigop", "diff"):
+    if tok.kind in ("num", "money", "greek", "greeksub", "named", "namedsub",
+                    "func", "bigop", "diff"):
         return True
     if tok.kind == "var":
         if tok.val[0] not in WEAK_STARTERS or tok.val[1]:
@@ -966,10 +1045,10 @@ def _startable(toks, i) -> bool:
         # "a" is usually the article, but `a_n`, `a'` and `a^2` are symbols.
         nxt = toks[i + 1] if i + 1 < len(toks) else None
         return nxt is not None and nxt.kind == "op" and nxt.val in (
-            "_", "'", "^", "=", "<", ">", "<=", ">=", "!=", "->", "/", "*",
+            "_", "^", "=", "<", ">", "<=", ">=", "!=", "->", "/", "*",
             "+", "-")
     if tok.kind == "op":
-        if tok.val in ("(", "[", "|", "-", "+/-", "<"):
+        if tok.val in ("(", "[", "|", "-", "+/-", "<", MINUS):
             return True
         # A `+` may open a fragment only when it is written flush against what
         # follows -- `+infinity`, `+1/5`. With a space after it (`x + h^2`) it
@@ -1013,8 +1092,16 @@ def convert(text: str, rejects=None):
         # hyphen of a compound, not a minus: `Carbon-14`, `2-by-2`, `stem-4`.
         # Nothing is lost by refusing here -- a real `x-1` starts its fragment
         # at the `x`, never at the sign.
-        if (tok.kind == "op" and tok.val in ("-", "+", "+/-")
+        if (tok.kind == "op" and tok.val in ("-", "+", "+/-", "\u2212")
                 and tok.start > 0 and text[tok.start - 1].isalnum()):
+            i += 1
+            continue
+        # `--` is an em dash, and a token right after an apostrophe is the tail
+        # of a possessive (`N's 3`), not the start of an expression.
+        if tok.kind == "op" and tok.val == "-" and text[tok.start:tok.start + 2] == "--":
+            i += 1
+            continue
+        if tok.start > 0 and text[tok.start - 1] == "'":
             i += 1
             continue
         p = Parser(toks, i)
