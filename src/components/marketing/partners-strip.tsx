@@ -2,6 +2,21 @@ import { prisma } from "@/lib/prisma";
 import { Reveal } from "@/components/shared/motion";
 
 /**
+ * Where to actually fetch a partner's logo from.
+ *
+ * A stored `/api/images/...` path needs a signed-in session, and this strip is
+ * rendered on the logged-out landing page, so those go through the public
+ * partner-logo route instead. An absolute URL is already public and is used
+ * as-is. Keyed on the partner id rather than the path, so the public route can
+ * only ever serve a logo a published partner points at.
+ */
+function logoSrc(partner: { id: string; logoUrl: string }): string {
+  return /^https?:\/\//i.test(partner.logoUrl)
+    ? partner.logoUrl
+    : `/api/partner-logo/${partner.id}`;
+}
+
+/**
  * Partner logos, each linking out to the partner.
  *
  * Rendered in two places, because they have different audiences: the marketing
@@ -59,7 +74,7 @@ export async function PartnersStrip({ compact = false }: { compact?: boolean }) 
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={p.logoUrl}
+                  src={logoSrc(p)}
                   alt=""
                   aria-hidden
                   className="h-10 w-10 rounded-full object-cover ring-1 ring-border transition-transform duration-300 group-hover:scale-105"
@@ -105,7 +120,7 @@ export async function PartnersStrip({ compact = false }: { compact?: boolean }) 
                     config before it would render at all. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={p.logoUrl}
+                  src={logoSrc(p)}
                   alt=""
                   aria-hidden
                   className="h-16 w-16 rounded-full object-cover ring-1 ring-border transition-transform duration-300 group-hover:scale-105"

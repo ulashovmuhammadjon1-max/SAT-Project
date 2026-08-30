@@ -29,7 +29,14 @@ const PUBLIC_ROUTES = [
 // published paper at /journal/<slug> was redirecting to the login page while
 // the index it is linked from stayed open. A paper nobody can read without an
 // account is not published, and a citation of one would break for the reader.
-const PUBLIC_PREFIXES = ["/journal/"];
+const PUBLIC_PREFIXES = [
+  "/journal/",
+  // Partner logos are shown on the logged-out landing page, so the route that
+  // serves them has to be reachable without a session. It takes a Partner id
+  // and serves only what a PUBLISHED partner row points at, so opening it up
+  // exposes nothing else in the blob store.
+  "/api/partner-logo/",
+];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
