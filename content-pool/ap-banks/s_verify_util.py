@@ -1,4 +1,4 @@
-"""Shared checking helpers for the AP Statistics (Units 3-4, inference) verifiers.
+"""Shared checking helpers for the AP Statistics Units 4-5 verifiers.
 
 Every ``verify_s<unit>_<topic>.py`` in this directory imports this module. The
 contract each verifier honours:
@@ -47,7 +47,7 @@ _UNIT_WORDS = {
     "percentage", "than", "less", "greater", "more", "at", "least", "most",
     "mean", "standard", "deviation", "variance", "median", "with", "against",
     "for", "from", "mm", "grams", "kilograms", "cm2", "b", "r", "se", "slope",
-    "intercept", "chirps", "mpg", "beats",
+    "intercept", "chirps", "mpg", "beats", "sample", "margin", "error",
 }
 
 
