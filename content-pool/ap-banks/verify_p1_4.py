@@ -85,6 +85,16 @@ CLAIMS = [
   "EK 1.4.A.6: plasticity is the brain's ability to rewire itself or create new connections, generally allowing a damaged part's function to be assumed by a different part."),
  ("EEG, which records electrical activity over time",
   "EK 1.4.A.7 lists EEG and fMRI scans, case studies, and surgical procedures such as lesioning as brain research methods. The stem asks for continuous electrical recording during a change of state, which is the EEG's specific capability and the basis for the sleep-stage evidence in Topic 1.5."),
+ ("fMRI, which shows where activity is occurring",
+  "EK 1.4.A.7 lists EEG and fMRI scans together, so the item has to separate them on what each actually delivers: an EEG gives electrical activity over TIME (item 25), an fMRI gives activity by LOCATION. Asking participants which part of the brain they used is included as a distractor because introspection cannot report on neural localization at all."),
+ ("may not generalize to people in general",
+  "EK 1.4.A.7 lists case studies among brain research methods. The limit on a single-case design is generalizability; the distractors misattribute to case studies the requirement of random assignment (which belongs to experiments) and the power to establish a cause (which a single case cannot)."),
+ ("alertness, some voluntary movement",
+  "EK 1.4.A.2, near verbatim: the reticular activating system and the brain's reward center generally control alertness, some voluntary movement, eye movement, and some types of learning, cognition, and emotion. The distractors are the assignments EK 1.4.A.1 and 1.4.A.3 give to the brain stem and cerebellum, plus the parietal somatosensory cortex from 1.4.A.4.iii."),
+ ("impairment of language",
+  "EK 1.4.A.5.i states that damage to Broca's area or Wernicke's area can lead to aphasia. The term therefore denotes a language deficit specifically; each distractor names a real deficit from a different structure in this topic, so the item tests what aphasia IS rather than whether the student recognises the word."),
+ ("typically located in the left hemisphere",
+  "EK 1.4.A.5.i: areas of the brain that affect language are typically located in the left hemisphere and include Broca's and Wernicke's areas. The framework says 'typically', which is why the option asserting an even distribution in EVERY person is wrong -- the key does not claim a universal, only a typical, location."),
 ]
 
-psych_check.check(p1_4, CLAIMS, per_topic=25, n_choices=4)
+psych_check.check(p1_4, CLAIMS, per_topic=30, n_choices=4)

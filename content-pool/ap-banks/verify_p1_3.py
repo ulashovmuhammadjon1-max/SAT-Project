@@ -82,6 +82,16 @@ CLAIMS = [
   "EK 1.3.C.3 identifies tolerance as the state in which more of a drug is needed for the effect it previously produced. Withdrawal, in the same EK, is what follows stopping."),
  ("withdrawal",
   "EK 1.3.C.3: addiction can create significant withdrawal symptoms if the psychoactive drug is no longer consumed. Item 24 and this item are keyed to the two halves of that sentence so the pair cannot be answered by recognising one word."),
+ ("disrupted",
+  "EK 1.3.B.1 names multiple sclerosis and myasthenia gravis as the conditions that can follow disruptions to the orderly process of neural transmission. They are the framework's own examples, so the item does not import outside clinical content."),
+ ("electrical charge of a neuron shifts",
+  "EK 1.3.B.1 lists depolarization among the steps of neural transmission. The distractors are three other terms from the same EK -- reuptake, resting potential -- plus a drug mechanism from EK 1.3.C.1, so the item discriminates inside the list rather than against unrelated material. The sodium-potassium pump, excluded by the same EK, is deliberately absent from the explanation."),
+ ("dopamine",
+  "Dopamine is on EK 1.3.B.2's closed list; its course-level role is reward, motivation, and movement, which is also why EK 1.4.A.2's brain reward center is described in those terms. All three distractors are drawn from the same closed list."),
+ ("serotonin",
+  "Serotonin is on EK 1.3.B.2's closed list and denotes the neurotransmitter linked to mood, sleep, and appetite. The distractors -- glutamate, substance P, acetylcholine -- are all on the same list with different assigned roles, so the item tests within-list discrimination."),
+ ("oxytocin",
+  "EK 1.3.B.3's hormone list is closed: adrenaline, leptin, ghrelin, melatonin, oxytocin. Oxytocin denotes social bonding. Each wrong option attaches one listed hormone to a DIFFERENT listed hormone's role (melatonin to hunger, leptin to arousal, ghrelin to sleep timing), so every option is inside the course and only the pairing is at issue."),
 ]
 
-psych_check.check(p1_3, CLAIMS, per_topic=25, n_choices=4)
+psych_check.check(p1_3, CLAIMS, per_topic=30, n_choices=4)

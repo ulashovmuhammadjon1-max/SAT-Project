@@ -176,4 +176,34 @@ QUESTIONS = [
    "an antagonist effect",
    "a refractory period"], ans=0,
    why="EK 1.3.C.3 states that addiction can create significant withdrawal symptoms if the drug is no longer consumed."),
+ dict(q="Multiple sclerosis and myasthenia gravis are used in the AP Psychology course as examples of", choices=[
+   "disorders that arise when the process of neural transmission is disrupted",
+   "psychoactive drugs that act as antagonists",
+   "hormones that act outside the nervous system",
+   "stages of the sleep cycle identified by EEG"], ans=0,
+   why="EK 1.3.B.1 names multiple sclerosis and myasthenia gravis as conditions that can follow disruptions to the orderly process of neural transmission."),
+ dict(q="Depolarization refers to the moment when", choices=[
+   "the electrical charge of a neuron shifts, allowing the signal to travel down the cell",
+   "a neurotransmitter is reabsorbed by the cell that released it",
+   "the neuron returns to its stable state before any stimulation",
+   "a drug blocks a receptor on the receiving neuron"], ans=0,
+   why="EK 1.3.B.1 lists depolarization among the steps of neural transmission; it is the change in the neuron's electrical state that carries the signal, as distinct from reuptake, resting potential, and the action of an antagonist."),
+ dict(q="Which neurotransmitter on the AP Psychology list is most closely associated with reward, motivation, and the control of movement?", choices=[
+   "dopamine",
+   "substance P",
+   "GABA",
+   "acetylcholine"], ans=0,
+   why="Dopamine is on EK 1.3.B.2's closed list and is the neurotransmitter tied to reward and motivation as well as movement, which connects it to the brain's reward center in EK 1.4.A.2."),
+ dict(q="A physician prescribes a drug intended to raise the availability of the neurotransmitter most closely linked to mood, sleep, and appetite. That neurotransmitter is", choices=[
+   "serotonin",
+   "glutamate",
+   "substance P",
+   "acetylcholine"], ans=0,
+   why="Serotonin is on EK 1.3.B.2's closed list and is the neurotransmitter associated with mood, sleep, and appetite; the others on the list carry excitatory signalling, pain transmission, and muscle activation respectively."),
+ dict(q="Which pairing of a hormone with its role is correct, according to the hormones covered in AP Psychology?", choices=[
+   "oxytocin — social bonding and attachment",
+   "melatonin — the sensation of hunger",
+   "leptin — preparation of the body for vigorous action",
+   "ghrelin — the timing of the sleep-wake cycle"], ans=0,
+   why="EK 1.3.B.3's closed list is adrenaline, leptin, ghrelin, melatonin, and oxytocin; oxytocin is the bonding hormone, while the other three options each attach a listed hormone to another listed hormone's role."),
 ]

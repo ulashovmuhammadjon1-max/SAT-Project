@@ -173,4 +173,34 @@ QUESTIONS = [
    "a case study of a single patient with an unusual injury",
    "a survey of participants' self-reported alertness"], ans=0,
    why="EK 1.4.A.7 lists scans including EEG and fMRI, case studies, and surgical procedures such as lesioning as the methods of brain research; recording ongoing electrical activity over time is specifically what an EEG does, and it is the method Topic 1.5 relies on for sleep stages."),
+ dict(q="A researcher wants to see which specific regions of the brain become more active while participants solve a word puzzle. The most appropriate technique is", choices=[
+   "an fMRI, which shows where activity is occurring in the brain",
+   "a lesion, which removes tissue to observe the consequence",
+   "a survey asking participants which part of the brain they used",
+   "a naturalistic observation of participants solving puzzles at home"], ans=0,
+   why="EK 1.4.A.7 lists fMRI among the scans used in brain research; unlike an EEG, which records overall electrical activity over time, an fMRI localizes activity to particular regions."),
+ dict(q="Much of what is known about the frontal lobes comes from case studies of individual patients with unusual injuries. The main limitation of this evidence is that", choices=[
+   "findings from one unusual patient may not generalize to people in general",
+   "case studies cannot describe a patient's behavior in any detail",
+   "case studies require random assignment, which is rarely possible",
+   "case studies are the only method that can establish a cause"], ans=0,
+   why="EK 1.4.A.7 lists case studies among the methods of brain research, and the standard limit on a single-case design is generalizability, not depth of description."),
+ dict(q="The brain's reward center is grouped in the AP Psychology framework with structures that control", choices=[
+   "alertness, some voluntary movement, and some types of learning, cognition, and emotion",
+   "breathing, heart rate, and other basic life functions",
+   "the interpretation of touch sensitivity",
+   "the coordination of balance while walking"], ans=0,
+   why="EK 1.4.A.2 groups the reticular activating system and the brain's reward center together as generally controlling alertness, some voluntary movement, eye movement, and some types of learning, cognition, and emotion."),
+ dict(q="Aphasia is best defined as", choices=[
+   "an impairment of language that can follow damage to Broca's or Wernicke's area",
+   "a loss of the ability to form new memories after damage to the hippocampus",
+   "a loss of coordination following damage to the cerebellum",
+   "a disruption of breathing following damage to the medulla"], ans=0,
+   why="EK 1.4.A.5.i states that damage to Broca's area or Wernicke's area can lead to aphasia, which is therefore a language impairment rather than a memory, motor, or life-support deficit."),
+ dict(q="According to the AP Psychology framework, the areas of the brain that affect language are", choices=[
+   "typically located in the left hemisphere",
+   "typically located in the right hemisphere",
+   "distributed evenly across both hemispheres in every person",
+   "located in the cerebellum"], ans=0,
+   why="EK 1.4.A.5.i states that areas of the brain that affect language are typically located in the left hemisphere and include Broca's area and Wernicke's area; 'typically' is the framework's own hedge and rules out the claim of an even distribution in every person."),
 ]
