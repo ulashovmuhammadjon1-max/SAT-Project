@@ -32,8 +32,6 @@ legislative body" visible as data. Its three ratios are recomputed, and so is
 the fact that the larger chamber's new-member count falls and then rises, since
 a distractor claims a monotonic decline.
 """
-import re
-
 import usgov_anchor as ua
 import usgov_check as uc
 import v2_1
@@ -225,30 +223,8 @@ TABLE_CHECKS = {
 }
 
 
-def _notation(module):
-    """No digit-hyphen-digit and no digit-slash-digit: mathfmt reads both as math."""
-    bad = re.compile(r"[0-9]\s*[-/]\s*[0-9]")
-    hits = []
-    for i, item in enumerate(module.QUESTIONS, 1):
-        strings = [item["q"], item["why"]] + list(item["choices"])
-        t = item.get("table")
-        if t:
-            strings += list(t["headers"]) + [c for row in t["rows"] for c in row]
-        for s in strings:
-            m = bad.search(s)
-            if m:
-                hits.append(f"q{i}: {m.group(0)!r} -- mathfmt.convert would typeset this")
-    if hits:
-        print(f"FAIL {module.__name__} notation")
-        for h in hits:
-            print("  -", h)
-        raise SystemExit(1)
-    print(f"OK  {module.__name__} notation: no digit-hyphen-digit or digit-slash-digit "
-          "anywhere, so mathfmt.convert has nothing to read as arithmetic")
-
-
 ua.check(v2_1, ANCHORS, GROUNDING)
-_notation(v2_1)
+ua.notation(v2_1)
 uc.check(v2_1, TABLE_CHECKS)
 
 # WHAT THE REVIEW FOUND

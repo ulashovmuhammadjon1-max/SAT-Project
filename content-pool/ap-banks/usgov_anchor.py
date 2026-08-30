@@ -63,3 +63,43 @@ def check(module, anchors, grounding):
     print(f"OK  {module.__name__} anchors: {len(anchors)} keys pinned to a distinctive "
           f"substring of their own choice text; {len(grounding)} keys traced to a CED "
           "statement, required case, foundational document or constitutional provision")
+
+
+# --- notation ---------------------------------------------------------------
+# export_units.py runs every string through mathfmt.convert on the way out, and
+# that converter reads a hyphen OR a slash between two digits as arithmetic:
+#
+#     "a 5-4 decision"        ->  "a \(5 - 4\) decision"
+#     "the 2024/2025 session" ->  "the \(2024/2025\) session"
+#
+# gov345_check enforces the hyphen half for Units 3 to 5. usgov_check does not
+# enforce either, so Units 1 and 2 carry it here instead. Write "five to four",
+# "ages 18 to 24", or an en dash. The pattern is spelled out rather than using
+# \d so it cannot match a non-ASCII digit and confuse the error message.
+import re as _re
+
+_MATHY = _re.compile(r"[0-9]\s*[-/]\s*[0-9]")
+
+
+def notation(module):
+    """No digit-hyphen-digit and no digit-slash-digit anywhere in the module."""
+    hits = []
+    for i, item in enumerate(module.QUESTIONS, 1):
+        strings = [("stem", item["q"]), ("why", item["why"])]
+        strings += [(f"choice {'ABCDE'[k]}", c) for k, c in enumerate(item["choices"])]
+        t = item.get("table")
+        if t:
+            strings += [("table header", h) for h in t["headers"]]
+            strings += [("table cell", c) for row in t["rows"] for c in row]
+        for label, s in strings:
+            m = _MATHY.search(s)
+            if m:
+                hits.append(f"q{i} {label}: {m.group(0)!r} -- mathfmt.convert would "
+                            "typeset this as arithmetic")
+    if hits:
+        print(f"FAIL {module.__name__} notation")
+        for h in hits:
+            print("  -", h)
+        raise SystemExit(1)
+    print(f"OK  {module.__name__} notation: no digit-hyphen-digit or digit-slash-digit "
+          "anywhere, so mathfmt.convert has nothing to read as arithmetic")
