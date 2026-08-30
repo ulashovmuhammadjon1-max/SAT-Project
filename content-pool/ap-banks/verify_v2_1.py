@@ -264,3 +264,12 @@ uc.check(v2_1, TABLE_CHECKS)
 #     the rationale to say so explicitly, because a student who confuses the two
 #     chamber sizes gets several later items wrong in the same direction. The
 #     rationale now states which chamber is smaller rather than leaving it.
+#
+# And one real defect, caught by the arithmetic rather than by reading: item 24's
+# key claimed the larger chamber seated "at least five times as many" new members
+# in every election. The three ratios are 62 to 9, 48 to 11 and 71 to 8 -- about
+# 6.9, 4.4 and 8.9 -- so the middle election falsifies FIVE while FOUR holds
+# everywhere. The key now says four, and the check recomputes all three ratios.
+# The keyed choice was still the best of the five options as originally written,
+# which is exactly what makes this kind of near-miss dangerous: nothing about the
+# item looks wrong until the number is actually divided.
