@@ -266,7 +266,7 @@ QUESTIONS = [
    table=_CONFIRM_TABLE,
    choices=[
      "Inaction, not rejection, is the Senate's most common way of defeating a nomination",
-     "Rejection is the Senate's most common way of defeating a nomination",
+     "An outright vote against a nominee is the Senate's usual method of defeat",
      "The Senate confirms every judicial nominee it considers",
      "The Senate treats Cabinet and judicial nominations identically",
      "The Senate rejects more nominees than it confirms in every category"], ans=0,
