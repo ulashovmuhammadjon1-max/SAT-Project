@@ -10,9 +10,9 @@ QUESTIONS = [
    "2*pi * int from a to b of f(x)^2 dx",
    "int from a to b of f(x)^2 dx"], ans=0,
    why="Each disc has radius f(x) and area pi*f(x)^2, and the thickness is dx."),
- dict(q="A region is revolved about the y-axis using discs. The volume is", choices=[
-   "pi * int of (the radius as a function of y)^2 dy",
-   "pi * int of (the radius as a function of x)^2 dx",
+ dict(q="A region is revolved about the y-axis using discs, and r denotes the radius of a disc. The volume is", choices=[
+   "pi * int of r(y)^2 dy",
+   "pi * int of r(x)^2 dx",
    "2*pi * int of x dy",
    "pi * int of y^2 dx"], ans=0,
    why="Discs perpendicular to the y-axis are indexed by y, so both the radius and the thickness must be expressed in y."),

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MathContent } from "@/components/shared/math-content";
 import { notFound } from "next/navigation";
 import {
   ArrowRight,
@@ -301,7 +302,7 @@ function QuestionReview({ q }: { q: ApResultQuestion }) {
                     key={i}
                     className="border border-border px-3 py-1.5 text-left font-semibold bg-secondary/60"
                   >
-                    {h}
+                    <MathContent html={h} />
                   </th>
                 ))}
               </tr>
@@ -311,7 +312,7 @@ function QuestionReview({ q }: { q: ApResultQuestion }) {
                 <tr key={i}>
                   {row.map((cell, j) => (
                     <td key={j} className="border border-border px-3 py-1.5">
-                      {cell}
+                      <MathContent html={cell} />
                     </td>
                   ))}
                 </tr>
@@ -321,7 +322,7 @@ function QuestionReview({ q }: { q: ApResultQuestion }) {
         </div>
       )}
 
-      <p className="mt-3 text-[15px] leading-relaxed">{q.stem}</p>
+      <MathContent className="mt-3 block text-[15px] leading-relaxed" html={q.stem} />
 
       <ul className="mt-3 space-y-1.5">
         {q.choices.map((choice, i) => {
@@ -358,9 +359,9 @@ function QuestionReview({ q }: { q: ApResultQuestion }) {
       </ul>
 
       {q.explanation && (
-        <p className="mt-3 rounded-lg bg-secondary/50 px-3 py-2.5 text-sm leading-relaxed text-muted-foreground">
-          {q.explanation}
-        </p>
+        <div className="mt-3 rounded-lg bg-secondary/50 px-3 py-2.5 text-sm leading-relaxed text-muted-foreground">
+          <MathContent html={q.explanation} />
+        </div>
       )}
     </div>
   );

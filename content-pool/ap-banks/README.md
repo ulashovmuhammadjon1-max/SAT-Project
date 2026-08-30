@@ -67,3 +67,60 @@ A question needing data carries `table=dict(headers=[...], rows=[[...]])`, and t
 runner renders it above the stem. Every table's arithmetic is verified in a
 comment at the top of its module — the marginal, average, and total columns are
 worked out there so a reviewer can check the key without recomputing the table.
+
+## Typesetting: `mathfmt.py`
+
+The modules are written in the plain-text notation the briefs specify
+(`x^2`, `1/2`, `int from 0 to 4 of f(x) dx`). `export_units.py` runs every
+string through `mathfmt.convert` on the way out, which parses that notation and
+emits KaTeX, so students see real exponents, stacked fractions, integral signs
+and Greek letters. The modules themselves stay plain: that is what the 167
+`verify_*.py` files assert against and what a human edits.
+
+CLAUDE.md's rule is "never bulk auto-convert Math text to LaTeX", written about
+the regex converters that caused every Test 3/4 defect. This one is different
+in kind and is gated twice, which is the only reason it is allowed to run:
+
+- **Round trip.** The parse tree is rendered back to plain text and compared to
+  the source fragment. A mismatch of one character and the fragment is left
+  alone. A conversion can therefore only re-typeset a string, never change what
+  it says.
+- **KaTeX.** `check_katex.mjs` parses every emitted span with KaTeX itself, at
+  `throwOnError: true` — production renders with `throwOnError: false`, which
+  would silently show a broken span as red source text instead of failing.
+
+Both checks carry their own positive AND negative controls, because a checker
+that has never rejected anything is indistinguishable from one wired to
+nothing. `test_mathfmt.py` has 46 positive controls, 38 negative controls
+(prose that must come back byte-identical), and a gate control that corrupts
+the renderer on purpose and asserts the round trip catches it.
+
+Run it as:
+
+    python3 test_mathfmt.py                  # must be 0 failing
+    python3 export_units.py <modules> --subject CALC_BC --out bank.json
+    node check_katex.mjs <spans.json>
+
+Current state over all 167 Calculus and Statistics modules: 29,104 strings,
+13,497 typeset, 20,541 spans, **0 round-trip rejections and 0 KaTeX failures**.
+
+### It is scoped to Calculus and Statistics on purpose
+
+Do **not** run it over the Microeconomics, Macroeconomics or Psychology banks.
+Measured on those 109 modules it damages 557 strings: thousands separators
+split into fractions (`300/6,000`), `$50 a year` read as `$50a`, CED reference
+codes mangled (`EK 3.5.A.1`), and "an infinity of ideas" turned into `∞`. Those
+banks are prose with numbers in it, not mathematics, and the notation the
+converter is built to read is not what they are written in.
+
+### To re-apply to the live database
+
+Converting the LIVE rows, not re-exporting the modules, is deliberate:
+re-exporting re-runs the choice shuffle, and `ApQuestionAttempt` stores the
+index a student selected, so a moved choice silently rewrites history.
+
+    PROD_URL=... node scripts/ap-latex-dump.mjs dump.json CALC_AB CALC_BC STATISTICS
+    python3 convert_db_rows.py dump.json patch.json
+    node check_katex.mjs patch.json.spans.json
+    PROD_URL=... node scripts/ap-latex-apply.mjs patch.json          # dry run
+    PROD_URL=... node scripts/ap-latex-apply.mjs patch.json --apply

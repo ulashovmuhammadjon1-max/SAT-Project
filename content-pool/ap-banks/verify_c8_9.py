@@ -23,7 +23,7 @@ for i, item in enumerate(Q, 1):
     assert 0 <= item["ans"] < 4, i
 
 assert key(1) == "pi * int from a to b of f(x)^2 dx"
-assert key(2).startswith("pi * int of (the radius as a function of y)^2 dy")
+assert key(2).startswith("pi * int of r(y)^2 dy")
 assert key(3).startswith("the distance from the x-axis to the curve")
 
 assert disc(x, 0, 3) == 9 * sp.pi and num(4) == 9 * sp.pi

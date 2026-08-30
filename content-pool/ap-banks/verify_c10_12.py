@@ -84,7 +84,7 @@ for k in range(1, 9):
     dk = sp.diff(sp.sin(x), x, k)
     assert dk in (sp.sin(x), sp.cos(x), -sp.sin(x), -sp.cos(x))
     assert sp.maximum(dk ** 2, x, sp.S.Reals) == 1   # so |dk| <= 1 everywhere
-expect(24, "every derivative of sin or cos is +/- sin or +/- cos, and all of those are bounded by 1 in absolute value")
+expect(24, "every derivative of sin or cos is one of sin, cos, -sin and -cos, all of which are bounded by 1 in absolute value")
 
 # --- q4  e^x, P_3, |x| <= 1 ----------------------------------------------------
 b4 = lagrange(sp.exp(x), 0, 3, -1, 1, 1)

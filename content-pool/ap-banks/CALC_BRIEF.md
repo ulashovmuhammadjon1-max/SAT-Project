@@ -28,10 +28,19 @@ QUESTIONS = [
 Calculus multiple-choice format, not the five used in economics. All four
 distinct, `ans` a 0-based index, `why` one sentence.
 
-## Notation: plain text, no LaTeX
+## Notation: plain text in the module, KaTeX on the way out
 
-These render as plain text, with no KaTeX. Write mathematics the way a
-calculator or a textbook's plain-text answer key would:
+Write mathematics the way a calculator or a textbook's plain-text answer key
+would. **This notation is the source of truth and it stays plain** -- every
+`verify_*.py` asserts against these exact strings, and a human editing a
+question edits plain text, not LaTeX.
+
+`export_units.py` typesets it into KaTeX at export time via `mathfmt.py`, so
+students see real fractions, exponents, integral signs and Greek letters
+without anyone hand-writing a backslash. That converter parses the notation
+below into a syntax tree and refuses anything it does not fully understand, so
+**the more exactly a module follows this list, the more of it gets typeset.**
+Anything unrecognized simply stays plain text -- never wrong, just plainer.
 
 - `f'(x)`, `f''(x)`, `dy/dx`, `d^2y/dx^2`
 - `x^2`, `x^(3/2)`, `e^(2x)`, `ln(x)`, `sqrt(x)`, `|x|`
@@ -41,6 +50,12 @@ calculator or a textbook's plain-text answer key would:
 
 Be consistent within a module. Never write a bare `^` inside prose that is not
 an exponent, and never use `$...$`.
+
+Two shapes the converter cannot read, so avoid them:
+- an integral or sum with no integrand -- `int from 5 to 9 = 3` (write what is
+  being integrated, or say it in words with no `int`);
+- prose inside a formula -- `int of (the radius as a function of y)^2 dy`
+  (name the function instead: `int of r(y)^2 dy`).
 
 ## Every answer must be verified with sympy — this is the hard rule
 

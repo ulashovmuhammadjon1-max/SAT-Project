@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { MathContent } from "@/components/shared/math-content";
 import { useRouter } from "next/navigation";
 import {
   Bookmark,
@@ -314,7 +315,7 @@ export function TopicRunner({
                             key={i}
                             className="border border-exam-border bg-exam-header px-3 py-1.5 text-left font-semibold"
                           >
-                            {h}
+                            <MathContent html={h} />
                           </th>
                         ))}
                       </tr>
@@ -324,7 +325,7 @@ export function TopicRunner({
                         <tr key={i}>
                           {row.map((cell, j) => (
                             <td key={j} className="border border-exam-border px-3 py-1.5">
-                              {cell}
+                              <MathContent html={cell} />
                             </td>
                           ))}
                         </tr>
@@ -334,7 +335,7 @@ export function TopicRunner({
                 </div>
               )}
 
-              <p className="text-[17px] leading-relaxed">{q.stem}</p>
+              <MathContent className="block text-[17px] leading-relaxed" html={q.stem} />
 
               <div className="mt-5">
                 <AnswerChoiceList
@@ -362,7 +363,7 @@ export function TopicRunner({
                   </p>
                   {result.explanation && (
                     <p className="mt-1.5 text-[14px] leading-relaxed text-exam-muted">
-                      {result.explanation}
+                      <MathContent html={result.explanation} />
                     </p>
                   )}
                 </div>

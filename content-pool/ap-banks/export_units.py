@@ -3,6 +3,12 @@
 Each topic module defines TOPIC = (code, title, unit) and QUESTIONS.
 Choices are shuffled with a per-topic deterministic seed so the answer key
 spreads across A-E; numeric ladders keep their written order.
+
+Math notation is typeset into KaTeX by mathfmt.convert on the way OUT, not in
+the modules themselves. The modules stay in the plain-text notation the briefs
+specified, which is what every verify_*.py asserts against and what a human
+edits; converting here means the two cannot drift, and re-running the export is
+idempotent because convert() is a pure function of the source string.
 """
 import argparse
 from collections import Counter
@@ -11,6 +17,8 @@ import json
 import random
 import re
 import sys
+
+from mathfmt import convert as tex
 
 NUMERICISH = re.compile(
     r"^[\s$€£%\d.,/+\-]*(tons?|utils?|bolts?|units?|steel|coal|cars?|trucks?|cakes?|pies?|"
@@ -125,11 +133,19 @@ def main():
                 choices = [choices[k] for k in order]
                 ans = target
             dist["ABCDE"[ans]] += 1
+            # Typeset AFTER the shuffle, so the conversion cannot disturb
+            # choice order or the answer key.
+            table = item.get("table")
+            if table:
+                table = dict(
+                    headers=[tex(h) for h in table["headers"]],
+                    rows=[[tex(c) for c in row] for row in table["rows"]],
+                )
             out.append(
                 dict(
                     subject=args.subject, unit=unit, topic=code, topicTitle=title, order=i,
-                    stem=item["q"], table=item.get("table"), choices=choices,
-                    correctIndex=ans, explanation=item["why"],
+                    stem=tex(item["q"]), table=table, choices=[tex(c) for c in choices],
+                    correctIndex=ans, explanation=tex(item["why"]),
                 )
             )
     json.dump(out, open(args.out, "w"))

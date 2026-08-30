@@ -169,7 +169,7 @@ QUESTIONS = [
 
  dict(q="For f(x) = sin(x) or f(x) = cos(x), the value M = 1 always works in the Lagrange bound because", choices=[
    "these functions are periodic",
-   "every derivative of sin or cos is +/- sin or +/- cos, and all of those are bounded by 1 in absolute value",
+   "every derivative of sin or cos is one of sin, cos, -sin and -cos, all of which are bounded by 1 in absolute value",
    "their Maclaurin series have alternating signs",
    "their Taylor polynomials have degree at most 5"], ans=1,
    why="Differentiating cycles among sin, cos and their negatives, none of which exceeds 1 in absolute value."),
