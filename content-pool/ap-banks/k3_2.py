@@ -247,7 +247,7 @@ QUESTIONS = [
      "peers, by 4 percentage points",
      "media, by 3 percentage points"], ans=0,
    why="EK IEF-1.C.4 names all five of the table's rows among the agents of socialization, so the item is a comparison within the framework's own list. Taking the absolute difference in each row and comparing them identifies the largest, and each alternative states the correct difference for a different row."),
- dict(q="Which conclusion does the same table best support?",
+ dict(q="Reading the two columns together, which conclusion about the agents named in the two countries is best supported?",
    table=_T_AGENT,
    choices=[
      "Both countries name the same set of agents, all of which the framework lists, but in different proportions",
