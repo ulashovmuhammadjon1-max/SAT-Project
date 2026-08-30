@@ -35,8 +35,22 @@ export async function GET(_request: Request, { params }: { params: { id: string 
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
+  // This logo's stored name contains a space ("2026-08-31 01.09.40-...jpg"),
+  // because the uploader kept the file's original name. The stored path is used
+  // verbatim first, since that is what the blob was written as; the
+  // percent-encoded form is tried only as a fallback, for a row whose path was
+  // saved already encoded. Trying both costs one extra lookup on a cached route
+  // and removes a whole class of "the logo just doesn't show" that is otherwise
+  // invisible until someone loads the page.
+  const candidates = [pathname];
+  const encoded = pathname.split("/").map(encodeURIComponent).join("/");
+  if (encoded !== pathname) candidates.push(encoded);
   try {
-    const result = await get(pathname, { access: "private" });
+    let result = null;
+    for (const candidate of candidates) {
+      result = await get(candidate, { access: "private" }).catch(() => null);
+      if (result?.stream) break;
+    }
     if (!result?.stream) return NextResponse.json({ error: "Not found." }, { status: 404 });
     return new NextResponse(result.stream, {
       headers: {
