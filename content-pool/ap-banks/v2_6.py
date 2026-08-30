@@ -262,7 +262,7 @@ QUESTIONS = [
      "Treaties ratified per year grew faster than executive agreements",
      "Executive orders were the most used instrument in every era",
      "Executive agreements were used less often than treaties in every era"], ans=0,
-   why="Executive agreements run 1, 6, 97 and 215 while treaties run 4, 9, 8 and 3, ending below the early figure. Executive orders fall from 48 to 41 in the last era, and agreements overtake treaties from the late nineteenth century onward."),
+   why="Executive agreements run 1, 6, 97 and 215 while treaties run 4, 9, 8 and 3, ending below the early figure. Executive orders fall from 48 to 41 in the last era, and agreements overtake treaties in the two most recent eras, so they are not always fewer."),
 
  dict(q=_GROWTH + " Which claim about presidential power do these data most directly support?",
    table=_GROWTH_TABLE,
