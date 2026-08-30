@@ -157,35 +157,35 @@ CED. Under the framework confirmed above the same content is **Unit 1 + Unit 2 +
 — it does not include a single inference topic, whereas "Units 1 through 4" of the
 current CED would be more than half inference (Units 3 and 4, 25 of the 55 topics).
 
-The content description is the instruction that is unambiguous, so this bank covers
-the topics that carry that content:
+The research was accepted and the work was re-divided against the confirmed
+framework rather than the retired one. **The split now in force is:**
 
-- **Unit 1**, all 13 topics — one-variable data *and* collecting data
-- **Unit 2**, all 12 topics — two-variable categorical, probability, random variables,
-  binomial, normal, sampling distributions and the CLT
-- **Unit 5**, all 5 topics — "Exploring Two-Variable Data" in the brief's wording:
-  scatterplots, correlation, regression, residuals, least squares
+| agent | scope | topics |
+|---|---|---|
+| this bank | **Unit 1, Unit 2, Unit 3** | 13 + 12 + 15 = **40** |
+| sibling | **Unit 4, Unit 5** | 10 + 5 = **15** |
 
-That is 30 topics. Units 3 and 4 (inference, 25 topics) are **not** covered and are
-the natural next assignment.
+So the descriptive/collecting/probability content of the original brief is covered
+here, plus all of the proportion inference in Unit 3; regression (Unit 5), which is
+the brief's "Exploring Two-Variable Data", moved to the sibling along with Unit 4.
 
-The brief's list of most-missed ideas maps onto these topics as follows, which is a
-second confirmation that this is the intended scope — every one of them lands inside
-Units 1, 2 or 5, and none of them lands in Unit 3 or 4:
+The brief's list of most-missed ideas maps onto CED topics as follows. Note that
+three of them — correlation, influential points, residual plots — land in **Unit 5**
+and are therefore the sibling's to cover, not this bank's:
 
-| idea | topic |
-|---|---|
-| correlation is not causation | 5.2, 1.13 |
-| r unaffected by linear rescaling | 5.2 |
-| influential points vs outliers vs high leverage | 5.4, 5.5 |
-| slope and intercept in context with units | 5.3 |
-| residual plots and what a pattern means | 5.4 |
-| parameter vs statistic | 1.10, 2.9 |
-| random assignment (causation) vs random sampling (generalization) | 1.11, 1.13 |
-| bias vs variability | 1.12, 2.12 |
-| mutually exclusive vs independent | 2.5, 2.7 |
-| binomial vs geometric setting | 2.10 |
-| expected value and SD of a linear combination | 2.9 |
+| idea | topic | whose |
+|---|---|---|
+| correlation is not causation | 5.2, and 1.13 for the design half | shared |
+| r unaffected by linear rescaling | 5.2 | sibling |
+| influential points vs outliers vs high leverage | 5.4, 5.5 | sibling |
+| slope and intercept in context with units | 5.3 | sibling |
+| residual plots and what a pattern means | 5.4 | sibling |
+| parameter vs statistic | 1.2, 3.1 | this bank |
+| random assignment (causation) vs random sampling (generalization) | 1.11, 1.13 | this bank |
+| bias vs variability | 1.12, 3.1, 3.2 | this bank |
+| mutually exclusive vs independent | 2.5, 2.7 | this bank |
+| binomial vs geometric setting | 2.10 | this bank |
+| expected value and SD of a linear combination | 2.9 | this bank |
 
 ## Exam format
 
