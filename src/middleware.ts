@@ -25,10 +25,17 @@ const PUBLIC_ROUTES = [
   "/journal",
 ];
 
+// Prefixes, not exact paths. PUBLIC_ROUTES matches a pathname exactly, so a
+// published paper at /journal/<slug> was redirecting to the login page while
+// the index it is linked from stayed open. A paper nobody can read without an
+// account is not published, and a citation of one would break for the reader.
+const PUBLIC_PREFIXES = ["/journal/"];
+
 export default auth((req) => {
   const { pathname } = req.nextUrl;
   const isPublic =
     PUBLIC_ROUTES.includes(pathname) ||
+    PUBLIC_PREFIXES.some((prefix) => pathname.startsWith(prefix)) ||
     pathname.startsWith("/api/auth") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||

@@ -3,6 +3,7 @@ import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
+import { JOURNAL_PAPERS } from "@/lib/journal/papers";
 
 export const metadata = {
   title: "Journal",
@@ -58,10 +59,39 @@ export default async function JournalPage() {
         <div className="mt-10 space-y-10">
           <section>
             <h2 className="font-display text-xl font-semibold tracking-tight">Published</h2>
-            <p className="mt-4 rounded-2xl border border-dashed border-border px-5 py-10 text-center text-sm text-muted-foreground">
-              The first papers are being written now. Finished work is published here permanently
-              — methodology, findings, and the author&apos;s name.
-            </p>
+            {JOURNAL_PAPERS.length === 0 ? (
+              <p className="mt-4 rounded-2xl border border-dashed border-border px-5 py-10 text-center text-sm text-muted-foreground">
+                The first papers are being written now. Finished work is published here permanently
+                — methodology, findings, and the author&apos;s name.
+              </p>
+            ) : (
+              <ul className="mt-4 space-y-4">
+                {JOURNAL_PAPERS.map((paper) => (
+                  <li key={paper.slug}>
+                    <Link
+                      href={`/journal/${paper.slug}`}
+                      className="block rounded-2xl border border-border px-5 py-5 transition-colors hover:border-foreground/25 hover:bg-secondary/40"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[hsl(190_84%_42%)]">
+                        {paper.field}
+                      </p>
+                      <h3 className="mt-2 font-display text-lg font-semibold leading-snug tracking-tight">
+                        {paper.title}
+                      </h3>
+                      {paper.subtitle ? (
+                        <p className="mt-1 text-sm text-muted-foreground">{paper.subtitle}</p>
+                      ) : null}
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {paper.abstract.slice(0, 240)}…
+                      </p>
+                      <p className="mt-3 text-[13px] text-muted-foreground">
+                        {paper.author} · {paper.readingMinutes} min read
+                      </p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
 
           <section>
