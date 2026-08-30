@@ -90,7 +90,7 @@ QUESTIONS = [
    why="EK 1.5.A.3.ii states that REM sleep is considered paradoxical because it produces waves similar to wakefulness but the body is at its most relaxed."),
  dict(q="Dreaming typically occurs during", choices=[
    "REM sleep",
-   "Stage 1 NREM sleep only",
+   "Stage 1 sleep only",
    "the transition between wakefulness and Stage 1",
    "periods of complete EEG silence"], ans=0,
    why="EK 1.5.A.3.ii states that dreaming typically occurs in REM sleep."),
