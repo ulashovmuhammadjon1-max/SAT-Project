@@ -200,22 +200,25 @@ redesign — the old course had neither. Disorders follow current DSM-5-TR
 terminology in the CED.
 
 **35 topics in total.** Files: `p<unit>_<topic>.py`, e.g. `p1_3.py` for topic
-1.3, with `verify_p1_3.py` beside it. 25 questions each.
+1.3, with `verify_p1_3.py` beside it. **30 questions each** (raised from an
+initial 25 by the coordinator partway through Unit 1; Topics 1.1-1.4 were
+authored at 25 and topped up with five genuinely new items each rather than
+rephrased ones, since the point of the larger count is wider coverage).
 
 ---
 
 ## Validating a psychology module
 
 `export_units.py` defaults to 50 questions per topic for any subject that is not
-Calculus, so **the `--per-topic 25` flag is required** or the export exits:
+Calculus, so **the `--per-topic 30` flag is required** or the export exits:
 
 ```bash
 cd content-pool/ap-banks
-python3 export_units.py p1_1 --subject PSYCHOLOGY --per-topic 25 --out /tmp/chk_p.json
+python3 export_units.py p1_1 --subject PSYCHOLOGY --per-topic 30 --out /tmp/chk_p.json
 ```
 
 There is nothing to verify with sympy here. `verify_p<unit>_<topic>.py` instead
-records, for every one of the 25 items, the specific claim the key rests on and
+records, for every one of the 30 items, the specific claim the key rests on and
 where in the framework it comes from — a definition, a named study, a theory's
 actual prediction — and asserts mechanically that the key text still matches
 that claim. An assertion nobody checked is how a wrong key ships.
@@ -226,3 +229,14 @@ Two further checks the exporter cannot make, which each module's verifier does:
   question with two correct choices is unanswerable. This is psychology's version
   of the duplicate-distractor defect.
 - **No question may depend on a figure.** There are no images in this bank.
+
+`psych_check.py` in this directory implements all of that; call it as
+`psych_check.check(module, CLAIMS, per_topic=30, n_choices=4)`. Its `n_choices`
+default is 5, inherited from the economics banks -- **pass 4 explicitly.**
+
+One mechanical trap worth knowing before it costs a debugging round: the anchor
+test is a plain substring match, so an anchor of "sympathetic nervous system"
+also matches "**para**sympathetic nervous system", and "REM sleep" also matches
+"N**REM** sleep". Where a correct term is a substring of a distractor, put a
+preceding word inside the anchor ("the sympathetic nervous system" does not
+match "the parasympathetic nervous system") or reword the distractor.
