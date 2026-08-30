@@ -25,6 +25,7 @@ economics banks label theirs. Both of its columns sum to 100, which the last
 check confirms, so the shares are a complete distribution and comparable across
 columns.
 """
+import usgov_anchor as ua
 import usgov_check as uc
 import v1_3
 
@@ -226,37 +227,7 @@ TABLE_CHECKS = {
 }
 
 
-def _anchors_and_grounding(module, anchors, grounding):
-    qs = module.QUESTIONS
-    bad = []
-    for i, item in enumerate(qs, 1):
-        anchor = anchors.get(i)
-        if not anchor:
-            bad.append(f"q{i}: no anchor")
-            continue
-        key = item["choices"][item["ans"]]
-        if anchor not in key:
-            bad.append(f"q{i}: anchor {anchor!r} is not in the keyed choice {key!r}")
-        for k, c in enumerate(item["choices"]):
-            if k != item["ans"] and anchor in c:
-                bad.append(f"q{i}: anchor {anchor!r} also appears in distractor "
-                           f"{'ABCDE'[k]}, so it does not identify the key")
-        if len(grounding.get(i, "").strip()) < 40:
-            bad.append(f"q{i}: grounding is missing or too thin to be a citation")
-    for i in sorted(set(anchors) | set(grounding)):
-        if not 1 <= i <= len(qs):
-            bad.append(f"anchor/grounding names q{i}, which does not exist")
-    if bad:
-        print(f"FAIL {module.__name__} anchors/grounding")
-        for b in bad:
-            print("  -", b)
-        raise SystemExit(1)
-    print(f"OK  {module.__name__} anchors: {len(anchors)} keys pinned to a distinctive "
-          f"substring of their own choice text; {len(grounding)} keys traced to a CED "
-          "statement, required case, or foundational document")
-
-
-_anchors_and_grounding(v1_3, ANCHORS, GROUNDING)
+ua.check(v1_3, ANCHORS, GROUNDING)
 uc.check(v1_3, TABLE_CHECKS)
 
 # WHAT THE REVIEW FOUND while writing GROUNDING and the table checks

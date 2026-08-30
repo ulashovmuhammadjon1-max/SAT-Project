@@ -36,6 +36,7 @@ AP_US_GOV_CED.md's statement of the required holdings and against the text of
 Federalist No. 10; the GROUNDING table below is that reading written down so
 the next reader audits it rather than repeats it.
 """
+import usgov_anchor as ua
 import usgov_check as uc
 import v1_2
 
@@ -227,39 +228,7 @@ TABLE_CHECKS = {
 }
 
 
-def _anchors_and_grounding(module):
-    """Every key pinned to its own text, and every key pinned to a citation."""
-    qs = module.QUESTIONS
-    bad = []
-    for i, item in enumerate(qs, 1):
-        anchor = ANCHORS.get(i)
-        if not anchor:
-            bad.append(f"q{i}: no anchor")
-            continue
-        key = item["choices"][item["ans"]]
-        if anchor not in key:
-            bad.append(f"q{i}: anchor {anchor!r} is not in the keyed choice {key!r}")
-        for k, c in enumerate(item["choices"]):
-            if k != item["ans"] and anchor in c:
-                bad.append(f"q{i}: anchor {anchor!r} also appears in distractor "
-                           f"{'ABCDE'[k]}, so it does not identify the key")
-        g = GROUNDING.get(i, "")
-        if len(g.strip()) < 40:
-            bad.append(f"q{i}: grounding is missing or too thin to be a citation")
-    for i in sorted(set(ANCHORS) | set(GROUNDING)):
-        if not 1 <= i <= len(qs):
-            bad.append(f"anchor/grounding names q{i}, which does not exist")
-    if bad:
-        print("FAIL verify_v1_2 anchors/grounding")
-        for b in bad:
-            print("  -", b)
-        raise SystemExit(1)
-    print(f"OK  v1_2 anchors: {len(ANCHORS)} keys pinned to a distinctive substring "
-          f"of their own choice text; {len(GROUNDING)} keys traced to a CED "
-          "statement, required case, or foundational document")
-
-
-_anchors_and_grounding(v1_2)
+ua.check(v1_2, ANCHORS, GROUNDING)
 uc.check(v1_2, TABLE_CHECKS)
 
 # WHAT THE REVIEW FOUND, reading all thirty to write GROUNDING above
