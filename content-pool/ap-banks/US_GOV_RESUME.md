@@ -10,13 +10,13 @@ only US Gov and is kept current by whoever is authoring it.
 |---|---|---|
 | 1 Foundations of American Democracy | 1.1 – 1.9 | **complete**, 9 of 9 |
 | 2 Interactions Among Branches | 2.1 – 2.15 | **complete**, 15 of 15 |
-| 3 Civil Liberties and Civil Rights | 3.1, 3.2, 3.3 | 3 of 13 |
+| 3 Civil Liberties and Civil Rights | 3.1 – 3.4 | 4 of 13 |
 | 4 American Political Ideologies and Beliefs | — | 0 of 10 |
 | 5 Political Participation | — | 0 of 13 |
 
-**27 of 60 topics, 810 questions, every one behind a passing verifier.**
+**28 of 60 topics, 840 questions, every one behind a passing verifier.**
 
-Resume at **3.4 Freedom of the Press** and work in CED order.
+Resume at **3.5 Second Amendment: Right to Bear Arms** and work in CED order.
 
 ## How to author one topic
 
@@ -91,7 +91,7 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
 
 ## Files
 
-- `v1_1.py` … `v3_3.py` — the modules. `verify_v*.py` — one per module.
+- `v1_1.py` … `v3_4.py` — the modules. `verify_v*.py` — one per module.
 - `usgov_check.py`, `gov345_check.py` — the two shared structural checkers.
   Libraries, not scripts: running one prints nothing.
 - `usgov_anchor.py` — the shared anchor/grounding/notation/shape gate.
