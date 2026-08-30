@@ -69,10 +69,10 @@ QUESTIONS = [
 
  dict(q="A population is normally distributed with mean 60 and standard deviation 8. For a random sample of 16 observations, what is the z-score of a sample mean of 63?", choices=[
    "0.375",
+   "0.75",
    "1.50",
    "3.00",
-   "6.00",
-   "0.75"], ans=1,
+   "6.00"], ans=2,
    why="The standard deviation of xbar is 8/sqrt(16) = 2, so z = (63 - 60)/2 = 1.50; 0.375 uses sigma = 8 in the denominator."),
 
  dict(q="A population is normally distributed with mean 250 and standard deviation 40. For random samples of size 16, what value does the sample mean exceed only 10 percent of the time?", choices=[
@@ -132,11 +132,11 @@ QUESTIONS = [
    why="From sigma/sqrt(25) = 1.6, sigma = 1.6 x 5 = 8.00; multiplying by 25 instead of by 5 gives 40."),
 
  dict(q="A population is normally distributed with mean 7.5 grams and standard deviation 0.8 grams. For a random sample of 4 items, what is the probability that the sample mean exceeds 7.9 grams?", choices=[
+   "0.0228",
    "0.1587",
    "0.3085",
    "0.6915",
-   "0.8413",
-   "0.0228"], ans=0,
+   "0.8413"], ans=1,
    why="The standard deviation of xbar is 0.8/2 = 0.4, so z = (7.9 - 7.5)/0.4 = 1.00 and the upper-tail probability is 0.1587; 0.3085 uses sigma = 0.8."),
 
  dict(q="A population has mean 50 and standard deviation 6. A student computes the probability that the mean of a random sample of 9 observations exceeds 52 by finding the area above z = (52 - 50)/6. What is wrong, and what is the correct probability?", choices=[

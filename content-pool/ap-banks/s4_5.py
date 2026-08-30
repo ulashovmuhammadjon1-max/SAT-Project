@@ -25,24 +25,24 @@ QUESTIONS = [
    "0.0180",
    "0.0359",
    "0.0717",
-   "0.9641",
-   "0.4830"], ans=1,
+   "0.4830",
+   "0.9641"], ans=1,
    why="With df = 35 the upper-tail area beyond t = 1.857 is 0.0359; 0.0717 doubles it, which would be right only for a two-sided alternative."),
 
  dict(q="A random sample of 20 observations has mean 27.4 and standard deviation 6.1. For H0: mu = 30 versus Ha: mu < 30, what is the test statistic?", choices=[
+   "-8.525",
+   "-2.600",
    "-1.906",
    "-0.426",
-   "-2.600",
-   "1.906",
-   "-8.525"], ans=0,
+   "1.906"], ans=2,
    why="t = (27.4 - 30)/(6.1/sqrt(20)) = -2.6/1.364 = -1.906; the sign must be kept, and -2.600 is the numerator alone."),
 
  dict(q="For that same test (n = 20, xbar = 27.4, s = 6.1, Ha: mu < 30), what is the p-value?", choices=[
+   "0.0250",
    "0.0359",
    "0.0719",
-   "0.9641",
-   "0.0250",
-   "0.1436"], ans=0,
+   "0.1436",
+   "0.9641"], ans=1,
    why="With df = 19 the lower-tail area below t = -1.906 is 0.0359; the alternative is one-sided, so the area is not doubled."),
 
  dict(q="A random sample of 25 observations has mean 104.2 and standard deviation 9.5. For H0: mu = 100 versus Ha: mu is not equal to 100, what is the test statistic?", choices=[
@@ -55,10 +55,10 @@ QUESTIONS = [
 
  dict(q="For that same two-sided test (n = 25, xbar = 104.2, s = 9.5, mu0 = 100), what is the p-value?", choices=[
    "0.0184",
+   "0.0250",
    "0.0368",
    "0.0736",
-   "0.9632",
-   "0.0250"], ans=1,
+   "0.9632"], ans=2,
    why="With df = 24 the one-tail area beyond t = 2.211 is 0.0184, and a two-sided alternative doubles it to 0.0368; using 0.0184 is the single most common error on a two-sided test."),
 
  dict(q="Ten volunteers each performed a task before and after a training session. The before-minus-after differences in completion time, in seconds, were 3, -1, 4, 2, 5, 0, 3, 6, 1, 2. For H0: mu_d = 0 versus Ha: mu_d > 0, what is the test statistic?", choices=[
@@ -73,8 +73,8 @@ QUESTIONS = [
    "0.0027",
    "0.0054",
    "0.0135",
-   "0.9973",
-   "0.0500"], ans=0,
+   "0.0500",
+   "0.9973"], ans=0,
    why="With df = 9 the upper-tail area beyond t = 3.638 is 0.0027; 0.0054 would be the two-sided p-value."),
 
  dict(q="A test of H0: mu = 12 against Ha: mu > 12 gives a p-value of 0.02. Which is the correct interpretation?", choices=[

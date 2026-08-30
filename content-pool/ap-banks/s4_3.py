@@ -78,11 +78,11 @@ QUESTIONS = [
    why="The standard error is 8/sqrt(20) = 1.789; with df = 19 the critical values are 1.729 and 2.861, giving margins of error 3.093 and 5.118 and widths twice those, so raising the confidence level widens the interval."),
 
  dict(q="For a fixed confidence level, the width of a confidence interval for a population mean is approximately proportional to 1/sqrt(n). To cut the width approximately in half, the sample size should be multiplied by", choices=[
+   "0.5",
    "2",
    "4",
    "8",
-   "16",
-   "0.5"], ans=1,
+   "16"], ans=2,
    why="Halving 1/sqrt(n) requires sqrt(n) to double, so n must be multiplied by 4."),
 
  dict(q="A researcher wants the margin of error for a population mean to be about one third of its current value, keeping the same confidence level and population. By approximately what factor must the sample size be multiplied?", choices=[
@@ -198,11 +198,11 @@ QUESTIONS = [
    why="An interval for a mean is far narrower than the spread of individual observations; describing individual values would require a different kind of interval altogether."),
 
  dict(q="A 90 percent confidence interval for a population mean is (14.8, 21.2). Which value is NOT a plausible value of the population mean at this confidence level?", choices=[
-   "22.0",
    "15.0",
    "18.0",
    "20.5",
-   "21.0"], ans=0,
+   "21.0",
+   "22.0"], ans=4,
    why="Plausible values are exactly those inside the interval; 22.0 lies above the upper endpoint 21.2, and every other listed value lies inside."),
 
  dict(q="Two researchers analyze the same random sample of 30 observations. One reports a 95 percent confidence interval for the population mean; the other reports a 95 percent confidence interval for the population mean using only the first 15 observations. Compared with the first, the second interval is expected to be", choices=[
