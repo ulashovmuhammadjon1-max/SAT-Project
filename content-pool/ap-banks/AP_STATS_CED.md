@@ -92,11 +92,25 @@ Note that the 2019 CED's separate normal-distribution and z-score topics (old 1.
 | 2.11 | The Normal Distribution |
 | 2.12 | Sampling Distributions and the Central Limit Theorem |
 
-**The geometric distribution is not a topic in this framework.** The 2019 CED
-carried it (old 4.12); the Fall 2026 unit at a glance lists only the binomial. It is
-still worth one or two contrast items inside 2.10 — "is this a binomial setting?"
-turns on a fixed number of trials, and the natural foil is waiting for a first
-success — but a topic module for it would be inventing a topic the CED does not have.
+**Two things the 2019 CED taught are gone from Unit 2. Do not author topics for them.**
+
+*The geometric distribution is not a topic in this framework.* The 2019 CED carried
+it (old 4.12); the Fall 2026 unit at a glance lists only the binomial. It is still
+worth one or two contrast items inside 2.10 — "is this a binomial setting?" turns on
+a fixed number of trials, and the natural foil is waiting for a first success — but a
+topic module for it would be inventing a topic the CED does not have.
+
+*Combining random variables is not in the framework either.* The 2019 CED had a topic
+on the mean and standard deviation of a sum or difference of independent random
+variables (old 4.9–4.10). Topic 2.9 here is **only** 2.9.A (calculate the mean and
+standard deviation of one discrete random variable) and 2.9.B (interpret them in
+context) — there is no 2.9.C. A full-text search of the CED for "combin" finds only
+the *pooled* proportion in Unit 3's two-sample tests, which is a different idea.
+
+This matters because "the expected value and standard deviation of a linear
+combination" is a standard item on every review list for the retired course, and it
+was on the brief for this bank. It has no CED topic to attach to now, so no module
+here carries it. If it is ever wanted, it belongs as enrichment, not as a topic.
 
 ### Unit 3 — Inference for Categorical Data: Proportions (15 topics)
 

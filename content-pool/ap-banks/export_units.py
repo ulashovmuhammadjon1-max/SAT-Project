@@ -5,6 +5,7 @@ Choices are shuffled with a per-topic deterministic seed so the answer key
 spreads across A-E; numeric ladders keep their written order.
 """
 import argparse
+from collections import Counter
 import importlib
 import json
 import random
@@ -62,6 +63,39 @@ def main():
         if len(qs) != expected:
             sys.exit(f"{mod_name}: expected {expected} questions, found {len(qs)}")
         rng = random.Random(int(code.replace(".", "")) * 7919)
+
+        # One balanced bag of key positions per choice-count, consumed as the
+        # questions are walked.
+        #
+        # Numeric ladders are deliberately left in their written order, so
+        # their keys sit wherever the author put them and cannot be moved. The
+        # bag therefore has to COMPENSATE for them: count the ladder keys
+        # first, then hand the movable questions the positions that level the
+        # topic's totals. Balancing only the movable questions is not enough --
+        # it left 16 topics still at 40% or more on one letter, because the
+        # ladders were pulling the totals on their own.
+        key_slots = {}
+        for width in (4, 5):
+            fixed = Counter(
+                it["ans"]
+                for it in qs
+                if len(it["choices"]) == width and numeric_ladder(it["choices"])
+            )
+            movable = sum(
+                1
+                for it in qs
+                if len(it["choices"]) == width and not numeric_ladder(it["choices"])
+            )
+            # Repeatedly hand the next slot to whichever position is furthest
+            # behind, so the final totals differ by at most one.
+            slots = []
+            running = Counter(fixed)
+            for _ in range(movable):
+                pos = min(range(width), key=lambda k: (running[k], k))
+                slots.append(pos)
+                running[pos] += 1
+            rng.shuffle(slots)
+            key_slots[width] = slots
         for i, item in enumerate(qs, 1):
             choices, ans = list(item["choices"]), item["ans"]
             # Five choices for econ (A-E), four for calculus (A-D).
@@ -76,10 +110,20 @@ def main():
             seen_stems.setdefault(key, (code, i))
 
             if not numeric_ladder(choices):
-                order = list(range(len(choices)))
+                # Place the key at a position drawn from a balanced sequence
+                # rather than shuffling blind. A blind shuffle only RELOCATES
+                # the clustering in the source: modules are written key-first,
+                # so nearly every ans is 0, and a single seed over 25 questions
+                # lands badly often enough to matter -- 37 of 111 Calculus
+                # topics had 40% or more of their keys on one letter, the worst
+                # at 52%. A student who always guessed that letter would score
+                # 52% on that topic, which is a defect in the bank, not a quirk.
+                target = key_slots[len(choices)].pop()
+                order = [k for k in range(len(choices)) if k != ans]
                 rng.shuffle(order)
+                order.insert(target, ans)
                 choices = [choices[k] for k in order]
-                ans = order.index(ans)
+                ans = target
             dist["ABCDE"[ans]] += 1
             out.append(
                 dict(
