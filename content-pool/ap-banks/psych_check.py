@@ -34,6 +34,9 @@ SYNONYM_CLASSES = [
     {"neuroticism", "emotional instability"},
     {"openness to experience", "openness"},
     {"self-efficacy", "belief in one's own capability", "belief in her own capability"},
+    {"unconditional positive regard", "unconditional regard"},
+    {"self-actualizing tendency", "self-actualization", "actualizing tendency"},
+    {"reciprocal determinism", "reciprocal interaction of person, behavior, and environment"},
     # --- therapy names ---
     {"person-centered therapy", "client-centered therapy", "rogerian therapy"},
     {"rational-emotive behavior therapy", "rebt"},
