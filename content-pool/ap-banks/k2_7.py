@@ -150,7 +150,7 @@ QUESTIONS = [
      "Both are elected by the legislature from among its own members",
      "Neither is connected to the Supreme Leader in any way"], ans=0,
    why="EK PAU-3.F.1.d gives the Guardian Council the vetting and compliance role and EK PAU-3.F.1.c gives the Expediency Council the advisory dispute-resolving role. EK PAU-3.C.2.b has the Supreme Leader appointing the Expediency Council and half the Guardian Council, so neither is separate from that office."),
- dict(q="According to the framework, legislatures have the potential to reinforce legitimacy and stability by",
+ dict(q="Which five activities does the framework name as ways a legislature can reinforce legitimacy and stability?",
    choices=[
      "responding to public demand, openly debating policy, facilitating compromise between factions, extending civil liberties, and restricting the power of the executive",
      "deferring to the executive on questions of policy and meeting in closed session",
@@ -300,7 +300,7 @@ QUESTIONS = [
      "five",
      "all six"], ans=0,
    why="EK PAU-3.F.1.a and .b name two Chinese bodies and EK PAU-3.F.1.c and .d name two Iranian ones, so the four examples come from two countries. Constraints on the legislatures of the other course countries appear in the CED's scoring guidelines rather than in this statement."),
- dict(q="Taking the framework's two statements in this topic together, which summary is most accurate?",
+ dict(q="Which summary best combines what the framework says constrains a legislature with what it says a free legislature contributes?",
    choices=[
      "Other governmental institutions can limit what a legislature is free to do, and a legislature that is free to act can reinforce legitimacy and stability in five named ways",
      "Legislatures cannot be constrained by any other institution, and their only function is to pass laws",
