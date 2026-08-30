@@ -1,5 +1,31 @@
 # Project memory
 
+## SOCIAL SCIENCES BUILD IN PROGRESS — read content-pool/ap-banks/SOCIAL_RESUME.md
+
+AP Human Geography, US Government and Comparative Government are being built.
+All three CEDs are read and all 171 topics recorded; 14 topics are authored.
+SOCIAL_RESUME.md is the exact state and the resume order.
+
+### Do not launch six agents at once
+Six Opus authoring agents were launched in parallel and **all six died on the
+session usage limit within minutes**, each partway through its first topic.
+Almost nothing was authored and the window's budget was gone. Two or three at a
+time is the ceiling, and it leaves the coordinator headroom to assemble and
+insert. The per-topic commit rule is what saved the run — 180 questions were
+sitting finished but uncommitted and had to be rescued by hand.
+
+### These subjects have no sympy, so the gate is different
+Every Math bank here rests on a computational check. A wrong key in a
+Government bank is caught by a person reading or not at all. So the rule in
+`SOCIAL_BRIEF.md` is that a key must trace to a sentence in the CED, and an
+uncertain question is **cut, not guessed** — a short topic honestly reported
+beats a full one with a lie in it.
+
+The agents' own answer is worth keeping: an ANCHORS check pins each key to a
+distinctive substring of its own choice text rather than to an index, because
+`export_units.py` reshuffles choices on the way out and a bare index is one
+edit away from pointing at a distractor.
+
 ## AP CALCULUS AND STATISTICS ARE TYPESET — the converter, and when it may be used
 
 `content-pool/ap-banks/mathfmt.py` turns the plain-text notation the AP briefs
