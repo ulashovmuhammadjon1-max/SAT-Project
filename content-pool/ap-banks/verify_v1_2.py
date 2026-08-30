@@ -271,9 +271,17 @@ uc.check(v1_2, TABLE_CHECKS)
 # quoting them, which is what SOCIAL_BRIEF.md asks for when the wording cannot
 # be verified.
 #
-# One arithmetic error was found and fixed, in an explanation rather than a key:
-# item 21's `why` said the elite-leaning categories "together draw 37 percent of
-# all respondents." In the All-respondents column they draw 31 + 17 = 48; 37 is
-# the figure for the under-35 column (24 + 13). The rationale now states both,
-# and the third TABLE_CHECK on item 21 recomputes them, so the number cannot
-# drift away from the table again.
+# Two arithmetic errors were found and fixed, both in the SAME explanation
+# rather than in any key -- item 21's `why`:
+#
+#   * it said the elite-leaning categories "together draw 37 percent of all
+#     respondents." In the All-respondents column they draw 31 + 17 = 48; 37 is
+#     the figure for the under-35 column (24 + 13). It now states both.
+#   * it said the two age columns "differ on three of the four actors." They
+#     differ on all four; the smallest gap is the 3 points on organized groups,
+#     which is what presumably got rounded away in the writing.
+#
+# Neither changed a key, and the keyed choice for item 21 is right either way.
+# Both are now recomputed from the table by TABLE_CHECKS above, which is the
+# point: a number in a rationale that nothing recomputes is a number that drifts
+# away from its table the first time an author edits a cell.
