@@ -23,6 +23,12 @@ function normalizeHref(raw: string): string | null {
   try {
     const url = new URL(withScheme);
     if (url.protocol !== "http:" && url.protocol !== "https:") return null;
+    // `new URL()` accepts a single-label host, so pasting a bare handle like
+    // "youthresearchlab" yields the syntactically valid but unreachable
+    // "https://youthresearchlab/". That shipped once and put a dead link under
+    // a partner's logo on the landing page. A real destination has a dot in
+    // its hostname; localhost is the only exception worth keeping.
+    if (!url.hostname.includes(".") && url.hostname !== "localhost") return null;
     return url.toString();
   } catch {
     return null;
@@ -54,7 +60,15 @@ export async function savePartner(input: PartnerInput): Promise<PartnerResult> {
   if (!name) return { ok: false, error: "Give the partner a name." };
 
   const href = normalizeHref(input.href ?? "");
-  if (!href) return { ok: false, error: "That link isn't a valid http or https URL." };
+  if (!href) {
+    return {
+      ok: false,
+      error:
+        "That link isn't a reachable URL. Paste the full address, like " +
+        "https://t.me/YourChannel or https://instagram.com/yourhandle — a bare " +
+        "handle on its own has no domain to open.",
+    };
+  }
 
   const logoUrl = normalizeLogo(input.logoUrl ?? "");
   if (!logoUrl) return { ok: false, error: "Add a logo — upload one or paste an image URL." };
