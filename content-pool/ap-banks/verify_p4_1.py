@@ -33,8 +33,9 @@ CLAIMS = [
  ("overweight dispositional causes and underweight situational",
   "EK 4.1.A.3 lists the fundamental attribution error as a bias in attributions "
   "about others: dispositional causes are overweighted and the situation "
-  "underweighted. Choice C states the self-serving bias, D the false consensus "
-  "effect, E out-group homogeneity -- all different constructs."),
+  "underweighted. The credit-successes/blame-circumstance option states the "
+  "self-serving bias instead, and the shared-opinions option states the false "
+  "consensus effect."),
 
  ("fundamental attribution error",
   "This is the standard attitude-attribution demonstration: when a position is "
@@ -45,7 +46,8 @@ CLAIMS = [
  ("successes to internal causes and one's own failures to external",
   "EK 4.1.A.3: the self-serving bias is directed at the self and is "
   "valence-dependent -- credit internally for good outcomes, blame externally for "
-  "bad ones. Choice C describes the actor/observer bias instead."),
+  "bad ones. The other-people-versus-oneself option describes the actor/observer "
+  "bias instead."),
 
  ("self-serving bias",
   "Both explanations are about the student's OWN results and reverse with the "
@@ -56,8 +58,9 @@ CLAIMS = [
  ("own behavior situationally but the same behavior in others dispositionally",
   "EK 4.1.A.3 lists actor/observer bias as its own bias. Its content is the "
   "asymmetry of perspective: as actor a person sees the situation acting on them, "
-  "as observer a person sees the other's disposition. Choice C is the self-serving "
-  "bias, which is a valence effect rather than a perspective effect."),
+  "as observer a person sees the other's disposition. The good-outcomes-internally "
+  "option is the self-serving bias, a valence effect rather than a perspective "
+  "effect."),
 
  ("actor/observer bias",
   "The SAME behavior -- being short with a cashier -- is explained situationally "
@@ -69,8 +72,9 @@ CLAIMS = [
   "The precise discriminator, and the one students most often miss: the "
   "fundamental attribution error is about explaining ANOTHER person and is "
   "indifferent to outcome valence, while the self-serving bias is about the SELF "
-  "and reverses direction with valence. Choice E is false -- the self-serving "
-  "bias is documented across cultures, though its magnitude varies."),
+  "and reverses direction with valence. The collectivist-cultures-only option is "
+  "false -- the self-serving bias is documented across cultures, though its "
+  "magnitude varies."),
 
  ("underestimating the power of the situation",
   "Only the subordinate's outcome is at issue, so the supervisor's self-esteem is "
@@ -108,8 +112,9 @@ CLAIMS = [
  ("generalized belief about control over one's outcomes",
   "The distinction students collapse: an attribution (EK 4.1.A.1) is an "
   "explanation offered for one particular event, while locus of control (LO 4.1.B) "
-  "is the broader, more stable expectancy carried across situations. Choice E is "
-  "false -- locus of control is a normal individual difference, not a symptom."),
+  "is the broader, more stable expectancy carried across situations. The "
+  "symptom-versus-normal-process option is false -- locus of control is a normal "
+  "individual difference, not a symptom."),
 
  ("increase liking",
   "EK 4.1.C.1 states it directly: the mere exposure effect occurs when people are "
@@ -124,9 +129,10 @@ CLAIMS = [
 
  ("expectation prompts behavior that draws out the very response expected",
   "EK 4.1.C.2: people behave in ways that elicit behaviors from others confirming "
-  "their beliefs or perceptions. The mechanism is behavioral elicitation. Choice B "
-  "is confirmation bias, a memory and search effect with no elicited behavior, and "
-  "is the distractor most often mistaken for this."),
+  "their beliefs or perceptions. The mechanism is behavioral elicitation. The "
+  "remembering-only-the-fitting-evidence option is confirmation bias, a memory and "
+  "search effect with no elicited behavior, and is the distractor most often "
+  "mistaken for this."),
 
  ("self-fulfilling prophecy",
   "EK 4.1.C.2, and the classic teacher-expectancy demonstration: the label was "

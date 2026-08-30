@@ -15,8 +15,8 @@ from psych_check import check
 CLAIMS = [
  ("generalized concept about the members of a group",
   "EK 4.2.A.1 states it verbatim: a stereotype is a generalized concept about a "
-  "group. It is a cognition. The distractors are prejudice (attitude), "
-  "discrimination (behavior), an implicit attitude, and a display rule."),
+  "group. It is a cognition. The distractors name prejudice (an attitude), "
+  "discrimination (a behavior), and an implicit attitude."),
 
  ("stereotype is a belief, prejudice is an attitude, discrimination is a behavior",
   "EK 4.2.A.1 treats stereotypes as the cognitive basis of prejudiced ATTITUDES "
@@ -25,9 +25,9 @@ CLAIMS = [
 
  ("reduce cognitive load",
   "EK 4.2.A.1 says explicitly that stereotypes can help reduce cognitive load when "
-  "making decisions or judgments. Choice B is false as written -- the CED makes no "
-  "accuracy claim, and stereotypes are described as frequently the basis of biased "
-  "perception."),
+  "making decisions or judgments. The 'almost always accurate' option is false as "
+  "written -- the CED makes no accuracy claim, and describes stereotypes as "
+  "frequently the basis of biased perception."),
 
  ("prejudice without discrimination",
   "Prejudice is the attitude, discrimination the behavior (EK 4.2.A.1). The "
@@ -40,8 +40,8 @@ CLAIMS = [
   "and behavior is what is described."),
 
  ("holds but may be unaware of or may not acknowledge",
-  "EK 4.2.A.2, verbatim. Choice B (states publicly but does not privately endorse) "
-  "is the reverse case and is the distractor most often chosen."),
+  "EK 4.2.A.2, verbatim. The 'states publicly but does not privately endorse' "
+  "option is the reverse case and is the distractor most often chosen."),
 
  ("get the outcomes they deserve",
   "EK 4.2.A.2 lists the just-world phenomenon as a way implicit attitudes reflect "
@@ -62,8 +62,8 @@ CLAIMS = [
  ("own team more favorably than identical work by another team",
   "In-group bias (EK 4.2.A.2) is favoritism toward one's own group, isolated here "
   "by holding the work identical. Each distractor names a different listed "
-  "phenomenon: out-group homogeneity, the just-world phenomenon, ethnocentrism, "
-  "and implicitness."),
+  "phenomenon: out-group homogeneity, the just-world phenomenon, and "
+  "ethnocentrism."),
 
  ("judging other cultures by the standards of one's own",
   "EK 4.2.A.2 lists ethnocentrism. It is specifically the use of one's own culture "
@@ -83,18 +83,19 @@ CLAIMS = [
   "The discriminator. EK 4.2.B.1 links the two but they are not the same: belief "
   "perseverance names the OUTCOME (the belief survives disconfirmation), "
   "confirmation bias names the PROCESS (selective search and weighting) that "
-  "protects it. Choice C is false -- confirmation bias is typically not deliberate."),
+  "protects it. The 'always deliberate and strategic' option is false -- "
+  "confirmation bias is typically not a deliberate strategy."),
 
  ("discomfort arising when a person's actions and attitudes are in conflict",
   "EK 4.2.B.2, verbatim: cognitive dissonance is the mental discomfort that occurs "
-  "when actions or attitudes are in conflict. Choice E describes the humanistic "
-  "self/ideal-self gap, a different construct entirely."),
+  "when actions or attitudes are in conflict. The actual-self-versus-ideal-self "
+  "option describes the humanistic self-concept gap, a different construct."),
 
  ("change either the action or the attitude",
   "EK 4.2.B.2: people are motivated to reduce the discomfort by changing either "
   "actions or attitudes to be more in line with each other. Note the theory "
-  "predicts realignment, not repression -- choice B is the psychodynamic answer "
-  "and is wrong here."),
+  "predicts realignment, not repression -- the repress-the-memory option is the "
+  "psychodynamic answer and is wrong here."),
 
  ("reduction of cognitive dissonance",
   "The commute is fixed, so the cheaper route to consistency is revising the "
@@ -112,13 +113,15 @@ CLAIMS = [
  ("adding a belief that makes the action consistent",
   "EK 4.2.B.2 allows dissonance reduction by bringing actions and attitudes into "
   "line; adding a consonant belief ('everyone does it') achieves that alignment "
-  "without altering the past behavior or abandoning the self-image. Choice B is "
-  "wrong because the behavior has already occurred and cannot be changed."),
+  "without altering the past behavior or abandoning the self-image. The "
+  "change-the-behavior option is wrong because the behavior has already occurred "
+  "and cannot be undone."),
 
  ("preference that the person sincerely denies holding",
   "EK 4.2.A.2's defining property is unawareness or non-acknowledgment, so the "
   "diagnostic pattern is a measured preference paired with a sincere denial. "
-  "Choice B is the definition of an EXPLICIT attitude."),
+  "The 'states the attitude confidently when asked' option is the definition of an "
+  "EXPLICIT attitude."),
 
  ("belief perseverance",
   "The debriefing removed the entire evidential basis for the belief and the "
@@ -135,7 +138,7 @@ CLAIMS = [
   "EK 4.2.A.1 states stereotypes can be the cause and/or result of biased "
   "perceptions and experiences. The mechanism closing that loop is selective "
   "attention and recall, the same process EK 4.2.B.1 calls confirmation bias. "
-  "Choice D is a claim the CED does not make."),
+  "The 'accurate at the group level' option is a claim the CED does not make."),
 
  ("self-report cannot capture attitudes participants are unaware of",
   "Research-methods item (Science Practice 2). Because EK 4.2.A.2 defines implicit "
@@ -146,8 +149,8 @@ CLAIMS = [
  ("weighed the supportive portions of the report more heavily",
   "Identical balanced evidence strengthening opposite prior views is the standard "
   "signature of confirmation bias acting on an existing belief (EK 4.2.B.1). "
-  "Choice C misstates the mere exposure effect, which concerns liking for a "
-  "repeated stimulus, not divergent belief strengthening."),
+  "The repeated-exposure option misstates the mere exposure effect, which concerns "
+  "liking for a repeated stimulus, not divergent belief strengthening."),
 ]
 
 check(p4_2, CLAIMS)

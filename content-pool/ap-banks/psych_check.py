@@ -110,7 +110,7 @@ def synonym_conflicts(choices):
     return problems
 
 
-def check(module, claims, per_topic=25, n_choices=5):
+def check(module, claims, per_topic=25, n_choices=4):
     """Run every structural and key check. Raises AssertionError on failure."""
     code, title, unit = module.TOPIC
     qs = module.QUESTIONS
@@ -126,6 +126,18 @@ def check(module, claims, per_topic=25, n_choices=5):
 
         # The claim must be a real sentence, not a placeholder.
         assert len(claim.split()) >= 6, f"{code} q{i}: claim too thin to audit: {claim!r}"
+
+        # A claim may NOT name an option by letter. export_units.py shuffles the
+        # choices, so "Choice C" in a claim points at whatever landed there --
+        # and it silently rots the moment a distractor is edited or replaced.
+        # Name the option by its content instead. (Explicit lookarounds, not \b:
+        # the letters A-E abut digits and words too easily.)
+        letter_ref = re.search(r"(?<![A-Za-z])(?:[Cc]hoice|[Oo]ption)\s+\(?([A-E])\)?(?![A-Za-z])",
+                               claim)
+        assert not letter_ref, (
+            f"{code} q{i}: claim names an option by letter ({letter_ref.group(0)!r}); "
+            "the exporter shuffles choices -- refer to the option by its content"
+        )
 
         # The anchor pins the key to its TEXT, so an off-by-one index fails here.
         assert normalize(anchor) in normalize(ch[ans]), (
