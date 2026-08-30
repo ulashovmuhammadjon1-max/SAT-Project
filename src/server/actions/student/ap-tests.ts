@@ -1,16 +1,14 @@
 "use server";
 
-import { createHash } from "crypto";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 import { courseForSubject, subjectByCode } from "@/lib/ap/catalog";
+import { canFill, selectQuestions } from "@/lib/ap/test-selection";
 import {
   AP_TESTS,
-  FORM_STRIDE,
   findTest,
   sectionOffsets,
-  testDemandByUnit,
   testDurationMinutes,
   testQuestionCount,
   testUnits,
@@ -35,97 +33,6 @@ import { requireUser } from "@/lib/session";
  *     configured duration, so the countdown the browser renders is a display of
  *     a deadline it cannot move.
  */
-
-// ---------------------------------------------------------------------------
-// Selecting a form
-// ---------------------------------------------------------------------------
-
-/**
- * A stable ordering of one unit's questions.
- *
- * Hashing (seed, id) rather than shuffling with a PRNG means the order does not
- * shift when a question is added to the middle of the bank — only the new
- * question slots in. That is what keeps "Practice Exam 1" the same test in
- * March as it was in January, which is the whole basis for comparing a best
- * score against a last score.
- */
-function orderedPool(subject: string, unit: number, ids: string[]): string[] {
-  const seed = `${subject}:${unit}`;
-  return [...ids].sort((a, b) => {
-    const ka = createHash("md5").update(`${seed}|${a}`).digest("hex");
-    const kb = createHash("md5").update(`${seed}|${b}`).digest("hex");
-    return ka < kb ? -1 : ka > kb ? 1 : 0;
-  });
-}
-
-interface BankQuestion {
-  id: string;
-  unit: number;
-  topic: string;
-}
-
-/**
- * Resolves a test's blueprint against the bank, returning the frozen question
- * ids in presentation order (section by section, in configuration order).
- *
- * Returns null when the bank cannot fill the blueprint, which is the same
- * condition the picker uses to hide a test — so a test that is visible is a
- * test that can be started.
- */
-function selectQuestions(test: ApPracticeTest, bank: BankQuestion[]): string[] | null {
-  const byUnit = new Map<number, BankQuestion[]>();
-  for (const q of bank) {
-    const list = byUnit.get(q.unit);
-    if (list) list.push(q);
-    else byUnit.set(q.unit, [q]);
-  }
-
-  // One cursor per unit for the whole test, so two sections drawing on the same
-  // unit (Calculus Part A and Part B both examine integration) cannot hand the
-  // student the same question twice.
-  const cursor = new Map<number, number>();
-  const taken = new Set<string>();
-  const picked: string[] = [];
-
-  for (const s of test.sections) {
-    for (const quota of s.blueprint) {
-      let candidates = byUnit.get(quota.unit) ?? [];
-      if (s.topics?.length) {
-        const wanted = new Set(s.topics);
-        candidates = candidates.filter((q) => wanted.has(q.topic));
-      }
-      if (candidates.length < quota.count) return null;
-
-      const pool = orderedPool(test.subject, quota.unit, candidates.map((q) => q.id));
-      const start = cursor.get(quota.unit) ?? test.variant * FORM_STRIDE;
-
-      let got = 0;
-      // Walk the pool cyclically from this form's starting point. The wrap only
-      // matters for a unit whose bank is smaller than variant * FORM_STRIDE —
-      // a young bank, where two forms will legitimately share questions rather
-      // than one of them failing to exist.
-      for (let step = 0; step < pool.length && got < quota.count; step++) {
-        const id = pool[(start + step) % pool.length];
-        if (taken.has(id)) continue;
-        taken.add(id);
-        picked.push(id);
-        got++;
-      }
-      if (got < quota.count) return null;
-      cursor.set(quota.unit, start + quota.count);
-    }
-  }
-
-  return picked;
-}
-
-/** Whether the live bank can fill this test's blueprint, unit by unit. */
-function canFill(test: ApPracticeTest, availableByUnit: Map<number, number>): boolean {
-  for (const [unit, needed] of testDemandByUnit(test)) {
-    if ((availableByUnit.get(unit) ?? 0) < needed) return false;
-  }
-  return true;
-}
 
 // ---------------------------------------------------------------------------
 // Listing
