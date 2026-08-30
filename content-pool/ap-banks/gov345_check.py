@@ -163,11 +163,19 @@ def check(module, arith=None, per_topic=30, n_choices=5):
         )
         recomputed.append(f"    q{i}: {note}")
 
-    heads = {}
+    # Duplicate stems are compared on the ASKED QUESTION, not on the whole
+    # string. A real exam set shares one stimulus across two or three items, and
+    # this bank does the same: two questions on one poll table legitimately open
+    # with the same paragraph. What may not repeat is the sentence that does the
+    # asking, which is the text after the last blank line.
+    asked, whole = {}, {}
     for i, item in enumerate(qs, 1):
-        h = normalize(item["q"])[:80]
-        assert h not in heads, f"{code}: q{i} opens exactly like q{heads[h]}"
-        heads[h] = i
+        a = normalize(item["q"].split("\n\n")[-1])
+        assert a not in asked, f"{code}: q{i} asks the same thing as q{asked[a]}"
+        asked[a] = i
+        w = normalize(item["q"])
+        assert w not in whole, f"{code}: q{i} is identical to q{whole[w]}"
+        whole[w] = i
 
     print(f"OK  {code} {title} (unit {unit}): {len(qs)} questions, "
           f"{n_choices} choices each, {len(table_qs)} data stimulus.")
