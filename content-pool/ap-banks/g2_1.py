@@ -37,7 +37,7 @@
 # while items naming a factor not on either list are keyed to the classification
 # rather than to the example.
 #
-# Six items carry a real `table=`; each one's arithmetic is recomputed from the
+# Five items carry a real `table=`; each one's arithmetic is recomputed from the
 # table in verify_g2_1.py. FIVE choices (A-E).
 TOPIC = ("2.1", "Population Distribution", 2)
 
