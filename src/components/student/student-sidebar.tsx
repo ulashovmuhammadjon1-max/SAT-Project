@@ -23,7 +23,6 @@ import {
   CalendarDays,
   ChevronDown,
   ClipboardList,
-  Compass,
   School,
   Trophy,
   MessagesSquare,
@@ -254,8 +253,11 @@ export interface SidebarApSubject {
 /**
  * The AP sidebar is built from the student's own enrollment, never from a
  * hard-coded list — the catalog is heading for thirty-odd subjects and nobody's
- * sidebar should grow with it. Browse and Practice Tests are always present, so
- * a student with an empty list still has somewhere to go.
+ * sidebar should grow with it.
+ *
+ * Browsing deliberately has no entry of its own: AP Home is already the first
+ * item and now hosts the whole catalog, so a second link to the same page made
+ * the section read as two ways of doing one thing.
  */
 function apGroups(subjects: SidebarApSubject[]): NavGroup[] {
   return [
@@ -266,18 +268,15 @@ function apGroups(subjects: SidebarApSubject[]): NavGroup[] {
         href: `/ap/${s.slug}`,
         label: s.name,
         icon: BookOpen,
+        // Practising a topic lives under /ap/practice/{slug}, so without this
+        // the subject a student is mid-session in stops being highlighted.
+        also: `/ap/practice/${s.slug}`,
       })),
-      empty: "No subjects yet — browse the catalog to add one.",
+      empty: "No subjects yet — add one from AP Home.",
     },
     {
       label: null,
-      items: [
-        // The hash drops the student straight onto the catalog rather than the
-        // top of the hub; `exact` keeps it from ever lighting up, since AP Home
-        // already owns /ap.
-        { href: "/ap#ap-explore-heading", label: "Browse all AP subjects", icon: Compass, exact: true },
-        { href: "/ap/tests", label: "Practice Tests", icon: ClipboardList },
-      ],
+      items: [{ href: "/ap/tests", label: "Practice Tests", icon: ClipboardList }],
     },
     { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
   ];
