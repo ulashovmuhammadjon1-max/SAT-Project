@@ -261,3 +261,53 @@ Practice 2 at 20–30% is the highest-weighted single practice after analysis an
 interpretation, which is the CED's own confirmation that **data-collection
 reasoning — random sampling versus random assignment, bias, scope of inference —
 is not a side topic.** It is roughly a quarter of the multiple-choice section.
+
+## State of the bank
+
+Units 1, 2 and 3 are complete: **40 topics, 1,000 questions**, five choices each,
+every topic 25 questions. Units 4 and 5 were built by a sibling agent.
+
+Every module `s<unit>_<topic>.py` has a committed `verify_s<unit>_<topic>.py`
+that either recomputes each key from the stem's own numbers or declares the item
+conceptual with the CED essential-knowledge statement behind it, and fails if any
+of the 25 indices is unaccounted for. Whole-subject gate:
+
+```
+cd content-pool/ap-banks
+for m in s1_1 s1_2 ... s3_15; do python3 verify_$m.py; done
+python3 export_units.py s1_1 s1_2 ... s3_15 --subject STATISTICS --out /tmp/chk.json
+```
+
+### Things worth knowing before extending this bank
+
+**Two standard errors that are numerically indistinguishable.** For a difference
+of proportions the pooled and unpooled standard errors differ in the fourth
+decimal place — 0.0389 against 0.0387 on a 300/300 table. That makes the wrong
+one useless as a multiple-choice distractor, because a student using the wrong
+method still rounds to the keyed choice. Topics 3.10 and 3.13 therefore test the
+pooled/unpooled distinction **conceptually**, and as a direction of error, never
+as a numeric answer. Both module headers record the decision.
+
+**The shared checker reads digits out of algebra.** `s_verify_util.numvec` finds
+numbers anywhere in a choice string, so `n(1 - p)` and `sqrt(np(1 - p))` both
+read as the number 1, and `reject H0` and `accept H0` both read as 0 — and the
+duplicate-choice guard then reports them as identical answers. Every one of those
+was a false positive, and every one was fixed **on the module side**, by writing
+`q` for the failure probability and spelling out "the null hypothesis", rather
+than by loosening the check. Do the same: the guard catches real defects (it
+found two in this bank) and is worth keeping sharp.
+
+**Tolerances have to be set per item, not globally.** Several topics
+deliberately offer a near-miss distractor — the value the characteristic mistake
+produces. `Checker.check`'s default relative tolerance of 0.002 is wider than
+some of those gaps, and it correctly refuses to key an ambiguous item. Where
+that happened the fix was a tighter `tol=` and a comment saying why, not a wider
+distractor spread; see `verify_s3_7.py` and `verify_s3_6.py`.
+
+**Defects the verifiers caught in this bank's own drafts**, all before commit:
+a wrong key (2.6 q14 keyed 0.090 where 90/900 = 0.100); duplicate-valued fraction
+choices (`5/6` beside `30/36`, `1/18` beside `2/36`, `1/16` beside `169/2704`);
+two distractors within rounding of each other (2.9 q12 offered 9.0900 and
+9.1000); and four items in 3.8 that shared a single stem word for word. The
+last one came from the exporter's near-duplicate-stem warning, which is worth
+reading rather than watching only the exit code.
