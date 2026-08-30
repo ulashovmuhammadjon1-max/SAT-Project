@@ -231,11 +231,13 @@ checked against the text dump, not recalled.
    and removal follows only "if the official is convicted in a Senate
    impeachment trial."
 
-9. **Baker v. Carr is dated 1962 in the required-case list but 1961 in the
-   CED's own sample question 15.** The required-case list on p. 30 says
-   *Baker v. Carr (1962)*; the sample multiple-choice question on p. 177 says
-   *Baker v. Carr (1961)*. The list is authoritative, and this bank uses
-   **1962** throughout. (The case was argued in 1961 and decided in 1962.)
+9. **Baker v. Carr is dated 1962 in the required-case list but 1961 twice
+   elsewhere in the same document.** The required-case list on p. 30 says
+   *Baker v. Carr (1962)*; the SCOTUS cross-reference table on p. 32 and the
+   sample multiple-choice question on p. 177 both say *Baker v. Carr (1961)*.
+   The required-case list is authoritative, and this bank uses **1962**
+   throughout. (The case was argued in 1961 and decided in 1962.) The same
+   cross-reference table also prints a typo, "1..8.A", in the Gideon row.
 
 10. **The CED's own sample multiple-choice questions have FOUR options
     (A–D), not five.** See CED pp. 172–177. This bank is authored with **five**
