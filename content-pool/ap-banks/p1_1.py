@@ -166,4 +166,34 @@ QUESTIONS = [
    "whether identical twins are more alike than fraternal twins",
    "whether a stressful home environment amplifies an inherited tendency"], ans=0,
    why="The exclusion statement on Topic 1.1 places chromosomes, along with DNA, genotype, phenotype, and dominant/recessive expression, outside the scope of the exam."),
+ dict(q="A psychologist sits in a public park and records how often parents and toddlers make eye contact, without approaching anyone or changing anything about the setting. This research design is", choices=[
+   "naturalistic observation",
+   "an experiment",
+   "an adoption study",
+   "a case study of one family"], ans=0,
+   why="Naturalistic observation is defined by recording behavior in its ordinary setting without intervening; nothing is manipulated, no group is assigned, and more than one family is watched."),
+ dict(q="A researcher plans to obtain adoption agency records in order to compare adopted adults with their biological relatives. Which safeguard is most necessary for the study to meet ethical standards?", choices=[
+   "obtaining informed consent and protecting the confidentiality of the records",
+   "guaranteeing in advance that the findings will support the hypothesis",
+   "concealing from participants that a study is taking place at all",
+   "excluding anyone who has ever met a biological relative"], ans=0,
+   why="Science practice 2.D concerns whether a research scenario followed appropriate ethical procedures, and consent plus confidentiality are the safeguards a study using identifiable personal records requires."),
+ dict(q="A study finds that more anxious parents have more anxious children. A second researcher points out that anxious children may make their parents more anxious, rather than the reverse. This objection identifies", choices=[
+   "the possibility that the direction of influence runs the opposite way",
+   "a confounding third variable that causes both",
+   "a failure to operationally define anxiety",
+   "an unrepresentative sample"], ans=0,
+   why="A correlation is consistent with influence running either way; this specific objection concerns direction of influence, not an outside variable, a definition, or a sample."),
+ dict(q="Which statement correctly distinguishes random sampling from random assignment?", choices=[
+   "random sampling determines who is studied; random assignment determines which condition a participant is placed in",
+   "random sampling determines which condition a participant is placed in; random assignment determines who is studied",
+   "the two terms describe the same procedure at different stages of a study",
+   "random sampling is used only in experiments and random assignment only in surveys"], ans=0,
+   why="Random sampling concerns who is in the study and therefore generalizability; random assignment concerns group equivalence and is what permits a causal conclusion. Twin and adoption studies can sample randomly but can never assign randomly."),
+ dict(q="A large twin study recruits every participant from a single university's psychology courses and concludes that its findings describe people in general. The strongest objection is that", choices=[
+   "the sample may not represent the wider population, so the findings may not generalize",
+   "twins cannot be used to study hereditary influence",
+   "the study has no measured outcome",
+   "recruiting participants from one place turns the study into an experiment"], ans=0,
+   why="Generalizability depends on whether the sample resembles the population the claim is about, and psychology students at one university differ systematically in age, education, and background from people in general."),
 ]

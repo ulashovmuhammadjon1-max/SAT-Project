@@ -80,6 +80,16 @@ CLAIMS = [
   "Science practice 2: participants selected their own group, so this is correlational. A third variable such as baseline fitness is a live rival explanation and causation cannot be claimed."),
  ("spinal cord is central, the nerves in the arm are peripheral",
   "EK 1.2.A.1 and 1.2.A.2 together: brain and spinal cord are central; everything relaying between the central system and the body, including the nerves of the limbs, is peripheral."),
+ ("adrenaline",
+  "EK 1.3.B.3's hormone list is closed: adrenaline, leptin, ghrelin, melatonin, oxytocin. Adrenaline is the arousal hormone, which is what ties it to the sympathetic activation of EK 1.2.A.2.i. Every distractor is drawn from the same closed list, so nothing outside the course appears."),
+ ("whether the participant practiced the breathing exercise",
+  "Science practice 2.B: the independent variable is the manipulated, randomly assigned condition. Heart rate is the dependent variable; the five-minute duration is held constant across groups and so is neither."),
+ ("somatic nervous system",
+  "EK 1.2.A.2.ii (voluntary = somatic) against EK 1.2.A.2.i (involuntary = autonomic). The stem preserves heartbeat, digestion, and breathing precisely so that the autonomic system and both of its divisions are ruled out and only the somatic system remains."),
+ ("no comparison group",
+  "Science practice 2.B: with every participant in one condition there is no baseline against which to judge the change. Sitting quietly activates the parasympathetic system on its own (EK 1.2.A.2.i), so the rival explanation here is not hypothetical."),
+ ("governed involuntarily but can be temporarily overridden by voluntary control",
+  "Breathing is one of the basic functions EK 1.4.A.1 assigns to the brain stem and that EK 1.2.A.2.i's autonomic system maintains without conscious direction; the somatic system's voluntary reach (EK 1.2.A.2.ii) can interrupt it briefly. The point of the item is that involuntary and voluntary control are not mutually exclusive at the level of a single organ."),
 ]
 
-psych_check.check(p1_2, CLAIMS, per_topic=25, n_choices=4)
+psych_check.check(p1_2, CLAIMS, per_topic=30, n_choices=4)

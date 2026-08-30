@@ -1,7 +1,7 @@
 """Key audit for AP PSYCHOLOGY 1.1 Interaction of Heredity and Environment.
 
 There is no computation to verify in psychology, so the discipline that replaces
-sympy is this: for every one of the 25 items, state the specific claim the key
+sympy is this: for every one of the 30 items, state the specific claim the key
 rests on and where in the course framework it comes from -- a definition, a named
 study design, or what a theory actually predicts. An assertion nobody wrote down
 is exactly how a wrong key ships.
@@ -73,6 +73,16 @@ CLAIMS = [
   "EK 1.1.A.1 frames the two influences as interacting to shape a trait. A percentage split applied to one person's talent misreads an interaction as a partition."),
  ("which specific chromosomes carry a trait",
   "The Topic 1.1 exclusion statement places genotype, phenotype, DNA, chromosomes, and recessive/dominant gene expression outside the scope of the AP Psychology Exam."),
+ ("naturalistic observation",
+  "Science practice 2.A: the design is defined by recording behavior in its ordinary setting with no intervention. Nothing is manipulated, so it is not an experiment; rearing and biological families are not compared, so it is not an adoption study; more than one family is observed, so it is not a case study."),
+ ("informed consent and protecting the confidentiality",
+  "Science practice 2.D. A study built on identifiable adoption records turns on consent and confidentiality. The distractor promising the findings in advance describes a bias, not a safeguard, and is the one a hurried reader accepts."),
+ ("direction of influence runs the opposite way",
+  "A correlation constrains neither the direction of influence nor the existence of an outside cause. This objection is specifically the reverse-direction one, which is why the third-variable option -- also a real limitation of correlational data -- is wrong for THIS objection."),
+ ("random sampling determines who is studied",
+  "Random sampling governs who enters the study and therefore generalizability; random assignment governs which condition a participant receives and is what licenses a causal claim. Twin and adoption studies (EK 1.1.A.3) can sample randomly but can never assign randomly, which is why they stay correlational."),
+ ("may not represent the wider population",
+  "Generalizability, the skill the exam's Article Analysis Question tests directly, depends on whether the sample resembles the population the claim is about. Psychology students at one university differ systematically in age, education, and background from people in general."),
 ]
 
-psych_check.check(p1_1, CLAIMS, per_topic=25, n_choices=4)
+psych_check.check(p1_1, CLAIMS, per_topic=30, n_choices=4)

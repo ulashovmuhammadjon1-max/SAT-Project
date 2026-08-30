@@ -169,4 +169,34 @@ QUESTIONS = [
    "the nerves in the arm are central, the spinal cord is peripheral",
    "the brain and the nerves in the arm are both central"], ans=0,
    why="EK 1.2.A.1 places the spinal cord with the brain in the central nervous system, leaving the nerves that reach the limbs in the peripheral nervous system."),
+ dict(q="Sympathetic arousal is accompanied by the release of a hormone that prepares the body for vigorous action. Among the hormones covered in AP Psychology, that hormone is", choices=[
+   "adrenaline",
+   "melatonin",
+   "leptin",
+   "ghrelin"], ans=0,
+   why="Of the five hormones EK 1.3.B.3 keeps in scope, adrenaline is the one released during arousal; melatonin governs sleep timing, and leptin and ghrelin signal fullness and hunger."),
+ dict(q="In an experiment, half the participants are randomly assigned to practice a slow-breathing exercise for five minutes and the other half sit quietly; heart rate is then measured in both groups. The independent variable is", choices=[
+   "whether the participant practiced the breathing exercise",
+   "the participant's heart rate after the five minutes",
+   "the five-minute duration of the session",
+   "the participant's level of autonomic arousal before the study"], ans=0,
+   why="The independent variable is what the researcher manipulates and assigns, which here is the presence or absence of the breathing exercise; heart rate is the measured outcome and the duration is held constant for everyone."),
+ dict(q="Following an injury, a patient cannot voluntarily move her right leg, yet her heart rate, digestion, and breathing continue normally. The damage is most consistent with an injury affecting the", choices=[
+   "somatic nervous system",
+   "autonomic nervous system",
+   "sympathetic nervous system",
+   "parasympathetic nervous system"], ans=0,
+   why="Voluntary movement is somatic (EK 1.2.A.2.ii) while heartbeat, digestion, and breathing are involuntary and therefore autonomic (EK 1.2.A.2.i); losing one while the other is intact isolates the somatic system."),
+ dict(q="A researcher testing whether a new relaxation recording lowers arousal has every participant listen to the recording and finds that heart rates drop over the session. The most important flaw is that", choices=[
+   "there is no comparison group, so the drop could reflect simply sitting still for the same length of time",
+   "heart rate is not a valid measure of arousal",
+   "the sample was randomly assigned to conditions",
+   "the recording should have been played twice"], ans=0,
+   why="Without a control group there is nothing to compare the change against, so an effect of the recording cannot be separated from an effect of resting quietly, which the parasympathetic system produces on its own."),
+ dict(q="A person can deliberately hold her breath for a time, but breathing resumes on its own once she stops trying. This observation best illustrates that", choices=[
+   "breathing is normally governed involuntarily but can be temporarily overridden by voluntary control",
+   "breathing is governed entirely by the somatic nervous system",
+   "the autonomic nervous system stops functioning during voluntary effort",
+   "the sympathetic and parasympathetic systems alternate control of every organ on a fixed schedule"], ans=0,
+   why="Breathing is one of the basic functions the autonomic system maintains without conscious direction, yet the somatic system can intervene briefly, which is why a single organ can be reached by both divisions."),
 ]
