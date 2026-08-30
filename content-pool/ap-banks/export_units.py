@@ -54,6 +54,7 @@ def main():
         "CALC_AB": 25, "CALC_BC": 25,
         "STATISTICS": 25,
         "PSYCHOLOGY": 30,
+        "HUMAN_GEO": 30, "US_GOV": 30, "COMP_GOV": 30,
     }
     expected = args.per_topic
     if expected is None:
