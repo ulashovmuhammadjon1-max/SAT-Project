@@ -148,7 +148,7 @@ QUESTIONS = [
  dict(q="A student says, 'A and B are mutually exclusive, so they must be independent.' This reasoning is",
    choices=[
      "correct, since disjoint events do not affect one another",
-     "incorrect: disjoint events with positive probability are dependent, because P(A given B) = 0 while P(A) > 0",
+     "incorrect, because disjoint events with positive probability are dependent, since P(A given B) = 0 while P(A) > 0",
      "correct, but only when P(A) + P(B) = 1",
      "incorrect, because mutually exclusive events cannot have probabilities",
      "correct whenever the sample space is finite"],

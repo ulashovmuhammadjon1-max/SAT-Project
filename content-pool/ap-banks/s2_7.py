@@ -174,7 +174,7 @@ QUESTIONS = [
  dict(q="A student writes 'A and B are mutually exclusive, therefore P(A and B) = P(A) x P(B).' This is",
    choices=[
      "correct, because mutually exclusive events are independent",
-     "incorrect: for mutually exclusive events P(A and B) = 0, while the product rule applies to independent events",
+     "incorrect, because P(A and B) = 0 for mutually exclusive events, while the product rule applies to independent events",
      "correct, provided P(A) and P(B) are both less than 0.5",
      "incorrect, because the product rule never holds",
      "correct only when P(A) = P(B)"],

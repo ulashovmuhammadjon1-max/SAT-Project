@@ -86,7 +86,7 @@ QUESTIONS = [
    table=TABLE_A,
    choices=[
      "an error in the calculation",
-     "expected: an expected value is a long-run average and need not be a possible value of the random variable",
+     "possible, because an expected value is a long-run average and need not be a possible value of the random variable",
      "a sign that the distribution is invalid",
      "a reason to round the answer to 1",
      "possible only because the probabilities are decimals"],
