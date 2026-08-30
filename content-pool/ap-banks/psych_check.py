@@ -110,7 +110,7 @@ def synonym_conflicts(choices):
     return problems
 
 
-def check(module, claims, per_topic=25, n_choices=4):
+def check(module, claims, per_topic=30, n_choices=4):
     """Run every structural and key check. Raises AssertionError on failure."""
     code, title, unit = module.TOPIC
     qs = module.QUESTIONS

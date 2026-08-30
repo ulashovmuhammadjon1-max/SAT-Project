@@ -1,4 +1,4 @@
-# AP PSYCH 4.2 Attitude Formation and Attitude Change — 25 questions
+# AP PSYCH 4.2 Attitude Formation and Attitude Change — 30 questions
 # Required content: CED (c) 2024 College Board, Course Framework V.1, p. 98.
 # EK 4.2.A.1 stereotypes, prejudice, discrimination; 4.2.A.2 implicit attitudes,
 # just-world phenomenon, out-group homogeneity bias, in-group bias, ethnocentrism;
@@ -208,4 +208,42 @@ QUESTIONS = [
    "each reader weighed the supportive portions of the report more heavily than the opposing portions"
 ], ans=3,
    why="Identical balanced evidence producing divergent strengthening is the classic outcome of confirmation bias operating on an existing belief (EK 4.2.B.1)."),
+
+ dict(q="Students who complete a long and demanding application process for a club later rate that club more favorably than students admitted with no effort at all. Dissonance theory explains this because the effort", choices=[
+   "would be inconsistent with holding a low opinion of the club, so the opinion rises",
+   "makes the club objectively better organized than it would otherwise be",
+   "increases the number of times students are exposed to the club's name",
+   "creates a debt that the club is expected to repay"], ans=0,
+   why="Effort justification: substantial effort spent on something judged worthless is the inconsistency, and since the effort cannot be undone, the attitude moves to match it (EK 4.2.B.2)."),
+
+ dict(q="How does ethnocentrism differ from in-group bias?", choices=[
+   "Ethnocentrism is always conscious, while in-group bias is always unconscious",
+   "Ethnocentrism treats one's own culture as the standard for evaluating others, while in-group bias is favoritism toward one's own group without necessarily invoking a cultural standard",
+   "Ethnocentrism applies only to nations, while in-group bias applies only to families",
+   "Ethnocentrism is a behavior, while in-group bias is a belief"
+], ans=1,
+   why="EK 4.2.A.2 lists both. In-group bias is preference for one's own group; ethnocentrism adds the evaluative yardstick, judging other cultures by one's own culture's standards."),
+
+ dict(q="Research on attitudes and behavior finds that an attitude predicts a person's behavior most strongly when the attitude is", choices=[
+   "formed recently rather than held over a long period",
+   "specific to the behavior in question and social pressures on that behavior are weak",
+   "held very privately and never expressed to anyone",
+   "general and abstract rather than tied to a particular action"
+], ans=1,
+   why="Attitude-behavior consistency rises when the attitude is measured at the same level of specificity as the behavior and when outside pressures do not override it -- which is also why a broad, abstract attitude is a poor predictor of any single act."),
+
+ dict(q="A fan of one team insists that supporters of a rival team 'all behave the same way at matches,' while describing his own team's supporters as a varied mix of people. His perception illustrates", choices=[
+   "out-group homogeneity bias",
+   "the just-world phenomenon",
+   "belief perseverance",
+   "cognitive dissonance"], ans=0,
+   why="EK 4.2.A.2. The diagnostic contrast is perceived VARIABILITY: the rival group looks uniform while his own looks differentiated."),
+
+ dict(q="A researcher wants to test whether an applicant's group membership CAUSES lower hiring ratings. The strongest design would be to", choices=[
+   "record how many members of each group were hired last year and compare the totals",
+   "interview applicants who were not hired about why they believe they were rejected",
+   "send identical application materials that differ only in a name signaling group membership, and compare the ratings each receives",
+   "survey hiring managers about whether they hold any prejudiced attitudes"
+], ans=2,
+   why="Research-design item (Science Practice 2.B). Only the first option manipulates the variable of interest while holding the credentials identical, so a difference in ratings can be attributed to group membership. The others are self-report or archival, and cannot establish causation -- and the survey option also runs into EK 4.2.A.2's point that implicit attitudes are not reliably self-reported."),
 ]

@@ -1,4 +1,4 @@
-# AP PSYCH 4.1 Attribution Theory and Person Perception — 25 questions
+# AP PSYCH 4.1 Attribution Theory and Person Perception — 30 questions
 # Required content: CED (c) 2024 College Board, Course Framework V.1, pp. 96-97.
 # EK 4.1.A.1 dispositional/situational attribution; 4.1.A.2 explanatory style;
 # 4.1.A.3 actor/observer bias, fundamental attribution error, self-serving bias;
@@ -206,4 +206,42 @@ QUESTIONS = [
    "how strongly participants believe the speaker holds the position"
 ], ans=2,
    why="The independent variable is the condition the experimenters manipulated; participants' rated belief about the speaker is the dependent variable, and random assignment is a design procedure rather than a variable."),
+
+ dict(q="A patient recovering from surgery deliberately reads about others whose recovery has been slower than her own, and afterward feels more optimistic. This strategy is", choices=[
+   "relative deprivation",
+   "a pessimistic explanatory style",
+   "downward social comparison",
+   "upward social comparison"
+], ans=2,
+   why="EK 4.1.C.3 states social comparison can be upward or downward; comparing oneself with someone judged worse off is downward, and it tends to raise rather than lower subjective standing."),
+
+ dict(q="Cross-cultural research finds that people raised in cultures emphasizing group obligation more often explain a stranger's behavior by pointing to the situation than do people raised in cultures emphasizing individual achievement. This finding suggests that the fundamental attribution error is", choices=[
+   "shaped by cultural norms rather than fixed in every population",
+   "entirely absent outside individualist cultures",
+   "a purely biological reflex unaffected by upbringing",
+   "the same thing as an external locus of control"], ans=0,
+   why="Science Practice 1.B asks how cultural norms apply to behavior and mental processes. A difference in degree across cultures shows cultural shaping; it does not show total absence, and a group tendency in attribution is not the same construct as an individual's generalized locus of control."),
+
+ dict(q="A coach and a player watch the same missed shot. Which pair of explanations best matches what the actor/observer bias predicts each will give?", choices=[
+   "both cite the wet court, because the cause is obvious to everyone present",
+   "both cite the player's concentration, because the player performed the action",
+   "the player cites the wet court; the coach cites the player's concentration",
+   "the player cites his own concentration; the coach cites the wet court"
+], ans=2,
+   why="EK 4.1.A.3. The actor sees the situation acting on him and the observer sees the actor, so the prediction is situational from the player and dispositional from the coach; the reversed pairing is the standard trap."),
+
+ dict(q="In a survey of 400 employees, those scoring higher on a measure of internal locus of control also reported higher job satisfaction. A researcher concludes that an internal locus of control causes job satisfaction. This conclusion is unjustified because", choices=[
+   "locus of control cannot be measured with a questionnaire",
+   "job satisfaction is not a psychological variable",
+   "no variable was manipulated, so the direction of the relationship cannot be established",
+   "the sample of 400 employees is too small for any conclusion"
+], ans=2,
+   why="Research-methods item (Science Practice 2.C). Both variables were measured rather than manipulated, so satisfaction could just as well foster an internal orientation, or a third variable could produce both."),
+
+ dict(q="Asked to explain a coworker's promotion, an employee first says the coworker 'just knows the right people.' Asked to explain her own promotion the following year, she says it reflected her sustained effort. Which two biases together best account for this pair of explanations?", choices=[
+   "the self-serving bias for her own promotion and a dispositional discounting of the coworker's",
+   "the mere exposure effect and relative deprivation",
+   "belief perseverance and an external locus of control",
+   "a self-fulfilling prophecy and social comparison"], ans=0,
+   why="Her own good outcome is credited internally, which is the self-serving bias, while the coworker's good outcome is credited to circumstance -- the mirror image of the fundamental attribution error, which appears when the other person's outcome is favorable and the perceiver's standing is at stake."),
 ]

@@ -151,6 +151,33 @@ CLAIMS = [
   "signature of confirmation bias acting on an existing belief (EK 4.2.B.1). "
   "The repeated-exposure option misstates the mere exposure effect, which concerns "
   "liking for a repeated stimulus, not divergent belief strengthening."),
+ ("inconsistent with holding a low opinion of the club",
+  "Effort justification, a dissonance result (EK 4.2.B.2). Substantial effort "
+  "spent on something judged worthless is the inconsistency; the effort cannot be "
+  "undone, so the attitude moves. Note the prediction runs OPPOSITE to a simple "
+  "cost account, which would predict resentment of the demanding process."),
+
+ ("treats one's own culture as the standard for evaluating others",
+  "EK 4.2.A.2 lists both constructs. In-group bias is favoritism toward one's own "
+  "group; ethnocentrism adds the evaluative yardstick. The claim that one is "
+  "conscious and the other unconscious is false -- either can be implicit."),
+
+ ("specific to the behavior in question and social pressures on that behavior are weak",
+  "Attitude-behavior consistency is highest when the attitude is measured at the "
+  "same level of specificity as the behavior and when situational pressure does "
+  "not override it. This is also why a broad, abstract attitude predicts any "
+  "single act poorly, which is the option most often chosen instead."),
+
+ ("out-group homogeneity bias",
+  "EK 4.2.A.2. The diagnostic contrast is perceived VARIABILITY -- the rival group "
+  "uniform, his own differentiated -- rather than favoritism, which would be "
+  "in-group bias, or a belief surviving disconfirmation."),
+
+ ("differ only in a name signaling group membership",
+  "Research-design item (Science Practice 2.B). Only this option manipulates group "
+  "membership while holding credentials identical, so a rating difference is "
+  "attributable to that manipulation. The self-report option additionally fails on "
+  "EK 4.2.A.2's own point: implicit attitudes are not reliably self-reported."),
 ]
 
 check(p4_2, CLAIMS)

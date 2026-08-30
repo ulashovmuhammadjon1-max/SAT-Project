@@ -161,6 +161,36 @@ CLAIMS = [
   "the experimenters manipulated and randomly assigned. Participants' rated belief "
   "about the speaker is the dependent variable; random assignment is a design "
   "procedure, not a variable; and sample size is a design parameter."),
+ ("downward social comparison",
+  "EK 4.1.C.3 states social comparison can be upward or downward. Comparing "
+  "oneself with people judged worse off is downward, and it raises rather than "
+  "lowers subjective standing -- which is why the patient feels better. Relative "
+  "deprivation is excluded because she does not feel unfairly worse off."),
+
+ ("shaped by cultural norms rather than fixed",
+  "Science Practice 1.B: cultural norms and expectations apply to behavior and "
+  "mental processes. A reliable difference in DEGREE across cultures demonstrates "
+  "cultural shaping. The overreach to 'entirely absent' is the trap -- the finding "
+  "is comparative, not an existence claim -- and a group-level attribution "
+  "tendency is a different construct from an individual's locus of control."),
+
+ ("player cites the wet court; the coach cites the player's concentration",
+  "EK 4.1.A.3. The actor/observer bias predicts the ACTOR gives the situational "
+  "explanation and the OBSERVER the dispositional one. The reversed pairing is "
+  "the standard trap and is the option most often chosen."),
+
+ ("no variable was manipulated",
+  "Research-methods item (Science Practice 2.C). Both locus of control and job "
+  "satisfaction were measured, not manipulated, so the causal direction is "
+  "unestablished and a third variable could produce both. A sample of 400 is "
+  "ample, and locus of control is routinely measured by questionnaire."),
+
+ ("self-serving bias for her own promotion",
+  "Her own favorable outcome is credited internally to effort -- the self-serving "
+  "bias (EK 4.1.A.3) -- while the coworker's equally favorable outcome is credited "
+  "to circumstance. The pairing shows the two biases are not a single tendency to "
+  "explain others dispositionally: the direction flips when the other person's "
+  "outcome is good and the perceiver's own standing is at stake."),
 ]
 
 check(p4_1, CLAIMS)
