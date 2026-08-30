@@ -22,6 +22,8 @@ import {
   Award,
   CalendarDays,
   ChevronDown,
+  ClipboardList,
+  Compass,
   School,
   Trophy,
   MessagesSquare,
@@ -55,6 +57,12 @@ interface NavGroup {
   /** Null renders the items with no heading (the Home block). */
   label: string | null;
   items: NavItem[];
+  /**
+   * Shown in place of the items when the group is legitimately empty — a
+   * student with no AP subjects should read why the heading is bare rather
+   * than wonder whether something failed to load.
+   */
+  empty?: string;
 }
 
 const SAT_GROUPS: NavGroup[] = [
@@ -236,19 +244,44 @@ function schoolGroups(pathname: string): NavGroup[] {
   ];
 }
 
-const AP_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/ap", label: "AP Home", icon: Award, exact: true }] },
-  {
-    label: "Subjects",
-    items: [
-      { href: "/ap/macroeconomics", label: "AP Macroeconomics", icon: BookOpen },
-      { href: "/ap/microeconomics", label: "AP Microeconomics", icon: BookOpen },
-      { href: "/ap/calculus-ab", label: "AP Calculus AB", icon: BookOpen },
-      { href: "/ap/calculus-bc", label: "AP Calculus BC", icon: BookOpen },
-    ],
-  },
-  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
-];
+/** One entry of the student's AP list, as the layout hands it down. */
+export interface SidebarApSubject {
+  slug: string;
+  name: string;
+  short: string;
+}
+
+/**
+ * The AP sidebar is built from the student's own enrollment, never from a
+ * hard-coded list — the catalog is heading for thirty-odd subjects and nobody's
+ * sidebar should grow with it. Browse and Practice Tests are always present, so
+ * a student with an empty list still has somewhere to go.
+ */
+function apGroups(subjects: SidebarApSubject[]): NavGroup[] {
+  return [
+    { label: null, items: [{ href: "/ap", label: "AP Home", icon: Award, exact: true }] },
+    {
+      label: "My Subjects",
+      items: subjects.map((s) => ({
+        href: `/ap/${s.slug}`,
+        label: s.name,
+        icon: BookOpen,
+      })),
+      empty: "No subjects yet — browse the catalog to add one.",
+    },
+    {
+      label: null,
+      items: [
+        // The hash drops the student straight onto the catalog rather than the
+        // top of the hub; `exact` keeps it from ever lighting up, since AP Home
+        // already owns /ap.
+        { href: "/ap#ap-explore-heading", label: "Browse all AP subjects", icon: Compass, exact: true },
+        { href: "/ap/tests", label: "Practice Tests", icon: ClipboardList },
+      ],
+    },
+    { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+  ];
+}
 
 type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL" | "AP";
 
@@ -269,12 +302,18 @@ export function StudentSidebar({
   activeExam = "SAT",
   teaching = false,
   classes = [],
+  apSubjects = [],
 }: {
   activeExam?: ExamMode;
   /** True when a class is linked to this account — shows the Teacher Panel. */
   teaching?: boolean;
   /** The student's classes, for the School product's switcher. */
   classes?: SwitcherClass[];
+  /**
+   * The student's AP enrollment, resolved in the server layout and passed
+   * down. This is a client component, so it must never fetch it itself.
+   */
+  apSubjects?: SidebarApSubject[];
 }) {
   const pathname = usePathname();
   const product = productFor(pathname, activeExam);
@@ -282,7 +321,7 @@ export function StudentSidebar({
     product === "RESEARCH"
       ? RESEARCH_GROUPS
       : product === "AP"
-        ? AP_GROUPS
+        ? apGroups(apSubjects)
         : product === "SCHOOL"
           ? schoolGroups(pathname)
           : GROUPS_FOR[activeExam];
@@ -324,6 +363,11 @@ export function StudentSidebar({
             {group.label && (
               <p className="px-3 pb-1 pt-1 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-muted-foreground/80">
                 {group.label}
+              </p>
+            )}
+            {group.items.length === 0 && group.empty && (
+              <p className="px-3 pb-1 text-xs leading-relaxed text-muted-foreground/80">
+                {group.empty}
               </p>
             )}
             {group.items.map((item) => {

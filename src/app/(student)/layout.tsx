@@ -5,19 +5,23 @@ import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 import { StudentContainer } from "@/components/student/student-container";
 import { isTeacher } from "@/server/actions/teacher/classes";
+import { getMySubjects } from "@/server/actions/student/ap-subjects";
 
 export default async function StudentLayout({ children }: { children: React.ReactNode }) {
   const user = await requireVerifiedUser();
   // Resolved once here and passed down, so the sidebar and the topbar cannot
   // disagree about which exam the student is in.
   const exam = await examContextOrDefault();
-  const [teaching, memberships] = await Promise.all([
+  // The sidebar is a client component, so everything it needs is resolved here
+  // and handed down — its AP list included.
+  const [teaching, memberships, apSubjects] = await Promise.all([
     isTeacher(user.id, user.email ?? null),
     prisma.classMembership.findMany({
       where: { userId: user.id, class: { isArchived: false } },
       orderBy: { joinedAt: "asc" },
       select: { class: { select: { id: true, name: true, teacherName: true } } },
     }),
+    getMySubjects(),
   ]);
 
   return (
@@ -26,6 +30,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
         activeExam={exam.active}
         teaching={teaching}
         classes={memberships.map((m) => m.class)}
+        apSubjects={apSubjects.map((s) => ({ slug: s.slug, name: s.name, short: s.short }))}
       />
       <div className="flex min-w-0 flex-1 flex-col">
         <StudentTopbar activeExam={exam.active} />
