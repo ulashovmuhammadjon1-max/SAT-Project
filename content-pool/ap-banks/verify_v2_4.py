@@ -247,36 +247,37 @@ TABLE_CHECKS = {
 
 
 def _pocket_veto(module):
-    """No sentence may put an override and a pocket veto together without a negation."""
+    """No KEY and no RATIONALE may assert that a pocket veto can be overridden.
+
+    Scoped to the keyed choice and the `why`, deliberately. A distractor whose
+    whole job is to state the falsehood -- item 5's "Both a regular veto and a
+    pocket veto can be overridden" -- must be allowed to say it, and so must a
+    stem describing a student's wrong calculation. An earlier version of this
+    function read every string in the module and reported eight findings, every
+    one of them a correct distractor doing its job. That is the over-matching
+    checker this project keeps re-inventing: it would have trained the next
+    reader to skim past real output. What must never state the falsehood is the
+    text a student is told is TRUE.
+    """
     bad = []
     for i, item in enumerate(module.QUESTIONS, 1):
-        strings = [("stem", item["q"]), ("why", item["why"])]
-        strings += [(f"choice {'ABCDE'[k]}", c) for k, c in enumerate(item["choices"])]
-        for label, s in strings:
+        for label, s in (("key", item["choices"][item["ans"]]), ("why", item["why"])):
             for clause in s.replace(";", ".").replace(",", ".").split("."):
                 low = clause.lower()
-                if "pocket veto" not in low:
+                if "pocket veto" not in low or "overrid" not in low:
                     continue
-                if "overrid" not in low:
+                if any(n in low for n in ("cannot", "can not", "never", "not ",
+                                          "no ", "excluded", "ineligible")):
                     continue
-                if any(n in low for n in ("cannot", "can not", "never", "no ", "not ",
-                                          "excluded", "were never eligible")):
-                    continue
-                # A distractor may state the falsehood, but only in a question whose
-                # key or rationale corrects it; flag anything else for a human.
-                bad.append(f"q{i} {label}: {clause.strip()!r} joins a pocket veto to an "
+                bad.append(f"q{i} {label}: {clause.strip()!r} asserts a pocket veto "
                            "override with no negation")
-    keyed = {i for i, item in enumerate(module.QUESTIONS, 1)
-             if "pocket veto" in item["choices"][item["ans"]].lower()}
-    bad = [b for b in bad if int(b.split()[0][1:]) not in keyed
-           or "choice A" not in b]
     if bad:
         print(f"FAIL {module.__name__} pocket veto")
         for b in bad:
             print("  -", b)
         raise SystemExit(1)
-    print(f"OK  {module.__name__} pocket veto: no key or rationale states or implies that a "
-          "pocket veto can be overridden, per EK 2.4.A.2.i")
+    print(f"OK  {module.__name__} pocket veto: no key and no rationale states or implies "
+          "that a pocket veto can be overridden, per EK 2.4.A.2.i")
 
 
 ua.check(v2_4, ANCHORS, GROUNDING)
@@ -299,3 +300,12 @@ uc.check(v2_4, TABLE_CHECKS)
 #     denominators are available: 9 of 42 gives 21 percent, 9 of 31 gives 29.
 #     The checks recompute both, so the wrong reading is provably wrong rather
 #     than merely disfavoured.
+#
+# And one own-goal, caught and fixed here rather than shipped: the first version
+# of _pocket_veto read EVERY string in the module and reported eight findings --
+# all eight of them correct distractors doing exactly their job, plus a stem
+# describing a student's wrong calculation. It is the same over-matching checker
+# this project has now built several times (\bpi, LETTER_REF, the shared-span
+# detector). The function is now scoped to the keyed choice and the rationale,
+# which is the only text a student is told is true, and the docstring records
+# why so nobody widens it again.
