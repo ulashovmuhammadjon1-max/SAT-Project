@@ -22,7 +22,7 @@
 # projection DOES -- a property that can be reasoned about -- not to a framework
 # sentence that does not exist. Items keyed to a framework sentence cite it.
 #
-# Six items carry a real `table=`; each one's arithmetic is recomputed from the
+# Five items carry a real `table=`; each one's arithmetic is recomputed from the
 # table in verify_g1_1.py. FIVE choices (A-E), the real exam's format.
 TOPIC = ("1.1", "Introduction to Maps", 1)
 
@@ -298,7 +298,7 @@ QUESTIONS = [
 
  dict(q="Five counties report the population and land area below. A planner argues that a dot distribution map and a choropleth map of population density would leave very different impressions of which county is the most crowded. Which county supports her point most sharply?",
    table=dict(
-     headers=["County", "Population", "Land area (sq mi)"],
+     headers=["County", "Population", "Land area (square miles)"],
      rows=[
        ["Alder", "480,000", "1,200"],
        ["Birch", "150,000", "150"],
