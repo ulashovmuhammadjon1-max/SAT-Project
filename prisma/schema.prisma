@@ -2282,11 +2282,22 @@ model ApQuestion {
   choicesJson  String   @db.Text
   correctIndex Int
   explanation  String?  @db.Text
+  /// Author-declared difficulty when the module carries one: 'EASY' | 'MEDIUM'
+  /// | 'HARD'. Left null rather than guessed for the banks that were authored
+  /// without labels — see timesAnswered/timesCorrect for the empirical signal.
+  difficulty   String?
+  /// Empirical difficulty, counted from the LATEST attempt per (user,
+  /// question) so retrying until correct does not make a question look easy.
+  /// Below a minimum sample the question reports as unrated rather than
+  /// pretending to a rating.
+  timesAnswered Int     @default(0)
+  timesCorrect  Int     @default(0)
   createdAt    DateTime @default(now())
 
   attempts ApQuestionAttempt[]
 
   @@index([subject, unit, topic])
+  @@index([subject, difficulty])
 }
 
 model ApQuestionAttempt {

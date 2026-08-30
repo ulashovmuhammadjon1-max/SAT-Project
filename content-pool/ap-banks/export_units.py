@@ -29,18 +29,30 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("modules", nargs="+", help="module names, e.g. u2_1 u2_2")
     ap.add_argument("--subject", default="MICRO")
-    # Economics carries 50 questions per CED topic. Calculus carries 25: its CED
-    # subdivides far more finely (the disc and washer methods are four separate
-    # topics), so fifty would be padding. The count is still checked exactly --
-    # the point of the gate is that a short module cannot ship by accident.
+    # Questions per CED topic, by subject. These differ because the courses
+    # subdivide differently: Calculus lists the disc and washer methods as four
+    # separate topics, so fifty each would be padding, while an economics topic
+    # is broad enough to carry fifty honestly. The count is still checked
+    # EXACTLY -- the point of the gate is that a short module cannot ship by
+    # accident, so a new subject must be added here rather than defaulted.
     ap.add_argument("--per-topic", type=int, default=None,
-                    help="questions required per topic; defaults to 25 for Calculus, 50 otherwise")
+                    help="questions required per topic; defaults to the subject's count")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
+    PER_TOPIC = {
+        "MICRO": 50, "MACRO": 50,
+        "CALC_AB": 25, "CALC_BC": 25,
+        "STATISTICS": 25,
+        "PSYCHOLOGY": 30,
+    }
     expected = args.per_topic
     if expected is None:
-        expected = 25 if args.subject.startswith("CALC") else 50
+        expected = PER_TOPIC.get(args.subject)
+        if expected is None:
+            sys.exit(
+                f"unknown subject {args.subject!r}: add it to PER_TOPIC or pass --per-topic"
+            )
 
     out, dist, seen_stems = [], {c: 0 for c in "ABCDE"}, {}
     for mod_name in args.modules:
