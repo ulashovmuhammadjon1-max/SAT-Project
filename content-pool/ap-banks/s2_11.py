@@ -50,12 +50,12 @@ QUESTIONS = [
    ans=1,
    why="The empirical rule gives about 68 percent within one standard deviation, about 95 percent within two, and about 99.7 percent within three."),
 
- dict(q="According to the empirical rule, approximately what percent of the values of a normal distribution lie within two standard deviations of the mean?",
+ dict(q="Within two standard deviations of the mean, the empirical rule says a normal distribution holds approximately what percent of its values?",
    choices=["68%", "75%", "90%", "95%", "99.7%"],
    ans=3,
    why="About 95 percent of a normal distribution lies within two standard deviations of the mean."),
 
- dict(q="According to the empirical rule, approximately what percent of the values of a normal distribution lie within three standard deviations of the mean?",
+ dict(q="Within three standard deviations of the mean, the empirical rule says a normal distribution holds approximately what percent of its values?",
    choices=["68%", "95%", "99.7%", "100%", "99.0%"],
    ans=2,
    why="About 99.7 percent lies within three standard deviations, which is why a value beyond that is treated as remarkable."),
@@ -70,12 +70,12 @@ QUESTIONS = [
    ans=3,
    why="The z-score is 1.50, and the area to its left under the standard normal curve is 0.933."),
 
- dict(q="Scores are normally distributed with mean 500 and standard deviation 100. What proportion of scores are above 420?",
+ dict(q="What proportion of scores exceed 420, when scores are normally distributed with mean 500 and standard deviation 100?",
    choices=["0.212", "0.288", "0.500", "0.712", "0.788"],
    ans=4,
    why="z = (420 - 500)/100 = -0.80, and the area to the right of -0.80 is 0.788."),
 
- dict(q="Scores are normally distributed with mean 500 and standard deviation 100. What proportion of scores fall between 450 and 600?",
+ dict(q="What proportion of scores fall between 450 and 600, for a normal distribution of scores with mean 500 and standard deviation 100?",
    choices=["0.150", "0.309", "0.533", "0.691", "0.841"],
    ans=2,
    why="The z-scores are -0.50 and 1.00, and the area between them is 0.841 - 0.309 = 0.533."),
@@ -197,11 +197,11 @@ QUESTIONS = [
 
  dict(q="A student needs the score separating the bottom 15% of a normal distribution and computes it as mu - 1.04/sigma. This is wrong because the correct expression is",
    choices=[
-     "mu - 1.04(sigma), since the z-score is multiplied by the standard deviation, not divided into it",
-     "mu + 1.04(sigma)",
-     "mu/1.04 - sigma",
-     "1.04(mu) - sigma",
-     "sigma - 1.04(mu)"],
+     "the mean minus 1.04 standard deviations, since the z-score is multiplied by the standard deviation rather than divided into it",
+     "the mean plus 1.04 standard deviations",
+     "the mean divided by 1.04, then reduced by one standard deviation",
+     "1.04 times the mean, minus one standard deviation",
+     "one standard deviation minus 1.04 times the mean"],
    ans=0,
    why="Rearranging z = (x - mu)/sigma gives x = mu + z(sigma), so a z-score of -1.04 produces mu - 1.04 times sigma."),
 ]
