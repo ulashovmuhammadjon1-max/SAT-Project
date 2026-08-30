@@ -104,7 +104,7 @@ QUESTIONS = [
      "A formal region, since 30 percent is a precise threshold",
      "A perceptual region, since commuters identify with the city",
      "A formal region, since every place inside shares the same commuting share",
-     "A vernacular region, since 'commuter belt' is an everyday phrase"],
+     "Not a region at all, since the commuting share changes from year to year"],
    ans=0,
    why="A threshold makes the boundary crisp but does not change what unifies the area, and what unifies it here is daily movement toward one center. EK SPS-1.A.1's pattern of activity and EK SPS-1.A.2's functional type are the operative statements."),
 
@@ -329,10 +329,10 @@ QUESTIONS = [
      rows=[
        ["Core county", "0", "96"],
        ["County V", "40", "88"],
-       ["County W", "90", "61"],
-       ["County X", "140", "34"],
-       ["County Y", "200", "12"],
-       ["County Z", "260", "4"]]),
+       ["County W", "90", "74"],
+       ["County X", "140", "55"],
+       ["County Y", "200", "31"],
+       ["County Z", "260", "9"]]),
    choices=[
      "Agreement declines steadily with distance from the core, so the boundary is a transition zone rather than a line",
      "Agreement is uniform, so the boundary is sharp and easy to draw",
@@ -340,7 +340,7 @@ QUESTIONS = [
      "Exactly half the counties agree, so the boundary lies between the third and fourth",
      "The responses show that the region does not exist"],
    ans=0,
-   why="Agreement falls from 96 percent to 4 percent as distance rises from zero to 260 kilometres, with no jump anywhere in the sequence. A monotonic decline is the measured form of the transitional boundary the framework describes."),
+   why="Agreement falls from 96 percent to 9 percent as distance rises from zero to 260 kilometres, with no jump anywhere in the sequence. A monotonic decline is the measured form of the transitional boundary the framework describes."),
 
  dict(q="One district's membership in four differently defined regions is recorded below. Using the table, which conclusion is supported?",
    table=dict(
