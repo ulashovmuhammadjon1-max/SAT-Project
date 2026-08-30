@@ -33,6 +33,36 @@ def numvec(text):
     return [float(t) for t in _NUM.findall(text.replace(",", ""))]
 
 
+_WORD = re.compile(r"[A-Za-z]+")
+
+# Words that are allowed to appear in a choice that still counts as "numeric in
+# style" -- units, and the handful of connectives a numeric answer needs.
+_UNIT_WORDS = {
+    "minutes", "minute", "hours", "hour", "seconds", "second", "days", "day",
+    "years", "year", "weeks", "week", "months", "month",
+    "kg", "g", "mg", "cm", "mm", "m", "km", "in", "ft", "lb", "lbs", "oz",
+    "ml", "l", "students", "people", "adults", "residents", "households",
+    "points", "degrees", "dollars", "and", "to", "or", "about", "z", "t", "p",
+    "df", "value", "n", "x", "s", "chi", "square", "approximately", "percent",
+    "percentage", "than", "less", "greater", "more", "at", "least", "most",
+    "mean", "standard", "deviation", "variance", "median", "with", "against",
+    "for", "from", "mm", "grams", "kilograms", "cm2", "b", "r", "se", "slope",
+    "intercept", "chirps", "mpg", "beats",
+}
+
+
+def numeric_style(text):
+    """True when ``text`` reads as a number (with units), not as prose.
+
+    Used to decide which choices may be compared as numbers. A choice with more
+    than two non-unit words is prose, and its digits are incidental.
+    """
+    if not _NUM.search(text):
+        return False
+    stray = [w for w in _WORD.findall(text.lower()) if w not in _UNIT_WORDS]
+    return len(stray) <= 2
+
+
 def _match(vec, expected, tol):
     if len(vec) != len(expected):
         return False
@@ -50,7 +80,7 @@ class Checker:
             f"{module.TOPIC[0]}: expected {total} questions, found {len(module.QUESTIONS)}"
         )
 
-    def check(self, q, expected, tol=0.02, note=""):
+    def check(self, q, expected, tol=0.002, note=""):
         """Question ``q`` (1-based) must key the unique choice matching ``expected``.
 
         ``expected`` is a number or a sequence of numbers -- every number the
@@ -60,7 +90,12 @@ class Checker:
             expected = [expected]
         expected = [float(v) for v in expected]
         item = self.m.QUESTIONS[q - 1]
-        hits = [i for i, c in enumerate(item["choices"]) if _match(numvec(c), expected, tol)]
+        assert numeric_style(item["choices"][item["ans"]]), (
+            f"q{q}: check() is for numeric answers, but the key "
+            f"{item['choices'][item['ans']]!r} reads as prose"
+        )
+        hits = [i for i, c in enumerate(item["choices"])
+                if numeric_style(c) and _match(numvec(c), expected, tol)]
         assert hits, (
             f"q{q}: computed {expected} matches no choice; choices={item['choices']}"
         )
@@ -84,8 +119,13 @@ class Checker:
         missing = [q for q in range(1, self.total + 1) if q not in self.seen]
         assert not missing, f"{self.m.TOPIC[0]}: questions not verified at all: {missing}"
         # Pairwise numeric distinctness, over and above the exporter's string check.
+        # Only choices that are *numeric in style* are compared this way. A prose
+        # choice such as "computed with n - 1 in the denominator" carries a stray
+        # 1, and comparing those numbers would report every such pair as a
+        # duplicate -- an over-matching check is worse than no check, because it
+        # trains you to ignore the output.
         for i, item in enumerate(self.m.QUESTIONS, 1):
-            vecs = [numvec(c) for c in item["choices"]]
+            vecs = [numvec(c) if numeric_style(c) else [] for c in item["choices"]]
             for a in range(len(vecs)):
                 for b in range(a + 1, len(vecs)):
                     if vecs[a] and vecs[a] == vecs[b]:
