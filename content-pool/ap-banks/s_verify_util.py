@@ -67,10 +67,15 @@ def numeric_style(text):
 # relations -- "Ha: mu > 500" against "Ha: mu < 500" -- are different answers,
 # so the duplicate check compares relations alongside numbers. Without this the
 # check reports every pair of one-sided hypotheses as a duplicate, which is the
-# over-matching failure that makes a checker worth ignoring.
+# over-matching failure that makes a checker worth ignoring. A space-delimited
+# + or - counts as a relation too, because "yhat = 12.85 + 3.42x" and
+# "yhat = 12.85 - 3.42x" carry identical NUMBERS -- numvec cannot claim the
+# minus, since a digit does not follow it immediately -- and are nonetheless
+# different answers.
 _REL = re.compile(
-    r"<=|>=|!=|<|>|=|\bnot equal\b|\bgreater\b|\bless\b|\bfewer\b|\bmore\b|"
-    r"\bexceeds?\b|\babove\b|\bbelow\b|\bat least\b|\bat most\b",
+    r"<=|>=|!=|<|>|=|(?<=\s)[+-](?=\s)|\bnot equal\b|\bgreater\b|\bless\b|"
+    r"\bfewer\b|\bmore\b|\bexceeds?\b|\babove\b|\bbelow\b|\bat least\b|"
+    r"\bat most\b",
     re.IGNORECASE,
 )
 
