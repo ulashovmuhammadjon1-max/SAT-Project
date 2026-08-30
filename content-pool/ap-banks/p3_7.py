@@ -208,7 +208,7 @@ QUESTIONS = [
    "the social clock",
    "latent learning"], ans=0,
    why="EK 3.7.A.3 states that emotional responses can be classically conditioned and that this grounds therapeutic interventions such as counterconditioning, which is what pairing a feared object with relaxation is."),
- dict(q="Which of the following is explicitly excluded from the scope of the AP Psychology Exam by Topic 3.7?", choices=[
+ dict(q="Topic 3.7 names one theory that the AP Psychology Exam will not address. Which is it?", choices=[
    "the expectancy theory",
    "spontaneous recovery",
    "higher-order conditioning",
