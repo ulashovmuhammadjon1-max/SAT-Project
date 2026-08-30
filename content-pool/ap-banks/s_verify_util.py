@@ -47,7 +47,7 @@ _UNIT_WORDS = {
     "percentage", "than", "less", "greater", "more", "at", "least", "most",
     "mean", "standard", "deviation", "variance", "median", "with", "against",
     "for", "from", "mm", "grams", "kilograms", "cm2", "b", "r", "se", "slope",
-    "intercept", "chirps", "mpg", "beats", "sample", "margin", "error",
+    "intercept", "chirps", "mpg", "beats", "sample", "margin", "error", "width",
 }
 
 
