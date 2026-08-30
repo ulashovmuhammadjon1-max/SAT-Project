@@ -14,11 +14,11 @@ TOPIC = ("5.2", "Correlation", 5)
 QUESTIONS = [
 
  dict(q="Which of the following is a possible value of a correlation coefficient?", choices=[
+   "-3.00",
    "-1.20",
    "-0.85",
    "1.40",
-   "2.00",
-   "-3.00"], ans=1,
+   "2.00"], ans=2,
    why="CED 5.2.A.1: r always lies between -1 and 1 inclusive, so only -0.85 is possible."),
 
  dict(q="A correlation coefficient of r = 0 between two quantitative variables means", choices=[
@@ -46,19 +46,19 @@ QUESTIONS = [
    why="Correlation standardizes both variables before combining them, so it is symmetric in the two; the roles of explanatory and response affect the regression line but not r."),
 
  dict(q="For the six pairs (2, 14), (4, 19), (5, 20), (7, 26), (9, 31), (11, 36), the correlation is about 0.998. If every y-value were doubled and then increased by 5, what would the new correlation be?", choices=[
+   "0.499",
+   "0.501",
    "0.998",
    "1.996",
-   "0.499",
-   "2.001",
-   "0.501"], ans=0,
+   "2.001"], ans=2,
    why="A linear rescaling of one variable leaves the standardized values unchanged in size and sign, so r is unchanged at 0.998; only reversing the sign of a variable would change r, and then only its sign."),
 
  dict(q="For the same six pairs, if every y-value were multiplied by -1, what would the correlation become?", choices=[
-   "-0.998",
-   "0.998",
-   "0.000",
    "-1.000",
-   "1.000"], ans=0,
+   "-0.998",
+   "0.000",
+   "0.998",
+   "1.000"], ans=1,
    why="Negating one variable reverses the direction of every standardized product, so r keeps its magnitude and flips sign."),
 
  dict(q="The correlation between two quantitative variables is 0.94. What is the coefficient of determination, and what does it mean?", choices=[
@@ -71,10 +71,10 @@ QUESTIONS = [
 
  dict(q="A regression of y on x reports r^2 = 0.49, and the scatterplot shows a falling pattern. What is r?", choices=[
    "-0.70",
-   "0.70",
+   "-0.49",
    "-0.24",
    "0.24",
-   "-0.49"], ans=0,
+   "0.70"], ans=0,
    why="Taking the square root of 0.49 gives 0.70 in magnitude, and the falling pattern fixes the sign as negative; r^2 alone cannot supply the sign."),
 
  dict(q="The correlation between the number of firefighters sent to a fire and the damage caused is strongly positive. What does this show?", choices=[
@@ -126,11 +126,11 @@ QUESTIONS = [
    why="Every point contributes to r through its standardized deviations, so one point far from the pattern can dominate the sum; correlation, like the mean, is not resistant."),
 
  dict(q="Two variables have correlation r = 0.6. What proportion of the variation in the response variable is NOT explained by the linear relationship with the explanatory variable?", choices=[
-   "0.64",
+   "0.16",
    "0.36",
    "0.40",
    "0.60",
-   "0.16"], ans=0,
+   "0.64"], ans=4,
    why="The explained proportion is r^2 = 0.36, so the unexplained proportion is 1 - 0.36 = 0.64; 0.40 is the mistake of using 1 - r."),
 
  dict(q="Which statement about the correlation coefficient is FALSE?", choices=[
