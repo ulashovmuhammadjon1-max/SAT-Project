@@ -330,7 +330,7 @@ QUESTIONS = [
        ["Region 1", "4,800", "6,000"],
        ["Region 2", "2,100", "1,400"],
        ["Region 3", "9,000", "15,000"],
-       ["Region 4", "1,200", "3,000"]]),
+       ["Region 4", "400", "1,000"]]),
    choices=[
      "Region 2, at 1,500 people per square kilometre of arable land",
      "Region 3, which has the largest population in the table",
@@ -338,7 +338,7 @@ QUESTIONS = [
      "Region 4, which has the least arable land",
      "Region 3, which has the most arable land"],
    ans=0,
-   why="Physiological densities are 800, 1,500, 600 and 400 people per square kilometre of arable land, so the most populous region is not the one under most pressure. The region with the least arable land is also not the answer, because its population is small in proportion."),
+   why="Physiological densities are 800, 1,500, 600 and 400 people per square kilometre of arable land, so the most populous region is not the one under the most pressure. The region with the least arable land is not the answer either, because its population is small in proportion to that land."),
 
  dict(q="Land and settlement data for one country are shown by zone. Using the table, what share of the country's population lives on what share of its land?",
    table=dict(
@@ -364,7 +364,7 @@ QUESTIONS = [
        ["2005", "42", "105"],
        ["2020", "54", "90"]]),
    choices=[
-     "Physiological density has doubled, from 250 to 600 people per square kilometre of arable land",
+     "Physiological density has more than doubled, from 250 to 600 people per square kilometre of arable land",
      "Physiological density has fallen, because farming has become more efficient",
      "Physiological density is unchanged, since both figures moved",
      "Physiological density rose only because the population rose",
