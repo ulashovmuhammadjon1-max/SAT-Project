@@ -232,6 +232,7 @@ def _respectively(module):
           "independence argument")
 
 
+ua.shape(v2_8)
 ua.check(v2_8, ANCHORS, GROUNDING)
 ua.notation(v2_8)
 _respectively(v2_8)

@@ -232,6 +232,7 @@ def _no_numeric_shorthand(module):
           "mathfmt.convert has nothing to read as a fraction")
 
 
+ua.shape(v1_5)
 ua.check(v1_5, ANCHORS, GROUNDING)
 _no_numeric_shorthand(v1_5)
 uc.check(v1_5, TABLE_CHECKS)

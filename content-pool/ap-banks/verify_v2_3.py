@@ -227,6 +227,7 @@ def _definitions(module):
           "divided government each keep the CED's own distinguishing wording")
 
 
+ua.shape(v2_3)
 ua.check(v2_3, ANCHORS, GROUNDING)
 ua.notation(v2_3)
 _definitions(v2_3)

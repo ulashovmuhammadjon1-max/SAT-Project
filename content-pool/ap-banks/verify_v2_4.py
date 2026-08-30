@@ -280,6 +280,7 @@ def _pocket_veto(module):
           "that a pocket veto can be overridden, per EK 2.4.A.2.i")
 
 
+ua.shape(v2_4)
 ua.check(v2_4, ANCHORS, GROUNDING)
 ua.notation(v2_4)
 _pocket_veto(v2_4)

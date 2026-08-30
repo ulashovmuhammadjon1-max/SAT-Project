@@ -278,6 +278,7 @@ def _discharge_wording(module):
           "discharge a bill alone, so the items are true on either reading of EK 2.2.A.3.i")
 
 
+ua.shape(v2_2)
 ua.check(v2_2, ANCHORS, GROUNDING)
 ua.notation(v2_2)
 _discharge_wording(v2_2)

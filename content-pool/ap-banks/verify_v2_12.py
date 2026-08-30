@@ -241,6 +241,7 @@ def _merit_criteria(module):
           "professionalism, specialization and neutrality, with nothing added")
 
 
+ua.shape(v2_12)
 ua.check(v2_12, ANCHORS, GROUNDING)
 ua.notation(v2_12)
 _two_axes(v2_12)

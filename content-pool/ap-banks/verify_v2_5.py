@@ -256,6 +256,7 @@ def _quantifiers(module):
           "duration claim and EK 2.5.A.3's definition all intact in the keys")
 
 
+ua.shape(v2_5)
 ua.check(v2_5, ANCHORS, GROUNDING)
 ua.notation(v2_5)
 _quantifiers(v2_5)

@@ -255,6 +255,7 @@ def _permissive(module):
           "independence; EK 2.10.A.1 says ALLOWS and CAN at every hinge")
 
 
+ua.shape(v2_10)
 ua.check(v2_10, ANCHORS, GROUNDING)
 ua.notation(v2_10)
 _on_syllabus(v2_10)

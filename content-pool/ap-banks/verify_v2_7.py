@@ -260,6 +260,7 @@ def _no_current(module):
           f"{sorted(allowed)[0].title()})")
 
 
+ua.shape(v2_7)
 ua.check(v2_7, ANCHORS, GROUNDING)
 ua.notation(v2_7)
 _salience(v2_7)

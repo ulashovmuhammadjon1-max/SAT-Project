@@ -103,3 +103,45 @@ def notation(module):
         raise SystemExit(1)
     print(f"OK  {module.__name__} notation: no digit-hyphen-digit or digit-slash-digit "
           "anywhere, so mathfmt.convert has nothing to read as arithmetic")
+
+
+# --- shape -------------------------------------------------------------------
+# A question dict may hold exactly these keys. The check exists because of a
+# real defect: a stray walrus expression was once left inside a question's dict
+# literal, between `ans` and `why`. Python accepted it -- it bound an unused
+# name to an empty string -- so the module imported cleanly, every structural
+# check passed, and the dead code would have shipped inside a live question.
+#
+# That defect is invisible to reading and invisible to every content check in
+# this bank, because it is syntactically valid and semantically inert. The only
+# thing that catches it is asserting the key set is exactly what it should be.
+_KEYS = {"q", "choices", "ans", "why"}
+_OPTIONAL = {"table"}
+
+
+def shape(module):
+    """Every question dict holds exactly q/choices/ans/why, plus an optional table."""
+    bad = []
+    for i, item in enumerate(module.QUESTIONS, 1):
+        keys = set(item)
+        missing = _KEYS - keys
+        extra = keys - _KEYS - _OPTIONAL
+        if missing:
+            bad.append(f"q{i}: missing {sorted(missing)}")
+        if extra:
+            bad.append(f"q{i}: unexpected key(s) {sorted(extra)} -- a stray expression or a "
+                       "misspelled field name inside the dict literal")
+        if not isinstance(item.get("choices"), list):
+            bad.append(f"q{i}: choices is not a list")
+        if not isinstance(item.get("ans"), int) or isinstance(item.get("ans"), bool):
+            bad.append(f"q{i}: ans is not a plain integer")
+        for k in ("q", "why"):
+            if not isinstance(item.get(k), str):
+                bad.append(f"q{i}: {k} is not a string")
+    if bad:
+        print(f"FAIL {module.__name__} shape")
+        for b in bad:
+            print("  -", b)
+        raise SystemExit(1)
+    print(f"OK  {module.__name__} shape: every question dict holds exactly q, choices, ans "
+          "and why, with no stray keys")

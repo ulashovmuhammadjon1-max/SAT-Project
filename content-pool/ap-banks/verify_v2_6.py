@@ -243,6 +243,7 @@ def _four_purposes(module):
           "appear, and item 6's four distractors are exactly those four")
 
 
+ua.shape(v2_6)
 ua.check(v2_6, ANCHORS, GROUNDING)
 ua.notation(v2_6)
 _four_purposes(v2_6)

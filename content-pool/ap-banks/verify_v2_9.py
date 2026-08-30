@@ -239,6 +239,7 @@ def _causal_chain(module):
           "public opinion, Congress or amendment; EK 2.9.A.2's cause is composition")
 
 
+ua.shape(v2_9)
 ua.check(v2_9, ANCHORS, GROUNDING)
 ua.notation(v2_9)
 _causal_chain(v2_9)

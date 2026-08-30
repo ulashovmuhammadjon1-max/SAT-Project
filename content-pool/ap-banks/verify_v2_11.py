@@ -272,6 +272,7 @@ def _five_restrictions(module):
           "choice in item 22 names one of them")
 
 
+ua.shape(v2_11)
 ua.check(v2_11, ANCHORS, GROUNDING)
 ua.notation(v2_11)
 _not_ideological(v2_11)

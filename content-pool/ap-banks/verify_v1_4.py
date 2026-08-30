@@ -220,6 +220,7 @@ TABLE_CHECKS = {
  ],
 }
 
+ua.shape(v1_4)
 ua.check(v1_4, ANCHORS, GROUNDING)
 uc.check(v1_4, TABLE_CHECKS)
 
