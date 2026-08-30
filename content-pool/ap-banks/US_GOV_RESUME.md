@@ -10,14 +10,13 @@ only US Gov and is kept current by whoever is authoring it.
 |---|---|---|
 | 1 Foundations of American Democracy | 1.1 – 1.9 | **complete**, 9 of 9 |
 | 2 Interactions Among Branches | 2.1 – 2.15 | **complete**, 15 of 15 |
-| 3 Civil Liberties and Civil Rights | 3.1 – 3.5 | 5 of 13 |
+| 3 Civil Liberties and Civil Rights | 3.1 – 3.6 | 6 of 13 |
 | 4 American Political Ideologies and Beliefs | — | 0 of 10 |
 | 5 Political Participation | — | 0 of 13 |
 
-**29 of 60 topics, 870 questions, every one behind a passing verifier.**
+**30 of 60 topics, 900 questions, every one behind a passing verifier.**
 
-Resume at **3.6 Amendments: Balancing Individual Freedom with Public Order and
-Safety** and work in CED order.
+Resume at **3.7 Selective Incorporation** and work in CED order.
 
 ## How to author one topic
 
@@ -91,6 +90,12 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
   A student who reads the topic heading and the case name together writes a
   false holding into an FRQ. Check what the CED says the case HELD, never what
   the case was about. See `_lopez_is_commerce` in `verify_v3_5.py`.
+- **Where the framework says DEBATE, the bank takes no side.** 3.6's three
+  subjects -- the death penalty, firearms regulation, metadata collection -- are
+  live controversies the CED identifies as contested and resolves none of.
+  Every item there asks what the debate consists of, what would count as
+  evidence, or what a required case held. See `_no_position` in
+  `verify_v3_6.py`.
 - **Where the framework supplies no test, the bank supplies none either.** 3.5
   gives one sentence about interpretation and one holding about applicability,
   and no standard for evaluating any regulation. Items 27 and 28 there make the
@@ -103,7 +108,7 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
 
 ## Files
 
-- `v1_1.py` … `v3_5.py` — the modules. `verify_v*.py` — one per module.
+- `v1_1.py` … `v3_6.py` — the modules. `verify_v*.py` — one per module.
 - `usgov_check.py`, `gov345_check.py` — the two shared structural checkers.
   Libraries, not scripts: running one prints nothing.
 - `usgov_anchor.py` — the shared anchor/grounding/notation/shape gate.
