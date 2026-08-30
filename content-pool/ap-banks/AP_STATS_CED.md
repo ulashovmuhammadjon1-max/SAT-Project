@@ -172,16 +172,23 @@ CED. Under the framework confirmed above the same content is **Unit 1 + Unit 2 +
 current CED would be more than half inference (Units 3 and 4, 25 of the 55 topics).
 
 The research was accepted and the work was re-divided against the confirmed
-framework rather than the retired one. **The split now in force is:**
+framework rather than the retired one. **The split in force is:**
 
 | agent | scope | topics |
 |---|---|---|
 | this bank | **Unit 1, Unit 2, Unit 3** | 13 + 12 + 15 = **40** |
 | sibling | **Unit 4, Unit 5** | 10 + 5 = **15** |
 
-So the descriptive/collecting/probability content of the original brief is covered
-here, plus all of the proportion inference in Unit 3; regression (Unit 5), which is
-the brief's "Exploring Two-Variable Data", moved to the sibling along with Unit 4.
+So the descriptive, data-collection and probability content of the original brief is
+covered here, plus all of the proportion inference in Unit 3 — including the
+chi-square topics at 3.14–3.15, which the redesign folded in from the retired Unit 8.
+Regression (Unit 5), which is the brief's "Exploring Two-Variable Data", belongs to
+the sibling along with Unit 4.
+
+Two topics are deliberately treated in both halves. **3.8 Potential Errors When
+Performing Tests** (Type I and Type II error, power) is the primary treatment and is
+the fuller one; the sibling also raises those ideas inside Units 4 and 5 wherever a
+decision about a mean needs them, and says so in those module headers.
 
 The brief's list of most-missed ideas maps onto CED topics as follows. Note that
 three of them — correlation, influential points, residual plots — land in **Unit 5**
