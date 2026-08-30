@@ -63,6 +63,24 @@ def numeric_style(text):
     return len(stray) <= 2
 
 
+# Relational markers. Two choices carrying the same numbers but different
+# relations -- "Ha: mu > 500" against "Ha: mu < 500" -- are different answers,
+# so the duplicate check compares relations alongside numbers. Without this the
+# check reports every pair of one-sided hypotheses as a duplicate, which is the
+# over-matching failure that makes a checker worth ignoring.
+_REL = re.compile(
+    r"<=|>=|!=|<|>|=|\bnot equal\b|\bgreater\b|\bless\b|\bfewer\b|\bmore\b|"
+    r"\bexceeds?\b|\babove\b|\bbelow\b|\bat least\b|\bat most\b",
+    re.IGNORECASE,
+)
+
+
+def signature(text):
+    """The comparable content of a choice: its relations and its numbers."""
+    lowered = text.lower()
+    return (tuple(m.group(0) for m in _REL.finditer(lowered)), tuple(numvec(text)))
+
+
 def _match(vec, expected, tol):
     if len(vec) != len(expected):
         return False
@@ -125,10 +143,10 @@ class Checker:
         # duplicate -- an over-matching check is worse than no check, because it
         # trains you to ignore the output.
         for i, item in enumerate(self.m.QUESTIONS, 1):
-            vecs = [numvec(c) if numeric_style(c) else [] for c in item["choices"]]
+            vecs = [signature(c) if numeric_style(c) else None for c in item["choices"]]
             for a in range(len(vecs)):
                 for b in range(a + 1, len(vecs)):
-                    if vecs[a] and vecs[a] == vecs[b]:
+                    if vecs[a] and vecs[a][1] and vecs[a] == vecs[b]:
                         raise AssertionError(
                             f"q{i}: choices {a} and {b} are the same number(s): "
                             f"{item['choices'][a]!r} / {item['choices'][b]!r}"
