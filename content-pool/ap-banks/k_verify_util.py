@@ -131,8 +131,13 @@ def check(module, tables=None, per_topic=30, n_choices=5):
             else:
                 try:
                     fn(item)
-                except AssertionError as exc:
-                    fail(f"q{i}: table arithmetic disagrees -- {exc}")
+                except Exception as exc:
+                    # Deliberately broad. A recomputation function that raises
+                    # ValueError because a cell stopped being a number is
+                    # reporting the same defect as one that raises
+                    # AssertionError, and letting it escape as a traceback
+                    # would hide the other questions' findings behind it.
+                    fail(f"q{i}: table arithmetic disagrees -- {type(exc).__name__}: {exc}")
         elif i in tables:
             fail(f"q{i}: recomputation function supplied but the question has no table")
             tables.pop(i)
