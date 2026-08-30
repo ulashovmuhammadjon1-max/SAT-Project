@@ -10,13 +10,14 @@ only US Gov and is kept current by whoever is authoring it.
 |---|---|---|
 | 1 Foundations of American Democracy | 1.1 – 1.9 | **complete**, 9 of 9 |
 | 2 Interactions Among Branches | 2.1 – 2.15 | **complete**, 15 of 15 |
-| 3 Civil Liberties and Civil Rights | 3.1 – 3.4 | 4 of 13 |
+| 3 Civil Liberties and Civil Rights | 3.1 – 3.5 | 5 of 13 |
 | 4 American Political Ideologies and Beliefs | — | 0 of 10 |
 | 5 Political Participation | — | 0 of 13 |
 
-**28 of 60 topics, 840 questions, every one behind a passing verifier.**
+**29 of 60 topics, 870 questions, every one behind a passing verifier.**
 
-Resume at **3.5 Second Amendment: Right to Bear Arms** and work in CED order.
+Resume at **3.6 Amendments: Balancing Individual Freedom with Public Order and
+Safety** and work in CED order.
 
 ## How to author one topic
 
@@ -84,6 +85,17 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
   titled "The Court in Action" and contains nothing about certiorari, the rule
   of four or oral argument — the CED never mentions any of them. See
   `_on_syllabus` in `verify_v2_10.py`.
+- **A required case can be attached to a topic it says nothing about.** The CED
+  attaches United States v. Lopez to 3.5 Second Amendment, and Lopez holds
+  nothing about the right to bear arms -- its holding is a Commerce Clause one.
+  A student who reads the topic heading and the case name together writes a
+  false holding into an FRQ. Check what the CED says the case HELD, never what
+  the case was about. See `_lopez_is_commerce` in `verify_v3_5.py`.
+- **Where the framework supplies no test, the bank supplies none either.** 3.5
+  gives one sentence about interpretation and one holding about applicability,
+  and no standard for evaluating any regulation. Items 27 and 28 there make the
+  ABSENCE the thing tested rather than inventing content that sounds
+  authoritative about a contested question.
 - **The framework states the access-point claim three times** (EK 1.6.B.1 for
   separation of powers, EK 1.9.A.1 for federalism, EK 2.15.B.1 for the three
   branches). Each module is pinned to a different multiplier and
@@ -91,7 +103,7 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
 
 ## Files
 
-- `v1_1.py` … `v3_4.py` — the modules. `verify_v*.py` — one per module.
+- `v1_1.py` … `v3_5.py` — the modules. `verify_v*.py` — one per module.
 - `usgov_check.py`, `gov345_check.py` — the two shared structural checkers.
   Libraries, not scripts: running one prints nothing.
 - `usgov_anchor.py` — the shared anchor/grounding/notation/shape gate.
