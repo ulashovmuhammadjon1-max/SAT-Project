@@ -107,6 +107,36 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
     blurb:
       "The scientific study of behavior and mental processes: biological bases, cognition, development and learning, social psychology and personality, and mental and physical health.",
   },
+  {
+    code: "HUMAN_GEO",
+    slug: "human-geography",
+    name: "AP Human Geography",
+    short: "Human Geography",
+    category: "SOCIAL",
+    gradient: "from-lime-500 to-green-600",
+    blurb:
+      "Population, migration, culture, political geography, agriculture, cities, and development.",
+  },
+  {
+    code: "US_GOV",
+    slug: "united-states-government-and-politics",
+    name: "AP United States Government and Politics",
+    short: "US Gov",
+    category: "SOCIAL",
+    gradient: "from-blue-500 to-indigo-600",
+    blurb:
+      "Constitutional foundations, the branches, civil liberties and rights, political behavior, and institutions.",
+  },
+  {
+    code: "COMP_GOV",
+    slug: "comparative-government-and-politics",
+    name: "AP Comparative Government and Politics",
+    short: "Comparative Gov",
+    category: "SOCIAL",
+    gradient: "from-red-500 to-rose-600",
+    blurb:
+      "Six course countries compared across political systems, institutions, participation, and policy.",
+  },
 ];
 
 /**
@@ -123,9 +153,6 @@ const PLANNED: Omit<ApCatalogEntry, "status" | "gradient">[] = [
   { code: "CSA", slug: "computer-science-a", name: "AP Computer Science A", short: "CS A", category: "STEM", blurb: "Object-oriented programming in Java: classes, arrays and lists, inheritance, and recursion." },
   { code: "CSP", slug: "computer-science-principles", name: "AP Computer Science Principles", short: "CS Principles", category: "STEM", blurb: "Computational thinking, data, algorithms, programming, and the impact of computing." },
   { code: "ENV_SCI", slug: "environmental-science", name: "AP Environmental Science", short: "Environmental Sci", category: "STEM", blurb: "Ecosystems, biodiversity, populations, land and water use, energy, pollution, and global change." },
-  { code: "HUMAN_GEO", slug: "human-geography", name: "AP Human Geography", short: "Human Geography", category: "SOCIAL", blurb: "Population, migration, culture, political geography, agriculture, cities, and development." },
-  { code: "US_GOV", slug: "united-states-government-and-politics", name: "AP United States Government and Politics", short: "US Gov", category: "SOCIAL", blurb: "Constitutional foundations, the branches, civil liberties and rights, political behavior, and institutions." },
-  { code: "COMP_GOV", slug: "comparative-government-and-politics", name: "AP Comparative Government and Politics", short: "Comparative Gov", category: "SOCIAL", blurb: "Six course countries compared across political systems, institutions, participation, and policy." },
   { code: "WORLD_HISTORY", slug: "world-history-modern", name: "AP World History: Modern", short: "World History", category: "HISTORY", blurb: "Global processes from about 1200 CE to the present." },
   { code: "US_HISTORY", slug: "united-states-history", name: "AP United States History", short: "US History", category: "HISTORY", blurb: "American history from about 1491 to the present, across nine periods." },
   { code: "EURO_HISTORY", slug: "european-history", name: "AP European History", short: "European History", category: "HISTORY", blurb: "European history from about 1450 to the present." },
