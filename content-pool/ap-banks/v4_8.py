@@ -240,7 +240,7 @@ QUESTIONS = [
      "That policy outcomes are unrelated to either consideration"], ans=0,
    why="EK 4.8.A.2 places the dynamic in outcomes over time, and an alternating pattern across decades is that claim in visual form. A bar consistently taller would show a trend, which is what the framework's word DYNAMIC declines to assert."),
 
- dict(q="A student is asked to analyze a political cartoon for this topic and writes only a description of what the cartoon shows. What does skill 4.D require beyond that?",
+ dict(q="A student is asked to analyze a political cartoon for this topic and writes only a description of what it depicts. What does skill 4.D require beyond that?",
    choices=[
      "An explanation of how the visual elements illustrate or relate to a political principle, process, or policy",
      "A judgment of whether the cartoon is well drawn",
@@ -327,12 +327,12 @@ QUESTIONS = [
  dict(q=_BALANCE + " Which conclusion is best supported by the data?",
    table=_BALANCE_TABLE,
    choices=[
-     "Neither side leads across all four questions: the liberty side leads one, the order side leads two, and one is close",
+     "Neither side leads across all four questions: each side leads two, and one of the four is close to even",
      "The liberty side leads all four questions",
      "The order side leads all four questions",
      "The two sides are tied on every question",
      "A majority favored the liberty side on every question"], ans=0,
-   why="The liberty side leads Question 1 at 58 to 31, the order side leads Questions 2 and 4, and Question 3 is 47 to 44. The liberty side reaches a majority only on the first question."),
+   why="The liberty side leads Questions 1 and 3 and the order side leads Questions 2 and 4, so neither leads throughout. Question 3 is 47 to 44, a gap of 3 points, and the liberty side reaches an outright majority only on Question 1."),
 
  dict(q=_BALANCE + " Which statement in the course framework does this pattern most directly illustrate?",
    table=_BALANCE_TABLE,
