@@ -217,7 +217,15 @@ def _holding(module):
                        "amounts given to candidates")
         if "citizens united" not in norm:
             continue
-        # A key naming the case must stay inside the CED's own vocabulary.
+        # A key that is only the case NAME asserts nothing about it -- item 8
+        # puts the holding in the stem and asks which case it belongs to. Strip
+        # the name and the year; if nothing is left, there is no claim to check.
+        bare = norm.replace("citizens united v federal election commission", "")
+        bare = bare.replace("citizens united", "").replace("2010", "").strip()
+        if not bare:
+            continue
+        # A key that does say something about the case must stay inside the
+        # CED's own vocabulary.
         inside = ("protected speech" in norm or "political spending" in norm
                   or "direct contributions to candidates" in norm)
         if not inside:
@@ -371,6 +379,13 @@ def _controls():
         rows[0][2] = "34"      # 61 plus 34 no longer exceeds the whole
     _must_fail("an agreement share that removes item 30's forced overlap",
                lambda: q30(m.QUESTIONS[29]["table"]))
+
+    # 5. A figure standing immediately after a framework citation, which is the
+    #    one place the citation-stripping rule could hide one.
+    m = _copy(v5_11)
+    m.QUESTIONS[14]["choices"][0] = "EK 5.11.A.2, which sets a 3300 dollar ceiling on a gift"
+    _must_fail("a dollar figure hiding immediately after a framework citation",
+               lambda: _no_invented_numbers(m))
 
 
 ua.shape(v5_11)
