@@ -181,30 +181,30 @@ QUESTIONS = [
 
  dict(q="A Democratic platform calls for a national programme addressing public health. Which framework statements, taken together, account for that position, and what does the framework's wording NOT license concluding?",
    choices=[
-     "More national government involvement, with less responsibility left to state governments",
-     "Less national government involvement, with more responsibility left to state governments",
-     "Little national or state involvement of any kind",
-     "Involvement only by local governments",
-     "No government involvement in social issues at all"], ans=0,
-   why="EK 4.10.A.1 states that liberal ideologies generally favor more national government involvement to address some social issues such as education and public health, with less responsibility left to state governments."),
+     "EK 4.7.A.1 aligns Democratic platforms with liberal positions and EK 4.10.A.1 assigns liberal ideologies more national involvement on social issues such as public health; the wording supports this as a tendency across platforms rather than a rule about any one of them",
+     "EK 4.7.A.1 alone accounts for the position, and it establishes the position as a rule binding each Democratic platform",
+     "EK 4.10.A.1 alone accounts for the position, since it names the party as well as the ideology",
+     "EK 4.10.A.2 accounts for the position, and it licenses concluding that the platform is conservative",
+     "No framework statement accounts for the position, because the framework never connects a party to a policy position"], ans=0,
+   why="Two statements are needed and neither is sufficient alone: EK 4.7.A.1 connects the PARTY to an IDEOLOGY, and EK 4.10.A.1 connects that IDEOLOGY to the POSITION, naming public health among its examples. The hedges are the second half of the answer -- EK 4.7.A.1 says platforms GENERALLY ALIGN MORE CLOSELY TO a set of positions, which is a comparison rather than an identity, so it supports an expectation about platforms in general and not a claim about every one of them. EK 4.10.A.1 names no party, which is why it cannot carry the inference by itself."),
 
  dict(q="Two party platforms take opposite positions on whether a social policy should be run nationally or left to the states. On the framework's account, which pairing of party to position is the expected one, and why is it only an expectation?",
    choices=[
-     "Less national government involvement, with more responsibility left to state governments",
-     "More national government involvement, with less responsibility left to state governments",
-     "Elimination of state governments",
-     "Involvement only by the federal courts",
-     "Identical involvement by national and state governments"], ans=0,
-   why="EK 4.10.A.2 states this, and its structure mirrors EK 4.10.A.1 exactly: the same two variables, national involvement and state responsibility, moved in opposite directions."),
+     "The platform favoring state responsibility is the expected Republican one and the platform favoring national involvement the expected Democratic one; it is only an expectation because the framework says platforms generally align more closely to a set of positions rather than adopting them",
+     "The platform favoring state responsibility is the expected Democratic one, because liberal ideologies are assigned more responsibility for state governments",
+     "Neither pairing is expected, because the framework connects ideologies to positions but never parties to ideologies",
+     "Both pairings are equally expected, because the framework describes the two parties as ideologically indistinguishable",
+     "The pairing is certain rather than expected, because the framework states that each party's platform adopts its ideology's positions in full"], ans=0,
+   why="EK 4.7.A.1 pairs Republican platforms with conservative positions and Democratic platforms with liberal ones; EK 4.10.A.2 assigns conservative ideologies less national involvement and more responsibility left to the states, and EK 4.10.A.1 assigns liberal ideologies the reverse. The second half of the question turns on EK 4.7.A.1's hedges: GENERALLY and ALIGN MORE CLOSELY TO make the pairing a tendency, so a platform departing from it contradicts nothing the framework says."),
 
  dict(q="A student assumes that because the framework aligns the two major parties with liberal and conservative positions, every ideology it describes belongs to one of the two parties. Which framework statement most directly corrects that assumption?",
    choices=[
-     "Little national or state government involvement except when government is protecting private property or individual liberty",
-     "More national involvement and less state involvement",
-     "Less national involvement and more state involvement",
-     "Equal involvement by national and state governments",
-     "Involvement determined by public referendum"], ans=0,
-   why="EK 4.10.A.3 states this, including the two exceptions. The libertarian position is not simply the conservative one taken further, because it applies to state governments as well as to the national one."),
+     "The framework describes a libertarian position on social issues that it pairs with neither major party, favoring little national or state involvement except where government protects private property or individual liberty",
+     "The framework states that the two major parties together contain every ideology it describes",
+     "The framework assigns the libertarian position to the Republican Party, since both favor less national involvement",
+     "The framework assigns the libertarian position to whichever party controls the presidency",
+     "The framework describes no ideology other than the liberal and the conservative"], ans=0,
+   why="EK 4.7.A.1 names only two parties and two ideological positions, but EK 4.10.A.3 describes a third ideology the framework pairs with no party at all. That is what refutes the assumption. The Republican pairing is the tempting error and is wrong on the framework's own terms: the libertarian position applies to STATE as well as national involvement, whereas EK 4.10.A.2's conservative position moves responsibility TOWARD the states, so the two are not the same position taken to different degrees."),
 
  dict(q="Read the following excerpt.\n\n“A zeal for different opinions concerning religion, concerning government, and many other points, as well of speculation as of practice… have, in turn, divided mankind into parties, inflamed them with mutual animosity, and rendered them much more disposed to vex and oppress each other than to co-operate for their common good.”\n—James Madison, Federalist No. 10, 1787\n\nWhat does this passage claim about the origin of political parties?",
    choices=[

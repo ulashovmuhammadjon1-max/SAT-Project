@@ -52,7 +52,7 @@
 # item 20 names each rival model in exactly one way.
 #
 # Three items carry a real `table=`. FIVE choices (A-E).
-TOPIC = ("5.8", "Von Thunen Model", 5)
+TOPIC = ("5.8", "Von Thünen Model", 5)
 
 QUESTIONS = [
  dict(q="According to the framework, what does von Thunen's model emphasize in explaining rural land use?", choices=[

@@ -64,9 +64,9 @@ ANCHORS = {
  9: "More governmental regulation of the marketplace",
  10: "Fewer regulations of the marketplace",
  11: "while libertarian ideologies favor little or no regulation beyond protecting",
- 12: "More national government involvement, with less responsibility left to state",
- 13: "Less national government involvement, with more responsibility left to state",
- 14: "except when government is protecting private property or individual liberty",
+ 12: "a tendency across platforms rather than a rule about any one of them",
+ 13: "it is only an expectation because the framework says platforms generally align",
+ 14: "pairs with neither major party",
  15: "That differences of opinion on fundamental questions divide people into parties",
  16: "It identifies economic difference as a durable basis of political division",
  17: "so a system must be designed to operate with them present",
@@ -103,20 +103,27 @@ GROUNDING = {
     "documents into a claim about persons.",
  8: "EK 4.7.A.1's GENERALLY, which makes a nonaligning plank consistent with the statement "
     "rather than a counterexample to it.",
- 9: "EK 4.9.A.1, verbatim: 'Liberal ideologies favor more governmental regulation of the "
-    "marketplace.' EK 4.7.A.1 names the ideologies; 4.9 and 4.10 describe them.",
- 10: "EK 4.9.A.1: 'conservative ideologies favor fewer regulations.' FEWER is a comparative, "
-     "which is what separates it from the libertarian position in the same sentence.",
+ 9: "EK 4.7.A.1 and EK 4.9.A.1 chained: the first aligns Democratic platforms with liberal "
+    "positions, the second assigns liberal ideologies more governmental regulation of the "
+    "marketplace. Neither reaches the platform on its own, which is LO 4.7.A's whole point.",
+ 10: "EK 4.7.A.1 and EK 4.9.A.1 chained for the other party. FEWER is a comparative, which "
+     "is what separates the conservative position from the libertarian one in the same "
+     "sentence and keeps the third choice wrong.",
  11: "EK 4.9.A.1's three positions in one sentence, and the difference between FEWER and "
      "LITTLE OR NO regulation 'beyond the protection of property rights and voluntary trade'.",
- 12: "EK 4.10.A.1, verbatim: liberal ideologies 'generally favor more national government "
-     "involvement to address some social issues such as education and public health, with "
-     "less responsibility for these issues left to state governments.'",
- 13: "EK 4.10.A.2, whose structure mirrors EK 4.10.A.1 exactly: the same two variables moved "
-     "in opposite directions.",
- 14: "EK 4.10.A.3, verbatim: libertarian ideologies 'generally favor little national or state "
-     "government involvement except when national or state government is protecting private "
-     "property or individual liberty.' It restrains state governments too.",
+ 12: "EK 4.7.A.1 and EK 4.10.A.1 together, plus the limit of the pair. EK 4.10.A.1 names "
+     "public health among its examples but names no party; EK 4.7.A.1 names the party but no "
+     "position, and its GENERALLY ALIGN MORE CLOSELY TO is a comparison, so the chain "
+     "supports an expectation about platforms and not a claim about every one of them.",
+ 13: "EK 4.7.A.1 read against EK 4.10.A.1 and EK 4.10.A.2, whose structures mirror each "
+     "other with the same two variables moved in opposite directions. The second half of the "
+     "key is EK 4.7.A.1's hedges, which make a departing platform consistent with the "
+     "framework rather than a counterexample to it.",
+ 14: "EK 4.10.A.3 set against EK 4.7.A.1's two-party frame: the framework describes a third "
+     "ideology it pairs with no party. The Republican pairing is the tempting error and fails "
+     "on the framework's own terms, because the libertarian position restrains STATE "
+     "involvement too while EK 4.10.A.2's conservative position moves responsibility toward "
+     "the states.",
  15: "Federalist No. 10 (required document), quoted verbatim; the CED attaches it to 4.7.A. "
      "Madison lists zeal for different opinions among the causes that have divided people "
      "into parties.",
@@ -254,7 +261,17 @@ _IDENTITY = (
 
 
 def _hedges(module):
-    """PLATFORMS, GENERALLY and MORE CLOSELY all survive."""
+    """PLATFORMS, GENERALLY and MORE CLOSELY all survive.
+
+    KNOWN BLIND SPOT: the _IDENTITY scan is a bare substring match, so it fires
+    on a NEGATED use as readily as on an assertion -- a key reading "not every
+    Democratic platform takes that position" is refused even though it says
+    exactly what the gate wants said. That is a false positive in the safe
+    direction and it has been left alone deliberately: widening it to parse
+    negation is how a gate stops gating, and this bank has paid for
+    over-matching checkers repeatedly. Phrase the hedge positively ("a tendency
+    across platforms rather than a rule about any one of them") instead.
+    """
     bad = []
     for i, item in enumerate(module.QUESTIONS, 1):
         key = item["choices"][item["ans"]].lower()
@@ -300,13 +317,16 @@ def _ideologies(module):
                                             "ideologies"),
         (10, "fewer regulations", "EK 4.9.A.1 gives FEWER regulations to conservative "
                                  "ideologies"),
-        (12, "more national government involvement", "EK 4.10.A.1 gives MORE national "
-                                                     "involvement to liberal ideologies"),
-        (13, "less national government involvement", "EK 4.10.A.2 gives LESS national "
-                                                     "involvement to conservative ideologies"),
-        (14, "little national or state government involvement", "EK 4.10.A.3's libertarian "
-                                                                "position restrains STATE "
-                                                                "government too"),
+        (12, "assigns liberal ideologies more national involvement", "EK 4.10.A.1 gives MORE "
+                                                                    "national involvement to "
+                                                                    "liberal ideologies"),
+        (13, "state responsibility is the expected republican one", "EK 4.10.A.2 gives LESS "
+                                                                   "national involvement to "
+                                                                   "conservative ideologies, "
+                                                                   "which EK 4.7.A.1 pairs "
+                                                                   "with Republican platforms"),
+        (14, "little national or state involvement", "EK 4.10.A.3's libertarian position "
+                                                    "restrains STATE government too"),
     )
     for n, clause, note in swaps:
         key = module.QUESTIONS[n - 1]["choices"][module.QUESTIONS[n - 1]["ans"]].lower()
