@@ -302,7 +302,7 @@ QUESTIONS = [
    "The framework forbids ranking cities at all"], ans=0,
    why="EK PSO-6.B.1 says world cities function at the top of the world's urban hierarchy without specifying how the hierarchy is measured. Any index makes decisions about what to count and how much to weight it, so the ranking it produces is one defensible reading rather than a fact about the cities."),
 
- dict(q="Which sentence states what this topic's two essential knowledge statements assert between them?", choices=[
+ dict(q="A lecturer sums the topic up in one sentence. Which sentence keeps both the agency the framework attributes to world cities and the reach of the connections it describes?", choices=[
    "A few cities hold the functions that organize the world economy and drive globalization, and cities generally are joined by networks along which global processes travel and are acted on",
    "Cities are passive recipients of globalization and play no part in producing it",
    "The world's largest cities by population are its world cities",
