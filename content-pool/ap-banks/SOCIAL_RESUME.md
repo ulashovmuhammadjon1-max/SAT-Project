@@ -31,12 +31,12 @@ subject the catalog does not mark LIVE, so the outlines are safe to sit there
 ahead of their questions. The three subjects stay COMING_SOON in
 `src/lib/ap/catalog.ts`; flipping them is the LAST step.
 
-### Modules authored: 101 of 171
-| subject | authored | remaining |
-|---|---|---|
-| Human Geography (`g<unit>_<n>.py`) | 36 | 32 |
-| US Government (`v<unit>_<n>.py`) | 33 | 27 |
-| Comparative Gov (`k<unit>_<n>.py`) | 32 | 11 |
+### Modules authored: 98 of 171
+| subject | authored | through | remaining |
+|---|---|---|---|
+| Human Geography (`g<unit>_<n>.py`) | 35 | 1.1–4.8 | 33 (4.9–4.10, Units 5–7) |
+| US Government (`v<unit>_<n>.py`) | 32 | 1.1–3.8 | 28 (3.9–3.13, Units 4–5) |
+| Comparative Gov (`k<unit>_<n>.py`) | 31 | 1.1–4.3 | 12 (4.4–4.6, Unit 5) |
 
 Nearly all carry a passing `verify_*.py`. The exceptions are listed next.
 
@@ -61,7 +61,7 @@ validate before trusting a module that was in flight.
 
 ## What REMAINS
 
-70 topics to author, at 30 questions each. Work in CED order within each
+73 topics to author, at 30 questions each. Work in CED order within each
 subject; `*_topics.json` has every code and its verbatim title.
 
 Then, in order:
