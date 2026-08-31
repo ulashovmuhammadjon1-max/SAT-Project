@@ -125,23 +125,23 @@ def q24(table, item):
 
 
 def q25(table, item):
-    p, r = cg.col(table, PRICE), cg.col(table, REV)
+    p, r, sp = cg.col(table, PRICE), cg.col(table, REV), cg.col(table, SPEND)
     rng = max(p) - min(p)
     assert rng == 91, f"the keyed range recomputes to {rng}"
     assert max(p) - 100 == 52, "the 52 distractor must be the gap above the starting year"
     assert 100 - min(p) == 39, "the 39 distractor must be the gap below the starting year"
-    assert max(p) == 152, "the 152 distractor must be the largest single figure read as a range"
+    assert max(sp) - min(sp) == 47, "the 47 distractor must be the programme spending column's range"
     assert max(r) - min(r) == 69, "the 69 distractor must be the revenue column's range"
     return f"the price column reads {p}, so its range is {rng:.0f} points"
 
 
 def q26(table, item):
-    p, r = cg.col(table, PRICE), cg.col(table, REV)
+    p, r, sp = cg.col(table, PRICE), cg.col(table, REV), cg.col(table, SPEND)
     rng = max(r) - min(r)
     assert rng == 69, f"the keyed range recomputes to {rng}"
     assert max(r) - 100 == 41, "the 41 distractor must be the gap above the starting year"
     assert 100 - min(r) == 28, "the 28 distractor must be the gap below the starting year"
-    assert max(r) == 141, "the 141 distractor must be the largest single figure read as a range"
+    assert max(sp) - min(sp) == 47, "the 47 distractor must be the programme spending column's range"
     assert max(p) - min(p) == 91, "the 91 distractor must be the price column's range"
     return f"the revenue column reads {r}, so its range is {rng:.0f} points"
 
@@ -232,9 +232,9 @@ CLAIMS = [
  ("swinging far below the starting level in the last year",
   "EK LEG-5.A.2.c names severe revenue fluctuations based on world market pricing. Recomputed in q24 above, which tests the rise and the fall separately, since the key asserts that revenue and spending follow the price in both directions."),
  ("91 points",
-  "Recomputed in q25 above by subtracting the smallest world price figure from the largest. The distractors are the two gaps against the starting year, the largest single figure read as a range, and the revenue column's range."),
+  "Recomputed in q25 above by subtracting the smallest world price figure from the largest. The distractors are the two gaps against the starting year, the programme spending column's range, and the revenue column's range."),
  ("69 points",
-  "Recomputed in q26 above by subtracting the smallest revenue figure from the largest. The distractors are the two gaps against the starting year, the largest single figure read as a range, and the price column's range."),
+  "Recomputed in q26 above by subtracting the smallest revenue figure from the largest. The distractors are the two gaps against the starting year, the programme spending column's range, and the price column's range."),
  ("private investors have been admitted to it",
   "EK LEG-5.A.3.a gives the decision to allow private investment in a national oil company as an instance of a lower degree of central control over a nationalized resource. Recomputed in q27 above, where one arrangement alone admits private investors while the state company remains."),
  ("foreign multinational corporations underwrite production and exercise political influence",
