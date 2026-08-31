@@ -313,15 +313,23 @@ def _ideologies(module):
         if clause not in key:
             bad.append(f"q{n}: the key no longer carries {clause!r}; {note}")
     # Conservative is FEWER, not LITTLE OR NO: that is the libertarian position.
+    # The clause is attributed to the ideology named NEAREST BEFORE IT, not to
+    # any ideology within a fixed window. A window reported item 11, whose key
+    # correctly reads "Conservative ideologies favor fewer regulations, WHILE
+    # libertarian ideologies favor little or no regulation..." -- the two are
+    # contrasted in one sentence, which is what the item is for. Third time this
+    # project has paid for a proximity check that could not tell attribution
+    # from adjacency.
     for i, item in enumerate(module.QUESTIONS, 1):
         key = item["choices"][item["ans"]].lower()
-        at = key.find("conservative")
-        if at >= 0:
-            seg = key[at:at + 120]
-            if "little or no regulation" in seg:
-                bad.append(f"q{i} key: gives conservative ideologies the LITTLE OR NO "
-                           "regulation position; EK 4.9.A.1 assigns that to libertarian "
-                           "ideologies and gives conservative ideologies FEWER regulations")
+        at = key.find("little or no regulation")
+        if at < 0:
+            continue
+        cons, libt = key.rfind("conservative", 0, at), key.rfind("libertarian", 0, at)
+        if cons > libt:
+            bad.append(f"q{i} key: gives conservative ideologies the LITTLE OR NO "
+                       "regulation position; EK 4.9.A.1 assigns that to libertarian "
+                       "ideologies and gives conservative ideologies FEWER regulations")
     if bad:
         print(f"FAIL {module.__name__} ideologies")
         for b in bad:
@@ -346,8 +354,15 @@ def _no_partisanship(module):
     bad = []
     for i, item in enumerate(module.QUESTIONS, 1):
         key = item["choices"][item["ans"]].lower()
+        stem = item["q"].lower()
+        # An item asking what the framework does NOT state has a key that NAMES
+        # the omitted claim. Item 23 is exactly that, and a flat scan reported
+        # its correct key as a verdict -- the fourth over-match this build has
+        # paid for. Naming a verdict as the thing the framework withholds is the
+        # opposite of passing it.
+        withholds = "not state" in stem or "does not state" in stem
         for v in _VERDICTS:
-            if v in key:
+            if v in key and not withholds:
                 bad.append(f"q{i} key: passes the verdict {v!r}. EK 4.7.A.1 is descriptive "
                            "throughout, and LO 4.7.A asks how party ideologies SHAPE POLICY "
                            "DEBATES -- a question about structure, not about who is right")
