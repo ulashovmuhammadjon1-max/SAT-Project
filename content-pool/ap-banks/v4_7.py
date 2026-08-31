@@ -152,7 +152,7 @@ QUESTIONS = [
      "Two parties adopting identical platforms"], ans=0,
    why="EK 4.7.A.1's word GENERALLY leaves room for planks that do not align, which is what makes the first option consistent with it rather than a counterexample. The other options describe situations the framework's sentence does not address."),
 
- dict(q="According to the course framework's account of economic policy, what do LIBERAL ideologies favor regarding the marketplace?",
+ dict(q="EK 4.7.A.1 aligns Democratic Party platforms more closely with liberal ideological positions. Reading that alongside the framework's account of economic policy, which position on the marketplace would a Democratic platform generally be expected to take?",
    choices=[
      "More governmental regulation of the marketplace",
      "Fewer regulations of the marketplace",
@@ -161,7 +161,7 @@ QUESTIONS = [
      "Elimination of all taxation"], ans=0,
    why="EK 4.9.A.1 states that liberal ideologies favor more governmental regulation of the marketplace, conservative ideologies favor fewer regulations, and libertarian ideologies favor little or no regulation beyond the protection of property rights and voluntary trade."),
 
- dict(q="According to the course framework's account of economic policy, what do CONSERVATIVE ideologies favor regarding the marketplace?",
+ dict(q="EK 4.7.A.1 aligns Republican Party platforms more closely with conservative ideological positions. Reading that alongside the framework's account of economic policy, which position on the marketplace would a Republican platform generally be expected to take?",
    choices=[
      "Fewer regulations of the marketplace",
      "More governmental regulation of the marketplace",
@@ -179,7 +179,7 @@ QUESTIONS = [
      "The framework does not describe a libertarian position"], ans=0,
    why="EK 4.9.A.1 names all three positions in one sentence, and the difference between the second and third is the difference between FEWER and LITTLE OR NO, with the libertarian position given two named exceptions."),
 
- dict(q="According to the course framework's account of social issues, what do LIBERAL ideologies generally favor?",
+ dict(q="A Democratic platform calls for a national programme addressing public health. Which framework statements, taken together, account for that position, and what does the framework's wording NOT license concluding?",
    choices=[
      "More national government involvement, with less responsibility left to state governments",
      "Less national government involvement, with more responsibility left to state governments",
@@ -188,7 +188,7 @@ QUESTIONS = [
      "No government involvement in social issues at all"], ans=0,
    why="EK 4.10.A.1 states that liberal ideologies generally favor more national government involvement to address some social issues such as education and public health, with less responsibility left to state governments."),
 
- dict(q="According to the course framework's account of social issues, what do CONSERVATIVE ideologies generally favor?",
+ dict(q="Two party platforms take opposite positions on whether a social policy should be run nationally or left to the states. On the framework's account, which pairing of party to position is the expected one, and why is it only an expectation?",
    choices=[
      "Less national government involvement, with more responsibility left to state governments",
      "More national government involvement, with less responsibility left to state governments",
@@ -197,7 +197,7 @@ QUESTIONS = [
      "Identical involvement by national and state governments"], ans=0,
    why="EK 4.10.A.2 states this, and its structure mirrors EK 4.10.A.1 exactly: the same two variables, national involvement and state responsibility, moved in opposite directions."),
 
- dict(q="According to the course framework, what do LIBERTARIAN ideologies generally favor on social issues?",
+ dict(q="A student assumes that because the framework aligns the two major parties with liberal and conservative positions, every ideology it describes belongs to one of the two parties. Which framework statement most directly corrects that assumption?",
    choices=[
      "Little national or state government involvement except when government is protecting private property or individual liberty",
      "More national involvement and less state involvement",
