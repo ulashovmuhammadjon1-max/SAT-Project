@@ -97,7 +97,7 @@ def q27_least_cost_site(table):
         vals = [float(materials), float(product), float(labour)]
         components[name] = vals
         totals[name] = sum(vals)
-    assert totals == {"Site A": 190, "Site B": 170, "Site C": 185}, totals
+    assert totals == {"Site A": 180, "Site B": 170, "Site C": 185}, totals
     winner = min(totals, key=totals.get)
     assert winner == "Site B", totals
     # Cheapest on NONE of the three, which is the point of minimizing a sum.
@@ -201,7 +201,7 @@ CLAIMS = [
   ),
 
  ("total of 170 is below Site C's 185",
-  "Recomputed from the record: the three components total 190, 170 and 185, and the verifier confirms that the winning site is cheapest on NONE of the three individually. EK SPS-7.B.2 names least cost theory among the influences on manufacturing location, and minimizing a sum rather than an input is exactly what distinguishes it.",
+  "Recomputed from the record: the three components total 180, 170 and 185, and the verifier confirms that the winning site is cheapest on NONE of the three individually. EK SPS-7.B.2 names least cost theory among the influences on manufacturing location, and minimizing a sum rather than an input is exactly what distinguishes it.",
   ),
 
  ("from 78 to 6 and transit time from 45 days to 14",

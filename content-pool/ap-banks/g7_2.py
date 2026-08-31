@@ -275,16 +275,16 @@ QUESTIONS = [
 
  dict(q="Three candidate sites for one factory are costed below. Using the accompanying figures, which does least cost reasoning select?",
    table=dict(headers=["Site", "Cost of moving materials in", "Cost of moving product out", "Labour cost"],
-     rows=[["Site A", "40", "90", "60"],
+     rows=[["Site A", "40", "90", "50"],
            ["Site B", "70", "45", "55"],
            ["Site C", "95", "20", "70"]]),
    choices=[
-   "Site B, whose total of 170 is below Site C's 185 and Site A's 190, even though it is cheapest on none of the three components",
+   "Site B, whose total of 170 is below Site C's 185 and Site A's 180, even though it is cheapest on none of the three components",
    "Site A, because its materials cost is the lowest",
    "Site C, because its product transport cost is the lowest",
    "Site B, because it is cheapest on all three components",
    "All three sites are equally costly in total"], ans=0,
-   why="Adding the three components gives 190, 170 and 185, so the lowest total belongs to a site that leads on none of them individually. EK SPS-7.B.2 names least cost theory among the influences on manufacturing location, and minimizing a SUM is what distinguishes it from choosing the cheapest single input."),
+   why="Adding the three components gives 180, 170 and 185, so the lowest total belongs to a site that leads on none of them individually. EK SPS-7.B.2 names least cost theory among the influences on manufacturing location, and minimizing a SUM is what distinguishes it from choosing the cheapest single input."),
 
  dict(q="The cost and duration of moving a tonne of goods 8,000 kilometres by sea are recorded below. Using the accompanying figures, what has occurred?",
    table=dict(headers=["Period", "Cost per tonne (currency units)", "Days in transit"],
