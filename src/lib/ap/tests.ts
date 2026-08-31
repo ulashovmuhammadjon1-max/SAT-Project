@@ -302,6 +302,50 @@ const PSYCH_BLUEPRINT: ApSectionQuota[] = [
 // The tests themselves.
 // ---------------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------------
+// The three social science exams. Each has a different Section I shape, and
+// each blueprint is that course's CED unit weighting rounded to the section's
+// question count, so a practice form carries the real exam's balance.
+//
+//   Human Geography   60 MC in 60 minutes, five choices
+//   US Government     55 MC in 80 minutes, five choices
+//   Comparative Gov   55 MC in 60 minutes, five choices
+//
+// None of the three permits a calculator. Timings and counts are taken from
+// the CED records in content-pool/ap-banks/AP_*_CED.md, which were read out of
+// the official Course and Exam Descriptions rather than recalled.
+// ---------------------------------------------------------------------------
+
+// CED: Unit 1 is 8-10%; Units 2-7 are 12-17% each. Rounded to 60.
+const HUMAN_GEO_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 6 }, // 8-10%
+  { unit: 2, count: 9 }, // 12-17%
+  { unit: 3, count: 9 }, // 12-17%
+  { unit: 4, count: 9 }, // 12-17%
+  { unit: 5, count: 9 }, // 12-17%
+  { unit: 6, count: 9 }, // 12-17%
+  { unit: 7, count: 9 }, // 12-17%
+];
+
+// CED: 15-22 / 25-36 / 13-18 / 10-15 / 20-27. Rounded to 55 at the midpoints.
+const US_GOV_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 10 }, // 15-22%
+  { unit: 2, count: 17 }, // 25-36%
+  { unit: 3, count: 9 },  // 13-18%
+  { unit: 4, count: 6 },  // 10-15%
+  { unit: 5, count: 13 }, // 20-27%
+];
+
+// CED: 18-27 / 22-33 / 11-18 / 13-18 / 16-24. Rounded to 55 at the midpoints.
+const COMP_GOV_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 12 }, // 18-27%
+  { unit: 2, count: 15 }, // 22-33%
+  { unit: 3, count: 8 },  // 11-18%
+  { unit: 4, count: 9 },  // 13-18%
+  { unit: 5, count: 11 }, // 16-24%
+];
+
 export const AP_TESTS: ApPracticeTest[] = [
   // --- Microeconomics ---
   econTest({
@@ -559,6 +603,126 @@ export const AP_TESTS: ApPracticeTest[] = [
         blueprint: PSYCH_BLUEPRINT,
         directions:
           "Each question is followed by four suggested answers. Choose the one that is best in each case. Section I contains both discrete and set-based questions.",
+      }),
+    ],
+  },
+  {
+    subject: "HUMAN_GEO",
+    slug: "diagnostic",
+    name: "Human Geography Diagnostic",
+    blurb: "Half a Section I, weighted across all seven units.",
+    variant: 0,
+    calculatorNote: "No calculator is used on the AP Human Geography exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 30,
+        calculator: "NONE",
+        blueprint: halve(HUMAN_GEO_BLUEPRINT, 30),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "HUMAN_GEO",
+    slug: "practice-1",
+    name: "Human Geography Practice Exam 1",
+    blurb: "A full Section I: 60 questions in 60 minutes.",
+    variant: 1,
+    calculatorNote: "No calculator is used on the AP Human Geography exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 60,
+        calculator: "NONE",
+        blueprint: HUMAN_GEO_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "US_GOV",
+    slug: "diagnostic",
+    name: "US Government Diagnostic",
+    blurb: "Half a Section I, weighted across all five units.",
+    variant: 0,
+    calculatorNote: "No calculator is used on the AP U.S. Government and Politics exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 40,
+        calculator: "NONE",
+        blueprint: halve(US_GOV_BLUEPRINT, 28),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "US_GOV",
+    slug: "practice-1",
+    name: "US Government Practice Exam 1",
+    blurb: "A full Section I: 55 questions in 80 minutes.",
+    variant: 1,
+    calculatorNote: "No calculator is used on the AP U.S. Government and Politics exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 80,
+        calculator: "NONE",
+        blueprint: US_GOV_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "COMP_GOV",
+    slug: "diagnostic",
+    name: "Comparative Government Diagnostic",
+    blurb: "Half a Section I, weighted across all five units.",
+    variant: 0,
+    calculatorNote: "No calculator is used on the AP Comparative Government and Politics exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 30,
+        calculator: "NONE",
+        blueprint: halve(COMP_GOV_BLUEPRINT, 28),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "COMP_GOV",
+    slug: "practice-1",
+    name: "Comparative Government Practice Exam 1",
+    blurb: "A full Section I: 55 questions in 60 minutes.",
+    variant: 1,
+    calculatorNote: "No calculator is used on the AP Comparative Government and Politics exam.",
+    referenceNote: "Multiple-choice questions have five answer choices.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 60,
+        calculator: "NONE",
+        blueprint: COMP_GOV_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
       }),
     ],
   },

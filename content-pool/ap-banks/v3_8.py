@@ -300,12 +300,12 @@ QUESTIONS = [
      "Every category was excluded at a similar rate",
      "No evidence was excluded in any category",
      "Volunteered statements were the most frequently excluded category"], ans=0,
-   why="The no-exception row is 118 excluded of 140 offered against 9 of 820 under a warrant. Volunteered statements were excluded 4 times of 210, the lowest rate in the table."),
+   why="The no-exception row is 118 excluded of 140 offered against 9 of 820 under a warrant. Volunteered statements were excluded 4 times of 210, so they were nowhere near the most frequently excluded category."),
 
  dict(q=_EVIDENCE + " Which claim from the course framework do the two warrantless rows together most directly illustrate?",
    table=_EVIDENCE_TABLE,
    choices=[
-     "That procedural protections are not absolute, since a claimed public safety exception changed the outcome in most of those cases",
+     "That procedural protections are not absolute, since most warrantless evidence was excluded where no exception was claimed while most of the evidence covered by a claimed public safety exception was admitted",
      "That procedural protections are absolute",
      "That the exclusionary rule applies to every category of evidence equally",
      "That warrants are unnecessary",

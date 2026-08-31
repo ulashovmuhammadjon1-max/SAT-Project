@@ -294,6 +294,14 @@ QUESTIONS = [
    "Nothing identifiable, since populations change over time"], ans=0,
    why="Both columns sum to 100, so only composition can be read, and the largest group rises from a bare majority to near-uniformity while the other two are reduced to four percent between them. EK SPS-4.A.1 names ethnic cleansing as the forced removal of a population, which is what the stem specifies and the shares record."),
 
+ dict(q="At which scale of analysis do the framework's devolutionary factors operate, and what follows from that?", choices=[
+   "The subnational scale, since each factor describes something that sets one region apart from the rest of the state, so national averages can conceal every one of them",
+   "The global scale, since devolution changes the number of states in the world",
+   "The household scale, since families decide individually whether to support separation",
+   "The continental scale, since mountain ranges and deserts cross many countries",
+   "No scale in particular, since devolution is a legal process rather than a spatial one"], ans=0,
+   why="EK SPS-4.A.1's factors are all regional in form -- one region cut off by terrain, one group's separatism, one area's unemployment -- so they are visible only when a state is disaggregated. A country whose national unemployment rate is average may still contain a region at three times that rate, which is precisely the condition the statement names."),
+
  dict(q="Which is the most defensible summary of what this topic's essential knowledge asserts?", choices=[
    "Six named conditions -- physical separation, ethnic separatism, ethnic cleansing, terrorism, economic and social problems, and irredentism -- raise the likelihood that a state will fragment",
    "Any one of the six conditions guarantees that a state will fragment",
