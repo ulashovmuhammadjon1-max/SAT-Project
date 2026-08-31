@@ -157,6 +157,12 @@ NEGATIVE = [
     "Carbon-14 has a half-life of about 5730 years.",
     "For that same 2-by-2 table, the degrees of freedom are",
     "The stem-4 row holds five values.",
+    # Flush year ranges. Found in the COMP_GOV export, where 46 of them were
+    # set with a real minus sign and read as subtraction. The round trip is
+    # blind to this -- no character moves -- so it is refused at the parse.
+    "Change in seat share, 2000-2020, by party",
+    "Turnout 1990-2020 fell in every country listed.",
+    "Between 2015-2020 the legislature met twice a year.",
     "A 3-by-3 table of 300 responses is shown.",
     # a bracket holding prose, which the variable-run rule must not split
     "The result (in units of dollars) is reported below.",

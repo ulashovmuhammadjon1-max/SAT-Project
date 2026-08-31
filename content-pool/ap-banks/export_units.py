@@ -18,7 +18,29 @@ import random
 import re
 import sys
 
-from mathfmt import convert as tex
+from mathfmt import convert as _tex
+
+# Subjects whose text is typeset by mathfmt on the way out.
+#
+# This is an ALLOW-list, not a deny-list, and the difference is the whole
+# point. mathfmt is a parser for mathematical notation; pointed at a bank that
+# is prose with numbers in it, every reading it makes is a guess, and the
+# round-trip gate cannot catch a wrong one because a misread loses no
+# characters -- it only changes what the string appears to say.
+#
+# Measured, not assumed. On COMP_GOV the converter produced 78 spans of which
+# 70 were damage: 46 year ranges (`2000-2020` set with a minus, reading as
+# subtraction), 12 numeric scales, 8 occurrences of the Niger *Delta* turned
+# into the symbol delta, and 4 CED codes (`LEG-2.A.1f` -> `LEG-2.A.\(1f\)`).
+# The eight it got right were negative numbers in table cells, which lose
+# nothing by staying plain. CLAUDE.md records the same measurement for the
+# economics banks: 557 strings damaged, `$50 a year` read as `$50a`.
+#
+# Those econ banks were exported before this import existed, so they were
+# never converted -- but the unconditional call meant the next re-export would
+# silently have damaged them. Naming the math subjects explicitly is what
+# closes that.
+TYPESET_SUBJECTS = {"CALC_AB", "CALC_BC", "STATISTICS"}
 
 NUMERICISH = re.compile(
     r"^[\s$€£%\d.,/+\-]*(tons?|utils?|bolts?|units?|steel|coal|cars?|trucks?|cakes?|pies?|"
@@ -63,6 +85,13 @@ def main():
             sys.exit(
                 f"unknown subject {args.subject!r}: add it to PER_TOPIC or pass --per-topic"
             )
+
+    # Typeset only where the subject is mathematical; elsewhere pass the
+    # author's text through untouched. See TYPESET_SUBJECTS above.
+    tex = _tex if args.subject in TYPESET_SUBJECTS else (lambda s: s)
+    if args.subject not in TYPESET_SUBJECTS:
+        print(f"note: {args.subject} is a prose subject; mathfmt not applied",
+              file=sys.stderr)
 
     out, dist, seen_stems = [], {c: 0 for c in "ABCDE"}, {}
     for mod_name in args.modules:

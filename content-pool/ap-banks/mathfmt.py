@@ -651,9 +651,36 @@ class Parser:
             ops.append(op)
         return Chain(parts, ops) if ops else parts[0]
 
+    _YEAR = re.compile(r"^(1[0-9]|2[0-9])\d{2}$")
+
+    def _range_hyphen(self):
+        """Is the operator at the cursor a range hyphen rather than a minus?
+
+        `2000-2020` typeset as mathematics renders with a true minus sign and
+        reads as a subtraction. The round-trip gate cannot catch this: not one
+        character moves, only the meaning, which is the gate's known blind
+        spot. So it has to be refused at the parse.
+
+        Deliberately narrow -- two four-digit years, written flush. Genuine
+        flush arithmetic between literals, such as the `(3-1)(4-1)` of a
+        chi-square degrees-of-freedom count in the Statistics bank, is left
+        alone, because widening this to any Num-Num pair would break it.
+        """
+        op = self.peek()
+        if op is None or op.kind != "op" or op.val not in ("-", MINUS):
+            return False
+        prev, nxt = self.peek(-1), self.peek(1)
+        if prev is None or nxt is None:
+            return False
+        if prev.kind != "num" or nxt.kind != "num":
+            return False
+        if prev.end != op.start or op.end != nxt.start:
+            return False
+        return bool(self._YEAR.match(prev.val) and self._YEAR.match(nxt.val))
+
     def additive(self):
         parts, ops = [self.term()], []
-        while self.at_op("+", "-", "+/-", MINUS):
+        while self.at_op("+", "-", "+/-", MINUS) and not self._range_hyphen():
             save = self.i
             op = self.eat().val
             try:
