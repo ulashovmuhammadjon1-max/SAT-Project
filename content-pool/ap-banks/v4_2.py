@@ -359,4 +359,13 @@ QUESTIONS = [
      "Every category changed for more than half of respondents",
      "The table reports a single year, so no change can be observed"], ans=0,
    why="The smallest change figure in the table is 19 percent and the largest is 58, all among adults over a ten year period. EK 4.3.A.1's life cycle effects describe experiences encountered during different life stages, which presupposes that development continues."),
+
+ dict(q="A person's family and the religious organization the person belongs to push toward opposite conclusions on a political question. What does the course framework allow a student to conclude about which influence will prevail?",
+   choices=[
+     "Nothing, because EK 4.2.A.1 lists the contributors without ranking them against one another",
+     "That family will prevail, because the framework lists it first",
+     "That the religious organization will prevail, because it is named in a parenthesis",
+     "That neither influence has any effect where the two conflict",
+     "That the person will adopt the view held by the media instead"], ans=0,
+   why="EK 4.2.A.1 names family, schools, peers, media and social environments as contributors to the development of political attitudes and values, and supplies no weighting among them. Order of mention in a list is not a claim about strength, and inferring one would put a prediction into the framework that it does not make."),
 ]
