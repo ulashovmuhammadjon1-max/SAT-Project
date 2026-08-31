@@ -31,9 +31,11 @@ export interface ClassInvite {
   code: string;
   /** Absolute site origin, resolved by the caller from request headers. */
   origin: string;
-  /** Present when the address has an account that is not yet verified. */
+  /** A one-click confirm link, when one could be issued. */
   verifyLink?: string | null;
   hasAccount: boolean;
+  /** The account exists but the address is not confirmed yet. */
+  needsVerification?: boolean;
 }
 
 export async function sendClassTeacherInvite(invite: ClassInvite) {
@@ -53,12 +55,20 @@ export async function sendClassTeacherInvite(invite: ClassInvite) {
     instruction =
       "Create an account with this email address and your Teacher Panel appears automatically — " +
       "the class is already waiting for it. Use this address, not another one, or the class will not find you.";
-  } else if (invite.verifyLink) {
-    action = { url: invite.verifyLink, label: "Confirm my email" };
-    instruction =
-      "You already have an account, but this address has not been confirmed yet, and Scholarly keeps " +
-      "unconfirmed accounts out of the panel. Confirm it and your Teacher Panel opens straight away. " +
-      "The link works once and expires in 24 hours.";
+  } else if (invite.needsVerification) {
+    // A resend inside the token cooldown yields no fresh link. Sending them to
+    // the panel anyway would be a dead end -- the layout requires a verified
+    // address -- so point at the confirm page, which can issue a new link.
+    action = invite.verifyLink
+      ? { url: invite.verifyLink, label: "Confirm my email" }
+      : { url: `${invite.origin}/verify-email`, label: "Confirm my email" };
+    instruction = invite.verifyLink
+      ? "You already have an account, but this address has not been confirmed yet, and Scholarly keeps " +
+        "unconfirmed accounts out of the panel. Confirm it and your Teacher Panel opens straight away. " +
+        "The link works once and expires in 24 hours."
+      : "You already have an account, but this address has not been confirmed yet, and Scholarly keeps " +
+        "unconfirmed accounts out of the panel. Open the page below and request a confirmation link; " +
+        "once the address is confirmed your Teacher Panel opens straight away.";
   } else {
     action = { url: teachUrl, label: "Open my Teacher Panel" };
     instruction =

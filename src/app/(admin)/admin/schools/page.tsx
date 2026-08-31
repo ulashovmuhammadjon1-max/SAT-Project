@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CreateClassForm } from "@/components/admin/create-class-form";
+import { ClassTeacherForm } from "@/components/admin/class-teacher-form";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 
@@ -64,8 +65,13 @@ export default async function AdminSchoolsPage() {
             </div>
           </CardHeader>
           <CardContent>
+            <ClassTeacherForm
+              classId={c.id}
+              teacherName={c.teacherName}
+              teacherEmail={c.teacherEmail}
+            />
             {c.memberships.length === 0 ? (
-              <p className="text-sm text-muted-foreground">No students have joined yet.</p>
+              <p className="mt-4 text-sm text-muted-foreground">No students have joined yet.</p>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">

@@ -78,6 +78,7 @@ async function linkAndInvite(classId: string): Promise<{ invited: boolean; reaso
       code: cls.code,
       origin: origin(),
       hasAccount: Boolean(user),
+      needsVerification: Boolean(user && !user.emailVerified),
       verifyLink,
     });
     return { invited: true };
