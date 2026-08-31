@@ -106,6 +106,89 @@ export async function sendEmail(msg: EmailMessage): Promise<EmailResult> {
   }
 }
 
+/** Resend's batch endpoint takes at most 100 messages per request. */
+export const EMAIL_BATCH_MAX = 100;
+
+/**
+ * Send many DIFFERENT messages in one request.
+ *
+ * Not a mailing list: each entry keeps its own recipient, subject and body, so
+ * a broadcast stays personalised (every student gets their own invite link)
+ * while costing one HTTP round trip per hundred rather than per person.
+ *
+ * That matters for a reason beyond speed. A 650-recipient announcement sent
+ * one call at a time is 650 round trips against a provider rate limit, inside
+ * a serverless function with a wall-clock timeout — it would be cut off
+ * partway through, having already delivered to some unknowable prefix of the
+ * list. Seven requests fit comfortably.
+ *
+ * Returns per-message results in the SAME ORDER as the input, so the caller
+ * can record exactly who was reached. Never throws, for the same reason
+ * `sendEmail` does not.
+ */
+export async function sendEmailBatch(
+  messages: EmailMessage[],
+): Promise<{ provider: string; results: EmailResult[] }> {
+  if (messages.length === 0) return { provider: "none", results: [] };
+  if (messages.length > EMAIL_BATCH_MAX) {
+    throw new Error(`sendEmailBatch takes at most ${EMAIL_BATCH_MAX} messages`);
+  }
+  if (!process.env.RESEND_API_KEY) {
+    // Deliberately NOT reported as success here, unlike sendEmail's console
+    // fallback. A password reset with no provider is still a valid reset; a
+    // broadcast with no provider is 650 people not told anything, and
+    // recording them as "sent" would make it impossible to retry.
+    return {
+      provider: "console",
+      results: messages.map(() => ({
+        ok: false,
+        provider: "console",
+        error: "no email provider configured (RESEND_API_KEY unset)",
+      })),
+    };
+  }
+  try {
+    const res = await fetch("https://api.resend.com/emails/batch", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(
+        messages.map((m) => ({
+          from: fromAddress(),
+          to: [m.to],
+          subject: m.subject,
+          text: m.text,
+          ...(m.html ? { html: m.html } : {}),
+        })),
+      ),
+    });
+    if (!res.ok) {
+      const error = (await res.text()).slice(0, 300);
+      return { provider: "resend", results: messages.map(() => ({ ok: false, provider: "resend", error })) };
+    }
+    const body = (await res.json()) as { data?: { id?: string }[] };
+    const sent = body.data?.length ?? 0;
+    // Resend returns one entry per accepted message, in order. If it somehow
+    // returns fewer, treat only the ones it acknowledged as sent rather than
+    // assuming the tail succeeded.
+    return {
+      provider: "resend",
+      results: messages.map((_, i) =>
+        i < sent
+          ? { ok: true, provider: "resend" }
+          : { ok: false, provider: "resend", error: "not acknowledged by provider" },
+      ),
+    };
+  } catch (error) {
+    return {
+      provider: "resend",
+      results: messages.map(() => ({ ok: false, provider: "resend", error: String(error).slice(0, 300) })),
+    };
+  }
+}
+
 export function emailConfigured(): boolean {
   return Boolean(process.env.RESEND_API_KEY);
 }
