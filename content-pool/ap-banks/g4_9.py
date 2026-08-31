@@ -294,7 +294,7 @@ QUESTIONS = [
    "Any two columns that rise together prove a causal link"], ans=0,
    why="EK SPS-4.B.2 says communication technology has FACILITATED devolution, which is a claim about making something easier rather than about producing it. Two series rising over the same decades is consistent with that claim without establishing it, since decades carry many other changes."),
 
- dict(q="Which is the most defensible summary of what this topic's essential knowledge asserts?", choices=[
+ dict(q="Taken together, what do this topic's four essential knowledge statements assert about the position of the state?", choices=[
    "Sovereignty is challenged from below by devolution and from above by supranational organizations that limit members' economic or political actions, and communication technology has made both easier",
    "Sovereignty has been abolished by supranational organizations",
    "Devolution always ends in the disintegration of the state",

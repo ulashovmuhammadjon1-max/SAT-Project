@@ -306,7 +306,7 @@ QUESTIONS = [
    "Because centripetal and centrifugal mean the same thing"], ans=0,
    why="Learning objective SPS-4.C specifies the state scale, which implies that the answer changes when a different scale is chosen. The suggested skill for this topic is comparing processes at various scales, and this pair of readings is the clearest instance of why the scale has to be stated."),
 
- dict(q="Which is the most defensible summary of what this topic's essential knowledge asserts?", choices=[
+ dict(q="A textbook must condense this topic into one sentence. Which condensation stays inside what the framework actually claims?", choices=[
    "Centrifugal forces may lead to failed states, uneven development, stateless nations and ethnic nationalist movements, while centripetal forces can lead to ethnonationalism, more equitable infrastructure development and increased cultural cohesion",
    "Centrifugal forces always destroy states and centripetal forces always preserve them",
    "Only economic forces affect the cohesion of a state",
