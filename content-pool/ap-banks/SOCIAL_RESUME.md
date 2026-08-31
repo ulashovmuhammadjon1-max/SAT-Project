@@ -1,24 +1,54 @@
-# Social Sciences build — exact state, and how to resume
+# Social Sciences build — FINISHED authoring; what is left is insertion
 
 The user asked for the three remaining Social Sciences subjects and said to
-continue after a usage-limit reset without waiting for approval. This file is
-what the next session needs to pick the work up cold.
+continue after a usage-limit reset without waiting for approval. All 171 topics
+are authored, verified and committed. The only step still outstanding needs a
+production connection string.
 
-## State: 164 of 171 topics authored, every one of them gated
+## State: 171 of 171 topics, 5,130 questions, every one gated
 
-| subject | authored | remaining |
-|---|---|---|
-| Comparative Government (`k<unit>_<n>.py`) | **43 / 43 — COMPLETE** | none |
-| Human Geography (`g<unit>_<n>.py`) | 64 / 68 | 7.5, 7.6, 7.7, 7.8 |
-| US Government (`v<unit>_<n>.py`) | 57 / 60 | 5.11, 5.12, 5.13 |
+| subject | topics | questions | key spread |
+|---|---|---|---|
+| Human Geography (`g<unit>_<n>.py`) | **68 / 68** | 2,040 | 408 each A-E |
+| US Government (`v<unit>_<n>.py`) | **60 / 60** | 1,800 | 360 each A-E |
+| Comparative Government (`k<unit>_<n>.py`) | **43 / 43** | 1,290 | 258 each A-E |
 
-Every authored topic has a passing `verify_*.py`. There are no ungated drafts
-left — the eight that were listed here previously have all been gated, and the
-short module (`g4_8`) has its thirtieth question.
+Checks that have actually been run, not assumed:
 
-Comp Gov exports clean: 1,290 questions, 43 topics x exactly 30, five choices
-each, answer key **6/6/6/6/6 on every single topic**, zero near-duplicate
-warnings, zero math spans.
+* **171 of 171 verifiers pass.**
+* **All 5,130 exported questions cross-checked against their source modules:
+  0 keys moved by the choice shuffle, 0 choice sets altered.** This is the one
+  that matters most, because `ApQuestionAttempt` stores the *index* a student
+  chose, so a moved choice would silently rewrite past answers.
+* **0 strings carrying math markup** in any of the three exports.
+* 171 modules swept for topic title/code drift against `*_topics.json`: 0
+  mismatches (one was found and fixed — `g5_8` was missing an umlaut).
+* `check-ap-coverage.ts --complete --from` on all three exports: 68/68, 60/60,
+  43/43 topics with questions, no orphans, no thin topics.
+* `check-ap-tests.ts`: all 22 practice tests pass, including the six new ones.
+* `insert-ap-questions.mjs --dry-run` on all three banks: every id distinct.
+
+## What REMAINS — one step, and it needs PROD_URL
+
+```
+PROD_URL='postgresql://...' node scripts/insert-ap-questions.mjs /tmp/HUMAN_GEO.json
+PROD_URL='postgresql://...' node scripts/insert-ap-questions.mjs /tmp/US_GOV.json
+PROD_URL='postgresql://...' node scripts/insert-ap-questions.mjs /tmp/COMP_GOV.json
+PROD_URL='postgresql://...' npx tsx scripts/check-ap-coverage.ts        # must be clean
+# then, and only then, flip the three subjects COMING_SOON -> LIVE in
+# src/lib/ap/catalog.ts, and re-run check-ap-coverage.ts
+```
+
+Regenerate an export with
+`python3 export_units.py <modules> --subject <SUBJ> --out <file>`.
+
+The insert is idempotent — ids are a pure function of subject, topic and order
+— so a partial run is safe to repeat. It batches 250 rows per round trip; the
+older one-row-per-request version would not have survived 2,040 questions.
+
+**Flip the catalog LAST.** `/ap/[slug]` refuses any subject the catalog does
+not mark LIVE, so the outlines can sit in `courses.ts` indefinitely without a
+student reaching an empty topic.
 
 ## The concurrency lesson — read this before spawning anything
 
@@ -42,28 +72,6 @@ in flight before trusting it: one module was left syntactically broken (a stray
 all, and one had a verifier that failed a question whose arithmetic was
 correct. Import the module, count the questions, and run the verifier before
 assuming a rescued file is fine.
-
-## What REMAINS, in order
-
-1. Seven topics (above), 30 questions each, each with a passing verifier.
-2. Per subject: `python3 export_units.py <modules> --subject <SUBJ> --out <file>`
-   — enforces 30-per-topic and warns on near-duplicate stems.
-3. `node content-pool/ap-banks/check_katex.mjs <spans>` on the exported spans.
-   All three subjects are now **prose subjects** and should export **zero** math
-   spans (see below), so this is a formality that should come back empty.
-4. `PROD_URL=... node scripts/insert-ap-questions.mjs <file>`.
-5. Move the three subjects from COMING_SOON to LIVE in `src/lib/ap/catalog.ts`
-   — **last**, and only once every topic has questions behind it, or students
-   tap through to empty sessions. `/ap/[slug]` already refuses non-live
-   subjects, so nothing is exposed before this step.
-6. `npx tsx scripts/check-ap-coverage.ts` — must report no problems. It starts
-   failing the moment a subject goes live with an empty topic, which is exactly
-   what it is for.
-
-Already DONE and not to be repeated: all three CEDs read and all 171 topics
-recorded (`*_topics.json`, `AP_*_CED.md`, `ced-source/*.txt.gz`); the course
-outlines generated into `src/lib/ap/courses.ts`; `ApSubjectCode` widened; and
-the six practice-test configs in `src/lib/ap/tests.ts`.
 
 ## These are PROSE subjects — the converter does not run on them
 
@@ -95,7 +103,7 @@ than none, and this project has now paid for that five times.
 
 ## Known, and deliberately not fixed: cross-topic repeats
 
-See `COMP_GOV_DEDUPE.md`. The finished Comp Gov bank carries ten cross-topic
+See `SOCIAL_DEDUPE.md`. The finished Comp Gov bank carries ten cross-topic
 pairs that are the same question asked twice. This is structural, not
 sloppiness: 1,290 questions rest on 147 distinct CED statements — 11.6 per
 statement — five topics have only three statements between them and their
