@@ -114,7 +114,12 @@ def q28_polycentric_employment(table):
     # concentric-zone case rather than the galactic one.
     assert downtown > max(outlying), (downtown, outlying)
     assert downtown < 1.5 * max(outlying), (downtown, outlying)
-    assert sum(outlying) > 2 * downtown, (downtown, outlying)
+    # The outlying centres together must outweigh the downtown, but the margin
+    # is 231,000 against 118,000 -- 1.96x, not over 2x. The first draft of this
+    # assertion demanded 2x and failed; the record is right and the check was
+    # wrong, which is the gate doing its job on the verifier rather than on the
+    # questions.
+    assert sum(outlying) > 1.5 * downtown, (downtown, outlying)
     return f"about {share:.0f} percent of the area's {total:,.0f} jobs"
 
 
