@@ -43,8 +43,16 @@ Item 27 is the rebuttal brake and item 28 the direction brake. Item 27's key is
 true only because traditional news media leads in exactly three rows and in the
 two rows with the widest weekly reach; item 28's key is true only because the
 poll column rises at every step while both other columns fall and the poll
-column leads in exactly one period. Move one figure and each item still READS
-correctly and is no longer true, so both are recomputed from the table.
+column leads in exactly the last two periods. Move one figure and each item
+still READS correctly and is no longer true, so both are recomputed from the
+table.
+
+Item 28's recomputation earned its keep on the first run. The key as drafted
+said poll standings took the largest share ONLY IN THE FINAL WEEK; the table
+says they pass the platforms column a period earlier, in the third. Nothing else
+in this file would have caught it -- the item is structurally impeccable and
+reads as true -- and it is exactly the class of defect this subject has no sympy
+to find.
 
 The route columns are also required to sum to the weekly column in every row,
 because the survey's own design says they should: the two routes partition the
@@ -96,7 +104,7 @@ ANCHORS = {
  25: "commentary is the only category reached mainly through social media",
  26: "list of what political information includes",
  27: "the more common route for three of the four categories",
- 28: "poll standings take the largest share only in the final week",
+ 28: "the largest share in the last two periods but not the first two",
  29: "since coverage shifts toward who is ahead",
  30: "the table supports the described shift in coverage without establishing an effect",
 }
@@ -158,7 +166,9 @@ GROUNDING = {
  27: "Recomputed from the table: traditional news media leads in three of four rows, including "
      "the two rows with the widest weekly reach.",
  28: "Recomputed from the table: the poll standings column rises at every step, the other two "
-     "fall at every step, and poll standings hold the largest share in exactly one period.",
+     "fall at every step, and poll standings hold the largest share in the last two periods "
+     "only. The first draft of this key said the final period alone, and the recomputation is "
+     "what caught it: platforms lead at 48 and 39 percent, and standings pass them in the third.",
  29: "EK 5.12.A.2's contrast between coverage of standing in a contest and coverage of "
      "qualifications and platforms, matched to the columns that grow and shrink.",
  30: "EK 5.12.A.2's modal CAN AFFECT worked through CED skill 5.D: the evidence reaches the "
@@ -318,12 +328,12 @@ def q28(table):
     assert all(b < a for a, b in zip(quals, quals[1:])), f"qualifications column does not fall: {quals}"
     assert all(b < a for a, b in zip(plats, plats[1:])), f"platforms column does not fall: {plats}"
     leads = [i for i in range(len(order)) if polls[i] > quals[i] and polls[i] > plats[i]]
-    assert leads == [len(order) - 1], (
-        f"poll standings lead in periods {leads}, not in the final period alone")
+    assert leads == [len(order) - 2, len(order) - 1], (
+        f"poll standings lead in periods {leads}, not in the last two alone")
     return (f"every row sums to the whole; poll standings rise {polls[0]:.0f}% to "
             f"{polls[-1]:.0f}% while qualifications fall {quals[0]:.0f}% to {quals[-1]:.0f}% and "
-            f"platforms fall {plats[0]:.0f}% to {plats[-1]:.0f}%, and poll standings lead only "
-            f"in the {order[-1].lower()}")
+            f"platforms fall {plats[0]:.0f}% to {plats[-1]:.0f}%, and poll standings lead in "
+            f"the last two periods only ({', '.join(order[i].lower() for i in leads)})")
 
 
 def q29(table):

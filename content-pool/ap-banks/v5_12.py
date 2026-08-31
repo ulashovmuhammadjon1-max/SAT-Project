@@ -328,12 +328,12 @@ QUESTIONS = [
  dict(q=_COVERAGE + " Which conclusion is best supported by the data?",
    table=_COVERAGE_TABLE,
    choices=[
-     "Coverage of poll standings rises in every period while coverage of qualifications and of platforms each falls, and poll standings take the largest share only in the final week",
+     "Coverage of poll standings rises in every period while coverage of qualifications and of platforms each falls, and poll standings hold the largest share in the last two periods but not the first two",
      "Coverage of poll standings falls as the election approaches",
      "Coverage of candidate platforms rises as the election approaches",
      "Coverage of poll standings takes the largest share in every period",
      "The three categories hold equal shares throughout the four periods"], ans=0,
-   why="Poll standings run from 22 to 61 percent while qualifications fall from 30 to 20 and platforms from 48 to 19. Platforms hold the largest share in the earliest period, so poll standings lead only at the end."),
+   why="Poll standings run from 22 to 61 percent while qualifications fall from 30 to 20 and platforms from 48 to 19. Platforms hold the largest share in the first two periods, at 48 and 39 percent, so the standings column leads only after the halfway point."),
 
  dict(q=_COVERAGE + " Which framework statement does this pattern most directly illustrate?",
    table=_COVERAGE_TABLE,
