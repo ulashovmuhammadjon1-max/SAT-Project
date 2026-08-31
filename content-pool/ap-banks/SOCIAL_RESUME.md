@@ -61,28 +61,29 @@ validate before trusting a module that was in flight.
 
 ## What REMAINS
 
-157 topics to author, at 30 questions each:
-
-| subject | done | remaining |
-|---|---|---|
-| Human Geography (`g<unit>_<n>.py`) | 1.1, 1.2, 4.1–4.4 | 62 of 68 |
-| US Government (`v<unit>_<n>.py`) | 1.1, 1.2, 3.1, 3.2 | 56 of 60 |
-| Comparative Gov (`k<unit>_<n>.py`) | 1.1, 1.2, 4.1, 4.2 | 39 of 43 |
+70 topics to author, at 30 questions each. Work in CED order within each
+subject; `*_topics.json` has every code and its verbatim title.
 
 Then, in order:
-1. Verifier for every module; all must pass.
-2. `python3 export_units.py <modules> --subject <SUBJ> --out <file>` per subject
-   — it enforces 30-per-topic and warns on near-duplicate stems.
+1. A verifier for the eight draft modules listed above, and for every new
+   module. All must pass. Write the thirtieth question for `g4_8`.
+2. `python3 export_units.py <modules> --subject <SUBJ> --out <file>` per
+   subject — it enforces 30-per-topic and warns on near-duplicate stems.
 3. `node content-pool/ap-banks/check_katex.mjs <spans>` on the exported spans.
-4. `node scripts/insert-ap-questions.mjs <file>` with `PROD_URL` set.
-5. `python3 gen_course_units.py <SUBJ>` → paste into `src/lib/ap/courses.ts`,
-   widen `ApSubjectCode`, add the course entry.
-6. Move the three subjects from `AP_PLANNED` to `AP_LIVE` in
-   `src/lib/ap/catalog.ts` — **last**, and only once every topic has questions,
-   or students tap through to empty sessions.
-7. Add practice-test configs in `src/lib/ap/tests.ts` using the exam formats
+4. `PROD_URL=... node scripts/insert-ap-questions.mjs <file>`.
+5. Move the three subjects from COMING_SOON to LIVE in `src/lib/ap/catalog.ts`
+   — **last**, and only once every topic has questions behind it, or students
+   tap through to empty sessions. `/ap/[slug]` already refuses non-live
+   subjects, so nothing is exposed before this step.
+6. Add practice-test configs in `src/lib/ap/tests.ts` using the exam formats
    recorded in the three `AP_*_CED.md` files.
-8. `npx tsx scripts/check-ap-coverage.ts` — must report no problems.
+7. `npx tsx scripts/check-ap-coverage.ts` — must report no problems. It will
+   start failing the moment a subject goes live with an empty topic, which is
+   exactly what it is for.
+
+Steps that used to be here and are now DONE: the course outlines are already in
+`src/lib/ap/courses.ts`, generated from the topic files, and `ApSubjectCode` is
+already widened.
 
 ## The standing quality rule for these subjects
 
