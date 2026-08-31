@@ -300,7 +300,7 @@ QUESTIONS = [
    "The framework forbids quantitative measures of production regions"], ans=0,
    why="EK PSO-5.C.1 defines production regions by the extent to which practices are subsistence or commercial, and puts monocropping in a parenthesis rather than in the definition. Diversity is strongly associated with subsistence without being what the term means, so a crop count supports the reading rather than establishing it."),
 
- dict(q="Which statement best captures what this topic's two essential knowledge statements assert together?", choices=[
+ dict(q="An examiner asks for the economic logic of this topic in a single sentence. Which sentence keeps both of the framework's qualifications?", choices=[
    "Production regions are placed on a subsistence-to-commercial spectrum, with specialization at the commercial end, and how intensively land is farmed depends partly on what that land costs",
    "Production regions are defined by climate, and land costs have no influence on farming",
    "Every production region is either wholly subsistence or wholly commercial",
