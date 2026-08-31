@@ -295,7 +295,7 @@ QUESTIONS = [
      "9",
      "37"], ans=0,
    why="Subtracting the smallest row from the largest gives the difference. The alternatives are other rows and gaps within the same column, and the two extreme rows added together instead of subtracted."),
- dict(q="The table follows one hypothetical country over three years. Which conclusion does it support?",
+ dict(q="The table records four measures of political conflict in one hypothetical country across three years. Which conclusion does it support?",
    table=_T_CONFLICT,
    choices=[
      "Civil society demands, protest events, arrests, and days of social media restriction all rose together across the three years",

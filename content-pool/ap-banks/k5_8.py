@@ -305,7 +305,7 @@ QUESTIONS = [
      "The table gives no information about tariffs, so economic explanations are ruled out",
      "There is no objection, since departures can only be explained by repression"], ans=0,
    why="EK LEG-4.A.2.b attributes the departure of highly skilled individuals to policies or practices perceived as limiting, corrupt, or repressive, but that is a claim about motive, and a table of arrivals and departures records movement rather than reasons."),
- dict(q="The table follows one hypothetical country over three years. Which conclusion does it support?",
+ dict(q="The table reports two age measures and health spending for one hypothetical country over three years. Which conclusion does it support?",
    table=_T_HEALTH,
    choices=[
      "The share of people aged 65 and over rose, the number of working-age people supporting each of them fell, and health spending per person rose",

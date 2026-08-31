@@ -79,7 +79,7 @@ def q21(table, item):
     top = max(v, key=v.get)
     assert top == "Privatization of state-owned companies", f"the most accepted condition is {top}"
     assert v[top] == 35, f"the keyed count reads {v[top]}"
-    assert v["Reduced governmental subsidies of domestic industries"] == 29 and v["Reduced tariffs"] == 20, \
+    assert v["Reduced governmental subsidies of domestic industries"] == 29 and v["Reduced tariffs"] == 18, \
         "each rejected option must state its own row's true count"
     assert len(set(v.values())) == 3, "'all three equally' must be false"
     assert max(v.values()) <= 40, "no row may exceed the forty governments the table describes"
@@ -89,10 +89,10 @@ def q21(table, item):
 def q22(table, item):
     c = cg.col(table, ACCEPT)
     total = sum(c)
-    assert total == 84, f"the keyed total recomputes to {total}"
+    assert total == 82, f"the keyed total recomputes to {total}"
     assert total - min(c) == 64, "the 64 distractor must be the total with the smallest row omitted"
-    assert max(c) + min(c) == 55, "the 55 distractor must be the largest and smallest rows added"
-    assert total - max(c) == 49, "the 49 distractor must be the total with the largest row omitted"
+    assert max(c) + min(c) == 53, "the 53 distractor must be the largest and smallest rows added"
+    assert total - max(c) == 47, "the 47 distractor must be the total with the largest row omitted"
     assert max(c) == 35, "the 35 distractor must be the largest single row"
     return f"the acceptance column reads {c} and sums to {total:.0f}, with every distractor a wrong sum of the same column"
 
@@ -100,10 +100,10 @@ def q22(table, item):
 def q23(table, item):
     c = cg.col(table, ACCEPT)
     diff = max(c) - min(c)
-    assert diff == 15, f"the keyed difference recomputes to {diff}"
+    assert diff == 17, f"the keyed difference recomputes to {diff}"
     pairs = {abs(a - b) for a in c for b in c if a != b}
-    assert 6 in pairs and 9 in pairs, f"the 6 and 9 distractors must be the other gaps in that column; gaps are {sorted(pairs)}"
-    assert max(c) == 35 and min(c) == 20, f"the 35 and 20 distractors must be the extreme rows; the column reads {c}"
+    assert 6 in pairs and 11 in pairs, f"the 6 and 11 distractors must be the other gaps in that column; gaps are {sorted(pairs)}"
+    assert max(c) == 35 and min(c) == 18, f"the 35 and 18 distractors must be the extreme rows; the column reads {c}"
     return f"the acceptance column reads {c}, so the largest minus the smallest is {diff:.0f}"
 
 
@@ -222,9 +222,9 @@ CLAIMS = [
   "EK LEG-3.A.1 attributes great influence to preconditions for financial assistance and EK LEG-3.A.3 attributes sovereign powers over member states together with pressure to reduce tariffs and otherwise liberalize trade."),
  ("privatization of state-owned companies, accepted by 35",
   "EK LEG-3.A.1 names privatization of state-owned companies, reduced tariffs, and reduced governmental subsidies of domestic industries as the requirements of structural adjustment programs. Recomputed in q21 above, which also confirms the table's rows are exactly those three and that each option states its own row truly."),
- ("84",
+ ("82",
   "Recomputed in q22 above by summing the acceptance column across the three conditions. The distractors are the total with the smallest row omitted, the largest and smallest rows added, the total with the largest row omitted, and the largest single row."),
- ("15",
+ ("17",
   "Recomputed in q23 above by subtracting the smallest row from the largest. The distractors are the other two gaps within the same column and the two extreme rows read as though they were differences."),
  ("raised the average tariff and was aimed at building up local production",
   "EK LEG-3.A.2 states that import substitution industrialization aims at reducing foreign dependency by raising tariffs and encouraging local production of industrialized products. Recomputed in q24 above, which requires the keyed row to show both the tariff rise and the stated aim."),

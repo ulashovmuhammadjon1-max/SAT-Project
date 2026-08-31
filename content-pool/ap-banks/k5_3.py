@@ -261,7 +261,7 @@ QUESTIONS = [
      "19",
      "4"], ans=0,
    why="Subtracting the smallest row from the largest gives the difference. The alternatives are the other two gaps within the same column and the two extreme rows read as though they were differences."),
- dict(q="The table follows one hypothetical country over three years. Which conclusion does it support?",
+ dict(q="The table sets industrial output beside three health and opinion measures for one hypothetical country. Which conclusion does it support?",
    table=_T_ENV,
    choices=[
      "As industrial output rose, unhealthy air days, respiratory admissions, and the share of residents who say the government is not protecting their health all rose with it",
