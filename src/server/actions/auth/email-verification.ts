@@ -45,11 +45,20 @@ function origin(): string {
  * reported as sent, because the token is real either way and the message is in
  * the server log for an admin to recover.
  */
-export async function sendVerificationEmail(input: {
-  email: string;
-  name?: string | null;
-}): Promise<boolean> {
-  const email = input.email.trim().toLowerCase();
+/**
+ * Issues a fresh verification token and returns its link, or null if the
+ * cooldown blocked it.
+ *
+ * Split out of `sendVerificationEmail` so the class-invite email can carry a
+ * confirm link of its own. A teacher invited to a class whose account is not
+ * yet verified would otherwise be sent to a dead end: the student layout uses
+ * `requireVerifiedUser`, so they sign in, get bounced to the verify screen,
+ * and never reach the Teacher Panel they were told about. One implementation
+ * of the token rules, used by both callers, is what keeps the two flows from
+ * drifting apart.
+ */
+export async function issueVerificationLink(rawEmail: string): Promise<string | null> {
+  const email = rawEmail.trim().toLowerCase();
   const identifier = `${PREFIX}${email}`;
 
   const existing = await prisma.verificationToken.findFirst({ where: { identifier } });
@@ -57,7 +66,7 @@ export async function sendVerificationEmail(input: {
     // `expires` is the only timestamp the table has, so the issue time is
     // derived from it rather than stored twice.
     const issuedAt = existing.expires.getTime() - TOKEN_TTL_MS;
-    if (Date.now() - issuedAt < RESEND_COOLDOWN_MS) return false;
+    if (Date.now() - issuedAt < RESEND_COOLDOWN_MS) return null;
   }
 
   const token = randomBytes(32).toString("hex");
@@ -68,7 +77,16 @@ export async function sendVerificationEmail(input: {
     data: { identifier, token: hash(token), expires: new Date(Date.now() + TOKEN_TTL_MS) },
   });
 
-  const link = `${origin()}/verify-email?token=${token}&email=${encodeURIComponent(email)}`;
+  return `${origin()}/verify-email?token=${token}&email=${encodeURIComponent(email)}`;
+}
+
+export async function sendVerificationEmail(input: {
+  email: string;
+  name?: string | null;
+}): Promise<boolean> {
+  const email = input.email.trim().toLowerCase();
+  const link = await issueVerificationLink(email);
+  if (!link) return false;
   const firstName = input.name?.trim().split(/\s+/)[0] ?? "there";
 
   await sendEmail({
