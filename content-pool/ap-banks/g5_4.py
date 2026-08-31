@@ -256,7 +256,7 @@ QUESTIONS = [
            ["After the new methods", "2.1", "400,000"]]),
    choices=[
    "It rose by about 133 percent, and since the area is unchanged the gain came from the land already in use",
-   "It rose by about 43 percent",
+   "It rose by about 57 percent, since 1.2 tonnes is 57 percent of the later yield",
    "It rose by 120 percent because the area also expanded",
    "It fell, since more land is now needed",
    "No conclusion is possible without knowing the population"], ans=0,
