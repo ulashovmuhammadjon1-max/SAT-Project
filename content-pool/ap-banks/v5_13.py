@@ -51,9 +51,21 @@
 #   NEW YORK TIMES CO. V. US (1971) -- "bolstered the freedom of the press
 #     protections of the First Amendment, establishing a 'heavy presumption
 #     against prior restraint' even in cases involving national security."
-#   CITIZENS UNITED V. FEDERAL ELECTION COMMISSION (2010) -- "Political spending
-#     by corporations, associations, and labor unions is a form of protected
-#     speech under the First Amendment."
+#     Item 19 reads it for its LIMIT against EK 5.13.A.2's bias debate; item 20
+#     relates it to the behavior EK 5.13.A.3.iv describes.
+#   TINKER V. DES MOINES INDEPENDENT COMMUNITY SCHOOL DISTRICT (1969) -- "A
+#     prohibition against public school students wearing black armbands in
+#     school to protest the Vietnam War violated the students' freedom of speech
+#     protections in the First Amendment." Item 21 relates it to EK 5.13.A.1's
+#     political participation.
+#
+# Item 21 was drafted as a Citizens United item -- a state law barring a
+# corporation that owns a news site from spending on election advertising -- and
+# was cut. Topic 5.11 item 23 is the same question with a nonprofit corporation
+# in place of the news site, and a cross-topic scan scored the pair at 0.59.
+# Neither could be improved by rewording, because the CED's holding sentence is
+# what both were built from; the fix was a different required case and a
+# different relation, which is what skill 2.D asks for anyway.
 #
 # The CED's optional reading for this topic is marked NOT REQUIRED, so nothing
 # here is keyed to it.
@@ -249,7 +261,7 @@ QUESTIONS = [
      "The framework's statement about agenda setting"], ans=0,
    why="EK 5.13.A.2 names debates over media bias and the impact of media ownership and partisan news sites, and the scenario is an argument about ownership. The framework records that the argument exists rather than deciding it."),
 
- dict(q="The suggested skill for this topic asks students to do what?",
+ dict(q="This topic's suggested skill belongs to the SCOTUS category. What does it ask students to do?",
    choices=[
      "Explain how a required Supreme Court case relates to a relevant political principle, institution, process, policy, or behavior",
      "Explain how a required Supreme Court case compares with a case that is not required",
@@ -258,14 +270,14 @@ QUESTIONS = [
      "Respond to opposing perspectives with rebuttal or refutation"], ans=0,
    why="Skill 2.D is stated in the CED in exactly those terms, and the CED assigns it to this topic. Comparing a required case with a non-required one and describing a case's facts are separate skills in the same category."),
 
- dict(q="In New York Times Co. v. United States (1971), the Supreme Court bolstered freedom of the press, establishing a heavy presumption against prior restraint even in cases involving national security. How does that holding relate to the growth in outlets EK 5.13.A.2 describes?",
+ dict(q="In New York Times Co. v. United States (1971), the Supreme Court bolstered freedom of the press, establishing a heavy presumption against prior restraint even in cases involving national security. Which of the following does that holding NOT establish about the outlets EK 5.13.A.2 describes?",
    choices=[
-     "The variety of outlets is not something government screens in advance, so disputes about what they publish are argued out among citizens rather than settled before publication",
-     "The holding requires government to license each new outlet",
-     "The holding requires outlets to present opposing viewpoints",
-     "The holding limits the number of outlets that may operate",
-     "The holding gives government the power to decide which outlets are credible"], ans=0,
-   why="A heavy presumption against stopping publication in advance means the decision to publish rests with each outlet, which is the condition under which a rapidly growing and ideologically varied set of outlets can exist. EK 5.13.A.2 records the debates that follow, and the case explains why they are debates rather than administrative determinations."),
+     "That any outlet's reporting is accurate or free of bias, since the holding governs whether publication may be stopped and not what is published",
+     "That stopping a publication before it appears faces a heavy burden",
+     "That the burden remains heavy where national security is asserted",
+     "That the protection at issue is a freedom of the press protection",
+     "That the Court decided against the government's request in that case"], ans=0,
+   why="The holding governs whether government may prevent material from appearing, which is a question about timing and authority rather than about the quality of what any outlet prints. EK 5.13.A.2 records debates over media bias, and a case about advance suppression settles none of them."),
 
  dict(q="A citizen who is unsure whether an online report is credible proposes that government resolve such doubts by stopping unreliable reports before they appear. Which required Supreme Court case bears most directly on the proposal?",
    choices=[
@@ -276,14 +288,14 @@ QUESTIONS = [
      "Wisconsin v. Yoder (1972), because it concerned compulsory school attendance"], ans=0,
    why="The proposal is that government block material before publication, and the CED states the holding as a heavy presumption against exactly that, even where national security is asserted. EK 5.13.A.3.iv names the citizen's uncertainty as a real feature of the current media environment, and the case explains why this particular remedy for it faces a heavy burden."),
 
- dict(q="A state law forbids a corporation that owns a news website from spending its own funds on advertisements supporting candidates. Which required Supreme Court case bears most directly on the law?",
+ dict(q="In Tinker v. Des Moines Independent Community School District (1969), the Supreme Court held that a prohibition against public school students wearing black armbands to protest the Vietnam War violated the students' freedom of speech protections in the First Amendment. How does that holding relate to the political participation EK 5.13.A.1 discusses?",
    choices=[
-     "Citizens United v. Federal Election Commission (2010), because political spending by corporations was held to be protected speech",
-     "New York Times Co. v. United States (1971), because it concerned an attempt to stop publication in advance",
-     "Gideon v. Wainwright (1963), because it concerned the right to counsel",
-     "Tinker v. Des Moines Independent Community School District (1969), because it concerned symbolic expression in schools",
-     "Marbury v. Madison (1803), because it established judicial review"], ans=0,
-   why="The law reaches a corporation's own spending on election advertising, which is the situation the CED's stated holding addresses. The other case involving the press concerns blocking publication rather than restricting spending, which is a different act by government."),
+     "It protects an act of political expression against suppression by government, so the media influences the framework describes operate alongside a right the participant already holds",
+     "It establishes that political participation may occur only in schools",
+     "It establishes that government may decide which forms of participation are worthwhile",
+     "It establishes that media coverage has no influence on participation",
+     "It establishes that expression is protected only when it uses words"], ans=0,
+   why="EK 5.13.A.1 says political participation is influenced by media coverage, analysis and commentary, and the case concerns whether government may stop a particular act of participation. Influence on what a person is moved to do and protection of what a person may do are two different things, which is why they can be stated together."),
 
  dict(q="EK 5.13.A.2 attributes the growth of outlets to RAPIDLY INCREASING DEMAND. What does that attribution rule out as the framework's explanation?",
    choices=[
@@ -294,7 +306,7 @@ QUESTIONS = [
      "That the number of outlets has grown"], ans=0,
    why="EK 5.13.A.2 locates the cause in demand from an ideologically diverse audience, so the framework's explanation runs from what audiences want to what gets produced. Every other option restates something the same statement asserts."),
 
- dict(q="Which of the following does the course framework NOT state in this topic?",
+ dict(q="Which of the following do EK 5.13.A.1 through EK 5.13.A.3 NOT state?",
    choices=[
      "Whether increased media choices have raised or lowered the level of political knowledge",
      "That political participation is influenced by media coverage, analysis, and commentary",

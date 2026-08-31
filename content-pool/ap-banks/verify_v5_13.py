@@ -87,9 +87,9 @@ ANCHORS = {
  16: "Ideologically oriented programming",
  17: "which names debates over the impact of media ownership",
  18: "relates to a relevant political principle, institution, process, policy, or behavior",
- 19: "disputes about what they publish are argued out among citizens",
+ 19: "governs whether publication may be stopped and not what is published",
  20: "because a heavy presumption runs against stopping publication in advance",
- 21: "because political spending by corporations was held to be protected speech",
+ 21: "so the media influences the framework describes operate alongside a right",
  22: "That the growth was directed by government policy or by a decision of any single owner",
  23: "Whether increased media choices have raised or lowered the level of political knowledge",
  24: "from increasing demand to increased choices",
@@ -135,13 +135,15 @@ GROUNDING = {
  18: "CED skill 2.D as stated (p. 14 and p. 116) and assigned to this topic. Skill 2.C compares "
      "a required case with a non-required one and 2.A describes a case, which are different.",
  19: "New York Times Co. v. United States (1971), required case. CED holding (p. 30): a heavy "
-     "presumption against prior restraint even in cases involving national security, related "
-     "under skill 2.D to the growth of outlets EK 5.13.A.2 describes.",
+     "presumption against prior restraint even in cases involving national security, read for "
+     "its LIMIT against EK 5.13.A.2's debates over media bias. The case governs whether "
+     "publication may be stopped, not the quality of what is published.",
  20: "The same holding related under skill 2.D to a BEHAVIOR: a citizen acting on the "
      "uncertainty EK 5.13.A.3.iv names by asking government to block publication in advance.",
- 21: "Citizens United v. Federal Election Commission (2010), required case. CED holding (p. 30): "
-     "political spending by corporations, associations and labor unions is a form of protected "
-     "speech under the First Amendment, related under skill 2.D to a state policy.",
+ 21: "Tinker v. Des Moines Independent Community School District (1969), required case. CED "
+     "holding (p. 30): a prohibition against public school students wearing black armbands to "
+     "protest the Vietnam War violated their freedom of speech protections in the First "
+     "Amendment. Related under skill 2.D to the political participation of EK 5.13.A.1.",
  22: "EK 5.13.A.2's causal direction. The framework attributes the growth to demand from an "
      "ideologically diverse audience, which is an explanation running from audiences to outlets "
      "rather than from government or owners to audiences.",

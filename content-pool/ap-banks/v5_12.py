@@ -214,7 +214,7 @@ QUESTIONS = [
      "Public opinion polling"], ans=0,
    why="EK 5.12.A.1 lists political commentary among the kinds of political information citizens acquire, and an argument about whether a law is good is opinion offered about politics. Reporting that the law was proposed would be a news event instead."),
 
- dict(q="The suggested skill for this topic asks students to do what?",
+ dict(q="This topic's suggested skill belongs to the ARGUMENTATION category. What does it ask students to do?",
    choices=[
      "Respond to opposing or alternate perspectives with rebuttal or refutation",
      "Describe the facts and holding of a required Supreme Court case",
@@ -277,7 +277,7 @@ QUESTIONS = [
      "It makes the statement apply only to printed material"], ans=0,
    why="Advances in social media are a kind of new communication technology, so listing both is the framework choosing to name the particular case as well as the general one. A list that named only the general category would leave a reader to decide whether the particular case was covered."),
 
- dict(q="Which of the following does the course framework NOT state in this topic?",
+ dict(q="Which of the following do EK 5.12.A.1 and EK 5.12.A.2 NOT state?",
    choices=[
      "Whether any particular outlet's coverage is fair or unfair",
      "That agenda setting concerns how citizens routinely acquire political information",
