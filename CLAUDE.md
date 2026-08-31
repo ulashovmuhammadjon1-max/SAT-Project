@@ -1,5 +1,26 @@
 # Project memory
 
+## Content commits no longer trigger a Vercel build — keep it that way
+
+`vercel.json` sets an `ignoreCommand` (`scripts/vercel-ignore-build.sh`) that
+skips the build when every changed path is under `content-pool/` or is
+`CLAUDE.md`. Measured before adding it: **66 of 69 pushes in one six-hour
+authoring session were content-only**, each producing a byte-identical site.
+
+Two things to preserve:
+
+1. **Do not batch the per-topic pushes to save builds.** That rule is what
+   rescues an authoring run when an agent dies mid-topic, and it has done so
+   repeatedly. The build skip gets the saving without giving up durability.
+2. **Nothing in `src/` may ever import from `content-pool/`.** The skip is only
+   sound because the four mentions of that directory in the app are comments.
+   If real code ever reads from there, remove the path from the script first.
+
+Questions reach students through the **database**, written by
+`scripts/insert-ap-questions.mjs` against Neon's HTTP API. That path never
+touches Vercel at all, so bulk-inserting content costs nothing in build minutes
+no matter how it is batched.
+
 ## SOCIAL SCIENCES BUILD IN PROGRESS — read content-pool/ap-banks/SOCIAL_RESUME.md
 
 AP Human Geography, US Government and Comparative Government are being built.
