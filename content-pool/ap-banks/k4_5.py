@@ -61,9 +61,9 @@ _T_SUPPRESS = dict(
     headers=["Movement (hypothetical)", "Formal leadership levels",
              "Participants arrested as a share of all participants (percent)",
              "Formal agreements negotiated with government representatives"],
-    rows=[["Movement 1", "1", "3", "0"],
-          ["Movement 2", "4", "17", "6"],
-          ["Movement 3", "2", "8", "2"]])
+    rows=[["Movement 1", "1", "4", "0"],
+          ["Movement 2", "6", "21", "6"],
+          ["Movement 3", "3", "12", "2"]])
 
 _T_SCALE = dict(
     headers=["Stage (hypothetical)", "Highest level at which the movement was active",
@@ -254,19 +254,19 @@ QUESTIONS = [
    table=_T_SUPPRESS,
    choices=[
      "8",
-     "28",
-     "7",
+     "37",
+     "10",
      "6",
-     "36"], ans=0,
+     "45"], ans=0,
    why="Adding the agreements column across the three rows gives the total. The alternatives are the arrest column's total, the leadership column's total, the largest single row, and two columns added together."),
  dict(q="Using the same table, the gap between the highest and lowest shares of participants arrested is",
    table=_T_SUPPRESS,
    choices=[
-     "14 percentage points",
-     "9 percentage points",
-     "5 percentage points",
      "17 percentage points",
-     "3 percentage points"], ans=0,
+     "9 percentage points",
+     "8 percentage points",
+     "21 percentage points",
+     "4 percentage points"], ans=0,
    why="Subtracting the smallest figure in the arrest column from the largest gives the gap. The alternatives are the gaps between other pairs in that column and the two extreme values read as though they were differences."),
  dict(q="The table follows one hypothetical movement through four stages. What does it show about how the movement grew?",
    table=_T_SCALE,

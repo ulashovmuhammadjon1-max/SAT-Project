@@ -102,21 +102,21 @@ def q22(table, item):
     deals, arrests, levels = cg.col(table, DEALS), cg.col(table, ARREST), cg.col(table, LEVELS)
     total = sum(deals)
     assert total == 8, f"the keyed total recomputes to {total}"
-    assert sum(arrests) == 28, "the 28 distractor must be the arrest column's total"
-    assert sum(levels) == 7, "the 7 distractor must be the leadership column's total"
+    assert sum(arrests) == 37, "the 37 distractor must be the arrest column's total"
+    assert sum(levels) == 10, "the 10 distractor must be the leadership column's total"
     assert max(deals) == 6, "the 6 distractor must be the largest single row of the keyed column"
-    assert total + sum(arrests) == 36, "the 36 distractor must be two columns added together"
+    assert total + sum(arrests) == 45, "the 45 distractor must be two columns added together"
     return f"the agreements column reads {deals} and sums to {total:.0f}, with every distractor a wrong sum of the same table"
 
 
 def q23(table, item):
     a = cg.col(table, ARREST)
     gap = max(a) - min(a)
-    assert gap == 14, f"the keyed gap recomputes to {gap}"
+    assert gap == 17, f"the keyed gap recomputes to {gap}"
     pairs = sorted({abs(x - y) for x in a for y in a if x != y})
-    assert 9 in pairs and 5 in pairs, f"the 9 and 5 distractors must be the other gaps in that column; gaps are {pairs}"
-    assert max(a) == 17 and min(a) == 3, \
-        f"the 17 and 3 distractors must be the column's extreme values read as differences; the column reads {a}"
+    assert 9 in pairs and 8 in pairs, f"the 9 and 8 distractors must be the other gaps in that column; gaps are {pairs}"
+    assert max(a) == 21 and min(a) == 4, \
+        f"the 21 and 4 distractors must be the column's extreme values read as differences; the column reads {a}"
     return f"the arrest column reads {a}, so the largest minus the smallest is {gap:.0f} percentage points"
 
 
@@ -228,7 +228,7 @@ CLAIMS = [
   "EK IEF-2.A.5 states that limited organizational hierarchies make a movement hard to suppress but can leave it unable to negotiate with governmental representatives. Recomputed in q21 above, where both columns rise with leadership levels across all three rows, so the claim rests on the pattern and not on one row."),
  ("8",
   "Recomputed in q22 above by summing the negotiated-agreements column. The distractors are the arrest column's total, the leadership column's total, the largest single row, and two columns added together."),
- ("14 percentage points",
+ ("17 percentage points",
   "Recomputed in q23 above by subtracting the smallest arrest share from the largest. The distractors are the other two gaps in that column and its two extreme values read as though they were differences."),
  ("with more local groups taking part at each stage",
   "EK IEF-2.A.4 states that grassroots social movements exert their power up from the local level to the regional, national, or international level. Recomputed in q24 above, which reads the stage names as well as the counts, since the key asserts both an order and a trend."),
