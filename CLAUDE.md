@@ -14,6 +14,21 @@ time is the ceiling, and it leaves the coordinator headroom to assemble and
 insert. The per-topic commit rule is what saved the run — 180 questions were
 sitting finished but uncommitted and had to be rescued by hand.
 
+### `git add -A` in an agent sweeps up the coordinator's uncommitted work
+The per-topic commit rule tells each authoring agent to run `git add -A && git
+commit && git push`. That stages **everything dirty in the tree**, including
+app-code edits the coordinator is midway through. The teacher-invite fix
+(`src/lib/email/class-invite.ts` and four other files) therefore shipped inside
+two commits titled "AP Comp Gov 4.4" and "AP Human Geography 4.9". Nothing was
+lost and the code deployed fine, but the history now lies about what those
+commits contain, and a bisect or revert on a content commit would take app code
+with it.
+
+Either commit your own work before spawning agents, or have the brief say
+`git add content-pool/ap-banks` rather than `-A`. Do not rewrite the history
+afterwards — the agents are still committing onto the same branch and a rebase
+under them loses their work.
+
 ### These subjects have no sympy, so the gate is different
 Every Math bank here rests on a computational check. A wrong key in a
 Government bank is caught by a person reading or not at all. So the rule in
