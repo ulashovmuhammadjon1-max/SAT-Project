@@ -10,14 +10,14 @@ only US Gov and is kept current by whoever is authoring it.
 |---|---|---|
 | 1 Foundations of American Democracy | 1.1 – 1.9 | **complete**, 9 of 9 |
 | 2 Interactions Among Branches | 2.1 – 2.15 | **complete**, 15 of 15 |
-| 3 Civil Liberties and Civil Rights | 3.1 – 3.7 | 7 of 13 |
-| 4 American Political Ideologies and Beliefs | — | 0 of 10 |
-| 5 Political Participation | — | 0 of 13 |
+| 3 Civil Liberties and Civil Rights | 3.1 – 3.13 | **complete**, 13 of 13 |
+| 4 American Political Ideologies and Beliefs | 4.1 – 4.10 | **complete**, 10 of 10 |
+| 5 Political Participation | 5.1 – 5.13 | **complete**, 13 of 13 |
 
-**31 of 60 topics, 930 questions, every one behind a passing verifier.**
+**60 of 60 topics, 1,800 questions, every one behind a passing verifier.
+THE SUBJECT IS FINISHED.**
 
-Resume at **3.8 Amendments: Due Process and the Rights of the Accused** and work
-in CED order.
+Nothing to resume. What is left is insertion, and the scan below before it.
 
 ## How to author one topic
 
@@ -115,10 +115,43 @@ LETTER_REF rules. **Every module, in either half, also runs the four helpers in
 
 ## Files
 
-- `v1_1.py` … `v3_7.py` — the modules. `verify_v*.py` — one per module.
+- `v1_1.py` … `v5_13.py` — the modules. `verify_v*.py` — one per module.
 - `usgov_check.py`, `gov345_check.py` — the two shared structural checkers.
   Libraries, not scripts: running one prints nothing.
 - `usgov_anchor.py` — the shared anchor/grounding/notation/shape gate.
 - `export_units.py v1_1 v1_2 … --subject US_GOV --out /tmp/usgov.json` —
   enforces 30 per topic, redistributes keys across A–E, warns on near-duplicate
   stems. Warnings on items that share one stimulus are expected.
+
+## Unit 5's last three topics, and the two boundaries they turn on
+
+5.11, 5.12 and 5.13 close the subject. Two of them rest on a single framework
+word, and in both cases the word is one a student already has an opinion about:
+
+- **5.11 keys nothing the CED does not state.** The framework gives no
+  contribution limit, no dollar figure, no definition of soft money beyond the
+  word, no taxonomy of PACs beyond "different types", and no verdict on the 2002
+  act or on `Citizens United`. `verify_v5_11.py`'s `_no_invented_numbers` refuses
+  any digit in a key outside the data items unless it is one of the eight years
+  the topic names, and `_holding` refuses any key that enlarges the CED's
+  one-sentence holding — in particular the standard misstatement that the case
+  permitted unlimited direct contributions, which is a claim about
+  CONTRIBUTIONS where the CED's sentence is about SPENDING.
+- **5.12's verb is CAN AFFECT and 5.13's is AFFECTED.** EK 5.12.A.2 says horse
+  race coverage CAN AFFECT elections; EK 5.13.A.3 says democratic debate and
+  political knowledge ARE AFFECTED, with no direction. Neither states an
+  outcome. `_modal` and `_uncommitted` enforce both, and `_uncommitted` also
+  refuses any key settling EK 5.13.A.2's bias debate in either direction.
+- **The course defines AGENDA SETTING twice.** EK 2.7.A.1.ii makes it a
+  president's influence over which policies the public sees as most important;
+  EK 5.12.A.1 makes it media influence over how citizens routinely acquire
+  political information. `_agenda` in `verify_v5_12.py` refuses a key that
+  imports the earlier definition, and 5.12 item 6 makes the difference the
+  question rather than leaving a student to collide with it.
+
+Every gate in the three verifiers carries an executable negative control: the
+gate is run against a deliberately corrupted copy of the module and must fail.
+Sixteen controls across the three files, all firing. One of them earned its keep
+immediately — 5.12 item 28's key said poll coverage took the largest share ONLY
+IN THE FINAL WEEK, and the table's own arithmetic says it passes the platforms
+column a period earlier. The item was structurally impeccable and read as true.
