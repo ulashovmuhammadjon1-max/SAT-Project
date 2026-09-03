@@ -37,7 +37,7 @@ _T_SOLUTIONS = dict(
     rows=[["1", "NaCl", "sodium ion and chloride ion"],
           ["2", "NaNO3", "sodium ion and nitrate ion"],
           ["3", "AgNO3", "silver ion and nitrate ion"],
-          ["4", "KBr", "potassium ion and bromide ion"]])
+          ["4", "CaCl2", "calcium ion and chloride ion"]])
 
 _T_CHLORIDE = dict(
     headers=["Beaker", "Chloride ion concentration already present (M)"],
@@ -85,37 +85,36 @@ QUESTIONS = [
           "already in solution is relieved by the reverse direction, which keeps more of "
           "the salt undissolved. The constant itself is fixed by temperature."),
 
- dict(q="Using the table, into which solution would solid AgCl be LEAST soluble?",
+ dict(q="Using the table, in which solution would solid AgCl be MOST soluble?",
       table=_T_SOLUTIONS,
       choices=["Solution 2", "Solution 1", "Solution 3", "Solution 4",
                "AgCl is equally soluble in all four"],
       ans=0,
-      why="EK 7.12.A.1 reduces the solubility only where an ion of the salt is already "
-          "present. AgCl supplies silver ion and chloride ion, and exactly one tabulated "
-          "solution contains neither of those, so that is the one in which the solubility "
-          "is NOT reduced. The keyed choice is the solution in which AgCl remains most "
-          "soluble, and the question asks for the least soluble case, so it is the "
-          "solutions sharing an ion that qualify."),
+      why="EK 7.12.A.1 reduces the solubility only where the solution already contains an "
+          "ion present in the salt. AgCl supplies silver ion and chloride ion, and "
+          "exactly one tabulated solution contains neither of those, so it is the only "
+          "one in which the solubility is not reduced."),
 
- dict(q="Using the same table, which solution shares NO ion with AgCl and so leaves its "
-        "solubility unreduced?",
+ dict(q="Using the same table, which solution reduces the solubility of AgCl by "
+        "supplying the same CATION that AgCl releases?",
       table=_T_SOLUTIONS,
-      choices=["Solution 2", "Solution 1", "Solution 3", "Solution 4",
-               "Every solution shares an ion with AgCl"],
+      choices=["Solution 3", "Solution 1", "Solution 2", "Solution 4",
+               "No tabulated solution supplies that cation"],
       ans=0,
-      why="AgCl releases silver ion and chloride ion. Exactly one tabulated solution "
-          "contains neither, holding only sodium ion and nitrate ion, so EK 7.12.A.1's "
-          "reduction does not apply to it."),
+      why="AgCl releases silver ion and chloride ion. Two tabulated solutions supply "
+          "chloride ion and exactly one supplies silver ion, which is the cation of the "
+          "salt, so EK 7.12.A.1's reduction operates through the cation in that one case "
+          "and through the anion in the others."),
 
- dict(q="Using the same table, which two solutions would each reduce the solubility of "
+ dict(q="Using the same table, which solutions would each reduce the solubility of "
         "AgCl?",
       table=_T_SOLUTIONS,
-      choices=["Solutions 1 and 3", "Solutions 1 and 2", "Solutions 2 and 4",
-               "Solutions 3 and 4", "Solutions 2 and 3"],
+      choices=["Solutions 1, 3 and 4", "Solutions 1, 2 and 3", "Solutions 2, 3 and 4",
+               "Solutions 1, 2 and 4", "All four solutions"],
       ans=0,
-      why="EK 7.12.A.1 requires an ion already present that also appears in the salt. One "
-          "tabulated solution supplies chloride ion and another supplies silver ion, and "
-          "both of those appear in AgCl, while nitrate, potassium and bromide do not."),
+      why="EK 7.12.A.1 requires an ion already present that also appears in the salt. Two "
+          "tabulated solutions supply chloride ion and one supplies silver ion, and all "
+          "three of those ions appear in AgCl, while nitrate, sodium and calcium do not."),
 
  dict(q="A student claims the common-ion effect works because the added ion physically "
         "blocks the surface of the solid. What is the better account, according to the "
@@ -280,8 +279,9 @@ QUESTIONS = [
         "The measured solubility rises with the concentration of the shared ion",
         "The measured solubility falls to zero once any shared ion is present"],
       ans=0,
-      why="The tabulated solubilities fall by a factor of ten each time the shared-ion "
-          "concentration rises by a factor of ten, which is what a one-to-one salt "
+      why="Between the second and third trials the shared-ion concentration rises "
+          "tenfold and the measured solubility falls tenfold, which is what a one-to-one "
+          "salt "
           "requires when the constant is the product of the solubility and a fixed "
           "shared-ion concentration. It is a reduction, not an abolition, as EK 7.12.A.1 "
           "says."),
