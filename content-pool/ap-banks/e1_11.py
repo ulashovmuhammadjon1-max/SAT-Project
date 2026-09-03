@@ -208,19 +208,20 @@ QUESTIONS = [
           "the table identifies exactly two species that build from sunlight, water and "
           "carbon dioxide rather than from another organism."),
 
- dict(q="Using the same meadow table, which species is best described as a primary "
-        "consumer?",
+ dict(q="Using the same meadow table, which species are best described as primary "
+        "consumers?",
       table=_T_WEB,
       choices=[
-        "Species D, which feeds only on a producer.",
-        "Species A, which feeds on sunlight, water and carbon dioxide.",
-        "Species E, which feeds on two consumers.",
-        "Species F, which feeds on dead remains.",
-        "Species B, which feeds on sunlight, water and carbon dioxide."],
+        "Species C and Species D, whose listed foods are producers and nothing else.",
+        "Species A and Species B, which feed on sunlight, water and carbon dioxide.",
+        "Species E alone, which feeds on two consumers.",
+        "Species F alone, which feeds on dead remains.",
+        "Species E and Species F, which feed on other organisms rather than on "
+        "producers."],
       ans=0,
       why="ENG-1.D.1 pairs primary consumers with herbivores and places them directly "
-          "above the producers, so the species whose whole diet is a producer is the "
-          "primary consumer among those listed."),
+          "above the producers, so the species whose listed foods are producers and "
+          "nothing else occupy that position. Two species in the table do."),
 
  dict(q="Using the same meadow table, which species feeds only on other consumers?",
       table=_T_WEB,

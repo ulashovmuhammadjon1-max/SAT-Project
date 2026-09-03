@@ -105,14 +105,17 @@ def q10(table, item):
 def q11(table, item):
     web = _web(table)
     prod = _producers(web)
-    only_prod = [s for s in web if s not in prod and s not in _dead_feeder(web)
+    dead = _dead_feeder(web)
+    only_prod = [s for s in web if s not in prod and s not in dead
+                 and any(_eats(web, s, p) for p in prod)
                  and all(not _eats(web, s, c) for c in web if c not in prod)]
-    assert only_prod == ["Species D"], f"exactly one species must eat producers only; got {only_prod}"
-    assert _eats(web, "Species D", "Species A"), "Species D must be stated to eat a producer"
-    assert _eats(web, "Species C", "Species A") and _eats(web, "Species C", "Species B"), \
-        "Species C must eat two producers, so it is a consumer too and the item asks for the single-producer feeder"
-    return ("exactly one species feeds on a producer and on nothing else, which is the "
-            "primary consumer position the framework places directly above the producers")
+    assert set(only_prod) == {"Species C", "Species D"}, \
+        f"exactly Species C and Species D must eat producers and nothing else; got {only_prod}"
+    for s in ("Species E", "Species F"):
+        assert s not in only_prod, f"{s} must not qualify as a primary consumer"
+    return (f"exactly two species, {sorted(only_prod)}, have producers among their listed "
+            "foods and nothing else, which is the primary consumer position the framework "
+            "places directly above the producers")
 
 
 def q12(table, item):
@@ -286,8 +289,8 @@ CLAIMS = [
   "ENG-1.D.2, near verbatim: when one species is removed from or added to a specific food web, the rest of the food web can be affected. The word can allows an effect without asserting a collapse."),
  ("which feed on sunlight, water and carbon dioxide",
   "Recomputed in q10 above: exactly two of the six species are described as building from sunlight, water and carbon dioxide. ENG-1.D.1 places producers, the autotrophs, at the start of a food chain."),
- ("which feeds only on a producer",
-  "Recomputed in q11 above: exactly one species feeds on a producer and on nothing else. ENG-1.D.1 pairs primary consumers with herbivores and places them directly above the producers."),
+ ("Species C and Species D",
+  "Recomputed in q11 above: exactly two species have producers among their listed foods and nothing else. ENG-1.D.1 pairs primary consumers with herbivores and places them directly above the producers."),
  ("Species E",
   "Recomputed in q12 above: exactly one species has no producer among its listed foods and does have other consumers among them, which is the secondary or tertiary position of ENG-1.D.1."),
  ("which feeds on the dead remains",
