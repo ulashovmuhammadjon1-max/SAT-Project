@@ -187,7 +187,7 @@ QUESTIONS = [
         "carry an oxidation number of negative two and requiring the oxidation "
         "numbers of all atoms to sum to the overall charge, what is the "
         "oxidation number of the sulfur atom?",
-      choices=["+6", "+3", "+2", "-2", "0"],
+      choices=["+6", "+4", "+3", "+2", "0"],
       ans=0,
       why="EK 4.7.A.4 states that oxidation numbers may be assigned to each of "
           "the atoms. Three oxygen atoms at negative two total negative six, and "
