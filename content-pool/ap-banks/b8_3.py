@@ -227,7 +227,7 @@ QUESTIONS = [
             "It halves", "It stays the same", "It rises and then falls"], ans=0,
    why="Skill 4.B calls for describing the trend. Dividing each year's count by the previous year's gives the same value at every step, which is a constant multiplication rather than a constant addition."),
 
- dict(q="Using the same four yearly counts, by how many individuals did the population increase between the third year and the fourth?",
+ dict(q="Using the same four yearly counts, by how many individuals did the population increase between Year 3 and Year 4?",
    table=_T_EXP,
    choices=["200 individuals", "100 individuals", "50 individuals",
             "400 individuals", "800 individuals"], ans=0,
