@@ -37,6 +37,13 @@
 #   EIN-2.F.7  Aquifers can be severely depleted if overused for agricultural irrigation,
 #              as has happened to the Ogallala Aquifer in the central United States.
 #
+# ONE INTERNAL TENSION IN THE CED, RESOLVED THE WAY THE CED ITSELF DIRECTS. EIN-2.F.4
+# states plainly that spray irrigation is MORE EFFICIENT THAN FLOOD AND FURROW, and then
+# caps its loss at "1/4 or less". EIN-2.F.3 gives flood about 20%. A spray figure of 25%
+# would satisfy the cap and contradict the ranking, so the tables here use 15% for spray,
+# which satisfies both: it is one quarter or less, and it is below flood's 20%. No item
+# asks a student to produce a spray percentage from memory.
+#
 # ON THE FOUR LOSS PERCENTAGES. These are the framework's own numbers, so a key may rest
 # on them. Every item that CALCULATES with them nonetheless prints the percentages in a
 # table with the question, so the arithmetic is recoverable from the stimulus alone and
@@ -59,7 +66,7 @@ _T_LOSS = dict(
              "Water lost to evaporation and runoff (percent of the water applied)"],
     rows=[["Drip irrigation", "5"],
           ["Flood irrigation", "20"],
-          ["Spray irrigation", "25"],
+          ["Spray irrigation", "15"],
           ["Furrow irrigation", "33"]])
 
 _T_APPLIED = dict(
@@ -68,7 +75,7 @@ _T_APPLIED = dict(
              "Water lost to evaporation and runoff (percent of the water applied)"],
     rows=[["Drip irrigation", "600", "5"],
           ["Flood irrigation", "600", "20"],
-          ["Spray irrigation", "600", "25"],
+          ["Spray irrigation", "600", "15"],
           ["Furrow irrigation", "600", "33"]])
 
 _T_SECTORS = dict(
@@ -115,18 +122,20 @@ _T_INSTALL = dict(
 
 QUESTIONS = [
 
- dict(q="On a global scale, approximately what share of human freshwater consumption does "
-        "the course framework assign to agriculture?",
+ dict(q="The table divides human freshwater consumption worldwide among three uses. Which "
+        "use takes the largest share, and at what figure?",
+      table=_T_SECTORS,
       choices=[
-        "About 70 percent",
-        "About 40 percent",
-        "About 20 percent",
-        "About 10 percent",
-        "About 95 percent"],
+        "Agriculture, at about 70 percent, which is the share the framework gives it",
+        "Industry, at about 70 percent, which is the share the framework gives it",
+        "Households and municipalities, at about 70 percent, which is the share the "
+        "framework gives them",
+        "Agriculture, at about 19 percent, which is the share the framework gives it",
+        "The three uses take equal shares, so none of them dominates"],
       ans=0,
-      why="EIN-2.E.1 states that on a global scale, approximately 70 percent of human "
-          "freshwater consumption is used for agriculture. The rejected values are all "
-          "well away from the framework's figure."),
+      why="The tabulated shares are 70, 19 and 11 percent, so agriculture is much the largest "
+          "and the three sum to 100. EIN-2.E.1 states that on a global scale, approximately "
+          "70 percent of human freshwater consumption is used for agriculture."),
 
  dict(q="Which set of methods does the framework list as types of irrigation?",
       choices=[
@@ -182,18 +191,6 @@ QUESTIONS = [
           "of water to plant roots. The other three methods are described in EIN-2.F.2, "
           "EIN-2.F.3 and EIN-2.F.4 by furrows, flooding and spray nozzles."),
 
- dict(q="Which method involves pumping ground water into nozzles set across the field?",
-      choices=[
-        "Spray irrigation",
-        "Drip irrigation",
-        "Flood irrigation",
-        "Furrow irrigation",
-        "The framework does not describe how any method delivers water"],
-      ans=0,
-      why="EIN-2.F.4 states that spray irrigation involves pumping ground water into spray "
-          "nozzles across an agricultural field. The framework describes the delivery method "
-          "for each of the four types, so the last option is wrong on its face."),
-
  dict(q="The table gives the share of applied water lost to evaporation and runoff under "
         "four methods. Which method is the most efficient, as the framework describes it?",
       table=_T_LOSS,
@@ -204,7 +201,7 @@ QUESTIONS = [
         "Spray irrigation, which loses the smallest share of the water applied",
         "All four are equally efficient, since each loses some water"],
       ans=0,
-      why="The tabulated losses are 5, 20, 25 and 33 percent, and drip is the smallest. "
+      why="The tabulated losses are 5, 15, 20 and 33 percent, and drip is the smallest. "
           "EIN-2.F.5 states that drip irrigation is the most efficient system, with only about "
           "5 percent of water lost to evaporation and runoff."),
 
@@ -218,7 +215,7 @@ QUESTIONS = [
         "Drip irrigation, at about one third of the water applied",
         "The four methods lose the same share of the water applied"],
       ans=0,
-      why="The tabulated losses are 5, 20, 25 and 33 percent, and 33 percent is furrow "
+      why="The tabulated losses are 5, 15, 20 and 33 percent, and 33 percent is furrow "
           "irrigation. EIN-2.F.2 states that about one third of the water is lost to "
           "evaporation and runoff under furrow irrigation."),
 
@@ -229,7 +226,7 @@ QUESTIONS = [
         "About 200 millimeters",
         "About 30 millimeters",
         "About 120 millimeters",
-        "About 150 millimeters",
+        "About 90 millimeters",
         "About 400 millimeters"],
       ans=0,
       why="A third of 600 millimeters is 200 millimeters, which matches the 33 percent the "
@@ -245,7 +242,7 @@ QUESTIONS = [
         "About 60 millimeters",
         "About 120 millimeters",
         "About 200 millimeters",
-        "About 570 millimeters"],
+        "About 570 millimeters remaining"],
       ans=0,
       why="Five percent of 600 millimeters is 30 millimeters, which is the figure the table "
           "gives for drip irrigation. The rejected values double the correct answer, quote the "
@@ -258,12 +255,12 @@ QUESTIONS = [
         "About 170 millimeters more",
         "About 200 millimeters more",
         "About 30 millimeters more",
-        "About 100 millimeters more",
+        "About 90 millimeters more",
         "About 230 millimeters more"],
       ans=0,
       why="Furrow loses 200 millimeters of the 600 applied and drip loses 30, so the difference "
-          "is 170 millimeters. The rejected values quote one of the two losses alone, pair the "
-          "wrong methods, or add the two losses instead of differencing them."),
+          "is 170 millimeters. The rejected values quote one of the two losses alone, use the "
+          "spray loss, or add the two losses instead of differencing them."),
 
  dict(q="Which statement correctly reports what the framework says about the cost of "
         "furrow irrigation?",
@@ -553,13 +550,14 @@ QUESTIONS = [
  dict(q="Which summary of this topic keeps the framework's ordering of the four methods by "
         "water lost, from least to most?",
       choices=[
-        "Drip loses least, then flood, then spray, then furrow loses most.",
-        "Furrow loses least, then spray, then flood, then drip loses most.",
+        "Drip loses least, then spray, then flood, then furrow loses most.",
+        "Furrow loses least, then flood, then spray, then drip loses most.",
         "Spray loses least, then drip, then furrow, then flood loses most.",
         "Flood loses least, then furrow, then drip, then spray loses most.",
         "The four methods lose the same share, so no ordering exists."],
       ans=0,
-      why="EIN-2.F.5 gives drip about 5 percent, EIN-2.F.3 gives flood about 20 percent, "
-          "EIN-2.F.4 gives spray one quarter or less, and EIN-2.F.2 gives furrow about one "
-          "third. Taking the framework's own figures in order puts drip first and furrow last."),
+      why="EIN-2.F.5 gives drip the smallest loss at about 5 percent, EIN-2.F.4 places spray "
+          "above flood and furrow in efficiency at one quarter or less, EIN-2.F.3 gives flood "
+          "about 20 percent, and EIN-2.F.2 gives furrow about one third. Reading the "
+          "framework's own ranking puts drip first, spray second and furrow last."),
 ]
