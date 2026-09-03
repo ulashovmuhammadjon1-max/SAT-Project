@@ -274,6 +274,28 @@ def check(topics: dict[str, str]) -> list[str]:
     return problems
 
 
+UNIT_TITLE = re.compile(r"\bUNIT\s+(\d{1,2})\s*:\s*([^\n]{3,70})", re.IGNORECASE)
+
+
+def unit_titles(path: str) -> dict[int, str]:
+    """Unit number -> title, from the contents listing.
+
+    The unit opener pages print `UNIT` and the number on separate lines, so the
+    contents listing is the only place the two sit together with the title.
+    Several renderings of the same line appear across the document; the longest
+    is the complete one.
+    """
+    txt = open(path, encoding="utf-8", errors="replace").read()
+    found: dict[int, str] = {}
+    for m in UNIT_TITLE.finditer(txt):
+        u = int(m.group(1))
+        # Trim the class-period or exam-weighting column that follows.
+        t = re.split(r"\s{2,}|\s+\d+[\u2013-]\d+%", m.group(2))[0].strip(" .\u00b7")
+        if t and (u not in found or len(t) > len(found[u])):
+            found[u] = t
+    return found
+
+
 def main():
     path, subject = sys.argv[1], sys.argv[2]
     topics, order = extract(path)
@@ -300,7 +322,17 @@ def main():
         for p in problems:
             print("  -", p)
         raise SystemExit(1)
-    out = {"_units": sorted({int(c.split(".")[0]) for c in topics})}
+    units = unit_titles(path)
+    seen_units = sorted({int(c.split(".")[0]) for c in topics})
+    missing = [u for u in seen_units if u not in units]
+    if missing:
+        print(f"\nNO TITLE for unit(s) {missing} -- not writing a file")
+        raise SystemExit(1)
+    # `_units` must be a MAPPING of unit number to title, not a bare list:
+    # gen_course_units.py calls .get() on it to build the course outline a
+    # student navigates. A list here fails with an AttributeError at generation
+    # time rather than at extraction time, which is the wrong place to find out.
+    out = {"_units": {str(u): units[u] for u in seen_units}}
     out.update({c: topics[c] for c in order})
     dest = f"{subject}_topics.json"
     json.dump(out, open(dest, "w", encoding="utf-8"), indent=1, ensure_ascii=False)

@@ -137,6 +137,16 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
     blurb:
       "Six course countries compared across political systems, institutions, participation, and policy.",
   },
+  {
+    code: "BIOLOGY",
+    slug: "biology",
+    name: "AP Biology",
+    short: "Biology",
+    category: "STEM",
+    gradient: "from-green-500 to-emerald-600",
+    blurb:
+      "Evolution, energetics, information storage, and systems interactions.",
+  },
 ];
 
 /**
@@ -144,7 +154,6 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
  * added or entered — a student must never land in an empty course.
  */
 const PLANNED: Omit<ApCatalogEntry, "status" | "gradient">[] = [
-  { code: "BIOLOGY", slug: "biology", name: "AP Biology", short: "Biology", category: "STEM", blurb: "Evolution, energetics, information storage, and systems interactions." },
   { code: "CHEMISTRY", slug: "chemistry", name: "AP Chemistry", short: "Chemistry", category: "STEM", blurb: "Atomic structure, bonding, reactions, kinetics, thermodynamics, and equilibrium." },
   { code: "PHYSICS_1", slug: "physics-1", name: "AP Physics 1: Algebra-Based", short: "Physics 1", category: "STEM", blurb: "Kinematics, forces, energy, momentum, rotation, and simple harmonic motion." },
   { code: "PHYSICS_2", slug: "physics-2", name: "AP Physics 2: Algebra-Based", short: "Physics 2", category: "STEM", blurb: "Fluids, thermodynamics, electromagnetism, optics, and modern physics." },

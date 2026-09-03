@@ -338,6 +338,19 @@ const US_GOV_BLUEPRINT: ApSectionQuota[] = [
 ];
 
 // CED: 18-27 / 22-33 / 11-18 / 13-18 / 16-24. Rounded to 55 at the midpoints.
+/** AP Biology Section I is 60 questions in 90 minutes (CED p. 218). Counts are
+ *  the midpoints of the CED's published unit weightings, which sum to 60. */
+const BIOLOGY_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 6 },  // 8-11%
+  { unit: 2, count: 7 },  // 10-13%
+  { unit: 3, count: 8 },  // 12-16%
+  { unit: 4, count: 8 },  // 10-15%
+  { unit: 5, count: 6 },  // 8-11%
+  { unit: 6, count: 8 },  // 12-16%
+  { unit: 7, count: 10 }, // 13-20%
+  { unit: 8, count: 7 },  // 10-15%
+];
+
 const COMP_GOV_BLUEPRINT: ApSectionQuota[] = [
   { unit: 1, count: 12 }, // 18-27%
   { unit: 2, count: 15 }, // 22-33%
@@ -722,6 +735,46 @@ export const AP_TESTS: ApPracticeTest[] = [
         timeLimitMinutes: 60,
         calculator: "NONE",
         blueprint: COMP_GOV_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "BIOLOGY",
+    slug: "diagnostic",
+    name: "Biology Diagnostic",
+    blurb: "Half a Section I, weighted across all eight units.",
+    variant: 0,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Biology exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 45,
+        calculator: "FOUR_FUNCTION",
+        blueprint: halve(BIOLOGY_BLUEPRINT, 30),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "BIOLOGY",
+    slug: "practice-1",
+    name: "Biology Practice Exam 1",
+    blurb: "A full Section I: 60 questions in 90 minutes.",
+    variant: 1,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Biology exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 90,
+        calculator: "FOUR_FUNCTION",
+        blueprint: BIOLOGY_BLUEPRINT,
         directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
       }),
     ],
