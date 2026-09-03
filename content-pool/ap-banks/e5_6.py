@@ -209,11 +209,11 @@ QUESTIONS = [
         "damaged reduced?",
       table=_T_YIELD,
       choices=[
-        "29 percentage points",
-        "38 percentage points",
-        "9 percentage points",
-        "47 percentage points",
-        "24 percentage points"],
+        "A reduction of 29 percentage points",
+        "A reduction of 38 percentage points",
+        "A reduction of 9 percentage points",
+        "A reduction of 47 percentage points",
+        "A reduction of 24 percentage points"],
       ans=0,
       why="Subtracting the two tabulated damage shares gives 38 minus 9, which is 29 percentage "
           "points. The rejected values quote one of the two shares alone or add them instead of "
