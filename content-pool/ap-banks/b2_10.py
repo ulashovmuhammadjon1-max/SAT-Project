@@ -116,15 +116,15 @@ QUESTIONS = [
    ans=0,
    why="EK 2.10.A.3 gives eukaryotes internal membranes that partition the cell into specialized regions, and EK 2.10.A.2 says prokaryotes typically lack internal membrane-bound organelles. EK 2.1.A.1 places ribosomes in all forms of life, which is why the ribosome option fails."),
 
- dict(q="Ribosomes are found in cells of every known form of life. What does the framework take that distribution to indicate?",
+ dict(q="The framework's statement reads that membrane-bound organelles SUCH AS mitochondria and chloroplasts evolved from once free-living prokaryotic cells. What does the phrase SUCH AS establish?",
    choices=[
-     "It reflects the common ancestry of all known life",
-     "It shows that ribosomes evolved separately in each lineage",
-     "It shows that ribosomes are membrane-bound organelles",
-     "It shows that every cell type carries out photosynthesis",
-     "It shows that ribosomes arose by endosymbiosis in the same way mitochondria did"],
+     "That the two are named as instances, without a claim that every membrane-bound organelle arose the same way",
+     "That every membrane-bound organelle in a eukaryotic cell arose in the same way",
+     "That mitochondria and chloroplasts are the only membrane-bound organelles a eukaryotic cell contains",
+     "That the two named organelles arose this way in some species and by other routes in the rest",
+     "That the account applies to prokaryotic cells rather than to eukaryotic ones"],
    ans=0,
-   why="EK 2.1.A.1 states that ribosomes are non-membrane subcellular structures found in cells in all forms of life and reflect the common ancestry in all known life. Universality is read as inheritance from a shared ancestor, not as repeated invention."),
+   why="EK 2.10.A.1 introduces mitochondria and chloroplasts with SUCH AS, which offers them as examples rather than as an exhaustive list, and asserts nothing about organelles it does not name. EK 2.1.A.2's endomembrane system names several other membrane-bound organelles for which the framework makes no endosymbiotic claim."),
 
  dict(q="An investigator reports that a mitochondrion contains its own circular molecule of DNA. Which claim does that observation most directly support, and on what reasoning?",
    choices=[

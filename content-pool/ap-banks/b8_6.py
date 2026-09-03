@@ -290,7 +290,7 @@ QUESTIONS = [
 
  dict(q="Species G held how many times the share of biomass that Species F held?",
    table=_T_KEYSTONE,
-   choices=["12 times", "9 times", "2 times", "24 times", "22 times"], ans=0,
+   choices=["12 times", "9 times", "24 times", "26 times", "48 times"], ans=0,
    why="Skill 5.A includes ratios. Dividing the biomass share of the first named species by that of the second gives the factor, and the same pair runs the other way on the number of species affected."),
 
  dict(q="Which conclusion do the results of that removal experiment best support?",
