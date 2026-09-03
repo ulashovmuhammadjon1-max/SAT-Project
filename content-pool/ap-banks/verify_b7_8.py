@@ -56,7 +56,17 @@ def named_row(table, item):
     return hits[0]
 
 
+def _rounds_numbered(table):
+    """Round labels must read Round 1 upward in written order: the stem of the
+    percentage item names a round by number, and the trend items read the
+    column in written order as if it were chronological."""
+    nums = [cg.num(lab) for lab in cg.labels(table)]
+    assert nums == list(range(1, len(nums) + 1)), \
+        f"round labels are {cg.labels(table)}; they must be numbered from one in row order"
+
+
 def q11(table, item):
+    _rounds_numbered(table)
     lab = named_row(table, item)
     n, g = cg.cell(table, lab, TESTED), cg.cell(table, lab, GREW)
     pct = g / n * 100
@@ -67,6 +77,7 @@ def q11(table, item):
 
 
 def q12(table, item):
+    _rounds_numbered(table)
     grew = cg.col(table, GREW)
     rise = grew[-1] - grew[0]
     assert keyed(item) == f"{int(rise)} colonies", \
@@ -75,6 +86,7 @@ def q12(table, item):
 
 
 def q13(table, item):
+    _rounds_numbered(table)
     grew = cg.col(table, GREW)
     tested = set(cg.col(table, TESTED))
     assert all(b > a for a, b in zip(grew, grew[1:])), \
