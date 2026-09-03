@@ -47,6 +47,17 @@ assert all(_DNA_PAIR[p] in PYRIMIDINES for p in PURINES), \
 assert all(_DNA_PAIR[p] in PURINES for p in PYRIMIDINES if p != "uracil"), \
     "EK 6.1.B.1.iii: every DNA pyrimidine must pair with a purine"
 
+# q8: the DNA and the RNA partner of one strand, and how many positions differ.
+_Q8_SEQ = ["adenine", "guanine", "adenine", "cytosine", "adenine"]
+_Q8_DNA = _complement(_Q8_SEQ)
+_Q8_RNA = _complement(_Q8_SEQ, rna=True)
+_Q8_DIFF = sum(1 for a, b in zip(_Q8_DNA, _Q8_RNA) if a != b)
+assert _Q8_DIFF == 3, f"q8: the two partner strands differ at {_Q8_DIFF} positions, not 3"
+assert _Q8_DIFF == _Q8_SEQ.count("adenine"), \
+    "q8: the positions that differ must be exactly the adenines, which is what the key asserts"
+assert all(a == b for a, b in zip(_Q8_DNA, _Q8_RNA)
+           if a not in ("thymine", "uracil")), "q8: no non-adenine position may differ"
+
 # q9: the complementary DNA strand, recomputed base by base.
 _Q9 = _complement(["guanine", "guanine", "cytosine", "adenine", "guanine"])
 assert _Q9 == ["cytosine", "cytosine", "guanine", "thymine", "cytosine"], \
@@ -174,8 +185,8 @@ CLAIMS = [
   "EK 6.1.B.1.i states that the purines, guanine and adenine, have a double ring structure, and EK 6.1.B.1.ii assigns cytosine, thymine and uracil to the single-ring pyrimidines. The class membership is checked against those sets above."),
  ("Cytosine, thymine and uracil",
   "EK 6.1.B.1.ii names cytosine, thymine and uracil as the pyrimidines and gives them a single ring structure; EK 6.1.B.1.i assigns guanine and adenine to the purines instead."),
- ("Thymine, and with uracil where the partner strand is RNA",
-  "EK 6.1.B.1.iii states that purines pair with pyrimidines: adenine with thymine, or uracil in RNA, and guanine with cytosine. The pairing tables above encode exactly that."),
+ ("Three, because only adenine takes a different partner",
+  "EK 6.1.B.1.iii gives guanine and cytosine one partner each in both nucleic acids and gives adenine thymine or uracil in RNA. Recomputed above by building both partner strands from the rule and comparing them position by position: they differ at three positions, and those positions are exactly the three adenines."),
  ("Cytosine, cytosine, guanine, thymine, cytosine",
   "EK 6.1.B.1.iii applied base by base. Recomputed above by ``_complement``, which implements the rule rather than recording an answer: the complement of guanine, guanine, cytosine, adenine, guanine is cytosine, cytosine, guanine, thymine, cytosine."),
  ("Uracil, guanine, uracil, adenine",
