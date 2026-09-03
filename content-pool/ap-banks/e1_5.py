@@ -433,23 +433,6 @@ QUESTIONS = [
           "certain types of soil bacteria into ammonia, and in the soil ammonia quickly "
           "converts to ammonium, which is available for biological uptake."),
 
- dict(q="Two ecosystems are identical except that one has a much higher rate of nitrogen "
-        "fixation. Which prediction does the framework support?",
-      choices=[
-        "The ecosystem with the higher fixation rate is likely to have more nitrogen "
-        "available in its soil.",
-        "The ecosystem with the higher fixation rate is likely to have less nitrogen "
-        "available in its soil.",
-        "The two ecosystems must have the same soil nitrogen, since both share an "
-        "atmosphere.",
-        "The ecosystem with the higher fixation rate will have a smaller atmospheric "
-        "nitrogen reservoir above it.",
-        "Fixation rate has no bearing on soil nitrogen availability."],
-      ans=0,
-      why="ERT-1.E.3 states that the availability of nitrogen compounds in the soil is "
-          "limited by the rate of nitrogen fixation, so raising that rate raises the "
-          "ceiling on availability."),
-
  dict(q="Which observation would best support the claim that microorganisms are essential "
         "to the nitrogen cycle in a particular soil?",
       choices=[

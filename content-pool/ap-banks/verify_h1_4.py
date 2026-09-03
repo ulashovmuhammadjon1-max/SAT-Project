@@ -224,7 +224,7 @@ CLAIMS = [
   "EK 1.4.A.1 defines a mixture as containing particles of two or more types whose relative proportions can vary, and every rejected option is described in the stem as containing a single type of particle throughout."),
  ("15.0 grams",
   "Substance A is 0.400 of 25.0 grams, which is 10.0 grams, so in a mixture of only two components the remaining 15.0 grams is substance B. Reporting A's mass rather than the remainder gives the rejected value."),
- ("lowers the measured percentage",
+ ("mass of carbon stays the same while the total mass rises",
   "A percent by mass is the element's mass over the total mass, so a component adding to the denominator alone must reduce the ratio. EK 1.4.A.1 makes such a change in relative proportion available to a mixture and EK 1.4.A.2 is why it is detectable."),
  ("does not by itself prove the material is a pure substance",
   "EK 1.4.A.1 lets the proportions of a mixture vary but does not require them to vary within one well-stirred container. Agreement between portions is therefore evidence against non-uniformity, not evidence that only one type of particle is present -- and the framework licenses no stronger inference."),

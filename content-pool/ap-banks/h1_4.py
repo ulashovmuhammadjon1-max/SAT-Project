@@ -327,7 +327,8 @@ QUESTIONS = [
         "The color of the sample.",
         "The mass of the sample.",
         "The mass of each element the sample yields.",
-        "Both the mass of the sample and the mass of each element it yields.",
+        "Every mass measurement in the list, since a ratio needs both a part and a "
+        "whole.",
         "All three are needed, because purity cannot be judged from mass data alone."],
       ans=0,
       why="Suggested skill 5.A asks which quantities the problem requires. EK 1.4.A.2 "
