@@ -40,7 +40,12 @@ from mathfmt import convert as _tex
 # never converted -- but the unconditional call meant the next re-export would
 # silently have damaged them. Naming the math subjects explicitly is what
 # closes that.
-TYPESET_SUBJECTS = {"CALC_AB", "CALC_BC", "STATISTICS"}
+TYPESET_SUBJECTS = {"CALC_AB", "CALC_BC", "STATISTICS", "CHEMISTRY"}
+# Chemistry joins the math subjects: its content is equilibrium
+# expressions, scientific notation and thermodynamic quantities, which
+# need real typesetting. Biology and Environmental Science are prose banks
+# and stay OUT, for the reason recorded above -- the converter turned the
+# Niger Delta into the symbol delta and set year ranges as subtractions.
 
 NUMERICISH = re.compile(
     r"^[\s$€£%\d.,/+\-]*(tons?|utils?|bolts?|units?|steel|coal|cars?|trucks?|cakes?|pies?|"
@@ -77,6 +82,7 @@ def main():
         "STATISTICS": 25,
         "PSYCHOLOGY": 30,
         "HUMAN_GEO": 30, "US_GOV": 30, "COMP_GOV": 30,
+        "BIOLOGY": 30, "CHEMISTRY": 30, "ENV_SCI": 30,
     }
     expected = args.per_topic
     if expected is None:
