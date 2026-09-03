@@ -171,7 +171,17 @@ def q21(table, item):
     return f"{named[0]} changes by {_whole(a)} and {named[1]} by {_whole(b)}, a difference of {_whole(gap)}"
 
 
+def _years_numbered(table):
+    """Year labels must read Year 1 upward in written order: the increments and
+    ratios below are read down the column as if it were chronological, and one
+    item names two years outright."""
+    nums = [cg.num(lab) for lab in cg.labels(table)]
+    assert nums == list(range(1, len(nums) + 1)), \
+        f"year labels are {cg.labels(table)}; they must be numbered from one in row order"
+
+
 def q22(table, item):
+    _years_numbered(table)
     counts = cg.col(table, COUNT)
     ratios = [b / a for a, b in zip(counts, counts[1:])]
     assert len({round(r, 9) for r in ratios}) == 1, \
@@ -185,6 +195,7 @@ def q22(table, item):
 
 
 def q23(table, item):
+    _years_numbered(table)
     named = named_rows(table, item)
     assert len(named) == 2, f"the stem must name exactly two rows; it names {named}"
     a, b = (cg.cell(table, lab, COUNT) for lab in named)
@@ -196,6 +207,7 @@ def q23(table, item):
 
 
 def q24(table, item):
+    _years_numbered(table)
     counts = cg.col(table, COUNT)
     ratios = [b / a for a, b in zip(counts, counts[1:])]
     increments = [b - a for a, b in zip(counts, counts[1:])]
@@ -208,6 +220,7 @@ def q24(table, item):
 
 
 def q25(table, item):
+    _years_numbered(table)
     counts = cg.col(table, COUNT)
     ratios = [b / a for a, b in zip(counts, counts[1:])]
     assert len({round(r, 9) for r in ratios}) == 1 and ratios[0] > 1, \
