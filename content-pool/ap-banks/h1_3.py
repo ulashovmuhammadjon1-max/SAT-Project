@@ -388,7 +388,7 @@ QUESTIONS = [
  dict(q="Compound T in the table contains only carbon and oxygen. What is its empirical "
         "formula?",
       table=_T_PERCENT,
-      choices=["CO2", "C2O", "CO3", "C3O2", "C2O5"],
+      choices=["CO2", "C2O", "CO3", "C3O2", "C4O5"],
       ans=0,
       why="From a 100 gram sample, 27.3 grams of carbon is about 2.28 moles and 72.7 "
           "grams of oxygen is about 4.54 moles, a ratio very close to one to two. "
