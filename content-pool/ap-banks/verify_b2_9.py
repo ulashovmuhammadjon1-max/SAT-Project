@@ -92,6 +92,10 @@ def q16(table, item):
 
 
 def q17(table, item):
+    # the key says the enzyme leaves the vesicles OVER TIME, so the time column
+    # has to be read and shown to be ordered, not merely printed beside the data
+    times = cg.col(table, "Treatment time (minutes)")
+    assert all(b > a for a, b in zip(times, times[1:])), f"the sampling times must increase: {times}"
     inside = cg.col(table, H_IN)
     outside = cg.col(table, H_OUT)
     assert all(b < a for a, b in zip(inside, inside[1:])), "inside must fall at every step"
