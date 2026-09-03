@@ -78,9 +78,9 @@ _T_CANDIDATES = dict(
 _T_THREE_SPECTRA = dict(
     headers=["Spectrum", "Lighter peak: mass and relative height",
              "Heavier peak: mass and relative height"],
-    rows=[["Spectrum I", "6.0 at 7.5 percent", "7.0 at 92.5 percent"],
-          ["Spectrum II", "63.0 at 69.0 percent", "65.0 at 31.0 percent"],
-          ["Spectrum III", "35.0 at 75.0 percent", "37.0 at 25.0 percent"]])
+    rows=[["Spectrum 1", "6.0 at 7.5 percent", "7.0 at 92.5 percent"],
+          ["Spectrum 2", "63.0 at 69.0 percent", "65.0 at 31.0 percent"],
+          ["Spectrum 3", "35.0 at 75.0 percent", "37.0 at 25.0 percent"]])
 
 QUESTIONS = [
 
@@ -418,7 +418,7 @@ QUESTIONS = [
  dict(q="Three single-element spectra are summarized in the table. In which one does "
         "the average atomic mass lie closest to the mass of its own heavier peak?",
       table=_T_THREE_SPECTRA,
-      choices=["Spectrum I", "Spectrum II", "Spectrum III",
+      choices=["Spectrum 1", "Spectrum 2", "Spectrum 3",
                "All three are equally close, because each has exactly two peaks",
                "None of them, because a weighted average always lies at the midpoint"],
       ans=0,

@@ -196,7 +196,7 @@ def q23(table, item):
         out[label] = (sum(m * p for m, p in pairs) / total, pairs)
     dist = {lab: abs(v[1][1][0] - v[0]) for lab, v in out.items()}
     best = min(dist, key=dist.get)
-    assert best == "Spectrum I", f"the average nearest its own heavier peak is {best}"
+    assert best == "Spectrum 1", f"the average nearest its own heavier peak is {best}"
     assert len(set(round(d, 6) for d in dist.values())) > 1, "'all equally close' must be false"
     for lab, (avg, pairs) in out.items():
         mid = (pairs[0][0] + pairs[1][0]) / 2
@@ -285,7 +285,7 @@ CLAIMS = [
   "Recomputed in q21 above. EK 1.2.A.2 calls for a weighted average using each isotope's relative abundance, and the check confirms the correct value falls below the student's midpoint because the lighter isotope is the more abundant."),
  ("11.0 atomic mass units",
   "The two abundances must exhaust the sample, fixing the heavier isotope at 80.0 percent, and EK 1.2.A.2 then gives 10.8 equal to 0.200 times 10.0 plus 0.800 times the unknown mass. Solving leaves 11.0, so the missing abundance does not have to be supplied separately."),
- ("Spectrum I",
+ ("Spectrum 1",
   "Recomputed in q23 above: the distance from each weighted average to its own heavier peak is computed for all three spectra and only one is nearest. The check also confirms no spectrum sits at its own midpoint, so the 'always at the midpoint' option is false on the data."),
  ("as they are naturally found",
   "EK 1.2.A.1 ties the abundance obtained from a spectrum to how common the isotope is in nature, and EK 1.2.A.2 uses exactly those abundances as the weights. Abundance is a share of a sample and does not set the mass of any isotope."),
