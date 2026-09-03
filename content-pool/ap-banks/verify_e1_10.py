@@ -180,8 +180,13 @@ def q11(table, item):
 
 
 def q12(table, item):
-    prod = cg.cell(table, "Producers", ENERGY)
-    prim = cg.cell(table, "Primary consumers", ENERGY)
+    # the third row reads "Not measured", so this table is read cell by cell rather
+    # than through cg.col, which requires every cell in a column to be numeric.
+    raw = {r[0]: r[1] for r in table["rows"]}
+    assert not re.search(r"\d", raw["Secondary consumers"]), \
+        f"the level being asked for must carry no value; got {raw['Secondary consumers']!r}"
+    prod = cg.num(raw["Producers"])
+    prim = cg.num(raw["Primary consumers"])
     assert abs(prim / prod - 0.1) < 1e-9, f"the tabulated step must already be a tenth; got {prim / prod}"
     expected = _tenth(prim, 1)
     assert expected == 600, f"the missing value recomputes to {expected}, not 600"

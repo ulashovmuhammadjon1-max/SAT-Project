@@ -52,6 +52,21 @@ def normalize(text):
     return re.sub(r"\s+", " ", t).strip()
 
 
+def _math_norm(text):
+    """Collapse whitespace and drop the delimiters, keeping STRUCTURE.
+
+    For the containment test only. normalize() strips braces and backslashes,
+    which flattens \\frac{a}{b} and \\frac{b}{a} to the same tokens; raw
+    string matching goes too far the other way, because "\\( K = [A] \\)" is
+    not a substring of "\\( K = [A] [B] \\)" -- the closing delimiter blocks
+    it, so a REAL containment escapes. Both failures were observed. Comparing
+    the delimiter-free inner text, with structure intact, catches the real case
+    and clears the false one.
+    """
+    t = re.sub(r"\\[\(\[\)\]]", " ", str(text))
+    return re.sub(r"\s+", " ", t).strip()
+
+
 def contains_phrase(haystack, phrase):
     """``phrase`` present in ``haystack``, delimited by non-alphanumerics.
 
@@ -150,12 +165,13 @@ def check(module, claims, table_checks=None, per_topic=30, n_choices=5):
         # else; only the normalizer had lost the difference.
         raw_math = [("\\(" in c or "\\[" in c) for c in ch]
         norms = [normalize(c) for c in ch]
+        maths = [_math_norm(c) for c in ch]
         for a in range(n_choices):
             for b in range(n_choices):
                 if a == b:
                     continue
                 if raw_math[a] or raw_math[b]:
-                    hit = ch[a] and ch[a].strip() in ch[b]
+                    hit = maths[a] and maths[a] in maths[b]
                 else:
                     hit = norms[a] and norms[a] in norms[b]
                 if hit:
