@@ -282,11 +282,11 @@ QUESTIONS = [
         "rule after twelve years?",
       table=_T_YIELD,
       choices=[
-        "430 thousand tonnes larger",
-        "500 thousand tonnes larger",
-        "70 thousand tonnes larger",
-        "50 thousand tonnes larger",
-        "570 thousand tonnes larger"],
+        "Larger by 430 thousand tonnes",
+        "Larger by 500 thousand tonnes",
+        "Larger by 70 thousand tonnes",
+        "Larger by 50 thousand tonnes",
+        "Larger by 570 thousand tonnes"],
       ans=0,
       why="Subtracting the two tabulated remaining stocks gives 500 minus 70, which is 430 "
           "thousand tonnes. The rejected values quote one remaining stock alone, use the "
