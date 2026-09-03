@@ -173,9 +173,9 @@ QUESTIONS = [
           "1.4.A.1 states that those links are covalent, and EK 1.3.A.2 is the reaction "
           "that makes each of them."),
 
- dict(q="Four samples were hydrolyzed until no bonds between monomers remained, with the "
-        "results in the table. Which sample was already a single monosaccharide before "
-        "hydrolysis?",
+ dict(q="Each of four samples was broken down completely and the products were identified, "
+        "as shown in the table. Which sample was already a single monosaccharide before "
+        "the treatment?",
       table=_T_HYDROLYSIS,
       choices=["Sample P", "Sample Q", "Sample R", "Sample S",
                "The results cannot distinguish a monosaccharide from a polysaccharide."],
@@ -195,15 +195,26 @@ QUESTIONS = [
           "molecules recovered, and being built from one kind of monomer shows up as one "
           "kind of simple sugar recovered. Exactly one row satisfies both conditions."),
 
- dict(q="For the sample in the table from which 740 simple sugar molecules were "
-        "recovered, how many covalent bonds between monomers were cleaved?",
+ dict(q="Compare the two samples in the table from which more than five hundred simple "
+        "sugar molecules were recovered. Which statement about that pair is accurate?",
       table=_T_HYDROLYSIS,
-      choices=["739", "740", "741", "370", "1,479"],
+      choices=[
+        "The sample yielding more molecules contained more monomers, while the sample "
+        "yielding fewer molecules was built from more kinds of monomer.",
+        "The sample yielding more molecules contained more monomers and was also built "
+        "from more kinds of monomer.",
+        "The sample yielding fewer molecules contained more monomers, because it "
+        "released more kinds of sugar.",
+        "The two samples contained the same number of monomers, because both are "
+        "polysaccharides.",
+        "Neither sample was a polysaccharide, because a polysaccharide releases only one "
+        "kind of simple sugar."],
       ans=0,
-      why="Every molecule recovered was a monomer in one chain, and a chain of n monomers "
-          "holds n minus 1 bonds between monomers. EK 1.3.A.1 makes hydrolysis the "
-          "cleaving of exactly those covalent bonds, so the count follows from the "
-          "recovery figure alone."),
+      why="Complete hydrolysis releases one molecule per monomer under EK 1.3.A.1, so the "
+          "totals report monomer counts and the kinds column reports how many different "
+          "monomers were used. The two columns run in opposite directions across this "
+          "pair, and EK 1.4.A.1 places no limit on how many kinds of monosaccharide a "
+          "polysaccharide may contain."),
 
  dict(q="Four polysaccharides, each a single connected molecule containing no rings, were "
         "examined and the number of chain ends on each was counted, as shown in the "

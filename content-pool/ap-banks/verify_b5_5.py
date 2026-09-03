@@ -33,9 +33,25 @@ def _rows(table):
     return [dict(zip(heads, r)) for r in table["rows"]]
 
 
-def _series(table, xcol, ycol):
-    return [(cg.num(r[cg.normalize(xcol)]), cg.num(r[cg.normalize(ycol)]))
-            for r in _rows(table)]
+def _series(table, xcol, ycol, xmax=None, percent=False):
+    """The two named columns as (x, y) pairs, with the sanity bounds enforced.
+
+    The bounds are not decoration. A trend check alone is nearly blind: scaling
+    one value of a monotonic series usually leaves it monotonic, so the negative
+    control caught one corruption in eight until the ranges below were added.
+    A percentage above 100 or an x column out of order is not data.
+    """
+    pairs = [(cg.num(r[cg.normalize(xcol)]), cg.num(r[cg.normalize(ycol)]))
+             for r in _rows(table)]
+    xs = [p[0] for p in pairs]
+    assert xs == sorted(xs) and len(set(xs)) == len(xs), \
+        f"the {xcol!r} column is not strictly increasing: {xs}"
+    if xmax is not None:
+        assert all(0 <= x <= xmax for x in xs), f"{xcol!r} out of range: {xs}"
+    if percent:
+        assert all(0 <= y <= 100 for y in (p[1] for p in pairs)), \
+            f"{ycol!r} holds a value outside 0 to 100 percent: {[p[1] for p in pairs]}"
+    return pairs
 
 
 def q2(table, item):
@@ -52,7 +68,8 @@ def q2(table, item):
 
 
 def q3(table, item):
-    s = _series(table, "Hours of light per day", "Percent of hares with a white coat")
+    s = _series(table, "Hours of light per day", "Percent of hares with a white coat",
+                xmax=24, percent=True)
     assert all(b[1] < a[1] for a, b in zip(s, s[1:])), \
         f"the white-coat percentage must fall at every step; got {s}"
     assert s[0][1] - s[-1][1] > 50, "the fall must be large enough to call an effect"
@@ -62,7 +79,7 @@ def q3(table, item):
 
 def q4(table, item):
     s = _series(table, "Incubation temperature (degrees Celsius)",
-                "Percent of hatchlings that are female")
+                "Percent of hatchlings that are female", xmax=60, percent=True)
     nearest = min(s, key=lambda p: abs(p[1] - 50))
     assert nearest[0] == 30, f"the temperature nearest an even sex ratio is {nearest[0]}, not 30"
     others = sorted(abs(p[1] - 50) for p in s if p[0] != nearest[0])
@@ -74,7 +91,7 @@ def q4(table, item):
 
 def q5(table, item):
     s = _series(table, "Daily UV exposure (arbitrary units)",
-                "Mean melanin content of skin samples (arbitrary units)")
+                "Mean melanin content of skin samples (arbitrary units)", xmax=100)
     lo = min(s, key=lambda p: p[0])
     hi = max(s, key=lambda p: p[0])
     fold = hi[1] / lo[1]
