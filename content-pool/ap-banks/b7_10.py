@@ -229,7 +229,7 @@ QUESTIONS = [
  dict(q="For which pairs in that same table does the barrier to reproduction act only after a zygote has formed?",
    table=_T_CROSS,
    choices=["Pair 2 and Pair 3", "Pair 1 and Pair 2", "Pair 3 and Pair 4",
-            "Pair 1 and Pair 4", "Pair 1, Pair 2 and Pair 3"], ans=0,
+            "Pair 1 and Pair 4", "All four pairs"], ans=0,
    why="EK 7.10.C.2 divides isolating mechanisms into pre-zygotic and post-zygotic, and the two names divide them at the formation of the zygote. The rows that record a zygote forming but the offspring failing to survive or to reproduce are the post-zygotic cases."),
 
  dict(q="In which pair recorded in that table does the barrier act before a zygote can form?",
