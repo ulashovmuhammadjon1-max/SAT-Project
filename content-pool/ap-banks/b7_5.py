@@ -39,9 +39,9 @@ TOPIC = ("7.5", "Hardy–Weinberg Equilibrium", 7)
 
 _T_COUNTS = dict(
     headers=["Genotype", "Number of individuals"],
-    rows=[["BB", "90"],
-          ["Bb", "60"],
-          ["bb", "50"]])
+    rows=[["FF", "90"],
+          ["FS", "60"],
+          ["SS", "50"]])
 
 _T_OBS_EXP = dict(
     headers=["Genotype", "Observed number of individuals",
@@ -51,14 +51,14 @@ _T_OBS_EXP = dict(
           ["NN", "40", "18"]])
 
 _T_GEN = dict(
-    headers=["Generation", "Frequency of allele R", "Frequency of allele r"],
+    headers=["Generation", "Frequency of allele R", "Frequency of allele W"],
     rows=[["First", "0.80", "0.20"],
           ["Second", "0.72", "0.28"],
           ["Third", "0.65", "0.35"],
           ["Fourth", "0.58", "0.42"]])
 
 _T_FOUR = dict(
-    headers=["Population", "Frequency of allele A", "Frequency of allele a",
+    headers=["Population", "Frequency of allele A", "Frequency of allele B",
              "Observed frequency of heterozygotes"],
     rows=[["W", "0.50", "0.50", "0.50"],
           ["X", "0.60", "0.40", "0.48"],
@@ -210,15 +210,15 @@ QUESTIONS = [
    choices=["0.90", "0.10", "0.18", "0.50", "0.09"], ans=0,
    why="Heterozygotes carry 2pq copies, or 0.18 per individual, and homozygous recessives carry twice q squared, or 0.02, so heterozygotes hold 0.18 of the 0.20 total, which is 0.90. This is why selection against the recessive phenotype removes rare alleles very slowly."),
 
- dict(q="The table gives the genotype counts at a locus with two alleles in a sample of individuals. What is the frequency of allele B in this sample?",
+ dict(q="The table gives the genotype counts at a codominant locus with two alleles in a sample of individuals. What is the frequency of allele F in this sample?",
    table=_T_COUNTS,
    choices=["0.60", "0.45", "0.40", "0.30", "0.75"], ans=0,
-   why="EK 7.5.A.2 states that allele frequencies can be calculated from genotype frequencies. Each homozygote contributes two copies and each heterozygote one, so B copies are twice 90 plus 60, out of twice the 200 individuals sampled."),
+   why="EK 7.5.A.2 states that allele frequencies can be calculated from genotype frequencies. Each homozygote contributes two copies and each heterozygote one, so F copies are twice 90 plus 60, out of twice the 200 individuals sampled."),
 
- dict(q="Using the same table of genotype counts, what is the frequency of allele b in the sample?",
+ dict(q="Using the same table of genotype counts, what is the frequency of allele S in the sample?",
    table=_T_COUNTS,
    choices=["0.40", "0.25", "0.60", "0.50", "0.20"], ans=0,
-   why="EK 7.5.A.2. Copies of b number twice 50 plus 60, out of 400 allele copies in 200 individuals. Because the locus carries only two alleles, this also follows from subtracting the frequency of B from one."),
+   why="EK 7.5.A.2. Copies of S number twice 50 plus 60, out of 400 allele copies in 200 individuals. Because the locus carries only two alleles, this also follows from subtracting the frequency of F from one."),
 
  dict(q="The table compares the observed genotype counts in a sample with the counts expected if the population were in Hardy-Weinberg equilibrium. Which conclusion is best supported?",
    table=_T_OBS_EXP,
@@ -238,11 +238,11 @@ QUESTIONS = [
  dict(q="The table gives the frequencies of two alleles at one locus in a population over four generations. Which conclusion is best supported by these data?",
    table=_T_GEN,
    choices=[
-     "The frequency of allele r rose in every interval shown, so at least one Hardy-Weinberg condition is not met in this population",
+     "The frequency of allele W rose in every interval shown, so at least one Hardy-Weinberg condition is not met in this population",
      "The population is in Hardy-Weinberg equilibrium because the two frequencies always sum to one",
-     "The data show that allele r is dominant to allele R",
+     "The data show that allele W is dominant to allele R",
      "The population must be large, because the change from generation to generation is small",
-     "Allele R will be absent from the population within one more generation"], ans=0,
+     "Allele R will have disappeared from the population within one more generation"], ans=0,
    why="Under EK 7.5.A.1 the model predicts allele frequencies that do not change, so a directional shift across four generations is a departure from the null expectation. The two frequencies sum to one by definition of a two-allele locus and so carry no information about equilibrium."),
 
  dict(q="For the first generation shown in that same table, what heterozygote frequency does the Hardy-Weinberg model predict?",
