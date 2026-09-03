@@ -74,7 +74,16 @@ def raw(table, row_label, header):
     return str(table["rows"][i][j])
 
 
+def _layers_numbered(table):
+    """Layer labels must read Layer 1 upward in written order, top of the
+    sequence first, since the stem and the keys refer to layers by number."""
+    nums = [cg.num(lab) for lab in cg.labels(table)]
+    assert nums == list(range(1, len(nums) + 1)), \
+        f"layer labels are {cg.labels(table)}; they must be numbered from one in row order"
+
+
 def q12(table, item):
+    _layers_numbered(table)
     ages = {lab: cg.cell(table, lab, AGE_MY) for lab in cg.labels(table)}
     oldest = max(ages, key=ages.get)
     assert cg.contains_phrase(keyed(item), oldest), \
@@ -84,6 +93,7 @@ def q12(table, item):
 
 
 def q13(table, item):
+    _layers_numbered(table)
     deep, shallow = stem_nums(item)
     a = cg.cell(table, row_where(table, DEPTH, deep), AGE_MY)
     b = cg.cell(table, row_where(table, DEPTH, shallow), AGE_MY)
@@ -94,6 +104,7 @@ def q13(table, item):
 
 
 def q14(table, item):
+    _layers_numbered(table)
     pairs = sorted(zip(cg.col(table, DEPTH), cg.col(table, AGE_MY)))
     ages = [a for _, a in pairs]
     assert all(y > x for x, y in zip(ages, ages[1:])), \
