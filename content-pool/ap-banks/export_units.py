@@ -40,12 +40,21 @@ from mathfmt import convert as _tex
 # never converted -- but the unconditional call meant the next re-export would
 # silently have damaged them. Naming the math subjects explicitly is what
 # closes that.
-TYPESET_SUBJECTS = {"CALC_AB", "CALC_BC", "STATISTICS", "CHEMISTRY"}
-# Chemistry joins the math subjects: its content is equilibrium
-# expressions, scientific notation and thermodynamic quantities, which
-# need real typesetting. Biology and Environmental Science are prose banks
-# and stay OUT, for the reason recorded above -- the converter turned the
-# Niger Delta into the symbol delta and set year ranges as subtractions.
+TYPESET_SUBJECTS = {"CALC_AB", "CALC_BC", "STATISTICS"}
+# CHEMISTRY WAS ADDED HERE AND THEN REMOVED, measured rather than assumed.
+# mathfmt is a parser for algebraic notation and a chemical formula is not
+# that. On representative Chemistry strings it:
+#     H2SO4              -> \(H_{2}\)SO4      split a formula in half
+#     Fe2O3 + 3 CO       -> Fe\(2O_{3} + 3\) CO   grabbed across the boundary
+#     [H3O+]             -> [\(H_{3}O\)+]      split the ion
+#     1s2 2s2 2p6        -> 1s_{2}2s_{2}...   SUBscripts; a configuration
+#                                             needs SUPERscripts, so this is
+#                                             not ugly, it is wrong
+#     1.8 x 10^-5        -> 1.8x10^{-5}       the times sign became a variable
+#     5.60 L             -> \(5.60L\)          welded the number to the unit
+# Chemistry therefore follows CLAUDE.md's standing rule for Math content:
+# never bulk auto-convert, hand-write the few spans that need it. AP questions
+# render through MathContent, so hand-written \( ... \) works.
 
 NUMERICISH = re.compile(
     r"^[\s$€£%\d.,/+\-]*(tons?|utils?|bolts?|units?|steel|coal|cars?|trucks?|cakes?|pies?|"

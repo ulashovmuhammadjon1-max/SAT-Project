@@ -9,7 +9,7 @@ differences below are what the sciences add.
 | subject | prefix | example | typeset? |
 |---|---|---|---|
 | Biology | `b` | `b3_2.py`, `verify_b3_2.py` | **no** |
-| Chemistry | `h` | `h4_7.py`, `verify_h4_7.py` | **YES** |
+| Chemistry | `h` | `h4_7.py`, `verify_h4_7.py` | no — hand-write spans |
 | Environmental Science | `e` | `e6_1.py`, `verify_e6_1.py` | **no** |
 
 `c`, `g`, `k`, `m`, `p`, `s`, `u` and `v` are already taken by the Calculus,
@@ -55,10 +55,27 @@ does not typeset these subjects, by design — running the converter over prose
 turned the Niger *Delta* into the symbol δ and set year ranges with a minus
 sign. Write `2000 to 2020`, never `2000-2020`.
 
-**Chemistry: write the notation the converter understands, still not LaTeX by
-hand.** `mathfmt.py` typesets Chemistry on export. Write `1.2 x 10^-3`,
-`[H3O+]`, `Ka = 4.5 x 10^-5`, `DeltaH`, `1/2`. Do not write `\frac` or `\(`
-yourself. Chemical formulas stay as ordinary text: `H2SO4`, `Fe2O3`.
+**Chemistry: hand-write `\( ... \)` for the spans that need it. The converter
+does NOT run on Chemistry.** It was tried and removed: `mathfmt` parses
+algebraic notation and a chemical formula is not that. It split `H2SO4` into
+`\(H_{2}\)SO4`, read `Fe2O3 + 3 CO` across the formula boundary, and rendered
+the electron configuration `1s2 2s2 2p6` with SUBscripts when a configuration
+needs SUPERscripts — wrong, not merely ugly.
+
+So follow the house rule for all Math content: no bulk conversion, hand-write
+per question. AP questions render through `MathContent`, so `\( ... \)` works.
+
+    scientific notation   \(1.8 \times 10^{-5}\)      never `1.8 x 10^-5`
+    equilibrium           \(K_a = \frac{[\mathrm{H_3O^+}][\mathrm{A^-}]}{[\mathrm{HA}]}\)
+    configuration         \(1s^2\,2s^2\,2p^6\,3s^1\)
+    thermodynamics        \(\Delta H = -92\ \mathrm{kJ/mol}\)
+    a formula in prose    H2SO4, Fe2O3 — plain text is fine and preferred
+    a formula in math     \(\mathrm{H_2SO_4}\)
+
+**Never leave a bare `^`, a `\`-macro, or a slash fraction outside a span** —
+they render literally. Escape function names (`\log`, `\ln`). Put a space
+either side of an inline span. Every verifier must check its own module for
+those, and the check must be negative-controlled against injected defects.
 
 ## Figures
 
