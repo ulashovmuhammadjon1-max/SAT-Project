@@ -208,7 +208,7 @@ QUESTIONS = [
      "Methionine, glycine, phenylalanine and histidine",
      "Phenylalanine, glycine and histidine only"], ans=0,
    why="EK 6.4.A.3.ii reads the sequence in triplets and EK 6.4.A.3.iii deduces each amino acid from the chart. The triplets are AUG, UUU, GGA, CAU and UAA, which the chart assigns to methionine, phenylalanine, glycine, histidine and a stop; by EK 6.4.A.3.vii and viii the ribosome stops at the last of these and releases the four amino acids already joined."),
- dict(q="For that same mRNA sequence and chart, how many amino acids does the finished polypeptide contain, and why?",
+ dict(q="Reading the mRNA sequence AUGUUUGGACAUUAA against the chart in the table, how many amino acids does the finished polypeptide contain, and why?",
    table=_T_CODE,
    choices=[
      "Four, because the fifth triplet is a stop codon and adds no amino acid",

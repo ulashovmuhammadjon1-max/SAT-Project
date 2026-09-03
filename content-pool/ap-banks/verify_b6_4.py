@@ -193,7 +193,7 @@ CLAIMS = [
   "EK 6.4.A.3.iii states that many amino acids are encoded by more than one codon. The table check inverts the chart to find which amino acids have several codons, and confirms that no codon on the chart carries two amino acids, which is what the reversed option would need."),
  ("stops there and the newly synthesized protein is released",
   "The chart lists that codon as a stop, and EK 6.4.A.3.vii and EK 6.4.A.3.viii stop the process at a stop codon and release the protein. The table check confirms the chart's entry for that codon and that it is not also the start codon."),
- ("Transcript 2",
+ ("whose coding region is 45 nucleotides long",
   "EK 6.4.A.3.ii reads the message in triplets, so the codon count is the length divided by three. The table check divides all three lengths, confirms each is a whole number of triplets and confirms exactly one transcript gives fifteen."),
  ("From RNA to DNA, made possible by reverse transcriptase",
   "EK 6.4.A.4 states that genetic information in retroviruses is a special case with an alternate flow from RNA to DNA, made possible by reverse transcriptase, an enzyme that copies the viral RNA genome into DNA."),
