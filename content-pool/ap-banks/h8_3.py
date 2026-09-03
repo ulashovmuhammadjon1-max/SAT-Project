@@ -82,7 +82,7 @@ QUESTIONS = [
         "\\( K_a = \\frac{[\\mathrm{H_3O^+}][\\mathrm{A^-}]}{[\\mathrm{HA}]} \\)",
         "\\( K_a = \\frac{[\\mathrm{HA}]}{[\\mathrm{H_3O^+}][\\mathrm{A^-}]} \\)",
         "\\( K_a = [\\mathrm{H_3O^+}][\\mathrm{A^-}][\\mathrm{HA}] \\)",
-        "\\( K_a = \\frac{[\\mathrm{H_3O^+}]}{[\\mathrm{A^-}]} \\)",
+        "\\( K_a = \\frac{[\\mathrm{A^-}]}{[\\mathrm{H_3O^+}][\\mathrm{HA}]} \\)",
         "\\( K_a = \\frac{[\\mathrm{OH^-}][\\mathrm{A^-}]}{[\\mathrm{HA}]} \\)"],
       ans=0,
       why="EK 8.3.A.2 gives the equation with the two product concentrations in the "
@@ -117,7 +117,8 @@ QUESTIONS = [
 
  dict(q="For the 0.10 M weak acid solution with an ionization constant of \\( 1.0 \\times "
         "10^{-5} \\), what percentage of the acid has ionized?",
-      choices=["1.0 percent", "10 percent", "0.10 percent", "50 percent", "100 percent"],
+      choices=["1.0 percent", "3.2 percent", "0.32 percent", "50 percent",
+               "100 percent"],
       ans=0,
       why="EK 8.3.A.5 says the percent ionization can be calculated from the constant and "
           "the initial concentration. The hydronium concentration is 0.0010 M out of an "
@@ -173,7 +174,7 @@ QUESTIONS = [
           "with a pKa of three."),
 
  dict(q="Using the same table of acids, which acid gives the highest pH when prepared at "
-        "0.10 M?",
+        "1.0 M?",
       table=_T_ACIDS,
       choices=["HD", "HA", "HB", "All three give the same pH",
                "The answer depends on the volume prepared"],
@@ -204,7 +205,7 @@ QUESTIONS = [
         "\\( K_b = \\frac{[\\mathrm{B}]}{[\\mathrm{OH^-}][\\mathrm{HB^+}]} \\)",
         "\\( K_b = \\frac{[\\mathrm{H_3O^+}][\\mathrm{HB^+}]}{[\\mathrm{B}]} \\)",
         "\\( K_b = [\\mathrm{OH^-}][\\mathrm{HB^+}][\\mathrm{B}] \\)",
-        "\\( K_b = \\frac{[\\mathrm{OH^-}]}{[\\mathrm{HB^+}][\\mathrm{B}]} \\)"],
+        "\\( K_b = \\frac{[\\mathrm{HB^+}]}{[\\mathrm{OH^-}][\\mathrm{B}]} \\)"],
       ans=0,
       why="EK 8.3.A.4 gives the equation with the hydroxide ion and the conjugate acid in "
           "the numerator and the un-ionized base in the denominator. Hydronium belongs to "
@@ -219,8 +220,8 @@ QUESTIONS = [
           "then makes the pH the remainder of fourteen. The value 3.00 is the pOH, not "
           "the pH."),
 
- dict(q="A 0.10 M solution of a weak base has a base ionization constant of \\( 1.0 "
-        "\\times 10^{-6} \\). What is the pOH of the solution?",
+ dict(q="A weak base prepared at an initial concentration of 0.10 M has a base "
+        "ionization constant of \\( 1.0 \\times 10^{-6} \\). What is its pOH?",
       choices=["pOH = 3.50", "pOH = 3.00", "pOH = 6.00", "pOH = 10.50", "pOH = 7.00"],
       ans=0,
       why="The hydroxide concentration is the square root of the product of the constant "
@@ -289,7 +290,7 @@ QUESTIONS = [
 
  dict(q="Using the same table of solutions, what is the percent ionization of solution 2?",
       table=_T_IONIZATION,
-      choices=["1.0 percent", "2.0 percent", "0.10 percent", "10 percent",
+      choices=["1.0 percent", "2.0 percent", "0.50 percent", "5.0 percent",
                "20 percent"],
       ans=0,
       why="EK 8.3.A.5 makes the percent ionization the equilibrium hydronium concentration "
