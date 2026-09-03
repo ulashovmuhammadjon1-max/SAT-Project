@@ -228,9 +228,27 @@ def q25(table, item):
             f"seventeenth-column ions outnumber second-column ions {ratio[1]} to {ratio[0]}")
 
 
+def _charge_from_valence(n):
+    """EK 1.8.A.3: the typical charge is governed by the number of valence
+    electrons. Few enough to shed, and the atom sheds them; close enough to a
+    filled outer subshell, and it takes the shortfall instead (EK 1.7.A.1).
+    Four valence electrons is the case the rule does not settle, so it raises
+    rather than guessing -- no item in this module uses one.
+    """
+    n = int(n)
+    if 1 <= n <= 3:
+        return n
+    if 5 <= n <= 7:
+        return n - 8
+    raise AssertionError(f"no typical ionic charge follows from {n} valence electrons")
+
+
 def q26(table, item):
     v = dict(zip(cg.labels(table), cg.col(table, VALENCE)))
-    charge = {"Sodium": 1, "Magnesium": 2, "Aluminum": 3, "Sulfur": -2, "Chlorine": -1}
+    # Derived from the table's own valence column, so a row added to the table
+    # is a row this search sees. An earlier draft hardcoded the five elements
+    # and the negative control walked straight past it.
+    charge = {k: _charge_from_valence(n) for k, n in v.items()}
     # Every metal-nonmetal pairing the table permits is balanced, not just the
     # keyed one. The first draft of this item asked for a ONE-TO-ONE ratio and
     # this check found two pairings that satisfy it -- magnesium with sulfur and
@@ -399,11 +417,13 @@ def _selftest():
             rows=[["Beryllium", "549"], ["Magnesium", "590"], ["Calcium", "738"],
                   ["Strontium", "900"]])
 
-    def add_a_second_one_to_one_pair(mod, claims):
+    def add_a_second_matching_pair(mod, claims):
+        # Calcium sits in the same column as magnesium, so calcium with chlorine
+        # also balances one to two and the item loses its unique answer.
         mod.QUESTIONS[25]["table"] = dict(
             headers=h1_8._T_VALENCE["headers"],
             rows=[["Sodium", "1", "1"], ["Magnesium", "2", "2"], ["Aluminum", "13", "3"],
-                  ["Sulfur", "16", "6"], ["Chlorine", "17", "7"], ["Oxygen", "16", "6"]])
+                  ["Sulfur", "16", "6"], ["Chlorine", "17", "7"], ["Calcium", "2", "2"]])
 
     def forget_table_check(mod, claims):
         mod.QUESTIONS[0]["table"] = h1_8._T_TYPICAL
@@ -436,8 +456,8 @@ def _selftest():
               balance_the_bad_formula)
     must_fail("the reactivity trend reversed, refuting the keyed element",
               flatten_the_reactivity_trend)
-    must_fail("a second pairing that also balances one to one, so the key is not unique",
-              add_a_second_one_to_one_pair)
+    must_fail("a second pairing that also gives the keyed ratio, so the key is not unique",
+              add_a_second_matching_pair)
     must_fail("a table added with no recompute behind it", forget_table_check)
     must_fail("a distractor made identical to the key", duplicate_choice)
     must_fail("a rationale reduced below the minimum", thin_why)
