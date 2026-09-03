@@ -184,6 +184,12 @@ def q28(table, item):
     share, effect, _, _ = _keystone(table)
     named = [lab for lab in cg.labels(table) if cg.contains_phrase(item["q"], lab)]
     assert len(named) == 2, f"the stem must name exactly two rows; it names {named}"
+    # Order by where each row appears IN THE STEM, not by its position in the
+    # table. "G held how many times the share of F" is a different quotient from
+    # "F held how many times the share of G", and reading the rows in table order
+    # silently computes the wrong one.
+    stem = cg.normalize(item["q"])
+    named.sort(key=lambda lab: stem.index(cg.normalize(lab)))
     a, b = named
     ratio = share[a] / share[b]
     assert abs(ratio - round(ratio)) < 1e-9, "the ratio must be whole for a calculator-free item"
