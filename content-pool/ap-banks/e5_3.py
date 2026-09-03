@@ -41,9 +41,9 @@ TOPIC = ("5.3", "The Green Revolution", 5)
 _T_YIELD = dict(
     headers=["Period", "Grain harvested per hectare (tonnes)",
              "Fertilizer applied per hectare (kilograms)"],
-    rows=[["Before the shift in practices", "1.2", "10"],
-          ["Ten years after the shift", "2.4", "60"],
-          ["Twenty years after the shift", "3.6", "140"]])
+    rows=[["Before the shift in practices", "1.0", "10"],
+          ["Ten years after the shift", "2.0", "60"],
+          ["Twenty years after the shift", "3.0", "150"]])
 
 _T_MECH = dict(
     headers=["Farm", "Hours of human labour per hectare per season",
@@ -69,9 +69,9 @@ _T_TWOFARMS = dict(
     headers=["Region",
              "Grain produced per hectare after the shift (tonnes)",
              "Fossil fuel energy used per hectare after the shift (megajoules)"],
-    rows=[["Region A", "1.5", "1,900"],
-          ["Region B", "3.0", "5,700"],
-          ["Region C", "4.5", "11,400"]])
+    rows=[["Region A", "1.0", "2,000"],
+          ["Region B", "2.0", "6,000"],
+          ["Region C", "3.0", "12,000"]])
 
 QUESTIONS = [
 
@@ -150,7 +150,7 @@ QUESTIONS = [
         "Fertilizer applied per hectare rose only after grain harvested per hectare had "
         "begun to fall."],
       ans=0,
-      why="Grain runs 1.2, 2.4 and 3.6 tonnes per hectare while fertilizer runs 10, 60 and 140 "
+      why="Grain runs 1.0, 2.0 and 3.0 tonnes per hectare while fertilizer runs 10, 60 and 150 "
           "kilograms, both rising with no reversal. EIN-2.C.1 names fertilization among the "
           "strategies of a shift undertaken in order to increase food production."),
 
@@ -164,7 +164,7 @@ QUESTIONS = [
         "Six times as much",
         "The same amount"],
       ans=0,
-      why="Dividing the two tabulated yields gives 3.6 divided by 1.2, which is 3. The rejected "
+      why="Dividing the two tabulated yields gives 3.0 divided by 1.0, which is 3. The rejected "
           "values come from the ten-year row, from the fertilizer ratio, or from denying that "
           "the yields differ."),
 
@@ -172,13 +172,13 @@ QUESTIONS = [
         "across the whole period?",
       table=_T_YIELD,
       choices=[
-        "130 kilograms per hectare",
-        "140 kilograms per hectare",
-        "80 kilograms per hectare",
-        "50 kilograms per hectare",
-        "150 kilograms per hectare"],
+        "A rise of 140 kilograms per hectare",
+        "A rise of 150 kilograms per hectare",
+        "A rise of 90 kilograms per hectare",
+        "A rise of 50 kilograms per hectare",
+        "A rise of 160 kilograms per hectare"],
       ans=0,
-      why="Subtracting the first and last tabulated values gives 140 minus 10, which is 130 "
+      why="Subtracting the first and last tabulated values gives 150 minus 10, which is 140 "
           "kilograms per hectare. The rejected values quote the final figure alone, pair the "
           "wrong rows, or add the first and last instead of differencing them."),
 
@@ -319,8 +319,8 @@ QUESTIONS = [
         "The region producing the least grain per hectare used the most fossil fuel "
         "energy per hectare."],
       ans=0,
-      why="Grain runs 1.5, 3.0 and 4.5 tonnes per hectare while fossil fuel energy runs 1,900, "
-          "5,700 and 11,400 megajoules, rising together with no reversal. EIN-2.C.1 records "
+      why="Grain runs 1.0, 2.0 and 3.0 tonnes per hectare while fossil fuel energy runs 2,000, "
+          "6,000 and 12,000 megajoules, rising together with no reversal. EIN-2.C.1 records "
           "both positive and negative results, and EIN-2.C.2 names increased reliance on fossil "
           "fuels as one of them."),
 
@@ -328,15 +328,15 @@ QUESTIONS = [
         "grain in the region producing the least grain per hectare?",
       table=_T_TWOFARMS,
       choices=[
-        "About 1,270 megajoules per tonne",
-        "About 1,900 megajoules per tonne",
-        "About 2,530 megajoules per tonne",
-        "About 1,500 megajoules per tonne",
-        "About 950 megajoules per tonne"],
+        "2,000 megajoules per tonne",
+        "3,000 megajoules per tonne",
+        "4,000 megajoules per tonne",
+        "6,000 megajoules per tonne",
+        "1,000 megajoules per tonne"],
       ans=0,
-      why="Dividing that region's 1,900 megajoules by its 1.5 tonnes gives about 1,267, which "
-          "rounds to about 1,270 megajoules per tonne. The rejected values quote the energy "
-          "figure itself, use another region's pair, or halve rather than divide by the yield."),
+      why="Dividing that region's 2,000 megajoules by its 1.0 tonne gives 2,000 megajoules per "
+          "tonne. The rejected values are the other two regions' figures per tonne, another "
+          "region's energy total, and half the correct quotient."),
 
  dict(q="Which of the following is the best statement of the PURPOSE the framework "
         "attributes to the shift in practices?",
@@ -464,14 +464,14 @@ QUESTIONS = [
         "fertilizer needed for each tonne of grain across the period?",
       table=_T_YIELD,
       choices=[
-        "It rose from about 8 kilograms per tonne to about 39 kilograms per tonne.",
-        "It fell from about 39 kilograms per tonne to about 8 kilograms per tonne.",
-        "It stayed at about 8 kilograms per tonne throughout the period.",
-        "It rose from about 8 kilograms per tonne to about 14 kilograms per tonne.",
+        "It rose from 10 kilograms per tonne to 50 kilograms per tonne.",
+        "It fell from 50 kilograms per tonne to 10 kilograms per tonne.",
+        "It stayed at 10 kilograms per tonne throughout the period.",
+        "It rose from 10 kilograms per tonne to 30 kilograms per tonne.",
         "It cannot be worked out, because the table reports no yields."],
       ans=0,
-      why="Dividing fertilizer by yield gives 10 over 1.2, which is about 8, and 140 over 3.6, "
-          "which is about 39 kilograms per tonne, so more fertilizer was needed per tonne at "
+      why="Dividing fertilizer by yield gives 10 over 1.0, which is 10, and 150 over 3.0, "
+          "which is 50 kilograms per tonne, so more fertilizer was needed per tonne at "
           "the end. EIN-2.C.1 records both positive and negative results from the shift, and "
           "this reading is one of each in the same data."),
 

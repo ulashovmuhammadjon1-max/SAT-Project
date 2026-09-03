@@ -148,7 +148,7 @@ QUESTIONS = [
 
  dict(q="How many electrons are transferred in the balanced equation formed from "
         "Al gives Al3+ + 3 e- and Cu2+ + 2 e- gives Cu?",
-      choices=["6", "5", "3", "2", "12"],
+      choices=["6", "5", "4", "3", "2"],
       ans=0,
       why="EK 4.9.A.1 requires the two half-reactions to be scaled until the "
           "electrons lost equal the electrons gained. That common number is the "
@@ -235,13 +235,25 @@ QUESTIONS = [
           "the hydrogen and oxygen counts come from the printed half-reaction."),
 
  dict(q="In acidic solution the dichromate half-reaction is Cr2O7 2- + 14 H+ + 6 "
-        "e- gives 2 Cr3+ + 7 H2O. How many electrons does one dichromate ion "
-        "take in?",
-      choices=["6", "2", "3", "7", "14"],
+        "e- gives 2 Cr3+ + 7 H2O. Taking each oxygen atom as negative two, which "
+        "account of the chromium explains the six electrons?",
+      choices=[
+        "Each chromium falls from positive six to positive three, and there are "
+        "two of them",
+        "Each chromium falls from positive seven to positive three, and there "
+        "are two of them",
+        "Each chromium falls from positive three to zero, and there are two of "
+        "them",
+        "Each chromium rises from positive three to positive six, and there are "
+        "two of them",
+        "Each chromium keeps the oxidation number it started with, and the six "
+        "electrons are taken up by the oxygen atoms"],
       ans=0,
       why="EK 4.9.A.1 makes the half-reaction the unit from which the balanced "
-          "equation is built, and the number of electrons is written into it. "
-          "The printed half-reaction states the number directly."),
+          "equation is built, and the electron count in it must match the change "
+          "the species undergoes. Seven oxygens at negative two in an ion of "
+          "charge negative two leave the two chromium atoms sharing a total of "
+          "positive twelve."),
 
  dict(q="Dichromate oxidizes iron(II) in acidic solution. Given Cr2O7 2- + 14 H+ "
         "+ 6 e- gives 2 Cr3+ + 7 H2O and Fe2+ gives Fe3+ + e-, how many iron(II) "
