@@ -218,7 +218,7 @@ QUESTIONS = [
       choices=[
         "Liters squared per mole squared per second",
         "Liters per mole per second",
-        "Per second",
+        "Reciprocal seconds",
         "Moles per liter per second",
         "Moles squared per liter squared per second"],
       ans=0,
@@ -301,7 +301,7 @@ QUESTIONS = [
  dict(q="A reaction is first order overall. Which units must its rate constant "
         "carry?",
       choices=[
-        "Per second",
+        "Reciprocal seconds, that is one over a second",
         "Moles per liter per second",
         "Liters per mole per second",
         "Liters squared per mole squared per second",
