@@ -415,8 +415,8 @@ QUESTIONS = [
           "Each rejected option names one of the harms the same sentence sets against "
           "that advantage."),
 
- dict(q="Using the sediment record over time, what does the eighth-year figure show about "
-        "how long the erosion effect lasts?",
+ dict(q="Using the sediment record over time, what does the eighth-year value show "
+        "about how long the erosion effect lasts?",
       table=_T_EROSION,
       choices=[
         "Sediment loss was still about twice its pre-harvest level eight years afterward.",
@@ -499,7 +499,7 @@ QUESTIONS = [
         "Three times as much",
         "Forty-two times as much",
         "Seven times as much",
-        "Two times as much"],
+        "Only twice as much"],
       ans=0,
       why="Dividing the two tabulated figures gives 42 divided by 2, which is 21. The rejected "
           "values come from the mature forest figure alone, from the young stand comparison, "

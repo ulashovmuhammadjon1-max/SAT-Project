@@ -465,7 +465,8 @@ QUESTIONS = [
         "HBr + H2O gives Br- + H3O+, with HBr the donor and water the acceptor",
         "HBr + H2O gives HBrO + H2, with HBr the acceptor and water the donor",
         "HBr + H2O gives H2Br+ + OH-, with water the donor and HBr the acceptor",
-        "HBr + H2O gives Br- + H2 + O, with HBr the donor and water the acceptor",
+        "HBr + H2O gives Br- + H2 + O, with the water molecule splitting into "
+        "separate atoms",
         "HBr does not react with water, because both species contain hydrogen"],
       ans=0,
       why="EK 4.8.A.1 makes the donor the acid and the acceptor the base, and EK "
