@@ -91,7 +91,7 @@ _T_TWOLAKES = dict(
 
 _T_ATMOS = dict(
     headers=["Element", "Share of the dry atmosphere that is this element in gas form"],
-    rows=[["Nitrogen", "About 78 parts in 100"],
+    rows=[["Nitrogen", "About 78 percent"],
           ["Phosphorus", "No measurable share"]])
 
 QUESTIONS = [

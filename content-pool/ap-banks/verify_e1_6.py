@@ -85,7 +85,7 @@ def q6(table, item):
         f"the phosphorus cell must record no measurable share; got {cells['Phosphorus']!r}"
     assert "no measurable" in cg.normalize(cells["Phosphorus"]), \
         "the phosphorus cell must say the share is not measurable"
-    return (f"nitrogen occupies about {n_share:.0f} parts in one hundred of the dry air "
+    return (f"nitrogen occupies about {n_share:.0f} percent of the dry air "
             "while phosphorus has no measurable gaseous share")
 
 
