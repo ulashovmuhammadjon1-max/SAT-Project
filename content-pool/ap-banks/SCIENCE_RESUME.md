@@ -96,6 +96,24 @@ with CED line citations, because unit 9's pages interleave the two columns
 WITHIN a line — 9.1 reads "Support a claim Introduction" then "to Entropy". No
 indent rule separates that, and guessing is what the brief forbids.
 
+## A hole in the Biology CED source — do not fill it from memory
+
+`EK 2.5.B.1` sub-point **ii**, the exocytosis mechanism, is **not in the PDF's
+text layer at all**. The page ends at a bare "ii." and the next page opens
+topic 2.6. Both `pdftotext` modes agree, so it is unrecoverable from this
+source — presumably rendered as part of a graphic.
+
+An authoring agent found this and handled it correctly, which is the behaviour
+to preserve. The bank keys only what the *surviving* lead sentence supports:
+that exocytosis moves large substances **out** of cells (from "into and out of
+cells" plus sub-point i naming endocytosis as the inward one), and that it
+**requires energy**. **No key asserts a mechanism** — no vesicle fusion, no
+membrane budding — even though that is standard teaching.
+
+Do not "complete" this from a textbook. A scan of all three science CED dumps
+for sub-points truncated at a page break found this as the **only** instance,
+so the extraction is otherwise sound.
+
 ## Open question the owner has not answered
 
 **30 questions per topic may be too many.** `SOCIAL_DEDUPE.md` measured that 30
