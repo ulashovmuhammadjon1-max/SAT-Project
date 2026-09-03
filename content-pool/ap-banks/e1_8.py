@@ -144,7 +144,7 @@ QUESTIONS = [
         "Energy per unit area only.",
         "Mass per organism only.",
         "Energy per organism per unit time.",
-        "Area per unit time."],
+        "Area covered per unit of energy."],
       ans=0,
       why="ENG-1.A.4 states that productivity is measured in units of energy per unit area "
           "per unit time, and gives kilocalories per square meter per year as its example."),
