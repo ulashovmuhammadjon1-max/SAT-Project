@@ -123,7 +123,7 @@ _T_INSTALL = dict(
 QUESTIONS = [
 
  dict(q="The table divides human freshwater consumption worldwide among three uses. Which "
-        "use takes the largest share, and at what figure?",
+        "use takes the largest share, and at what percentage?",
       table=_T_SECTORS,
       choices=[
         "Agriculture, at about 70 percent, which is the share the framework gives it",

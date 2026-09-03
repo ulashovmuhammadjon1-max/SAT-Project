@@ -80,8 +80,12 @@ def no_figure_reference(module):
     """No stem may point at a picture the bank cannot show.
 
     A stem that says "the diagram shows" with nothing behind it is the defect
-    this project has already shipped once. A stem may name a figure only when
-    the question actually carries a ``table``.
+    this project has already shipped once, so the word list below is deliberately
+    strict: it fires on "figure" even where the author meant a NUMBER rather than
+    a picture. That is an over-match by design and the fix is always to write
+    "value", "share" or "reading" in the stem, never to loosen the pattern -- an
+    over-matching checker here costs one word, while an under-matching one ships
+    a question a student cannot answer.
     """
     pat = re.compile(
         r"(?<![a-z])(diagrams?|graphs?|figures?|charts?|photographs?|images?|maps?|"
