@@ -51,6 +51,13 @@
 # b7_10; the only claim made here about divergence is EK 7.4.B.1.ii's and
 # EK 7.4.B.1.iii's own.
 #
+# ON THE ALLELE LETTERS. The two alleles of a gene are named with letters that
+# differ by more than their case -- R and S, M and N -- rather than the
+# conventional R and r. The verifier reads a table by its column HEADERS after
+# normalizing them, and normalizing lowercases, so "copies of allele R" and
+# "copies of allele r" collapse into one key and the two columns silently become
+# the same column. The checker caught exactly that here, which is what it is for.
+#
 # ON FIGURES. No stem refers to a graph. Every data set is a table=.
 #
 # FIVE choices (A-E) per SCIENCE_BRIEF.md. Prose notation, no LaTeX.
@@ -59,14 +66,14 @@ TOPIC = ("7.4", "Population Genetics", 7)
 # One population counted before and immediately after a sharp reduction.
 _T_CRASH = dict(
     headers=["Time point", "Number of individuals in the population",
-             "Number of copies of allele R", "Number of copies of allele r"],
+             "Number of copies of allele R", "Number of copies of allele S"],
     rows=[["Before the reduction", "500", "300", "700"],
           ["Immediately after the reduction", "20", "32", "8"]])
 
 # A source population and the small group that separated from it.
 _T_FOUNDER = dict(
     headers=["Population", "Number of individuals in the population",
-             "Number of copies of allele A", "Number of copies of allele a"],
+             "Number of copies of allele M", "Number of copies of allele N"],
     rows=[["Source population", "800", "640", "960"],
           ["Newly separated population", "10", "2", "18"]])
 
@@ -197,7 +204,7 @@ QUESTIONS = [
      "Gene flow, since the number of copies of each allele changed",
      "Mutation, since new alleles must have appeared during the reduction"], ans=0,
    why="EK 7.4.A.1.iii states that the bottleneck effect is a type of genetic drift occurring when a population size is reduced to a small number of individuals for at least one generation, which is what the table records: 500 individuals become 20. No new allele appears and no individual moves between populations, so mutation and gene flow are not what changed."),
- dict(q="The table reports a source population and a small group that separated from it. What was the frequency of allele A in each?",
+ dict(q="The table reports a source population and a small group that separated from it. What was the frequency of allele M in each?",
    table=_T_FOUNDER,
    choices=[
      "40 percent in the source population and 10 percent in the separated group",
