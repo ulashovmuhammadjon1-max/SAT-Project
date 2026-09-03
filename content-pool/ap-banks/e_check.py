@@ -84,8 +84,9 @@ def no_figure_reference(module):
     the question actually carries a ``table``.
     """
     pat = re.compile(
-        r"(?<![a-z])(diagram|graph|figure|chart|photograph|image|map|illustration|"
-        r"cross[ -]section|profile shown|pictured)(?![a-z])",
+        r"(?<![a-z])(diagrams?|graphs?|figures?|charts?|photographs?|images?|maps?|"
+        r"illustrations?|cross[ -]sections?|profile shown|pictured|shown above|"
+        r"shown below)(?![a-z])",
         re.IGNORECASE,
     )
     for i, item in enumerate(module.QUESTIONS, 1):

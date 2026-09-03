@@ -274,8 +274,8 @@ QUESTIONS = [
         "the normal boiling point. Which conclusion is supported by these data?",
       table=_T_HALIDES,
       choices=[
-        "Vaporizing each substance costs less than a twentieth of what breaking "
-        "its internal bond costs, consistent with boiling changing only "
+        "Vaporizing each substance costs less than a tenth of what breaking its "
+        "internal bond costs, consistent with boiling changing only "
         "intermolecular interactions",
         "The substance with the strongest bond inside the molecule also has the "
         "highest boiling point, so the two quantities measure the same "
