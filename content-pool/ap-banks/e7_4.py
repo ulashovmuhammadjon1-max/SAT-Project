@@ -73,7 +73,7 @@ _T_SEASON = dict(
     rows=[["February", "418", "2"],
           ["May", "424", "11"],
           ["August", "436", "19"],
-          ["November", "426", "8"]])
+          ["November", "422", "8"]])
 
 _T_FILTERS = dict(
     headers=["Filter", "Hours the pump ran", "Mass of particles collected (milligrams)"],
