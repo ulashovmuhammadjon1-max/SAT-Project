@@ -9,9 +9,9 @@ up with no memory of this one.
 
 | subject | prefix | topics | typeset? | state |
 |---|---|---|---|---|
-| Biology | `b` | 60 | no (prose) | **in progress** |
-| Chemistry | `h` | 91 | **YES** | not started |
-| Environmental Science | `e` | 99 | no (prose) | not started |
+| Biology | `b` | 60 | no (prose) | **DONE — 1,800 questions LIVE in production** |
+| Chemistry | `h` | 91 | no — hand-written spans | in progress, 3 agents |
+| Environmental Science | `e` | 99 | no (prose) | in progress, 3 agents |
 
 Physics 1, Physics 2, Physics C Mechanics and Physics C E&M are **out of
 scope**. They stay COMING_SOON in `src/lib/ap/catalog.ts`. Their CED dumps are
@@ -46,9 +46,9 @@ verifier before exporting.
 
 ## Resume order
 
-1. Finish Biology's remaining topics. Then Chemistry, then Environmental
-   Science — one subject at a time, all its units together, which is the
-   owner's explicit instruction.
+1. Finish Chemistry and Environmental Science. Each subject's units all go
+   together and each gets ONE Vercel build when it flips live, which is what
+   the owner asked for.
 2. `python3 export_units.py <modules> --subject BIOLOGY --out /tmp/BIOLOGY.json`
 3. `node check_katex.mjs <spans>` — Biology and ES are prose subjects and should
    export **zero** math spans. Chemistry will have real ones.
@@ -74,14 +74,18 @@ an empty topic drops a student into an empty session.
 - **Prefixes are `b`, `h`, `e`.** `c`, `g`, `k`, `m`, `p`, `s`, `u`, `v` are
   taken by live banks (`c` alone is 111 Calculus modules). Reusing one
   overwrites shipped content.
-- **Chemistry is in `TYPESET_SUBJECTS`; Biology and ES are not.** Running
-  mathfmt over prose turned the Niger *Delta* into the symbol delta and set
-  year ranges as subtractions. Do not "fix" this by adding them.
+- **NOTHING here is in `TYPESET_SUBJECTS`.** Chemistry was added and then
+  removed after testing: mathfmt split `H2SO4` into `\(H_{2}\)SO4`, read
+  `Fe2O3 + 3 CO` across the formula boundary, and set the electron
+  configuration `1s2 2s2 2p6` with SUBscripts where it needs SUPERscripts.
+  Chemistry authors hand-write `\( ... \)` spans instead, per CLAUDE.md's
+  standing rule for Math content. Do not re-add any of the three.
 - **No stem may reference a figure the bank cannot show.** No images are
   supported. Data goes in a `table=`.
-- **Four agents at a time.** Six died together on the session limit with almost
-  nothing authored; three lost two of its number. The per-topic commit rule is
-  what makes any of this survivable — `git add content-pool/ap-banks`, never
+- **Six agents are currently running** (three per subject) at the owner's
+  explicit request. Six once died together on the session limit with almost
+  nothing authored; what makes it survivable now is the per-topic commit rule,
+  which has held through four runs. `git add content-pool/ap-banks`, never
   `-A`.
 
 ## The extractor, if a topic list ever needs regenerating
