@@ -48,10 +48,10 @@ _T_DOWNWIND = dict(
 _T_BEDROCK = dict(
     headers=["Lake", "Bedrock of the surrounding basin",
              "Average pH of rainfall reaching the lake", "Average pH of the lake water"],
-    rows=[["Lake W", "limestone", "4.4", "7.1"],
+    rows=[["Lake W", "limestone", "4.6", "7.1"],
           ["Lake X", "limestone", "4.5", "6.9"],
           ["Lake Y", "granite", "4.4", "5.0"],
-          ["Lake Z", "granite", "4.6", "5.2"]])
+          ["Lake Z", "granite", "4.5", "5.2"]])
 
 _T_STONE = dict(
     headers=["Solution the stone chips were soaked in for two weeks",
