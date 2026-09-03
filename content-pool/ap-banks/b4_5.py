@@ -312,7 +312,7 @@ QUESTIONS = [
    ans=0,
    why="EK 4.5.A.1.iii places DNA replication in S phase, where DNA in the form of chromatin replicates to form two sister chromatids connected at a centromere."),
 
- dict(q="At which stage of the cell cycle does the framework place the replication of the centrosomes?",
+ dict(q="A cell has finished copying its chromosomes and is now synthesizing protein, producing large quantities of ATP, and replicating its centrosomes. Which stage is it in?",
    choices=[
      "G2 phase",
      "S phase",
@@ -320,7 +320,7 @@ QUESTIONS = [
      "Anaphase",
      "Telophase"],
    ans=0,
-   why="EK 4.5.A.1.iv states that in G2 phase protein synthesis occurs, ATP is produced in large quantities, and centrosomes replicate. DNA replication is what belongs to S under EK 4.5.A.1.iii."),
+   why="EK 4.5.A.1.iv states that in G2 phase protein synthesis occurs, ATP is produced in large quantities, and centrosomes replicate, which is the whole of the description given. Chromosome copying has already happened in S under EK 4.5.A.1.iii."),
 
  dict(q="Why does the framework describe the two products of mitosis as genetically identical to one another?",
    choices=[

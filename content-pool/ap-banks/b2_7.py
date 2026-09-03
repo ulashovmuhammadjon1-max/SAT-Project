@@ -150,7 +150,9 @@ QUESTIONS = [
 
  dict(q="A solution is held at 27 degrees Celsius. What temperature should be used in the "
         "solute potential equation, which requires the temperature in Kelvin?",
-      choices=["300", "27", "273", "246", "327"],
+      choices=["300 Kelvin", "27 Kelvin, the Celsius value used unchanged",
+               "273 Kelvin", "246 Kelvin, from subtracting instead of adding",
+               "327 Kelvin"],
       ans=0,
       why="The equation printed with EK 2.7.B.2 defines the temperature in Kelvin as the "
           "temperature in degrees Celsius plus 273. Using the Celsius value unchanged, or "

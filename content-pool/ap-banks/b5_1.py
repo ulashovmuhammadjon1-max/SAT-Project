@@ -204,15 +204,15 @@ QUESTIONS = [
    ans=0,
    why="EK 5.1.A.2.i states that in prophase I homologous chromosomes pair up and condense, synapsis occurs and then chiasmata may form. No later stage in the framework's list mentions either event."),
 
- dict(q="How does the framework describe the division of the cytoplasm at the end of each meiotic division?",
+ dict(q="How many times does a cell that completes meiosis divide its cytoplasm, and at which points?",
    choices=[
-     "A cleavage furrow forms in an animal cell or a cell plate forms in a plant cell",
-     "A cell plate forms in an animal cell or a cleavage furrow forms in a plant cell",
-     "A cleavage furrow forms in both kinds of cell",
-     "A cell plate forms in both kinds of cell",
-     "The cytoplasm is not divided at either stage"],
+     "Twice, once at the end of each of the two meiotic divisions",
+     "Once, only at the end of the second meiotic division",
+     "Once, only at the end of the first meiotic division",
+     "Four times, once for each daughter cell that is eventually produced",
+     "Not at all, since the four nuclei remain within a single cell"],
    ans=0,
-   why="EK 5.1.A.2.iv and EK 5.1.A.3.iv both state that a cleavage furrow forms in an animal cell or a cell plate forms in a plant cell as cytokinesis occurs."),
+   why="EK 5.1.A.2.iv places cytokinesis at the end of telophase I, giving two haploid cells, and EK 5.1.A.3.iv places it again at the end of telophase II, giving four. The cytoplasm is therefore divided once per division."),
 
  dict(q="Cells and chromosomes were counted at three points in meiosis, with the results shown. What happens to the chromosome number per cell across the two divisions?",
    table=_T_COUNTS,
@@ -258,7 +258,7 @@ QUESTIONS = [
    ans=0,
    why="EK 5.1.A.2.iii places the separation of homologous chromosomes in anaphase I with sister chromatids still attached, and EK 5.1.A.3.iii places the separation of sister chromatids in anaphase II."),
 
- dict(q="DNA per cell was measured at four points, with the results shown. Which interpretation is best supported?",
+ dict(q="A cell entering meiosis was sampled before replication and again after each of its two divisions, with the results shown. Which interpretation is best supported?",
    table=_T_DNA,
    choices=[
      "DNA doubles before the first division and is then halved at each of the two divisions",
@@ -371,13 +371,13 @@ QUESTIONS = [
 
  dict(q="Which statement about meiosis is NOT supported by the framework?",
    choices=[
-     "Sister chromatids separate during anaphase I while homologous chromosomes remain attached",
+     "Four haploid daughter cells are already present at the end of meiosis I",
      "Homologous chromosomes pair up and undergo synapsis in prophase I",
-     "Two haploid daughter cells are present at the end of meiosis I",
-     "Four haploid daughter cells are present at the end of meiosis II",
+     "The kinetochore of each chromatid attaches to a microtubule in metaphase II",
+     "Chromatids begin to decondense during telophase II",
      "Mitosis and meiosis both use a spindle apparatus to move chromosomes"],
    ans=0,
-   why="EK 5.1.A.2.iii states the opposite: homologous chromosomes separate in anaphase I while sister chromatids remain attached. The other four options restate EK 5.1.A.2.i, EK 5.1.A.2.iv, EK 5.1.A.3.iv and EK 5.1.B.1."),
+   why="EK 5.1.A.2.iv states that TWO haploid daughter cells are formed at the end of meiosis I, and EK 5.1.A.3.iv puts the count of four at the end of meiosis II. The other four options restate EK 5.1.A.2.i, EK 5.1.A.3.ii, EK 5.1.A.3.iv and EK 5.1.B.1."),
 
  dict(q="Taken together, how does the framework describe what the two meiotic divisions accomplish?",
    choices=[
