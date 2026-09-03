@@ -14,20 +14,22 @@ defensible answers, so the checks assert they do not.
 
 WHAT THE KEYS REST ON
 ---------------------
-Items 1, 4, 6, 9, 12, 13, 20, 22, 25, 27, 28 and 29 rest on EK 1.4.A.1: pure
-substances contain atoms, molecules, or formula units of a single type, while
-mixtures contain them of two or more types whose relative proportions can vary.
+Items 1, 6, 9, 12, 13, 14, 16, 17, 20, 22, 23, 26, 28 and 29 rest on EK 1.4.A.1:
+pure substances contain atoms, molecules, or formula units of a single type,
+while mixtures contain them of two or more types whose relative proportions can
+vary. Item 23 is the one written to REFUSE an inference the framework does not
+license -- agreement between two portions is not proof of purity.
 
-Items 3, 5, 10, 11, 14, 15, 17, 18, 21, 24, 26 and 30 rest on EK 1.4.A.2:
-elemental analysis can be used to determine the relative numbers of atoms in a
-substance and to determine its purity. Where a purity judgement needs a
-baseline the claim also cites EK 1.3.A.2, the fixed mass ratio of a pure
-sample, because that is what supplies the expected value; and item 24 cites EK
-1.3.A.3 for the whole number atom ratio a pure compound must show.
+Items 3, 5, 6, 10, 11, 14, 15, 17, 24, 27 and 30 rest on EK 1.4.A.2: elemental
+analysis can be used to determine the relative numbers of atoms in a substance
+and to determine its purity. Where a purity judgement needs a baseline the
+claim also cites EK 1.3.A.2, the fixed mass ratio of a pure sample, because
+that is what supplies the expected value; item 24 cites EK 1.3.A.3 for the
+whole number atom ratio a pure compound must show.
 
-Items 2, 7, 19 and 23 are pure percent-by-mass arithmetic on a stated mixture.
-Items 8, 18 and 25 are the suggested skill 5.A items: which quantities the
-problem actually requires.
+Items 2, 4, 7, 12, 19, 21, 22 and 28 are percent-by-mass arithmetic on a stated
+mixture. Items 8, 18 and 25 are the suggested skill 5.A items: which quantities
+the problem actually requires.
 
 NOTHING HERE ASSERTS MORE THAN THE FRAMEWORK. In particular no key claims that
 elemental analysis can identify an unknown impurity, or that agreement between
@@ -180,7 +182,7 @@ def q15(table, item):
 
 
 CLAIMS = [
- ("particles of a single type",
+ ("a single type, while a mixture",
   "EK 1.4.A.1, near verbatim: pure substances contain atoms, molecules, or formula units of a single type, while mixtures contain them of two or more types whose relative proportions can vary. A compound of several elements is still one type of particle, which is where the element-counting option fails."),
  ("60.0 percent",
   "Recomputed in q2 above from the item's own table. A component's percent by mass is its own mass over the total mass of the mixture, and the check confirms that dividing by the other component instead produces one of the rejected values."),
@@ -202,6 +204,8 @@ CLAIMS = [
   "Recomputed in q10 above. Only one component of the mixture contains oxygen, so all the recovered oxygen came from it, and the tabulated percent oxygen in that pure component converts the oxygen mass into the component's mass."),
  ("2.0 grams",
   "Recomputed in q11 above as the remainder: the mixture mass less the mass of oxide implied by the recovered oxygen. Reporting the oxide mass rather than the remainder gives the rejected value."),
+ ("40.0 percent",
+  "Both the mass of the component and the total mass change when pure component is added, so the new share is 16.0 divided by 40.0. EK 1.4.A.1 is what permits a mixture's relative proportions to move like this at all; adding to the numerator while leaving the denominator at thirty grams produces a rejected value."),
  ("keeps its own chemical formula",
   "EK 1.4.A.1 describes a mixture as containing atoms, molecules, or formula units of two or more types, which is a statement about which particles are present rather than about a new substance forming. The proportions are the only part the framework lets vary."),
  ("Solid E",

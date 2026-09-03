@@ -153,6 +153,7 @@ QUESTIONS = [
 
  dict(q="Using the same table, what do all three rows have in common once the system has "
         "settled again?",
+      table=_T_DISTURB,
       choices=[
         "The concentrations have redistributed so that Q and K are equal once more",
         "The concentrations have returned to the values they had before the disturbance",
