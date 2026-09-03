@@ -290,8 +290,12 @@ QUESTIONS = [
  dict(q="A membrane preparation is found to consist of two facing layers of lipid "
         "molecules. Which lipid example named in the course framework accounts for that "
         "arrangement?",
-      choices=["Phospholipids", "Steroid hormones", "Stored fats",
-               "Free fatty acids released from a fat", "Nucleic acids"],
+      choices=["Phospholipids, which group together into the two facing layers of a "
+               "bilayer",
+               "Steroid hormones, which act as chemical messengers",
+               "Stored fats, which provide energy and insulation",
+               "Free fatty acids released from a fat",
+               "Cholesterol, which stabilizes the membrane it sits in"],
       ans=0,
       why="EK 1.5.A.2 iv states that phospholipids group together to form the lipid "
           "bilayers found in plasma and cell membranes, which is the two-layer "
