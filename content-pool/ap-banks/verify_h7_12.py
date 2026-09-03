@@ -77,11 +77,17 @@ def solubility_with_common_ion(ksp, common, n_common=1, n_other=1):
 
 # ------------------------------------------------------------------ table items
 
+def _ion_list(table, row):
+    """The ion-list cell for one row, read by header name rather than by index."""
+    j = [cg.normalize(x) for x in table["headers"]].index(cg.normalize(IONS))
+    matches = [r for r in table["rows"] if str(r[0]) == row]
+    assert len(matches) == 1, f"row {row!r} appears {len(matches)} times"
+    return str(matches[0][j])
+
+
 def _shares(table, row, ions):
-    text = cg.normalize(cg.cell.__self__ if False else
-                        [r for r in table["rows"] if str(r[0]) == row][0][
-                            [cg.normalize(x) for x in table["headers"]].index(
-                                cg.normalize(IONS))])
+    """Which of ``ions`` the tabulated solution in ``row`` already contains."""
+    text = _ion_list(table, row)
     return [i for i in ions if cg.contains_phrase(text, i)]
 
 
@@ -248,7 +254,7 @@ NUMERIC = {7: n7, 8: n8, 11: n11, 13: n13, 14: n14, 15: n15, 17: n17, 22: n22,
 
 
 CLAIMS = [
- ("The solubility is reduced",
+ ("It is reduced, whichever of the two ions",
   "EK 7.12.A.1, verbatim: the solubility of a salt is reduced when it is dissolved into a solution that already contains one of the ions present in the salt. The statement draws no distinction between a shared cation and a shared anion."),
  ("chloride ion already present pushes the dissolution equilibrium back",
   "EK 7.12.A.1 offers Le Chatelier's principle as the qualitative route, and the shared ion is a product of the dissolution equilibrium, so supplying it shifts that equilibrium toward the undissolved solid."),

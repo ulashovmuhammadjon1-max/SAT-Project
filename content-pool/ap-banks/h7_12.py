@@ -58,11 +58,11 @@ QUESTIONS = [
         "is dissolved into a solution that already contains one of the ions present in "
         "that salt?",
       choices=[
-        "The solubility is reduced",
-        "The solubility is increased",
-        "The solubility is unchanged",
-        "The solubility becomes exactly zero",
-        "The solubility is reduced only if the shared ion is the cation"],
+        "It is reduced, whichever of the two ions is the shared one",
+        "It is increased, because more ions are present in the solution",
+        "It is unchanged, because the solubility-product constant is unchanged",
+        "It falls to exactly zero, so none of the salt dissolves at all",
+        "It is reduced only when the shared ion is the cation of the salt"],
       ans=0,
       why="EK 7.12.A.1 states it directly: the solubility of a salt is reduced when it is "
           "dissolved into a solution that already contains one of the ions present in the "
@@ -215,9 +215,9 @@ QUESTIONS = [
           "the square of 0.10, which is the constant divided by 0.010. Forgetting to "
           "square the common-ion concentration gives ten times too small a value."),
 
- dict(q="A salt releasing one cation and two anions has a solubility-product constant of "
-        "\\( 4.0 \\times 10^{-11} \\). What is the ANION concentration contributed by "
-        "that salt when it is added to a 0.10 M solution sharing its CATION?",
+ dict(q="Consider a salt of the type one cation to two anions whose solubility-product "
+        "constant is \\( 4.0 \\times 10^{-11} \\). It is added to a 0.10 M solution "
+        "sharing its CATION. What is the anion concentration in the resulting solution?",
       choices=["\\( 2.0 \\times 10^{-5} \\) M", "\\( 4.0 \\times 10^{-10} \\) M",
                "\\( 1.0 \\times 10^{-5} \\) M", "\\( 4.0 \\times 10^{-6} \\) M",
                "\\( 2.0 \\times 10^{-6} \\) M"],
