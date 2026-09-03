@@ -70,15 +70,16 @@ QUESTIONS = [
  dict(q="Which expression is the solubility-product expression for the dissolution of "
         "PbI2(s) into Pb2+(aq) and I-(aq)?",
       choices=["\\( K_{sp} = [\\mathrm{Pb^{2+}}][\\mathrm{I^-}]^{2} \\)",
-               "\\( K_{sp} = [\\mathrm{Pb^{2+}}][\\mathrm{I^-}] \\)",
+               "\\( K_{sp} = [\\mathrm{I^-}][\\mathrm{Pb^{2+}}] \\)",
                "\\( K_{sp} = [\\mathrm{Pb^{2+}}]^{2}[\\mathrm{I^-}] \\)",
                "\\( K_{sp} = \\frac{[\\mathrm{Pb^{2+}}][\\mathrm{I^-}]^{2}}{[\\mathrm{PbI_2}]} \\)",
-               "\\( K_{sp} = [\\mathrm{Pb^{2+}}] + 2[\\mathrm{I^-}] \\)"],
+               "\\( K_{sp} = 2[\\mathrm{Pb^{2+}}][\\mathrm{I^-}] \\)"],
       ans=0,
       why="Each ion concentration is raised to its coefficient in the dissolution "
-          "equation, and two iodide ions are released per formula unit. The solid is a "
-          "pure solid and so is left out of the expression, which is why no denominator "
-          "appears."),
+          "equation, and two iodide ions are released per formula unit, so the two enters "
+          "as an exponent on the iodide term rather than as a multiplier out in front. "
+          "The solid is a pure solid and so is left out of the expression, which is why "
+          "no denominator appears."),
 
  dict(q="A salt of the type one cation to one anion has a solubility-product constant of "
         "\\( 4.0 \\times 10^{-10} \\). What is its molar solubility in pure water?",
@@ -117,7 +118,7 @@ QUESTIONS = [
         "\\( K_{sp} = [\\mathrm{Ca^{2+}}]^{2}[\\mathrm{PO_4^{3-}}]^{3} \\)",
         "\\( K_{sp} = [\\mathrm{Ca^{2+}}][\\mathrm{PO_4^{3-}}] \\)",
         "\\( K_{sp} = 3[\\mathrm{Ca^{2+}}] + 2[\\mathrm{PO_4^{3-}}] \\)",
-        "\\( K_{sp} = [\\mathrm{Ca^{2+}}]^{3} + [\\mathrm{PO_4^{3-}}]^{2} \\)"],
+        "\\( K_{sp} = 3[\\mathrm{Ca^{2+}}] \\times 2[\\mathrm{PO_4^{3-}}] \\)"],
       ans=0,
       why="Three calcium ions and two phosphate ions are released per formula unit, so "
           "each concentration is raised to its own coefficient and the two are multiplied. "

@@ -187,7 +187,7 @@ QUESTIONS = [
  dict(q="Which of these electron configurations is NOT a ground-state configuration?",
       choices=[
         r"\(1s^2\,2s^2\,2p^5\,3s^1\)",
-        r"\(1s^2\,2s^2\,2p^6\)",
+        r"\(1s^2\,2s^2\,2p^6\,3s^1\)",
         r"\(1s^2\,2s^2\,2p^3\)",
         r"\(1s^2\,2s^1\)",
         r"\(1s^2\,2s^2\,2p^6\,3s^2\,3p^3\)"],
@@ -305,11 +305,11 @@ QUESTIONS = [
  dict(q="A magnesium atom loses two electrons to form a magnesium ion. Which "
         "ground-state configuration belongs to that ion?",
       choices=[
-        r"\(1s^2\,2s^2\,2p^6\)",
-        r"\(1s^2\,2s^2\,2p^6\,3s^2\)",
-        r"\(1s^2\,2s^2\,2p^4\)",
-        r"\(1s^2\,2s^2\,2p^6\,3s^2\,3p^2\)",
-        r"\(1s^2\,2s^2\,2p^2\)"],
+        r"\(1s^2\,2s^2\,2p^6\), a total of ten electrons",
+        r"\(1s^2\,2s^2\,2p^6\,3s^2\), a total of twelve electrons",
+        r"\(1s^2\,2s^2\,2p^4\), a total of eight electrons",
+        r"\(1s^2\,2s^2\,2p^6\,3s^2\,3p^2\), a total of fourteen electrons",
+        r"\(1s^2\,2s^2\,2p^2\), a total of six electrons"],
       ans=0,
       why="A neutral magnesium atom holds twelve electrons and the ion holds ten, and "
           "the two electrons lost are the outermost ones. Removing electrons from an "
