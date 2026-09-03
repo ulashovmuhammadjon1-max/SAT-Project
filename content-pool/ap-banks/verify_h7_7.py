@@ -94,8 +94,14 @@ def q6(table, item):
 def q11(table, item):
     # The table states the equilibrium row as 1.00 minus x and x, so the ratio is
     # x/(1 - x); K is 3.0 in the stem.
-    assert cg.cell(table, "Initial", A) == 1.00, "the initial A must be 1.00 M"
-    assert cg.cell(table, "Initial", B) == 0.0, "the initial B must be zero"
+    # This table carries symbolic cells ("minus x"), so it is read by hand rather
+    # than through cg.col, which requires exactly one number per cell.
+    head = [str(x) for x in table["headers"]]
+    rows = {str(r[0]): r for r in table["rows"]}
+    assert cg.num(rows["Initial"][head.index(A)]) == 1.00, "the initial A must be 1.00 M"
+    assert cg.num(rows["Initial"][head.index(B)]) == 0.0, "the initial B must be zero"
+    assert rows["Equilibrium"][head.index(A)] == "1.00 minus x", \
+        "the equilibrium row must state the reactant as the initial amount minus x"
     left, x = one_to_one(1.00, 3.0)
     assert abs(x - 0.75) < 1e-9 and abs(left - 0.25) < 1e-9, f"solved x is {x}"
     h.shows(item, "0.75")
@@ -193,7 +199,9 @@ def n7(item):
     x = math.sqrt(k * a0 / 4.0)
     b = 2 * x
     assert abs(b - 2.0e-3) < 1e-12, f"B recomputes to {b}"
-    assert (2 * x) ** 2 / (a0 - x) - k < 1e-9, "the approximation must reproduce K"
+    exact = (2 * x) ** 2 / (a0 - x)
+    assert abs(exact - k) / k < 1e-2, (
+        f"the neglected x makes K {exact} rather than {k}, too large a difference to ignore")
     h.shows(item, "2.0 \\times 10^{-3}")
     return f"four x squared equal to {k} gives x of {x:g} and B of {b:g} M"
 
