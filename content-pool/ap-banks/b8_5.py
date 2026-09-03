@@ -171,7 +171,7 @@ QUESTIONS = [
    choices=["Mutualism", "Parasitism", "Commensalism", "Predation", "Competition"], ans=0,
    why="EK 8.5.B.3's positive and negative effects applied to EK 8.5.B.4's three named symbioses: a positive effect on both populations is what mutualism names. Predation and competition are listed separately from the symbioses in the same statement."),
 
- dict(q="In an interaction between two populations, one population benefits and the other is neither helped nor harmed. Which of the symbioses the framework names does this pattern of effects describe?",
+ dict(q="Two populations interact, and one of them benefits while the other is neither helped nor harmed. Which of the symbioses the framework names does this pattern of effects describe?",
    choices=["Commensalism", "Mutualism", "Parasitism", "Predation", "A trophic cascade"], ans=0,
    why="EK 8.5.B.3's positive and negative effects applied to EK 8.5.B.4's three named symbioses: a positive effect on one population with no effect on the other is what commensalism names, since the other two involve a benefit or a harm to both."),
 
@@ -241,11 +241,11 @@ QUESTIONS = [
             "Both of the other two sites", "Site 1 cannot be compared with any other site"], ans=0,
    why="Skill 5.B asks for an estimate of whether sample means are statistically different. Exactly one of the other sites has an interval that does not overlap the interval around the named site, and non-overlapping intervals support treating the means as different."),
 
- dict(q="By how many species per plot do the means of the two sites with non-overlapping error bars differ?",
+ dict(q="By how many species per plot do the means of Site 1 and Site 3 differ?",
    table=_T_ERROR,
    choices=["10 species per plot", "1 species per plot", "9 species per plot",
             "22 species per plot", "12 species per plot"], ans=0,
-   why="Skill 5.A includes differences and skill 5.B identifies which pair the comparison concerns. The pair whose intervals do not overlap is located from the two error bar columns, and the answer is the difference between the two means."),
+   why="Skill 5.A includes differences and skill 5.B settles whether the comparison is meaningful. The two named sites have error bars that do not overlap, so the difference between their means is a difference the data support, and that difference is read from the two means."),
 
  dict(q="A student reports that two sample means differ and concludes that the underlying communities differ. Under the framework's suggested skill for this topic, what is missing from that reasoning?",
    choices=[
