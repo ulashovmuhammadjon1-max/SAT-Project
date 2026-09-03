@@ -38,7 +38,11 @@ TOPIC_START = re.compile(r"^(\s{0,24})(\d{1,2})\.(\d{1,2})\s+(\S.*)$")
 NOISE = re.compile(
     r"Go to AP Classroom|Progress Check|Review the results|Course and Exam Description|"
     r"Return to Table of Contents|College Board|UNIT AT A GLANCE|Class Periods|"
-    r"^\s*Topic\s*$|Suggested Skill|CLASS PERIODS|SAMPLE INSTRUCTIONAL|^\s*UNIT\s*$",
+    r"^\s*Topic\s*$|Suggested Skill|CLASS PERIODS|SAMPLE INSTRUCTIONAL|^\s*UNIT\s*$|"
+    # Section headers that sit at the SAME indent as a topic title on the
+    # TOPIC pages, so the indent rule alone does not exclude them.
+    r"Required Course Content|AVAILABLE RESOURCES|SUGGESTED SKILL|ENDURING UNDERSTANDING|"
+    r"LEARNING OBJECTIVE|ESSENTIAL KNOWLEDGE",
     re.IGNORECASE,
 )
 
@@ -53,12 +57,27 @@ def clean(s: str) -> str:
     "Hydrogen Bonding" became "Hydrogen Bonding biological concepts and
     processes."
     """
+    s = "".join(ch for ch in s if ord(ch) >= 32 or ch == "\t")
     s = re.split(r"\s{3,}", s.strip())[0]
     s = SKILL.split(s)[0]
     s = re.sub(r"\s+", " ", s).strip()
     # Titles never end in a lone digit-dot-letter fragment or a page number.
     s = re.sub(r"\s*\d+\.[A-Z]$", "", s).strip()
     return s
+
+
+def dedupe_words(s: str) -> str:
+    """Collapse an immediately repeated word or word pair.
+
+    A TOPIC page prints the title as a heading and again in the body, so
+    joining its lines repeats the tail: "Introduction to Macromolecules
+    Macromolecules". This has to run AFTER the join -- the pieces are clean
+    individually and only the concatenation is wrong, which is why doing it
+    inside clean() had no effect.
+    """
+    s = re.sub(r"\b(\w+)(\s+\1)\b", r"\1", s, flags=re.IGNORECASE)
+    s = re.sub(r"\b(\w+\s+\w+)(\s+\1)\b", r"\1", s, flags=re.IGNORECASE)
+    return s.strip()
 
 
 def extract(path: str):
@@ -105,10 +124,123 @@ def extract(path: str):
             # Relative to the topic column: a wrapped title lines up just past
             # the number, while the right-hand column sits far to the right.
             if tail and col < here <= col + 12:
-                topics[current] = (topics[current] + " " + tail).strip()
+                topics[current] = dedupe_words(topics[current] + " " + tail)
             else:
                 current = None
     return topics, order
+
+
+# `TOPIC 8.7` sometimes shares its line with the right-hand SUGGESTED SKILL
+# column, so anything after a wide gap is tolerated and ignored.
+TOPIC_PAGE = re.compile(r"^(\s*)TOPIC\s+(\d{1,2})\.(\d{1,2})(?:\s*$|\s{3,}\S.*$)")
+
+
+def fill_from_topic_pages(path: str, topics: dict[str, str], order: list[str]) -> list[str]:
+    """Recover topics the UNIT AT A GLANCE tables leave out.
+
+    Chemistry's unit 8 glance table lists 8.1-8.4, 8.6 and 8.9 and simply omits
+    8.5, 8.7, 8.8 and 8.10 -- they appear in the Course at a Glance overview
+    and on their own TOPIC pages, but not in the per-unit table this extractor
+    reads. So the glance tables are the primary source, because they put the
+    number and title adjacent in one column, and the TOPIC pages are the
+    fallback for whatever is missing.
+
+    A TOPIC page is `TOPIC N.M` alone on a line, with the title on the lines
+    directly beneath at the SAME indent. The surrounding skill and resource
+    columns sit at a different indent, which is what makes them separable.
+    """
+    lines = open(path, encoding="utf-8", errors="replace").read().split("\n")
+    added = []
+    for i, raw in enumerate(lines):
+        m = TOPIC_PAGE.match(raw)
+        if not m:
+            continue
+        code = f"{int(m.group(2))}.{int(m.group(3))}"
+        if code in topics:
+            continue
+        indent = len(m.group(1))
+        parts = []
+        # The two columns interleave line by line, so the skill column can sit
+        # BETWEEN the TOPIC heading and its title -- 8.8's title is four lines
+        # below, with "6.D / Provide reasoning to justify / a claim using
+        # chemical" in between at a different indent. Lines from the other
+        # column are skipped rather than treated as the end of the title.
+        for nxt in lines[i + 1 : i + 14]:
+            if not nxt.strip():
+                continue
+            here = len(nxt) - len(nxt.lstrip())
+            if abs(here - indent) > 2:
+                continue
+            if NOISE.search(nxt) or SKILL.search(nxt):
+                break
+            piece = clean(nxt)
+            if piece:
+                parts.append(piece)
+            if len(parts) >= 3:
+                break
+        title = dedupe_words(" ".join(x for x in parts if x))
+        if title:
+            topics[code] = title
+            order.append(code)
+            added.append(code)
+    order.sort(key=lambda c: tuple(int(x) for x in c.split(".")))
+    return added
+
+
+# A title left dangling on a joining word, or reduced to a stub, was cut off by
+# a layout the glance pass mishandled -- Chemistry's unit 9 sits in the
+# multi-column Course at a Glance, where a class-period digit in the left
+# gutter shifts the indent and truncates "Gibbs Free Energy and Thermodynamic
+# Favorability" to "Gibbs".
+DANGLING = re.compile(r"\b(and|or|of|the|in|for|to|a|an|with|under|between)$", re.IGNORECASE)
+
+
+def suspect(title: str) -> bool:
+    """Only a title left dangling on a joining word is definitely truncated.
+
+    Length is NOT a usable signal: "Hess's Law", "pH and pKa", "Solubility" and
+    "Catalysis" are all real, complete AP Chemistry topic titles.
+    """
+    return bool(DANGLING.search(title))
+
+
+def repair_from_topic_pages(path: str, topics: dict[str, str]) -> list[str]:
+    """Prefer the TOPIC-page title wherever it is longer than the glance one.
+
+    No cleverness about which titles "look" truncated -- truncation only ever
+    SHORTENS, so taking the longer of the two independent sources repairs the
+    mangled ones and leaves the good ones alone. Chemistry's unit 9 lives in
+    the multi-column Course at a Glance, where a class-period digit in the left
+    gutter shifts the indent and cuts "Gibbs Free Energy and Thermodynamic
+    Favorability" down to "Gibbs".
+    """
+    probe: dict[str, str] = {}
+    fill_from_topic_pages(path, probe, [])
+    fixed = []
+    for code, old_title in list(topics.items()):
+        cand = probe.get(code, "")
+        if len(cand) > len(old_title) and not NOISE.search(cand):
+            topics[code] = cand
+            fixed.append(f"{code}: {old_title!r} -> {cand!r}")
+    return fixed
+
+
+# Titles the layout defeats outright, read by eye from the CED and cited by
+# line so the correction is auditable rather than remembered.
+#
+# Chemistry's unit 9 pages interleave the two columns WITHIN a line -- topic
+# 9.1's page reads "Support a claim Introduction" then "to Entropy", with the
+# skill sentence and the title sharing one physical row. No indent rule can
+# separate that, and guessing is exactly what SOCIAL_BRIEF forbids, so these
+# four are transcribed from the Course at a Glance overview instead.
+OVERRIDES = {
+    "CHEMISTRY": {
+        "9.1": "Introduction to Entropy",                      # CED text line 1046
+        "9.5": "Free Energy and Equilibrium",                  # lines 1060-1062
+        "9.7": "Coupled Reactions",                            # line 1074
+        "9.10": "Cell Potential Under Nonstandard Conditions",  # lines 1083-1084
+    },
+}
 
 
 def check(topics: dict[str, str]) -> list[str]:
@@ -126,6 +258,8 @@ def check(topics: dict[str, str]) -> list[str]:
             problems.append(f"{code}: empty title")
         elif len(title) < 3:
             problems.append(f"{code}: implausibly short title {title!r}")
+        elif suspect(title):
+            problems.append(f"{code}: title left dangling on a joining word: {title!r}")
         elif re.search(
             r"Suggested Skill|\d\.[A-Z]\s|\bDescribe\b|\bPredict\b|\bExplain\b|"
             r"concepts and processes|one or more components|applied contexts|"
@@ -143,6 +277,20 @@ def check(topics: dict[str, str]) -> list[str]:
 def main():
     path, subject = sys.argv[1], sys.argv[2]
     topics, order = extract(path)
+    added = fill_from_topic_pages(path, topics, order)
+    if added:
+        print(f"(recovered {len(added)} topic(s) from TOPIC pages: {', '.join(added)})")
+    fixed = repair_from_topic_pages(path, topics)
+    if fixed:
+        print(f"(repaired {len(fixed)} truncated title(s))")
+        for f in fixed:
+            print("   ", f)
+    # Applied LAST: an override is the hand-read ground truth and must not be
+    # overwritten by either automated pass.
+    for code, title in OVERRIDES.get(subject, {}).items():
+        if topics.get(code) != title:
+            print(f"(override {code}: {topics.get(code)!r} -> {title!r})")
+            topics[code] = title
     problems = check(topics)
     print(f"{subject}: {len(topics)} topics across {len({c.split('.')[0] for c in topics})} units")
     for code in order:
