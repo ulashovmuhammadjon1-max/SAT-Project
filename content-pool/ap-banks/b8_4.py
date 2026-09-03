@@ -112,12 +112,14 @@ QUESTIONS = [
             "The length of the time interval"], ans=0,
    why="The CED defines K as the carrying capacity in the logistic growth equation for this topic. The current population size is N, the maximum per capita growth rate is rmax and the change in population size is dN."),
 
- dict(q="In the logistic growth equation, what does rmax represent?",
-   choices=["The maximum per capita growth rate of the population",
-            "The carrying capacity of the ecosystem", "The current population size",
-            "The number of individuals added in one year",
-            "The proportion of the carrying capacity that remains unused"], ans=0,
-   why="The CED defines rmax as the maximum per capita growth rate of population, in both the exponential and the logistic equations. The carrying capacity is K and the current size is N."),
+ dict(q="A population's maximum per capita growth rate and its current size both stay the same, but the carrying capacity of its ecosystem falls while remaining above the population size. What does the logistic equation predict for the change in population size per unit time?",
+   choices=[
+     "It falls, because the unused share of the carrying capacity is smaller",
+     "It rises, because the population is now closer to its carrying capacity",
+     "It is unchanged, because the per capita rate and the population size are unchanged",
+     "It becomes negative, because the carrying capacity has fallen",
+     "It cannot be predicted without knowing the birth rate and the death rate separately"], ans=0,
+   why="The framework prints dN/dt equal to rmax times N times the quantity K minus N all divided by K. Holding rmax and N fixed and lowering K shrinks the last factor, so the product shrinks; the factor stays positive because the stem keeps the population below the carrying capacity."),
 
  dict(q="In the logistic equation, what happens to the quantity K minus N all divided by K when the population is very small compared with the carrying capacity?",
    choices=[

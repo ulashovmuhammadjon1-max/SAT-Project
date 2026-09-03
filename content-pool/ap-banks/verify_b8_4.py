@@ -283,8 +283,8 @@ CLAIMS = [
   "EK 8.4.A.2 writes TYPICALLY rather than always. A stated tendency describes the usual outcome and leaves room for departures, so an absolute reading overstates the sentence."),
  ("The carrying capacity",
   "The CED defines K as the carrying capacity in the logistic growth equation for this topic. N is the current population size, rmax the maximum per capita growth rate and dN the change in population size."),
- ("maximum per capita growth rate of the population",
-  "The CED defines rmax as the maximum per capita growth rate of population, in both printed growth equations. The carrying capacity is K and the current size is N."),
+ ("unused share of the carrying capacity is smaller",
+  "The CED prints dN/dt equal to rmax times N times the quantity K minus N all divided by K. Holding rmax and N fixed while lowering K shrinks the last factor, so the whole product shrinks, and the factor stays positive because the stem keeps N below K. Recomputed numerically in ``falling_k`` below rather than argued. This item replaced a straight definition of rmax, which b8_3 already asks of the exponential equation; a cross-topic scan scored the pair at 0.75 and SOCIAL_DEDUPE.md says to change the ask, not the wording."),
  ("approaches one, so the growth term is close to what unconstrained growth would give",
   "With N small compared with K the numerator K minus N is nearly K, so the quotient is nearly one and the whole expression is nearly rmax times N, which is the product EK 8.3.A.2's exponential equation gives."),
  ("Zero, so the change in population size per unit time is zero",
@@ -375,8 +375,26 @@ def style():
     return hits
 
 
+def falling_k():
+    """q7's key, recomputed rather than argued.
+
+    Lower the carrying capacity while holding the per capita rate and the
+    population size fixed, keeping the population below the new capacity, and
+    confirm the printed equation gives a SMALLER change in population size per
+    unit time and that it stays positive.
+    """
+    r, n = 0.10, 200.0
+    before, after = logistic(r, n, 1000.0), logistic(r, n, 600.0)
+    assert 0 < after < before, (
+        f"lowering the carrying capacity must shrink the rate while leaving it positive; "
+        f"got {before} then {after}"
+    )
+    return f"with rmax {r} and N {int(n)}, lowering K from 1000 to 600 takes the rate from {before:g} to {after:g}"
+
+
 def main():
     n_style = style()
+    note_k = falling_k()
     notes = []
     for i, fn in sorted(STEM_MATH.items()):
         item = QS[i - 1]
@@ -384,6 +402,7 @@ def main():
         notes.append(f"  q{i:>2}: {fn(item)}")
     cg.check(b8_4, CLAIMS, table_checks=TABLE_CHECKS)
     print(f"    {n_style} notation and figure-reference checks clean.")
+    print(f"    q 7: {note_k}")
     print(f"    {len(STEM_MATH)} stem calculation(s) recomputed from the stem text:")
     print("\n".join(notes))
 
