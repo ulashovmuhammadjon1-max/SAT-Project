@@ -349,8 +349,8 @@ QUESTIONS = [
       choices=[
         "Transpiration.",
         "Nitrogen fixation.",
+        "Assimilation.",
         "Ammonification.",
-        "Nitrification.",
         "Denitrification."],
       ans=0,
       why="ERT-1.E.1 lists nitrogen fixation, assimilation, ammonification, nitrification "
