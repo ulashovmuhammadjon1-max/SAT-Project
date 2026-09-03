@@ -28,6 +28,8 @@ selected line's change is not attributable to the selection.
 
 NEGATIVE CONTROL: ``negcontrol_b5_7.py``.
 """
+import re
+
 import cg_check as cg
 import b7_3
 
@@ -271,11 +273,26 @@ def q17(table, item):
 
 # ------------------------------------------------------------------ varieties
 
+# This table is fixed stimulus and its cells carry units, so the negative
+# control's numeric corruption cannot reach them: "4.2 times" is not a bare
+# number. Without a format assertion the check caught one corruption in twelve.
+# The factor is matched against the RAW cell, not the normalized one, because
+# normalize() strips the decimal point and "1.0 times" becomes "1 0 times".
+_VARIETY_LABEL = re.compile(r"(?:variety [0-9]+|wild form)")
+_FACTOR = re.compile(r"[0-9]+\.[0-9] times")
+_TRAIT = re.compile(r"(?:none|[a-z]+(?: [a-z]+){0,2})")
+
+
 def _varieties(table):
     out = {}
     for r in _rows(table):
-        out[cg.normalize(r["variety"])] = (cg.normalize(r["trait emphasized by the breeders"]),
-                                           cg.num(r["value of that trait relative to the wild form"]))
+        label = cg.normalize(r["variety"])
+        trait = cg.normalize(r["trait emphasized by the breeders"])
+        factor = str(r["value of that trait relative to the wild form"]).strip()
+        assert _VARIETY_LABEL.fullmatch(label), f"row label {label!r} is not a variety or the wild form"
+        assert _TRAIT.fullmatch(trait), f"trait {trait!r} is not a short trait name"
+        assert _FACTOR.fullmatch(factor), f"factor {factor!r} is not of the form '4.2 times'"
+        out[label] = (trait, cg.num(factor))
     return out
 
 
