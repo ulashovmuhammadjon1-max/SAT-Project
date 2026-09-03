@@ -57,9 +57,9 @@ _T_OYSTER = dict(
     headers=["Bed", "Access rule",
              "Oysters harvested per hectare in the tenth year (kilograms)"],
     rows=[["Bed 1", "Open to all harvesters", "140"],
-          ["Bed 2", "Open to all harvesters", "165"],
+          ["Bed 2", "Open to all harvesters", "160"],
           ["Bed 3", "Harvest limited by an enforced quota", "610"],
-          ["Bed 4", "Harvest limited by an enforced quota", "580"]])
+          ["Bed 4", "Harvest limited by an enforced quota", "590"]])
 
 _T_ORCHARD = dict(
     headers=["Season", "Fruit taken by the village in total (kilograms)",
@@ -267,7 +267,7 @@ QUESTIONS = [
         "The two beds under an enforced limit yielded nothing at all in the tenth year.",
         "Access rules cannot be compared, because each bed had a different rule."],
       ans=0,
-      why="The open beds returned 140 and 165 kilograms per hectare against 610 and 580 for "
+      why="The open beds returned 140 and 160 kilograms per hectare against 610 and 590 for "
           "the limited beds, a gap of several times. EIN-2.A.1 attributes depletion to shared "
           "resources used in each individual's own self-interest, and open access is what "
           "makes a resource shared in that sense."),
@@ -309,11 +309,11 @@ QUESTIONS = [
         "household in the fourth season?",
       table=_T_ORCHARD,
       choices=[
-        "20 kilograms per household",
-        "80 kilograms per household",
-        "45 kilograms per household",
-        "120 kilograms per household",
-        "1,600 kilograms per household"],
+        "An average of 20 kilograms per household",
+        "An average of 80 kilograms per household",
+        "An average of 45 kilograms per household",
+        "An average of 120 kilograms per household",
+        "An average of 1,600 kilograms per household"],
       ans=0,
       why="Dividing the fourth season total of 1,600 kilograms by the 80 households taking "
           "fruit gives 20 kilograms each. The rejected values come from the wrong season, from "
@@ -496,16 +496,16 @@ QUESTIONS = [
         "an enforced limit?",
       table=_T_OYSTER,
       choices=[
-        "443 kilograms per hectare",
-        "152 kilograms per hectare",
-        "595 kilograms per hectare",
+        "450 kilograms per hectare",
+        "150 kilograms per hectare",
+        "600 kilograms per hectare",
         "470 kilograms per hectare",
-        "748 kilograms per hectare"],
+        "750 kilograms per hectare"],
       ans=0,
-      why="The open beds average 140 and 165, which is 152.5 kilograms per hectare, and the "
-          "limited beds average 610 and 580, which is 595, so the gap is 442.5 and rounds to "
-          "443. The rejected values are the two averages themselves, a difference taken "
-          "between the wrong pair of beds, or the sum of the two averages."),
+      why="The open beds average 150 kilograms per hectare and the beds under an enforced "
+          "limit average 600, so the gap is 450 kilograms per hectare. The rejected values are "
+          "the two averages themselves, a difference taken between the wrong pair of beds, and "
+          "the sum of the two averages."),
 
  dict(q="Which of the following is the best statement of why the framework places this "
         "concept in a unit about land and water use?",
@@ -525,21 +525,20 @@ QUESTIONS = [
           "forests, fisheries and groundwater commonly are. The rejected options deny that "
           "these resources can be depleted or that individuals make choices about them."),
 
- dict(q="Compare the woodlot record with the aquifer record. What do the two have in common "
-        "as illustrations of the concept?",
+ dict(q="A district engineer summarises the aquifer record for the council in one sentence. "
+        "Which summary states what the record shows about the concept?",
       table=_T_WELLS,
       choices=[
-        "In each, the number of users drawing on one shared stock rose while the stock "
-        "available to them fell.",
-        "In each, the number of users fell while the stock available to them rose.",
-        "In each, the stock available stayed constant while the number of users changed.",
-        "In each, a single owner controlled the resource throughout the period recorded.",
-        "In each, the resource was replenished faster than it was drawn down."],
+        "The number of users drawing on one shared stock rose while the water within reach "
+        "of them fell.",
+        "The number of users fell while the water within reach of them rose.",
+        "The water within reach stayed constant while the number of users changed.",
+        "A single owner controlled the aquifer throughout the period recorded.",
+        "The aquifer was replenished faster than it was drawn down."],
       ans=0,
-      why="The aquifer record shows wells rising from 18 to 88 as the depth to water grows from "
-          "22 to 68 meters, so less water lies within reach as more users draw on it, and the "
-          "woodlot record has the same shape. EIN-2.A.1 attributes this joint movement to "
-          "shared use in each user's own interest."),
+      why="The record shows wells rising from 18 to 88 while the depth to water grows from 22 "
+          "to 68 meters, so less water lies within reach as more users draw on it. EIN-2.A.1 "
+          "attributes this joint movement to shared use in each user's own interest."),
 
  dict(q="Which summary correctly relates the three elements of the framework's sentence to "
         "one another?",

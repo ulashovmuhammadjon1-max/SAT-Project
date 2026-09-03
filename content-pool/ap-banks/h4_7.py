@@ -58,8 +58,8 @@ _T_THREE = dict(
     rows=[["I", "A gas is released and no oxidation number changes",
            ],
           ["II", "A yellow solid settles out of a clear mixture"],
-          ["III", "A strip of metal disappears and a different metal coats the "
-                  "beaker"]])
+          ["III", "A strip of metal disappears and a solid layer of a different "
+                  "metal coats the beaker"]])
 
 _T_SOLUBLE = dict(
     headers=["Solution mixed", "Ions present before mixing"],
