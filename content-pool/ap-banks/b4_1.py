@@ -168,15 +168,15 @@ QUESTIONS = [
    ans=0,
    why="The CED lists thyroid hormones as an illustrative example of EK 4.1.B.2, which covers signals released by one cell type travelling long distances to target cells of another type."),
 
- dict(q="Testosterone and estrogen are both listed by the framework as examples of which kind of signal?",
+ dict(q="Which pair below sets one of the framework's long-distance signals beside one of its short-distance local regulators?",
    choices=[
-     "Signals that travel long distances to target cells of another type",
-     "Local regulators that act only on cells beside the releasing cell",
-     "Molecules that act by holding two cells in direct contact",
-     "Molecules that act only inside the cell that produced them",
-     "Molecules that act only between cells of the immune system"],
+     "Estrogen and neurotransmitters",
+     "Insulin and thyroid hormones",
+     "Neurotransmitters and morphogens",
+     "Testosterone and human growth hormone",
+     "Quorum sensing molecules and the plant immune response"],
    ans=0,
-   why="The CED lists testosterone and estrogen among the illustrative examples of EK 4.1.B.2, which covers signals released by one cell type that travel long distances to target cells of another type."),
+   why="The CED lists estrogen among the illustrative examples of EK 4.1.B.2, long-distance signals reaching target cells of another type, and neurotransmitters among those of EK 4.1.B.1, local regulators acting on cells in the vicinity. Each of the other four pairs draws both of its members from the same one of those two lists."),
 
  dict(q="Human growth hormone is released by cells in one part of the body and produces effects in tissues far from its source. Which statement about it follows from the framework?",
    choices=[
