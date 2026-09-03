@@ -65,10 +65,10 @@ _T_DRUG = dict(
     headers=["Treatment of the cells",
              "Ligand supplied (1 means yes, 0 means no)",
              "Response measured (hypothetical, arbitrary units)"],
-    rows=[["No drug added", "0", "3"],
-          ["No drug added", "1", "80"],
-          ["Drug D added", "0", "76"],
-          ["Drug E added", "1", "6"]])
+    rows=[["No drug added, messenger withheld", "0", "3"],
+          ["No drug added, messenger supplied", "1", "80"],
+          ["Drug D added, messenger withheld", "0", "76"],
+          ["Drug E added, messenger supplied", "1", "6"]])
 
 _T_EXPRESSION = dict(
     headers=["Gene measured",
