@@ -34,8 +34,13 @@ T_FRAG = b6_2._T_FRAG
 T_INHIB = b6_2._T_INHIB
 
 NAMED = ("dna polymerase", "ligase", "rna polymerase", "helicase", "topoisomerase")
-OUT_OF_SCOPE = ("primase", "gyrase", "exonuclease", "telomerase", "nuclease",
-                "single-strand binding protein", "sliding clamp")
+OUT_OF_SCOPE = ("primase", "primases", "gyrase", "gyrases", "exonuclease",
+                "exonucleases", "telomerase", "telomerases", "nuclease",
+                "nucleases", "single-strand binding protein", "sliding clamp")
+# The plurals are listed separately on purpose. ``contains_phrase`` delimits a
+# match with explicit lookarounds, so "primase" does NOT match inside
+# "primases" -- an under-matching checker is the own-goal this project has paid
+# for repeatedly, and listing both forms is cheaper than loosening the boundary.
 
 
 def _semiconservative(rounds):
@@ -212,7 +217,7 @@ CLAIMS = [
   "EK 6.2.A.1.iv states that topoisomerase relaxes supercoiling in front of the replication fork; unwinding the strands themselves is helicase's role in EK 6.2.A.1.iii. The exclusion statement puts any further enzyme beyond the scope of the exam."),
  ("requires an RNA primer in order to initiate",
   "EK 6.2.A.1.v states that DNA polymerase requires RNA primers to initiate DNA synthesis. Supercoiling belongs to EK 6.2.A.1.iv, joining to EK 6.2.A.1.vii and strand separation to EK 6.2.A.1.iii."),
- ("In the 5 prime to 3 prime direction",
+ ("5 prime to 3 prime direction, on both",
   "EK 6.2.A.1.i states without qualification that DNA is synthesized in the 5 prime to 3 prime direction, and EK 6.2.A.1.vi accounts for the difference between the two new strands by the continuity of synthesis rather than by a reversal of direction."),
  ("Continuously, as a single uninterrupted stretch",
   "EK 6.2.A.1.vi states that DNA polymerase synthesizes new strands continuously on the leading strand and discontinuously on the lagging strand. EK 6.2.A.1.v attaches the primer requirement to the polymerase rather than to one strand."),
@@ -222,7 +227,7 @@ CLAIMS = [
   "EK 6.2.A.1.vii gives ligase the fragments on the lagging strand. The table check recomputes the join count as one fewer than the segment count for both strands, confirming eleven for the twelve lagging-strand segments and none for the single leading-strand segment."),
  ("Inhibitor 3",
   "EK 6.2.A.1.vii states that ligase joins the fragments on the lagging strand, so blocking it leaves fragments made but unjoined. The table check matches each of the four observations to exactly one participant and confirms which inhibitor produces the unjoined-fragment result."),
- ("Inhibitor 2",
+ ("becomes steadily more supercoiled",
   "EK 6.2.A.1.iv states that topoisomerase relaxes supercoiling in front of the replication fork, so its loss lets supercoiling build ahead of a fork that has still opened. The table check confirms that this observation is distinguishable from the helicase one, in which no fork opens at all."),
  ("no template is exposed",
   "EK 6.2.A.1.iii states that helicase unwinds the DNA strands, and EK 6.2.A.1.ii requires a single strand to serve as the template. With the strands still wound there is no exposed template, so the failure precedes priming, synthesis and joining."),
@@ -270,5 +275,14 @@ for word in OUT_OF_SCOPE:
         f"6.2: {word!r} appears in the module, but the CED's exclusion statement puts every "
         f"enzyme except {NAMED} beyond the scope of the exam"
     )
+# Positive control on the scan itself: a checker that cannot fire is worse than
+# none. If ``contains_phrase`` ever stops matching, the loop above would pass
+# silently on a module full of out-of-scope enzymes.
+for word in OUT_OF_SCOPE:
+    assert cg.contains_phrase(f"the module mentions {word} here", word), (
+        f"the exclusion scan cannot detect {word!r} even in a string that contains it"
+    )
+assert not cg.contains_phrase(_text, "primase"), "sanity: the module itself must stay clean"
+
 print(f"    Semiconservative model recomputed round by round; exclusion statement enforced "
       f"({len(OUT_OF_SCOPE)} out-of-scope enzyme names scanned for).")

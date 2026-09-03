@@ -135,11 +135,11 @@ QUESTIONS = [
    why="EK 6.2.A.1.v states that DNA polymerase requires RNA primers to initiate DNA synthesis. Supercoiling is what topoisomerase relaxes under EK 6.2.A.1.iv, ligase acts on already-made fragments under EK 6.2.A.1.vii, and helicase separates the strands under EK 6.2.A.1.iii."),
  dict(q="In which direction is a new strand of DNA synthesized?",
    choices=[
-     "In the 5 prime to 3 prime direction",
-     "In the 3 prime to 5 prime direction",
-     "In the 5 prime to 3 prime direction on the leading strand and the 3 prime to 5 prime direction on the lagging strand",
-     "In whichever direction the template strand runs, which differs between the two new strands",
-     "In both directions at once from the point where the primer was laid down"], ans=0,
+     "In the 5 prime to 3 prime direction, on both of the new strands",
+     "In the 3 prime to 5 prime direction, on both of the new strands",
+     "In one direction along the leading strand and in the opposite direction along the lagging strand",
+     "In whichever direction the template strand happens to run, which differs between the two new strands",
+     "In both directions at once, outward from the point where the primer was laid down"], ans=0,
    why="EK 6.2.A.1.i states without qualification that DNA is synthesized in the 5 prime to 3 prime direction. The framework applies that one direction to both new strands, and EK 6.2.A.1.vi accounts for the difference between them by the continuity of synthesis rather than by a reversal of direction."),
  dict(q="How does DNA polymerase build the new strand on the leading strand at a replication fork?",
    choices=[
