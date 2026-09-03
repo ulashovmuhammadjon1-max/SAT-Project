@@ -83,9 +83,9 @@ _T_DEPTH = dict(
     headers=["Depth below the sea surface (meters)",
              "Water temperature in neutral years (degrees Celsius)",
              "Water temperature during the event (degrees Celsius)"],
-    rows=[["0", "23", "28"],
-          ["50", "18", "26"],
-          ["100", "15", "22"],
+    rows=[["0", "23", "30"],
+          ["50", "18", "24"],
+          ["100", "15", "19"],
           ["200", "13", "14"]])
 
 _T_TWOEVENTS = dict(
@@ -306,10 +306,10 @@ QUESTIONS = [
         "The water was cooler at every depth during the event than in neutral years.",
         "Only the deepest measurement changed between the two sets of years."],
       ans=0,
-      why="The event minus neutral differences are 5, 8, 7 and 1 degrees Celsius at 0, 50, "
-          "100 and 200 meters, so the change is several degrees in the upper water and only "
-          "one degree at 200 meters. ENG-2.C.1 identifies these phenomena with changing ocean "
-          "SURFACE temperatures, and the data show the change concentrated in the upper water."),
+      why="The event minus neutral differences are 7, 6, 4 and 1 degrees Celsius at 0, 50, "
+          "100 and 200 meters, so the change falls steadily with depth and is only one degree "
+          "at 200 meters. ENG-2.C.1 identifies these phenomena with changing ocean SURFACE "
+          "temperatures, and the data show the change concentrated near the surface."),
 
  dict(q="Rainfall in three regions is compared between warm phase years and cool phase "
         "years. Which reading of the table is accurate?",
@@ -564,9 +564,9 @@ QUESTIONS = [
       choices=[
         "Four of the five",
         "Two of the five",
-        "All five",
-        "One of the five",
-        "None of the five"],
+        "All five locations",
+        "Exactly one of the five",
+        "None of them"],
       ans=0,
       why="The departures from 100 percent are 38, 145, 50, 26 and 4 percentage points, so four "
           "exceed twenty and one does not. ENG-2.C.2 states that these phenomena can affect "
