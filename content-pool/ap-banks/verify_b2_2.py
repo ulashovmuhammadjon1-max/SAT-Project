@@ -225,7 +225,7 @@ def check_geometry(module):
     # the 6 to 1 distractor must be the ratio at a side of one, not at a side of four
     assert abs((6 * 1 * 1) / 1 ** 3 - 6) < 1e-12, "the 6 to 1 distractor must be the side-1 ratio"
     print(f"OK  {module.TOPIC[0]} geometry: sphere of radius 3 gives 1 to 1, cube of side 4 "
-          f"gives 1.5 to 1, doubling a side quarters nothing and halves the ratio.")
+          f"gives 1.5 to 1, and doubling a cube's side halves the ratio.")
 
 
 CLAIMS = [
@@ -324,7 +324,7 @@ def _selftest():
         mod.QUESTIONS[13]["table"] = dict(
             headers=b2_2._T_BOXES["headers"],
             rows=[["Model 1", "4 by 4 by 4", "96", "64"],
-                  ["Model 2", "8 by 8 by 2", "288", "128"],
+                  ["Model 2", "8 by 8 by 2", "192", "128"],
                   ["Model 3", "16 by 4 by 1", "168", "64"]])
 
     def heat_trend_broken(mod, claims):
