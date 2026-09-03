@@ -83,9 +83,9 @@ assert _translate(_CHART, "UAA") == [], "a message that stops at once must give 
 assert _translate(_CHART, "AUGUAA") == ["methionine"], "the start codon must contribute a residue"
 
 
-def _sequence_from(stem):
+def _sequence_from(stem, least=6):
     """The RNA sequence the stem states, lifted out rather than retyped."""
-    hits = re.findall(r"(?<![A-Za-z])[ACGU]{6,}(?![A-Za-z])", stem)
+    hits = re.findall(r"(?<![A-Za-z])[ACGU]{%d,}(?![A-Za-z])" % least, stem)
     assert len(hits) == 1, f"expected one RNA sequence in the stem; found {hits}"
     return hits[0]
 
@@ -131,7 +131,7 @@ def q18(table, item):
 
 def q19(table, item):
     chart = _chart(table)
-    codon = _sequence_from(item["q"]) if False else "UAA"
+    codon = _sequence_from(item["q"], least=3)
     assert codon in chart, f"{codon} is not on the chart"
     assert chart[codon] == "stop", f"the chart lists {codon} as {chart[codon]!r}, not a stop"
     stops = [c for c, a in chart.items() if a == "stop"]
@@ -185,7 +185,7 @@ CLAIMS = [
   "EK 6.4.A.3.vii states that the process continues along the mRNA until a stop codon is reached, making the stopping point a feature of the message rather than a count of residues or a shortage of a component."),
  ("newly synthesized protein is released",
   "EK 6.4.A.3.viii states that translation terminates with the release of the newly synthesized protein. A stop codon is part of the mRNA under EK 6.4.A.3.vii and is not appended to a polypeptide."),
- ("Methionine, phenylalanine, glycine, histidine",
+ ("histidine, and then the chain is released",
   "EK 6.4.A.3.ii reads the message in triplets and EK 6.4.A.3.iii deduces each residue from the chart, with EK 6.4.A.3.vii and viii stopping at the stop codon. The table check lifts the sequence out of the stem and runs the chart over it, so the keyed list is produced rather than remembered."),
  ("Four, because the fifth triplet is a stop codon",
   "EK 6.4.A.3.i makes the start codon an amino acid as well as a signal, and EK 6.4.A.3.vii adds no residue for a stop codon. The table check recomputes five triplets and four residues and confirms no distractor value equals the count."),
