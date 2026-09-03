@@ -101,9 +101,45 @@ def notation(module):
           f"{n_spans} hand-written math span(s), nothing raw outside one.")
 
 
-def audit(module, claims, table_checks=None):
-    """The whole gate: notation, then the shared structural and key checks."""
+def arithmetic(module, arith):
+    """Recompute what each quantitative key asserts, from the stem alone.
+
+    ``cg_check`` recomputes only questions that carry a ``table``. Units 5, 6
+    and 7 are full of quantitative items whose data sit in the stem instead --
+    a rate law, an enthalpy sum, an ICE table -- and SCIENCE_BRIEF.md requires
+    those to be recomputed too. ``arith[i]`` is a callable taking the question
+    and returning a sentence saying what it recomputed; it is expected to
+    assert the recomputed value against the KEYED choice, so moving the key
+    breaks it.
+    """
+    for i, fn in sorted(arith.items()):
+        assert 1 <= i <= len(module.QUESTIONS), f"arith[{i}] is out of range"
+        note = fn(module.QUESTIONS[i - 1])
+        assert isinstance(note, str) and len(note.split()) >= 4, (
+            f"{module.TOPIC[0]} q{i}: the arithmetic check must return a sentence "
+            "saying what it recomputed"
+        )
+    print(f"OK  {module.TOPIC[0]} arithmetic: {len(arith)} stem-data question(s) "
+          "recomputed from the stimulus alone.")
+
+
+def keyed(item, value):
+    """Assert ``value`` appears in the keyed choice and in no distractor."""
+    key = item["choices"][item["ans"]]
+    assert cg.contains_phrase(key, value), (
+        f"the recomputed value {value!r} is not in the keyed choice {key!r}"
+    )
+    others = [c for j, c in enumerate(item["choices"])
+              if j != item["ans"] and cg.contains_phrase(c, value)]
+    assert not others, f"the recomputed value {value!r} also appears in {others}"
+    return key
+
+
+def audit(module, claims, table_checks=None, arith=None):
+    """The whole gate: notation, arithmetic, then the structural and key checks."""
     notation(module)
+    if arith:
+        arithmetic(module, arith)
     cg.check(module, claims, table_checks=table_checks)
 
 
@@ -116,18 +152,18 @@ def _mutant(module):
     return m
 
 
-def selftest(module, claims, table_checks=None, extra=()):
+def selftest(module, claims, table_checks=None, arith=None, extra=()):
     """Corrupt each gate on purpose and require every corruption to be caught.
 
     ``extra`` is a sequence of ``(label, mutate)`` pairs for module-specific
-    corruptions -- above all a table cell, which only the module's own
-    ``table_checks`` can be expected to notice.
+    corruptions -- above all a table cell or a stem number, which only the
+    module's own ``table_checks`` and ``arith`` can be expected to notice.
     """
     def must_fail(label, mutate):
         mod, cl = _mutant(module), list(claims)
         try:
             mutate(mod, cl)
-            audit(mod, cl, table_checks=table_checks)
+            audit(mod, cl, table_checks=table_checks, arith=arith)
         except AssertionError as exc:
             print(f"  control OK  {label}: {str(exc)[:88]}")
             return
