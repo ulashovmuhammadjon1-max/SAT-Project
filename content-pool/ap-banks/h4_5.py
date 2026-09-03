@@ -378,8 +378,7 @@ QUESTIONS = [
         "product and atoms are conserved",
         "10.0 g, because only the solid reactant contributes mass to a solid "
         "product",
-        "15.0 g, because gases always add exactly half of their mass to a "
-        "solid product",
+        "12.5 g, because a gas adds only half of its mass to a solid product",
         "10.0 g, because the gas escapes once it has caused the reaction to "
         "occur",
         "Neither, because the mass of a product cannot be predicted from the "
