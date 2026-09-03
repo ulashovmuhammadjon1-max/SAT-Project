@@ -517,4 +517,20 @@ QUESTIONS = [
       why="Each clause of the keyed summary is one of the framework's three statements: "
           "the definition, the urban sources, and the effects on animals in ecological "
           "systems. Every rejected summary contradicts at least one of them."),
+
+ dict(q="A team wants to distinguish damaged hearing from physiological stress in a "
+        "group of people working near a loud machine. Which measurement would show "
+        "damaged hearing specifically?",
+      choices=[
+        "The quietest sound each worker can detect, measured before the period of "
+        "exposure and again afterward",
+        "The stress hormone concentration in each worker's blood at the end of the shift",
+        "Each worker's blood pressure recorded once during the shift",
+        "The sound level at the machine, recorded without measuring any worker",
+        "A survey asking each worker how annoying the machine is"],
+      ans=0,
+      why="Hearing loss is a change in what a person can hear, so the measurement that "
+          "shows it is the faintest detectable sound compared before and after exposure. "
+          "Hormones and blood pressure are measures of the stress the framework names "
+          "separately, and a sound level or a survey measures neither effect."),
 ]
