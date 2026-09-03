@@ -142,10 +142,23 @@ def check(module, claims, table_checks=None, per_topic=30, n_choices=5):
         # assertion sits inside a second option, a student who accepts the
         # shorter one has no ground to reject the longer, and the item has two
         # defensible answers.
+        # IN MATH, STRUCTURE IS THE MEANING, so this test runs on the RAW
+        # string when a choice carries a math span. normalize() strips braces
+        # and backslashes, which flattens \frac{a}{b} and \frac{b}{a} to the
+        # same token bag -- it reported Chemistry 8.3 q2's five DIFFERENT Ka
+        # expressions as containing one another. Nothing there implies anything
+        # else; only the normalizer had lost the difference.
+        raw_math = [("\\(" in c or "\\[" in c) for c in ch]
         norms = [normalize(c) for c in ch]
         for a in range(n_choices):
             for b in range(n_choices):
-                if a != b and norms[a] and norms[a] in norms[b]:
+                if a == b:
+                    continue
+                if raw_math[a] or raw_math[b]:
+                    hit = ch[a] and ch[a].strip() in ch[b]
+                else:
+                    hit = norms[a] and norms[a] in norms[b]
+                if hit:
                     raise AssertionError(
                         f"{code} q{i}: choice {a} is contained in choice {b}: "
                         f"{ch[a]!r} inside {ch[b]!r}"

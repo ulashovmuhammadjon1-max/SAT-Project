@@ -466,16 +466,17 @@ QUESTIONS = [
           "the nearest rejected option."),
 
  dict(q="Using the tabulated valence electron counts, which two elements would be "
-        "expected to combine in a one-to-one ratio in an ionic compound?",
+        "expected to combine in a ratio of one metal ion to two nonmetal ions?",
       table=_T_VALENCE,
-      choices=["Magnesium and sulfur", "Sodium and sulfur",
-               "Aluminum and chlorine", "Sodium and chlorine, in a two-to-one ratio",
-               "Magnesium and chlorine"],
+      choices=["Magnesium and chlorine", "Sodium and chlorine",
+               "Sodium and sulfur", "Aluminum and chlorine",
+               "Magnesium and sulfur"],
       ans=0,
-      why="EK 1.8.A.3 turns the tabulated valence counts into typical charges of plus "
-          "two and minus two for that pair, and equal magnitudes balance one for one "
-          "under EK 4.2.A.2. Every other pairing here has charges of unequal magnitude "
-          "and so cannot combine one to one."),
+      why="EK 1.8.A.3 turns the tabulated valence counts into typical charges, and EK "
+          "4.2.A.2's charge balance makes the combining ratio the inverse ratio of the "
+          "charge magnitudes. A charge of plus two against a charge of minus one is the "
+          "only pairing in the table that gives one to two; two of the rejected pairings "
+          "balance one to one and the others give two to one and one to three."),
 
  dict(q="Why do the elements of the first column become more reactive as metals going "
         "down the column?",
