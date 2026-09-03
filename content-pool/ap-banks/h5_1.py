@@ -384,7 +384,7 @@ QUESTIONS = [
           "oxygen rate."),
 
  dict(q="A rate expression for the reaction 2 A → B is sometimes written as "
-        r"\( \mathrm{rate} = -\frac{1}{2}\frac{\Delta[\mathrm{A}]}{\Delta t} \) . "
+        r"\( \mathrm{rate} = -\frac{1}{2}\frac{\Delta[\mathrm{A}]}{\Delta t} \). "
         "Why does the expression carry the factor of one half?",
       choices=[
         "So that the single reported rate agrees with the rate of formation of "
