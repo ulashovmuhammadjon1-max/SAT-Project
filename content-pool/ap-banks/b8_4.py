@@ -224,8 +224,8 @@ QUESTIONS = [
 
  dict(q="Using the same table, what happens to the change in population size per unit time as the population rises from the middle of the range toward the carrying capacity?",
    table=_T_LOG,
-   choices=["It falls", "It rises", "It stays the same", "It rises and then falls again",
-            "It becomes negative"], ans=0,
+   choices=["It falls", "It continues to rise", "It stays the same",
+            "It rises and then falls again", "It becomes negative"], ans=0,
    why="The logistic equation's last factor shrinks toward zero as N approaches K, and beyond the midpoint that shrinking outweighs the growth of the term rising with N. The table records exactly that fall across its upper sizes."),
 
  dict(q="What do the values in that table show about a population approaching its carrying capacity?",
@@ -240,7 +240,7 @@ QUESTIONS = [
 
  dict(q="The table lists four limits on the growth of a population and records whether the strength of each changes as the population becomes more crowded. How many of the four are density-dependent limits?",
    table=_T_FACTORS,
-   choices=["Three", "One", "Two", "Four", "None"], ans=0,
+   choices=["Three", "One", "Two", "Four", "Zero"], ans=0,
    why="EK 8.4.A.2 names density-dependent factors without listing any, so the classification must rest on the division the term itself makes. Counting the rows the table records as changing in strength with crowding gives the number."),
 
  dict(q="Which of the limits listed in that table is a density-independent limit?",
