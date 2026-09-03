@@ -159,7 +159,7 @@ CLAIMS = [
   "STB-2.J.2 lists transportation among the urban sources of noise pollution, and road traffic is transportation. The pile driver is construction, the stamping press is industrial activity, and the air conditioner and rooftop fan are domestic and building activity."),
  ("physiological stress that the definition uses",
   "STB-2.J.1 defines noise pollution as sound at levels high enough to cause physiological stress and hearing loss, so raised blood pressure and disturbed sleep are the stress half of the definition. Construction is one of the urban sources named in STB-2.J.2."),
- ("four separate effects from damaged hearing",
+ ("as separate effects from damaged hearing",
   "STB-2.J.3 lists four effects on animals, only one of which is damaged hearing, so an effect on a population does not require hearing loss. The framework sets no fixed level below which animals are unaffected and confines the effects to no one kind of species."),
  ("same on days when the factory is shut",
   "Suggested skill 3.C. If the measured sound is unchanged when the suspected source stops, that source is not accounting for it. Building size, appearance, employment and construction date bear on none of the measurements."),
@@ -191,10 +191,10 @@ CLAIMS = [
   "Suggested skill 3.C with STB-2.J.2, which names construction among the urban sources. The claim is that removing nighttime construction lowers the noise, so what supports it is evidence identifying construction as the dominant nighttime contributor; preferences, site counts, costs and opinions elsewhere do not."),
  ("adds masking of communication and hunting sounds",
   "STB-2.J.1 names physiological stress and hearing loss, and STB-2.J.3 separately lists stress, masking, damaged hearing and changes to migratory routes for animals in ecological systems. Both sets exist in the framework and they are not identical."),
- ("quietest sound each worker can detect",
-  "STB-2.J.1 names physiological stress and hearing loss as two distinct harms, so distinguishing them requires a measure of hearing itself, which is the faintest detectable sound compared across the exposure. A hormone or a blood pressure measures the stress half, and a sound level or a survey measures neither."),
  ("Sound loud enough to cause physiological stress and hearing loss, produced in urban areas",
   "Each clause is one of the framework's three statements: the definition in STB-2.J.1, the urban sources in STB-2.J.2, and the effects on animals in STB-2.J.3. Every rejected summary contradicts at least one of them."),
+ ("quietest sound each worker can detect",
+  "STB-2.J.1 names physiological stress and hearing loss as two distinct harms, so distinguishing them requires a measure of hearing itself, which is the faintest detectable sound compared across the exposure. A hormone or a blood pressure measures the stress half, and a sound level or a survey measures neither."),
 ]
 
 TABLE_CHECKS = {4: q4, 5: q5, 6: q6, 7: q7, 8: q8, 9: q9}
