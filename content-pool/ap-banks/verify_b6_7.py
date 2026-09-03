@@ -185,12 +185,31 @@ def q18(table, item):
             f"{zygote:.0f} chromosomes in the zygote")
 
 
+# The descriptive table is fixed stimulus, so the check asserts its exact
+# wording rather than searching it for keywords. A keyword search passes on a
+# cell that has acquired extra text, which is how a table check ends up not
+# reading its table -- the negative control caught this file doing it.
+_CHANGES = {"one nucleotide substituted for a different nucleotide",
+            "one nucleotide deleted from the sequence"}
+_EFFECTS = {"one amino acid differs from the usual one",
+            "no amino acid differs from the usual sequence",
+            "a stop appears earlier than usual where an amino acid had been",
+            "every amino acid after the site of the change differs"}
+
+
 def _mut_table(table):
     """Each described mutation mapped onto the framework's categories."""
     out = {}
+    seen_effects = set()
     for r in _rows(table):
-        change = r["change to the dna sequence"]
-        effect = r["effect on the amino acid sequence of the protein"]
+        change = cg.normalize(r["change to the dna sequence"])
+        effect = cg.normalize(r["effect on the amino acid sequence of the protein"])
+        assert change in _CHANGES, f"unrecognised change description {change!r}"
+        assert effect in _EFFECTS, f"unrecognised effect description {effect!r}"
+        assert effect not in seen_effects, f"the effect {effect!r} is recorded twice"
+        seen_effects.add(effect)
+        assert re.fullmatch(r"mutation [0-9]+", cg.normalize(r["mutation"])), \
+            f"row label {r['mutation']!r} is not of the form 'Mutation 1'"
         substituted = cg.contains_phrase(change, "substituted")
         deleted = cg.contains_phrase(change, "deleted")
         assert substituted != deleted, f"the change {change!r} is neither clearly a substitution nor a deletion"
