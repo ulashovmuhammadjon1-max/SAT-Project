@@ -135,8 +135,8 @@ QUESTIONS = [
       ans=0,
       why="Dividing each mass by its own molar mass gives 2.00 moles of carbon and 4.00 "
           "moles of hydrogen, a ratio of one to two. EK 1.3.A.3 requires the LOWEST "
-          "whole number ratio, so the doubled and sixfold forms are rejected even "
-          "though they carry the same proportion."),
+          "whole number ratio, so the doubled, tripled and sixfold forms are rejected "
+          "even though every one of them carries the same proportion."),
 
  dict(q="Some pure substances are made of individual molecules, while others consist "
         "of atoms or ions held together in fixed proportions. Which statement about "
@@ -235,9 +235,9 @@ QUESTIONS = [
       choices=["NO2", "N2O", "NO3", "N4O2", "N3O4"],
       ans=0,
       why="Dividing each mass by its own molar mass gives 0.500 moles of nitrogen and "
-          "1.00 mole of oxygen, a ratio of one to two. The doubled form carries the "
-          "same proportion but is not the lowest whole number ratio EK 1.3.A.3 "
-          "requires."),
+          "1.00 mole of oxygen, a ratio of one to two. Reversing that ratio gives the "
+          "rejected two to one form, and doubling it gives another rejected form that "
+          "is not the lowest whole number ratio EK 1.3.A.3 requires."),
 
  dict(q="A 50.0 gram sample of a pure compound is known to be 40.0 percent carbon by "
         "mass. What mass of carbon does the sample contain?",
@@ -381,8 +381,9 @@ QUESTIONS = [
       ans=0,
       why="The oxygen taken up is the difference between the two recorded masses, 4.8 "
           "grams, which is 0.300 moles against 0.200 moles of iron, a ratio of two to "
-          "three. Forgetting to subtract and treating the whole product mass as oxygen "
-          "is the error that leads away from this answer."),
+          "three. Forgetting to subtract and treating the whole 16.0 grams of product "
+          "as oxygen gives 1.00 mole against 0.200, which is the rejected one to five "
+          "formula."),
 
  dict(q="Compound T in the table contains only carbon and oxygen. What is its empirical "
         "formula?",
@@ -391,8 +392,9 @@ QUESTIONS = [
       ans=0,
       why="From a 100 gram sample, 27.3 grams of carbon is about 2.28 moles and 72.7 "
           "grams of oxygen is about 4.54 moles, a ratio very close to one to two. "
-          "Comparing the two percentages directly rather than the mole amounts is what "
-          "makes the one to one form look plausible."),
+          "Reversing that ratio, or reading the mass proportion of roughly one to "
+          "two-and-two-thirds as though it were an atom ratio, produces the rejected "
+          "formulas."),
 
  dict(q="A compound has the empirical formula CH2O, whose unit has a molar mass of 30.0 "
         "grams per mole. A second compound has the same empirical formula but a molar "
