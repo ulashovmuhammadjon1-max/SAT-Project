@@ -306,11 +306,15 @@ QUESTIONS = [
         "proportion, and what role does the course framework give it?",
       table=_T_COMPOSITION,
       choices=[
-        "Phospholipid, which forms the structural framework of the membrane",
-        "Protein, which forms the structural framework of the membrane",
-        "Cholesterol, which forms the structural framework of the membrane",
-        "Glycoprotein, which forms the structural framework of the membrane",
-        "Glycolipid, which forms the structural framework of the membrane"],
+        "Phospholipid, which the framework identifies as the membrane's structural "
+        "framework",
+        "Protein, which the framework says is embedded in a framework made of something "
+        "else",
+        "Cholesterol, which the framework identifies as the membrane's structural "
+        "framework",
+        "Glycoprotein, which the framework says forms the bulk of every membrane",
+        "Glycolipid, which the framework identifies as the membrane's structural "
+        "framework"],
       ans=0,
       why="The phospholipid row carries the largest percentage in the table, and EK "
           "2.3.B.1 states that plasma membranes consist of a structural framework of "
