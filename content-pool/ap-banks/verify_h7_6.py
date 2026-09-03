@@ -54,11 +54,11 @@ def q12(table, item):
     ks = cg.col(table, KNIT)
     product = ks[0] * ks[1]
     assert abs(product - 2.0) < 1e-9, f"product of the two constants is {product}"
-    assert abs(sum(ks) - 405) < 1e-9, "the 405 distractor must be the sum of the same two"
+    assert abs(max(ks) - 400) < 1e-9, "the 400 distractor must be the larger tabulated value"
     assert abs(ks[1] / ks[0] - 80000) < 1e-6, "the 80,000 distractor must be the quotient"
     h.shows(item, "2.0")
-    return (f"{ks[0]:g} times {ks[1]:g} is {product:g}; the sum is {sum(ks):g} and the "
-            "quotient is 80,000")
+    return (f"{ks[0]:g} times {ks[1]:g} is {product:g}; the larger value alone is "
+            f"{max(ks):g} and the quotient is 80,000")
 
 
 def q19(table, item):
