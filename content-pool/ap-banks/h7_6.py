@@ -183,12 +183,12 @@ QUESTIONS = [
  dict(q="Using the table, what is the equilibrium constant for the overall reaction "
         "N2(g) + 2 O2(g) to 2 NO2(g), obtained by adding reactions I and II?",
       table=_T_NITROGEN,
-      choices=["K = 2.0", "K = 405", "K = 80,000", "K = 0.50", "K = 0.0020"],
+      choices=["K = 2.0", "K = 400", "K = 80,000", "K = 0.50", "K = 0.0020"],
       ans=0,
       why="Adding the two equations cancels the 2 NO(g) that is a product of the first "
           "and a reactant of the second, giving the overall equation, so EK 7.6.A.3 "
-          "makes the overall constant the product: 0.0050 times 400 is 2.0. Summing the "
-          "constants gives 405 and dividing them gives 80,000."),
+          "makes the overall constant the product: 0.0050 times 400 is 2.0. Keeping only "
+          "the larger constant gives 400 and dividing one by the other gives 80,000."),
 
  dict(q="An overall reaction is the sum of two steps and has an equilibrium constant of "
         "60. The first step has an equilibrium constant of 12. What is the equilibrium "
