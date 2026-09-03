@@ -468,20 +468,24 @@ QUESTIONS = [
           "2.4.A.2's free-passage category nor among the ions that statement routes "
           "through proteins."),
 
- dict(q="The hydrophobic interior that the course framework blames for selective "
-        "permeability is made up of which part of the membrane?",
+ dict(q="An artificial membrane is built from molecules that are polar along their "
+        "entire length, so the membrane has no hydrophobic interior at all. Which "
+        "prediction follows most directly from the course framework?",
       choices=[
-        "The fatty acid regions of the phospholipids, which face each other in the "
-        "interior",
-        "The phosphate regions of the phospholipids, which face the aqueous environments",
-        "The carbohydrate chains of the glycoproteins",
-        "The cholesterol embedded among the phospholipids",
-        "The cell wall lying outside the membrane"],
+        "It will lose its selective permeability, because that property is stated to "
+        "result from having a hydrophobic interior.",
+        "It will keep its selective permeability, because selectivity depends on the "
+        "embedded proteins rather than on the interior.",
+        "It will become impermeable to every substance, including small nonpolar "
+        "molecules.",
+        "It will admit ions but exclude small nonpolar molecules.",
+        "It will behave exactly as before, because the interior plays no part in what "
+        "crosses."],
       ans=0,
-      why="EK 2.4.A.1 attributes selective permeability to the membrane's hydrophobic "
-          "interior and EK 2.4.A.3 calls the excluding structures the nonpolar hydrocarbon "
-          "tails of phospholipids, which EK 2.3.A.1 places facing each other within the "
-          "interior of the membrane."),
+      why="EK 2.4.A.1 states that selective permeability is the result of the plasma "
+          "membrane having a hydrophobic interior, so removing that interior removes the "
+          "stated cause of the property. EK 2.4.A.2 and EK 2.4.A.3 make the interior what "
+          "sorts substances, not what blocks all of them."),
 
  dict(q="A membrane is found to admit nitrogen and carbon dioxide readily, water in small "
         "amounts, and sodium ions only where particular proteins are present. Which term "

@@ -90,10 +90,14 @@ def _is_ds_dna(table, lab):
 
 
 def q15(table, item):
-    rna = [lab for lab in cg.labels(table)
-           if cg.cell(table, lab, U) > 0 and cg.cell(table, lab, T) == 0]
-    assert rna == ["Sample 2"], f"rows with uracil and no thymine: {rna}"
-    return f"exactly one row carries uracil and no thymine, {rna[0]}, which is EK 1.6.A.4 ii's RNA case"
+    # how many samples carry each base at all
+    present = {name: sum(1 for lab in cg.labels(table) if cg.cell(table, lab, name) > 0)
+               for name in (A, T, G, C, U)}
+    rare = sorted(name for name, n in present.items() if n == 1)
+    assert rare == [U], f"bases present in exactly one sample: {rare}"
+    assert present[T] > 1, "thymine must appear in more than one sample, or the item has two answers"
+    return (f"counts of samples containing each base are "
+            f"{ {k.split(' ')[0]: v for k, v in present.items()} }; only uracil appears once")
 
 
 def q16(table, item):
@@ -206,8 +210,8 @@ CLAIMS = [
   "EK 1.6.A.4 iii, near verbatim. The framework says typically rather than always, which is why the options asserting a universal rule overstate it."),
  ("molecular structure of specific nucleotides",
   "The exclusion statement printed under EK 1.6.A.2 puts the molecular structure of specific nucleotides beyond the scope of the AP Exam. The rejected options restate content EK 1.6.A.1 to EK 1.6.A.4 do require."),
- ("Sample 2",
-  "Recomputed in q15 above: exactly one row carries uracil and no thymine, which is the RNA side of EK 1.6.A.4 ii."),
+ ("Uracil",
+  "Recomputed in q15 above: of the five base columns only uracil is nonzero in a single sample, and thymine is checked to appear in more than one so the item has one answer. EK 1.6.A.4 ii is why uracil is the scarce one -- it places thymine in DNA and uracil in RNA, and only one sample is a nucleic acid of the second kind."),
  ("Sample 1 and Sample 3",
   "Recomputed in q16 above. EK 1.6.A.3 pairs every adenine with a thymine and every cytosine with a guanine, so a double-stranded DNA must show equal adenine and thymine shares and equal cytosine and guanine shares; exactly two rows do, and both sum to 100."),
  ("Sample 4, because its adenine and thymine",

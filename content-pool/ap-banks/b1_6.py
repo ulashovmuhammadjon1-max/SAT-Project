@@ -237,14 +237,14 @@ QUESTIONS = [
           "1.6.A.4 do require."),
 
  dict(q="The table gives the base composition of four purified nucleic acid samples. "
-        "Which sample is RNA?",
+        "Which nitrogenous base is present in exactly one of the four samples?",
       table=_T_BASES,
-      choices=["Sample 2", "Sample 1", "Sample 3", "Sample 4",
-               "The composition cannot distinguish RNA from DNA."],
+      choices=["Uracil", "Adenine", "Guanine", "Cytosine", "Thymine"],
       ans=0,
-      why="EK 1.6.A.4 ii places thymine in DNA and uracil in RNA, so the sample carrying "
-          "uracil and no thymine is the RNA. Exactly one row of the table fits, which is "
-          "why the composition does distinguish them."),
+      why="Reading down the five base columns, four of them are nonzero in more than one "
+          "sample and only one is nonzero in a single sample. EK 1.6.A.4 ii is why that "
+          "base is the scarce one: it places thymine in DNA and uracil in RNA, and only "
+          "one of the four samples is a nucleic acid of the second kind."),
 
  dict(q="Which samples in the table have base compositions consistent with a "
         "double-stranded DNA molecule?",

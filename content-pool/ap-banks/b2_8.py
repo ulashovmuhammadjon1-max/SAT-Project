@@ -175,20 +175,19 @@ QUESTIONS = [
           "so the energy supply alone is not sufficient. EK 2.4.A.3 makes the nonpolar "
           "hydrocarbon tails prevent ions from crossing the interior directly."),
 
- dict(q="How does active transport differ from passive transport in what it needs?",
+ dict(q="The course framework specifies what metabolic energy is required to move "
+        "actively across the membrane. What does it name?",
       choices=[
-        "Active transport needs a direct input of metabolic energy and passive transport "
-        "does not.",
-        "Passive transport needs a direct input of metabolic energy and active transport "
-        "does not.",
-        "Active transport needs a selectively permeable membrane and passive transport "
-        "does not.",
-        "Passive transport needs membrane proteins and active transport does not.",
-        "Neither process needs anything beyond a concentration difference."],
+        "Molecules and ions alike",
+        "Molecules only, never ions",
+        "Ions only, never molecules",
+        "Water only, and only through aquaporins",
+        "Only substances that are already more concentrated inside the cell"],
       ans=0,
-      why="EK 2.8.A.1 and EK 2.5.A.3 both require the direct input of energy for active "
-          "transport, while EK 2.5.A.2 defines passive transport as occurring without "
-          "it. Selective permeability is common ground under EK 2.5.A.1."),
+      why="EK 2.8.A.1 states that metabolic energy is required for active transport of "
+          "molecules and ions across the membrane, naming both together. Water through "
+          "aquaporins is EK 2.6.A.3's facilitated route, which EK 2.6.A.2 says takes no "
+          "energy input at all."),
 
  dict(q="Both facilitated diffusion and active transport use membrane proteins. What "
         "separates them in the course framework?",
