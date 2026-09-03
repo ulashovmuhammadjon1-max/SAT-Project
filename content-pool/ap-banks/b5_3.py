@@ -150,7 +150,7 @@ QUESTIONS = [
      "1 in 4, because only the homozygous dominant genotype carries the A allele",
      "1 in 2, because each parent transmits the A allele half the time",
      "1 in 16, because the probability from each parent is multiplied",
-     "1 in 1, because a dominant allele is always transmitted when a parent carries one"], ans=0,
+     "It is certain, because a dominant allele is always transmitted when a parent carries one"], ans=0,
    why="The CED's law of probability for mutually exclusive outcomes gives P(A or B) = P(A) + P(B). A cross of two heterozygotes gives one quarter AA and one half Aa; these are mutually exclusive genotypes, and one quarter plus one half is three quarters."),
  dict(q="A biologist records that a rabbit has black fur and, by breeding it, determines that it carries one allele for black fur and one for brown fur. Which of these two records is the rabbit's phenotype, and which is its genotype?",
    choices=[
