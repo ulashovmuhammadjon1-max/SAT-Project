@@ -141,7 +141,12 @@ QUESTIONS = [
  dict(q="The table gives a two-step mechanism. Which species is the reaction "
         "intermediate?",
       table=_M_NO2CO,
-      choices=["NO3", "NO2", "CO", "CO2", "NO"],
+      choices=[
+        "NO3, the nitrate radical",
+        "NO2, nitrogen dioxide",
+        "CO, carbon monoxide",
+        "CO2, carbon dioxide",
+        "NO, nitrogen monoxide"],
       ans=0,
       why="EK 5.7.A.3 makes an intermediate the species produced by one "
           "elementary step and consumed by another. Reading the two tabulated "
@@ -166,7 +171,12 @@ QUESTIONS = [
  dict(q="The table gives a two-step mechanism proposed for the destruction of "
         "ozone. Which species is the reaction intermediate?",
       table=_M_CFC,
-      choices=["ClO", "Cl", "O3", "O2", "O"],
+      choices=[
+        "ClO, the chlorine monoxide radical",
+        "Cl, the chlorine atom",
+        "O3, ozone",
+        "O2, dioxygen",
+        "O, the oxygen atom"],
       ans=0,
       why="EK 5.7.A.3 makes an intermediate the species produced by an earlier "
           "elementary step and consumed by a later one, which is settled by "
@@ -175,7 +185,12 @@ QUESTIONS = [
  dict(q="In that same tabulated mechanism, which species is consumed in the "
         "first step and regenerated in the second?",
       table=_M_CFC,
-      choices=["Cl", "ClO", "O3", "O2", "O"],
+      choices=[
+        "Cl, the chlorine atom",
+        "ClO, the chlorine monoxide radical",
+        "O3, ozone",
+        "O2, dioxygen",
+        "O, the oxygen atom"],
       ans=0,
       why="EK 5.7.A.1 lists catalysts among the components of a mechanism, and "
           "EK 5.11.A.2 describes a catalyst as frequently consumed in one step "
@@ -200,7 +215,12 @@ QUESTIONS = [
  dict(q="The table gives a two-step mechanism for the decomposition of hydrogen "
         "peroxide. Which species is the reaction intermediate?",
       table=_M_IODIDE,
-      choices=["IO-", "I-", "H2O2", "H2O", "O2"],
+      choices=[
+        "IO-, the hypoiodite ion",
+        "I-, the iodide ion",
+        "H2O2, hydrogen peroxide",
+        "H2O, water",
+        "O2, dioxygen"],
       ans=0,
       why="EK 5.7.A.3 makes an intermediate the species produced by one step "
           "and consumed by another, and only one tabulated species is formed "
@@ -225,7 +245,12 @@ QUESTIONS = [
  dict(q="The table gives a two-step mechanism proposed for the formation of "
         "nitrogen dioxide. Which species is the reaction intermediate?",
       table=_M_NO_O2,
-      choices=["N2O2", "NO", "O2", "NO2", "There is no intermediate"],
+      choices=[
+        "N2O2, the nitrogen monoxide dimer",
+        "NO, nitrogen monoxide",
+        "O2, dioxygen",
+        "NO2, nitrogen dioxide",
+        "There is no intermediate in this mechanism"],
       ans=0,
       why="EK 5.7.A.3 makes an intermediate the species produced by an earlier "
           "step and consumed by a later one, so the species formed in the first "
@@ -403,7 +428,12 @@ QUESTIONS = [
  dict(q="For that same tabulated mechanism, which species is the reaction "
         "intermediate?",
       table=_M_ICL,
-      choices=["HI", "ICl", "H2", "HCl", "I2"],
+      choices=[
+        "HI, hydrogen iodide",
+        "ICl, iodine monochloride",
+        "H2, dihydrogen",
+        "HCl, hydrogen chloride",
+        "I2, diiodine"],
       ans=0,
       why="EK 5.7.A.3 makes an intermediate the species produced by an earlier "
           "elementary step and consumed by a later one, which is settled by "
