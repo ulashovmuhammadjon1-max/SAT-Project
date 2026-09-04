@@ -126,7 +126,7 @@ QUESTIONS = [
  dict(q="For the synthesis N2(g) + 3 H2(g) to 2 NH3(g), a vessel at equilibrium gives the "
         "tabulated concentrations. What is the value of Kc?",
       table=_T_NH3,
-      choices=["200", "20", "2.0", "0.0050", "10"],
+      choices=["200", "20.0", "2.0", "0.0050", "10"],
       ans=0,
       why="EK 7.4.A.1 builds the constant from the tabulated equilibrium concentrations, "
           "and EK 7.3.A.1 cubes the hydrogen concentration and squares the ammonia "
@@ -182,7 +182,7 @@ QUESTIONS = [
       choices=["0.25", "0.125", "2.0", "0.50", "8.0"],
       ans=0,
       why="EK 7.4.A.1 speaks of the CONCENTRATIONS at equilibrium, so each tabulated mole "
-          "figure has to be divided by the volume of the vessel before it enters the "
+          "count has to be divided by the volume of the vessel before it enters the "
           "expression. Using the moles directly gives half the correct value, because the "
           "expression has two species below the line and only one above it."),
 
