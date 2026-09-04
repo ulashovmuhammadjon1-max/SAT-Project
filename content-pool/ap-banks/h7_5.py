@@ -43,10 +43,10 @@ TOPIC = ("7.5", "Magnitude of the Equilibrium Constant", 7)
 
 _T_K = dict(
     headers=["Reaction", "Equilibrium constant at 298 K"],
-    rows=[["I", "\\( 1 \\times 10^{15} \\)"],
-          ["II", "\\( 1 \\times 10^{-12} \\)"],
-          ["III", "\\( 2.0 \\)"],
-          ["IV", "\\( 1 \\times 10^{6} \\)"]])
+    rows=[["W", "\\( 1 \\times 10^{15} \\)"],
+          ["X", "\\( 1 \\times 10^{-12} \\)"],
+          ["Y", "\\( 2.0 \\)"],
+          ["Z", "\\( 1 \\times 10^{6} \\)"]])
 
 _T_TWO = dict(
     headers=["Reaction", "Equilibrium constant at 500 K"],
@@ -118,8 +118,8 @@ QUESTIONS = [
  dict(q="The table gives equilibrium constants for four reactions at the same temperature. "
         "Which reaction proceeds essentially to completion?",
       table=_T_K,
-      choices=["Reaction I", "Reaction II", "Reaction III", "Reaction IV",
-               "Reactions I and IV equally"],
+      choices=["Reaction W", "Reaction X", "Reaction Y", "Reaction Z",
+               "Reactions W and Z equally"],
       ans=0,
       why="EK 7.5.A.1 attaches proceeding essentially to completion to a very large K, and "
           "the tabulated constants have a single largest value, many orders of magnitude "
@@ -128,7 +128,7 @@ QUESTIONS = [
 
  dict(q="Using the same table of four constants, which reaction barely proceeds at all?",
       table=_T_K,
-      choices=["Reaction II", "Reaction I", "Reaction III", "Reaction IV",
+      choices=["Reaction X", "Reaction W", "Reaction Y", "Reaction Z",
                "None of them, since all four have positive constants"],
       ans=0,
       why="EK 7.5.A.1 attaches barely proceeding to a very small K, and one tabulated "
@@ -138,7 +138,7 @@ QUESTIONS = [
  dict(q="Using the same table of four constants, in which reaction's equilibrium mixture "
         "is the ratio of products to reactants smallest?",
       table=_T_K,
-      choices=["Reaction II", "Reaction I", "Reaction III", "Reaction IV",
+      choices=["Reaction X", "Reaction W", "Reaction Y", "Reaction Z",
                "The ratio is the same in all four"],
       ans=0,
       why="Learning objective 7.5.A links the size of the constant to the relative "
