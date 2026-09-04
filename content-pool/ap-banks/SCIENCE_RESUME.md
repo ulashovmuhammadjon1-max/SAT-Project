@@ -10,8 +10,21 @@ up with no memory of this one.
 | subject | prefix | topics | typeset? | state |
 |---|---|---|---|---|
 | Biology | `b` | 60 | no (prose) | **DONE — 1,800 questions LIVE in production** |
-| Chemistry | `h` | 91 | no — hand-written spans | in progress, 3 agents |
-| Environmental Science | `e` | 99 | no (prose) | in progress, 3 agents |
+| Chemistry | `h` | 91 | no — hand-written spans | 33 authored, 6 agents running |
+| Environmental Science | `e` | 99 | no (prose) | 37 authored, 6 agents running |
+
+Agent territories, so a restart does not double-assign. Each is disjoint by
+unit, which is what stopped siblings converging on the same question during
+the Social Sciences build:
+
+| agent | subject | units | topics |
+|---|---|---|---|
+| H-A | Chemistry | 2, 3 | 2.3-2.7, 3.1-3.13 (18) + validate `h2_2` |
+| H-B | Chemistry | 4, 5, 6 | 4.1-4.3, 5.6-5.11, 6.1-6.9 (18) |
+| H-C | Chemistry | 7, 8, 9 | 7.1-7.5, 8.6-8.11, 9.1-9.11 (22) |
+| E-A | Env Sci | 2, 3, 4 | 2.2-2.7, 3.1-3.9, 4.1-4.6 (21) |
+| E-B | Env Sci | 5, 6 | 5.10-5.17, 6.1-6.13 (21) + validate `e5_9` |
+| E-C | Env Sci | 8, 9 | 8.6-8.15, 9.1-9.10 (20) |
 
 Physics 1, Physics 2, Physics C Mechanics and Physics C E&M are **out of
 scope**. They stay COMING_SOON in `src/lib/ap/catalog.ts`. Their CED dumps are
@@ -39,10 +52,33 @@ for subj, pre in (("BIOLOGY","b"), ("CHEMISTRY","h"), ("ENV_SCI","e")):
 PY
 ```
 
-At the last check Biology was **38 of 60 authored, 37 verified**, with four
-agents running. A module with no verifier is a module with **no gate** — it was
-in flight when its agent stopped. Import it, count its questions, and write the
-verifier before exporting.
+A module with no verifier is a module with **no gate** — it was in flight when
+its agent stopped. Import it, count its questions, and write the verifier
+before exporting.
+
+**A stopped agent leaves damage, not just absence, and the counter cannot see
+it.** Four modules were left orphaned by the last session limit and all four
+had 30 well-formed questions, so nothing about them looked wrong. Running
+their verifiers found three real defects:
+
+- `h8_5`'s diprotic titration table was sampled every 10.00 mL and climbed at a
+  near-constant rate, behind a stem asking the student to read **two separate
+  pH jumps** off it. There was nothing to read. The table was resampled around
+  each equivalence volume.
+- That module's own check counted raw pH differences between adjacent rows,
+  which measures how finely the table was sampled as much as it measures
+  chemistry. It measures slope now, and merges contiguous steep intervals so
+  one jump straddling an equivalence volume counts once.
+- `verify_e2_1` had an anchor that matched the **swapped distractor** as well
+  as the key — precisely the ambiguity anchors exist to catch. When a
+  distractor is the swap, the anchor has to carry both clauses.
+
+And one of that file's negative controls **could not fail**: it lowered a
+generalist count to invert a specialist-first ordering, but the specialists had
+already fallen 100%, the maximum, so no change to the other column could
+outpace them. It passed silently while proving nothing. Swapping the two
+columns is what actually inverts the claim. Check that your mutation really
+violates the thing you are asserting.
 
 ## Resume order
 
