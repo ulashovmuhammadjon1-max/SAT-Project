@@ -46,6 +46,15 @@ ON THE DATA. Bond lengths and bond energies are of realistic magnitude, but no
 item turns on recalling one: every key follows from comparisons WITHIN the
 item's own table.
 
+WHAT THE GATE FOUND WHEN IT WAS FINALLY WRITTEN. This module was left with 30
+questions and no verifier, so nothing had ever checked it. verify_h2_2.py found
+four items in which one choice was wholly contained in another -- a student who
+accepted the shorter option had no ground to reject the longer, so the item had
+two defensible answers -- two stems that opened identically, and one key that
+rested on an attraction/repulsion balance the 2.2 essential knowledge never
+states. All six are fixed here; the key in question was rewritten onto EK
+2.2.A.1's own definition of the equilibrium bond length.
+
 NOTATION. Energies and distances are plain prose with units written out.
 Negative values are written with a hyphen inside the table cells, which the
 notation gate permits because a cell is not prose.

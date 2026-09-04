@@ -192,8 +192,8 @@ QUESTIONS = [
       ans=0,
       why="EK 7.1.A.3 states that the forward and reverse processes continue to occur at "
           "equal rates. The tabulated rates converge on a common nonzero value and stay "
-          "there, which is the dynamic picture the framework insists on; rates of zero "
-          "would describe a system in which nothing is happening at all."),
+          "there, which is the dynamic state the framework insists on; rates of zero would "
+          "describe a system in which nothing is happening at all."),
 
  dict(q="Using the same table of reaction rates, at which time is equilibrium first "
         "established?",
