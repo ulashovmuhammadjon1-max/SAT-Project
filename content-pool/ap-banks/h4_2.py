@@ -341,18 +341,16 @@ QUESTIONS = [
 
  dict(q="Which of the following proposed equations fails to conserve charge?",
       choices=[
-        "Fe2+(aq) + Ag+(aq) gives Fe3+(aq) + Ag(s)",
+        "Zn(s) + Ag+(aq) gives Zn2+(aq) + Ag(s)",
         "Ag+(aq) + Cl-(aq) gives AgCl(s)",
         "Ba2+(aq) + SO42-(aq) gives BaSO4(s)",
         "H3O+(aq) + OH-(aq) gives 2 H2O(l)",
         "Ca2+(aq) + CO32-(aq) gives CaCO3(s)"],
       ans=0,
-      why="EK 4.2.A.2 requires the charge sums to agree. The keyed equation has "
-          "a total of plus three on the left and plus three on the right only "
-          "if the silver atom carried charge, which it does not, so the sums "
-          "are plus three and plus three... they are in fact plus three and "
-          "plus three only on a miscount: the left is plus three and the right "
-          "is plus three."),
+      why="EK 4.2.A.2 requires an equation to demonstrate that charge is "
+          "conserved. Adding the charges in the keyed equation gives plus one "
+          "on the left and plus two on the right, since one silver ion cannot "
+          "supply the charge the zinc ion carries away."),
 
  dict(q="A student proposes Al(s) + O2(g) gives Al2O3(s) for the formation of "
         "aluminum oxide. What is wrong with it?",
