@@ -246,9 +246,9 @@ QUESTIONS = [
           "kind per formula unit gives a total charge of zero, matching the "
           "neutral solid."),
 
- dict(q="The table gives a starting box and four proposals for the box after "
-        "the reaction 2 CO + O2 gives 2 CO2 has occurred. Which proposal "
-        "conserves the atoms of every element?",
+ dict(q="In a second set of boxes, carbon monoxide burns by 2 CO + O2 gives "
+        "2 CO2. The table gives the box before and four proposals for the box "
+        "afterwards. Which proposal conserves the atoms of every element?",
       table=_T_FAULTY,
       choices=[
         "Proposal P",
@@ -325,7 +325,7 @@ QUESTIONS = [
         "3 CO2 molecules and 3 H2O molecules",
         "1 CO2 molecule and 2 H2O molecules",
         "6 CO2 molecules and 3 H2O molecules",
-        "3 CO2 molecules and 6 H2O molecules and 1 O2 molecule"],
+        "1 CO2 molecule, 2 H2O molecules and 4 O2 molecules"],
       ans=0,
       why="EK 4.3.A.1 translates the coefficients into particle counts, so three "
           "sets of the equation give three carbon dioxide and six water "
@@ -499,11 +499,11 @@ QUESTIONS = [
  dict(q="Why does the learning objective ask specifically for a CONSISTENT "
         "particulate model?",
       choices=[
-        "Because a picture that contradicts the balanced equation misrepresents "
+        "Because a model that contradicts the balanced equation misrepresents "
         "what the reaction does to the atoms",
-        "Because two students should always draw the identical picture",
+        "Because two students should always draw the identical model",
         "Because a model must be drawn to scale to be acceptable",
-        "Because the picture is the only acceptable way to represent a reaction",
+        "Because a drawing is the only acceptable way to represent a reaction",
         "Because consistency means using the same colors as the textbook"],
       ans=0,
       why="EK 4.3.A.1 makes the model a TRANSLATION of the balanced equation, "
