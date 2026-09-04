@@ -57,10 +57,12 @@ fi
 
 # Paths that cannot reach the bundle. Keep this list short and boring; when in
 # doubt leave a path OFF it, because being off it only costs a build.
-OUTSIDE=$(printf '%s\n' "$CHANGED" | grep -vE '^(content-pool/|CLAUDE\.md$)' || true)
+# MISSION.md and CLAUDE.md are documentation for whoever works on the repo.
+# Neither is imported, read at runtime, or served -- grep before adding a third.
+OUTSIDE=$(printf '%s\n' "$CHANGED" | grep -vE '^(content-pool/|CLAUDE\.md$|MISSION\.md$)' || true)
 
 if [ -z "$OUTSIDE" ]; then
-  echo "Only content-pool/ and CLAUDE.md changed; the build output cannot differ. Skipping."
+  echo "Only content-pool/ and repo documentation changed; the build output cannot differ. Skipping."
   printf '%s\n' "$CHANGED" | head -5 | sed 's/^/  /'
   exit $SKIP
 fi
