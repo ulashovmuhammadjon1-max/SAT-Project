@@ -273,8 +273,8 @@ QUESTIONS = [
           "row."),
 
  dict(q="Four cation and anion pairs carry identical charges but differ in the distance "
-        "between their ion centers, as shown. In which pair is the interaction the "
-        "weakest?",
+        "between their ion centers, as the table records. In which pair is the "
+        "interaction the weakest?",
       table=_T_IONIC_SIZE,
       choices=["Pair D", "Pair A", "Pair B", "Pair C",
                "All four are equal, because all four carry the same charges"],
@@ -304,21 +304,23 @@ QUESTIONS = [
           "Because the deepest minimum belongs to a different molecule, depth cannot be "
           "used as a proxy here."),
 
- dict(q="Why is the potential energy of two bonded atoms lower at the equilibrium bond "
-        "length than at any other separation?",
+ dict(q="The potential energy of two bonded atoms is lower at the equilibrium bond length "
+        "than at any other separation. Which statement explains why, in the framework's "
+        "own terms?",
       choices=[
-        "Because that separation is where the net attraction and repulsion between the "
-        "two atoms balance most favorably, which is what makes it the minimum of the "
-        "curve.",
-        "Because the atoms stop moving entirely at that separation.",
-        "Because the two nuclei touch at that separation.",
-        "Because the bond order changes at that separation.",
-        "Because potential energy is defined to be zero at that separation."],
+        "The equilibrium bond length is defined as the separation at which the potential "
+        "energy is lowest, so every other separation lies higher on the curve.",
+        "The atoms stop moving entirely at that separation.",
+        "The two nuclei touch at that separation.",
+        "The bond order changes at that separation.",
+        "The potential energy is set to zero at that separation by convention."],
       ans=0,
-      why="EK 2.2.A.1 identifies the equilibrium bond length as the separation at which "
-          "the potential energy is lowest, and a minimum in the curve is by definition "
-          "where the energy is lower than on either side. The framework sets the zero of "
-          "the scale at large separation, not at the minimum."),
+      why="EK 2.2.A.1 gives the equilibrium bond length exactly this definition, the "
+          "separation between atoms at which the potential energy is lowest, so the "
+          "statement is what the term means rather than a further fact about it. The "
+          "framework treats the separated atoms as the reference the bond energy is "
+          "measured against, since it calls that energy the energy required to separate "
+          "them."),
 
  dict(q="A second potential energy curve is tabulated below for a different diatomic "
         "molecule. Compared with the first table, is this bond longer or shorter, and "
@@ -376,9 +378,9 @@ QUESTIONS = [
           "direction. Adding the two lengths rather than subtracting them gives one of "
           "the rejected values."),
 
- dict(q="An ionic compound made of doubly charged ions is compared with one made of "
-        "singly charged ions of about the same size. Which is expected to have the "
-        "stronger interaction between its ions, and why?",
+ dict(q="Using the tabulated ion pairs, a compound built from doubly charged ions is "
+        "compared with one built from singly charged ions whose centers are the same "
+        "distance apart. Which has the stronger interaction between its ions, and why?",
       table=_T_IONS,
       choices=[
         "The compound with doubly charged ions, because interaction strength is "
@@ -526,8 +528,8 @@ QUESTIONS = [
           "other. When the two point in opposite directions the framework licenses no "
           "shortcut, only the combined comparison."),
 
- dict(q="A potential energy curve for a pair of atoms never dips below zero at any "
-        "separation. What does that indicate?",
+ dict(q="A potential energy curve for a pair of atoms never dips below the value it "
+        "approaches at large separation. What does that indicate?",
       choices=[
         "No stable bond forms between them, since there is no separation at which the "
         "atoms are lower in energy than when apart.",

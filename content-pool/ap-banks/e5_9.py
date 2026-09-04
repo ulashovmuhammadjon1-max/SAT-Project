@@ -457,11 +457,11 @@ QUESTIONS = [
         "medium grade ore, and how does that compare with the high grade ore?",
       table=_T_GRADE,
       choices=[
-        "5 kilograms per tonne, which is one quarter of the high grade figure",
-        "5 kilograms per tonne, which is four times the high grade figure",
-        "20 kilograms per tonne, which is the same as the high grade figure",
-        "2 kilograms per tonne, which is one tenth of the high grade figure",
-        "200 kilograms per tonne, which is ten times the high grade figure"],
+        "5 kilograms per tonne, which is one quarter of the high grade value",
+        "5 kilograms per tonne, which is four times the high grade value",
+        "20 kilograms per tonne, which is the same as the high grade value",
+        "2 kilograms per tonne, which is one tenth of the high grade value",
+        "200 kilograms per tonne, which is ten times the high grade value"],
       ans=0,
       why="The table gives 5 kilograms per tonne for the medium grade against 20 for the high "
           "grade, and 5 is a quarter of 20. The rejected options invert the comparison, quote "
