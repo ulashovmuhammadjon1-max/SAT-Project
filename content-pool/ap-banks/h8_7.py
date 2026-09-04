@@ -32,7 +32,7 @@
 #
 # WHAT THE FRAMEWORK DOES NOT SAY, and the error this module exists to prevent: the
 # comparison is pH against pKa, NOT pH against 7. A solution at pH 5 is acidic, and an acid
-# of pKa 3 sitting in it is nonetheless mostly DEPROTONATED. Items 16, 22 and 23 turn on
+# of pKa 3 sitting in it is nonetheless mostly DEPROTONATED. Items 17, 19 and 20 turn on
 # that, and every tabulated row is chosen so the pH-against-7 rule would give the wrong
 # answer at least once.
 #
@@ -45,7 +45,7 @@ TOPIC = ("8.7", "pH and pKa", 8)
 
 _T_ACIDS = dict(
     headers=["Acid", "pKa of the acid", "pH of the solution it is dissolved in"],
-    rows=[["HJ", "4.0", "6.0"],
+    rows=[["HJ", "4.0", "9.0"],
           ["HL", "7.0", "6.0"],
           ["HM", "6.0", "6.0"],
           ["HN", "3.0", "5.0"]])
@@ -116,15 +116,16 @@ QUESTIONS = [
           "describes. Equality of the pair says nothing about the pH being 7.00."),
 
  dict(q="The table gives four acids, each dissolved in a solution of the stated pH. For "
-        "which acid is the base form the more concentrated?",
+        "which acid does the base form predominate by the largest margin?",
       table=_T_ACIDS,
       choices=["Acid HJ", "Acid HL", "Acid HM", "Acid HN",
-               "For none of them, since every solution listed is acidic"],
+               "For none of them, since a base form never predominates"],
       ans=0,
       why="EK 8.7.A.1 makes the base form the more concentrated when the solution pH is "
-          "greater than the acid pKa, and comparing the two tabulated columns row by row "
-          "identifies which rows satisfy that. Whether the solution is acidic on the "
-          "seven-point scale is a different comparison and settles nothing here."),
+          "greater than the acid pKa, so subtracting each tabulated pKa from its own "
+          "tabulated pH and taking the largest positive difference identifies the acid. Two "
+          "of the tabulated rows have the base form predominant, and only one of them by "
+          "the larger margin."),
 
  dict(q="Using the same table of four acids, for which acid is the ACID form the more "
         "concentrated?",
