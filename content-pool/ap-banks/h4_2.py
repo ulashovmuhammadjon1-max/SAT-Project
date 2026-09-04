@@ -432,7 +432,7 @@ QUESTIONS = [
         "R3",
         "R1",
         "R2",
-        "Both R1 and R2",
+        "Each of the three rows equally",
         "None of the three rows"],
       ans=0,
       why="EK 4.2.A.3 names balanced molecular, complete ionic and net ionic "
