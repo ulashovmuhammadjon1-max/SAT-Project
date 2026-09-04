@@ -55,8 +55,8 @@ _T_NH3 = dict(
 
 _T_PRESS = dict(
     headers=["Species", "Equilibrium partial pressure (atm)"],
-    rows=[["N2O4(g)", "0.50"],
-          ["NO2(g)", "1.00"]])
+    rows=[["N2O4(g)", "0.40"],
+          ["NO2(g)", "0.20"]])
 
 _T_ICE = dict(
     headers=["Stage", "[A] (M)"],
@@ -105,12 +105,13 @@ QUESTIONS = [
  dict(q="The table gives the concentrations measured at equilibrium in a vessel in which "
         "H2(g) + I2(g) to 2 HI(g) has been allowed to settle. What is the value of Kc?",
       table=_T_HI,
-      choices=["16", "4.0", "20", "0.0625", "8.0"],
+      choices=["16", "4.0", "20", "0.0625", "3.2"],
       ans=0,
       why="EK 7.4.A.1 licenses building the constant directly from measurements at "
           "equilibrium, and the law of mass action of EK 7.3.A.1 squares the tabulated "
           "product concentration and divides by the product of the two tabulated reactant "
-          "concentrations. Omitting the exponent gives a much smaller number."),
+          "concentrations. Dividing by only one of the two tabulated reactant "
+          "concentrations gives a much smaller number."),
 
  dict(q="A vessel in which 2 SO2(g) + O2(g) to 2 SO3(g) has reached equilibrium gives the "
         "concentrations in the table. What is the value of Kc?",
@@ -119,28 +120,28 @@ QUESTIONS = [
       ans=0,
       why="EK 7.4.A.1 takes the value from measurements at equilibrium, and EK 7.3.A.1's "
           "expression squares both the tabulated SO3 and SO2 concentrations while leaving "
-          "the O2 concentration to the first power. Dropping the exponent on the reactant "
-          "halves the denominator and doubles the answer."),
+          "the O2 concentration to the first power. Using the first power of every "
+          "concentration instead gives half the correct value."),
 
  dict(q="For the synthesis N2(g) + 3 H2(g) to 2 NH3(g), a vessel at equilibrium gives the "
         "tabulated concentrations. What is the value of Kc?",
       table=_T_NH3,
-      choices=["200", "20", "2.0", "0.0050", "2000"],
+      choices=["200", "20", "2.0", "0.0050", "10"],
       ans=0,
       why="EK 7.4.A.1 builds the constant from the tabulated equilibrium concentrations, "
           "and EK 7.3.A.1 cubes the hydrogen concentration and squares the ammonia "
           "concentration. The cube is what makes the denominator small and the constant "
-          "large; using the first power of hydrogen gives a tenth of the value."),
+          "large; squaring hydrogen instead of cubing it gives a tenth of the value."),
 
  dict(q="A rigid flask holding N2O4(g) to 2 NO2(g) has reached equilibrium and the "
         "partial pressures are given in the table. What is the value of Kp?",
       table=_T_PRESS,
-      choices=["2.0", "0.50", "4.0", "0.25", "1.0"],
+      choices=["0.10", "0.50", "2.0", "0.040", "0.25"],
       ans=0,
       why="EK 7.4.A.1 allows partial pressures as well as concentrations, and EK 7.3.A.1's "
           "pressure form squares the tabulated NO2 pressure and divides by the tabulated "
-          "N2O4 pressure. Forgetting the exponent gives the ratio of the two pressures "
-          "instead."),
+          "N2O4 pressure. Forgetting the exponent gives the plain ratio of the two "
+          "pressures instead."),
 
  dict(q="Solid CaCO3 is heated in a sealed evacuated flask until CaCO3(s) to CaO(s) + "
         "CO2(g) reaches equilibrium, at which point the carbon dioxide pressure is 0.25 "
@@ -168,7 +169,7 @@ QUESTIONS = [
         "2 B(g). The table reports the concentration of B before the reaction and at "
         "equilibrium. What is the value of Kc?",
       table=_T_ICE2,
-      choices=["0.10", "0.080", "0.40", "0.020", "2.5"],
+      choices=["0.10", "0.080", "0.40", "0.020", "0.50"],
       ans=0,
       why="Two molecules of B appear for each molecule of A consumed, so the tabulated "
           "equilibrium concentration of B fixes how much A was used and therefore how much "
@@ -178,12 +179,12 @@ QUESTIONS = [
  dict(q="A 2.0 L vessel holding A(g) + B(g) to C(g) has reached equilibrium, and the "
         "table reports the moles of each species present. What is the value of Kc?",
       table=_T_MOLES,
-      choices=["0.25", "0.13", "2.0", "0.50", "8.0"],
+      choices=["0.25", "0.125", "2.0", "0.50", "8.0"],
       ans=0,
       why="EK 7.4.A.1 speaks of the CONCENTRATIONS at equilibrium, so each tabulated mole "
           "figure has to be divided by the volume of the vessel before it enters the "
-          "expression. Using the moles directly gives a different number, because the "
-          "expression is not balanced in the number of species on each side."),
+          "expression. Using the moles directly gives half the correct value, because the "
+          "expression has two species below the line and only one above it."),
 
  dict(q="Three trials of the reaction A(g) to B(g) were run at the same temperature from "
         "different starting amounts, and the table reports the equilibrium concentrations "
@@ -292,7 +293,8 @@ QUESTIONS = [
  dict(q="At equilibrium in a vessel holding C(s) + CO2(g) to 2 CO(g), the concentration of "
         "CO2 is 0.20 M and that of CO is 0.40 M, with 5.0 grams of carbon still present. "
         "What is the value of Kc?",
-      choices=["0.80", "0.16", "2.0", "4.0", "0.16 divided by the mass of carbon"],
+      choices=["0.80", "0.16", "2.0", "4.0",
+               "The value cannot be found without the mass of carbon"],
       ans=0,
       why="EK 7.3.A.2 leaves the solid carbon out of the expression because its "
           "concentration is independent of the amount present, so the stated mass does not "
@@ -301,7 +303,7 @@ QUESTIONS = [
 
  dict(q="A reaction 2 A(g) to B(g) reaches equilibrium with the concentration of A at 0.20 "
         "M and that of B at 0.40 M. What is the value of Kc?",
-      choices=["10", "2.0", "0.10", "20", "0.50"],
+      choices=["10", "2.0", "0.25", "20", "0.50"],
       ans=0,
       why="EK 7.3.A.1 puts the product concentration over the SQUARE of the reactant "
           "concentration, because the coefficient of A is two, and EK 7.4.A.1 evaluates it "
@@ -310,7 +312,7 @@ QUESTIONS = [
 
  dict(q="A flask in which 2 SO2(g) + O2(g) to 2 SO3(g) has settled has partial pressures "
         "of 0.10 atm of SO2, 0.20 atm of O2 and 0.20 atm of SO3. What is the value of Kp?",
-      choices=["20", "10", "2.0", "0.050", "200"],
+      choices=["20", "10", "2.0", "0.050", "0.40"],
       ans=0,
       why="EK 7.4.A.1 permits partial pressures, and EK 7.3.A.1's pressure form squares "
           "the SO3 pressure and divides by the square of the SO2 pressure times the O2 "
