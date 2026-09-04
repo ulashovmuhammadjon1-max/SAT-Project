@@ -155,7 +155,7 @@ QUESTIONS = [
         "Which pair is most likely to form an interstitial alloy?",
       table=_T_PAIRS,
       choices=["Pair 4", "Pair 1", "Pair 2", "Pair 3",
-               "Pair 2, because its added atom is the larger of the two"],
+               "The pair whose added atom is the larger of the two"],
       ans=0,
       why="EK 2.4.A.2 makes significantly different radii the condition for an "
           "interstitial alloy, so the pair whose added atom is smallest relative to its "
@@ -166,7 +166,7 @@ QUESTIONS = [
         "substitutional alloy?",
       table=_T_PAIRS,
       choices=["Pair 3", "Pair 1", "Pair 2", "Pair 4",
-               "Pair 1, because its two radii differ by the largest number of picometers"],
+               "The pair whose two radii differ by the largest number of picometers"],
       ans=0,
       why="EK 2.4.A.3 makes comparable radius the condition for substitution, so the pair "
           "whose two radii are nearest to equal is the likeliest. The largest difference "
@@ -203,7 +203,7 @@ QUESTIONS = [
         "lattice?",
       table=_T_ELEMENTS,
       choices=["Element B", "Element A", "Element C", "Element D",
-               "Element C, because its radius is the largest in the table"],
+               "The candidate with the largest radius in the table"],
       ans=0,
       why="EK 2.4.A.2 requires significantly different radii for an atom to fill the "
           "spaces between the larger atoms, and one tabulated element is only half the "
@@ -214,7 +214,7 @@ QUESTIONS = [
         "substitute for the host atoms in the lattice?",
       table=_T_ELEMENTS,
       choices=["Element C", "Element A", "Element B", "Element D",
-               "Element B, because the smallest atom fits a lattice position most easily"],
+               "The smallest candidate, since a small atom fits a lattice position most easily"],
       ans=0,
       why="EK 2.4.A.3 makes comparable radius the condition for substitution, so the "
           "element whose radius is closest to the host's is the likeliest to take a "
@@ -244,7 +244,7 @@ QUESTIONS = [
       choices=["Alloy 1", "Alloy 2",
                "Both, since every alloy contains atoms of different size",
                "Neither, since both pairs of radii are comparable",
-               "Alloy 2, because its added atom is larger than its majority atom"],
+               "The alloy whose added atom is larger than its majority atom"],
       ans=0,
       why="EK 2.4.A.2 makes significantly different radii the interstitial condition, and "
           "only one tabulated alloy pairs a majority atom with an added atom far smaller "
@@ -255,7 +255,7 @@ QUESTIONS = [
       choices=["Alloy 2", "Alloy 1",
                "Both, since both contain two kinds of metal atom",
                "Neither, since substitution requires identical radii",
-               "Alloy 1, because its added atom is much smaller than its majority atom"],
+               "The alloy whose added atom is much smaller than its majority atom"],
       ans=0,
       why="EK 2.4.A.3 makes comparable radius the substitutional condition, and only one "
           "tabulated alloy pairs two atoms within a few picometers of each other. That "
@@ -268,8 +268,7 @@ QUESTIONS = [
         "Radii that are significantly different",
         "Radii that are comparable",
         "Radii that are exactly equal",
-        "Radii that are comparable in the majority element and significantly different in "
-        "the added element",
+        "Equal radii in the two elements, to within one picometer",
         "The comparison of radii does not determine which kind of alloy forms"],
       ans=0,
       why="EK 2.4.A.2 states the condition in those words: interstitial alloys form "
@@ -293,7 +292,7 @@ QUESTIONS = [
  dict(q="Of the four tabulated candidate alloys, how many pair two atoms whose radii are "
         "within ten percent of one another?",
       table=_T_PAIRS,
-      choices=["Two", "One", "Three", "Four", "None"],
+      choices=["Exactly two", "Exactly one", "Exactly three", "All four", "None of them"],
       ans=0,
       why="EK 2.4.A.3 makes comparable radius the substitutional condition, and comparing "
           "each tabulated added radius with its own host radius sorts the four candidates "
@@ -304,7 +303,7 @@ QUESTIONS = [
  dict(q="Among the four candidate additions tabulated with the host metal, how many have "
         "a radius within ten percent of the host's?",
       table=_T_ELEMENTS,
-      choices=["Three", "One", "Two", "Four", "None"],
+      choices=["Exactly three", "Exactly one", "Exactly two", "All four", "None of them"],
       ans=0,
       why="EK 2.4.A.3 makes comparable radius the condition for substitution, so counting "
           "the tabulated elements close to the host counts the plausible substitutions. "
@@ -328,7 +327,7 @@ QUESTIONS = [
         "the host metal's?",
       table=_T_ELEMENTS,
       choices=["Element B", "Element A", "Element C", "Element D",
-               "Element C, because it is the only one larger than the host"],
+               "The only candidate larger than the host"],
       ans=0,
       why="Comparing each tabulated radius with the host's identifies the one furthest "
           "away, and EK 2.4.A.2 is what makes that comparison worth making, since "
@@ -364,7 +363,7 @@ QUESTIONS = [
         "the smallest number of picometers?",
       table=_T_PAIRS,
       choices=["Pair 3", "Pair 1", "Pair 2", "Pair 4",
-               "Pair 4, because its two radii are the smallest in the table"],
+               "The pair whose two radii are the smallest in the table"],
       ans=0,
       why="Subtracting the two tabulated radii in each row gives the difference directly, "
           "and EK 2.4.A.3 is what makes the smallest difference interesting, since "
@@ -392,7 +391,7 @@ QUESTIONS = [
       choices=["Alloy 2", "Alloy 1",
                "They are the same, since both are alloys of a metal",
                "Neither, since in both the added atom is smaller",
-               "Alloy 1, because carbon is the added element in it"],
+               "The alloy in which carbon is the added element"],
       ans=0,
       why="Dividing each tabulated added radius by its own majority radius compares the "
           "two alloys directly, and EK 2.4.A.2 and EK 2.4.A.3 are what make that ratio "
