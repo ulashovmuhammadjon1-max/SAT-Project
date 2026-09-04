@@ -195,7 +195,7 @@ QUESTIONS = [
         "the largest number of valence electrons available to its Lewis diagram?",
       table=_T_SPECIES,
       choices=["Sulfate ion", "Methane", "Carbon dioxide", "Nitrate ion",
-               "Methane, because it has the most atoms"],
+               "Whichever species has the most atoms in its formula"],
       ans=0,
       why="EK 1.5.A.3 makes the total the sum of the atoms' valence electrons and EK "
           "1.5.A.1 makes each unit of negative charge one more electron, so the totals are "
@@ -246,7 +246,7 @@ QUESTIONS = [
         "electrons available to its Lewis diagram?",
       table=_T_SPECIES,
       choices=["Methane", "Carbon dioxide", "Nitrate ion", "Sulfate ion",
-               "The sulfate ion, because its charge removes electrons"],
+               "Whichever species carries the largest negative charge, since charge removes electrons"],
       ans=0,
       why="EK 1.5.A.3 makes the total the sum of the atoms' valence electrons, computed "
           "here row by row from the tabulated formulas. EK 1.5.A.1 makes a NEGATIVE charge "
@@ -255,11 +255,11 @@ QUESTIONS = [
 
  dict(q="A Lewis diagram is to be drawn for carbon tetrachloride, whose formula is CCl4 "
         "and which is neutral overall. How many valence electrons are available?",
-      choices=["32", "28", "20", "36", "8"],
+      choices=["32", "28", "20", "36", "40"],
       ans=0,
       why="EK 1.5.A.3 gives four valence electrons for carbon and seven for each chlorine "
-          "from their columns of the periodic table. Counting one electron per chlorine, "
-          "as though chlorine behaved like hydrogen, gives one of the rejected totals."),
+          "from their columns of the periodic table. Forgetting the carbon altogether, or "
+          "allowing every atom an octet from the start, gives two of the rejected totals."),
 
  dict(q="In the accepted Lewis diagram for nitrogen gas, whose formula is N2 and which is "
         "neutral overall, the two nitrogen atoms are joined by a triple bond. How many "

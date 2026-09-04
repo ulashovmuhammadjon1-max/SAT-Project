@@ -457,9 +457,20 @@ def _retable(mod, i, label, **cells):
     mod.QUESTIONS[i - 1]["table"] = dict(headers=heads, rows=rows)
 
 
-def _sulfate_charge_flips(mod, cl):
-    """Flip the sign of the tabulated charge, moving the largest total off the key."""
-    _retable(mod, 13, "Sulfate ion", **{CHARGE: "2+"})
+def _sulfate_shrinks(mod, cl):
+    """Shrink the largest species so the tabulated maximum moves off its key.
+
+    Flipping its charge is NOT enough and the first draft of this control did
+    exactly that: two units of charge move a total of thirty-two only to
+    twenty-eight, which is still the largest in the table, so the control passed
+    while proving nothing. The formula has to move.
+    """
+    _retable(mod, 13, "Sulfate ion", **{FORMULA: "SO2"})
+
+
+def _methane_gains_a_charge(mod, cl):
+    """Give the smallest species a charge, so nothing is twice it any more."""
+    _retable(mod, 24, "Methane", **{CHARGE: "2-"})
 
 
 def _nothing_doubles_the_smallest(mod, cl):
@@ -509,8 +520,10 @@ if __name__ == "__main__" and "--selftest" in sys.argv:
          _drawn_count_matches),
         ("the drawn electron count made too small, reversing the keyed direction",
          _drawn_count_runs_the_other_way),
-        ("a tabulated charge sign flipped, moving the largest total off its key",
-         _sulfate_charge_flips),
+        ("the largest tabulated species shrunk, moving the maximum off its key",
+         _sulfate_shrinks),
+        ("a tabulated charge added to the smallest species, so nothing doubles it",
+         _methane_gains_a_charge),
         ("a tabulated formula changed so nothing doubles the smallest total",
          _nothing_doubles_the_smallest),
         ("resonance, which is topic 2.6's, moved into a stem", _resonance_creeps_in),

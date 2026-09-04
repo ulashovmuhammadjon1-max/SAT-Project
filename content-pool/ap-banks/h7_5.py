@@ -167,8 +167,8 @@ QUESTIONS = [
         "product at equilibrium?",
       table=_T_TWO,
       choices=["Reaction J", "Reaction L", "Both end with the same amount",
-               "Reaction L, because its constant has the larger exponent in size",
-               "The comparison cannot be made from constants"],
+               "Neither, because both constants are less than one",
+               "The comparison cannot be made from constants alone"],
       ans=0,
       why="Learning objective 7.5.A links the magnitude of K to the relative "
           "concentrations at equilibrium, and the larger of the two tabulated constants "
