@@ -51,16 +51,16 @@ _T_AMMONIA = dict(
 
 _T_FAULTY = dict(
     headers=["Box", "Particles in the box"],
-    rows=[["Before", "3 CO molecules and 2 O2 molecules"],
-          ["Proposal P", "3 CO2 molecules"],
+    rows=[["Before", "4 CO molecules and 2 O2 molecules"],
+          ["Proposal P", "4 CO2 molecules"],
           ["Proposal Q", "3 CO2 molecules and 1 O2 molecule"],
           ["Proposal R", "2 CO2 molecules and 1 O2 molecule"],
-          ["Proposal S", "4 CO2 molecules"]])
+          ["Proposal S", "4 CO2 molecules and 1 O2 molecule"]])
 
 _T_MIXTURE = dict(
     headers=["Box", "Particles in the box"],
     rows=[["Box 1", "6 CO molecules"],
-          ["Box 2", "3 C2 molecules and 3 O2 molecules"],
+          ["Box 2", "3 N2 molecules and 3 O2 molecules"],
           ["Box 3", "3 CO molecules and 3 CO2 molecules"]])
 
 _T_DECOMP = dict(
@@ -251,8 +251,8 @@ QUESTIONS = [
         "conserves the atoms of every element?",
       table=_T_FAULTY,
       choices=[
-        "Proposal Q",
         "Proposal P",
+        "Proposal Q",
         "Proposal R",
         "Proposal S",
         "None of the four proposals"],
@@ -264,7 +264,12 @@ QUESTIONS = [
 
  dict(q="A box is drawn holding 5 CH4 molecules. How many atoms of hydrogen "
         "does the box contain?",
-      choices=["20", "5", "10", "16", "25"],
+      choices=[
+        "20, four in each of the five molecules",
+        "4, the number written in the formula",
+        "5, the number of molecules in the box",
+        "10, half of one hydrogen atom for each molecule",
+        "16, four hydrogen atoms in each of four molecules"],
       ans=0,
       why="EK 4.3.A.1 makes the particulate model a translation of the formulas "
           "in the equation, and a formula's subscript is a count of atoms in "
@@ -360,7 +365,12 @@ QUESTIONS = [
  dict(q="A particulate model of an aqueous solution shows 3 Ca2+ particles. How "
         "many Cl- particles must it show if the dissolved compound is CaCl2 and "
         "nothing else is present?",
-      choices=["6", "3", "2", "9", "1"],
+      choices=[
+        "6, two chloride ions for each calcium ion",
+        "3, one chloride ion for each calcium ion",
+        "2, the number written in the formula",
+        "9, three chloride ions for each calcium ion",
+        "1, since a single chloride ion balances the box"],
       ans=0,
       why="EK 4.3.A.1 translates the formula into the picture, and EK 4.2.A.2 "
           "requires charge to be conserved: two chloride ions of minus one for "
@@ -399,7 +409,12 @@ QUESTIONS = [
  dict(q="Magnesium burns according to 2 Mg + O2 gives 2 MgO. If a box holds 8 Mg "
         "atoms and enough oxygen, how many MgO formula units should the box hold "
         "afterwards?",
-      choices=["8", "4", "16", "2", "6"],
+      choices=[
+        "8, one formula unit for each magnesium atom",
+        "4, one formula unit for every two magnesium atoms",
+        "16, two formula units for each magnesium atom",
+        "2, the coefficient written in the equation",
+        "10, one for each magnesium atom and one for each oxygen molecule"],
       ans=0,
       why="EK 4.3.A.1 translates the coefficients into particle counts, and the "
           "equation pairs each magnesium atom with one formula unit of the "
@@ -470,7 +485,12 @@ QUESTIONS = [
         "drawn with 5 Ag+ particles and 5 Cl- particles at the start. How many "
         "AgCl formula units should the solid contain when the reaction is "
         "complete?",
-      choices=["5", "10", "1", "25", "2"],
+      choices=[
+        "5, one for each pair of ions",
+        "10, one for every ion present in the box",
+        "1, since the solid is drawn as a single particle",
+        "25, the product of the two ion counts",
+        "2, since two kinds of ion are present"],
       ans=0,
       why="EK 4.3.A.1 translates the net ionic equation into particles at a one "
           "to one ratio, and EK 4.2.A.2's conservation of atoms fixes the count: "
