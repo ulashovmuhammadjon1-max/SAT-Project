@@ -289,8 +289,8 @@ QUESTIONS = [
           "change in the row favored at all temperatures, and exactly one tabulated salt "
           "has that pair of signs. For it, no calculation is needed at all."),
 
- dict(q="Which of the tabulated salts has a dissolution that is thermodynamically favored "
-        "at no temperature?",
+ dict(q="One of the tabulated salts has a dissolution that no temperature will make "
+        "thermodynamically favored. Which salt is it?",
       table=_T_SALTS,
       choices=["Salt C", "Salt A", "Salt B", "Salt D", "Salts B and C together"],
       ans=0,
