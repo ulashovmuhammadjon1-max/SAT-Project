@@ -142,12 +142,13 @@ QUESTIONS = [
  dict(q="The table reports concentrations measured at intervals in a sealed vessel. At "
         "which time has the system FIRST reached equilibrium?",
       table=_T_TIMECOURSE,
-      choices=["6 minutes", "2 minutes", "4 minutes", "10 minutes", "0 minutes"],
+      choices=["6 minutes", "2 minutes", "4 minutes", "8 minutes",
+               "Equilibrium has not been reached by the last reading"],
       ans=0,
       why="EK 7.1.A.2 makes constancy of the concentrations the signature of equilibrium, "
-          "so the first reading after which nothing changes again is the answer. The "
-          "readings are still falling up to that time, and the last reading is merely the "
-          "last one taken rather than the first constant one."),
+          "so the FIRST reading after which nothing changes again is the answer. The "
+          "readings are still falling up to that time, and the reading after it merely "
+          "repeats a value already reached."),
 
  dict(q="Using the same table of concentrations, what is true of the two concentrations "
         "once the system has settled?",
@@ -198,7 +199,7 @@ QUESTIONS = [
  dict(q="Using the same table of reaction rates, at which time is equilibrium first "
         "established?",
       table=_T_RATES,
-      choices=["20 seconds", "10 seconds", "30 seconds", "0 seconds",
+      choices=["20 seconds", "10 seconds", "30 seconds", "Immediately upon mixing",
                "Equilibrium is never established in this vessel"],
       ans=0,
       why="EK 7.1.A.3 makes equality of the forward and reverse rates the condition for "
@@ -225,7 +226,8 @@ QUESTIONS = [
         "converts reversibly to Y(g). At which time has the system first reached "
         "equilibrium?",
       table=_T_PRESSURES,
-      choices=["10 minutes", "5 minutes", "15 minutes", "20 minutes", "0 minutes"],
+      choices=["8 minutes", "4 minutes", "12 minutes", "16 minutes",
+               "Equilibrium is reached only after the last reading was taken"],
       ans=0,
       why="EK 7.1.A.2 says that at equilibrium the concentrations OR PARTIAL PRESSURES of "
           "all species remain constant, so the first reading after which the tabulated "

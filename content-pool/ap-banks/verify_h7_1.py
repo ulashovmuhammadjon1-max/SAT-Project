@@ -187,9 +187,9 @@ def q9(table, item):
 
 def q11(table, item):
     t, i = first_constant(table, TIME, [PX, PY])
-    assert abs(t - 10.0) < 1e-12, f"the tabulated pressures first stop changing at {t}"
+    assert abs(t - 8.0) < 1e-12, f"the tabulated pressures first stop changing at {t}"
     assert i > 0, "the pressures must change at least once before settling"
-    h.shows(item, "10 minutes")
+    h.shows(item, "8 minutes")
     return f"the tabulated partial pressures first stop changing at {t:g} minutes"
 
 
@@ -265,7 +265,7 @@ CLAIMS = [
   "EK 7.1.A.3 makes equality of the two rates the condition for equilibrium. The earliest tabulated time at which they agree is recomputed in q9."),
  ("equal rates that produce no net change",
   "EK 7.1.A.3 says the processes CONTINUE at equal rates; the absence of change is a balance between two ongoing processes rather than the absence of both."),
- ("10 minutes",
+ ("8 minutes",
   "EK 7.1.A.2 extends constancy to partial pressures. The first tabulated time after which they stop changing is recomputed in q11."),
  ("fell by 0.80 atm while Y rose by 1.60 atm",
   "EK 7.1.A.4 licenses reading partial pressure against time. Both changes are recomputed from the table in q12, which also checks the rise is twice the fall."),
@@ -338,8 +338,8 @@ def _extra_mutations():
         # pair of changes is false.
         mod.QUESTIONS[11]["table"] = dict(
             headers=h7_1._T_PRESSURES["headers"],
-            rows=[["0", "2.00", "0"], ["5", "1.40", "1.00"], ["10", "1.20", "1.20"],
-                  ["15", "1.20", "1.20"], ["20", "1.20", "1.20"]])
+            rows=[["0", "2.00", "0"], ["4", "1.40", "1.00"], ["8", "1.20", "1.20"],
+                  ["12", "1.20", "1.20"], ["16", "1.20", "1.20"]])
 
     def second_steady_vessel(mod, cl):
         # A second vessel made steady, so "Vessel 2" is no longer the unique answer.
