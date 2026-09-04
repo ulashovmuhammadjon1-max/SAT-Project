@@ -76,8 +76,8 @@ QUESTIONS = [
           "buffer the same. The pH is set by the ratio under EK 8.9.A.1, and the ratio is "
           "what has been held fixed."),
 
- dict(q="Increasing the concentration of both buffer components while keeping their ratio "
-        "constant has what effect on the buffer's capacity?",
+ dict(q="A chemist doubles the concentration of both buffer components, leaving the ratio "
+        "between them unchanged. What happens to the buffer's capacity?",
       choices=[
         "It increases the capacity to neutralize added acid or base",
         "It decreases the capacity to neutralize added acid or base",
@@ -197,7 +197,7 @@ QUESTIONS = [
         "for added base most nearly equal?",
       table=_T_ASYM,
       choices=["Buffer R", "Buffer P", "Buffer Q", "None of them",
-               "Buffer P, because its concentrations are the largest"],
+               "The buffer whose concentrations are the largest"],
       ans=0,
       why="EK 8.10.A.2's two clauses describe buffers with an EXCESS of one component; "
           "neither applies to a buffer whose two tabulated concentrations are equal, and "
@@ -353,15 +353,16 @@ QUESTIONS = [
           "both concentrations leaves it unchanged. Exactly two tabulated rows have the "
           "same base-to-acid ratio, and they differ only in concentration."),
 
- dict(q="Using the same four buffers, which pair differs in capacity but not in pH?",
+ dict(q="Using the same four buffers, which one has the same pH as buffer J but a "
+        "smaller capacity?",
       table=_T_MIXED,
-      choices=["Buffers J and K", "Buffers J and L", "Buffers L and M",
-               "Buffers K and M", "No pair differs in capacity but not in pH"],
+      choices=["Buffer K", "Buffer L", "Buffer M", "Buffer J has no equal in pH",
+               "Every other buffer has the same pH as buffer J"],
       ans=0,
-      why="EK 8.10.A.1 describes exactly this situation: two buffers of the same ratio and "
-          "different concentrations share a pH while differing in capacity. The tabulated "
-          "rows contain one such pair, and the other pairs differ in ratio and so in pH as "
-          "well."),
+      why="EK 8.10.A.1 describes exactly this situation: two buffers of the same ratio share "
+          "a pH while the more dilute of them has the smaller capacity. Exactly one "
+          "tabulated row has the same base-to-acid ratio as buffer J, and its "
+          "concentrations are lower."),
 
  dict(q="A buffer contains ten times as much conjugate acid as conjugate base. How do its "
         "two capacities compare?",
@@ -369,7 +370,7 @@ QUESTIONS = [
         "Its capacity for added base is the greater",
         "Its capacity for added acid is the greater",
         "The two capacities are equal",
-        "Its capacity for added acid is the greater, because it is an acidic buffer",
+        "The greater capacity is for added acid, since the buffer is acidic",
         "Neither capacity can be assessed without the pKa"],
       ans=0,
       why="EK 8.10.A.2 states that when a buffer has more conjugate acid than base, it has "
