@@ -200,7 +200,7 @@ def q19(table, item):
     assert d == 35, f"the difference recomputes to {d}, not 35"
     for wrong in (max(p), max(p) + min(p),
                   cg.cell(table, "Site 1", PARASITE) - cg.cell(table, "Site 3", PARASITE),
-                  cg.cell(table, "Site 3", PARASITE)):
+                  cg.cell(table, "Site 1", PARASITE) - cg.cell(table, "Site 2", PARASITE)):
         assert d != wrong, f"the {wrong} distractor equals the key"
     return f"38 minus 3 is {d:.0f} percentage points commoner in the wild fish nearest the cages"
 
@@ -243,7 +243,7 @@ CLAIMS = [
  ("commonest in the wild fish nearest the cages and rarer with distance",
   "Recomputed in q18 above: 1, 5, 15 and 40 kilometers against parasite shares of 38, 21, 9 and 3 percent. STB-1.F.2 states that increases in disease incidences can be TRANSMITTED TO WILD FISH. One distractor reverses the direction, so the anchor carries it."),
  ("35 percentage points commoner",
-  "Recomputed in q19 above: 38 minus 3 percent of the wild fish. The rejected values quote the nearest site alone, add the two, compare the wrong pair of sites, or quote a middle site."),
+  "Recomputed in q19 above: 38 minus 3 percent of the wild fish. The rejected values quote the nearest site alone, add the two, or compare the nearest site with one of the two middle sites instead of the farthest."),
  ("three reasons for its expansion: efficiency, small areas of water, and little fuel",
   "STB-1.F.1 supplies three reasons for the expansion before STB-1.F.2 supplies the drawbacks, so the framework carries both sides. Reducing the reasons to one, or denying the drawbacks, both misreport it."),
  ("escapees may compete OR BREED with wild fish",

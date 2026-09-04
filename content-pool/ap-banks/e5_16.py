@@ -365,11 +365,11 @@ QUESTIONS = [
         "38 percentage points commoner",
         "41 percentage points commoner",
         "29 percentage points commoner",
-        "9 percentage points commoner"],
+        "17 percentage points commoner"],
       ans=0,
       why="Subtracting the two tabulated shares gives 38 minus 3, which is 35 percentage points. "
-          "The rejected values quote the nearest site alone, add the two, compare the wrong pair "
-          "of sites, or quote a middle site."),
+          "The rejected values quote the nearest site alone, add the two, or compare the nearest "
+          "site with one of the two middle sites instead of the farthest."),
 
  dict(q="A student writes that the framework presents aquaculture purely as a source of harm. "
         "Which correction is required?",
