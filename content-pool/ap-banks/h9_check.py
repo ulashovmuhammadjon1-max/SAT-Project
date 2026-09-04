@@ -89,7 +89,7 @@ def opposite_sign_offered(item, token):
 
 # -------------------------------------------------------- gas-mole bookkeeping
 
-_TERM = re.compile(r"^(?:(\d+)\s+)?([A-Za-z0-9]+)\((s|l|g|aq)\)$")
+_TERM = re.compile(r"^(?:(\d+)\s+)?([A-Z][A-Za-z0-9]*)\((s|l|g|aq)\)$")
 _EQ_IN_STEM = re.compile(r"reaction\s+(.+?)\s*(?:,|\?|$)")
 
 
@@ -115,6 +115,36 @@ def delta_n_gas(equation):
     left, sep, right = equation.partition(" gives ")
     assert sep, f"no 'gives' separating the two sides of {equation!r}"
     return _side_gas_moles(right) - _side_gas_moles(left)
+
+
+_SPECIES_TERM = re.compile(r"^(?:(\d+)\s+)?([A-Z][A-Za-z0-9]*\((?:s|l|g|aq)\))$")
+
+
+def species_terms(equation):
+    """``(reactants, products)``, each a list of ``(coefficient, species)``.
+
+    The species string keeps its phase label, because that is how the tables in
+    these modules label their rows -- H2O(l) and H2O(g) are two different rows
+    with two different absolute entropies, and a lookup that dropped the phase
+    would silently read the wrong one.
+    """
+    left, sep, right = equation.partition(" gives ")
+    assert sep, f"no 'gives' separating the two sides of {equation!r}"
+
+    def side(text):
+        out = []
+        for term in text.split(" + "):
+            m = _SPECIES_TERM.match(term.strip())
+            assert m, f"cannot parse the term {term!r} in {text!r}"
+            out.append((int(m.group(1) or 1), m.group(2)))
+        return out
+
+    return side(left), side(right)
+
+
+def summed(terms, value_of):
+    """The coefficient-weighted sum of a per-species quantity over one side."""
+    return sum(coeff * value_of(species) for coeff, species in terms)
 
 
 # --------------------------------------------------------------- the equations
@@ -242,6 +272,19 @@ def selftest():
                 lambda: delta_n_gas("CaCO3(s) + CaO(s)"))
     _must_raise("a stem with no equation after the word 'reaction'",
                 lambda: equation_from("What is entropy?"))
+
+    # The species parser. The coefficient must be carried, and the phase label
+    # must survive, or a lookup reads liquid water's entropy for the vapour.
+    react, prod = species_terms("2 H2(g) + O2(g) gives 2 H2O(l)")
+    assert react == [(2, "H2(g)"), (1, "O2(g)")], f"reactant side parsed as {react}"
+    assert prod == [(2, "H2O(l)")], f"product side parsed as {prod}"
+    table = {"H2(g)": 130.7, "O2(g)": 205.0, "H2O(l)": 69.9}
+    assert abs(summed(react, table.__getitem__) - 466.4) < 1e-9, \
+        "the coefficient-weighted sum is wrong"
+    _must_raise("a coefficient written without its space",
+                lambda: species_terms("2H2(g) gives H2(g) + H2(g)"))
+    _must_raise("a species whose phase label is missing",
+                lambda: species_terms("2 H2 + O2(g) gives 2 H2O(l)"))
 
     # The equations. Each positive control is a value computed by hand.
     assert abs(gibbs(-92.2, -198.8, 298) - (-92.2 + 298 * 0.1988)) < 1e-9
