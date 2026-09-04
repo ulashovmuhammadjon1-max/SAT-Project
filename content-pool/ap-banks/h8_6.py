@@ -401,10 +401,10 @@ QUESTIONS = [
         "stabilizing the conjugate base of a strong acid?",
       choices=[
         "The molar mass of the anion",
-        "Electronegativity",
-        "Inductive effects",
-        "Resonance",
-        "A combination of electronegativity and resonance"],
+        "Electronegativity of the atoms near the acidic proton",
+        "Inductive effects transmitted through the bonds",
+        "Resonance within the anion",
+        "A combination of the three influences the framework names"],
       ans=0,
       why="EK 8.6.A.1.i lists electronegativity, inductive effects, resonance, or some "
           "combination thereof, and molar mass is not among them. A heavy anion is not "
