@@ -150,8 +150,8 @@ QUESTIONS = [
           "and the tabulated values at the two shortest distances rise and then turn "
           "positive."),
 
- dict(q="Using the same table, what happens to the potential energy as the two atoms are "
-        "pulled far apart?",
+ dict(q="For that same tabulated pair of atoms, describe the potential energy as the two "
+        "atoms are pulled far apart from the equilibrium separation.",
       table=_T_CURVE,
       choices=[
         "It rises toward zero, the value for two separated atoms.",
@@ -236,7 +236,7 @@ QUESTIONS = [
         "doubled while the distance between the ion centers is unchanged?",
       choices=["It becomes stronger.", "It becomes weaker.",
                "It is unchanged, since only distance matters.",
-               "It becomes stronger only if the anion's charge is also doubled.",
+               "It changes only if the anion's charge is also doubled.",
                "It falls to zero, since a doubled charge cancels the anion's charge."],
       ans=0,
       why="EK 2.2.A.3.i states that because the interaction strength is proportional to "
@@ -287,7 +287,7 @@ QUESTIONS = [
         "in each potential energy curve recorded. Which molecule has the strongest bond?",
       table=_T_MINIMA,
       choices=["Molecule M", "Molecule J", "Molecule K", "Molecule L",
-               "Molecule J, because its minimum lies at the shortest distance"],
+               "Whichever molecule's minimum lies at the shortest internuclear distance"],
       ans=0,
       why="EK 2.2.A.1 makes the bond energy the energy required to separate the atoms, "
           "which is the depth of the minimum, so the deepest tabulated minimum marks the "
@@ -297,7 +297,7 @@ QUESTIONS = [
  dict(q="Using the same table, which molecule has the shortest bond?",
       table=_T_MINIMA,
       choices=["Molecule J", "Molecule K", "Molecule L", "Molecule M",
-               "Molecule M, because it has the deepest minimum"],
+               "Whichever molecule reaches the deepest minimum, since depth fixes length"],
       ans=0,
       why="EK 2.2.A.1 defines the equilibrium bond length as the separation at which the "
           "potential energy is lowest, so the answer is the smallest tabulated distance. "
@@ -369,7 +369,7 @@ QUESTIONS = [
       table=_T_ORDER,
       choices=["By about 34 picometers", "By about 20 picometers",
                "By about 120 picometers", "By about 274 picometers",
-               "It does not shorten; it lengthens by about 34 picometers"],
+               "It does not shorten; it lengthens by roughly that same amount"],
       ans=0,
       why="The difference between the two tabulated bond lengths is read off directly, "
           "and EK 2.2.A.2's statement that higher-order bonds are shorter fixes the "
@@ -512,7 +512,6 @@ QUESTIONS = [
         "cation and a doubly charged anion; the second from a singly charged cation and "
         "a singly charged anion at a slightly smaller separation. What does the framework "
         "allow you to say?",
-      table=_T_IONS,
       choices=[
         "Both charge and separation affect the interaction, so the comparison requires "
         "weighing the larger charges against the smaller separation.",
