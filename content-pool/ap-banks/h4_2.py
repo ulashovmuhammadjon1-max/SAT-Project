@@ -218,7 +218,7 @@ QUESTIONS = [
         "BaCl2(aq) + Na2SO4(aq) gives BaSO4(s) + NaCl(aq)",
         "Ba2+(aq) + 2 Cl-(aq) + 2 Na+(aq) + SO42-(aq) gives BaSO4(s) + 2 Na+(aq) "
         "+ 2 Cl-(aq)",
-        "BaCl2(aq) + NaSO4(aq) gives BaSO4(s) + NaCl2(aq)"],
+        "BaCl2(aq) + Na2SO4(aq) gives Ba2SO4(s) + 2 NaCl(aq)"],
       ans=0,
       why="EK 4.2.A.3 makes the molecular form the one in which each substance "
           "is written as a compound rather than as ions, and EK 4.2.A.2 "
@@ -445,7 +445,7 @@ QUESTIONS = [
       choices=[
         "2 Al(s) + 3 Cl2(g) gives 2 AlCl3(s)",
         "Al(s) + Cl2(g) gives AlCl3(s)",
-        "Al(s) + 3 Cl2(g) gives AlCl3(s)",
+        "2 Al(s) + 6 Cl2(g) gives 2 AlCl3(s)",
         "2 Al(s) + 3 Cl2(g) gives AlCl3(s)",
         "3 Al(s) + 2 Cl2(g) gives 2 AlCl3(s)"],
       ans=0,

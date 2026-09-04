@@ -175,23 +175,51 @@ def n8(item):
     return f"trying every whole coefficient from one to ten leaves {fits} as the only balance"
 
 
-def n9(item):
+def net_ionic_key(item, anchor, molecular=None, complete=None, unbalanced=()):
+    """The key balances AND is the net ionic form; the named siblings are what they claim.
+
+    A "which is the net ionic equation" item cannot be settled by balance alone,
+    because the molecular and complete ionic forms of the same reaction balance
+    too -- that is EK 4.2.A.3's whole point. So this recomputes the CLASSIFICATION
+    as well: the key must carry ions with no species standing unaltered on both
+    sides, the molecular sibling must carry no ions at all, the complete ionic
+    sibling must repeat at least one species across the arrow, and each choice
+    named in ``unbalanced`` must actually fail EK 4.2.A.2's counts.
+    """
     key = item["choices"][item["ans"]]
-    assert heq.balanced(key), f"the keyed net ionic equation does not balance: {heq.report(key)}"
+    assert heq.balanced(key), f"the keyed equation does not balance: {heq.report(key)}"
     assert form_of(key) == "net ionic", f"the keyed equation is the {form_of(key)} form"
-    others = {form_of(c) for i, c in enumerate(item["choices"])
-              if i != item["ans"] and " gives " in c and _try(heq.balanced, c)}
-    assert "net ionic" not in others, "another choice is also a balanced net ionic equation"
-    h.shows(item, "Ag+(aq) + Cl-(aq) gives AgCl(s)")
-    return (f"the keyed equation balances ({heq.report(key)}) and is the only balanced "
-            "choice written with ions and no species repeated across the arrow")
+    if molecular is not None:
+        got = form_of(item["choices"][molecular])
+        assert got == "molecular", f"choice {molecular} is the {got} form, not molecular"
+    if complete is not None:
+        got = form_of(item["choices"][complete])
+        assert got == "complete ionic", f"choice {complete} is the {got} form"
+    for j in unbalanced:
+        assert not _try(heq.balanced, item["choices"][j]), (
+            f"choice {j} was expected to fail EK 4.2.A.2's counts but balances"
+        )
+    h.shows(item, anchor)
+    return (f"the keyed equation balances ({heq.report(key)}) and classifies as the net ionic "
+            f"form, while the sibling forms and the {len(unbalanced)} miscounted choice(s) "
+            "classify as stated")
+
+
+def n9(item):
+    return net_ionic_key(item, "Ag+(aq) + Cl-(aq) gives AgCl(s)",
+                         molecular=1, complete=2, unbalanced=(4,))
 
 
 def n12(item):
-    note = only_key_balances(item)
-    assert form_of(item["choices"][item["ans"]]) == "molecular", \
-        "the keyed choice is not written in the molecular form"
-    return note + ", and it carries no charged species, which is the molecular form"
+    """The molecular form: balanced, and the only balanced choice carrying no ions."""
+    key = item["choices"][item["ans"]]
+    assert heq.balanced(key), f"the keyed equation does not balance: {heq.report(key)}"
+    mol = [i for i, c in enumerate(item["choices"])
+           if " gives " in c and _try(heq.balanced, c) and form_of(c) == "molecular"]
+    assert mol == [item["ans"]], f"balanced choices in the molecular form: {mol}"
+    h.shows(item, "BaSO4(s) + 2 NaCl(aq)")
+    return (f"the keyed equation balances ({heq.report(key)}) and is the only balanced choice "
+            "written without ions, which is EK 4.2.A.3's molecular form")
 
 
 def n13(item):
@@ -217,11 +245,13 @@ def n15(item):
 
 
 def n17(item):
-    return only_key_balances(item)
+    return net_ionic_key(item, "H3O+(aq) + OH-(aq) gives 2 H2O(l)",
+                         molecular=1, complete=4, unbalanced=(3,))
 
 
 def n19(item):
-    return only_key_balances(item)
+    return net_ionic_key(item, "2 H3O+(aq) gives Mg2+(aq)",
+                         molecular=1, unbalanced=(2, 3))
 
 
 def n20(item):
@@ -256,12 +286,8 @@ def n24(item):
 
 
 def n26(item):
-    key = item["choices"][item["ans"]]
-    assert heq.balanced(key), heq.report(key)
-    assert form_of(key) == "net ionic", f"the keyed equation is the {form_of(key)} form"
-    h.shows(item, "Ca2+(aq) + CO32-(aq) gives CaCO3(s)")
-    return (f"the keyed equation balances ({heq.report(key)}) and repeats no species across "
-            "the arrow, which is the net ionic form")
+    return net_ionic_key(item, "Ca2+(aq) + CO32-(aq) gives CaCO3(s)",
+                         molecular=1, complete=2, unbalanced=(4,))
 
 
 def n28(item):
@@ -344,7 +370,7 @@ def _extra_mutations():
 
     def balance_a_distractor(mod, cl):
         """A distractor made balanced too, so the key is no longer the only one."""
-        mod.QUESTIONS[22]["choices"][1] = "C2H5OH + 3 O2 gives 2 CO2 + 3 H2O(g)"
+        mod.QUESTIONS[22]["choices"][1] = "3 O2 + C2H5OH gives 3 H2O + 2 CO2"
 
     def corrupt_table_equation(mod, cl):
         """A tabulated equation retyped so the recomputed answer changes."""
