@@ -67,10 +67,10 @@ _T_RATES = dict(
 _T_PRESSURES = dict(
     headers=["Time (min)", "Partial pressure of X (atm)", "Partial pressure of Y (atm)"],
     rows=[["0", "2.00", "0"],
-          ["5", "1.40", "1.20"],
-          ["10", "1.20", "1.60"],
-          ["15", "1.20", "1.60"],
-          ["20", "1.20", "1.60"]])
+          ["4", "1.40", "1.20"],
+          ["8", "1.20", "1.60"],
+          ["12", "1.20", "1.60"],
+          ["16", "1.20", "1.60"]])
 
 _T_VESSELS = dict(
     headers=["Vessel", "[R] at 20 min (M)", "[R] at 30 min (M)", "[R] at 40 min (M)"],

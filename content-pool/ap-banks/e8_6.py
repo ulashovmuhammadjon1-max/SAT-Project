@@ -231,8 +231,8 @@ QUESTIONS = [
  dict(q="Which observation would be the strongest evidence that a discharge is causing "
         "thermal pollution as the framework defines it?",
       choices=[
-        "The river below the outfall is warmer than the river above it and holds fewer "
-        "of the species that lived there before",
+        "The reach below the outfall has lost species that lived there before, and the "
+        "water there is warmer than it is upstream",
         "The river below the outfall is warmer than the river above it",
         "The plant reports the volume of water it withdraws each day",
         "The outfall pipe is larger in diameter than it was ten years ago",
