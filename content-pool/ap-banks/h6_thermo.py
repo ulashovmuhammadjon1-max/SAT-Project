@@ -204,6 +204,36 @@ def agrees(delta_h, text, transfer=False):
     return value_is_exothermic == text_says_exothermic
 
 
+_SIGNED_VALUE = re.compile(r"^[-+]\d")
+
+
+def present(text, value_text):
+    """Is ``value_text`` in ``text``, with a SIGNED value compared RAW?
+
+    ``cg.contains_phrase`` normalizes before matching, and ``normalize`` strips a
+    leading '+' while keeping a leading '-'. That once made "+183 kJ/mol" match a
+    keyed "-183 kJ/mol": the anchor for an ENDOthermic key matched the EXOthermic
+    distractor, and the swap guard that exists to catch exactly that could not
+    see it. The shared helper has since been fixed to refuse a preceding sign
+    when the phrase opens with a digit, and ``selftest`` below asserts it stays
+    fixed.
+
+    This function is kept alongside it because it does something the normalized
+    matcher still does not: it compares the RAW string, so it is unaffected by
+    any future change to normalization, and it refuses a longer number that
+    merely starts the same way ("-1830" against "-183"). Every unit 6 verifier
+    locating a mistaken signed value in a distractor goes through it.
+    """
+    if not _SIGNED_VALUE.match(value_text):
+        import cg_check as cg
+        return cg.contains_phrase(text, value_text)
+    idx = text.find(value_text)
+    if idx < 0:
+        return False
+    after = text[idx + len(value_text):idx + len(value_text) + 1]
+    return not after.isdigit()
+
+
 def report(delta_h, unit="kJ/mol"):
     """A sentence naming the number and its direction, for a check's return value."""
     w = word(delta_h)
@@ -304,6 +334,31 @@ def selftest():
         "the lookarounds must not match a word run together with digits"
     )
     assert stated_direction("nonexothermic") is None
+
+    # ``present``: positive AND negative controls, including the exact confusion
+    # it exists to prevent and the shared helper it depends on staying fixed.
+    import cg_check as cg
+    key = "-183 kJ/mol, so the reaction is exothermic"
+    assert present(key, "-183 kJ/mol"), "the raw matcher fails to find the value it holds"
+    assert not present(key, "+183 kJ/mol"), (
+        "NEGATIVE CONTROL FAILED: the signed matcher cannot tell + from -, which is the "
+        "whole reason it exists"
+    )
+    assert not present("-1830 kJ/mol", "-183 kJ/mol"), (
+        "NEGATIVE CONTROL FAILED: a longer number that merely starts the same way was matched"
+    )
+    assert present(key, "exothermic") and not present(key, "endothermic"), (
+        "an unsigned phrase must still be matched through the normalized helper"
+    )
+    assert not cg.contains_phrase(key, "+183 kJ/mol"), (
+        "REGRESSION: cg.contains_phrase has gone back to confusing +183 with -183. That is "
+        "the defect the unit 6 banks were built around -- an anchor for an endothermic key "
+        "matching the exothermic distractor. Fix the shared helper, do not work around it"
+    )
+    assert cg.contains_phrase(key, "-183 kJ/mol"), (
+        "cg.contains_phrase must still find a correctly signed value; a fix that rejects the "
+        "right sign too is not a fix"
+    )
 
     print("OK  h6_thermo: q=mc(delta T), phase, reaction, bond, formation and Hess "
           "arithmetic checked against known values; the reversed subtraction, the "
