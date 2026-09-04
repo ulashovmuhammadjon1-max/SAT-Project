@@ -361,7 +361,7 @@ QUESTIONS = [
         "and the tenth generation?",
       table=_T_RESIST,
       choices=["Sixty-four points", "Sixty-eight points", "Eighty-eight points",
-               "Thirty-three points", "Four points"],
+               "Thirty-three points", "Twelve points"],
       ans=0,
       why="Survival stands at 4 percent in the first generation tested and 68 percent in the "
           "tenth, and 68 less 4 is 64. ERT-2.H.1 places such a change across generations "
@@ -370,7 +370,8 @@ QUESTIONS = [
  dict(q="In that beetle record, which is the first generation tested at which more than "
         "half the population survived the dose?",
       table=_T_RESIST,
-      choices=["Generation 10", "Generation 1", "Generation 3", "Generation 6",
+      choices=["The tenth generation tested", "The first generation tested",
+               "The third generation tested", "The sixth generation tested",
                "No tested generation exceeded one half"],
       ans=0,
       why="The survival figures are 4, 12, 35, 68 and 92 percent, and the first above 50 is "
