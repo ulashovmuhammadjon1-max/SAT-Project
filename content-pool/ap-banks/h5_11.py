@@ -52,6 +52,15 @@
 # NOTATION. Chemistry is not typeset. Formulas are plain text, the arrow is the
 # word "gives", ions are written H3O+ in the ordinary way, and a surface site is
 # written M, as a mechanism for surface catalysis conventionally does.
+#
+# THE PROTONATED FORMIC ACID IS WRITTEN H2COOH+, and not with the extra proton
+# written last. Both stand for the same cation, CH3O2+, but a trailing digit in
+# front of a charge sign is read as the SIZE of the charge everywhere else in
+# these banks -- SO42- is four oxygens and a charge of minus two -- so formic
+# acid with the proton written last reads as a charge of plus two, to
+# h_equation.py's parser and to a student alike. Written
+# H2COOH+ the formula is unambiguous, and verify_h5_11.py atom- and
+# charge-balances every tabulated elementary step to prove it.
 TOPIC = ("5.11", "Catalysis", 5)
 
 _M_OZONE = dict(
@@ -61,8 +70,8 @@ _M_OZONE = dict(
 
 _M_ACID = dict(
     headers=["Step", "Elementary reaction"],
-    rows=[["Step 1", "HCOOH + H3O+ gives HCOOH2+ + H2O"],
-          ["Step 2", "HCOOH2+ gives CO + H3O+"]])
+    rows=[["Step 1", "HCOOH + H3O+ gives H2COOH+ + H2O"],
+          ["Step 2", "H2COOH+ gives CO + H3O+"]])
 
 _M_SURFACE = dict(
     headers=["Step", "Elementary reaction"],
@@ -245,7 +254,7 @@ QUESTIONS = [
       table=_M_ACID,
       choices=[
         "H3O+, the hydronium ion",
-        "HCOOH2+, the protonated acid",
+        "H2COOH+, the protonated acid",
         "HCOOH, formic acid",
         "H2O, water",
         "CO, carbon monoxide"],

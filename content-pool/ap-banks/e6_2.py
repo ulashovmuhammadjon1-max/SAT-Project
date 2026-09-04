@@ -123,7 +123,7 @@ QUESTIONS = [
         "It increases",
         "It decreases",
         "It stays exactly where it was",
-        "It increases only where the country has no fossil fuel of its own",
+        "It changes only where the country has no fossil fuel of its own",
         "The framework makes no statement about it"],
       ans=0,
       why="ENG-3.B.3 states that AS DEVELOPING COUNTRIES BECOME MORE DEVELOPED, THEIR RELIANCE "
@@ -136,7 +136,7 @@ QUESTIONS = [
         "It increases",
         "It decreases",
         "It stays level, because industry uses energy more efficiently",
-        "It increases in developed countries and decreases in developing ones",
+        "It rises in developed countries and falls in developing ones",
         "The framework makes no statement about it"],
       ans=0,
       why="ENG-3.B.4 states that AS THE WORLD BECOMES MORE INDUSTRIALIZED, THE DEMAND FOR ENERGY "
@@ -159,13 +159,14 @@ QUESTIONS = [
         "statement?",
       choices=[
         "The climate of the region",
-        "Availability",
-        "Price",
-        "Governmental regulations",
-        "Price together with availability"],
+        "How available the source is",
+        "What a unit of the source costs",
+        "The regulations a government sets on its use",
+        "Whether a government permits its use at all"],
       ans=0,
       why="ENG-3.B.5's three influences are availability, price and governmental regulations. "
-          "Climate is not one of them, and every rejected option quotes the statement directly."),
+          "Climate is not one of them. Two rejected options restate governmental regulation, one "
+          "restates availability and one restates price."),
 
  dict(q="Which of the following correctly separates two of the framework's statements about "
         "trends?",
@@ -237,8 +238,8 @@ QUESTIONS = [
         "energy, which is the framework's claim about fossil fuels.",
         "Nuclear power supplies the largest part of the world's energy, which is the "
         "framework's claim about fossil fuels.",
-        "The sources other than coal, crude oil and natural gas together supply the largest "
-        "part of the world's energy.",
+        "The sources other than coal, crude oil and natural gas supply more of the world's "
+        "energy than those three do.",
         "The five sources each supply about the same share of the world's energy.",
         "Coal alone supplies more than half of the world's energy."],
       ans=0,
@@ -457,10 +458,10 @@ QUESTIONS = [
         "first. Which of the framework's influences does that illustrate?",
       choices=[
         "Governmental regulations",
-        "Price",
-        "Availability",
-        "Price together with availability",
-        "None of the three, since a ban is not an influence on use"],
+        "The price of the fuel",
+        "How much of the fuel is available nearby",
+        "The climate of the district",
+        "None of the three influences the framework names, since a prohibition is not one"],
       ans=0,
       why="ENG-3.B.5 names availability, price and GOVERNMENTAL REGULATIONS as the three "
           "influences on which energy sources people use and how they use them, and a national "
@@ -470,11 +471,11 @@ QUESTIONS = [
  dict(q="A second district switches away from a fuel after its cost for each unit of energy "
         "doubles. Which of the framework's influences does that illustrate?",
       choices=[
-        "Price",
+        "The price of the fuel",
         "Governmental regulations",
-        "Availability",
-        "Governmental regulations together with availability",
-        "None of the three, since cost is not one of them"],
+        "How much of the fuel is available nearby",
+        "The age of the equipment that burns it",
+        "None of the three influences the framework names, since cost is not one of them"],
       ans=0,
       why="ENG-3.B.5 names availability, PRICE and governmental regulations, and a change in "
           "cost for each unit of energy is a change in price. No rule was made and no supply "
