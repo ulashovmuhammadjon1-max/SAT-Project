@@ -142,7 +142,7 @@ QUESTIONS = [
       choices=[
         "Renewable and clean",
         "Renewable and inexpensive",
-        "Nonrenewable and clean",
+        "Clean but nonrenewable",
         "Clean and inexhaustible",
         "Renewable and free of any effect on wildlife"],
       ans=0,
@@ -160,7 +160,9 @@ QUESTIONS = [
       ans=0,
       why="ENG-3.S.1 states that BIRDS AND BATS MAY BE KILLED IF THEY FLY INTO THE SPINNING "
           "TURBINE BLADES. The same statement calls wind energy clean, so it releases no air "
-          "pollutants; fish and dams belong to hydroelectric power in topic 6.9."),
+          "pollutants; the loss of or change in habitats following the construction of dams is "
+          "ENG-3.M.1, in topic 6.9, and the framework names no harm to fish anywhere in this "
+          "unit."),
 
  dict(q="What does the word MAY establish in that clause?",
       choices=[
@@ -301,14 +303,14 @@ QUESTIONS = [
       choices=[
         "60 energy units, the same at every site where the air is moving",
         "40 energy units, the same at every site where the air is moving",
-        "240 energy units, the same at every site where the air is moving",
+        "240 energy units, which is what the slowest moving site delivers in a whole day",
         "A different amount at each site, falling as the wind rises",
         "The amount for each unit of speed cannot be worked out from the record"],
       ans=0,
       why="Dividing output by wind speed gives 240 over 4, 360 over 6 and 540 over 9, which is 60 "
-          "energy units for each speed unit at every moving site. The rejected values divide the "
-          "wrong way round, quote a whole day's output, or deny an arithmetic the record plainly "
-          "allows."),
+          "energy units for each speed unit at every moving site. The rejected values pair one "
+          "site's output with another site's wind speed, quote a whole day's output as though it "
+          "were a rate, or deny an arithmetic the record plainly allows."),
 
  dict(q="A fifth site with the same turbine averages 7 speed units. What daily output does the "
         "record lead you to expect there?",
