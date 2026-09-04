@@ -316,8 +316,8 @@ QUESTIONS = [
         "The transition state",
         "The reactants",
         "The products",
-        "Whichever of the reactants and the products is higher",
-        "The point halfway between the reactants and the products"],
+        "Whichever end of the profile lies higher",
+        "A point midway along the reaction coordinate"],
       ans=0,
       why="EK 5.6.A.3 has the coordinate proceed from reactants, through a "
           "transition state, to products, and makes the reactant to transition "
