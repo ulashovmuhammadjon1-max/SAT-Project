@@ -87,6 +87,30 @@ def opposite_sign_offered(item, token):
     return flipped
 
 
+# ------------------------------------------------------- the sign convention
+
+# "favored" sits inside "unfavored", so the lookbehind is what keeps the two
+# apart: at the 'f' of "unfavored" the previous character is 'n', a letter, and
+# the match is refused. A pattern written with \b would match both and the
+# verdict would silently always read "favored".
+_FAVORED = re.compile(r"(?<![A-Za-z])(un)?favou?red(?![A-Za-z])", re.I)
+
+
+def favorability_verdict(text):
+    """True if the text says favored, False if unfavored, None if unclear.
+
+    A text saying both, or neither, returns None rather than guessing, so a
+    caller has to handle that case deliberately instead of inheriting a
+    default that happens to be right half the time.
+    """
+    found = {(m.group(1) or "").lower() for m in _FAVORED.finditer(text)}
+    if found == {""}:
+        return True
+    if found == {"un"}:
+        return False
+    return None
+
+
 # -------------------------------------------------------- gas-mole bookkeeping
 
 _TERM = re.compile(r"^(?:(\d+)\s+)?([A-Z][A-Za-z0-9]*)\((s|l|g|aq)\)$")
@@ -272,6 +296,17 @@ def selftest():
                 lambda: delta_n_gas("CaCO3(s) + CaO(s)"))
     _must_raise("a stem with no equation after the word 'reaction'",
                 lambda: equation_from("What is entropy?"))
+
+    # The verdict reader. "favored" is a substring of "unfavored", so a reader
+    # that got this wrong would report every unfavored process as favored --
+    # the single most damaging error available in this unit.
+    assert favorability_verdict("thermodynamically favored") is True
+    assert favorability_verdict("thermodynamically unfavored") is False
+    assert favorability_verdict("a process, favored under standard conditions") is True
+    assert favorability_verdict("says nothing about it") is None, \
+        "a text with no verdict must not be read as one"
+    assert favorability_verdict("favored at low temperature and unfavored above it") is None, \
+        "a text carrying both verdicts must not be read as either"
 
     # The species parser. The coefficient must be carried, and the phase label
     # must survive, or a lookup reads liquid water's entropy for the vapour.
