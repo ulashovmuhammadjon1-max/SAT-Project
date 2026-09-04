@@ -112,23 +112,36 @@ def mechanism(table):
         "the slow step must be the FIRST; a slow step later in the mechanism is EK 5.9.A.1's "
         f"pre-equilibrium case, and the table marks step {slow[0] + 1}"
     )
-    inter = set(heq.intermediates(steps))
-    reactants, _ = heq.step_species(steps[0])
-    clash = inter & set(reactants)
-    assert not clash, (
-        f"the slow step's reactants include the intermediate(s) {sorted(clash)}, which makes "
-        "this EK 5.9.A.1's case rather than EK 5.8.A.1's"
-    )
     return steps, slow[0]
+
+
+def no_intermediate_in_key(steps, item):
+    """EK 5.9.A.1's case must not be keyed here.
+
+    A rate law written in the concentration of an intermediate is what EK
+    5.9.A.1 sends to a pre-equilibrium approximation, and it is not something
+    EK 5.8.A.1 licenses reading off a slow step. Every mechanism in this module
+    forms at least one intermediate and offers a distractor written in it, so
+    this is reachable: keying that distractor fires it.
+    """
+    for name in heq.intermediates(steps):
+        token = f"[\\mathrm{{{latex_formula(name)}}}]"
+        assert token not in item["choices"][item["ans"]], (
+            f"the keyed rate law is written in the intermediate {name}, which is EK "
+            f"5.9.A.1's pre-equilibrium case rather than EK 5.8.A.1's"
+        )
+    return heq.intermediates(steps)
 
 
 def law_item(table, item):
     steps, slow = mechanism(table)
+    inter = no_intermediate_in_key(steps, item)
     law, word, _ = rate_law(steps[slow])
     anchor = f"{law} \\), {word} order overall"
     h.shows(item, anchor)
     return (f"the tabulated slow step {steps[slow]!r} carries the particles that must collide, "
-            f"so its molecularity rebuilds the rate law as {law} , {word} order overall")
+            f"so its molecularity rebuilds the rate law as {law} , {word} order overall, "
+            f"naming none of the intermediates {inter}")
 
 
 def factor_item(table, item, species_name, multiplier):
@@ -316,7 +329,7 @@ def _extra_mutations():
         t = mod.QUESTIONS[5]["table"]
         mod.QUESTIONS[5]["table"] = dict(
             headers=t["headers"],
-            rows=[[r[0], "NO2 + NO2 gives NO2F + F", r[2]] if r[0] == "Step 1" else list(r)
+            rows=[[r[0], "NO2 + NO2 gives N2O4", r[2]] if r[0] == "Step 1" else list(r)
                   for r in t["rows"]])
 
     def two_slow_steps(mod, cl):
@@ -325,18 +338,15 @@ def _extra_mutations():
             headers=t["headers"],
             rows=[[r[0], r[1], "slow"] if r[0] == "Step 2" else list(r) for r in t["rows"]])
 
-    def intermediate_in_slow_step(mod, cl):
-        """The mechanism reordered so the slow step consumes an intermediate."""
-        t = mod.QUESTIONS[9]["table"]
-        mod.QUESTIONS[9]["table"] = dict(
-            headers=t["headers"],
-            rows=[["Step 1", "O + O3 gives 2 O2", "slow"],
-                  ["Step 2", "O3 gives O2 + O", "fast"]])
+    def key_written_in_an_intermediate(mod, cl):
+        """The key moved to the rate law written in the mechanism's intermediate."""
+        mod.QUESTIONS[3]["ans"] = 2
+        cl[3] = (r"k[\mathrm{NO_3}][\mathrm{CO}] \), second order overall", cl[3][1])
 
     def factor_key_wrong(mod, cl):
         """The doubling key moved off the factor the slow step's powers give."""
-        mod.QUESTIONS[14]["choices"][0] = "It becomes eight times as large"
-        cl[14] = ("eight times as large", cl[14][1])
+        mod.QUESTIONS[14]["choices"][0] = "It becomes sixteen times as large"
+        cl[14] = ("sixteen times as large", cl[14][1])
 
     def figure_language(mod, cl):
         mod.QUESTIONS[0]["q"] = "What sets the rate law in the mechanism shown above?"
@@ -347,8 +357,8 @@ def _extra_mutations():
             ("a tabulated slow step retyped so the rebuilt law changes",
              slow_step_species_changed),
             ("two steps both labelled slow", two_slow_steps),
-            ("a slow step that consumes an intermediate, which is 5.9's case",
-             intermediate_in_slow_step),
+            ("a key written in the concentration of an intermediate, which is 5.9's case",
+             key_written_in_an_intermediate),
             ("a concentration-change key moved off its recomputed factor", factor_key_wrong),
             ("a stem pointing at a picture the bank cannot show", figure_language)]
 
