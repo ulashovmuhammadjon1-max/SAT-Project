@@ -444,7 +444,7 @@ QUESTIONS = [
       ans=0,
       why="EK 9.8.A.2 says visual representations of galvanic and electrolytic cells are "
           "tools of analysis to identify where half-reactions occur and in what direction "
-          "current flows, which is a claim about their use rather than about any single "
-          "picture."),
+          "current flows, which is a claim about how they are used rather than about any "
+          "one representation."),
 
 ]

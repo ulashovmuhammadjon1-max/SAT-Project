@@ -112,7 +112,7 @@ QUESTIONS = [
         "It is endothermic",
         "It transfers no energy at all",
         "It cannot occur",
-        "It is exothermic only if a gas is produced"],
+        "Its direction depends on whether a gas is produced"],
       ans=0,
       why="EK 6.7.A.2 states that if the energy released is greater than the energy "
           "required, the reaction is exothermic."),
@@ -124,7 +124,7 @@ QUESTIONS = [
         "It is exothermic",
         "It transfers no energy at all",
         "It cannot occur",
-        "It is endothermic only if the products are solids"],
+        "Its direction depends on whether the products are solids"],
       ans=0,
       why="EK 6.7.A.2 states that if the energy required is greater than the energy "
           "released, the reaction is endothermic, which is the mirror of the exothermic "
@@ -151,8 +151,8 @@ QUESTIONS = [
         "It requires energy",
         "It releases energy",
         "It neither requires nor releases energy",
-        "It requires energy only if the bond is a double bond",
-        "It releases energy only if the bond is in a reactant"],
+        "Energy is needed only when the bond is a double bond",
+        "Energy is given out only when the bond is in a reactant"],
       ans=0,
       why="EK 6.7.A.2 speaks throughout of the energy REQUIRED to break all of the bonds in "
           "the reactant molecules, which is why the reactant sum enters the calculation as "
@@ -163,8 +163,8 @@ QUESTIONS = [
         "It releases energy",
         "It requires energy",
         "It neither requires nor releases energy",
-        "It releases energy only if the product is a gas",
-        "It requires energy only if the bond is a single bond"],
+        "Energy is given out only when the product is a gas",
+        "Energy is needed only when the bond is a single bond"],
       ans=0,
       why="EK 6.7.A.2 speaks of the energy RELEASED in forming the bonds in the product "
           "molecules, which is why the product sum enters the calculation as a refund."),
@@ -221,8 +221,8 @@ QUESTIONS = [
           "of all the bonds in the reactant molecules, which here are one bond in each of "
           "the two diatomic reactants."),
 
- dict(q="For that same reaction, how much energy is released in forming the bonds in the "
-        "product molecules?",
+ dict(q="For the reaction H2 + Cl2 gives 2 HCl , how much energy is released in forming "
+        "the bonds in the product molecules, using the tabulated values?",
       table=_T_BOND,
       choices=[
         "862 kJ/mol",
@@ -445,7 +445,7 @@ QUESTIONS = [
         "-250 kJ/mol, so the reaction is exothermic",
         "+250 kJ/mol, so the reaction is endothermic",
         "-3250 kJ/mol, so the reaction is exothermic",
-        "+3250 kJ/mol, so the reaction is endothermic",
+        "-1500 kJ/mol, so the reaction is exothermic",
         "-1750 kJ/mol, so the reaction is exothermic"],
       ans=0,
       why="Learning objective 6.7.A subtracts the energy released forming the product bonds "
