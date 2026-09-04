@@ -100,7 +100,7 @@ QUESTIONS = [
         "\\( c = \\frac{\\lambda}{\\nu} \\)",
         "\\( c = \\frac{\\nu}{\\lambda} \\)",
         "\\( \\lambda = c \\nu \\)",
-        "\\( c = \\lambda + \\nu \\)"],
+        "\\( \\nu = c \\lambda \\)"],
       ans=0,
       why="EK 3.12.A.2 gives that equation, with the speed of light equal to the product of "
           "wavelength and frequency. Because the product is fixed, a longer wavelength must "
@@ -112,7 +112,7 @@ QUESTIONS = [
         "\\( E = \\frac{h}{\\nu} \\)",
         "\\( E = \\frac{\\nu}{h} \\)",
         "\\( E = h \\lambda \\)",
-        "\\( E = h + \\nu \\)"],
+        "\\( \\nu = h E \\)"],
       ans=0,
       why="EK 3.12.A.2 says the energy of a photon is related to the frequency of the "
           "electromagnetic wave through Planck's equation and gives it in that form. Energy "
@@ -284,17 +284,18 @@ QUESTIONS = [
           "electromagnetic wave through Planck's equation. Wavelength enters only through "
           "the other equation, which ties it to frequency."),
 
- dict(q="Which equation does the framework use to relate wavelength and frequency?",
+ dict(q="According to the framework's two equations, which pair of quantities has a product "
+        "that is the same for every electromagnetic wave?",
       choices=[
-        "\\( c = \\lambda \\nu \\)",
-        "\\( E = h \\nu \\)",
-        "\\( E = h \\lambda \\)",
-        "\\( \\nu = h E \\)",
-        "\\( \\lambda = h \\nu \\)"],
+        "The wavelength and the frequency",
+        "The energy and the frequency",
+        "The energy and the wavelength",
+        "Planck's constant and the frequency",
+        "The wavelength and Planck's constant"],
       ans=0,
-      why="EK 3.12.A.2 gives one equation tying wavelength and frequency through the speed of "
-          "light and a second tying energy to frequency through Planck's constant. Only the "
-          "first contains a wavelength at all."),
+      why="EK 3.12.A.2 sets the product of wavelength and frequency equal to the speed of "
+          "light, which is the same for every electromagnetic wave. Planck's equation instead "
+          "makes energy rise with frequency, so no product involving the energy is fixed."),
 
  dict(q="An atom undergoes an electronic transition and emits a photon. How does the energy "
         "of the photon compare with the energy lost by the atom?",
@@ -327,13 +328,13 @@ QUESTIONS = [
       choices=[
         "\\( 3.00 \\times 10^{15} \\) per second",
         "\\( 3.00 \\times 10^{-15} \\) per second",
-        "\\( 1.32 \\times 10^{-51} \\) J",
-        "\\( 3.33 \\times 10^{16} \\) per second",
+        "\\( 1.32 \\times 10^{-51} \\) per second",
+        "\\( 3.33 \\times 10^{-16} \\) per second",
         "\\( 1.32 \\times 10^{51} \\) per second"],
       ans=0,
       why="EK 3.12.A.2's Planck equation rearranged divides the energy by the constant, so "
-          "the powers of ten subtract. Multiplying them instead gives a product with a "
-          "wildly different exponent, which is one of the values offered."),
+          "the powers of ten subtract. Multiplying the two instead, or dividing the constant "
+          "by the energy, gives two of the other values offered."),
 
  dict(q="A photon has a wavelength of \\( 2.00 \\times 10^{-7} \\) metres. Taking the speed of "
         "light as \\( 3.00 \\times 10^{8} \\) metres per second and Planck's constant as "
