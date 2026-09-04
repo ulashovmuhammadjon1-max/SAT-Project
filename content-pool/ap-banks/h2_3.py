@@ -28,9 +28,11 @@ of the numbers, and one is a stem-numeric comparison. Every one of those is
 recomputed in verify_h2_3.py from the table or the stem alone.
 
 THE EXCLUSION STATEMENT IS GATED, NOT JUST OBEYED. No item names a crystal
-structure, a unit cell, a coordination number or a packing efficiency;
-``no_named_lattice`` in the verifier asserts it, so the exclusion cannot quietly
-be broken by a later edit.
+structure, a unit cell, a coordination number or a packing efficiency in its
+stem or its keyed choice; ``excluded_material_only_as_a_distractor`` in the
+verifier asserts it, so the exclusion cannot quietly be broken by a later edit.
+Item 23 puts four such tasks in its REJECTED options on purpose, which is how
+an exclusion statement gets taught rather than merely obeyed.
 
 WHAT IS NOT HERE. The macroscopic properties of ionic solids -- low vapor
 pressure, high melting point, brittleness, conduction only when molten or
@@ -253,7 +255,7 @@ QUESTIONS = [
         "which is the interaction between neighboring ions weakest?",
       table=_T_CHARGE_DIST,
       choices=["Compound W", "Compound X", "Compound Y", "Compound Z",
-               "Compound X, because it has the largest separation"],
+               "The one with the largest separation, since distance is all that matters"],
       ans=0,
       why="EK 2.2.A.3 makes the strength rise with the charges and fall with the "
           "separation, so the weakest is the compound that combines the smallest charge "
@@ -283,7 +285,7 @@ QUESTIONS = [
         "separation, in which is the interaction weakest?",
       table=_T_DISTANCE_ONLY,
       choices=["Compound M", "Compound J", "Compound K", "Compound L",
-               "Compound J, because the smallest separation gives the weakest interaction"],
+               "The one with the smallest separation, since the closest ions interact least"],
       ans=0,
       why="EK 2.2.A.3.ii states that the interaction strength increases as the distance "
           "between ion centers decreases, so the largest tabulated separation gives the "
@@ -310,7 +312,7 @@ QUESTIONS = [
         "the interaction between neighboring ions weakest?",
       table=_T_CHARGE_ONLY,
       choices=["Compound Q", "Compound R", "Compound S", "Compound T",
-               "Compound T, because the largest charges give the weakest interaction"],
+               "The one with the largest charges, since higher charges weaken the attraction"],
       ans=0,
       why="EK 2.2.A.3.i makes the strength proportional to the charge on each ion, so with "
           "every tabulated separation equal the smallest product of charges gives the "
@@ -336,7 +338,7 @@ QUESTIONS = [
         "in which is the interaction between neighboring ions weakest?",
       table=_T_RADII,
       choices=["Sample 4", "Sample 1", "Sample 2", "Sample 3",
-               "Sample 1, because the smallest anion gives the weakest interaction"],
+               "The one built from the smallest anion, since a small anion weakens the attraction"],
       ans=0,
       why="Adding the two tabulated radii gives the distance between neighboring ion "
           "centers, and EK 2.2.A.3.ii makes the largest such distance the weakest "
