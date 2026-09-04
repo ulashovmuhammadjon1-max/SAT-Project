@@ -30,7 +30,10 @@ counter, so nothing here is trusted until that has run.
 import re
 
 _PHASE = re.compile(r"\((?:s|l|g|aq)\)")
-_CHARGE = re.compile(r"(\d*)([+-])$")
+# The charge magnitude is a SINGLE digit, never a run of them. Greedy digits
+# read ``SO42-`` as a charge of minus forty-two instead of four oxygens and a
+# charge of minus two, and the parser then reports a real equation unbalanced.
+_CHARGE = re.compile(r"(\d?)([+-])$")
 _COEFF = re.compile(r"^(\d+)\s+(\S.*)$")
 _ELEMENT = re.compile(r"([A-Z][a-z]?)(\d*)")
 
