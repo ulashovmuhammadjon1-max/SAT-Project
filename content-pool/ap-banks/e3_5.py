@@ -345,7 +345,7 @@ QUESTIONS = [
  dict(q="In which year of that record does the population stand furthest below the carrying "
         "capacity?",
       table=_T_DECLINE,
-      choices=["Year 13", "Year 1", "Year 5", "Year 9",
+      choices=["The thirteenth year", "The first year", "The fifth year", "The ninth year",
                "The population is never below the carrying capacity"],
       ans=0,
       why="The shortfalls against the capacity of 1,400 are 200, none, 50 and 220 "
