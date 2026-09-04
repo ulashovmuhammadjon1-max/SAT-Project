@@ -365,7 +365,7 @@ QUESTIONS = [
         "that record?",
       table=_T_TWOSPECIES,
       choices=["A Type I or a Type II curve", "A Type III curve", "A Type IV curve",
-               "Either a Type III or a Type IV curve",
+               "Type III and Type IV curves together",
                "The framework assigns no curve type to it"],
       ans=0,
       why="ERT-3.B.1 gives K-selected species few offspring and long life spans, which is "
