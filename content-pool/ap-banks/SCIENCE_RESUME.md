@@ -17,14 +17,20 @@ Agent territories, so a restart does not double-assign. Each is disjoint by
 unit, which is what stopped siblings converging on the same question during
 the Social Sciences build:
 
-| agent | subject | units | topics |
+| agent | subject | topics | also gates |
 |---|---|---|---|
-| H-A | Chemistry | 2, 3 | 2.3-2.7, 3.1-3.13 (18) + validate `h2_2` |
-| H-B | Chemistry | 4, 5, 6 | 4.1-4.3, 5.6-5.11, 6.1-6.9 (18) |
-| H-C | Chemistry | 7, 8, 9 | 7.1-7.5, 8.6-8.11, 9.1-9.11 (22) |
-| E-A | Env Sci | 2, 3, 4 | 2.2-2.7, 3.1-3.9, 4.1-4.6 (21) |
-| E-B | Env Sci | 5, 6 | 5.10-5.17, 6.1-6.13 (21) + validate `e5_9` |
-| E-C | Env Sci | 8, 9 | 8.6-8.15, 9.1-9.10 (20) |
+| H-A | Chemistry | 3.4-3.13 (10) | `h3_3` |
+| H-B | Chemistry | 6.1-6.9, 8.11 (10) | `h5_11` |
+| H-C | Chemistry | 9.1-9.11 (11) | — |
+| E-A | Env Sci | 4.1-4.6 (6) | `e3_5`, `e9_4` |
+| E-B | Env Sci | 6.3-6.13 (11) | `e6_2` |
+| E-C | Env Sci | 3.6-3.9, 9.5-9.10 (10) | — |
+
+The first round of six ran until the session limit and authored **27 Chemistry
+and 35 Environmental Science topics** between them, which is the per-topic
+commit rule doing exactly what it exists for. Every one of the six stopped
+mid-topic; five left an ungated module behind and one left a module whose
+verifier failed.
 
 Physics 1, Physics 2, Physics C Mechanics and Physics C E&M are **out of
 scope**. They stay COMING_SOON in `src/lib/ap/catalog.ts`. Their CED dumps are
@@ -73,7 +79,24 @@ their verifiers found three real defects:
   as the key — precisely the ambiguity anchors exist to catch. When a
   distractor is the swap, the anchor has to carry both clauses.
 
-And one of that file's negative controls **could not fail**: it lowered a
+A second round of rescues found the sharpest case yet. `verify_h8_10`
+**rejected a correct key** — q3, which restates EK 8.10.A.2 almost verbatim.
+The check was inverted: it built one tuple ordered `(acid, base)` and another
+ordered `(base, acid)`, then compared index 0 against index 0 as though they
+were parallel, so it demanded exactly the pairing the framework forbids. The
+lesson generalises past this module: **when a checker disagrees with a
+question, establish which one is wrong before "fixing" the question.** An
+agent under time pressure will edit the content, because the checker looks
+like infrastructure and the content looks like the thing being tested. Prefer
+named booleans to indexing into tuples that merely read as parallel.
+
+That check also could not be stated as one rule, because its items are three
+different shapes: the key states both halves, or the stem states the excess
+and the choices differ only in the addition, or the key states the rule
+abstractly and one word pins its direction. A single blanket assertion
+rejected a correct key and would have rejected the other two shapes in turn.
+
+And one of `verify_e2_1`'s negative controls **could not fail**: it lowered a
 generalist count to invert a specialist-first ordering, but the specialists had
 already fallen 100%, the maximum, so no change to the other column could
 outpace them. It passed silently while proving nothing. Swapping the two
@@ -118,6 +141,16 @@ an empty topic drops a student into an empty session.
   standing rule for Math content. Do not re-add any of the three.
 - **No stem may reference a figure the bank cannot show.** No images are
   supported. Data goes in a `table=`.
+- **`git add content-pool/ap-banks` sweeps up a sibling's in-flight files.**
+  Commit `de16559`, titled "AP Chemistry 8.10 Buffer Capacity", also contains
+  five unrelated draft modules that five other agents had left uncommitted in
+  the tree. Nothing was lost and the drafts needed committing anyway, but the
+  history now misreports what that commit holds — the same defect CLAUDE.md
+  records for the teacher-invite fix. It was **not** rewritten, because
+  rewriting a pushed branch under running agents loses their work; the rule is
+  to record it and move on. Before committing, run `git status --short`, and
+  where other agents' files are dirty, name your own files explicitly instead
+  of staging the directory.
 - **Six agents are currently running** (three per subject) at the owner's
   explicit request. Six once died together on the session limit with almost
   nothing authored; what makes it survivable now is the per-topic commit rule,
