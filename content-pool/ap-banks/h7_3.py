@@ -195,11 +195,12 @@ QUESTIONS = [
         "\\( K_c = \\frac{[\\mathrm{CO}][\\mathrm{H_2}]}{[\\mathrm{C}][\\mathrm{H_2O}]} \\)",
         "\\( K_c = \\frac{[\\mathrm{H_2O}]}{[\\mathrm{CO}][\\mathrm{H_2}]} \\)",
         "\\( K_c = [\\mathrm{CO}][\\mathrm{H_2}][\\mathrm{H_2O}] \\)",
-        "\\( K_c = \\frac{[\\mathrm{CO}] + [\\mathrm{H_2}]}{[\\mathrm{H_2O}]} \\)"],
+        "\\( K_c = \\frac{[\\mathrm{CO}]}{[\\mathrm{H_2O}]} \\)"],
       ans=0,
       why="EK 7.3.A.1 puts products over reactants and EK 7.3.A.2 removes the solid "
-          "carbon, leaving the two gaseous products over the one gaseous reactant. "
-          "Concentrations in an equilibrium expression are multiplied, never added."),
+          "carbon, leaving BOTH gaseous products over the one gaseous reactant. Dropping "
+          "either product, or keeping the carbon, changes the value the expression "
+          "returns."),
 
  dict(q="Why does the framework leave solids and pure liquids out of the reaction "
         "quotient?",
