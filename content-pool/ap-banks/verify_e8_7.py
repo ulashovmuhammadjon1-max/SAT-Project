@@ -63,6 +63,10 @@ def q3(table, item):
         f"the two described groups are not both present as written: {kind}"
     assert min(days[i] for i in synth) > 10 * max(days[i] for i in quick), \
         f"the synthetic carbon based rows do not last far longer: {days}"
+    assert min(days[i] for i in synth) >= 1000, \
+        f"the synthetic carbon based rows are not measured in thousands of days: {days}"
+    assert max(days[i] for i in quick) < 100, \
+        f"the readily broken down rows are not gone within about a month: {days}"
     assert days.index(min(days)) in quick, \
         "'the fastest to break down is a synthetic carbon based one' must be false"
     assert len(set(days)) == len(days), "'about the same time for all four' must be false"
