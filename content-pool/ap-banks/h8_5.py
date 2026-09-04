@@ -70,11 +70,22 @@ _T_STRONG_CURVE = dict(
 
 _T_DIPROTIC = dict(
     headers=["Volume of 0.100 M NaOH added (mL)", "pH of the flask"],
+    # Sampled finely on either side of each equivalence volume, because a
+    # diprotic curve's whole point is that the rise is CONCENTRATED there.
+    # An earlier version read every 10.00 mL and climbed at a near-constant
+    # 1 pH per 10 mL throughout -- q15 asks the student to read two separate
+    # jumps off these numbers, and at that spacing there was nothing to read.
+    # The buffer plateaus around the half-equivalence points (10.00 mL for
+    # pKa1 = 2.90, 30.00 mL for pKa2 = 7.20) are what make the jumps visible.
     rows=[["0.00", "1.90"],
           ["10.00", "2.90"],
+          ["18.00", "3.60"],
           ["20.00", "5.00"],
+          ["22.00", "6.40"],
           ["30.00", "7.20"],
+          ["38.00", "8.00"],
           ["40.00", "10.00"],
+          ["42.00", "11.40"],
           ["50.00", "12.00"]])
 
 _T_TRIALS = dict(
