@@ -165,11 +165,12 @@ QUESTIONS = [
         "120 resource units greater",
         "140 resource units greater",
         "34 resource units greater",
-        "20 resource units greater"],
+        "80 resource units greater"],
       ans=0,
       why="Subtracting the two tabulated demands gives 120 minus 20, which is 100 resource "
           "units per person. The rejected values quote the highest alone, add the two, take the "
-          "difference in the waste column, or quote the lowest alone."),
+          "difference in the waste column, or pair the highest society with the third rather "
+          "than the fourth."),
 
  dict(q="Four countries' footprints per person and their populations are given in the table. "
         "Which conclusion do the values support?",
@@ -196,12 +197,12 @@ QUESTIONS = [
         "68 million units",
         "160 million units",
         "320 million units",
-        "8 million units"],
+        "1,000 million units"],
       ans=0,
       why="Multiplying the tabulated footprint per person by the tabulated population gives 8 "
           "times 60 million, which is 480 million units. The rejected values add the two columns "
-          "instead of multiplying them, or give the whole-population footprint of another "
-          "country."),
+          "instead of multiplying them, give the whole-population footprint of another country, "
+          "or total all four countries together."),
 
  dict(q="Two households were measured on both halves of the footprint. What do the values "
         "show?",

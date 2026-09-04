@@ -434,8 +434,16 @@ def _cation_radius_varies(mod, cl):
 
 
 def _second_controlled_pair(mod, cl):
-    """Give a second pair the same charge product, so distance is no longer isolated."""
-    _retable(mod, 24, "Compound Z", **{QCAT: "+1", QAN: "-2"})
+    """Give a second pair the same charge product, so distance is no longer isolated.
+
+    The charge product is what has to move, and it has to move onto a value another
+    row already carries: setting Compound X to a single charge makes three rows share
+    a product where one pair shared it before, which is exactly the ambiguity the
+    isolate-the-variable item cannot survive. Changing a charge to some OTHER new
+    value leaves the count at one and proves nothing -- the first draft of this
+    control did that and passed silently.
+    """
+    _retable(mod, 24, "Compound X", **{QCAT: "+1", QAN: "-1"})
 
 
 def _nothing_doubles_the_reference(mod, cl):
@@ -445,8 +453,10 @@ def _nothing_doubles_the_reference(mod, cl):
 
 def _stem_charges_shrink(mod, cl):
     """Halve the second charge pair in the stem, so the keyed factor no longer follows."""
-    mod.QUESTIONS[29]["q"] = mod.QUESTIONS[29]["q"].replace(
-        "charges of +2 and -2", "charges of +2 and -1")
+    before = mod.QUESTIONS[29]["q"]
+    after = before.replace("carrying +2 and -2", "carrying +2 and -1")
+    assert after != before, "the control's replacement did not match the stem"
+    mod.QUESTIONS[29]["q"] = after
 
 
 def _excluded_material_in_a_key(mod, cl):
@@ -467,8 +477,7 @@ if __name__ == "__main__" and "--selftest" in sys.argv:
     hn.selftest(M, CLAIMS, TABLE_CHECKS, arith=ARITH, extra=[
         ("a second tabulated model made to alternate, so the item has two answers",
          _model_4_alternates),
-        ("the doubly charged compound pushed out until it is no longer strongest",
-         _spread_the_strongest),
+        ("the strongest compound's separation corrupted until the table no longer\n          supports its key", _spread_the_strongest),
         ("the equal-charge premise of the separation-only item broken",
          _charges_stop_matching),
         ("the equal-separation premise of the charge-only item broken",
