@@ -321,7 +321,7 @@ QUESTIONS = [
         "formal charge on one atom?",
       table=_T_CANDIDATES,
       choices=["Diagram 4", "Diagram 1", "Diagram 2", "Diagram 3",
-               "Diagram 3, because it has the most atoms carrying a nonzero formal charge"],
+               "Whichever diagram has the most atoms carrying a nonzero formal charge"],
       ans=0,
       why="The two tabulated columns measure different things: how many atoms carry a "
           "nonzero formal charge, and how large the largest one is. The diagram with the "
@@ -370,7 +370,7 @@ QUESTIONS = [
         "the greatest number of atoms?",
       table=_T_CANDIDATES,
       choices=["Diagram 3", "Diagram 1", "Diagram 2", "Diagram 4",
-               "Diagram 4, because it carries the largest single formal charge"],
+               "Whichever diagram carries the largest single formal charge"],
       ans=0,
       why="One tabulated column counts the atoms carrying a nonzero formal charge and the "
           "other measures the largest single value, and they do not point at the same "

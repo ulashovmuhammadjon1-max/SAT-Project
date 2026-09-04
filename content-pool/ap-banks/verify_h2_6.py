@@ -71,8 +71,8 @@ _ATOM = re.compile(r"([A-Z][a-z]?)(\d*)")
 # the first draft, and the check crashed rather than passing silently -- which is
 # the failure mode to prefer, but the pattern still had to be widened.
 _ATOM_IN_STEM = re.compile(
-    r"([a-z]+) atom (?:has |with )?(\d+) electrons in lone pairs and (\d+) "
-    r"electrons in bonds")
+    r"([a-z]+) atom (?:in [a-z ]+ )?(?:has |with )?(\d+) electrons in lone pairs "
+    r"and (\d+) electrons in bonds")
 _FORM_IN_STEM = re.compile(r"formula is ([A-Z][A-Za-z0-9]*)(?![A-Za-z0-9])")
 _CHARGE_IN_STEM = re.compile(r"overall charge of (\d)([+-])(?![0-9])")
 _NEUTRAL = re.compile(r"(?<![a-z])neutral overall(?![a-z])")
