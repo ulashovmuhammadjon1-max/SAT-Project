@@ -408,8 +408,8 @@ QUESTIONS = [
           "one does not."),
 
  dict(q="Hybridization involving which orbitals does the framework place outside the exam?",
-      choices=["d orbitals", "s orbitals", "p orbitals",
-               "Both s and p orbitals", "No orbitals are excluded"],
+      choices=["d orbitals", "s orbitals only", "p orbitals only",
+               "The s and p orbitals together", "No orbitals at all are excluded"],
       ans=0,
       why="The exclusion statement says hybridization involving d orbitals will not be "
           "assessed on the AP Exam, while EK 2.7.A.3's sp, sp2 and sp3 nomenclature, built "
