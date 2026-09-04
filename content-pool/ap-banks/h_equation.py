@@ -254,8 +254,31 @@ def selftest():
     # The charge suffix must win over the last element's subscript.
     assert species("SO42-") == (1, {"S": 1, "O": 4}, -2), species("SO42-")
     assert species("2 Ca(OH)2") == (2, {"Ca": 1, "O": 2, "H": 2}, 0), species("2 Ca(OH)2")
+
+    # -------------------------------------------------- mechanism controls
+    m1 = ["NO2 + NO2 gives NO3 + NO", "NO3 + CO gives NO2 + CO2"]
+    assert intermediates(m1) == ["NO3"], intermediates(m1)
+    assert catalysts(m1) == [], catalysts(m1)
+    assert aligns_with(m1, "NO2 + CO gives NO + CO2"), mechanism_overall(m1)
+    assert not aligns_with(m1, "NO2 + CO gives NO2 + CO2"), \
+        "NEGATIVE CONTROL FAILED: a wrong overall equation was accepted as aligning"
+
+    m2 = ["Cl + O3 gives ClO + O2", "ClO + O gives Cl + O2"]
+    assert intermediates(m2) == ["ClO"], intermediates(m2)
+    assert catalysts(m2) == ["Cl"], catalysts(m2)
+    assert aligns_with(m2, "O3 + O gives 2 O2"), mechanism_overall(m2)
+
+    # A species that survives into the overall equation is neither, however
+    # often it is written -- EK 5.7.A.3's "present only while a reaction is
+    # occurring" is the clause this control exists to protect.
+    m3 = ["A + B gives C", "C + B gives D"]
+    assert intermediates(m3) == ["C"], intermediates(m3)
+    assert "B" not in intermediates(m3) and "B" not in catalysts(m3), \
+        "NEGATIVE CONTROL FAILED: a species left in the overall equation was called a component"
+
     print(f"OK  h_equation: {len(ok)} balanced equations accepted, {len(bad)} corrupted "
-          "ones rejected, atom and charge failures told apart.")
+          "ones rejected, atom and charge failures told apart, and three mechanisms "
+          "resolved into intermediates, catalysts and an overall equation.")
 
 
 if __name__ == "__main__":
