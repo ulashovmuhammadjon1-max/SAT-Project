@@ -100,8 +100,8 @@ QUESTIONS = [
         "It releases energy",
         "It absorbs energy",
         "It neither releases nor absorbs energy",
-        "It releases energy only if it is cooled below its freezing point",
-        "It absorbs energy from the substance around it"],
+        "Energy is given up by the surroundings rather than by the system",
+        "Energy is taken in by the system only once the change is complete"],
       ans=0,
       why="EK 6.5.A.1 states that a system releases energy when it freezes or condenses, "
           "which is the mirror of the transfer into the system that melting and boiling "
