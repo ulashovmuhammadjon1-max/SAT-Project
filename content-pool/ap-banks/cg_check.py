@@ -48,7 +48,26 @@ def normalize(text):
     t = "".join(c for c in t if not unicodedata.combining(c)).lower()
     t = t.replace("’", "'").replace("‘", "'")
     t = t.replace("–", "-").replace("—", "-").replace("−", "-")
-    t = re.sub(r"[^a-z0-9'%-]+", " ", t)
+    # '+' IS KEPT, and the omission was a real hole in the gate.
+    #
+    # It used to fall into the "drop it" class while '-' was kept, which meant
+    # a sum and a product collapsed to the same string:
+    #
+    #     "c = \\lambda + \\nu"  ->  "c lambda nu"
+    #     "c = \\lambda \\nu"    ->  "c lambda nu"
+    #
+    # Those are the key and its distractor in Chemistry 3.12, so an anchor for
+    # one matched the other and the containment check could not see it. The
+    # same asymmetry let an anchor of "+183 kJ/mol" match a keyed "-183
+    # kJ/mol"; contains_phrase now also refuses a sign before a leading digit,
+    # but that only covers a sign at the START of a phrase. This covers a '+'
+    # anywhere, which is what an equation needs.
+    #
+    # It has been worked around locally twice in one day -- once by writing a
+    # private raw matcher, once by rewriting two distractors. Both agents were
+    # right that the content had to ship; both workarounds left the shared
+    # gate broken for everyone else.
+    t = re.sub(r"[^a-z0-9'%+-]+", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
 

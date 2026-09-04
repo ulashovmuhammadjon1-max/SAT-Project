@@ -312,7 +312,7 @@ CLAIMS = [
   "EK 9.3.A.2 reads the small negative total as favored and EK 9.6.A.1 explains why the margin is tiny. q13 recomputes the total and the largest contribution and checks both descriptions."),
  ("-5.0 kJ/mol, so the dissolution is thermodynamically favored",
   "EK 9.3.A.5's equation applied to the tabulated changes for one salt at the stated temperature, with the entropy change converted to kilojoules. Recomputed in salt_gibbs_item."),
- ("5.0 kJ/mol, so the dissolution is thermodynamically unfavored",
+ ("+5.0 kJ/mol, so the dissolution is thermodynamically unfavored",
   "EK 9.3.A.5 with a negative entropy term that adds to the enthalpy change, so an exothermic dissolution comes out unfavored. Recomputed in salt_gibbs_item."),
  ("Salt D",
   "EK 9.3.A.6's table puts a negative enthalpy change with a positive entropy change in the all-temperature row. q16 recomputes which tabulated salt has that pair of signs."),
@@ -360,7 +360,14 @@ def _extra_mutations():
         ch = list(mod.QUESTIONS[13]["choices"])
         ch[0] = "\\( -5.0 \\) kJ/mol, so the dissolution is thermodynamically unfavored"
         mod.QUESTIONS[13]["choices"] = ch
-        cl[13] = ("5.0 kJ/mol, so the dissolution is thermodynamically unfavored", cl[13][1])
+        # The anchor carries the SAME sign as the corrupted choice, so this
+        # control still exercises sign_matches_favorability -- the guard it
+        # names -- rather than tripping the containment test first. Since
+        # cg.normalize began keeping '+', an unsigned anchor no longer matches
+        # a signed choice at all, so leaving it unsigned would make the control
+        # pass for a reason that has nothing to do with favorability.
+        cl[13] = ("-5.0 \\) kJ/mol, so the dissolution is thermodynamically unfavored",
+                  cl[13][1])
         sign_matches_favorability(mod)
 
     def contributions_no_longer_cancel(mod, cl):

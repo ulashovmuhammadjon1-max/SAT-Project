@@ -309,7 +309,7 @@ CLAIMS = [
   "EK 9.7.A.2 states that in the coupled system the individual reactions share one or more common intermediates, which is what makes their sum a single reaction."),
  ("-20.0 kJ/mol, so the coupling achieves the desired outcome",
   "EK 9.7.A.2 makes the overall change the sum of the two steps. Recomputed in coupled_sum, which also checks the verdict matches the recomputed sign."),
- ("35.0 kJ/mol, so the coupling fails to achieve the desired outcome",
+ ("+35.0 kJ/mol, so the coupling fails to achieve the desired outcome",
   "EK 9.7.A.2 requires the SUM to lie below zero, and a favorable step too small to outweigh the unfavorable one leaves it above. Recomputed in coupled_sum."),
  ("which is not below zero",
   "EK 9.7.A.2's condition is a strict inequality, so a sum of exactly zero does not achieve the outcome. q8 recomputes the sum and checks it is exactly zero and not below it."),

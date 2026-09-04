@@ -341,7 +341,7 @@ CLAIMS = [
   "EK 9.5.A.3 states that when the change is much larger or much smaller than RT, K deviates strongly from 1 -- RT being the scale the comparison is made against."),
  ("-10.0 kJ/mol, and the equilibrium constant is greater than 1",
   "EK 9.5.A.2's logarithmic equation with the sign reversed, and EK 9.5.A.4's pairing. Recomputed in dg_from_lnk from RT and the logarithm stated in the stem."),
- ("20.0 kJ/mol, and the equilibrium constant is less than 1",
+ ("+20.0 kJ/mol, and the equilibrium constant is less than 1",
   "EK 9.5.A.2 turning a negative logarithm into a positive change, with EK 9.5.A.4 putting such a process on the reactant side. Recomputed in dg_from_lnk."),
  ("0.0 kJ/mol, and the equilibrium constant is exactly 1",
   "EK 9.5.A.2's equation gives zero for a logarithm of zero whatever RT is, and that is the boundary of EK 9.5.A.4 rather than either side of it. Recomputed in q10."),
