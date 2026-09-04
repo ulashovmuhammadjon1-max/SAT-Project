@@ -422,7 +422,7 @@ QUESTIONS = [
       why="EK 3.3.A.2 puts a liquid's constituent particles in close contact with each "
           "other, while EK 3.3.A.4 describes a gas by the average spacing between its "
           "particles and by the minimal effects of forces between them, which is the "
-          "opposite picture."),
+          "opposite description."),
 
  dict(q="EK 3.3.A.3's comparison of molar volumes covers which phases?",
       choices=[
