@@ -307,7 +307,7 @@ CLAIMS = [
   "EK 9.7.A.2 says the sum of the individual reactions produces an overall reaction that achieves the desired outcome and has a standard free energy change below zero."),
  ("One or more common intermediates",
   "EK 9.7.A.2 states that in the coupled system the individual reactions share one or more common intermediates, which is what makes their sum a single reaction."),
- ("20.0 kJ/mol, so the coupling achieves the desired outcome",
+ ("-20.0 kJ/mol, so the coupling achieves the desired outcome",
   "EK 9.7.A.2 makes the overall change the sum of the two steps. Recomputed in coupled_sum, which also checks the verdict matches the recomputed sign."),
  ("35.0 kJ/mol, so the coupling fails to achieve the desired outcome",
   "EK 9.7.A.2 requires the SUM to lie below zero, and a favorable step too small to outweigh the unfavorable one leaves it above. Recomputed in coupled_sum."),

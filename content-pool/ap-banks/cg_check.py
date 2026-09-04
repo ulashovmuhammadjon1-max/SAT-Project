@@ -71,9 +71,26 @@ def contains_phrase(haystack, phrase):
     """``phrase`` present in ``haystack``, delimited by non-alphanumerics.
 
     Explicit lookarounds, never ``\\b``.
+
+    A phrase opening with a digit must not be preceded by a SIGN. normalize()
+    drops a leading '+' (it is not in the kept character class) but keeps '-',
+    so an anchor of "+183 kJ/mol" normalizes to "183 kj mol" -- which is a
+    substring of "-183 kj mol", and the plain lookbehind allowed it because
+    '-' is not [a-z0-9]. The anchor for an ENDOthermic key therefore matched
+    the EXOthermic distractor, and the swap guard that exists to catch exactly
+    that could not see it.
+
+    That is not cosmetic in this content. Across Chemistry units 6 and 9 and
+    the thermodynamics topics, the sign IS the answer: exothermic against
+    endothermic, thermodynamically favourable against unfavourable, a galvanic
+    cell against an electrolytic one. An authoring agent found it while
+    writing bond enthalpies and was stopped by a session limit before it could
+    be fixed.
     """
-    p = re.escape(normalize(phrase))
-    return re.search(r"(?<![a-z0-9])" + p + r"(?![a-z0-9])", normalize(haystack)) is not None
+    n = normalize(phrase)
+    p = re.escape(n)
+    before = r"(?<![a-z0-9+\-])" if n[:1].isdigit() else r"(?<![a-z0-9])"
+    return re.search(before + p + r"(?![a-z0-9])", normalize(haystack)) is not None
 
 
 # ---------------------------------------------------------------- table helpers

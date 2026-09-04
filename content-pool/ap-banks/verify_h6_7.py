@@ -284,9 +284,24 @@ def _present(text, value_text):
 def sign_matcher_self_check():
     """Positive AND negative control for ``_present`` itself, run every time.
 
-    The negative half is the point: it asserts that the normalized matcher
-    genuinely CANNOT separate the two signs, which is what makes the raw one
-    necessary rather than decorative.
+    THE TRIPWIRE BELOW HAS FIRED ONCE, AND THAT IS WHY THIS READS AS IT DOES.
+
+    ``_present`` was written here because ``cg.contains_phrase`` could not
+    separate "+183 kJ/mol" from "-183 kJ/mol": ``normalize`` drops a leading
+    '+' but keeps '-', and the lookbehind treated the surviving '-' as an
+    ordinary delimiter, so an anchor for an ENDOthermic key matched the
+    EXOthermic distractor. This check asserted that the shared helper still
+    had the bug, so that anyone fixing it upstream would be told to come back
+    here rather than silently leaving a redundant local matcher behind.
+
+    The shared helper has since been fixed -- ``contains_phrase`` now refuses
+    a preceding sign when the phrase opens with a digit -- so the assertion
+    is inverted: both matchers must now separate the signs.
+
+    ``_present`` is kept rather than deleted, because it does something the
+    shared one still does not: it compares the RAW text, so it is unaffected
+    by any future change to normalization, and it rejects a longer number
+    that merely starts the same way ("-1830" against "-183").
     """
     key = "-183 kJ/mol, so the reaction is exothermic"
     assert _present(key, "-183 kJ/mol"), "the raw matcher fails to find the value it holds"
@@ -297,13 +312,18 @@ def sign_matcher_self_check():
     assert not _present("-1830 kJ/mol", "-183 kJ/mol"), (
         "the signed matcher must not match a longer number that starts the same way"
     )
-    assert cg.contains_phrase(key, "+183 kJ/mol"), (
-        "NEGATIVE CONTROL FAILED: the normalized matcher was expected to confuse the two "
-        "signs, and if it no longer does then this helper's reason for existing has "
-        "changed and should be re-read"
+    assert not cg.contains_phrase(key, "+183 kJ/mol"), (
+        "REGRESSION: cg.contains_phrase has gone back to confusing +183 with -183. That "
+        "is the defect this module was written around -- an anchor for an endothermic "
+        "key matching the exothermic distractor. Fix the shared helper, do not work "
+        "around it here"
     )
-    print("OK  6.7 sign matcher: raw comparison separates +183 from -183, and the "
-          "normalized comparison is confirmed unable to, which is why it is not used here.")
+    assert cg.contains_phrase(key, "-183 kJ/mol"), (
+        "cg.contains_phrase must still find a correctly signed value; a fix that rejects "
+        "the right sign too is not a fix"
+    )
+    print("OK  6.7 sign matcher: the raw and the normalized comparison BOTH separate "
+          "+183 from -183, and both still find the correctly signed value.")
 
 
 def mistake(item, value_text, origin):
