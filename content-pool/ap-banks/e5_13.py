@@ -178,11 +178,11 @@ QUESTIONS = [
         "24 millimeters more",
         "26 millimeters more",
         "18 millimeters more",
-        "2 millimeters more"],
+        "3 millimeters more"],
       ans=0,
       why="Subtracting the two tabulated depths gives 24 minus 2, which is 22 millimeters. The "
           "rejected values quote the permeable surface alone, add the two, compare the wrong "
-          "pair of surfaces, or quote the traditional surface alone."),
+          "pair of surfaces, or quote a traditional surface's own infiltration."),
 
  dict(q="A car park was gauged in storms of the same size before and after it was repaved. "
         "Which conclusion do the values support?",
@@ -272,11 +272,12 @@ QUESTIONS = [
         "38 percentage points smaller",
         "57 percentage points smaller",
         "46 percentage points smaller",
-        "8 percentage points smaller"],
+        "27 percentage points smaller"],
       ans=0,
       why="Subtracting the two tabulated shares gives 38 minus 19, which is 19 percentage "
           "points. The rejected values quote the first city alone, add the two, take a reading "
-          "from the transport column, or quote the smaller transport share."),
+          "from the transport column, or difference the second city's two entries across the "
+          "columns."),
 
  dict(q="Two plans would house the same number of dwellings on the same site. Which reading of "
         "the values matches the framework's phrase about building upward?",
@@ -302,11 +303,11 @@ QUESTIONS = [
         "28 hectares more",
         "32 hectares more",
         "12 hectares more",
-        "4 hectares more"],
+        "36 hectares more"],
       ans=0,
       why="Subtracting the two tabulated unpaved areas gives 28 minus 4, which is 24 hectares. "
-          "The rejected values quote the taller plan alone, add the two, take the difference in "
-          "ground covered, or quote the outward plan alone."),
+          "The rejected values quote the taller plan alone, add the two, or take one of the two "
+          "figures for ground covered instead."),
 
  dict(q="Which design would best test whether permeable pavement increases infiltration?",
       choices=[
