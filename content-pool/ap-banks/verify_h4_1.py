@@ -198,7 +198,7 @@ def _extra_mutations():
         t = mod.QUESTIONS[7]["table"]
         mod.QUESTIONS[7]["table"] = dict(
             headers=t["headers"],
-            rows=[[r[0], "Transfer between containers"] if "deep blue" in r[0] else list(r)
+            rows=[[r[0], "Change in volume"] if "deep blue" in r[0] else list(r)
                   for r in t["rows"]])
 
     def formula_corrupted(mod, cl):
