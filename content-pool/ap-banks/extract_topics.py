@@ -240,6 +240,32 @@ OVERRIDES = {
         "9.7": "Coupled Reactions",                            # line 1074
         "9.10": "Cell Potential Under Nonstandard Conditions",  # lines 1083-1084
     },
+    # World History's TOPIC pages set the title as a narrow column beside the
+    # skill statement, so a long title is broken across three or four lines
+    # with unrelated text interleaved BETWEEN its halves. No indent rule
+    # separates them. Each of these was read off the CED page named beside it
+    # and reassembled by hand; the line numbers are into the `pdftotext
+    # -layout` dump so a future reader can check rather than trust.
+    "WORLD_HISTORY": {
+        # "The Mongol Empire" / "and the Making" / "of the Modern World"
+        "2.2": "The Mongol Empire and the Making of the Modern World",   # lines 2605-2613
+        # "Economic Developments" / "and Innovations in" / "the Industrial Age"
+        "5.7": "Economic Developments and Innovations in the Industrial Age",  # 5050-5054
+        # "Setting the Stage" / "for the Cold War and" / "Decolonization"
+        "8.1": "Setting the Stage for the Cold War and Decolonization",  # lines 7024-7028
+        # "Decolonization" / "After 1900"
+        "8.5": "Decolonization After 1900",                             # lines 7235-7237
+        # "Calls for Reform and" / "Responses After 1900"
+        "9.5": "Calls for Reform and Responses After 1900",             # lines 8039-8041
+        # "Institutions" / "Developing in a" / "Globalized World"
+        "9.8": "Institutions Developing in a Globalized World",         # lines 8203-8207
+        # "Continuity and" / "Change from" / "1450 to 1750", immediately after
+        # which the page runs on into an un-spaced paragraph
+        # ("Thefinaltopicinthisunitfocusesontheskillof...") that the parser
+        # read as part of the title. Caught by cross-checking every title's
+        # words against its own TOPIC page, not by the dangling-word guard.
+        "4.8": "Continuity and Change from 1450 to 1750",               # lines 4315-4318
+    },
 }
 
 
