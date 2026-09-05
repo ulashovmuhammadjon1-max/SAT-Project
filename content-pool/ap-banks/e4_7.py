@@ -1,4 +1,4 @@
-# AP ENVIRONMENTAL SCIENCE 4.7 Solar Radiation and Earth's Seasons
+# AP ENVIRONMENTAL SCIENCE 4.7 Solar Radiation and Earth’s Seasons
 # CED effective Fall 2026, Unit 4 Earth Systems and Resources.
 # Enduring understanding ENG-2: most of the Earth's atmospheric processes are driven
 # by input of energy from the sun.
@@ -32,7 +32,7 @@
 # visual item is served by a table= instead of a described picture.
 # FIVE choices (A-E) per SCIENCE_BRIEF.md. No LaTeX: export_units.py does not typeset
 # Environmental Science.
-TOPIC = ("4.7", "Solar Radiation and Earth's Seasons", 4)
+TOPIC = ("4.7", "Solar Radiation and Earth’s Seasons", 4)
 
 _T_LATITUDE = dict(
     headers=["Latitude",

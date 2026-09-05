@@ -316,7 +316,18 @@ def unit_titles(path: str) -> dict[int, str]:
     for m in UNIT_TITLE.finditer(txt):
         u = int(m.group(1))
         # Trim the class-period or exam-weighting column that follows.
-        t = re.split(r"\s{2,}|\s+\d+[\u2013-]\d+%", m.group(2))[0].strip(" .\u00b7")
+        t = re.split(r"\s{2,}|\s+\d+[\u2013-]\d+%", m.group(2))[0]
+        # Control characters become SPACES, never nothing. World History's
+        # unit openers separate the words of a title with \x07, so deleting
+        # them welded "Consequences of Industrialization" into one word.
+        t = re.sub(r"[\x00-\x1f]+", " ", t)
+        t = re.sub(r"\s+", " ", t).strip(" .\u00b7")
+        # A skills index prints "Unit 1: Learning Objective N" once per
+        # objective, and those lines are LONGER than the real title, so the
+        # longest-wins rule handed every World History unit the string
+        # "Learning Objective A". They are index entries, not unit titles.
+        if re.match(r"learning objectives?\b", t, re.I):
+            continue
         if t and (u not in found or len(t) > len(found[u])):
             found[u] = t
     return found
