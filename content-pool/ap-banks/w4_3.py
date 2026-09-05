@@ -399,8 +399,8 @@ QUESTIONS = [
        "were brought by Europeans, which is an act rather than a by-product. The distinction is "
        "the framework's own wording and not an inference.")),
  dict(
-  q=("Which of the following claims about this topic would require evidence from outside the "
-     "framework's own statements?"),
+  q=("Which of the following claims about the Columbian Exchange could not be settled from the "
+     "framework's own statements alone?"),
   choices=[
    "That one named disease killed a larger share of a population than another did",
    "That the diseases that spread were endemic in the Eastern Hemisphere",
@@ -483,8 +483,8 @@ QUESTIONS = [
        "Afro-Eurasia. The second option exchanges those two effects between the hemispheres, "
        "which is the misreading this item is built to catch.")),
  dict(
-  q=("A summary sentence for this topic is being drafted for students. Which version stays within "
-     "what the framework asserts about the period 1450 to 1750?"),
+  q=("A teacher is drafting one closing sentence on this topic for students. Which version stays "
+     "within what the framework asserts about the period 1450 to 1750?"),
   choices=[
    "New connections between the hemispheres carried plants, animals, and diseases both ways: Afro-Eurasian crops and animals reached the Americas, American foods became staples in Europe, Asia, and Africa and improved nutrition there, and diseases endemic in the Eastern Hemisphere substantially reduced indigenous populations",
    "New connections carried only trade goods, and neither plants nor animals nor diseases crossed between the hemispheres",

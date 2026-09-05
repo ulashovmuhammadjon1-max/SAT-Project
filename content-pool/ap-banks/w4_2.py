@@ -494,8 +494,8 @@ QUESTIONS = [
        "about rising interest across Europe needs evidence spanning several states and several "
        "years. A wage, a depth, a bolt of cloth and a birth date bear on none of it.")),
  dict(
-  q=("A summary sentence for this topic is being drafted for students. Which version stays within "
-     "what the framework asserts about the period 1450 to 1750?"),
+  q=("A one-sentence summary of this topic is being written for a revision guide. Which version "
+     "stays within what the framework asserts about the period 1450 to 1750?"),
   choices=[
    "States paid for new ocean voyages in this period, Portuguese navigation opened trade with Africa and Asia and built a trading-post empire, Spanish sponsorship of transatlantic voyaging raised European interest sharply, and English, French, and Dutch crossings of the northern Atlantic sought other routes to Asia",
    "Private merchants paid for every voyage of the period, and no ruler took any interest in the oceans",

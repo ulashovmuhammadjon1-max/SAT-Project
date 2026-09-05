@@ -485,8 +485,8 @@ QUESTIONS = [
        "European states establishing new maritime empires driven by political, religious, and "
        "economic rivalries. Each rejected pairing contradicts a statement of the framework.")),
  dict(
-  q=("Which of the following claims about this topic would require evidence from outside the "
-     "framework's own statements?"),
+  q=("A student wants to defend a claim using the framework's own statements and nothing else. "
+     "Which claim could not be defended that way?"),
   choices=[
    "That one of the new maritime empires was larger than the others",
    "That European states established new maritime empires driven largely by rivalries",
@@ -499,8 +499,8 @@ QUESTIONS = [
        "them by size, date or importance, so a comparison of that kind would have to be defended "
        "from another source.")),
  dict(
-  q=("A summary sentence for this topic is being drafted for students. Which version stays within "
-     "what the framework asserts about the period 1450 to 1750?"),
+  q=("A revision card for this topic needs a single sentence on its front. Which version stays "
+     "within what the framework asserts about the period 1450 to 1750?"),
   choices=[
    "European states built new maritime empires out of their rivalries and set up profitable trading posts in Africa and Asia, some Asian states answered with restrictive policies while African states such as the Asante gained influence through trade, Indian Ocean networks went on flourishing with Asian merchants in them, and colonial economies in the Americas rested on agriculture worked by old and new labor systems",
    "European states built no empires in this period, and the trading posts of Africa and Asia returned no profit to anyone",

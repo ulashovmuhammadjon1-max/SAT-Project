@@ -424,8 +424,8 @@ QUESTIONS = [
        "outcome. Both a claim of success and a claim of failure would need a source outside the "
        "framework.")),
  dict(
-  q=("Which of the following claims about this topic would require evidence from outside the "
-     "framework's own statements?"),
+  q=("Which claim about the resistance of this period cannot be settled from the framework's own "
+     "statements alone?"),
   choices=[
    "That one of the named episodes of local resistance involved more people than another",
    "That state expansion and centralization led to resistance on a local level",
@@ -495,8 +495,8 @@ QUESTIONS = [
        "Objective L asks for the effects of the development of state power. Each rejected option "
        "reverses or denies that link.")),
  dict(
-  q=("A summary sentence for this topic is being drafted for students. Which version stays within "
-     "what the framework asserts about the period 1450 to 1750?"),
+  q=("A course outline is reducing this topic to one sentence for students. Which version stays "
+     "within what the framework asserts about the period 1450 to 1750?"),
   choices=[
    "As states expanded and gathered authority into their centres, social, political, and economic groups resisted at a local level, and in the Americas enslaved persons challenged existing authorities through organized resistance",
    "States expanded without meeting any resistance, and enslaved persons in the Americas did not challenge colonial authorities",

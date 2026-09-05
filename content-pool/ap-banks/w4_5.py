@@ -428,8 +428,8 @@ QUESTIONS = [
        "date, an addressee, a length and a use of figures are features of the document rather "
        "than its argument.")),
  dict(
-  q=("This topic's reasoning process is continuity and change. Which pairing of a continuity with "
-     "a change does the framework support?"),
+  q=("Continuity and change is the reasoning process printed beside this topic. Which pairing of "
+     "a continuity with a change does the framework support?"),
   choices=[
    "Regional markets went on using established commercial practices, while European merchants developed new transoceanic and regional shipping services",
    "Regional markets abandoned their established practices, while European merchants withdrew their shipping services",
@@ -472,8 +472,8 @@ QUESTIONS = [
        "company shares and shipbuilding bear on KC-4.1.IV, KC-4.2.II.A and KC-4.1.IV.C "
        "instead.")),
  dict(
-  q=("Which of the following claims about this topic would require evidence from outside the "
-     "framework's own statements?"),
+  q=("Which claim about this topic would send a student outside the framework in search of "
+     "evidence for it?"),
   choices=[
    "That one European ruler's mercantilist policy was more successful than another's",
    "That mercantilist policies were used by European rulers to control their economies",
@@ -515,8 +515,8 @@ QUESTIONS = [
        "networks. The correction has to keep both the continuation and the new services, and each "
        "rejected option drops one of them.")),
  dict(
-  q=("A summary sentence for this topic is being drafted for students. Which version stays within "
-     "what the framework asserts about the period 1450 to 1750?"),
+  q=("A study guide is condensing this topic into one sentence. Which version stays within what "
+     "the framework asserts about the period 1450 to 1750?"),
   choices=[
    "European rulers used mercantilist policies and chartered companies to build and compete for wealth, American silver bought Asian goods and met Chinese demand while Afro-Eurasian regional markets kept flourishing, the Atlantic system moved goods, wealth and enslaved labor and mixed three continents' cultures, and economic disputes set states against one another",
    "European rulers abandoned control of their economies, and no company was chartered in the period",
