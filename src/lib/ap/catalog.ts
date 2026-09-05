@@ -147,6 +147,26 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
     blurb:
       "Evolution, energetics, information storage, and systems interactions.",
   },
+  {
+    code: "CHEMISTRY",
+    slug: "chemistry",
+    name: "AP Chemistry",
+    short: "Chemistry",
+    category: "STEM",
+    gradient: "from-orange-500 to-amber-600",
+    blurb:
+      "Atomic structure, bonding, reactions, kinetics, thermodynamics, and equilibrium.",
+  },
+  {
+    code: "ENV_SCI",
+    slug: "environmental-science",
+    name: "AP Environmental Science",
+    short: "Environmental Sci",
+    category: "STEM",
+    gradient: "from-teal-500 to-emerald-600",
+    blurb:
+      "Ecosystems, biodiversity, populations, land and water use, energy, pollution, and global change.",
+  },
 ];
 
 /**
@@ -154,14 +174,12 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
  * added or entered — a student must never land in an empty course.
  */
 const PLANNED: Omit<ApCatalogEntry, "status" | "gradient">[] = [
-  { code: "CHEMISTRY", slug: "chemistry", name: "AP Chemistry", short: "Chemistry", category: "STEM", blurb: "Atomic structure, bonding, reactions, kinetics, thermodynamics, and equilibrium." },
   { code: "PHYSICS_1", slug: "physics-1", name: "AP Physics 1: Algebra-Based", short: "Physics 1", category: "STEM", blurb: "Kinematics, forces, energy, momentum, rotation, and simple harmonic motion." },
   { code: "PHYSICS_2", slug: "physics-2", name: "AP Physics 2: Algebra-Based", short: "Physics 2", category: "STEM", blurb: "Fluids, thermodynamics, electromagnetism, optics, and modern physics." },
   { code: "PHYSICS_C_MECH", slug: "physics-c-mechanics", name: "AP Physics C: Mechanics", short: "Physics C: Mech", category: "STEM", blurb: "Calculus-based mechanics: kinematics, Newton's laws, work and energy, momentum, rotation, oscillations, and gravitation." },
   { code: "PHYSICS_C_EM", slug: "physics-c-electricity-and-magnetism", name: "AP Physics C: Electricity and Magnetism", short: "Physics C: E&M", category: "STEM", blurb: "Calculus-based electrostatics, conductors and capacitors, circuits, magnetic fields, and electromagnetism." },
   { code: "CSA", slug: "computer-science-a", name: "AP Computer Science A", short: "CS A", category: "STEM", blurb: "Object-oriented programming in Java: classes, arrays and lists, inheritance, and recursion." },
   { code: "CSP", slug: "computer-science-principles", name: "AP Computer Science Principles", short: "CS Principles", category: "STEM", blurb: "Computational thinking, data, algorithms, programming, and the impact of computing." },
-  { code: "ENV_SCI", slug: "environmental-science", name: "AP Environmental Science", short: "Environmental Sci", category: "STEM", blurb: "Ecosystems, biodiversity, populations, land and water use, energy, pollution, and global change." },
   { code: "WORLD_HISTORY", slug: "world-history-modern", name: "AP World History: Modern", short: "World History", category: "HISTORY", blurb: "Global processes from about 1200 CE to the present." },
   { code: "US_HISTORY", slug: "united-states-history", name: "AP United States History", short: "US History", category: "HISTORY", blurb: "American history from about 1491 to the present, across nine periods." },
   { code: "EURO_HISTORY", slug: "european-history", name: "AP European History", short: "European History", category: "HISTORY", blurb: "European history from about 1450 to the present." },

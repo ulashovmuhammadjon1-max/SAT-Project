@@ -359,6 +359,43 @@ const COMP_GOV_BLUEPRINT: ApSectionQuota[] = [
   { unit: 5, count: 11 }, // 16-24%
 ];
 
+/** AP Chemistry Section I is 60 questions in 90 minutes (CED p. 205).
+ *
+ *  The CED's nine bands CANNOT all be met at 60 integer counts: taking the
+ *  largest whole number inside each band sums to 57, three short. So three
+ *  units have to sit one question above their band, and the choice was made
+ *  by minimising the WORST distortion rather than the number of units touched
+ *  -- spreading three 1.0-point overshoots beats concentrating a single
+ *  2.7-point one, since no unit then misrepresents its share by more than the
+ *  one question that is the smallest error available at n=60. The three
+ *  extras go to the units with the most instructional time among those tied,
+ *  which is the CED's own other measure of a unit's size. */
+const CHEMISTRY_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 5 },  // 7-9%,   8.3%
+  { unit: 2, count: 5 },  // 7-9%,   8.3%
+  { unit: 3, count: 13 }, // 18-22%, 21.7%
+  { unit: 4, count: 6 },  // 7-9%,  10.0%  (+1 question, ~14-15 class periods)
+  { unit: 5, count: 6 },  // 7-9%,  10.0%  (+1 question, ~13-14 class periods)
+  { unit: 6, count: 5 },  // 7-9%,   8.3%
+  { unit: 7, count: 6 },  // 7-9%,  10.0%  (+1 question, ~13-15 class periods)
+  { unit: 8, count: 9 },  // 11-15%, 15.0%
+  { unit: 9, count: 5 },  // 7-9%,   8.3%
+];
+
+/** AP Environmental Science Section I is 80 questions in 90 minutes
+ *  (CED p. 191). Every count here falls inside its published band. */
+const ENV_SCI_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 6 },  // 6-8%,    7.5%
+  { unit: 2, count: 6 },  // 6-8%,    7.5%
+  { unit: 3, count: 10 }, // 10-15%, 12.5%
+  { unit: 4, count: 10 }, // 10-15%, 12.5%
+  { unit: 5, count: 10 }, // 10-15%, 12.5%
+  { unit: 6, count: 10 }, // 10-15%, 12.5%
+  { unit: 7, count: 7 },  // 7-10%,   8.8%
+  { unit: 8, count: 7 },  // 7-10%,   8.8%
+  { unit: 9, count: 14 }, // 15-20%, 17.5%
+];
+
 export const AP_TESTS: ApPracticeTest[] = [
   // --- Microeconomics ---
   econTest({
@@ -775,6 +812,86 @@ export const AP_TESTS: ApPracticeTest[] = [
         timeLimitMinutes: 90,
         calculator: "FOUR_FUNCTION",
         blueprint: BIOLOGY_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "CHEMISTRY",
+    slug: "diagnostic",
+    name: "Chemistry Diagnostic",
+    blurb: "Half a Section I, weighted across all nine units.",
+    variant: 0,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Chemistry exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 45,
+        calculator: "FOUR_FUNCTION",
+        blueprint: halve(CHEMISTRY_BLUEPRINT, 30),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "CHEMISTRY",
+    slug: "practice-1",
+    name: "Chemistry Practice Exam 1",
+    blurb: "A full Section I: 60 questions in 90 minutes.",
+    variant: 1,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Chemistry exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 90,
+        calculator: "FOUR_FUNCTION",
+        blueprint: CHEMISTRY_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "ENV_SCI",
+    slug: "diagnostic",
+    name: "Environmental Science Diagnostic",
+    blurb: "Half a Section I, weighted across all nine units.",
+    variant: 0,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Environmental Science exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 45,
+        calculator: "FOUR_FUNCTION",
+        blueprint: halve(ENV_SCI_BLUEPRINT, 40),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "ENV_SCI",
+    slug: "practice-1",
+    name: "Environmental Science Practice Exam 1",
+    blurb: "A full Section I: 80 questions in 90 minutes.",
+    variant: 1,
+    calculatorNote: "A four-function, scientific, or graphing calculator is allowed on the whole AP Environmental Science exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 90,
+        calculator: "FOUR_FUNCTION",
+        blueprint: ENV_SCI_BLUEPRINT,
         directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
       }),
     ],
