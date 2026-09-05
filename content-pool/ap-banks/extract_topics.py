@@ -240,6 +240,37 @@ OVERRIDES = {
         "9.7": "Coupled Reactions",                            # line 1074
         "9.10": "Cell Potential Under Nonstandard Conditions",  # lines 1083-1084
     },
+    # AP U.S. History has the same narrow-title-column layout as World History,
+    # so the same seven-way breakage: each of these is split across two or three
+    # lines with the skill statement interleaved between the halves. Read off
+    # the raw TOPIC page named beside each, not reconstructed by a parser.
+    "US_HISTORY": {
+        # A SECOND ROUND, the grammatical-truncation class World History taught
+        # us to hunt for: a title with its middle dropped is shorter but still
+        # reads, so the dangling-joining-word guard cannot see it. Found by
+        # cross-checking every title against the at-a-glance rows AND the raw
+        # TOPIC page, not by any single check.
+        "1.1": "Contextualizing Period 1",                        # extractor took the page's prose
+        "1.5": "Labor, Slavery, and Caste in the Spanish Colonial System",   # page TOPIC 1.5
+        "1.6": "Cultural Interactions Between Europeans, Native Americans, and Africans",  # 1.6
+        "2.5": "Interactions Between American Indians and Europeans",  # page TOPIC 2.5
+        "3.4": "Philosophical Foundations of the American Revolution",  # page TOPIC 3.4
+        "8.6": "Early Steps in the Civil Rights Movement (1940s and 1950s)",  # page TOPIC 8.6
+        "8.13": "The Environment and Natural Resources from 1968 to 1980",   # page TOPIC 8.13
+        # THE CED CONTRADICTS ITSELF HERE. Its TOPIC 8.5 page and its Unit at a
+        # Glance row both read "Culture after 1945"; an OPTIONAL ACTIVITY
+        # sidebar on a later page reads "Culture from 1945 to 1960", and the
+        # extractor took the sidebar. Two authoritative renderings against one
+        # secondary, so the page wins.
+        "8.5": "Culture after 1945",                              # page TOPIC 8.5, glance line 18498
+        "2.6": "Slavery in the British Colonies",                 # page TOPIC 2.6
+        "3.12": "Movement in the Early Republic",                 # page TOPIC 3.12
+        "4.4": "America on the World Stage",                      # page TOPIC 4.4
+        "4.13": "The Society of the South in the Early Republic",  # page TOPIC 4.13
+        "5.1": "Contextualizing Period 5",                        # page TOPIC 5.1
+        "7.7": "1920s: Innovations in Communication and Technology",  # page TOPIC 7.7
+        "7.8": "1920s: Cultural and Political Controversies",     # page TOPIC 7.8
+    },
     # World History's TOPIC pages set the title as a narrow column beside the
     # skill statement, so a long title is broken across three or four lines
     # with unrelated text interleaved BETWEEN its halves. No indent rule

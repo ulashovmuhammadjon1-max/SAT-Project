@@ -92,7 +92,7 @@ def main():
         "PSYCHOLOGY": 30,
         "HUMAN_GEO": 30, "US_GOV": 30, "COMP_GOV": 30,
         "BIOLOGY": 30, "CHEMISTRY": 30, "ENV_SCI": 30,
-        "WORLD_HISTORY": 30,
+        "WORLD_HISTORY": 30, "US_HISTORY": 30,
     }
     expected = args.per_topic
     if expected is None:

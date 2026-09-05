@@ -31,7 +31,7 @@ import sys
 # Only the subjects with a committed <SUBJECT>_topics.json can be checked at
 # all; the rest predate that convention and are listed so the gap is visible
 # rather than silent.
-PREFIX = {"BIOLOGY": "b", "CHEMISTRY": "h", "ENV_SCI": "e", "WORLD_HISTORY": "w",
+PREFIX = {"BIOLOGY": "b", "CHEMISTRY": "h", "ENV_SCI": "e", "WORLD_HISTORY": "w", "US_HISTORY": "a",
           "HUMAN_GEO": "g", "US_GOV": "v", "COMP_GOV": "k", "PSYCHOLOGY": "p",
           "MICRO": "u", "MACRO": "m", "STATISTICS": "s"}
 
