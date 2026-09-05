@@ -180,19 +180,29 @@ QUESTIONS = [
            "that the expansion of empires, including Mali in West Africa, facilitated trade and "
            "communication.")),
 
- dict(q=("Which of the following is an internal factor in the expansion or decline of a state, "
-         "as the framework distinguishes internal from external?"),
+ # REPLACED. The item that stood here asked which of five options was an INTERNAL
+ # factor and keyed a disputed succession. Topic 1.4 q21 asks the same question and
+ # keys the same answer in almost the same words, and a student meets both in the
+ # Question Bank. SOCIAL_BRIEF.md's rule is to deduplicate against the whole subject
+ # rather than the unit, so this asks instead what the CED's own distinction between
+ # a historical development and an illustrative example means for an argument -- a
+ # question 1.4 does not ask and one this topic's very thin page makes worth asking.
+ dict(q=("Great Zimbabwe, Ethiopia and the Hausa kingdoms are printed beside this topic under "
+         "the heading Illustrative Examples rather than among its historical developments. "
+         "Explain what follows for a student building an argument about state building in "
+         "Africa in this period."),
       choices=[
-        "A quarrel among the state's own leading families over who is to succeed the ruler.",
-        "The rise of a stronger neighbor on the state's frontier.",
-        "A shift in the route taken by merchants from another region.",
-        "A demand for tribute pressed by an outside power.",
-        "The conversion of a neighboring people to a new faith.",
+        "The three are offered as instances of the stated process, so an argument should rest on what the framework asserts about state systems in general and use a named case to illustrate it rather than to carry it.",
+        "The three are the whole of what the framework asserts about Africa in this period, so an argument must be confined to them.",
+        "The three fall outside the period the topic covers, so an argument should avoid them.",
+        "The three are ranked by importance in the order they are printed, so the first of them should carry the argument.",
+        "The three take the place of any general claim, so an argument need state nothing about state systems at all.",
       ], ans=0,
-      why=("The Governance thematic focus states that a variety of internal and external factors "
-           "contribute to state formation, expansion, and decline. A succession quarrel arises "
-           "within the state itself; each rejected option originates outside it. KC-3.2.I.D.ii "
-           "is the content those factors operate on.")),
+      why=("The CED states that illustrative examples are intended as examples and do not in any "
+           "way constitute additional, preferred, or required information, while historical "
+           "development statements comprise the knowledge required to demonstrate mastery of the "
+           "learning objective. Here that required statement is KC-3.2.I.D.ii, and Learning "
+           "Objective J asks how and why states in Africa developed and changed over time.")),
 
  dict(q=("Explain why the survival of an older title alongside a newly created office is "
          "described by the framework as continuity and innovation together rather than as one or "
