@@ -29,9 +29,10 @@
 #
 # WHAT THIS BANK DOES NOT DO. The CED NAMES the Chinese Exclusion Act and the White
 # Australia policy and says not one word about what either provided, when it passed,
-# who enacted it or how long it lasted. Items 12 and 13 therefore ask only which
-# heading the framework prints them under -- the one thing the CED settles -- and no
-# item states a provision of either. The same restraint governs the enclave list: the
+# who enacted it or how long it lasted. Item 12 therefore asks only which pair the
+# framework names, and item 13 only which of the unit's statements the CED prints
+# the Chinese Exclusion Act beside -- the two things the CED settles -- and no item
+# states a provision of either. The same restraint governs the enclave list: the
 # framework gives regions, so items ask for regions and never for a date, a number or
 # an occupation.
 #
@@ -181,14 +182,14 @@ QUESTIONS = [
      "The Sokoto Caliphate and the Cherokee Nation",
      "The Ghost Dance and the Mahdist wars"], ans=0,
    why="The CED prints the Chinese Exclusion Act and the White Australia policy under its heading Regulation of immigrants for topic 6.7, illustrating KC-5.4.III.C. The Opium Wars and the Port of Buenos Aires illustrate economic imperialism in topic 6.5, and the remaining names belong to topic 6.3's list of new states and rebellions."),
- dict(q="Under which of the framework's headings is the Chinese Exclusion Act printed?",
+ dict(q="The framework prints the Chinese Exclusion Act as an illustration of which of its statements?",
    choices=[
-     "The heading Regulation of immigrants",
-     "The heading Migrant ethnic enclaves",
-     "The heading Return of migrants",
-     "The heading Migrants",
-     "The heading Resource export economies"], ans=0,
-   why="The CED prints the Chinese Exclusion Act under Regulation of immigrants in topic 6.7, beside KC-5.4.III.C, which is the statement that states attempted to regulate the increased flow of people across their borders. Migrant ethnic enclaves is the other heading on the same page, Return of migrants and Migrants are topic 6.6's and resource export economies is topic 6.4's. The framework names the measure and describes nothing about it."),
+     "That states attempted to regulate the increased flow of people across their borders",
+     "That migrants often created ethnic enclaves that transplanted their culture",
+     "That migrants tended to be male",
+     "That many individuals chose freely to relocate in search of work",
+     "That new methods of transportation allowed many migrants to return home"], ans=0,
+   why="The CED prints the Chinese Exclusion Act under its heading Regulation of immigrants for topic 6.7, beside KC-5.4.III.C, the statement that receiving societies did not always embrace immigrants as seen in the ways states attempted to regulate the increased flow of people across their borders. KC-5.4.III.B, KC-5.4.III.A, KC-5.4.II.A and KC-5.4.I.B are the four other statements offered, each a real statement of this unit and none the one this example illustrates. The framework names the measure and describes nothing whatever about it."),
  dict(q="An illustrative letter from a village, quoted here without attribution, reports that since the young men went overseas 'the fields are sown and the accounts kept by their wives and mothers, who never did either before'. Which of the framework's statements does the letter illustrate?",
    choices=[
      "That women in the home society took on roles formerly occupied by men",

@@ -47,11 +47,24 @@
 # KC-5.4.I to KC-5.4.III.C (the causes and effects of migration).
 #
 # THREE CAREFUL POINTS.
-#   1. KC-5.1 says increased standards of living FOR SOME. That qualification is the
-#      framework's own and is the single most useful thing in this topic for a
-#      reasoning question, because it is exactly what qualifies an argument that
-#      industrial capitalism raised living standards for everyone. Items 12 and 22
-#      turn on it and no item drops it.
+#   1. KC-5.1 says increased standards of living FOR SOME, and separately that
+#      improved manufacturing increased the availability, affordability and variety
+#      of consumer goods. The qualification is the framework's own and is the most
+#      useful thing in this topic for a reasoning question, because it is exactly
+#      what qualifies an argument that industrial capitalism raised living
+#      standards for everyone. Items 8, 12, 22 and 30 carry it and no item drops it.
+#
+#      ITEMS 21 AND 22 WERE REBUILT ON THE SECOND CLAUSE, not the first, and the
+#      reason is worth recording. Their first draft was a table of four groups'
+#      real income indexed to a hundred. A cross-subject similarity scan then
+#      found w5_7 item 23 -- written independently by a sibling agent for topic
+#      5.7 -- to be the SAME table: four groups, the same base of a hundred, and
+#      two of four end values identical (168 and 96). Both drafts had come from
+#      KC-5.1's "for some" by the shortest route. Agents converge, which CLAUDE.md
+#      warns of, and a similarity score is only useful if a match above it is read
+#      rather than waved through. These items now rest on the consumer goods
+#      clause and ask a different question of it, and item 22 turns on what a
+#      record of ownership can and cannot establish about wellbeing.
 #   2. CAUSATION IS THE REASONING PROCESS, so the DIRECTION of each review
 #      statement matters: industrialization to imperial expansion in KC-5.2, and
 #      transoceanic empires and a capitalist economy to changed migration in
@@ -62,6 +75,17 @@
 #      across four territories and settles nothing about why, which is the honest
 #      thing for a causation topic to teach.
 #
+# ITEMS 25 AND 26 WERE ALSO REBUILT, for the same reason as 21 and 22. Their first
+# draft was a five-row register of resistance episodes with a form column and an
+# appeal column, and the similarity scan matched it to w6_3 items 16 to 18, which a
+# sibling had already built as a five-row register of resistance episodes with a
+# form column and a religious-ideas column, down to an item asking which episode
+# combined a new state on a periphery with the other attribute. Two agents reached
+# the same table from the same key concepts. These items now tabulate ARGUMENTS --
+# the evidence each rests on and whether it states a mechanism -- which is what
+# suggested skill 6.D is actually about and what no other topic in this subject has
+# reason to tabulate.
+#
 # WHAT THIS BANK DOES NOT DO. No item asks for a date, a person, a treaty or a
 # quantity, because this topic prints none. Every source is UNATTRIBUTED and
 # labelled illustrative; tables are labelled hypothetical and every keyed conclusion
@@ -70,14 +94,14 @@
 # FIVE choices (A-E) per HISTORY_BRIEF.md. Dates are written "1750 to 1900".
 TOPIC = ("6.8", "Causation in the Imperial Age", 6)
 
-_T_INCOMES = dict(
-    headers=["Group in one hypothetical industrializing society",
-             "Real income at the start of the period (index)",
-             "Real income at the end of the period (index)"],
-    rows=[["Group 1", "100", "168"],
-          ["Group 2", "100", "131"],
-          ["Group 3", "100", "104"],
-          ["Group 4", "100", "96"]])
+_T_GOODS = dict(
+    headers=["Consumer good in one hypothetical industrializing society",
+             "Households in every hundred owning it at the start of the period",
+             "Households in every hundred owning it at the end of the period"],
+    rows=[["A factory-woven cotton garment", "31", "92"],
+          ["A cast-iron cooking vessel", "18", "74"],
+          ["A printed book or newspaper", "9", "51"],
+          ["A clock or watch", "6", "28"]])
 
 _T_TERRITORIES = dict(
     headers=["Hypothetical territory",
@@ -88,15 +112,14 @@ _T_TERRITORIES = dict(
           ["Territory 3", "41", "38"],
           ["Territory 4", "35", "44"]])
 
-_T_EPISODES = dict(
-    headers=["Hypothetical episode of resistance",
-             "Appeal its leaders made",
-             "Form the episode took"],
-    rows=[["Episode 1", "Religious", "Direct resistance within an empire"],
-          ["Episode 2", "Political authority and nationalism", "Creation of a new state on a periphery"],
-          ["Episode 3", "Religious", "Rebellion"],
-          ["Episode 4", "Political authority and nationalism", "Direct resistance within an empire"],
-          ["Episode 5", "Religious and political together", "Rebellion"]])
+_T_ARGUMENTS = dict(
+    headers=["Claim about this period, in a hypothetical set of student essays",
+             "Evidence the claim rests on",
+             "Whether the claim states a mechanism"],
+    rows=[["Claim 1", "One official report", "No"],
+          ["Claim 2", "Several kinds of source, including ones that disagree", "Yes"],
+          ["Claim 3", "Several kinds of source, including ones that disagree", "No"],
+          ["Claim 4", "One official report", "Yes"]])
 
 QUESTIONS = [
  dict(q="What does this unit's final learning objective ask students to explain?",
@@ -155,14 +178,14 @@ QUESTIONS = [
      "Judge a claim solely by whether its author was well regarded",
      "Judge a claim solely by whether it is stated confidently"], ans=0,
    why="Suggested skill 6.D lists explaining how or why a historical claim or argument is or is not effective. That asks for reasons about the claim itself, which neither a blanket verdict nor a judgement of the author's standing nor the confidence of the wording supplies, and Unit 6 Learning Objective I is the objective the skill serves here."),
- dict(q="The unit review states what the development of industrial capitalism led to. What does it say?",
+ dict(q="The unit review says that continued improvement in manufacturing methods increased three things about consumer goods. Which three?",
    choices=[
-     "Increased standards of living for some, and continued improvement in manufacturing methods that increased the availability, affordability and variety of consumer goods",
-     "Increased standards of living for everyone in every society it reached",
-     "Falling standards of living everywhere, and a decline in the variety of consumer goods",
-     "No change in standards of living, and no change in manufacturing methods",
-     "Increased standards of living for some, and a fall in the availability of consumer goods"], ans=0,
-   why="KC-5.1, printed in this unit's review, reads that the development of industrial capitalism led to increased standards of living FOR SOME, and to continued improvement in manufacturing methods that increased the availability, affordability, and variety of consumer goods. The qualification and the improvement are both parts of that sentence, so an option dropping either one misreports it."),
+     "Their availability, their affordability and their variety",
+     "Their availability and their variety, but not their affordability",
+     "Their affordability and their variety, but not their availability",
+     "Their durability, their weight and the cost of carrying them",
+     "Their scarcity, their price and their uniformity"], ans=0,
+   why="KC-5.1, printed in this unit's review, reads that industrial capitalism led to continued improvement in manufacturing methods that increased the availability, affordability, and variety of consumer goods. Those three nouns are the framework's own; dropping one of them, or replacing the list with durability, weight, carriage, scarcity, price or uniformity, misreports the sentence."),
  dict(q="The unit review states what states did as they industrialized. What does it say?",
    choices=[
      "They expanded existing overseas empires and established new colonies and transoceanic relationships",
@@ -179,14 +202,14 @@ QUESTIONS = [
      "The end of all rebellion against governments",
      "The transfer of every colony to a chartered company"], ans=0,
    why="KC-5.3, printed in this unit's review, reads that the intense period of revolution and rebellion against existing governments led to the establishment of new nation-states around the world. Consolidation of existing governments and abolition of the nation-state are each the reverse of that clause."),
- dict(q="The unit review gives the setting in which migration patterns changed dramatically and the numbers of migrants increased significantly. What is it?",
+ dict(q="The unit review makes two assertions about migration itself in this period. Which pair does it make?",
    choices=[
-     "The emergence of transoceanic empires and of a global capitalist economy",
-     "The closing of transoceanic empires and the collapse of world markets",
-     "A general decline in the world's population",
-     "The prohibition of migration by most governments",
-     "The disappearance of the differences between societies"], ans=0,
-   why="KC-5.4, printed in this unit's review, reads that as a result of the emergence of transoceanic empires and a global capitalist economy, migration patterns changed dramatically and the numbers of migrants increased significantly. Each rejected option asserts the opposite of one clause of that sentence."),
+     "That migration patterns changed dramatically, and that the numbers of migrants increased significantly",
+     "That migration patterns changed dramatically, and that the numbers of migrants fell",
+     "That the numbers of migrants increased, and that migration patterns were otherwise unchanged",
+     "That neither the patterns of migration nor the numbers of migrants changed",
+     "That migration ceased to cross the borders of states during the period"], ans=0,
+   why="KC-5.4, printed in this unit's review, reads that migration patterns changed dramatically AND the numbers of migrants increased significantly. Both assertions stand in one sentence, so an option keeping one and reversing the other misreports it, and the anchor carries both because a distractor offers each half alone."),
  dict(q="A student writes that industrial capitalism raised standards of living for everyone it reached. Which of the unit's review statements most directly qualifies that argument?",
    choices=[
      "The statement that industrial capitalism raised standards of living for some",
@@ -259,24 +282,24 @@ QUESTIONS = [
      "That export economies are said by the framework to have prevented all labour migration",
      "That the framework treats the two as belonging to different centuries"], ans=0,
    why="KC-5.1.II.A describes export economies growing to supply factories and urban populations, and KC-5.4 states that migration patterns changed as a result of transoceanic empires and a global capitalist economy. Suggested skill 6.D asks for relevant connections within and across periods, and these two statements describe the same economy from two sides rather than unrelated or opposed developments."),
- dict(q="The record below reports the real income of four groups in one hypothetical industrializing society, at the start and at the end of the period. Which conclusion does it support?",
+ dict(q="The record below reports, for four consumer goods in one hypothetical industrializing society, how many households in every hundred owned each good at the start and at the end of the period. Which conclusion does it support?",
    choices=[
-     "Real income rose for most of the groups but did not rise for all of them",
-     "Real income rose for every group in the society",
-     "Real income fell for every group in the society",
-     "Real income was unchanged for every group in the society",
-     "Real income rose for exactly one group and fell for the rest"], ans=0,
-   table=_T_INCOMES,
-   why="Read from the record alone: three groups end above their starting index, at 168, 131 and 104, and one ends below it at 96. KC-5.1 states that industrial capitalism led to increased standards of living FOR SOME, and a record in which most but not all groups gain is that qualification in a table."),
- dict(q="A student uses the same hypothetical income record to argue that industrial capitalism raised living standards for everyone in this society. What does the record do to that argument?",
+     "Every one of these goods reached more households by the end, and the goods that were already commonest spread furthest",
+     "Every one of these goods reached more households by the end, and the goods that were rarest at the start spread furthest",
+     "None of these goods reached more households by the end of the period",
+     "All four goods spread to exactly the same extent",
+     "Only one of these goods reached more households by the end of the period"], ans=0,
+   table=_T_GOODS,
+   why="Read from the record alone: the garment runs 31 to 92, the cooking vessel 18 to 74, the book or newspaper 9 to 51 and the clock 6 to 28, so all four spread and the rises fall in the same order as the starting figures. KC-5.1 states that continued improvement in manufacturing methods increased the availability, affordability, and variety of consumer goods, and the reversed reading of the pattern is offered as a distractor."),
+ dict(q="A student uses the same hypothetical record of consumer goods to argue that industrial capitalism made every member of this society better off. Which statement best describes what the record can and cannot establish?",
    choices=[
-     "It qualifies the argument, because one of the four groups ends the period below where it began",
-     "It corroborates the argument without change, because most groups gained",
-     "It leaves the argument untouched, because the record reports no incomes",
-     "It refutes the argument entirely, because no group gained",
-     "It modifies the argument into a claim about manufacturing methods"], ans=0,
-   table=_T_INCOMES,
-   why="One group's index ends at 96 against a start of 100, so the everyone in the student's claim is wrong while the gains of the other three stand, which is what suggested skill 6.D calls qualifying rather than corroborating or refuting. KC-5.1's own wording, increased standards of living for some, is the framework statement the record illustrates."),
+     "It establishes that these four goods reached more households, but not that every member of the society was better off",
+     "It establishes that every member of the society was better off, but not that these goods reached more households",
+     "It establishes both of those things, since ownership of goods and wellbeing are the same measure",
+     "It establishes neither, since none of the four goods reached more households",
+     "It establishes nothing at all, since a record of this kind may not be used in a historical argument"], ans=0,
+   table=_T_GOODS,
+   why="Every column of the record counts households owning a good and no column reports an income, a wage or a person's condition, so the record reaches the availability of consumer goods and stops there. KC-5.1 keeps those apart itself, saying that industrial capitalism led to increased standards of living for some AND to improvements that increased the availability of consumer goods, and suggested skill 6.D asks students to explain the relative significance of a source's credibility and limitations."),
  dict(q="The table below reports, for four hypothetical territories, the share of export earnings coming from the largest single commodity and the share of the population living in towns. What pattern does it show?",
    choices=[
      "The territories with the most concentrated exports have the smallest urban shares",
@@ -294,25 +317,25 @@ QUESTIONS = [
      "An association among territories can never be evidence of anything",
      "The argument fails because the table does not name the territories"], ans=0,
    table=_T_TERRITORIES,
-   why="The association is real in the table, running from 82 against 14 down to 35 against 44, so the objection cannot be that it is absent or reversed. Causation is this topic's reasoning process and suggested skill 6.D asks students to explain nuance by analyzing multiple variables, which is what a jump from an association among four cases to a single cause skips over."),
- dict(q="The record below lists five hypothetical episodes of resistance, the appeal each set of leaders made and the form the episode took. A student argues that resistance in this period was religious in inspiration throughout. What does the record do to that argument?",
+   why="The association is real in the table, running from 82 against 14 down to 35 against 44, so the objection cannot be that it is absent or reversed. Causation is this topic's reasoning process and suggested skill 6.D asks students to explain nuance by analyzing multiple variables, which is what a jump from an association among four cases to a single cause skips over. Unit 6 Learning Objective I asks for a weighing of effects, and a weighing rests on knowing which way a cause ran."),
+ dict(q="The record below describes four claims about this period made in a hypothetical set of student essays, the evidence each rests on and whether each states a mechanism. Which claim best meets both of the tests the suggested skill sets?",
    choices=[
-     "It qualifies the argument, since two episodes rest on appeals to political authority and nationalism and one combines the two kinds of appeal",
-     "It corroborates the argument without change, since every episode rests on a religious appeal",
-     "It refutes the argument entirely, since no episode rests on a religious appeal",
-     "It leaves the argument untouched, since the record does not report the appeals made",
-     "It modifies the argument into a claim about the forms resistance took"], ans=0,
-   table=_T_EPISODES,
-   why="Read from the record alone: two episodes are led by an appeal to political authority and nationalism, one combines that with a religious appeal and two are religious, so the argument holds for part of the record and not for all of it. KC-5.3.III.E says some rebellions were influenced by religious ideas and KC-5.3.III.D names growing nationalism and questions about political authority, so the framework itself gives both, which is why suggested skill 6.D calls this qualifying."),
- dict(q="Using the same hypothetical record of resistance episodes, which episode combines an appeal to political authority and nationalism with the creation of a new state on a periphery?",
+     "Claim 2",
+     "Claim 1",
+     "Claim 3",
+     "Claim 4",
+     "No claim in the record meets both tests"], ans=0,
+   table=_T_ARGUMENTS,
+   why="Read from the record alone: Claim 2 is the only row that both rests on several kinds of source, including ones that disagree, and states a mechanism. Suggested skill 6.D asks for diverse and alternative evidence and for an explanation of how or why a claim is effective, and those are the two columns; Claims 1, 3 and 4 each satisfy at most one of them, and Unit 6 Learning Objective I asks for the reasons behind a weighing, which is what a stated mechanism supplies."),
+ dict(q="A student says that one of the claims in the same hypothetical record is as well supported as the strongest, because both state a mechanism. Which difference between them does the record show?",
    choices=[
-     "Episode 2",
-     "Episode 1",
-     "Episode 3",
-     "Episode 4",
-     "Episode 5"], ans=0,
-   table=_T_EPISODES,
-   why="Read from the record alone: Episode 2 is the only row pairing that appeal with that form, since Episode 4 makes the same appeal but takes the form of direct resistance within an empire and the remaining episodes are rebellions or direct resistance. KC-5.2.II.C names direct resistance within empires and the creation of new states on the peripheries as the forms anti-imperial resistance took, and KC-5.3.III.D names nationalism among its causes."),
+     "The weaker claim rests on one official report, while the stronger rests on several kinds of source including ones that disagree",
+     "The weaker claim rests on several kinds of source, while the stronger rests on one official report",
+     "The weaker claim states no mechanism, while the stronger states one",
+     "The two claims rest on the same evidence and differ only in length",
+     "The record does not report what evidence any claim rests on"], ans=0,
+   table=_T_ARGUMENTS,
+   why="Read from the record alone: two claims state a mechanism, and the two are separated only by their evidence, one resting on a single official report and the other on several kinds of source including ones that disagree. Suggested skill 6.D asks for the relative historical significance of a source's credibility and limitations and for diverse and alternative evidence, and the reversal of which claim rests on which is offered as a distractor. Unit 6 Learning Objective I asks students to defend a weighing, which is why the evidence a claim rests on decides between two claims that both state a mechanism."),
  dict(q="A student argues that discontent with imperial rule expressed itself only in rebellion. Which of the unit's statements most directly qualifies that argument?",
    choices=[
      "The statement that anti-imperial resistance took various forms, including direct resistance within empires and the creation of new states on the peripheries",
