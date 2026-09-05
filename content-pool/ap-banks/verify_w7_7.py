@@ -95,19 +95,36 @@ def q19(table, item):
     assert not fallen, f"every state's fourth-year share must exceed its first-year share; {fallen} do not"
     assert min(list(first.values()) + list(fourth.values())) > 0, \
         "'only one state engages any of its adult population' must be false"
+    # The item asks for the largest MULTIPLE, not the largest gain in percentage
+    # points. It used to ask for the points, and its keyed sentence was then
+    # identical to 7.6 q8's apart from the state letter -- the same analytical
+    # move on a second table, which is the template repeat CLAUDE.md names.
+    #
+    # UNIQUENESS BEFORE IDENTITY. max() returns the FIRST row holding the
+    # extremum, so a tie reads as a clean winner and a control aimed at the tie
+    # guard would be answered by the identity assert instead.
+    mult = {k: fourth[k] / first[k] for k in first}
+    m_order = sorted(mult, key=mult.get, reverse=True)
+    assert mult[m_order[0]] > mult[m_order[1]], "the largest multiple must be unique"
+    assert m_order[0] == "State J", \
+        f"the largest multiple belongs to {m_order[0]}, not State J"
+    # THE TRAP IS THE ITEM. The state gaining most in percentage points must NOT
+    # be the one growing by the largest multiple, or the two readings of the
+    # table agree and the question tests nothing.
     rise = {k: fourth[k] - first[k] for k in first}
-    order = sorted(rise, key=rise.get, reverse=True)
-    assert rise[order[0]] > rise[order[1]], "the largest increase must be unique"
-    assert order[0] == "State G", f"the largest increase belongs to {order[0]}, not State G"
-    assert order[0] != "State H", "'the largest increase is in State H' must be false"
+    p_order = sorted(rise, key=rise.get, reverse=True)
+    assert rise[p_order[0]] > rise[p_order[1]], \
+        "the largest points gain must be unique for the trap to be sharp"
+    assert p_order[0] != m_order[0], (
+        f"{p_order[0]} gains most in percentage points AND grows by the largest multiple, "
+        f"so the distractor naming it is not a trap"
+    )
     assert len(set(fourth.values())) > 1, \
         "'the three states reach the same share by the fourth year' must be false"
-    top_first = max(first, key=first.get)
-    assert rise[top_first] != max(rise.values()), \
-        "the state that began highest must not also record the largest increase"
-    return (f"every fourth-year share exceeds its first-year share, the increases in percentage "
-            f"points are {rise}, the largest belongs to {order[0]}, and the state that began "
-            f"highest was {top_first}")
+    return (f"every fourth-year share exceeds its first-year share; the multiples are "
+            f"{ {k: round(v, 2) for k, v in mult.items()} }, largest at {m_order[0]}, while the "
+            f"largest gain in percentage points is {p_order[0]}'s {rise[p_order[0]]:g} -- the two "
+            f"readings disagree, which is what the item tests")
 
 
 def q20(table, item):
@@ -179,7 +196,7 @@ CLAIMS = [
   "Suggested skill 3.D asks how evidence supports an argument, and KC-6.2.IV.A.ii calls the war a total war, names media among the mobilizing strategies and states that all of the state's resources were mobilized for war."),
  ("mobilized their populations without repressing basic freedoms",
   "Suggested skill 3.D distinguishes modifying an argument from refuting it, and KC-6.2.IV.A.ii attaches repression to totalitarian states in particular while leaving mobilization general, so such evidence narrows the account without overturning its mobilization claim."),
- ("largest increase in percentage points is in State G",
+ ("it grows by the largest multiple in State J",
   "KC-6.2.IV.A.ii states that governments used ideologies to mobilize all of their state's resources for war, and this item asks a student to read a rising share of the adult population out of data. Recomputed in q19 above from the illustrative table alone, including the swapped distractor."),
  ("largest increase is in State U",
   "KC-6.1.III.C.ii states that new military technology and new tactics led to increased levels of wartime casualties, and this item asks a student to read that increase out of data. Recomputed in q20 above from the illustrative table alone, including the combined column that must agree with the two figures it sums."),
@@ -191,8 +208,8 @@ CLAIMS = [
   "KC-6.2.IV.A.ii says that in the case of totalitarian states governments used ideologies to repress basic freedoms and dominate many aspects of daily life, which covers control of the press, of movement and of labour."),
  ("such domination of daily life extended beyond the conflicts themselves",
   "KC-6.2.IV.A.ii says totalitarian states repressed basic freedoms and dominated many aspects of daily life during the course of the conflicts AND BEYOND, so a wartime control still in force afterwards is inside the framework's account rather than an exception to it."),
- ("State control of the national economy through five year plans",
-  "KC-6.2.IV.A.ii names political propaganda, art, media and intensified forms of nationalism as the mobilizing strategies, while control of a national economy through five year plans belongs to KC-6.3.I.A.i in topic 7.4."),
+ ("That the conflict was a total war",
+  "KC-6.2.IV.A.i opens 'World War I was the first total war' and KC-6.2.IV.A.ii opens 'World War II was a total war', so this is the one characterisation the framework states of both; the four distractors are clauses .ii adds that .i does not carry. Replaces an item that was topic 7.3 q12 with 'First' swapped for 'Second', identical choices and identical key."),
  ("ideologies, including fascism and communism, to mobilize all of the state's resources",
   "KC-6.2.IV.A.i and KC-6.2.IV.A.ii both name propaganda, art, media and intensified nationalism, and both casualty sentences name new military technology, but the ideologies clause appears only in KC-6.2.IV.A.ii."),
  ("alike, and in what ways did they differ",

@@ -217,15 +217,15 @@ QUESTIONS = [
      "Evidence that casualty levels rose in the later of the two wars",
      "Evidence that colonies supplied no troops to any combatant"], ans=0,
    why="Suggested skill 3.D distinguishes modifying an argument from refuting it. KC-6.2.IV.A.ii attaches the repression of basic freedoms and the domination of daily life to totalitarian states in particular while stating the mobilization claim generally, so such evidence narrows the account's scope without overturning its mobilization claim."),
- dict(q="The table below reports illustrative figures for the share of the adult population engaged in the armed forces or in war production in three states, in the first and fourth years of the war. Which conclusion is best supported?",
+ dict(q="The table below reports illustrative figures for the share of the adult population engaged in the armed forces or in war production in three states, in the first and fourth years of the war. By what multiple did the share grow most, and in which state?",
    table=_T_MOBILIZE,
    choices=[
-     "The share rises in every state, and the largest increase in percentage points is in State G",
-     "The share rises in every state, and the largest increase in percentage points is in State H",
+     "The share rises in every state, and it grows by the largest multiple in State J",
+     "The share rises in every state, and it grows by the largest multiple in State G",
+     "The share rises in every state, and it grows by the largest multiple in State H",
      "The share falls in every state between the two years shown",
-     "Only one of the three states engages any of its adult population in this way",
      "The three states reach the same share by the fourth year"], ans=0,
-   why="Read from the table alone: every fourth-year share exceeds its first-year share, none is zero, and subtracting gives one state the largest increase, which is not the state that began highest. KC-6.2.IV.A.ii states that governments mobilized all of their state's resources for war, and a rising share of the adult population in war work is the kind of evidence that bears on it."),
+   why="Read from the table alone: every fourth-year share exceeds its first-year share, and DIVIDING rather than subtracting gives State J the largest growth, 9 percent to 36, a multiple of four. State G is the trap: it gains most in percentage points, 14 to 52, but that is a multiple of about 3.7. The two readings of the same table disagree, which is what the item tests. KC-6.2.IV.A.ii states that governments mobilized all of their state's resources for war, and a rising share of the adult population in war work is the kind of evidence that bears on it."),
  dict(q="The table below reports illustrative casualty figures for three combatant states across the two global conflicts of the period. Which conclusion is best supported?",
    table=_T_CASUALTY,
    choices=[
@@ -267,14 +267,27 @@ QUESTIONS = [
      "It shows that the regulation had never been enforced during the war",
      "It shows that the state issuing it had ceased to be a combatant"], ans=0,
    why="KC-6.2.IV.A.ii says totalitarian states repressed basic freedoms and dominated many aspects of daily life during the course of the conflicts and beyond. A wartime control still operating after the fighting is the framework's own 'and beyond' rather than an exception to it."),
- dict(q="Which of the following does the framework NOT name among the strategies used to mobilize populations for the Second World War?",
+ # REPLACED. This item was "which does the framework NOT name among the
+ # strategies used to mobilize populations for the Second World War", with the
+ # five-year-plans key -- word for word topic 7.3 q12 with "First" swapped for
+ # "Second", down to an identical choice list and an identical key. That is the
+ # template repeat CLAUDE.md names as a defect, and it was invisible to a
+ # stem-only scan of one module: it only appears when stems and KEYS are scored
+ # together across the whole subject.
+ #
+ # The replacement is a SIMILARITY item, which this topic lacked. Unit 7
+ # Learning Objective G is "explain similarities and differences in how
+ # governments used a variety of methods to conduct war", and every other
+ # comparison item here (q4, q26) asks what the second war's account adds. This
+ # one asks what the two accounts share, which nothing else in the module does.
+ dict(q="KC-6.2.IV.A.i and KC-6.2.IV.A.ii open their accounts of the two wars with the same characterisation. Which of the following does the framework state of BOTH wars rather than of the Second alone?",
    choices=[
-     "State control of the national economy through five year plans",
-     "Political propaganda",
-     "Art",
-     "Media",
-     "Intensified forms of nationalism"], ans=0,
-   why="KC-6.2.IV.A.ii names political propaganda, art, media, and intensified forms of nationalism as the mobilizing strategies. Control of a national economy through five year plans belongs to KC-6.3.I.A.i, which the framework attaches to the Soviet economy in topic 7.4 rather than to wartime mobilization."),
+     "That the conflict was a total war",
+     "That governments used ideologies, including fascism and communism, to mobilize their states' resources",
+     "That totalitarian states repressed basic freedoms",
+     "That the domination of many aspects of daily life continued beyond the conflict",
+     "That governments mobilized populations in former colonies as well as in colonies"], ans=0,
+   why="KC-6.2.IV.A.i opens 'World War I was the first total war' and KC-6.2.IV.A.ii opens 'World War II was a total war', so total war is the characterisation the framework applies to both. The other four are clauses KC-6.2.IV.A.ii adds and KC-6.2.IV.A.i does not carry: the use of ideologies including fascism and communism, the repression of basic freedoms by totalitarian states, the domination of daily life continuing 'and beyond', and the widening of the mobilized populations to 'colonies or former colonies' where the first war's statement says only 'the colonies'."),
  dict(q="Which statement belongs to the framework's account of the second war's conduct rather than to its account of the first war's?",
    choices=[
      "Governments used ideologies, including fascism and communism, to mobilize all of the state's resources",
