@@ -291,4 +291,85 @@ CLAIMS = [
   "KC-5.2.I.E gives the practitioners and the principal regions and KC-5.1.II.C gives the distinct economic advantage held by merchants and companies based in Europe and the U.S. The anchor carries both clauses because the swapped version, with producing regions in both roles, is offered as a distractor."),
 ]
 
+
+# --------------------------------------------------------- legal-value controls
+#
+# es_check's cell control corrupts a cell by appending " CORRUPTED", which trips
+# the exact-vocabulary validation in _ships or the 0-to-100 bound in _shares
+# BEFORE any uniqueness guard runs. Those twenty-of-twenty lines therefore prove
+# that the tables are read; they prove nothing about the guards that make each
+# keyed row the ONLY defensible answer, which is the property whose absence
+# shipped item 15 with two correct choices.
+#
+# So each guard gets its own control that substitutes one LEGAL region or share
+# for another. The record stays well formed, the vocabulary check passes, and the
+# only thing that changes is whether the key is still unique. Each control also
+# asserts on the MESSAGE, because a control that fires for the wrong reason
+# proves nothing about the guard it names.
+
+_MADE, _SENT, _FIRM = 1, 2, 3
+
+
+def _fires(base, mutate, check, needle, label):
+    import copy
+    table = copy.deepcopy(base)
+    mutate(table["rows"])
+    try:
+        check(table, None)
+    except AssertionError as exc:
+        assert needle in str(exc), \
+            f"CONTROL FIRED FOR THE WRONG REASON ({label}): expected {needle!r}, got {exc}"
+        return
+    raise SystemExit(f"CONTROL FAILED: {label} -- {check.__name__} accepted the mutation")
+
+
+def uniqueness_control():
+    ships, adv = w6_5._T_SHIPMENTS, w6_5._T_ADVANTAGE
+
+    # The original defect, reproduced exactly: give Record 4 a second row's worth
+    # of Latin American production so TWO rows satisfy both of item 15's
+    # conditions. This is the mutation the missing verifier would have had to
+    # catch, and it is legal in every other respect.
+    def two_answers(rows):
+        rows[3][_MADE] = "Latin America"
+        rows[3][_FIRM] = "Latin America"
+    _fires(ships, two_answers, q15, "exactly one row may satisfy BOTH conditions",
+           "item 15 with two defensible answers")
+
+    _fires(ships, lambda rows: rows[0].__setitem__(_MADE, "Western Europe"), q14,
+           "exactly one row must be produced in Western Europe",
+           "item 14 with a second European producer")
+
+    def no_local_firm(rows):
+        rows[3][_FIRM] = "North America"
+        rows[4][_FIRM] = "Western Europe"
+    _fires(ships, no_local_firm, q16, "the key says at least one such shipment exists",
+           "item 16 with no locally arranged shipment")
+
+    _fires(ships, lambda rows: rows[4].__setitem__(_FIRM, "Western Europe"), q13,
+           "not four", "item 13 with a fifth European firm")
+
+    # Shares: 60 and 40 are legal percentages, so the 0-to-100 bound cannot fire
+    # and the guard under test is the only thing that can.
+    _fires(adv, lambda rows: rows[3].__setitem__(1, "60"), q17,
+           "majority shares must be exactly the three moving services",
+           "item 17 with warehousing raised to a majority")
+    _fires(adv, lambda rows: rows[4].__setitem__(1, "40"), q18,
+           "growing must be the smallest share",
+           "item 18 with growing raised above warehousing")
+
+    # POSITIVE control: the same six checks must ACCEPT the module's own tables,
+    # so a check that rejected everything would be caught here rather than
+    # counted as six successes.
+    for fn in (q13, q14, q15, q16):
+        fn(ships, None)
+    for fn in (q17, q18):
+        fn(adv, None)
+    print("  control OK  every uniqueness guard fires on a legal-value mutation, "
+          "for the reason it names, and passes the real tables")
+
+
+if "--selftest" in sys.argv:
+    uniqueness_control()
+
 es.run(w6_5, CLAIMS, TABLE_CHECKS, sys.argv)
