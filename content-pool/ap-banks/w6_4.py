@@ -34,7 +34,7 @@
 # the table alone.
 #
 # FIVE choices (A-E) per HISTORY_BRIEF.md. Dates are written "1750 to 1900".
-TOPIC = ("6.4", "Global Economic Development from", 6)
+TOPIC = ("6.4", "Global Economic Development from 1750 to 1900", 6)
 
 _T_PORTS = dict(
     headers=["Port economy (hypothetical)", "Leading export by value", "Leading import by value"],

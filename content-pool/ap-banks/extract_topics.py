@@ -259,6 +259,30 @@ OVERRIDES = {
         "9.5": "Calls for Reform and Responses After 1900",             # lines 8039-8041
         # "Institutions" / "Developing in a" / "Globalized World"
         "9.8": "Institutions Developing in a Globalized World",         # lines 8203-8207
+        # A SECOND ROUND, found only after 29 modules had been authored against
+        # the first list. The Course at a Glance table sets THREE units side by
+        # side, so a wrapped title's continuation lines sit in a neighbouring
+        # unit's column and the parser dropped the middle of the title while
+        # keeping both ends. That produces a title that is SHORTER but still
+        # grammatical -- "Technological 1450 to 1750" -- which the
+        # dangling-joining-word guard cannot see, and which a check that only
+        # asks "do all the title's words appear on its page" also passes,
+        # because a truncation has fewer words, not wrong ones.
+        #
+        # 1.1 and 1.2 collapsed to the SAME string this way. Two topics sharing
+        # a title is the cheap check that would have caught the whole class.
+        "1.1": "Developments in East Asia from c. 1200 to c. 1450",       # 1783-1790
+        "1.2": "Developments in Dar al-Islam from c. 1200 to c. 1450",    # 1881-1888
+        "1.6": "Developments in Europe from c. 1200 to c. 1450",          # page TOPIC 1.6
+        "2.6": "Environmental Consequences of Connectivity",              # page TOPIC 2.6
+        "3.4": "Comparison in Land-Based Empires",                        # page TOPIC 3.4
+        "4.1": "Technological Innovations from 1450 to 1750",             # 3709-3716
+        "4.6": "Internal and External Challenges to State Power from 1450 to 1750",  # 4200-4207
+        "5.6": "Industrialization: Government’s Role from 1750 to 1900",  # page TOPIC 5.6
+        "6.1": "Rationales for Imperialism from 1750 to 1900",            # 5559-5566
+        "6.4": "Global Economic Development from 1750 to 1900",           # page TOPIC 6.4
+        "8.7": "Global Resistance to Established Power Structures After 1900",  # page TOPIC 8.7
+        "9.1": "Advances in Technology and Exchange After 1900",          # 7799-7806
         # "Continuity and" / "Change from" / "1450 to 1750", immediately after
         # which the page runs on into an un-spaced paragraph
         # ("Thefinaltopicinthisunitfocusesontheskillof...") that the parser
@@ -293,6 +317,23 @@ def check(topics: dict[str, str]) -> list[str]:
             title,
         ):
             problems.append(f"{code}: skill text leaked into the title: {title!r}")
+    # Two topics with the SAME title. A cheap check, and the one that would
+    # have caught a whole class of defect on its own: World History's Course at
+    # a Glance table sets three units side by side, so a wrapped title's middle
+    # lines land in a neighbouring column and get dropped. That leaves a title
+    # that is shorter but still grammatical -- invisible to the dangling-word
+    # guard -- and it collapsed 1.1 and 1.2 both to "Developments in c. 1200 to
+    # c. 1450". Twelve titles were wrong; this is the one that made it obvious
+    # something systematic was happening rather than a stray page misparsing.
+    by_title: dict[str, list[str]] = {}
+    for code, title in topics.items():
+        by_title.setdefault(title.strip().lower(), []).append(code)
+    for title, codes in sorted(by_title.items()):
+        if len(codes) > 1:
+            problems.append(
+                f"{', '.join(sorted(codes))}: share the title {topics[codes[0]]!r} -- two CED "
+                "topics never do, so at least one is truncated"
+            )
     for u, nums in sorted(units.items()):
         nums.sort()
         if nums != list(range(1, len(nums) + 1)):

@@ -39,7 +39,7 @@
 #
 # FIVE choices (A-E) per HISTORY_BRIEF.md. Dates are written "1750 to 1900"; a
 # hyphen between numerals is banned by the notation gate in es_check.py.
-TOPIC = ("6.1", "Rationales for 1750 to 1900", 6)
+TOPIC = ("6.1", "Rationales for Imperialism from 1750 to 1900", 6)
 
 _T_PAMPHLETS = dict(
     headers=["Argument made in the pamphlet",

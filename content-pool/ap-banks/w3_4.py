@@ -42,7 +42,7 @@
 # Dates are written "1450 to 1750". Five choices A-E per HISTORY_BRIEF.md. Every
 # stimulus is hypothetical or unattributed; no quotation is put in a real
 # person's mouth.
-TOPIC = ("3.4", "Comparison in Land-Based Empires Land-Based Empires", 3)
+TOPIC = ("3.4", "Comparison in Land-Based Empires", 3)
 
 _T_EVIDENCE = dict(
     headers=["Piece of evidence a student has gathered", "What it records"],

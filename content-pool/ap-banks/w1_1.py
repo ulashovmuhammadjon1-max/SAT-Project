@@ -56,7 +56,7 @@
 # its own dates are approximate -- events "are not constrained by the given dates and
 # may begin before, or continue after, the period" -- so no key here turns on a
 # boundary year.
-TOPIC = ("1.1", "Developments in c. 1200 to c. 1450", 1)
+TOPIC = ("1.1", "Developments in East Asia from c. 1200 to c. 1450", 1)
 
 _T_OUTPUT = dict(
     headers=["Period (hypothetical)", "Iron output (index)", "Registered urban households (thousands)"],

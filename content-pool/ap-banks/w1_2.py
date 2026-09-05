@@ -1,7 +1,14 @@
-# AP WORLD HISTORY: MODERN 1.2  (title copied verbatim from WORLD_HISTORY_topics.json.
-# The CED topic page reads "Developments in Dar al-Islam from c. 1200 to c. 1450"; the
-# JSON holds what the narrow title column of that two-column page yielded, and the
-# brief says to copy the JSON verbatim rather than to retype the page.)
+# AP WORLD HISTORY: MODERN 1.2  (title copied verbatim from WORLD_HISTORY_topics.json.)
+#
+# THIS MODULE FOUND A REAL DEFECT AND THE NOTE IS KEPT BECAUSE OF IT. The JSON
+# originally held "Developments in c. 1200 to c. 1450" -- the Course at a Glance
+# table sets three units side by side, so this title's middle lines landed in a
+# neighbouring column and were dropped, leaving something shorter but still
+# grammatical. 1.1 was truncated to the SAME string. This module followed the
+# brief and copied the JSON, while recording that the CED page read
+# "Developments in Dar al-Islam from c. 1200 to c. 1450" -- which is what made
+# the conflict visible. Twelve titles were wrong; extract_topics.py now refuses
+# any list in which two topics share a title.
 # Unit 1 The Global Tapestry. Suggested skill 1.A, identify and describe a historical
 # concept, development, or process.
 #
@@ -47,7 +54,7 @@
 # Stimuli are unattributed and illustrative, or HYPOTHETICAL tables whose keyed
 # conclusion is recomputed from the table alone. No quotation is put in a real
 # person's mouth.
-TOPIC = ("1.2", "Developments in c. 1200 to c. 1450", 1)
+TOPIC = ("1.2", "Developments in Dar al-Islam from c. 1200 to c. 1450", 1)
 
 _T_LIBRARY = dict(
     headers=["Field of learning (hypothetical)", "Works in an earlier inventory",
