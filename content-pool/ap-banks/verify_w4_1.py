@@ -16,27 +16,17 @@ substring that must appear in the KEYED choice and in no distractor, so an
 off-by-one key or a reordered choice list fails here rather than reaching a
 student. `claim` states what the key rests on, for a human to audit.
 
-The structural gate is `cg_check.check`; the notation gate (no backslash, no
-caret, no digit-hyphen-digit range, no dollar sign, no non-ASCII) and the
-generic negative control -- every key rotated, every table cell corrupted -- are
-in `es_check`, reused unchanged. Three further gates are defined here.
+EVERYTHING SHARED IS SHARED. `wh_check.run` is the World History gate the rest
+of this subject already uses: `cg_check.check` for structure and anchors,
+`es_check.style` for notation, a required KC code or Learning Objective in every
+`why` AND every `claim`, and a ban on figure language the bank cannot display --
+which matters more in this unit than in any other, because a topic about ocean
+routes invites a map on every second question. Its self-test rotates all thirty
+keys, breaks all thirty anchors, corrupts every table cell and asserts WHICH
+message came back each time. None of that is reimplemented here.
 
-CITATION. Every `why` must carry a CED reference: a `KC-` code, a named Learning
-Objective, a suggested skill, or the thematic focus (two items rest on the
-Technology and Innovation focus printed with this topic, which is framework text
-carrying no KC code of its own). HISTORY_BRIEF.md's whole gate is that a key
-traces to a sentence in the framework, and an uncited `why` is exactly the
-question nobody can check later.
-
-FIGURE LANGUAGE. The bank cannot show images, so a stem may never send a student
-to look at a map or a picture. This unit invites maps more than any other, which
-is why the gate matters here. The patterns are deliberately narrow: they require
-a display word FOLLOWED by shows/depicts/above/below, so "the fullest picture
-of" and a distractor naming a diagram as a concept do not trip them -- both were
-real false findings elsewhere in this repo. "The table below" is legal and stays
-legal, because a `table=` really is there.
-
-MARKED STIMULUS. Section I is stimulus-based and this module carries seven
+ONE GATE IS ADDED, because it is what this module needs and the shared gate does
+not have. MARKED STIMULUS. Section I is stimulus-based and this module carries seven
 invented sources. HISTORY_BRIEF.md forbids putting words in a real person's
 mouth, so every stem that introduces a source document must say in the stem that
 it is hypothetical, unattributed or illustrative. What the check can and cannot
@@ -80,29 +70,11 @@ import sys
 
 import cg_check as cg
 import es_check as es
+import wh_check as wh
 
 import w4_1
 
-# ----------------------------------------------------- the three history gates
-
-# Explicit lookarounds throughout. `\b` is silently not a boundary between a
-# digit and a letter, and this project has paid for that four separate times.
-_CITE = re.compile(
-    r"(?<![A-Za-z0-9])(?:KC-\d\.\d"
-    r"|Learning Objective [A-N](?![A-Za-z])"
-    r"|[Ss]uggested skill \d\.[A-E](?![A-Za-z])"
-    r"|thematic focus(?![A-Za-z]))"
-)
-
-_FIGURE = [
-    re.compile(r"(?<![A-Za-z])the (?:map|image|picture|photograph|painting|cartoon|graph|"
-               r"chart|diagram)s? (?:above|below|shown|shows|depicts|indicates)(?![A-Za-z])",
-               re.IGNORECASE),
-    re.compile(r"(?<![A-Za-z])in the (?:image|map|photograph|painting|cartoon)(?![A-Za-z])",
-               re.IGNORECASE),
-    re.compile(r"(?<![A-Za-z])(?:pictured|illustrated|depicted) (?:above|below)(?![A-Za-z])",
-               re.IGNORECASE),
-]
+# ------------------------------------------- the gate this module adds
 
 # A stem that INTRODUCES one of these has introduced a SOURCE, and a source in
 # this bank is invented. Explicit lookarounds so "recording" does not count as
@@ -123,29 +95,6 @@ _MARKED = re.compile(r"(?<![A-Za-z])(?:hypothetical|unattributed|illustrative)(?
                      re.IGNORECASE)
 
 
-def cited(module):
-    """Every `why` names the CED statement its key rests on."""
-    for i, item in enumerate(module.QUESTIONS, 1):
-        assert _CITE.search(item["why"]), (
-            f"{module.TOPIC[0]} q{i}: why cites no CED statement -- {item['why'][:80]!r}"
-        )
-    print(f"OK  {module.TOPIC[0]} citations: all {len(module.QUESTIONS)} whys name a "
-          "CED statement.")
-
-
-def no_figure_language(module):
-    """No student-facing text may point at a picture the bank cannot show."""
-    for i, item in enumerate(module.QUESTIONS, 1):
-        for text in es.texts(item):
-            for pat in _FIGURE:
-                hit = pat.search(text)
-                assert not hit, (
-                    f"{module.TOPIC[0]} q{i}: refers to a figure the bank cannot display "
-                    f"-- {hit.group(0)!r}"
-                )
-    print(f"OK  {module.TOPIC[0]} figures: no question sends a student to an image.")
-
-
 def marked_stimulus(module):
     """A stem that introduces a source must say the source is invented."""
     n = 0
@@ -161,14 +110,12 @@ def marked_stimulus(module):
     print(f"OK  {module.TOPIC[0]} stimuli: all {n} source-bearing stems are marked invented.")
 
 
-def extras(module):
-    cited(module)
-    no_figure_language(module)
-    marked_stimulus(module)
-
-
 def extra_controls(module):
-    """Negative AND positive controls for the three gates defined above."""
+    """Negative AND positive controls for the stimulus gate defined above.
+
+    The citation, figure-language, notation, anchor and table controls all live
+    in `wh_check.selftest` and run from `wh.run` below; they are not repeated.
+    """
     import copy
     import types
 
@@ -197,28 +144,12 @@ def extra_controls(module):
             raise SystemExit(f"CONTROL FAILED: {label} was rejected -- {exc}")
         print(f"  control OK  {label}: accepted, as legal text must be")
 
-    def strip_citation(mod):
-        mod.QUESTIONS[3]["why"] = ("The framework says so plainly and the other options are "
-                                   "simply not what it says anywhere at all.")
-
-    def map_language(mod):
-        mod.QUESTIONS[0]["q"] = ("The map below shows the routes sailed in the period. Which "
-                                 "worlds did the learning spread from?")
-
-    def image_language(mod):
-        mod.QUESTIONS[1]["q"] = ("In the image, a caravel is drawn beside an older vessel. "
-                                 "Which list does the framework give?")
-
     def unmarked_source(mod):
         # q6's stem, with the one word that marks it invented removed. The
         # source noun 'notebook' stays, so it is the MARK that is missing and
         # the mark is what this gate is about.
         mod.QUESTIONS[5]["q"] = mod.QUESTIONS[5]["q"].replace("A hypothetical shipwright's",
                                                               "A shipwright's")
-
-    def legal_picture_word(mod):
-        mod.QUESTIONS[2]["why"] = ("KC-4.1.II gives the fullest picture of the diffusion, and "
-                                   "the table below is not an image at all.")
 
     def stem_without_a_source(mod):
         # No source noun at all: the stimulus gate must stay silent rather than
@@ -234,19 +165,11 @@ def extra_controls(module):
                                  "the framework's account, and in the report of the unit "
                                  "overview, of this period?")
 
-    print("history-specific controls:")
-    must_raise("a why stripped of its CED citation", strip_citation, cited)
-    must_raise("a stem sending the student to a map", map_language, no_figure_language)
-    must_raise("a stem sending the student to an image", image_language, no_figure_language)
+    print("stimulus-gate controls:")
     must_raise("a source-bearing stem with its 'hypothetical' removed",
                unmarked_source, marked_stimulus)
-    # POSITIVE controls. A gate that rejects everything catches nothing, and the
-    # phrases below are exactly the false findings this repo has already shipped
-    # from an over-matching figure check and from an over-broad word list.
-    must_pass("legal prose containing 'picture of' and 'the table below'",
-              legal_picture_word, no_figure_language)
-    must_pass("legal prose containing 'picture of' still counts as cited",
-              legal_picture_word, cited)
+    # POSITIVE controls. A gate that rejects everything catches nothing, and a
+    # gate that fires on ordinary prose trains everyone to ignore its output.
     must_pass("a stem that introduces no source at all", stem_without_a_source,
               marked_stimulus)
     must_pass("a stem naming the framework's own account and report",
@@ -386,7 +309,7 @@ CLAIMS = [
  ("new tools, and an improved understanding of regional wind",
   "KC-4.1.II.A names new tools and an improved understanding of regional wind and currents patterns among its three developments; instruments for taking bearings are tools and a chart of a route's winds and currents is that understanding. Plantations are KC-4.2.II.C, syncretism KC-4.1.VI, companies KC-4.1.IV.C and officials KC-4.3.I.C."),
  ("human adaptation and innovation",
-  "The Technology and Innovation thematic focus printed with this topic says human adaptation and innovation have resulted in increased efficiency, comfort, and security and that technological advances have shaped human development. The rejected descriptions are the Governance, Social Interactions, Humans and the Environment and Cultural Developments thematic focuses."),
+  "The Technology and Innovation thematic focus printed with this topic says human adaptation and innovation have resulted in increased efficiency, comfort, and security and that technological advances have shaped human development, which is why KC-4.1.II and KC-4.1.II.A sit under it rather than under governance. The rejected descriptions are the Governance, Social Interactions, Humans and the Environment and Cultural Developments thematic focuses."),
  ("both intended and unintended consequences",
   "The same Technology and Innovation thematic focus says technological advances have shaped human development and interactions with both intended and unintended consequences, which is what licenses treating unintended consequences as part of the subject. The rejected statements are KC-4.3.I.A, KC-4.3.II.B, KC-4.2.II.A and KC-5.3.III.C."),
  ("one list of developments the framework does not rank",
@@ -414,5 +337,5 @@ TABLE_CHECKS = {11: q11, 12: q12, 13: q13}
 if __name__ == "__main__" and "--selftest" in sys.argv:
     extra_controls(w4_1)
 
-extras(w4_1)
-es.run(w4_1, CLAIMS, TABLE_CHECKS, sys.argv)
+marked_stimulus(w4_1)
+wh.run(w4_1, CLAIMS, table_checks=TABLE_CHECKS, argv=sys.argv)
