@@ -65,115 +65,17 @@ the only people navigating oceans, and no item implies it.
 
 NEGATIVE CONTROL: `python3 verify_w4_1.py --selftest`.
 """
-import re
 import sys
 
 import cg_check as cg
-import es_check as es
 import wh_check as wh
+import wh_stimulus as ws
 
 import w4_1
 
-# ------------------------------------------- the gate this module adds
-
-# A stem that INTRODUCES one of these has introduced a SOURCE, and a source in
-# this bank is invented. Explicit lookarounds so "recording" does not count as
-# "record" and "instructions" does count as "instruction".
-#
-# The indefinite article is load-bearing and was not in the first draft of this
-# gate. Without it the pattern fired on q16's "the direction of technological
-# diffusion in the framework's ACCOUNT of this period" -- a reference to the CED
-# itself, not an invented document, and a textbook false finding of exactly the
-# kind this repo keeps paying for. A stimulus is introduced ("A hypothetical
-# shipwright's notebook describes..."), never referred back to with "the". The
-# false finding is kept below as a positive control so nobody widens this again.
-_SOURCE_NOUN = re.compile(
-    r"(?<![A-Za-z])[Aa]n? (?:[A-Za-z']+ ){0,3}"
-    r"(?:account|notebook|letter|book|treatise|inventory|instruction|chronicle|record|"
-    r"manual|logbook|memoir|report|petition|decree|dispatch|ledger|testimony)s?(?![A-Za-z])")
-_MARKED = re.compile(r"(?<![A-Za-z])(?:hypothetical|unattributed|illustrative)(?![A-Za-z])",
-                     re.IGNORECASE)
-
-
-def marked_stimulus(module):
-    """A stem that introduces a source must say the source is invented."""
-    n = 0
-    for i, item in enumerate(module.QUESTIONS, 1):
-        hit = _SOURCE_NOUN.search(item["q"])
-        if not hit:
-            continue
-        n += 1
-        assert _MARKED.search(item["q"]), (
-            f"{module.TOPIC[0]} q{i}: the stem introduces a {hit.group(0)!r} without "
-            f"marking it hypothetical, unattributed or illustrative -- {item['q'][:90]!r}"
-        )
-    print(f"OK  {module.TOPIC[0]} stimuli: all {n} source-bearing stems are marked invented.")
-
-
-def extra_controls(module):
-    """Negative AND positive controls for the stimulus gate defined above.
-
-    The citation, figure-language, notation, anchor and table controls all live
-    in `wh_check.selftest` and run from `wh.run` below; they are not repeated.
-    """
-    import copy
-    import types
-
-    def mutant():
-        m = types.ModuleType(module.__name__ + "_mutant")
-        m.TOPIC = module.TOPIC
-        m.QUESTIONS = copy.deepcopy(module.QUESTIONS)
-        return m
-
-    def must_raise(label, mutate, gate):
-        mod = mutant()
-        mutate(mod)
-        try:
-            gate(mod)
-        except AssertionError as exc:
-            print(f"  control OK  {label}: {str(exc)[:90]}")
-            return
-        raise SystemExit(f"CONTROL FAILED: {label} did not raise")
-
-    def must_pass(label, mutate, gate):
-        mod = mutant()
-        mutate(mod)
-        try:
-            gate(mod)
-        except AssertionError as exc:
-            raise SystemExit(f"CONTROL FAILED: {label} was rejected -- {exc}")
-        print(f"  control OK  {label}: accepted, as legal text must be")
-
-    def unmarked_source(mod):
-        # q6's stem, with the one word that marks it invented removed. The
-        # source noun 'notebook' stays, so it is the MARK that is missing and
-        # the mark is what this gate is about.
-        mod.QUESTIONS[5]["q"] = mod.QUESTIONS[5]["q"].replace("A hypothetical shipwright's",
-                                                              "A shipwright's")
-
-    def stem_without_a_source(mod):
-        # No source noun at all: the stimulus gate must stay silent rather than
-        # demanding the word 'hypothetical' of every stem in the module.
-        mod.QUESTIONS[7]["q"] = ("The framework says the developments of this topic made "
-                                 "something possible. What, according to that sentence?")
-
-    def framework_account(mod):
-        # THE REAL FALSE FINDING. The first draft of the stimulus gate rejected
-        # q16 for the phrase "the framework's account", which introduces no
-        # document at all. It must stay legal.
-        mod.QUESTIONS[8]["q"] = ("Which statement best describes the direction of diffusion in "
-                                 "the framework's account, and in the report of the unit "
-                                 "overview, of this period?")
-
-    print("stimulus-gate controls:")
-    must_raise("a source-bearing stem with its 'hypothetical' removed",
-               unmarked_source, marked_stimulus)
-    # POSITIVE controls. A gate that rejects everything catches nothing, and a
-    # gate that fires on ordinary prose trains everyone to ignore its output.
-    must_pass("a stem that introduces no source at all", stem_without_a_source,
-              marked_stimulus)
-    must_pass("a stem naming the framework's own account and report",
-              framework_account, marked_stimulus)
+# The MARKED STIMULUS gate now lives in `wh_stimulus`, so the seven modules of
+# this unit share one copy of it and one set of controls. It was written here
+# first; the docstring above records why the indefinite article is in it.
 
 
 # ------------------------------------------------------------ table recomputes
@@ -335,7 +237,7 @@ CLAIMS = [
 TABLE_CHECKS = {11: q11, 12: q12, 13: q13}
 
 if __name__ == "__main__" and "--selftest" in sys.argv:
-    extra_controls(w4_1)
+    ws.controls(w4_1)
 
-marked_stimulus(w4_1)
+ws.marked_stimulus(w4_1)
 wh.run(w4_1, CLAIMS, table_checks=TABLE_CHECKS, argv=sys.argv)
