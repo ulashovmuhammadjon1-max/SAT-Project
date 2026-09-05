@@ -59,6 +59,7 @@ import re
 import types
 
 import cg_check as cg
+import wh_stimulus
 import es_check as es
 
 # A Key Concept code as this CED prints them: KC-6.2.IV.C.ii, KC-6.3.I.A.ii,
@@ -283,4 +284,13 @@ def run(module, claims, table_checks=None, argv=()):
     if "--selftest" in argv:
         selftest(module, claims, table_checks)
     history_style(module, claims)
+    # THE MARKED-STIMULUS GATE RUNS FOR EVERY MODULE, from here rather than
+    # from each verifier. It began life inside unit 4's verifiers, so 63 of the
+    # 71 modules were never subject to it; run across all of them it found 29
+    # stems that introduced an invented source with no marker -- a dated,
+    # specific document a student reads as real, which is what
+    # HISTORY_BRIEF.md forbids. Putting it in the shared entry point is what
+    # stops that recurring: a new module cannot opt out by forgetting an
+    # import.
+    wh_stimulus.marked_stimulus(module)
     cg.check(module, claims, table_checks=table_checks)

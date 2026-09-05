@@ -124,7 +124,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.1.I.A names radio communication, cellular communication, and the internet as the new modes of communication that, together with transportation, reduced the problem of geographic distance. Shipping containers and air travel appear in that sentence as transportation rather than communication, and the remaining lists belong to KC-6.1.I.C, KC-6.1.III.B, KC-6.1.I.D and KC-6.1.I.B."),
 
- dict(q="An engineering report of 1962 argues that a new power station will allow the district's factories to run more shifts and to produce a far larger quantity of goods each year. The report describes a development this course places under",
+ dict(q="A hypothetical engineering report of 1962 argues that a new power station will allow the district's factories to run more shifts and to produce a far larger quantity of goods each year. The report describes a development this course places under",
    choices=[
      "energy technologies raising productivity and increasing the production of material goods",
      "new modes of communication reducing the problem of geographic distance",

@@ -152,7 +152,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.III.A.i states that redrawn boundaries led to the creation of new states and KC-6.2.III.A.ii adds that this led to conflict and displacement IN SOME CASES. A record in which both outcomes appear in every decade is those two sentences made countable, and the figures are hypothetical, with the key and the falsity of every distractor recomputed from the table alone in the verifier."),
 
- dict(q="A memoir published in 1980 by a woman who moved from a former colony to the imperial metropole in 1958 describes settling in the metropole's largest city, sending money to relatives at home each month and returning for family occasions. Her account most directly illustrates which course development?",
+ dict(q="A hypothetical memoir published in 1980 by a woman who moved from a former colony to the imperial metropole in 1958 describes settling in the metropole's largest city, sending money to relatives at home each month and returning for family occasions. Her account most directly illustrates which course development?",
    choices=[
      "Migration to imperial metropoles, usually in the major cities, maintained cultural and economic ties between colony and metropole",
      "Migration to imperial metropoles severed the cultural and economic ties between colony and metropole",
@@ -284,7 +284,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.I.C states that governments in newly independent states after World War II often took on a strong role in guiding economic life to promote development, so a uniform withdrawal from economic life reverses the framework's sentence and is the statement it does not support. The other four restate KC-6.3.I.C, KC-6.2.III.A.i, KC-6.2.III.A.ii and KC-6.2.III.B."),
 
- dict(q="A metropolitan official's report of 1975 argues that the arrival of former colonial subjects in the metropole is evidence that the imperial relationship has ended. Which consideration most directly requires that argument to be modified?",
+ dict(q="A hypothetical metropolitan official's report of 1975 argues that the arrival of former colonial subjects in the metropole is evidence that the imperial relationship has ended. Which consideration most directly requires that argument to be modified?",
    choices=[
      "The framework treats such migration as maintaining ties between colony and metropole rather than ending them",
      "The framework treats such migration as having occurred only before the empire was dissolved",
@@ -374,7 +374,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.III.B states that the migration of former colonial subjects to imperial metropoles maintained cultural and economic ties between the colony and the metropole even after the dissolution of empires. Remittances large enough to pay for a fifth of a country's imports are that economic tie measured by the receiving state itself."),
 
- dict(q="A government's own account of its first decade claims that it inherited nothing usable from the colonial period and built the state from nothing. Which evidence would most directly require that claim to be modified?",
+ dict(q="A hypothetical government's own account of its first decade claims that it inherited nothing usable from the colonial period and built the state from nothing. Which evidence would most directly require that claim to be modified?",
    choices=[
      "Evidence that the state's frontiers, and the administrative districts inside them, were those the colonial authority had drawn",
      "Evidence that the government published its account in the national language",

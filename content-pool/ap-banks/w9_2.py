@@ -105,7 +105,7 @@ _T_PROGRAMMES = dict(
 
 QUESTIONS = [
 
- dict(q="A regional health report of 1985 notes that the illnesses filling its clinics include both a long-familiar infection of the poorest districts and a disease unknown in the region twenty years earlier. According to this course, the report describes",
+ dict(q="A hypothetical regional health report of 1985 notes that the illnesses filling its clinics include both a long-familiar infection of the poorest districts and a disease unknown in the region twenty years earlier. According to this course, the report describes",
    choices=[
      "diseases associated with poverty persisting while other diseases emerged as new epidemics",
      "diseases associated with poverty disappearing as new epidemic diseases replaced them",
@@ -248,7 +248,7 @@ QUESTIONS = [
    ans=0,
    why="The CED prints heart disease and Alzheimer's disease beside KC-6.1.III.A as illustrative examples of diseases associated with increased longevity, which is the sentence about higher incidence arising merely because more people reach the relevant ages. The other lists are the same page's examples of diseases of poverty and of emergent epidemics, or belong to other topics."),
 
- dict(q="A government's statistical office reports that deaths from a long-standing infectious disease of the poorest districts have not fallen over thirty years, while deaths from a disease first recorded in the region ten years ago have risen. This pattern is best described by this course as",
+ dict(q="In a hypothetical case, a government's statistical office reports that deaths from a long-standing infectious disease of the poorest districts have not fallen over thirty years, while deaths from a disease first recorded in the region ten years ago have risen. This pattern is best described by this course as",
    choices=[
      "a continuity in one kind of disease alongside a change in another",
      "a change in one kind of disease that eliminated the other",

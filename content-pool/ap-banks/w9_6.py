@@ -192,7 +192,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.IV.i states that political and social changes of the twentieth century led to changes in the arts, which is the essay's premise stated as course content. The distractors either deny the relation, reverse it or move it outside the period, and each is a reading of the sentence the sentence does not permit."),
 
- dict(q="A record shop's inventory of 1982 shows that a musical form which had originated on one island is now stocked in its main section rather than among imports. This local change is best situated within",
+ dict(q="A hypothetical record shop's inventory of 1982 shows that a musical form which had originated on one island is now stocked in its main section rather than among imports. This local change is best situated within",
    choices=[
      "popular culture becoming more global in the second half of the twentieth century",
      "political and social changes leading to changes in the arts early in the century",
@@ -263,7 +263,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.IV.i states that political and social changes of the twentieth century LED TO changes in the arts, which fixes politics as prior and the arts as what followed. The student has the relation the right pair but the wrong way round, so the correction has to name the direction rather than deny the connection."),
 
- dict(q="A sports federation's report of 1972 notes that its championship is now followed in countries with no team in it. This course would situate the report within",
+ dict(q="A hypothetical sports federation's report of 1972 notes that its championship is now followed in countries with no team in it. This course would situate the report within",
    choices=[
      "popular culture becoming more global in the second half of the century",
      "political and social changes leading to changes in the arts",
@@ -363,7 +363,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.IV.ii states that arts, entertainment, and popular culture increasingly reflected the influence of a globalized society, which is a widening of what they drew on within an activity that continued. The reasoning process the CED prints beside this topic is continuity and change, and the key holds one of each."),
 
- dict(q="A cultural ministry's annual report of 1986 asks whether the country's audiences now have more in common with audiences abroad than with their own grandparents. This course would treat the question as belonging to",
+ dict(q="A hypothetical cultural ministry's annual report of 1986 asks whether the country's audiences now have more in common with audiences abroad than with their own grandparents. This course would treat the question as belonging to",
    choices=[
      "the globalization of popular and consumer culture in the second half of the century",
      "the political and social changes that led to changes in the arts",

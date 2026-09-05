@@ -184,7 +184,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.IV.E names three causes and a direct war between the superpowers is not among them; the framework nowhere states that the two fought each other directly. The other four are the three causes of that sentence, with public discontent and economic weakness listed separately because the sentence names both."),
 
- dict(q="An economic report of the late 1980s describes a country in which industrial plant is obsolete, growth has stopped, and shortages of ordinary goods have become normal. According to this course, conditions of this kind contributed to",
+ dict(q="A hypothetical economic report of the late 1980s describes a country in which industrial plant is obsolete, growth has stopped, and shortages of ordinary goods have become normal. According to this course, conditions of this kind contributed to",
    choices=[
      "the end of the Cold War and the collapse of the Soviet Union",
      "the beginning of the Cold War and the division of Europe into two blocs",

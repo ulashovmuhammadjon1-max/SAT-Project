@@ -228,7 +228,7 @@ QUESTIONS = [
    ans=0,
    why="The CED prints these four beside KC-6.2.V.C as illustrative examples of responses that intensified conflict. The other lists are illustrative examples the framework prints beside the Non-Aligned Movement, beside states created by redrawn boundaries, beside proxy wars and beside regional trade agreements, all in other topics."),
 
- dict(q="An open letter published in 1965 addresses the citizens of the writer's own country rather than its government, arguing that they should refuse to cooperate with a policy the writer opposes. The letter's choice of audience is best explained by the fact that",
+ dict(q="A hypothetical open letter published in 1965 addresses the citizens of the writer's own country rather than its government, arguing that they should refuse to cooperate with a policy the writer opposes. The letter's choice of audience is best explained by the fact that",
    choices=[
      "a campaign of nonviolent action depends on the withdrawal of ordinary cooperation, which only the public can give or withhold",
      "governments in this period did not read letters published in newspapers",
@@ -379,7 +379,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.V.A describes those who challenged the many wars of the century and promoted the practice of nonviolence, and KC-6.2.V.D describes movements that used violence against civilians in an effort to achieve political aims. Unit 8 Learning Objective I asks for the VARIOUS reactions to existing power structures, and these two are the contrasting pair the topic sets out."),
 
- dict(q="A retired officer's memoir published in 1995 explains that measures taken in the 1970s were unavoidable given the threat then facing the state. What limits this source as evidence about the effects of those measures?",
+ dict(q="A hypothetical retired officer's memoir published in 1995 explains that measures taken in the 1970s were unavoidable given the threat then facing the state. What limits this source as evidence about the effects of those measures?",
    choices=[
      "It is written by a participant, long afterward, to explain and justify his own part in what happened",
      "It was published in 1995, and no memoir published after an event can be used",

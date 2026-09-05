@@ -464,7 +464,7 @@ QUESTIONS = [
             "suffrage of KC-5.3.I.C reached.",
     ),
     dict(
-        q="A petition of the period asks a legislature to widen the franchise, and grounds the "
+        q="A hypothetical petition of the period asks a legislature to widen the franchise, and grounds the "
           "request in the claim that those who obey a law should have a voice in making it. "
           "Which pair of framework statements does the petition draw together?",
         choices=[

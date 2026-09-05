@@ -262,7 +262,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.IV.C.ii makes each side an interested party in a global ideological conflict, so a speech is authoritative about its own maker's framing and weak about the opponent it describes. Distinguishing what a source can and cannot support is the skill this topic practises."),
 
- dict(q="A memoir written in the 1990s by a former official of a nonaligned government recalls the pressures the two blocs applied in the 1960s. Compared with a government document written in 1962, this memoir is",
+ dict(q="A hypothetical memoir written in the 1990s by a former official of a nonaligned government recalls the pressures the two blocs applied in the 1960s. Compared with a government document written in 1962, this memoir is",
    choices=[
      "written with knowledge of how the confrontation ended, which shapes what it treats as important",
      "necessarily more accurate, because the writer had time to reflect on the events",
@@ -302,7 +302,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.IV.C.ii states that the democracy of the United States and the authoritarian communist Soviet Union emerged as superpowers, which led to ideological conflict and a power struggle between capitalism and communism. The rival principles on which the two were organized are what the framework makes the ideological form of the struggle rest on."),
 
- dict(q="An anthropologist collects oral testimony in 2005 from villagers in a formerly nonaligned state about how the confrontation of the 1960s reached them. The chief strength of this evidence is that",
+ dict(q="In a hypothetical study, an anthropologist collects oral testimony in 2005 from villagers in a formerly nonaligned state about how the confrontation of the 1960s reached them. The chief strength of this evidence is that",
    choices=[
      "it records the experience of people whose governments' documents rarely mention them",
      "it is contemporaneous with the events and therefore free of hindsight",

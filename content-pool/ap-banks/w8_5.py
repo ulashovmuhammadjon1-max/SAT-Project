@@ -172,7 +172,7 @@ QUESTIONS = [
    ans=0,
    why="The CED prints India from the British Empire, the Gold Coast from the British Empire and French West Africa as illustrative examples of negotiated independence, and Algeria from the French empire, Angola from the Portuguese empire and Vietnam from the French empire as illustrative examples of independence through armed struggle, all beside KC-6.2.I.C. The exchanged pairing is the tempting error, so the key names each case together with its own process."),
 
- dict(q="A petition submitted in 1953 by a regional association asks that its district be given a self-governing assembly within the colony rather than be separated from it. According to this course, such a movement",
+ dict(q="A hypothetical petition submitted in 1953 by a regional association asks that its district be given a self-governing assembly within the colony rather than be separated from it. According to this course, such a movement",
    choices=[
      "is one of the regional movements that advocated for autonomy rather than a separate state",
      "cannot be counted as a movement at all, because it did not demand separation",
@@ -264,7 +264,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.I.C states that after the end of World War II some colonies negotiated their independence while others achieved independence through armed struggle. A front reporting years of fighting until the imperial government withdraws describes the second route, and the key names which of the two it is so that the reversed reading cannot match."),
 
- dict(q="A religious association in a colony petitions in 1948 for a separate political unit in which its community would govern itself. This course would classify the association among",
+ dict(q="In a hypothetical case, a religious association in a colony petitions in 1948 for a separate political unit in which its community would govern itself. This course would classify the association among",
    choices=[
      "the regional, religious, and ethnic movements that challenged colonial rule and inherited imperial boundaries",
      "the nationalist parties that spoke for the colony as a single undivided people",

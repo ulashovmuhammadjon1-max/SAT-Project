@@ -165,7 +165,7 @@ QUESTIONS = [
      "Every region records fewer challenges in the later decade than in the earlier one",
      "No region records fewer challenges in the later decade than in the earlier one"], ans=0,
    why="Read from the table alone: no cell is zero, one region has the largest later total, and exactly one region's total falls between the two decades. This is the pattern KC-6.2.II.D describes, of states around the world challenging the existing order rather than a single region doing so."),
- dict(q="A memoir written decades afterwards by a former minister of a collapsed empire blames foreign bankers alone for the collapse. Which limitation on the source's usefulness is most significant?",
+ dict(q="A hypothetical memoir written decades afterwards by a former minister of a collapsed empire blames foreign bankers alone for the collapse. Which limitation on the source's usefulness is most significant?",
    choices=[
      "The author's own position gives him a reason to leave the empire's internal administration out of the account",
      "The author was not alive during the period the memoir describes",

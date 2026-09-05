@@ -174,7 +174,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.1.II.A names increased consumption of the world's supply of fresh water among the changes to which human activity contributed. The record is hypothetical and the keyed conclusion, with the falsity of each distractor, is recomputed from the table alone in the verifier; the last distractor is true of the quantity and false of the share, which is why the verifier separates the two."),
 
- dict(q="A city engineer's report of 1959 attributes a persistent winter haze to the smoke of domestic fires and of the factories in the valley. This local finding sits within which of the framework's named changes?",
+ dict(q="A hypothetical city engineer's report of 1959 attributes a persistent winter haze to the smoke of domestic fires and of the factories in the valley. This local finding sits within which of the framework's named changes?",
    choices=[
      "A decline in air quality, to which human activity contributed",
      "Desertification, to which human activity contributed",
@@ -295,7 +295,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.1.II.A joins the two in one sentence: as human activity contributed to deforestation, desertification, a decline in air quality, and increased consumption of the world's supply of fresh water, humans competed over these and other resources more intensely than ever before. The reasoning process the CED prints beside this topic is causation, and that sentence is the causal chain."),
 
- dict(q="A city council's record of 1982 shows measurements of the air taken every day for the first time that year. According to this course, the practice of taking such measurements is best situated within",
+ dict(q="A hypothetical city council's record of 1982 shows measurements of the air taken every day for the first time that year. According to this course, the practice of taking such measurements is best situated within",
    choices=[
      "concern about a decline in air quality and about releases into the atmosphere during this period",
      "the reduction of the problem of geographic distance by new transportation",

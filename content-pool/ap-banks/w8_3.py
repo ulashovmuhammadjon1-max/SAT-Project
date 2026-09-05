@@ -286,7 +286,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.IV.D names nuclear proliferation among the Cold War's effects, and proliferation is the spread of the weapons to more holders. Civilian power generation, drills, publications and budgets measure adjacent things rather than the number of states holding the weapons."),
 
- dict(q="An internal report circulated within one superpower in 1966 recommends supporting a faction in a distant civil war on the ground that the rival superpower is supporting the other side. What does this document most directly illustrate?",
+ dict(q="A hypothetical internal report circulated within one superpower in 1966 recommends supporting a faction in a distant civil war on the ground that the rival superpower is supporting the other side. What does this document most directly illustrate?",
    choices=[
      "The reasoning by which a local conflict was absorbed into the superpower confrontation",
      "The formal terms of the military alliance to which the superpower belonged",

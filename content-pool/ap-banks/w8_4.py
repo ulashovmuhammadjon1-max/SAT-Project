@@ -147,7 +147,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.II.D.i describes movements to redistribute land and resources, and a transfer of share between holding groups is what redistribution names. The survey is hypothetical and the keyed conclusion, together with the falsity of each distractor, is recomputed from the table alone in the verifier."),
 
- dict(q="A provincial official's report of 1959 submitted to his own superiors describes a state-directed economic campaign in his province as an unqualified success. Which consideration most limits the use of this source as evidence about the campaign's results?",
+ dict(q="A hypothetical provincial official's report of 1959 submitted to his own superiors describes a state-directed economic campaign in his province as an unqualified success. Which consideration most limits the use of this source as evidence about the campaign's results?",
    choices=[
      "It was written for the authority that ordered the campaign, by an official answerable to it",
      "It concerns a province rather than the whole country, so its subject falls outside the period",
@@ -219,7 +219,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.I.i names internal tension and Japanese aggression as the conditions from which the Chinese communists seized power; it names no Soviet invasion, so that statement is the one the framework does not support. The other four restate KC-6.2.I.i and KC-6.2.II.D.i."),
 
- dict(q="A memoir published abroad in 1985 by a former villager describes hunger during a state-directed campaign of the late 1950s. Which use of this source is best supported?",
+ dict(q="A hypothetical memoir published abroad in 1985 by a former villager describes hunger during a state-directed campaign of the late 1950s. Which use of this source is best supported?",
    choices=[
      "As testimony about how the campaign was experienced by one person in one place",
      "As a measurement of the campaign's effect on national output as a whole",

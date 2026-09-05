@@ -127,7 +127,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.I.D states that in a trend accelerated by the end of the Cold War, many governments encouraged free-market economic policies and promoted economic liberalization in the late twentieth century. Selling state firms, ending price controls and cutting tariffs are that encouragement in a budget document, and each distractor describes the state doing more rather than less."),
 
- dict(q="A company report of 1994 explains that the firm designs its products in one country, has them assembled in a second and sells them in forty others. According to this course, a firm of this kind is one of the",
+ dict(q="A hypothetical company report of 1994 explains that the firm designs its products in one country, has them assembled in a second and sells them in forty others. According to this course, a firm of this kind is one of the",
    choices=[
      "multinational corporations that reflected the spread of principles and practices associated with free-market economics",
      "state enterprises through which governments directed their national economies",
@@ -189,7 +189,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.3.II.B states that regional trade agreements reflected the spread of principles and practices associated with free-market economics throughout the world, and a rising count in which regional agreements predominate is that spread counted. The record is hypothetical and the key, with the falsity of each distractor, is recomputed from the table alone in the verifier."),
 
- dict(q="An industrial survey of 1998 finds that a country which had exported raw materials for most of the century now exports finished goods assembled in its own factories, while a country that had been the world's leading manufacturer now earns more from services and software. Which of this course's statements does the pair illustrate?",
+ dict(q="A hypothetical industrial survey of 1998 finds that a country which had exported raw materials for most of the century now exports finished goods assembled in its own factories, while a country that had been the world's leading manufacturer now earns more from services and software. Which of this course's statements does the pair illustrate?",
    choices=[
      "That manufacturing was increasingly situated in Asia and Latin America while knowledge economies grew in some regions",
      "That knowledge economies grew in Asia and Latin America while manufacturing moved elsewhere",

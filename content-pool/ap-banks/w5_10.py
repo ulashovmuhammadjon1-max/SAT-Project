@@ -170,7 +170,7 @@ QUESTIONS = [
             "nothing settles the question of extent.",
     ),
     dict(
-        q="One source records that goods of a kind once rare became common and cheap in an "
+        q="One hypothetical source records that goods of a kind once rare became common and cheap in an "
           "industrial city. A second records that a quarter of that city's households could still "
           "not afford them. Considering both, which statement is best supported?",
         choices=[
@@ -201,7 +201,7 @@ QUESTIONS = [
             "is evidence of change rather than of continuity.",
     ),
     dict(
-        q="A source records that one industrial district's output of cloth tripled over four "
+        q="A hypothetical source records that one industrial district's output of cloth tripled over four "
           "decades. Which claim does that source support as stated?",
         choices=[
             "That cloth output rose in that district over those decades",

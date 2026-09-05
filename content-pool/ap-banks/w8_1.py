@@ -72,7 +72,7 @@ _T_TROOPS = dict(
 
 QUESTIONS = [
 
- dict(q="A nationalist association in an Asian colony submitted a petition to the imperial capital in 1919 asking for a fixed timetable toward self-government. In 1946 the same association published a statement recalling that no such timetable had ever been granted. Taken together, the two documents are best used as evidence for which broader development?",
+ dict(q="In a hypothetical case, a nationalist association in an Asian colony submitted a petition to the imperial capital in 1919 asking for a fixed timetable toward self-government. In 1946 the same association published a statement recalling that no such timetable had ever been granted. Taken together, the two documents are best used as evidence for which broader development?",
    choices=[
      "Hopes for greater self-government were largely unfulfilled in the years following World War I",
      "Imperial powers granted self-government to most of their Asian possessions in the years following World War I",
@@ -92,7 +92,7 @@ QUESTIONS = [
    ans=0,
    why="KC-6.2.II states that in the years following World War II increasing anti-imperialist sentiment contributed to the dissolution of empires and the restructuring of states. The pamphlet's date and its argument that the war itself weakened the imperial claim place it inside that sentence rather than in the interwar one."),
 
- dict(q="An economic survey written in 1946 observes that the states which ended the recent war on the winning side emerged with enlarged industrial plant, technologies developed under wartime pressure, and large credits owed to them abroad, while much of the industrial capacity of the defeated and occupied states lay in ruins. This observation most directly helps explain",
+ dict(q="A hypothetical economic survey written in 1946 observes that the states which ended the recent war on the winning side emerged with enlarged industrial plant, technologies developed under wartime pressure, and large credits owed to them abroad, while much of the industrial capacity of the defeated and occupied states lay in ruins. This observation most directly helps explain",
    choices=[
      "why technological and economic gains made during World War II by the victorious nations shifted the global balance of power",
      "why hopes for greater self-government went unfulfilled in the years after World War I",
