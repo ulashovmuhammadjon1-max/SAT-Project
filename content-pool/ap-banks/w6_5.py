@@ -124,7 +124,7 @@ QUESTIONS = [
      "Copper",
      "Cotton grown in South Asia",
      "Manufactured cloth"], ans=0,
-   why="The CED lists palm oil produced in sub-Saharan Africa and exported to European countries among the commodities that contributed to European and American economic advantage. Opium moves to China, copper is extracted in Chile, South Asian cotton goes to Europe from South Asia, and manufactured cloth is a finished good rather than one of the listed commodities."),
+   why="The CED lists palm oil produced in sub-Saharan Africa and exported to European countries among the commodities that contributed to European and American economic advantage. Opium moves to China, copper is extracted in Chile, South Asian cotton goes to Europe from South Asia, and manufactured cloth is a finished good rather than one of the commodities listed under KC-5.1.II.C."),
  dict(q="The framework's list of commodities that contributed to European and American economic advantage includes a metal. Where does it say that metal was extracted?",
    choices=[
      "Chile",
@@ -190,7 +190,7 @@ QUESTIONS = [
      "Record 3",
      "Record 5"], ans=0,
    table=_T_SHIPMENTS,
-   why="Read from the record alone: Western Europe is the destination in Records 1, 3 and 5, and Record 4 is the only row in which Western Europe is the region of production. The other four rows carry goods from South Asia, Latin America or sub-Saharan Africa toward Western Europe or North America, so Record 4 is the one shipment running against that direction."),
+   why="Read from the record alone: Western Europe is the destination in Records 1, 3 and 5, and Record 4 is the only row in which Western Europe is the region of production. The other four rows carry goods from South Asia, Latin America or sub-Saharan Africa toward Western Europe or North America, so Record 4 is the one shipment running against the direction KC-5.1.II.C describes."),
  dict(q="In the same hypothetical shipment record, which shipment carries a good produced outside Europe and North America and arranged by a firm based in the region that produced it?",
    choices=[
      "Record 5",
@@ -199,7 +199,7 @@ QUESTIONS = [
      "Record 3",
      "Record 4"], ans=0,
    table=_T_SHIPMENTS,
-   why="Read from the record alone: Record 5's good is produced in Latin America and the arranging firm is based in Latin America, and Latin America lies outside Europe and North America. Record 4 also has its firm based in its own region of production, but that region is Western Europe, so the stem's two conditions are met by Record 5 alone; in Records 1, 2 and 3 the arranging firm sits in the destination region instead."),
+   why="Read from the record alone: Record 5's good is produced in Latin America and the arranging firm is based in Latin America, and Latin America lies outside Europe and North America. Record 4 also has its firm based in its own region of production, but that region is Western Europe, so the stem's two conditions are met by Record 5 alone; in Records 1, 2 and 3 the arranging firm sits in the destination region instead, which is the concentration KC-5.1.II.C describes."),
  dict(q="A student concludes from the same hypothetical record that firms based in producing regions never arranged shipments at all. The record refutes this because",
    choices=[
      "at least one shipment is arranged by a firm based in the region that produced the good",
@@ -217,7 +217,7 @@ QUESTIONS = [
      "Firms based in Europe or North America supplied every service listed in full",
      "The table shows no service in which firms based in Europe or North America held a majority share"], ans=0,
    table=_T_ADVANTAGE,
-   why="Read from the table alone: shipping at 88, insurance at 91 and finance at 84 are majority shares, warehousing at 35 is not, and growing and harvesting stands at 2. That pattern is a large share of the moving services and almost none of the growing, which is the reverse of the first distractor and rules out an even division, a complete monopoly and an absence of majorities."),
+   why="Read from the table alone: shipping at 88, insurance at 91 and finance at 84 are majority shares, warehousing at 35 is not, and growing and harvesting stands at 2. That pattern is a large share of the moving services and almost none of the growing, which is what KC-5.1.II.C means by an advantage arising from the way a trade is organized, and it rules out an even division, a complete monopoly and an absence of majorities."),
  dict(q="Using the same hypothetical breakdown of services, which figure most directly supports the framework's statement that the ORGANIZATION of a trade could confer an advantage?",
    choices=[
      "The high shares held in shipping, insurance and finance, which are the arrangements by which goods reach a market",

@@ -5,10 +5,11 @@ substring that must appear in the KEYED choice and in no distractor, so an
 off-by-one key or a reordered choice list fails here rather than reaching a
 student. ``claim`` states what the key rests on, for a human to audit.
 
-The structural gate is ``cg_check.check``; the notation gate and the negative
-control are ``es_check``, reused unchanged, exactly as verify_w6_4.py does,
-because World History is a prose subject that ``export_units.py`` does not
-typeset.
+The gate is ``wh_check.run``, the shared World History gate: ``cg_check.check``
+for structure and anchors, ``es_check.style`` for notation (World History is a
+prose subject that ``export_units.py`` does not typeset), plus the two rules
+history adds -- a CED citation in every ``why`` and every ``claim``, and no
+figure language, since the bank cannot display an image.
 
 WHY THIS FILE EXISTS LATE
 -------------------------
@@ -75,6 +76,7 @@ import sys
 
 import cg_check as cg
 import es_check as es
+import wh_check as wh
 import w6_5
 
 LABEL = "Shipment record (hypothetical)"
@@ -238,9 +240,9 @@ CLAIMS = [
  ("produced in the Middle East or South Asia and exported to China",
   "The CED prints opium produced in the Middle East or South Asia and exported to China among the commodities that contributed to European and American economic advantage under KC-5.1.II.C. The direction is the whole content of the example and the reversal is a distractor, so the anchor carries both clauses."),
  ("grown in South Asia and Egypt and exported to Great Britain",
-  "The CED prints cotton grown in South Asia and Egypt and exported to Great Britain and other European countries under the same heading. The reversed direction would describe the opposite trade and is offered as a distractor, so the anchor carries origin and destination together."),
+  "The CED prints cotton grown in South Asia and Egypt and exported to Great Britain and other European countries under the same heading, beside KC-5.1.II.C. The reversed direction would describe the opposite trade and is offered as a distractor, so the anchor carries origin and destination together."),
  ("Palm oil",
-  "The CED prints palm oil produced in sub-Saharan Africa and exported to European countries among the commodities that contributed to European and American economic advantage. Opium moves to China, copper is extracted in Chile, South Asian cotton leaves South Asia for Europe, and manufactured cloth is on no list in this topic."),
+  "The CED prints palm oil produced in sub-Saharan Africa and exported to European countries among the commodities that contributed to European and American economic advantage under KC-5.1.II.C. Opium moves to China, copper is extracted in Chile, South Asian cotton leaves South Asia for Europe, and manufactured cloth is on no list in this topic."),
  ("Chile",
   "The CED prints copper extracted in Chile among the commodities that contributed to European and American economic advantage under KC-5.1.II.C. Egypt and South Asia appear in the cotton example, China as the destination of opium, and West Africa in topic 6.4's palm oil example, not in the copper one."),
  ("industrialized states practicing economic imperialism",
@@ -256,17 +258,17 @@ CLAIMS = [
  ("Four of the five shipments",
   "Recomputed in q13 above: the arranging firm is based in Western Europe in Records 1, 3 and 4 and in North America in Record 2, which is four of five, and every rejected count is checked to be false. That concentration is what KC-5.1.II.C means by an advantage held by merchants and companies based in Europe and the U.S."),
  ("Record 4",
-  "Recomputed in q14 above: Record 4 is the ONLY row whose region of production is Western Europe, while Records 1, 3 and 5 have Western Europe as their destination. The uniqueness is asserted against the record rather than assumed, and the item asks nothing the record does not contain."),
+  "Recomputed in q14 above: Record 4 is the ONLY row whose region of production is Western Europe, while Records 1, 3 and 5 have Western Europe as their destination. The uniqueness is asserted against the record rather than assumed, and the item asks nothing the record does not contain; the direction it isolates is the one KC-5.1.II.C describes."),
  ("Record 5",
-  "Recomputed in q15 above, and this is the item the missing verifier let ship broken. TWO rows have the arranging firm based in the region of production, Record 4 and Record 5, so the stem carries a second condition -- produced outside Europe and North America -- and q15 asserts that exactly one row satisfies both."),
+  "Recomputed in q15 above, and this is the item the missing verifier let ship broken. TWO rows have the arranging firm based in the region of production, Record 4 and Record 5, so the stem carries a second condition -- produced outside Europe and North America -- and q15 asserts that exactly one row satisfies both. KC-5.1.II.C claims an advantage for merchants and companies based in Europe and the U.S., not that no other firm ever arranged a shipment."),
  ("at least one shipment is arranged by a firm based in the region that produced the good",
   "Recomputed in q16 above: two of the five rows have the arranging firm based in the region of production, so at least one does and the student's claim of never is refuted from the data the student is using. The four rejected statements are true of the record but leave that claim standing, and KC-5.1.II.C asserts an advantage rather than a monopoly."),
  ("supplied most of the services that moved the crop, but almost none of the labour that grew it",
-  "Recomputed in q17 above: shipping 88, insurance 91 and finance 84 are the table's only majority shares, warehousing stands at 35 and growing and harvesting at 2. The exact reversal is offered as a distractor, so the anchor carries both clauses, and an even division, a complete monopoly and an absence of majorities are each false on the same numbers."),
+  "Recomputed in q17 above: shipping 88, insurance 91 and finance 84 are the table's only majority shares, warehousing stands at 35 and growing and harvesting at 2. The exact reversal is offered as a distractor, so the anchor carries both clauses, and an even division, a complete monopoly and an absence of majorities are each false on the same numbers. The concentration is what KC-5.1.II.C calls a distinct economic advantage."),
  ("high shares held in shipping, insurance and finance",
   "Recomputed in q18 above: the three organizing services all exceed 50 percent and all outrank warehousing and growing. KC-5.1.II.C locates the advantage in the way trade was ORGANIZED, and these are the organizing services; the growing share reports production, warehousing at 35 is not a majority at all, and a row count and a unit carry no claim."),
  ("how the venture was presented to the people being asked to invest in it",
-  "This key rests on the logic of evidence, not on a framework assertion about any real firm. A circular issued to shareholders is written to attract and reassure capital, so it is direct evidence of the case made to investors; profits, local opinion, wages and shipping volumes are matters it is not written to report."),
+  "This key rests on the logic of evidence, not on a framework assertion about any real firm. A circular issued to shareholders is written to attract and reassure capital, so it is direct evidence of the case made to investors; profits, local opinion, wages and shipping volumes are matters it is not written to report. KC-5.2.I.E's claim about businesses practicing economic imperialism is not established by any one firm's own prospectus, which is the point of the item."),
  ("the same commodity could be traded on different terms, and the terms decided who gained",
   "KC-5.1.II.C grounds the distinct economic advantage in how trade in some commodities WAS ORGANIZED, which is a claim about terms rather than about goods. The listed commodities were produced outside Europe and the United States, so no option making them European manufactures or worthless to their producers can be right."),
  ("one through control of territory and one through economic position",
@@ -372,4 +374,4 @@ def uniqueness_control():
 if "--selftest" in sys.argv:
     uniqueness_control()
 
-es.run(w6_5, CLAIMS, TABLE_CHECKS, sys.argv)
+wh.run(w6_5, CLAIMS, table_checks=TABLE_CHECKS, argv=sys.argv)
