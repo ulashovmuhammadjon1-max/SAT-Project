@@ -42,7 +42,7 @@ FIVE choices per item (A-E); see HISTORY_BRIEF.md.
 import sys
 
 import cg_check as cg
-import es_check as es
+import wh_check as wh
 import w5_1
 
 CLAIM_COL = "Central claim advanced"
@@ -102,11 +102,11 @@ CLAIMS = [
  ("political and gender hierarchies",
   "KC-5.3.IV.B, near verbatim: demands for women's suffrage and an emergent feminism challenged political and gender hierarchies. The rejected options name coal and iron, banking, national boundaries and factory organization, which the framework treats in topics 5.3 through 5.7."),
  ("A Vindication of the Rights of Woman",
-  "The illustrative examples printed on this topic's page under Demands name Mary Wollstonecraft's A Vindication of the Rights of Woman. The rejected titles belong to the framework's economic, industrial and revolutionary-document material rather than to this list."),
+  "The illustrative examples printed beside KC-5.3.IV.B on this topic's page, under Demands, name Mary Wollstonecraft's A Vindication of the Rights of Woman. The rejected titles belong to the framework's economic, industrial and revolutionary-document material rather than to this list."),
  ("Rights of Woman and of the Female Citizen",
-  "The same illustrative list names Olympe de Gouges's Declaration of the Rights of Woman and of the Female Citizen. The document it echoes, the Declaration of the Rights of Man and of the Citizen, is named separately in KC-5.3.I.B as a French revolutionary document, so the anchor carries the distinguishing words rather than the shared opening."),
+  "The same illustrative list, printed beside KC-5.3.IV.B, names Olympe de Gouges's Declaration of the Rights of Woman and of the Female Citizen. The document it echoes, the Declaration of the Rights of Man and of the Citizen, is named separately in KC-5.3.I.B as a French revolutionary document, so the anchor carries the distinguishing words rather than the shared opening."),
  ("Elizabeth Cady Stanton and Lucretia Mott",
-  "The illustrative list names the Seneca Falls Conference (1848) organized by Elizabeth Cady Stanton and Lucretia Mott. This is the only date keyed in the module and it is the framework's own."),
+  "The illustrative list printed beside KC-5.3.IV.B names the Seneca Falls Conference (1848) organized by Elizabeth Cady Stanton and Lucretia Mott. This is the only date keyed in the module and it is the framework's own."),
  ("role that religion played in public life",
   "KC-5.3.I.A states that Enlightenment philosophies reexamined the role that religion played in public life. The framework describes a reexamination of religion's public role, which is what a source about confession, law and office is doing, and not a rejection of belief."),
  ("the importance of reason",
@@ -128,7 +128,7 @@ CLAIMS = [
  ("intellectual and ideological context",
   "Unit 5 Learning Objective A asks students to explain the intellectual and ideological context in which revolutions swept the Atlantic world from 1750 to 1900. The rejected options are verbatim the learning objectives of topics 5.5, 5.3, 5.6 and 5.9."),
  ("More pamphlets in the sample treat natural rights and the social contract than treat the role of religion",
-  "Recomputed in q20 above from the table alone: seventy two against fifty four, with the reversed comparison, the court-ceremony claim and the all-political claim each checked false on the same counts. The anchor carries both sides of the comparison because a distractor reverses it."),
+  "Recomputed in q20 above from the table alone: seventy two against fifty four, with the reversed comparison, the court-ceremony claim and the all-political claim each checked false on the same counts. The two leading subjects are those KC-5.3.I.A names, natural rights and the social contract on one side and the role of religion in public life on the other. The anchor carries both sides of the comparison because a distractor reverses it."),
  ("The second argues from reason and evidence while the first argues from the age of a custom",
   "KC-5.3.I.A makes reason and empiricist approaches the mark of Enlightenment argument and KC-5.3.I describes established traditions being questioned; suggested skill 3.A is identifying the claim a source advances. The anchor is the full two-clause sentence because one distractor exchanges the two sources."),
  ("before and outside the grant",
@@ -153,4 +153,4 @@ CLAIMS = [
 
 TABLE_CHECKS = {13: q13, 20: q20}
 
-es.run(w5_1, CLAIMS, TABLE_CHECKS, sys.argv)
+wh.run(w5_1, CLAIMS, TABLE_CHECKS, sys.argv)

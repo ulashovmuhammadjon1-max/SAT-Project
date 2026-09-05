@@ -170,10 +170,10 @@ QUESTIONS = [
             "Letter from Jamaica",
             "The Declaration of Independence"],
         ans=0,
-        why="The illustrative examples printed on this topic's page under Demands name Mary "
-            "Wollstonecraft's A Vindication of the Rights of Woman. The other titles appear in "
-            "the framework or its activities under economics, industrial conditions, and the "
-            "revolutionary documents of topic 5.2, not under this demand.",
+        why="The illustrative examples printed beside KC-5.3.IV.B on this topic's page, under "
+            "Demands, name Mary Wollstonecraft's A Vindication of the Rights of Woman. The "
+            "other titles appear in the framework under economics, industrial conditions, and "
+            "the revolutionary documents of KC-5.3.I.B, not under this demand.",
     ),
     dict(
         q="A second work named by the course framework among the demands of this period "
@@ -186,10 +186,10 @@ QUESTIONS = [
             "The Communist Manifesto",
             "The Social Contract"],
         ans=0,
-        why="The illustrative examples on this topic's page name Olympe de Gouges's "
-            "Declaration of the Rights of Woman and of the Female Citizen. The framework "
-            "separately names the Declaration of the Rights of Man and of the Citizen in "
-            "KC-5.3.I.B as a French revolutionary document, which is the text being echoed.",
+        why="The illustrative examples printed beside KC-5.3.IV.B name Olympe de Gouges's "
+            "Declaration of the Rights of Woman and of the Female Citizen. The framework names "
+            "the Declaration of the Rights of Man and of the Citizen separately, in KC-5.3.I.B, "
+            "as a French revolutionary document, which is the text being echoed.",
     ),
     dict(
         q="The course framework names a conference of 1848 as an illustrative example of "
@@ -202,10 +202,10 @@ QUESTIONS = [
             "Muhammad Ali and the Meiji reformers",
             "Lola Rodriguez de Tio and the Propaganda Movement"],
         ans=0,
-        why="The illustrative examples on this topic's page name the Seneca Falls Conference "
-            "(1848) organized by Elizabeth Cady Stanton and Lucretia Mott. The other names "
-            "appear elsewhere in the framework: two as authors of the named works, and the "
-            "rest under economics, state sponsored industrialization and nationalism.",
+        why="The illustrative examples printed beside KC-5.3.IV.B name the Seneca Falls "
+            "Conference (1848) organized by Elizabeth Cady Stanton and Lucretia Mott. The other "
+            "names appear elsewhere in the framework: two as authors of the named works, and "
+            "the rest under KC-5.1.V.C, KC-5.2.II.A and KC-5.3.II.iii.",
     ),
     dict(
         q="An unattributed treatise of the period argues that a person's standing before the "
@@ -380,8 +380,8 @@ QUESTIONS = [
         ans=0,
         why="The table is the whole basis for the answer: seventy two pamphlets treat natural "
             "rights and the social contract against fifty four on the role of religion in "
-            "public life. The remaining options either reverse a comparison in the table or "
-            "assert something the table does not record at all.",
+            "public life, the two subjects KC-5.3.I.A names. The remaining options either "
+            "reverse a comparison in the table or assert something it does not record.",
     ),
     dict(
         q="Two unattributed sources of the period discuss the same proposed law. The first "
