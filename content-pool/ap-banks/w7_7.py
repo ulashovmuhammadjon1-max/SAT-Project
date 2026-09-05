@@ -283,7 +283,7 @@ QUESTIONS = [
      "Governments used intensified forms of nationalism to mobilize populations",
      "New military technology led to increased levels of wartime casualties"], ans=0,
    why="KC-6.2.IV.A.i and KC-6.2.IV.A.ii both name propaganda, art, media and intensified nationalism, and both wars' casualty sentences name new military technology. The ideologies clause appears only in KC-6.2.IV.A.ii, which is the framework's statement about the second war."),
- dict(q="Which research question follows most directly from this topic's stated learning objective?",
+ dict(q="Which research question restates this topic's stated learning objective as an inquiry?",
    choices=[
      "In what ways were the methods governments used to conduct the war alike, and in what ways did they differ",
      "Which commander won the greatest number of engagements during the war",

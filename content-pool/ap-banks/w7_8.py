@@ -150,7 +150,7 @@ QUESTIONS = [
      "It places the killing after the war had ended",
      "It places the killing before the war began"], ans=0,
    why="KC-6.2.III.C says the Nazi killing of the Jews in the Holocaust took place during World War II and names the rise of extremist groups in power as what led to it. The sentence therefore supplies a period for the one and a cause for the other, and the anchor carries both halves because a reversal in either direction is the plausible error."),
- dict(q="Which research question follows most directly from this topic's stated learning objective?",
+ dict(q="Which research question does the objective stated for this topic call for?",
    choices=[
      "What caused mass atrocities in the period from 1900 to the present, and what followed from them",
      "Which state produced the largest quantity of armaments in the twentieth century",

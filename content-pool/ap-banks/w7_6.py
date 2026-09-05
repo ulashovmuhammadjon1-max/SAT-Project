@@ -244,7 +244,7 @@ QUESTIONS = [
      "Because the framework's statement describes the conduct of a single campaign",
      "Because the framework's statement concerns the mobilization of populations rather than the origins of the war"], ans=0,
    why="KC-6.2.IV.B.ii is a statement of what caused World War II, and its 'and especially' marks one cause as weightier than the others. A sentence that both lists causes and ranks one of them is causation reasoning, whereas mobilization is the subject of KC-6.2.IV.A.ii in topic 7.7."),
- dict(q="Which research question follows most directly from this topic's stated learning objective?",
+ dict(q="Which research question is framed most directly by this topic's stated learning objective?",
    choices=[
      "What caused the Second World War, and what followed from it",
      "Which general commanded each army during the Second World War",
