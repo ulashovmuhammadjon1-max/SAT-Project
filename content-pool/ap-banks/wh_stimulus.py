@@ -110,7 +110,14 @@ def controls(module, unmarked_index=None):
 
     def unmark(mod):
         q = mod.QUESTIONS[unmarked_index]
-        q["q"] = MARKED.sub("", q["q"]).replace("A  ", "A ").replace("a  ", "a ")
+        # Collapse ALL runs of whitespace, not just the two that follow an
+        # article. Removing "hypothetical" from "A single hypothetical record"
+        # leaves a double space in the middle of the phrase, and SOURCE_NOUN
+        # requires single spaces -- so the first version of this control stopped
+        # matching the noun and the guard below fired instead of the gate. That
+        # guard is why the bug was visible at all; without it the control would
+        # have raised for the wrong reason and looked like a pass.
+        q["q"] = re.sub(r"[ \t]+", " ", MARKED.sub("", q["q"]))
         assert SOURCE_NOUN.search(q["q"]), (
             "the control removed the source noun as well as the marker, so it would "
             "fire for the wrong reason")
