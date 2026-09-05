@@ -7,11 +7,18 @@ up with no memory of this one.
 
 ## Scope
 
-| subject | prefix | topics | typeset? | state |
+| subject | prefix | topics | questions | state |
 |---|---|---|---|---|
-| Biology | `b` | 60 | no (prose) | **DONE — 1,800 questions LIVE in production** |
-| Chemistry | `h` | 91 | no — hand-written spans | 33 authored, 6 agents running |
-| Environmental Science | `e` | 99 | no (prose) | 37 authored, 6 agents running |
+| Biology | `b` | 60 | 1,800 | **LIVE** |
+| Chemistry | `h` | 91 | 2,730 | **LIVE** |
+| Environmental Science | `e` | 99 | 2,970 | **LIVE** |
+
+**ALL THREE ARE DONE, INSERTED AND LIVE.** The catalog carries 12 subjects
+and 23,755 questions. `check-ap-coverage --complete` is clean for all 12,
+every outline topic backed by questions.
+
+Nothing below is work still to do; it is the record of how it was done and
+what went wrong, kept because the same traps recur in every build.
 
 Agent territories, so a restart does not double-assign. Each is disjoint by
 unit, which is what stopped siblings converging on the same question during
