@@ -396,6 +396,27 @@ const ENV_SCI_BLUEPRINT: ApSectionQuota[] = [
   { unit: 9, count: 14 }, // 15-20%, 17.5%
 ];
 
+/** AP World History: Modern Section I Part A is 55 questions in 55 minutes
+ *  (CED p. 202; the section is 40% of the exam).
+ *
+ *  Every unit lands INSIDE its published band, and the total is exactly 55 --
+ *  unlike Chemistry, where the bands could not be met at 60 integer counts.
+ *  Units 3 to 6 all sit at 12-15%, so two of the four must take 8 questions and
+ *  two take 7; the CED's own class-period allocation breaks the tie, giving the
+ *  extra question to units 4 (~22-25 periods) and 5 (~20-23) over units 3
+ *  (~8-11) and 6 (~12-15). */
+const WORLD_HISTORY_BLUEPRINT: ApSectionQuota[] = [
+  { unit: 1, count: 5 }, // 8-10%,   9.1%
+  { unit: 2, count: 5 }, // 8-10%,   9.1%
+  { unit: 3, count: 7 }, // 12-15%, 12.7%
+  { unit: 4, count: 8 }, // 12-15%, 14.5%
+  { unit: 5, count: 8 }, // 12-15%, 14.5%
+  { unit: 6, count: 7 }, // 12-15%, 12.7%
+  { unit: 7, count: 5 }, // 8-10%,   9.1%
+  { unit: 8, count: 5 }, // 8-10%,   9.1%
+  { unit: 9, count: 5 }, // 8-10%,   9.1%
+];
+
 export const AP_TESTS: ApPracticeTest[] = [
   // --- Microeconomics ---
   econTest({
@@ -892,6 +913,47 @@ export const AP_TESTS: ApPracticeTest[] = [
         timeLimitMinutes: 90,
         calculator: "FOUR_FUNCTION",
         blueprint: ENV_SCI_BLUEPRINT,
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+
+  {
+    subject: "WORLD_HISTORY",
+    slug: "diagnostic",
+    name: "World History Diagnostic",
+    blurb: "Half a Section I, weighted across all nine units.",
+    variant: 0,
+    calculatorNote: "No calculator is used on the AP World History: Modern exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Diagnostic — Multiple Choice",
+        short: "Diagnostic",
+        timeLimitMinutes: 28,
+        calculator: "NONE",
+        blueprint: halve(WORLD_HISTORY_BLUEPRINT, 28),
+        directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
+      }),
+    ],
+  },
+  {
+    subject: "WORLD_HISTORY",
+    slug: "practice-1",
+    name: "World History Practice Exam 1",
+    blurb: "A full Section I Part A: 55 questions in 55 minutes.",
+    variant: 1,
+    calculatorNote: "No calculator is used on the AP World History: Modern exam.",
+    referenceNote: "Multiple-choice questions have four answer choices on the real exam; this bank uses five.",
+    sections: [
+      section({
+        id: "mcq",
+        name: "Section I, Part A — Multiple Choice",
+        short: "Section I",
+        timeLimitMinutes: 55,
+        calculator: "NONE",
+        blueprint: WORLD_HISTORY_BLUEPRINT,
         directions: "Each question is followed by five suggested answers. Choose the one that is best in each case.",
       }),
     ],

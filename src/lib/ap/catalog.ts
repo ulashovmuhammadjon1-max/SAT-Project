@@ -167,6 +167,16 @@ const LIVE: Omit<ApCatalogEntry, "status">[] = [
     blurb:
       "Ecosystems, biodiversity, populations, land and water use, energy, pollution, and global change.",
   },
+  {
+    code: "WORLD_HISTORY",
+    slug: "world-history-modern",
+    name: "AP World History: Modern",
+    short: "World History",
+    category: "HISTORY",
+    gradient: "from-cyan-500 to-blue-600",
+    blurb:
+      "Global processes from about 1200 CE to the present, across nine units.",
+  },
 ];
 
 /**
@@ -180,7 +190,6 @@ const PLANNED: Omit<ApCatalogEntry, "status" | "gradient">[] = [
   { code: "PHYSICS_C_EM", slug: "physics-c-electricity-and-magnetism", name: "AP Physics C: Electricity and Magnetism", short: "Physics C: E&M", category: "STEM", blurb: "Calculus-based electrostatics, conductors and capacitors, circuits, magnetic fields, and electromagnetism." },
   { code: "CSA", slug: "computer-science-a", name: "AP Computer Science A", short: "CS A", category: "STEM", blurb: "Object-oriented programming in Java: classes, arrays and lists, inheritance, and recursion." },
   { code: "CSP", slug: "computer-science-principles", name: "AP Computer Science Principles", short: "CS Principles", category: "STEM", blurb: "Computational thinking, data, algorithms, programming, and the impact of computing." },
-  { code: "WORLD_HISTORY", slug: "world-history-modern", name: "AP World History: Modern", short: "World History", category: "HISTORY", blurb: "Global processes from about 1200 CE to the present." },
   { code: "US_HISTORY", slug: "united-states-history", name: "AP United States History", short: "US History", category: "HISTORY", blurb: "American history from about 1491 to the present, across nine periods." },
   { code: "EURO_HISTORY", slug: "european-history", name: "AP European History", short: "European History", category: "HISTORY", blurb: "European history from about 1450 to the present." },
   { code: "ENG_LANG", slug: "english-language-and-composition", name: "AP English Language and Composition", short: "English Lang", category: "ENGLISH", blurb: "Rhetorical analysis, argument, and synthesis in non-fiction prose." },
