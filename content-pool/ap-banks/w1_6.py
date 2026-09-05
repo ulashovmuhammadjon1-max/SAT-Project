@@ -338,19 +338,23 @@ QUESTIONS = [
            "social implications. Days of rest, fasts and almsgiving are practices ordering "
            "conduct.")),
 
- dict(q=("Which of the following identifies a question about Europe in this period that could be "
-         "settled by evidence rather than by a judgment of value?"),
+ dict(q=("An unattributed account of a village on a European estate records that the households "
+         "owing labor service, the households paying a money rent and the lord's own officers "
+         "each had a settled place in the order of a village gathering, and that the order was "
+         "not in dispute. Which of the following identifies what such an account shows?"),
       choices=[
-        "Whether the households of a given estate owed days of work as well as a money rent.",
-        "Whether it was just that some households owed days of work to a lord.",
-        "Whether a decentralized monarchy is a better form of government than a centralized one.",
-        "Whether the obligations of a tenant to his lord were deserved.",
-        "Whether one religious tradition in Europe taught a truer doctrine than another.",
+        "That the way the society grouped its members carried norms governing how those groups dealt with one another, which is how social organization shows itself in a village as much as in a kingdom.",
+        "That the three groups named stood in the same rank and could take one another's places.",
+        "That the estate had no lord, since the village settled its own business in a gathering.",
+        "That the obligations of the households were owed to the gathering rather than to any lord.",
+        "That the households of the village belonged to no group broader than the household itself.",
       ], ans=0,
-      why=("KC-3.3.III.C asserts matters of fact about the arrangements under which land was "
-           "worked in Europe, and Learning Objective M asks for the effects of agriculture on "
-           "social organization. What a household owed can be checked against a record; justice, "
-           "superiority, desert and doctrinal truth cannot be settled by observation.")),
+      why=("The Social Interactions thematic focus states that the process by which societies "
+           "group their members and the norms that govern the interactions between these groups "
+           "and between individuals influence political, economic, and cultural institutions and "
+           "organization, and KC-3.3.III.C names the free and coerced arrangements that supply "
+           "the groups in this case. Learning Objective M asks for the effects of agriculture on "
+           "social organization in Europe.")),
 
  dict(q=("A historian argues that European political decentralization in this period had more "
          "than one cause. Which of the following would most strengthen that argument?"),
@@ -469,19 +473,22 @@ QUESTIONS = [
            "bureaucracy to maintain and justify its rule. The anchor carries both halves because "
            "the strongest distractor is the same pair exchanged.")),
 
- dict(q=("A historian wishes to show that religious traditions in Europe had political as well as "
-         "private effects. Which of the following would be the most direct evidence?"),
+ dict(q=("An unattributed set of ordinances for a European association of craftsmen opens by "
+         "naming the feast on which its members gather, the observance they keep together on "
+         "that day, and the duty of every member to attend the burial of a fellow. Which of the "
+         "following identifies what the ordinances show about the association?"),
       choices=[
-        "A record of a religious institution holding land and exercising over it the same kind of authority a lay lord exercised over his.",
-        "A record of the number of copies made of a devotional text.",
-        "A record of the days on which a market was held in a town.",
-        "A record of a household observing a fast.",
-        "A record of the crops sown on an estate in a given year.",
+        "That a religious observance supplied the terms in which an occupational group described itself, which is one way a belief shapes how a group in a society views itself.",
+        "That the association existed in order to conduct religious observance and had no occupational purpose at all.",
+        "That the members of the association were forbidden to practise their craft on any other day.",
+        "That occupational associations in this period were constituted by the monarch rather than by their own members.",
+        "That religious observance and occupational association were kept strictly apart from one another in this period.",
       ], ans=0,
-      why=("The Cultural Developments thematic focus states that the interactions of societies "
-           "and their beliefs often have political, social, and cultural implications, "
-           "KC-3.1.III.D.v names the religions shaping European societies, and KC-3.2.I.B.ii "
-           "makes lordship over land the political question of the period.")),
+      why=("The Cultural Developments thematic focus states that the development of ideas, "
+           "beliefs, and religions illustrates how groups in society VIEW THEMSELVES and that the "
+           "interactions of societies and their beliefs often have political, social, and "
+           "cultural implications, and KC-3.1.III.D.v names the traditions that continued to "
+           "shape societies in Europe.")),
 
  dict(q=("Which of the following identifies the reason a claim about Europe in this period cannot "
          "be established simply by finding one estate where it holds?"),
@@ -512,8 +519,8 @@ QUESTIONS = [
            "politically fragmented Europe. Overlapping authority is what those two sentences "
            "together describe; the framework nowhere makes them exclusive.")),
 
- dict(q=("Taken together, what generalization about Europe from c. 1200 to c. 1450 do the "
-         "developments of this topic best support?"),
+ dict(q=("Which of the following statements about Europe from c. 1200 to c. 1450 is supported by "
+         "all three of this topic's historical developments at once?"),
       choices=[
         "Authority over territory was divided rather than concentrated, most people worked the land under obligations that were free in some cases and coerced in others, and several religious traditions went on shaping how the society understood itself.",
         "Authority was concentrated in a single center, cultivation was carried on under one uniform obligation, and one religious tradition alone was present.",

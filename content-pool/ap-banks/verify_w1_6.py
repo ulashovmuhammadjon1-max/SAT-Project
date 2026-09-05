@@ -195,8 +195,8 @@ CLAIMS = [
  ("ordered ordinary conduct and not only formal worship",
   "KC-3.1.III.D.v names the core beliefs AND PRACTICES of Christianity, Judaism and Islam as continuing to shape societies in Europe, and the Cultural Developments thematic focus states that beliefs illustrate how groups in society view themselves and often carry social implications. Days of rest, fasts and almsgiving are practices ordering conduct."),
 
- ("owed days of work as well as a money rent",
-  "KC-3.3.III.C asserts matters of fact about the arrangements under which land was worked in Europe, and Learning Objective M asks for the effects of agriculture on social organization. What a household owed can be checked against a record, while justice, superiority, desert and doctrinal truth cannot be settled by observation."),
+ ("norms governing how those groups dealt with one another",
+  "The Social Interactions thematic focus states that the process by which societies group their members and the norms that govern the interactions between these groups and between individuals influence political, economic, and cultural institutions and organization, and KC-3.3.III.C supplies the groups in this case, the households owing service and those paying rent. Learning Objective M asks for the effects of agriculture on social organization in Europe. This item replaced an evidence-versus-value question that topics 1.2, 1.3, 1.4 and 1.5 already carry between them."),
 
  ("removing any one leaves the pattern unexplained",
   "The Governance thematic focus states that a VARIETY of internal and external factors contribute to state formation, expansion, and decline, and Learning Objective L asks for the causes of political decentralization in Europe. A multi-cause account is strengthened by evidence about the causes themselves, not by a fact about a single case."),
@@ -222,8 +222,8 @@ CLAIMS = [
  ("Europe is described as politically fragmented, while the Song are described as maintaining rule",
   "KC-3.2.I.B.ii states that Europe was politically fragmented and characterized by decentralized monarchies, feudalism, and the manorial system, while KC-3.2.I.A states that the Song Dynasty utilized traditional methods of Confucianism and an imperial bureaucracy to maintain and justify its rule. The anchor carries both halves in order because the strongest distractor is the same pair exchanged."),
 
- ("the same kind of authority a lay lord exercised",
-  "The Cultural Developments thematic focus states that the interactions of societies and their beliefs often have political, social, and cultural implications, KC-3.1.III.D.v names the religions that continued to shape European societies, and KC-3.2.I.B.ii makes lordship over land the political question of the period. Land and jurisdiction are therefore where a religious effect shows as a political one."),
+ ("supplied the terms in which an occupational group described itself",
+  "The Cultural Developments thematic focus states that the development of ideas, beliefs, and religions illustrates how groups in society VIEW THEMSELVES, and KC-3.1.III.D.v names Christianity, Judaism and Islam and their core beliefs and practices as continuing to shape societies in Europe. This item replaced one asking for evidence that belief had political as well as private effects, which is what topic 1.1 q28 already asks."),
 
  ("a single estate may be unrepresentative",
   "KC-3.3.III.C and KC-3.2.I.B.ii both make general statements about Europe, and the Social Interactions thematic focus concerns how a society groups its members. A general claim is supported by particular evidence without being established by one instance, which is a matter of scale rather than of the record's reliability."),
