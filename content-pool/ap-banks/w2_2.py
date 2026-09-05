@@ -69,11 +69,12 @@ _T_MESSAGES = dict(
           ["Route Three", "10", "70"]])
 
 _T_TRANSFERS = dict(
-    headers=["Kind of transfer (hypothetical)", "Instances recorded moving westward",
-             "Instances recorded moving eastward"],
-    rows=[["Medical knowledge", "9", "3"],
-          ["Numbering and calculation", "7", "2"],
-          ["Script and writing", "4", "6"]])
+    headers=["Kind of transfer (hypothetical)",
+             "Regions in which it is recorded before the contact",
+             "Regions in which it is recorded after the contact"],
+    rows=[["Medical knowledge", "2", "6"],
+          ["Numbering and calculation", "1", "5"],
+          ["Script and writing", "3", "4"]])
 
 _T_STATES = dict(
     headers=["Region (hypothetical)", "Imperial states recorded as having collapsed",
@@ -156,21 +157,23 @@ QUESTIONS = [
            "transfers. Both nouns are in the sentence, which is what the first two rejected "
            "options each halve.")),
 
- dict(q=("HYPOTHETICAL counts of recorded transfers by direction are given in the table below. "
-         "Which statement is best supported by that data alone?"),
+ dict(q=("HYPOTHETICAL counts of the regions in which three kinds of knowledge are recorded, "
+         "before and after a period of contact, are given in the table below. Which statement is "
+         "best supported by that data alone?"),
       table=_T_TRANSFERS,
       choices=[
-        "Every kind of transfer listed is recorded in both directions, and the direction that predominates is not the same for all three kinds.",
-        "Every kind of transfer listed predominates westward.",
-        "None of the kinds listed records any transfer moving eastward.",
-        "The kind of transfer with the most instances moving westward also has the most moving eastward.",
-        "Each kind of transfer listed is recorded in one direction only.",
+        "Every kind listed is recorded in more regions after the contact, and the kind recorded in fewest regions beforehand is not the kind recorded in most regions afterwards.",
+        "Every kind listed is recorded in more regions after the contact, and the kind recorded in fewest regions beforehand is the kind recorded in most regions afterwards.",
+        "One of the kinds listed is recorded in fewer regions after the contact than before it.",
+        "One of the kinds listed is recorded in the same number of regions before and after.",
+        "The kind recorded in most regions beforehand is also recorded in most regions afterwards.",
       ], ans=0,
       why=("Recomputed in the verifier from the two columns. KC-3.2.II.A.ii states that "
-           "interregional contacts and conflicts encouraged significant technological and "
-           "cultural transfers without assigning them a single direction, and the topic's own "
-           "illustrative list runs both ways, from Greco-Islamic medicine westward to the "
-           "adoption of a script eastward.")),
+           "interregional contacts and conflicts between states and empires encouraged "
+           "significant technological and cultural transfers, and knowledge reaching further "
+           "than it had before is what such a transfer looks like in a record. The framework "
+           "orders no race between them, which is why the anchor carries both clauses: the "
+           "strongest distractor changes only which kind ends up furthest spread.")),
 
  dict(q=("Which of the following identifies the connection between the collapse of empires and "
          "the appearance of the Mongol khanates as the framework presents it?"),

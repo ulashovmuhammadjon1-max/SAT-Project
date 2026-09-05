@@ -51,7 +51,7 @@ five times:
   q6   merchants influencing hosts / hosts influencing merchants, exchanged
   q16  settled community against passing party, the descriptions exchanged
   q17  the direction in which practices moved, reversed
-  q25  the environment shaping societies / societies shaping environments
+  q25  which of five claims the framework attaches to the Indian Ocean ALONE
 
 Those anchors carry both clauses in order, which is the defect verify_e2_1.py
 shipped and HISTORY_BRIEF.md records.
@@ -218,8 +218,8 @@ CLAIMS = [
  ("practices of the ports among the merchants",
   "KC-3.1.III.B states that merchants introduced their own cultural traditions into the indigenous cultures and, in turn, indigenous cultures influenced merchant cultures, and the Cultural Developments thematic focus states that the interactions of societies and their beliefs often have political, social, and cultural implications."),
 
- ("the environment shaping the societies that trade and those populations in turn shaping their environments",
-  "The Humans and the Environments thematic focus states that the environment shapes human societies, and as populations grow and change, these populations IN TURN shape their environments, while KC-3.1.II.A.i makes environmental knowledge a condition of the expansion of long-distance routes. The anchor carries both directions because two distractors keep one and drop the other."),
+ ("fostered the growth of states, which the framework asserts of the Indian Ocean in a sentence of its own",
+  "KC-3.1.I.A.iii states in one clause that the Indian Ocean trading network fostered the growth of states, and no parallel sentence in this unit says it of another network. Each rejected option names something the framework asserts more widely: KC-3.1.I.A.i and KC-3.1.I.A.iv carry volume and range for the Silk Roads and the trans-Saharan network, KC-3.1.III.B places diasporic communities along important trade routes generally, and KC-3.1.II.A.i makes environmental knowledge a condition of long-distance routes generally. This item replaced one on the Humans and the Environments focus that duplicated topic 2.6 q9."),
 
  ("the places where merchants settled and cultural traditions passed between communities",
   "KC-3.1.I.A.ii supplies the increased volume of trade on existing routes including the Indian Ocean, and KC-3.1.III.B supplies the diasporic communities in key places along important trade routes where traditions moved both ways. The framework asserts both of the same routes, which is why both descriptions hold."),

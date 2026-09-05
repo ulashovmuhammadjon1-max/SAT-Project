@@ -78,8 +78,8 @@ import wh_check
 
 BEFORE_M = "Messages recorded before the empire's expansion"
 AFTER_M = "Messages recorded after the empire's expansion"
-WEST = "Instances recorded moving westward"
-EAST = "Instances recorded moving eastward"
+BEFORE_R = "Regions in which it is recorded before the contact"
+AFTER_R = "Regions in which it is recorded after the contact"
 COLLAPSED = "Imperial states recorded as having collapsed"
 ESTABLISHED = "New imperial states recorded as established"
 
@@ -107,22 +107,24 @@ def q3(table, item):
 
 
 def q6(table, item):
-    """Both directions everywhere, and the prevailing direction not uniform."""
-    west, east = cg.col(table, WEST), cg.col(table, EAST)
-    assert all(w > 0 for w in west) and all(e > 0 for e in east), \
-        f"every kind must record both directions: west {west}, east {east}"
-    westward_leads = [w > e for w, e in zip(west, east)]
-    assert len(set(westward_leads)) == 2, \
-        f"the prevailing direction must NOT be the same for all kinds: {westward_leads}"
+    """All spread further, and the narrowest beforehand is NOT the widest after."""
+    before, after = cg.col(table, BEFORE_R), cg.col(table, AFTER_R)
+    assert all(a > b for b, a in zip(before, after)), \
+        f"every kind must reach more regions after: {before} to {after}"
+    narrowest = before.index(min(before))
+    assert after[narrowest] != max(after), \
+        f"the narrowest beforehand must NOT be the widest after: {before} / {after}"
     # every distractor false on the same numbers
-    assert not all(westward_leads), "'westward predominates everywhere' must be false"
-    assert not all(e == 0 for e in east), "'no eastward transfers at all' must be false"
-    assert west.index(max(west)) != east.index(max(east)), \
-        "'the most westward kind is also the most eastward' must be false"
-    assert not any(w == 0 or e == 0 for w, e in zip(west, east)), \
-        "'each kind recorded in one direction only' must be false"
-    return (f"westward {west} against eastward {east}: both directions present for every "
-            f"kind, and westward leads in {sum(westward_leads)} of {len(west)} kinds")
+    assert not any(a < b for b, a in zip(before, after)), \
+        "'one kind reaches fewer regions after' must be false"
+    assert not any(a == b for b, a in zip(before, after)), \
+        "'one kind unchanged' must be false"
+    widest = before.index(max(before))
+    assert after[widest] != max(after), \
+        "'the widest beforehand is also the widest after' must be false"
+    return (f"before {before} to after {after}: every kind spreads, and the kind starting "
+            f"in {min(before)} region(s) ends in {after[narrowest]}, not the maximum "
+            f"{max(after)}")
 
 
 def q8(table, item):
@@ -162,8 +164,8 @@ CLAIMS = [
  ("Contacts AND conflicts between states and empires both encouraged",
   "KC-3.2.II.A.ii states that interregional contacts AND CONFLICTS between states and empires, including the Mongols, encouraged significant technological and cultural transfers. Both nouns stand in the sentence, which is what the two options keeping only one of them each halve."),
 
- ("the direction that predominates is not the same for all three kinds",
-  "Recomputed in q6 above from the two columns. KC-3.2.II.A.ii states that interregional contacts and conflicts encouraged significant technological and cultural transfers without assigning them a single direction, and the topic's own illustrative list runs both ways, from Greco-Islamic medicine moving west to the adoption of a script."),
+ ("the kind recorded in fewest regions beforehand is not the kind recorded in most regions afterwards",
+  "Recomputed in q6 above from the two columns. KC-3.2.II.A.ii states that interregional contacts and conflicts between states and empires encouraged significant technological and cultural transfers, and knowledge reaching further than before is what such a transfer looks like in a record; the framework orders no race between the kinds transferred. The anchor carries both clauses because the strongest distractor changes only which kind ends up furthest spread. This table replaced one of the same shape as topic 2.3 q7."),
 
  ("named as an instance of the new imperial states",
   "KC-3.2.I.B.iii states that empires collapsed in different regions of the world and in some areas were replaced by new imperial states, INCLUDING THE MONGOL KHANATES. The word including makes the khanates one case of the pattern the sentence describes rather than the whole of it."),

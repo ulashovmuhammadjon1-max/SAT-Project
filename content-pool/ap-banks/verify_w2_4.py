@@ -170,8 +170,8 @@ CLAIMS = [
  ("in separate sentences about the same growth",
   "KC-3.1.II.A.ii names innovations in existing transportation technologies, KC-3.1.I.A.iv names improved transportation technologies and commercial practices, and KC-3.1.I.E.ii names the expansion of empires. Learning Objective H asks for the causes and effects of the growth of trans-Saharan trade, and the framework supplies more than one cause for it."),
 
- ("describes the improvement and spread of arrangements already in use",
-  "KC-3.1.II.A.ii states that the growth of interregional trade was encouraged by innovations in EXISTING transportation technologies, and KC-3.1.I.A.iv speaks of expanding the range of EXISTING trade routes. Both adjectives are the framework's own and both rule out invention within the period."),
+ ("a technical and a political cause respectively",
+  "KC-3.1.II.A.ii and KC-3.1.I.A.iv sit under the Technology and Innovation focus and name innovations in existing transportation technologies and improved commercial practices, while KC-3.1.I.E.ii sits under the Governance focus and names the expansion of empires. Learning Objective H asks for the causes and effects of the growth of trans-Saharan trade and Learning Objective I for the influence of imperial expansion. This item replaced one on the word EXISTING that duplicated topic 2.1 q3."),
 
  ("its effects are not exhausted by its purpose",
   "The Technology thematic focus states that technological advances have shaped human development and interactions WITH BOTH INTENDED AND UNINTENDED CONSEQUENCES, which is the framework's own phrase, and KC-3.1.II.A.ii supplies this topic's case, an innovation in an existing transportation technology whose effects ran well past the journeys it was adopted to ease."),

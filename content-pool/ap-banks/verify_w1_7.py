@@ -87,24 +87,23 @@ NEW = "Institutions first recorded in this period"
 
 
 def q5(table, item):
-    """One region falls, one is level, one rises -- so no single direction."""
+    """The leading region changes hands, and the total falls."""
     early, late = cg.col(table, EARLY_P), cg.col(table, LATE_P)
-    fell = [i for i in range(len(early)) if late[i] < early[i]]
-    level = [i for i in range(len(early)) if late[i] == early[i]]
-    rose = [i for i in range(len(early)) if late[i] > early[i]]
-    assert len(early) == 3 and len(fell) == 1 and len(level) == 1 and len(rose) == 1, \
-        f"the key needs one of each direction: fell={fell} level={level} rose={rose}"
-    # every distractor false on the same numbers
-    assert not all(late[i] < early[i] for i in range(len(early))), \
-        "'every region moved toward fewer' must be false"
-    assert not all(late[i] > early[i] for i in range(len(early))), \
-        "'every region moved toward more' must be false"
-    assert not all(late[i] == early[i] for i in range(len(early))), \
-        "'unchanged everywhere' must be false"
     assert early.index(max(early)) != late.index(max(late)), \
-        "'the region with the most at the earlier date also has the most later' must be false"
-    return (f"earlier {early} against later {late}: one region falls, one is level and one "
-            f"rises, so the three point in three directions")
+        f"the leading region must change: {early} then {late}"
+    assert sum(late) < sum(early), \
+        f"the total must fall: {sum(early)} to {sum(late)}"
+    # every distractor false on the same numbers
+    assert not (early.index(max(early)) == late.index(max(late)) and sum(late) > sum(early)), \
+        "'the same leader and a rising total' must be false"
+    assert not all(late[i] < early[i] for i in range(len(early))), \
+        "'every region holds fewer later' must be false"
+    assert any(late[i] > early[i] for i in range(len(early))), \
+        "'no region holds more later' must be false"
+    assert sum(late) != sum(early), "'the same total at both dates' must be false"
+    return (f"earlier {early} totalling {sum(early)} against later {late} totalling "
+            f"{sum(late)}: the lead passes from region {early.index(max(early)) + 1} to "
+            f"region {late.index(max(late)) + 1} while the total falls")
 
 
 def q7(table, item):
@@ -158,8 +157,8 @@ CLAIMS = [
  ("a claim that all states did one thing runs against it",
   "KC-3.2.I.A names the Song Dynasty of China in particular as utilizing traditional methods of Confucianism and an imperial bureaucracy to maintain and justify its rule, and KC-3.2 asserts diversity in state formation across various regions. A universal claim is defeated by the diversity the framework asserts repeatedly, not by a denial that any state examined its officials."),
 
- ("no single direction of change can be claimed",
-  "Recomputed in q5 above from the table alone, distractors included. KC-3.2 states that state formation and development demonstrated continuity, innovation, and diversity in various regions, and data pointing in three directions at once is what a defensible claim of diversity rests on."),
+ ("is not the region holding the most at the later date, and the three regions together hold fewer",
+  "Recomputed in q5 above from the table alone, distractors included. KC-3.2 states that state formation and development demonstrated continuity, innovation, and diversity in various regions, and a falling total beneath a change in which region leads is what a defensible claim of diversity rests on: the regions do not move together. The anchor carries both clauses because the strongest distractor inverts each of them. This question replaced one whose keyed conclusion duplicated topic 2.5 q5."),
 
  ("as well as on arrangements that had no precedent",
   "KC-3.2 and KC-3.2.I both name continuity, innovation, and diversity together, and KC-3.2.I.D.i and KC-3.2.I.D.ii repeat the same terms of the Americas and of Africa. A thesis of pure novelty drops continuity and a thesis of pure preservation drops innovation; the framework asserts both at once, which is what the revision restores."),

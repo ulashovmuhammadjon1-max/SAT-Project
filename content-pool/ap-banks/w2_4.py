@@ -235,19 +235,21 @@ QUESTIONS = [
            "and KC-3.1.I.E.ii names the expansion of empires. Learning Objective H asks for the "
            "causes and effects of the growth of trans-Saharan trade.")),
 
- dict(q=("A student writes that the technologies encouraging trans-Saharan trade were all "
-         "invented in this period. Which of the following best explains the error?"),
+ dict(q=("Which of the following best explains why this topic's page carries a governance "
+         "focus as well as a technology focus?"),
       choices=[
-        "The framework speaks of innovations in EXISTING transportation technologies, which describes the improvement and spread of arrangements already in use.",
-        "The framework speaks of technologies that had been abandoned before this period and were revived in it.",
-        "The framework speaks of technologies used only outside the desert regions.",
-        "The framework speaks of no technologies at all in connection with this trade.",
-        "The framework speaks of technologies that were reserved to rulers and denied to merchants.",
+        "Because the framework attributes the growth of the trade both to innovations in how goods were carried and to the expansion of empires, which are a technical and a political cause respectively.",
+        "Because the framework treats every technological change as an act of government.",
+        "Because the framework treats the two focuses as alternatives, only one of which can apply to a topic.",
+        "Because governments in this period carried the goods themselves, leaving merchants no part in the trade.",
+        "Because the framework treats the growth of trade as having no cause that is not political.",
       ], ans=0,
-      why=("KC-3.1.II.A.ii states that the growth of interregional trade was encouraged by "
-           "innovations in EXISTING transportation technologies, and KC-3.1.I.A.iv likewise "
-           "speaks of expanding the range of EXISTING trade routes. Both adjectives are the "
-           "framework's own.")),
+      why=("KC-3.1.II.A.ii and KC-3.1.I.A.iv sit under the Technology and Innovation focus and "
+           "name innovations in existing transportation technologies and improved commercial "
+           "practices, while KC-3.1.I.E.ii sits under the Governance focus and names the "
+           "expansion of empires. Learning Objective H asks for the causes and effects of the "
+           "growth of trans-Saharan trade and Learning Objective I for the influence of imperial "
+           "expansion, so the page carries two causes of two kinds.")),
 
  dict(q=("Which of the following best explains the Technology thematic focus's remark that "
          "technological advances have both intended and unintended consequences?"),

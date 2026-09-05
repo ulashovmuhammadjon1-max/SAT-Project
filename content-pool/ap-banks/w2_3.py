@@ -452,20 +452,22 @@ QUESTIONS = [
            "and the Cultural Developments thematic focus states that the interactions of "
            "societies and their beliefs often have political, social, and cultural implications.")),
 
- dict(q=("Which of the following identifies what the Humans and the Environments thematic focus "
-         "adds to this topic's account of exchange?"),
+ dict(q=("The framework attaches to the Indian Ocean network one claim it attaches to no other "
+         "network in this unit. Which of the following identifies that claim?"),
       choices=[
-        "That the relation runs both ways, the environment shaping the societies that trade and those populations in turn shaping their environments.",
-        "That the environment shapes societies while remaining itself unaffected by them.",
-        "That societies shape their environments while remaining themselves unaffected.",
-        "That the environment and human societies have no bearing on one another.",
-        "That environmental factors bear on agriculture but not on exchange.",
+        "That the network fostered the growth of states, which the framework asserts of the Indian Ocean in a sentence of its own.",
+        "That improved transportation technologies raised the volume carried on it, which the framework asserts of the Indian Ocean alone.",
+        "That the geographical range of the route was expanded, which the framework asserts of the Indian Ocean alone.",
+        "That merchants formed settled communities along it, which the framework asserts of the Indian Ocean alone.",
+        "That its growth depended on environmental knowledge, which the framework asserts of the Indian Ocean alone.",
       ], ans=0,
-      why=("The Humans and the Environments thematic focus states that the environment shapes "
-           "human societies, and as populations grow and change, these populations IN TURN shape "
-           "their environments, while KC-3.1.II.A.i makes environmental knowledge a condition of "
-           "the expansion of long-distance routes. The anchor carries both directions because two "
-           "distractors keep one and drop the other.")),
+      why=("KC-3.1.I.A.iii is a sentence of one clause about the Indian Ocean trading network "
+           "fostering the growth of states, and no parallel sentence says it of another network. "
+           "The four rejected options each name something the framework asserts more widely: "
+           "KC-3.1.I.A.i and KC-3.1.I.A.iv carry volume and range for the Silk Roads and the "
+           "trans-Saharan network, KC-3.1.III.B places diasporic communities along important "
+           "trade routes generally, and KC-3.1.II.A.i makes environmental knowledge a condition "
+           "of long-distance routes generally.")),
 
  dict(q=("Two students describe the same port. One calls it a place where goods change hands; the "
          "other calls it a place where societies meet. Which of the following identifies how the "

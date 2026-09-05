@@ -144,16 +144,18 @@ QUESTIONS = [
          "regions at an earlier and at a later date. Which claim does this data best support?"),
       table=_T_POLITIES,
       choices=[
-        "The three regions moved in different directions, one toward fewer polities, one toward more and one not at all, so no single direction of change can be claimed for all of them.",
-        "Every region listed moved toward fewer separate polities across the two dates.",
-        "Every region listed moved toward more separate polities across the two dates.",
-        "The number of separate polities was unchanged in every region listed.",
-        "The region with the most polities at the earlier date also had the most at the later date.",
+        "The region holding the most polities at the earlier date is not the region holding the most at the later date, and the three regions together hold fewer at the later date than at the earlier one.",
+        "The region holding the most polities at the earlier date also holds the most at the later date, and the three together hold more at the later date.",
+        "Every region listed holds fewer polities at the later date than at the earlier one.",
+        "No region listed holds more polities at the later date than at the earlier one.",
+        "The three regions together hold the same number of polities at both dates.",
       ], ans=0,
       why=("Recomputed in the verifier from the table alone, distractors included. KC-3.2 states "
            "that state formation and development demonstrated continuity, innovation, and "
-           "diversity in various regions, and data pointing three different ways is what a "
-           "defensible claim of diversity would rest on.")),
+           "diversity in various regions, and a total falling while the region that leads the "
+           "count changes hands is what a defensible claim of diversity rests on: the regions do "
+           "not move together. The anchor carries both clauses because the strongest distractor "
+           "inverts each of them.")),
 
  dict(q=("A student's thesis reads: state formation between c. 1200 and c. 1450 was everywhere a "
          "process of building something entirely new. Which of the following revisions would make "
