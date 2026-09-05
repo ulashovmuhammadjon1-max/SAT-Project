@@ -110,6 +110,50 @@ outpace them. It passed silently while proving nothing. Swapping the two
 columns is what actually inverts the claim. Check that your mutation really
 violates the thing you are asserting.
 
+## The sign bug, twice — the most transferable finding of this build
+
+`cg_check.normalize` treated `+` and `-` asymmetrically: it **dropped a `+`
+and kept a `-`**. That produced two separate holes in the answer-key gate, and
+each was found by an authoring agent that then worked around it locally.
+
+1. **`contains_phrase` matched a sign-flipped key.** An anchor of
+   `+183 kJ/mol` matched a keyed choice of `-183 kJ/mol`, because the
+   surviving `-` read as an ordinary delimiter to the lookbehind. In
+   Chemistry units 6 and 9 the sign IS the answer, so the swap guard that
+   exists to catch exactly that was blind to it.
+2. **A sum and a product normalized to the same string.**
+   `c = \lambda + \nu` and `c = \lambda \nu` both became `c lambda nu`.
+   Those are the key and its distractor in topic 3.12.
+
+Both are fixed in the shared helper: `contains_phrase` refuses a sign before a
+phrase that opens with a digit, and `normalize` now keeps `+`.
+
+**The lesson is about the workarounds, not the bug.** One agent wrote a
+private raw matcher; another rewrote two distractors. Both were right that
+their content had to ship, and both left the shared gate broken for every
+other bank. One of them did the thing that made this recoverable: it left a
+**tripwire** asserting the shared helper still had the bug, with a message
+saying to come back if it ever stopped. Fixing the helper fired it.
+
+**Measure the blast radius; do not reason about it.** Both fixes were run
+against all 622 verifiers before and after. Each exposed a batch of anchors
+that omitted a sign their keyed choice carried — 20 negative, then 15
+positive — every one a real under-specification that would have matched a
+sign-flipped distractor. Zero regressions after repair.
+
+Three guards earned their keep while repairing:
+
+- replacement was scoped to the `CLAIMS` block **by AST line range**, because
+  one literal also appears inside a negative control where the anchor is
+  deliberately unsigned, and a whole-file replace would have rewritten the
+  control;
+- a uniqueness check refused a literal shared by two questions until it was
+  confirmed both need the same signed form (they do: different stems that
+  both recompute to `+20.0`);
+- one control had to be re-signed so it kept exercising the guard it names
+  rather than tripping containment first. **A control that fires for the
+  wrong reason proves nothing about the guard it is attached to.**
+
 ## Resume order
 
 1. Finish Chemistry and Environmental Science. Each subject's units all go
