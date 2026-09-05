@@ -37,6 +37,18 @@
 #      exported to another. Reversing a direction is the classic near-miss
 #      distractor, so wherever one is offered the anchor carries both clauses.
 #
+# REPAIR, recorded because the module shipped ungated. The author of this module was
+# stopped before writing verify_w6_5.py, so items 14 to 16 reached the tree with no
+# check on them. Item 15 asked for "the single shipment arranged by a firm based in
+# the region where the good was produced" and the hypothetical record has TWO such
+# rows -- Record 5 (Latin America to Latin America) and Record 4 (Western Europe to
+# Western Europe) -- so the item had two defensible answers. Item 15 now names the
+# second condition that makes Record 5 unique, item 14 has been rewritten to a
+# question the record settles on its own rather than one needing a student to supply
+# which regions were industrialized, and item 16's key now says "at least one"
+# because two rows satisfy it. verify_w6_5.py asserts the UNIQUENESS of each of
+# those keys, which is the check whose absence let the defect through.
+#
 # The CED names the Opium Wars and the Port of Buenos Aires and describes neither.
 # No item asks what happened in a war, when it happened, who signed what, or what
 # any of it cost. Every source is UNATTRIBUTED and labelled illustrative, and
@@ -170,7 +182,7 @@ QUESTIONS = [
      "One of the five shipments"], ans=0,
    table=_T_SHIPMENTS,
    why="Read from the record alone: the arranging firm is based in Western Europe in Records 1, 3 and 4 and in North America in Record 2, which is four; only Record 5's firm is based in Latin America. That concentration is what KC-5.1.II.C means by an advantage held by merchants and companies based in Europe and the U.S."),
- dict(q="Using the same hypothetical shipment record, which shipment carries a good produced in an industrialized region to a region that produces primary goods?",
+ dict(q="Using the same hypothetical shipment record, which is the only shipment in which Western Europe is the region where the good was produced rather than a region receiving it?",
    choices=[
      "Record 4",
      "Record 1",
@@ -178,8 +190,8 @@ QUESTIONS = [
      "Record 3",
      "Record 5"], ans=0,
    table=_T_SHIPMENTS,
-   why="Record 4 is the only row whose production region is Western Europe and whose destination is Latin America; the other four rows move goods from South Asia, Latin America or sub-Saharan Africa to Western Europe or North America. Reading the two region columns together is what settles it."),
- dict(q="In the same hypothetical shipment record, which single shipment is arranged by a firm based in the region where the good was produced?",
+   why="Read from the record alone: Western Europe is the destination in Records 1, 3 and 5, and Record 4 is the only row in which Western Europe is the region of production. The other four rows carry goods from South Asia, Latin America or sub-Saharan Africa toward Western Europe or North America, so Record 4 is the one shipment running against that direction."),
+ dict(q="In the same hypothetical shipment record, which shipment carries a good produced outside Europe and North America and arranged by a firm based in the region that produced it?",
    choices=[
      "Record 5",
      "Record 1",
@@ -187,16 +199,16 @@ QUESTIONS = [
      "Record 3",
      "Record 4"], ans=0,
    table=_T_SHIPMENTS,
-   why="Record 5 shows a good produced in Latin America and a firm based in Latin America, the only row in which those two columns agree while the destination lies elsewhere. In Records 1 and 3 the firm sits in the destination region, and in Records 2 and 4 the firm is based in neither the production region alone nor the destination alone in the same way."),
+   why="Read from the record alone: Record 5's good is produced in Latin America and the arranging firm is based in Latin America, and Latin America lies outside Europe and North America. Record 4 also has its firm based in its own region of production, but that region is Western Europe, so the stem's two conditions are met by Record 5 alone; in Records 1, 2 and 3 the arranging firm sits in the destination region instead."),
  dict(q="A student concludes from the same hypothetical record that firms based in producing regions never arranged shipments at all. The record refutes this because",
    choices=[
-     "one of the five shipments is arranged by a firm based in the producing region",
+     "at least one shipment is arranged by a firm based in the region that produced the good",
      "the record does not name the commodities being shipped",
      "the record does not give the value of any shipment",
      "the record covers five shipments rather than fifty",
      "the record does not state the year of any shipment"], ans=0,
    table=_T_SHIPMENTS,
-   why="The refutation has to come from the data the student is using, and Record 5's arranging firm is based in Latin America, the region where the good was produced. The four rejected statements are true of the record but leave the claim standing, and KC-5.1.II.C claims an advantage rather than a monopoly."),
+   why="The refutation has to come from the data the student is using, and two rows have the arranging firm based in the region of production: Record 5 in Latin America and Record 4 in Western Europe. The four rejected statements are true of the record but leave the claim standing, and KC-5.1.II.C claims an advantage rather than a monopoly."),
  dict(q="The table below breaks a hypothetical commodity's journey to market into the services it required. Which conclusion is best supported?",
    choices=[
      "Firms based in Europe or North America supplied most of the services that moved the crop, but almost none of the labour that grew it",

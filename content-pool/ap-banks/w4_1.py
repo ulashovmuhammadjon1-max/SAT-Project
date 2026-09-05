@@ -311,19 +311,21 @@ QUESTIONS = [
   q=("Which of the following is the best example of a historical context, as suggested skill 4.A "
      "uses the term, for the appearance of new sailing vessels in this period?"),
   choices=[
-   "A long exchange of technical knowledge among societies around the Mediterranean and the Indian Ocean",
+   "A long exchange of technical knowledge between European societies and the Classical, Islamic, and Asian worlds",
    "The precise day on which one vessel was launched",
    "The number of nails used in one vessel's construction",
    "The personal preferences of a single shipowner",
    "The modern museum in which a model of the vessel is displayed"],
   ans=0,
   why=("Suggested skill 4.A asks students to identify and describe a historical context for a "
-       "specific development, and KC-4.1.II supplies one: the spread of knowledge, scientific "
-       "learning, and technology from the Classical, Islamic, and Asian worlds. A launch date, "
+       "specific development, and KC-4.1.II supplies one in its own words: the spread of "
+       "knowledge, scientific learning, and technology from the Classical, Islamic, and Asian "
+       "worlds, which facilitated European developments over time. A launch date, "
        "a nail count, one owner's taste and a modern display are not contexts.")),
  dict(
   q=("A hypothetical inventory from a European port in the period lists instruments for taking "
-     "bearings and measuring position, alongside charts of distant coasts.\n\n"
+     "bearings and measuring position, alongside charts recording the winds and currents "
+     "met on distant routes.\n\n"
      "Which two of the framework's three named developments does the inventory document?"),
   choices=[
    "The production of new tools, and an improved understanding of regional wind and currents patterns",
@@ -333,8 +335,9 @@ QUESTIONS = [
    "The recruitment of officials, and the building of monuments"],
   ans=0,
   why=("KC-4.1.II.A names new tools, innovations in ship designs, and an improved understanding "
-       "of regional wind and currents patterns; instruments are tools and charts record what is "
-       "known of a region's waters. Plantations are KC-4.2.II.C, syncretism KC-4.1.VI, "
+       "of regional wind and currents patterns; instruments for taking bearings are new tools "
+       "and a chart of the winds and currents of a route records that regional understanding. "
+       "Plantations are KC-4.2.II.C, syncretism KC-4.1.VI, "
        "companies KC-4.1.IV.C and officials KC-4.3.I.C.")),
  dict(
   q=("Why is the framework's account of this topic placed under the theme of technology and "

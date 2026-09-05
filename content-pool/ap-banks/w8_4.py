@@ -160,13 +160,13 @@ QUESTIONS = [
  dict(q="The table gives hypothetical figures for a state-directed campaign. Which conclusion does the table alone support?",
    table=_T_CAMPAIGN,
    choices=[
-     "In the two years when output fell furthest, the quantity taken by the state stood above its first-year level",
+     "The year in which output stood lowest was also the year in which the state took the most",
      "Output and the quantity taken by the state moved in the same direction in every year recorded",
      "The quantity taken by the state fell in every year after the first",
      "Output stood higher in the last year recorded than in the first",
      "Output never fell by more than a tenth below its first-year level"],
    ans=0,
-   why="KC-6.3.I.A.ii states that the government controlled the national economy through the Great Leap Forward, often implementing repressive policies, with negative repercussions for the population. A state taking more while output falls is one mechanism by which such repercussions reach a population, and the figures are hypothetical, with the key recomputed from the table alone in the verifier."),
+   why="KC-6.3.I.A.ii states that the government controlled the national economy through the Great Leap Forward, often implementing repressive policies, with negative repercussions for the population. A state taking the most in the very year production stood lowest is one mechanism by which such repercussions reach a population, and the figures are hypothetical, with the key recomputed from the table alone in the verifier. An earlier wording of this choice spoke of the two years output fell furthest, which was ambiguous between the lowest levels and the sharpest year-on-year drops and was true only on the second reading."),
 
  dict(q="A peasant association's resolution of 1952 and a landlord's petition of the same year describe the same redistribution in a single district in incompatible terms. A historian using both should conclude that",
    choices=[
