@@ -75,9 +75,26 @@ anything to it.
   table of figures — and ask the question of it.
 - **Never invent a quotation and attribute it to a real person or document.**
   That is fabrication, and it will be read by students as fact. Either quote
-  what the CED itself contains, or write an explicitly *unattributed,
-  illustrative* source ("A merchant's account from the period describes…")
-  and make the question turn on reasoning, not on who said it.
+  what the CED itself contains, or write an invented source and **say in the
+  stem that it is invented** — "A hypothetical merchant's account describes…",
+  "Suppose a source records…", "A traveller's notebook, its author unnamed…".
+  Make the question turn on reasoning, not on who said it.
+
+  **The marker word is required, and the earlier wording of this rule was too
+  weak.** It asked only for an *unattributed* source and gave "A merchant's
+  account from the period describes…" as its example — which names nobody, and
+  so satisfied the letter of the rule while still reading as a real document.
+  On the real exam the stimuli ARE genuine historical sources, so a student has
+  every reason to take "A memoir published in 1980 by a woman who moved from a
+  former colony" for one. Naming no one is not enough; the stem has to say the
+  source is hypothetical.
+
+  `wh_stimulus.py` enforces this, and is honest about its limit: it proves the
+  LABEL is present, not that the label is honest. "A hypothetical letter of
+  Zheng He" would pass it. What it catches is the far commoner drift — a source
+  introduced with no marker at all — and it makes the marker a property of the
+  file rather than an instruction an author forgets on the twenty-eighth
+  question.
 - Lean on the CED's own reasoning skills: contextualisation, comparison,
   causation, continuity and change. The "final topic" of each unit is
   explicitly a reasoning topic — 4.8, 9.9 and their siblings — so write those
@@ -133,3 +150,31 @@ shipped once.
 - **A stopped agent leaves damage, not just absence.** If you resume, import
   every module you did not personally finish, count its questions, and run its
   verifier before trusting it.
+
+## PENDING BEFORE EXPORT — do not ship World History without this
+
+`wh_stimulus.marked_stimulus` is currently imported by unit 4's eight
+verifiers only. Run across all modules it flags **22 stems** that introduce an
+invented source with no marker, concentrated in unit 8:
+
+    python3 - <<'PY'
+    import importlib, os, re, io, contextlib, types, wh_stimulus
+    mods = sorted((f[:-3] for f in os.listdir(".") if re.match(r"^w\d+_\d+\.py$", f)),
+                  key=lambda x: [int(v) for v in x[1:].split("_")])
+    for name in mods:
+        m = importlib.import_module(name)
+        for i, q in enumerate(m.QUESTIONS, 1):
+            probe = types.SimpleNamespace(TOPIC=m.TOPIC, QUESTIONS=[q])
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    wh_stimulus.marked_stimulus(probe)
+            except AssertionError as e:
+                print(str(e)[:150])
+    PY
+
+None of them violates the rule as it was originally written — the audit for
+the rule that always mattered, a stimulus attributed to a NAMED person or
+document, returns **0 across all 62 modules**. They fail the stricter marker
+rule above, which was added after the fact. Add a marker word to each stem,
+then import the gate in every `verify_w*.py` so it cannot regress. Editing
+was deferred only because agents were still writing those modules.

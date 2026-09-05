@@ -43,10 +43,26 @@ SOURCE_NOUN = re.compile(
     r"(?<![A-Za-z])[Aa]n? (?:[A-Za-z']+ ){0,3}"
     r"(?:account|notebook|letter|book|treatise|inventory|instruction|chronicle|record|"
     r"manual|logbook|memoir|report|petition|decree|dispatch|ledger|testimony|charter|"
-    r"proclamation|register|survey|complaint|ruling|contract)s?(?![A-Za-z])")
+    r"proclamation|register|survey|complaint|contract)s?(?![A-Za-z])")
+# "ruling" was in this list and matched "a state's RULING group has held
+# office for decades" -- a governing group, not a legal ruling. A noun that
+# is also a common adjective cannot carry this check on its own.
 
-MARKED = re.compile(r"(?<![A-Za-z])(?:hypothetical|unattributed|illustrative)(?![A-Za-z])",
-                    re.IGNORECASE)
+MARKED = re.compile(
+    r"(?<![A-Za-z])(?:hypothetical|unattributed|illustrative|invented|imagined|"
+    # "Suppose a source records that ..." frames the whole stem as hypothetical,
+    # and "its author unnamed" is the brief's own way of saying unattributed.
+    r"suppose|author unnamed|unnamed author|author is unnamed|no named author"
+    r")(?![A-Za-z])",
+    re.IGNORECASE)
+
+# A stem that REASONS ABOUT a source rather than presenting one needs no marker:
+# there is no document for a student to mistake for real. "A student uses a
+# single official dispatch as proof ..." and "Why is a source's own description
+# ... weaker evidence than ..." are method questions, not stimuli.
+ABOUT_NOT_PRESENTING = re.compile(
+    r"(?<![A-Za-z])(?:a student|a historian|why is|explain why|what makes|"
+    r"would most strengthen|the strongest objection)(?![A-Za-z])", re.IGNORECASE)
 
 
 def marked_stimulus(module):
@@ -54,7 +70,7 @@ def marked_stimulus(module):
     n = 0
     for i, item in enumerate(module.QUESTIONS, 1):
         hit = SOURCE_NOUN.search(item["q"])
-        if not hit:
+        if not hit or ABOUT_NOT_PRESENTING.search(item["q"]):
             continue
         n += 1
         assert MARKED.search(item["q"]), (
