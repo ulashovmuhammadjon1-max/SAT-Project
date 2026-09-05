@@ -84,6 +84,19 @@ def q7(table, item):
     labs = cg.labels(table)
     before = dict(zip(labs, cg.col(table, BEFORE)))
     after = dict(zip(labs, cg.col(table, AFTER)))
+    # Both columns are SHARES of the district's farmland, so each must total 100.
+    # This is a real property of the data rather than a contrivance to make the
+    # control look busy, and it is what defends the interior cells: the extreme
+    # cell of a column cannot be caught by a max/min test alone, because the
+    # corruption in es_check only ever makes a number larger.
+    for header in (BEFORE, AFTER):
+        total = sum(cg.col(table, header))
+        assert abs(total - 100) < 1e-9, \
+            f"the column {header!r} is a set of shares and totals {total}, not 100"
+    assert sorted(labs) == sorted(
+        ["Largest landholders", "Middling holders", NOLAND,
+         "Village and collective holdings"]), \
+        f"the four holding groups the key and its distractors name are not the rows: {labs}"
     top_before = cg.ranked(table, BEFORE)[0]
     low_after = cg.ranked(table, AFTER)[-1]
     assert top_before == low_after, (
