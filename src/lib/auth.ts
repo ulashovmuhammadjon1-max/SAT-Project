@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import bcrypt from "bcryptjs";
 
 import { prisma } from "@/lib/prisma";
-import { loginSchema } from "@/lib/validations/auth";
+import { loginSchema, looksLikeEmail } from "@/lib/validations/auth";
 import authConfig from "@/lib/auth.config";
 
 /** 30 days, in seconds. */
@@ -37,16 +37,25 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Credentials({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "email" },
+        identifier: { label: "Username or email", type: "text" },
         password: { label: "Password", type: "password" },
       },
       authorize: async (credentials) => {
         const parsed = loginSchema.safeParse(credentials);
         if (!parsed.success) return null;
 
-        const user = await prisma.user.findUnique({
-          where: { email: parsed.data.email },
-        });
+        // ONE FIELD, EITHER KIND. Accounts created since username signup have
+        // no email; the 693 that predate it have no username. An "@" is what
+        // separates the two, and a username cannot contain one (see
+        // usernameSchema), so the test cannot misroute a real username.
+        //
+        // Usernames are stored lowercase, so the lookup lowercases too --
+        // otherwise "Alice" and "alice" would be different accounts to the
+        // database and the same one to the person typing.
+        const identifier = parsed.data.identifier.trim();
+        const user = looksLikeEmail(identifier)
+          ? await prisma.user.findUnique({ where: { email: identifier.toLowerCase() } })
+          : await prisma.user.findUnique({ where: { username: identifier.toLowerCase() } });
         if (!user?.passwordHash) return null;
 
         const isValid = await bcrypt.compare(parsed.data.password, user.passwordHash);

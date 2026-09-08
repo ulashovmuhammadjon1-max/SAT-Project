@@ -48,6 +48,16 @@ export async function POST() {
   const admin = await requireAdminApi();
   if (!admin) return NextResponse.json({ error: "admin only" }, { status: 403 });
 
+  // Since username signup an account may have no email, admin accounts
+  // included. There is nowhere to send a health check in that case, and
+  // saying so is more useful than a provider error.
+  if (!admin.email) {
+    return NextResponse.json(
+      { error: "This admin account has no email address to send the check to." },
+      { status: 400 },
+    );
+  }
+
   const result = await sendEmail({
     to: admin.email,
     subject: "Scholarly email health check",

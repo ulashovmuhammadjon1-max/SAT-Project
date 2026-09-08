@@ -21,13 +21,13 @@ export function LoginForm() {
     setError(null);
     startTransition(async () => {
       const result = await signIn("credentials", {
-        email: formData.get("email"),
+        identifier: formData.get("identifier"),
         password: formData.get("password"),
         redirect: false,
       });
 
       if (result?.error) {
-        setError("Invalid email or password.");
+        setError("Wrong username or password.");
         return;
       }
 
@@ -40,8 +40,20 @@ export function LoginForm() {
   return (
     <form action={onSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input id="email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" />
+        <Label htmlFor="identifier">Username</Label>
+        {/* One field for both kinds of credential. Accounts created since
+            username signup have no email; the ones that predate it have no
+            username, and they sign in with the address they registered. */}
+        <Input
+          id="identifier"
+          name="identifier"
+          type="text"
+          placeholder="your username"
+          required
+          autoComplete="username"
+          autoCapitalize="none"
+          spellCheck={false}
+        />
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">

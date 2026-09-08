@@ -44,6 +44,12 @@ export async function decidePeerMentor(input: {
 
   const approved = decision === "APPROVED";
   const firstName = app.user.name?.trim().split(/\s+/)[0] ?? "there";
+  // The decision above is already written. An applicant who signed up with a
+  // username has no address to notify, and that must not undo the decision or
+  // fail the action -- they see the outcome in the app.
+  if (!app.user.email) {
+    return { ok: true };
+  }
   await sendEmail({
     to: app.user.email,
     subject: approved ? "You are a Scholarly peer mentor" : "About your peer-mentor application",

@@ -17,7 +17,7 @@ import { prisma } from "@/lib/prisma";
 export interface ProfileIdentity {
   id: string;
   name: string | null;
-  email: string;
+  email: string | null;
   image: string | null;
   emailVerified: Date | null;
   joinedAt: Date;

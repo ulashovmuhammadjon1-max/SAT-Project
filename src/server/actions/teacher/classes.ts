@@ -35,7 +35,8 @@ async function claimClassesByEmail(userId: string, email: string) {
 export interface TeachingStudent {
   id: string;
   name: string | null;
-  email: string;
+  /** Null for accounts created since username signup. */
+  email: string | null;
   joinedAt: Date;
   testsCompleted: number;
   questionsAnswered: number;
@@ -305,7 +306,7 @@ async function assignmentStatuses(classId: string, memberIds: string[]): Promise
 export interface AssignmentTracking {
   assignment: Omit<AssignmentStatus, "perStudent">;
   className: string;
-  students: (AssignmentStudentStatus & { name: string | null; email: string })[];
+  students: (AssignmentStudentStatus & { name: string | null; email: string | null })[];
 }
 
 /** One assignment's full submission picture, for the teacher's detail page. */
@@ -400,7 +401,8 @@ export async function getClassAnalytics(classId: string): Promise<ClassAnalytics
 export interface StudentDetail {
   id: string;
   name: string | null;
-  email: string;
+  /** Null for accounts created since username signup. */
+  email: string | null;
   createdAt: Date;
   currentStreak: number;
   targetScore: number | null;

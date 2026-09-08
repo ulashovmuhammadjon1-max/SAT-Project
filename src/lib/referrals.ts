@@ -242,9 +242,13 @@ export async function getReferralSummary(userId: string, origin: string): Promis
   };
 }
 
-function displayName(name: string | null, email: string): string {
+function displayName(name: string | null, email: string | null): string {
   const first = name?.trim().split(/\s+/)[0];
   if (first) return first;
-  const local = email.split("@")[0] ?? "Student";
+  // Since username signup an account may have no email at all, and `name` is
+  // seeded from the username, so the first branch almost always answers. This
+  // is the fallback for the older rows that have an email and no name.
+  const local = email?.split("@")[0];
+  if (!local) return "Student";
   return local.slice(0, 2) + "•".repeat(Math.max(2, Math.min(6, local.length - 2)));
 }

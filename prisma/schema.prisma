@@ -71,9 +71,18 @@ enum ExamPriority {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String    @unique
+  id   String  @id @default(cuid())
+  name String?
+
+  /// What a new account signs up with. Optional only because the 693 accounts
+  /// that predate username signup have none; every account created after it
+  /// has one, and it is what they sign in with.
+  username String? @unique
+
+  /// Optional since username signup: a new account never supplies one. Every
+  /// pre-existing account still holds theirs, which is what they sign in with
+  /// and where teacher invites and referral mail go, so the column stays.
+  email         String?   @unique
   emailVerified DateTime?
   image         String?
   passwordHash  String?
@@ -331,11 +340,11 @@ model Test {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  modules  Module[]
-  attempts Attempt[]
+  modules          Module[]
+  attempts         Attempt[]
+  classAssignments ClassAssignment[] @relation("AssignmentTest")
 
   @@index([status, type])
-  classAssignments ClassAssignment[] @relation("AssignmentTest")
 }
 
 model Module {
@@ -2132,22 +2141,22 @@ enum PeerMentorStatus {
 /// mentor" is a single-row read, and that APPROVED status *is* the role that
 /// unlocks hosting sessions.
 model PeerMentorApplication {
-  id        String           @id @default(cuid())
-  userId    String           @unique
-  headline  String
-  bio       String           @db.Text
-  satScore  Int?
-  ieltsBand Float?
-  subjects  String[]         @default([])
-  telegram  String?
+  id           String           @id @default(cuid())
+  userId       String           @unique
+  headline     String
+  bio          String           @db.Text
+  satScore     Int?
+  ieltsBand    Float?
+  subjects     String[]         @default([])
+  telegram     String?
   /// [{ name, dataUrl }] — score-report uploads as inline data URIs, the same
   /// storage approach as question figures (no Blob token dependency).
-  certificates Json          @default("[]")
-  status    PeerMentorStatus @default(PENDING)
-  adminNote String?          @db.Text
-  decidedAt DateTime?
-  createdAt DateTime         @default(now())
-  updatedAt DateTime         @default(now()) @updatedAt
+  certificates Json             @default("[]")
+  status       PeerMentorStatus @default(PENDING)
+  adminNote    String?          @db.Text
+  decidedAt    DateTime?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @default(now()) @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -2238,10 +2247,10 @@ model ClassAssignment {
 }
 
 model AssignmentCompletion {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   assignmentId String
   userId       String
-  completedAt  DateTime @default(now())
+  completedAt  DateTime  @default(now())
   /// When the student handed the work in. NULL = a saved draft.
   submittedAt  DateTime?
 
@@ -2266,33 +2275,33 @@ model AssignmentCompletion {
 // ---------------------------------------------------------------------------
 
 model ApQuestion {
-  id           String   @id @default(cuid())
+  id            String   @id @default(cuid())
   /// 'MICRO' | 'MACRO' | 'CALC_AB' | 'CALC_BC'
-  subject      String
-  unit         Int
+  subject       String
+  unit          Int
   /// CED topic code, e.g. "1.1"
-  topic        String
-  topicTitle   String
-  order        Int      @default(0)
-  stem         String   @db.Text
+  topic         String
+  topicTitle    String
+  order         Int      @default(0)
+  stem          String   @db.Text
   /// Optional data table: {"headers": [...], "rows": [[...], ...]}
-  tableJson    String?  @db.Text
+  tableJson     String?  @db.Text
   /// The answer choices as a JSON array of strings: five (A-E) for the
   /// economics exams, four (A-D) for Calculus, matching each exam's format.
-  choicesJson  String   @db.Text
-  correctIndex Int
-  explanation  String?  @db.Text
+  choicesJson   String   @db.Text
+  correctIndex  Int
+  explanation   String?  @db.Text
   /// Author-declared difficulty when the module carries one: 'EASY' | 'MEDIUM'
   /// | 'HARD'. Left null rather than guessed for the banks that were authored
   /// without labels — see timesAnswered/timesCorrect for the empirical signal.
-  difficulty   String?
+  difficulty    String?
   /// Empirical difficulty, counted from the LATEST attempt per (user,
   /// question) so retrying until correct does not make a question look easy.
   /// Below a minimum sample the question reports as unrated rather than
   /// pretending to a rating.
-  timesAnswered Int     @default(0)
-  timesCorrect  Int     @default(0)
-  createdAt    DateTime @default(now())
+  timesAnswered Int      @default(0)
+  timesCorrect  Int      @default(0)
+  createdAt     DateTime @default(now())
 
   attempts ApQuestionAttempt[]
 

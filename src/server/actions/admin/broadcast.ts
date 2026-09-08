@@ -58,7 +58,12 @@ async function origin(): Promise<string> {
  * relies on the same person not moving between pages mid-send.
  */
 async function recipients() {
+  // Only accounts that HAVE an email can be sent one. Since username signup,
+  // a new account has none at all, so this is a real filter rather than a
+  // formality -- without it the batch would carry nulls straight into the
+  // provider and fail the whole request.
   return prisma.user.findMany({
+    where: { email: { not: null } },
     select: { id: true, email: true, name: true },
     orderBy: { createdAt: "asc" },
   });
@@ -137,7 +142,7 @@ export async function sendReferralContestBatch(): Promise<BroadcastStatus> {
   const messages = [];
   for (const user of batch) {
     const code = await ensureReferralCode(user.id);
-    messages.push(buildContestEmail({ to: user.email, name: user.name, code, origin: site }));
+    messages.push(buildContestEmail({ to: user.email!, name: user.name, code, origin: site }));
   }
 
   const { results } = await sendEmailBatch(messages);
