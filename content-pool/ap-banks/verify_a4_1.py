@@ -50,11 +50,14 @@ territory and denies trade, item 29 exchanges which column grows faster. Those
 anchors carry BOTH clauses, which is the defect ``verify_e2_1.py`` shipped and
 ``HISTORY_BRIEF.md`` records.
 
-DATA ITEMS: 27, 28 and 29 carry tables of explicitly hypothetical figures,
-recomputed below from the table alone with every distractor falsified against
-the same rows. Row labels are compared literally and the numbers semantically,
-so a corrupted label fails on the label assertion and a corrupted figure fails
-on the claim the item actually makes.
+DATA ITEMS: 27, 28 and 29 carry tables of explicitly hypothetical figures. Each
+check recomputes the keyed claim and falsifies every distractor from the same
+rows FIRST, and only then compares the rows against the literal list stated
+here. The order is deliberate. Semantics alone caught only 6 of q27's 12 cells,
+because the shared corrupter can scale a figure in the direction the claim
+already runs; the literal list closes that and makes every cell load-bearing.
+Running it LAST is what keeps each semantic control firing on the guard it
+names rather than on row equality.
 
 NEGATIVE CONTROLS: ``python3 verify_a4_1.py --selftest``.
 """
@@ -65,6 +68,44 @@ import cg_check as cg
 import wh_check
 import wh_stimulus
 import a4_1
+
+_EXPECTED_SUFFRAGE = [
+    ["State 1", "3,100", "8,400"],
+    ["State 2", "2,700", "9,100"],
+    ["State 3", "4,500", "7,900"],
+    ["State 4", "1,800", "6,200"],
+]
+
+_EXPECTED_MARKET = [
+    ["1800 to 1810", "40", "160"],
+    ["1810 to 1820", "70", "150"],
+    ["1820 to 1830", "120", "130"],
+    ["1830 to 1840", "210", "110"],
+]
+
+_EXPECTED_ASSOC = [
+    ["1800 to 1810", "12", "9"],
+    ["1810 to 1820", "31", "10"],
+    ["1820 to 1830", "68", "11"],
+    ["1830 to 1840", "140", "12"],
+]
+
+
+def _rows_are(table, expected, what):
+    """Every remaining cell made load-bearing, AFTER the semantic guards above.
+
+    The order matters and is the point a1_1's verifier makes: a direction check
+    catches the corruptions that reverse a claim, but the shared corrupter can
+    also scale a figure in the direction the claim already runs -- q27 caught
+    only 6 of 12 cells before this was added. Comparing the rows literally
+    closes that, and running it LAST keeps every semantic control firing on the
+    guard it names rather than on row equality.
+    """
+    assert [list(r) for r in table["rows"]] == expected, (
+        f"the {what} table does not hold the rows this check was written against; "
+        f"got {table['rows']}"
+    )
+
 
 VOTE_BEFORE = "Adult white men able to vote while a property test applied"
 VOTE_AFTER = "Adult white men able to vote after the property test was dropped"
@@ -129,6 +170,7 @@ def q27(table, item):
         f"'the number rises in only one state' must be false; it rises in {len(risen)} of "
         f"{len(before)} rows"
     )
+    _rows_are(table, _EXPECTED_SUFFRAGE, "suffrage")
     return (f"all {len(before)} rows record a higher figure after the property test was "
             f"dropped, {before} rising to {after}")
 
@@ -154,6 +196,7 @@ def q28(table, item):
         "'the value consumed locally exceeds the value sent away in every decade' must be false"
     assert len(set(away)) > 1 and len(set(home)) > 1, \
         "'neither column changes' must be false"
+    _rows_are(table, _EXPECTED_MARKET, "market")
     return (f"goods sent away run {away} against {home} kept at home, so the share leaving "
             f"its district runs {[round(s, 2) for s in shares]}")
 
@@ -180,6 +223,7 @@ def q29(table, item):
     )
     assert all(o != i for o, i in zip(outside, inside)), \
         "'the two columns hold the same figure in every decade' must be false"
+    _rows_are(table, _EXPECTED_ASSOC, "association")
     return (f"associations outside government run {outside}, a multiple of "
             f"{round(grow_out, 1)}, against {inside} founded by government, a multiple of "
             f"{round(grow_in, 1)}")
