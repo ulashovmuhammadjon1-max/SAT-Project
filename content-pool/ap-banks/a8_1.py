@@ -255,10 +255,10 @@ QUESTIONS = [
         "A statement that the earlier period has no bearing on this one"],
       ans=0,
       why="The topic page offers two ways into context, one of them 'change from and/or "
-          "continuity with preceding historical developments'. A promise made in an earlier era "
-          "and still being pursued in this one is that continuity. The page's second approach "
-          "concerns contemporaneous developments in different regions, which is not what a link "
-          "backward in time is."),
+          "continuity with preceding historical developments'. KC-8.2.I places the activists of "
+          "this period in pursuit of promises made in an earlier era, so the link is that "
+          "continuity. The page's second approach concerns contemporaneous developments in "
+          "different regions, which is not what a link backward in time is."),
 
  dict(q="KC-8.2.II says a variety of movements emerged in response to two things and focused on "
         "three issues. Which option states both correctly?",
@@ -413,9 +413,9 @@ QUESTIONS = [
       ans=0,
       why="The heading over this topic's Required Course Content reads PREVIEW: UNIT 8 KEY "
           "CONCEPTS, and the page tells the teacher to select one or two of those concepts for "
-          "which students most need context. The lettered sub-points that carry the detail are "
-          "printed on the later topic pages of the same unit, so the unit does cover them and "
-          "does not defer them to another period."),
+          "which students most need context. The lettered sub-points beneath KC-8.1, KC-8.2 and "
+          "KC-8.3 carry that detail and are printed on the later topic pages of the same unit, "
+          "so the unit does cover them and does not defer them to another period."),
 
  dict(q="Which of the following statements belongs to the unit's first key concept rather than "
         "to KC-8.2 or KC-8.3?",
