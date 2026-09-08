@@ -48,6 +48,12 @@ export const countedStudentWhere = {
  */
 export const awaitingVerificationWhere = {
   role: "STUDENT",
+  // Only an account that HAS an address can be waiting to confirm it. Since
+  // username signup a new account has none, and without this every one of
+  // them would sit in the "stuck in verification" callout forever. Kept in
+  // step with the gate in `lib/session.ts`, which passes such accounts
+  // through for the same reason.
+  email: { not: null },
   emailVerified: null,
   createdAt: { gte: VERIFICATION_REQUIRED_FROM },
 } satisfies Prisma.UserWhereInput;

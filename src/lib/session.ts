@@ -43,9 +43,16 @@ export async function requireVerifiedUser() {
 
   const row = await prisma.user.findUnique({
     where: { id: user.id },
-    select: { emailVerified: true, createdAt: true },
+    select: { email: true, emailVerified: true, createdAt: true },
   });
   if (!row) return user;
+  // An account with no email address has nothing to confirm. Since username
+  // signup a new account has none at all, and without this line every one of
+  // them was bounced to /verify-email -- created after the cutoff, never
+  // verified, and with no address the page could ever send a link to. That
+  // is the "it again says to confirm email" report, and it was a loop with
+  // no exit.
+  if (!row.email) return user;
   if (row.emailVerified) return user;
   if (row.createdAt < VERIFICATION_REQUIRED_FROM) return user;
 

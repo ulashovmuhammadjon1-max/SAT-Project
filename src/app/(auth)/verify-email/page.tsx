@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { CheckCircle2, MailCheck } from "lucide-react";
 
 import { ResendVerificationButton } from "@/components/auth/resend-verification-button";
@@ -71,14 +72,20 @@ export default async function VerifyEmailPage({
 
   // Waiting state.
   const sessionUser = await getCurrentUser();
-  const address = sessionUser?.email
-    ? (
-        await prisma.user.findUnique({
-          where: { id: sessionUser.id },
-          select: { email: true, emailVerified: true },
-        })
-      )
+  const address = sessionUser
+    ? await prisma.user.findUnique({
+        where: { id: sessionUser.id },
+        select: { email: true, emailVerified: true },
+      })
     : null;
+
+  // Nothing to confirm. A username-only account has no address, so the
+  // "check your inbox" screen below would be describing a message that was
+  // never sent to a place that does not exist. Anyone landing here from an
+  // old bookmark, or from a build that predates the gate fix, goes to work.
+  if (sessionUser && address && !address.email) {
+    redirect("/dashboard");
+  }
 
   if (address?.emailVerified) {
     return (
