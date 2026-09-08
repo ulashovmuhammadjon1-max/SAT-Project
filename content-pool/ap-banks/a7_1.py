@@ -74,9 +74,9 @@ _T_MIGRANTS = dict(
     headers=["Stretch of the period (illustrative)",
              "International migrants recorded (thousands)",
              "Internal migrants recorded (thousands)"],
-    rows=[["Stretch 1", "820", "310"],
+    rows=[["Stretch 1", "820", "210"],
           ["Stretch 2", "240", "540"],
-          ["Stretch 3", "90", "760"]])
+          ["Stretch 3", "90", "900"]])
 
 _T_CONCEPTS = dict(
     headers=["Statement offered as context (illustrative)",
