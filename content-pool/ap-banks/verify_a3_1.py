@@ -135,49 +135,59 @@ def q20(table, item):
             f"carry {rest[0]} each, and they total {sum(counts)}")
 
 
-_EXPECTED_APPROACH = [
-    ["Colonial traditions of self-government had been forming before 1754", "Preceding"],
-    ["Enlightenment ideas were being argued over in Europe during these same decades",
-     "Contemporaneous, in a different region"],
-    ["New states were admitted west of the mountains long after 1848", "Later than the period"],
-    ["British and French rivalry in North America had begun well before 1754", "Preceding"],
+_EXPECTED_APPROACH_STATEMENTS = [
+    "Colonial traditions of self-government had been forming before 1754",
+    "Enlightenment ideas were being argued over in Europe during these same decades",
+    "New states were admitted west of the mountains long after 1848",
+    "British and French rivalry in North America had begun well before 1754",
 ]
+_CATEGORIES = {"Preceding", "Contemporaneous, in a different region", "Later than the period"}
 
 
 def q21(table, item):
-    assert [list(r) for r in table["rows"]] == _EXPECTED_APPROACH, (
-        f"the context table does not hold the rows this check was written against; "
-        f"got {table['rows']}"
+    # ONLY THE STATEMENT COLUMN IS COMPARED LITERALLY. The category column is
+    # left to the semantic guards below, so the control that marks a SECOND row
+    # 'Later than the period' raises on the count the key actually depends on
+    # rather than on a row-equality assertion, which would fire for the wrong
+    # reason and prove nothing about the guard it names. A corrupted category
+    # cell still fails, through the membership check: the shared corrupter
+    # appends text, and 'Preceding CORRUPTED' is not one of the three marks.
+    assert _col(table, STATEMENT) == _EXPECTED_APPROACH_STATEMENTS, (
+        f"the context table's statements are not the ones this check was written "
+        f"against; got {_col(table, STATEMENT)}"
     )
-    standing = [s.strip().lower() for s in _col(table, STANDING)]
-    later = [s for s in standing if s.startswith("later")]
+    standing = [s.strip() for s in _col(table, STANDING)]
+    for s in standing:
+        assert s in _CATEGORIES, (
+            f"every row must carry one of the three marks this check reads; got {s!r}")
+    later = [s for s in standing if s == "Later than the period"]
     assert len(later) == 1, (
-        f"the key names exactly one row outside the two approaches; {len(later)} rows are "
-        f"marked later than the period")
-    preceding = [s for s in standing if s.startswith("preceding")]
-    contemporaneous = [s for s in standing if s.startswith("contemporaneous")]
+        f"the key names THE one row outside the two approaches, so exactly one row may be "
+        f"marked later than the period; {len(later)} are")
+    preceding = [s for s in standing if s == "Preceding"]
+    contemporaneous = [s for s in standing if s.startswith("Contemporaneous")]
     assert preceding and contemporaneous, (
         f"both of the topic page's approaches must appear among the other rows, or the "
-        f"remaining four options are not all false; got {standing}")
+        f"four rejected options are not all false; got {standing}")
     assert len(preceding) + len(contemporaneous) + len(later) == len(standing), (
         f"every row must fall into one of the three categories; got {standing}")
-    # 'No row falls outside the two approaches' must be false, which is the same
-    # count as above, stated from the distractor's side.
-    assert later, "'no row falls outside the two approaches' must be false"
     return (f"{len(preceding)} rows are marked preceding and {len(contemporaneous)} "
             f"contemporaneous elsewhere, against exactly {len(later)} marked later than "
             f"the period")
 
 
-_EXPECTED_SPAN = [["Period 2", "1607", "1754"],
-                  ["Period 3", "1754", "1800"],
-                  ["Period 4", "1800", "1848"]]
+_EXPECTED_PERIODS = ["Period 2", "Period 3", "Period 4"]
+# The three spans the framework prints for these periods, stated here rather
+# than read off the module so that every year cell is load-bearing. The
+# ABUTMENT assertions come first, so the control that moves a boundary year
+# raises on the equality the key depends on rather than on this list.
+_EXPECTED_LENGTHS = [147, 46, 48]
 
 
 def q22(table, item):
-    assert [list(r) for r in table["rows"]] == _EXPECTED_SPAN, (
-        f"the period table does not hold the rows this check was written against; "
-        f"got {table['rows']}"
+    assert _col(table, PERIOD) == _EXPECTED_PERIODS, (
+        f"the period table does not name the three periods this check was written "
+        f"against; got {_col(table, PERIOD)}"
     )
     firsts = [int(v) for v in _col(table, FIRST)]
     lasts = [int(v) for v in _col(table, LAST)]
@@ -194,6 +204,9 @@ def q22(table, item):
     assert lengths[1] < lengths[0] and lengths[1] < lengths[2], (
         f"'longer than the preceding period and shorter than the following one' must be "
         f"false; the spans are {lengths}")
+    assert lengths == _EXPECTED_LENGTHS, (
+        f"the spans are not the ones the framework prints for these three periods; "
+        f"got {lengths}")
     return (f"the spans run {list(zip(firsts, lasts))}: each closes in the year the next "
             f"opens, and their lengths are {lengths}")
 
@@ -289,16 +302,23 @@ def _extra_mutations():
         t["rows"][0][2] = "1744"
         mod.QUESTIONS[21]["table"] = t
 
+    # Each control names the assertion it must raise on. A control that fires
+    # for the WRONG reason proves nothing about the guard it names, and the two
+    # table controls below both did exactly that in a first draft -- they hit a
+    # whole-row equality assertion that would have passed unchanged had the
+    # derived checks been deleted.
     return [
-        ("period detail in a contextualizing topic", period_detail_creeps_in),
+        ("period detail in a contextualizing topic", period_detail_creeps_in,
+         r"printed under a lettered sub-point"),
         ("a second row marked later than the period, so q21's key names one of two",
-         two_rows_marked_later),
-        ("a boundary year moved back, so the spans no longer meet", spans_leave_a_gap),
+         two_rows_marked_later, r"exactly one row may be\s+marked later than the period"),
+        ("a boundary year moved back, so the spans no longer meet", spans_leave_a_gap,
+         r"must close in the year this one opens"),
     ]
 
 
 if __name__ == "__main__" and "--selftest" in sys.argv:
-    for label, mutate in _extra_mutations():
+    for label, mutate, expect in _extra_mutations():
         mod = wh_check._mutant(a3_1)
         claims = list(CLAIMS)
         try:
@@ -308,6 +328,8 @@ if __name__ == "__main__" and "--selftest" in sys.argv:
             import cg_check as cg
             cg.check(mod, claims, table_checks=TABLE_CHECKS)
         except AssertionError as e:
+            assert re.search(expect, str(e)), (
+                f"CONTROL FIRED FOR THE WRONG REASON: {label} -- {e}")
             print(f"  control OK  {label}: {str(e)[:110]}")
         else:
             raise SystemExit(f"CONTROL FAILED: {label} did not raise")
