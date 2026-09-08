@@ -3,12 +3,16 @@
 # context for a specific historical development or process. Reasoning process for this
 # topic: Continuity and Change.
 #
-# NOTE ON THE SOURCE FILE. HISTORY_BRIEF.md says to read the CED with
-# `zcat ced-source/US_HISTORY_ced.txt.gz`. That archive is NOT in the repository -- the
-# setup commit (27976a5) added US_HISTORY_topics.json and the extractor but not the CED
-# dump, so the only copy in this container is the coordinator's pdftotext output at
-# /tmp/ced/US_HISTORY.txt. Every sentence quoted below was read from that file, and the
-# gap is reported rather than papered over.
+# NOTE ON THE SOURCE FILE, worth keeping for the next agent. When this module was
+# written `ced-source/US_HISTORY_ced.txt.gz` was not yet in the repository (the setup
+# commit added the topic list and the extractor but not the dump; commit 9069f8c landed
+# it afterwards), so every sentence quoted below was read from the coordinator's
+# pdftotext output at /tmp/ced/US_HISTORY.txt.
+#
+# DO NOT `zcat ... > /tmp/apush.txt` and read that path. Sibling agents share this
+# container and share /tmp, so the same command run by two agents truncates the file
+# under the other one -- observed here, as a 26,553-line file that `wc -c` reported as 0
+# bytes. Unzip to your own scratch directory instead.
 #
 # THE CED SENTENCES EVERY KEY IN THIS MODULE RESTS ON, in the framework's own words:
 #
@@ -383,8 +387,9 @@ QUESTIONS = [
         "Argumentation, which asks students to develop a defensible claim",
         "Sourcing and Situation, which asks students to analyse a source's audience"],
       ans=0,
-      why="The unit's table of contents prints Continuity and Change as the reasoning process "
-          "for this topic, and the framework defines that process as describing and "
+      why="The unit's own table prints Continuity and Change as the reasoning process for "
+          "this topic, which Unit 4 Learning Objective A asks students to apply to the span "
+          "1800 to 1848, and the framework defines that process as describing and "
           "explaining patterns of continuity and change over time. Causation and Comparison "
           "are the other two reasoning processes and belong to other topics of Unit 4; "
           "argumentation and sourcing are historical thinking skills rather than reasoning "
