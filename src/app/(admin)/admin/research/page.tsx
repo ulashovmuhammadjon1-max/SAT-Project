@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResearchDecision } from "@/components/admin/research-decision";
+import { ResearchMessage } from "@/components/admin/research-message";
 import { listAcceptedProjects } from "@/lib/journal/projects";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
@@ -70,6 +71,26 @@ export default async function AdminResearchPage() {
   // the student and the world actually see. Built from the same function the
   // journal uses, never re-derived here — two slug rules would drift.
   const slugById = new Map(projects.map((p) => [p.id, p.slug]));
+
+  const SITE = process.env.NEXT_PUBLIC_APP_URL ?? "https://scholarly.space";
+
+  /**
+   * The message that is nearly always the one being sent to an accepted
+   * student: their project is up, here is where, come and talk to me. Prefilled
+   * so sending is one click, and still editable for anything else.
+   */
+  function draftFor(name: string | null, slug: string | undefined) {
+    const firstName = name?.trim().split(/\s+/)[0] || "there";
+    const link = slug ? `${SITE}/journal/projects/${slug}` : `${SITE}/journal`;
+    return (
+      `Hi ${firstName},\n\n` +
+      `Your proposal has been accepted into the Scholarly research programme, and your ` +
+      `project now has its own page in the Scholarly Journal:\n\n${link}\n\n` +
+      `Next step is mentor pairing and planning how the project will run. Please message ` +
+      `me on Telegram at @ulashovmuhammadjon1 and we will get you started.\n\n` +
+      `Muhammadjon\nScholarly`
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -154,6 +175,12 @@ export default async function AdminResearchPage() {
                           View the public project page →
                         </Link>
                       )}
+                      <ResearchMessage
+                        proposalId={p.id}
+                        studentEmail={p.user.email}
+                        defaultSubject="Your Scholarly research project is published"
+                        defaultBody={draftFor(p.user.name, slugById.get(p.id))}
+                      />
                     </div>
                   </details>
                 </li>
