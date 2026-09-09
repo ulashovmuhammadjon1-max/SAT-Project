@@ -1,16 +1,57 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResearchDecision } from "@/components/admin/research-decision";
+import { listAcceptedProjects } from "@/lib/journal/projects";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 
 export const metadata = { title: "Research Proposals" };
 export const dynamic = "force-dynamic";
 
+/**
+ * What the student actually wrote.
+ *
+ * Shared by the pending queue and the decided list. It used to exist only in
+ * the pending branch, so the moment a proposal was accepted its question and
+ * motivation disappeared from the admin panel entirely and the only copy left
+ * was in the database — which is not somewhere the person running the
+ * programme can read it.
+ */
+function ProposalBody({
+  question,
+  motivation,
+  experience,
+}: {
+  question: string;
+  motivation: string;
+  experience: string | null;
+}) {
+  return (
+    <div className="space-y-3">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Question</p>
+        <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{question}</p>
+      </div>
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Motivation</p>
+        <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{motivation}</p>
+      </div>
+      {experience && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Experience</p>
+          <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{experience}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default async function AdminResearchPage() {
   await requireAdmin();
 
-  const [pending, decided] = await Promise.all([
+  const [pending, decided, projects] = await Promise.all([
     prisma.researchProposal.findMany({
       where: { status: "PENDING" },
       orderBy: { createdAt: "asc" },
@@ -22,7 +63,13 @@ export default async function AdminResearchPage() {
       take: 20,
       include: { user: { select: { name: true, email: true } } },
     }),
+    listAcceptedProjects(),
   ]);
+
+  // The public URL for an accepted project, so the admin list can link to what
+  // the student and the world actually see. Built from the same function the
+  // journal uses, never re-derived here — two slug rules would drift.
+  const slugById = new Map(projects.map((p) => [p.id, p.slug]));
 
   return (
     <div className="space-y-6">
@@ -54,20 +101,11 @@ export default async function AdminResearchPage() {
             </div>
           </CardHeader>
           <CardContent className="space-y-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Question</p>
-              <p className="mt-0.5 text-sm leading-relaxed">{p.question}</p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Motivation</p>
-              <p className="mt-0.5 text-sm leading-relaxed">{p.motivation}</p>
-            </div>
-            {p.experience && (
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Experience</p>
-                <p className="mt-0.5 text-sm leading-relaxed">{p.experience}</p>
-              </div>
-            )}
+            <ProposalBody
+              question={p.question}
+              motivation={p.motivation}
+              experience={p.experience}
+            />
             <ResearchDecision proposalId={p.id} />
           </CardContent>
         </Card>
@@ -81,14 +119,43 @@ export default async function AdminResearchPage() {
           <CardContent>
             <ul className="divide-y divide-border">
               {decided.map((p) => (
-                <li key={p.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-sm">
-                  <span className="min-w-[200px] flex-1">
-                    <span className="font-medium">{p.title}</span>
-                    <span className="ml-2 text-xs text-muted-foreground">{p.user.name}</span>
-                  </span>
-                  <Badge variant={p.status === "ACCEPTED" ? "success" : "destructive"}>
-                    {p.status === "ACCEPTED" ? "Accepted" : "Rejected"}
-                  </Badge>
+                <li key={p.id} className="py-2.5 text-sm">
+                  <details className="group">
+                    <summary className="flex cursor-pointer flex-wrap items-center justify-between gap-2 list-none">
+                      <span className="min-w-[200px] flex-1">
+                        <span className="font-medium">{p.title}</span>
+                        <span className="ml-2 text-xs text-muted-foreground">{p.user.name}</span>
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground group-open:hidden">
+                          Show submission
+                        </span>
+                        <Badge variant={p.status === "ACCEPTED" ? "success" : "destructive"}>
+                          {p.status === "ACCEPTED" ? "Accepted" : "Rejected"}
+                        </Badge>
+                      </span>
+                    </summary>
+                    <div className="mt-3 rounded-lg border border-border bg-secondary/30 p-4">
+                      <ProposalBody
+                        question={p.question}
+                        motivation={p.motivation}
+                        experience={p.experience}
+                      />
+                      {p.adminNote && (
+                        <p className="mt-3 text-xs text-muted-foreground">
+                          Note sent to the student: {p.adminNote}
+                        </p>
+                      )}
+                      {p.status === "ACCEPTED" && slugById.get(p.id) && (
+                        <Link
+                          href={`/journal/projects/${slugById.get(p.id)}`}
+                          className="mt-3 inline-block text-xs font-medium text-primary underline-offset-4 hover:underline"
+                        >
+                          View the public project page →
+                        </Link>
+                      )}
+                    </div>
+                  </details>
                 </li>
               ))}
             </ul>

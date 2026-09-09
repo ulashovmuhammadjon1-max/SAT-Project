@@ -2,8 +2,8 @@ import Link from "next/link";
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
-import { prisma } from "@/lib/prisma";
 import { JOURNAL_PAPERS } from "@/lib/journal/papers";
+import { listAcceptedProjects, type JournalProject } from "@/lib/journal/projects";
 
 export const metadata = {
   title: "Journal",
@@ -13,24 +13,15 @@ export const metadata = {
 
 export const dynamic = "force-dynamic";
 
-interface Project {
-  title: string;
-  field: string;
-  author: string;
-}
-
-async function getProjects(): Promise<Project[]> {
+/**
+ * Newest acceptance first for display. The slugs themselves are assigned in
+ * creation order inside `listAcceptedProjects`, so sorting here changes the
+ * order of the cards without moving anybody's URL.
+ */
+async function getProjects(): Promise<JournalProject[]> {
   try {
-    const rows = await prisma.researchProposal.findMany({
-      where: { status: "ACCEPTED" },
-      orderBy: { decidedAt: "desc" },
-      select: { title: true, field: true, user: { select: { name: true } } },
-    });
-    return rows.map((r) => ({
-      title: r.title,
-      field: r.field,
-      author: r.user.name ?? "Scholarly student",
-    }));
+    const projects = await listAcceptedProjects();
+    return projects.sort((a, b) => (b.acceptedAt ?? "").localeCompare(a.acceptedAt ?? ""));
   } catch (error) {
     // A build without a database must not fail; the first request regenerates.
     console.error("[journal] projects unavailable", error);
@@ -109,14 +100,19 @@ export default async function JournalPage() {
               </p>
             ) : (
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {projects.map((p, i) => (
-                  <div key={`${p.title}-${i}`} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+                {projects.map((p) => (
+                  <Link
+                    key={p.id}
+                    href={`/journal/projects/${p.slug}`}
+                    className="block rounded-2xl border border-border/70 bg-card p-5 shadow-soft transition-colors hover:border-foreground/25 hover:bg-secondary/40"
+                  >
                     <p className="text-xs font-semibold uppercase tracking-wide text-[hsl(190_84%_42%)]">
                       {p.field}
                     </p>
                     <p className="mt-1.5 font-medium leading-snug">{p.title}</p>
                     <p className="mt-2 text-sm text-muted-foreground">{p.author}</p>
-                  </div>
+                    <p className="mt-3 text-[13px] font-medium text-primary">Read the proposal →</p>
+                  </Link>
                 ))}
               </div>
             )}
