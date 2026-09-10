@@ -40,15 +40,16 @@ export function LoginForm() {
   return (
     <form action={onSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="identifier">Username</Label>
-        {/* One field for both kinds of credential. Accounts created since
-            username signup have no email; the ones that predate it have no
-            username, and they sign in with the address they registered. */}
+        <Label htmlFor="identifier">Username or email</Label>
+        {/* One field for both kinds of credential. Accounts that signed up
+            through the onboarding wizard use their email; the bulk-provisioned
+            accounts have a username and no email. An "@" tells the two apart
+            (a username cannot contain one), so this one field serves both. */}
         <Input
           id="identifier"
           name="identifier"
           type="text"
-          placeholder="your username"
+          placeholder="username or email"
           required
           autoComplete="username"
           autoCapitalize="none"

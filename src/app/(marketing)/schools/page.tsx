@@ -95,10 +95,6 @@ export default async function SchoolsPage() {
           Curious what your students would be using?{" "}
           <Link href="/" className="font-medium text-primary underline-offset-4 hover:underline">
             See the platform
-          </Link>{" "}
-          or{" "}
-          <Link href="/impact" className="font-medium text-primary underline-offset-4 hover:underline">
-            our live numbers
           </Link>
           .
         </p>

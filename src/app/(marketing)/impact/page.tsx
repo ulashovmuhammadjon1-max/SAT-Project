@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
-import { getCurrentUser } from "@/lib/session";
+import { getCurrentUser, requireAdmin } from "@/lib/session";
 import { countedStudentWhere } from "@/lib/counted-students";
 import { prisma } from "@/lib/prisma";
 
@@ -12,13 +12,17 @@ export const metadata = {
 };
 
 /**
- * Public, self-updating proof of scale.
+ * Admin-only, self-updating proof of scale.
  *
  * Every number on this page is computed from the live database on render —
- * nothing is typed in, so nothing can quietly go stale or get inflated. That
- * is the whole point: a claim anyone can check is worth more than a bigger
- * claim nobody can. Rendered per request so a signed-in visitor gets the
- * in-app return bar instead of the marketing nav.
+ * nothing is typed in, so nothing can quietly go stale or get inflated. It
+ * used to be public, on the reasoning that a claim anyone can check is worth
+ * more than a bigger claim nobody can. It is now restricted to admins on the
+ * user's instruction: `requireAdmin` below sends a signed-out visitor to the
+ * login page and a signed-in non-admin to their dashboard, and every public
+ * entry point to it — the marketing nav, the landing footer, and the
+ * team/schools cross-links — has been removed. The route is also no longer in
+ * the middleware allow-list, so it is not reachable without a session at all.
  */
 export const dynamic = "force-dynamic";
 
@@ -66,6 +70,11 @@ async function queryImpact() {
 const fmt = (n: number) => n.toLocaleString("en-US");
 
 export default async function ImpactPage() {
+  // Admins only. Redirects a signed-out visitor to /login and a signed-in
+  // non-admin to /dashboard, so the live numbers are never shown to the public
+  // or to students.
+  await requireAdmin();
+
   const [d, user] = await Promise.all([getImpact(), getCurrentUser()]);
 
   const STATS: { value: string; label: string; sub: string }[] = [

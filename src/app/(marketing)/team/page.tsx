@@ -216,14 +216,6 @@ export default async function TeamPage() {
             ))}
           </div>
         </section>
-
-        <p className="mt-12 text-sm text-muted-foreground">
-          See what the team has built:{" "}
-          <Link href="/impact" className="font-medium text-primary underline-offset-4 hover:underline">
-            our live impact numbers
-          </Link>
-          .
-        </p>
       </main>
     </div>
   );

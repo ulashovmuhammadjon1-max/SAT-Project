@@ -17,9 +17,9 @@ const PUBLIC_ROUTES = [
   "/verify-email",
   "/terms",
   "/privacy",
-  // The whole point of the impact page is that anyone — an admissions
-  // officer included — can open it without an account.
-  "/impact",
+  // NOTE: /impact is deliberately NOT public. It is admin-only now (the page
+  // itself calls requireAdmin), so it must fall through to the auth check
+  // below rather than be allow-listed here.
   "/team",
   "/schools",
   "/journal",
