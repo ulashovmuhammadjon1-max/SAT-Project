@@ -4,6 +4,7 @@ import { AchievementTile, CATEGORY_ICONS } from "@/components/student/achievemen
 import { getAchievements } from "@/lib/achievements/service";
 import { CATEGORY_LABELS, type AchievementCategory } from "@/lib/achievements/definitions";
 import { requireUser } from "@/lib/session";
+import { ScenicHeader } from "@/components/shared/scenic-header";
 
 export const metadata = { title: "Achievements" };
 export const dynamic = "force-dynamic";
@@ -25,12 +26,18 @@ export default async function AchievementsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="font-display text-2xl font-semibold tracking-tight">Achievements</h1>
-        <p className="text-sm text-muted-foreground">
+      <ScenicHeader
+        theme="achievements"
+        priority
+        contentClassName="flex min-h-[168px] flex-col justify-end"
+      >
+        <h1 className="font-display text-2xl font-semibold tracking-tight drop-shadow-sm">
+          Achievements
+        </h1>
+        <p className="mt-1 text-sm text-white/85 drop-shadow-sm">
           Earned automatically from what you have already done — nothing to claim.
         </p>
-      </div>
+      </ScenicHeader>
 
       <Card>
         <CardContent className="flex flex-wrap items-center gap-6 p-6">

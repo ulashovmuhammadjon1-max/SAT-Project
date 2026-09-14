@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { GRADE_LABELS, SECTION_LABELS } from "@/lib/validations/onboarding";
 import { AuroraBackdrop } from "@/components/shared/motion";
+import { ScenicHeader } from "@/components/shared/scenic-header";
 
 export interface PersonalizedHeaderProps {
   firstName: string;
@@ -56,29 +57,35 @@ export function PersonalizedHeader({
   return (
     <div className="relative space-y-5">
       <AuroraBackdrop className="-z-10 opacity-70" />
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-            Welcome back{firstName ? `, ${firstName}` : ""}
-          </h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {goalMet
-              ? "Today's goal is done — anything else is a bonus."
-              : dailyGoalValue !== null
-                ? `${Math.max(dailyGoalValue - goalDone, 0)} ${
-                    dailyGoalType === "MINUTES" ? "minutes" : "questions"
-                  } left to hit today's goal.`
-                : "Here's where your prep stands today."}
-          </p>
-        </div>
+      <ScenicHeader
+        theme="dashboard"
+        priority
+        contentClassName="flex min-h-[176px] flex-col justify-end sm:min-h-[200px]"
+      >
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h1 className="font-display text-2xl font-semibold tracking-tight drop-shadow-sm sm:text-3xl">
+              Welcome back{firstName ? `, ${firstName}` : ""}
+            </h1>
+            <p className="mt-1 text-sm text-white/85 drop-shadow-sm">
+              {goalMet
+                ? "Today's goal is done — anything else is a bonus."
+                : dailyGoalValue !== null
+                  ? `${Math.max(dailyGoalValue - goalDone, 0)} ${
+                      dailyGoalType === "MINUTES" ? "minutes" : "questions"
+                    } left to hit today's goal.`
+                  : "Here's where your prep stands today."}
+            </p>
+          </div>
 
-        {currentStreak > 0 && (
-          <span className="flex items-center gap-1.5 rounded-full bg-warning/10 px-3 py-1.5 text-sm font-semibold text-warning-foreground">
-            <Flame className="h-4 w-4 text-warning" />
-            {currentStreak}-day streak
-          </span>
-        )}
-      </div>
+          {currentStreak > 0 && (
+            <span className="flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+              <Flame className="h-4 w-4 text-amber-300" />
+              {currentStreak}-day streak
+            </span>
+          )}
+        </div>
+      </ScenicHeader>
 
       {!onboarded && (
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary/40 bg-primary-50/60 px-5 py-4">
