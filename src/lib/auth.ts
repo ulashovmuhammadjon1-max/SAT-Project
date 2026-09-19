@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 
 import { prisma } from "@/lib/prisma";
 import { loginSchema, looksLikeEmail } from "@/lib/validations/auth";
+import { oauthProviders } from "@/lib/auth-providers";
 import authConfig from "@/lib/auth.config";
 
 /** 30 days, in seconds. */
@@ -70,5 +71,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         };
       },
     }),
+    // Google / Microsoft / Apple — each present only when its credentials are
+    // configured (see auth-providers.ts). With no OAuth env set this is empty
+    // and the app behaves exactly as before: email + password only.
+    ...oauthProviders(),
   ],
 });
