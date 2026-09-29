@@ -17,10 +17,7 @@ const PUBLIC_ROUTES = [
   "/verify-email",
   "/terms",
   "/privacy",
-  // NOTE: /impact is deliberately NOT public. It is admin-only now (the page
-  // itself calls requireAdmin), so it must fall through to the auth check
-  // below rather than be allow-listed here.
-  "/team",
+  // /impact and /team were removed from the site; do not re-add them here.
   "/schools",
   "/journal",
 ];

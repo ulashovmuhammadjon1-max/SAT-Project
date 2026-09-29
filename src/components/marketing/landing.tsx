@@ -1270,11 +1270,6 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/team" className="transition-colors hover:text-foreground">
-                  Team
-                </Link>
-              </li>
-              <li>
                 <Link href="/journal" className="transition-colors hover:text-foreground">
                   Journal
                 </Link>
