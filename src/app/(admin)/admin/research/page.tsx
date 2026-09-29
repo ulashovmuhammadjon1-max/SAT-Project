@@ -81,11 +81,11 @@ export default async function AdminResearchPage() {
    */
   function draftFor(name: string | null, slug: string | undefined) {
     const firstName = name?.trim().split(/\s+/)[0] || "there";
-    const link = slug ? `${SITE}/journal/projects/${slug}` : `${SITE}/journal`;
+    const link = slug ? `${SITE}/journal/projects/${slug}` : `${SITE}/research`;
     return (
       `Hi ${firstName},\n\n` +
-      `Your proposal has been accepted into the Scholarly research programme, and your ` +
-      `project now has its own page in the Scholarly Journal:\n\n${link}\n\n` +
+      `Your proposal has been accepted into the Scholarly research programme. You can see ` +
+      `your project page here (it is private to you and our team):\n\n${link}\n\n` +
       `Next step is mentor pairing and planning how the project will run. Please message ` +
       `me on Telegram at @ulashovmuhammadjon1 and we will get you started.\n\n` +
       `Muhammadjon\nScholarly`
@@ -172,7 +172,7 @@ export default async function AdminResearchPage() {
                           href={`/journal/projects/${slugById.get(p.id)}`}
                           className="mt-3 inline-block text-xs font-medium text-primary underline-offset-4 hover:underline"
                         >
-                          View the public project page →
+                          View the project page (private) →
                         </Link>
                       )}
                       <ResearchMessage

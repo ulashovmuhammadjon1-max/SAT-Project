@@ -2,12 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
-import { SiteNav } from "@/components/marketing/site-nav";
-import { projectBySlug, toParagraphs } from "@/lib/journal/projects";
+import { projectBySlug, toParagraphs, type JournalProject } from "@/lib/journal/projects";
 import { getCurrentUser } from "@/lib/session";
 
 /**
- * A project in progress, as its own page.
+ * A project in progress, as its own page — PRIVATE.
+ *
+ * Visible only to the project's author and to admins. Anyone else, signed in
+ * or not, gets a plain 404, so the page does not even confirm that a project
+ * exists. Signed-out visitors never reach this code: the middleware sends them
+ * to sign in. The metadata is gated the same way, so no title or author leaks
+ * into the page head either.
  *
  * Every word of the body is the student's own submission, reproduced. This
  * page states no findings and draws no conclusions, because the work has not
@@ -25,14 +30,22 @@ const LONG_DATE = new Intl.DateTimeFormat("en-GB", {
   timeZone: "UTC",
 });
 
+/** The project, if the current user may see it; otherwise undefined. */
+async function visibleProject(slug: string): Promise<JournalProject | undefined> {
+  const [project, user] = await Promise.all([projectBySlug(slug), getCurrentUser()]);
+  if (!project || !user) return undefined;
+  if (user.role === "ADMIN" || user.id === project.userId) return project;
+  return undefined;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const project = await projectBySlug(slug);
-  if (!project) return { title: "Project not found" };
+  const project = await visibleProject(slug);
+  // Never index, and never reveal a title to someone who cannot see the page.
+  if (!project) return { title: "Not found", robots: { index: false, follow: false } };
   return {
-    title: `${project.title} — The Scholarly Journal`,
-    description: `A research project in progress by ${project.author}, in ${project.field}.`,
-    authors: [{ name: project.author }],
+    title: `${project.title} — Research project`,
+    robots: { index: false, follow: false },
   };
 }
 
@@ -51,18 +64,18 @@ function Section({ heading, body }: { heading: string; body: string }) {
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [project, user] = await Promise.all([projectBySlug(slug), getCurrentUser()]);
+  const project = await visibleProject(slug);
   if (!project) notFound();
 
   return (
     <div className="min-h-screen bg-background">
-      {user ? <AppReturnBar backHref="/research" backLabel="Back to Research" /> : <SiteNav />}
+      <AppReturnBar backHref="/research" backLabel="Back to Research" />
       <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
         <Link
-          href="/journal"
+          href="/research"
           className="text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
-          ← The Scholarly Journal
+          ← Research
         </Link>
 
         <header className="mt-6 border-b border-border pb-8">
@@ -82,9 +95,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </header>
 
         <p className="mt-8 rounded-xl border border-dashed border-border bg-secondary/30 px-5 py-4 text-[14px] leading-relaxed text-muted-foreground">
-          This is a research proposal, not a finished paper. It sets out the question{" "}
-          {project.author} is investigating and why. There are no results here yet — the findings
-          and method will be published in this journal when the work is complete.
+          This project is private: only its author and the Scholarly team can see this page. It
+          sets out the question {project.author} is investigating and why. When the work is
+          finished, the paper can be published in the Scholarly Journal.
         </p>
 
         <Section heading="The question" body={project.question} />
@@ -95,12 +108,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         <footer className="mt-16 border-t border-border pt-8">
           <p className="text-[13px] leading-relaxed text-muted-foreground">
-            Published in The Scholarly Journal, which carries research by students in the Scholarly
-            research programme.{" "}
-            <Link href="/journal" className="font-medium text-foreground hover:underline">
-              See the other projects and papers
-            </Link>
-            .
+            A project in the Scholarly research programme. This page is not public.
           </p>
         </footer>
       </main>

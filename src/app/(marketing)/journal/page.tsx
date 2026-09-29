@@ -3,34 +3,22 @@ import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { JOURNAL_PAPERS } from "@/lib/journal/papers";
-import { listAcceptedProjects, type JournalProject } from "@/lib/journal/projects";
 
 export const metadata = {
   title: "Journal",
   description:
-    "The Scholarly Journal — student research from the community: published work and projects in progress, by area.",
+    "The Scholarly Journal — finished research by students in the Scholarly research programme.",
 };
 
 export const dynamic = "force-dynamic";
 
 /**
- * Newest acceptance first for display. The slugs themselves are assigned in
- * creation order inside `listAcceptedProjects`, so sorting here changes the
- * order of the cards without moving anybody's URL.
+ * Only finished, published papers are public. Accepted projects that are still
+ * in progress are deliberately NOT listed here: they are private to their
+ * author and the team (see journal/projects/[slug]).
  */
-async function getProjects(): Promise<JournalProject[]> {
-  try {
-    const projects = await listAcceptedProjects();
-    return projects.sort((a, b) => (b.acceptedAt ?? "").localeCompare(a.acceptedAt ?? ""));
-  } catch (error) {
-    // A build without a database must not fail; the first request regenerates.
-    console.error("[journal] projects unavailable", error);
-    return [];
-  }
-}
-
 export default async function JournalPage() {
-  const [projects, user] = await Promise.all([getProjects(), getCurrentUser()]);
+  const user = await getCurrentUser();
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,8 +31,8 @@ export default async function JournalPage() {
           Research by students, published here
         </h1>
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-          Every project in the research programme ends up on this page — first as work in
-          progress, then as finished, published writing with the student&apos;s name on it.
+          Finished research from the Scholarly research programme, published with the
+          student&apos;s name on it.
         </p>
 
         <div className="mt-10 space-y-10">
@@ -82,39 +70,6 @@ export default async function JournalPage() {
                   </li>
                 ))}
               </ul>
-            )}
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl font-semibold tracking-tight">In progress</h2>
-            {projects.length === 0 ? (
-              <p className="mt-4 rounded-2xl border border-dashed border-border px-5 py-10 text-center text-sm text-muted-foreground">
-                No accepted projects yet —{" "}
-                <Link
-                  href="/research"
-                  className="font-medium text-primary underline-offset-4 hover:underline"
-                >
-                  propose the first one
-                </Link>
-                .
-              </p>
-            ) : (
-              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {projects.map((p) => (
-                  <Link
-                    key={p.id}
-                    href={`/journal/projects/${p.slug}`}
-                    className="block rounded-2xl border border-border/70 bg-card p-5 shadow-soft transition-colors hover:border-foreground/25 hover:bg-secondary/40"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-wide text-[hsl(190_84%_42%)]">
-                      {p.field}
-                    </p>
-                    <p className="mt-1.5 font-medium leading-snug">{p.title}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">{p.author}</p>
-                    <p className="mt-3 text-[13px] font-medium text-primary">Read the proposal →</p>
-                  </Link>
-                ))}
-              </div>
             )}
           </section>
 

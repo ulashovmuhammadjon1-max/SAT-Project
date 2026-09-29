@@ -35,11 +35,17 @@ const PUBLIC_PREFIXES = [
   "/api/partner-logo/",
 ];
 
+// Paths inside a public prefix that must still require a session. In-progress
+// research projects live under /journal/ but are private to their author and
+// admins, so they fall through to the sign-in check like any app page.
+const PRIVATE_UNDER_PUBLIC = ["/journal/projects/"];
+
 export default auth((req) => {
   const { pathname } = req.nextUrl;
+  const isPrivateCarveOut = PRIVATE_UNDER_PUBLIC.some((p) => pathname.startsWith(p));
   const isPublic =
     PUBLIC_ROUTES.includes(pathname) ||
-    PUBLIC_PREFIXES.some((prefix) => pathname.startsWith(prefix)) ||
+    (!isPrivateCarveOut && PUBLIC_PREFIXES.some((prefix) => pathname.startsWith(prefix))) ||
     pathname.startsWith("/api/auth") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||

@@ -1,7 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
 /**
- * Accepted research projects, as the journal shows them.
+ * Accepted research projects that are still in progress.
+ *
+ * PRIVATE: these are not shown to the public. A project page is visible only to
+ * its author and to admins (see journal/projects/[slug]); the public journal
+ * lists finished papers only.
  *
  * These are `ResearchProposal` rows with status ACCEPTED — work that has been
  * taken into the programme but is not finished. They are deliberately NOT
@@ -18,6 +22,8 @@ import { prisma } from "@/lib/prisma";
 
 export interface JournalProject {
   id: string;
+  /** The author's user id — used to let only them (and admins) open the page. */
+  userId: string;
   slug: string;
   title: string;
   field: string;
@@ -71,6 +77,7 @@ export async function listAcceptedProjects(): Promise<JournalProject[]> {
     orderBy: { createdAt: "asc" },
     select: {
       id: true,
+      userId: true,
       title: true,
       field: true,
       question: true,
@@ -89,6 +96,7 @@ export async function listAcceptedProjects(): Promise<JournalProject[]> {
 
     return {
       id: row.id,
+      userId: row.userId,
       slug,
       title: row.title,
       field: row.field,
