@@ -25,10 +25,10 @@ OUT_PDF = HERE / "scholarly_impact_overview.pdf"
 OUT_PNG = HERE / "scholarly_impact_overview.png"
 CHROMIUM = "/opt/pw-browsers/chromium"
 
-ACCENT = "#2D5A3D"      # the one accent colour (deep green); reads as dark grey in black and white
-LAND = "#E4E1D8"
-INK = "#111111"
-MUTED = "#555555"
+ACCENT = "#B5532F"      # the one accent colour (terracotta); prints as mid grey in black and white
+LAND = "#ECE6DB"
+INK = "#1E1B18"
+MUTED = "#6B645C"
 
 # Countries Natural Earth does not map as a separate shape. Name and region are
 # the ISO 3166-1 name and UN region; the point is the island's location.
@@ -221,15 +221,14 @@ def build_html(agg: dict, selfrep: dict, svg: str, regions: dict[str, list[str]]
   }}
   h1 {{ font-size: 21pt; font-weight: 700; letter-spacing: -0.2pt; }}
   .meta {{ margin-top: 4mm; font-size: 10pt; color: {MUTED}; line-height: 1.5; }}
-  .rule {{ height: 0; border-top: 1.2pt solid {ACCENT}; margin: 7mm 0 6mm; }}
+  .rule {{ height: 0; border-top: 1.5pt solid {ACCENT}; margin: 7mm 0 6mm; }}
   .groups {{ display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }}
-  .group + .group {{ border-left: 0.6pt solid #CFCABD; padding-left: 8mm; }}
-  .gcap {{ font-size: 8pt; font-weight: 700; color: {MUTED}; text-transform: uppercase;
-           letter-spacing: 0.6pt; margin-bottom: 3mm; }}
+  .group + .group {{ border-left: 0.6pt solid #D9D1C3; padding-left: 8mm; }}
+  .gcap {{ font-size: 9pt; font-weight: 700; color: {ACCENT}; margin-bottom: 3mm; }}
   .stats {{ display: grid; grid-template-columns: 1fr 1fr; }}
   .stat {{ padding: 0 3mm; }}
   .stat:first-child {{ padding-left: 0; border-left: none; }}
-  .num {{ font-size: 32pt; font-weight: 700; color: {ACCENT}; line-height: 1.05;
+  .num {{ font-size: 32pt; font-weight: 700; color: {INK}; line-height: 1.05;
           font-variant-numeric: tabular-nums; }}
   .lbl {{ margin-top: 2mm; font-size: 8.5pt; color: {MUTED}; line-height: 1.3; }}
   h2 {{ font-size: 11.5pt; font-weight: 700; margin: 10mm 0 3.5mm; }}
@@ -237,23 +236,23 @@ def build_html(agg: dict, selfrep: dict, svg: str, regions: dict[str, list[str]]
   .note {{ margin-top: 2mm; font-size: 7.5pt; color: {MUTED}; }}
   .regions {{ margin-top: 5mm; }}
   .region {{ display: grid; grid-template-columns: 24mm 1fr; padding: 2.2mm 0;
-             border-top: 0.6pt solid #E2DED4; }}
-  .region:last-child {{ border-bottom: 0.6pt solid #E2DED4; }}
+             border-top: 0.6pt solid #E6DFD3; }}
+  .region:last-child {{ border-bottom: 0.6pt solid #E6DFD3; }}
   .rname {{ font-size: 8.5pt; font-weight: 700; }}
   .rlist {{ font-size: 8.5pt; line-height: 1.45; color: {INK}; }}
   footer {{ position: absolute; left: 17mm; right: 17mm; bottom: 12mm;
-            font-size: 7.5pt; color: {MUTED}; border-top: 0.6pt solid #E2DED4; padding-top: 2.5mm; }}
+            font-size: 7.5pt; color: {MUTED}; border-top: 0.6pt solid #E6DFD3; padding-top: 2.5mm; }}
 </style></head>
 <body>
   <h1>scholarly.space — Impact Overview</h1>
-  <div class="meta">https://scholarly.space<br>Muhammadjon Ulashov</div>
+  <div class="meta">https://scholarly.space</div>
   <div class="rule"></div>
   <div class="groups">{stats}</div>
   <h2>Countries represented</h2>
   <div class="map">{svg}</div>
   {marker_note}
   <div class="regions">{region_rows}</div>
-  <footer>Platform figures and countries: computed from the scholarly.space database on {escape(agg["computed_on"])}. In-person figures: reported by Muhammadjon Ulashov; not recorded in the platform database. Map data: Natural Earth.</footer>
+  <footer>Platform figures and countries: computed from the scholarly.space database on {escape(agg["computed_on"])}. In-person figures: self-reported; not recorded in the platform database. Map data: Natural Earth.</footer>
 </body></html>"""
 
 
