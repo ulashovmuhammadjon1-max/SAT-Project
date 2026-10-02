@@ -25,8 +25,8 @@ OUT_PDF = HERE / "scholarly_impact_overview.pdf"
 OUT_PNG = HERE / "scholarly_impact_overview.png"
 CHROMIUM = "/opt/pw-browsers/chromium"
 
-ACCENT = "#1F4E79"      # the one accent colour; reads as dark grey in black and white
-LAND = "#DCE0E5"
+ACCENT = "#2D5A3D"      # the one accent colour (deep green); reads as dark grey in black and white
+LAND = "#E4E1D8"
 INK = "#111111"
 MUTED = "#555555"
 
@@ -45,6 +45,9 @@ DISPLAY_NAME = {
 }
 
 REGION_ORDER = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
+
+# The headline figures printed on the page, in order.
+PAGE_FIGURES = ["students_registered", "countries_represented"]
 
 
 # --------------------------------------------------------------------------
@@ -176,13 +179,7 @@ def names_by_region(codes: list[str], f110: list[dict], f50: list[dict]) -> dict
 # --------------------------------------------------------------------------
 def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: bool) -> str:
     fig = agg["figures"]
-    order = [
-        "students_registered",
-        "countries_represented",
-        "mentorship_session_requests",
-        "mentorship_sessions_held",
-        "papers_published",
-    ]
+    order = PAGE_FIGURES
     stats = "".join(
         f'<div class="stat"><div class="num">{fig[k]["value"]:,}</div>'
         f'<div class="lbl">{escape(fig[k]["label"])}</div></div>'
@@ -215,10 +212,10 @@ def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: 
   h1 {{ font-size: 21pt; font-weight: 700; letter-spacing: -0.2pt; }}
   .meta {{ margin-top: 4mm; font-size: 10pt; color: {MUTED}; line-height: 1.5; }}
   .rule {{ height: 0; border-top: 1.2pt solid {ACCENT}; margin: 7mm 0 6mm; }}
-  .stats {{ display: grid; grid-template-columns: repeat(5, 1fr); }}
-  .stat {{ padding: 0 3mm; border-left: 0.6pt solid #C9CDD2; }}
+  .stats {{ display: grid; grid-template-columns: repeat({len(order)}, 1fr); max-width: 120mm; }}
+  .stat {{ padding: 0 3mm; border-left: 0.6pt solid #CFCABD; }}
   .stat:first-child {{ padding-left: 0; border-left: none; }}
-  .num {{ font-size: 28pt; font-weight: 700; color: {ACCENT}; line-height: 1.05;
+  .num {{ font-size: 32pt; font-weight: 700; color: {ACCENT}; line-height: 1.05;
           font-variant-numeric: tabular-nums; }}
   .lbl {{ margin-top: 2mm; font-size: 8.5pt; color: {MUTED}; line-height: 1.3; }}
   h2 {{ font-size: 11.5pt; font-weight: 700; margin: 10mm 0 3.5mm; }}
@@ -226,12 +223,12 @@ def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: 
   .note {{ margin-top: 2mm; font-size: 7.5pt; color: {MUTED}; }}
   .regions {{ margin-top: 5mm; }}
   .region {{ display: grid; grid-template-columns: 24mm 1fr; padding: 2.2mm 0;
-             border-top: 0.6pt solid #E1E4E8; }}
-  .region:last-child {{ border-bottom: 0.6pt solid #E1E4E8; }}
+             border-top: 0.6pt solid #E2DED4; }}
+  .region:last-child {{ border-bottom: 0.6pt solid #E2DED4; }}
   .rname {{ font-size: 8.5pt; font-weight: 700; }}
   .rlist {{ font-size: 8.5pt; line-height: 1.45; color: {INK}; }}
   footer {{ position: absolute; left: 17mm; right: 17mm; bottom: 12mm;
-            font-size: 7.5pt; color: {MUTED}; border-top: 0.6pt solid #E1E4E8; padding-top: 2.5mm; }}
+            font-size: 7.5pt; color: {MUTED}; border-top: 0.6pt solid #E2DED4; padding-top: 2.5mm; }}
 </style></head>
 <body>
   <h1>scholarly.space — Impact Overview</h1>

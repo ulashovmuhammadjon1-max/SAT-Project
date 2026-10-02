@@ -23,6 +23,7 @@ import sys
 from pathlib import Path
 
 from compute_aggregates import neon_query
+from build_overview import PAGE_FIGURES
 
 HERE = Path(__file__).resolve().parent
 PDF = HERE / "scholarly_impact_overview.pdf"
@@ -58,10 +59,9 @@ check(len(fonts) > 0 and all(e == "yes" for e in emb), f"{len(fonts)} font(s), a
 
 # 3. numbers ---------------------------------------------------------------------
 text = run("pdftotext", "-layout", str(PDF), "-")
-order = ["students_registered", "countries_represented", "mentorship_session_requests",
-         "mentorship_sessions_held", "papers_published"]
+order = PAGE_FIGURES
 expected = [f"{fig[k]['value']:,}" for k in order]
-stat_line = next((l for l in text.splitlines() if re.fullmatch(r"\s*[\d,]+(\s+[\d,]+){4}\s*", l)), "")
+stat_line = next((l for l in text.splitlines() if re.fullmatch(r"\s*[\d,]+(\s+[\d,]+){%d}\s*" % (len(order) - 1), l)), "")
 on_page = stat_line.split()
 check(on_page == expected, f"headline numbers on page {on_page} == computed {expected}")
 for k, v in zip(order, on_page):
@@ -72,7 +72,7 @@ all_nums = re.findall(r"\d[\d,]*", text)
 allowed = expected + date_nums
 extra = [n for n in all_nums if n not in allowed]
 check(not extra and sorted(all_nums) == sorted(allowed),
-      f"no numbers other than the 5 figures and the date (found {all_nums})")
+      f"no numbers other than the {len(order)} figures and the date (found {all_nums})")
 
 # 4. countries section has no digits ----------------------------------------------
 section = text.split("Countries represented")[-1].split("Figures computed")[0]
