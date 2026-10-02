@@ -60,22 +60,27 @@ check(len(fonts) > 0 and all(e == "yes" for e in emb), f"{len(fonts)} font(s), a
 # 3. numbers ---------------------------------------------------------------------
 text = run("pdftotext", "-layout", str(PDF), "-")
 order = PAGE_FIGURES
-expected = [f"{fig[k]['value']:,}" for k in order]
-stat_line = next((l for l in text.splitlines() if re.fullmatch(r"\s*[\d,]+(\s+[\d,]+){%d}\s*" % (len(order) - 1), l)), "")
+selfrep = json.loads((HERE / "self_reported.json").read_text())
+expected = [f"{fig[k]['value']:,}" for k in order] + [f["value"] for f in selfrep["figures"]]
+labels = [fig[k]["label"] for k in order] + [f["label"] + " (self-reported)" for f in selfrep["figures"]]
+sources = [str(fig[k]["value"]) for k in order] + [f["value"] for f in selfrep["figures"]]
+tok = r"[\d,]+\+?"
+stat_line = next((l for l in text.splitlines()
+                  if re.fullmatch(r"\s*%s(\s+%s){%d}\s*" % (tok, tok, len(expected) - 1), l)), "")
 on_page = stat_line.split()
-check(on_page == expected, f"headline numbers on page {on_page} == computed {expected}")
-for k, v in zip(order, on_page):
-    print(f"        {fig[k]['label']:<30} page={v:<6} computed={fig[k]['value']}")
+check(on_page == expected, f"headline numbers on page {on_page} == sources {expected}")
+for lbl, v, s in zip(labels, on_page, sources):
+    print(f"        {lbl:<50} page={v:<6} source={s}")
 
 date_nums = re.findall(r"\d+", agg["computed_on"])
 all_nums = re.findall(r"\d[\d,]*", text)
-allowed = expected + date_nums
+allowed = [re.sub(r"\+$", "", e) for e in expected] + date_nums
 extra = [n for n in all_nums if n not in allowed]
 check(not extra and sorted(all_nums) == sorted(allowed),
-      f"no numbers other than the {len(order)} figures and the date (found {all_nums})")
+      f"no numbers other than the {len(expected)} figures and the date (found {all_nums})")
 
 # 4. countries section has no digits ----------------------------------------------
-section = text.split("Countries represented")[-1].split("Figures computed")[0]
+section = text.split("Countries represented")[-1].split("Platform figures")[0]
 check(not re.search(r"\d", section), "no digits anywhere in the countries section")
 
 # 5. personal data ------------------------------------------------------------------

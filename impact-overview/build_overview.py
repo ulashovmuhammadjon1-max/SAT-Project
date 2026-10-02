@@ -177,13 +177,23 @@ def names_by_region(codes: list[str], f110: list[dict], f50: list[dict]) -> dict
 # --------------------------------------------------------------------------
 # Page
 # --------------------------------------------------------------------------
-def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: bool) -> str:
+def stat_cells(items: list[tuple[str, str]]) -> str:
+    return "".join(
+        f'<div class="stat"><div class="num">{escape(v)}</div>'
+        f'<div class="lbl">{escape(l)}</div></div>'
+        for v, l in items
+    )
+
+
+def build_html(agg: dict, selfrep: dict, svg: str, regions: dict[str, list[str]], has_markers: bool) -> str:
     fig = agg["figures"]
-    order = PAGE_FIGURES
-    stats = "".join(
-        f'<div class="stat"><div class="num">{fig[k]["value"]:,}</div>'
-        f'<div class="lbl">{escape(fig[k]["label"])}</div></div>'
-        for k in order
+    platform = [(f"{fig[k]['value']:,}", fig[k]["label"]) for k in PAGE_FIGURES]
+    in_person = [(f["value"], f["label"]) for f in selfrep["figures"]]
+    stats = (
+        f'<div class="group"><div class="gcap">On the platform</div>'
+        f'<div class="stats">{stat_cells(platform)}</div></div>'
+        f'<div class="group"><div class="gcap">{escape(selfrep["group_label"])}</div>'
+        f'<div class="stats">{stat_cells(in_person)}</div></div>'
     )
     region_rows = "".join(
         f'<div class="region"><div class="rname">{escape(r)}</div>'
@@ -212,8 +222,12 @@ def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: 
   h1 {{ font-size: 21pt; font-weight: 700; letter-spacing: -0.2pt; }}
   .meta {{ margin-top: 4mm; font-size: 10pt; color: {MUTED}; line-height: 1.5; }}
   .rule {{ height: 0; border-top: 1.2pt solid {ACCENT}; margin: 7mm 0 6mm; }}
-  .stats {{ display: grid; grid-template-columns: repeat({len(order)}, 1fr); max-width: 120mm; }}
-  .stat {{ padding: 0 3mm; border-left: 0.6pt solid #CFCABD; }}
+  .groups {{ display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }}
+  .group + .group {{ border-left: 0.6pt solid #CFCABD; padding-left: 8mm; }}
+  .gcap {{ font-size: 8pt; font-weight: 700; color: {MUTED}; text-transform: uppercase;
+           letter-spacing: 0.6pt; margin-bottom: 3mm; }}
+  .stats {{ display: grid; grid-template-columns: 1fr 1fr; }}
+  .stat {{ padding: 0 3mm; }}
   .stat:first-child {{ padding-left: 0; border-left: none; }}
   .num {{ font-size: 32pt; font-weight: 700; color: {ACCENT}; line-height: 1.05;
           font-variant-numeric: tabular-nums; }}
@@ -234,12 +248,12 @@ def build_html(agg: dict, svg: str, regions: dict[str, list[str]], has_markers: 
   <h1>scholarly.space — Impact Overview</h1>
   <div class="meta">https://scholarly.space<br>Muhammadjon Ulashov</div>
   <div class="rule"></div>
-  <div class="stats">{stats}</div>
+  <div class="groups">{stats}</div>
   <h2>Countries represented</h2>
   <div class="map">{svg}</div>
   {marker_note}
   <div class="regions">{region_rows}</div>
-  <footer>Figures computed from the scholarly.space platform database on {escape(agg["computed_on"])}. Map data: Natural Earth.</footer>
+  <footer>Platform figures and countries: computed from the scholarly.space database on {escape(agg["computed_on"])}. In-person figures: reported by Muhammadjon Ulashov; not recorded in the platform database. Map data: Natural Earth.</footer>
 </body></html>"""
 
 
@@ -254,7 +268,8 @@ def main() -> None:
     listed = sum(len(v) for v in regions.values())
     assert listed == len(codes) == agg["figures"]["countries_represented"]["value"], "country list mismatch"
 
-    html = build_html(agg, svg, regions, bool(marked))
+    selfrep = json.loads((HERE / "self_reported.json").read_text())
+    html = build_html(agg, selfrep, svg, regions, bool(marked))
     (HERE / "scholarly_impact_overview.html").write_text(html)
 
     with sync_playwright() as pw:
