@@ -64,8 +64,51 @@ interface NavGroup {
   empty?: string;
 }
 
+/** The general Home, pinned to the top of every product's sidebar. */
+const HOME_LINK: NavItem = { href: "/dashboard", label: "Home", icon: LayoutDashboard, exact: true };
+
+/**
+ * Home: the general hub. Scholarly is several programmes, and this is the
+ * sidebar for /dashboard and every page that belongs to no single programme
+ * (community, mentorship, events, achievements, settings). SAT is one
+ * programme among them and is listed last.
+ */
+const HOME_GROUPS: NavGroup[] = [
+  { label: null, items: [HOME_LINK] },
+  {
+    label: "Programmes",
+    items: [
+      { href: "/research", label: "Research", icon: FlaskConical },
+      { href: "/ap", label: "AP Courses", icon: GraduationCap },
+      { href: "/ielts", label: "IELTS", icon: PenLine },
+      { href: "/sat", label: "SAT Practice", icon: ClipboardList },
+    ],
+  },
+  {
+    label: "Mentorship",
+    items: [
+      { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
+      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
+      { href: "/wallet", label: "Coins", icon: Coins },
+    ],
+  },
+  {
+    label: "Community",
+    items: [
+      { href: "/community", label: "Community", icon: MessagesSquare },
+      { href: "/events", label: "Events", icon: CalendarRange },
+      { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
+      { href: "/invite", label: "Invite Friends", icon: UserPlus },
+    ],
+  },
+  { label: "Progress", items: [{ href: "/achievements", label: "Achievements", icon: Award }] },
+  { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
+];
+
+const SAT_HOME: NavItem = { href: "/sat", label: "SAT Home", icon: ClipboardList, exact: true };
+
 const SAT_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/dashboard", label: "Home", icon: LayoutDashboard, exact: true }] },
+  { label: null, items: [HOME_LINK, SAT_HOME] },
   {
     label: "Practice",
     items: [
@@ -81,31 +124,13 @@ const SAT_GROUPS: NavGroup[] = [
       { href: "/plan", label: "My SAT Plan", icon: Target },
       { href: "/analytics", label: "Analytics", icon: BarChart3 },
       { href: "/bookmarks", label: "Saved Questions", icon: Bookmark },
-      { href: "/achievements", label: "Achievements", icon: Award },
-    ],
-  },
-  {
-    label: "Community",
-    items: [
-      { href: "/community", label: "Community", icon: MessagesSquare },
-      { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
-      { href: "/events", label: "Events", icon: CalendarRange },
-      { href: "/invite", label: "Invite Friends", icon: UserPlus },
-    ],
-  },
-  {
-    label: "Mentorship",
-    items: [
-      { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
-      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
-      { href: "/wallet", label: "Coins", icon: Coins },
     ],
   },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
 const IELTS_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/ielts", label: "Home", icon: LayoutDashboard, exact: true }] },
+  { label: null, items: [HOME_LINK, { href: "/ielts", label: "IELTS Home", icon: PenLine, exact: true }] },
   {
     label: "Practice",
     items: [
@@ -122,32 +147,11 @@ const IELTS_GROUPS: NavGroup[] = [
       { href: "/ielts/leaderboard", label: "Leaderboard", icon: Trophy },
     ],
   },
-  {
-    label: "Community",
-    items: [
-      { href: "/community", label: "Community", icon: MessagesSquare },
-      { href: "/ielts/invite", label: "Invite Friends", icon: UserPlus },
-    ],
-  },
-  {
-    label: "Mentorship",
-    items: [{ href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" }],
-  },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
 const BOTH_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/dashboard", label: "Home", icon: LayoutDashboard, exact: true }] },
-  {
-    label: "SAT",
-    items: [
-      { href: "/tests", label: "Full-Length Tests", icon: BookOpen },
-      { href: "/practice", label: "Question Bank", icon: ListChecks },
-      { href: "/daily", label: "Daily Challenge", icon: CalendarDays },
-      { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
-      { href: "/plan", label: "My SAT Plan", icon: Target },
-    ],
-  },
+  { label: null, items: [HOME_LINK, SAT_HOME] },
   {
     label: "IELTS",
     items: [
@@ -159,38 +163,19 @@ const BOTH_GROUPS: NavGroup[] = [
     ],
   },
   {
-    label: "Progress",
+    label: "SAT",
     items: [
+      { href: "/tests", label: "Full-Length Tests", icon: BookOpen },
+      { href: "/practice", label: "Question Bank", icon: ListChecks },
+      { href: "/daily", label: "Daily Challenge", icon: CalendarDays },
+      { href: "/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
+      { href: "/plan", label: "My SAT Plan", icon: Target },
       { href: "/analytics", label: "Analytics", icon: BarChart3 },
       { href: "/bookmarks", label: "Saved Questions", icon: Bookmark },
-      { href: "/achievements", label: "Achievements", icon: Award },
-    ],
-  },
-  {
-    label: "Community",
-    items: [
-      { href: "/community", label: "Community", icon: MessagesSquare },
-      { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
-      { href: "/events", label: "Events", icon: CalendarRange },
-      { href: "/invite", label: "Invite Friends", icon: UserPlus },
-    ],
-  },
-  {
-    label: "Mentorship",
-    items: [
-      { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
-      { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
-      { href: "/wallet", label: "Coins", icon: Coins },
     ],
   },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
-
-const GROUPS_FOR: Record<ExamMode, NavGroup[]> = {
-  SAT: SAT_GROUPS,
-  IELTS: IELTS_GROUPS,
-  BOTH: BOTH_GROUPS,
-};
 
 /**
  * Research and School are products of their own: opening one swaps the whole
@@ -198,7 +183,7 @@ const GROUPS_FOR: Record<ExamMode, NavGroup[]> = {
  * student on /class is *in* School, not in an exam with a page borrowed.
  */
 const RESEARCH_GROUPS: NavGroup[] = [
-  { label: null, items: [{ href: "/research", label: "Research Home", icon: FlaskConical, exact: true }] },
+  { label: null, items: [HOME_LINK, { href: "/research", label: "Research Home", icon: FlaskConical, exact: true }] },
   {
     label: "Programme",
     items: [
@@ -217,7 +202,7 @@ const RESEARCH_GROUPS: NavGroup[] = [
 function schoolGroups(pathname: string): NavGroup[] {
   const classId = pathname.match(/^\/classes\/([^/]+)/)?.[1];
   return [
-    { label: null, items: [{ href: "/classes", label: "All Classes", icon: School, exact: true }] },
+    { label: null, items: [HOME_LINK, { href: "/classes", label: "All Classes", icon: School, exact: true }] },
     ...(classId
       ? [
           {
@@ -261,7 +246,7 @@ export interface SidebarApSubject {
  */
 function apGroups(subjects: SidebarApSubject[]): NavGroup[] {
   return [
-    { label: null, items: [{ href: "/ap", label: "AP Home", icon: Award, exact: true }] },
+    { label: null, items: [HOME_LINK, { href: "/ap", label: "AP Home", icon: Award, exact: true }] },
     {
       label: "My Subjects",
       items: subjects.map((s) => ({
@@ -282,10 +267,16 @@ function apGroups(subjects: SidebarApSubject[]): NavGroup[] {
   ];
 }
 
-type Product = "SAT" | "IELTS" | "RESEARCH" | "SCHOOL" | "AP";
+type Product = "HOME" | "SAT" | "IELTS" | "RESEARCH" | "SCHOOL" | "AP";
 
-/** Which product a path belongs to; exam pages fall back to activeExam. */
-function productFor(pathname: string, activeExam: ExamMode): Product {
+/** Pages that belong to SAT practice. Everything unclaimed is Home. */
+const SAT_PREFIXES = [
+  "/sat", "/tests", "/practice", "/daily", "/vocabulary", "/plan",
+  "/analytics", "/bookmarks", "/exam", "/results", "/review",
+];
+
+/** Which product a path belongs to. Pages no programme owns are Home. */
+function productFor(pathname: string): Product {
   if (pathname.startsWith("/research")) return "RESEARCH";
   if (pathname.startsWith("/ap")) return "AP";
   if (
@@ -294,7 +285,9 @@ function productFor(pathname: string, activeExam: ExamMode): Product {
     pathname.startsWith("/teach")
   )
     return "SCHOOL";
-  return activeExam === "IELTS" ? "IELTS" : "SAT";
+  if (pathname.startsWith("/ielts")) return "IELTS";
+  if (SAT_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`))) return "SAT";
+  return "HOME";
 }
 
 export function StudentSidebar({
@@ -315,7 +308,7 @@ export function StudentSidebar({
   apSubjects?: SidebarApSubject[];
 }) {
   const pathname = usePathname();
-  const product = productFor(pathname, activeExam);
+  const product = productFor(pathname);
   const baseGroups =
     product === "RESEARCH"
       ? RESEARCH_GROUPS
@@ -323,7 +316,11 @@ export function StudentSidebar({
         ? apGroups(apSubjects)
         : product === "SCHOOL"
           ? schoolGroups(pathname)
-          : GROUPS_FOR[activeExam];
+          : product === "SAT"
+            ? activeExam === "BOTH" ? BOTH_GROUPS : SAT_GROUPS
+            : product === "IELTS"
+              ? activeExam === "BOTH" ? BOTH_GROUPS : IELTS_GROUPS
+              : HOME_GROUPS;
   // Teachers see their panel in every product's sidebar, right before
   // Settings — a teacher checking on their class should never have to hunt.
   const groups = teaching
@@ -336,7 +333,7 @@ export function StudentSidebar({
         baseGroups[baseGroups.length - 1],
       ]
     : baseGroups;
-  const home = activeExam === "IELTS" ? "/ielts" : "/dashboard";
+  const home = "/dashboard";
 
   return (
     <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
@@ -421,9 +418,10 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
   const [pending, startTransition] = useTransition();
 
   const META: Record<Product, { label: string; short: string }> = {
-    SAT: { label: "SAT Prep", short: "SAT" },
+    HOME: { label: "Scholarly Home", short: "S" },
+    SAT: { label: "SAT Practice", short: "SAT" },
     IELTS: { label: "IELTS Prep", short: "IE" },
-    AP: { label: "AP Prep", short: "AP" },
+    AP: { label: "AP Courses", short: "AP" },
     RESEARCH: { label: "Research", short: "RS" },
     SCHOOL: { label: "School", short: "SC" },
   };
@@ -433,7 +431,7 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
       // Already in that exam mode but viewing another product: just go home.
       if (mode === activeExam || (mode === "SAT" && activeExam === "BOTH")) {
         setOpen(false);
-        router.push(mode === "IELTS" ? "/ielts" : "/dashboard");
+        router.push(mode === "IELTS" ? "/ielts" : "/sat");
         return;
       }
       const result = await setActiveExam(mode);
@@ -442,17 +440,19 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
         return;
       }
       setOpen(false);
-      router.push(result.redirectTo ?? (mode === "IELTS" ? "/ielts" : "/dashboard"));
+      router.push(result.redirectTo ?? (mode === "IELTS" ? "/ielts" : "/sat"));
       router.refresh();
     });
   };
 
   const options: { key: Product; icon: typeof BookOpen; onSelect?: () => void; href?: string; badge?: string }[] = [
-    { key: "SAT", icon: BookOpen, onSelect: () => goExam("SAT") },
+    // SAT is listed last: it is one programme among several, not the front door.
+    { key: "HOME", icon: LayoutDashboard, href: "/dashboard" },
+    { key: "RESEARCH", icon: FlaskConical, href: "/research" },
+    { key: "AP", icon: GraduationCap, href: "/ap" },
     { key: "IELTS", icon: PenLine, onSelect: () => goExam("IELTS") },
-    { key: "AP", icon: Award, href: "/ap", badge: "New" },
-    { key: "RESEARCH", icon: FlaskConical, href: "/research", badge: "New" },
-    { key: "SCHOOL", icon: School, href: "/classes", badge: "New" },
+    { key: "SCHOOL", icon: School, href: "/classes" },
+    { key: "SAT", icon: ClipboardList, onSelect: () => goExam("SAT") },
   ];
 
   return (

@@ -275,16 +275,17 @@ function buildSteps({
     // sitting the SAT.
     {
       emoji: "🧭",
-      title: "What are you preparing for?",
-      subtitle: "This decides what we ask next and what your plan is built around.",
+      title: "What brings you to Scholarly?",
+      subtitle: "This decides what we ask next. You can add anything else later.",
       canContinue: track !== null,
       content: (
         <div className="space-y-3">
           {(
             [
-              { v: "SAT", icon: "📘", t: "SAT", s: "Practice tests, a question bank and a personalised plan" },
-              { v: "IELTS", icon: "🗣️", t: "IELTS", s: "Writing and Speaking, marked by a person, free" },
-              { v: "BOTH", icon: "🎯", t: "Both", s: "Two separate plans, and a switch between them any time" },
+              { v: "EXPLORE", icon: "🔬", t: "Research, AP courses & mentorship", s: "Explore the community — no exam plan needed" },
+              { v: "IELTS", icon: "🗣️", t: "IELTS preparation", s: "Writing and Speaking, marked by a person, free" },
+              { v: "SAT", icon: "📘", t: "SAT preparation", s: "Practice tests, a question bank and a personalised plan" },
+              { v: "BOTH", icon: "🎯", t: "IELTS and SAT", s: "Two separate plans, and a switch between them any time" },
             ] as const
           ).map((o, i) => (
             <OptionCard
@@ -298,14 +299,22 @@ function buildSteps({
             />
           ))}
           <p className="pt-1 text-center text-xs text-muted-foreground">
-            You can switch between the two at any time afterwards — this only decides
-            which questions we ask now.
+            Research, AP courses and mentorship are open to everyone whichever you
+            pick — this only decides which questions we ask now.
           </p>
         </div>
       ),
     },
 
-    ...(track === "IELTS" ? [] : satSteps({ profile, patch, selectAndAdvance })),
+    // Nothing beyond the chooser until a choice is made, so the step counter
+    // does not announce the longest (SAT) flow to someone who has not picked it.
+    ...(track === null
+      ? []
+      : track === "EXPLORE"
+        ? exploreSteps({ profile, patch, selectAndAdvance })
+        : track === "IELTS"
+          ? []
+          : satSteps({ profile, patch, selectAndAdvance })),
     ...(track === "IELTS" || track === "BOTH"
       ? ieltsSteps({ profile, patch, selectAndAdvance })
       : []),
@@ -313,13 +322,80 @@ function buildSteps({
     // Account — always last, whichever track was taken.
     {
       emoji: "🎉",
-      title: track === "BOTH" ? "Both plans are ready" : "Your plan is ready",
+      title: track === "BOTH" ? "Both plans are ready" : track === "EXPLORE" ? "You're all set" : "Your plan is ready",
       subtitle:
         "Create your account to save it. We will email you a link to confirm your address — your account is not active until you click it.",
       canContinue: true,
       content: <AccountStep profile={profile} referralCode={referralCode} />,
     },
   ];
+}
+
+/** Shared by every track: where the student is from. */
+function countryStep(profile: OnboardingProfile, patch: (p: Partial<OnboardingProfile>) => void): Step {
+  return (
+    {
+      emoji: "🌍",
+      title: "What country are you from?",
+      subtitle: "This helps us understand where our students are.",
+      canContinue: profile.countryCode !== null,
+      content: <CountryPicker value={profile.countryCode} onChange={(code) => patch({ countryCode: code })} />,
+    }
+  );
+}
+
+/** Shared by every track: the student's grade. */
+function gradeStep(
+  profile: OnboardingProfile,
+  selectAndAdvance: (p: Partial<OnboardingProfile>) => void,
+): Step {
+  return (
+    {
+      emoji: "📚",
+      title: "What grade are you in?",
+      canContinue: profile.gradeLevel !== null,
+      content: (
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+          {(
+            [
+              { v: "GRADE_9", t: "9th grade" },
+              { v: "GRADE_10", t: "10th grade" },
+              { v: "GRADE_11", t: "11th grade" },
+              { v: "GRADE_12", t: "12th grade" },
+              { v: "GAP_YEAR", t: "Gap year" },
+              { v: "COLLEGE", t: "College" },
+              { v: "OTHER", t: "Other" },
+            ] as const
+          ).map((o, i) => (
+            <ChipOption
+              key={o.v}
+              index={i}
+              selected={profile.gradeLevel === o.v}
+              onSelect={() => selectAndAdvance({ gradeLevel: o.v })}
+            >
+              {o.t}
+            </ChipOption>
+          ))}
+        </div>
+      ),
+    }
+  );
+}
+
+/**
+ * The EXPLORE track: here for research, AP, mentorship or the community, with no
+ * exam plan to build. Only the questions every student answers.
+ */
+function exploreSteps({
+  profile,
+  patch,
+  selectAndAdvance,
+}: {
+  profile: OnboardingProfile;
+  patch: (p: Partial<OnboardingProfile>) => void;
+  selectAndAdvance: (p: Partial<OnboardingProfile>) => void;
+}): Step[] {
+  return [countryStep(profile, patch), gradeStep(profile, selectAndAdvance)];
 }
 
 /**
@@ -444,45 +520,9 @@ function satSteps({
       content: <UniversityPicker value={profile.dreamUniversities} onChange={(v) => patch({ dreamUniversities: v })} />,
     },
 
-    // 5 — Country
-    {
-      emoji: "🌍",
-      title: "What country are you from?",
-      subtitle: "This helps us understand where our students are and tailor test-date guidance.",
-      canContinue: profile.countryCode !== null,
-      content: <CountryPicker value={profile.countryCode} onChange={(code) => patch({ countryCode: code })} />,
-    },
+    countryStep(profile, patch),
 
-    // 6 — Grade level
-    {
-      emoji: "📚",
-      title: "What grade are you in?",
-      canContinue: profile.gradeLevel !== null,
-      content: (
-        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-          {(
-            [
-              { v: "GRADE_9", t: "9th grade" },
-              { v: "GRADE_10", t: "10th grade" },
-              { v: "GRADE_11", t: "11th grade" },
-              { v: "GRADE_12", t: "12th grade" },
-              { v: "GAP_YEAR", t: "Gap year" },
-              { v: "COLLEGE", t: "College" },
-              { v: "OTHER", t: "Other" },
-            ] as const
-          ).map((o, i) => (
-            <ChipOption
-              key={o.v}
-              index={i}
-              selected={profile.gradeLevel === o.v}
-              onSelect={() => selectAndAdvance({ gradeLevel: o.v })}
-            >
-              {o.t}
-            </ChipOption>
-          ))}
-        </div>
-      ),
-    },
+    gradeStep(profile, selectAndAdvance),
 
     // 7 — SAT date
     {

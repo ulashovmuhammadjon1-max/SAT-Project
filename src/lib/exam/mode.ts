@@ -107,7 +107,7 @@ export const EXAM_LABEL: Record<ExamMode, string> = {
 
 /** Where the switcher sends the student when they change exam. */
 export const EXAM_HOME: Record<ExamMode, string> = {
-  SAT: "/dashboard",
+  SAT: "/sat",
   IELTS: "/ielts",
   BOTH: "/dashboard",
 };

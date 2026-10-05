@@ -10,10 +10,11 @@ import { ThemeToggle, ThemeToggleCompact } from "@/components/shared/theme-toggl
 import { cn } from "@/lib/utils";
 
 const LINKS = [
-  { href: "#features", label: "Features" },
-  { href: "#experience", label: "Test engine" },
-  { href: "/schools", label: "For Schools" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#programmes", label: "Programmes" },
+  { href: "/#research", label: "Research" },
+  { href: "/#courses", label: "AP Courses" },
+  { href: "/journal", label: "Journal" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function SiteNav() {
@@ -64,7 +65,7 @@ export function SiteNav() {
             <Link href="/login">Sign in</Link>
           </Button>
           <Button size="sm" className="rounded-full px-4 shadow-soft" asChild>
-            <Link href="/onboarding">Start practicing</Link>
+            <Link href="/onboarding">Join free</Link>
           </Button>
         </div>
 
@@ -109,7 +110,7 @@ export function SiteNav() {
                   <Link href="/login">Sign in</Link>
                 </Button>
                 <Button className="flex-1" asChild>
-                  <Link href="/onboarding">Start practicing</Link>
+                  <Link href="/onboarding">Join free</Link>
                 </Button>
               </div>
             </div>

@@ -63,8 +63,11 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
   // are looking at right now. Picking one exam never removes the other from
   // the switcher — it only decides which questions were worth asking.
   const track = profile.track ?? "SAT";
-  const preparationExams =
-    track === "BOTH" ? (["SAT", "IELTS"] as const) : ([track] as const);
+  // EXPLORE prepares for no exam: an empty list, which resolveMode() already
+  // treats as SAT for the exam switcher, so nothing downstream sees a gap.
+  const preparationExams: ("SAT" | "IELTS")[] =
+    track === "BOTH" ? ["SAT", "IELTS"] : track === "EXPLORE" ? [] : [track];
+  const activeExam = track === "EXPLORE" ? "SAT" : track;
 
   const base = {
     name,
@@ -94,8 +97,8 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
         dailyGoalType: profile.dailyGoalType,
         dailyGoalValue: profile.dailyGoalValue,
         onboardedAt: new Date(),
-        preparationExams: [...preparationExams],
-        activeExam: track,
+        preparationExams,
+        activeExam,
       },
       select: { id: true },
     });
@@ -127,7 +130,7 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
     // The IELTS answers, when they were asked for. Separate row, separate
     // failure: a student whose IELTS profile cannot be written still has an
     // account and can answer again from the IELTS side.
-    if (track !== "SAT") {
+    if (track === "IELTS" || track === "BOTH") {
       try {
         await prisma.ieltsStudentProfile.create({
           data: {

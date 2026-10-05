@@ -15,7 +15,7 @@ export interface ExamModeResult {
 }
 
 const HOME: Record<ExamMode, string> = {
-  SAT: "/dashboard",
+  SAT: "/sat",
   IELTS: "/ielts",
   BOTH: "/dashboard",
 };
@@ -83,7 +83,7 @@ export async function addExam(exam: ExamKind): Promise<ExamModeResult> {
   if (!row) return { error: "Account not found." };
 
   if (row.preparationExams.includes(exam)) {
-    return { ok: true, redirectTo: exam === "IELTS" ? "/ielts" : "/dashboard" };
+    return { ok: true, redirectTo: exam === "IELTS" ? "/ielts" : "/sat" };
   }
 
   const preparing = [...row.preparationExams, exam];
@@ -105,7 +105,7 @@ export async function addExam(exam: ExamKind): Promise<ExamModeResult> {
   });
 
   revalidatePath("/", "layout");
-  return { ok: true, redirectTo: exam === "IELTS" ? "/ielts" : "/dashboard" };
+  return { ok: true, redirectTo: exam === "IELTS" ? "/ielts" : "/sat" };
 }
 
 /**

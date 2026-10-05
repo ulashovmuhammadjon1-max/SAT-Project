@@ -18,11 +18,11 @@ const display = Lexend({
 
 export const metadata: Metadata = {
   title: {
-    default: "Scholarly — SAT, IELTS & More",
+    default: "Scholarly — Research, Mentorship & Learning",
     template: "%s | Scholarly",
   },
   description:
-    "A free academic community: adaptive Digital SAT practice, full IELTS preparation, financial literacy, mentorship, and research programmes — all in one place.",
+    "A free academic community for students: a research programme with mentors, AP courses, IELTS preparation, financial literacy, and SAT practice — all in one place.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

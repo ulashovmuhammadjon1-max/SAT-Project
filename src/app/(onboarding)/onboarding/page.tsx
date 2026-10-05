@@ -6,7 +6,7 @@ import { auth } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Get started",
-  description: "Build your personalised study plan — SAT, IELTS, or both — in about a minute.",
+  description: "Join Scholarly: research, mentorship, AP courses, IELTS and SAT preparation. About a minute to set up.",
 };
 
 export default async function OnboardingPage({

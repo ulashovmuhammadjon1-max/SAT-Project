@@ -1,93 +1,73 @@
 import Link from "next/link";
-import { ArrowRight, Clock, Target, TrendingUp } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  CalendarRange,
+  FlaskConical,
+  Flame,
+  Languages,
+  MessagesSquare,
+  UserRound,
+  BookOpen,
+} from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { StatCard } from "@/components/student/stat-card";
-import { PersonalizedHeader } from "@/components/student/personalized-header";
+import { Card, CardContent } from "@/components/ui/card";
+import { ScenicHeader } from "@/components/shared/scenic-header";
 import {
   DashboardCoinsCard,
-  DashboardPlanCard,
   DashboardSessionCard,
 } from "@/components/student/dashboard-plan-card";
 import {
   DashboardAchievementsCard,
-  DashboardDailyCard,
   DashboardLeaderboardCard,
 } from "@/components/student/dashboard-engagement";
-import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
 import { PartnersStrip } from "@/components/marketing/partners-strip";
 import { getAchievements } from "@/lib/achievements/service";
-import { getDailyChallenge } from "@/lib/daily-challenge";
 import { getLeaderboard } from "@/lib/leaderboard";
 import { ACTIVE_STATUSES } from "@/lib/booking/status";
+import { getExamContext } from "@/lib/exam/mode";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
-import { estimateScaledScore } from "@/lib/scoring/estimate";
-import { getPlanSummary } from "@/lib/plan/service";
 import { getSettings } from "@/lib/settings";
-import { readProfile } from "@/lib/onboarding/profile";
-import { asWeakArea } from "@/lib/validations/onboarding";
-import { formatDuration } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
-export const metadata = { title: "Dashboard" };
+export const metadata = { title: "Home" };
 export const dynamic = "force-dynamic";
 
-export default async function DashboardPage() {
+/**
+ * Home — the first page a signed-in student sees.
+ *
+ * Scholarly is several programmes, so Home is a hub across all of them: the
+ * research programme, AP courses, mentorship, IELTS, events and community,
+ * each showing where this student stands. SAT practice has its own home at
+ * /sat and appears here last, as one card among the rest.
+ *
+ * Every query selects explicit columns (see CLAUDE.md on whole-row fetches).
+ */
+export default async function HomePage() {
   const user = await requireUser();
 
-  // Midnight UTC today — StudyActivity.date is a @db.Date, so this matches the
-  // row for the current day without timezone drift.
-  const todayUtc = new Date();
-  todayUtc.setUTCHours(0, 0, 0, 0);
-
   const [
-    inProgress,
-    recentAttempts,
-    responses,
-    submittedAttempts,
-    profile,
-    todayActivity,
-    planSummary,
-    coinUser,
+    proposals,
+    apEnrollments,
+    exam,
     upcomingSession,
+    coinUser,
+    profile,
+    satLatest,
+    satInProgress,
     settings,
-    daily,
     achievements,
     weeklyBoard,
   ] = await Promise.all([
-    prisma.attempt.findFirst({
-      where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
-      include: { test: true },
-      orderBy: { updatedAt: "desc" },
-    }),
-    prisma.attempt.findMany({
+    prisma.researchProposal.findMany({
       where: { userId: user.id },
       orderBy: { createdAt: "desc" },
-      take: 5,
-      include: { test: true },
+      select: { status: true },
+      take: 1,
     }),
-    prisma.response.findMany({
-      where: { attempt: { userId: user.id }, isCorrect: { not: null } },
-      include: { question: { include: { domain: true } } },
-    }),
-    prisma.attempt.findMany({
-      where: { userId: user.id, status: "SUBMITTED" },
-      orderBy: { submittedAt: "asc" },
-      select: { submittedAt: true, totalScaledScore: true, mathScaledScore: true, rwScaledScore: true },
-    }),
-    readProfile(user.id),
-    prisma.studyActivity.findUnique({
-      where: { userId_date: { userId: user.id, date: todayUtc } },
-      select: { questionsAnswered: true, minutesStudied: true },
-    }),
-    getPlanSummary(user.id),
-    prisma.user.findUnique({
-      where: { id: user.id },
-      select: { coinBalance: true },
-    }),
+    prisma.apSubjectEnrollment.count({ where: { userId: user.id } }),
+    getExamContext(),
     prisma.booking.findFirst({
       where: { userId: user.id, status: { in: ACTIVE_STATUSES } },
       orderBy: { slot: { startsAt: "asc" } },
@@ -96,77 +76,135 @@ export default async function DashboardPage() {
         slot: { select: { startsAt: true, durationMinutes: true } },
       },
     }),
+    prisma.user.findUnique({ where: { id: user.id }, select: { coinBalance: true } }),
+    prisma.user.findUnique({ where: { id: user.id }, select: { currentStreak: true } }),
+    prisma.attempt.findFirst({
+      where: { userId: user.id, status: "SUBMITTED", totalScaledScore: { not: null } },
+      orderBy: { submittedAt: "desc" },
+      select: { totalScaledScore: true },
+    }),
+    prisma.attempt.findFirst({
+      where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
+      orderBy: { updatedAt: "desc" },
+      select: { id: true, test: { select: { title: true } } },
+    }),
     getSettings(),
-    getDailyChallenge(user.id),
     getAchievements(user.id),
-    // Just the podium for the dashboard card; the full board is its own page.
     getLeaderboard("weekly", user.id, 3),
   ]);
 
-  const totalAnswered = responses.length;
-  const totalCorrect = responses.filter((r) => r.isCorrect).length;
-  const accuracy = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
-  const avgTime = totalAnswered
-    ? Math.round(responses.reduce((sum, r) => sum + r.timeSpentSeconds, 0) / totalAnswered)
-    : 0;
+  const firstName = user.name ? user.name.split(" ")[0] : "";
+  const streak = profile?.currentStreak ?? 0;
+  const proposal = proposals[0]?.status ?? null;
 
-  const rwResponses = responses.filter((r) => r.question.domain.subject === "READING_WRITING");
-  const mathResponses = responses.filter((r) => r.question.domain.subject === "MATH");
-  const rwAccuracy = rwResponses.length
-    ? Math.round((rwResponses.filter((r) => r.isCorrect).length / rwResponses.length) * 100)
-    : 0;
-  const mathAccuracy = mathResponses.length
-    ? Math.round((mathResponses.filter((r) => r.isCorrect).length / mathResponses.length) * 100)
-    : 0;
-
-  const latestFullLength = submittedAttempts.at(-1);
-  const rwEstimate = latestFullLength?.rwScaledScore ?? (rwResponses.length ? estimateScaledScore(rwAccuracy, "READING_WRITING") : null);
-  const mathEstimate =
-    latestFullLength?.mathScaledScore ?? (mathResponses.length ? estimateScaledScore(mathAccuracy, "MATH") : null);
-  const totalEstimate =
-    latestFullLength?.totalScaledScore ?? (rwEstimate && mathEstimate ? rwEstimate + mathEstimate : null);
-
-  const domainStats = new Map<string, { correct: number; total: number }>();
-  for (const r of responses) {
-    const key = r.question.domain.name;
-    const bucket = domainStats.get(key) ?? { correct: 0, total: 0 };
-    bucket.total += 1;
-    if (r.isCorrect) bucket.correct += 1;
-    domainStats.set(key, bucket);
-  }
-  const domainAccuracy = [...domainStats.entries()]
-    .map(([domain, { correct, total }]) => ({ domain, accuracy: Math.round((correct / total) * 100), total }))
-    .filter((d) => d.total >= 3)
-    .sort((a, b) => a.accuracy - b.accuracy);
-  const weakest = domainAccuracy.slice(0, 3);
-  const strongest = [...domainAccuracy].reverse().slice(0, 3);
-
-  const trend = submittedAttempts
-    .filter((a) => a.totalScaledScore != null)
-    .map((a, i) => ({ attempt: `#${i + 1}`, score: a.totalScaledScore as number }));
+  const paths: PathCard[] = [
+    {
+      key: "research",
+      icon: FlaskConical,
+      tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
+      title: "Research programme",
+      status:
+        proposal === "ACCEPTED"
+          ? "Your project is accepted"
+          : proposal === "PENDING"
+            ? "Your proposal is under review"
+            : proposal === "REJECTED"
+              ? "Ready for a new proposal"
+              : "Investigate a question you care about",
+      cta: proposal === "ACCEPTED" ? "Open your project" : proposal === "PENDING" ? "View proposal" : "Propose a topic",
+      href: "/research",
+      highlight: proposal === "ACCEPTED",
+    },
+    {
+      key: "ap",
+      icon: Award,
+      tint: "bg-success/10 text-success",
+      title: "AP courses",
+      status:
+        apEnrollments > 0
+          ? `${apEnrollments} subject${apEnrollments === 1 ? "" : "s"} on your list`
+          : "Practise AP subjects unit by unit",
+      cta: apEnrollments > 0 ? "Continue AP practice" : "Pick your subjects",
+      href: "/ap",
+    },
+    {
+      key: "mentorship",
+      icon: UserRound,
+      tint: "bg-primary/10 text-primary",
+      title: "Mentorship",
+      status: upcomingSession
+        ? `Next session ${upcomingSession.slot.startsAt.toLocaleDateString("en-US", {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+            timeZone: "UTC",
+          })}`
+        : "Book a free 1-on-1 session",
+      cta: upcomingSession ? "My sessions" : "Book a session",
+      href: upcomingSession ? "/bookings" : "/booking",
+    },
+    {
+      key: "ielts",
+      icon: Languages,
+      tint: "bg-[hsl(266_84%_60%)]/10 text-[hsl(266_84%_60%)]",
+      title: "IELTS",
+      status: exam?.hasIelts ? "Writing and Speaking practice" : "Add IELTS preparation any time",
+      cta: exam?.hasIelts ? "Open IELTS" : "Explore IELTS",
+      href: "/ielts",
+    },
+    {
+      key: "events",
+      icon: CalendarRange,
+      tint: "bg-warning/15 text-warning",
+      title: "Events & classes",
+      status: "Financial literacy classes and lectures",
+      cta: "See events",
+      href: "/events",
+    },
+    {
+      key: "community",
+      icon: MessagesSquare,
+      tint: "bg-[hsl(340_78%_56%)]/10 text-[hsl(340_78%_56%)]",
+      title: "Community",
+      status: "Talk with other students",
+      cta: "Open community",
+      href: "/community",
+    },
+  ];
 
   return (
     <div className="space-y-8">
-      <PersonalizedHeader
-        firstName={user.name ? user.name.split(" ")[0] : ""}
-        targetScore={profile?.targetScore ?? null}
-        currentScore={profile?.currentScore ?? null}
-        predictedScore={totalEstimate}
-        satDate={profile?.satDate ?? null}
-        gradeLevel={profile?.gradeLevel ?? null}
-        weakestArea={asWeakArea(profile?.weakestArea)}
-        dailyGoalType={profile?.dailyGoalType ?? null}
-        dailyGoalValue={profile?.dailyGoalValue ?? null}
-        todayQuestions={todayActivity?.questionsAnswered ?? 0}
-        todayMinutes={todayActivity?.minutesStudied ?? 0}
-        currentStreak={profile?.currentStreak ?? 0}
-        weakestSkills={weakest.map((w) => w.domain)}
-        onboarded={profile?.onboardedAt != null}
-      />
+      <ScenicHeader
+        theme="dashboard"
+        priority
+        contentClassName="flex min-h-[176px] flex-col justify-end sm:min-h-[200px]"
+      >
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h1 className="font-display text-2xl font-semibold tracking-tight drop-shadow-sm sm:text-3xl">
+              Welcome back{firstName ? `, ${firstName}` : ""}
+            </h1>
+            <p className="mt-1 text-sm text-white/85 drop-shadow-sm">What would you like to work on today?</p>
+          </div>
+          {streak > 0 && (
+            <span className="flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+              <Flame className="h-4 w-4 text-amber-300" />
+              {streak}-day streak
+            </span>
+          )}
+        </div>
+      </ScenicHeader>
 
-      {daily && <DashboardDailyCard daily={daily} />}
-
-      <DashboardPlanCard plan={planSummary} />
+      <section aria-labelledby="paths-heading" className="space-y-4">
+        <h2 id="paths-heading" className="font-display text-lg font-semibold tracking-tight">
+          Your programmes
+        </h2>
+        <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {paths.map((p) => (
+            <PathTile key={p.key} card={p} />
+          ))}
+        </div>
+      </section>
 
       <div className="stagger grid gap-4 md:grid-cols-2">
         <DashboardAchievementsCard
@@ -183,10 +221,7 @@ export default async function DashboardPage() {
       </div>
 
       <div className="stagger grid gap-4 md:grid-cols-2">
-        <DashboardCoinsCard
-          balance={coinUser?.coinBalance ?? 0}
-          referralReward={settings.referralRewardCoins}
-        />
+        <DashboardCoinsCard balance={coinUser?.coinBalance ?? 0} referralReward={settings.referralRewardCoins} />
         {upcomingSession && (
           <DashboardSessionCard
             startsAt={upcomingSession.slot.startsAt}
@@ -196,120 +231,69 @@ export default async function DashboardPage() {
         )}
       </div>
 
-      {inProgress && (
-        <Card className="border-primary/50 bg-primary-50/50">
-          <CardContent className="flex flex-wrap items-center justify-between gap-4 p-6">
-            <div>
-              <p className="text-sm font-medium text-primary-700">Continue where you left off</p>
-              <p className="font-display text-lg font-semibold">{inProgress.test.title}</p>
-            </div>
-            <Button asChild>
-              <Link href={`/exam/${inProgress.id}`}>
-                Resume test <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </CardContent>
-        </Card>
-      )}
-
-      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard label="Overall SAT estimate" value={totalEstimate ?? "—"} sublabel="out of 1600" icon={TrendingUp} />
-        <StatCard label="Reading & Writing" value={rwEstimate ?? "—"} sublabel="out of 800" icon={Target} tone="violet" />
-        <StatCard label="Math" value={mathEstimate ?? "—"} sublabel="out of 800" icon={Target} tone="emerald" />
-        <StatCard label="Avg. time / question" value={avgTime ? formatDuration(avgTime) : "—"} icon={Clock} tone="amber" />
-      </div>
-
-      <div className="grid gap-6 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
-          <CardHeader>
-            <CardTitle>Score trend</CardTitle>
-          </CardHeader>
-          <CardContent>
-            {trend.length > 1 ? (
-              <ScoreTrendChart data={trend} />
-            ) : (
-              <p className="py-12 text-center text-sm text-muted-foreground">
-                Complete full-length practice tests to see your score trend here.
-              </p>
-            )}
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Accuracy</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="text-center">
-              <p className="font-display text-4xl font-semibold">{accuracy}%</p>
-              <p className="text-sm text-muted-foreground">{totalAnswered} questions answered</p>
-            </div>
-            <Progress value={accuracy} />
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Weakest topics</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {weakest.length === 0 && <p className="text-sm text-muted-foreground">Not enough data yet.</p>}
-            {weakest.map((d) => (
-              <div key={d.domain} className="flex items-center justify-between">
-                <span className="text-sm">{d.domain}</span>
-                <Badge variant="destructive">{d.accuracy}%</Badge>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Strongest topics</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {strongest.length === 0 && <p className="text-sm text-muted-foreground">Not enough data yet.</p>}
-            {strongest.map((d) => (
-              <div key={d.domain} className="flex items-center justify-between">
-                <span className="text-sm">{d.domain}</span>
-                <Badge variant="success">{d.accuracy}%</Badge>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </div>
-
+      {/* SAT practice — one card among the programmes, last. */}
       <Card>
-        <CardHeader>
-          <CardTitle>Recent activity</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          {recentAttempts.length === 0 && (
-            <p className="text-sm text-muted-foreground">
-              No attempts yet.{" "}
-              <Link href="/tests" className="text-primary hover:underline">
-                Start a practice test
-              </Link>
-              .
-            </p>
-          )}
-          {recentAttempts.map((attempt) => (
-            <div key={attempt.id} className="flex items-center justify-between rounded-lg border border-border p-3">
-              <div>
-                <p className="text-sm font-medium">{attempt.test.title}</p>
-                <p className="text-xs text-muted-foreground">
-                  {attempt.createdAt.toLocaleDateString()} · {attempt.status.replace("_", " ")}
-                </p>
-              </div>
-              {attempt.totalScaledScore != null && <Badge variant="outline">{attempt.totalScaledScore}</Badge>}
+        <CardContent className="flex flex-wrap items-center justify-between gap-4 p-5">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-muted-foreground">
+              <BookOpen className="h-5 w-5" />
+            </span>
+            <div>
+              <p className="text-sm font-semibold">SAT practice</p>
+              <p className="text-sm text-muted-foreground">
+                {satInProgress
+                  ? `In progress: ${satInProgress.test.title}`
+                  : satLatest?.totalScaledScore != null
+                    ? `Latest full-length score: ${satLatest.totalScaledScore}`
+                    : "Full-length adaptive tests, a question bank and analytics"}
+              </p>
             </div>
-          ))}
+          </div>
+          <Link
+            href={satInProgress ? `/exam/${satInProgress.id}` : "/sat"}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            {satInProgress ? "Resume test" : "Open SAT practice"} <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </CardContent>
       </Card>
 
       {/* Renders nothing while no partner is published. */}
       <PartnersStrip compact />
     </div>
+  );
+}
+
+interface PathCard {
+  key: string;
+  icon: typeof FlaskConical;
+  tint: string;
+  title: string;
+  status: string;
+  cta: string;
+  href: string;
+  highlight?: boolean;
+}
+
+function PathTile({ card }: { card: PathCard }) {
+  const Icon = card.icon;
+  return (
+    <Link
+      href={card.href}
+      className={cn(
+        "lift group flex h-full flex-col rounded-2xl border bg-card p-5 shadow-soft transition-colors hover:border-foreground/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        card.highlight ? "border-success/40" : "border-border",
+      )}
+    >
+      <span className={cn("flex h-10 w-10 items-center justify-center rounded-xl", card.tint)}>
+        <Icon className="h-5 w-5" />
+      </span>
+      <p className="mt-4 font-display text-base font-semibold tracking-tight">{card.title}</p>
+      <p className="mt-1 flex-1 text-sm text-muted-foreground">{card.status}</p>
+      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+        {card.cta}
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+      </span>
+    </Link>
   );
 }

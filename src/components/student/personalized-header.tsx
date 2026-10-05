@@ -58,14 +58,17 @@ export function PersonalizedHeader({
     <div className="relative space-y-5">
       <AuroraBackdrop className="-z-10 opacity-70" />
       <ScenicHeader
-        theme="dashboard"
+        theme="math"
         priority
         contentClassName="flex min-h-[176px] flex-col justify-end sm:min-h-[200px]"
       >
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <h1 className="font-display text-2xl font-semibold tracking-tight drop-shadow-sm sm:text-3xl">
-              Welcome back{firstName ? `, ${firstName}` : ""}
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80 drop-shadow-sm">
+              {firstName ? `${firstName} · ` : ""}SAT practice
+            </p>
+            <h1 className="mt-1 font-display text-2xl font-semibold tracking-tight drop-shadow-sm sm:text-3xl">
+              Your SAT preparation
             </h1>
             <p className="mt-1 text-sm text-white/85 drop-shadow-sm">
               {goalMet

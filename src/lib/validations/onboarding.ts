@@ -21,7 +21,12 @@ export const WEAK_AREAS = ["READING", "WRITING", "MATH", "VOCABULARY", "TIME_MAN
  * even worth asking: a target of 1450 means nothing to someone sitting IELTS,
  * and a Task 2 word count means nothing to someone sitting the SAT.
  */
-export const EXAM_TRACKS = ["SAT", "IELTS", "BOTH"] as const;
+/**
+ * What a new student is here for. EXPLORE is "no exam right now": research, AP,
+ * mentorship and the rest of the community, without an exam plan. It stores no
+ * preparation exam (see registerWithOnboarding).
+ */
+export const EXAM_TRACKS = ["EXPLORE", "IELTS", "SAT", "BOTH"] as const;
 
 /** Why someone needs IELTS. Drives the target band the plan aims at. */
 export const IELTS_REASONS = ["UNIVERSITY", "WORK", "IMMIGRATION", "OTHER"] as const;
