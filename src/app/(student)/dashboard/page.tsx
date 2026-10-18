@@ -21,7 +21,6 @@ import {
   DashboardAchievementsCard,
   DashboardLeaderboardCard,
 } from "@/components/student/dashboard-engagement";
-import { PartnersStrip } from "@/components/marketing/partners-strip";
 import { getAchievements } from "@/lib/achievements/service";
 import { getLeaderboard } from "@/lib/leaderboard";
 import { ACTIVE_STATUSES } from "@/lib/booking/status";
@@ -257,9 +256,6 @@ export default async function HomePage() {
           </Link>
         </CardContent>
       </Card>
-
-      {/* Renders nothing while no partner is published. */}
-      <PartnersStrip compact />
     </div>
   );
 }

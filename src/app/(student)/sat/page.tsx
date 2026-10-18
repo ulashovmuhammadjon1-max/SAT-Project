@@ -18,7 +18,6 @@ import {
   DashboardLeaderboardCard,
 } from "@/components/student/dashboard-engagement";
 import { ScoreTrendChart } from "@/components/charts/score-trend-chart";
-import { PartnersStrip } from "@/components/marketing/partners-strip";
 import { getAchievements } from "@/lib/achievements/service";
 import { getDailyChallenge } from "@/lib/daily-challenge";
 import { getLeaderboard } from "@/lib/leaderboard";
@@ -312,9 +311,6 @@ export default async function SatHomePage() {
           ))}
         </CardContent>
       </Card>
-
-      {/* Renders nothing while no partner is published. */}
-      <PartnersStrip compact />
     </div>
   );
 }

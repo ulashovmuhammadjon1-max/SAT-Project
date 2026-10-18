@@ -1,5 +1,4 @@
 import { Landing, type ApSummary } from "@/components/marketing/landing";
-import { PartnersStrip } from "@/components/marketing/partners-strip";
 import { AP_CATALOG } from "@/lib/ap/catalog";
 
 /**
@@ -12,5 +11,5 @@ const AP_SUMMARY: ApSummary = {
 };
 
 export default function HomePage() {
-  return <Landing partners={<PartnersStrip />} ap={AP_SUMMARY} />;
+  return <Landing ap={AP_SUMMARY} />;
 }

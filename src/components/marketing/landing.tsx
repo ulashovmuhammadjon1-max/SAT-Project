@@ -62,12 +62,7 @@ const ApContext = createContext<ApSummary>({ live: [], plannedCount: 0 });
 const useAp = () => useContext(ApContext);
 const shortName = (name: string) => name.replace(/^AP /, "");
 
-/**
- * `partners` is passed in rather than imported because this is a client
- * component and the partners strip is an async server component that reads the
- * database. Handing it down as a child keeps the query on the server.
- */
-export function Landing({ partners, ap }: { partners?: React.ReactNode; ap: ApSummary }) {
+export function Landing({ ap }: { ap: ApSummary }) {
   return (
     <ApContext.Provider value={ap}>
     <div className="min-h-screen overflow-x-clip bg-background">
@@ -81,7 +76,6 @@ export function Landing({ partners, ap }: { partners?: React.ReactNode; ap: ApSu
         <StreakBand />
         <SatSection />
         <Faq />
-        {partners}
         <FinalCta />
       </main>
       <Footer />
