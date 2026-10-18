@@ -20,10 +20,10 @@ export function LegalLayout({
   return (
     <div className="min-h-screen bg-background">
       <SiteNav />
-      <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="font-display text-3xl font-semibold tracking-tight">{title}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Last updated {updated}</p>
-        <div className="mt-10 space-y-8">{children}</div>
+      <main id="main" className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <p className="text-[13px] text-muted-foreground">Last updated {updated}</p>
+        <h1 className="mt-3 font-serif text-[2.4rem] font-medium leading-tight tracking-[-0.015em]">{title}</h1>
+        <div className="mt-10 space-y-10 border-t border-border pt-10">{children}</div>
         <div className="mt-16 border-t border-border pt-6 text-sm text-muted-foreground">
           <Link href="/terms" className="hover:text-foreground">
             Terms
@@ -45,8 +45,8 @@ export function LegalLayout({
 export function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h2 className="font-display text-lg font-semibold">{title}</h2>
-      <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+      <h2 className="font-serif text-[1.4rem] font-medium leading-snug">{title}</h2>
+      <div className="mt-3 max-w-[40rem] space-y-3 text-[16px] leading-[1.7] text-foreground/80 [&_a]:underline [&_a]:underline-offset-4">
         {children}
       </div>
     </section>

@@ -5,7 +5,7 @@ import { enabledOAuth } from "@/lib/auth-providers";
 
 export const metadata = {
   title: "Sign in",
-  description: "Sign in to Scholarly to continue your SAT and IELTS preparation.",
+  description: "Sign in to Scholarly to continue your research, courses and preparation.",
 };
 
 // Read at request time so the social buttons reflect whatever OAuth providers
@@ -17,7 +17,7 @@ export default function LoginPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-center font-display text-2xl font-semibold tracking-tight sm:text-[28px]">
+      <h1 className="text-center font-serif text-[1.85rem] font-medium tracking-[-0.01em] sm:text-[2.1rem]">
         Sign in to Scholarly
       </h1>
 

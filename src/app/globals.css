@@ -3,6 +3,110 @@
 @tailwind utilities;
 
 @layer base {
+  /* Scholarly's palette: paper and ink.
+     Light is the primary expression — warm paper surfaces, ink text, one
+     restrained academic blue for actions and links, and a muted teal reserved
+     for research. Colour carries meaning (action, research, status), never
+     decoration. Every text token below clears WCAG AA (4.5:1) on the paper
+     background, the white card and the secondary surface, and --input clears
+     3:1 for form-control boundaries, in both themes. */
+  :root {
+    --background: 43 30% 96%;          /* paper  #F8F6F1 */
+    --foreground: 221 34% 13%;         /* ink    #151C2B */
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 34% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 34% 13%;
+
+    --primary: 223 60% 49%;            /* academic blue #315CCB — 6:1 with white */
+    --primary-foreground: 0 0% 100%;
+
+    --navy: 221 34% 13%;
+
+    --secondary: 40 22% 92%;           /* a deeper paper, for quiet surfaces */
+    --secondary-foreground: 221 34% 13%;
+
+    --muted: 40 22% 92%;
+    --muted-foreground: 218 12% 40%;   /* #5A6374 — 5.6:1 on paper */
+
+    --accent: 223 60% 95%;
+    --accent-foreground: 223 60% 36%;
+
+    --destructive: 0 66% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 153 55% 29%;            /* #217452 */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 36 88% 44%;
+    --warning-foreground: 221 34% 13%;
+
+    /* Research — a muted teal, used for the programme's labels and rules. */
+    --research: 184 72% 27%;           /* #137479 — 5.3:1 on paper */
+    --research-soft: 184 40% 92%;
+
+    --border: 36 12% 85%;              /* a fine warm rule that sits on paper */
+    --input: 36 6% 52%;               /* form-control boundary — 3.3:1+ (WCAG 1.4.11) */
+    --ring: 223 60% 49%;
+
+    --radius: 0.5rem;
+
+    /* Categorical chart series. Assigned in fixed order — total, then the two
+       sections — so a series keeps its colour whatever else is on the chart. */
+    --chart-1: 223 60% 49%;
+    --chart-2: 153 55% 36%;
+    --chart-3: 29 91% 38%;
+  }
+
+  /* Dark: layered ink and navy, not black. Text is warm paper rather than
+     pure white so long passages stay comfortable to read. */
+  .dark {
+    --background: 220 38% 9%;          /* #0E1420 */
+    --foreground: 40 22% 92%;
+
+    --card: 221 34% 12%;               /* ink surface */
+    --card-foreground: 40 22% 92%;
+
+    --popover: 221 34% 12%;
+    --popover-foreground: 40 22% 92%;
+
+    --primary: 223 72% 70%;
+    --primary-foreground: 221 40% 10%;
+
+    --navy: 40 22% 92%;
+
+    --secondary: 221 28% 16%;
+    --secondary-foreground: 40 22% 92%;
+
+    --muted: 221 28% 16%;
+    --muted-foreground: 220 12% 68%;
+
+    --accent: 221 28% 19%;
+    --accent-foreground: 223 80% 80%;
+
+    --destructive: 0 72% 64%;
+    --destructive-foreground: 221 40% 10%;
+
+    --success: 153 45% 52%;
+    --success-foreground: 221 40% 10%;
+
+    --warning: 38 85% 58%;
+    --warning-foreground: 221 40% 10%;
+
+    --research: 182 45% 58%;
+    --research-soft: 184 30% 16%;
+
+    --border: 221 22% 20%;
+    --input: 221 14% 45%;
+    --ring: 223 72% 70%;
+
+    --chart-1: 223 72% 70%;
+    --chart-2: 153 45% 50%;
+    --chart-3: 28 88% 52%;
+  }
+
   /* `.theme-light-scope` re-declares the light tokens on an element deep inside
      the page, which is how the testing rooms stay light for a student who runs
      the rest of the site in dark mode. The `exam-*` palette is already fixed,
@@ -10,9 +114,12 @@
      shadcn Button, say — would otherwise follow the site theme and render a
      dark control on a light kiosk. Custom properties are inherited, so setting
      them on the room's root element beats `.dark` on `<html>` for everything
-     inside it without touching specificity. */
-  :root,
+     inside it without touching specificity. The rooms keep the original
+     neutral white rather than the site's paper: a mock test should look like
+     the real one, whatever the site palette does. */
   .theme-light-scope {
+    --research: 184 72% 27%;
+    --research-soft: 184 40% 92%;
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
@@ -61,49 +168,6 @@
     --chart-3: 29 91% 38%;
   }
 
-  .dark {
-    --background: 222 47% 7%;
-    --foreground: 210 20% 96%;
-
-    --card: 222 40% 10%;
-    --card-foreground: 210 20% 96%;
-
-    --popover: 222 40% 9%;
-    --popover-foreground: 210 20% 96%;
-
-    --primary: 226 84% 62%;
-    --primary-foreground: 222 47% 8%;
-
-    --navy: 210 20% 96%;
-
-    --secondary: 222 30% 15%;
-    --secondary-foreground: 210 20% 96%;
-
-    --muted: 222 30% 15%;
-    --muted-foreground: 220 12% 65%;
-
-    --accent: 222 30% 18%;
-    --accent-foreground: 217 91% 75%;
-
-    --destructive: 0 63% 48%;
-    --destructive-foreground: 0 0% 100%;
-
-    --success: 152 55% 45%;
-    --success-foreground: 222 47% 8%;
-
-    --warning: 38 92% 55%;
-    --warning-foreground: 222 47% 8%;
-
-    --border: 222 25% 18%;
-    --input: 222 25% 20%;
-    --ring: 226 84% 62%;
-
-    /* Dark steps for the same three series — re-picked against the dark
-       surface, not lightened copies of the light ones. */
-    --chart-1: 226 84% 66%;
-    --chart-2: 152 55% 43%;
-    --chart-3: 28 88% 44%;
-  }
 }
 
 @layer base {
@@ -115,6 +179,11 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 

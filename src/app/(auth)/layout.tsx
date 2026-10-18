@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap } from "lucide-react";
+import { ScholarlyMark } from "@/components/marketing/wordmark";
 
 /**
  * Auth shell.
@@ -12,23 +12,23 @@ import { GraduationCap } from "lucide-react";
  */
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-muted/40 px-4 py-10 sm:py-16">
-      <Link
-        href="/"
-        className="mb-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity hover:opacity-80"
-        aria-label="Scholarly home"
-      >
-        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy-900 text-white">
-          <GraduationCap className="h-5 w-5" />
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight">Scholarly</span>
-      </Link>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-10 sm:py-16">
+      <header>
+        <Link
+          href="/"
+          className="mb-8 inline-flex items-center gap-2.5 rounded-md text-foreground transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          aria-label="Scholarly home"
+        >
+          <ScholarlyMark className="h-8 w-8" />
+          <span className="font-serif text-[1.35rem] font-semibold">Scholarly</span>
+        </Link>
+      </header>
 
       <main className="w-full max-w-[420px] animate-fade-up">{children}</main>
 
-      <p className="mt-8 text-xs text-muted-foreground">
+      <footer className="mt-8 text-xs text-muted-foreground">
         © {new Date().getFullYear()} Scholarly
-      </p>
+      </footer>
     </div>
   );
 }

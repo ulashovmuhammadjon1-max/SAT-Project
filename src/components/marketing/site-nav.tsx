@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Wordmark } from "@/components/marketing/wordmark";
 import { ThemeToggle, ThemeToggleCompact } from "@/components/shared/theme-toggle";
-import { cn } from "@/lib/utils";
 
+/**
+ * Every link resolves to a real destination: the four homepage sections by
+ * anchor (as absolute "/#…" paths, so they also work from /team or /schools),
+ * and the team page.
+ */
 const LINKS = [
   { href: "/#programmes", label: "Programmes" },
   { href: "/#research", label: "Research" },
@@ -17,106 +20,111 @@ const LINKS = [
   { href: "/#faq", label: "FAQ" },
 ];
 
+/**
+ * The public header. Sticky, because the page is long and the join action
+ * should stay one click away — but kept to 64px with a solid paper surface
+ * and a single hairline, rather than a tall frosted panel.
+ */
 export function SiteNav() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // Close the mobile menu on Escape, the way a native disclosure behaves.
   useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 12);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "border-b border-border/60 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60"
-          : "border-b border-transparent bg-transparent"
-      )}
-    >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white shadow-soft">
-            <GraduationCap className="h-[18px] w-[18px]" />
-          </span>
-          <span className="font-display text-[17px] font-semibold tracking-tight">Scholarly</span>
-        </Link>
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 supports-[backdrop-filter]:bg-background/90 supports-[backdrop-filter]:backdrop-blur-sm">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-md focus:bg-card focus:px-3 focus:py-2 focus:text-sm focus:shadow-card"
+      >
+        Skip to content
+      </a>
+      <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+        <Wordmark />
 
-        <div className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 lg:flex">
           {LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {l.label}
-            </a>
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                className="whitespace-nowrap rounded-md px-3 py-2 text-[14px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                {l.label}
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <ThemeToggleCompact />
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Sign in</Link>
-          </Button>
-          <Button size="sm" className="rounded-full px-4 shadow-soft" asChild>
-            <Link href="/onboarding">Join free</Link>
-          </Button>
+          <Link
+            href="/login"
+            className="whitespace-nowrap rounded-md px-3 py-2 text-[14px] font-medium text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Sign in
+          </Link>
+          <Link
+            href="/onboarding"
+            className="ml-1 inline-flex h-9 items-center whitespace-nowrap rounded-md bg-primary px-4 text-[14px] font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            Join free
+          </Link>
         </div>
 
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground md:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center rounded-md text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-border/60 bg-background/95 backdrop-blur-xl md:hidden"
+      <div
+        id="mobile-menu"
+        hidden={!open}
+        className="border-t border-border bg-background lg:hidden"
+      >
+        <ul className="px-4 py-2">
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="flex min-h-11 items-center border-b border-border/70 text-[15px] text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                {l.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="flex items-center justify-between px-4 py-3">
+          <span className="text-sm text-muted-foreground">Theme</span>
+          <ThemeToggle />
+        </div>
+        <div className="grid grid-cols-2 gap-2 px-4 pb-4">
+          <Link
+            href="/login"
+            className="inline-flex h-11 items-center justify-center rounded-md border border-input text-[15px] font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <div className="space-y-1 px-5 py-4">
-              {LINKS.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground"
-                >
-                  {l.label}
-                </a>
-              ))}
-              {/* Full three-way switch on mobile: there is room for it here,
-                  and the cycling button is harder to understand on a phone. */}
-              <div className="flex items-center justify-between px-3 pt-2">
-                <span className="text-sm font-medium text-muted-foreground">Theme</span>
-                <ThemeToggle />
-              </div>
-              <div className="flex gap-2 pt-2">
-                <Button variant="outline" className="flex-1" asChild>
-                  <Link href="/login">Sign in</Link>
-                </Button>
-                <Button className="flex-1" asChild>
-                  <Link href="/onboarding">Join free</Link>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            Sign in
+          </Link>
+          <Link
+            href="/onboarding"
+            className="inline-flex h-11 items-center justify-center rounded-md bg-primary text-[15px] font-medium text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            Join free
+          </Link>
+        </div>
+      </div>
     </header>
   );
 }

@@ -12,7 +12,11 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        // Interface headings: the sans at display weights. The geometric face
+        // this used to point at read as a startup; one sans keeps the product
+        // precise, and the serif below carries the editorial voice.
+        display: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "Cambria", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -109,6 +113,10 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        research: {
+          DEFAULT: "hsl(var(--research))",
+          soft: "hsl(var(--research-soft))",
         },
       },
       borderRadius: {

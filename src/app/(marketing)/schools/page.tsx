@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BarChart3, CheckCircle2, ClipboardList, School, Users2 } from "lucide-react";
+import { Container, Eyebrow, Lede, SectionTitle } from "@/components/marketing/editorial";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
@@ -13,17 +13,14 @@ export const metadata = {
 
 const BENEFITS = [
   {
-    icon: ClipboardList,
     title: "Ready-made assignments",
     body: "31 full adaptive SAT practice tests and a 5,000+ question bank — assign real practice instead of photocopies, graded automatically.",
   },
   {
-    icon: BarChart3,
     title: "See the whole class at a glance",
     body: "Which students are falling behind, and which skills the whole class is weakest on — so lesson time goes where the data says.",
   },
   {
-    icon: Users2,
     title: "One account, both exams",
     body: "Your students need SAT and IELTS. Scholarly covers both under one free account, instead of two separate paid tools.",
   },
@@ -42,63 +39,69 @@ export default async function SchoolsPage() {
   return (
     <div className="min-h-screen bg-background">
       {user ? <AppReturnBar backHref="/class" backLabel="Back to My Class" /> : <SiteNav />}
-      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">
-          <School className="mr-1 inline h-3.5 w-3.5 align-[-2px]" />
-          Scholarly for Schools
-        </p>
-        <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-          Free classroom prep, with a teacher&apos;s view
-        </h1>
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-          Everything students already get on Scholarly — adaptive tests, a Bluebook-style
-          interface, IELTS practice — plus a class code that shows you, the teacher, exactly how
-          your class is doing. Free, with no per-seat pricing, ever.
-        </p>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {BENEFITS.map((b) => (
-            <div key={b.title} className="rounded-2xl border border-border/70 bg-card p-6 shadow-soft">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-success/10 text-success">
-                <b.icon className="h-5 w-5" />
-              </span>
-              <p className="mt-4 font-medium">{b.title}</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
+      <main id="main">
+        <Container className="py-16 lg:py-24">
+          <div className="grid gap-6 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <Eyebrow>Scholarly for Schools</Eyebrow>
+              <SectionTitle as="h1" className="mt-5 sm:text-[2.9rem]">
+                Free classroom prep, with a teacher&apos;s view
+              </SectionTitle>
             </div>
-          ))}
-        </div>
+            <Lede className="lg:col-span-5 lg:pt-12">
+              Everything students already get on Scholarly — adaptive tests, a Bluebook-style interface, IELTS
+              practice — plus a class code that shows you, the teacher, exactly how your class is doing. Free, with no
+              per-seat pricing, ever.
+            </Lede>
+          </div>
 
-        <div className="mt-12 max-w-2xl">
-          <h2 className="font-display text-xl font-semibold tracking-tight">How the pilot works</h2>
-          <ul className="mt-4 space-y-3">
-            {STEPS.map((s, i) => (
-              <li key={i} className="flex items-start gap-3 text-[15px] leading-relaxed">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success" />
-                <span className="text-muted-foreground">{s}</span>
+          <ol className="mt-14 grid border-t border-border sm:grid-cols-3">
+            {BENEFITS.map((b, i) => (
+              <li
+                key={b.title}
+                className="border-b border-border py-7 sm:border-b-0 sm:py-8 sm:pr-8 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:pl-8"
+              >
+                <p aria-hidden className="font-serif text-[15px] tabular-nums text-muted-foreground">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h2 className="mt-3 font-serif text-[1.35rem] leading-snug">{b.title}</h2>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{b.body}</p>
               </li>
             ))}
-          </ul>
-          <p className="mt-6 text-sm text-muted-foreground">
-            We are onboarding pilot classes one at a time, personally — early teachers shape what
-            gets built next.
-          </p>
-          <a
-            href="mailto:scholarlyhub.space@gmail.com?subject=Scholarly%20for%20Schools%20—%20pilot%20class"
-            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Request a class code
-          </a>
-        </div>
+          </ol>
 
-        {!user && (
-        <p className="mt-12 text-sm text-muted-foreground">
-          Curious what your students would be using?{" "}
-          <Link href="/" className="font-medium text-primary underline-offset-4 hover:underline">
-            See the platform
-          </Link>
-          .
-        </p>
-        )}
+          <div className="mt-16 grid gap-8 border-t border-border pt-12 lg:grid-cols-12">
+            <h2 className="font-serif text-[1.75rem] font-medium leading-tight lg:col-span-4">How the pilot works</h2>
+            <div className="lg:col-span-7 lg:col-start-6">
+              <ol className="divide-y divide-border border-y border-border">
+                {STEPS.map((step, i) => (
+                  <li key={i} className="grid grid-cols-[2rem_minmax(0,1fr)] gap-3 py-4 text-[15.5px] leading-relaxed">
+                    <span className="font-serif tabular-nums text-muted-foreground">{i + 1}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
+                We are onboarding pilot classes one at a time, personally — early teachers shape what gets built next.
+              </p>
+              <a
+                href="mailto:scholarlyhub.space@gmail.com?subject=Scholarly%20for%20Schools%20—%20pilot%20class"
+                className="mt-6 inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-[15px] font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Request a class code
+              </a>
+              {!user && (
+                <p className="mt-8 text-[15px] text-muted-foreground">
+                  Curious what your students would be using?{" "}
+                  <Link href="/" className="font-medium text-primary underline-offset-4 hover:underline">
+                    See the platform
+                  </Link>
+                  .
+                </p>
+              )}
+            </div>
+          </div>
+        </Container>
       </main>
     </div>
   );
