@@ -20,28 +20,14 @@ const PUBLIC_ROUTES = [
   // /impact is confidential and was removed from the site; do not re-add it.
   "/team",
   "/schools",
-  "/journal",
+  // Research proposals are private to their author
+  // and admins; nothing about them is served to a logged-out visitor.
 ];
-
-// Prefixes, not exact paths. PUBLIC_ROUTES matches a pathname exactly, so a
-// published paper at /journal/<slug> was redirecting to the login page while
-// the index it is linked from stayed open. A paper nobody can read without an
-// account is not published, and a citation of one would break for the reader.
-const PUBLIC_PREFIXES = [
-  "/journal/",
-];
-
-// Paths inside a public prefix that must still require a session. In-progress
-// research projects live under /journal/ but are private to their author and
-// admins, so they fall through to the sign-in check like any app page.
-const PRIVATE_UNDER_PUBLIC = ["/journal/projects/"];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
-  const isPrivateCarveOut = PRIVATE_UNDER_PUBLIC.some((p) => pathname.startsWith(p));
   const isPublic =
     PUBLIC_ROUTES.includes(pathname) ||
-    (!isPrivateCarveOut && PUBLIC_PREFIXES.some((prefix) => pathname.startsWith(prefix))) ||
     pathname.startsWith("/api/auth") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||

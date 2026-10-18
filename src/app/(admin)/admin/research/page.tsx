@@ -1,10 +1,7 @@
-import Link from "next/link";
-
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResearchDecision } from "@/components/admin/research-decision";
 import { ResearchMessage } from "@/components/admin/research-message";
-import { listAcceptedProjects } from "@/lib/journal/projects";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 
@@ -52,7 +49,7 @@ function ProposalBody({
 export default async function AdminResearchPage() {
   await requireAdmin();
 
-  const [pending, decided, projects] = await Promise.all([
+  const [pending, decided] = await Promise.all([
     prisma.researchProposal.findMany({
       where: { status: "PENDING" },
       orderBy: { createdAt: "asc" },
@@ -64,28 +61,21 @@ export default async function AdminResearchPage() {
       take: 20,
       include: { user: { select: { name: true, email: true } } },
     }),
-    listAcceptedProjects(),
   ]);
-
-  // The public URL for an accepted project, so the admin list can link to what
-  // the student and the world actually see. Built from the same function the
-  // journal uses, never re-derived here — two slug rules would drift.
-  const slugById = new Map(projects.map((p) => [p.id, p.slug]));
 
   const SITE = process.env.NEXT_PUBLIC_APP_URL ?? "https://scholarly.space";
 
   /**
    * The message that is nearly always the one being sent to an accepted
-   * student: their project is up, here is where, come and talk to me. Prefilled
-   * so sending is one click, and still editable for anything else.
+   * student: they are in, come and talk to me. Prefilled so sending is one
+   * click, and still editable for anything else.
    */
-  function draftFor(name: string | null, slug: string | undefined) {
+  function draftFor(name: string | null) {
     const firstName = name?.trim().split(/\s+/)[0] || "there";
-    const link = slug ? `${SITE}/journal/projects/${slug}` : `${SITE}/research`;
     return (
       `Hi ${firstName},\n\n` +
       `Your proposal has been accepted into the Scholarly research programme. You can see ` +
-      `your project page here (it is private to you and our team):\n\n${link}\n\n` +
+      `its status any time at ${SITE}/research (only you and our team can see it).\n\n` +
       `Next step is mentor pairing and planning how the project will run. Please message ` +
       `me on Telegram at @ulashovmuhammadjon1 and we will get you started.\n\n` +
       `Muhammadjon\nScholarly`
@@ -167,19 +157,11 @@ export default async function AdminResearchPage() {
                           Note sent to the student: {p.adminNote}
                         </p>
                       )}
-                      {p.status === "ACCEPTED" && slugById.get(p.id) && (
-                        <Link
-                          href={`/journal/projects/${slugById.get(p.id)}`}
-                          className="mt-3 inline-block text-xs font-medium text-primary underline-offset-4 hover:underline"
-                        >
-                          View the project page (private) →
-                        </Link>
-                      )}
                       <ResearchMessage
                         proposalId={p.id}
                         studentEmail={p.user.email}
-                        defaultSubject="Your Scholarly research project is published"
-                        defaultBody={draftFor(p.user.name, slugById.get(p.id))}
+                        defaultSubject="Your Scholarly research proposal was accepted"
+                        defaultBody={draftFor(p.user.name)}
                       />
                     </div>
                   </details>

@@ -95,10 +95,6 @@ export default async function ResearchGuidePage() {
         Ready?{" "}
         <Link href="/research" className="font-medium text-primary underline-offset-4 hover:underline">
           Submit your proposal
-        </Link>{" "}
-        — or see what other students are working on in{" "}
-        <Link href="/journal" className="font-medium text-primary underline-offset-4 hover:underline">
-          the Journal
         </Link>
         .
       </p>

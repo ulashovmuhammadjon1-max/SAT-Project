@@ -28,8 +28,8 @@ const STEPS = [
   },
   {
     icon: FileText,
-    title: "Do the work, publish it",
-    body: "You run the project with guidance, and finished work is published on Scholarly with your name on it.",
+    title: "Do the work, finish the paper",
+    body: "You run the project with guidance and finish with a paper in your own name.",
   },
 ];
 

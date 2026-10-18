@@ -188,7 +188,6 @@ const RESEARCH_GROUPS: NavGroup[] = [
     label: "Programme",
     items: [
       { href: "/research/guide", label: "Proposal Guide", icon: BookOpen },
-      { href: "/journal", label: "The Journal", icon: Microscope },
     ],
   },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },

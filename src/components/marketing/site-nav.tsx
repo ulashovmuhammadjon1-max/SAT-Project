@@ -13,7 +13,6 @@ const LINKS = [
   { href: "/#programmes", label: "Programmes" },
   { href: "/#research", label: "Research" },
   { href: "/#courses", label: "AP Courses" },
-  { href: "/journal", label: "Journal" },
   { href: "/team", label: "Team" },
   { href: "/#faq", label: "FAQ" },
 ];

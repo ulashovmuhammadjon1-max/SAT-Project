@@ -212,7 +212,7 @@ function Hero() {
                   className="h-12 rounded-full border-border/80 px-7 text-[15px] backdrop-blur"
                   asChild
                 >
-                  <Link href="/journal">Read student research</Link>
+                  <a href="#research">How research works</a>
                 </Button>
               </div>
             </Reveal>
@@ -252,7 +252,7 @@ function HeroPathways() {
     { label: "Proposal accepted", state: "done" },
     { label: "Mentor paired", state: "done" },
     { label: "Doing the research", state: "current" },
-    { label: "Published in the Journal", state: "next" },
+    { label: "Paper finished", state: "next" },
   ] as const;
 
   return (
@@ -271,7 +271,7 @@ function HeroPathways() {
             Your research question
           </p>
           <p className="mt-1.5 font-display text-lg font-semibold leading-snug text-balance">
-            What keeps students in school when education is already free?
+            How does a full night of sleep change what you remember the next day?
           </p>
           <ol className="mt-5 space-y-2.5">
             {stages.map((s) => (
@@ -374,7 +374,7 @@ const programmes = (apCount: number) => [
   {
     icon: FlaskConical,
     title: "Student Research",
-    body: "Propose a research question in any field, get paired with a mentor, do the work, and publish the finished paper in the Scholarly Journal.",
+    body: "Propose a research question in any field, get paired with a mentor, do the work, and finish with a paper in your own name.",
     label: "Applications open",
     href: "#research",
     tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
@@ -499,8 +499,8 @@ const RESEARCH_STEPS = [
   },
   {
     icon: BookOpen,
-    title: "Publish it",
-    body: "Finished work is published in the Scholarly Journal with your name on it.",
+    title: "Finish the paper",
+    body: "You finish with a written paper in your own name, ready to show universities.",
   },
 ];
 
@@ -518,7 +518,7 @@ function Research() {
               icon={FlaskConical}
               label="The research programme"
               title="Ask a real question. Answer it properly."
-              body="Universities notice students who have done original work. The programme takes a question you care about from a first paragraph to a published paper, with a mentor beside you."
+              body="Universities notice students who have done original work. The programme takes a question you care about from a first paragraph to a finished paper, with a mentor beside you."
             />
             <Reveal delay={0.2}>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -526,9 +526,6 @@ function Research() {
                   <Link href="/onboarding">
                     Propose a project <ArrowRight className="h-4 w-4" />
                   </Link>
-                </Button>
-                <Button variant="outline" className="h-11 rounded-full px-6" asChild>
-                  <Link href="/journal">Read the Journal</Link>
                 </Button>
               </div>
             </Reveal>
@@ -620,7 +617,7 @@ function Courses() {
 const stats = (apCount: number): { value: number; prefix?: string; suffix?: string; label: string }[] => [
   { value: apCount, label: "AP subjects live" },
   { value: 20000, suffix: "+", label: "AP practice questions, all explained" },
-  { value: 4, label: "Stages from proposal to published paper" },
+  { value: 4, label: "Stages from proposal to finished paper" },
   { value: 0, prefix: "$", label: "To join" },
 ];
 
@@ -773,7 +770,7 @@ const faqs = ({ live, plannedCount }: ApSummary) => [
   },
   {
     q: "How does the research programme work?",
-    a: "You propose a research question in any field with a short paragraph about why it matters to you. Accepted proposals are paired with a mentor who helps you scope the question and design the work. When the work is finished, the paper is published in the Scholarly Journal with your name on it.",
+    a: "You propose a research question in any field with a short paragraph about why it matters to you. Accepted proposals are paired with a mentor who helps you scope the question and design the work. When the work is done, you finish with a paper in your own name.",
   },
   {
     q: "Which AP subjects are available?",
@@ -940,11 +937,6 @@ function Footer() {
               <li>
                 <Link href="/login" className="transition-colors hover:text-foreground">
                   Sign in
-                </Link>
-              </li>
-              <li>
-                <Link href="/journal" className="transition-colors hover:text-foreground">
-                  Journal
                 </Link>
               </li>
               <li>
