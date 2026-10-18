@@ -47,9 +47,9 @@ export interface MentorCard {
  * through /mentor (PeerMentorApplication), so both routes onto the page work.
  */
 export const PEER_MENTORS: MentorCard[] = [
-  { name: "Jasurbek", headline: "SAT 1450 · Math 790", subjects: [] },
-  { name: "Rustambek", headline: "SAT 1480 · Math 800", subjects: [] },
-  { name: "Yusufbek", headline: "SAT Math 730", subjects: [] },
+  { name: "Jasurbek", headline: "SAT 1450 · Math 790", subjects: ["SAT"] },
+  { name: "Rustambek", headline: "SAT 1480 · Math 800", subjects: ["SAT"] },
+  { name: "Yusufbek", headline: "SAT Math 730", subjects: ["SAT"] },
 ];
 
 /** Mentors on the research programme. */

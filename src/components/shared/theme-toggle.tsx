@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
  *
  * Three options rather than two: a plain toggle forces a student to keep the
  * site in sync with their phone by hand, and "system" is what most people
- * actually want once they know it exists. Light (paper) stays the default for
- * anyone who never touches this.
+ * actually want once they know it exists. Dark stays the default for anyone
+ * who never touches this.
  *
  * `next-themes` cannot know the resolved theme until after hydration, so the
  * control renders a same-sized placeholder on the server. Rendering the real

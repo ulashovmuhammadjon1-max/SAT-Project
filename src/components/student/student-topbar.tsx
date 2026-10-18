@@ -27,7 +27,7 @@ export async function StudentTopbar({ activeExam = "SAT" }: { activeExam?: ExamM
       </div>
       <div className="hidden lg:block" />
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-1.5 rounded-full bg-warning/15 px-3 py-1.5 text-sm font-semibold text-foreground">
+        <div className="flex items-center gap-1.5 rounded-full bg-warning/15 px-3 py-1.5 text-sm font-semibold text-warning-foreground">
           <Flame className="h-4 w-4 text-warning" />
           {user?.currentStreak ?? 0} day streak
         </div>

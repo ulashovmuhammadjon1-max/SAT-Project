@@ -1,810 +1,874 @@
+"use client";
+
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { createContext, useContext, useRef } from "react";
+import {
+  ArrowRight,
+  Award,
+  BarChart3,
+  BookOpen,
+  CalendarDays,
+  CheckCircle2,
+  ClipboardList,
+  FlaskConical,
+  GraduationCap,
+  Languages,
+  Layers,
+  LineChart,
+  Microscope,
+  MonitorPlay,
+  PenLine,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  UserRound,
+  Users,
+  Wallet,
+  Zap,
+} from "lucide-react";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowLink, Container, Eyebrow, Lede, PrimaryLink, SectionTitle } from "@/components/marketing/editorial";
+import { Button } from "@/components/ui/button";
 import { SiteNav } from "@/components/marketing/site-nav";
-import { Wordmark } from "@/components/marketing/wordmark";
+import { BluebookMockup } from "@/components/marketing/mockups";
+import { CountUp, FloatingBlob, HoverLift, Reveal, RevealGroup, RevealItem } from "@/components/marketing/motion";
 import { cn } from "@/lib/utils";
 
 /**
  * The landing page.
  *
- * Scholarly is a free academic community — a research programme, AP courses,
- * mentorship, IELTS and financial literacy — and the page is ordered to say
- * so in the first screen. SAT preparation is real and well built but is one
- * tool among several, so it sits in a single short section near the end.
+ * Scholarly is a free academic community: a student research programme,
+ * mentorship, AP courses, IELTS and financial literacy. The page is ordered to
+ * say so in the first second. SAT preparation is real and well built, but it is
+ * one tool among several, so it lives in a single section near the end rather
+ * than in the hero.
  *
- * Content rules this page keeps:
- *  - Every number is checkable. Subject counts come from the AP catalog; the
- *    question count is a floor under a measured total (see AP section).
- *  - Nothing about other students is shown. Proposals and projects are private
- *    to the student and the team, so the hero's proposal is labelled as an
- *    illustration of the format, and no stage of it is shown as achieved.
- *  - No member counts, testimonials, partner logos or outcome claims.
- *
- * A server component: there is no client-side motion here. The only
- * interactive pieces (the header and the FAQ) are their own client islands.
+ * Every number on this page is checkable: subject counts come from the AP
+ * catalog itself, and question counts are floors under a measured total.
  */
 
+/**
+ * The AP catalog summary, computed on the server (app/page.tsx) and handed in.
+ * The catalog module imports the full course outlines, which would otherwise
+ * ship to every visitor's browser just to count subjects.
+ */
 export interface ApSummary {
-  live: { code: string; name: string; category: string }[];
-  categories: { id: string; label: string }[];
+  live: { code: string; name: string }[];
   plannedCount: number;
-  /** A real unit from a real course outline, for the hero's course excerpt. */
-  sample: {
-    course: string;
-    unitNumber: number;
-    unitTitle: string;
-    topics: { code: string; title: string }[];
-  } | null;
 }
 
+const ApContext = createContext<ApSummary>({ live: [], plannedCount: 0 });
+const useAp = () => useContext(ApContext);
 const shortName = (name: string) => name.replace(/^AP /, "");
 
 export function Landing({ ap }: { ap: ApSummary }) {
   return (
+    <ApContext.Provider value={ap}>
     <div className="min-h-screen overflow-x-clip bg-background">
       <SiteNav />
-      <main id="main">
-        <Hero ap={ap} />
-        <Programmes apCount={ap.live.length} />
-        <ResearchProcess />
-        <ResearchableQuestions />
-        <Courses ap={ap} />
-        <MentorshipAndFinance />
-        <Purpose />
+      <main>
+        <Hero />
+        <Programmes />
+        <Research />
+        <Courses />
+        <Stats />
+        <StreakBand />
         <SatSection />
-        <Faq ap={ap} />
+        <Faq />
         <FinalCta />
       </main>
       <Footer />
+    </div>
+    </ApContext.Provider>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Shared                                                                      */
+/* -------------------------------------------------------------------------- */
+
+function SectionLabel({ icon: Icon, children }: { icon: typeof Sparkles; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-secondary/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+      <Icon className="h-3.5 w-3.5 text-primary" />
+      {children}
+    </span>
+  );
+}
+
+function SectionHeading({
+  label,
+  title,
+  body,
+  align = "center",
+  icon = Sparkles,
+}: {
+  label: string;
+  title: React.ReactNode;
+  body?: React.ReactNode;
+  align?: "center" | "left";
+  icon?: typeof Sparkles;
+}) {
+  return (
+    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+      <Reveal>
+        <SectionLabel icon={icon}>{label}</SectionLabel>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+          {title}
+        </h2>
+      </Reveal>
+      {body && (
+        <Reveal delay={0.12}>
+          <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground text-balance">{body}</p>
+        </Reveal>
+      )}
     </div>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Hero                                                                        */
+/* 1. Hero                                                                     */
 /* -------------------------------------------------------------------------- */
 
-function Hero({ ap }: { ap: ApSummary }) {
+function Hero() {
+  const { live } = useAp();
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const mockY = useTransform(scrollYProgress, [0, 1], [0, 56]);
+
   return (
-    <section aria-labelledby="hero-title" className="border-b border-border">
-      <Container className="grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
-        <div className="lg:col-span-6">
-          <Eyebrow>A free academic community for students</Eyebrow>
+    <section ref={ref} className="relative isolate overflow-hidden pb-14 pt-28 sm:pt-32 lg:pb-16 lg:pt-32">
+      {/* Background: campus plate (dark theme only), wash, soft colour fields. */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="hero-plate absolute inset-0 hidden dark:block" />
+        <div className="hero-wash absolute inset-0 hidden dark:block" />
+        <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,hsl(226_84%_56%/0.10),transparent_70%)]" />
+        <FloatingBlob className="absolute -top-24 left-[8%] h-[380px] w-[380px] rounded-full bg-primary/20 blur-[110px]" />
+        <FloatingBlob
+          className="absolute right-[6%] top-10 h-[420px] w-[420px] rounded-full bg-[hsl(190_84%_42%)]/15 blur-[120px]"
+          duration={22}
+          delay={1.5}
+        />
+        <FloatingBlob
+          className="absolute left-[38%] top-[42%] h-[300px] w-[300px] rounded-full bg-success/10 blur-[100px]"
+          duration={26}
+          delay={3}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:56px_56px] opacity-[0.35] [mask-image:radial-gradient(70%_50%_at_50%_0%,black,transparent)]" />
+      </div>
 
-          <h1
-            id="hero-title"
-            className="mt-6 font-serif text-[clamp(2.05rem,9.2vw,2.65rem)] font-medium leading-[1.04] tracking-[-0.02em] sm:text-[3.4rem] lg:text-[3.6rem] xl:text-[3.9rem]"
-          >
-            Learn like a scholar,
-            <br />
-            <em className="font-normal italic text-primary">before university.</em>
-          </h1>
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
+          <div className="text-center lg:text-left">
+            <Reveal direction="none" scale={0.96}>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/70 px-3.5 py-1.5 text-[10px] font-semibold uppercase leading-tight tracking-[0.08em] text-muted-foreground shadow-soft backdrop-blur sm:text-[11.5px] sm:tracking-[0.1em]">
+                <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-success/15">
+                  <span className="h-1.5 w-1.5 rounded-full bg-success" />
+                </span>
+                <span className="text-left">
+                  Free academic community
+                  <span className="mx-1.5 text-border">•</span>
+                  <span className="whitespace-nowrap">For students who want more</span>
+                </span>
+              </span>
+            </Reveal>
 
-          <Lede className="mt-6 text-[17px] sm:text-[18px]">
-            Investigate a research question of your own with a mentor, study AP subjects unit by unit, prepare for
-            IELTS, and learn how money actually works — in one free community.
-          </Lede>
+            <Reveal delay={0.08}>
+              <h1 className="mt-6 font-display text-[2.7rem] font-bold leading-[0.98] tracking-[-0.02em] text-balance sm:text-[3.5rem] lg:text-[3.5rem] xl:text-[4rem]">
+                Learn like a scholar.
+                <br />
+                <span className="text-gradient-animated bg-gradient-to-r from-primary via-[hsl(190_84%_42%)] to-[hsl(152_60%_42%)] bg-[length:200%_auto] bg-clip-text text-transparent">
+                  Research, mentors &amp; real courses.
+                </span>
+              </h1>
+            </Reveal>
 
-          <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
-            <PrimaryLink href="/onboarding" className="w-full sm:w-auto">
-              Join Scholarly — free
-              <ArrowRight aria-hidden className="h-4 w-4" />
-            </PrimaryLink>
-            <ArrowLink href="#research">How research works</ArrowLink>
+            <Reveal delay={0.16}>
+              <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground text-balance lg:mx-0 lg:text-lg">
+                Investigate your own research question with a mentor, study AP subjects unit by unit, prepare for
+                IELTS, and learn how money actually works — in one free community.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.24}>
+              <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+                <Button
+                  size="lg"
+                  className="group h-12 rounded-full px-7 text-[15px] shadow-card transition-shadow hover:shadow-panel"
+                  asChild
+                >
+                  <Link href="/onboarding">
+                    Join Scholarly — Free
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-12 rounded-full border-border/80 px-7 text-[15px] backdrop-blur"
+                  asChild
+                >
+                  <a href="#research">How research works</a>
+                </Button>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.32}>
+              <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground lg:justify-start">
+                {["Free to join", "Research programme open", `${live.length} AP subjects live`].map((t) => (
+                  <li key={t} className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-success" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-5 text-[13.5px] text-muted-foreground">
-            <li>
-              <span className="font-medium text-foreground">Free</span> to join
-            </li>
-            <li>
-              Research programme <span className="font-medium text-foreground">open to proposals</span>
-            </li>
-            <li>
-              <span className="font-medium text-foreground">{ap.live.length}</span> AP subjects live
-            </li>
-          </ul>
+          <motion.div style={reduced ? undefined : { y: mockY }} className="relative">
+            <div className="absolute -inset-8 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-[hsl(190_84%_42%)]/5 to-transparent blur-3xl" />
+            <HeroPathways />
+          </motion.div>
         </div>
 
-        <div className="lg:col-span-6">
-          <HeroArtifact sample={ap.sample} />
-        </div>
-      </Container>
+        <ValueStrip />
+      </div>
     </section>
   );
 }
 
-const STAGES = ["Proposal", "Review", "Mentor", "Investigation", "Paper"] as const;
-
 /**
- * The hero visual: a research proposal, typeset as the document it is, with a
- * real AP unit outline beside it. One focal object and one secondary one —
- * no floating panels, progress bars or glowing badges. The proposal is an
- * illustration of the format and says so; the course outline is real data.
+ * The hero visual: what a student actually does here, as product cards — a
+ * research project moving through the programme's real stages, an AP unit in
+ * progress, and a mentor session. Illustrative UI: no names, and no claims
+ * about other students.
  */
-function HeroArtifact({ sample }: { sample: ApSummary["sample"] }) {
+function HeroPathways() {
+  const stages = [
+    { label: "Proposal accepted", state: "done" },
+    { label: "Mentor paired", state: "done" },
+    { label: "Doing the research", state: "current" },
+    { label: "Paper finished", state: "next" },
+  ] as const;
+
   return (
-    <figure aria-labelledby="hero-artifact-caption">
-      <div className="rounded-md border border-border bg-card shadow-[0_1px_0_hsl(var(--border)),0_28px_56px_-36px_rgb(21_28_43/0.45)] dark:shadow-none">
-        <div className="flex items-center justify-between gap-4 border-b border-border px-5 py-3 sm:px-7">
-          <p className="text-[13px] font-medium text-research">Research proposal</p>
-          <p className="text-[13px] text-muted-foreground">
-            Status: <span className="font-medium text-foreground">Under review</span>
+    <div className="relative mx-auto max-w-[560px]">
+      <Reveal direction="none" scale={0.97} duration={0.7}>
+        <div className="rounded-2xl border border-border/70 bg-card/95 p-5 shadow-panel backdrop-blur sm:p-6">
+          <div className="flex items-center justify-between gap-3">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(190_84%_42%)]/10 px-2.5 py-1 text-[11px] font-semibold text-[hsl(190_84%_42%)]">
+              <FlaskConical className="h-3.5 w-3.5" /> Research project
+            </span>
+            <span className="rounded-full border border-success/30 bg-success/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-success">
+              Accepted
+            </span>
+          </div>
+          <p className="mt-4 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
+            Your research question
           </p>
-        </div>
-
-        <dl className="space-y-5 px-5 py-6 sm:px-7 sm:py-7">
-          <div>
-            <dt className="text-[12.5px] text-muted-foreground">Field</dt>
-            <dd className="mt-1 text-[15px]">Psychology</dd>
-          </div>
-          <div>
-            <dt className="text-[12.5px] text-muted-foreground">Research question</dt>
-            <dd className="mt-1.5 font-serif text-[1.45rem] leading-[1.3] tracking-[-0.005em] text-balance sm:text-[1.65rem]">
-              How does a full night of sleep change what you remember the next day?
-            </dd>
-          </div>
-          <div>
-            <dt className="text-[12.5px] text-muted-foreground">Evidence I would look at</dt>
-            <dd className="mt-1 max-w-md text-[14.5px] leading-relaxed text-muted-foreground">
-              A week of sleep diaries kept by volunteer classmates, set beside a short recall test taken each morning.
-            </dd>
-          </div>
-        </dl>
-
-        <div className="border-t border-border px-5 py-3.5 sm:px-7">
-          <ol aria-label="Stages of a project" className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[12.5px]">
-            {STAGES.map((stage, i) => (
-              <li key={stage} className="flex items-center gap-2">
+          <p className="mt-1.5 font-display text-lg font-semibold leading-snug text-balance">
+            How does a full night of sleep change what you remember the next day?
+          </p>
+          <ol className="mt-5 space-y-2.5">
+            {stages.map((s) => (
+              <li key={s.label} className="flex items-center gap-3 text-sm">
                 <span
-                  aria-current={stage === "Review" ? "step" : undefined}
                   className={cn(
-                    stage === "Review"
-                      ? "font-medium text-foreground underline decoration-research decoration-2 underline-offset-[5px]"
-                      : "text-muted-foreground",
+                    "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border",
+                    s.state === "done" && "border-success bg-success text-white",
+                    s.state === "current" && "border-primary bg-primary/10",
+                    s.state === "next" && "border-border",
                   )}
                 >
-                  {stage}
+                  {s.state === "done" ? (
+                    <CheckCircle2 className="h-3.5 w-3.5" />
+                  ) : s.state === "current" ? (
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  ) : null}
                 </span>
-                {i < STAGES.length - 1 && (
-                  <span aria-hidden className="text-border">
-                    /
-                  </span>
-                )}
+                <span className={cn(s.state === "next" ? "text-muted-foreground" : "text-foreground")}>
+                  {s.label}
+                </span>
               </li>
             ))}
           </ol>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] sm:items-start">
-        {sample && (
-          <div className="hidden rounded-md border border-border bg-card px-5 py-4 sm:block">
-            <p className="text-[12.5px] text-muted-foreground">
-              {sample.course} · Unit {sample.unitNumber}
-            </p>
-            <p className="mt-0.5 font-serif text-[1.15rem] leading-snug">{sample.unitTitle}</p>
-            <ol className="mt-3 space-y-1.5">
-              {sample.topics.map((t) => (
-                <li key={t.code} className="flex gap-3 text-[13px] leading-snug">
-                  <span className="w-7 shrink-0 tabular-nums text-muted-foreground">{t.code}</span>
-                  <span>{t.title}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        )}
-        <figcaption id="hero-artifact-caption" className="text-[12.5px] leading-relaxed text-muted-foreground sm:pt-1">
-          An illustration of the proposal format, not a real submission — students&rsquo; proposals are private to
-          them and the review team.
-          {sample && (
-            <span className="hidden sm:inline">
-              {" "}
-              Beside it, a unit outline exactly as it appears in the {shortName(sample.course)} course.
+      <Reveal delay={0.4} direction="up" className="relative z-10 -mt-5 ml-auto w-[86%] sm:-mt-6 sm:w-[72%]">
+        <div className="rounded-2xl border border-border/70 bg-card p-4 shadow-panel">
+          <div className="flex items-center gap-3">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-success/10 text-success">
+              <Award className="h-4 w-4" />
             </span>
-          )}
-        </figcaption>
-      </div>
-    </figure>
+            <div className="min-w-0 flex-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">AP Biology</p>
+              <p className="truncate text-sm font-medium">Unit 3 · Cellular Energetics</p>
+            </div>
+          </div>
+          <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+            <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-success to-[hsl(190_84%_42%)]" />
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.55} direction="up" className="relative -mt-3 w-[80%] sm:w-[64%]">
+        <div className="rounded-2xl border border-primary/25 bg-card p-4 shadow-panel">
+          <div className="flex items-center gap-3">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <UserRound className="h-4 w-4" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-primary">1-on-1 with a mentor</p>
+              <p className="truncate text-sm font-medium">Scoping your research method</p>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  );
+}
+
+const valueStrip = (apCount: number) => [
+  { icon: FlaskConical, title: "Student research", body: "Investigate a question you care about" },
+  { icon: UserRound, title: "Mentorship", body: "Guidance from people a step ahead" },
+  { icon: Award, title: "AP courses", body: `${apCount} subjects, unit by unit` },
+  { icon: Languages, title: "IELTS", body: "Writing and Speaking practice" },
+  { icon: Sparkles, title: "Free", body: "No paywall on the essentials" },
+];
+
+function ValueStrip() {
+  return (
+    <Reveal delay={0.5}>
+      <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5">
+        {valueStrip(useAp().live.length).map((v) => (
+          <li key={v.title} className="flex items-start gap-3">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <v.icon className="h-4 w-4" />
+            </span>
+            <div>
+              <p className="text-[15px] font-medium leading-snug">{v.title}</p>
+              <p className="mt-0.5 text-[13px] leading-snug text-muted-foreground">{v.body}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Programmes                                                                  */
+/* 2. Programmes                                                               */
 /* -------------------------------------------------------------------------- */
 
-interface Programme {
-  title: string;
-  status: string;
-  body: string;
-  link?: { href: string; label: string };
-  research?: boolean;
-}
-
 /**
- * `status` is the only claim each row makes about how established a programme
- * is. Anything not yet running must say so; a row gets a link only when there
- * is somewhere real to go.
+ * `label` is a cadence/status badge and is the only claim each card makes about
+ * how established a programme is. Anything that has not launched must read
+ * "Coming soon"; move a card to a real cadence only once it is running.
  */
-const programmes = (apCount: number): Programme[] => [
+const programmes = (apCount: number) => [
   {
-    title: "Independent research",
-    status: "Open to proposals",
-    body: "Formulate a question in any field and write a proposal. If it is accepted, you investigate it with a mentor until you have a finished paper in your own name.",
-    link: { href: "#research", label: "How it works" },
-    research: true,
+    icon: FlaskConical,
+    title: "Student Research",
+    body: "Propose a research question in any field, get paired with a mentor, do the work, and finish with a paper in your own name.",
+    label: "Applications open",
+    href: "#research",
+    tint: "bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]",
+    chip: "border-[hsl(190_84%_42%)]/30 text-[hsl(190_84%_42%)]",
   },
   {
-    title: "AP courses",
-    status: `${apCount} subjects live`,
-    body: "Study each subject against its official course outline, unit by unit and topic by topic. Every practice question carries a written explanation, and full practice tests are scored when you finish.",
-    link: { href: "#courses", label: "See the subjects" },
-  },
-  {
+    icon: UserRound,
     title: "Mentorship",
-    status: "Free one-to-one sessions",
-    body: "Book free one-to-one sessions for study planning and test analysis. Once you have earned strong results yourself, you can apply to mentor the students coming after you.",
-    link: { href: "#mentorship", label: "About mentorship" },
+    body: "Book free 1-on-1 sessions with mentors, or apply to become a peer mentor and help the students coming after you.",
+    label: "Free 1-on-1",
+    href: "/onboarding",
+    tint: "bg-primary/10 text-primary",
+    chip: "border-primary/25 text-primary",
   },
   {
-    title: "IELTS preparation",
-    status: "Live now",
-    body: "Practise Writing and Speaking with band-scored feedback against the marking criteria, Speaking cue cards, and a leaderboard to measure yourself against.",
-    link: { href: "/onboarding", label: "Start practising" },
+    icon: Award,
+    title: "AP Courses",
+    body: `${apCount} AP subjects, practised unit by unit and topic by topic, with an explanation on every question and full practice tests.`,
+    label: `${apCount} subjects live`,
+    href: "#courses",
+    tint: "bg-success/10 text-success",
+    chip: "border-success/30 text-success",
   },
   {
-    title: "Financial literacy",
-    status: "Monthly live classes",
-    body: "Live classes on how money, inflation, interest rates, banking and investing shape the decisions people make every day.",
-    link: { href: "#financial-literacy", label: "About the classes" },
+    icon: Languages,
+    title: "IELTS Preparation",
+    body: "Writing and Speaking practice with band-scored feedback, whole-mark criteria, cue cards, and a leaderboard.",
+    label: "Live now",
+    href: "/onboarding",
+    tint: "bg-[hsl(266_84%_60%)]/10 text-[hsl(266_84%_60%)]",
+    chip: "border-[hsl(266_84%_60%)]/30 text-[hsl(266_84%_60%)]",
   },
   {
-    title: "Learn from experts",
-    status: "In preparation",
-    body: "Guest lectures and conversations with university professors and other experts, bringing academic perspectives to students directly.",
+    icon: Wallet,
+    title: "Financial Literacy",
+    body: "How money, inflation, interest rates, banking and investing actually affect everyday life, taught in live classes.",
+    label: "Monthly",
+    href: "/onboarding",
+    tint: "bg-warning/15 text-warning",
+    chip: "border-warning/30 text-warning",
+  },
+  {
+    icon: GraduationCap,
+    title: "Learn From Experts",
+    body: "Guest lectures and conversations with university professors and other experts, bringing real academic perspectives to students.",
+    label: "Coming soon",
+    href: "/onboarding",
+    tint: "bg-[hsl(340_78%_56%)]/10 text-[hsl(340_78%_56%)]",
+    chip: "border-[hsl(340_78%_56%)]/30 text-[hsl(340_78%_56%)]",
   },
 ];
 
-function Programmes({ apCount }: { apCount: number }) {
+function Programmes() {
+  const { live } = useAp();
   return (
-    <section id="programmes" aria-labelledby="programmes-title" className="scroll-mt-16 py-20 lg:py-28">
-      <Container>
-        <div className="grid gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <Eyebrow>Programmes</Eyebrow>
-            <SectionTitle id="programmes-title" className="mt-5">
-              One account, several ways to work.
-            </SectionTitle>
-          </div>
-          <Lede className="lg:col-span-6 lg:col-start-7 lg:pt-10">
-            Begin with the programme that fits what you are working on now and add others whenever you like. Each
-            is free, and each asks something different of you.
-          </Lede>
-        </div>
+    <section id="programmes" className="scroll-mt-24 py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <SectionHeading
+          label="What you can do here"
+          icon={Sparkles}
+          title="One community, many ways to grow."
+          body="Scholarly is a free academic community. Do original research, learn from mentors, study AP subjects, prepare for IELTS, and build financial literacy, all with one account."
+        />
 
-        <ol className="mt-14 border-b border-border">
-          {programmes(apCount).map((p, i) => (
-            <li key={p.title} className="grid gap-3 border-t border-border py-7 sm:grid-cols-12 sm:gap-6 lg:py-8">
-              <p aria-hidden className="font-serif text-[15px] tabular-nums text-muted-foreground sm:col-span-1 sm:pt-1.5">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <div className="sm:col-span-11 lg:col-span-4">
-                <h3 className="font-serif text-[1.55rem] leading-tight tracking-[-0.01em]">{p.title}</h3>
-                <p className={cn("mt-1.5 text-[13.5px] font-medium", p.research ? "text-research" : "text-muted-foreground")}>
-                  {p.status}
-                </p>
-              </div>
-              <p className="text-[15.5px] leading-relaxed text-muted-foreground sm:col-span-11 sm:col-start-2 lg:col-span-5 lg:col-start-auto">
-                {p.body}
-              </p>
-              <div className="sm:col-span-11 sm:col-start-2 lg:col-span-2 lg:col-start-auto lg:text-right">
-                {p.link ? (
-                  <ArrowLink href={p.link.href} className="text-[14.5px]">
-                    {p.link.label}
-                  </ArrowLink>
-                ) : (
-                  <span className="text-[14.5px] text-muted-foreground">Announced when ready</span>
-                )}
-              </div>
-            </li>
+        <RevealGroup className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3" delay={0.05}>
+          {programmes(live.length).map((p) => (
+            <RevealItem key={p.title}>
+              <HoverLift className="h-full">
+                <Link
+                  href={p.href}
+                  className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-soft transition-shadow hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <span
+                      className={cn(
+                        "flex h-10 w-10 items-center justify-center rounded-xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110",
+                        p.tint,
+                      )}
+                    >
+                      <p.icon className="h-[18px] w-[18px]" />
+                    </span>
+                    <span
+                      className={cn(
+                        "rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em]",
+                        p.chip,
+                      )}
+                    >
+                      {p.label}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">{p.title}</h3>
+                  <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{p.body}</p>
+                </Link>
+              </HoverLift>
+            </RevealItem>
           ))}
-        </ol>
-      </Container>
+        </RevealGroup>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Research — the process                                                      */
+/* 3. Research                                                                 */
 /* -------------------------------------------------------------------------- */
 
-/**
- * The stages a project actually passes through. None is marked done: this is
- * a description of the programme, not anybody's record.
- */
-const RESEARCH_STAGES = [
+const RESEARCH_STEPS = [
   {
-    title: "Formulate a question",
-    body: "Start from something you have noticed and want to understand, in any field. Narrow it until you can picture the evidence that would settle it.",
+    icon: PenLine,
+    title: "Propose a topic",
+    body: "Submit a research question you genuinely care about, in any field. A paragraph of motivation is enough.",
   },
   {
-    title: "Write the proposal",
-    body: "A title, the field, your question in a sentence or two, and why it matters to you. Experience is optional — “none yet” is an honest and acceptable answer.",
+    icon: Users,
+    title: "Get paired with a mentor",
+    body: "Accepted proposals are matched with a mentor who helps you scope the question and design the work.",
   },
   {
-    title: "Review and decision",
-    body: "The team reads every proposal and emails you its decision with a written note. A proposal that is not taken forward can be reworked and submitted again.",
+    icon: Microscope,
+    title: "Do the research",
+    body: "You run the project with guidance: the reading, the data, the method, the writing.",
   },
   {
-    title: "Mentor pairing",
-    body: "An accepted proposal is matched with a research mentor, who helps you scope the question and turn the evidence you described into a method.",
-  },
-  {
-    title: "Investigation",
-    body: "You do the reading, gather the data and run the method, with your mentor on hand to work through problems as they come up.",
-  },
-  {
-    title: "Drafting and revision",
-    body: "You write the paper and revise it against your mentor’s feedback. The argument, the analysis and the conclusions remain your own.",
-  },
-  {
-    title: "The finished paper",
-    body: "The project ends with a complete paper in your own name — a piece of original work you can discuss and stand behind.",
+    icon: BookOpen,
+    title: "Finish the paper",
+    body: "You finish with a written paper in your own name, ready to show universities.",
   },
 ];
 
-const PROPOSAL_FIELDS = [
-  { term: "Title", detail: "What the project is called" },
-  { term: "Field", detail: "Any discipline" },
-  { term: "Research question", detail: "A sentence or two" },
-  { term: "Motivation", detail: "Why this question matters to you" },
-  { term: "Experience", detail: "Optional" },
-];
-
-function ResearchProcess() {
+function Research() {
   return (
     <section
       id="research"
-      aria-labelledby="research-title"
-      className="scroll-mt-16 border-y border-border bg-secondary/50 py-20 lg:py-28"
+      className="relative scroll-mt-20 overflow-hidden border-y border-border/60 bg-secondary/25 py-20 sm:py-28"
     >
-      <Container className="grid gap-14 lg:grid-cols-12 lg:gap-10">
-        <div className="lg:col-span-5">
-          <div className="lg:sticky lg:top-24">
-            <Eyebrow tone="research">The research programme</Eyebrow>
-            <SectionTitle id="research-title" className="mt-5">
-              Ask a real question. Answer it properly.
-            </SectionTitle>
-            <Lede className="mt-5">
-              The programme takes a question you care about from a first paragraph to a finished paper, with a
-              mentor beside you. You do not need prior experience. You need a question you can answer.
-            </Lede>
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div>
+            <SectionHeading
+              align="left"
+              icon={FlaskConical}
+              label="The research programme"
+              title="Ask a real question. Answer it properly."
+              body="Universities notice students who have done original work. The programme takes a question you care about from a first paragraph to a finished paper, with a mentor beside you."
+            />
+            <Reveal delay={0.2}>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button className="h-11 rounded-full px-6" asChild>
+                  <Link href="/onboarding">
+                    Propose a project <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </Reveal>
+          </div>
 
-            <div className="mt-9 rounded-md border border-border bg-card">
-              <p className="border-b border-border px-5 py-3 text-[13px] font-medium">What a proposal asks for</p>
-              <dl className="divide-y divide-border">
-                {PROPOSAL_FIELDS.map((f) => (
-                  <div key={f.term} className="flex items-baseline justify-between gap-4 px-5 py-2.5 text-[14px]">
-                    <dt>{f.term}</dt>
-                    <dd className="text-right text-muted-foreground">{f.detail}</dd>
+          <RevealGroup className="grid gap-4 sm:grid-cols-2" stagger={0.08}>
+            {RESEARCH_STEPS.map((s, i) => (
+              <RevealItem key={s.title}>
+                <div className="h-full rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+                  <div className="flex items-center gap-3">
+                    <span className="font-display text-sm font-semibold text-primary">0{i + 1}</span>
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[hsl(190_84%_42%)]/10 text-[hsl(190_84%_42%)]">
+                      <s.icon className="h-4 w-4" />
+                    </span>
                   </div>
-                ))}
-              </dl>
-              <p className="border-t border-border px-5 py-3 text-[13px] leading-relaxed text-muted-foreground">
-                One proposal under review at a time, and up to three in total.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <PrimaryLink href="/onboarding">
-                Propose a project
-                <ArrowRight aria-hidden className="h-4 w-4" />
-              </PrimaryLink>
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:col-span-6 lg:col-start-7">
-          <h3 className="text-[13px] font-medium text-muted-foreground">From question to paper</h3>
-          <ol className="relative mt-6">
-            {RESEARCH_STAGES.map((s, i) => (
-              <li key={s.title} className="relative grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 pb-9 last:pb-0">
-                {i < RESEARCH_STAGES.length - 1 && (
-                  <span aria-hidden className="absolute left-[1.2rem] top-10 h-[calc(100%-2.5rem)] w-px bg-border" />
-                )}
-                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-research/40 bg-card font-serif text-[15px] tabular-nums text-research">
-                  {i + 1}
-                </span>
-                <div className="pt-1.5">
-                  <h4 className="font-serif text-[1.3rem] leading-snug">{s.title}</h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
+                  <h3 className="mt-4 font-display text-lg font-semibold tracking-tight">{s.title}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
                 </div>
-              </li>
+              </RevealItem>
             ))}
-          </ol>
+          </RevealGroup>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Research — what a researchable question looks like                         */
+/* 4. AP courses                                                               */
 /* -------------------------------------------------------------------------- */
 
-/** Taken from the Scholarly proposal guide (app/(student)/research/guide). */
-const QUESTION_PAIRS = [
-  {
-    vague: "How does social media affect students?",
-    good: "Does time spent on short-form video the night before a practice test predict a lower Reading score the next day?",
-  },
-  {
-    vague: "Is money important in education?",
-    good: "How does the price of private SAT tutoring in three Tashkent districts compare to the score gains tutors advertise?",
-  },
+const COURSE_POINTS = [
+  { icon: Layers, title: "Unit by unit", body: "Every course follows its official unit outline, topic by topic." },
+  { icon: CheckCircle2, title: "Explained answers", body: "Each question carries a written explanation of why the answer is right." },
+  { icon: ClipboardList, title: "Practice tests", body: "Full AP practice tests, scored when you finish." },
 ];
 
-function ResearchableQuestions() {
+function Courses() {
+  const { live, plannedCount } = useAp();
   return (
-    <section aria-labelledby="questions-title" className="py-20 lg:py-28">
-      <Container>
-        <div className="grid gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <Eyebrow tone="research">Before you propose</Eyebrow>
-            <SectionTitle id="questions-title" className="mt-5">
-              A good question is narrow enough to answer.
-            </SectionTitle>
-          </div>
-          <Lede className="lg:col-span-6 lg:col-start-7 lg:pt-10">
-            A research project answers one question well. Narrow does not mean small — it means answerable: you can
-            imagine the exact evidence that would settle it.
-          </Lede>
-        </div>
+    <section id="courses" className="scroll-mt-20 py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <SectionHeading
+          label="AP courses"
+          icon={Award}
+          title="Study AP subjects the way the course is taught."
+          body={`${live.length} AP subjects are live today, with ${plannedCount} more on the way. Pick the ones you take and practise them unit by unit.`}
+        />
 
-        <div className="mt-12 border-t border-border">
-          <div className="hidden grid-cols-12 gap-6 py-3 text-[13px] text-muted-foreground md:grid">
-            <p className="col-span-4">Too broad to answer</p>
-            <p className="col-span-7 col-start-6">Answerable</p>
-          </div>
-          {QUESTION_PAIRS.map((q) => (
-            <div key={q.vague} className="grid gap-3 border-t border-border py-7 md:grid-cols-12 md:gap-6">
-              <p className="text-[15.5px] text-muted-foreground line-through decoration-muted-foreground/50 md:col-span-4">
-                <span className="sr-only">Too broad: </span>
-                {q.vague}
-              </p>
-              <p className="font-serif text-[1.3rem] leading-snug md:col-span-7 md:col-start-6">
-                <span className="sr-only">Answerable: </span>
-                {q.good}
-              </p>
-            </div>
-          ))}
-          <p className="border-t border-border pt-4 text-[12.5px] text-muted-foreground">
-            Examples from the Scholarly proposal guide, which every student can read before submitting.
-          </p>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-/* AP courses                                                                  */
-/* -------------------------------------------------------------------------- */
-
-const COURSE_NOTES = [
-  { title: "Unit by unit", body: "Every course follows its official outline, so you practise topic 3.4 when your class reaches topic 3.4." },
-  { title: "Explained answers", body: "Each question carries a written explanation of why the right answer is right." },
-  { title: "Practice tests", body: "Full AP practice tests, scored when you finish." },
-];
-
-function Courses({ ap }: { ap: ApSummary }) {
-  return (
-    <section
-      id="courses"
-      aria-labelledby="courses-title"
-      className="scroll-mt-16 border-t border-border bg-card py-20 lg:py-28"
-    >
-      <Container>
-        <div className="grid gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <Eyebrow>AP courses</Eyebrow>
-            <SectionTitle id="courses-title" className="mt-5">
-              Study each subject the way the course is taught.
-            </SectionTitle>
-          </div>
-          <Lede className="lg:col-span-6 lg:col-start-7 lg:pt-10">
-            {ap.live.length} AP subjects are live, with {ap.plannedCount} more in preparation. Each follows the units
-            and topics of its official course outline, and you choose only the subjects you take.
-          </Lede>
-        </div>
-
-        <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
-            {ap.categories.map((c) => (
-              <div key={c.id}>
-                <h3 className="border-b border-foreground/80 pb-2 text-[13px] font-medium">{c.label}</h3>
-                <ul className="divide-y divide-border">
-                  {ap.live
-                    .filter((s) => s.category === c.id)
-                    .map((s) => (
-                      <li key={s.code} className="py-2.5 font-serif text-[17px] leading-snug">
-                        {shortName(s.name)}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="lg:col-span-4">
-            <h3 className="border-b border-foreground/80 pb-2 text-[13px] font-medium">How a course works</h3>
-            <dl className="divide-y divide-border">
-              {COURSE_NOTES.map((n) => (
-                <div key={n.title} className="py-3.5">
-                  <dt className="text-[15px] font-medium">{n.title}</dt>
-                  <dd className="mt-1 text-[14.5px] leading-relaxed text-muted-foreground">{n.body}</dd>
-                </div>
-              ))}
-            </dl>
-            {/* A floor, not a count: the banks held 23,560 by a count of the
-                authored modules and 25,885 in the database when last measured.
-                "More than 20,000" is true under both, and the banks only grow. */}
-            <p className="mt-4 border-t border-border pt-4 text-[14px] leading-relaxed text-muted-foreground">
-              More than <span className="font-medium text-foreground">20,000</span> practice questions across the AP
-              banks, each with a written explanation.
-            </p>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-/* Mentorship and financial literacy                                           */
-/* -------------------------------------------------------------------------- */
-
-const MENTORSHIP_POINTS = [
-  { title: "Research mentors", body: "Paired with every accepted research project: scoping the question, designing the method, and reading drafts critically." },
-  { title: "One-to-one sessions", body: "Free sessions for study planning and test analysis, booked from your account." },
-  { title: "Peer mentors", body: "Students with strong results of their own, hosting sessions for the cohort behind them." },
-];
-
-const FINANCE_TOPICS = ["Money and banking", "Inflation", "Interest rates and borrowing", "Saving and investing"];
-
-function MentorshipAndFinance() {
-  return (
-    <section aria-label="Mentorship and financial literacy" className="border-t border-border py-20 lg:py-28">
-      <Container className="grid gap-16 lg:grid-cols-2 lg:gap-0">
-        <div id="mentorship" className="scroll-mt-24 lg:pr-14">
-          <Eyebrow>Mentorship</Eyebrow>
-          <SectionTitle className="mt-5 sm:text-[2.25rem]">Guidance from people a step ahead.</SectionTitle>
-          <Lede className="mt-5 text-[16px]">
-            Mentorship here is practical: guidance from people who have recently done what you are attempting.
-            Mentors advise and question; the work and its conclusions remain yours.
-          </Lede>
-          <dl className="mt-8 divide-y divide-border border-y border-border">
-            {MENTORSHIP_POINTS.map((p) => (
-              <div key={p.title} className="py-4">
-                <dt className="text-[15px] font-medium">{p.title}</dt>
-                <dd className="mt-1 text-[14.5px] leading-relaxed text-muted-foreground">{p.body}</dd>
-              </div>
-            ))}
-          </dl>
-          <ArrowLink href="/team" className="mt-6">
-            Meet the mentors
-          </ArrowLink>
-        </div>
-
-        <div id="financial-literacy" className="scroll-mt-24 lg:border-l lg:border-border lg:pl-14">
-          <Eyebrow>Financial literacy</Eyebrow>
-          <SectionTitle className="mt-5 sm:text-[2.25rem]">How money actually works.</SectionTitle>
-          <Lede className="mt-5 text-[16px]">
-            Live classes on the financial ideas behind everyday decisions, explained from first principles. No jargon
-            and nothing to buy — the aim is understanding, not a product.
-          </Lede>
-          <ul className="mt-8 divide-y divide-border border-y border-border">
-            {FINANCE_TOPICS.map((t) => (
-              <li key={t} className="py-4 font-serif text-[1.2rem]">
-                {t}
+        <Reveal delay={0.1}>
+          <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2.5">
+            {live.map((s) => (
+              <li key={s.code} className="rounded-full border border-border/70 bg-card px-4 py-2 text-sm font-medium shadow-soft">
+                {shortName(s.name)}
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-[14.5px] text-muted-foreground">
-            Classes run monthly and are free for members.{" "}
-            <Link
-              href="/onboarding"
-              className="font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            >
-              Join to attend
-            </Link>
-            .
-          </p>
-        </div>
-      </Container>
+        </Reveal>
+
+        <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-3" stagger={0.07}>
+          {COURSE_POINTS.map((p) => (
+            <RevealItem key={p.title}>
+              <div className="h-full rounded-xl border border-border/70 bg-card p-5 shadow-soft">
+                <p.icon className="h-5 w-5 text-success" />
+                <h3 className="mt-2.5 text-[15px] font-semibold">{p.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+              </div>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Purpose                                                                     */
+/* 5. Stats                                                                    */
 /* -------------------------------------------------------------------------- */
 
-function Purpose() {
+/**
+ * Every number here must be checkable.
+ *
+ * - AP subjects: counted from the catalog at build time.
+ * - AP questions: a floor. The banks held 23,560 by a count of the authored
+ *   modules and 25,885 in the database when last measured; "20,000+" is true
+ *   under both, and the banks only grow.
+ * - 4: the programme's own stages (propose, mentor, research, publish).
+ */
+const stats = (apCount: number): { value: number; prefix?: string; suffix?: string; label: string }[] => [
+  { value: apCount, label: "AP subjects live" },
+  { value: 20000, suffix: "+", label: "AP practice questions, all explained" },
+  { value: 4, label: "Stages from proposal to finished paper" },
+  { value: 0, prefix: "$", label: "To join" },
+];
+
+function Stats() {
+  const { live } = useAp();
   return (
-    <section aria-labelledby="purpose-title" className="border-t border-border bg-secondary/50 py-20 lg:py-24">
-      <Container className="grid gap-6 lg:grid-cols-12">
-        <h2 id="purpose-title" className="text-[13px] font-medium text-muted-foreground lg:col-span-3 lg:pt-3">
-          Why Scholarly exists
-        </h2>
-        <p className="font-serif text-[1.65rem] leading-[1.35] tracking-[-0.01em] text-balance sm:text-[2.1rem] lg:col-span-9">
-          So that students can begin working like scholars before they reach university: asking real questions,
-          reading carefully, and finishing what they start. <span className="text-muted-foreground">It is free to
-          join, and the essentials sit behind no paywall.</span>
-        </p>
-      </Container>
+    <section className="border-y border-border/60 bg-secondary/25 py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <RevealGroup className="grid grid-cols-2 gap-6 sm:gap-10 lg:grid-cols-4">
+          {stats(live.length).map((s) => (
+            <RevealItem key={s.label}>
+              <div className="text-center">
+                <p className="bg-gradient-to-br from-primary to-[hsl(190_84%_42%)] bg-clip-text font-display text-3xl font-semibold tracking-tight text-transparent sm:text-4xl">
+                  <CountUp value={s.value} prefix={s.prefix} suffix={s.suffix} />
+                </p>
+                <p className="mt-1.5 text-sm text-muted-foreground">{s.label}</p>
+              </div>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* SAT — one supplementary section                                             */
+/* 6. Streak                                                                   */
+/* -------------------------------------------------------------------------- */
+
+const STREAK_DAYS = ["M", "T", "W", "T", "F", "S", "S"];
+
+function StreakBand() {
+  return (
+    <section className="mx-auto w-full max-w-7xl px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+      <Reveal direction="up">
+        <div className="relative overflow-hidden rounded-2xl border border-primary/25 bg-card/95 shadow-panel backdrop-blur">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-24 -top-24 h-56 w-56 rounded-full bg-primary/15 blur-3xl"
+          />
+          <div className="relative grid gap-6 p-6 sm:p-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center lg:gap-8">
+            <div>
+              <p className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Zap className="h-5 w-5 text-warning" />
+                Build a 7-day streak
+              </p>
+              <p className="mt-0.5 text-sm text-muted-foreground">Seven days in a row is where the habit starts.</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {STREAK_DAYS.map((label, i) => (
+                  <li key={i} className="flex flex-col items-center gap-1">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-dashed border-primary/40 text-xs font-semibold text-primary/60">
+                      {label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="lg:border-l lg:border-border/60 lg:pl-8">
+              <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                <Star className="h-4 w-4 text-warning" />
+                Then aim for
+              </p>
+              <p className="mt-1 font-display text-2xl font-semibold tabular-nums">14 days</p>
+              <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+                <div className="h-full w-0 rounded-full bg-gradient-to-r from-primary to-[hsl(190_84%_42%)]" />
+              </div>
+              <p className="mt-1.5 text-xs tabular-nums text-muted-foreground">
+                Your streak starts on your first day of learning
+              </p>
+            </div>
+
+            <div className="lg:border-l lg:border-border/60 lg:pl-8">
+              <p className="flex items-center gap-2 text-sm font-medium">
+                <LineChart className="h-4 w-4 text-success" />
+                Why streaks work
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">Twenty minutes a day beats a whole weekend once a month.</p>
+              <Button asChild className="mt-4 w-full sm:w-auto">
+                <Link href="/onboarding">
+                  Start your streak <ArrowRight className="ml-1.5 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* 7. SAT — one supplementary section                                          */
 /* -------------------------------------------------------------------------- */
 
 const SAT_POINTS = [
-  "31 full-length practice tests in a Bluebook-style interface",
-  "Adaptive modules that route like the real Digital SAT",
-  "A written explanation on every question",
-  "Analytics that show which skills are costing you points",
-  "Vocabulary sets with spaced repetition",
+  { icon: MonitorPlay, text: "31 full-length practice tests in a Bluebook-style interface" },
+  { icon: Layers, text: "Adaptive modules that route like the real Digital SAT" },
+  { icon: Zap, text: "A written explanation on every question" },
+  { icon: BarChart3, text: "Analytics that show which skills are costing you points" },
+  { icon: BookOpen, text: "Vocabulary sets with spaced repetition" },
 ];
 
 function SatSection() {
   return (
-    <section id="sat" aria-labelledby="sat-title" className="scroll-mt-16 border-t border-border py-20 lg:py-24">
-      <Container className="grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <Eyebrow>Also on Scholarly</Eyebrow>
-          <h2 id="sat-title" className="mt-5 font-serif text-[1.85rem] font-medium leading-tight tracking-[-0.01em]">
-            SAT preparation, when you need it
-          </h2>
-          <p className="mt-4 max-w-md text-[15.5px] leading-relaxed text-muted-foreground">
-            Sitting the Digital SAT? The same free account includes a full practice engine.
-          </p>
+    <section id="sat" className="scroll-mt-20 py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid items-center gap-10 rounded-3xl border border-border/70 bg-card/60 p-6 shadow-soft sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+          <div>
+            <SectionLabel icon={CalendarDays}>Also on Scholarly</SectionLabel>
+            <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
+              SAT preparation, when you need it
+            </h2>
+            <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+              Sitting the Digital SAT? The same free account includes a full practice engine.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {SAT_POINTS.map((p) => (
+                <li key={p.text} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-primary/10">
+                    <p.icon className="h-3.5 w-3.5 text-primary" />
+                  </span>
+                  <span className="text-[14px] leading-relaxed text-muted-foreground">{p.text}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 flex items-start gap-1.5 text-[11.5px] leading-relaxed text-muted-foreground">
+              <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+              Scholarly is independent and not affiliated with or endorsed by the College Board. SAT&reg; and
+              Bluebook&trade; are trademarks of their owners, referenced only to describe the exam format.
+            </p>
+          </div>
+          <Reveal direction="left" delay={0.1}>
+            <BluebookMockup />
+          </Reveal>
         </div>
-        <div className="lg:col-span-6 lg:col-start-7">
-          <ul className="divide-y divide-border border-y border-border">
-            {SAT_POINTS.map((p) => (
-              <li key={p} className="py-3 text-[15px]">
-                {p}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-[12.5px] leading-relaxed text-muted-foreground">
-            Scholarly is independent and not affiliated with or endorsed by the College Board. SAT&reg; and
-            Bluebook&trade; are trademarks of their owners, referenced only to describe the exam format.
-          </p>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* FAQ                                                                         */
+/* 8. FAQ                                                                      */
 /* -------------------------------------------------------------------------- */
 
 const faqs = ({ live, plannedCount }: ApSummary) => [
   {
     q: "What is Scholarly?",
-    a: "A free academic community for students. You can carry out original research with a mentor, book one-to-one sessions, study AP subjects, prepare for IELTS, and join financial literacy classes — all with one account.",
+    a: "A free academic community for students. You can do original research with a mentor through the research programme, book 1-on-1 sessions with mentors, study AP subjects, prepare for IELTS, and join financial literacy classes, all with one account.",
   },
   {
     q: "How does the research programme work?",
-    a: "You propose a research question in any field, with a short paragraph about why it matters to you. The team reads every proposal and emails a decision with a written note. Accepted proposals are paired with a mentor who helps you scope the question and design the method, and the project ends with a finished paper in your own name.",
-  },
-  {
-    q: "Do I need research experience to apply?",
-    a: "No. What gets a proposal turned down is vagueness, not inexperience. A narrow, answerable question and an honest account of why it interests you matter far more than a long list of past work.",
-  },
-  {
-    q: "Can other people see my proposal?",
-    a: "No. Proposals and projects in progress are private to you and the Scholarly team.",
+    a: "You propose a research question in any field with a short paragraph about why it matters to you. Accepted proposals are paired with a mentor who helps you scope the question and design the work. When the work is done, you finish with a paper in your own name.",
   },
   {
     q: "Which AP subjects are available?",
-    a: `${live.map((s) => shortName(s.name)).join(", ")}. ${plannedCount} more subjects are in preparation.`,
+    a: `${live.map((s) => shortName(s.name)).join(", ")}. ${plannedCount} more subjects are being written now.`,
   },
   {
     q: "Is it really free?",
-    a: "Yes. You can create an account and use the research programme, AP practice, IELTS practice and mentorship without entering any payment details.",
+    a: "Yes. You can create an account and use the research programme, AP practice, IELTS practice and mentorship without entering payment details.",
+  },
+  {
+    q: "Do you offer test preparation?",
+    a: "Yes, for IELTS and the SAT. IELTS covers Writing and Speaking with band-scored feedback. SAT preparation includes full-length adaptive practice tests in a Bluebook-style interface, a question bank and analytics.",
   },
   {
     q: "Is Scholarly affiliated with the College Board?",
-    a: "No. Scholarly is independent. AP®, SAT® and Bluebook™ are trademarks of the College Board, which does not sponsor or endorse this platform.",
+    a: "No. We are completely independent. SAT® and Bluebook™ are trademarks of the College Board, which does not sponsor or endorse this platform.",
   },
 ];
 
-function Faq({ ap }: { ap: ApSummary }) {
+function Faq() {
+  const ap = useAp();
   return (
-    <section id="faq" aria-labelledby="faq-title" className="scroll-mt-16 border-t border-border py-20 lg:py-28">
-      <Container className="grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-4">
-          <Eyebrow>FAQ</Eyebrow>
-          <SectionTitle id="faq-title" className="mt-5">
-            Questions, answered.
-          </SectionTitle>
-          <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-            Something else? Write to{" "}
-            <a
-              href="mailto:scholarlyhub.space@gmail.com"
-              className="font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            >
-              scholarlyhub.space@gmail.com
-            </a>
-            .
-          </p>
-        </div>
-        <Accordion type="single" collapsible className="border-t border-border lg:col-span-7 lg:col-start-6">
-          {faqs(ap).map((f, i) => (
-            <AccordionItem key={f.q} value={`item-${i}`}>
-              <AccordionTrigger className="py-5 text-left text-[16px] font-medium hover:no-underline">
-                {f.q}
-              </AccordionTrigger>
-              <AccordionContent className="max-w-[40rem] pb-6 text-[15.5px] leading-relaxed text-muted-foreground">
-                {f.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Container>
+    <section id="faq" className="scroll-mt-20 py-20 sm:py-28">
+      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <SectionHeading label="FAQ" icon={ClipboardList} title="Questions, answered" />
+        <Reveal delay={0.1}>
+          <Accordion type="single" collapsible className="mt-12 w-full">
+            {faqs(ap).map((f, i) => (
+              <AccordionItem
+                key={f.q}
+                value={`item-${i}`}
+                className="mb-3 rounded-xl border border-border/70 bg-card px-5 shadow-soft transition-shadow data-[state=open]:shadow-card"
+              >
+                <AccordionTrigger className="text-left text-[15px] font-semibold hover:no-underline">{f.q}</AccordionTrigger>
+                <AccordionContent className="text-[15px] leading-relaxed text-muted-foreground">{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
+      </div>
     </section>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Final call to action                                                        */
+/* 9. Final CTA                                                                */
 /* -------------------------------------------------------------------------- */
 
-/**
- * An inverted band: ink on paper becomes paper on ink, in either theme,
- * because it is drawn from the foreground and background tokens themselves.
- */
 function FinalCta() {
   return (
-    <section aria-labelledby="cta-title" className="bg-foreground text-background">
-      <Container className="grid gap-8 py-20 lg:grid-cols-12 lg:items-end lg:py-24">
-        <div className="lg:col-span-7">
-          <h2
-            id="cta-title"
-            className="font-serif text-[2.25rem] font-medium leading-[1.08] tracking-[-0.015em] sm:text-[3rem]"
-          >
-            Begin with a question.
-          </h2>
-          <p className="mt-5 max-w-[34rem] text-[17px] leading-relaxed opacity-80">
-            Propose a research project, choose your AP subjects, prepare for IELTS, or book a session with a mentor.
-            Joining is free and takes about a minute.
-          </p>
-        </div>
-        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center lg:col-span-5 lg:justify-end">
-          <Link
-            href="/onboarding"
-            className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-background px-5 text-[15px] font-medium text-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-foreground sm:w-auto"
-          >
-            Join Scholarly — free
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/login"
-            className="rounded-sm text-[15px] font-medium underline underline-offset-4 opacity-85 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
-          >
-            I already have an account
-          </Link>
-        </div>
-      </Container>
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <Reveal scale={0.97} direction="none">
+          <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-navy-950 px-6 py-16 text-center text-white sm:px-12 sm:py-20">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,hsl(226_84%_56%/0.35),transparent_70%)]" />
+              <FloatingBlob className="absolute -bottom-20 left-[20%] h-[300px] w-[300px] rounded-full bg-primary/25 blur-[100px]" />
+              <FloatingBlob
+                className="absolute -top-16 right-[18%] h-[260px] w-[260px] rounded-full bg-[hsl(190_84%_42%)]/20 blur-[100px]"
+                duration={20}
+                delay={2}
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]" />
+            </div>
+
+            <div className="relative mx-auto max-w-2xl">
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-5xl sm:leading-[1.08]">
+                Start where you want to go
+              </h2>
+              <p className="mx-auto mt-5 max-w-lg text-[17px] leading-relaxed text-navy-200 text-balance">
+                Propose a research project, pick your AP subjects, prepare for IELTS, or book a session with a mentor.
+                It is free, and it takes about a minute to join.
+              </p>
+              <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Button
+                  size="lg"
+                  className="group h-[52px] w-full rounded-full bg-primary px-8 text-base font-semibold text-white shadow-panel hover:bg-primary-600 sm:w-auto"
+                  asChild
+                >
+                  <Link href="/onboarding">
+                    Join Scholarly free
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-[52px] w-full rounded-full border-white/20 bg-white/5 px-8 text-base text-white backdrop-blur hover:bg-white/10 hover:text-white sm:w-auto"
+                  asChild
+                >
+                  <Link href="/login">I already have an account</Link>
+                </Button>
+              </div>
+              <p className="mt-6 text-[13px] text-navy-300">Free to join · No credit card · Takes about a minute</p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
@@ -813,86 +877,106 @@ function FinalCta() {
 /* Footer                                                                      */
 /* -------------------------------------------------------------------------- */
 
-const FOOTER_COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
-  {
-    title: "Programmes",
-    links: [
-      { href: "#research", label: "Independent research" },
-      { href: "#courses", label: "AP courses" },
-      { href: "#mentorship", label: "Mentorship" },
-      { href: "#financial-literacy", label: "Financial literacy" },
-      { href: "#sat", label: "SAT preparation" },
-    ],
-  },
-  {
-    title: "Scholarly",
-    links: [
-      { href: "/team", label: "Team" },
-      { href: "/schools", label: "For schools" },
-      { href: "#faq", label: "FAQ" },
-    ],
-  },
-  {
-    title: "Account",
-    links: [
-      { href: "/onboarding", label: "Join free" },
-      { href: "/login", label: "Sign in" },
-    ],
-  },
-];
-
 function Footer() {
   return (
-    <footer className="border-t border-border">
-      <Container className="py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
-          <div className="sm:col-span-2 lg:col-span-5">
-            <Wordmark />
-            <p className="mt-4 max-w-sm text-[14.5px] leading-relaxed text-muted-foreground">
-              A free academic community: independent research with mentors, AP courses, IELTS preparation and
-              financial literacy.
+    <footer className="border-t border-border/60 bg-secondary/25">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white">
+                <GraduationCap className="h-[18px] w-[18px]" />
+              </span>
+              <span className="font-display text-[17px] font-semibold tracking-tight">Scholarly</span>
+            </Link>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              A free academic community: student research with mentors, AP courses, IELTS preparation, financial
+              literacy, and SAT practice.
             </p>
-            <a
-              href="mailto:scholarlyhub.space@gmail.com"
-              className="mt-4 inline-block text-[14.5px] text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            >
-              scholarlyhub.space@gmail.com
-            </a>
           </div>
-          {FOOTER_COLUMNS.map((col) => (
-            <nav key={col.title} aria-label={col.title} className="lg:col-span-2">
-              <h2 className="text-[13px] font-medium">{col.title}</h2>
-              <ul className="mt-3 space-y-2">
-                {col.links.map((l) => (
-                  <li key={l.label}>
-                    <Link
-                      href={l.href}
-                      className="text-[14.5px] text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ))}
+
+          <div>
+            <p className="text-sm font-semibold">Explore</p>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#research" className="transition-colors hover:text-foreground">
+                  Research programme
+                </a>
+              </li>
+              <li>
+                <a href="#programmes" className="transition-colors hover:text-foreground">
+                  Mentorship
+                </a>
+              </li>
+              <li>
+                <a href="#courses" className="transition-colors hover:text-foreground">
+                  AP courses
+                </a>
+              </li>
+              <li>
+                <a href="#programmes" className="transition-colors hover:text-foreground">
+                  IELTS &amp; financial literacy
+                </a>
+              </li>
+              <li>
+                <a href="#sat" className="transition-colors hover:text-foreground">
+                  SAT preparation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold">Get started</p>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link href="/onboarding" className="transition-colors hover:text-foreground">
+                  Create an account
+                </Link>
+              </li>
+              <li>
+                <Link href="/login" className="transition-colors hover:text-foreground">
+                  Sign in
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="transition-colors hover:text-foreground">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/schools" className="transition-colors hover:text-foreground">
+                  For Schools
+                </Link>
+              </li>
+              <li>
+                <a href="#faq" className="transition-colors hover:text-foreground">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-[12.5px] text-muted-foreground sm:flex-row sm:items-start sm:justify-between">
-          <p className="max-w-2xl leading-relaxed">
-            &copy; {new Date().getFullYear()} Scholarly. AP&reg;, SAT&reg; and Bluebook&trade; are trademarks of the
-            College Board, which is not affiliated with and does not endorse this platform.
-          </p>
-          <p className="flex shrink-0 gap-5">
-            <Link href="/terms" className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <div className="mt-12 border-t border-border/60 pt-6">
+          <p className="mb-3 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+            <Link href="/terms" className="text-muted-foreground hover:text-foreground">
               Terms of Use
             </Link>
-            <Link href="/privacy" className="hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+            <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
               Privacy Policy
             </Link>
+            <a href="mailto:scholarlyhub.space@gmail.com" className="text-muted-foreground hover:text-foreground">
+              Contact
+            </a>
+          </p>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            &copy; {new Date().getFullYear()} Scholarly. SAT&reg; is a trademark registered by the College Board, which
+            is not affiliated with and does not endorse this platform. Bluebook&trade; is a trademark of the College
+            Board. All other marks belong to their respective owners.
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

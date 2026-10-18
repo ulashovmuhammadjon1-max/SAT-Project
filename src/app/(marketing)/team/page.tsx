@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { BadgeCheck, Cake, FlaskConical, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
-import { Container, Eyebrow, Lede, SectionTitle } from "@/components/marketing/editorial";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
@@ -69,23 +69,17 @@ const OPEN_ROLES = [
   },
 ];
 
-function MentorList({ title, intro, mentors, research }: { title: string; intro: React.ReactNode; mentors: Mentor[]; research?: boolean }) {
+function MentorGrid({ mentors, accent }: { mentors: Mentor[]; accent: string }) {
   return (
-    <section className="border-t border-border py-12 lg:grid lg:grid-cols-12 lg:gap-10">
-      <div className="lg:col-span-4">
-        <h2 className="font-serif text-[1.75rem] font-medium leading-tight">{title}</h2>
-        <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-muted-foreground">{intro}</p>
-      </div>
-      <ul className="mt-8 grid border-t border-border sm:grid-cols-2 lg:col-span-8 lg:mt-0 lg:grid-cols-3">
-        {mentors.map((m) => (
-          <li key={m.name} className="border-b border-border py-5 sm:pr-6">
-            <p className="font-serif text-[1.25rem] leading-snug">{m.name}</p>
-            <p className={`mt-1 text-[14px] ${research ? "text-research" : "text-muted-foreground"}`}>{m.headline}</p>
-            {m.subjects.length > 0 && <p className="mt-1 text-[13px] text-muted-foreground">{m.subjects.join(" · ")}</p>}
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {mentors.map((m) => (
+        <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+          <p className="font-medium">{m.name}</p>
+          <p className={`mt-0.5 text-sm ${accent}`}>{m.headline}</p>
+          {m.subjects.length > 0 && <p className="mt-2 text-xs text-muted-foreground">{m.subjects.join(" · ")}</p>}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -95,140 +89,169 @@ export default async function TeamPage() {
   const named = new Set(PEER_MENTORS.map((m) => m.name.toLowerCase()));
   const mentors = [...PEER_MENTORS, ...approved.filter((m) => !named.has(m.name.toLowerCase()))];
 
-  const contacts: { key: string; term: string; label: string; href?: string }[] = [];
-  if (FOUNDER.age !== null) contacts.push({ key: "age", term: "Age", label: String(FOUNDER.age) });
+  const contacts: { key: string; icon: typeof Mail; label: string; href?: string }[] = [];
+  if (FOUNDER.age !== null) contacts.push({ key: "age", icon: Cake, label: `Age ${FOUNDER.age}` });
   if (FOUNDER.phone) {
-    contacts.push({ key: "phone", term: "Phone", label: FOUNDER.phone, href: `tel:${FOUNDER.phone.replace(/[^\d+]/g, "")}` });
+    contacts.push({ key: "phone", icon: Phone, label: FOUNDER.phone, href: `tel:${FOUNDER.phone.replace(/[^\d+]/g, "")}` });
   }
-  if (FOUNDER.email) contacts.push({ key: "email", term: "Email", label: FOUNDER.email, href: `mailto:${FOUNDER.email}` });
+  if (FOUNDER.email) contacts.push({ key: "email", icon: Mail, label: FOUNDER.email, href: `mailto:${FOUNDER.email}` });
   if (FOUNDER.telegram) {
     const tg = telegramLink(FOUNDER.telegram);
-    contacts.push({ key: "telegram", term: "Telegram", label: tg.label, href: tg.href });
+    contacts.push({ key: "telegram", icon: Send, label: tg.label, href: tg.href });
   }
 
   return (
     <div className="min-h-screen bg-background">
       {user ? <AppReturnBar backHref="/dashboard" backLabel="Back to home" /> : <SiteNav />}
-      <main id="main">
-        <Container className="py-16 lg:py-24">
-          <div className="grid gap-6 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <Eyebrow>Team</Eyebrow>
-              <SectionTitle as="h1" className="mt-5 sm:text-[2.9rem]">
-                The people behind Scholarly
-              </SectionTitle>
+      <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Team</p>
+        <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          The people behind Scholarly
+        </h1>
+        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+          Scholarly is student-built and student-run. Everyone here earned their place with real
+          work — and the team grows as the community does.
+        </p>
+
+        {/* Founder */}
+        <section className="mt-10">
+          <div className="rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/[0.06] to-card p-6 shadow-card sm:p-8">
+            <div className="flex flex-wrap items-center gap-4">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-900 text-white">
+                <GraduationCap className="h-7 w-7" />
+              </span>
+              <div className="min-w-[220px] flex-1">
+                <p className="font-display text-xl font-semibold tracking-tight">{FOUNDER.name}</p>
+                <p className="text-sm font-medium text-primary">{FOUNDER.title}</p>
+              </div>
             </div>
-            <Lede className="lg:col-span-5 lg:pt-12">
-              Scholarly is student-built and student-run. Everyone here earned their place with real work, and the
-              team grows as the community does.
-            </Lede>
+            <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">{FOUNDER.bio}</p>
+            {contacts.length > 0 && (
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {contacts.map((c) => {
+                  const Icon = c.icon;
+                  const body = (
+                    <>
+                      <Icon className="h-4 w-4 shrink-0 text-primary" />
+                      <span className="truncate">{c.label}</span>
+                    </>
+                  );
+                  return (
+                    <li key={c.key} className="min-w-0 max-w-full">
+                      {c.href ? (
+                        <a
+                          href={c.href}
+                          {...(c.key === "telegram" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                          className="flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-sm font-medium transition-colors hover:border-primary/40 hover:text-primary"
+                        >
+                          {body}
+                        </a>
+                      ) : (
+                        <span className="flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-sm font-medium">
+                          {body}
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </div>
+        </section>
 
-          {/* Founder */}
-          <section aria-labelledby="founder-name" className="mt-14 border-t border-border py-12 lg:grid lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-4">
-              <p className="text-[13px] text-muted-foreground">{FOUNDER.title}</p>
-              <h2 id="founder-name" className="mt-2 font-serif text-[2rem] font-medium leading-tight">
-                {FOUNDER.name}
-              </h2>
-            </div>
-            <div className="mt-5 lg:col-span-8 lg:mt-0">
-              <p className="max-w-2xl font-serif text-[1.3rem] leading-[1.5]">{FOUNDER.bio}</p>
-              {contacts.length > 0 && (
-                <dl className="mt-8 grid max-w-2xl border-t border-border sm:grid-cols-2">
-                  {contacts.map((c) => (
-                    <div key={c.key} className="border-b border-border py-3 sm:pr-6">
-                      <dt className="text-[13px] text-muted-foreground">{c.term}</dt>
-                      <dd className="mt-0.5 break-all text-[15px]">
-                        {c.href ? (
-                          <a
-                            href={c.href}
-                            {...(c.key === "telegram" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                            className="text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                          >
-                            {c.label}
-                          </a>
-                        ) : (
-                          c.label
-                        )}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
-            </div>
-          </section>
-
-          {/* Core team — managed from the admin panel */}
-          {core.length > 0 && (
-            <section className="border-t border-border py-12 lg:grid lg:grid-cols-12 lg:gap-10">
-              <h2 className="font-serif text-[1.75rem] font-medium leading-tight lg:col-span-4">Core team</h2>
-              <ul className="mt-8 grid border-t border-border sm:grid-cols-2 lg:col-span-8 lg:mt-0">
-                {core.map((m) => (
-                  <li key={m.name} className="flex gap-4 border-b border-border py-5 sm:pr-6">
-                    {m.photo && (
+        {/* Core team — managed from the admin panel */}
+        {core.length > 0 && (
+          <section className="mt-12">
+            <h2 className="font-display text-xl font-semibold tracking-tight">Core team</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {core.map((m) => (
+                <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+                  <div className="flex items-center gap-3">
+                    {m.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={m.photo} alt="" className="h-14 w-14 shrink-0 rounded-md border border-border object-cover" />
+                      <img
+                        src={m.photo}
+                        alt={m.name}
+                        className="h-12 w-12 rounded-xl border border-border object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary font-display text-lg font-semibold text-muted-foreground">
+                        {m.name.slice(0, 1)}
+                      </span>
                     )}
                     <div className="min-w-0">
-                      <p className="font-serif text-[1.25rem] leading-snug">{m.name}</p>
-                      <p className="mt-0.5 text-[14px] text-muted-foreground">{m.title}</p>
-                      {m.bio && <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{m.bio}</p>}
-                      {m.email && (
-                        <a href={`mailto:${m.email}`} className="mt-1.5 block truncate text-[13.5px] text-primary underline-offset-4 hover:underline">
-                          {m.email}
-                        </a>
-                      )}
+                      <p className="truncate font-medium">{m.name}</p>
+                      <p className="truncate text-sm text-primary">{m.title}</p>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          <MentorList
-            title="Research mentors"
-            intro="They guide students in the research programme from a first question to a finished paper."
-            mentors={RESEARCH_MENTORS}
-            research
-          />
-
-          <MentorList
-            title="Peer mentors"
-            intro={
-              <>
-                Students with top SAT results who now host sessions for the next cohort.{" "}
-                <Link href="/mentor" className="font-medium text-primary underline-offset-4 hover:underline">
-                  Apply to become a peer mentor
-                </Link>
-                .
-              </>
-            }
-            mentors={mentors}
-          />
-
-          {/* Open roles */}
-          <section className="border-t border-border py-12 lg:grid lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-4">
-              <h2 className="font-serif text-[1.75rem] font-medium leading-tight">Open roles</h2>
-              <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
-                Volunteer positions with real ownership. Write to{" "}
-                <a href="mailto:scholarlyhub.space@gmail.com" className="font-medium text-primary underline-offset-4 hover:underline">
-                  scholarlyhub.space@gmail.com
-                </a>{" "}
-                with what you would do in your first month.
-              </p>
-            </div>
-            <ul className="mt-8 border-t border-border lg:col-span-8 lg:mt-0">
-              {OPEN_ROLES.map((r) => (
-                <li key={r.title} className="border-b border-border py-5">
-                  <p className="font-serif text-[1.25rem] leading-snug">{r.title}</p>
-                  <p className="mt-1.5 max-w-xl text-[15px] leading-relaxed text-muted-foreground">{r.body}</p>
-                </li>
+                  </div>
+                  {m.bio && <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>}
+                  {m.email && (
+                    <a
+                      href={`mailto:${m.email}`}
+                      className="mt-2 block truncate text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                    >
+                      {m.email}
+                    </a>
+                  )}
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
-        </Container>
+        )}
+
+        {/* Peer mentors — live from the database */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <BadgeCheck className="h-5 w-5 text-[hsl(266_84%_60%)]" />
+            Peer mentors
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            Students who earned top SAT scores and now host sessions for the next cohort.{" "}
+            <Link href="/mentor" className="font-medium text-primary underline-offset-4 hover:underline">
+              Apply to become a peer mentor
+            </Link>
+            .
+          </p>
+          <MentorGrid mentors={mentors} accent="text-[hsl(266_84%_60%)]" />
+        </section>
+
+        {/* Research mentors */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <FlaskConical className="h-5 w-5 text-[hsl(190_84%_42%)]" />
+            Research mentors
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            They guide students in the research programme from a first question to a finished paper.
+          </p>
+          <MentorGrid mentors={RESEARCH_MENTORS} accent="text-[hsl(190_84%_42%)]" />
+        </section>
+
+        {/* Open roles */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <Sparkles className="h-5 w-5 text-primary" />
+            Open roles
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            Volunteer positions with real ownership. Write to{" "}
+            <a
+              href="mailto:scholarlyhub.space@gmail.com"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              scholarlyhub.space@gmail.com
+            </a>{" "}
+            with what you would do in your first month.
+          </p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {OPEN_ROLES.map((r) => (
+              <div key={r.title} className="rounded-2xl border border-dashed border-border bg-card/50 p-5">
+                <p className="font-medium">{r.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{r.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
