@@ -954,6 +954,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/team" className="transition-colors hover:text-foreground">
+                  Team
+                </Link>
+              </li>
+              <li>
                 <Link href="/schools" className="transition-colors hover:text-foreground">
                   For Schools
                 </Link>

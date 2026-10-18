@@ -17,7 +17,8 @@ const PUBLIC_ROUTES = [
   "/verify-email",
   "/terms",
   "/privacy",
-  // /impact and /team were removed from the site; do not re-add them here.
+  // /impact is confidential and was removed from the site; do not re-add it.
+  "/team",
   "/schools",
   "/journal",
 ];
