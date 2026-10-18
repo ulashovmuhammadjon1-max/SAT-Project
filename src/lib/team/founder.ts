@@ -31,9 +31,33 @@ export const FOUNDER: FounderCard = {
     "every research proposal and peer-mentor application personally.",
   age: null,
   phone: null,
-  email: "ulashovmuhammadjon7@gmail.com",
+  email: "ulashovmuhammadjon1@gmail.com",
   telegram: "@ulashovmuhammadjon1",
 };
+
+export interface MentorCard {
+  name: string;
+  /** One line under the name, e.g. the score that earned the place. */
+  headline: string;
+  subjects: string[];
+}
+
+/**
+ * Peer mentors named by the founder. Shown alongside any mentor approved
+ * through /mentor (PeerMentorApplication), so both routes onto the page work.
+ */
+export const PEER_MENTORS: MentorCard[] = [
+  { name: "Jasurbek", headline: "SAT 1450 · Math 790", subjects: ["SAT"] },
+  { name: "Rustambek", headline: "SAT 1480 · Math 800", subjects: ["SAT"] },
+  { name: "Yusufbek", headline: "SAT Math 730", subjects: ["SAT"] },
+];
+
+/** Mentors on the research programme. */
+export const RESEARCH_MENTORS: MentorCard[] = [
+  { name: "Sardorbek", headline: "Research mentor", subjects: [] },
+  { name: "Muhammadjon", headline: "Research mentor", subjects: [] },
+  { name: "Farrukh", headline: "Research mentor", subjects: [] },
+];
 
 /** "@name" or "t.me/name" or a full URL, normalised to a link and a label. */
 export function telegramLink(value: string): { href: string; label: string } {

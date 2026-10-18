@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { BadgeCheck, Cake, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
+import { BadgeCheck, Cake, FlaskConical, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { FOUNDER, telegramLink } from "@/lib/team/founder";
+import { FOUNDER, PEER_MENTORS, RESEARCH_MENTORS, telegramLink, type MentorCard } from "@/lib/team/founder";
 
 export const metadata = {
   title: "Team",
@@ -22,11 +22,7 @@ export const metadata = {
  */
 export const dynamic = "force-dynamic";
 
-interface Mentor {
-  name: string;
-  headline: string;
-  subjects: string[];
-}
+type Mentor = MentorCard;
 
 interface CoreMember {
   name: string;
@@ -71,18 +67,27 @@ const OPEN_ROLES = [
     title: "Research Mentor",
     body: "Guide a student project from question to finished paper: scope the topic, review drafts, sign off on method.",
   },
-  {
-    title: "Community Lead",
-    body: "Run the Telegram community, classes and events — the heartbeat of the programme.",
-  },
-  {
-    title: "Content Lead",
-    body: "Own the quality bar for AP, IELTS and SAT material: review disputes and keep explanations sharp.",
-  },
 ];
 
+function MentorGrid({ mentors, accent }: { mentors: Mentor[]; accent: string }) {
+  return (
+    <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {mentors.map((m) => (
+        <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
+          <p className="font-medium">{m.name}</p>
+          <p className={`mt-0.5 text-sm ${accent}`}>{m.headline}</p>
+          {m.subjects.length > 0 && <p className="mt-2 text-xs text-muted-foreground">{m.subjects.join(" · ")}</p>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default async function TeamPage() {
-  const [mentors, core, user] = await Promise.all([getMentors(), getCoreMembers(), getCurrentUser()]);
+  const [approved, core, user] = await Promise.all([getMentors(), getCoreMembers(), getCurrentUser()]);
+  // Named mentors first, then anyone approved through /mentor who is not already listed.
+  const named = new Set(PEER_MENTORS.map((m) => m.name.toLowerCase()));
+  const mentors = [...PEER_MENTORS, ...approved.filter((m) => !named.has(m.name.toLowerCase()))];
 
   const contacts: { key: string; icon: typeof Mail; label: string; href?: string }[] = [];
   if (FOUNDER.age !== null) contacts.push({ key: "age", icon: Cake, label: `Age ${FOUNDER.age}` });
@@ -201,29 +206,25 @@ export default async function TeamPage() {
             Peer mentors
           </h2>
           <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-            Students who proved their results and now host sessions for the next cohort.
+            Students who earned top SAT scores and now host sessions for the next cohort.{" "}
+            <Link href="/mentor" className="font-medium text-primary underline-offset-4 hover:underline">
+              Apply to become a peer mentor
+            </Link>
+            .
           </p>
-          {mentors.length === 0 ? (
-            <p className="mt-5 rounded-2xl border border-dashed border-border px-5 py-8 text-sm text-muted-foreground">
-              The first cohort is being reviewed now. Want to help?{" "}
-              <Link href="/mentor" className="font-medium text-primary underline-offset-4 hover:underline">
-                Apply to become a peer mentor
-              </Link>
-              .
-            </p>
-          ) : (
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {mentors.map((m) => (
-                <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
-                  <p className="font-medium">{m.name}</p>
-                  <p className="mt-0.5 text-sm text-[hsl(266_84%_60%)]">{m.headline}</p>
-                  {m.subjects.length > 0 && (
-                    <p className="mt-2 text-xs text-muted-foreground">{m.subjects.join(" · ")}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+          <MentorGrid mentors={mentors} accent="text-[hsl(266_84%_60%)]" />
+        </section>
+
+        {/* Research mentors */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <FlaskConical className="h-5 w-5 text-[hsl(190_84%_42%)]" />
+            Research mentors
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            They guide students in the research programme from a first question to a finished paper.
+          </p>
+          <MentorGrid mentors={RESEARCH_MENTORS} accent="text-[hsl(190_84%_42%)]" />
         </section>
 
         {/* Open roles */}
@@ -242,7 +243,7 @@ export default async function TeamPage() {
             </a>{" "}
             with what you would do in your first month.
           </p>
-          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {OPEN_ROLES.map((r) => (
               <div key={r.title} className="rounded-2xl border border-dashed border-border bg-card/50 p-5">
                 <p className="font-medium">{r.title}</p>
