@@ -7,6 +7,7 @@ import { prisma } from "@/lib/prisma";
 import { loginSchema, looksLikeEmail } from "@/lib/validations/auth";
 import { oauthProviders } from "@/lib/auth-providers";
 import authConfig from "@/lib/auth.config";
+import { TERMS_VERSION } from "@/lib/legal";
 
 /** 30 days, in seconds. */
 const SESSION_MAX_AGE = 30 * 24 * 60 * 60;
@@ -34,6 +35,28 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     updateAge: 24 * 60 * 60,
   },
   jwt: { maxAge: SESSION_MAX_AGE },
+
+  // Fires only when the adapter creates a user, i.e. a first sign-in through
+  // Google, Microsoft or Apple. Email signups are created by the onboarding
+  // action, which records acceptance itself. The login page states the terms
+  // and the 13+ requirement directly under the social buttons, so continuing
+  // is the acceptance — recorded here so those accounts are not left with a
+  // blank termsAcceptedAt. A failure is logged, never allowed to block sign-in.
+  events: {
+    async createUser({ user }) {
+      if (!user.id) return;
+      try {
+        await prisma.user.update({
+          where: { id: user.id },
+          data: { termsAcceptedAt: new Date(), termsVersion: TERMS_VERSION },
+          select: { id: true },
+        });
+      } catch (error) {
+        console.error("[auth] could not record terms acceptance for new OAuth user", error);
+      }
+    },
+  },
+
   providers: [
     Credentials({
       name: "Credentials",

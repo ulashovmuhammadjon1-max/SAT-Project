@@ -163,7 +163,7 @@ export const onboardingSignupSchema = z.object({
    * button is a courtesy rather than the actual enforcement.
    */
   acceptedTerms: z.literal(true, {
-    errorMap: () => ({ message: "Please accept the Terms and Privacy Policy to continue." }),
+    errorMap: () => ({ message: "Please confirm you are 13 or older and accept the Terms and Privacy Policy to continue." }),
   }),
 });
 

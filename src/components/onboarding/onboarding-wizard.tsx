@@ -1038,7 +1038,7 @@ function AccountStep({
             className="mt-0.5 h-4 w-4 shrink-0 rounded border-input accent-primary"
           />
           <span className="text-[13px] leading-relaxed text-muted-foreground">
-            I agree to the{" "}
+            I am 13 or older, and I agree to the{" "}
             <Link
               href="/terms"
               target="_blank"

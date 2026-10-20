@@ -22,6 +22,12 @@ const OAUTH = [
   { key: "apple", id: "apple", label: "Continue with Apple", Icon: AppleIcon },
 ] as const;
 
+/** "Google", "Google or Apple", "Google, Microsoft or Apple". */
+function listNames(names: string[]): string {
+  if (names.length <= 1) return names[0] ?? "";
+  return `${names.slice(0, -1).join(", ")} or ${names[names.length - 1]}`;
+}
+
 /** Map an Auth.js `?error=` code to something a person can act on. */
 function friendlyAuthError(code: string | null): string | null {
   if (!code) return null;
@@ -231,6 +237,23 @@ export function LoginForm({ providers }: { providers: EnabledOAuth }) {
               />
             ))}
           </div>
+
+          {/* A social button can create an account without ever reaching the
+              onboarding consent box, so the same terms are stated here, before
+              the click. Acceptance is then recorded on the new account by the
+              createUser event in lib/auth.ts. */}
+          <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground">
+            By continuing with {listNames(socials.map((o) => o.label.replace("Continue with ", "")))}, you confirm you
+            are 13 or older and agree to the{" "}
+            <Link href="/terms" target="_blank" className="underline underline-offset-2 hover:text-foreground">
+              Terms of Use
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy" target="_blank" className="underline underline-offset-2 hover:text-foreground">
+              Privacy Policy
+            </Link>
+            .
+          </p>
         </>
       )}
 
