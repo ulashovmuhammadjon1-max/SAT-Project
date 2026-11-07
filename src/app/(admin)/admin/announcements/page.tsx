@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnnouncementForm } from "@/components/admin/announcement-form";
 import { AnnouncementToggle } from "@/components/admin/announcement-toggle";
 import { ReferralContestBroadcast } from "@/components/admin/referral-contest-broadcast";
+import { SessionsBroadcast } from "@/components/admin/sessions-broadcast";
 import { prisma } from "@/lib/prisma";
 
 export const metadata = { title: "Announcements" };
@@ -17,6 +18,15 @@ export default async function AdminAnnouncementsPage() {
         <h1 className="font-display text-2xl font-semibold tracking-tight">Announcements</h1>
         <p className="text-sm text-muted-foreground">Broadcast messages shown to students, admins, or everyone.</p>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Email: new 1-on-1 sessions are open</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <SessionsBroadcast />
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader>
