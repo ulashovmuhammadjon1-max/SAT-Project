@@ -54,6 +54,8 @@ export interface OpenSlot {
   /** Set on sessions an admin published from My Sessions. */
   title: string | null;
   subject: string | null;
+  /** Seats still free. Display only — capacity is enforced when booking. */
+  seatsLeft: number;
 }
 
 /** Future slots that are published, not blocked, and not already taken. */
@@ -80,7 +82,11 @@ export async function getOpenSlots(): Promise<OpenSlot[]> {
   // live count rather than on "has any booking row".
   return slots
     .filter((s) => s._count.bookings < s.capacity)
-    .map(({ _count, capacity, host, ...rest }) => ({ ...rest, hostName: host?.name ?? null }));
+    .map(({ _count, capacity, host, ...rest }) => ({
+      ...rest,
+      hostName: host?.name ?? null,
+      seatsLeft: capacity - _count.bookings,
+    }));
 }
 
 export interface BookingContext {
@@ -94,6 +100,10 @@ export interface BookingContext {
   hasUpcoming: boolean;
   refundHours: number | null;
   referralRewardCoins: number;
+  /** The pricing settings behind `cost`, so the page can explain it without
+   *  hard-coding numbers. Display only — the price is recomputed on booking. */
+  baseCost: number;
+  costIncrement: number;
 }
 
 /**
@@ -136,6 +146,8 @@ export async function getBookingContext(): Promise<BookingContext> {
     hasUpcoming: Boolean(upcoming),
     refundHours: settings.bookingRefundHours,
     referralRewardCoins: settings.referralRewardCoins,
+    baseCost: settings.bookingBaseCost,
+    costIncrement: settings.bookingCostIncrement,
   };
 }
 
@@ -416,6 +428,8 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
     sessionType: slot.sessionType,
     meetingUrl: meeting.url,
     coinsSpent,
+    instagram: `@${settings.instagramHandle}`,
+    telegram: `@${settings.telegramChannel}`,
   });
 
   revalidatePath("/bookings");
@@ -517,6 +531,9 @@ async function sendBookingConfirmation(args: {
   sessionType: SessionType;
   meetingUrl: string | null;
   coinsSpent: number;
+  /** Configured community accounts, e.g. "@scholarly_space". */
+  instagram: string;
+  telegram: string;
 }) {
   const label = EVENT_TYPE_LABELS[args.sessionType];
   const when = args.startsAt.toUTCString();
@@ -534,7 +551,7 @@ async function sendBookingConfirmation(args: {
       (args.coinsSpent > 0
         ? `Coins held: ${args.coinsSpent} — returned in full if the request is not approved.\n`
         : "") +
-      `\nRemember to follow @scholarly_space on Instagram and our founder on Telegram — ` +
+      `\nRemember to follow ${args.instagram} on Instagram and join ${args.telegram} on Telegram — ` +
       `volunteers check this before approving.\n\n` +
       `Changed your mind? Withdraw it from My Sessions on scholarly.space.`,
     html: layout(

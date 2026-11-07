@@ -215,6 +215,7 @@ model User {
   researchProposals     ResearchProposal[]
   peerMentorApplication PeerMentorApplication?
   hostedSlots           MentorSlot[]           @relation("SlotHost")
+  hostProfile    HostProfile?
   classMemberships      ClassMembership[]
   classesTaught         SchoolClass[]          @relation("ClassTeacher")
   assignmentCompletions AssignmentCompletion[]
@@ -627,6 +628,18 @@ enum SessionType {
 ///
 /// Stored as an absolute UTC instant; the student UI renders it in their own
 /// timezone. `isBlocked` lets an admin retire a slot without deleting history.
+/// An admin's saved defaults for the sessions they host: their own Google Meet
+/// link and the subject and title they usually teach. Prefills My Sessions.
+/// Each admin has their own row; created the first time they save.
+model HostProfile {
+  userId         String   @id
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  meetingUrl     String?
+  defaultSubject String?
+  defaultTitle   String?
+  updatedAt      DateTime @default(now()) @updatedAt
+}
+
 model MentorSlot {
   id              String   @id @default(cuid())
   startsAt        DateTime

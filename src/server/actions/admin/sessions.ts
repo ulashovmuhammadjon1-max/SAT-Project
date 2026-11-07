@@ -122,3 +122,39 @@ export async function deleteAdminSession(slotId: string): Promise<SessionActionR
   revalidatePath("/booking");
   return { ok: true };
 }
+
+const defaultsSchema = z.object({
+  meetingUrl: z
+    .string()
+    .trim()
+    .refine((v) => v === "" || MEET_LINK.test(v), "Paste a Google Meet link, like https://meet.google.com/abc-defg-hij."),
+  defaultSubject: z.string().trim().max(80, "Keep the subject under 80 characters."),
+  defaultTitle: z.string().trim().max(120, "Keep the title under 120 characters."),
+});
+
+/**
+ * Saves this admin's own session defaults. Each admin has a separate row, so
+ * one admin's Meet link never appears in another admin's form.
+ */
+export async function saveHostDefaults(input: {
+  meetingUrl: string;
+  defaultSubject: string;
+  defaultTitle: string;
+}): Promise<SessionActionResult> {
+  const admin = await requireAdmin();
+  const parsed = defaultsSchema.safeParse(input);
+  if (!parsed.success) return { ok: false, error: parsed.error.issues[0]?.message ?? "Check the form and try again." };
+  const data = {
+    meetingUrl: parsed.data.meetingUrl || null,
+    defaultSubject: parsed.data.defaultSubject || null,
+    defaultTitle: parsed.data.defaultTitle || null,
+  };
+  await prisma.hostProfile.upsert({
+    where: { userId: admin.id },
+    create: { userId: admin.id, ...data },
+    update: data,
+    select: { userId: true },
+  });
+  revalidatePath("/admin/my-sessions");
+  return { ok: true };
+}

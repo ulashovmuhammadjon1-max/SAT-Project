@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { Loader2, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { createAdminSession, deleteAdminSession } from "@/server/actions/admin/sessions";
+import { createAdminSession, deleteAdminSession, saveHostDefaults } from "@/server/actions/admin/sessions";
 
 /** "YYYY-MM-DD" for today in the admin's own timezone, for the date picker's min. */
 function todayLocal() {
@@ -21,12 +22,20 @@ function todayLocal() {
  * by the browser and sent as an absolute instant, so students elsewhere see the
  * session at the right local time.
  */
-export function CreateSessionForm() {
-  const [title, setTitle] = useState("");
-  const [subject, setSubject] = useState("");
+export interface HostDefaults {
+  meetingUrl: string;
+  defaultSubject: string;
+  defaultTitle: string;
+}
+
+export function CreateSessionForm({ defaults }: { defaults: HostDefaults }) {
+  // Prefilled from this admin's saved details, and reset back to them after
+  // each publish, so the usual subject and link never need retyping.
+  const [title, setTitle] = useState(defaults.defaultTitle);
+  const [subject, setSubject] = useState(defaults.defaultSubject);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [meetingUrl, setMeetingUrl] = useState("");
+  const [meetingUrl, setMeetingUrl] = useState(defaults.meetingUrl);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
@@ -49,10 +58,11 @@ export function CreateSessionForm() {
         return;
       }
       toast.success("Session published. Students can book it now.");
-      setTitle("");
-      setSubject("");
+      setTitle(defaults.defaultTitle);
+      setSubject(defaults.defaultSubject);
       setDate("");
       setTime("");
+      setMeetingUrl(defaults.meetingUrl || meetingUrl);
     });
   }
 
@@ -161,5 +171,79 @@ export function DeleteSessionButton({ slotId }: { slotId: string }) {
     >
       {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}
     </Button>
+  );
+}
+
+/**
+ * This admin's saved details. Stored per admin, so each one keeps their own
+ * Meet link; used to prefill the create form above.
+ */
+export function HostDefaultsForm({ defaults }: { defaults: HostDefaults }) {
+  const router = useRouter();
+  const [meetingUrl, setMeetingUrl] = useState(defaults.meetingUrl);
+  const [defaultSubject, setDefaultSubject] = useState(defaults.defaultSubject);
+  const [defaultTitle, setDefaultTitle] = useState(defaults.defaultTitle);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
+
+  function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError(null);
+    startTransition(async () => {
+      const res = await saveHostDefaults({ meetingUrl, defaultSubject, defaultTitle });
+      if (!res.ok) {
+        setError(res.error);
+        return;
+      }
+      toast.success("Saved. New sessions will start with these details.");
+      router.refresh();
+    });
+  }
+
+  return (
+    <form onSubmit={onSubmit} className="space-y-4">
+      <div className="space-y-1.5">
+        <Label htmlFor="default-meet">Your Google Meet link</Label>
+        <Input
+          id="default-meet"
+          type="url"
+          inputMode="url"
+          value={meetingUrl}
+          onChange={(e) => setMeetingUrl(e.target.value)}
+          placeholder="https://meet.google.com/abc-defg-hij"
+        />
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="space-y-1.5">
+          <Label htmlFor="default-subject">Subject you usually teach</Label>
+          <Input
+            id="default-subject"
+            value={defaultSubject}
+            onChange={(e) => setDefaultSubject(e.target.value)}
+            placeholder="e.g. AP Biology"
+            maxLength={80}
+          />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="default-title">Usual session title</Label>
+          <Input
+            id="default-title"
+            value={defaultTitle}
+            onChange={(e) => setDefaultTitle(e.target.value)}
+            placeholder="e.g. 1-on-1 AP Biology help"
+            maxLength={120}
+          />
+        </div>
+      </div>
+      {error && (
+        <p role="alert" className="rounded-lg bg-destructive/10 px-3 py-2 text-sm text-destructive">
+          {error}
+        </p>
+      )}
+      <Button type="submit" variant="outline" disabled={isPending}>
+        {isPending && <Loader2 className="h-4 w-4 animate-spin" />}
+        Save my details
+      </Button>
+    </form>
   );
 }

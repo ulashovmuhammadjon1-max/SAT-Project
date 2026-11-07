@@ -51,3 +51,27 @@ export function AppleIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** Instagram glyph, single colour so it follows the surrounding text colour. */
+export function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" className={className} aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M12 2.2c3.2 0 3.6 0 4.8.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.8.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.15 0-3.5.01-4.75.07-2.4.11-3.52 1.25-3.63 3.63-.06 1.24-.07 1.6-.07 4.75s.01 3.5.07 4.75c.11 2.37 1.22 3.52 3.63 3.63 1.24.06 1.6.07 4.75.07s3.5-.01 4.75-.07c2.4-.11 3.52-1.26 3.63-3.63.06-1.24.07-1.6.07-4.75s-.01-3.5-.07-4.75c-.11-2.37-1.23-3.52-3.63-3.63-1.24-.06-1.6-.07-4.75-.07Zm0 3.08a4.74 4.74 0 1 1 0 9.48 4.74 4.74 0 0 1 0-9.48Zm0 1.98a2.76 2.76 0 1 0 0 5.52 2.76 2.76 0 0 0 0-5.52Zm4.93-3.32a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"
+      />
+    </svg>
+  );
+}
+
+/** Telegram paper-plane glyph, single colour. */
+export function TelegramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" className={className} aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M21.94 4.6 18.9 19.02c-.23 1.01-.83 1.26-1.68.79l-4.63-3.41-2.23 2.15c-.25.25-.45.45-.93.45l.33-4.73 8.6-7.77c.37-.33-.08-.52-.58-.19L7.2 13.01l-4.57-1.43c-.99-.31-1.01-.99.21-1.47L20.7 3.23c.83-.31 1.55.19 1.24 1.37Z"
+      />
+    </svg>
+  );
+}

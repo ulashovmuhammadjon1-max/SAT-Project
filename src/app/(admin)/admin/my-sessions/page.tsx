@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreateSessionForm, DeleteSessionButton } from "@/components/admin/create-session-form";
+import { CreateSessionForm, DeleteSessionButton, HostDefaultsForm } from "@/components/admin/create-session-form";
 import { LocalTime } from "@/components/shared/local-time";
 import { SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
@@ -17,22 +17,33 @@ export const dynamic = "force-dynamic";
 export default async function MySessionsPage() {
   const admin = await requireAdmin();
 
-  const sessions = await prisma.mentorSlot.findMany({
-    where: { hostId: admin.id, startsAt: { gt: new Date(Date.now() - 60 * 60_000) } },
-    orderBy: { startsAt: "asc" },
-    select: {
-      id: true,
-      startsAt: true,
-      title: true,
-      subject: true,
-      meetingUrl: true,
-      bookings: {
-        where: { status: { in: SEAT_HOLDING_STATUSES } },
-        select: { status: true, name: true },
-        take: 1,
+  const [saved, sessions] = await Promise.all([
+    prisma.hostProfile.findUnique({
+      where: { userId: admin.id },
+      select: { meetingUrl: true, defaultSubject: true, defaultTitle: true },
+    }),
+    prisma.mentorSlot.findMany({
+      where: { hostId: admin.id, startsAt: { gt: new Date(Date.now() - 60 * 60_000) } },
+      orderBy: { startsAt: "asc" },
+      select: {
+        id: true,
+        startsAt: true,
+        title: true,
+        subject: true,
+        meetingUrl: true,
+        bookings: {
+          where: { status: { in: SEAT_HOLDING_STATUSES } },
+          select: { status: true, name: true },
+          take: 1,
+        },
       },
-    },
-  });
+    }),
+  ]);
+  const defaults = {
+    meetingUrl: saved?.meetingUrl ?? "",
+    defaultSubject: saved?.defaultSubject ?? "",
+    defaultTitle: saved?.defaultTitle ?? "",
+  };
 
   return (
     <div className="space-y-6">
@@ -50,7 +61,20 @@ export default async function MySessionsPage() {
           <CardDescription>One student, one hour, on your own Google Meet link.</CardDescription>
         </CardHeader>
         <CardContent>
-          <CreateSessionForm />
+          {/* Keyed on the saved values so a fresh save re-seeds the form. */}
+          <CreateSessionForm key={JSON.stringify(defaults)} defaults={defaults} />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base">My saved details</CardTitle>
+          <CardDescription>
+            Saved for you only. New sessions start with your Meet link, subject and title already filled in.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <HostDefaultsForm defaults={defaults} />
         </CardContent>
       </Card>
 

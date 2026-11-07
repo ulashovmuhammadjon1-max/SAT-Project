@@ -71,6 +71,7 @@ export default async function HomePage() {
       where: { userId: user.id, status: { in: ACTIVE_STATUSES } },
       orderBy: { slot: { startsAt: "asc" } },
       select: {
+        status: true,
         meetingUrl: true,
         slot: { select: { startsAt: true, durationMinutes: true } },
       },
@@ -225,7 +226,8 @@ export default async function HomePage() {
           <DashboardSessionCard
             startsAt={upcomingSession.slot.startsAt}
             durationMinutes={upcomingSession.slot.durationMinutes}
-            meetingUrl={upcomingSession.meetingUrl}
+            // The join link is private until the booking is approved.
+            meetingUrl={upcomingSession.status === "UPCOMING" ? upcomingSession.meetingUrl : null}
           />
         )}
       </div>
