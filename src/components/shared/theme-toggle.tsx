@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
+import { applyPalette, storeAppearanceId } from "@/lib/appearance";
 import { cn } from "@/lib/utils";
 
 /**
@@ -53,7 +54,11 @@ export function ThemeToggle({ className }: { className?: string }) {
             aria-checked={active}
             aria-label={o.label}
             title={o.label}
-            onClick={() => setTheme(o.value)}
+            onClick={() => {
+              setTheme(o.value);
+              applyPalette("default");
+              storeAppearanceId(o.value);
+            }}
             className={cn(
               "flex h-8 w-8 items-center justify-center rounded-full transition-colors",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -92,7 +97,11 @@ export function ThemeToggleCompact({ className }: { className?: string }) {
   return (
     <button
       type="button"
-      onClick={() => setTheme(next.value)}
+      onClick={() => {
+        setTheme(next.value);
+        applyPalette("default");
+        storeAppearanceId(next.value);
+      }}
       aria-label={`Theme: ${current.label}. Switch to ${next.label}.`}
       title={`Theme: ${current.label} — click for ${next.label}`}
       className={cn(

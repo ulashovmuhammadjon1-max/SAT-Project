@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 import { StudentContainer } from "@/components/student/student-container";
+import { LiveProvider } from "@/components/live/live-provider";
 import { isTeacher } from "@/server/actions/teacher/classes";
 import { getMySubjects } from "@/server/actions/student/ap-subjects";
 
@@ -25,6 +26,9 @@ export default async function StudentLayout({ children }: { children: React.Reac
   ]);
 
   return (
+    // LiveProvider: one poller per tab for notifications, presence and the
+    // community's live updates. See src/components/live/live-provider.tsx.
+    <LiveProvider>
     <div className="flex min-h-screen bg-secondary/30">
       <StudentSidebar
         activeExam={exam.active}
@@ -39,5 +43,6 @@ export default async function StudentLayout({ children }: { children: React.Reac
         </main>
       </div>
     </div>
+    </LiveProvider>
   );
 }

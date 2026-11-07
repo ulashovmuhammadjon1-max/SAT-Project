@@ -29,6 +29,7 @@ import {
   TrendingUp,
   UserPlus,
   UsersRound,
+  MessagesSquare,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -67,6 +68,7 @@ const SCHOLARLY_NAV: AdminNavItem[] = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/users", label: "Users", icon: Users },
   { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
+  { href: "/admin/community", label: "Community", icon: MessagesSquare },
   { href: "/admin/my-sessions", label: "My Sessions", icon: CalendarPlus },
   { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
   { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },

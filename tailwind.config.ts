@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -177,6 +178,25 @@ const config: Config = {
           "0%, 100%": { transform: "scale(1) rotate(0deg)", opacity: "1" },
           "50%": { transform: "scale(1.12) rotate(-4deg)", opacity: "0.9" },
         },
+        // Community: a side panel arriving, a highlighted message fading out,
+        // a badge counting up.
+        "slide-in-right": {
+          from: { opacity: "0", transform: "translateX(24px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-in-left": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "highlight-fade": {
+          "0%, 30%": { backgroundColor: "hsl(var(--primary) / 0.14)" },
+          "100%": { backgroundColor: "hsl(var(--primary) / 0)" },
+        },
+        "badge-bump": {
+          "0%": { transform: "scale(0.6)", opacity: "0" },
+          "60%": { transform: "scale(1.15)", opacity: "1" },
+          "100%": { transform: "scale(1)" },
+        },
         // Slow hue drift across a gradient, for hero surfaces only.
         "gradient-pan": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
@@ -195,6 +215,10 @@ const config: Config = {
         "glow-pulse": "glow-pulse 2s ease-out infinite",
         flicker: "flicker 2.2s ease-in-out infinite",
         "gradient-pan": "gradient-pan 12s ease infinite",
+        "slide-in-right": "slide-in-right 0.28s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "slide-in-left": "slide-in-left 0.25s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "highlight-fade": "highlight-fade 2.4s ease-out both",
+        "badge-bump": "badge-bump 0.35s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },

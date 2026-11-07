@@ -29,6 +29,8 @@ export default auth((req) => {
   const isPublic =
     PUBLIC_ROUTES.includes(pathname) ||
     pathname.startsWith("/api/auth") ||
+    // Authorised inside the route by CRON_SECRET, not by a session.
+    pathname.startsWith("/api/cron/") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||
     pathname.startsWith("/icon");

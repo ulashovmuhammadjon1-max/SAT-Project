@@ -1,5 +1,27 @@
 # Project memory
 
+## Community: how notifications and emails work (migration 029)
+
+Live updates are **version polling**, not WebSockets/SSE: `/api/community/sync`
+returns stamps, the client (`src/components/live/live-provider.tsx`) refetches
+only when a stamp moves — 3s while looking at a channel, slower when idle,
+stopped in hidden tabs. SSE/WebSockets hold a Vercel function open per tab and
+this plan cannot afford that. The same request is the presence heartbeat.
+
+Emails go through an outbox (`CommunityEmailDelivery`, unique per
+notification) processed by `src/lib/community/email.ts`: claimed atomically
+(`FOR UPDATE SKIP LOCKED`), re-checked at send time (read in app? deleted?
+recipient back online?), one email per student per 15 minutes, retries with
+backoff, FAILED after 5. It runs right after a notification is created (via
+`waitUntil`), on every heartbeat, and from the daily Vercel cron
+(`/api/cron/community`, needs `CRON_SECRET`). **Never send community email
+from anywhere else** — that is what keeps it to one email per notification.
+
+Timestamps in community components render only after mount (`LocalStamp`,
+`useMounted` in `components/community/bits.tsx`): the server renders UTC, the
+browser renders Tashkent time, and a mismatch throws away the server HTML.
+`Badge` renders a `<div>` — never put it inside a `<p>`.
+
 ## Content commits no longer trigger a Vercel build — keep it that way
 
 `vercel.json` sets an `ignoreCommand` (`scripts/vercel-ignore-build.sh`) that

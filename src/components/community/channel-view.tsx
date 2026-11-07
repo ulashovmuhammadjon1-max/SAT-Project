@@ -1,100 +1,152 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowDown, Bell, BellOff, Loader2, Pin, Search, X } from "lucide-react";
+import { toast } from "sonner";
 
-import { Button } from "@/components/ui/button";
-import { Composer, type ReplyTarget } from "@/components/community/composer";
-import { MessageRow } from "@/components/community/message-row";
-import {
-  deleteMessage,
-  editMessage,
-  listMessages,
-  markChannelRead,
-  toggleReaction,
-} from "@/server/actions/student/community";
-import type { CommunityMessageView } from "@/lib/community/types";
+import { useLive, useLiveScope } from "@/components/live/live-provider";
+import type { ChannelView as Channel, CommunityMessageView } from "@/lib/community/types";
 import { cn } from "@/lib/utils";
+import {
+  listMessages,
+  listPinned,
+  locateMessage,
+  markChannelRead,
+  setChannelMuted,
+} from "@/server/actions/student/community";
+import { markNotificationsForMessage } from "@/server/actions/student/notifications";
 
-/** How often to pull new messages while the tab is visible. */
-const POLL_MS = 8000;
+import { ChannelIcon, dayLabel, useMounted } from "./bits";
+import { Composer, type ReplyTarget } from "./composer";
+import { MessageItem } from "./message-item";
+import { NavToggle } from "./community-shell";
+import { ThreadPanel } from "./thread-panel";
 
-
-
+const GROUP_GAP_MS = 5 * 60_000;
 
 export function ChannelView({
-  channelSlug,
-  channelName,
-  description,
-  isReadOnly,
+  channel,
   initialMessages,
   initialHasMore,
+  initialPinned,
+  isAdmin,
+  restriction,
+  initialThread,
+  focusMessage,
+  initialKind,
 }: {
-  channelSlug: string;
-  channelName: string;
-  description: string | null;
-  isReadOnly: boolean;
+  channel: Channel;
   initialMessages: CommunityMessageView[];
   initialHasMore: boolean;
+  initialPinned: CommunityMessageView[];
+  isAdmin: boolean;
+  restriction: { until: string; reason: string } | null;
+  initialThread: string | null;
+  focusMessage: string | null;
+  initialKind?: import("@/lib/community/types").MessageKind;
 }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const { data, pokeNow } = useLive();
   const [messages, setMessages] = useState(initialMessages);
   const [hasMore, setHasMore] = useState(initialHasMore);
   const [loadingMore, setLoadingMore] = useState(false);
+  const [pinned, setPinned] = useState(initialPinned);
+  const [showPinned, setShowPinned] = useState(false);
   const [replyTo, setReplyTo] = useState<ReplyTarget | null>(null);
+  const [thread, setThread] = useState<{ id: string; focus: string | null } | null>(
+    initialThread ? { id: initialThread, focus: focusMessage } : null,
+  );
+  const [highlight, setHighlight] = useState<string | null>(initialThread ? null : focusMessage);
+  const [muted, setMuted] = useState(channel.muted);
+  const [newBelow, setNewBelow] = useState(0);
+
+  useLiveScope({ channel: channel.slug, thread: thread?.id ?? null });
+  const mounted = useMounted();
 
   const scroller = useRef<HTMLDivElement>(null);
-  // Only auto-scroll when the reader is already at the bottom. Yanking someone
-  // to the newest message while they are reading history is the single most
-  // irritating thing a chat can do.
-  const pinnedToBottom = useRef(true);
+  const atBottom = useRef(true);
+  const lastVersion = useRef<string | null>(null);
 
-  const scrollToBottom = useCallback(() => {
+  const scrollToBottom = useCallback((smooth = false) => {
     const el = scroller.current;
-    if (el) el.scrollTop = el.scrollHeight;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: smooth ? "smooth" : "auto" });
+    setNewBelow(0);
   }, []);
 
+  // First paint: jump to a linked message, or to the newest one.
   useEffect(() => {
-    scrollToBottom();
-    void markChannelRead(channelSlug);
-  }, [channelSlug, scrollToBottom]);
+    if (focusMessage && !initialThread) {
+      const go = () => {
+        const el = document.getElementById(`msg-${focusMessage}`);
+        if (el) {
+          el.scrollIntoView({ block: "center" });
+          atBottom.current = false;
+        } else scrollToBottom();
+      };
+      if (!initialMessages.some((m) => m.id === focusMessage)) {
+        void listMessages(channel.slug, { around: focusMessage }).then((r) => {
+          setMessages(r.messages);
+          setHasMore(r.hasMore);
+          requestAnimationFrame(go);
+        });
+      } else requestAnimationFrame(go);
+      void markNotificationsForMessage(focusMessage);
+    } else {
+      requestAnimationFrame(() => scrollToBottom());
+    }
+    void markChannelRead(channel.slug);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [channel.slug]);
 
   const refresh = useCallback(async () => {
-    const { messages: fresh, hasMore: more } = await listMessages(channelSlug);
+    const r = await listMessages(channel.slug);
     setMessages((prev) => {
-      // Nothing changed — return the same array so React skips the re-render
-      // and the reader's scroll position is untouched.
-      const sameLength = prev.length === fresh.length;
-      const sameTail = sameLength && prev[prev.length - 1]?.id === fresh[fresh.length - 1]?.id;
-      // Reactions and edits change nothing about length or tail id, so they
-      // have to be compared explicitly or a new reaction would never appear.
-      const sameEdits =
-        sameTail &&
-        prev.every(
-          (m, i) =>
-            m.deleted === fresh[i].deleted &&
-            m.editedAt === fresh[i].editedAt &&
-            m.reactions.length === fresh[i].reactions.length &&
-            m.reactions.every(
-              (r, j) =>
-                r.emoji === fresh[i].reactions[j]?.emoji &&
-                r.count === fresh[i].reactions[j]?.count &&
-                r.mine === fresh[i].reactions[j]?.mine
-            )
-        );
-      return sameEdits ? prev : fresh;
+      // Keep any older history the reader already loaded.
+      const firstNew = r.messages[0];
+      const olderKept = firstNew ? prev.filter((m) => new Date(m.createdAt) < new Date(firstNew.createdAt)) : [];
+      const added = r.messages.filter((m) => !prev.some((p) => p.id === m.id)).length;
+      if (!atBottom.current && added > 0) setNewBelow((n) => n + added);
+      return [...olderKept, ...r.messages];
     });
-    setHasMore(more);
-    if (pinnedToBottom.current) requestAnimationFrame(scrollToBottom);
-    void markChannelRead(channelSlug);
-  }, [channelSlug, scrollToBottom]);
+    if (atBottom.current) requestAnimationFrame(() => scrollToBottom(true));
+    if (document.visibilityState === "visible") void markChannelRead(channel.slug);
+    setPinned(await listPinned(channel.slug));
+  }, [channel.slug, scrollToBottom]);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      // Polling a hidden tab burns the database for nobody's benefit.
-      if (document.visibilityState === "visible") void refresh();
-    }, POLL_MS);
-    return () => clearInterval(id);
+    const on = () => void refresh();
+    window.addEventListener("community:refresh", on);
+    return () => window.removeEventListener("community:refresh", on);
   }, [refresh]);
+
+  // Live: refetch when the channel's version stamp moves.
+  useEffect(() => {
+    const v = data?.channelVersion ?? null;
+    if (!v) return;
+    if (lastVersion.current && v !== lastVersion.current) void refresh();
+    lastVersion.current = v;
+  }, [data?.channelVersion, refresh]);
+
+  // Keep the URL in step with the open discussion, so it can be shared and
+  // the back button closes it.
+  const openThread = useCallback(
+    (id: string | null, focus: string | null = null) => {
+      setThread(id ? { id, focus } : null);
+      // history.replaceState (not router.replace): the URL stays shareable and
+      // in sync with useSearchParams, without a server round trip that would
+      // remount the channel and lose its scroll position.
+      const url = id ? `${pathname}?thread=${id}${focus ? `&m=${focus}` : ""}` : pathname;
+      window.history.replaceState(window.history.state, "", url);
+    },
+    [pathname],
+  );
+
+  const onRootChanged = useCallback((root: CommunityMessageView) => {
+    setMessages((prev) => prev.map((m) => (m.id === root.id ? { ...m, ...root } : m)));
+  }, []);
 
   async function loadOlder() {
     const oldest = messages[0];
@@ -102,128 +154,226 @@ export function ChannelView({
     setLoadingMore(true);
     const el = scroller.current;
     const before = el?.scrollHeight ?? 0;
-
-    const { messages: older, hasMore: more } = await listMessages(channelSlug, oldest.id);
-    setMessages((prev) => [...older, ...prev]);
-    setHasMore(more);
+    const r = await listMessages(channel.slug, { before: oldest.id });
+    setMessages((prev) => [...r.messages, ...prev]);
+    setHasMore(r.hasMore);
     setLoadingMore(false);
-
-    // Keep the reader looking at the same message rather than jumping to the
-    // top of the newly-prepended block.
     requestAnimationFrame(() => {
       if (el) el.scrollTop = el.scrollHeight - before;
     });
   }
 
-  async function remove(id: string) {
-    const result = await deleteMessage(id);
-    if (result.ok) {
-      setMessages((prev) => prev.map((m) => (m.id === id ? { ...m, deleted: true, body: "", attachments: [], canDelete: false } : m)));
+  const patch = (id: string, p: Partial<CommunityMessageView>) => {
+    setMessages((prev) => prev.map((m) => (m.id === id ? { ...m, ...p } : m)));
+    if ("pinned" in p) void listPinned(channel.slug).then(setPinned);
+  };
+
+  async function jump(id: string, threadRootId: string | null) {
+    if (threadRootId) return openThread(threadRootId, id);
+    let el = document.getElementById(`msg-${id}`);
+    if (!el) {
+      const loc = await locateMessage(id);
+      if (!loc) return void toast.error("That message is no longer available.");
+      if (loc.channelSlug !== channel.slug) return router.push(`/community/${loc.channelSlug}?m=${id}`);
+      const r = await listMessages(channel.slug, { around: id });
+      setMessages(r.messages);
+      setHasMore(r.hasMore);
+      await new Promise((res) => requestAnimationFrame(res));
+      el = document.getElementById(`msg-${id}`);
     }
+    el?.scrollIntoView({ behavior: "smooth", block: "center" });
+    setHighlight(null);
+    requestAnimationFrame(() => setHighlight(id));
   }
 
-  async function edit(id: string, body: string) {
-    const result = await editMessage(id, body);
-    if (result.ok) {
-      setMessages((prev) =>
-        prev.map((m) => (m.id === id ? { ...m, body, editedAt: new Date().toISOString() } : m))
-      );
-    }
-  }
+  const handlers = {
+    onPatch: patch,
+    onReply: (m: CommunityMessageView) => setReplyTo({ id: m.id, authorName: m.author.name, excerpt: m.title ?? (m.body.slice(0, 80) || "attachment") }),
+    onOpenThread: (m: CommunityMessageView) => openThread(m.id),
+    onJump: (id: string, root: string | null) => void jump(id, root),
+    onChanged: () => void refresh(),
+  };
 
-  /**
-   * Toggle a reaction, updating the pill immediately.
-   *
-   * Optimistic because a reaction is the lowest-stakes action in the app and a
-   * pill that waits for a round trip feels broken. A refresh follows so the
-   * count settles to the truth if someone else reacted in the same moment.
-   */
-  function react(id: string, emoji: string) {
-    setMessages((prev) =>
-      prev.map((m) => {
-        if (m.id !== id) return m;
-        const existing = m.reactions.find((r) => r.emoji === emoji);
-        if (!existing) return { ...m, reactions: [...m.reactions, { emoji, count: 1, mine: true }] };
-        const count = existing.count + (existing.mine ? -1 : 1);
-        return {
-          ...m,
-          reactions:
-            count === 0
-              ? m.reactions.filter((r) => r.emoji !== emoji)
-              : m.reactions.map((r) =>
-                  r.emoji === emoji ? { ...r, count, mine: !existing.mine } : r
-                ),
-        };
-      })
-    );
-    void toggleReaction(id, emoji).then(() => refresh());
-  }
-
-  function onScroll() {
-    const el = scroller.current;
-    if (!el) return;
-    pinnedToBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
-  }
+  const disabledReason = restriction
+    ? `A moderator has paused your posting until ${mounted ? new Date(restriction.until).toLocaleString() : "later"}.`
+    : channel.isReadOnly && !isAdmin
+      ? "Only the Scholarly team posts in this channel. You'll be notified of new posts."
+      : null;
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl border bg-card">
-      <div className="shrink-0 border-b px-5 py-3">
-        <h2 className="font-display text-lg font-semibold"># {channelName}</h2>
-        {description && <p className="text-sm text-muted-foreground">{description}</p>}
-      </div>
+    <div className="flex min-h-0 min-w-0 flex-1">
+      <section className="flex min-h-0 min-w-0 flex-1 flex-col">
+        <header className="flex h-14 shrink-0 items-center gap-2 border-b border-border bg-background/70 px-3 backdrop-blur sm:px-5">
+          <NavToggle />
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <ChannelIcon icon={channel.icon} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h1 className="truncate font-display text-[15px] font-semibold leading-tight">{channel.name}</h1>
+            {channel.description && <p className="hidden truncate text-xs text-muted-foreground sm:block">{channel.description}</p>}
+          </div>
+          <div className="flex items-center gap-0.5">
+            {pinned.length > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowPinned((v) => !v)}
+                className={cn("flex h-9 items-center gap-1 rounded-lg px-2.5 text-xs font-medium", showPinned ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-secondary hover:text-foreground")}
+                aria-expanded={showPinned}
+              >
+                <Pin className="h-4 w-4" /> <span className="tabular-nums">{pinned.length}</span>
+              </button>
+            )}
+            <button
+              type="button"
+              title={muted ? "Unmute channel" : "Mute channel"}
+              aria-label={muted ? "Unmute channel" : "Mute channel"}
+              onClick={async () => {
+                const r = await setChannelMuted(channel.slug, !muted);
+                if (!r.ok) return void toast.error(r.error);
+                setMuted(!muted);
+                toast.success(!muted ? `#${channel.name} muted. Direct replies and mentions still reach you.` : `#${channel.name} unmuted.`);
+                pokeNow();
+              }}
+              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground"
+            >
+              {muted ? <BellOff className="h-4 w-4" /> : <Bell className="h-4 w-4" />}
+            </button>
+            <Link href={`/community/search?channel=${channel.slug}`} aria-label="Search this channel" className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground">
+              <Search className="h-4 w-4" />
+            </Link>
+          </div>
+        </header>
 
-      <div ref={scroller} onScroll={onScroll} className="flex-1 overflow-y-auto px-3 py-4">
-        {hasMore && (
-          <div className="flex justify-center pb-2">
-            <Button variant="ghost" size="sm" onClick={() => void loadOlder()} disabled={loadingMore}>
-              {loadingMore ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : null}
-              Load earlier messages
-            </Button>
+        {showPinned && pinned.length > 0 && (
+          <div className="max-h-72 shrink-0 overflow-y-auto border-b border-border bg-secondary/30 animate-fade-in">
+            <div className="flex items-center justify-between px-5 pt-3">
+              <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <Pin className="h-3.5 w-3.5" /> Pinned
+              </p>
+              <button type="button" onClick={() => setShowPinned(false)} aria-label="Close pinned" className="rounded p-1 text-muted-foreground hover:bg-secondary">
+                <X className="h-3.5 w-3.5" />
+              </button>
+            </div>
+            {pinned.map((p) => (
+              <button key={p.id} type="button" onClick={() => { setShowPinned(false); void jump(p.id, null); }} className="block w-full px-5 py-2 text-left hover:bg-secondary/60">
+                <span className="text-xs font-semibold">{p.author.name}</span>
+                <span className="ml-2 line-clamp-1 text-sm text-muted-foreground">{p.title ?? p.body}</span>
+              </button>
+            ))}
           </div>
         )}
 
-        {messages.length === 0 ? (
-          <p className="py-24 text-center text-muted-foreground">No messages yet. Say hello.</p>
-        ) : (
-          messages.map((m, i) => (
-            <MessageRow
-              key={m.id}
-              message={m}
-              // Consecutive messages from one person collapse into a block, so
-              // a burst of three lines does not repeat the name three times.
-              grouped={
-                i > 0 &&
-                messages[i - 1].author.id === m.author.id &&
-                !m.replyTo &&
-                new Date(m.createdAt).getTime() -
-                  new Date(messages[i - 1].createdAt).getTime() <
-                  5 * 60_000
-              }
-              onReply={() =>
-                setReplyTo({
-                  id: m.id,
-                  authorName: m.author.name,
-                  excerpt: m.body.slice(0, 60) || "attachment",
-                })
-              }
-              onDelete={() => void remove(m.id)}
-              onEdit={(body) => edit(m.id, body)}
-              onReact={(emoji) => react(m.id, emoji)}
-            />
-          ))
-        )}
-      </div>
+        <div
+          ref={scroller}
+          onScroll={() => {
+            const el = scroller.current;
+            if (!el) return;
+            atBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 120;
+            if (atBottom.current && newBelow) setNewBelow(0);
+          }}
+          className="relative min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-6"
+        >
+          {hasMore ? (
+            <div className="flex justify-center py-3">
+              <button
+                type="button"
+                onClick={() => void loadOlder()}
+                disabled={loadingMore}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground"
+              >
+                {loadingMore && <Loader2 className="h-3.5 w-3.5 animate-spin" />} Load earlier messages
+              </button>
+            </div>
+          ) : (
+            <ChannelIntro channel={channel} empty={messages.length === 0} />
+          )}
 
-      <Composer
-        channelSlug={channelSlug}
-        disabled={isReadOnly}
-        replyTo={replyTo}
-        onCancelReply={() => setReplyTo(null)}
-        onPosted={() => {
-          pinnedToBottom.current = true;
-          void refresh();
-        }}
-      />
+          {messages.map((m, i) => {
+            const prev = messages[i - 1];
+            // Day boundaries are the reader's local days, so they are drawn only
+            // in the browser (the server does not know the reader's timezone).
+            const newDay = mounted && (!prev || new Date(prev.createdAt).toDateString() !== new Date(m.createdAt).toDateString());
+            const grouped =
+              !newDay &&
+              Boolean(prev) &&
+              prev.author.id === m.author.id &&
+              !m.replyTo &&
+              m.kind === "MESSAGE" &&
+              prev.kind === "MESSAGE" &&
+              new Date(m.createdAt).getTime() - new Date(prev.createdAt).getTime() < GROUP_GAP_MS;
+            return (
+              <Fragment key={m.id}>
+                {newDay && (
+                  <div className="sticky top-0 z-[5] flex items-center gap-3 px-5 py-2">
+                    <span className="h-px flex-1 bg-border" />
+                    <span className="rounded-full border border-border bg-background/90 px-3 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground backdrop-blur">
+                      {dayLabel(m.createdAt)}
+                    </span>
+                    <span className="h-px flex-1 bg-border" />
+                  </div>
+                )}
+                <MessageItem message={m} grouped={grouped} handlers={handlers} highlight={highlight === m.id} />
+              </Fragment>
+            );
+          })}
+        </div>
+
+        {newBelow > 0 && (
+          <div className="pointer-events-none relative">
+            <button
+              type="button"
+              onClick={() => scrollToBottom(true)}
+              className="pointer-events-auto absolute -top-12 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground shadow-lg animate-badge-bump"
+            >
+              <ArrowDown className="h-3.5 w-3.5" /> {newBelow} new {newBelow === 1 ? "message" : "messages"}
+            </button>
+          </div>
+        )}
+
+        <Composer
+          channelSlug={channel.slug}
+          channelName={channel.name}
+          disabled={Boolean(disabledReason)}
+          disabledReason={disabledReason}
+          isAdmin={isAdmin}
+          slowModeSeconds={channel.slowModeSeconds}
+          initialKind={initialKind}
+          replyTo={replyTo}
+          onCancelReply={() => setReplyTo(null)}
+          onPosted={() => {
+            atBottom.current = true;
+            void refresh();
+            pokeNow();
+          }}
+        />
+      </section>
+
+      {thread && (
+        <ThreadPanel
+          key={thread.id}
+          rootId={thread.id}
+          focusId={thread.focus}
+          isAdmin={isAdmin}
+          disabledReason={restriction ? disabledReason : null}
+          onClose={() => openThread(null)}
+          onRootChanged={onRootChanged}
+        />
+      )}
+    </div>
+  );
+}
+
+function ChannelIntro({ channel, empty }: { channel: Channel; empty: boolean }) {
+  return (
+    <div className="px-5 pb-4 pt-10 sm:px-8">
+      <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent text-primary shadow-sm">
+        <ChannelIcon icon={channel.icon} className="h-7 w-7" />
+      </span>
+      <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight">Welcome to #{channel.name}</h2>
+      <p className="mt-1.5 max-w-xl text-[15px] text-muted-foreground">
+        {channel.description ?? "This is the very beginning of the channel."}
+        {empty && " Nothing has been posted yet — start the first conversation."}
+      </p>
     </div>
   );
 }
