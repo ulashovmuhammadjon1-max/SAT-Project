@@ -110,7 +110,7 @@ export async function checkChannelMembership(telegramUserId: string): Promise<Me
   if (!token) return { status: "unknown", error: "Telegram verification is not configured." };
 
   const settings = await getSettings();
-  const chatId = `@${settings.telegramHandle}`;
+  const chatId = `@${settings.telegramChannel}`;
 
   try {
     const res = await fetch(

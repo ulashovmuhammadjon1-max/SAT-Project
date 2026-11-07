@@ -3,9 +3,18 @@
 import { useEffect, useMemo, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CalendarCheck, Check, Coins, Loader2 } from "lucide-react";
+import { AlertTriangle, CalendarCheck, Check, Coins, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -114,12 +123,21 @@ export function BookingForm({
     if (next && selected && topicOf(selected) !== next) setSlotId(null);
   }
 
+  // Pressing Confirm opens the warning first; only "I followed, book it" books.
+  const [warnOpen, setWarnOpen] = useState(false);
+
   function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!slotId) {
       toast.error("Please choose a session.");
       return;
     }
+    setWarnOpen(true);
+  }
+
+  function book() {
+    if (!slotId) return;
+    setWarnOpen(false);
     startTransition(async () => {
       const res = await createBooking({
         slotId,
@@ -511,6 +529,56 @@ export function BookingForm({
           )}
         </CardContent>
       </Card>
+
+      {/* The follow requirements are checked by people after booking, so the
+          consequence is stated as loudly as possible before a coin is spent:
+          a booking from someone who did not follow is cancelled. */}
+      <AlertDialog open={warnOpen} onOpenChange={setWarnOpen}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader className="items-center text-center sm:text-center">
+            <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-warning/20">
+              <AlertTriangle className="h-9 w-9 text-warning" aria-hidden />
+            </span>
+            <AlertDialogTitle className="text-xl">Did you follow both accounts?</AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-3 text-[15px] leading-relaxed">
+                <p>
+                  <strong className="text-foreground">
+                    If you have not followed, your booking will be cancelled.
+                  </strong>{" "}
+                  Our reviewers check every booking and cancel any where the student is not following.
+                </p>
+                <ul className="space-y-1 text-left">
+                  {context.requirements.map((r) => (
+                    <li key={r.id} className="flex items-start gap-2">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-success" aria-hidden />
+                      <span>
+                        {r.label}{" "}
+                        <a
+                          href={r.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-primary underline-offset-4 hover:underline"
+                        >
+                          {r.handle}
+                        </a>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm">If your booking is cancelled for this, your coins are returned.</p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter className="gap-2 sm:justify-center">
+            <AlertDialogCancel>Go back</AlertDialogCancel>
+            <Button type="button" onClick={book} disabled={isPending}>
+              {isPending && <Loader2 className="h-4 w-4 animate-spin" />}
+              I followed, book my session
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </form>
   );
 }

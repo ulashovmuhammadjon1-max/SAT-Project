@@ -137,8 +137,15 @@ export function EconomySettingsForm({
             onChange={(v) => set("instagramHandle", v)}
           />
           <TextField
+            id="telegramChannel"
+            label="Telegram channel (required to book)"
+            prefix="@"
+            value={form.telegramChannel}
+            onChange={(v) => set("telegramChannel", v)}
+          />
+          <TextField
             id="telegramHandle"
-            label="Telegram handle"
+            label="Founder's Telegram (contact on Terms and Privacy)"
             prefix="@"
             value={form.telegramHandle}
             onChange={(v) => set("telegramHandle", v)}

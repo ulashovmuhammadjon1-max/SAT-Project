@@ -102,6 +102,11 @@ const settingsSchema = z.object({
   operatorName: z.string().trim().min(1).max(120).default("Scholarly"),
   bookingRefundHours: z.coerce.number().int().min(0).max(720).nullable(),
   instagramHandle: z.string().trim().min(1).max(64),
+  telegramChannel: z
+    .string()
+    .trim()
+    .transform((v) => v.replace(/^@/, ""))
+    .refine((v) => v.length >= 1 && v.length <= 64, "Enter the Telegram channel username"),
   telegramHandle: z.string().trim().min(1).max(64),
   meetingProvider: z.enum(["manual", "static", "google_meet"]),
   // Empty is valid (no room configured yet); anything else must be a real URL,

@@ -29,6 +29,10 @@ export interface PlatformSettings {
   bookingRefundHours: number | null;
   /** Community accounts a student must join before booking. */
   instagramHandle: string;
+  /** The Telegram channel students must join before booking. Also the chat the
+   *  automatic membership check asks about. */
+  telegramChannel: string;
+  /** The founder's personal Telegram, shown as a contact on Terms and Privacy. */
   telegramHandle: string;
   /** Which meeting provider to use. See lib/meeting/index.ts. */
   meetingProvider: string;
@@ -64,6 +68,7 @@ export const DEFAULT_SETTINGS: PlatformSettings = {
   bookingCostIncrement: 5,
   bookingRefundHours: 24,
   instagramHandle: "scholarly_space",
+  telegramChannel: "muhammadjon_posts",
   telegramHandle: "ulashovmuhammadjon",
   meetingProvider: "manual",
   staticMeetingUrl: "",
