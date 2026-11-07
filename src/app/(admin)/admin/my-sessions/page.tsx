@@ -1,6 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreateSessionForm, DeleteSessionButton, HostDefaultsForm } from "@/components/admin/create-session-form";
+import {
+  CreateSessionForm,
+  DeleteSessionButton,
+  EditSessionButton,
+  HostDefaultsForm,
+} from "@/components/admin/create-session-form";
 import { LocalTime } from "@/components/shared/local-time";
 import { SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
@@ -89,6 +94,15 @@ export default async function MySessionsPage() {
             <ul className="divide-y divide-border">
               {sessions.map((s) => {
                 const booking = s.bookings[0];
+                const editable = {
+                  id: s.id,
+                  title: s.title ?? "",
+                  subject: s.subject ?? "",
+                  startsAt: s.startsAt.toISOString(),
+                  meetingUrl: s.meetingUrl ?? "",
+                  // COMPLETED holds a seat too, but only PENDING/UPCOMING lock the time.
+                  booked: Boolean(booking && booking.status !== "COMPLETED"),
+                };
                 return (
                   <li key={s.id} className="flex flex-wrap items-start justify-between gap-3 py-3">
                     <div className="min-w-[240px] flex-1">
@@ -108,7 +122,8 @@ export default async function MySessionsPage() {
                         </a>
                       )}
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {s.startsAt.getTime() > Date.now() && <EditSessionButton session={editable} />}
                       {booking ? (
                         <Badge variant={booking.status === "PENDING" ? "warning" : "success"}>
                           {booking.status === "PENDING" ? `Requested by ${booking.name}` : `Booked by ${booking.name}`}

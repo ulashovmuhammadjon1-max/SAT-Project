@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { z } from "zod";
 
-import { SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
+import { ACTIVE_STATUSES, SEAT_HOLDING_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
 
@@ -93,6 +93,101 @@ export async function createAdminSession(input: {
   revalidatePath("/admin/my-sessions");
   revalidatePath("/admin/bookings");
   revalidatePath("/booking");
+  return { ok: true };
+}
+
+/**
+ * Edits one of this admin's own upcoming sessions.
+ *
+ * Title, subject and Meet link can always change. A new Meet link is copied
+ * onto any active booking too, because the student reads the link from their
+ * booking, not from the session. The time can only move while nobody has
+ * booked or requested the session: a student who planned their day around it
+ * must not find it silently moved. To move a booked session, the booking is
+ * cancelled first so the student's coins are returned.
+ */
+export async function updateAdminSession(
+  slotId: string,
+  input: { title: string; subject: string; startsAt: string; meetingUrl: string }
+): Promise<SessionActionResult> {
+  const admin = await requireAdmin();
+
+  const parsed = sessionSchema.safeParse(input);
+  if (!parsed.success) return { ok: false, error: parsed.error.issues[0]?.message ?? "Check the form and try again." };
+  const { title, subject, startsAt, meetingUrl } = parsed.data;
+  if (Number.isNaN(startsAt.getTime())) return { ok: false, error: "Pick a date and start time." };
+
+  const slot = await prisma.mentorSlot.findUnique({
+    where: { id: slotId },
+    select: {
+      hostId: true,
+      startsAt: true,
+      durationMinutes: true,
+      meetingUrl: true,
+      _count: { select: { bookings: { where: { status: { in: ACTIVE_STATUSES } } } } },
+    },
+  });
+  if (!slot) return { ok: false, error: "That session no longer exists." };
+  if (slot.hostId !== admin.id) return { ok: false, error: "That session is not yours." };
+  if (slot.startsAt.getTime() + slot.durationMinutes * 60_000 < Date.now()) {
+    return { ok: false, error: "This session has already finished and can no longer be edited." };
+  }
+
+  const timeChanged = startsAt.getTime() !== slot.startsAt.getTime();
+  if (timeChanged) {
+    if (slot._count.bookings > 0) {
+      return {
+        ok: false,
+        error:
+          "A student has booked this session, so its time cannot change. Cancel the booking from Sessions first (their coins are returned), then move it.",
+      };
+    }
+    if (startsAt.getTime() < Date.now() + 15 * 60_000) {
+      return { ok: false, error: "Sessions must start at least 15 minutes from now." };
+    }
+    if (startsAt.getTime() > Date.now() + 180 * 86_400_000) {
+      return { ok: false, error: "Sessions can be scheduled at most 6 months ahead." };
+    }
+    const end = new Date(startsAt.getTime() + SESSION_MINUTES * 60_000);
+    const mine = await prisma.mentorSlot.findMany({
+      where: {
+        hostId: admin.id,
+        id: { not: slotId },
+        startsAt: { gt: new Date(startsAt.getTime() - 24 * 60 * 60_000), lt: end },
+      },
+      select: { startsAt: true, durationMinutes: true },
+    });
+    if (mine.some((s) => s.startsAt.getTime() + s.durationMinutes * 60_000 > startsAt.getTime())) {
+      return { ok: false, error: "You already have a session during that hour. Pick another time." };
+    }
+  }
+
+  try {
+    await prisma.$transaction(async (tx) => {
+      await tx.mentorSlot.update({
+        where: { id: slotId },
+        data: { title, subject, meetingUrl, ...(timeChanged ? { startsAt } : {}) },
+        select: { id: true },
+      });
+      if (meetingUrl !== slot.meetingUrl) {
+        await tx.booking.updateMany({
+          where: { slotId, status: { in: ACTIVE_STATUSES } },
+          data: { meetingUrl, meetingProvider: "host", meetingExternalId: null },
+        });
+      }
+    });
+  } catch (error) {
+    if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
+      return { ok: false, error: "You already have a session starting at exactly that time." };
+    }
+    throw error;
+  }
+
+  revalidatePath("/admin/my-sessions");
+  revalidatePath("/admin/bookings");
+  revalidatePath("/booking");
+  revalidatePath("/bookings");
+  revalidatePath("/dashboard");
   return { ok: true };
 }
 
