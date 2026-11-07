@@ -2,6 +2,7 @@ import type { SessionType } from "@prisma/client";
 
 import { EVENT_TYPE_LABELS } from "@/lib/events";
 import { button, layout, para, sendEmail } from "@/lib/email";
+import { getSettings } from "@/lib/settings";
 
 /**
  * The three emails an admin decision can produce.
@@ -60,6 +61,8 @@ function reasonHtml(reason?: string | null): string {
 
 export async function sendBookingApproved(args: DecisionArgs) {
   const label = EVENT_TYPE_LABELS[args.sessionType];
+  // The configured accounts, so a handle change in settings reaches the email.
+  const settings = await getSettings();
   const when = args.startsAt.toUTCString();
   const first = firstNameOf(args.name);
 
@@ -73,7 +76,7 @@ export async function sendBookingApproved(args: DecisionArgs) {
       `Duration: ${args.durationMinutes} minutes\n` +
       (args.meetingUrl ? `Join: ${args.meetingUrl}\n` : `A join link will be sent before the session.\n`) +
       reasonText(args.reason) +
-      `\nRemember to follow @scholarly_space on Instagram and our founder on Telegram — ` +
+      `\nRemember to follow @${settings.instagramHandle} on Instagram and join @${settings.telegramChannel} on Telegram — ` +
       `volunteers check this before each session.\n\n` +
       `Need to cancel? Do it from My Sessions on scholarly.space.`,
     html: layout(

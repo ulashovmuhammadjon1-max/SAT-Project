@@ -531,7 +531,7 @@ async function sendBookingConfirmation(args: {
   sessionType: SessionType;
   meetingUrl: string | null;
   coinsSpent: number;
-  /** Configured community accounts, e.g. "@scholarly_space". */
+  /** Configured community accounts, e.g. "@scholarly.space". */
   instagram: string;
   telegram: string;
 }) {
