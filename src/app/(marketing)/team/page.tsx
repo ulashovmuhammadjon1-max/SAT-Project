@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { BadgeCheck, Cake, Camera, FlaskConical, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
+import { BadgeCheck, Cake, Camera, CheckCircle2, FlaskConical, GraduationCap, Languages, Mail, Phone, Send, Sparkles } from "lucide-react";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { FOUNDER, MEDIA_TEAM, PEER_MENTORS, RESEARCH_MENTORS, telegramLink, type MentorCard } from "@/lib/team/founder";
+import {
+  FOUNDER, IELTS_ASSESSORS, MEDIA_TEAM, PEER_MENTORS, RESEARCH_MENTORS, SAT_MENTOR_REQUIREMENT,
+  telegramLink, type MentorCard,
+} from "@/lib/team/founder";
 
 export const metadata = {
   title: "Team",
@@ -62,10 +65,26 @@ async function getMentors(): Promise<Mentor[]> {
   }
 }
 
-const OPEN_ROLES = [
+const OPEN_ROLES: { title: string; body: string; requirements: string[] }[] = [
   {
     title: "Research Mentor",
     body: "Guide a student project from question to finished paper: scope the topic, review drafts, sign off on method.",
+    requirements: [],
+  },
+  {
+    title: "IELTS Writing Score Assessor",
+    body: "Mark students' Task 1 and Task 2 responses on the four IELTS criteria and write feedback they can act on.",
+    requirements: ["IELTS Writing band 6.5 or higher."],
+  },
+  {
+    title: "IELTS Speaking Score Assessor",
+    body: "Listen to recorded Speaking answers, band each criterion, and tell students exactly what to fix.",
+    requirements: ["IELTS Speaking band 6.5 or higher."],
+  },
+  {
+    title: "Media Team",
+    body: "Make posts, short videos and stories for Scholarly's Instagram and Telegram, and show what the community is doing.",
+    requirements: ["Not being shy ;)"],
   },
 ];
 
@@ -212,6 +231,12 @@ export default async function TeamPage() {
             </Link>
             .
           </p>
+          <p className="mt-2 flex items-start gap-1.5 text-sm text-muted-foreground">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(266_84%_60%)]" aria-hidden />
+            <span>
+              <span className="font-medium text-foreground">Requirement:</span> {SAT_MENTOR_REQUIREMENT}
+            </span>
+          </p>
           <MentorGrid mentors={mentors} accent="text-[hsl(266_84%_60%)]" />
         </section>
 
@@ -225,6 +250,18 @@ export default async function TeamPage() {
             They guide students in the research programme from a first question to a finished paper.
           </p>
           <MentorGrid mentors={RESEARCH_MENTORS} accent="text-[hsl(190_84%_42%)]" />
+        </section>
+
+        {/* IELTS assessors */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <Languages className="h-5 w-5 text-[hsl(152_60%_40%)]" />
+            IELTS assessors
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            They mark IELTS Writing and Speaking practice and give every student a band with feedback.
+          </p>
+          <MentorGrid mentors={IELTS_ASSESSORS} accent="text-[hsl(152_60%_40%)]" />
         </section>
 
         {/* Media team */}
@@ -260,6 +297,19 @@ export default async function TeamPage() {
               <div key={r.title} className="rounded-2xl border border-dashed border-border bg-card/50 p-5">
                 <p className="font-medium">{r.title}</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{r.body}</p>
+                {r.requirements.length > 0 && (
+                  <div className="mt-3 border-t border-border/70 pt-3">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Requirements</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {r.requirements.map((req) => (
+                        <li key={req} className="flex items-start gap-1.5 text-sm">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -60,6 +60,15 @@ export const RESEARCH_MENTORS: MentorCard[] = [
   { name: "Farrukh", headline: "Research mentor", subjects: [] },
 ];
 
+/** People who mark IELTS Writing and Speaking for students. */
+export const IELTS_ASSESSORS: MentorCard[] = [
+  { name: "Muhammadjon", headline: "IELTS Writing assessor", subjects: ["Writing Task 2 · Band 7.5"] },
+];
+
+/** The SAT bar for a peer mentor, shown on /team and /mentor. */
+export const SAT_MENTOR_REQUIREMENT =
+  "700 or higher in at least one SAT section (Math or Reading and Writing).";
+
 /** The media team: social channels, posts and video. */
 export const MEDIA_TEAM: MentorCard[] = [
   { name: "Abdulaziz", headline: "Media team", subjects: [] },

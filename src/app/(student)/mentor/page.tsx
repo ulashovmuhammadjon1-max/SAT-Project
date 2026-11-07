@@ -6,6 +6,7 @@ import { MentorStudio } from "@/components/student/mentor-studio";
 import { PeerMentorApplyForm } from "@/components/student/peer-mentor-apply-form";
 import { getMyMentorState, getMySlots } from "@/server/actions/student/peer-mentor";
 import { requireUser } from "@/lib/session";
+import { SAT_MENTOR_REQUIREMENT } from "@/lib/team/founder";
 
 export const metadata = { title: "Peer-Mentor Programme" };
 export const dynamic = "force-dynamic";
@@ -127,6 +128,10 @@ export default async function MentorPage() {
                 <CardDescription>
                   Approval is manual and certificate-based: upload the score report for the exam you
                   want to mentor, and an admin verifies it before you appear anywhere.
+                  <span className="mt-2 block">
+                    <span className="font-medium text-foreground">SAT requirement:</span>{" "}
+                    {SAT_MENTOR_REQUIREMENT}
+                  </span>
                 </CardDescription>
               </CardHeader>
               <CardContent>
