@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { BadgeCheck, Cake, FlaskConical, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
+import { BadgeCheck, Cake, Camera, FlaskConical, GraduationCap, Mail, Phone, Send, Sparkles } from "lucide-react";
 
 import { AppReturnBar } from "@/components/marketing/app-return-bar";
 import { SiteNav } from "@/components/marketing/site-nav";
 import { getCurrentUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { FOUNDER, PEER_MENTORS, RESEARCH_MENTORS, telegramLink, type MentorCard } from "@/lib/team/founder";
+import { FOUNDER, MEDIA_TEAM, PEER_MENTORS, RESEARCH_MENTORS, telegramLink, type MentorCard } from "@/lib/team/founder";
 
 export const metadata = {
   title: "Team",
@@ -225,6 +225,18 @@ export default async function TeamPage() {
             They guide students in the research programme from a first question to a finished paper.
           </p>
           <MentorGrid mentors={RESEARCH_MENTORS} accent="text-[hsl(190_84%_42%)]" />
+        </section>
+
+        {/* Media team */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+            <Camera className="h-5 w-5 text-[hsl(340_75%_55%)]" />
+            Media team
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+            They run Scholarly&apos;s channels and tell the community&apos;s story.
+          </p>
+          <MentorGrid mentors={MEDIA_TEAM} accent="text-[hsl(340_75%_55%)]" />
         </section>
 
         {/* Open roles */}

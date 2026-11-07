@@ -24,7 +24,7 @@ export interface FounderCard {
 
 export const FOUNDER: FounderCard = {
   name: "Muhammadjon Ulashov",
-  title: "Founder",
+  title: "Founder and Project Manager",
   bio:
     "Built Scholarly as a free academic community: a research programme with mentors, AP courses, " +
     "IELTS and SAT preparation, and financial literacy classes. Runs the 1-on-1 sessions and reviews " +
@@ -54,9 +54,15 @@ export const PEER_MENTORS: MentorCard[] = [
 
 /** Mentors on the research programme. */
 export const RESEARCH_MENTORS: MentorCard[] = [
-  { name: "Sardorbek", headline: "Research mentor", subjects: [] },
   { name: "Muhammadjon", headline: "Research mentor", subjects: [] },
+  { name: "Jasurbek", headline: "Research proposal reviewer & mentor", subjects: [] },
+  { name: "Sardorbek", headline: "Research mentor", subjects: [] },
   { name: "Farrukh", headline: "Research mentor", subjects: [] },
+];
+
+/** The media team: social channels, posts and video. */
+export const MEDIA_TEAM: MentorCard[] = [
+  { name: "Abdulaziz", headline: "Media team", subjects: [] },
 ];
 
 /** "@name" or "t.me/name" or a full URL, normalised to a link and a label. */
