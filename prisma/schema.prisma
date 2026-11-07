@@ -1726,6 +1726,10 @@ model IeltsWritingSubmission {
   responseText String
   wordCount    Int
   submittedAt  DateTime @default(now())
+  /// Optional Task 1 image (a photo of a handwritten answer, or a sketch of the
+  /// figure). A storage key from `savePromptImage`, served only through
+  /// /api/ielts/response-image/[submissionId]. Migration 028.
+  responseImage String?
 
   status IeltsReviewStatus @default(PENDING)
 

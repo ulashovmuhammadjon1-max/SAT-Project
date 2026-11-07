@@ -4,13 +4,17 @@ import {
   useCallback, useEffect, useRef, useState, useTransition, type CSSProperties,
 } from "react";
 import { useRouter } from "next/navigation";
+import { ImagePlus, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 
 import { IeltsShell } from "@/components/ielts/ielts-shell";
 import { NavButton } from "@/components/testing/primitives";
 import { cn } from "@/lib/utils";
 import { countWords } from "@/lib/ielts/answers";
-import { saveWritingDraft, submitWriting } from "@/server/actions/student/ielts-writing";
+import { ACCEPTED_IMAGE_TYPES, MAX_IMAGE_BYTES } from "@/lib/ielts/image-types";
+import {
+  attachWritingImage, removeWritingImage, saveWritingDraft, submitWriting,
+} from "@/server/actions/student/ielts-writing";
 
 const AUTOSAVE_MS = 5000;
 
@@ -47,6 +51,8 @@ export interface WritingTask {
   imageAlt?: string | null;
   minWords: number;
   initialText: string;
+  /** Task 1 only: the image the student attached to their answer, if any. */
+  responseImageUrl?: string | null;
   /** True once this task has gone for review — its text is frozen. */
   readOnly: boolean;
 }
@@ -90,6 +96,12 @@ export function WritingWorkspace({
     Object.fromEntries(tasks.map((t) => [t.partId, t.initialText]))
   );
   const [saved, setSaved] = useState<"idle" | "saving" | "saved">("idle");
+  const [images, setImages] = useState<Record<string, string | null>>(() =>
+    Object.fromEntries(tasks.map((t) => [t.partId, t.responseImageUrl ?? null]))
+  );
+  const [uploading, setUploading] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const hasAnswer = (t: WritingTask) => Boolean((texts[t.partId] ?? "").trim() || images[t.partId]);
   const [pending, startTransition] = useTransition();
   const lastSaved = useRef<Record<string, string>>(
     Object.fromEntries(tasks.map((t) => [t.partId, t.initialText]))
@@ -172,11 +184,52 @@ export function WritingWorkspace({
     };
   }, [dragging]);
 
+  async function onPickImage(file: File | undefined) {
+    if (!file) return;
+    if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
+      toast.error("Attach a PNG, JPEG, WebP or GIF image.");
+      return;
+    }
+    if (file.size > MAX_IMAGE_BYTES) {
+      toast.error("That image is larger than 8 MB. Try a smaller one.");
+      return;
+    }
+    // Flush the text first so the draft row the image lands on is current.
+    await save();
+    const form = new FormData();
+    form.set("partId", task.partId);
+    form.set("image", file);
+    setUploading(true);
+    try {
+      const res = await attachWritingImage(form);
+      if (res.error) toast.error(res.error);
+      else {
+        setImages((m) => ({ ...m, [task.partId]: res.imageSrc ?? null }));
+        toast.success("Image attached.");
+      }
+    } catch {
+      toast.error("The image could not be uploaded. Check your connection and try again.");
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  async function onRemoveImage() {
+    setUploading(true);
+    try {
+      const res = await removeWritingImage(task.partId);
+      if (res.error) toast.error(res.error);
+      else setImages((m) => ({ ...m, [task.partId]: null }));
+    } finally {
+      setUploading(false);
+    }
+  }
+
   function onSubmit() {
     const pendingTasks = tasks.filter((t) => !t.readOnly);
-    const empty = pendingTasks.filter((t) => !(texts[t.partId] ?? "").trim());
+    const empty = pendingTasks.filter((t) => !hasAnswer(t));
     if (empty.length === pendingTasks.length) {
-      toast.error("Write your response before submitting.");
+      toast.error("Write your response, or attach an image of it, before submitting.");
       return;
     }
 
@@ -204,7 +257,7 @@ export function WritingWorkspace({
       // attempt row, and two at once would race on its status update.
       for (const t of pendingTasks) {
         const body = (texts[t.partId] ?? "").trim();
-        if (!body) continue;
+        if (!body && !images[t.partId]) continue;
         const res = await submitWriting(t.partId, body);
         if (res.error) {
           toast.error(res.error);
@@ -387,6 +440,86 @@ export function WritingWorkspace({
               task.readOnly && "cursor-default text-exam-muted"
             )}
           />
+          {/* Task 1 only: an optional image with the answer — a photo of a
+              response written by hand, or a sketch of the figure. */}
+          {task.taskNumber === 1 && (!task.readOnly || images[task.partId]) && (
+            <div className="flex shrink-0 flex-wrap items-center gap-3 border-t border-exam-border bg-exam-header px-6 py-3 lg:px-10">
+              {images[task.partId] ? (
+                <>
+                  <a
+                    href={images[task.partId] ?? undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0"
+                    title="Open the image full size"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={images[task.partId] ?? undefined}
+                      alt="The image attached to your answer"
+                      className="h-16 w-auto max-w-[8rem] rounded border border-exam-border bg-white object-contain"
+                    />
+                  </a>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[13px] font-semibold">Image attached</p>
+                    <p className="text-[12px] text-exam-muted">
+                      {task.readOnly ? "Sent with your answer." : "The reviewer sees it alongside your text."}
+                    </p>
+                  </div>
+                  {!task.readOnly && (
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => fileRef.current?.click()}
+                        disabled={uploading || pending}
+                        className="rounded border border-exam-border bg-white px-3 py-1.5 text-[13px] font-medium hover:bg-exam-passage disabled:opacity-50"
+                      >
+                        Replace
+                      </button>
+                      <button
+                        type="button"
+                        onClick={onRemoveImage}
+                        disabled={uploading || pending}
+                        aria-label="Remove the attached image"
+                        className="inline-flex items-center gap-1 rounded border border-exam-border bg-white px-3 py-1.5 text-[13px] font-medium hover:bg-exam-passage disabled:opacity-50"
+                      >
+                        <X className="h-3.5 w-3.5" aria-hidden /> Remove
+                      </button>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => fileRef.current?.click()}
+                    disabled={uploading || pending}
+                    className="inline-flex items-center gap-2 rounded border border-exam-border bg-white px-3 py-1.5 text-[13px] font-medium hover:bg-exam-passage disabled:opacity-50"
+                  >
+                    {uploading ? (
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                    ) : (
+                      <ImagePlus className="h-4 w-4" aria-hidden />
+                    )}
+                    {uploading ? "Uploading…" : "Attach an image"}
+                  </button>
+                  <p className="text-[12px] text-exam-muted">
+                    Optional. A photo of a handwritten answer, or a sketch. PNG, JPEG, WebP or GIF, up to 8 MB.
+                  </p>
+                </>
+              )}
+              <input
+                ref={fileRef}
+                type="file"
+                accept={ACCEPTED_IMAGE_TYPES.join(",")}
+                className="hidden"
+                onChange={(e) => {
+                  void onPickImage(e.target.files?.[0]);
+                  e.target.value = "";
+                }}
+              />
+            </div>
+          )}
         </section>
       </div>
     </IeltsShell>

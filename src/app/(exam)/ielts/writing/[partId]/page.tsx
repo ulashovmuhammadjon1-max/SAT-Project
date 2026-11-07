@@ -4,7 +4,7 @@ import { WritingWorkspace } from "@/components/ielts/writing-workspace";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { WRITING_SUGGESTED_MINUTES } from "@/lib/ielts/constants";
-import { promptImageSrc } from "@/lib/ielts/image-storage";
+import { promptImageSrc, responseImageSrc } from "@/lib/ielts/image-storage";
 
 export const metadata = { title: "Writing Task" };
 export const dynamic = "force-dynamic";
@@ -38,7 +38,7 @@ export default async function WritingTaskPage({ params }: { params: { partId: st
   const submission = await prisma.ieltsWritingSubmission.findFirst({
     where: { partId: part.id, userId: user.id },
     orderBy: { submittedAt: "desc" },
-    select: { responseText: true, status: true },
+    select: { id: true, responseText: true, responseImage: true, status: true },
   });
   const minWords = part.minWords ?? (part.partNumber === 1 ? 150 : 250);
 
@@ -57,6 +57,7 @@ export default async function WritingTaskPage({ params }: { params: { partId: st
           imageAlt: part.imageAlt,
           minWords,
           initialText: submission?.responseText ?? "",
+          responseImageUrl: submission?.responseImage ? responseImageSrc(submission.id) : null,
           readOnly: Boolean(submission && submission.status !== "PENDING"),
         },
       ]}

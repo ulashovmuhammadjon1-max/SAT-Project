@@ -53,3 +53,11 @@ export function promptImageSrc(partId: string, value: string | null | undefined)
   if (!value) return null;
   return isManagedPromptImage(value) ? `/api/ielts/prompt-image/${partId}` : value;
 }
+
+/**
+ * The only URL a student's Task 1 response image is shown through. The route
+ * checks the requester; the stored key itself is never sent to a browser.
+ */
+export function responseImageSrc(submissionId: string): string {
+  return `/api/ielts/response-image/${submissionId}`;
+}

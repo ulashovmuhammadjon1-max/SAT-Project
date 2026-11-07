@@ -131,7 +131,7 @@ export interface CatalogSubject {
 }
 
 /**
- * The whole catalog, annotated with whether this student has added each
+ * The live catalog, annotated with whether this student has added each
  * subject and how many questions it holds.
  *
  * One groupBy for every subject rather than a count per card — the catalog is
@@ -146,7 +146,9 @@ export async function getCatalog(): Promise<CatalogSubject[]> {
   const added = new Set(mine);
   const countBy = new Map(counts.map((c) => [c.subject, c._count.id]));
 
-  return AP_CATALOG.map((s) => ({
+  // Only subjects that actually have content. A planned subject is not shown
+  // to students at all — a card they can read but never open is noise.
+  return AP_CATALOG.filter((s) => s.status === "LIVE").map((s) => ({
     code: s.code,
     slug: s.slug,
     name: s.name,

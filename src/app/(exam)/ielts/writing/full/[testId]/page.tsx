@@ -4,7 +4,7 @@ import { WritingWorkspace, type WritingTask } from "@/components/ielts/writing-w
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { WRITING_SUGGESTED_MINUTES } from "@/lib/ielts/constants";
-import { promptImageSrc } from "@/lib/ielts/image-storage";
+import { promptImageSrc, responseImageSrc } from "@/lib/ielts/image-storage";
 
 export const metadata = { title: "Full Writing Practice" };
 export const dynamic = "force-dynamic";
@@ -52,7 +52,7 @@ export default async function FullWritingPracticePage({
   const submissions = await prisma.ieltsWritingSubmission.findMany({
     where: { userId: user.id, partId: { in: parts.map((p) => p.id) } },
     orderBy: { submittedAt: "desc" },
-    select: { partId: true, responseText: true, status: true },
+    select: { id: true, partId: true, responseText: true, responseImage: true, status: true },
   });
   // Newest first, so the first hit per part is the current one.
   const byPart = new Map<string, (typeof submissions)[number]>();
@@ -69,6 +69,7 @@ export default async function FullWritingPracticePage({
       imageAlt: p.imageAlt,
       minWords: p.minWords ?? (p.partNumber === 1 ? 150 : 250),
       initialText: sub?.responseText ?? "",
+      responseImageUrl: sub?.responseImage ? responseImageSrc(sub.id) : null,
       readOnly: Boolean(sub && sub.status !== "PENDING"),
     };
   });

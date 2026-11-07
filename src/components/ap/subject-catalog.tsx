@@ -33,16 +33,15 @@ import { cn } from "@/lib/utils";
  *
  * Add and remove are real server actions, applied optimistically: the card
  * flips the moment it is clicked and only reverts if the action comes back
- * with an error. COMING_SOON subjects never render an Add control at all; the
- * server refuses them too, but a student should not be offered something that
- * cannot happen.
+ * with an error. Only LIVE subjects reach this component (see `getCatalog`);
+ * the COMING_SOON branch below stays as a guard, and the server refuses to add
+ * one regardless.
  */
 
-type Availability = "all" | "added" | "soon";
+type Availability = "all" | "added";
 
 const FILTERS: { id: Availability; label: string }[] = [
   { id: "added", label: "Added" },
-  { id: "soon", label: "Coming soon" },
 ];
 
 /** Chip styling, shared by the category row and the availability row. */
@@ -72,6 +71,13 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
 
   const isAdded = (s: CatalogSubject) => overrides[s.code] ?? s.added;
 
+  // Only the categories that hold at least one subject, so no chip leads to an
+  // empty list.
+  const categories = useMemo(
+    () => AP_CATEGORIES.filter((c) => subjects.some((s) => s.category === c.id)),
+    [subjects],
+  );
+
   const categoryLabel = useMemo(
     () => new Map(AP_CATEGORIES.map((c) => [c.id as string, c.label])),
     [],
@@ -82,7 +88,6 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
     return subjects.filter((s) => {
       if (category !== "ALL" && s.category !== category) return false;
       if (availability === "added" && !(overrides[s.code] ?? s.added)) return false;
-      if (availability === "soon" && s.status !== "COMING_SOON") return false;
       if (!needle) return true;
       const haystack = `${s.name} ${s.short} ${s.blurb} ${categoryLabel.get(s.category) ?? ""}`;
       return haystack.toLowerCase().includes(needle);
@@ -181,7 +186,7 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
         >
           All
         </button>
-        {AP_CATEGORIES.map((c) => (
+        {categories.map((c) => (
           <button
             key={c.id}
             type="button"
@@ -194,9 +199,7 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
         ))}
       </div>
 
-      {/* Availability chips. Mutually exclusive on purpose — "Added" and
-          "Coming soon" can never both be true of one subject, so letting both
-          be pressed would only ever produce an empty list. */}
+      {/* Availability chip: show only the subjects in your list. */}
       <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by availability">
         {FILTERS.map((f) => {
           const active = availability === f.id;
@@ -211,11 +214,7 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
                 !active && "border-dashed",
               )}
             >
-              {f.id === "added" ? (
-                <Check aria-hidden className="mr-1.5 inline h-3.5 w-3.5 align-[-2px]" />
-              ) : (
-                <Clock aria-hidden className="mr-1.5 inline h-3.5 w-3.5 align-[-2px]" />
-              )}
+              <Check aria-hidden className="mr-1.5 inline h-3.5 w-3.5 align-[-2px]" />
               {f.label}
             </button>
           );

@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { IeltsReviewForm } from "@/components/admin/ielts-review-form";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/session";
-import { promptImageSrc } from "@/lib/ielts/image-storage";
+import { promptImageSrc, responseImageSrc } from "@/lib/ielts/image-storage";
 
 export const metadata = { title: "Review Writing" };
 export const dynamic = "force-dynamic";
@@ -106,9 +106,28 @@ export default async function ReviewWritingPage({
             {/* Rendered as plain text, never as HTML: this is student input and
                 anything else would let one student's markup run in a
                 reviewer's browser. whitespace-pre-wrap keeps their paragraphing. */}
-            <p className="whitespace-pre-wrap text-[15px] leading-relaxed">
-              {submission.responseText}
-            </p>
+            {submission.responseText ? (
+              <p className="whitespace-pre-wrap text-[15px] leading-relaxed">
+                {submission.responseText}
+              </p>
+            ) : (
+              <p className="text-sm italic text-muted-foreground">No typed text — see the attached image.</p>
+            )}
+            {submission.responseImage && (
+              <div className="mt-4 border-t border-border pt-3">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  Image attached by the student
+                </p>
+                <a href={responseImageSrc(submission.id)} target="_blank" rel="noopener noreferrer">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={responseImageSrc(submission.id)}
+                    alt="The image the student attached to their response"
+                    className="max-w-full rounded border border-border bg-white"
+                  />
+                </a>
+              </div>
+            )}
           </div>
         </div>
 
