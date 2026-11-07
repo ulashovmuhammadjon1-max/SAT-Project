@@ -26,6 +26,7 @@ import {
   School,
   TrendingUp,
   UserPlus,
+  UsersRound,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -38,33 +39,49 @@ interface AdminNavItem {
 }
 
 /**
- * Two admin panels behind one URL space.
+ * Four admin sections behind one URL space: Scholarly (the platform as a
+ * whole), SAT, IELTS and Research.
  *
- * The single list had SAT content, IELTS content and IELTS review queues
- * interleaved, so an admin looking for the Writing queue read past PDF
- * Ingestion and the Question Bank to find it — and a reviewer who only ever
- * touches IELTS saw fourteen SAT entries they will never open. The two products
- * are run by different people doing different work, and the sidebar now says so.
+ * A single list mixed SAT content, IELTS review queues, research decisions and
+ * platform settings, so finding one page meant reading past fifteen others.
+ * Each section is run as its own piece of work, and the sidebar now shows only
+ * that section's pages.
  *
- * The routes are unchanged. Which panel you are in is derived from the path,
- * so a bookmarked `/admin/ielts/writing` still lands in the IELTS panel with
- * the right sidebar, and no state has to be stored anywhere.
+ * The routes are unchanged. Which section you are in is derived from the path
+ * (see `sectionFor`), so a bookmarked `/admin/ielts/writing` still lands in the
+ * IELTS section with the right sidebar, and no state is stored anywhere.
  */
-const SAT_NAV: AdminNavItem[] = [
+type Section = "scholarly" | "sat" | "ielts" | "research";
+
+const SECTIONS: { id: Section; label: string; href: string }[] = [
+  { id: "scholarly", label: "Scholarly", href: "/admin" },
+  { id: "sat", label: "SAT", href: "/admin/sat" },
+  { id: "ielts", label: "IELTS", href: "/admin/ielts" },
+  { id: "research", label: "Research", href: "/admin/research" },
+];
+
+/** The platform: people, sessions, communication, money, and logs. */
+const SCHOLARLY_NAV: AdminNavItem[] = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
+  { href: "/admin/users", label: "Users", icon: Users },
+  { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
+  { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
+  { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },
+  { href: "/admin/schools", label: "Schools", icon: School },
+  { href: "/admin/team", label: "Team Page", icon: UsersRound },
+  { href: "/admin/economy", label: "Economy", icon: Coins },
+  { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
+  { href: "/admin/logs", label: "System Logs", icon: ScrollText },
+];
+
+const SAT_NAV: AdminNavItem[] = [
+  { href: "/admin/sat", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/uploads", label: "PDF Ingestion", icon: UploadCloud },
   { href: "/admin/tests", label: "Tests & Modules", icon: BookOpenText },
   { href: "/admin/questions", label: "Question Bank", icon: ListChecks },
   { href: "/admin/content-health", label: "Content Health", icon: AlertTriangle },
   { href: "/admin/vocabulary", label: "Vocabulary", icon: SpellCheck2 },
-  { href: "/admin/bookings", label: "Sessions", icon: CalendarCheck },
-  { href: "/admin/peer-mentors", label: "Peer Mentors", icon: BadgeCheck },
-  { href: "/admin/research", label: "Research", icon: FlaskConical },
-  { href: "/admin/schools", label: "Schools", icon: School },
-  { href: "/admin/team", label: "Team Page", icon: Users },
-  { href: "/admin/economy", label: "Economy", icon: Coins },
-  { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
-  { href: "/admin/statistics", label: "Statistics", icon: TrendingUp },
+  { href: "/admin/statistics", label: "Statistics", icon: TrendingUp, exact: true },
   { href: "/admin/settings", label: "Adaptive Settings", icon: Sliders },
 ];
 
@@ -77,15 +94,46 @@ const IELTS_NAV: AdminNavItem[] = [
   { href: "/admin/ielts/papers", label: "Papers", icon: Globe2 },
 ];
 
-/** Shared by both panels — these are about the platform, not either exam. */
-const COMMON_NAV: AdminNavItem[] = [
-  { href: "/admin/users", label: "Users", icon: Users },
-  { href: "/admin/announcements", label: "Announcements", icon: Megaphone },
-  { href: "/admin/logs", label: "System Logs", icon: ScrollText },
+const RESEARCH_NAV: AdminNavItem[] = [
+  { href: "/admin/research", label: "Proposals", icon: FlaskConical },
 ];
 
+const NAV: Record<Section, AdminNavItem[]> = {
+  scholarly: SCHOLARLY_NAV,
+  sat: SAT_NAV,
+  ielts: IELTS_NAV,
+  research: RESEARCH_NAV,
+};
+
+const SAT_PREFIXES = [
+  "/admin/sat",
+  "/admin/uploads",
+  "/admin/tests",
+  "/admin/questions",
+  "/admin/content-health",
+  "/admin/vocabulary",
+  "/admin/settings",
+];
+
+function under(pathname: string, prefix: string) {
+  return pathname === prefix || pathname.startsWith(prefix + "/");
+}
+
+/**
+ * Which section a path belongs to. A student's profile page lives under
+ * /admin/statistics/students but is reached from Users, so it stays in the
+ * Scholarly section; the Statistics page itself is SAT (test funnel, scores).
+ */
+function sectionFor(pathname: string): Section {
+  if (under(pathname, "/admin/ielts")) return "ielts";
+  if (under(pathname, "/admin/research")) return "research";
+  if (under(pathname, "/admin/statistics/students")) return "scholarly";
+  if (under(pathname, "/admin/statistics") || SAT_PREFIXES.some((p) => under(pathname, p))) return "sat";
+  return "scholarly";
+}
+
 function NavLink({ item, pathname }: { item: AdminNavItem; pathname: string }) {
-  const active = item.exact ? pathname === item.href : pathname.startsWith(item.href);
+  const active = item.exact ? pathname === item.href : under(pathname, item.href);
   return (
     <Link
       href={item.href}
@@ -104,8 +152,7 @@ function NavLink({ item, pathname }: { item: AdminNavItem; pathname: string }) {
 
 export function AdminSidebar() {
   const pathname = usePathname();
-  const inIelts = pathname.startsWith("/admin/ielts");
-  const nav = inIelts ? IELTS_NAV : SAT_NAV;
+  const section = sectionFor(pathname);
 
   return (
     <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
@@ -116,49 +163,36 @@ export function AdminSidebar() {
         <span className="font-display text-base font-semibold">Scholarly Admin</span>
       </div>
 
-      {/* The same SAT | IELTS control students have at the top of the app, so
-          the two halves of the product are switched the same way on both
-          sides. Each lands on that panel's own overview. */}
+      {/* Section switcher. Each option lands on that section's own overview. */}
       <div className="border-b border-border p-3">
-        <div className="flex rounded-lg border border-border bg-secondary/50 p-0.5">
-          <Link
-            href="/admin"
-            className={cn(
-              "flex-1 rounded-md px-3 py-1.5 text-center text-xs font-semibold transition-colors",
-              inIelts
-                ? "text-muted-foreground hover:text-foreground"
-                : "bg-card text-foreground shadow-soft"
-            )}
-          >
-            SAT
-          </Link>
-          <Link
-            href="/admin/ielts"
-            className={cn(
-              "flex-1 rounded-md px-3 py-1.5 text-center text-xs font-semibold transition-colors",
-              inIelts
-                ? "bg-card text-foreground shadow-soft"
-                : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            IELTS
-          </Link>
+        <div
+          role="tablist"
+          aria-label="Admin section"
+          className="grid grid-cols-2 gap-0.5 rounded-lg border border-border bg-secondary/50 p-0.5"
+        >
+          {SECTIONS.map((s) => (
+            <Link
+              key={s.id}
+              href={s.href}
+              role="tab"
+              aria-selected={section === s.id}
+              className={cn(
+                "rounded-md px-3 py-1.5 text-center text-xs font-semibold transition-colors",
+                section === s.id
+                  ? "bg-card text-foreground shadow-soft"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {s.label}
+            </Link>
+          ))}
         </div>
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-3">
-        {nav.map((item) => (
+        {NAV[section].map((item) => (
           <NavLink key={item.href} item={item} pathname={pathname} />
         ))}
-
-        <div className="!mt-4 space-y-1 border-t border-border pt-3">
-          <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-            Platform
-          </p>
-          {COMMON_NAV.map((item) => (
-            <NavLink key={item.href} item={item} pathname={pathname} />
-          ))}
-        </div>
       </nav>
     </aside>
   );
