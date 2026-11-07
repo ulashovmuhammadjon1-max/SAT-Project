@@ -49,8 +49,11 @@ export interface OpenSlot {
   startsAt: Date;
   durationMinutes: number;
   sessionType: SessionType;
-  /** Peer mentor hosting this slot; null means the founder. */
+  /** Peer mentor or admin hosting this slot; null means the founder. */
   hostName: string | null;
+  /** Set on sessions an admin published from My Sessions. */
+  title: string | null;
+  subject: string | null;
 }
 
 /** Future slots that are published, not blocked, and not already taken. */
@@ -67,6 +70,8 @@ export async function getOpenSlots(): Promise<OpenSlot[]> {
       durationMinutes: true,
       sessionType: true,
       capacity: true,
+      title: true,
+      subject: true,
       host: { select: { name: true } },
       _count: { select: { bookings: { where: { status: { in: SEAT_HOLDING_STATUSES } } } } },
     },
@@ -297,7 +302,7 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
           userId: user.id,
           amount: cost,
           type: "BOOKING_SPEND",
-          description: "1-on-1 SAT guidance session",
+          description: slot.title ? `1-on-1 session: ${slot.title}` : "1-on-1 SAT guidance session",
         },
         tx,
       );
@@ -376,14 +381,18 @@ export async function createBooking(input: BookingFormInput): Promise<CreateBook
 
   // Best-effort, outside the transaction: a provider outage must not undo a
   // paid booking. `createMeetingSafely` never throws.
-  const meeting = await createMeetingSafely({
-    bookingId,
-    startsAt: slot.startsAt,
-    durationMinutes: slot.durationMinutes,
-    studentName: snapshot.name,
-    studentEmail: snapshot.email,
-    title: "Scholarly 1-on-1 SAT guidance",
-  });
+  // A session an admin published carries its host's own Meet link; that link
+  // is the meeting, so no provider is asked to create another one.
+  const meeting = slot.meetingUrl
+    ? { url: slot.meetingUrl, provider: "host", externalId: null as string | null }
+    : await createMeetingSafely({
+        bookingId,
+        startsAt: slot.startsAt,
+        durationMinutes: slot.durationMinutes,
+        studentName: snapshot.name,
+        studentEmail: snapshot.email,
+        title: slot.title ? `Scholarly 1-on-1: ${slot.title}` : "Scholarly 1-on-1 SAT guidance",
+      });
   if (meeting.url) {
     await prisma.booking
       .update({

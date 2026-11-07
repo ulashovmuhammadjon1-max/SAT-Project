@@ -166,10 +166,9 @@ export async function createMentorSlot(input: {
       data: { startsAt, durationMinutes, sessionType: "ONE_ON_ONE_SAT", hostId: user.id },
     });
   } catch (error) {
-    // startsAt is globally unique across hosts; a collision with anyone
-    // else's slot is a real conflict the mentor can route around.
+    // Unique per host and start time: this mentor already has a slot then.
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
-      return { error: "Another session already starts at exactly that time — shift yours by a few minutes." };
+      return { error: "You already have a slot starting at exactly that time." };
     }
     throw error;
   }

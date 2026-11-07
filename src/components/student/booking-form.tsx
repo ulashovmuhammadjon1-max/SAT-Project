@@ -273,7 +273,7 @@ export function BookingForm({
                       onClick={() => setSlotId(s.id)}
                       aria-pressed={active}
                       className={cn(
-                        "rounded-lg border px-3 py-2 text-sm tabular-nums transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                        "rounded-lg border px-3 py-2 text-left text-sm tabular-nums transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                         active
                           ? "border-primary bg-primary/10 font-medium text-primary"
                           : "border-border hover:bg-secondary"
@@ -287,6 +287,11 @@ export function BookingForm({
                       {s.hostName && (
                         <span className="ml-1.5 text-xs font-medium text-[hsl(266_84%_60%)]">
                           · {s.hostName.split(/\s+/)[0]}
+                        </span>
+                      )}
+                      {(s.title || s.subject) && (
+                        <span className="mt-0.5 block max-w-[16rem] truncate text-xs text-muted-foreground">
+                          {[s.subject, s.title].filter(Boolean).join(" · ")}
                         </span>
                       )}
                     </button>
@@ -419,6 +424,8 @@ export function BookingForm({
                   <Check className="mr-1 inline h-4 w-4 text-success" />
                   <LocalTime iso={new Date(selected.startsAt).toISOString()} format="full" /> ·{" "}
                   {selected.durationMinutes} minutes
+                  {selected.title && <> · {selected.title}</>}
+                  {selected.subject && <> ({selected.subject})</>}
                 </>
               ) : (
                 <span className="text-muted-foreground">Choose a time to continue.</span>

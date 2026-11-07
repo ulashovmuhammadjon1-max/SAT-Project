@@ -639,8 +639,15 @@ model MentorSlot {
   /// Seats. 1 keeps the existing 1-on-1 semantics; a lecture can open many.
   capacity    Int         @default(1)
   /// Shown on the events page. Null for plain 1-on-1 slots, which need no name.
+  /// Admin-hosted 1-on-1 sessions set it to the session's name.
   title       String?
   description String?     @db.Text
+  /// What the host teaches in this session, e.g. "AP Biology". Set on 1-on-1
+  /// sessions an admin creates from My Sessions; null on older slots.
+  subject     String?
+  /// Join link the host supplied (e.g. a Google Meet URL). When set, every
+  /// booking on this slot uses it instead of the configured meeting provider.
+  meetingUrl  String?
 
   /// Who hosts this slot. Null means the founder/admin — which is every slot
   /// that existed before the peer-mentor programme, with no backfill needed.
@@ -649,7 +656,12 @@ model MentorSlot {
 
   bookings Booking[]
 
-  @@unique([startsAt])
+  /// One session per host per start time. This used to be @@unique([startsAt]),
+  /// which stopped two different admins teaching at the same hour. In the
+  /// database the index is NULLS NOT DISTINCT (migration 026), so the founder's
+  /// host-less slots still cannot be published twice at the same instant —
+  /// createSlots relies on that for skipDuplicates.
+  @@unique([hostId, startsAt])
   @@index([startsAt])
   @@index([hostId])
 }

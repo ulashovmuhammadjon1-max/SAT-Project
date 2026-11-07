@@ -50,7 +50,8 @@ export async function createSlots(input: {
   }
   if (!starts.length) return { ok: false, error: "Those times couldn't be parsed." };
 
-  // startsAt is unique — skipDuplicates makes re-submitting harmless.
+  // (hostId, startsAt) is unique with NULLS NOT DISTINCT (migration 026), so
+  // for these host-less slots skipDuplicates still makes re-submitting harmless.
   const res = await prisma.mentorSlot.createMany({
     data: starts.map((startsAt) => ({ startsAt, durationMinutes: duration })),
     skipDuplicates: true,
