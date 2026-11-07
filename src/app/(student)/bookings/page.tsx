@@ -77,10 +77,10 @@ export default async function MyBookingsPage({
           <CardContent className="space-y-3 p-8 text-center">
             <p className="font-medium">No sessions yet.</p>
             <p className="text-sm text-muted-foreground">
-              Book a free 1-on-1 with a 1580 scorer to build your study plan.
+              Browse sessions by topic and book a free 1-on-1 with a Scholarly mentor.
             </p>
             <Button asChild>
-              <Link href="/booking">Get My Free Study Plan</Link>
+              <Link href="/booking">Browse sessions</Link>
             </Button>
           </CardContent>
         </Card>

@@ -12,6 +12,7 @@ import {
   BarChart3,
   BadgeCheck,
   CalendarCheck,
+  CalendarPlus,
   CalendarRange,
   Coins,
   FlaskConical,
@@ -87,6 +88,7 @@ const HOME_GROUPS: NavGroup[] = [
   {
     label: "Mentorship",
     items: [
+      { href: "/booking", label: "Sessions", icon: CalendarPlus, exact: true },
       { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
       { href: "/mentor", label: "Peer-Mentor Programme", icon: BadgeCheck, badge: "New" },
       { href: "/wallet", label: "Coins", icon: Coins },

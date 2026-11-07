@@ -17,6 +17,18 @@ import { checkChannelMembership } from "@/lib/telegram";
 export type AdminResult = { ok: boolean; error?: string };
 
 /**
+ * Sessions belong to the admin who published them. Every admin sees only their
+ * own on the Sessions page, so every action on a slot or a booking checks the
+ * slot's host too — hiding a session is not the same as protecting it.
+ */
+const NOT_YOURS = "That session belongs to another admin.";
+
+async function hostOfBooking(bookingId: string): Promise<string | null | undefined> {
+  const b = await prisma.booking.findUnique({ where: { id: bookingId }, select: { slot: { select: { hostId: true } } } });
+  return b ? b.slot.hostId : undefined;
+}
+
+/**
  * Publishes bookable slots.
  *
  * `times` are "HH:MM" in the admin's own timezone; `tzOffsetMinutes` is
@@ -30,7 +42,7 @@ export async function createSlots(input: {
   durationMinutes: number;
   tzOffsetMinutes: number;
 }): Promise<AdminResult & { created?: number }> {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
   if (!input.dates.length || !input.times.length) {
     return { ok: false, error: "Pick at least one date and one time." };
@@ -50,10 +62,9 @@ export async function createSlots(input: {
   }
   if (!starts.length) return { ok: false, error: "Those times couldn't be parsed." };
 
-  // (hostId, startsAt) is unique with NULLS NOT DISTINCT (migration 026), so
-  // for these host-less slots skipDuplicates still makes re-submitting harmless.
+  // (hostId, startsAt) is unique, so skipDuplicates makes re-submitting harmless.
   const res = await prisma.mentorSlot.createMany({
-    data: starts.map((startsAt) => ({ startsAt, durationMinutes: duration })),
+    data: starts.map((startsAt) => ({ startsAt, durationMinutes: duration, hostId: admin.id })),
     skipDuplicates: true,
   });
 
@@ -62,10 +73,11 @@ export async function createSlots(input: {
 }
 
 export async function setSlotBlocked(slotId: string, isBlocked: boolean): Promise<AdminResult> {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
   const slot = await prisma.mentorSlot.findUnique({ where: { id: slotId }, include: { bookings: { where: { status: "UPCOMING" } } } });
   if (!slot) return { ok: false, error: "Slot not found." };
+  if (slot.hostId !== admin.id) return { ok: false, error: NOT_YOURS };
   if (isBlocked && slot.bookings.length > 0) {
     return {
       ok: false,
@@ -82,10 +94,11 @@ export async function setSlotBlocked(slotId: string, isBlocked: boolean): Promis
 }
 
 export async function deleteSlot(slotId: string): Promise<AdminResult> {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
   const slot = await prisma.mentorSlot.findUnique({ where: { id: slotId }, include: { bookings: { where: { status: "UPCOMING" } } } });
   if (!slot) return { ok: true };
+  if (slot.hostId !== admin.id) return { ok: false, error: NOT_YOURS };
   if (slot.bookings.length > 0) {
     return {
       ok: false,
@@ -105,10 +118,11 @@ export async function setBookingStatus(
   bookingId: string,
   status: "UPCOMING" | "COMPLETED" | "CANCELLED"
 ): Promise<AdminResult> {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
-  const booking = await prisma.booking.findUnique({ where: { id: bookingId } });
+  const booking = await prisma.booking.findUnique({ where: { id: bookingId }, include: { slot: { select: { hostId: true } } } });
   if (!booking) return { ok: false, error: "Booking not found." };
+  if (booking.slot.hostId !== admin.id) return { ok: false, error: NOT_YOURS };
 
   // Cancelling has to go through decideBooking so the coins are actually
   // returned. This path used to flip the status and keep the student's coins,
@@ -159,9 +173,10 @@ export async function decideBooking(input: {
 
   const booking = await prisma.booking.findUnique({
     where: { id: input.bookingId },
-    include: { slot: { select: { startsAt: true, durationMinutes: true, sessionType: true } } },
+    include: { slot: { select: { startsAt: true, durationMinutes: true, sessionType: true, hostId: true } } },
   });
   if (!booking) return { ok: false, error: "Booking not found." };
+  if (booking.slot.hostId !== admin.id) return { ok: false, error: NOT_YOURS };
 
   if (input.decision === "APPROVE" && booking.status !== "PENDING") {
     return {
@@ -289,9 +304,8 @@ export async function decideBooking(input: {
  * has a name, a description and a seat count, and is created one at a time
  * rather than as a grid of repeated slots.
  *
- * `MentorSlot.startsAt` is unique, which for a single mentor is a feature:
- * it makes it impossible to publish an event opposite a 1-on-1 and end up
- * double-booked with yourself.
+ * `(hostId, startsAt)` is unique, which makes it impossible for an admin to
+ * publish an event opposite one of their own 1-on-1s at the same instant.
  */
 export async function createEvent(input: {
   date: string;
@@ -305,7 +319,7 @@ export async function createEvent(input: {
   /** Publish this many weekly repeats, for a recurring review. */
   repeatWeeks?: number;
 }): Promise<AdminResult & { created?: number }> {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
   const title = input.title?.trim();
   if (!title) return { ok: false, error: "Give the event a title." };
@@ -329,6 +343,7 @@ export async function createEvent(input: {
     title,
     description: input.description?.trim() || null,
     capacity,
+    hostId: admin.id,
   }));
 
   // skipDuplicates so re-submitting, or overlapping an existing slot, is
@@ -356,7 +371,10 @@ export async function setStudentTelegramVerified(input: {
   bookingId: string;
   isMember: boolean;
 }): Promise<AdminResult> {
-  await requireAdmin();
+  const admin = await requireAdmin();
+  const host = await hostOfBooking(input.bookingId);
+  if (host === undefined) return { ok: false, error: "Booking not found." };
+  if (host !== admin.id) return { ok: false, error: NOT_YOURS };
 
   const booking = await prisma.booking.findUnique({
     where: { id: input.bookingId },
@@ -385,7 +403,10 @@ export async function setStudentTelegramVerified(input: {
  * real check would misreport the evidence.
  */
 export async function recheckStudentTelegram(bookingId: string): Promise<AdminResult> {
-  await requireAdmin();
+  const admin = await requireAdmin();
+  const host = await hostOfBooking(bookingId);
+  if (host === undefined) return { ok: false, error: "Booking not found." };
+  if (host !== admin.id) return { ok: false, error: NOT_YOURS };
 
   const booking = await prisma.booking.findUnique({
     where: { id: bookingId },

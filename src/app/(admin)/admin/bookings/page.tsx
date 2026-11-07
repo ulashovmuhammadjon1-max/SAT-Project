@@ -14,11 +14,18 @@ import { getSettings } from "@/lib/settings";
 export const metadata = { title: "Sessions" };
 export const dynamic = "force-dynamic";
 
+/**
+ * Each admin sees and manages only the sessions they host. A session belongs to
+ * whoever published it (My Sessions, the slot creator or the event creator all
+ * record the publishing admin as host), and the actions behind this page check
+ * the host as well, so another admin's bookings cannot be decided from here.
+ */
 export default async function AdminBookingsPage() {
-  await requireAdmin();
+  const admin = await requireAdmin();
 
   const [slots, settings] = await Promise.all([
     prisma.mentorSlot.findMany({
+      where: { hostId: admin.id },
       orderBy: { startsAt: "asc" },
       include: {
         bookings: {
@@ -115,7 +122,7 @@ export default async function AdminBookingsPage() {
       <div>
         <h1 className="font-display text-2xl font-semibold tracking-tight">Sessions</h1>
         <p className="text-sm text-muted-foreground">
-          Publish availability and manage free 1-on-1 bookings.
+          Your sessions only: publish availability and manage the bookings on sessions you host.
         </p>
       </div>
 
@@ -137,7 +144,7 @@ export default async function AdminBookingsPage() {
       <SlotCreator />
 
       <div>
-        <h2 className="font-display text-lg font-semibold">All slots</h2>
+        <h2 className="font-display text-lg font-semibold">Your slots</h2>
         <div className="mt-3">
           <SlotTable slots={rows} />
         </div>

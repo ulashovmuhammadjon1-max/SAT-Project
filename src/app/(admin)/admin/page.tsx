@@ -4,6 +4,7 @@ import { ArrowRight, BookOpenText, CalendarCheck, FlaskConical, Languages, UserP
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { countedStudentWhere } from "@/lib/counted-students";
+import { requireAdmin } from "@/lib/session";
 
 export const metadata = { title: "Admin Overview" };
 export const dynamic = "force-dynamic";
@@ -19,6 +20,7 @@ const DAY = 24 * 60 * 60 * 1000;
  * Every query is a count, so the page stays cheap however large the tables get.
  */
 export default async function AdminOverviewPage() {
+  const admin = await requireAdmin();
   const now = new Date();
   const [
     students,
@@ -34,10 +36,10 @@ export default async function AdminOverviewPage() {
     prisma.user.count({ where: countedStudentWhere }),
     prisma.user.count({ where: { AND: [countedStudentWhere, { createdAt: { gte: new Date(now.getTime() - 7 * DAY) } }] } }),
     prisma.user.count({ where: { AND: [countedStudentWhere, { createdAt: { gte: new Date(now.getTime() - 30 * DAY) } }] } }),
-    prisma.booking.count({ where: { status: "UPCOMING", slot: { startsAt: { gte: now } } } }),
+    prisma.booking.count({ where: { status: "UPCOMING", slot: { hostId: admin.id, startsAt: { gte: now } } } }),
     prisma.researchProposal.count({ where: { status: "PENDING" } }),
     prisma.peerMentorApplication.count({ where: { status: "PENDING" } }),
-    prisma.booking.count({ where: { status: "PENDING" } }),
+    prisma.booking.count({ where: { status: "PENDING", slot: { hostId: admin.id } } }),
     Promise.all([
       prisma.ieltsWritingSubmission.count({ where: { status: { in: ["ASSIGNED", "IN_REVIEW"] } } }),
       prisma.ieltsSpeakingSubmission.count({ where: { status: { in: ["ASSIGNED", "IN_REVIEW"] } } }),
@@ -49,13 +51,13 @@ export default async function AdminOverviewPage() {
     { label: "Students", value: students, icon: Users },
     { label: "New this week", value: newThisWeek, icon: UserPlus },
     { label: "New in 30 days", value: newThisMonth, icon: UserPlus },
-    { label: "Upcoming sessions", value: upcomingSessions, icon: CalendarCheck },
+    { label: "Your upcoming sessions", value: upcomingSessions, icon: CalendarCheck },
   ];
 
   const queue = [
     { label: "Research proposals awaiting a decision", value: pendingProposals, href: "/admin/research" },
     { label: "Peer-mentor applications to review", value: pendingMentorApps, href: "/admin/peer-mentors" },
-    { label: "Session requests to approve", value: pendingSessionRequests, href: "/admin/bookings" },
+    { label: "Requests for your sessions to approve", value: pendingSessionRequests, href: "/admin/bookings" },
     { label: "IELTS Writing and Speaking reviews in the queue", value: ieltsQueue, href: "/admin/ielts" },
     { label: "SAT PDF uploads that need review", value: satUploadsToReview, href: "/admin/uploads" },
   ];

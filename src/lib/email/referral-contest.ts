@@ -35,7 +35,7 @@ export interface ContestInvite {
 }
 
 export const CONTEST_TARGET = 100;
-export const CONTEST_SUBJECT = `Invite ${CONTEST_TARGET} friends, win a full Desmos course from a 1580 scorer`;
+export const CONTEST_SUBJECT = `Invite ${CONTEST_TARGET} friends, win a full Desmos course from Scholarly`;
 
 export function buildContestEmail(invite: ContestInvite): EmailMessage {
   const firstName = (invite.name ?? "").trim().split(/\s+/)[0] || "there";
@@ -53,7 +53,7 @@ export function buildContestEmail(invite: ContestInvite): EmailMessage {
 
   const prize =
     `The first person to bring ${CONTEST_TARGET} friends onto Scholarly gets a full Desmos course ` +
-    `— the complete graphing-calculator method for the Digital SAT Math section — taught by a 1580 scorer, free.`;
+    `— the complete graphing-calculator method for the Digital SAT Math section — free.`;
 
   const how =
     `Invites only count through your own invite link. Share the link below; when a friend uses it to ` +

@@ -30,6 +30,20 @@ export interface BookingPrefill {
   weakestArea: string | null;
 }
 
+/**
+ * The topic a slot is listed under: the subject its host gave it, or, for the
+ * older slots that predate subjects, the SAT study-plan session they always were.
+ */
+const LEGACY_TOPIC = "SAT study plan";
+function topicOf(s: OpenSlot) {
+  return s.subject?.trim() || LEGACY_TOPIC;
+}
+
+/** SAT-specific questions are only asked when the session is about the SAT. */
+function isSatTopic(topic: string) {
+  return topic === LEGACY_TOPIC || /\bSAT\b/i.test(topic);
+}
+
 /** Group slots by calendar day *in the viewer's timezone*. */
 function groupByDay(slots: OpenSlot[]) {
   const map = new Map<string, OpenSlot[]>();
@@ -71,6 +85,7 @@ export function BookingForm({
     .every((r) => acked.has(r.id));
 
   const [slotId, setSlotId] = useState<string | null>(null);
+  const [topic, setTopic] = useState<string | null>(null);
   const [name, setName] = useState(prefill.name);
   const [email, setEmail] = useState(prefill.email);
   const [currentScore, setCurrentScore] = useState(prefill.currentScore?.toString() ?? "");
@@ -86,14 +101,23 @@ export function BookingForm({
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  const days = useMemo(() => (mounted ? groupByDay(slots) : []), [slots, mounted]);
+  const topics = useMemo(() => [...new Set(slots.map(topicOf))].sort((a, b) => a.localeCompare(b)), [slots]);
+  const visible = useMemo(() => (topic ? slots.filter((s) => topicOf(s) === topic) : slots), [slots, topic]);
+  const days = useMemo(() => (mounted ? groupByDay(visible) : []), [visible, mounted]);
   const timezone = useLocalTimezone();
   const selected = slots.find((s) => s.id === slotId);
+  const askSat = selected ? isSatTopic(topicOf(selected)) : false;
+
+  function chooseTopic(next: string | null) {
+    setTopic(next);
+    // A selection hidden by the filter would be booked without being visible.
+    if (next && selected && topicOf(selected) !== next) setSlotId(null);
+  }
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!slotId) {
-      toast.error("Please choose a time slot.");
+      toast.error("Please choose a session.");
       return;
     }
     startTransition(async () => {
@@ -101,11 +125,11 @@ export function BookingForm({
         slotId,
         name,
         email,
-        currentScore: currentScore ? parseInt(currentScore, 10) : null,
-        targetScore: targetScore ? parseInt(targetScore, 10) : null,
-        satDate: satDate || null,
+        currentScore: askSat && currentScore ? parseInt(currentScore, 10) : null,
+        targetScore: askSat && targetScore ? parseInt(targetScore, 10) : null,
+        satDate: askSat ? satDate || null : null,
         studyHoursPerWeek: hours ? parseInt(hours, 10) : null,
-        weakestArea: weakest || null,
+        weakestArea: askSat ? weakest || null : null,
         notes: notes || null,
         timezone,
         acknowledgedRequirements: [...acked],
@@ -252,11 +276,37 @@ export function BookingForm({
 
       <section aria-labelledby="pick-time">
         <h2 id="pick-time" className="font-display text-lg font-semibold">
-          2. Pick a time
+          2. Choose a topic and a time
         </h2>
         <p className="mt-0.5 text-sm text-muted-foreground">
-          Times shown in your local timezone{timezone && ` (${timezone})`}.
+          Each session is one-to-one. Times shown in your local timezone{timezone && ` (${timezone})`}.
         </p>
+
+        {topics.length > 1 && (
+          <div role="group" aria-label="Filter by topic" className="mt-4 flex flex-wrap gap-2">
+            {[null, ...topics].map((t) => {
+              const active = topic === t;
+              const count = t ? slots.filter((s) => topicOf(s) === t).length : slots.length;
+              return (
+                <button
+                  key={t ?? "all"}
+                  type="button"
+                  onClick={() => chooseTopic(t)}
+                  aria-pressed={active}
+                  className={cn(
+                    "rounded-full border px-3 py-1.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    active
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-border text-muted-foreground hover:bg-secondary hover:text-foreground",
+                  )}
+                >
+                  {t ?? "All topics"}
+                  <span className={cn("ml-1.5 tabular-nums", active ? "opacity-80" : "opacity-60")}>{count}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         <div className="mt-4 space-y-4">
           {!mounted && <p className="text-sm text-muted-foreground">Loading times…</p>}
@@ -272,6 +322,7 @@ export function BookingForm({
                       type="button"
                       onClick={() => setSlotId(s.id)}
                       aria-pressed={active}
+                      data-slot
                       className={cn(
                         "rounded-lg border px-3 py-2 text-left text-sm tabular-nums transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                         active
@@ -309,7 +360,7 @@ export function BookingForm({
             3. About you
           </h2>
           <p className="mt-0.5 text-sm text-muted-foreground">
-            Prefilled from your profile where we already know the answer.
+            Prefilled from your profile where we already know the answer. Your mentor reads this before the session.
           </p>
         </div>
 
@@ -326,34 +377,38 @@ export function BookingForm({
               required
             />
           </Field>
-          <Field id="currentScore" label="Current SAT score" hint="Optional">
-            <Input
-              id="currentScore"
-              type="number"
-              min={400}
-              max={1600}
-              value={currentScore}
-              onChange={(e) => setCurrentScore(e.target.value)}
-            />
-          </Field>
-          <Field id="targetScore" label="Target SAT score" hint="Optional">
-            <Input
-              id="targetScore"
-              type="number"
-              min={400}
-              max={1600}
-              value={targetScore}
-              onChange={(e) => setTargetScore(e.target.value)}
-            />
-          </Field>
-          <Field id="satDate" label="Upcoming test date" hint="Optional">
-            <Input
-              id="satDate"
-              type="date"
-              value={satDate}
-              onChange={(e) => setSatDate(e.target.value)}
-            />
-          </Field>
+          {askSat && (
+            <>
+              <Field id="currentScore" label="Current SAT score" hint="Optional">
+                <Input
+                  id="currentScore"
+                  type="number"
+                  min={400}
+                  max={1600}
+                  value={currentScore}
+                  onChange={(e) => setCurrentScore(e.target.value)}
+                />
+              </Field>
+              <Field id="targetScore" label="Target SAT score" hint="Optional">
+                <Input
+                  id="targetScore"
+                  type="number"
+                  min={400}
+                  max={1600}
+                  value={targetScore}
+                  onChange={(e) => setTargetScore(e.target.value)}
+                />
+              </Field>
+              <Field id="satDate" label="Upcoming test date" hint="Optional">
+                <Input
+                  id="satDate"
+                  type="date"
+                  value={satDate}
+                  onChange={(e) => setSatDate(e.target.value)}
+                />
+              </Field>
+            </>
+          )}
           <Field id="hours" label="Study hours per week" hint="Optional">
             <Input
               id="hours"
@@ -366,16 +421,18 @@ export function BookingForm({
           </Field>
         </div>
 
-        <Field id="weakest" label="Biggest SAT weakness" hint="Optional">
-          <Input
-            id="weakest"
-            value={weakest}
-            onChange={(e) => setWeakest(e.target.value)}
-            placeholder="e.g. running out of time on Reading"
-          />
-        </Field>
+        {askSat && (
+          <Field id="weakest" label="Biggest SAT weakness" hint="Optional">
+            <Input
+              id="weakest"
+              value={weakest}
+              onChange={(e) => setWeakest(e.target.value)}
+              placeholder="e.g. running out of time on Reading"
+            />
+          </Field>
+        )}
 
-        <Field id="notes" label="Anything else you'd like to discuss?" hint="Optional">
+        <Field id="notes" label="What would you like to focus on in the session?" hint="Optional">
           <Textarea
             id="notes"
             value={notes}

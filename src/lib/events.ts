@@ -8,7 +8,7 @@ import type { SessionType } from "@prisma/client";
  * the build rather than any test.
  */
 export const EVENT_TYPE_LABELS: Record<SessionType, string> = {
-  ONE_ON_ONE_SAT: "1-on-1 SAT guidance",
+  ONE_ON_ONE_SAT: "1-on-1 session",
   TEST_ANALYSIS: "Weekly practice-test review",
   FINANCIAL_LITERACY: "Financial literacy",
   LECTURE: "Expert lecture",
@@ -16,7 +16,7 @@ export const EVENT_TYPE_LABELS: Record<SessionType, string> = {
 };
 
 export const EVENT_TYPE_BLURB: Record<SessionType, string> = {
-  ONE_ON_ONE_SAT: "One-to-one strategy with a 1580 scorer.",
+  ONE_ON_ONE_SAT: "One-to-one time with a Scholarly mentor, on the topic you choose.",
   TEST_ANALYSIS:
     "We work through the week's practice test together — the questions people missed, and why.",
   FINANCIAL_LITERACY: "How money actually works, taught properly and free.",
