@@ -5,6 +5,7 @@ import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 import { StudentContainer } from "@/components/student/student-container";
 import { LiveProvider } from "@/components/live/live-provider";
+import { WhatsNewScreen } from "@/components/student/whats-new-screen";
 import { isTeacher } from "@/server/actions/teacher/classes";
 import { getMySubjects } from "@/server/actions/student/ap-subjects";
 
@@ -40,6 +41,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
         <StudentTopbar activeExam={exam.active} />
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <StudentContainer>{children}</StudentContainer>
+          <WhatsNewScreen userId={user.id} firstName={(user.name ?? "").trim().split(/\s+/)[0] || "there"} />
         </main>
       </div>
     </div>
