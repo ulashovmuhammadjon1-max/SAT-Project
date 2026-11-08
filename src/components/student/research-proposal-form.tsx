@@ -45,7 +45,7 @@ export function ResearchProposalForm() {
         </p>
       )}
 
-      <div className="grid gap-4 sm:grid-cols-[1fr_220px]">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1fr_220px]">
         <div className="space-y-1.5">
           <Label htmlFor="title">Project title</Label>
           <Input

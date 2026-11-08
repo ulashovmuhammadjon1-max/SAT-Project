@@ -96,7 +96,7 @@ export function IeltsEssayForm({ initial }: { initial?: EssayFormValues }) {
             />
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div className="space-y-1.5">
               <Label>Band</Label>
               {/* Only three values exist. A free number field here is how a 7.5

@@ -153,7 +153,7 @@ export default async function AdminIeltsTestPage({
                           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                             Options
                           </p>
-                          <ul className="grid gap-1 text-sm sm:grid-cols-2">
+                          <ul className="grid grid-cols-1 gap-1 text-sm sm:grid-cols-2">
                             {options.map((o) => (
                               <li key={o.key}>
                                 <span className="font-semibold">{o.key}</span> &nbsp;{o.text}

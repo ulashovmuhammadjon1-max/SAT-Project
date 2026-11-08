@@ -1,5 +1,26 @@
 # Project memory
 
+## Responsive layout: the conventions that keep phones working
+
+- **One navigation source.** `SidebarContent` (student) and `AdminSidebarContent`
+  render both the desktop aside (lg+) and the drawer below lg. Add links there,
+  never to a second list. Phones (<md) also get `StudentTabBar`, which renders its
+  own spacer so page content never hides behind it; it is hidden on `/community`,
+  which has its own full-height layout and composer.
+- **A responsive grid needs a base track.** `grid sm:grid-cols-2` with no base
+  `grid-cols-*` sizes its one phone column to the widest child, so a mockup or a
+  long word pushes the whole page past the screen — and inside an
+  `overflow-hidden` shell it is clipped silently. Write `grid grid-cols-1
+  sm:grid-cols-2`. 133 grids were fixed this way.
+- **Full-screen runners use `h-dvh`, not `h-screen`.** 100vh on a phone includes
+  the strip behind the browser toolbar, which hid the exam's Back/Next bar.
+- **The audit must open up `<main>` before measuring.** The app shells' `<main>`
+  is `overflow-y-auto`, which makes it a horizontal scroller too: a too-wide page
+  scrolls inside it and `document.scrollWidth` never moves. The first audit run
+  reported 0 problems on 104 routes for exactly that reason. Also measure text
+  glyphs (a Range), not boxes, and only exempt containers *declared*
+  `overflow-x-auto` — computed style cannot tell a vertical pane from a strip.
+
 ## Community: how notifications and emails work (migration 029)
 
 Live updates are **version polling**, not WebSockets/SSE: `/api/community/sync`

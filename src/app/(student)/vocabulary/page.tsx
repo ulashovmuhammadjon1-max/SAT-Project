@@ -40,7 +40,7 @@ export default async function VocabularyPage() {
         <AddWordDialog />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
         <Card>
           <CardContent className="p-5">
             <p className="font-display text-2xl font-semibold">{totalWords}</p>
@@ -67,7 +67,7 @@ export default async function VocabularyPage() {
         </Card>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Card className="border-primary/30 bg-primary/[0.03]">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base">
@@ -85,7 +85,7 @@ export default async function VocabularyPage() {
         </Card>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base">

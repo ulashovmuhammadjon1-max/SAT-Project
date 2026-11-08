@@ -96,7 +96,7 @@ export function PeerMentorApplyForm() {
         <p className="text-xs text-muted-foreground">One line students will see next to your name.</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="space-y-1.5">
           <Label htmlFor="satScore">SAT score</Label>
           <Input id="satScore" name="satScore" type="number" min={400} max={1600} placeholder="1520" />

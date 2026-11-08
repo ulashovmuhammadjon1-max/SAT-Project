@@ -110,7 +110,7 @@ export default async function ApHubPage() {
             </a>
           </div>
         ) : (
-          <div className="mt-3 grid gap-5 sm:grid-cols-2">
+          <div className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {mine.map((subject) => {
               const p = byCode.get(subject.code);
               const total = p?.total ?? subject.questionCount;

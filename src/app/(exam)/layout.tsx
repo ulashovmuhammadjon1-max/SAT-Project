@@ -6,5 +6,7 @@ import { requireVerifiedUser } from "@/lib/session";
 // get the entire viewport to themselves, same as the app they're modeled on.
 export default async function ExamLayout({ children }: { children: React.ReactNode }) {
   await requireVerifiedUser();
-  return <div className="h-screen w-screen overflow-hidden">{children}</div>;
+  // dvh, not vh: on a phone 100vh includes the strip behind the browser's own
+  // toolbar, which would hide the exam's Back/Next bar.
+  return <div className="h-screen w-screen overflow-hidden supports-[height:100dvh]:h-dvh">{children}</div>;
 }

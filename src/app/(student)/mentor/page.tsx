@@ -107,7 +107,7 @@ export default async function MentorPage() {
         </>
       ) : (
         <>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {PERKS.map((p) => (
               <Card key={p.title}>
                 <CardContent className="space-y-2 py-5">

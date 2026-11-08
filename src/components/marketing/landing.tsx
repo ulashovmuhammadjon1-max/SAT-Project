@@ -162,7 +162,7 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
           <div className="text-center lg:text-left">
             <Reveal direction="none" scale={0.96}>
               <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/70 px-3.5 py-1.5 text-[10px] font-semibold uppercase leading-tight tracking-[0.08em] text-muted-foreground shadow-soft backdrop-blur sm:text-[11.5px] sm:tracking-[0.1em]">
@@ -171,8 +171,10 @@ function Hero() {
                 </span>
                 <span className="text-left">
                   Free academic community
-                  <span className="mx-1.5 text-border">•</span>
-                  <span className="whitespace-nowrap">For students who want more</span>
+                  {/* Two lines on a phone: the second half never wraps, so
+                      sharing a line with the first pushed it off screen. */}
+                  <span className="mx-1.5 hidden text-border min-[400px]:inline">•</span>
+                  <span className="block whitespace-nowrap min-[400px]:inline">For students who want more</span>
                 </span>
               </span>
             </Reveal>
@@ -344,7 +346,7 @@ const valueStrip = (apCount: number) => [
 function ValueStrip() {
   return (
     <Reveal delay={0.5}>
-      <ul className="mt-16 grid gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5">
+      <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-6 border-t border-border/60 pt-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5">
         {valueStrip(useAp().live.length).map((v) => (
           <li key={v.title} className="flex items-start gap-3">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -439,7 +441,7 @@ function Programmes() {
           body="Scholarly is a free academic community. Do original research, learn from mentors, study AP subjects, prepare for IELTS, and build financial literacy, all with one account."
         />
 
-        <RevealGroup className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3" delay={0.05}>
+        <RevealGroup className="mx-auto mt-12 grid grid-cols-1 max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3" delay={0.05}>
           {programmes(live.length).map((p) => (
             <RevealItem key={p.title}>
               <HoverLift className="h-full">
@@ -511,7 +513,7 @@ function Research() {
       className="relative scroll-mt-20 overflow-hidden border-y border-border/60 bg-secondary/25 py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <SectionHeading
               align="left"
@@ -531,7 +533,7 @@ function Research() {
             </Reveal>
           </div>
 
-          <RevealGroup className="grid gap-4 sm:grid-cols-2" stagger={0.08}>
+          <RevealGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2" stagger={0.08}>
             {RESEARCH_STEPS.map((s, i) => (
               <RevealItem key={s.title}>
                 <div className="h-full rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
@@ -585,7 +587,7 @@ function Courses() {
           </ul>
         </Reveal>
 
-        <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-3" stagger={0.07}>
+        <RevealGroup className="mx-auto mt-12 grid grid-cols-1 max-w-5xl gap-4 sm:grid-cols-3" stagger={0.07}>
           {COURSE_POINTS.map((p) => (
             <RevealItem key={p.title}>
               <div className="h-full rounded-xl border border-border/70 bg-card p-5 shadow-soft">
@@ -658,7 +660,7 @@ function StreakBand() {
             aria-hidden
             className="pointer-events-none absolute -left-24 -top-24 h-56 w-56 rounded-full bg-primary/15 blur-3xl"
           />
-          <div className="relative grid gap-6 p-6 sm:p-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center lg:gap-8">
+          <div className="relative grid grid-cols-1 gap-6 p-6 sm:p-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center lg:gap-8">
             <div>
               <p className="flex items-center gap-2 font-display text-lg font-semibold">
                 <Zap className="h-5 w-5 text-warning" />
@@ -725,7 +727,7 @@ function SatSection() {
   return (
     <section id="sat" className="scroll-mt-20 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-center gap-10 rounded-3xl border border-border/70 bg-card/60 p-6 shadow-soft sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 rounded-3xl border border-border/70 bg-card/60 p-6 shadow-soft sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
           <div>
             <SectionLabel icon={CalendarDays}>Also on Scholarly</SectionLabel>
             <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
@@ -881,7 +883,7 @@ function Footer() {
   return (
     <footer className="border-t border-border/60 bg-secondary/25">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-950 text-white">

@@ -91,7 +91,7 @@ export function TeamMemberForm({ initial }: { initial?: TeamMemberValues }) {
             }}
           />
         </label>
-        <div className="grid flex-1 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 flex-1 gap-3 sm:grid-cols-2">
           <div className="space-y-1">
             <Label>Name</Label>
             <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full name" />

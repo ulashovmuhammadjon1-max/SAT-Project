@@ -23,7 +23,7 @@ export default async function VocabCollectionsPage() {
       {collections.length === 0 ? (
         <p className="text-sm text-muted-foreground">No vocab collections yet.</p>
       ) : (
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {collections.map((c) => {
             const complete = c.setsCompleted === c.setCount && c.setCount > 0;
             return (

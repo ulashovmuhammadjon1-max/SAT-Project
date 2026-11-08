@@ -56,7 +56,7 @@ export default async function SchoolsPage() {
           your class is doing. Free, with no per-seat pricing, ever.
         </p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {BENEFITS.map((b) => (
             <div key={b.title} className="rounded-2xl border border-border/70 bg-card p-6 shadow-soft">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-success/10 text-success">

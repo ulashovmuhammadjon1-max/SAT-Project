@@ -125,10 +125,10 @@ export function IeltsShell({
     // `exam-*` palette is already fixed, but a shared component that reaches
     // for `bg-background` would otherwise follow the site theme and render a
     // dark control on a light kiosk for anyone using dark mode.
-    <div ref={rootRef} className="theme-light-scope flex h-screen flex-col bg-exam-bg text-exam-text">
+    <div ref={rootRef} className="theme-light-scope flex h-screen supports-[height:100dvh]:h-dvh flex-col bg-exam-bg text-exam-text">
       <header className="relative z-20 shrink-0 border-b border-dashed border-exam-divider bg-exam-header">
-        <div className="flex h-[62px] items-center px-4">
-          <div className="flex min-w-0 flex-col gap-0.5">
+        <div className="flex h-[62px] items-center gap-2 px-3 sm:gap-0 sm:px-4">
+          <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-initial">
             <p className="truncate text-[14px] font-semibold leading-tight">{title}</p>
             {directions && directions.length > 0 ? (
               <button
@@ -149,7 +149,7 @@ export function IeltsShell({
           </div>
 
           {remaining != null && (
-            <div className="pointer-events-none absolute left-1/2 flex -translate-x-1/2 flex-col items-center">
+            <div className="pointer-events-none flex shrink-0 flex-col items-center sm:absolute sm:left-1/2 sm:-translate-x-1/2">
               <div className="flex h-[26px] items-center gap-1.5">
                 {timerHidden ? (
                   <Clock className="h-5 w-5 text-exam-muted" aria-hidden="true" />
@@ -183,27 +183,29 @@ export function IeltsShell({
             </div>
           )}
 
-          <div className="ml-auto flex items-center gap-1">
+          <div className="ml-auto flex shrink-0 items-center gap-1">
             <button
               type="button"
               onClick={toggleFullscreen}
+              aria-label={isFullscreen ? "Exit full screen" : "Full screen"}
               className={cn(
-                "flex h-[46px] min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover",
+                "flex h-[46px] min-w-[40px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover sm:min-w-[54px]",
                 FOCUS_RING
               )}
             >
               {isFullscreen ? <Minimize className="h-[18px] w-[18px]" /> : <Maximize className="h-[18px] w-[18px]" />}
-              <span className="whitespace-nowrap">{isFullscreen ? "Exit" : "Full Screen"}</span>
+              <span className="hidden whitespace-nowrap sm:inline">{isFullscreen ? "Exit" : "Full Screen"}</span>
             </button>
             <a
               href={exitHref}
+              aria-label="Exit"
               className={cn(
-                "flex h-[46px] min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover",
+                "flex h-[46px] min-w-[40px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover sm:min-w-[54px]",
                 FOCUS_RING
               )}
             >
               <X className="h-[18px] w-[18px]" />
-              <span className="whitespace-nowrap">Exit</span>
+              <span className="hidden whitespace-nowrap sm:inline">Exit</span>
             </a>
           </div>
         </div>
@@ -214,11 +216,11 @@ export function IeltsShell({
       <div className="min-h-0 flex-1 overflow-hidden">{children}</div>
 
       <div className="relative shrink-0 border-t border-exam-border bg-exam-header">
-        <div className="flex h-[54px] items-center gap-3 px-4">
+        <div className="flex h-[54px] items-center gap-2 px-3 sm:gap-3 sm:px-4">
           <p className="hidden truncate text-[14px] font-medium sm:block sm:w-[26%]">{studentName}</p>
           <div className="flex flex-1 justify-center">
             {centreLabel && (
-              <span className="flex h-[34px] items-center rounded-md bg-exam-strip px-4 text-[13px] font-medium text-white">
+              <span className="flex h-[34px] items-center whitespace-nowrap rounded-md bg-exam-strip px-3 text-[12px] font-medium text-white sm:px-4 sm:text-[13px]">
                 {centreLabel}
               </span>
             )}

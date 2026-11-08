@@ -70,7 +70,7 @@ export default async function IeltsSpeakingPage() {
 
       <ReviewBalance allowance={allowance} />
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {papers.map((paper) => {
           const parts = paper.sections.flatMap((s) => s.parts);
           const sub = byTest.get(paper.id);

@@ -20,7 +20,7 @@ export default function BookingLoading() {
             <Skeleton key={w} className="h-11 rounded-full" style={{ width: w }} />
           ))}
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {[0, 1, 2, 3].map((i) => (
             <SessionCardSkeleton key={i} />
           ))}

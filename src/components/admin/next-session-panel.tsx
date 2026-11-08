@@ -86,7 +86,7 @@ export function NextSessionPanel({ session }: { session: NextSessionInfo | null 
         </div>
 
         {/* Everything worth knowing before the call, without opening another page. */}
-        <div className="mt-5 grid gap-4 border-t border-border/60 pt-4 sm:grid-cols-3">
+        <div className="mt-5 grid grid-cols-1 gap-4 border-t border-border/60 pt-4 sm:grid-cols-3">
           <Detail
             icon={Target}
             label="Score"

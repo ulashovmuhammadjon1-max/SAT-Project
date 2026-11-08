@@ -132,7 +132,7 @@ export default async function AdminBookingsPage() {
 
       <EventCreator />
 
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-4">
         {/* Awaiting approval leads, because it is the only tile that is a
             to-do list rather than a status readout. */}
         <Stat label="Awaiting approval" value={awaiting} />

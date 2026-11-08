@@ -111,7 +111,7 @@ export default async function IeltsDashboardPage() {
       {/* Per-skill standing. Four cards, each a way in to that skill. */}
       <section className="space-y-3">
         <h2 className="font-display text-lg font-semibold">Your progress</h2>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {data.standings.filter((s) => SHOWN_SKILLS.has(s.skill)).map((s) => {
             const Icon = SKILL_ICON[s.skill];
             return (

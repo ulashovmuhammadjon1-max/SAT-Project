@@ -695,7 +695,7 @@ const QuestionCard = memo(function QuestionCard({
           </p>
         )}
         <ImageUploadField imageUrl={q.imageUrl} onChange={(url) => onUpdateQuestion(qIndex, { imageUrl: url })} />
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {q.choices.map((choice, cIndex) => (
             <label
               key={choice.label}
@@ -753,7 +753,7 @@ const QuestionCard = memo(function QuestionCard({
             + Add explanation (optional)
           </button>
         )}
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <div className="space-y-1">
             <Label className="text-xs text-muted-foreground">Domain</Label>
             <Select
@@ -907,7 +907,7 @@ function VocabReview({
         </CardContent>
       </Card>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {words.map((word, index) => (
           <Card key={index}>
             <CardContent className="space-y-2 p-4">

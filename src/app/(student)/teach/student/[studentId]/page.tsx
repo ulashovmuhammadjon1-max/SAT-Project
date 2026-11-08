@@ -49,7 +49,7 @@ export default async function TeachStudentPage({ params }: { params: { studentId
         </div>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm">Totals</CardTitle>
@@ -117,7 +117,7 @@ export default async function TeachStudentPage({ params }: { params: { studentId
         </Card>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm">Accuracy by domain</CardTitle>

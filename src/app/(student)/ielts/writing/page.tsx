@@ -104,7 +104,7 @@ export default async function IeltsWritingPage() {
       {mine.length > 0 && (
         <section className="space-y-3">
           <h2 className="font-display text-lg font-semibold">Your own topics</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {mine.map((paper) => {
               const parts = paper.sections.flatMap((s) => s.parts);
               const done = parts.filter((p) => {
@@ -169,7 +169,7 @@ export default async function IeltsWritingPage() {
               </Button>
             )}
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {paper.sections.flatMap((s) => s.parts).map((part) => {
               const sub = byPart.get(part.id);
               const band = sub?.review?.overallBand;

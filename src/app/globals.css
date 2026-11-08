@@ -203,6 +203,20 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Phones in landscape must not inflate text on their own. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Touch devices only. iOS Safari zooms the whole page into any text field
+     whose font is under 16px and does not zoom back out, which throws the
+     layout sideways mid-form. Desktop keeps its 14px fields. */
+  @media (hover: none) and (pointer: coarse) {
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
   }
 }
 

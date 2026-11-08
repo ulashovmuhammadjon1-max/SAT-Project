@@ -19,7 +19,7 @@ const FOCUS_RING =
  */
 export function ModuleOverScreen() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-exam-bg px-6 text-center">
+    <div className="flex h-screen supports-[height:100dvh]:h-dvh flex-col items-center justify-center bg-exam-bg px-6 text-center">
       <h1 className="text-[26px] font-semibold tracking-tight text-exam-blue">This Module Is Over</h1>
       <p className="mt-4 text-[15px] leading-[1.7] text-exam-text">All your work has been saved.</p>
       <p className="text-[15px] leading-[1.7] text-exam-text">
@@ -54,7 +54,7 @@ export function PreparingScreen({ onDone, ms = 2200 }: { onDone: () => void; ms?
   }, [ms]);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-exam-bg px-6 text-center">
+    <div className="flex h-screen supports-[height:100dvh]:h-dvh flex-col items-center justify-center bg-exam-bg px-6 text-center">
       <h1 className="text-[26px] font-semibold tracking-tight text-exam-text">
         We&apos;re Preparing Your Practice Test
       </h1>
@@ -103,7 +103,7 @@ export function BreakScreen({
   const ss = String(secondsLeft % 60).padStart(2, "0");
 
   return (
-    <div className="flex h-screen flex-col bg-[#1B1B1F] text-white">
+    <div className="flex h-screen supports-[height:100dvh]:h-dvh flex-col bg-[#1B1B1F] text-white">
       <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
         <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-white/50">Section Break</p>
         <h1 className="mt-3 text-[30px] font-semibold tracking-tight">Take a Break</h1>

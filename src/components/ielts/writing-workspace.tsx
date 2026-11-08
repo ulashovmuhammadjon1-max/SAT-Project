@@ -291,8 +291,11 @@ export function WritingWorkspace({
       exitHref="/ielts/writing"
       centreLabel={
         <>
-          {full && <span className="mr-2 opacity-80">{task.title}</span>}
-          Word Count:&nbsp;
+          {/* On a phone the task is already named by the Task 1 / Task 2
+              buttons beside this, so the chip keeps only the count. */}
+          {full && <span className="mr-2 hidden opacity-80 sm:inline">{task.title}</span>}
+          <span className="hidden sm:inline">Word Count:&nbsp;</span>
+          <span className="sm:hidden">Words&nbsp;</span>
           <span className={cn("tabular-nums", short && "text-exam-warning")}>{words}</span>
           <span className="opacity-70">&nbsp;/ {task.minWords}</span>
         </>

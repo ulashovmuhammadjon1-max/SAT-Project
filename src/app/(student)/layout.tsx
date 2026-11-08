@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { StudentSidebar } from "@/components/student/student-sidebar";
 import { StudentTopbar } from "@/components/student/student-topbar";
 import { StudentContainer } from "@/components/student/student-container";
+import { StudentMobileNavProvider, StudentTabBar } from "@/components/student/student-mobile-nav";
 import { LiveProvider } from "@/components/live/live-provider";
 import { WhatsNewScreen } from "@/components/student/whats-new-screen";
 import { isTeacher } from "@/server/actions/teacher/classes";
@@ -26,25 +27,32 @@ export default async function StudentLayout({ children }: { children: React.Reac
     getMySubjects(),
   ]);
 
+  const nav = {
+    activeExam: exam.active,
+    teaching,
+    classes: memberships.map((m) => m.class),
+    apSubjects: apSubjects.map((s) => ({ slug: s.slug, name: s.name, short: s.short })),
+  };
+
   return (
     // LiveProvider: one poller per tab for notifications, presence and the
     // community's live updates. See src/components/live/live-provider.tsx.
     <LiveProvider>
+    {/* Below lg the sidebar becomes a drawer, opened from the top bar or the
+        phone tab bar. Same content, one source. */}
+    <StudentMobileNavProvider {...nav}>
     <div className="flex min-h-screen bg-secondary/30">
-      <StudentSidebar
-        activeExam={exam.active}
-        teaching={teaching}
-        classes={memberships.map((m) => m.class)}
-        apSubjects={apSubjects.map((s) => ({ slug: s.slug, name: s.name, short: s.short }))}
-      />
+      <StudentSidebar {...nav} />
       <div className="flex min-w-0 flex-1 flex-col">
         <StudentTopbar activeExam={exam.active} />
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <StudentContainer>{children}</StudentContainer>
           <WhatsNewScreen userId={user.id} firstName={(user.name ?? "").trim().split(/\s+/)[0] || "there"} />
+          <StudentTabBar activeExam={exam.active} />
         </main>
       </div>
     </div>
+    </StudentMobileNavProvider>
     </LiveProvider>
   );
 }

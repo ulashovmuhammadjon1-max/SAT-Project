@@ -87,7 +87,7 @@ export default async function TeachClassPage({ params }: { params: { classId: st
 
       {/* Analytics row */}
       {a && active.students.length > 0 && (
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="flex items-center gap-2 text-sm">

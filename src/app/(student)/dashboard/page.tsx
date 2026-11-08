@@ -202,14 +202,14 @@ export default async function HomePage() {
         <h2 id="paths-heading" className="font-display text-lg font-semibold tracking-tight">
           Your programmes
         </h2>
-        <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {paths.map((p) => (
             <PathTile key={p.key} card={p} />
           ))}
         </div>
       </section>
 
-      <div className="stagger grid gap-4 md:grid-cols-2">
+      <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
         <DashboardAchievementsCard
           unlocked={achievements.unlocked}
           nextUp={achievements.nextUp}
@@ -223,7 +223,7 @@ export default async function HomePage() {
         />
       </div>
 
-      <div className="stagger grid gap-4 md:grid-cols-2">
+      <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
         <DashboardCoinsCard balance={coinUser?.coinBalance ?? 0} referralReward={settings.referralRewardCoins} />
         {upcomingSession && (
           <DashboardSessionCard

@@ -250,7 +250,7 @@ export function BookingExperience({
         <ArrowLeft className="h-4 w-4" aria-hidden /> All sessions
       </Button>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-8">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-8">
         {/* Summary: first on small screens so the student always sees what they are booking. */}
         <aside aria-label="Booking summary" className="space-y-5 rounded-xl border border-border bg-card p-5 sm:p-6 lg:sticky lg:top-6 lg:order-2">
           <SessionFacts slot={selected} />
@@ -429,7 +429,7 @@ function ReviewStep({ values, askSat, cost }: { values: DetailsValues; askSat: b
     <div className="space-y-6">
       <dl className="divide-y divide-border rounded-xl border border-border">
         {rows.map(([k, v]) => (
-          <div key={k} className="grid gap-1 px-4 py-3 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-4">
+          <div key={k} className="grid grid-cols-1 gap-1 px-4 py-3 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-4">
             <dt className="text-sm text-muted-foreground">{k}</dt>
             <dd className="break-words text-[15px]">{v}</dd>
           </div>

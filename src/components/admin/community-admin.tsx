@@ -385,7 +385,7 @@ function RestrictForm({ run, pending }: { run: (fn: () => Promise<{ ok: boolean;
     <div className="rounded-xl border border-border bg-card p-4">
       <p className="text-sm font-semibold">Pause a student&apos;s posting</p>
       <p className="text-xs text-muted-foreground">They can still read. They are notified, and it lifts automatically.</p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-[1fr_6rem]">
+      <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-[1fr_6rem]">
         <div className="relative">
           <Input
             value={chosen ? chosen.label : q}
@@ -450,7 +450,7 @@ function ChannelDialog({
           <DialogDescription>Changes appear for students straight away.</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div className="space-y-1.5">
               <Label htmlFor="ch-name">Name</Label>
               <Input
@@ -483,7 +483,7 @@ function ChannelDialog({
               ))}
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div className="space-y-1.5">
               <Label htmlFor="ch-cat">Category</Label>
               <select id="ch-cat" value={form.categoryId ?? ""} onChange={(e) => set("categoryId", e.target.value || null)} className="block w-full rounded-lg border border-input bg-background px-2.5 py-2 text-sm">

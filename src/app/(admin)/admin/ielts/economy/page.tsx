@@ -93,7 +93,7 @@ export default async function AdminIeltsEconomyPage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardContent className="space-y-1 py-5">
             <Gift className="h-4 w-4 text-muted-foreground" />

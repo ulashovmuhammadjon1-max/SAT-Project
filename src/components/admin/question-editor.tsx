@@ -179,7 +179,7 @@ export function QuestionEditor({
           <h1 className="font-display text-2xl font-semibold tracking-tight">Question Editor</h1>
           <p className="text-sm text-muted-foreground">Edit content, taxonomy, and explanation. Preview updates live.</p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {(prevId || nextId) && (
             <div className="flex items-center overflow-hidden rounded-lg border border-border">
               <Button variant="ghost" className="rounded-none border-r border-border" disabled={!prevId} asChild={!!prevId}>
@@ -215,7 +215,7 @@ export function QuestionEditor({
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Editor */}
         <div className="space-y-4">
           <Card>

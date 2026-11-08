@@ -61,7 +61,7 @@ export default async function AdminIeltsOverviewPage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Link href="/admin/ielts/writing">
           <Card className={cn("lift h-full", writingQueue > 0 && "border-amber-500/40")}>
             <CardContent className="space-y-1 py-5">
@@ -113,7 +113,7 @@ export default async function AdminIeltsOverviewPage() {
         </Card>
       )}
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-base">Recently marked</CardTitle>

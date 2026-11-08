@@ -79,15 +79,19 @@ export function ToolButton({
       onClick={onClick}
       disabled={disabled}
       aria-pressed={active}
+      aria-label={label}
+      title={label}
       className={cn(
-        "flex h-[46px] min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none transition-colors",
+        // Icon-only on phones, where five labelled tools cannot share a row
+        // with the section title and the clock.
+        "flex h-[46px] min-w-[40px] sm:min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none transition-colors",
         active ? "bg-exam-hover text-exam-blue" : "text-exam-text hover:bg-exam-hover",
         "disabled:pointer-events-none disabled:opacity-40",
         FOCUS_RING
       )}
     >
       <Icon className="h-[18px] w-[18px]" />
-      <span className="whitespace-nowrap">{label}</span>
+      <span className="hidden whitespace-nowrap sm:inline">{label}</span>
     </button>
   );
 }

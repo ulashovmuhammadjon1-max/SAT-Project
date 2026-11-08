@@ -86,7 +86,7 @@ export function SearchView({ channels }: { channels: ChannelView[] }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {KINDS.map((k) => (
-                <button key={k.id || "all"} type="button" onClick={() => setKind(k.id)} className={cn("rounded-full border px-3 py-1 text-xs font-medium transition-colors", kind === k.id ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/40")}>
+                <button key={k.id || "all"} type="button" onClick={() => setKind(k.id)} className={cn("rounded-full border px-3 py-2 text-xs font-medium transition-colors sm:py-1", kind === k.id ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/40")}>
                   {k.label}
                 </button>
               ))}
@@ -95,7 +95,7 @@ export function SearchView({ channels }: { channels: ChannelView[] }) {
               </button>
             </div>
             {showFilters && (
-              <div className="grid gap-3 rounded-2xl border border-border bg-card p-4 sm:grid-cols-2 animate-fade-in">
+              <div className="grid grid-cols-1 gap-3 rounded-2xl border border-border bg-card p-4 sm:grid-cols-2 animate-fade-in">
                 <label className="text-xs font-medium text-muted-foreground">
                   Channel
                   <select value={channel} onChange={(e) => setChannel(e.target.value)} className="mt-1 block w-full rounded-lg border border-input bg-background px-2.5 py-2 text-sm text-foreground">

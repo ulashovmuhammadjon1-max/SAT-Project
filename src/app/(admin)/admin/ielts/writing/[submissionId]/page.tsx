@@ -79,7 +79,7 @@ export default async function ReviewWritingPage({
         {submission.review && <Badge variant="navy">Already reviewed</Badge>}
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div className="space-y-4">
           <div className="rounded-lg border border-border bg-card p-4">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">

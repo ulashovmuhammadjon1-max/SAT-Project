@@ -120,7 +120,7 @@ export function WhatsNewScreen({ userId, firstName }: { userId: string; firstNam
               subtitle="Free with your Scholarly coins. Seats go quickly."
               action={{ label: "Book a session", onClick: () => go("/booking") }}
             >
-              <ul className="grid gap-2 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {s.items.map((x) => (
                   <li key={x.id} className="rounded-xl border border-border bg-card p-3">
                     <p className="text-[11px] font-semibold uppercase tracking-wide text-primary">{x.topic}</p>

@@ -40,7 +40,7 @@ export default async function TestsPage() {
         </p>
       </div>
 
-      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tests.map((test) => {
           const questionCount = test.modules.reduce((sum, m) => sum + m._count.questions, 0);
           const totalMinutes = test.modules.reduce((sum, m) => sum + m.timeLimitMinutes, 0);

@@ -67,7 +67,7 @@ export default async function ApTestResultPage({ params }: { params: { attemptId
       </div>
 
       {/* Score */}
-      <div className="grid gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
         <div className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft sm:col-span-2">
           <p className="text-xs uppercase tracking-wide text-muted-foreground">Raw score</p>
           <p className="mt-1 text-4xl font-semibold tabular-nums leading-none">

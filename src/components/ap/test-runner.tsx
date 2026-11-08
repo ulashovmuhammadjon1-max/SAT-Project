@@ -434,7 +434,7 @@ export function ApTestRunner({
                 onClick={toggleMark}
                 aria-pressed={marked.has(q.id)}
                 className={cn(
-                  "flex items-center gap-1.5 rounded px-1 py-0.5 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover",
+                  "flex items-center gap-1.5 rounded px-1 py-2 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover sm:py-0.5",
                   FOCUS_RING,
                 )}
               >

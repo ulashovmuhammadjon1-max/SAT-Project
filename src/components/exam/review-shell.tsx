@@ -136,7 +136,7 @@ export function ReviewShell({
   }, [step, matches, items.length]);
 
   return (
-    <div className="h-screen overflow-y-auto bg-secondary/30">
+    <div className="h-screen supports-[height:100dvh]:h-dvh overflow-y-auto bg-secondary/30">
       <header className="border-b border-border bg-navy-950 text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5">
           <div>
@@ -171,7 +171,7 @@ export function ReviewShell({
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-7xl gap-6 p-6 lg:grid-cols-[280px_1fr]">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-6 p-4 sm:p-6 lg:grid-cols-[280px_1fr]">
         <div className="space-y-5 lg:sticky lg:top-6 lg:h-fit">
           <div className="flex flex-wrap gap-1.5">
             {FILTERS.map((f) => {

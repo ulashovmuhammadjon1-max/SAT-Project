@@ -95,7 +95,7 @@ export default async function IeltsLandingPage() {
 
       <section className="space-y-4">
         <h2 className="font-display text-xl font-semibold">The two skills a human marks</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Card className="lift">
             <CardHeader className="flex flex-row items-center gap-3 space-y-0">
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-900 text-white">
@@ -155,7 +155,7 @@ export default async function IeltsLandingPage() {
           Every submission is scored by a person against the four official criteria, with a
           written note on each one saying what you did and what would move that band up.
         </p>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <div className="rounded-xl border border-border bg-card p-4">
             <p className="text-sm font-semibold">Writing</p>
             <p className="text-sm text-muted-foreground">{REVIEWER_CLAIM.WRITING}.</p>
@@ -180,7 +180,7 @@ export default async function IeltsLandingPage() {
 
       <section className="space-y-4">
         <h2 className="font-display text-xl font-semibold">What you get</h2>
-        <ul className="grid gap-2 sm:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {[
             "A full-screen Writing room with the task beside your answer",
             "Autosaved drafts, so a closed tab is not a lost essay",
@@ -199,7 +199,7 @@ export default async function IeltsLandingPage() {
         </ul>
       </section>
 
-      <section className="grid gap-4 sm:grid-cols-3">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card>
           <CardContent className="space-y-1 py-5">
             <PenLine className="h-4 w-4 text-muted-foreground" />

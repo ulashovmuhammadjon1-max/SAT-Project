@@ -8,7 +8,7 @@ import {
   ChevronDown,
   Compass,
   Mail,
-  Menu,
+  PanelLeftOpen,
   Search,
   Settings,
   ShieldCheck,
@@ -32,9 +32,11 @@ export function NavToggle() {
       type="button"
       onClick={openNav}
       aria-label="Open channels"
-      className="-ml-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground lg:hidden"
+      className="-ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground lg:hidden"
     >
-      <Menu className="h-5 w-5" />
+      {/* Not a hamburger: the app menu already owns that icon in the top
+          bar, and two identical buttons one above the other read as one. */}
+      <PanelLeftOpen className="h-5 w-5" />
     </button>
   );
 }

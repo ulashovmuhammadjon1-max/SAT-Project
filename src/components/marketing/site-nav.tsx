@@ -30,11 +30,18 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || open
           ? "border-b border-border/60 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60"
           : "border-b border-transparent bg-transparent"
       )}
@@ -73,7 +80,9 @@ export function SiteNav() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground md:hidden"
+          aria-expanded={open}
+          aria-controls="site-nav-mobile"
+          className="-mr-2 flex h-10 w-10 items-center justify-center rounded-lg text-foreground md:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -86,7 +95,8 @@ export function SiteNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-border/60 bg-background/95 backdrop-blur-xl md:hidden"
+            id="site-nav-mobile"
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border/60 bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="space-y-1 px-5 py-4">
               {LINKS.map((l) => (
@@ -94,7 +104,7 @@ export function SiteNav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground"
+                  className="flex min-h-11 items-center rounded-md px-3 text-[15px] font-medium text-muted-foreground active:bg-secondary"
                 >
                   {l.label}
                 </a>
@@ -106,10 +116,10 @@ export function SiteNav() {
                 <ThemeToggle />
               </div>
               <div className="flex gap-2 pt-2">
-                <Button variant="outline" className="flex-1" asChild>
+                <Button variant="outline" className="h-11 flex-1" asChild>
                   <Link href="/login">Sign in</Link>
                 </Button>
-                <Button className="flex-1" asChild>
+                <Button className="h-11 flex-1" asChild>
                   <Link href="/onboarding">Join free</Link>
                 </Button>
               </div>

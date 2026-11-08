@@ -19,7 +19,7 @@ const GROUPS: { label: string; emoji: string[] }[] = [
 export function EmojiPicker({ onPick, className }: { onPick: (e: string) => void; className?: string }) {
   const [tab, setTab] = useState(0);
   return (
-    <div className={cn("w-72 rounded-xl border border-border bg-popover p-2 shadow-xl", className)}>
+    <div className={cn("w-72 max-w-[calc(100vw-1.5rem)] rounded-xl border border-border bg-popover p-2 shadow-xl", className)}>
       <div className="mb-2 flex gap-1 overflow-x-auto no-scrollbar" role="tablist">
         {GROUPS.map((g, i) => (
           <button

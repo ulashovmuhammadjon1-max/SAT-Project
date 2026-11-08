@@ -291,12 +291,7 @@ function productFor(pathname: string): Product {
   return "HOME";
 }
 
-export function StudentSidebar({
-  activeExam = "SAT",
-  teaching = false,
-  classes = [],
-  apSubjects = [],
-}: {
+export interface StudentNavProps {
   activeExam?: ExamMode;
   /** True when a class is linked to this account — shows the Teacher Panel. */
   teaching?: boolean;
@@ -307,7 +302,32 @@ export function StudentSidebar({
    * down. This is a client component, so it must never fetch it itself.
    */
   apSubjects?: SidebarApSubject[];
-}) {
+}
+
+/** The desktop sidebar. Below `lg` the same content lives in the mobile drawer. */
+export function StudentSidebar(props: StudentNavProps) {
+  return (
+    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
+      <SidebarContent {...props} />
+    </aside>
+  );
+}
+
+/**
+ * Everything the sidebar shows: brand, programme menu, class switcher and the
+ * product's navigation. Rendered once in the desktop aside and once in the
+ * phone/tablet drawer, so the two can never drift apart.
+ *
+ * `touch` gives every row a taller hit area for fingers; the desktop sidebar
+ * keeps its original density.
+ */
+export function SidebarContent({
+  activeExam = "SAT",
+  teaching = false,
+  classes = [],
+  apSubjects = [],
+  touch = false,
+}: StudentNavProps & { touch?: boolean }) {
   const pathname = usePathname();
   const product = productFor(pathname);
   const baseGroups =
@@ -337,8 +357,8 @@ export function StudentSidebar({
   const home = "/dashboard";
 
   return (
-    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
-      <Link href={home} className="flex h-16 items-center gap-2 border-b border-border px-6">
+    <>
+      <Link href={home} className="flex h-16 shrink-0 items-center gap-2 border-b border-border px-6">
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-900 text-white">
           <GraduationCap className="h-4 w-4" />
         </span>
@@ -348,17 +368,22 @@ export function StudentSidebar({
       {/* Which programme this sidebar is showing. SAT by default; the chevron
           opens the other programmes — IELTS (switches the whole sidebar),
           Research, and School. */}
-      <ProductMenu activeExam={activeExam} product={product} />
+      <ProductMenu activeExam={activeExam} product={product} touch={touch} />
 
       {/* Inside School, the class is the unit everything hangs off — the
           switcher keeps "which class am I in?" answered at all times. */}
       {product === "SCHOOL" && <ClassSwitcher classes={classes} />}
 
-      <nav className="flex-1 space-y-4 overflow-y-auto p-3">
+      <nav aria-label="Main" className="flex-1 space-y-4 overflow-y-auto overscroll-contain p-3">
         {groups.map((group, gi) => (
           <div key={group.label ?? `plain-${gi}`} className="space-y-0.5">
             {group.label && (
-              <p className="px-3 pb-1 pt-1 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-muted-foreground/80">
+              <p
+                className={cn(
+                  "px-3 pb-1 pt-1 font-semibold uppercase tracking-[0.12em] text-muted-foreground/80",
+                  touch ? "text-[11px]" : "text-[10.5px]"
+                )}
+              >
                 {group.label}
               </p>
             )}
@@ -378,14 +403,16 @@ export function StudentSidebar({
                 <Link
                   key={`${item.href}-${item.label}`}
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "group flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium transition-all duration-200",
+                    "group flex items-center gap-3 rounded-xl px-3 text-sm font-medium transition-all duration-200",
+                    touch ? "min-h-11 py-2.5 text-[15px]" : "py-2",
                     active
                       ? "bg-primary text-primary-foreground shadow-soft"
                       : "text-muted-foreground hover:translate-x-0.5 hover:bg-secondary hover:text-foreground"
                   )}
                 >
-                  <item.icon className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
+                  <item.icon className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:scale-110" />
                   <span className="min-w-0 flex-1 truncate">{item.label}</span>
                   {item.badge && (
                     <span
@@ -403,7 +430,7 @@ export function StudentSidebar({
           </div>
         ))}
       </nav>
-    </aside>
+    </>
   );
 }
 
@@ -413,7 +440,7 @@ export function StudentSidebar({
  * mode (and navigate to that exam's home); Research and School navigate to
  * their own product homes — the sidebar re-derives the product from the URL.
  */
-function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: Product }) {
+function ProductMenu({ activeExam, product, touch = false }: { activeExam: ExamMode; product: Product; touch?: boolean }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
@@ -462,7 +489,10 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="flex w-full items-center gap-2.5 rounded-xl border border-border bg-secondary/50 px-3 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
+        className={cn(
+          "flex w-full items-center gap-2.5 rounded-xl border border-border bg-secondary/50 px-3 text-sm font-semibold transition-colors hover:bg-secondary",
+          touch ? "min-h-11 py-2.5" : "py-2"
+        )}
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-md bg-navy-900 text-[10px] font-bold text-white">
           {META[product].short}
@@ -486,7 +516,10 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
                   key={o.key}
                   href={o.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                  className={cn(
+                    "flex items-center gap-2.5 rounded-lg px-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground",
+                    touch ? "min-h-11 py-2.5" : "py-2"
+                  )}
                 >
                   <o.icon className="h-4 w-4" />
                   {META[o.key].label}
@@ -502,7 +535,10 @@ function ProductMenu({ activeExam, product }: { activeExam: ExamMode; product: P
                   type="button"
                   disabled={pending}
                   onClick={o.onSelect}
-                  className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:opacity-60"
+                  className={cn(
+                    "flex w-full items-center gap-2.5 rounded-lg px-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground disabled:opacity-60",
+                    touch ? "min-h-11 py-2.5" : "py-2"
+                  )}
                 >
                   <o.icon className="h-4 w-4" />
                   {META[o.key].label}

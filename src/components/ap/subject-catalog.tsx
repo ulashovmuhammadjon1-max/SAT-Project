@@ -227,7 +227,7 @@ export function SubjectCatalog({ subjects }: { subjects: CatalogSubject[] }) {
           filters.
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((s) => (
             <SubjectCard
               key={s.code}

@@ -50,7 +50,7 @@ export function TestActions({ testId, status }: { testId: string; status: string
   }
 
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-wrap gap-2">
       {status !== "PUBLISHED" ? (
         <Button onClick={() => change("PUBLISHED")} disabled={isPending}>
           {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <CheckCircle2 className="h-4 w-4" />}

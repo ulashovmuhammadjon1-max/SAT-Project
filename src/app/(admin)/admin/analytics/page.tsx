@@ -154,7 +154,7 @@ export default async function AdminAnalyticsPage() {
           </div>
         )}
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <MetricCard label="Students" value={students.length} />
           <MetricCard
             label="Countries reached"
@@ -190,7 +190,7 @@ export default async function AdminAnalyticsPage() {
           />
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Users by country</CardTitle>
@@ -296,7 +296,7 @@ export default async function AdminAnalyticsPage() {
       <section className="space-y-4">
         <h2 className="font-display text-lg font-semibold tracking-tight">Performance</h2>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <MetricCard label="Total attempts" value={totalAttempts} />
           <MetricCard label="Submitted attempts" value={submittedAttempts} />
           <MetricCard label="Completion rate" value={`${completionRate}%`} />

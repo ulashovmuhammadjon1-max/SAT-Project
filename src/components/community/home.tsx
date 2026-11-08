@@ -100,7 +100,7 @@ export function CommunityHomeView({ data, categories }: { data: HomeData; catego
         </div>
       </section>
 
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <div className="mx-auto grid grid-cols-1 max-w-6xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="min-w-0 space-y-10">
           {announcement && (
             <Link
@@ -145,7 +145,7 @@ export function CommunityHomeView({ data, categories }: { data: HomeData; catego
             {lists.unanswered.length === 0 ? (
               <EmptyCard icon={CircleHelp} title="Every question has an answer" body="Nothing is waiting right now. Got a question of your own?" href={`/community/${postable.find((c) => c.slug === "math")?.slug ?? postable[0]?.slug ?? "general"}?compose=question`} cta="Ask a question" />
             ) : (
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {lists.unanswered.map((m) => (
                   <Link
                     key={m.id}
@@ -169,7 +169,7 @@ export function CommunityHomeView({ data, categories }: { data: HomeData; catego
 
           {lists.achievements.length > 0 && (
             <Section icon={Trophy} title="Recent achievements" subtitle="Scores, offers and milestones from the community.">
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {lists.achievements.map((m) => (
                   <Link
                     key={m.id}

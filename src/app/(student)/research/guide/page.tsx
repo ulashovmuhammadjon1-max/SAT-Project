@@ -58,7 +58,7 @@ export default async function ResearchGuidePage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {SECTIONS.map((s) => (
           <Card key={s.title}>
             <CardContent className="py-5">

@@ -56,7 +56,7 @@ export default async function StudentAnalyticsPage() {
         <p className="text-sm text-muted-foreground">A closer look at your performance.</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StatCard label="Accuracy" value={`${accuracy}%`} icon={Target} />
         <StatCard label="Avg. time / question" value={avgTime ? formatDuration(avgTime) : "—"} icon={Clock} />
         <StatCard label="Full tests completed" value={submittedAttempts.length} icon={TrendingUp} />

@@ -86,7 +86,7 @@ export default async function QuestionBankPage({
       <OverviewStats overview={overview} />
 
       {/* Quick entry points */}
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <QuickCard
           href={`/practice/start?subject=${subject}&newOnly=1`}
           icon={Sparkles}

@@ -131,7 +131,7 @@ export function AssignmentForm({
       </div>
       <p className="-mt-2 text-[11px] text-muted-foreground">{active.hint}</p>
 
-      <div className="grid gap-3 sm:grid-cols-[1fr_220px]">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_220px]">
         <div className="space-y-1">
           <Label>Title</Label>
           <Input
@@ -163,7 +163,7 @@ export function AssignmentForm({
 
       {kind === "QUESTIONS" && <QuestionPicker onChange={setQuestions} />}
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <div className="space-y-1">
           <Label>Instructions (optional)</Label>
           <Textarea

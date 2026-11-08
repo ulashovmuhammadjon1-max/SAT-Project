@@ -41,7 +41,7 @@ export default async function MyBookingsPage({
               <p className="font-display text-lg font-semibold">You&apos;re booked!</p>
             </div>
 
-            <dl className="mt-4 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
+            <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
               <div className="flex justify-between sm:block">
                 <dt className="text-muted-foreground">Date</dt>
                 <dd className="font-medium">

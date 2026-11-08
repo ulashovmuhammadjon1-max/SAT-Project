@@ -76,7 +76,7 @@ export default async function LeaderboardPage({
               </ol>
               {board.me && (
                 <>
-                  <p className="border-t px-6 py-2 text-center text-xs text-muted-foreground">
+                  <p className="border-t px-4 py-2 text-center sm:px-6 text-xs text-muted-foreground">
                     ⋯ {board.me.rank - board.rows.length - 1} more
                   </p>
                   <ol className="border-t">
@@ -118,7 +118,7 @@ function Row({ row, unit }: { row: LeaderboardRow; unit: string }) {
   return (
     <li
       className={cn(
-        "flex items-center gap-3 border-b px-6 py-2.5 last:border-0",
+        "flex items-center gap-3 border-b px-4 py-2.5 last:border-0 sm:px-6",
         row.isMe && "bg-primary/5"
       )}
     >

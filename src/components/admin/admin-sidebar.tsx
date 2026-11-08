@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
+  Menu,
   UploadCloud,
   ListChecks,
   Globe2,
@@ -32,6 +34,7 @@ import {
   MessagesSquare,
 } from "lucide-react";
 
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 interface AdminNavItem {
@@ -138,13 +141,15 @@ function sectionFor(pathname: string): Section {
   return "scholarly";
 }
 
-function NavLink({ item, pathname }: { item: AdminNavItem; pathname: string }) {
+function NavLink({ item, pathname, touch = false }: { item: AdminNavItem; pathname: string; touch?: boolean }) {
   const active = item.exact ? pathname === item.href : under(pathname, item.href);
   return (
     <Link
       href={item.href}
+      aria-current={active ? "page" : undefined}
       className={cn(
-        "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+        "flex items-center gap-3 rounded-lg px-3 text-sm font-medium transition-colors",
+        touch ? "min-h-11 py-2.5 text-[15px]" : "py-2",
         active
           ? "bg-primary text-primary-foreground shadow-soft"
           : "text-muted-foreground hover:bg-secondary hover:text-foreground"
@@ -157,12 +162,48 @@ function NavLink({ item, pathname }: { item: AdminNavItem; pathname: string }) {
 }
 
 export function AdminSidebar() {
+  return (
+    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
+      <AdminSidebarContent />
+    </aside>
+  );
+}
+
+/** Below lg the same navigation opens in a drawer from the top bar. */
+export function AdminMobileNav() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  useEffect(() => setOpen(false), [pathname]);
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="Open admin navigation"
+        className="-ml-1.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+      >
+        <Menu className="h-5 w-5" />
+      </button>
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetContent
+          side="left"
+          className="flex w-[86vw] max-w-[320px] flex-col gap-0 p-0 pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] lg:hidden"
+        >
+          <SheetTitle className="sr-only">Admin navigation</SheetTitle>
+          <AdminSidebarContent touch />
+        </SheetContent>
+      </Sheet>
+    </>
+  );
+}
+
+function AdminSidebarContent({ touch = false }: { touch?: boolean }) {
   const pathname = usePathname();
   const section = sectionFor(pathname);
 
   return (
-    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
-      <div className="flex h-16 items-center gap-2 border-b border-border px-6">
+    <>
+      <div className="flex h-16 shrink-0 items-center gap-2 border-b border-border px-6">
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-900 text-white">
           <GraduationCap className="h-4 w-4" />
         </span>
@@ -183,7 +224,8 @@ export function AdminSidebar() {
               role="tab"
               aria-selected={section === s.id}
               className={cn(
-                "rounded-md px-3 py-1.5 text-center text-xs font-semibold transition-colors",
+                "rounded-md px-3 text-center text-xs font-semibold transition-colors",
+                touch ? "py-2.5 text-[13px]" : "py-1.5",
                 section === s.id
                   ? "bg-card text-foreground shadow-soft"
                   : "text-muted-foreground hover:text-foreground"
@@ -195,11 +237,11 @@ export function AdminSidebar() {
         </div>
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto p-3">
+      <nav aria-label="Admin" className="flex-1 space-y-1 overflow-y-auto overscroll-contain p-3">
         {NAV[section].map((item) => (
-          <NavLink key={item.href} item={item} pathname={pathname} />
+          <NavLink key={item.href} item={item} pathname={pathname} touch={touch} />
         ))}
       </nav>
-    </aside>
+    </>
   );
 }

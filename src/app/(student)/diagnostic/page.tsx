@@ -68,7 +68,7 @@ function SatPanel({ status }: { status: DiagnosticStatus | undefined }) {
           Every domain of the Digital SAT, from easy to hard, in the same test screen you will use for full practice tests.
         </p>
       </div>
-      <div className="grid gap-4 px-6 py-6 sm:grid-cols-2 sm:px-8">
+      <div className="grid grid-cols-1 gap-4 px-6 py-6 sm:grid-cols-2 sm:px-8">
         <Fact icon={BookOpenCheck} title={`${DIAGNOSTIC_SIZE} questions`} body="13 Reading and Writing, then 12 Math" />
         <Fact icon={Clock} title={`About ${DIAGNOSTIC_MINUTES} minutes`} body="No timer. Take the time you need" />
         <Fact icon={Calculator} title="Calculator and reference sheet" body="Available on every Math question" />
@@ -90,7 +90,7 @@ function SatResult({ result, completedAt }: { result: DiagnosticResult; complete
   return (
     <section className="space-y-6">
       <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-        <div className="grid gap-6 bg-gradient-to-br from-primary/[0.12] via-card to-card px-6 py-7 sm:grid-cols-[1.1fr_1fr] sm:px-8">
+        <div className="grid grid-cols-1 gap-6 bg-gradient-to-br from-primary/[0.12] via-card to-card px-6 py-7 sm:grid-cols-[1.1fr_1fr] sm:px-8">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">Estimated SAT score</p>
             <p className="mt-2 font-serif text-6xl font-medium tabular-nums tracking-tight">{result.total.estimate}</p>
@@ -124,7 +124,7 @@ function SatResult({ result, completedAt }: { result: DiagnosticResult; complete
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
           <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
             <Target className="h-5 w-5 text-primary" /> Work on these first

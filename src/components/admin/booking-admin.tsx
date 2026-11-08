@@ -98,7 +98,7 @@ export function SlotCreator() {
         </p>
 
         <form onSubmit={submit} className="mt-4 space-y-4">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <Label>Dates</Label>
               {dates.map((d, i) => (
@@ -364,7 +364,7 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
                         }
                       />
                     )}
-                    <dl className="mt-2 grid gap-x-6 gap-y-1 text-xs sm:grid-cols-2">
+                    <dl className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-xs sm:grid-cols-2">
                       <Detail label="Current score" value={s.booking!.currentScore} />
                       <Detail label="Target score" value={s.booking!.targetScore} />
                       <Detail

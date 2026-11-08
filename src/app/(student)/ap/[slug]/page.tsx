@@ -54,11 +54,11 @@ export default async function ApSubjectPage({ params }: { params: { slug: string
           const hasContent = topics.some((t) => (topicProgress.get(t.code)?.total ?? 0) > 0);
           return (
             <div key={unit.number} className="rounded-2xl border border-border/70 bg-card shadow-soft">
-              <div className="flex items-start gap-3 px-5 py-4">
+              <div className="flex flex-wrap items-start gap-3 px-4 py-4 sm:flex-nowrap sm:px-5">
                 <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-sm font-semibold text-primary">
                   {unit.number}
                 </span>
-                <div className="min-w-0 flex-1">
+                <div className="min-w-0 flex-1 basis-[calc(100%-3rem)] sm:basis-auto">
                   <p className="font-medium leading-snug">
                     Unit {unit.number} — {unit.title}
                   </p>
@@ -68,15 +68,20 @@ export default async function ApSubjectPage({ params }: { params: { slug: string
                     </p>
                   )}
                 </div>
-                {unit.weight && (
-                  <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
-                    {unit.weight} of exam
-                  </span>
-                )}
-                {!hasContent && (
-                  <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
-                    <Clock className="h-3 w-3" /> Coming soon
-                  </span>
+                {/* Under the title on a phone, beside it from sm up. */}
+                {(unit.weight || !hasContent) && (
+                  <div className="flex shrink-0 flex-wrap items-start gap-3 pl-12 sm:pl-0">
+                    {unit.weight && (
+                      <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                        {unit.weight} of exam
+                      </span>
+                    )}
+                    {!hasContent && (
+                      <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
+                        <Clock className="h-3 w-3" /> Coming soon
+                      </span>
+                    )}
+                  </div>
                 )}
               </div>
 
@@ -87,7 +92,7 @@ export default async function ApSubjectPage({ params }: { params: { slug: string
                     if (!p || p.total === 0) return null;
                     const done = p.answered >= p.total;
                     return (
-                      <div key={t.code} className="flex flex-wrap items-center gap-3 px-5 py-3">
+                      <div key={t.code} className="flex flex-wrap items-center gap-3 px-4 py-3 sm:px-5">
                         <span className="w-8 shrink-0 text-sm font-semibold tabular-nums text-muted-foreground">
                           {t.code}
                         </span>

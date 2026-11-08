@@ -148,7 +148,7 @@ export default async function EssayLibraryPage({
           </CardContent>
         </Card>
       ) : (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {essays.map((e) => (
             <Link key={e.id} href={`/ielts/essays/${e.id}`} className="group">
               <Card className="h-full transition-colors hover:border-primary/50">

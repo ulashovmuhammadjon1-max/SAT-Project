@@ -172,7 +172,7 @@ export default async function SatHomePage() {
 
       <DashboardPlanCard plan={planSummary} />
 
-      <div className="stagger grid gap-4 md:grid-cols-2">
+      <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
         <DashboardAchievementsCard
           unlocked={achievements.unlocked}
           nextUp={achievements.nextUp}
@@ -186,7 +186,7 @@ export default async function SatHomePage() {
         />
       </div>
 
-      <div className="stagger grid gap-4 md:grid-cols-2">
+      <div className="stagger grid grid-cols-1 gap-4 md:grid-cols-2">
         <DashboardCoinsCard
           balance={coinUser?.coinBalance ?? 0}
           referralReward={settings.referralRewardCoins}
@@ -216,14 +216,14 @@ export default async function SatHomePage() {
         </Card>
       )}
 
-      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Overall SAT estimate" value={totalEstimate ?? "—"} sublabel="out of 1600" icon={TrendingUp} />
         <StatCard label="Reading & Writing" value={rwEstimate ?? "—"} sublabel="out of 800" icon={Target} tone="violet" />
         <StatCard label="Math" value={mathEstimate ?? "—"} sublabel="out of 800" icon={Target} tone="emerald" />
         <StatCard label="Avg. time / question" value={avgTime ? formatDuration(avgTime) : "—"} icon={Clock} tone="amber" />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>Score trend</CardTitle>
@@ -253,7 +253,7 @@ export default async function SatHomePage() {
         </Card>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle>Weakest topics</CardTitle>

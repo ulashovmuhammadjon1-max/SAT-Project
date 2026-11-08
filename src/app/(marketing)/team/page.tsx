@@ -90,7 +90,7 @@ const OPEN_ROLES: { title: string; body: string; requirements: string[] }[] = [
 
 function MentorGrid({ mentors, accent }: { mentors: Mentor[]; accent: string }) {
   return (
-    <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {mentors.map((m) => (
         <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
           <p className="font-medium">{m.name}</p>
@@ -182,7 +182,7 @@ export default async function TeamPage() {
         {core.length > 0 && (
           <section className="mt-12">
             <h2 className="font-display text-xl font-semibold tracking-tight">Core team</h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {core.map((m) => (
                 <div key={m.name} className="rounded-2xl border border-border/70 bg-card p-5 shadow-soft">
                   <div className="flex items-center gap-3">
@@ -292,7 +292,7 @@ export default async function TeamPage() {
             </a>{" "}
             with what you would do in your first month.
           </p>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {OPEN_ROLES.map((r) => (
               <div key={r.title} className="rounded-2xl border border-dashed border-border bg-card/50 p-5">
                 <p className="font-medium">{r.title}</p>

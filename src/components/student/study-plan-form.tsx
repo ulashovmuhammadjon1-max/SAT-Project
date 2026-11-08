@@ -51,7 +51,7 @@ export function StudyPlanForm({ initial }: { initial: OnboardingProfile }) {
         />
       </Row>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Row label="Current score">
           <Select
             value={profile.currentScore?.toString() ?? ""}
@@ -68,7 +68,7 @@ export function StudyPlanForm({ initial }: { initial: OnboardingProfile }) {
         </Row>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Row label="Grade level">
           <Select
             value={profile.gradeLevel ?? ""}
@@ -94,7 +94,7 @@ export function StudyPlanForm({ initial }: { initial: OnboardingProfile }) {
         </Row>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Row label="Strongest section">
           <Select
             value={profile.strongestSection ?? ""}
@@ -117,7 +117,7 @@ export function StudyPlanForm({ initial }: { initial: OnboardingProfile }) {
         </Row>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Row label="Daily goal type">
           <Select
             value={profile.dailyGoalType ?? ""}

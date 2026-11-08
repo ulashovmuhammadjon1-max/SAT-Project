@@ -32,7 +32,7 @@ export function CreateClassForm() {
 
   return (
     <form ref={formRef} action={submit} className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="name">Class name</Label>
           <Input id="name" name="name" placeholder="Grade 11 SAT — morning group" required />

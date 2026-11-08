@@ -53,7 +53,7 @@ export default async function AssignmentPage({
         <StatusBadge status={a.status} className="mt-1.5" />
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(360px,440px)]">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(360px,440px)]">
         {/* What the teacher set */}
         <div className="min-w-0 space-y-7">
           {a.instructions && (

@@ -56,7 +56,7 @@ export function EconomySettingsForm({
         <CardHeader>
           <CardTitle className="text-base">Coins</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-4 sm:grid-cols-2">
+        <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <NumberField
             id="signupBonusCoins"
             label="Welcome bonus"
@@ -79,7 +79,7 @@ export function EconomySettingsForm({
           <CardTitle className="text-base">Booking price ladder</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <NumberField
               id="bookingBaseCost"
               label="First booking costs"
@@ -128,7 +128,7 @@ export function EconomySettingsForm({
         <CardHeader>
           <CardTitle className="text-base">Community requirements</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-4 sm:grid-cols-2">
+        <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <TextField
             id="instagramHandle"
             label="Instagram handle"

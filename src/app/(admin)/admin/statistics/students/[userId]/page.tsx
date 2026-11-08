@@ -132,7 +132,7 @@ export default async function StudentProfilePage({ params }: { params: { userId:
       </Card>
 
       {/* ---- headline numbers -------------------------------------------- */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Stat
           label="Best score"
           value={totals.bestScore ?? "—"}
@@ -192,7 +192,7 @@ export default async function StudentProfilePage({ params }: { params: { userId:
         </CardContent>
       </Card>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {/* ---- onboarding profile ---------------------------------------- */}
         <Card>
           <CardHeader>
@@ -390,7 +390,7 @@ export default async function StudentProfilePage({ params }: { params: { userId:
       </Card>
 
       {/* ---- sessions + vocabulary ---------------------------------------- */}
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle className="text-base">Mentorship sessions</CardTitle>

@@ -378,7 +378,7 @@ export function Composer({
       }}
     >
       {suggestions.length > 0 && mentionQuery != null && (
-        <ul role="listbox" className="absolute bottom-full left-4 z-30 mb-2 w-72 overflow-hidden rounded-xl border border-border bg-popover p-1 shadow-xl animate-fade-in">
+        <ul role="listbox" className="absolute bottom-full left-4 z-30 mb-2 w-72 max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border border-border bg-popover p-1 shadow-xl animate-fade-in">
           <li className="px-2.5 pb-1 pt-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Mention</li>
           {suggestions.map((s, i) => (
             <li key={s.id} role="option" aria-selected={i === highlighted}>
@@ -547,7 +547,7 @@ export function Composer({
           className="block max-h-[260px] min-h-[2.75rem] w-full resize-none bg-transparent px-3.5 py-3 text-[15px] leading-relaxed placeholder:text-muted-foreground/70 focus:outline-none"
         />
 
-        <div className="flex items-center gap-0.5 px-1.5 pb-1.5">
+        <div className="flex flex-wrap items-center gap-0.5 gap-y-1 px-1.5 pb-1.5">
           {!threadRootId && (
             <div className="relative" ref={kindRef}>
               <button

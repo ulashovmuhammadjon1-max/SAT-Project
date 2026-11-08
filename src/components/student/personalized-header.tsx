@@ -107,7 +107,7 @@ export function PersonalizedHeader({
         </div>
       )}
 
-      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {/* Target vs predicted */}
         <div className="lift rounded-2xl border border-border bg-card p-5 shadow-soft">
           <div className="flex items-center gap-2 text-muted-foreground">

@@ -189,7 +189,7 @@ export function DetailsStep({
     <div className="space-y-8">
       <fieldset className="space-y-5">
         <legend className="mb-1 text-sm font-semibold text-muted-foreground">Contact</legend>
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field id="name" label="Your name" required error={errors.name}>
             <Input
               id="name"
@@ -222,7 +222,7 @@ export function DetailsStep({
       {askSat && (
         <fieldset className="space-y-5">
           <legend className="mb-1 text-sm font-semibold text-muted-foreground">Your SAT preparation (optional)</legend>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <Field id="currentScore" label="Current SAT score" optional error={errors.currentScore}>
               <Input
                 id="currentScore"
@@ -284,7 +284,7 @@ export function DetailsStep({
             placeholder="e.g. I want to check whether my research question is narrow enough."
           />
         </Field>
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field id="hours" label="Study hours per week" optional error={errors.hours}>
             <Input
               id="hours"

@@ -74,7 +74,7 @@ export default async function DailyChallengePage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card className={cn(daily.answeredToday && "border-emerald-500/40")}>
           <CardContent className="flex items-center gap-3 p-5">
             {daily.answeredToday ? (

@@ -19,7 +19,7 @@ export default async function AdminVocabularyPage() {
         <p className="text-sm text-muted-foreground">Decks and words published from vocabulary PDF uploads.</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {decks.map((deck) => (
           <Card key={deck.id}>
             <CardHeader className="pb-2">

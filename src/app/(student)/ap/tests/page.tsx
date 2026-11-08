@@ -51,7 +51,7 @@ export default async function ApTestsPage() {
           cta="Practise by topic"
         />
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {withTests.map((subject) => {
             const openSitting = subject.tests.find((t) => t.inProgressAttemptId);
             const taken = subject.tests.reduce((n, t) => n + t.attemptCount, 0);

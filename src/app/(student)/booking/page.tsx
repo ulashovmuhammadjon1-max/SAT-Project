@@ -115,7 +115,7 @@ export default async function BookingPage() {
           </div>
         </div>
 
-        <ul className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
           {PROMISES.map((p) => (
             <li key={p.title} className="flex gap-3 bg-card p-4 sm:p-5">
               <p.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />

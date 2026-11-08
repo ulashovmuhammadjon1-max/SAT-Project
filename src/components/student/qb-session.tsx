@@ -423,7 +423,7 @@ export function PracticeSession({
 
   if (finishing) {
     return (
-      <div className="flex h-screen flex-col items-center justify-center gap-3 bg-exam-bg px-6 text-center text-exam-text">
+      <div className="flex h-screen supports-[height:100dvh]:h-dvh flex-col items-center justify-center gap-3 bg-exam-bg px-6 text-center text-exam-text">
         <Loader2 className="h-6 w-6 animate-spin text-exam-muted" />
         <p className="text-[15px] text-exam-muted">Scoring your diagnostic…</p>
       </div>
@@ -433,7 +433,7 @@ export function PracticeSession({
   if (finished || !q) {
     const pct = score.answered ? Math.round((score.correct / score.answered) * 100) : 0;
     return (
-      <div className="flex h-screen flex-col items-center justify-center gap-4 bg-exam-bg px-6 text-center text-exam-text">
+      <div className="flex h-screen supports-[height:100dvh]:h-dvh flex-col items-center justify-center gap-4 bg-exam-bg px-6 text-center text-exam-text">
         <p className="text-[13px] font-medium uppercase tracking-[0.12em] text-exam-muted">Session complete</p>
         <p className="text-[44px] font-semibold tabular-nums leading-none">
           {score.correct} / {score.answered}
@@ -467,7 +467,7 @@ export function PracticeSession({
             disabled={isSaving}
             aria-pressed={state.marked}
             className={cn(
-              "flex items-center gap-1.5 rounded px-1 py-0.5 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover",
+              "flex items-center gap-1.5 rounded px-1 py-2 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover sm:py-0.5",
               FOCUS_RING
             )}
           >
@@ -565,7 +565,7 @@ export function PracticeSession({
   );
 
   return (
-    <div ref={rootRef} className="flex h-screen flex-col bg-exam-bg text-exam-text">
+    <div ref={rootRef} className="flex h-screen supports-[height:100dvh]:h-dvh flex-col bg-exam-bg text-exam-text">
       <QbHeader
         domainName={q.domainName}
         subject={q.subject}

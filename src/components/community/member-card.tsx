@@ -39,7 +39,7 @@ export function MemberPopover({ userId, children }: { userId: string; children: 
     <>
       <Popover open={open} onOpenChange={(o) => void onOpenChange(o)}>
         <PopoverTrigger asChild>{children}</PopoverTrigger>
-        <PopoverContent align="start" sideOffset={8} className="w-80 overflow-hidden p-0">
+        <PopoverContent align="start" sideOffset={8} className="w-80 max-w-[calc(100vw-1.5rem)] overflow-hidden p-0">
           {profile ? (
             <MemberCard
               profile={profile}

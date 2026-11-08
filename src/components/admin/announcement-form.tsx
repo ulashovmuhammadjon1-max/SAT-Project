@@ -35,7 +35,7 @@ export function AnnouncementForm() {
 
   return (
     <div className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-[1fr_180px]">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1fr_180px]">
         <div className="space-y-1.5">
           <Label>Title</Label>
           <Input value={title} onChange={(e) => setTitle(e.target.value)} />

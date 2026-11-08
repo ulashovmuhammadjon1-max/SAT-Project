@@ -75,7 +75,7 @@ export default async function AdminOverviewPage() {
         <p className="text-sm text-muted-foreground">The whole platform at a glance, and what is waiting on you.</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <Card key={stat.label}>
             <CardContent className="flex items-center justify-between p-6">
@@ -120,7 +120,7 @@ export default async function AdminOverviewPage() {
         </CardContent>
       </Card>
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {sections.map((s) => (
           <Link key={s.href} href={s.href} className="group">
             <Card className="h-full transition-colors group-hover:border-primary/40">

@@ -67,7 +67,7 @@ export function EventCreator() {
       <CardHeader>
         <CardTitle className="text-base">Publish an event</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-4 sm:grid-cols-2">
+      <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="ev-type">Type</Label>
           <select

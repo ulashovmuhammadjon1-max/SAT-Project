@@ -40,7 +40,7 @@ export default async function InvitePage() {
         </CardContent>
       </Card>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StatTile icon={Users} label="Friends joined" value={String(r.rewarded)} />
         <StatTile icon={Clock} label="Pending" value={String(r.pending)} />
         <StatTile

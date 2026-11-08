@@ -180,7 +180,7 @@ export function SessionBrowser({
       )}
 
       {!mounted ? (
-        <div className="grid gap-4 md:grid-cols-2" aria-busy="true" aria-label="Loading sessions">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2" aria-busy="true" aria-label="Loading sessions">
           {Array.from({ length: Math.min(4, slots.length) }, (_, i) => (
             <SessionCardSkeleton key={i} />
           ))}
@@ -203,7 +203,7 @@ export function SessionBrowser({
               {g.label && (
                 <h3 className="mb-3 text-sm font-semibold text-muted-foreground">{g.label}</h3>
               )}
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {g.items.map((s) => (
                   <SessionCard key={s.id} slot={s} cost={cost} canAfford={canAfford} onBook={() => onBook(s.id)} />
                 ))}

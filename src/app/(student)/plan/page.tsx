@@ -38,7 +38,7 @@ export default async function PlanPage() {
       {/* Score header. Only renders what the student actually gave us — an
           absent target must not become a fake "0". */}
       <Card className="overflow-hidden border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent">
-        <CardContent className="grid gap-6 p-6 sm:grid-cols-3 sm:p-8">
+        <CardContent className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-3 sm:p-8">
           <Metric
             icon={TrendingUp}
             label={plan.estimatedScore ? "Latest estimate" : "Starting score"}

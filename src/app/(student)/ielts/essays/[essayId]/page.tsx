@@ -82,7 +82,7 @@ export default async function EssayDetailPage({ params }: { params: { essayId: s
         </h1>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(0,1fr)] lg:items-start">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.9fr)_minmax(0,1fr)] lg:items-start">
         <Card>
           <CardContent className="py-6">
             <EssayReader essayText={essay.essayText} annotations={intact} />

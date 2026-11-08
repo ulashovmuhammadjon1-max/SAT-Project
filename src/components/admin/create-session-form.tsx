@@ -81,7 +81,7 @@ export function CreateSessionForm({ defaults }: { defaults: HostDefaults }) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="session-title">Title</Label>
           <Input
@@ -106,7 +106,7 @@ export function CreateSessionForm({ defaults }: { defaults: HostDefaults }) {
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="session-date">Date</Label>
           <Input
@@ -287,7 +287,7 @@ export function EditSessionButton({ session }: { session: EditableSession }) {
                 required
               />
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-1.5">
                 <Label htmlFor={`edit-date-${session.id}`}>Date</Label>
                 <Input
@@ -416,7 +416,7 @@ export function HostDefaultsForm({ defaults }: { defaults: HostDefaults }) {
           placeholder="https://meet.google.com/abc-defg-hij"
         />
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="default-subject">Subject you usually teach</Label>
           <Input

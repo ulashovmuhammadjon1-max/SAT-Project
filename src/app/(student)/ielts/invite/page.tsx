@@ -43,7 +43,7 @@ export default async function IeltsInvitePage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card className={cn(allowance.remaining > 0 && "border-emerald-600/40")}>
           <CardContent className="space-y-1 py-5">
             <Gift

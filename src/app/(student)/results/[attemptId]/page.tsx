@@ -112,7 +112,7 @@ export default async function ResultsPage({ params }: { params: { attemptId: str
         </Button>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,22rem)_1fr]">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,22rem)_1fr]">
         <ScoreCard
           data={{
             studentName: user.name ?? "Scholarly student",
@@ -134,7 +134,7 @@ export default async function ResultsPage({ params }: { params: { attemptId: str
         />
 
         <div className="space-y-4">
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <Stat
               label="Change"
               value={

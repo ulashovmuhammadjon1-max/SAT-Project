@@ -109,7 +109,7 @@ export function CustomTopicForm() {
     <div className="space-y-6">
       <div className="space-y-2">
         <Label className="text-sm font-medium">What do you want to write?</Label>
-        <div className="grid gap-2 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
           {MODES.map((m) => (
             <button
               key={m.value}

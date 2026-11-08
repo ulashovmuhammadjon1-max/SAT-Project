@@ -70,7 +70,7 @@ export default async function AchievementsPage() {
                 {done}/{items.length}
               </span>
             </h2>
-            <div className="stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="stagger grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {items.map((a) => (
                 <AchievementTile key={a.id} achievement={a} />
               ))}

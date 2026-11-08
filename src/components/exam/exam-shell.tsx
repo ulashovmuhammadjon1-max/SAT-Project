@@ -570,7 +570,7 @@ export function ExamShell({
   }
 
   return (
-    <div ref={rootRef} className="flex h-screen flex-col bg-exam-bg text-exam-text">
+    <div ref={rootRef} className="flex h-screen supports-[height:100dvh]:h-dvh flex-col bg-exam-bg text-exam-text">
       {header}
 
       <TestingBanner>This is a practice test</TestingBanner>
@@ -853,8 +853,8 @@ function ExamHeader({
 
   return (
     <header className="relative z-20 shrink-0 border-b border-dashed border-exam-divider bg-exam-header">
-      <div className="flex h-[62px] items-center px-4">
-        <div className="flex min-w-0 flex-col gap-0.5">
+      <div className="flex h-[62px] items-center gap-2 px-3 sm:gap-0 sm:px-4">
+        <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-initial">
           <p className="truncate text-[14px] font-semibold leading-tight">{sectionTitle}</p>
           <button
             type="button"
@@ -868,7 +868,9 @@ function ExamHeader({
           </button>
         </div>
 
-        <div className="pointer-events-none absolute left-1/2 flex -translate-x-1/2 flex-col items-center">
+        {/* Centred over the bar from sm up; on a phone it takes its own slot
+            between the title and the tools so the three cannot overlap. */}
+        <div className="pointer-events-none flex shrink-0 flex-col items-center sm:absolute sm:left-1/2 sm:-translate-x-1/2">
           <div className="flex h-[26px] items-center gap-1.5">
             {timerHidden ? (
               <Clock className="h-5 w-5 text-exam-muted" aria-hidden="true" />
@@ -908,7 +910,7 @@ function ExamHeader({
           </button>
         </div>
 
-        <div className="ml-auto flex items-center gap-0.5">
+        <div className="ml-auto flex shrink-0 items-center gap-0.5">
           {subject === "MATH" && (
             <>
               <ToolButton icon={Calculator} label="Calculator" onClick={onToggleCalculator} active={calculatorOpen} />
@@ -928,7 +930,7 @@ function ExamHeader({
             {notesPanelOpen && (
               <>
                 <div className="fixed inset-0 z-30" onMouseDown={onToggleNotesPanel} />
-                <div className="absolute right-0 top-full z-40 mt-1 w-[320px] rounded-md border border-exam-border bg-white shadow-examPopup">
+                <div className="absolute right-0 top-full z-40 mt-1 w-[min(320px,calc(100vw-1rem))] rounded-md border border-exam-border bg-white shadow-examPopup">
                   <div className="flex items-center justify-between border-b border-exam-divider px-3.5 py-2.5">
                     <p className="text-[13px] font-semibold">Highlights &amp; Notes</p>
                     <button
@@ -993,12 +995,12 @@ function ExamHeader({
                 type="button"
                 aria-label="More test tools"
                 className={cn(
-                  "flex h-[46px] min-w-[54px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover",
+                  "flex h-[46px] min-w-[40px] flex-col items-center justify-center gap-1 rounded px-2 text-[11px] font-medium leading-none text-exam-text transition-colors hover:bg-exam-hover sm:min-w-[54px]",
                   FOCUS_RING
                 )}
               >
                 <MoreHorizontal className="h-[18px] w-[18px]" aria-hidden="true" />
-                <span>More</span>
+                <span className="hidden sm:inline">More</span>
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -1314,7 +1316,7 @@ function QuestionBody({
             onClick={onToggleFlag}
             aria-pressed={flagged}
             className={cn(
-              "flex items-center gap-1.5 rounded px-1 py-0.5 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover",
+              "flex items-center gap-1.5 rounded px-1 py-2 text-[13px] font-medium text-exam-text transition-colors hover:bg-exam-hover sm:py-0.5",
               FOCUS_RING
             )}
           >

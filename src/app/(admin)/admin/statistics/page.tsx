@@ -35,7 +35,7 @@ export default async function AdminStatisticsPage() {
       </div>
 
       {/* ---- headline numbers ------------------------------------------- */}
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <Metric
           icon={Users}
           label="Students"
@@ -112,7 +112,7 @@ export default async function AdminStatisticsPage() {
               questions and then never arrived is a real student lost to a mail problem,
               not a junk signup.
             </p>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <MiniStat label="Total" value={stats.unverified.total} note="unconfirmed accounts" />
               <MiniStat
                 label="Last 7 days"
@@ -151,7 +151,7 @@ export default async function AdminStatisticsPage() {
       )}
 
       {/* ---- trends ------------------------------------------------------ */}
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle>New students, last 12 weeks</CardTitle>
@@ -253,7 +253,7 @@ export default async function AdminStatisticsPage() {
             those are opposite outcomes for the thing the platform is built around.
           </p>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <Metric
               icon={Users}
               label="Different students booked"
@@ -313,7 +313,7 @@ export default async function AdminStatisticsPage() {
       </Card>
 
       {/* ---- content QA --------------------------------------------------- */}
-      <div className="grid gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
         <OutlierTable
           title="Hardest questions"
           blurb="A question almost nobody gets right is usually broken — a wrong key, an ambiguous stem, a missing figure — rather than genuinely difficult. Worth reading before assuming it is hard."
