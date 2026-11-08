@@ -63,7 +63,7 @@ export function SearchView({ channels }: { channels: ChannelView[] }) {
   const patch = (id: string, p: Partial<CommunityMessageView>) => setResults((xs) => xs?.map((m) => (m.id === id ? { ...m, ...p } : m)) ?? null);
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
+    <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <PageHeader title="Search" subtitle="Find questions, answers, resources and discussions" icon={Search} />
       <div className="min-h-0 flex-1 overflow-y-auto">
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">

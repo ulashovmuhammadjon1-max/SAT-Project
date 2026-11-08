@@ -32,7 +32,7 @@ export function SettingsView({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
+    <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <PageHeader title="Profile & notifications" subtitle="How you appear and what reaches you" icon={Settings} />
       <div className="min-h-0 flex-1 overflow-y-auto">
         <div className="mx-auto max-w-3xl space-y-6 px-4 py-6 sm:px-6">

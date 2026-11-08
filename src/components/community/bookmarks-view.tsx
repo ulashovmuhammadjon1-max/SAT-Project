@@ -14,7 +14,7 @@ export function BookmarksView({ initial }: { initial: CommunityMessageView[] }) 
   const patch = (id: string, p: Partial<CommunityMessageView>) =>
     setItems((xs) => (p.bookmarked === false ? xs.filter((m) => m.id !== id) : xs.map((m) => (m.id === id ? { ...m, ...p } : m))));
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
+    <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <PageHeader title="Saved" subtitle="Discussions and resources you bookmarked" icon={Bookmark} />
       <div className="min-h-0 flex-1 overflow-y-auto">
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
