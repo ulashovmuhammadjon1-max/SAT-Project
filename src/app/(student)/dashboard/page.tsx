@@ -13,6 +13,7 @@ import {
 
 import { Card, CardContent } from "@/components/ui/card";
 import { ScenicHeader } from "@/components/shared/scenic-header";
+import { DiagnosticBanner } from "@/components/student/diagnostic-banner";
 import {
   DashboardCoinsCard,
   DashboardSessionCard,
@@ -194,6 +195,8 @@ export default async function HomePage() {
           )}
         </div>
       </ScenicHeader>
+
+      <DiagnosticBanner />
 
       <section aria-labelledby="paths-heading" className="space-y-4">
         <h2 id="paths-heading" className="font-display text-lg font-semibold tracking-tight">

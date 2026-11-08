@@ -51,6 +51,7 @@ import {
 import { cn } from "@/lib/utils";
 import { toggleBookmark } from "@/server/actions/student/bookmarks";
 import { submitQuestionAnswer, type SubmitAnswerResult } from "@/server/actions/student/question-bank";
+import { completeSatDiagnostic } from "@/server/actions/student/diagnostic";
 import type { QuestionState } from "@/types/exam";
 
 export interface SessionQuestion {
@@ -108,12 +109,19 @@ export function PracticeSession({
   backHref,
   sessionHref,
   studentName,
+  diagnostic = false,
 }: {
   questions: SessionQuestion[];
   backHref: string;
   /** The pinned URL that reopens exactly this set of questions. */
   sessionHref: string;
   studentName: string;
+  /**
+   * Diagnostic mode: answers are recorded and the runner moves on, but nothing
+   * says right or wrong (no colours, no explanation, no running score, no
+   * difficulty label) until the whole test is finished and scored.
+   */
+  diagnostic?: boolean;
 }) {
   const router = useRouter();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -138,7 +146,11 @@ export function PracticeSession({
   const q = questions[index];
   const state = states[index];
   const result = state?.result ?? null;
-  const revealed = !!result;
+  const answered = !!result;
+  // What the student is shown. In diagnostic mode an answer is locked in but
+  // never revealed.
+  const revealed = answered && !diagnostic;
+  const [finishing, setFinishing] = useState(false);
   const isLast = index === questions.length - 1;
 
   const patch = useCallback((changes: Partial<QbState>) => {
@@ -274,7 +286,7 @@ export function PracticeSession({
 
   // ---- Answering -----------------------------------------------------------
   function submit() {
-    if (!q || revealed || isPending) return;
+    if (!q || answered || isPending) return;
     const answer = q.type === "FREE_RESPONSE" ? state.freeResponseAnswer.trim() : state.selectedChoiceId;
     if (!answer) return;
 
@@ -290,10 +302,35 @@ export function PracticeSession({
         // Written by index rather than through `patch`: the student may have
         // navigated while the request was in flight.
         setStates((prev) => prev.map((s, i) => (i === at ? { ...s, result: res } : s)));
+        // A diagnostic moves straight on, like a real test.
+        if (diagnostic && at < questions.length - 1) setIndex((cur) => (cur === at ? at + 1 : cur));
       } catch {
         toast.error("Couldn't save that answer. Check your connection and try again.");
       }
     });
+  }
+
+  /** Diagnostic: score what was answered and go to the results. */
+  async function finishDiagnostic() {
+    const unanswered = states.filter((s) => !s.result).length;
+    if (
+      unanswered > 0 &&
+      !window.confirm(
+        `You have ${unanswered} unanswered ${unanswered === 1 ? "question" : "questions"}. They count as incorrect. Finish and see your results?`,
+      )
+    ) {
+      return;
+    }
+    setFinishing(true);
+    const res = await completeSatDiagnostic();
+    if (!res.ok) {
+      setFinishing(false);
+      toast.error(res.error);
+      return;
+    }
+    clearQbSession(signature);
+    router.push("/diagnostic?done=1");
+    router.refresh();
   }
 
   function goTo(next: number) {
@@ -354,8 +391,8 @@ export function PracticeSession({
     [states]
   );
   const outcomes: QuestionOutcome[] = useMemo(
-    () => states.map((s) => (s.result ? (s.result.isCorrect ? "correct" : "incorrect") : null)),
-    [states]
+    () => states.map((s) => (s.result && !diagnostic ? (s.result.isCorrect ? "correct" : "incorrect") : null)),
+    [states, diagnostic]
   );
   const score = useMemo(() => {
     const answered = states.filter((s) => s.result).length;
@@ -373,8 +410,8 @@ export function PracticeSession({
       if (target?.getAttribute("role") === "separator") return;
       if (e.key === "ArrowRight" && revealed) goTo(index + 1);
       else if (e.key === "ArrowLeft") goTo(index - 1);
-      else if (e.key === "Enter" && !revealed) submit();
-      else if (["1", "2", "3", "4"].includes(e.key) && q?.type === "MULTIPLE_CHOICE" && !revealed) {
+      else if (e.key === "Enter" && !answered) submit();
+      else if (["1", "2", "3", "4"].includes(e.key) && q?.type === "MULTIPLE_CHOICE" && !answered) {
         const choice = q.choices[Number(e.key) - 1];
         if (choice) patch({ selectedChoiceId: choice.id });
       }
@@ -383,6 +420,15 @@ export function PracticeSession({
     return () => window.removeEventListener("keydown", onKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, revealed, q, menuOpen, helpOpen, finished, state]);
+
+  if (finishing) {
+    return (
+      <div className="flex h-screen flex-col items-center justify-center gap-3 bg-exam-bg px-6 text-center text-exam-text">
+        <Loader2 className="h-6 w-6 animate-spin text-exam-muted" />
+        <p className="text-[15px] text-exam-muted">Scoring your diagnostic…</p>
+      </div>
+    );
+  }
 
   if (finished || !q) {
     const pct = score.answered ? Math.round((score.correct / score.answered) * 100) : 0;
@@ -431,9 +477,11 @@ export function PracticeSession({
 
           <span className="ml-auto flex items-center gap-2">
             <span className="hidden text-[12px] text-exam-muted sm:inline">{q.skillName}</span>
-            <span className="rounded-[3px] border border-exam-border bg-white px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-exam-muted">
-              {q.difficulty}
-            </span>
+            {!diagnostic && (
+              <span className="rounded-[3px] border border-exam-border bg-white px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-exam-muted">
+                {q.difficulty}
+              </span>
+            )}
             {q.type === "MULTIPLE_CHOICE" && !revealed && (
               <button
                 type="button"
@@ -486,7 +534,10 @@ export function PracticeSession({
                 crossOutEnabled={crossOutEnabled}
                 correctId={result?.correctChoiceId ?? null}
                 revealed={revealed}
-                onSelect={(id) => patch({ selectedChoiceId: id })}
+                onSelect={(id) => {
+                  // A diagnostic answer is final once saved.
+                  if (!answered) patch({ selectedChoiceId: id });
+                }}
                 onToggleEliminate={(id) =>
                   patch({
                     eliminated: state.eliminated.includes(id)
@@ -498,13 +549,16 @@ export function PracticeSession({
             ) : (
               <FreeResponseInput
                 value={state.freeResponseAnswer}
-                disabled={revealed}
+                disabled={answered}
                 onChange={(v) => patch({ freeResponseAnswer: v })}
               />
             )}
           </div>
 
-          {result && <ExplanationPanel result={result} questionType={q.type} />}
+          {result && revealed && <ExplanationPanel result={result} questionType={q.type} />}
+          {diagnostic && answered && (
+            <p className="mt-4 text-[13px] text-exam-muted">Answer saved. You will see how you did when you finish.</p>
+          )}
         </div>
       </div>
     </div>
@@ -517,6 +571,8 @@ export function PracticeSession({
         subject={q.subject}
         answered={score.answered}
         correct={score.correct}
+        diagnostic={diagnostic}
+        total={questions.length}
         calculatorOpen={calculatorOpen}
         onToggleCalculator={() => setCalculatorOpen((v) => !v)}
         onOpenReference={() => setReferenceOpen(true)}
@@ -526,7 +582,7 @@ export function PracticeSession({
         onExit={() => router.push(backHref)}
       />
 
-      <TestingBanner>Question Bank practice</TestingBanner>
+      <TestingBanner>{diagnostic ? "Free diagnostic test" : "Question Bank practice"}</TestingBanner>
 
       <div className="flex-1 overflow-hidden">
         {q.subject === "READING_WRITING" && q.passage ? (
@@ -625,7 +681,27 @@ export function PracticeSession({
                 Back
               </NavButton>
             )}
-            {!revealed ? (
+            {diagnostic ? (
+              !answered && canSubmit ? (
+                <NavButton onClick={submit} disabled={isPending}>
+                  {isPending ? (
+                    <span className="flex items-center gap-1.5">
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" /> Saving
+                    </span>
+                  ) : isLast ? (
+                    "Save answer"
+                  ) : (
+                    "Next"
+                  )}
+                </NavButton>
+              ) : isLast ? (
+                <NavButton onClick={() => void finishDiagnostic()}>Finish diagnostic</NavButton>
+              ) : (
+                <NavButton variant={answered ? "primary" : "ghost"} onClick={() => goTo(index + 1)}>
+                  {answered ? "Next" : "Skip"}
+                </NavButton>
+              )
+            ) : !revealed ? (
               <NavButton onClick={submit} disabled={!canSubmit || isPending}>
                 {isPending ? (
                   <span className="flex items-center gap-1.5">
@@ -652,8 +728,8 @@ export function PracticeSession({
           states={paletteStates}
           outcomes={outcomes}
           onJump={goTo}
-          onGoToReview={() => setFinished(true)}
-          reviewLabel="Finish session"
+          onGoToReview={() => (diagnostic ? void finishDiagnostic() : setFinished(true))}
+          reviewLabel={diagnostic ? "Finish diagnostic" : "Finish session"}
         />
       </div>
 
@@ -767,6 +843,8 @@ function QbHeader({
   isFullscreen,
   onToggleFullscreen,
   onExit,
+  diagnostic = false,
+  total = 0,
 }: {
   domainName: string;
   subject: SessionQuestion["subject"];
@@ -779,22 +857,24 @@ function QbHeader({
   isFullscreen: boolean;
   onToggleFullscreen: () => void;
   onExit: () => void;
+  diagnostic?: boolean;
+  total?: number;
 }) {
   return (
     <header className="shrink-0 border-b border-exam-border bg-exam-header">
       <div className="flex h-[62px] items-center gap-4 px-4">
         <div className="min-w-0 flex-1">
           <p className="truncate text-[15px] font-semibold leading-tight">
-            Question Bank: {subject === "MATH" ? "Math" : "Reading and Writing"}
+            {diagnostic ? "Diagnostic" : "Question Bank"}: {subject === "MATH" ? "Math" : "Reading and Writing"}
           </p>
           <p className="truncate text-[12px] leading-tight text-exam-muted">{domainName}</p>
         </div>
 
         <div className="hidden text-center sm:block">
           <p className="text-[15px] font-semibold tabular-nums leading-tight">
-            {correct}/{answered}
+            {diagnostic ? `${answered}/${total}` : `${correct}/${answered}`}
           </p>
-          <p className="text-[11px] leading-tight text-exam-muted">correct so far</p>
+          <p className="text-[11px] leading-tight text-exam-muted">{diagnostic ? "answered" : "correct so far"}</p>
         </div>
 
         <div className="flex flex-1 items-center justify-end gap-0.5">

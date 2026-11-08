@@ -151,6 +151,20 @@ export async function registerWithOnboarding(input: OnboardingSignup): Promise<O
       }
     }
 
+    // The free diagnostic, if they said yes on the last question. Enabling it
+    // is just the row existing; the test itself is picked when they start.
+    if (profile.diagnostic === true && track !== "EXPLORE") {
+      const kinds: ("SAT" | "IELTS")[] = track === "BOTH" ? ["SAT", "IELTS"] : [track === "IELTS" ? "IELTS" : "SAT"];
+      try {
+        await prisma.diagnosticTest.createMany({
+          data: kinds.map((kind) => ({ userId: createdUserId as string, kind })),
+          skipDuplicates: true,
+        });
+      } catch (error) {
+        console.error("[onboarding] Could not enable the diagnostic", error);
+      }
+    }
+
     await grantSignupRewards(createdUserId, input.referralCode ?? null);
 
     try {

@@ -121,6 +121,8 @@ export const onboardingProfileSchema = z.object({
   studyMinutesPerDay: z.number().int().min(5).max(600).nullable().default(null),
   dailyGoalType: z.enum(DAILY_GOAL_TYPES).nullable().default(null),
   dailyGoalValue: z.number().int().min(1).max(500).nullable().default(null),
+  /** Asked last: switch on the free diagnostic test for this account. */
+  diagnostic: z.boolean().nullable().default(null),
 });
 
 export type OnboardingProfile = z.infer<typeof onboardingProfileSchema>;
@@ -140,6 +142,7 @@ export const EMPTY_PROFILE: OnboardingProfile = {
   studyMinutesPerDay: null,
   dailyGoalType: null,
   dailyGoalValue: null,
+  diagnostic: null,
 };
 
 export const onboardingSignupSchema = z.object({

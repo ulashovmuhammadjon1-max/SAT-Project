@@ -210,6 +210,7 @@ model User {
   communityRestriction    CommunityRestriction?
   communityConversations  CommunityConversationMember[]
   communityDirectMessages CommunityDirectMessage[]
+  diagnosticTests         DiagnosticTest[]
 
   uploadsCreated     PDFUpload[]       @relation("UploadedBy")
   uploadsReviewed    AIProcessingJob[] @relation("ReviewedBy")
@@ -1721,6 +1722,39 @@ model CommunityDirectMessage {
   reports      CommunityReport[]
 
   @@index([conversationId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Free diagnostic test (migration 030)
+//
+// Offered at the end of sign-up and from /diagnostic. One row per student per
+// exam; the row existing is what "enabled" means. The SAT diagnostic pins its
+// question set here so a resumed or reloaded run is always the same questions,
+// and stores the result once, so the score a student saw never changes.
+// ---------------------------------------------------------------------------
+
+enum DiagnosticKind {
+  SAT
+  IELTS
+}
+
+model DiagnosticTest {
+  id          String         @id @default(cuid())
+  userId      String
+  kind        DiagnosticKind
+  requestedAt DateTime       @default(now())
+  startedAt   DateTime?
+  completedAt DateTime?
+  /// SAT: the pinned question ids, in order.
+  questionIds String[]       @default([])
+  /// IELTS: the Writing Task 2 part the student was given.
+  ieltsPartId String?
+  /// SAT: section estimates, domain accuracy and weakest skills.
+  result      Json?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, kind])
 }
 
 // ---------------------------------------------------------------------------

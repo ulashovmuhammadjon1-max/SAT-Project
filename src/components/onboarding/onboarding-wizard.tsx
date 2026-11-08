@@ -319,6 +319,10 @@ function buildSteps({
       ? ieltsSteps({ profile, patch, selectAndAdvance })
       : []),
 
+    // The free diagnostic — the last question for anyone preparing for an
+    // exam. Explore has no exam to diagnose, so it is not asked there.
+    ...(track === null || track === "EXPLORE" ? [] : [diagnosticStep(profile, selectAndAdvance)]),
+
     // Account — always last, whichever track was taken.
     {
       emoji: "🎉",
@@ -329,6 +333,49 @@ function buildSteps({
       content: <AccountStep profile={profile} referralCode={referralCode} />,
     },
   ];
+}
+
+/** The last question: switch on a free diagnostic test for the new account. */
+function diagnosticStep(
+  profile: OnboardingProfile,
+  selectAndAdvance: (p: Partial<OnboardingProfile>) => void,
+): Step {
+  const ieltsOnly = profile.track === "IELTS";
+  const both = profile.track === "BOTH";
+  return {
+    emoji: "🧪",
+    title: "Want a free diagnostic test?",
+    subtitle: ieltsOnly
+      ? "Write one IELTS Task 2 essay and a real person marks it, so you know your band before you start."
+      : both
+        ? "Find out where you stand: a short SAT diagnostic with an estimated score, plus one IELTS Task 2 essay marked by a person."
+        : "25 questions, about 35 minutes. You get an estimated SAT score and the exact skills to work on first.",
+    canContinue: profile.diagnostic !== null,
+    content: (
+      <div className="space-y-3">
+        <OptionCard
+          index={0}
+          icon="✅"
+          title="Yes, enable my free diagnostic"
+          subtitle={
+            ieltsOnly
+              ? "It will be waiting on your dashboard when you sign in"
+              : "It will be waiting on your dashboard. Take it whenever you are ready"
+          }
+          selected={profile.diagnostic === true}
+          onSelect={() => selectAndAdvance({ diagnostic: true })}
+        />
+        <OptionCard
+          index={1}
+          icon="⏭️"
+          title="Not now"
+          subtitle="You can turn it on later from your dashboard"
+          selected={profile.diagnostic === false}
+          onSelect={() => selectAndAdvance({ diagnostic: false })}
+        />
+      </div>
+    ),
+  };
 }
 
 /** Shared by every track: where the student is from. */
