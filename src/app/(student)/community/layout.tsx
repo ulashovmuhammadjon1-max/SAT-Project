@@ -16,7 +16,7 @@ export default async function CommunityLayout({ children }: { children: React.Re
   return (
     <CommunityShell
       initialCategories={categories}
-      me={{ id: user.id, name: displayName(me?.name), image: me?.image ?? null }}
+      me={{ id: user.id, name: displayName(me?.name, user.role), image: me?.image ?? null }}
       isAdmin={user.role === "ADMIN"}
     >
       {children}

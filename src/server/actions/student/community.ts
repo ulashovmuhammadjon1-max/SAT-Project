@@ -139,7 +139,7 @@ function includeFor(userId: string) {
     mentions: { where: { userId }, select: { id: true } },
     reactions: { select: { emoji: true, userId: true } },
     replyTo: {
-      select: { id: true, body: true, title: true, deletedAt: true, threadRootId: true, author: { select: { name: true } } },
+      select: { id: true, body: true, title: true, deletedAt: true, threadRootId: true, author: { select: { name: true, role: true } } },
     },
     pollOptions: {
       orderBy: { order: "asc" as const },
@@ -197,7 +197,7 @@ async function toViews(
       deleted,
       author: {
         id: m.author.id,
-        name: displayName(m.author.name),
+        name: displayName(m.author.name, m.author.role),
         image: m.author.image,
         isAdmin: m.author.role === "ADMIN",
         isMentor: mentors.has(m.author.id),
@@ -218,7 +218,7 @@ async function toViews(
       replyTo: m.replyTo
         ? {
             id: m.replyTo.id,
-            authorName: displayName(m.replyTo.author.name),
+            authorName: displayName(m.replyTo.author.name, m.replyTo.author.role),
             excerpt: m.replyTo.deletedAt ? "message deleted" : excerpt(m.replyTo.title ?? m.replyTo.body, 140) || "attachment",
             deleted: m.replyTo.deletedAt != null,
             threadRootId: m.replyTo.threadRootId,
@@ -379,13 +379,13 @@ export async function searchMembers(query: string): Promise<{ id: string; name: 
       NOT: { name: null },
       id: { notIn: [...iBlocked, ...blockedMe] },
     },
-    select: { id: true, name: true, image: true },
+    select: { id: true, name: true, image: true, role: true },
     orderBy: { name: "asc" },
     take: 8,
   });
   return users.map((u) => ({
     id: u.id,
-    name: displayName(u.name),
+    name: displayName(u.name, u.role),
     image: u.image,
     // The token typed into the body. The mention row stores the id, so two
     // people with the same first name still resolve to whoever was picked.
@@ -774,7 +774,7 @@ export async function acceptAnswer(rootId: string, replyId: string | null): Prom
   await prisma.communityMessage.update({ where: { id: rootId }, data: { acceptedAnswerId: reply?.id ?? null } });
 
   if (reply && reply.authorId !== user.id) {
-    const who = await prisma.user.findUnique({ where: { id: user.id }, select: { name: true } });
+    const who = await prisma.user.findUnique({ where: { id: user.id }, select: { name: true, role: true } });
     const answer = reply;
     runInBackground("community-accepted", () =>
       createNotifications([
@@ -784,7 +784,7 @@ export async function acceptAnswer(rootId: string, replyId: string | null): Prom
           actorId: user.id,
           messageId: answer.id,
           channelId: root.channel.id,
-          title: `${displayName(who?.name)} accepted your answer`,
+          title: `${displayName(who?.name, who?.role)} accepted your answer`,
           body: root.title ?? "Your answer was marked as the solution.",
           url: messageUrl(root.channel.slug, answer.id, rootId),
           dedupeKey: `accept:${rootId}:${answer.id}`,
@@ -949,7 +949,7 @@ export async function getCommunityHome(): Promise<CommunityHome> {
 
   const [account, announcements, candidates, unanswered, resourceRows, achievements, recent, presence] =
     await Promise.all([
-      prisma.user.findUnique({ where: { id: me.id }, select: { name: true, image: true } }),
+      prisma.user.findUnique({ where: { id: me.id }, select: { name: true, image: true, role: true } }),
       prisma.communityMessage.findMany({
         where: { ...live, OR: [{ kind: "ANNOUNCEMENT" }, { channel: { slug: "announcements" } }] },
         orderBy: { createdAt: "desc" },
@@ -997,7 +997,7 @@ export async function getCommunityHome(): Promise<CommunityHome> {
           userId: true,
           lastSeenAt: true,
           lastActiveAt: true,
-          user: { select: { name: true, image: true, communityMember: { select: { showPresence: true } } } },
+          user: { select: { name: true, image: true, role: true, communityMember: { select: { showPresence: true } } } },
         },
       }),
     ]);
@@ -1016,7 +1016,7 @@ export async function getCommunityHome(): Promise<CommunityHome> {
     .filter((p) => p.user.communityMember?.showPresence !== false && !iBlocked.has(p.userId))
     .filter((p) => isActiveNow(p, Date.now()) || Date.now() - p.lastActiveAt.getTime() < 10 * 60_000)
     .slice(0, 12)
-    .map((p) => ({ id: p.userId, name: displayName(p.user.name), image: p.user.image }));
+    .map((p) => ({ id: p.userId, name: displayName(p.user.name, p.user.role), image: p.user.image }));
 
   const [a, t, u, r, ach, rec] = await Promise.all([
     toViews(announcements, me),
@@ -1027,7 +1027,7 @@ export async function getCommunityHome(): Promise<CommunityHome> {
     toViews(recent, me),
   ]);
   return {
-    me: { name: displayName(account?.name), image: account?.image ?? null },
+    me: { name: displayName(account?.name, account?.role), image: account?.image ?? null },
     announcements: a,
     trending: t,
     unanswered: u.filter((m) => !m.authorBlocked),
@@ -1071,7 +1071,7 @@ export async function getMemberProfile(userId: string): Promise<MemberProfileVie
   const policyAllows = member?.dmPolicy !== "NOBODY" || me.role === "ADMIN";
   return {
     id: u.id,
-    name: displayName(u.name),
+    name: displayName(u.name, u.role),
     image: u.image,
     joined: u.createdAt.toISOString(),
     isAdmin: u.role === "ADMIN",

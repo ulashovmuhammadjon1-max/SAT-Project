@@ -14,7 +14,13 @@ export function isActiveNow(p: { lastSeenAt: Date; lastActiveAt: Date } | null |
   return now - p.lastSeenAt.getTime() < PRESENCE_SEEN_MS && now - p.lastActiveAt.getTime() < PRESENCE_ACTIVE_MS;
 }
 
-export const displayName = (name: string | null | undefined) => shortName(name ?? null, "A student");
+/**
+ * How a name appears in the community. Students show as "First L." for
+ * privacy; Scholarly team accounts (admins) show their full name, because it
+ * is a public role and "Scholarly A." reads like a mistake.
+ */
+export const displayName = (name: string | null | undefined, role?: string | null) =>
+  role === "ADMIN" && name?.trim() ? name.trim().replace(/\s+/g, " ") : shortName(name ?? null, "A student");
 
 /** Plain one-line excerpt with the markdown markers stripped. */
 export function excerpt(text: string, max = 160): string {

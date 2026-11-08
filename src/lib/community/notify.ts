@@ -173,7 +173,7 @@ export async function notifyForMessage(messageId: string): Promise<void> {
   });
   if (!m || m.deletedAt) return;
 
-  const actor = displayName(m.author.name);
+  const actor = displayName(m.author.name, m.author.role);
   const where = `#${m.channel.name}`;
   const text = excerpt(m.title ? `${m.title} — ${m.body}` : m.body) || "Shared an attachment";
   const url = messageUrl(m.channel.slug, m.id, m.threadRootId);
@@ -292,9 +292,9 @@ export async function notifyReaction(messageId: string, reactorId: string, emoji
   });
   if (blocked) return;
 
-  const reactor = await prisma.user.findUnique({ where: { id: reactorId }, select: { name: true } });
+  const reactor = await prisma.user.findUnique({ where: { id: reactorId }, select: { name: true, role: true } });
   const others = m.reactions.filter((r) => r.userId !== reactorId && r.userId !== m.authorId).length;
-  const who = displayName(reactor?.name);
+  const who = displayName(reactor?.name, reactor?.role);
   const title =
     others > 0
       ? `${who} and ${others} other${others === 1 ? "" : "s"} reacted to your message`

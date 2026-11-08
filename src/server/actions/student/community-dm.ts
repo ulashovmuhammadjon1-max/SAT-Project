@@ -98,6 +98,7 @@ export async function listConversations(): Promise<ConversationSummary[]> {
                   id: true,
                   name: true,
                   image: true,
+                  role: true,
                   communityPresence: true,
                   communityMember: { select: { showPresence: true } },
                 },
@@ -130,7 +131,7 @@ export async function listConversations(): Promise<ConversationSummary[]> {
         id: m.conversationId,
         other: {
           id: other.id,
-          name: displayName(other.name),
+          name: displayName(other.name, other.role),
           image: other.image,
           activeNow: other.communityMember?.showPresence !== false && isActiveNow(other.communityPresence),
         },
@@ -214,7 +215,7 @@ export async function getConversation(conversationId: string): Promise<{
     id: conversationId,
     other: {
       id: other.id,
-      name: displayName(other.name),
+      name: displayName(other.name, other.role),
       image: other.image,
       isAdmin: other.role === "ADMIN",
       isMentor: mentors.has(other.id),
@@ -310,8 +311,8 @@ export async function sendDirectMessage(input: {
   if (!other.mutedAt) {
     const recipient = other.userId;
     runInBackground("community-dm-notify", async () => {
-      const author = await prisma.user.findUnique({ where: { id: user.id }, select: { name: true } });
-      const title = `${displayName(author?.name)} sent you a message`;
+      const author = await prisma.user.findUnique({ where: { id: user.id }, select: { name: true, role: true } });
+      const title = `${displayName(author?.name, author?.role)} sent you a message`;
       const preview = excerpt(body, 160) || "Sent an attachment";
       // One live notification per unread stretch of a conversation: while the
       // last one is unread it is refreshed, so ten quick messages are one
