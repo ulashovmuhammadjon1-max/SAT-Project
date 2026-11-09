@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export type LocalTimeFormat = "full" | "date" | "time" | "dayLabel" | "dateShort";
+export type LocalTimeFormat = "full" | "date" | "time" | "dayLabel" | "dateShort" | "weekdayShort" | "dayMonth";
 
 const OPTIONS: Record<LocalTimeFormat, Intl.DateTimeFormatOptions> = {
   full: { weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" },
@@ -10,6 +10,8 @@ const OPTIONS: Record<LocalTimeFormat, Intl.DateTimeFormatOptions> = {
   dateShort: { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" },
   time: { hour: "numeric", minute: "2-digit" },
   dayLabel: { weekday: "short", month: "short", day: "numeric" },
+  weekdayShort: { weekday: "short" },
+  dayMonth: { month: "short", day: "numeric" },
 };
 
 /**

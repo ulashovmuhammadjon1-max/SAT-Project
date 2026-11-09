@@ -27,6 +27,7 @@ import { getLeaderboard } from "@/lib/leaderboard";
 import { ACTIVE_STATUSES } from "@/lib/booking/status";
 import { getExamContext } from "@/lib/exam/mode";
 import { prisma } from "@/lib/prisma";
+import { OpenSessionsCard } from "@/components/student/open-sessions-card";
 import { requireUser } from "@/lib/session";
 import { getSettings } from "@/lib/settings";
 import { cn } from "@/lib/utils";
@@ -197,6 +198,8 @@ export default async function HomePage() {
       </ScenicHeader>
 
       <DiagnosticBanner />
+
+      <OpenSessionsCard />
 
       <section aria-labelledby="paths-heading" className="space-y-4">
         <h2 id="paths-heading" className="font-display text-lg font-semibold tracking-tight">

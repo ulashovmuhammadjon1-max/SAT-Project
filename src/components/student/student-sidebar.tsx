@@ -128,6 +128,15 @@ const SAT_GROUPS: NavGroup[] = [
       { href: "/bookmarks", label: "Saved Questions", icon: Bookmark },
     ],
   },
+  // SAT students spend their time here, and until this group existed the
+  // sessions were only linked from the Home sidebar: six sat unbooked.
+  {
+    label: "Mentorship",
+    items: [
+      { href: "/booking", label: "1-on-1 Sessions", icon: CalendarPlus, exact: true },
+      { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
+    ],
+  },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
 ];
 
@@ -174,6 +183,13 @@ const BOTH_GROUPS: NavGroup[] = [
       { href: "/plan", label: "My SAT Plan", icon: Target },
       { href: "/analytics", label: "Analytics", icon: BarChart3 },
       { href: "/bookmarks", label: "Saved Questions", icon: Bookmark },
+    ],
+  },
+  {
+    label: "Mentorship",
+    items: [
+      { href: "/booking", label: "1-on-1 Sessions", icon: CalendarPlus, exact: true },
+      { href: "/bookings", label: "My Sessions", icon: CalendarCheck },
     ],
   },
   { label: null, items: [{ href: "/settings", label: "Settings", icon: Settings }] },
@@ -302,6 +318,8 @@ export interface StudentNavProps {
    * down. This is a client component, so it must never fetch it itself.
    */
   apSubjects?: SidebarApSubject[];
+  /** Bookable 1-on-1 sessions right now; shown as "N open" on the Sessions link. */
+  openSessions?: number;
 }
 
 /** The desktop sidebar. Below `lg` the same content lives in the mobile drawer. */
@@ -326,6 +344,7 @@ export function SidebarContent({
   teaching = false,
   classes = [],
   apSubjects = [],
+  openSessions = 0,
   touch = false,
 }: StudentNavProps & { touch?: boolean }) {
   const pathname = usePathname();
@@ -392,7 +411,12 @@ export function SidebarContent({
                 {group.empty}
               </p>
             )}
-            {group.items.map((item) => {
+            {group.items.map((rawItem) => {
+              // A live count beats a static label: "3 open" is the reason to click.
+              const item =
+                rawItem.href === "/booking" && openSessions > 0
+                  ? { ...rawItem, badge: `${openSessions} open` }
+                  : rawItem;
               // `exact` matters for the dashboards: without it, /ielts would
               // light up for every /ielts/* route at once. `also` lets an
               // exact item still own a child subtree (assignment pages).

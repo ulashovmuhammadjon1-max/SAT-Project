@@ -21,7 +21,7 @@ const PROMISES = [
   { icon: CoinsIcon, title: "Free to join", body: "Sessions use Scholarly coins, which you earn on the platform. No money." },
 ];
 
-export default async function BookingPage() {
+export default async function BookingPage({ searchParams }: { searchParams: { slot?: string } }) {
   const user = await requireUser();
 
   const [profile, slots, bookingContext, existing, botUsername] = await Promise.all([
@@ -129,6 +129,7 @@ export default async function BookingPage() {
       </header>
 
         <BookingExperience
+          initialSlotId={typeof searchParams.slot === "string" ? searchParams.slot : null}
           existing={existingView}
           slots={slots}
           context={bookingContext}

@@ -24,6 +24,7 @@ import { getLeaderboard } from "@/lib/leaderboard";
 import { ACTIVE_STATUSES } from "@/lib/booking/status";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { OpenSessionsCard } from "@/components/student/open-sessions-card";
 import { estimateScaledScore } from "@/lib/scoring/estimate";
 import { getPlanSummary } from "@/lib/plan/service";
 import { getSettings } from "@/lib/settings";
@@ -167,6 +168,8 @@ export default async function SatHomePage() {
         weakestSkills={weakest.map((w) => w.domain)}
         onboarded={profile?.onboardedAt != null}
       />
+
+      <OpenSessionsCard />
 
       {daily && <DashboardDailyCard daily={daily} />}
 

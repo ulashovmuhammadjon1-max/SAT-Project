@@ -9,6 +9,7 @@ import { LiveProvider } from "@/components/live/live-provider";
 import { WhatsNewScreen } from "@/components/student/whats-new-screen";
 import { isTeacher } from "@/server/actions/teacher/classes";
 import { getMySubjects } from "@/server/actions/student/ap-subjects";
+import { countOpenSessions } from "@/lib/booking/open-sessions";
 
 export default async function StudentLayout({ children }: { children: React.ReactNode }) {
   const user = await requireVerifiedUser();
@@ -17,7 +18,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
   const exam = await examContextOrDefault();
   // The sidebar is a client component, so everything it needs is resolved here
   // and handed down — its AP list included.
-  const [teaching, memberships, apSubjects] = await Promise.all([
+  const [teaching, memberships, apSubjects, openSessions] = await Promise.all([
     isTeacher(user.id, user.email ?? null),
     prisma.classMembership.findMany({
       where: { userId: user.id, class: { isArchived: false } },
@@ -25,6 +26,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
       select: { class: { select: { id: true, name: true, teacherName: true } } },
     }),
     getMySubjects(),
+    countOpenSessions(),
   ]);
 
   const nav = {
@@ -32,6 +34,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
     teaching,
     classes: memberships.map((m) => m.class),
     apSubjects: apSubjects.map((s) => ({ slug: s.slug, name: s.name, short: s.short })),
+    openSessions,
   };
 
   return (
@@ -48,7 +51,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <StudentContainer>{children}</StudentContainer>
           <WhatsNewScreen userId={user.id} firstName={(user.name ?? "").trim().split(/\s+/)[0] || "there"} />
-          <StudentTabBar activeExam={exam.active} />
+          <StudentTabBar activeExam={exam.active} openSessions={openSessions} />
         </main>
       </div>
     </div>

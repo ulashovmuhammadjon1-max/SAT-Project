@@ -69,7 +69,13 @@ const NO_TAB_BAR = ["/community"];
  * The phone tab bar. It sits in the page flow as a spacer (so nothing is ever
  * hidden behind it) plus the fixed bar itself, padded for the home indicator.
  */
-export function StudentTabBar({ activeExam = "SAT" }: { activeExam?: StudentNavProps["activeExam"] }) {
+export function StudentTabBar({
+  activeExam = "SAT",
+  openSessions = 0,
+}: {
+  activeExam?: StudentNavProps["activeExam"];
+  openSessions?: number;
+}) {
   const pathname = usePathname();
   const { open } = useContext(MobileNavContext);
   const { data } = useLive();
@@ -93,6 +99,7 @@ export function StudentTabBar({ activeExam = "SAT" }: { activeExam?: StudentNavP
       label: "Sessions",
       icon: CalendarPlus,
       active: pathname.startsWith("/booking"),
+      count: openSessions,
     },
   ];
 
@@ -123,7 +130,15 @@ export function StudentTabBar({ activeExam = "SAT" }: { activeExam?: StudentNavP
                   <t.icon className="h-[19px] w-[19px]" />
                 </span>
                 {t.label}
-                {t.dot && (
+                {"count" in t && (t.count ?? 0) > 0 && (
+                  <span
+                    aria-label={`${t.count} open`}
+                    className="absolute left-[calc(50%+6px)] top-1 min-w-[18px] rounded-full bg-primary px-1 text-center text-[10px] font-bold leading-[18px] text-primary-foreground ring-2 ring-background"
+                  >
+                    {t.count}
+                  </span>
+                )}
+                {"dot" in t && t.dot && (
                   <span className="absolute right-[calc(50%-16px)] top-2 h-2 w-2 rounded-full bg-destructive ring-2 ring-background" />
                 )}
               </Link>

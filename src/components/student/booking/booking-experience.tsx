@@ -56,6 +56,7 @@ export function BookingExperience({
   prefill,
   telegram,
   existing,
+  initialSlotId = null,
 }: {
   slots: OpenSlot[];
   context: BookingContext;
@@ -68,6 +69,11 @@ export function BookingExperience({
    * booked" view would replace the success screen before it could be read.
    */
   existing: React.ReactNode | null;
+  /**
+   * A session chosen elsewhere (the "Open sessions" card on Home and SAT home).
+   * Opens straight into booking it; ignored if it is no longer open.
+   */
+  initialSlotId?: string | null;
 }) {
   const router = useRouter();
   const timezone = useLocalTimezone();
@@ -123,6 +129,17 @@ export function BookingExperience({
     setBanner(null);
     setPhase("book");
   }
+
+  // Arriving from a "Book" link on Home or SAT home: open that session's
+  // booking straight away, once. A session taken in the meantime falls back
+  // to the normal list.
+  const deepLinked = useRef(false);
+  useEffect(() => {
+    if (deepLinked.current || !initialSlotId || existing) return;
+    deepLinked.current = true;
+    if (slots.some((s) => s.id === initialSlotId)) startBooking(initialSlotId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialSlotId]);
 
   function backToBrowse() {
     setPhase("browse");
