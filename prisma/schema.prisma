@@ -2559,6 +2559,12 @@ model ResearchProposal {
   question   String                 @db.Text
   motivation String                 @db.Text
   experience String?                @db.Text
+  /// Exams and scores (SAT, IELTS, AP, olympiads). Migration 031; null on older proposals.
+  qualifications String?            @db.Text
+  /// What the student has already done on their question. Migration 031.
+  priorWork      String?            @db.Text
+  /// Self-introduction, at most 300 words (enforced in the app). Migration 031.
+  introEssay     String?            @db.Text
   status     ResearchProposalStatus @default(PENDING)
   adminNote  String?                @db.Text
   decidedAt  DateTime?

@@ -19,29 +19,42 @@ export const dynamic = "force-dynamic";
  */
 function ProposalBody({
   question,
+  priorWork,
   motivation,
+  qualifications,
   experience,
+  introEssay,
 }: {
   question: string;
+  priorWork: string | null;
   motivation: string;
+  qualifications: string | null;
   experience: string | null;
+  introEssay: string | null;
 }) {
+  // The last three questions were added in migration 031; proposals sent
+  // before then simply do not have them, so each block shows only if present.
+  const blocks: { label: string; text: string | null }[] = [
+    { label: "Question", text: question },
+    { label: "What they have already done", text: priorWork },
+    { label: "Motivation", text: motivation },
+    { label: "Qualifications", text: qualifications },
+    { label: "Experience", text: experience },
+    {
+      label: introEssay ? `Introduction (${introEssay.trim().split(/\s+/).filter(Boolean).length} words)` : "Introduction",
+      text: introEssay,
+    },
+  ];
   return (
     <div className="space-y-3">
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Question</p>
-        <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{question}</p>
-      </div>
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Motivation</p>
-        <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{motivation}</p>
-      </div>
-      {experience && (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Experience</p>
-          <p className="mt-0.5 whitespace-pre-line text-sm leading-relaxed">{experience}</p>
-        </div>
-      )}
+      {blocks
+        .filter((b) => b.text)
+        .map((b) => (
+          <div key={b.label}>
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{b.label}</p>
+            <p className="mt-0.5 whitespace-pre-line break-words text-sm leading-relaxed">{b.text}</p>
+          </div>
+        ))}
     </div>
   );
 }
@@ -114,8 +127,11 @@ export default async function AdminResearchPage() {
           <CardContent className="space-y-3">
             <ProposalBody
               question={p.question}
+              priorWork={p.priorWork}
               motivation={p.motivation}
+              qualifications={p.qualifications}
               experience={p.experience}
+              introEssay={p.introEssay}
             />
             <ResearchDecision proposalId={p.id} />
           </CardContent>
@@ -149,8 +165,11 @@ export default async function AdminResearchPage() {
                     <div className="mt-3 rounded-lg border border-border bg-secondary/30 p-4">
                       <ProposalBody
                         question={p.question}
+                        priorWork={p.priorWork}
                         motivation={p.motivation}
+                        qualifications={p.qualifications}
                         experience={p.experience}
+                        introEssay={p.introEssay}
                       />
                       {p.adminNote && (
                         <p className="mt-3 text-xs text-muted-foreground">

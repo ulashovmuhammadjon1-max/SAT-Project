@@ -1,10 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { z } from "zod";
-
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
+import { proposalSchema } from "@/lib/validations/research";
 
 /**
  * The research programme's student side: propose a topic, see where it stands.
@@ -14,22 +13,6 @@ import { requireUser } from "@/lib/session";
  * is small enough for a motivated student to finish in one sitting and
  * structured enough that an admin can make a real decision from it.
  */
-
-const proposalSchema = z.object({
-  title: z.string().trim().min(8, "Give your project a real title (at least 8 characters).").max(160),
-  field: z.string().trim().min(2, "What field is this in?").max(80),
-  question: z
-    .string()
-    .trim()
-    .min(30, "State the question you want to answer — a sentence or two.")
-    .max(2000),
-  motivation: z
-    .string()
-    .trim()
-    .min(30, "Tell us why this question matters to you.")
-    .max(4000),
-  experience: z.string().trim().max(4000).optional().or(z.literal("")),
-});
 
 export interface ResearchActionResult {
   ok?: boolean;
@@ -47,8 +30,11 @@ export async function submitResearchProposal(formData: FormData): Promise<Resear
     title: formData.get("title"),
     field: formData.get("field"),
     question: formData.get("question"),
+    priorWork: formData.get("priorWork"),
     motivation: formData.get("motivation"),
+    qualifications: formData.get("qualifications"),
     experience: formData.get("experience"),
+    introEssay: formData.get("introEssay"),
   });
   if (!parsed.success) {
     return { error: parsed.error.issues[0]?.message ?? "Please check the form and try again." };
@@ -73,6 +59,9 @@ export async function submitResearchProposal(formData: FormData): Promise<Resear
       question: parsed.data.question,
       motivation: parsed.data.motivation,
       experience: parsed.data.experience || null,
+      qualifications: parsed.data.qualifications,
+      priorWork: parsed.data.priorWork,
+      introEssay: parsed.data.introEssay,
     },
   });
 
