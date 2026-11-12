@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #070b16;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: #070b16;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.5" data-width="1080" data-height="1920">
+      <div id="score3d" data-composition-id="score3d" data-composition-src="compositions/score3d.html"
+        data-start="0" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="adaptive" data-composition-id="adaptive" data-composition-src="compositions/adaptive.html"
+        data-start="4.5" data-duration="5.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="exam" data-composition-id="exam" data-composition-src="compositions/exam.html"
+        data-start="10" data-duration="6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="features" data-composition-id="features" data-composition-src="compositions/features.html"
+        data-start="16" data-duration="6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="payoff3d" data-composition-id="payoff3d" data-composition-src="compositions/payoff3d.html"
+        data-start="22" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html"
+        data-start="26.5" data-duration="5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
