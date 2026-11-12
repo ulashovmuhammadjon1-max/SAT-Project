@@ -11,8 +11,8 @@
 |---|---|---|---|
 | 0–5 s | 3D gold **800** swings, then each digit topples and turns red | "Miss Module 1 on the SAT, and 800 is off the table." | Miss Module 1 / and 800 is off the table. |
 | 5–13.2 s | Module 1 splits into Hard (up to 800) and Easy (score capped) | "The Digital SAT is adaptive. Module 1 decides your ceiling, and most students only find out on test day." | The Digital SAT is adaptive. |
-| 13.2–19.2 s | The real Scholarly exam screen, punch-in on the question and answer choices | "So practise the real format: 31 full-length adaptive tests in a Bluebook-style interface." | 31 full-length adaptive tests |
-| 19.2–26.6 s | Three feature cards fly in | "Then learn from every mistake. Every question is explained, analytics show where you lose points, and vocabulary sets use spaced repetition." | Then learn from every mistake. |
+| 13.2–19.2 s | The real Scholarly exam screen, punch-in on the question and answer choices | "So practise the real format. 31 full-length adaptive tests." | 31 full-length adaptive tests |
+| 19.2–26.6 s | Three feature cards fly in | "Then learn from every mistake. Every question explained. And analytics that show exactly where you lose points." | Then learn from every mistake. |
 | 26.6–31.1 s | 3D **800** rises again in gold | "Walk in ready. Aim for 800." | Walk in ready. / Aim for 800. |
 | 31.1–36.1 s | Scholarly logo, scholarly.space, button | "Take your first test free at scholarly.space." | scholarly.space · Take your first test → · Free to join · No credit card |
 
