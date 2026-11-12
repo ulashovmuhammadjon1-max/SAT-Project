@@ -146,7 +146,10 @@ export default async function AdminBookingsPage() {
       <div>
         <h2 className="font-display text-lg font-semibold">Your slots</h2>
         <div className="mt-3">
-          <SlotTable slots={rows} />
+          <SlotTable
+            slots={rows}
+            channels={{ instagram: `@${settings.instagramHandle}`, telegram: `@${settings.telegramChannel}` }}
+          />
         </div>
       </div>
     </div>

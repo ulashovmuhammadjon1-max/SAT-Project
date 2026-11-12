@@ -205,7 +205,55 @@ const DECISION_COPY: Record<
   },
 };
 
-export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
+/** The community accounts students must follow, for the quick reasons. */
+export interface RequirementChannels {
+  instagram: string;
+  telegram: string;
+}
+
+/**
+ * One-click reasons for the cases that come up again and again — mostly a
+ * student who ticked "I follow" without following. Each fills the reason box
+ * with a complete, polite message the admin can still edit before sending.
+ * The ending depends on the action: an un-approve keeps the seat, so it says
+ * "we will approve it again"; everything else ends the booking.
+ */
+function quickReasons(decision: BookingDecision, ch: RequirementChannels): { label: string; text: string }[] {
+  if (decision === "APPROVE") return [];
+  const next =
+    decision === "REVOKE"
+      ? "Once you have, reply to this email and we will approve your session again. Your seat and coins are still held."
+      : "Once you have, you are welcome to book a session again.";
+  const reasons = [
+    {
+      label: "Telegram missing (Instagram OK)",
+      text: `Thank you for following Scholarly on Instagram (${ch.instagram}). However, we could not find you in our Telegram channel (${ch.telegram}), and joining it is required for every session. Please join ${ch.telegram}. ${next}`,
+    },
+    {
+      label: "Instagram missing (Telegram OK)",
+      text: `Thank you for joining our Telegram channel (${ch.telegram}). However, we could not find you following Scholarly on Instagram (${ch.instagram}), and following it is required for every session. Please follow ${ch.instagram}. ${next}`,
+    },
+    {
+      label: "Both missing",
+      text: `We could not find you following Scholarly on Instagram (${ch.instagram}) or in our Telegram channel (${ch.telegram}). Both are required for every session. Please follow ${ch.instagram} and join ${ch.telegram}. ${next}`,
+    },
+  ];
+  if (decision === "REJECT" || decision === "CANCEL") {
+    reasons.push({
+      label: "Time no longer works",
+      text: "Your mentor is no longer available at this time. Please pick another open session from scholarly.space/booking.",
+    });
+  }
+  if (decision === "REMOVE") {
+    reasons.push({
+      label: "Did not attend",
+      text: "You did not attend the session and did not let us know, so the slot has been released for other students.",
+    });
+  }
+  return reasons;
+}
+
+export function SlotTable({ slots, channels }: { slots: AdminSlotRow[]; channels: RequirementChannels }) {
   const router = useRouter();
   const [deciding, setDeciding] = useState<DecisionTarget | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -240,6 +288,7 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
       {deciding && (
         <DecisionDialog
           target={deciding}
+          channels={channels}
           busy={busy === deciding.slotId}
           onClose={() => setDeciding(null)}
           onConfirm={(reason) => {
@@ -406,11 +455,13 @@ export function SlotTable({ slots }: { slots: AdminSlotRow[] }) {
  */
 function DecisionDialog({
   target,
+  channels,
   busy,
   onClose,
   onConfirm,
 }: {
   target: DecisionTarget;
+  channels: RequirementChannels;
   busy: boolean;
   onClose: () => void;
   onConfirm: (reason: string) => void;
@@ -418,6 +469,7 @@ function DecisionDialog({
   const copy = DECISION_COPY[target.decision];
   const [reason, setReason] = useState("");
   const blocked = copy.reasonRequired && !reason.trim();
+  const presets = quickReasons(target.decision, channels);
 
   return (
     <div
@@ -436,13 +488,37 @@ function DecisionDialog({
             </p>
           </div>
 
+          {presets.length > 0 && (
+            <div className="space-y-1.5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Quick reasons</p>
+              <div className="flex flex-wrap gap-1.5">
+                {presets.map((p) => (
+                  <button
+                    key={p.label}
+                    type="button"
+                    onClick={() => setReason(p.text)}
+                    aria-pressed={reason === p.text}
+                    className={cn(
+                      "rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
+                      reason === p.text
+                        ? "border-primary bg-primary/15 text-primary"
+                        : "border-border bg-card hover:border-primary/40 hover:bg-primary/5"
+                    )}
+                  >
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="space-y-1.5">
             <Label htmlFor="decision-reason">
               Reason {copy.reasonRequired ? "" : <span className="text-muted-foreground">(optional)</span>}
             </Label>
             <Textarea
               id="decision-reason"
-              rows={4}
+              rows={5}
               value={reason}
               autoFocus
               placeholder={
