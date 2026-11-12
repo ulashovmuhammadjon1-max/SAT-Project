@@ -56,7 +56,7 @@
     }
     #ex-chip {
       position: absolute;
-      top: 1150px;
+      top: 1100px;
       left: 0;
       right: 0;
       text-align: center;
@@ -70,26 +70,35 @@
       font-weight: 700;
       box-shadow: 0 20px 60px rgba(59, 99, 236, 0.45);
     }
-    #ex-sub {
+    #ex-free {
       position: absolute;
-      top: 1270px;
-      left: 90px;
-      right: 90px;
+      top: 1225px;
+      left: 0;
+      right: 0;
       text-align: center;
-      font-size: 34px;
-      color: rgba(255, 255, 255, 0.72);
+    }
+    #ex-free span {
+      display: inline-block;
+      padding: 18px 36px;
+      border-radius: 999px;
+      background: rgba(52, 211, 153, 0.14);
+      border: 2px solid #34d399;
+      color: #34d399;
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
     }
   </style>
   <div id="root" data-composition-id="exam" data-width="1080" data-height="1920">
     <div id="ex-bg"></div>
-    <h1 id="ex-title" class="clip" data-start="0" data-duration="6">So practise the <span style="color:#19b6d4">real format.</span></h1>
-    <div id="ex-stage" class="clip" data-start="0" data-duration="6" data-layout-allow-overflow>
+    <h1 id="ex-title" class="clip" data-start="0" data-duration="7.2">So practise the <span style="color:#19b6d4">real format.</span></h1>
+    <div id="ex-stage" class="clip" data-start="0" data-duration="7.2" data-layout-allow-overflow>
       <div id="ex-cam">
         <img id="ex-img" src="assets/exam-d.png" alt="Scholarly exam interface" />
       </div>
     </div>
-    <div id="ex-chip" class="clip" data-start="0" data-duration="6"><span>31 full-length adaptive tests</span></div>
-    <p id="ex-sub" class="clip" data-start="0" data-duration="6">Bluebook-style interface · timed modules</p>
+    <div id="ex-chip" class="clip" data-start="0" data-duration="7.2"><span>31 full-length adaptive tests</span></div>
+    <div id="ex-free" class="clip" data-start="0" data-duration="7.2"><span>Every test is free</span></div>
   </div>
   <script>
     (function () {
@@ -100,7 +109,8 @@
       tl.fromTo("#ex-cam", { scale: 1, x: 0 }, { scale: 2.05, x: -230, duration: 0.55, ease: "power3.inOut", immediateRender: false }, 1.35);
       tl.to("#ex-cam", { scale: 1, x: 0, duration: 0.5, ease: "power3.inOut" }, 3.35);
       tl.fromTo("#ex-chip span", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 2.5);
-      tl.fromTo("#ex-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 3.0);
+      tl.fromTo("#ex-free span", { opacity: 0, scale: 0.5, rotation: -6 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2.4)" }, 5.85);
+      tl.fromTo("#ex-free span", { boxShadow: "0 0 0 rgba(52,211,153,0)" }, { boxShadow: "0 0 70px rgba(52,211,153,0.55)", duration: 0.5, ease: "power2.out", immediateRender: false }, 6.15);
       window.__timelines["exam"] = tl;
     })();
   </script>

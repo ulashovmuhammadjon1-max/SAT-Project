@@ -29,42 +29,43 @@
   <body>
     <!--
       Narrated: the voice is the clock. Scene slots are sized to each voice line.
-      hook 0-5 · adaptive 5-13.2 · exam 13.2-19.2 · features 19.2-26.6 · payoff 26.6-31.1 · end 31.1-36.1
+      hook 0-5 · adaptive 5-13.2 · exam 13.2-20.4 · features 20.4-27.8 · payoff 27.8-32.3 · end 32.3-37.3
     -->
-    <div id="root" data-composition-id="main" data-start="0" data-duration="36.1" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="37.3" data-width="1080" data-height="1920">
       <div id="score3d" data-composition-id="score3d" data-composition-src="compositions/score3d.html"
         data-start="0" data-duration="5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
       <div id="adaptive" data-composition-id="adaptive" data-composition-src="compositions/adaptive.html"
         data-start="5" data-duration="8.2" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
       <div id="exam" data-composition-id="exam" data-composition-src="compositions/exam.html"
-        data-start="13.2" data-duration="6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+        data-start="13.2" data-duration="7.2" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
       <div id="features" data-composition-id="features" data-composition-src="compositions/features.html"
-        data-start="19.2" data-duration="7.4" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+        data-start="20.4" data-duration="7.4" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
       <div id="payoff3d" data-composition-id="payoff3d" data-composition-src="compositions/payoff3d.html"
-        data-start="26.6" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+        data-start="27.8" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
       <div id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html"
-        data-start="31.1" data-duration="5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+        data-start="32.3" data-duration="5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
 
       <!-- Voiceover: Kokoro am_michael, one file per line -->
       <audio id="vo1" class="clip" src="assets/voice/v1.wav" data-start="0.15" data-duration="4.28" data-volume="1" data-track-index="5"></audio>
       <audio id="vo2" class="clip" src="assets/voice/v2.wav" data-start="5.25" data-duration="7.76" data-volume="1" data-track-index="5"></audio>
-      <audio id="vo3" class="clip" src="assets/voice/v3.wav" data-start="13.45" data-duration="4.36" data-volume="1" data-track-index="5"></audio>
-      <audio id="vo4" class="clip" src="assets/voice/v4.wav" data-start="19.35" data-duration="6.99" data-volume="1" data-track-index="5"></audio>
-      <audio id="vo5" class="clip" src="assets/voice/v5.wav" data-start="27.5" data-duration="2.27" data-volume="1" data-track-index="5"></audio>
-      <audio id="vo6" class="clip" src="assets/voice/v6.wav" data-start="31.6" data-duration="3.28" data-volume="1" data-track-index="5"></audio>
+      <audio id="vo3" class="clip" src="assets/voice/v3.wav" data-start="13.45" data-duration="6.51" data-volume="1" data-track-index="5"></audio>
+      <audio id="vo4" class="clip" src="assets/voice/v4.wav" data-start="20.55" data-duration="6.99" data-volume="1" data-track-index="5"></audio>
+      <audio id="vo5" class="clip" src="assets/voice/v5.wav" data-start="28.7" data-duration="2.27" data-volume="1" data-track-index="5"></audio>
+      <audio id="vo6" class="clip" src="assets/voice/v6.wav" data-start="32.8" data-duration="3.28" data-volume="1" data-track-index="5"></audio>
 
       <!-- Whoosh peaks 0.755 s into the file: start it so the peak lands one frame after each cut. -->
       <audio id="sfx-w1" class="clip" src="assets/sfx/whoosh.mp3" data-start="4.28" data-duration="2.65" data-volume="0.35" data-track-index="6"></audio>
       <audio id="sfx-w2" class="clip" src="assets/sfx/whoosh.mp3" data-start="12.48" data-duration="2.65" data-volume="0.3" data-track-index="6"></audio>
-      <audio id="sfx-w3" class="clip" src="assets/sfx/whoosh.mp3" data-start="18.48" data-duration="2.65" data-volume="0.35" data-track-index="6"></audio>
-      <audio id="sfx-w4" class="clip" src="assets/sfx/whoosh.mp3" data-start="25.88" data-duration="2.65" data-volume="0.3" data-track-index="6"></audio>
-      <audio id="sfx-w5" class="clip" src="assets/sfx/whoosh.mp3" data-start="30.38" data-duration="2.65" data-volume="0.35" data-track-index="6"></audio>
+      <audio id="sfx-w3" class="clip" src="assets/sfx/whoosh.mp3" data-start="19.68" data-duration="2.65" data-volume="0.35" data-track-index="6"></audio>
+      <audio id="sfx-w4" class="clip" src="assets/sfx/whoosh.mp3" data-start="27.08" data-duration="2.65" data-volume="0.3" data-track-index="6"></audio>
+      <audio id="sfx-w5" class="clip" src="assets/sfx/whoosh.mp3" data-start="31.58" data-duration="2.65" data-volume="0.35" data-track-index="6"></audio>
       <!-- Pops: the "31 tests" chip, the three feature cards, the end-card button -->
       <audio id="sfx-p1" class="clip" src="assets/sfx/pop.mp3" data-start="15.73" data-duration="0.49" data-volume="0.4" data-track-index="7"></audio>
-      <audio id="sfx-p2" class="clip" src="assets/sfx/pop.mp3" data-start="20.83" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
-      <audio id="sfx-p3" class="clip" src="assets/sfx/pop.mp3" data-start="22.83" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
-      <audio id="sfx-p4" class="clip" src="assets/sfx/pop.mp3" data-start="24.43" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
-      <audio id="sfx-p5" class="clip" src="assets/sfx/pop.mp3" data-start="32.43" data-duration="0.49" data-volume="0.4" data-track-index="7"></audio>
+      <audio id="sfx-p6" class="clip" src="assets/sfx/pop.mp3" data-start="19.04" data-duration="0.49" data-volume="0.45" data-track-index="8"></audio>
+      <audio id="sfx-p2" class="clip" src="assets/sfx/pop.mp3" data-start="22.03" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
+      <audio id="sfx-p3" class="clip" src="assets/sfx/pop.mp3" data-start="24.03" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
+      <audio id="sfx-p4" class="clip" src="assets/sfx/pop.mp3" data-start="25.63" data-duration="0.49" data-volume="0.35" data-track-index="7"></audio>
+      <audio id="sfx-p5" class="clip" src="assets/sfx/pop.mp3" data-start="33.63" data-duration="0.49" data-volume="0.4" data-track-index="7"></audio>
     </div>
     <script>
       window.__timelines = window.__timelines || {};
