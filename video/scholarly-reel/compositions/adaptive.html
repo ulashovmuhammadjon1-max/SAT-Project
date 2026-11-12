@@ -48,9 +48,9 @@
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
     }
     .ad-kicker {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.6);
     }
@@ -107,6 +107,9 @@
       line-height: 1.25;
       color: rgba(255, 255, 255, 0.92);
     }
+    #ad-caption span, #ad-caption b {
+      display: inline-block;
+    }
     #ad-caption b {
       color: #ff5a6a;
     }
@@ -117,23 +120,23 @@
       <path id="ad-path-l" d="M540 760 C540 840 290 830 290 900" stroke="#34d399" stroke-width="6" stroke-linecap="round" />
       <path id="ad-path-r" d="M540 760 C540 840 790 830 790 900" stroke="#ff5a6a" stroke-width="6" stroke-linecap="round" />
     </svg>
-    <h1 id="ad-title" class="clip" data-start="0" data-duration="5.5">The Digital SAT is <em>adaptive.</em></h1>
-    <div id="ad-m1" class="ad-card clip" data-start="0" data-duration="5.5">
+    <h1 id="ad-title" class="clip" data-start="0" data-duration="8.2">The Digital SAT is <em>adaptive.</em></h1>
+    <div id="ad-m1" class="ad-card clip" data-start="0" data-duration="8.2">
       <div class="ad-kicker">You start with</div>
       <div class="ad-name">Module 1</div>
     </div>
-    <div id="ad-hard" class="ad-card clip" data-start="0" data-duration="5.5">
+    <div id="ad-hard" class="ad-card clip" data-start="0" data-duration="8.2">
       <div class="ad-kicker">Do well → Module 2</div>
       <div class="ad-name">Hard module</div>
       <div class="ad-out">Up to 800</div>
     </div>
-    <div id="ad-easy" class="ad-card clip" data-start="0" data-duration="5.5">
+    <div id="ad-easy" class="ad-card clip" data-start="0" data-duration="8.2">
       <div class="ad-kicker">Slip up → Module 2</div>
       <div class="ad-name">Easy module</div>
       <div class="ad-out">Score capped</div>
     </div>
-    <p id="ad-caption" class="clip" data-start="0" data-duration="5.5">
-      Module 1 decides your ceiling.<br /><b>Most students find out on test day.</b>
+    <p id="ad-caption" class="clip" data-start="0" data-duration="8.2">
+      <span id="ad-cap1">Module 1 decides your ceiling.</span><br /><b id="ad-cap2">Most students find out on test day.</b>
     </p>
   </div>
   <script>
@@ -148,10 +151,11 @@
       tl.fromTo("#ad-hard", { opacity: 0, x: -60, rotationY: 25 }, { opacity: 1, x: 0, rotationY: 0, duration: 0.5, ease: "power3.out" }, 1.45);
       tl.fromTo("#ad-easy", { opacity: 0, x: 60, rotationY: -25 }, { opacity: 1, x: 0, rotationY: 0, duration: 0.5, ease: "power3.out" }, 1.6);
       // The cap lands: the Easy card shakes once and its glow turns red.
-      tl.to("#ad-easy", { boxShadow: "0 0 90px rgba(255,90,106,0.55)", duration: 0.3, ease: "power2.out" }, 2.3);
-      tl.to("#ad-easy", { keyframes: { x: [0, -14, 12, -8, 5, 0] }, duration: 0.45, ease: "none" }, 2.3);
-      tl.to("#ad-hard", { opacity: 0.55, duration: 0.3 }, 2.3);
-      tl.fromTo("#ad-caption", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 2.2);
+      tl.to("#ad-easy", { boxShadow: "0 0 90px rgba(255,90,106,0.55)", duration: 0.3, ease: "power2.out" }, 3.6);
+      tl.to("#ad-easy", { keyframes: { x: [0, -14, 12, -8, 5, 0] }, duration: 0.45, ease: "none" }, 3.6);
+      tl.to("#ad-hard", { opacity: 0.55, duration: 0.3 }, 3.6);
+      tl.fromTo("#ad-cap1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 2.6);
+      tl.fromTo("#ad-cap2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 4.9);
       window.__timelines["adaptive"] = tl;
     })();
   </script>
