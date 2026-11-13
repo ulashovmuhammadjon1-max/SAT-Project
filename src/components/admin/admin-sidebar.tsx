@@ -163,7 +163,7 @@ function NavLink({ item, pathname, touch = false }: { item: AdminNavItem; pathna
 
 export function AdminSidebar() {
   return (
-    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
+    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:self-start supports-[height:100dvh]:lg:h-dvh">
       <AdminSidebarContent />
     </aside>
   );
@@ -237,7 +237,7 @@ function AdminSidebarContent({ touch = false }: { touch?: boolean }) {
         </div>
       </div>
 
-      <nav aria-label="Admin" className="flex-1 space-y-1 overflow-y-auto overscroll-contain p-3">
+      <nav aria-label="Admin" className="min-h-0 flex-1 space-y-1 overflow-y-auto overscroll-contain p-3">
         {NAV[section].map((item) => (
           <NavLink key={item.href} item={item} pathname={pathname} touch={touch} />
         ))}

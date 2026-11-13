@@ -325,7 +325,7 @@ export interface StudentNavProps {
 /** The desktop sidebar. Below `lg` the same content lives in the mobile drawer. */
 export function StudentSidebar(props: StudentNavProps) {
   return (
-    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:flex lg:flex-col">
+    <aside className="hidden w-64 shrink-0 border-r border-border bg-card/40 lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:self-start supports-[height:100dvh]:lg:h-dvh">
       <SidebarContent {...props} />
     </aside>
   );
@@ -393,7 +393,7 @@ export function SidebarContent({
           switcher keeps "which class am I in?" answered at all times. */}
       {product === "SCHOOL" && <ClassSwitcher classes={classes} />}
 
-      <nav aria-label="Main" className="flex-1 space-y-4 overflow-y-auto overscroll-contain p-3">
+      <nav aria-label="Main" className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain p-3">
         {groups.map((group, gi) => (
           <div key={group.label ?? `plain-${gi}`} className="space-y-0.5">
             {group.label && (
