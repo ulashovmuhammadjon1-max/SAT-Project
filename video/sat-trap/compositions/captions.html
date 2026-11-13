@@ -1,0 +1,124 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .cap { position: absolute; left: 80px; right: 80px; top: 1500px; text-align: center; }
+    .cap p { display: inline-block; font-family: "Archivo Black", sans-serif; font-size: 70px; line-height: 1.08; color: #fff;
+      -webkit-text-stroke: 10px #000; paint-order: stroke fill; padding: 10px 28px 16px; border-radius: 26px; background: rgba(8,10,18,0.72); }
+    .cap .hot { color: #ffd23f; }
+    .big { position: absolute; left: 60px; right: 60px; top: 215px; text-align: center; }
+    .big p { display: inline-block; font-family: "Archivo Black", sans-serif; font-size: 96px; line-height: 1.02; color: #fff;
+      -webkit-text-stroke: 14px #000; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,0.35); }
+    .big b { color: #ff4d5e; font-weight: inherit; display: inline-block; }
+    .pill { position: absolute; left: 0; right: 0; top: 230px; text-align: center; }
+    .pill span { display: inline-flex; align-items: center; gap: 18px; padding: 18px 40px; border-radius: 999px; color: #fff;
+      font-family: "Archivo Black", sans-serif; font-size: 62px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+    #ov-trap span { background: #e5252f; }
+    #ov-hidden span { background: #ffd23f; color: #111; }
+    #ov-ans span { background: #16a34a; }
+    #ov-mod span { background: #1f3b8c; font-size: 52px; }
+    #ov-timer { position: absolute; left: 0; right: 0; top: 190px; text-align: center; }
+    #ov-ring { display: inline-flex; align-items: center; justify-content: center; width: 260px; height: 260px; border-radius: 50%;
+      background: rgba(0,0,0,0.6); border: 12px solid #ffd23f; font-family: "Archivo Black", sans-serif; font-size: 150px; color: #fff; }
+    #ov-pause { position: absolute; left: 0; right: 0; top: 480px; text-align: center; }
+    #ov-pause span { display: inline-block; padding: 16px 36px; border-radius: 22px; background: #fff; color: #111;
+      font-family: "Archivo Black", sans-serif; font-size: 48px; box-shadow: 0 14px 40px rgba(0,0,0,0.3); }
+    #ov-end { position: absolute; left: 70px; right: 70px; top: 300px; text-align: center; }
+    #ov-end .card { display: inline-block; padding: 40px 56px; border-radius: 40px; background: rgba(9,14,30,0.86); box-shadow: 0 20px 60px rgba(0,0,0,0.45); }
+    #ov-end .k { font-family: "Archivo Black", sans-serif; font-size: 46px; color: #ffd23f; letter-spacing: 0.02em; }
+    #ov-end .u { font-family: "Archivo Black", sans-serif; font-size: 92px; color: #fff; margin-top: 6px; }
+    #ov-end .s { font-family: "Inter", sans-serif; font-weight: 700; font-size: 40px; color: #c8d3ec; margin-top: 10px; }
+    #ov-comment { position: absolute; left: 0; right: 0; top: 240px; text-align: center; }
+    #ov-comment span { display: inline-flex; align-items: center; gap: 14px; padding: 20px 42px; border-radius: 999px; background: #ffd23f; color: #111;
+      font-family: "Archivo Black", sans-serif; font-size: 60px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="ov-hook" class="big clip" data-start="0" data-duration="3.75"><p>THE OBVIOUS<br/>ANSWER IS <b>WRONG</b></p></div>
+    <div id="ov-timer" class="clip" data-start="10.6" data-duration="3.1"><div id="ov-ring"><span id="ov-num">3</span></div></div>
+    <div id="ov-pause" class="clip" data-start="10.6" data-duration="3.1"><span>PAUSE &amp; COMMENT YOUR ANSWER</span></div>
+    <div id="ov-trap" class="pill clip" data-start="15.5" data-duration="0.8"><span><svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>TRAP</span></div>
+    <div id="ov-hidden" class="pill clip" data-start="20.25" data-duration="3.15"><span>THE HIDDEN +2</span></div>
+    <div id="ov-ans" class="pill clip" data-start="25.4" data-duration="1.6"><span><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>B) 23</span></div>
+    <div id="ov-mod" class="pill clip" data-start="27.0" data-duration="2.4"><span>MODULE 2 · HARD</span></div>
+    <div id="ov-end" class="clip" data-start="29.4" data-duration="2.2"><div class="card"><div class="k">HUNDREDS MORE, FREE</div><div class="u">scholarly.space</div><div class="s">31 full SAT practice tests</div></div></div>
+    <div id="ov-comment" class="clip" data-start="31.6" data-duration="0.8"><span>COMMENT YOUR ANSWER<svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span></div>
+    <div id="cap0" class="cap clip" data-start="0.15" data-duration="1.1"><p>This SAT question</p></div>
+    <div id="cap1" class="cap clip" data-start="1.27" data-duration="0.89"><p>has an <span class="hot">obvious</span></p></div>
+    <div id="cap2" class="cap clip" data-start="2.18" data-duration="0.44"><p>answer…</p></div>
+    <div id="cap3" class="cap clip" data-start="2.64" data-duration="1.19"><p>and it&#x27;s <span class="hot">wrong.</span></p></div>
+    <div id="cap4" class="cap clip" data-start="3.85" data-duration="1.15"><p>If x plus</p></div>
+    <div id="cap5" class="cap clip" data-start="5.02" data-duration="1.68"><p>1/x equals 5…</p></div>
+    <div id="cap6" class="cap clip" data-start="6.72" data-duration="1.29"><p>what is x²</p></div>
+    <div id="cap7" class="cap clip" data-start="8.03" data-duration="1.45"><p>plus 1/x²?</p></div>
+    <div id="cap8" class="cap clip" data-start="9.5" data-duration="0.35"><p>Pause.</p></div>
+    <div id="cap9" class="cap clip" data-start="9.82" data-duration="1.25"><p>Pick your answer.</p></div>
+    <div id="cap10" class="cap clip" data-start="13.8" data-duration="0.58"><p>The <span class="hot">trap?</span></p></div>
+    <div id="cap11" class="cap clip" data-start="14.4" data-duration="0.86"><p>Square the 5,</p></div>
+    <div id="cap12" class="cap clip" data-start="15.28" data-duration="1.0"><p>and pick <span class="hot">25.</span></p></div>
+    <div id="cap13" class="cap clip" data-start="16.3" data-duration="0.84"><p>But squaring the</p></div>
+    <div id="cap14" class="cap clip" data-start="17.16" data-duration="0.78"><p>left side hides</p></div>
+    <div id="cap15" class="cap clip" data-start="17.96" data-duration="0.51"><p>a <span class="hot">sneaky</span> <span class="hot">2</span></p></div>
+    <div id="cap16" class="cap clip" data-start="18.49" data-duration="0.89"><p>in the middle.</p></div>
+    <div id="cap17" class="cap clip" data-start="19.4" data-duration="1.26"><p>x² plus <span class="hot">2</span></p></div>
+    <div id="cap18" class="cap clip" data-start="20.68" data-duration="2.24"><p>plus 1/x² equals</p></div>
+    <div id="cap19" class="cap clip" data-start="22.94" data-duration="0.54"><p><span class="hot">25.</span></p></div>
+    <div id="cap20" class="cap clip" data-start="23.5" data-duration="1.18"><p>Take away the</p></div>
+    <div id="cap21" class="cap clip" data-start="24.7" data-duration="0.35"><p><span class="hot">2…</span></p></div>
+    <div id="cap22" class="cap clip" data-start="24.89" data-duration="0.49"><p><span class="hot">23.</span></p></div>
+    <div id="cap23" class="cap clip" data-start="25.4" data-duration="0.39"><p>It&#x27;s <span class="hot">B.</span></p></div>
+    <div id="cap24" class="cap clip" data-start="25.81" data-duration="0.61"><p>Did you get</p></div>
+    <div id="cap25" class="cap clip" data-start="26.44" data-duration="0.54"><p>it?</p></div>
+    <div id="cap26" class="cap clip" data-start="27.0" data-duration="1.35"><p>That&#x27;s a <span class="hot">hard-module</span></p></div>
+    <div id="cap27" class="cap clip" data-start="28.37" data-duration="0.59"><p>question.</p></div>
+    <div id="cap28" class="cap clip" data-start="28.98" data-duration="1.14"><p>Hundreds more are</p></div>
+    <div id="cap29" class="cap clip" data-start="30.14" data-duration="1.97"><p><span class="hot">free</span> on <span class="hot">scholarly.space</span></p></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#ov-hook p", { scale: 1.25, rotation: -3 }, { scale: 1, rotation: -2, duration: 0.3, ease: "back.out(2)" }, 0);
+      tl.fromTo("#ov-hook b", { scale: 1 }, { scale: 1.18, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 2.95);
+      tl.fromTo("#ov-ring", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }, 10.6);
+      tl.fromTo("#ov-pause span", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 10.7);
+      const num = document.getElementById("ov-num"); const n = { v: 0 };
+      tl.fromTo(n, { v: 0 }, { v: 3, duration: 3.0, ease: "none", onUpdate: () => { num.textContent = String(Math.max(1, 3 - Math.floor(n.v))); } }, 10.6);
+      [11.6, 12.6].forEach((at) => tl.fromTo("#ov-ring", { scale: 1.18 }, { scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at));
+      tl.fromTo("#ov-trap span", { scale: 0.4, opacity: 0, rotation: -8 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.25, ease: "back.out(3)" }, 15.5);
+      tl.fromTo("#ov-hidden span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 20.25);
+      tl.fromTo("#ov-ans span", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }, 25.4);
+      tl.fromTo("#ov-mod span", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 27.0);
+      tl.fromTo("#ov-end .card", { y: 60, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 29.4);
+      tl.fromTo("#ov-comment span", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.6)" }, 31.6);
+      tl.fromTo("#cap0 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 0.15);
+      tl.fromTo("#cap1 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 1.27);
+      tl.fromTo("#cap2 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 2.18);
+      tl.fromTo("#cap3 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 2.64);
+      tl.fromTo("#cap4 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 3.85);
+      tl.fromTo("#cap5 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 5.02);
+      tl.fromTo("#cap6 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.72);
+      tl.fromTo("#cap7 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 8.03);
+      tl.fromTo("#cap8 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 9.5);
+      tl.fromTo("#cap9 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 9.82);
+      tl.fromTo("#cap10 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 13.8);
+      tl.fromTo("#cap11 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 14.4);
+      tl.fromTo("#cap12 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 15.28);
+      tl.fromTo("#cap13 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 16.3);
+      tl.fromTo("#cap14 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 17.16);
+      tl.fromTo("#cap15 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 17.96);
+      tl.fromTo("#cap16 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 18.49);
+      tl.fromTo("#cap17 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 19.4);
+      tl.fromTo("#cap18 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 20.68);
+      tl.fromTo("#cap19 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 22.94);
+      tl.fromTo("#cap20 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 23.5);
+      tl.fromTo("#cap21 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 24.7);
+      tl.fromTo("#cap22 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 24.89);
+      tl.fromTo("#cap23 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 25.4);
+      tl.fromTo("#cap24 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 25.81);
+      tl.fromTo("#cap25 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 26.44);
+      tl.fromTo("#cap26 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 27.0);
+      tl.fromTo("#cap27 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 28.37);
+      tl.fromTo("#cap28 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 28.98);
+      tl.fromTo("#cap29 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 30.14);
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,324 @@
+<!doctype html>
+<!--
+  world: a classroom in 3D. The whiteboard is a canvas texture redrawn from t, so the math is
+  "written" step by step: question, choices, the trap crossed out, the working with the hidden +2
+  highlighted, the answer circled. The student is the Quaternius CC0 animated man (hoodie recolour,
+  sneakers as bone-following geometry). SHOTS chooses the camera.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/newsreader.woff2") format("woff2"); font-weight: 200 800; font-style: normal; }
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/newsreader-italic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #w-root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #w-canvas { position: absolute; inset: 0; width: 1080px; height: 1920px; display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="w-root" data-composition-id="world" data-start="0" data-duration="32.4" data-width="1080" data-height="1920">
+      <canvas id="w-canvas" class="clip" data-start="0" data-duration="32.4" data-track-index="1"></canvas>
+    </div>
+    <script>
+      (function () {
+        var root = document.getElementById("w-root");
+        var duration = parseFloat(root.dataset.duration) || 32.4;
+        var clock = { t: 0 };
+        var host = { clock: clock, duration: duration, render: null };
+        window.__world = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (r) { host.ready = r; });
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+    <script type="module">
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.184.0/+esm";
+      import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/loaders/FBXLoader.js/+esm";
+      import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/geometries/RoundedBoxGeometry.js/+esm";
+
+      const host = window.__world;
+      const W = 1080, H = 1920;
+      const asset = (p) => (typeof __hyperframes !== "undefined" && __hyperframes.assetUrl ? __hyperframes.assetUrl(p) : p);
+      function mulberry32(a) { return function () { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+      const clamp01 = (x) => Math.min(1, Math.max(0, x));
+      const lerp = (a, b, u) => a + (b - a) * u;
+      const easeOut = (x) => 1 - Math.pow(1 - clamp01(x), 3);
+      const easeInOut = (x) => { const u = clamp01(x); return u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2; };
+      const win = (t, a, b) => clamp01((t - a) / (b - a));
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+      const rng = mulberry32(17);
+
+      await Promise.all([document.fonts.load('500 120px "Newsreader"'), document.fonts.load('italic 500 120px "Newsreader"')]);
+
+      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("w-canvas"), antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1); renderer.setSize(W, H, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+      renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x1a1612);
+      const camera = new THREE.PerspectiveCamera(40, W / H, 0.05, 200);
+
+      const canvasTex = (w, h, draw, rep) => { const c = document.createElement("canvas"); c.width = w; c.height = h; draw(c.getContext("2d"), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; if (rep) { t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep[0], rep[1]); } return t; };
+      const std = (color, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color, roughness: 0.8 }, o));
+
+      // ---------------- room ----------------
+      const floorTex = canvasTex(512, 512, (g, w, h) => {
+        for (let i = 0; i < 8; i++) { const v = 150 + rng() * 30; g.fillStyle = `rgb(${v},${v * 0.72},${v * 0.48})`; g.fillRect(0, i * 64, w, 63); g.fillStyle = "rgba(60,35,20,0.6)"; g.fillRect(0, i * 64 + 63, w, 1); g.fillRect(((i * 173) % 400) + 40, i * 64, 2, 64);
+          for (let k = 0; k < 18; k++) { g.strokeStyle = `rgba(90,55,30,${0.12 + rng() * 0.15})`; g.beginPath(); const y = i * 64 + rng() * 60; g.moveTo(0, y); g.lineTo(w, y + (rng() - 0.5) * 6); g.stroke(); } }
+      }, [3, 3]);
+      const wallTex = canvasTex(256, 256, (g, w, h) => { g.fillStyle = "#e9e3d6"; g.fillRect(0, 0, w, h); for (let i = 0; i < 2500; i++) { const v = 215 + rng() * 25; g.fillStyle = `rgba(${v},${v - 4},${v - 12},0.35)`; g.fillRect(rng() * w, rng() * h, 2, 2); } }, [4, 2]);
+      const floor = new THREE.Mesh(new THREE.PlaneGeometry(14, 12), std(0xffffff, { map: floorTex, roughness: 0.55 }));
+      floor.rotation.x = -Math.PI / 2; floor.position.set(0, 0, 2); floor.receiveShadow = true; scene.add(floor);
+      const wallM = std(0xffffff, { map: wallTex, roughness: 0.9 });
+      const back = new THREE.Mesh(new THREE.PlaneGeometry(14, 5), wallM); back.position.set(0, 2.5, -2.1); back.receiveShadow = true; scene.add(back);
+      const left = new THREE.Mesh(new THREE.PlaneGeometry(12, 5), wallM); left.rotation.y = Math.PI / 2; left.position.set(-4.6, 2.5, 2); left.receiveShadow = true; scene.add(left);
+      const right = new THREE.Mesh(new THREE.PlaneGeometry(12, 5), wallM); right.rotation.y = -Math.PI / 2; right.position.set(4.6, 2.5, 2); right.receiveShadow = true; scene.add(right);
+      const ceil = new THREE.Mesh(new THREE.PlaneGeometry(14, 12), std(0xf2eee6)); ceil.rotation.x = Math.PI / 2; ceil.position.set(0, 4.2, 2); scene.add(ceil);
+      const skirt = new THREE.Mesh(new THREE.BoxGeometry(14, 0.14, 0.04), std(0x5a4636)); skirt.position.set(0, 0.07, -2.08); scene.add(skirt);
+      // window on the right wall: bright sky, frame
+      const sky = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 2.0), new THREE.MeshBasicMaterial({ map: canvasTex(4, 256, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#8fbde8"); gr.addColorStop(0.7, "#d9ecf8"); gr.addColorStop(1, "#f6e9cf"); g.fillStyle = gr; g.fillRect(0, 0, w, h); }) }));
+      sky.rotation.y = -Math.PI / 2; sky.position.set(4.58, 2.4, 0.6); scene.add(sky);
+      for (const [w, h, y, z] of [[2.8, 0.12, 3.45, 0.6], [2.8, 0.12, 1.35, 0.6], [0.12, 2.2, 2.4, -0.7], [0.12, 2.2, 2.4, 1.9], [0.06, 2.0, 2.4, 0.6]]) { const f = new THREE.Mesh(new THREE.BoxGeometry(0.1, h, w === 0.12 || w === 0.06 ? w : w), std(0xf4f1ea)); f.rotation.y = -Math.PI / 2; f.position.set(4.55, y, z); scene.add(f); }
+
+      // ---------------- whiteboard ----------------
+      const BW = 2048, BH = 1365;
+      const bc = document.createElement("canvas"); bc.width = BW; bc.height = BH; const bg = bc.getContext("2d");
+      const boardTex = new THREE.CanvasTexture(bc); boardTex.colorSpace = THREE.SRGBColorSpace; boardTex.anisotropy = 16;
+      const BOARD = { w: 3.6, h: 2.4, x: 0.3, y: 2.05, z: -2.0 };
+      const board = new THREE.Mesh(new THREE.PlaneGeometry(BOARD.w, BOARD.h), new THREE.MeshStandardMaterial({ map: boardTex, roughness: 0.35, metalness: 0.0 }));
+      board.position.set(BOARD.x, BOARD.y, BOARD.z + 0.035); board.receiveShadow = true; scene.add(board);
+      const frameM = std(0xb9bec4, { metalness: 0.8, roughness: 0.3 });
+      for (const [w, h, x, y] of [[BOARD.w + 0.12, 0.06, 0, BOARD.h / 2 + 0.03], [BOARD.w + 0.12, 0.06, 0, -BOARD.h / 2 - 0.03], [0.06, BOARD.h + 0.12, -BOARD.w / 2 - 0.03, 0], [0.06, BOARD.h + 0.12, BOARD.w / 2 + 0.03, 0]]) { const f = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.05), frameM); f.position.set(BOARD.x + x, BOARD.y + y, BOARD.z + 0.04); scene.add(f); }
+      const tray = new THREE.Mesh(new THREE.BoxGeometry(BOARD.w * 0.8, 0.04, 0.12), frameM); tray.position.set(BOARD.x, BOARD.y - BOARD.h / 2 - 0.08, BOARD.z + 0.1); scene.add(tray);
+      for (const [x, c] of [[-0.4, 0x1f3b8c], [-0.2, 0xd2232a], [0.0, 0x1a9a4a]]) { const mk = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.14, 10), std(c, { roughness: 0.4 })); mk.rotation.z = Math.PI / 2; mk.position.set(BOARD.x + x, BOARD.y - BOARD.h / 2 - 0.05, BOARD.z + 0.12); scene.add(mk); }
+      const eraser = new THREE.Mesh(new RoundedBoxGeometry(0.2, 0.06, 0.08, 2, 0.02), std(0x2b2b2b)); eraser.position.set(BOARD.x + 0.45, BOARD.y - BOARD.h / 2 - 0.035, BOARD.z + 0.11); scene.add(eraser);
+
+      // math layout on the canvas
+      const BLUE = "#1f3b8c", RED = "#d2232a", GREEN = "#13924a";
+      const F = (size, it) => `${it ? "italic " : ""}500 ${size}px "Newsreader"`;
+      function measure(tokens, size) {
+        let x = 0; const out = [];
+        for (const tk of tokens) {
+          let w;
+          if (tk.frac) { bg.font = F(size * 0.62, false); const wn = bg.measureText(tk.frac.n).width; bg.font = F(size * 0.62, true); const wd = bg.measureText(tk.frac.d).width + (tk.frac.dsup ? size * 0.3 : 0); w = Math.max(wn, wd) + size * 0.18; }
+          else if (tk.sup) { bg.font = F(size * 0.58, false); w = bg.measureText(tk.s).width + size * 0.05; }
+          else { bg.font = F(size, tk.it); w = bg.measureText(tk.s).width; }
+          out.push({ tk, x, w }); x += w;
+        }
+        return { items: out, width: x };
+      }
+      function drawRow(tokens, x0, y, size, color, reveal = 1, ids = {}) {
+        const m = measure(tokens, size);
+        bg.save();
+        bg.beginPath(); bg.rect(x0 - 20, y - size * 1.2, (m.width + 40) * clamp01(reveal), size * 2.2); bg.clip();
+        bg.fillStyle = color; bg.strokeStyle = color;
+        for (const { tk, x, w } of m.items) {
+          const X = x0 + x;
+          if (tk.id) ids[tk.id] = { x: X, w, y, size };
+          if (tk.frac) {
+            const cx = X + w / 2, s2 = size * 0.62, axis = y - size * 0.3;
+            bg.textAlign = "center"; bg.font = F(s2, false); bg.fillText(tk.frac.n, cx, axis - s2 * 0.22);
+            bg.font = F(s2, true); const dw = bg.measureText(tk.frac.d).width;
+            const dx = cx - (tk.frac.dsup ? size * 0.12 : 0);
+            bg.fillText(tk.frac.d, dx, axis + s2 * 0.82);
+            if (tk.frac.dsup) { bg.font = F(s2 * 0.62, false); bg.textAlign = "left"; bg.fillText(tk.frac.dsup, dx + dw / 2 + 2, axis + s2 * 0.42); }
+            bg.lineWidth = size * 0.055; bg.lineCap = "round"; bg.beginPath(); bg.moveTo(X + size * 0.06, axis); bg.lineTo(X + w - size * 0.06, axis); bg.stroke();
+            bg.textAlign = "left";
+          } else if (tk.sup) { bg.font = F(size * 0.58, false); bg.fillText(tk.s, X + size * 0.02, y - size * 0.45); }
+          else { bg.font = F(size, tk.it); bg.textAlign = "left"; bg.fillText(tk.s, X, y); }
+        }
+        bg.restore();
+        return m.width;
+      }
+      const T = (s, it) => ({ s, it }), SUP = (s) => ({ s, sup: true });
+      const FR = (n, d, dsup) => ({ frac: { n, d, dsup } });
+      const Q1 = [T("x", 1), T(" + "), FR("1", "x"), T(" = 5")];
+      const Q2 = [T("x", 1), SUP("2"), T(" + "), FR("1", "x", "2"), T(" = ?")];
+      const W1 = [T("("), T("x", 1), T(" + "), FR("1", "x"), T(")"), SUP("2"), T(" = 5"), SUP("2")];
+      const W2 = [T("x", 1), SUP("2"), T(" + "), { s: "2", id: "plus2" }, T(" + "), FR("1", "x", "2"), T(" = 25")];
+      const W3 = [T("x", 1), SUP("2"), T(" + "), FR("1", "x", "2"), T(" = "), { s: "23", id: "ans" }];
+      const CH = [["A", "21"], ["B", "23"], ["C", "25"], ["D", "27"]];
+      const CHX = [130, 600, 1070, 1540], CHY = 1268;
+
+      // static smudges for a used board
+      const smudge = document.createElement("canvas"); smudge.width = BW; smudge.height = BH;
+      { const g = smudge.getContext("2d"); g.fillStyle = "#fbfbf8"; g.fillRect(0, 0, BW, BH);
+        for (let i = 0; i < 26; i++) { const x = rng() * BW, y = rng() * BH, r = 60 + rng() * 220; const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(170,180,200,${0.05 + rng() * 0.06})`); gr.addColorStop(1, "rgba(170,180,200,0)"); g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2); }
+        const gl = g.createLinearGradient(0, 0, BW, 0); gl.addColorStop(0, "rgba(255,255,255,0)"); gl.addColorStop(0.55, "rgba(255,255,255,0.35)"); gl.addColorStop(0.62, "rgba(255,255,255,0)"); g.fillStyle = gl; g.fillRect(0, 0, BW, BH); }
+
+      let lastSig = "";
+      function drawBoard(t) {
+        const p = {
+          ch: [0, 1, 2, 3].map((i) => win(t, 6.6 + i * 0.18, 6.85 + i * 0.18)),
+          trap: win(t, 15.4, 15.9), w1: win(t, 16.45, 17.5), w2: win(t, 19.5, 21.0), hl: win(t, 20.25, 20.6),
+          w3: win(t, 24.0, 24.95), ans: win(t, 25.4, 25.9),
+        };
+        const sig = JSON.stringify(p, (k, v) => (typeof v === "number" ? Math.round(v * 40) : v));
+        if (sig === lastSig) return; lastSig = sig;
+        bg.drawImage(smudge, 0, 0);
+        const ids = {};
+        drawRow(Q1, 130, 235, 150, BLUE);
+        drawRow(Q2, 130, 455, 150, BLUE);
+        bg.strokeStyle = "rgba(31,59,140,0.35)"; bg.lineWidth = 5; bg.beginPath(); bg.moveTo(120, 548); bg.lineTo(1930, 548); bg.stroke();
+        // highlight behind +2 (drawn first so the digit sits on top)
+        const w2ids = {}; measure(W2, 118);
+        if (p.hl > 0) {
+          const tmp = {}; // locate the 2 without drawing
+          let x = 130; for (const it of measure(W2, 118).items) { if (it.tk.id === "plus2") { tmp.x = 130 + it.x; tmp.w = it.w; } }
+          bg.save(); bg.fillStyle = "rgba(255,210,63,0.75)"; bg.beginPath(); bg.ellipse(tmp.x + tmp.w / 2, 900 - 40, 70 * easeOut(p.hl), 78 * easeOut(p.hl), -0.15, 0, Math.PI * 2); bg.fill(); bg.restore();
+        }
+        if (p.w1 > 0) drawRow(W1, 130, 705, 118, BLUE, p.w1);
+        if (p.w2 > 0) drawRow(W2, 130, 900, 118, BLUE, p.w2, w2ids);
+        if (p.w3 > 0) drawRow(W3, 130, 1090, 118, GREEN, p.w3, ids);
+        for (let i = 0; i < 4; i++) {
+          if (p.ch[i] <= 0) continue;
+          bg.save(); bg.globalAlpha = p.ch[i]; bg.fillStyle = BLUE;
+          bg.font = F(104, false); bg.fillText(CH[i][0] + ")", CHX[i], CHY); const lw = bg.measureText(CH[i][0] + ") ").width;
+          bg.fillText(CH[i][1], CHX[i] + lw, CHY); bg.restore();
+        }
+        // trap: red circle and cross on C) 25
+        if (p.trap > 0) {
+          const cx = CHX[2] + 125, cy = CHY - 36;
+          bg.save(); bg.strokeStyle = RED; bg.lineWidth = 12; bg.lineCap = "round";
+          bg.beginPath(); bg.ellipse(cx, cy, 185, 88, -0.05, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * clamp01(p.trap * 1.6)); bg.stroke();
+          const k = clamp01((p.trap - 0.55) / 0.45);
+          if (k > 0) { bg.beginPath(); bg.moveTo(cx - 120, cy - 70); bg.lineTo(cx - 120 + 240 * k, cy - 70 + 140 * k); bg.stroke(); }
+          if (k > 0.5) { const k2 = (k - 0.5) * 2; bg.beginPath(); bg.moveTo(cx + 120, cy - 70); bg.lineTo(cx + 120 - 240 * k2, cy - 70 + 140 * k2); bg.stroke(); }
+          bg.restore();
+        }
+        // answer: green circle on B) 23
+        if (p.ans > 0) {
+          const cx = CHX[1] + 125, cy = CHY - 36;
+          bg.save(); bg.strokeStyle = GREEN; bg.lineWidth = 13; bg.lineCap = "round";
+          bg.beginPath(); bg.ellipse(cx, cy, 190, 92, 0.04, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2.08 * easeOut(p.ans)); bg.stroke(); bg.restore();
+        }
+        boardTex.needsUpdate = true;
+      }
+
+      // ---------------- props: desk + laptop with the real exam screen, shelf, plant, clock ----------------
+      const wood = std(0x8a5e3b, { map: floorTex, roughness: 0.5 });
+      const desk = new THREE.Group(); scene.add(desk); desk.position.set(3.05, 0, -0.9); desk.rotation.y = -0.35;
+      const top = new THREE.Mesh(new RoundedBoxGeometry(1.8, 0.06, 0.85, 2, 0.02), wood); top.position.y = 0.78; top.castShadow = top.receiveShadow = true; desk.add(top);
+      for (const [x, z] of [[-0.82, -0.36], [0.82, -0.36], [-0.82, 0.36], [0.82, 0.36]]) { const l = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.76, 0.05), std(0x2b2b2b, { metalness: 0.6, roughness: 0.4 })); l.position.set(x, 0.38, z); l.castShadow = true; desk.add(l); }
+      const examTex = await new THREE.TextureLoader().loadAsync(asset("assets/exam-screen.png")); examTex.colorSpace = THREE.SRGBColorSpace; examTex.anisotropy = 8;
+      const lapBase = new THREE.Mesh(new RoundedBoxGeometry(0.62, 0.025, 0.42, 2, 0.01), std(0x9aa0a8, { metalness: 0.8, roughness: 0.3 })); lapBase.position.set(-0.2, 0.825, 0.05); desk.add(lapBase);
+      const lapLid = new THREE.Group(); lapLid.position.set(-0.2, 0.84, -0.16); lapLid.rotation.x = -0.25; desk.add(lapLid);
+      const lid = new THREE.Mesh(new RoundedBoxGeometry(0.62, 0.42, 0.015, 2, 0.006), std(0x9aa0a8, { metalness: 0.8, roughness: 0.3 })); lid.position.y = 0.21; lapLid.add(lid);
+      const screen = new THREE.Mesh(new THREE.PlaneGeometry(0.58, 0.29), new THREE.MeshBasicMaterial({ map: examTex })); screen.position.set(0, 0.22, 0.009); lapLid.add(screen);
+      const mug = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.045, 0.11, 18), std(0xc6463a, { roughness: 0.4 })); mug.position.set(0.35, 0.865, 0.1); desk.add(mug);
+      const books = new THREE.Group(); books.position.set(0.55, 0.81, -0.15); desk.add(books);
+      [[0x2f5e8a, 0.05], [0xd9a441, 0.04], [0x3f7a4a, 0.06]].forEach(([c, h], i) => { const b = new THREE.Mesh(new THREE.BoxGeometry(0.3, h, 0.22), std(c)); b.position.y = i * 0.055 + h / 2; b.rotation.y = (i - 1) * 0.15; b.castShadow = true; books.add(b); });
+      const chair = new THREE.Group(); scene.add(chair); chair.position.set(3.3, 0, 0.0); chair.rotation.y = 2.6;
+      const seat = new THREE.Mesh(new RoundedBoxGeometry(0.5, 0.06, 0.5, 2, 0.02), std(0x2d3a4a)); seat.position.y = 0.48; chair.add(seat);
+      const backr = new THREE.Mesh(new RoundedBoxGeometry(0.5, 0.5, 0.05, 2, 0.02), std(0x2d3a4a)); backr.position.set(0, 0.78, -0.23); chair.add(backr);
+      const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.45), std(0x333333, { metalness: 0.7 })); stem.position.y = 0.23; chair.add(stem);
+      // shelf with books on the left wall
+      const shelf = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.04, 1.6), wood); shelf.position.set(-4.43, 1.9, -0.6); scene.add(shelf);
+      for (let i = 0; i < 12; i++) { const h = 0.22 + rng() * 0.12; const b = new THREE.Mesh(new THREE.BoxGeometry(0.2, h, 0.05 + rng() * 0.04), std([0x8a2f2f, 0x2f5e8a, 0xd9a441, 0x3f7a4a, 0x6b4f8a][i % 5])); b.position.set(-4.43, 1.92 + h / 2, -1.3 + i * 0.12); b.castShadow = true; scene.add(b); }
+      const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.15, 0.36, 16), std(0xd97c4a, { roughness: 0.7 })); pot.position.set(-3.7, 0.18, -1.6); scene.add(pot);
+      for (let i = 0; i < 9; i++) { const lf = new THREE.Mesh(new THREE.ConeGeometry(0.08, 0.7 + rng() * 0.3, 5), std(0x2f6a35, { flatShading: true })); const a = i * 0.7; lf.position.set(-3.7 + Math.cos(a) * 0.08, 0.7, -1.6 + Math.sin(a) * 0.08); lf.rotation.set(Math.sin(a) * 0.4, 0, Math.cos(a) * 0.4); lf.castShadow = true; scene.add(lf); }
+      // wall clock with a ticking second hand
+      const clockG = new THREE.Group(); clockG.position.set(-2.55, 3.25, -2.05); scene.add(clockG);
+      const face = new THREE.Mesh(new THREE.CircleGeometry(0.26, 40), new THREE.MeshStandardMaterial({ map: canvasTex(256, 256, (g) => { g.fillStyle = "#fff"; g.beginPath(); g.arc(128, 128, 128, 0, 7); g.fill(); g.fillStyle = "#222"; for (let i = 0; i < 12; i++) { const a = (i / 12) * Math.PI * 2; g.fillRect(128 + Math.sin(a) * 100 - 4, 128 - Math.cos(a) * 100 - 12, 8, 24); } }) }));
+      face.position.z = 0.03; clockG.add(face);
+      const rim = new THREE.Mesh(new THREE.TorusGeometry(0.27, 0.025, 10, 40), std(0x222222)); rim.position.z = 0.03; clockG.add(rim);
+      const handM = std(0x111111), secM = std(0xd2232a);
+      const hourH = new THREE.Mesh(new THREE.BoxGeometry(0.025, 0.13, 0.01), handM); hourH.geometry.translate(0, 0.065, 0); hourH.position.z = 0.04; hourH.rotation.z = -2.2; clockG.add(hourH);
+      const minH = new THREE.Mesh(new THREE.BoxGeometry(0.018, 0.2, 0.01), handM); minH.geometry.translate(0, 0.1, 0); minH.position.z = 0.045; minH.rotation.z = -0.9; clockG.add(minH);
+      const secH = new THREE.Mesh(new THREE.BoxGeometry(0.008, 0.22, 0.01), secM); secH.geometry.translate(0, 0.09, 0); secH.position.z = 0.05; clockG.add(secH);
+      // poster
+      const poster = new THREE.Mesh(new THREE.PlaneGeometry(0.8, 1.05), new THREE.MeshStandardMaterial({ map: canvasTex(400, 525, (g, w, h) => { g.fillStyle = "#1d2b4a"; g.fillRect(0, 0, w, h); g.fillStyle = "#ffd23f"; g.font = "bold 150px Georgia, serif"; g.textAlign = "center"; g.fillText("π", w / 2, 230); g.fillStyle = "#e9e3d6"; g.font = "bold 44px Georgia, serif"; g.fillText("KEEP", w / 2, 340); g.fillText("SOLVING", w / 2, 395); }) }));
+      poster.position.set(2.85, 2.55, -2.08); scene.add(poster);
+
+      // ---------------- lights ----------------
+      const hemi = new THREE.HemisphereLight(0xfff3e0, 0x6b5a48, 0.9); scene.add(hemi);
+      const sun = new THREE.DirectionalLight(0xffe2b8, 2.4); sun.position.set(9, 6.5, 2.2); sun.target.position.set(-1, 0.5, -1); sun.castShadow = true;
+      sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -7, right: 7, top: 7, bottom: -7, near: 1, far: 30 }); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
+      scene.add(sun, sun.target);
+      const boardLight = new THREE.SpotLight(0xffffff, 18, 9, 0.55, 0.6, 1.4); boardLight.position.set(0.3, 3.9, 1.6); boardLight.target.position.set(0.3, 2.0, -2); scene.add(boardLight, boardLight.target);
+      const fill = new THREE.PointLight(0xfff4e6, 6, 9, 1.6); scene.add(fill);
+
+      // ---------------- the student ----------------
+      const guy = await new FBXLoader().loadAsync(asset("assets/guy/guy.fbx"));
+      const gtex = await new THREE.TextureLoader().loadAsync(asset("assets/guy/clothes.png")); gtex.colorSpace = THREE.SRGBColorSpace; gtex.magFilter = gtex.minFilter = THREE.NearestFilter;
+      guy.traverse((m) => { if (m.isMesh) { m.material = new THREE.MeshStandardMaterial({ map: gtex, roughness: 0.7, flatShading: true }); m.castShadow = m.receiveShadow = true; m.frustumCulled = false; } });
+      guy.scale.setScalar(1.76 / 526); scene.add(guy);
+      const mixer = new THREE.AnimationMixer(guy);
+      const clips = {}; for (const a of guy.animations) clips[a.name.split("|")[1]] = a;
+      function setAnim(name, tt) { mixer.stopAllAction(); const a = mixer.clipAction(clips[name]); a.reset(); a.play(); const d = clips[name].duration; a.time = ((tt % d) + d) % d; mixer.update(0); }
+      const bones = {}; guy.traverse((b) => { if (b.isBone) bones[b.name] = b; });
+      const shoeM = std(0xf2f2f2, { roughness: 0.6 }), soleM = std(0x3a3a3a);
+      const gear = [];
+      const seg = (a, b, r, mat) => { const m = new THREE.Mesh(new THREE.BufferGeometry(), mat); m.castShadow = true; scene.add(m); gear.push({ m, a, b, r }); };
+      seg("LeftFoot", "LeftToe_End", 0.062, shoeM); seg("RightFoot", "RightToe_End", 0.062, shoeM);
+      const ankles = ["LeftFoot", "RightFoot"].map((b) => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.068, 14, 10), soleM); m.castShadow = true; scene.add(m); return { m, b }; });
+      const A = new THREE.Vector3(), B = new THREE.Vector3(), Y = new THREE.Vector3(0, 1, 0);
+      setAnim("Idle", 0); guy.updateMatrixWorld(true);
+      for (const g of gear) { bones[g.a].getWorldPosition(A); bones[g.b].getWorldPosition(B); g.m.geometry = new THREE.CapsuleGeometry(g.r, Math.max(0.01, A.distanceTo(B) - g.r), 4, 12); }
+      function updateGear() {
+        guy.updateMatrixWorld(true);
+        for (const g of gear) { bones[g.a].getWorldPosition(A); bones[g.b].getWorldPosition(B); g.m.position.copy(A).add(B).multiplyScalar(0.5); g.m.quaternion.setFromUnitVectors(Y, B.clone().sub(A).normalize()); }
+        for (const k of ankles) { bones[k.b].getWorldPosition(A); k.m.position.copy(A); k.m.position.y -= 0.02; }
+      }
+      const GX = -2.2, GZ = -1.15;
+
+      // ---------------- shots ----------------
+      // [start, end, camFrom, camTo, lookFrom, lookTo, fov]
+      const SHOTS = [
+        [0.0, 2.1, V(-1.55, 1.78, 1.35), V(-1.7, 1.74, 0.85), V(-2.15, 1.6, -1.15), V(-2.15, 1.58, -1.15), 40],
+        [2.1, 3.85, V(-0.6, 2.0, 6.2), V(-0.7, 2.0, 5.5), V(-1.0, 1.9, -2), V(-1.0, 1.9, -2), 46],
+        [3.85, 9.4, V(-0.45, 2.72, 3.3), V(0.2, 2.05, 5.3), V(-0.45, 2.72, -2), V(0.2, 2.0, -2), 42],
+        [9.4, 13.7, V(-1.3, 1.9, 5.4), V(-1.15, 1.9, 4.8), V(-1.0, 1.8, -2), V(-1.0, 1.8, -2), 44],
+        [13.7, 16.3, V(0.55, 1.28, 2.35), V(0.45, 1.25, 1.95), V(0.45, 1.2, -2), V(0.45, 1.2, -2), 40],
+        [16.3, 19.4, V(-0.45, 2.35, 3.1), V(-0.4, 2.3, 2.75), V(-0.45, 2.25, -2), V(-0.45, 2.25, -2), 42],
+        [19.4, 20.3, V(-0.35, 1.98, 3.3), V(-0.35, 1.98, 3.1), V(-0.35, 1.9, -2), V(-0.35, 1.9, -2), 42],
+        [20.3, 23.4, V(-0.6, 1.95, 2.05), V(-0.6, 1.95, 1.75), V(-0.72, 1.92, -2), V(-0.72, 1.92, -2), 40],
+        [23.4, 25.35, V(-0.35, 1.62, 3.6), V(-0.35, 1.66, 3.95), V(-0.35, 1.55, -2), V(-0.35, 1.6, -2), 42],
+        [25.35, 27.0, V(-1.5, 1.75, 5.0), V(-1.6, 1.7, 4.3), V(-1.3, 1.6, -2), V(-1.4, 1.6, -2), 44],
+        [27.0, 29.4, V(-1.6, 1.72, 1.6), V(-1.7, 1.72, 1.15), V(-2.15, 1.58, -1.15), V(-2.15, 1.58, -1.15), 40],
+        [29.4, 31.6, V(2.05, 1.32, 0.95), V(2.25, 1.26, 0.55), V(2.95, 1.0, -1.1), V(2.95, 1.0, -1.1), 40],
+        [31.6, 32.4, V(-1.55, 1.78, 1.35), V(-1.6, 1.77, 1.2), V(-2.15, 1.6, -1.15), V(-2.15, 1.6, -1.15), 40],
+      ];
+      const shotAt = (t) => { for (let i = SHOTS.length - 1; i >= 0; i--) if (t >= SHOTS[i][0]) return i; return 0; };
+
+      // turns: face camera, or turn to the board to point at it
+      const POINTS = [[15.2, 16.25], [20.05, 21.1], [25.3, 25.45]];
+      host.render = (t) => {
+        const si = shotAt(t), S = SHOTS[si];
+        const u = easeInOut((t - S[0]) / (S[1] - S[0]));
+        camera.position.lerpVectors(S[2], S[3], u);
+        // a quick punch on every cut: starts 4% closer and settles
+        const punch = 1 - easeOut(win(t, S[0], S[0] + 0.35));
+        const look = new THREE.Vector3().lerpVectors(S[4], S[5], u);
+        camera.position.lerp(look, 0.06 * punch);
+        camera.fov = S[6]; camera.updateProjectionMatrix(); camera.lookAt(look);
+        fill.position.copy(camera.position).add(V(0.3, 0.3, 0));
+
+        drawBoard(t);
+        secH.rotation.z = -Math.floor(t) * (Math.PI / 30) - 0.6;
+
+        // student
+        let anim = "Idle", at = t + 3.0, ry = 0.25;
+        let pointing = POINTS.find(([a, b]) => t >= a && t < b);
+        if (pointing) { anim = "Punch"; at = (t - pointing[0]) * 0.9 + 0.05; ry = 1.25; }
+        if (t >= 25.45 && t < 26.6) { anim = "Jump"; at = (t - 25.45) * 0.9; ry = 0.3; }
+        const turnIn = pointing ? easeOut(win(t, pointing[0], pointing[0] + 0.2)) : 0;
+        guy.position.set(GX, 0, GZ); guy.rotation.set(0, lerp(0.25, ry, pointing ? turnIn : 1), 0);
+        setAnim(anim, at);
+        updateGear();
+
+        renderer.render(scene, camera);
+      };
+      host.render(host.clock.t);
+      host.ready();
+    </script>
+  </body>
+</html>
