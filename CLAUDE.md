@@ -1,5 +1,16 @@
 # Project memory
 
+## Promo videos (`video/`): the house voice is Liam — read `video/voice/README.md`
+
+Every scholarly.space Short uses the ElevenLabs voice "Liam" (`TX3LPaxmHKxFdv7VOQHJ`), generated through the vidIQ
+connector at 1.2× speed. The owner chose it over the earlier Kokoro voice. The README has the exact recipe, a
+cutting script, and the reference take. `video/sat-hardest/` (SAT Short #2 v4) is the reference video for
+structure:
+- the hook readable on frame 1,
+- a 3-second countdown,
+- a music bed under everything,
+- an end card that lights each line as it's said and ends on "Join the community!".
+
 ## Responsive layout: the conventions that keep phones working
 
 - **One navigation source.** `SidebarContent` (student) and `AdminSidebarContent`
