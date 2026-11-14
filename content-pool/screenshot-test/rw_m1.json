@@ -310,6 +310,86 @@
    "mine": "B",
    "printed": null,
    "why": "\"However\" contrasts this sentence with the previous one (best known for Sugar Hill, yet not on its classic song), so it closes the first clause, and a semicolon joins the explanation. C attaches \"however\" to the wrong clause; A is a comma splice."
+  },
+  {
+   "n": 21,
+   "skill": "SEC-BS",
+   "source": "SATashkent",
+   "passage": "<p>In 2020, internationally renowned Slovak photographer Mária Švarbová exhibited her work at the Contessa Gallery and the Art Angel Gallery in the United States and _____ utilizing vivid pastel colors, overexposed tones, and mirror like symmetry, Švarbová’s photographs evoke a Socialist-era aesthetic that she describes as “minimalistic but also futuristic.”</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Japan, respectively,",
+    "Japan, respectively;",
+    "Japan; respectively",
+    "Japan, respectively"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "\"Respectively\" belongs with the first clause; what follows is a complete sentence, so a semicolon joins the two. A is a comma splice, D a run-on, and C cuts \"respectively\" off its clause."
+  },
+  {
+   "n": 22,
+   "skill": "EOI-TR",
+   "passage": "<p>If you could travel in a spaceship to Elara, one of Jupiter’s many moons, you’d find a moon with a prograde orbit. This means that Elara orbits Jupiter in the same direction that Jupiter rotates on its axis. _____ at Mneme, another Jovian moon, you’d find an example of a retrograde orbit, with the moon revolving around Jupiter in the opposite direction.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "Elsewhere,",
+    "Specifically,",
+    "In other words,"
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "The text moves from Elara to a different place, Mneme."
+  },
+  {
+   "n": 23,
+   "skill": "EOI-TR",
+   "passage": "<p>Photonics expert Mo Li claims that because quasiparticles called excitons are charge neutral, they would resist energy loss if used to transport data in circuits, greatly improving circuit efficiency. _____ in the absence of any other force, neutral excitons wouldn’t move at all (because they’d resist the current’s pull); knowing this, Li plans to use sound waves to move the excitons.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "That is,",
+    "In addition,",
+    "Granted,",
+    "For example,"
+   ],
+   "mine": "C",
+   "printed": "C",
+   "why": "The sentence concedes a drawback of the neutrality just praised, then says how Li works around it."
+  },
+  {
+   "n": 24,
+   "skill": "EOI-TR",
+   "source": "SATashkent",
+   "passage": "<p>Decentralized space, in which no points in the performance space are privileged over others, was one of the central principles of Merce Cunningham’s choreographic philosophy. The approach marked a radical departure from the dance philosophies of Cunningham’s mid-twentieth-century contemporaries. _____ resulting in his dance pieces, like <em>Interscape Mirage</em>, being received not merely as experimental spectacles but as groundbreaking artworks.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Moreover, Cunningham incorporated his principles with great skill and artistry.",
+    "Specifically, Cunningham was an accomplished dancer as well as choreographer,",
+    "Accordingly, Cunningham founded his namesake dance company in 1953,",
+    "In contrast, Cunningham gained a reputation as an unpredictable iconoclast,"
+   ],
+   "mine": "D",
+   "printed": null,
+   "why": "Breaking with his contemporaries made him an iconoclast, which is why his pieces were received as groundbreaking. A is a complete sentence and cannot run into 'resulting'; B and C do not explain the reception.",
+   "flags": [
+    "Least clear-cut item so far ('In contrast' is a loose fit); answered by reasoning, no printed key seen. Check against the book's key if available."
+   ]
+  },
+  {
+   "n": 25,
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Alexander D. Dolgov is a Russian particle physicist.</li><li>Particle physicists study subatomic particles.</li><li>Neutrinos are some of the least understood subatomic particles.</li><li>Neutrinos were first discovered in the mid-twentieth century.</li><li>Dolgov is known for his research on neutrino kinetics.</li></ul>",
+   "stem": "The student wants to provide an example of a particle physicist whose research focuses on neutrinos. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "By studying neutrino kinetics—to name just one example—particle physicists can learn more about neutrinos.",
+    "Particle physicist Alexander D. Dolgov is known for his research on neutrino kinetics.",
+    "Neutrinos are a type of subatomic particle that particle physicists are still trying to understand.",
+    "The research done on neutrino kinetics exemplifies the work particle physicists do to advance our understanding of subatomic particles."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Only B names a particle physicist (Dolgov) and his neutrino research."
   }
  ],
  "disputes": [],
