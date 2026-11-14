@@ -22,7 +22,7 @@ inserted as DRAFT. The user publishes from the admin panel.
   passage overlap with this test, lowest student exposure first. Every one was re-solved by hand; 4 were
   rejected (2 template repeats of Math M1, 1 contradictory rounding instruction, 1 wrong key "July Falk")
   and 4 repaired (`FIXES` in the build script).
-- Routing (set by the user): R&W Module 1 below 20/27 -> Easy (74%); Math Module 1 below 15/22 -> Easy (68%).
+- Routing (set by the user): Easy modules switched off, every student goes to Module 2 Hard (cut-off 0%). The Easy modules stay in the database because students already answered 98 questions in them.
 - Pinned first in every test list by `isFeaturedTest` in `src/lib/tests/order.ts`.
 - Verified locally: math rendering audit 0 errors (positive control fires), 117 KaTeX spans compile at
   throwOnError: true, all 147 questions walked in the real exam screen with no raw LaTeX, no broken images.

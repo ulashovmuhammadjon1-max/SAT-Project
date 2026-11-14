@@ -57,10 +57,10 @@ const domainId = Object.fromEntries((await sql`SELECT id, code FROM "Domain"`).m
 const skillId = Object.fromEntries((await sql`SELECT id, code FROM "Skill"`).map((s) => [s.code, s.id]));
 
 const MODULES = {
-  RW_M1:    { subject: "READING_WRITING", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 32, threshold: 74 },
+  RW_M1:    { subject: "READING_WRITING", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 32, threshold: 0 },
   RW_M2E:   { subject: "READING_WRITING", order: 2, difficulty: "EASY",     title: "Module 2 (Easy)", time: 32, threshold: null },
   RW_M2H:   { subject: "READING_WRITING", order: 2, difficulty: "HARD",     title: "Module 2 (Hard)", time: 32, threshold: null },
-  MATH_M1:  { subject: "MATH", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 35, threshold: 68 },
+  MATH_M1:  { subject: "MATH", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 35, threshold: 0 },
   MATH_M2E: { subject: "MATH", order: 2, difficulty: "EASY",     title: "Module 2 (Easy)", time: 35, threshold: null },
   MATH_M2H: { subject: "MATH", order: 2, difficulty: "HARD",     title: "Module 2 (Hard)", time: 35, threshold: null },
 };
