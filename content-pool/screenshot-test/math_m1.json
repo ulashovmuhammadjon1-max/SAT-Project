@@ -237,6 +237,81 @@
    "verify": "count of parts: 4n + n + 15 = 100 (n = 17); A totals inches and gives n = 5/4",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 16,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "A city has an area of x square miles and a population density of 1,035 people per square mile. The suburb adjacent to the city has an area of y square miles and a population density of 535 people per square mile. The combined population of the city and the suburb adjacent to the city is 13,165 people. Which equation represents this situation?",
+   "choices": [
+    "1,035x + 535y = 13,165",
+    "1,035x + 535 = 13,165y",
+    "1,035x + 535 = 1,570y",
+    "1,035x + 535y = 1,570"
+   ],
+   "mine": "A",
+   "verify": "population = density x area for each region, summed",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 17,
+   "skill": "GT-TR",
+   "type": "FR",
+   "stem": "For two acute angles A and B, \\(\\cos A-\\sin B=0\\). The measure of angle A is x degrees, where 8x − 13 = 321. What is the measure of angle B, in degrees?",
+   "answerFR": [
+    "193/4",
+    "48.25"
+   ],
+   "mine": "193/4",
+   "verify": "sympy: x = 167/4 = 41.75, B = 90 - A = 48.25; cos A - sin B = 0 checked",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 18,
+   "skill": "ALG-LI",
+   "type": "MC",
+   "stem": "\\[r>0.54t\\]The given inequality describes the total rainfall r, in inches, in a certain area over a period of t hours, where \\(t\\le 4\\). Which of the following describes this rainfall?",
+   "choices": [
+    "An average rainfall of exactly 0.54 inches per hour",
+    "An average rainfall of more than 0.54 inches per hour",
+    "A total rainfall of more than 4 inches",
+    "A total rainfall of exactly 4 inches"
+   ],
+   "mine": "B",
+   "verify": "r/t > 0.54",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 19,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "\\[12x+8=k(6x+8)+6x\\]In the given equation, k is a constant. The equation has exactly one solution. Which value CANNOT be the value of k?",
+   "choices": [
+    "−1",
+    "0",
+    "1",
+    "2"
+   ],
+   "mine": "C",
+   "verify": "sympy: k = 1 gives no solution; -1, 0, 2 give x = -4/3",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 20,
+   "skill": "ADV-NE",
+   "type": "FR",
+   "stem": "\\[-4x^{2}+bx-25=0\\]In the given equation, b is a positive integer. The equation has no real solution. What is the largest possible value of b?",
+   "answerFR": [
+    "19"
+   ],
+   "mine": "19",
+   "verify": "discriminant b^2 - 400 < 0 -> b < 20; largest integer 19",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
