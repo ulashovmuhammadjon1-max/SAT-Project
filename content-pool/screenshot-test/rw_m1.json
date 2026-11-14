@@ -160,7 +160,84 @@
    "mine": "A",
    "printed": "A",
    "why": "History is accurate like a map but cold, lacking a painting's charm; the fix uses methods barred to those bound to exactness."
+  },
+  {
+   "n": 11,
+   "skill": "INI-CE",
+   "passage": "<p><strong>Monthly Temperatures and Wing Centroid Sizes of Fruit Fly Specimens</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Month</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Average high (&deg;F)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Average low (&deg;F)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Average male wing centroid size (mm)</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Average female wing centroid size (mm)</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">June</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">80</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">56</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.01</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.31</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">October</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">67</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">44</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1.98</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.29</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">July</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">87</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">62</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.02</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.31</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">May</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">73</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">50</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">1.98</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">2.27</td></tr></tbody></table><p><em>Drosophila</em> (fruit flies) have generation times of 10–12 days, so seasonal changes in humidity and other environmental conditions can drive seasonal fluctuations in chromosome rearrangements in species such as <em>D. robusta</em> and <em>D. subobscura</em>. <em>Drosophila</em> body size (for which wing centroid size serves as a proxy measure) correlates with reproductive fitness. Banu Şebnem Önder and Cansu Fidan Aksoy measured the wing sizes of members of a <em>D. melanogaster</em> population in Yeşilöz, Turkey, that were collected monthly between May and October over three years. Their research suggests that <em>Drosophila</em> collected in relatively warmer months should tend to have greater reproductive fitness, as is illustrated by the finding that _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the assertion?",
+   "choices": [
+    "the average female wing centroid size was consistently larger than the average male wing centroid size in all four months in the table.",
+    "the average male wing centroid size was larger in July than in October.",
+    "the average monthly low temperature was higher in June than in May.",
+    "the average female wing centroid size was 2.02 mm in July but was 2.31 mm in June."
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "July is the warmest month and October the coolest; male wing size (the fitness proxy) is 2.02 mm vs 1.98 mm.",
+   "flags": [
+    "Watermark covered a word: 'for which ___ centroid size serves'; restored as 'wing' from the table."
+   ]
+  },
+  {
+   "n": 12,
+   "skill": "INI-CE",
+   "passage": "<p><strong>US Honey Bee Specimen Lineages and Haplotypes</strong></p><table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">State</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">African lineage percentage</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">North Mediterranean lineage percentage</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">West Mediterranean lineage percentage</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Known haplotypes</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Utah</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.2</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">95.8</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C1, C2j, C2d, A1v</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">South Carolina</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">95.5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">4.5</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C1, C2j, C2d, C3</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">Alabama</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">86.4</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">13.6</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">C1, C2j, C2c, C2d, C3, M3a</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">New Mexico</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">0</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">91.3</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">8.7</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">CJ, C2j, C2c, C2d, C2i, M7b</td></tr></tbody></table><p>The ability of honey bee populations to tolerate disease, predation, and environmental changes, which is important given bees’ crucial role in pollination, is supported by healthy genetic diversity in those populations. Mohamed Alburaki, Jillian Lopez, and colleagues analyzed a large sample of honey bees (<em>Apis mellifera</em> L.) collected from most US states, assessing mitochondrial DNA markers to identify three maternal evolutionary lineages—North Mediterranean, West Mediterranean, and African—and the distinct haplotypes (inherited DNA variants) associated with each. A student asserts that if the data in the table are broadly representative, the researchers’ findings suggest that _____</p>",
+   "stem": "Which choice most effectively uses data from the table to complete the student’s conclusion?",
+   "choices": [
+    "US honey bee populations may be vulnerable to stressors because they are overwhelmingly dominated by a single lineage and there is extensive recurrence of the same haplotypes across locations.",
+    "the genetic diversity of US honey bee populations has recently begun to increase because there are haplotypes recorded that are not yet ubiquitous across states.",
+    "even as lineages with minimal representation continue to diminish, the overall genetic diversity of US honey bee populations will remain stable or increase because of the distribution of haplotypes.",
+    "certain haplotypes are prevalent throughout US honey bee populations because they confer resistance to a broader range of stressors than haplotypes limited to regional populations do."
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "North Mediterranean is 86–96% everywhere and C1/C2j/C2d recur across states: low diversity, so vulnerability.",
+   "flags": [
+    "Watermark covered a word: 'assessing ___ DNA markers'; restored as 'mitochondrial' (maternal lineages).",
+    "Table shows 'CJ' for New Mexico, likely a typo for C1; kept as printed pending the user."
+   ]
+  },
+  {
+   "n": 13,
+   "skill": "INI-CE",
+   "passage": "<p>Variously, researchers have closely examined obsidian artifacts to map ancient economic and cultural exchange routes, as in David V. Burley and colleagues’ 2011 study, or to glean aspects of cultural identity, as in Dennis Ogburn and colleagues’ 2009 study. Studies of the Malia archaeological site on the Mediterranean island of Crete have shown that significant changes to building styles—changes consistent with an influx of people from another culture elsewhere in the Mediterranean—occurred from the Middle Bronze Age to the Late Bronze Age. In a 2022 study, however, Tristan Carter and Vassilis Kilikoglou found that obsidian-object production methods at Malia stayed remarkably consistent during this architectural transition, which they interpret as indicative of local cultural continuity in the Middle and Late Bronze Ages.</p>",
+   "stem": "Which finding, if true, would most directly weaken Carter and Kilikoglou’s argument?",
+   "choices": [
+    "Changes to buildings like those that occurred at Malia have not been linked to changes in obsidian-object production methods in other Mediterranean cultures during the Middle and Late Bronze Ages.",
+    "The methods used to produce obsidian objects at Malia during the Middle and Late Bronze Ages were also used by some other Mediterranean cultures in the period.",
+    "The obsidian-object production method that was most common among other Mediterranean cultures during the Middle and Late Bronze Ages was more efficient than the method used at Malia.",
+    "The obsidian used to produce objects at Malia was transported to Crete from the same source elsewhere in the Mediterranean throughout the Middle and Late Bronze Ages."
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "If newcomers from elsewhere used the same methods, unchanged methods no longer show the local culture continued.",
+   "flags": [
+    "Watermark covered 'Carter' and 'object'; restored from the stem and choice C."
+   ]
+  },
+  {
+   "n": 14,
+   "skill": "INI-IE",
+   "passage": "<p>Artificial intelligence (AI) technology is increasingly prevalent in online marketing, largely in the form of autonomously operating algorithms that make use of extensive collections of data about individuals’ behavior to generate highly personalized advertisements in real time. In a recent survey of college students’ attitudes toward AI marketing, researchers found that respondents expressed little concern about AI marketing technology in general but expressed a high degree of concern about the collection and use of personal data (be it their own or other people’s). Since machine learning on immense troves of such data is intrinsic to the functionality of AI marketing tools, this discrepancy suggests that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the college students included in the survey may not be representative of the general population with regard to attitudes toward AI marketing technology.",
+    "respondents’ attitudes toward AI marketing technology in general may be a result of the respondents having a limited understanding of how that technology works.",
+    "respondents have little concern about the collection and use of personal data in the abstract but are uncomfortable with their own data being collected and used.",
+    "the potential drawbacks of AI marketing technology influence respondents’ attitudes more than do the potential benefits of that technology."
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "They worry about data use but not about AI, which is built on data use: they likely don't understand how it works.",
+   "flags": [
+    "Watermark covered 'that' in 'algorithms that make use'; restored.",
+    "Inference must stay the last reading question: the cut-off Q15 (support finding) goes before this one."
+   ]
   }
  ],
- "disputes": []
+ "disputes": [],
+ "notes": [
+  "The Hawthorne main-idea question was sent twice (batches 6-10 and 11-15); kept once, as Q10."
+ ]
 }
