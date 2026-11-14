@@ -1,46 +1,166 @@
 {
-  "module": "READING_WRITING M1 STANDARD",
-  "questions": [
-    {
-      "n": 1, "skill": "CAS-WV",
-      "passage": "<p>Roosevelt County Electric Cooperative and other member-owned rural electric cooperatives can be _____ the other main types of US electrical utilities by their chosen governance models. Although public power utilities are, like cooperatives, not-for-profit enterprises, they are owned and run by local governments; investor-owned utilities, meanwhile, are managed by private boards for the benefit of shareholders.</p>",
-      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-      "choices": ["established by", "distinguished from", "integrated with", "protected against"],
-      "mine": "B", "printed": null,
-      "why": "The text contrasts the governance of cooperatives with that of public power and investor-owned utilities, so cooperatives can be told apart from them by governance."
-    },
-    {
-      "n": 2, "skill": "CAS-WV",
-      "passage": "<p>Having observed microorganisms possessing characteristics unaligned with the two then-known domains of life, Carl Woese proposed a new domain, Archaea, in the 1970s. He first noted Archaea’s traits in methanogens, microbes such as <em>Methanothermus fervidus</em> that cannot _____ in an oxygenated environment but flourish in oxygen-free environments by metabolizing hydrogen and carbon dioxide.</p>",
-      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-      "choices": ["attenuate", "mediate", "dissipate", "proliferate"],
-      "mine": "D", "printed": "D",
-      "why": "\"Cannot ___ ... but flourish\" needs the counterpart of flourishing: multiplying and thriving."
-    },
-    {
-      "n": 3, "skill": "CAS-WV",
-      "passage": "<p>Technical documentation for installing complex heating and cooling systems is sometimes frustratingly _____, offering such complicated and excessively detailed guidance that even seasoned professionals can make little sense of it. That such systems get successfully set up is a testament to the installers’ expertise.</p>",
-      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-      "choices": ["vague", "condensed", "simplistic", "convoluted"],
-      "mine": "D", "printed": "D",
-      "why": "\"Complicated and excessively detailed\" guidance that professionals cannot follow is convoluted."
-    },
-    {
-      "n": 4, "skill": "CAS-WV",
-      "passage": "<p>In the 2010s, the price of vintage empty soda cans rose dramatically, which had the counterintuitive effect of _____ demand: buyers who hadn’t previously wanted to purchase old soda cans suddenly thronged the market, believing prices would continue to rise and the cans could be resold later at a profit.</p>",
-      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-      "choices": ["exploiting", "precipitating", "stabilizing", "monetizing"],
-      "mine": "B", "printed": null,
-      "why": "Rising prices brought in new buyers, so they set off (precipitated) demand; that is the counterintuitive part."
-    },
-    {
-      "n": 5, "skill": "CAS-WV",
-      "passage": "<p>The use of electronic automotive diagnostic scanners has become widespread because they provide mechanics with immediate access to fault codes and system data, but these tools are not without limitations. Thus, most mechanics _____ their use of these scanners with traditional hands-on inspection methods.</p>",
-      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-      "choices": ["contradict", "supplement", "confuse", "exchange"],
-      "mine": "B", "printed": "B",
-      "why": "Because the scanners have limitations, mechanics add hands-on inspection to them."
-    }
-  ],
-  "disputes": []
+ "module": "READING_WRITING M1 STANDARD",
+ "questions": [
+  {
+   "n": 1,
+   "skill": "CAS-WV",
+   "passage": "<p>Roosevelt County Electric Cooperative and other member-owned rural electric cooperatives can be _____ the other main types of US electrical utilities by their chosen governance models. Although public power utilities are, like cooperatives, not-for-profit enterprises, they are owned and run by local governments; investor-owned utilities, meanwhile, are managed by private boards for the benefit of shareholders.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "established by",
+    "distinguished from",
+    "integrated with",
+    "protected against"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "The text contrasts the governance of cooperatives with that of public power and investor-owned utilities, so cooperatives can be told apart from them by governance."
+  },
+  {
+   "n": 2,
+   "skill": "CAS-WV",
+   "passage": "<p>Having observed microorganisms possessing characteristics unaligned with the two then-known domains of life, Carl Woese proposed a new domain, Archaea, in the 1970s. He first noted Archaea’s traits in methanogens, microbes such as <em>Methanothermus fervidus</em> that cannot _____ in an oxygenated environment but flourish in oxygen-free environments by metabolizing hydrogen and carbon dioxide.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "attenuate",
+    "mediate",
+    "dissipate",
+    "proliferate"
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "\"Cannot ___ ... but flourish\" needs the counterpart of flourishing: multiplying and thriving."
+  },
+  {
+   "n": 3,
+   "skill": "CAS-WV",
+   "passage": "<p>Technical documentation for installing complex heating and cooling systems is sometimes frustratingly _____, offering such complicated and excessively detailed guidance that even seasoned professionals can make little sense of it. That such systems get successfully set up is a testament to the installers’ expertise.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "vague",
+    "condensed",
+    "simplistic",
+    "convoluted"
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "\"Complicated and excessively detailed\" guidance that professionals cannot follow is convoluted."
+  },
+  {
+   "n": 4,
+   "skill": "CAS-WV",
+   "passage": "<p>In the 2010s, the price of vintage empty soda cans rose dramatically, which had the counterintuitive effect of _____ demand: buyers who hadn’t previously wanted to purchase old soda cans suddenly thronged the market, believing prices would continue to rise and the cans could be resold later at a profit.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "exploiting",
+    "precipitating",
+    "stabilizing",
+    "monetizing"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Rising prices brought in new buyers, so they set off (precipitated) demand; that is the counterintuitive part."
+  },
+  {
+   "n": 5,
+   "skill": "CAS-WV",
+   "passage": "<p>The use of electronic automotive diagnostic scanners has become widespread because they provide mechanics with immediate access to fault codes and system data, but these tools are not without limitations. Thus, most mechanics _____ their use of these scanners with traditional hands-on inspection methods.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "contradict",
+    "supplement",
+    "confuse",
+    "exchange"
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "Because the scanners have limitations, mechanics add hands-on inspection to them."
+  },
+  {
+   "n": 6,
+   "skill": "CAS-TS",
+   "passage": "<p>Published in 1973, <em>The Sign of the Chrysanthemum</em> was Katherine Paterson’s debut novel. <u>A debut novel is the first book that an author publishes.</u> Authors who are successful with their debut novel will often publish more novels. For example, Paterson published additional novels, including the 1977 novel <em>Bridge to Terabithia</em>.</p>",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It suggests that Paterson should write more novels.",
+    "It describes how authors write novels.",
+    "It gives the title of Paterson’s debut novel.",
+    "It explains what a debut novel is."
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "The underlined sentence defines the term \"debut novel\" used in the sentence before it."
+  },
+  {
+   "n": 7,
+   "skill": "CAS-TS",
+   "passage": "<p>Archaeologist Yijie Zhuang and colleagues uncovered a network of ceramic pipes and drainage ditches in China that date back to the Longshan period (about 4,000 years ago). The system’s complexity would have required a highly advanced level of community-wide planning, but there is no evidence of a centralized authority that could have overseen such planning. The intricacy of the network refutes the common view that only a centralized governing power would be able to gather the resources to build such a complex water-management system.</p>",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It describes a discovery made by Zhuang and colleagues, notes important contextual information about that discovery, and then explains a potential implication of that discovery and contextual information.",
+    "It introduces an unusual aspect of an ancient water system in China, offers a hypothesis about how that aspect came to be, and then signals future research that might bolster that hypothesis.",
+    "It summarizes a conclusion reached by Zhuang and colleagues, acknowledges a counterargument to that conclusion, and then refutes that counterargument with additional evidence.",
+    "It highlights an ancient water-management system discovered in China, points out a significant feature of that system, and then provides additional information clarifying the function of that feature."
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "Discovery (the pipe network), context (needs planning, yet no central authority), implication (refutes the common view).",
+   "flags": [
+    "Stem cut off in the screenshot; 'overall structure' stem inferred from the choices.",
+    "Watermark replaced a word: 'gather the ___ to build'. 'resources' is a placeholder pending the user."
+   ]
+  },
+  {
+   "n": 8,
+   "skill": "INI-CI",
+   "passage": "<p>Information from the Great Sunflower Project helps scientists address pollinator population-size declines caused by habitat loss. Participants monitor which pollinators visit specific plants and the frequency of those visits. Scientists then use this information to determine which plant species best support pollinators and identify where those plant species have declined. Without bees, butterflies, and other pollinators performing their vital role in plant reproduction and food production, ecosystems would suffer—making the conservation efforts informed by this citizen science project all the more important!</p>",
+   "stem": "According to the text, why is the information collected by the Great Sunflower Project valuable?",
+   "choices": [
+    "It helps scientists determine which flowers produce the most honey when visited by bees.",
+    "It helps project participants demonstrate that butterfly population sizes are growing faster than bee population sizes.",
+    "It helps gardeners learn how to grow larger sunflowers through better pollination.",
+    "It helps scientists develop strategies for addressing pollinator habitat loss."
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "The first sentence: the information helps scientists address declines caused by habitat loss.",
+   "flags": [
+    "Watermark replaced the dash in 'suffer—making'; restored."
+   ]
+  },
+  {
+   "n": 9,
+   "skill": "INI-CI",
+   "passage": "<p>In her history of the US Civil Rights Movement, Tomiko Brown-Nagin notes that much of the NAACP’s national agenda in the 1950s was shaped by the progressive ideas of the organization’s New York–based lawyers, who argued civil rights cases in federal courts on behalf of clients in distant locations, mostly in the South. Meanwhile, the efforts of NAACP branch leaders in the South, such as A.T. Walden in Atlanta, were made alongside community members, many of whom were business owners, educators, or health care workers. Like Walden, they tended to favor conservative social values and an approach to civil rights work suited to local circumstances.</p>",
+   "stem": "What does the text most strongly suggest about the NAACP in the 1950s?",
+   "choices": [
+    "Local organizers realized that a unified strategy for the organization as a whole would have to take into account their approaches as well as those of the lawyers based in New York.",
+    "Political disagreements among prominent community organizers negatively affected the organization’s ability to undertake civil rights campaigns in Atlanta.",
+    "The organization’s national priorities were influenced by individuals who had less direct contact with the people they represented than did A.T. Walden and other local organizers.",
+    "Unlike A.T. Walden and other Atlanta residents, who favored community-based efforts, the organization’s staff in New York believed that federal courts offered the most effective route to securing civil rights."
+   ],
+   "mine": "C",
+   "printed": "C",
+   "why": "The national agenda came from New York lawyers representing distant clients, while local leaders worked alongside their communities.",
+   "flags": [
+    "Watermark replaced the verb: 'lawyers, who ___ civil rights cases'. 'argued' is a placeholder pending the user."
+   ]
+  },
+  {
+   "n": 10,
+   "skill": "INI-CI",
+   "passage": "<p>The following text is from Nathaniel Hawthorne’s 1830 short story “Sir William Phips.”</p><p>The knowledge, communicated by the historian and biographer, is analogous to that which we acquire of a country by the map,—minute, perhaps, and accurate, and available for all necessary purposes, but cold and naked, and wholly destitute of the mimic charm produced by painting. These defects are partly remediable, and even without an absolute violation of literal truth, although by methods rightfully interdicted to professors of biographical exactness.</p>",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Historians’ fidelity to the truth often results in work that is less engaging than it could be.",
+    "Maps are more practical to own than paintings.",
+    "Historians do not agree among themselves about the best methods of recording history.",
+    "Biographers are more-skilled writers than other kinds of historians."
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "History is accurate like a map but cold, lacking a painting's charm; the fix uses methods barred to those bound to exactness."
+  }
+ ],
+ "disputes": []
 }
