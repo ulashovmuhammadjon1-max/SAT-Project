@@ -88,10 +88,84 @@
     "Watermark covered 'satisfaction, ___, as the years'; restored as 'until' (Woolf's original wording)."
    ],
    "n": 5
+  },
+  {
+   "n": 6,
+   "src": 6,
+   "skill": "CAS-TS",
+   "passage": "<p>According to a study led by Claire Heeryung Kim, artifact emojis—pictorial symbols representing objects, such as a flower—generally elicit consumer skepticism when used in digital marketing messages. However, the effect was found to be moderated by the emojis’ relevance to the message content: for instance, a pizza company’s email about football and pizza prompted less skepticism when it included football and pizza symbols than when it included gift-box and speaker symbols. This suggests that, barring avoidance of artifact emojis altogether, marketers would benefit from selecting symbols based on their pertinence.</p>",
+   "stem": "Which choice best describes the main purpose of the text?",
+   "choices": [
+    "To explain that inconsistent use of artifact emojis across digital marketing communications undermines consumers’ trust in and willingness to engage with a company",
+    "To illustrate why artifact emojis typically prompt consumer skepticism when they are incorporated into digital marketing communications",
+    "To present research findings about consumer responses to artifact emojis that point to a recommendation for more effective implementation in marketing messages",
+    "To contrast two methodological approaches researchers used in a study to measure consumer responses to the inclusion of artifact emojis in different forms of marketing messages"
+   ],
+   "mine": "C",
+   "printed": "C",
+   "why": "Findings (skepticism, moderated by relevance) lead to a recommendation (pick pertinent symbols).",
+   "flags": [
+    "Watermark covered 'the ___’ relevance'; restored as 'emojis’'."
+   ]
+  },
+  {
+   "n": 7,
+   "src": 7,
+   "skill": "CAS-CT",
+   "passage": "<p><strong>Text 1</strong></p><p>The island of Grande Terre split from the former supercontinent Gondwana around 80 million years ago, carrying <u>Gondwanan species</u> from a variety of clades with it. The island was periodically submerged until 37 million years ago, but some researchers suggest that its current biota includes species from clades predating the split that took refuge on islands near Grande Terre during submergence events and then returned.</p><p><strong>Text 2</strong></p><p>Prashant Sharma and Gonzalo Giribet found that the crown age—the age of the most recent common ancestor of all species in the clade (i.e., the clade’s founder)—of Grande Terre’s clade of harvest spiders is 48.9 million years, which is among the oldest clade crown ages of species inhabiting the island today. Nearly all of Grande Terre’s living species belong to clades that originated much more recently: for example, the crown age of the island’s clade of winter’s bark plants is 15.0 million years.</p>",
+   "stem": "Based on the texts, the author of Text 2 would most likely agree with which statement about the “Gondwanan species” discussed in Text 1?",
+   "choices": [
+    "Few if any of them were members of a clade that includes species currently inhabiting Grande Terre.",
+    "Although most of them have living descendants on Grande Terre, the harvest spiders and winter’s bark plants do not.",
+    "Most of them began recolonizing Grande Terre from nearby islands around 15.0 million years ago.",
+    "Clades to which they belong originated no earlier than 48.9 million years ago."
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "The split was 80 million years ago, yet even the oldest living clades founded 48.9 million years ago; so the clades on the island today postdate the Gondwanan species.",
+   "flags": [
+    "Stem cut off in the screenshot; taken from the user's message.",
+    "Watermark covered '80 ___ years' (million) and 'the ___ recent common ancestor' (most); restored."
+   ]
+  },
+  {
+   "n": 8,
+   "src": 9,
+   "skill": "INI-CI",
+   "passage": "<p>Models indicate that when Neptune captured its moon Triton, the moon first entered a stretched, elongated orbit and could have stayed bound to Neptune only by quickly shedding orbital energy. Researchers long assumed that tidal interactions between Triton and Neptune enabled that shedding, gradually reshaping Triton’s orbit to its current path. Newer work suggests that as Triton passed through a crowd of moons circling Neptune, tides would have acted too slowly to keep it bound. Collisions with those moons, however, could have dissipated orbital energy roughly ten times faster than tides could have.</p>",
+   "stem": "Based on the text, how might collisions with Neptune’s existing moons have affected Triton?",
+   "choices": [
+    "By allowing Triton to shed orbital energy fast enough to keep the moon bound to Neptune",
+    "By enabling a sufficiently rapid reduction in Triton’s orbital energy to preserve the moon’s initial orbit",
+    "By enabling Triton to remain bound to Neptune despite a rapid loss in orbital energy",
+    "By slowing the stretching and elongation of Triton’s orbit so the moon would not drift toward Neptune"
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "Collisions shed energy ten times faster than tides, fast enough to keep Triton bound. B says the orbit was preserved (it was reshaped); C reverses cause and effect.",
+   "flags": [
+    "Watermark covered 'assumed that ___ interactions between ___ and Neptune'; restored as 'tidal' and 'Triton'."
+   ]
   }
  ],
  "disputes": [],
  "notes": [
   "Reordered so fill-in-the-blank WiC precedes underlined-word WiC (CLAUDE.md block order). 'src' is the number in the user's screenshots."
+ ],
+ "excluded": [
+  {
+   "src": 8,
+   "reason": "Exact duplicate of R&W Module 1 Q9 (NAACP, Brown-Nagin) with choices reshuffled; a student sees M1 then this branch.",
+   "key": "A (= M1's C)"
+  },
+  {
+   "src": 10,
+   "reason": "Template duplicate of R&W Module 1 Q12 (honey bee lineages): same stem and choices, different states in the table.",
+   "key": "A"
+  }
+ ],
+ "needs": [
+  "Replacement for an INI-CI 'most strongly suggest' item (for src 8)",
+  "Replacement for an INI-CE table item (for src 10)"
  ]
 }
