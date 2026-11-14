@@ -311,12 +311,43 @@
    "verify": "t = 1/(1.2 x 1.17) = 0.7123",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 21,
+   "skill": "GT-TR",
+   "type": "FR",
+   "source": "sat1600acer",
+   "stem": "In right triangle XYZ, angles X and Z are acute angles. Point R lies on \\(\\overline{XZ}\\) such that \\(\\overline{YR}\\) is perpendicular to \\(\\overline{XZ}\\). The measure of \\(\\angle XZY\\) is a&deg;, the measure of \\(\\angle XYR\\) is b&deg;, and the length of \\(\\overline{XY}\\) is 16. If \\(\\sin a^{\\circ}=\\frac{12}{13}\\), what is the value of \\(\\tan b^{\\circ}\\)?",
+   "answerFR": [
+    "12/5",
+    "2.4"
+   ],
+   "mine": "12/5",
+   "verify": "altitude to the hypotenuse: angle XYR = 90 - X = angle Z, so b = a; sin a = 12/13 gives tan a = 12/5"
+  },
+  {
+   "n": 22,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "source": "Muhammadjon (original)",
+   "stem": "<p><strong>Made by Muhammadjon</strong></p><p><strong>Muhammadjon vs. Yusuf.</strong> Muhammadjon and Yusuf compete in a football shooting challenge. Every shot Muhammadjon takes is either a goal, a shot saved by Yusuf, or a miss. Yusuf has saved 12 of Muhammadjon’s shots. The ratio of goals scored to shots saved is equal to the ratio of shots saved to shots missed. If Muhammadjon had scored 25% more goals and Yusuf had saved 25% fewer shots, with the number of misses unchanged, Muhammadjon would have taken 6 more shots in total.</p><p>What is the total number of shots Muhammadjon has taken?</p>",
+   "choices": [
+    "48",
+    "52",
+    "56",
+    "60"
+   ],
+   "mine": "B",
+   "verify": "sympy: G·M = 144 and 0.25G − 3 = 6 → G = 36, M = 4, total 36 + 12 + 4 = 52",
+   "flags": [
+    "User-supplied original was unsolvable: the ratio gives 10/3 misses and the percent condition gives −5. Rebuilt with saves = 12 and a stated change of 6 shots; answer 52. Needs the user's OK."
+   ]
   }
  ],
  "notes": [
   "Order follows the order screenshots were sent, not the numbers printed in them (user's instruction)."
  ],
  "flags": [
-  "6 free-response items, one over the ~5 cap for this rebuild; the user decides whether to keep it."
+  "7 free-response items (cap ~5 for this rebuild); the user decides whether to keep them all."
  ]
 }
