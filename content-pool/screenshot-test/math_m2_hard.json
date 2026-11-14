@@ -1,0 +1,85 @@
+{
+ "module": "MATH M2 HARD",
+ "questions": [
+  {
+   "n": 1,
+   "skill": "ALG-LF",
+   "type": "MC",
+   "stem": "An airplane begins its descent from a cruising altitude of 33,000 feet and descends at a constant rate of 1,800 feet per minute. Which of the following statements best describes how the plane’s distance from its cruising altitude changes over time?",
+   "choices": [
+    "The plane’s distance from its cruising altitude is increasing linearly over time.",
+    "The plane’s distance from its cruising altitude is decreasing linearly over time.",
+    "The plane’s distance from its cruising altitude is increasing exponentially over time.",
+    "The plane’s distance from its cruising altitude is decreasing exponentially over time."
+   ],
+   "mine": "A",
+   "verify": "distance below cruising altitude = 1,800t: grows by a constant amount each minute",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 2,
+   "skill": "GT-AV",
+   "type": "FR",
+   "stem": "The sides of a rectangle are such that the length is 11 centimeters more than 8 times the width, in centimeters. If the width of the rectangle is 5 centimeters, what is the area, in square centimeters, of the rectangle?",
+   "answerFR": [
+    "255"
+   ],
+   "mine": "255",
+   "verify": "length 8(5) + 11 = 51; 51 x 5 = 255",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 3,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "The function f is defined by \\(f(x)=(x-2)(x-8)(x+3)\\). In the xy-plane, the graph of y = h(x) is the result of translating the graph of y = f(x) up 6 units. What is the y-coordinate of the y-intercept of the graph of y = h(x)?",
+   "choices": [
+    "54",
+    "48",
+    "6",
+    "0"
+   ],
+   "mine": "A",
+   "verify": "sympy: f(0) = 48, h(0) = 54",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 4,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "The function \\(A(b)=7b^{2}\\) gives the area of a right triangle, in square centimeters (\\(\\text{cm}^{2}\\)), if the length of its base is b cm and the length of its height is 14 times the length of its base. Which of the following is the best interpretation of A(18) = 2,268?",
+   "choices": [
+    "If the length of the base of the triangle is 2,268 cm, then the length of the height of the triangle is 18 cm.",
+    "If the length of the base of the triangle is 18 cm, then the length of the height of the triangle is 2,268 cm.",
+    "If the length of the base of the triangle is 18 cm, then the area of the triangle is 2,268 \\(\\text{cm}^{2}\\).",
+    "If the length of the base of the triangle is 2,268 cm, then the area of the triangle is 18 \\(\\text{cm}^{2}\\)."
+   ],
+   "mine": "C",
+   "verify": "sympy: (1/2)(b)(14b) = 7b^2, A(18) = 2268",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 5,
+   "skill": "GT-AV",
+   "type": "MC",
+   "stem": "Circle N has a radius of 6 millimeters (mm). Circle M has an area of \\(121\\pi\\ \\text{mm}^{2}\\). What is the total area, in \\(\\text{mm}^{2}\\), of circles N and M?",
+   "choices": [
+    "\\(17\\pi\\)",
+    "\\(133\\pi\\)",
+    "\\(145\\pi\\)",
+    "\\(157\\pi\\)"
+   ],
+   "mine": "D",
+   "verify": "36π + 121π = 157π",
+   "source": "sat1600acer",
+   "printed": null
+  }
+ ],
+ "notes": [
+  "Order follows the order screenshots were sent, not the numbers printed in them (user's instruction)."
+ ]
+}
