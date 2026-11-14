@@ -130,6 +130,23 @@
   },
   {
    "n": 8,
+   "src": "7 (sat1600acer)",
+   "source": "sat1600acer",
+   "skill": "CAS-CT",
+   "passage": "<p><strong>Text 1</strong></p><p>Brown University and the investment bank Barclays are two of the many institutions offering training programs in entrepreneurship. But what results do such programs produce? In a study of business school graduates in Norway, researchers Lars Kolvereid and Øystein Moen addressed this question and convincingly demonstrated that participants showed strong intentions to become entrepreneurs as a result of receiving entrepreneurial training.</p><p><strong>Text 2</strong></p><p>While studies of entrepreneurial training typically report positive results, a close look at these studies reveals widespread methodological shortcomings. For instance, a 1997 study by Lars Kolvereid and Øystein Moen found benefits of entrepreneurial education for graduates of Norwegian business schools, but the study only collected data on subjects after the training, not before, making it unclear whether the training actually had an effect.</p>",
+   "stem": "Based on the texts, the author of Text 1 and the author of Text 2 would most likely disagree about the answer to which question?",
+   "choices": [
+    "Is the cost of conducting entrepreneurial training programs typically offset by the programs’ benefits?",
+    "Did Kolvereid and Moen’s study provide persuasive evidence that its results are attributable to the entrepreneurial training participants received?",
+    "Did Kolvereid and Moen report that participants who received the entrepreneurial training showed strong intentions to become entrepreneurs?",
+    "Are there convincing experimental results showing that different types of entrepreneurial training programs are associated with different outcomes?"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Text 1 says the study convincingly showed the training caused the intentions; Text 2 says data only after training leaves the effect unclear. Both agree on what was reported (C)."
+  },
+  {
+   "n": 9,
    "src": "8 (replacement)",
    "source": "sat1600acer",
    "skill": "INI-CI",
@@ -146,7 +163,7 @@
    "why": "Both came through Spanish from indigenous languages; the stated difference is the source language: Nahuatl vs Taino."
   },
   {
-   "n": 9,
+   "n": 10,
    "src": 9,
    "skill": "INI-CI",
    "passage": "<p>Models indicate that when Neptune captured its moon Triton, the moon first entered a stretched, elongated orbit and could have stayed bound to Neptune only by quickly shedding orbital energy. Researchers long assumed that tidal interactions between Triton and Neptune enabled that shedding, gradually reshaping Triton’s orbit to its current path. Newer work suggests that as Triton passed through a crowd of moons circling Neptune, tides would have acted too slowly to keep it bound. Collisions with those moons, however, could have dissipated orbital energy roughly ten times faster than tides could have.</p>",
@@ -165,7 +182,7 @@
    ]
   },
   {
-   "n": 10,
+   "n": 11,
    "src": "10 (replacement)",
    "source": "sat1600acer",
    "skill": "INI-CE",
@@ -180,11 +197,80 @@
    "mine": "B",
    "printed": null,
    "why": "The objective is worldwide, but the gel was tested only on an Indian Ocean coral; B shows the same Indian Ocean metabolites working for corals elsewhere."
+  },
+  {
+   "n": 12,
+   "src": "10 (sat1600acer)",
+   "source": "sat1600acer",
+   "skill": "INI-CE",
+   "passage": "<p>In countries with right-hand traffic, drivers who want to make a left turn at a traffic intersection with stoplights have to wait for either a gap in oncoming traffic or a designated left-turn signal to turn green. At busy intersections, this often causes a backup of vehicles waiting to turn left or being prevented from proceeding by left-turning vehicles in front of them. Transportation researcher Vikash V. Gayah claims that in urban areas eliminating the option to turn left at busy intersections—both with and without dedicated left-turn signals—would improve traffic flow and, as a result, reduce overall travel times even if such a restriction would require drivers to sometimes travel a slightly longer distance.</p>",
+   "stem": "Which finding, if true, would most directly support the researcher’s claim?",
+   "choices": [
+    "In a town that installed left-turn signals at all busy intersections, seven out of ten survey respondents agreed with the statement “the streets in my community are easier to navigate by motor vehicle than before.”",
+    "After a city eliminated left turns at busy intersections, a package-delivery company reports that its drivers have been able to reach more addresses in the city daily, on average, and therefore deliver more packages there annually.",
+    "Statistics reveal that school buses in a city that eliminated left turns at most intersections took on average two minutes longer to complete their routes after the restriction took effect than they did before.",
+    "A traffic study of intersections in a large city shows that on average drivers wait longer to make a left turn at intersections without left-turn signals than at intersections with such signals."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "More stops per day after left turns were banned means shorter overall travel time despite longer routes. C would weaken; A and D are not about eliminating left turns."
+  },
+  {
+   "n": 13,
+   "src": "12 (sat1600acer)",
+   "source": "sat1600acer",
+   "skill": "INI-IE",
+   "passage": "<p>“Golden Hours” by Clara J. Whitmore, published in the <em>Chicago Evening Post</em> in 1878, exemplifies the phenomenon of “fugitive verse,” poems reprinted in newspapers and other nineteenth-century US periodicals without authorial oversight or even, in many cases, knowledge. Though poems that became fugitive verse were typical of newspaper poetry of their era in their reliance on such elements as simple rhyme schemes and everyday settings, the phenomenon of fugitive verse represents a significant departure from the dominant model of literary authorship in which a work is controlled by a single and publicly identified author. This practice, however, was accepted as routine, even by the poets affected; that it has come to seem anomalous is indicative of the fact that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the authors of nineteenth-century newspaper poetry placed less value on artistic control than did their contemporaries who wrote other types of literature.",
+    "the concept of authorship and the privileges associated with the author’s role are mediated by the contexts within which works are written and published.",
+    "the notion that authors should have control over the reprinting of their works was a contested issue in nineteenth-century literary culture.",
+    "the literary characteristics of works disseminated through commercial venues are influenced by the circumstances of publication as well as by authorial choices."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Routine then, anomalous now: what counts as an author's control depends on the setting of writing and publication. C contradicts \"accepted as routine\"; D is about literary features, not authorship."
+  },
+  {
+   "n": 14,
+   "src": "13 (sat1600acer)",
+   "source": "sat1600acer",
+   "skill": "INI-IE",
+   "passage": "<p>Indigenous songs can be repositories of ecological information, from Yi songs about the natural environment to Tlingit songs about wildlife encounters. Kwakwaka’wakw song keeper Kwaxsistalla Wathl’thla aided research by ethnobiologist Dana Lepofsky et al. by contributing songs that reference creating terraced intertidal gardens to foster the healthy development of clams, a staple in the Kwakwaka’wakw people’s diet. Such structures date as far back as 3,500 years ago. Intriguingly, analysis of local paleoecological marine bivalve records has revealed significant increases in clam size and productivity as clam garden practices became more prevalent and harvesting pressure increased—a finding that bolsters the notion that _____</p>",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the Kwakwaka’wakw people encouraged the health of clam gardens and reduced pressure on them by periodically increasing their reliance on other sources of sustenance.",
+    "the practical approach described in the Kwakwaka’wakw songs effectively maintained clams as a sustainable food source.",
+    "the Kwakwaka’wakw people initially adapted their clam garden practices from similar methods observed among other Indigenous peoples in neighboring areas.",
+    "contemporary Kwakwaka’wakw people have only minimally deviated from the clam-gardening practices described in the people’s songs."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Clams got bigger and more productive even as harvesting rose, so the gardening the songs describe kept the food source sustainable. A contradicts \"harvesting pressure increased\"."
+  },
+  {
+   "n": 15,
+   "src": "15 (sat1600acer)",
+   "source": "sat1600acer",
+   "skill": "SEC-BS",
+   "passage": "<p>When, in 2018, scientists in Germany discovered a fossilized brittle star with three thick, spine-studded arms positioned opposite three thin, undeveloped ones, they found something never before seen in the fossil _____ clonal fragmentation, a type of asexual reproduction, an animal splits itself in two, each half then regrowing its missing limbs—just what the brittle star was doing.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "record, Evidence of cloning in",
+    "record—evidence of cloning in",
+    "record, evidence of cloning, in",
+    "record: evidence of cloning. In"
+   ],
+   "mine": "D",
+   "printed": null,
+   "why": "The colon introduces what they found; \"In clonal fragmentation, ... an animal splits itself in two\" is a new sentence. B and C run two sentences together; A capitalizes mid-sentence."
   }
  ],
  "disputes": [],
  "notes": [
-  "Reordered so fill-in-the-blank WiC precedes underlined-word WiC (CLAUDE.md block order). 'src' is the number in the user's screenshots."
+  "Reordered so fill-in-the-blank WiC precedes underlined-word WiC (CLAUDE.md block order). 'src' is the number in the user's screenshots.",
+  "Two cross-text items (7 and 8) at the user's request."
  ],
  "excluded": [
   {
