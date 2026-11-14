@@ -77,6 +77,162 @@
    "verify": "36π + 121π = 157π",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 6,
+   "skill": "ADV-EQ",
+   "type": "MC",
+   "stem": "Function f is defined as \\(f(x)=(2x-5)^{2}\\), and function g is defined as g(x) = 2(2x + 7). Which of the following is equivalent to f(x) + g(x)?",
+   "choices": [
+    "\\(4x^{2}+4x+39\\)",
+    "\\(4x^{2}-20x+39\\)",
+    "\\(4x^{2}-16x+39\\)",
+    "\\(4x^{2}-16x+32\\)"
+   ],
+   "mine": "C",
+   "verify": "sympy expand: 4x^2 - 16x + 39",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 7,
+   "skill": "GT-AV",
+   "type": "FR",
+   "image": "figures/m2h_q7_pyramid.png",
+   "stem": "The figure shown is a right rectangular pyramid, where \\(\\ell=14\\) units, w = 7 units, and h = 13 units. What is the surface area, in square units, of the pyramid?",
+   "answerFR": [
+    "389.8",
+    "389.83"
+   ],
+   "mine": "98 + 7√218 + 35√29 ≈ 389.83",
+   "verify": "base 98; slant heights √(13² + 3.5²) over ℓ and √(13² + 7²) over w",
+   "flags": [
+    "Answer is not a whole number (≈389.83). Valid if h is the pyramid's height, as the right-angle mark shows; confirm against the source key."
+   ],
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 8,
+   "skill": "ALG-LF",
+   "type": "MC",
+   "image": "figures/m2h_q8_line.png",
+   "stem": "The graph of the linear function y = f(x) − 19 is shown. If c and d are positive constants, which equation could define f?",
+   "choices": [
+    "f(x) = d − cx",
+    "f(x) = −d + cx",
+    "f(x) = d + cx",
+    "f(x) = −d − cx"
+   ],
+   "mine": "A",
+   "verify": "graph through (-4, 0), (0, -7.5): f(x) = -15/8 x + 11.5, negative slope, positive intercept",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 9,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "\\[50x=12{,}500y-10{,}000\\]One of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?",
+   "choices": [
+    "\\(\\frac{1}{50}x=5y\\)",
+    "\\(\\frac{1}{50}x=250y-200\\)",
+    "x = 5y",
+    "x = 250y − 200"
+   ],
+   "mine": "A",
+   "verify": "sympy: A no solution, B and C one point, D infinitely many",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 10,
+   "skill": "PSDA-RP",
+   "type": "FR",
+   "stem": "The concentration of calcium, in milligrams per liter (mg/L), is found for three samples of water: bottled, tap, and mineral. The concentration of calcium in the sample of bottled water is 48% of the concentration of calcium in the sample of tap water and 24% of the concentration of calcium in the sample of mineral water. If the concentration of calcium in the sample of tap water is 36 mg/L, what is the concentration of calcium, in mg/L, in the sample of mineral water?",
+   "answerFR": [
+    "72"
+   ],
+   "mine": "72",
+   "verify": "bottled 0.48(36) = 17.28 = 0.24m -> m = 72",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 11,
+   "skill": "ADV-NF",
+   "type": "FR",
+   "stem": "For a certain type of rope, the equation \\(y=900ax^{2}\\), where a is a constant, gives the estimated breaking strength y, in pounds, of a rope with a circumference of x inches. Based on this equation, if a rope of this type has a circumference of 0.75 inches, it has an estimated breaking strength of 708.75 pounds. What is the estimated breaking strength, in pounds, of a rope of this type that has a circumference of 4.50 inches?",
+   "answerFR": [
+    "25515",
+    "25,515"
+   ],
+   "mine": "25515",
+   "verify": "sympy: a = 7/5, y(4.5) = 25,515",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 12,
+   "skill": "PSDA-ST",
+   "type": "MC",
+   "stem": "A science club from a certain high school in Ohio conducted an experiment to study the effects of smell on taste. A sample of 100 students was selected at random from the high school to participate in the experiment. First, the students tasted a pureed food sample while wearing covered goggles and nose plugs. Then, the students tasted the same pureed food sample without nose plugs. 35 students were able to correctly identify the pureed food sample while wearing nose plugs. Which of the following is the largest population to which the results of the experiment can be generalized?",
+   "choices": [
+    "All students from the high school",
+    "The 100 students who participated in the experiment",
+    "The 35 students who were able to correctly identify the pureed food sample while wearing nose plugs",
+    "All students from high schools in Ohio"
+   ],
+   "mine": "A",
+   "verify": "random sample drawn from that one high school",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 13,
+   "skill": "ADV-EQ",
+   "type": "FR",
+   "stem": "The expression \\(6x^{4}+17x^{2}+7\\) can be rewritten as \\((3x^{2}+a)(2x^{2}+b)\\), where a and b are positive integers, or as \\((3x^{2}+c)(2x^{2}+d)\\), where c and d are positive nonintegers. What is the value of a + c?",
+   "answerFR": [
+    "17/2",
+    "8.5"
+   ],
+   "mine": "17/2",
+   "verify": "sympy: (3x^2 + 7)(2x^2 + 1) so a = 7; nonintegers c = 3/2, d = 14/3; a + c = 8.5",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 14,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "The function f is a quadratic function. In the xy-plane, the graph of y = f(x) has a vertex at (1, 8) and passes through the points (2, 47) and (−1, 164). What is the value of f(−2) − f(0)?",
+   "choices": [
+    "125",
+    "203",
+    "312",
+    "359"
+   ],
+   "mine": "C",
+   "verify": "sympy: f(x) = 39(x - 1)^2 + 8, f(-1) = 164 checks, f(-2) - f(0) = 312",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 15,
+   "skill": "ADV-EQ",
+   "type": "MC",
+   "stem": "\\[f(x)=11x^{10}+3x^{8}\\]\\[g(x)=-15x^{7}+7x^{5}\\]The polynomial p(x) is defined as the product of the given polynomials, f(x) and g(x). What is the coefficient of \\(x^{15}\\) in p(x)?",
+   "choices": [
+    "122",
+    "77",
+    "32",
+    "15"
+   ],
+   "mine": "C",
+   "verify": "sympy: 77 - 45 = 32",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
