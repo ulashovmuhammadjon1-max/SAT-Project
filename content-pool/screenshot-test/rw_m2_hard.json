@@ -348,6 +348,89 @@
    "mine": "B",
    "printed": null,
    "why": "Both are plain plurals with nothing possessed, so no apostrophes."
+  },
+  {
+   "n": 21,
+   "source": "SATashkent",
+   "skill": "SEC-BS",
+   "passage": "<p>On March 23, 2021, a gust of wind wreaked havoc on global trade. <em>Ever Given</em>, an international shipping container vessel, became lodged in Egypt’s Suez Canal, a major shipping route between Europe and Asia. The vessel took six days to _____ it’s as heavy as two thousand blue whales when fully loaded.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "dislodge in part due to its sheer size,",
+    "dislodge, in part due to its sheer size:",
+    "dislodge, in part due to its sheer size,",
+    "dislodge, in part, due to its sheer size"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "\"It’s as heavy as ...\" is a complete sentence explaining the size, so a colon introduces it. A and C are comma splices; D is a run-on."
+  },
+  {
+   "n": 22,
+   "source": "sat1600acer",
+   "skill": "EOI-TR",
+   "passage": "<p>Every US state has an associated state soil, which is typically selected by a group of experts, then passed through the state legislature to receive its official designation. For example, Arkansas’s Stuttgart soil was formally designated in 1997, and Maine’s Chesuncook soil in 1999. _____ years pass between a soil’s selection and official designation, as the legislative process can be notoriously slow.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Often,",
+    "Therefore,",
+    "Similarly,",
+    "Indeed,"
+   ],
+   "mine": "A",
+   "printed": null,
+   "why": "The sentence states how commonly a long gap occurs (because the process is slow); nothing before it implies or compares that."
+  },
+  {
+   "n": 23,
+   "source": "sat1600acer",
+   "skill": "EOI-TR",
+   "passage": "<p>As part of a study, participants were asked to list animals they thought of as “charismatic,” which was defined as “attractive, fascinating, or appealing.” Researchers compiled the responses into a single list and found that the panda and the koala both landed in the top twenty. _____ no animal outranked the tiger.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "As a result,",
+    "Still,",
+    "In other words,",
+    "For example,"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Panda and koala did well, yet the tiger topped them all: a concession, not a consequence or restatement."
+  },
+  {
+   "n": 24,
+   "source": "sat1600acer",
+   "skill": "EOI-TR",
+   "passage": "<p>The tendency of applesauce to decrease in viscosity under mechanical stress (e.g., being stirred or squeezed) can lead to manufacturing challenges: the applesauce temporarily thins as it passes through industrial machinery, only to thicken—and potentially clog—when it stops moving. _____ on the shelf, the applesauce remains stable in its container, yet it mixes easily with a spoon.</p>",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In fact, mechanical stress commonly causes viscosity issues:",
+    "Still, this inconsistency can also become an asset:",
+    "However, the product’s viscosity does not change once it leaves production:",
+    "Indeed, these problems can occur on the consumer end as well:"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "After the drawback, the text shows the same property helping: thick on the shelf, thin when stirred. C is false (it still thins with a spoon); D says problems, but what follows is a benefit."
+  },
+  {
+   "n": 25,
+   "source": "sat1600acer",
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li><em>Jonathan Strange &amp; Mr Norrell</em> is a board game based on the writing of Susanna Clarke.</li><li>The game features characters and events from Clarke’s novel <em>Jonathan Strange &amp; Mr Norrell</em>.</li><li><em>The Hobbit: An Unexpected Journey</em> is a board game based on the writing of J.R.R. Tolkien.</li><li>The game features characters and events from Tolkien’s novel <em>The Hobbit</em>.</li></ul>",
+   "stem": "The student wants to emphasize a difference between the two games. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The game <em>Jonathan Strange &amp; Mr Norrell</em> is based on a work by Susanna Clarke, while the game <em>The Hobbit: An Unexpected Journey</em> is based on a work by J.R.R. Tolkien.",
+    "Some board games feature characters and events from works of fiction; for example, <em>The Hobbit: An Unexpected Journey</em> is based on J.R.R. Tolkien’s novel <em>The Hobbit</em>.",
+    "<em>Jonathan Strange &amp; Mr Norrell</em>, a board game based on the writing of Susanna Clarke, features characters and events from the novel <em>Jonathan Strange &amp; Mr Norrell</em>.",
+    "Both the game <em>Jonathan Strange &amp; Mr Norrell</em> and the game <em>The Hobbit: An Unexpected Journey</em> have themes inspired by works of fiction."
+   ],
+   "mine": "A",
+   "printed": null,
+   "why": "Only A contrasts the two games (different authors); B and C describe one game, D a similarity.",
+   "flags": [
+    "Stem split across the screenshot's two panes; joined."
+   ]
   }
  ],
  "disputes": [],

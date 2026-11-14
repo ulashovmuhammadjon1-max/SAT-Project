@@ -11,4 +11,4 @@ inserted as DRAFT. The user publishes from the admin panel.
 ## Status
 - R&W Module 1: COMPLETE, 27/27, block order verified, 0 key disputes. Difficulty not yet assigned (target 3 E / 15 M / 9 H).
   Open: Q7 stem inferred; Q7 "resources" and Q9 "argued" are placeholders for words the watermark covered.
-- R&W Module 2 Hard: 20 of 27 (reading done; grammar 15-20). Two cross-text items at the user's request.
+- R&W Module 2 Hard: 25 of 27 (reading, grammar, transitions done; notes from Q25). Two cross-text items at the user's request.
