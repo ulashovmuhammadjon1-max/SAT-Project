@@ -38,68 +38,146 @@
       font-family: "Archivo Black", sans-serif; font-size: 54px; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
     #ov-dont span { background: #e5252f; }
     #ov-key span { background: #ffd23f; color: #111; }
+      #ov-end { top: 210px; }
+    #ov-end .card { text-align: left; padding: 38px 48px; }
+    #ov-end .k { font-size: 40px; }
+    #ov-end .u { font-size: 84px; }
+    #ov-end ul { list-style: none; margin: 18px 0 0; padding: 0; }
+    #ov-end li { display: flex; align-items: center; gap: 18px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 40px; color: #fff; margin-top: 14px; }
+    #ov-end li i { flex: none; width: 46px; height: 46px; border-radius: 50%; background: #16a34a; display: inline-flex; align-items: center; justify-content: center; }
+    #ov-end li b { color: #ffd23f; }
+    .pill sup { font-size: 0.6em; position: relative; top: -0.6em; margin-left: 2px; }
+    #ov-rule span { background: #1f3b8c; color: #fff; gap: 0; white-space: pre; }
+    #ov-sub span { background: #ffd23f; color: #111; gap: 0; white-space: pre; }
   </style>
   <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
-    <div id="ov-hook" class="big clip" data-start="0" data-duration="4.15"><p>THE <b>HARDEST</b> TYPE OF<br/>SAT MATH QUESTION</p></div>
-    <div id="ov-cys" class="clip" data-start="0" data-duration="4.15"><span>CAN YOU SOLVE IT?</span></div>
-    <div id="ov-timer" class="clip" data-start="4.2" data-duration="1.1"><div id="ov-ring"><span id="ov-num">1</span></div></div>
-    <div id="ov-pause" class="clip" data-start="4.2" data-duration="1.1"><span>PAUSE &amp; TRY IT</span></div>
-    <div id="ov-dont" class="pill clip" data-start="5.3" data-duration="1.2"><span>DON'T SOLVE FOR s</span></div>
-    <div id="ov-key" class="pill clip" data-start="6.6" data-duration="4.0"><span>6s = 3 × 2s</span></div>
-    <div id="ov-ans" class="pill clip" data-start="11.9" data-duration="1.5"><span><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>A) 343</span></div>
-    <div id="ov-end" class="clip" data-start="13.4" data-duration="2.2"><div class="card"><div class="k">MORE HARD QUESTIONS, FREE</div><div class="u">scholarly.space</div><div class="s">31 full SAT practice tests</div></div></div>
-    <div id="ov-comment" class="clip" data-start="15.6" data-duration="1.2"><span>COMMENT YOUR ANSWER<svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span></div>
+    <div id="ov-hook" class="big clip" data-start="0" data-duration="4.25"><p>THE <b>HARDEST</b> TYPE OF<br/>SAT MATH QUESTION</p></div>
+    <div id="ov-cys" class="clip" data-start="0" data-duration="4.25"><span>CAN YOU SOLVE IT?</span></div>
+    <div id="ov-timer" class="clip" data-start="8.9" data-duration="1.1"><div id="ov-ring"><span id="ov-num">1</span></div></div>
+    <div id="ov-pause" class="clip" data-start="8.9" data-duration="1.1"><span>PAUSE &amp; TRY IT</span></div>
+    <div id="ov-dont" class="pill clip" data-start="10.0" data-duration="2.2"><span>YOU DON'T NEED s</span></div>
+    <div id="ov-key" class="pill clip" data-start="12.2" data-duration="2.85"><span>6s = 3 × 2s</span></div>
+    <div id="ov-rule" class="pill clip" data-start="15.05" data-duration="4.1"><span>3<sup>6s</sup> = (3<sup>2s</sup>)<sup>3</sup></span></div>
+    <div id="ov-sub" class="pill clip" data-start="19.15" data-duration="3.1"><span>3<sup>2s</sup> = 7 → 7<sup>3</sup></span></div>
+    <div id="ov-ans" class="pill clip" data-start="26.4" data-duration="1.5"><span><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>A) 343</span></div>
+    <div id="ov-end" class="clip" data-start="27.9" data-duration="12.5"><div class="card">
+      <div class="k">NON-PROFIT · 100% FREE</div><div class="u">scholarly.space</div>
+      <ul>
+        <li id="ov-b1"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i><span><b>31+</b> full SAT practice tests</span></li>
+        <li id="ov-b2"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i><span>Hard questions <b>exactly like this</b></span></li>
+        <li id="ov-b3"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i><span>Free 1-on-1 with a <b>1580</b> scorer</span></li>
+      </ul></div></div>
+    <div id="ov-comment" class="clip" data-start="40.4" data-duration="0.9"><span>COMMENT YOUR ANSWER<svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span></div>
     <div id="cap0" class="cap clip" data-start="0.1" data-duration="0.7"><p>This is the</p></div>
     <div id="cap1" class="cap clip" data-start="0.82" data-duration="0.95"><p><span class="hot">hardest</span> type of</p></div>
     <div id="cap2" class="cap clip" data-start="1.79" data-duration="0.96"><p>question in SAT</p></div>
-    <div id="cap3" class="cap clip" data-start="2.77" data-duration="0.35"><p>math.</p></div>
-    <div id="cap4" class="cap clip" data-start="3.09" data-duration="0.83"><p>Can you <span class="hot">solve</span></p></div>
-    <div id="cap5" class="cap clip" data-start="3.94" data-duration="0.55"><p>it?</p></div>
-    <div id="cap6" class="cap clip" data-start="5.3" data-duration="0.88"><p>Don&#x27;t <span class="hot">solve</span> for</p></div>
-    <div id="cap7" class="cap clip" data-start="6.2" data-duration="0.35"><p><span class="hot">s.</span></p></div>
-    <div id="cap8" class="cap clip" data-start="6.5" data-duration="0.91"><p>6s is just</p></div>
-    <div id="cap9" class="cap clip" data-start="7.43" data-duration="0.35"><p>2s,</p></div>
-    <div id="cap10" class="cap clip" data-start="7.71" data-duration="0.87"><p><span class="hot">times</span> <span class="hot">3.</span></p></div>
-    <div id="cap11" class="cap clip" data-start="8.6" data-duration="0.58"><p>So 3 to</p></div>
-    <div id="cap12" class="cap clip" data-start="9.2" data-duration="0.76"><p>the 6s is</p></div>
-    <div id="cap14" class="cap clip" data-start="9.98" data-duration="0.8"><p>7, <span class="hot">cubed.</span></p></div>
-    <div id="cap15" class="cap clip" data-start="10.8" data-duration="0.6"><p><span class="hot">343.</span></p></div>
-    <div id="cap16" class="cap clip" data-start="11.42" data-duration="1.36"><p>It&#x27;s <span class="hot">A.</span></p></div>
-    <div id="cap17" class="cap clip" data-start="12.8" data-duration="0.57"><p>Did you get</p></div>
-    <div id="cap18" class="cap clip" data-start="13.39" data-duration="0.35"><p>it?</p></div>
-    <div id="cap19" class="cap clip" data-start="13.55" data-duration="1.05"><p><span class="hot">Comment</span> below.</p></div>
+    <div id="cap3" class="cap clip" data-start="2.77" data-duration="0.3"><p>math.</p></div>
+    <div id="cap4" class="cap clip" data-start="3.09" data-duration="0.83"><p>Can you solve</p></div>
+    <div id="cap5" class="cap clip" data-start="3.94" data-duration="0.34"><p>it?</p></div>
+    <div id="cap6" class="cap clip" data-start="4.3" data-duration="0.59"><p>If 3 to</p></div>
+    <div id="cap7" class="cap clip" data-start="4.91" data-duration="1.02"><p>the power 2s</p></div>
+    <div id="cap8" class="cap clip" data-start="5.95" data-duration="0.77"><p>equals 7…</p></div>
+    <div id="cap9" class="cap clip" data-start="6.74" data-duration="0.76"><p>what is 3</p></div>
+    <div id="cap10" class="cap clip" data-start="7.52" data-duration="1.02"><p>to the power</p></div>
+    <div id="cap11" class="cap clip" data-start="8.56" data-duration="0.61"><p>6s?</p></div>
+    <div id="cap12" class="cap clip" data-start="10.0" data-duration="0.82"><p>Here&#x27;s the <span class="hot">trick:</span></p></div>
+    <div id="cap13" class="cap clip" data-start="10.84" data-duration="0.67"><p>you don&#x27;t need</p></div>
+    <div id="cap14" class="cap clip" data-start="11.53" data-duration="0.65"><p>to <span class="hot">find</span> s.</p></div>
+    <div id="cap15" class="cap clip" data-start="12.2" data-duration="1.12"><p>Notice that 6s</p></div>
+    <div id="cap16" class="cap clip" data-start="13.34" data-duration="0.88"><p>is just 2s,</p></div>
+    <div id="cap17" class="cap clip" data-start="14.24" data-duration="0.79"><p><span class="hot">times</span> <span class="hot">3.</span></p></div>
+    <div id="cap18" class="cap clip" data-start="15.05" data-duration="0.61"><p>So 3 to</p></div>
+    <div id="cap19" class="cap clip" data-start="15.68" data-duration="0.79"><p>the 6s is</p></div>
+    <div id="cap20" class="cap clip" data-start="16.49" data-duration="0.96"><p>the same as</p></div>
+    <div id="cap21" class="cap clip" data-start="17.47" data-duration="0.7"><p>3 to the</p></div>
+    <div id="cap22" class="cap clip" data-start="18.19" data-duration="0.25"><p>2s…</p></div>
+    <div id="cap23" class="cap clip" data-start="18.46" data-duration="0.67"><p><span class="hot">cubed.</span></p></div>
+    <div id="cap24" class="cap clip" data-start="19.15" data-duration="0.67"><p>And 3 to</p></div>
+    <div id="cap25" class="cap clip" data-start="19.84" data-duration="0.75"><p>the 2s is</p></div>
+    <div id="cap26" class="cap clip" data-start="20.61" data-duration="0.15"><p><span class="hot">7.</span></p></div>
+    <div id="cap27" class="cap clip" data-start="20.78" data-duration="0.76"><p>So it&#x27;s 7</p></div>
+    <div id="cap28" class="cap clip" data-start="21.56" data-duration="0.67"><p><span class="hot">cubed.</span></p></div>
+    <div id="cap29" class="cap clip" data-start="22.25" data-duration="1.14"><p>7 <span class="hot">times</span> 7</p></div>
+    <div id="cap30" class="cap clip" data-start="23.41" data-duration="1.27"><p><span class="hot">times</span> 7 is</p></div>
+    <div id="cap31" class="cap clip" data-start="24.7" data-duration="0.5"><p><span class="hot">343.</span></p></div>
+    <div id="cap32" class="cap clip" data-start="25.22" data-duration="1.66"><p>The answer is</p></div>
+    <div id="cap33" class="cap clip" data-start="26.9" data-duration="0.48"><p><span class="hot">A.</span></p></div>
+    <div id="cap34" class="cap clip" data-start="27.4" data-duration="1.24"><p>Want more questions</p></div>
+    <div id="cap35" class="cap clip" data-start="28.66" data-duration="0.64"><p>like this?</p></div>
+    <div id="cap36" class="cap clip" data-start="29.32" data-duration="1.3"><p><span class="hot">scholarly.space</span> is a</p></div>
+    <div id="cap37" class="cap clip" data-start="30.64" data-duration="0.84"><p><span class="hot">non-profit.</span></p></div>
+    <div id="cap38" class="cap clip" data-start="31.5" data-duration="0.77"><p>It has <span class="hot">31+</span></p></div>
+    <div id="cap39" class="cap clip" data-start="32.29" data-duration="1.31"><p>full SAT practice</p></div>
+    <div id="cap40" class="cap clip" data-start="33.62" data-duration="0.45"><p>tests,</p></div>
+    <div id="cap41" class="cap clip" data-start="34.09" data-duration="1.48"><p>with <span class="hot">hard</span> questions</p></div>
+    <div id="cap42" class="cap clip" data-start="35.59" data-duration="1.31"><p>exactly like this</p></div>
+    <div id="cap43" class="cap clip" data-start="36.92" data-duration="0.46"><p>one.</p></div>
+    <div id="cap44" class="cap clip" data-start="37.4" data-duration="1.01"><p>And <span class="hot">free</span> 1-on-1</p></div>
+    <div id="cap45" class="cap clip" data-start="38.43" data-duration="1.01"><p>sessions with a</p></div>
+    <div id="cap46" class="cap clip" data-start="39.46" data-duration="0.87"><p><span class="hot">1580</span> scorer.</p></div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#ov-hook p", { scale: 1.2, rotation: -3 }, { scale: 1, rotation: -2, duration: 0.3, ease: "back.out(2)" }, 0);
       tl.fromTo("#ov-cys span", { scale: 1 }, { scale: 1.12, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 3.2);
-      tl.fromTo("#ov-ring", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.4)" }, 4.2);
-      tl.fromTo("#ov-pause span", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 4.25);
-      tl.fromTo("#ov-dont span", { scale: 0.4, opacity: 0, rotation: -8 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.25, ease: "back.out(3)" }, 5.3);
-      tl.fromTo("#ov-key span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 6.6);
-      tl.fromTo("#ov-ans span", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }, 11.9);
-      tl.fromTo("#ov-end .card", { y: 60, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 13.4);
-      tl.fromTo("#ov-comment span", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.6)" }, 15.6);
+      tl.fromTo("#ov-ring", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.4)" }, 8.9);
+      tl.fromTo("#ov-pause span", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 8.95);
+      tl.fromTo("#ov-dont span", { scale: 0.4, opacity: 0, rotation: -8 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.25, ease: "back.out(3)" }, 10.0);
+      tl.fromTo("#ov-key span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 12.2);
+      tl.fromTo("#ov-rule span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 15.05);
+      tl.fromTo("#ov-sub span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 19.15);
+      tl.fromTo("#ov-ans span", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }, 26.4);
+      tl.fromTo("#ov-end .card", { y: 60, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 27.9);
+      [["#ov-b1", 32.0], ["#ov-b2", 34.4], ["#ov-b3", 37.9]].forEach(([id, at]) => tl.fromTo(id, { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }, at));
+      tl.fromTo("#ov-comment span", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.6)" }, 40.4);
       tl.fromTo("#cap0 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 0.1);
       tl.fromTo("#cap1 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 0.82);
       tl.fromTo("#cap2 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 1.79);
       tl.fromTo("#cap3 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 2.77);
       tl.fromTo("#cap4 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 3.09);
       tl.fromTo("#cap5 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 3.94);
-      tl.fromTo("#cap6 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 5.3);
-      tl.fromTo("#cap7 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.2);
-      tl.fromTo("#cap8 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.5);
-      tl.fromTo("#cap9 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 7.43);
-      tl.fromTo("#cap10 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 7.71);
-      tl.fromTo("#cap11 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 8.6);
-      tl.fromTo("#cap12 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 9.2);
-      tl.fromTo("#cap14 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 9.98);
-      tl.fromTo("#cap15 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 10.8);
-      tl.fromTo("#cap16 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 11.42);
-      tl.fromTo("#cap17 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 12.8);
-      tl.fromTo("#cap18 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 13.39);
-      tl.fromTo("#cap19 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 13.55);
+      tl.fromTo("#cap6 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 4.3);
+      tl.fromTo("#cap7 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 4.91);
+      tl.fromTo("#cap8 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 5.95);
+      tl.fromTo("#cap9 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.74);
+      tl.fromTo("#cap10 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 7.52);
+      tl.fromTo("#cap11 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 8.56);
+      tl.fromTo("#cap12 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 10.0);
+      tl.fromTo("#cap13 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 10.84);
+      tl.fromTo("#cap14 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 11.53);
+      tl.fromTo("#cap15 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 12.2);
+      tl.fromTo("#cap16 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 13.34);
+      tl.fromTo("#cap17 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 14.24);
+      tl.fromTo("#cap18 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 15.05);
+      tl.fromTo("#cap19 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 15.68);
+      tl.fromTo("#cap20 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 16.49);
+      tl.fromTo("#cap21 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 17.47);
+      tl.fromTo("#cap22 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 18.19);
+      tl.fromTo("#cap23 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 18.46);
+      tl.fromTo("#cap24 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 19.15);
+      tl.fromTo("#cap25 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 19.84);
+      tl.fromTo("#cap26 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 20.61);
+      tl.fromTo("#cap27 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 20.78);
+      tl.fromTo("#cap28 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 21.56);
+      tl.fromTo("#cap29 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 22.25);
+      tl.fromTo("#cap30 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 23.41);
+      tl.fromTo("#cap31 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 24.7);
+      tl.fromTo("#cap32 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 25.22);
+      tl.fromTo("#cap33 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 26.9);
+      tl.fromTo("#cap34 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 27.4);
+      tl.fromTo("#cap35 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 28.66);
+      tl.fromTo("#cap36 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 29.32);
+      tl.fromTo("#cap37 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 30.64);
+      tl.fromTo("#cap38 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 31.5);
+      tl.fromTo("#cap39 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 32.29);
+      tl.fromTo("#cap40 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 33.62);
+      tl.fromTo("#cap41 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 34.09);
+      tl.fromTo("#cap42 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 35.59);
+      tl.fromTo("#cap43 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 36.92);
+      tl.fromTo("#cap44 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 37.4);
+      tl.fromTo("#cap45 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 38.43);
+      tl.fromTo("#cap46 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 39.46);
       window.__timelines["captions"] = tl;
     })();
   </script>

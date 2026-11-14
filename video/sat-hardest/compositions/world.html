@@ -19,13 +19,13 @@
     </style>
   </head>
   <body>
-    <div id="w-root" data-composition-id="world" data-start="0" data-duration="16.8" data-width="1080" data-height="1920">
-      <canvas id="w-canvas" class="clip" data-start="0" data-duration="16.8" data-track-index="1"></canvas>
+    <div id="w-root" data-composition-id="world" data-start="0" data-duration="41.3" data-width="1080" data-height="1920">
+      <canvas id="w-canvas" class="clip" data-start="0" data-duration="41.3" data-track-index="1"></canvas>
     </div>
     <script>
       (function () {
         var root = document.getElementById("w-root");
-        var duration = parseFloat(root.dataset.duration) || 16.8;
+        var duration = parseFloat(root.dataset.duration) || 41.3;
         var clock = { t: 0 };
         var host = { clock: clock, duration: duration, render: null };
         window.__world = host;
@@ -145,8 +145,9 @@
       const Q2 = [T("3"), SI("6s"), T(" = ?")];
       const TRY = [T("s", 1), T(" = ?")];
       const W1 = [T("6"), T("s", 1), T(" = 3 · 2"), T("s", 1)];
-      const W2 = [T("3"), SI("6s"), T(" = ("), T("3"), SI("2s"), T(")"), { s: "3", sup: true, id: "cube" }, T(" = 7"), { s: "3", sup: true }];
-      const W3 = [T("3"), SI("6s"), T(" = "), { s: "343", id: "ans" }];
+      const W2A = [T("3"), SI("6s"), T(" = ("), { s: "3", id: "b3" }, { s: "2s", sup: true, it: true, id: "b2s" }, T(")"), { s: "3", sup: true }];
+      const W2B = [T(" = 7"), { s: "3", sup: true }];
+      const W3 = [T("7 · 7 · 7 = "), { s: "343", id: "ans" }];
       const CH = [["A", "343"], ["B", "441"], ["C", "2,187"], ["D", "2,401"]];
       const CHX = [130, 600, 1070, 1540], CHY = 1268;
 
@@ -158,23 +159,24 @@
 
       let lastSig = "";
       function drawBoard(t) {
-        const p = { x: win(t, 5.35, 5.8), w1: win(t, 6.6, 7.6), w2: win(t, 8.7, 10.2), hl: win(t, 9.95, 10.3), w3: win(t, 11.0, 11.5), ans: win(t, 11.9, 12.4) };
+        const p = { x: win(t, 11.25, 11.7), w1: win(t, 13.0, 14.0), w2a: win(t, 15.6, 17.3), hl: win(t, 19.5, 19.9), w2b: win(t, 20.6, 21.4), w3: win(t, 22.7, 24.6), ans: win(t, 26.4, 26.9) };
         const sig = JSON.stringify(p, (k, v) => (typeof v === "number" ? Math.round(v * 40) : v));
         if (sig === lastSig) return; lastSig = sig;
         bg.drawImage(smudge, 0, 0);
         drawRow(Q1, 130, 235, 150, BLUE);
         drawRow(Q2, 130, 455, 150, BLUE);
         bg.strokeStyle = "rgba(31,59,140,0.35)"; bg.lineWidth = 5; bg.beginPath(); bg.moveTo(120, 548); bg.lineTo(1930, 548); bg.stroke();
-        // the tempting first move, "solve for s", written faintly and struck out
         drawRow(TRY, 1250, 235, 120, "rgba(31,59,140,0.6)");
         if (p.x > 0) { bg.save(); bg.strokeStyle = RED; bg.lineWidth = 12; bg.lineCap = "round"; bg.beginPath(); bg.moveTo(1225, 200); bg.lineTo(1225 + 330 * easeOut(p.x), 200 - 10 * easeOut(p.x)); bg.stroke(); bg.restore(); }
-        // highlight behind the cube in (3^2s)^3
+        // highlight behind 3^(2s) inside the brackets: the part that equals 7
+        const m2a = measure(W2A, 118);
         if (p.hl > 0) {
-          let hx = 0, hw = 0; for (const it of measure(W2, 118).items) if (it.tk.id === "cube") { hx = 130 + it.x; hw = it.w; }
-          bg.save(); bg.fillStyle = "rgba(255,210,63,0.75)"; bg.beginPath(); bg.ellipse(hx + hw / 2 + 2, 900 - 70, 46 * easeOut(p.hl), 50 * easeOut(p.hl), 0, 0, Math.PI * 2); bg.fill(); bg.restore();
+          let x0 = 0, x1 = 0; for (const it of m2a.items) { if (it.tk.id === "b3") x0 = 130 + it.x; if (it.tk.id === "b2s") x1 = 130 + it.x + it.w; }
+          bg.save(); bg.fillStyle = "rgba(255,210,63,0.72)"; bg.beginPath(); bg.ellipse((x0 + x1) / 2, 900 - 48, ((x1 - x0) / 2 + 30) * easeOut(p.hl), 82 * easeOut(p.hl), 0, 0, Math.PI * 2); bg.fill(); bg.restore();
         }
         if (p.w1 > 0) drawRow(W1, 130, 705, 118, BLUE, p.w1);
-        if (p.w2 > 0) drawRow(W2, 130, 900, 118, BLUE, p.w2);
+        if (p.w2a > 0) drawRow(W2A, 130, 900, 118, BLUE, p.w2a);
+        if (p.w2b > 0) drawRow(W2B, 130 + m2a.width, 900, 118, BLUE, p.w2b);
         if (p.w3 > 0) drawRow(W3, 130, 1090, 118, GREEN, p.w3);
         for (let i = 0; i < 4; i++) {
           bg.save(); bg.fillStyle = BLUE; bg.font = F(100, false);
@@ -260,20 +262,23 @@
       // [start, end, camFrom, camTo, lookFrom, lookTo, fov]
       const SHOTS = [
         [0.0, 2.0, V(-0.8, 2.2, 4.4), V(-0.75, 2.25, 3.9), V(-0.35, 2.2, -2), V(-0.35, 2.25, -2), 44],
-        [2.0, 4.2, V(0.2, 2.05, 5.2), V(0.2, 2.05, 4.7), V(0.2, 2.0, -2), V(0.2, 2.0, -2), 42],
-        [4.2, 5.3, V(-1.3, 1.9, 5.0), V(-1.2, 1.9, 4.6), V(-1.0, 1.8, -2), V(-1.0, 1.8, -2), 44],
-        [5.3, 6.5, V(0.95, 2.95, 2.4), V(0.95, 2.95, 2.15), V(0.95, 2.95, -2), V(0.95, 2.95, -2), 40],
-        [6.5, 8.6, V(-0.45, 2.35, 3.0), V(-0.4, 2.3, 2.7), V(-0.45, 2.25, -2), V(-0.45, 2.25, -2), 42],
-        [8.6, 10.7, V(-0.3, 1.98, 3.2), V(-0.35, 1.98, 2.6), V(-0.3, 1.92, -2), V(-0.35, 1.95, -2), 42],
-        [10.7, 12.0, V(-0.35, 1.6, 3.7), V(-0.35, 1.62, 3.95), V(-0.35, 1.55, -2), V(-0.35, 1.58, -2), 42],
-        [12.0, 13.4, V(-1.5, 1.75, 5.0), V(-1.6, 1.7, 4.3), V(-1.3, 1.6, -2), V(-1.4, 1.6, -2), 44],
-        [13.4, 15.6, V(2.05, 1.32, 0.95), V(2.25, 1.26, 0.55), V(2.95, 1.0, -1.1), V(2.95, 1.0, -1.1), 40],
-        [15.6, 16.8, V(-0.8, 2.2, 4.4), V(-0.78, 2.21, 4.2), V(-0.35, 2.2, -2), V(-0.35, 2.21, -2), 44],
+        [2.0, 4.3, V(0.2, 2.05, 5.2), V(0.2, 2.05, 4.7), V(0.2, 2.0, -2), V(0.2, 2.0, -2), 42],
+        [4.3, 8.9, V(-0.45, 2.72, 3.3), V(-0.4, 2.68, 2.85), V(-0.45, 2.72, -2), V(-0.4, 2.68, -2), 42],
+        [8.9, 10.0, V(-1.3, 1.9, 5.0), V(-1.2, 1.9, 4.6), V(-1.0, 1.8, -2), V(-1.0, 1.8, -2), 44],
+        [10.0, 12.2, V(0.95, 2.95, 2.4), V(0.95, 2.95, 2.15), V(0.95, 2.95, -2), V(0.95, 2.95, -2), 40],
+        [12.2, 15.05, V(-0.45, 2.35, 3.0), V(-0.4, 2.3, 2.7), V(-0.45, 2.25, -2), V(-0.45, 2.25, -2), 42],
+        [15.05, 19.15, V(-0.3, 1.98, 3.2), V(-0.35, 1.98, 2.7), V(-0.3, 1.92, -2), V(-0.35, 1.95, -2), 42],
+        [19.15, 22.25, V(-0.15, 1.98, 3.5), V(-0.15, 1.98, 3.15), V(-0.15, 1.92, -2), V(-0.15, 1.92, -2), 42],
+        [22.25, 26.5, V(-0.35, 1.6, 3.7), V(-0.35, 1.62, 4.0), V(-0.35, 1.55, -2), V(-0.35, 1.58, -2), 42],
+        [26.5, 27.9, V(-1.5, 1.75, 5.0), V(-1.6, 1.7, 4.3), V(-1.3, 1.6, -2), V(-1.4, 1.6, -2), 44],
+        [27.9, 33.5, V(2.05, 1.32, 0.95), V(2.3, 1.24, 0.45), V(2.95, 1.0, -1.1), V(2.95, 1.0, -1.1), 40],
+        [33.5, 40.4, V(-1.55, 1.95, 1.9), V(-1.68, 1.85, 1.2), V(-2.15, 1.85, -1.15), V(-2.15, 1.72, -1.15), 40],
+        [40.4, 41.3, V(-0.8, 2.2, 4.4), V(-0.78, 2.21, 4.2), V(-0.35, 2.2, -2), V(-0.35, 2.21, -2), 44],
       ];
       const shotAt = (t) => { for (let i = SHOTS.length - 1; i >= 0; i--) if (t >= SHOTS[i][0]) return i; return 0; };
 
       // turns: face camera, or turn to the board to point at it
-      const POINTS = [[5.25, 6.2], [9.85, 10.8], [11.8, 11.95]];
+      const POINTS = [[11.15, 12.1], [19.4, 20.4], [26.25, 26.45]];
       host.render = (t) => {
         const si = shotAt(t), S = SHOTS[si];
         const u = easeInOut((t - S[0]) / (S[1] - S[0]));
@@ -292,7 +297,7 @@
         let anim = "Idle", at = t + 3.0, ry = 0.25;
         let pointing = POINTS.find(([a, b]) => t >= a && t < b);
         if (pointing) { anim = "Punch"; at = (t - pointing[0]) * 0.9 + 0.05; ry = 1.25; }
-        if (t >= 12.0 && t < 13.15) { anim = "Jump"; at = (t - 12.0) * 0.9; ry = 0.3; }
+        if (t >= 26.5 && t < 27.65) { anim = "Jump"; at = (t - 26.5) * 0.9; ry = 0.3; }
         const turnIn = pointing ? easeOut(win(t, pointing[0], pointing[0] + 0.2)) : 0;
         guy.position.set(GX, 0, GZ); guy.rotation.set(0, lerp(0.25, ry, pointing ? turnIn : 1), 0);
         setAnim(anim, at);
