@@ -1,0 +1,46 @@
+{
+  "module": "READING_WRITING M1 STANDARD",
+  "questions": [
+    {
+      "n": 1, "skill": "CAS-WV",
+      "passage": "<p>Roosevelt County Electric Cooperative and other member-owned rural electric cooperatives can be _____ the other main types of US electrical utilities by their chosen governance models. Although public power utilities are, like cooperatives, not-for-profit enterprises, they are owned and run by local governments; investor-owned utilities, meanwhile, are managed by private boards for the benefit of shareholders.</p>",
+      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": ["established by", "distinguished from", "integrated with", "protected against"],
+      "mine": "B", "printed": null,
+      "why": "The text contrasts the governance of cooperatives with that of public power and investor-owned utilities, so cooperatives can be told apart from them by governance."
+    },
+    {
+      "n": 2, "skill": "CAS-WV",
+      "passage": "<p>Having observed microorganisms possessing characteristics unaligned with the two then-known domains of life, Carl Woese proposed a new domain, Archaea, in the 1970s. He first noted Archaea’s traits in methanogens, microbes such as <em>Methanothermus fervidus</em> that cannot _____ in an oxygenated environment but flourish in oxygen-free environments by metabolizing hydrogen and carbon dioxide.</p>",
+      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": ["attenuate", "mediate", "dissipate", "proliferate"],
+      "mine": "D", "printed": "D",
+      "why": "\"Cannot ___ ... but flourish\" needs the counterpart of flourishing: multiplying and thriving."
+    },
+    {
+      "n": 3, "skill": "CAS-WV",
+      "passage": "<p>Technical documentation for installing complex heating and cooling systems is sometimes frustratingly _____, offering such complicated and excessively detailed guidance that even seasoned professionals can make little sense of it. That such systems get successfully set up is a testament to the installers’ expertise.</p>",
+      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": ["vague", "condensed", "simplistic", "convoluted"],
+      "mine": "D", "printed": "D",
+      "why": "\"Complicated and excessively detailed\" guidance that professionals cannot follow is convoluted."
+    },
+    {
+      "n": 4, "skill": "CAS-WV",
+      "passage": "<p>In the 2010s, the price of vintage empty soda cans rose dramatically, which had the counterintuitive effect of _____ demand: buyers who hadn’t previously wanted to purchase old soda cans suddenly thronged the market, believing prices would continue to rise and the cans could be resold later at a profit.</p>",
+      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": ["exploiting", "precipitating", "stabilizing", "monetizing"],
+      "mine": "B", "printed": null,
+      "why": "Rising prices brought in new buyers, so they set off (precipitated) demand; that is the counterintuitive part."
+    },
+    {
+      "n": 5, "skill": "CAS-WV",
+      "passage": "<p>The use of electronic automotive diagnostic scanners has become widespread because they provide mechanics with immediate access to fault codes and system data, but these tools are not without limitations. Thus, most mechanics _____ their use of these scanners with traditional hands-on inspection methods.</p>",
+      "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+      "choices": ["contradict", "supplement", "confuse", "exchange"],
+      "mine": "B", "printed": "B",
+      "why": "Because the scanners have limitations, mechanics add hands-on inspection to them."
+    }
+  ],
+  "disputes": []
+}
