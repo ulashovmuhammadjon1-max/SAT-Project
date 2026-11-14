@@ -1,0 +1,97 @@
+{
+ "module": "READING_WRITING M2 HARD",
+ "questions": [
+  {
+   "src": 2,
+   "skill": "CAS-WV",
+   "wic": "blank",
+   "passage": "<p>Some critics allege that current agricultural certification requirements and procedures, while uniform in application, are _____ in effect. The extensive paperwork requirements and high costs associated with certification can easily be absorbed by global agriculture companies with vast resources, whereas they can represent a significant burden for small farms.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "salutary",
+    "inequitable",
+    "negligible",
+    "indeterminate"
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "The same rules weigh lightly on large companies and heavily on small farms: unequal in effect.",
+   "n": 1
+  },
+  {
+   "src": 4,
+   "skill": "CAS-WV",
+   "wic": "blank",
+   "passage": "<p>Studying sales and price data for 325 brands of cooking sauces, cat food, bath additives, and other consumer packaged goods, Koushyar Rajavi and colleagues found that pricing, though hardly _____ brand success, made a much less pronounced contribution to brand success than retail distribution breadth did.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "determinative of",
+    "contingent on",
+    "uncharacteristic of",
+    "immaterial to"
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "Pricing still contributed, just less: \"hardly irrelevant to\" success.",
+   "n": 2
+  },
+  {
+   "src": 5,
+   "skill": "CAS-WV",
+   "wic": "blank",
+   "passage": "<p>Difficulties of documenting nocturnal pollinator visits and a general focus on diurnal invertebrate pollinators, such as <em>Andrena dorsata</em>, have resulted in _____ of information on nocturnal moth pollination of plants such as <em>Rubus fruticosus</em> L. aggregate, but Max Anderson et al. have addressed this by utilizing infrared technology.</p>",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "an aggregation",
+    "a dearth",
+    "a dissonance",
+    "an abatement"
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "Difficulty and neglect leave a shortage of information, which Anderson et al. then addressed.",
+   "n": 3
+  },
+  {
+   "src": 1,
+   "skill": "CAS-WV",
+   "wic": "meaning",
+   "passage": "<p>The following text is adapted from the 1895 poem “The Song My Paddle Sings” by Emily Pauline Johnson (Tekahionwake).</p><p>West wind blow from your prairie nest,<br/>Blow from the mountains, blow from the west.<br/>The sail is <u>idle</u>, the sailor too;<br/>O! wind of the west, we wait for you.</p>",
+   "stem": "As used in the text, what does the word “idle” most nearly mean?",
+   "choices": [
+    "Frivolous",
+    "Untrustworthy",
+    "Unsupported",
+    "Inactive"
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "Without wind the sail does nothing; the speaker waits.",
+   "n": 4
+  },
+  {
+   "src": 3,
+   "skill": "CAS-WV",
+   "wic": "meaning",
+   "passage": "<p>The following text is adapted from Virginia Woolf’s 1919 novel <em>Night and Day</em>. Katharine is the granddaughter of a celebrated poet.</p><p>[Katharine’s] descent from [a celebrated poet] was no surprise to her, but matter for satisfaction, until, as the years wore on, certain drawbacks made themselves very <u>manifest</u>. Perhaps it is a little depressing to inherit not lands but an example of intellectual virtue; perhaps the conclusiveness of a great ancestor is a little discouraging to those who run the risk of comparison with him.</p>",
+   "stem": "As used in the text, what does the word “manifest” most nearly mean?",
+   "choices": [
+    "Complex",
+    "Evident",
+    "Anticipated",
+    "Particular"
+   ],
+   "mine": "B",
+   "printed": "B",
+   "why": "The drawbacks became very apparent, as the next sentence goes on to name them.",
+   "flags": [
+    "Watermark covered 'satisfaction, ___, as the years'; restored as 'until' (Woolf's original wording)."
+   ],
+   "n": 5
+  }
+ ],
+ "disputes": [],
+ "notes": [
+  "Reordered so fill-in-the-blank WiC precedes underlined-word WiC (CLAUDE.md block order). 'src' is the number in the user's screenshots."
+ ]
+}
