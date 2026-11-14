@@ -1,0 +1,89 @@
+{
+ "module": "MATH M1 STANDARD",
+ "questions": [
+  {
+   "n": 1,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "If the equations −9x + y = 17 and 9x + y = 17 are graphed in the xy-plane, at what point (x, y) do the graphs intersect?",
+   "choices": [
+    "(0, 17)",
+    "(0, 9)",
+    "(9, 0)",
+    "(17, 0)"
+   ],
+   "mine": "A",
+   "verify": "sympy: {x: 0, y: 17}",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 2,
+   "skill": "ALG-LI",
+   "type": "MC",
+   "stem": "Rebecca is collecting 40-milliliter samples of river water and 15-milliliter samples of lake water. She needs to collect a total of at least 770 milliliters of river water and lake water, where the number of samples of lake water is twice the number of samples of river water. Which inequality represents this situation, where x is the number of samples of river water that Rebecca needs to collect?",
+   "choices": [
+    "\\(40(2x)+15x\\le 770\\)",
+    "\\(40(2x)+15x\\ge 770\\)",
+    "\\(40x+15(2x)\\le 770\\)",
+    "\\(40x+15(2x)\\ge 770\\)"
+   ],
+   "mine": "D",
+   "verify": "x river samples at 40 mL, 2x lake samples at 15 mL; 'at least' gives >=",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 3,
+   "skill": "PSDA-ST",
+   "type": "MC",
+   "stem": "<table style=\"border-collapse:collapse;margin:0.75rem 0;\"><thead><tr><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">Data set</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">1</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">2</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">3</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">4</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">5</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">6</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">7</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">8</th><th style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;text-align:left;background:#F4F6F8;\">9</th></tr></thead><tbody><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">J</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">19</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">21</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td></tr><tr><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">K</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">18</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">20</td><td style=\"border:1px solid #D9DEE5;padding:0.35rem 0.6rem;\">22</td></tr></tbody></table>The lists give the values in data sets J and K. Which of the following statistics is greater for data set J than it is for data set K?",
+   "choices": [
+    "Mean",
+    "Median",
+    "Range",
+    "Standard deviation"
+   ],
+   "mine": "D",
+   "verify": "means 20/20, medians 20/20, ranges 4/4, population SD 1.491 vs 0.943",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 4,
+   "skill": "ADV-NE",
+   "type": "MC",
+   "stem": "\\[4x^{2}-4x-24=0\\]What is the product of the solutions to the given equation?",
+   "choices": [
+    "−24",
+    "−6",
+    "6",
+    "24"
+   ],
+   "mine": "B",
+   "verify": "sympy roots [-2, 3], product -6",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 5,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "\\[y=4x+36\\]One of the two equations in a system of linear equations is given. The system has infinitely many solutions. Which equation could be the second equation in this system?",
+   "choices": [
+    "y − 4x = −36",
+    "y − 4x = 36",
+    "y − 9x = 18",
+    "y − 9x = 0"
+   ],
+   "mine": "B",
+   "verify": "sympy: B infinitely many, A no solution, C and D one point",
+   "source": "sat1600acer",
+   "printed": null
+  }
+ ],
+ "notes": [
+  "User's screenshots were numbered 1,3,4,5,6 (source #2 not sent); stored as 1-5.",
+  "House style (CLAUDE.md, Test 1/2): simple linear math plain text; \\( \\) only for exponents/inequalities; display equations in \\[ \\]."
+ ]
+}
