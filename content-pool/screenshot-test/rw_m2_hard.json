@@ -265,6 +265,89 @@
    "mine": "D",
    "printed": null,
    "why": "The colon introduces what they found; \"In clonal fragmentation, ... an animal splits itself in two\" is a new sentence. B and C run two sentences together; A capitalizes mid-sentence."
+  },
+  {
+   "n": 16,
+   "source": "sat1600acer",
+   "skill": "SEC-BS",
+   "passage": "<p>To appreciate what scholars believe to be the allegorical intent of Munch’s 19th-century painting _____ to embody the existential anxiety that can occur when facing the unknown—a viewer must become familiar with the painting’s symbolic elements.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "<em>The Scream</em>, namely",
+    "<em>The Scream</em>, namely—",
+    "<em>The Scream</em>—namely,",
+    "<em>The Scream</em>, namely,"
+   ],
+   "mine": "C",
+   "printed": null,
+   "why": "The phrase \"namely, to embody ... the unknown\" is closed by a dash after \"unknown\", so it must open with a dash too.",
+   "flags": [
+    "Choice C showed a stray space before the dash in the source; removed."
+   ]
+  },
+  {
+   "n": 17,
+   "source": "sat1600acer",
+   "skill": "SEC-BS",
+   "passage": "<p>When Anglo and African Americans moved West in the nineteenth century to begin cattle ranching, they learned the trade from Spanish-speaking Mexican <em>vaqueros</em> (cowboys). This is why many ranching terms come from _____ English word “lasso” (a rope) comes from the Spanish word <em>lazo</em>, and “cinch” (a belt) comes from <em>cincho</em>.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Spanish. The",
+    "Spanish (the",
+    "Spanish the",
+    "Spanish? The"
+   ],
+   "mine": "A",
+   "printed": null,
+   "why": "Two complete statements: the second sentence gives the examples. B opens a parenthesis that never closes; C is a run-on; D is not a question."
+  },
+  {
+   "n": 18,
+   "source": "sat1600acer",
+   "skill": "SEC-FS",
+   "passage": "<p>In the 1960s and the 1970s, a loose-knit group of writers including Sonia Sanchez, Gwendolyn Brooks, and James Baldwin _____ monumental works of poetry and fiction exploring the Black American experience and together came to be known as the Black Arts movement.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are publishing",
+    "published",
+    "will publish",
+    "publish"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Past events (the 1960s and 1970s), parallel with the past-tense \"came to be known\"."
+  },
+  {
+   "n": 19,
+   "source": "sat1600acer",
+   "skill": "SEC-FS",
+   "passage": "<p>When _____ debuted in April 1983 as part of the exhibit <em>Children’s Art: Identity: New Work from Youth Education Program</em>, the artworks brought vibrant visual texture to the bustling terminals of San Francisco International Airport.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "they",
+    "that",
+    "it",
+    "this"
+   ],
+   "mine": "A",
+   "printed": null,
+   "why": "The pronoun refers to \"the artworks\", which is plural."
+  },
+  {
+   "n": 20,
+   "source": "SATashkent",
+   "skill": "SEC-FS",
+   "passage": "<p>What makes the theremin a unique musical instrument? You play it without touching it. When you place your _____ the pitch will shift as your hands move through the air.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "hand’s between the two antenna’s,",
+    "hands between the two antennas,",
+    "hands’ between the two antennas’,",
+    "hands’ between the two antennas,"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Both are plain plurals with nothing possessed, so no apostrophes."
   }
  ],
  "disputes": [],
