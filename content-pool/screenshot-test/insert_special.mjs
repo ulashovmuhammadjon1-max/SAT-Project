@@ -12,7 +12,7 @@
  *    which must match exactly once or the run stops before writing anything;
  *  - routing cut-offs set by the user: R&W Module 1 below 20/27 -> Easy, so
  *    74% (20/27 = 74.1% goes Hard, 19/27 = 70.4% goes Easy); Math Module 1
- *    below 19/22 -> Easy, so 86% (19/22 = 86.4% Hard, 18/22 = 81.8% Easy).
+ *    below 15/22 -> Easy, so 68% (15/22 = 68.2% Hard, 14/22 = 63.6% Easy).
  *
  * Idempotent like the original: an existing test or module is skipped.
  * Never put a connection string in a file; pass both in the environment.
@@ -60,7 +60,7 @@ const MODULES = {
   RW_M1:    { subject: "READING_WRITING", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 32, threshold: 74 },
   RW_M2E:   { subject: "READING_WRITING", order: 2, difficulty: "EASY",     title: "Module 2 (Easy)", time: 32, threshold: null },
   RW_M2H:   { subject: "READING_WRITING", order: 2, difficulty: "HARD",     title: "Module 2 (Hard)", time: 32, threshold: null },
-  MATH_M1:  { subject: "MATH", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 35, threshold: 86 },
+  MATH_M1:  { subject: "MATH", order: 1, difficulty: "STANDARD", title: "Module 1",        time: 35, threshold: 68 },
   MATH_M2E: { subject: "MATH", order: 2, difficulty: "EASY",     title: "Module 2 (Easy)", time: 35, threshold: null },
   MATH_M2H: { subject: "MATH", order: 2, difficulty: "HARD",     title: "Module 2 (Hard)", time: 35, threshold: null },
 };
