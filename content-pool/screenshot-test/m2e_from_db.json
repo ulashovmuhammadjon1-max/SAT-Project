@@ -1,0 +1,398 @@
+{
+ "RW_M2E": [
+  {
+   "id": "bfdb7014-4333-4df2-85d2-766ee6453f2f",
+   "skill": "CAS-WV",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 28"
+  },
+  {
+   "id": "03eac5ba-73e1-4cea-99e9-a80f238bf020",
+   "skill": "CAS-WV",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 21"
+  },
+  {
+   "id": "049f8cfa-fd96-43d6-b844-78576d1d9ed6",
+   "skill": "CAS-WV",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 23"
+  },
+  {
+   "id": "121f5c23-ebf9-46b6-9254-4a955da444e8",
+   "skill": "CAS-WV",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 15"
+  },
+  {
+   "id": "d24905a0-6d4a-44d2-868a-b50a6376cbc3",
+   "skill": "CAS-WV",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 28"
+  },
+  {
+   "id": "7155b33c-82fc-4467-b170-8fbfc7fa420b",
+   "skill": "CAS-TS",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 23"
+  },
+  {
+   "id": "b4d730d2-1e4b-4c84-bfec-617daa5218f4",
+   "skill": "CAS-TS",
+   "dom": "CAS",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 28"
+  },
+  {
+   "id": "a18b91a3-4186-4630-aa85-392d23b95cdb",
+   "skill": "CAS-CT",
+   "dom": "CAS",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "430e1343-f5b5-47af-857f-826b669dc97c",
+   "skill": "INI-CI",
+   "dom": "INI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 23"
+  },
+  {
+   "id": "d6328e43-7fdb-4bd1-9f3d-a61a737474bc",
+   "skill": "INI-CI",
+   "dom": "INI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 28"
+  },
+  {
+   "id": "c5e4b42d-901f-4b7e-91b3-7d5db71888d9",
+   "skill": "INI-CE",
+   "dom": "INI",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 10"
+  },
+  {
+   "id": "0dacc0b6-d484-4137-a301-6db43ada4c6f",
+   "skill": "INI-CE",
+   "dom": "INI",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 12"
+  },
+  {
+   "id": "ab7257f9-740b-4969-8849-ed3fe8e3b279",
+   "skill": "INI-CE",
+   "dom": "INI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 19"
+  },
+  {
+   "id": "0b3eb7c8-2295-4761-ad46-a8b555124a04",
+   "skill": "INI-IE",
+   "dom": "INI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 22"
+  },
+  {
+   "id": "8a3814c2-c959-4d0a-a505-ef2ceac9728a",
+   "skill": "INI-IE",
+   "dom": "INI",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 15"
+  },
+  {
+   "id": "b776c6e8-9f77-46b4-9bd8-0e635e9b0d24",
+   "skill": "SEC-BS",
+   "dom": "SEC",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 19"
+  },
+  {
+   "id": "5db6b71d-ab8b-4e8b-85be-b802732fd724",
+   "skill": "SEC-BS",
+   "dom": "SEC",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 27"
+  },
+  {
+   "id": "8a9db238-759d-4cc3-a765-6287772ccf63",
+   "skill": "SEC-BS",
+   "dom": "SEC",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 23"
+  },
+  {
+   "id": "009f8789-fac4-4f6e-b416-71521f329b12",
+   "skill": "SEC-FS",
+   "dom": "SEC",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 23"
+  },
+  {
+   "id": "27dcc972-8802-4710-aa3c-72b09639e17d",
+   "skill": "SEC-FS",
+   "dom": "SEC",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 18"
+  },
+  {
+   "id": "381753bb-2278-4d5c-b3ab-f95454a0634c",
+   "skill": "SEC-FS",
+   "dom": "SEC",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 17"
+  },
+  {
+   "id": "398bf9f4-73c8-459a-ac54-def7e6f0514e",
+   "skill": "EOI-TR",
+   "dom": "EOI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 12"
+  },
+  {
+   "id": "39bfddfa-9e8d-4478-84cc-8d40f5fb0f7a",
+   "skill": "EOI-TR",
+   "dom": "EOI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 15"
+  },
+  {
+   "id": "a5be6e8e-3813-4bf9-a2f5-79935e56b114",
+   "skill": "EOI-TR",
+   "dom": "EOI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 12"
+  },
+  {
+   "id": "573a7f0b-b210-4152-876f-3bd9e81324bd",
+   "skill": "EOI-RS",
+   "dom": "EOI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 5"
+  },
+  {
+   "id": "b85ceb72-17eb-48f2-bb09-4e0e278b06a6",
+   "skill": "EOI-RS",
+   "dom": "EOI",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 5"
+  },
+  {
+   "id": "00818a47-4b4d-4eec-88c7-0654eb70c95f",
+   "skill": "EOI-RS",
+   "dom": "EOI",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": "Test 19"
+  }
+ ],
+ "MATH_M2E": [
+  {
+   "id": "01966923-6370-4062-a442-95afadffb243",
+   "skill": "ALG-LE",
+   "dom": "ALG",
+   "difficulty": "EASY",
+   "type": "FREE_RESPONSE",
+   "test": null
+  },
+  {
+   "id": "0fcfd6e4-85ed-47ca-96db-d057e74fe557",
+   "skill": "ADV-EQ",
+   "dom": "ALG",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "14f1a8d8-eb69-4221-8894-8b920e162b05",
+   "skill": "ALG-LE",
+   "dom": "ALG",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "32dcef47-ee23-4d6f-857a-38946e6659da",
+   "skill": "ALG-LE",
+   "dom": "ALG",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "0fe1ba05-fde3-412e-8741-64491a3b171a",
+   "skill": "ADV-NF",
+   "dom": "ADV",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "5d02da05-6e16-4026-90a4-47df9f8c257d",
+   "skill": "ADV-NF",
+   "dom": "ADV",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "97af5af8-4ffc-49b8-9783-1ac9aae86fd9",
+   "skill": "ADV-NF",
+   "dom": "ADV",
+   "difficulty": "EASY",
+   "type": "FREE_RESPONSE",
+   "test": null
+  },
+  {
+   "id": "22d06b79-1da2-4609-9654-1be5fa436176",
+   "skill": "PSDA-RP",
+   "dom": "PSDA",
+   "difficulty": "EASY",
+   "type": "FREE_RESPONSE",
+   "test": null
+  },
+  {
+   "id": "75fab8a5-6649-4428-b89d-246534a98b97",
+   "skill": "PSDA-DI",
+   "dom": "PSDA",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "07d38dbd-a48c-49cc-bd9a-7a0085230a10",
+   "skill": "GT-TR",
+   "dom": "GT",
+   "difficulty": "EASY",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "06959d72-81d6-404f-8cdb-de71445907a9",
+   "skill": "ALG-LE",
+   "dom": "ALG",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "3c27eb65-cada-480a-851c-6e4a4799921b",
+   "skill": "ALG-LE",
+   "dom": "ALG",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "0deb5f9e-9c93-4d64-a8eb-be7953bfa8a1",
+   "skill": "ADV-NF",
+   "dom": "ADV",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "78695fbc-157f-439e-ac69-262d7980adf8",
+   "skill": "ADV-NE",
+   "dom": "ADV",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "83f7cd7a-c3c6-42bf-a442-1fce33b30225",
+   "skill": "ADV-NE",
+   "dom": "ADV",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "1629655e-6629-4fc6-a699-6f886e75824c",
+   "skill": "PSDA-ST",
+   "dom": "PSDA",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "02512a3b-696f-4d56-b2da-4bfccc262ed2",
+   "skill": "PSDA-RP",
+   "dom": "PSDA",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "7ec41e70-72e1-48ff-9531-116fb055e37a",
+   "skill": "GT-LA",
+   "dom": "GT",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "609db1c9-09e7-4bb3-9c74-054af7c44a3e",
+   "skill": "GT-LA",
+   "dom": "GT",
+   "difficulty": "MEDIUM",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "b656445a-d714-4602-b88f-ab6afa798534",
+   "skill": "GT-AV",
+   "dom": "GT",
+   "difficulty": "HARD",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "e5e6517f-0d94-4b73-b688-64eb4f430325",
+   "skill": "GT-LA",
+   "dom": "GT",
+   "difficulty": "HARD",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  },
+  {
+   "id": "0d233fb4-49cf-41f5-81b2-d49febc06785",
+   "skill": "GT-LA",
+   "dom": "GT",
+   "difficulty": "HARD",
+   "type": "MULTIPLE_CHOICE",
+   "test": null
+  }
+ ]
+}

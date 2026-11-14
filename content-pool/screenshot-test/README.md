@@ -14,3 +14,15 @@ inserted as DRAFT. The user publishes from the admin panel.
 - R&W Module 2 Hard: COMPLETE, 27/27, block order verified, no passage overlaps with Module 1 (checked with a positive control). Two cross-text items at the user's request.
 - Math Module 1: COMPLETE, 22/22 (4 free-response), every answer checked with sympy.
 - Math Module 2 Hard: COMPLETE 22/22 (7 free-response, over the cap). Q22 is the user's own question, rebuilt because the original was unsolvable; awaiting OK.
+
+## Assembled as SPECIAL TEST
+- `build_special_test.py` -> `special_test.json` -> `insert_special.mjs` (DATABASE_URL=target, SOURCE_URL=production).
+- Both Module 2 Easy sections are COPIES of existing published questions (`m2e_from_db.json`, chosen by
+  `select_m2e_from_db.py`): only items whose key passed the explanation gate, none from Tests 3/4, no
+  passage overlap with this test, lowest student exposure first. Every one was re-solved by hand; 4 were
+  rejected (2 template repeats of Math M1, 1 contradictory rounding instruction, 1 wrong key "July Falk")
+  and 4 repaired (`FIXES` in the build script).
+- Routing (set by the user): R&W Module 1 below 20/27 -> Easy (74%); Math Module 1 below 19/22 -> Easy (86%).
+- Pinned first in every test list by `isFeaturedTest` in `src/lib/tests/order.ts`.
+- Verified locally: math rendering audit 0 errors (positive control fires), 117 KaTeX spans compile at
+  throwOnError: true, all 147 questions walked in the real exam screen with no raw LaTeX, no broken images.

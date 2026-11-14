@@ -4,7 +4,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 def save(fig, name):
-    fig.savefig(f"figures/{name}.png", dpi=200, bbox_inches="tight", facecolor="white")
+    fig.savefig(f"figures/{name}.png", dpi=110, bbox_inches="tight", facecolor="white")
     plt.close(fig)
 
 # Math M2 Hard Q7: right rectangular pyramid, l = 14, w = 7, height h.

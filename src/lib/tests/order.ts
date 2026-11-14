@@ -22,6 +22,14 @@ export function testNumber(title: string): number | null {
 }
 
 /**
+ * "SPECIAL TEST" is pinned to the top of every test list at the founder's
+ * request. Matched by its title prefix so a later "SPECIAL TEST 2" joins it.
+ */
+export function isFeaturedTest(title: string): boolean {
+  return /^special test\b/i.test(title.trim());
+}
+
+/**
  * Compare two tests: numbered titles ascending, then everything else.
  *
  * A title without a number (a themed or diagnostic test, say) sorts after all
@@ -32,6 +40,10 @@ export function compareTests(
   a: { title: string },
   b: { title: string }
 ): number {
+  // Featured tests come before everything else, whatever their title says.
+  const fa = isFeaturedTest(a.title);
+  const fb = isFeaturedTest(b.title);
+  if (fa !== fb) return fa ? -1 : 1;
   const na = testNumber(a.title);
   const nb = testNumber(b.title);
   if (na !== null && nb !== null && na !== nb) return na - nb;
