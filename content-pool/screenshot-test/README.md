@@ -12,4 +12,4 @@ inserted as DRAFT. The user publishes from the admin panel.
 - R&W Module 1: COMPLETE, 27/27, block order verified, 0 key disputes. Difficulty not yet assigned (target 3 E / 15 M / 9 H).
   Open: Q7 stem inferred; Q7 "resources" and Q9 "argued" are placeholders for words the watermark covered.
 - R&W Module 2 Hard: COMPLETE, 27/27, block order verified, no passage overlaps with Module 1 (checked with a positive control). Two cross-text items at the user's request.
-- Math Module 1: 20 of 22 (3 free-response), every answer checked with sympy.
+- Math Module 1: COMPLETE, 22/22 (4 free-response), every answer checked with sympy.

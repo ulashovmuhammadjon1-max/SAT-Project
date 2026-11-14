@@ -312,6 +312,38 @@
    "verify": "discriminant b^2 - 400 < 0 -> b < 20; largest integer 19",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 21,
+   "skill": "ADV-NF",
+   "type": "FR",
+   "stem": "A quadratic function models the height, in feet, of an object above the ground in terms of the time, in seconds, after the object was launched. The model estimates that the object was launched from an initial height of 0.00 feet above the ground and was at a maximum height of 207.36 feet above the ground 3.6 seconds after it was launched. The model also estimates that the object was at a height of 184.32 feet above the ground x seconds after it was launched. What is a possible value of x?",
+   "answerFR": [
+    "2.4",
+    "12/5",
+    "4.8",
+    "24/5"
+   ],
+   "mine": "2.4 or 4.8",
+   "verify": "sympy: h(t) = -16t^2 + 115.2t; h = 184.32 at t = 2.4 and 4.8",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 22,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "For the polynomial function f, the graph of y = f(x) in the xy-plane passes through the points (−5, 0), (3, 0), and (8, 0). Which of the following must be a factor of f(x)?",
+   "choices": [
+    "x + 3",
+    "x + 8",
+    "x − 3",
+    "x − 5"
+   ],
+   "mine": "C",
+   "verify": "zero at x = 3 -> factor (x - 3); the zeros -5 and 8 would give x + 5 and x - 8, not offered",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
