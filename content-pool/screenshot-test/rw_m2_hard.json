@@ -130,6 +130,23 @@
   },
   {
    "n": 8,
+   "src": "8 (replacement)",
+   "source": "sat1600acer",
+   "skill": "INI-CI",
+   "passage": "<p>“Coyote” is one example of an English word that has an indigenous origin. The word came to English indirectly from <em>coyote</em>, the Spanish word for the wild canine species. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word’s original form is <em>coyotl</em>. “Iguana” also has an indigenous origin and entered English through Spanish. But in this case, the original source was Taino, a language of the Caribbean islands, in which the word for the group of related lizard species is <em>iwana</em>.</p>",
+   "stem": "According to the text, what is one difference between the English words “coyote” and “iguana”?",
+   "choices": [
+    "“Coyote” is known for being indigenous in origin, while “iguana” is mistakenly regarded as Spanish in origin.",
+    "“Coyote” changed in meaning significantly when English borrowed the word from Spanish, whereas “iguana” retained its original meaning.",
+    "“Coyote” can be traced to the Nahuatl language, while “iguana” can be traced to the Taino language.",
+    "“Coyote” entered English recently, but “iguana” entered English many centuries ago."
+   ],
+   "mine": "C",
+   "printed": null,
+   "why": "Both came through Spanish from indigenous languages; the stated difference is the source language: Nahuatl vs Taino."
+  },
+  {
+   "n": 9,
    "src": 9,
    "skill": "INI-CI",
    "passage": "<p>Models indicate that when Neptune captured its moon Triton, the moon first entered a stretched, elongated orbit and could have stayed bound to Neptune only by quickly shedding orbital energy. Researchers long assumed that tidal interactions between Triton and Neptune enabled that shedding, gradually reshaping Triton’s orbit to its current path. Newer work suggests that as Triton passed through a crowd of moons circling Neptune, tides would have acted too slowly to keep it bound. Collisions with those moons, however, could have dissipated orbital energy roughly ten times faster than tides could have.</p>",
@@ -146,6 +163,23 @@
    "flags": [
     "Watermark covered 'assumed that ___ interactions between ___ and Neptune'; restored as 'tidal' and 'Triton'."
    ]
+  },
+  {
+   "n": 10,
+   "src": "10 (replacement)",
+   "source": "sat1600acer",
+   "skill": "INI-CE",
+   "passage": "<p><em>Orbicella faveolata</em>, a Caribbean coral with a boulder-like shape, and <em>Pocillopora eydouxi</em>, a coral from the Indian Ocean with branching clusters, are both stony corals—the type that builds reefs. Increasing stony coral colonies worldwide is a key objective for ecologists, since land-based runoff and other pressures are causing growing harm to reefs. In the wild, crustose coralline algae (CCA) promote growth in the healthy reefs they inhabit by releasing lipids and other metabolites—chemical cues that trigger coral larvae settlement. Biotechnology researcher Lina Haddad and team have developed a tool to restore those cues in damaged reefs: a gel coating infused with metabolites derived from Indian Ocean CCA. In tests with <em>Porites lutea</em>, an Indian Ocean stony coral, settlement rates rose substantially.</p>",
+   "stem": "Which finding, if true, would best support a claim that the new tool already has the capacity to support the scope of the ecologists’ objective?",
+   "choices": [
+    "The lipids and other metabolites derived from Indian Ocean CCA seem to remain stable for long periods under a variety of water temperatures and environmental conditions.",
+    "Exposure to lipids and other metabolites released by CCA from Indian Ocean reefs improves settlement rates for larvae of <em>Orbicella faveolata</em> and a variety of other coral species in regions outside the Indian Ocean.",
+    "In Indian Ocean reefs, higher concentrations of lipids and other metabolites released by local CCA are linked to larger colonies of <em>Pocillopora eydouxi</em> and greater overall diversity of coral species.",
+    "When CCA are present and releasing lipids and other metabolites, larvae settlement rates improve nearly as much in damaged reefs with <em>Porites lutea</em> as they do in healthy reefs containing that coral."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "The objective is worldwide, but the gel was tested only on an Indian Ocean coral; B shows the same Indian Ocean metabolites working for corals elsewhere."
   }
  ],
  "disputes": [],
@@ -164,8 +198,5 @@
    "key": "A"
   }
  ],
- "needs": [
-  "Replacement for an INI-CI 'most strongly suggest' item (for src 8)",
-  "Replacement for an INI-CE table item (for src 10)"
- ]
+ "needs": []
 }
