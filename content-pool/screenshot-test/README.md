@@ -9,5 +9,5 @@ Target shape (CLAUDE.md, Test 1 reference): R&W 27/27/27, Math 22/22/22,
 inserted as DRAFT. The user publishes from the admin panel.
 
 ## Status
-- R&W Module 1: 24 of 27 transcribed and solved (every printed key agrees; Q24 has no key, reasoned). Missing: Q14 (support finding), Q26-27.
+- R&W Module 1: 26 of 27 transcribed and solved (every printed key agrees; Q24 reasoned, no key). Missing: Q14 (support finding).
   Open: Q7 stem inferred; Q7 "resources" and Q9 "argued" are placeholders for words the watermark covered.

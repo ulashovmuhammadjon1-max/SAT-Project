@@ -390,6 +390,42 @@
    "mine": "B",
    "printed": null,
    "why": "Only B names a particle physicist (Dolgov) and his neutrino research."
+  },
+  {
+   "n": 26,
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Uzbek is a language in the Turkic language family.</li><li>In Uzbek, a noun takes a different form when that noun functions as a location in a sentence.</li><li>The Uzbek noun <em>xona</em> (room) is combined with the locative suffix <em>-da</em> to become the locative noun <em>xonada</em> (in the room).</li><li>Danish is a language in the Germanic language family.</li><li>In Danish, nouns do not change form to indicate location.</li><li>In Danish, nouns used as a location must be indicated by prepositions such as <em>i</em> (in) or <em>på</em> (on).</li></ul>",
+   "stem": "The student wants to emphasize a difference between Uzbek and Danish nouns. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Though nouns in Uzbek change form to indicate location, this Turkic language belongs to a different language family than Danish does.",
+    "To indicate location in Uzbek, a suffix is appended to a noun, but in Danish, the noun is unchanged and a preposition is used.",
+    "In Uzbek, nouns take a different form when they function as a location, as the language belongs to the Turkic family; Danish, however, belongs to the Germanic family.",
+    "Uzbek and Danish belong to two distinct language families; the former is in the Turkic family, while the latter is a Germanic language."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Only B contrasts the nouns themselves: a suffix in Uzbek, an unchanged noun plus a preposition in Danish. A, C and D contrast the language families.",
+   "flags": [
+    "Watermark covered the locative noun; restored as 'xonada' (xona + -da)."
+   ]
+  },
+  {
+   "n": 27,
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>During the Industrial Revolution (from the mid-1700s to the mid-1800s), the number of people living in urban areas of the UK grew substantially (30%).</li><li>Urbanization occurred as large segments of the country’s rural population relocated to cities to support the burgeoning manufacturing industry.</li><li>The industrial city of Manchester, England, experienced the most population growth (2,000%).</li><li>A comparison of a 1746 map of Manchester with maps of the city from the late 1800s reflects the city’s expansion.</li><li>According to historian Donna Sherman, these maps present “a powerful visual representation of the transformation of Manchester’s landscape.”</li></ul>",
+   "stem": "The student wants to connect the quotation from Sherman to the increase in the UK’s urban population during the Industrial Revolution. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Rural populations relocating to cities like Manchester created a phenomenon that Sherman describes as “a powerful visual representation” of how the UK transformed during the Industrial Revolution.",
+    "Sherman claims that period maps of the UK present “a powerful visual representation” of how the country’s rural landscape was transformed by population shifts during the Industrial Revolution.",
+    "Sherman claims that maps of Industrial Revolution–era Manchester, England, present “a powerful visual representation of the transformation of Manchester’s landscape” during a time period in which the UK experienced a substantial (2,000%) increase in population.",
+    "The sizeable growth in the UK’s urban population during the Industrial Revolution is reflected in before-and-after maps that present, in Sherman’s view, “a powerful visual representation” of how the increase transformed Manchester."
+   ],
+   "mine": "D",
+   "printed": "D",
+   "why": "D ties the UK's urban growth to Sherman's maps of Manchester accurately. A and B misdescribe what the quotation is about; C puts Manchester's 2,000% on the whole UK.",
+   "flags": [
+    "Watermark covered 'burgeoning ___ industry'; 'manufacturing' is a placeholder."
+   ]
   }
  ],
  "disputes": [],
