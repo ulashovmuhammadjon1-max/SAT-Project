@@ -157,6 +157,86 @@
    "verify": "11.17 ± 0.2 = [10.97, 11.37]",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 11,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "The equation \\(E(t)=5(1.8)^{t}\\) gives the estimated number of employees at a restaurant, where t is the number of years since the restaurant opened. Which of the following is the best interpretation of the number 5 in this context?",
+   "choices": [
+    "The estimated number of employees when the restaurant opened",
+    "The increase in the estimated number of employees each year",
+    "The number of years the restaurant has been open",
+    "The percent increase in the estimated number of employees each year"
+   ],
+   "mine": "A",
+   "verify": "E(0) = 5",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 12,
+   "skill": "GT-AV",
+   "type": "MC",
+   "stem": "Rectangle X has a length of 24 millimeters (mm) and a width of 7.5 mm. Right triangle Y has a base of 60 mm. The area of rectangle X is 3 times the area of right triangle Y. What is the height, in mm, of right triangle Y?",
+   "choices": [
+    "1",
+    "2",
+    "3",
+    "6"
+   ],
+   "mine": "B",
+   "verify": "sympy: 180 = 3 * (1/2)(60)h -> h = 2",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 13,
+   "skill": "PSDA-ST",
+   "type": "MC",
+   "stem": "At a convention center, there are a total of 375 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.48, and the probability of selecting a visitor who is located in room B is 0.28. How many visitors are located in room C?",
+   "choices": [
+    "24",
+    "50",
+    "75",
+    "90"
+   ],
+   "mine": "D",
+   "verify": "375 * (1 - 0.48 - 0.28) = 90",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 14,
+   "skill": "ADV-NF",
+   "type": "MC",
+   "stem": "For the polynomial function f, when f(x) is divided by x − 8, the remainder is 9. Which of the following must be true about the graph of y = f(x) in the xy-plane?",
+   "choices": [
+    "It passes through the point (9, −8)",
+    "It passes through the point (−8, 9)",
+    "It passes through the point (9, 8)",
+    "It passes through the point (8, 9)"
+   ],
+   "mine": "D",
+   "verify": "remainder theorem: f(8) = 9; sympy check on a sample f",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 15,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "A machine makes 9-inch, 8-inch, and 3-inch parts. During a certain day, the number of 9-inch parts that the machine makes is 4 times the number n of 8-inch parts, and the number of 3-inch parts is 15. During this day, the machine makes 100 parts total. Which equation represents this situation?",
+   "choices": [
+    "9(4n) + 8n + 3(15) = 100",
+    "9n + 8n + 3n = 100",
+    "4n + 15 = 100",
+    "5n + 15 = 100"
+   ],
+   "mine": "D",
+   "verify": "count of parts: 4n + n + 15 = 100 (n = 17); A totals inches and gives n = 5/4",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
