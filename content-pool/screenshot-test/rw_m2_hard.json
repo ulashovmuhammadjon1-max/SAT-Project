@@ -431,6 +431,41 @@
    "flags": [
     "Stem split across the screenshot's two panes; joined."
    ]
+  },
+  {
+   "n": 26,
+   "source": "SATashkent",
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>The Music by Black Composers (MBC) project aims to inspire aspiring music students by archiving and sharing information about the music of Black classical composers.</li><li>George Theophilus Walker is a Black classical music composer included in MBC’s Historic Composers Directory.</li><li>He was born in 1922 and died in 2018.</li></ul>",
+   "stem": "Which choice most effectively uses information from the given sentences to set up a discussion of Walker’s career for an audience already familiar with the MBC Project?",
+   "choices": [
+    "While George Theophilus Walker is considered a great composer, there are many more such composers included in MBC’s Historic Composers Directory.",
+    "Born in 1922, George Theophilus Walker passed away in 2018 according to the MBC project.",
+    "Among the many talented figures included in the MBC project is classical music composer George Theophilus Walker.",
+    "The MBC project’s Historic Composers Directory highlights Black classical composers of the past, such as George Theophilus Walker (1922–2018), in order to inspire music students to become the classical composers of the future."
+   ],
+   "mine": "C",
+   "printed": null,
+   "why": "C introduces Walker as the subject to come and assumes the audience knows MBC. D explains MBC (for newcomers); A turns away from Walker; B gives only dates."
+  },
+  {
+   "n": 27,
+   "source": "SATashkent",
+   "skill": "EOI-RS",
+   "passage": "<p>While researching a topic, a student has taken the following notes:</p><ul><li>Sister cities are pairs of cities that form social or legal partnerships to promote each other’s cultures.</li><li>Previously known as “town twinning,” the concept of sister cities evolved in Europe after World War II as a way to repair bonds between cities.</li><li>Many cities in New York State maintain such partnerships with cities around the world.</li><li>Rhinebeck, New York, and Larreynaga, Nicaragua, became sister cities in 1989.</li></ul>",
+   "stem": "The student wants to emphasize the duration of Rhinebeck and Larreynaga’s sister city relationship. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Since the end of World War II, sister cities such as Rhinebeck, New York, and Larreynaga, Nicaragua, have continued to form social partnerships to promote each other’s cultures.",
+    "As sister cities, Rhinebeck, New York, and Larreynaga, Nicaragua, have engaged in cultural exchange and partnerships since 1989.",
+    "Larreynaga, which became a sister city—or “twin town”—to Rhinebeck, New York, is located in Nicaragua.",
+    "Despite their distance from each other, the sister cities of Rhinebeck, New York, and Larreynaga, Nicaragua, have enjoyed the same partnerships as many other sister cities."
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "Only B states how long the relationship has lasted (since 1989). A misattributes a post-war start to these two cities.",
+   "flags": [
+    "Source misspells the town (Larreynago, Larreyna) and capitalizes WORLD WAR II; normalized. C's broken dashes fixed."
+   ]
   }
  ],
  "disputes": [],
