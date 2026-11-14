@@ -217,7 +217,7 @@
    ]
   },
   {
-   "n": 14,
+   "n": 15,
    "skill": "INI-IE",
    "passage": "<p>Artificial intelligence (AI) technology is increasingly prevalent in online marketing, largely in the form of autonomously operating algorithms that make use of extensive collections of data about individuals’ behavior to generate highly personalized advertisements in real time. In a recent survey of college students’ attitudes toward AI marketing, researchers found that respondents expressed little concern about AI marketing technology in general but expressed a high degree of concern about the collection and use of personal data (be it their own or other people’s). Since machine learning on immense troves of such data is intrinsic to the functionality of AI marketing tools, this discrepancy suggests that _____</p>",
    "stem": "Which choice most logically completes the text?",
@@ -234,10 +234,92 @@
     "Watermark covered 'that' in 'algorithms that make use'; restored.",
     "Inference must stay the last reading question: the cut-off Q15 (support finding) goes before this one."
    ]
+  },
+  {
+   "n": 16,
+   "skill": "SEC-BS",
+   "passage": "<p>In the hunt for potential mineral deposits, modern gem prospectors utilize advanced satellite _____ this technology allowing prospectors to detect specific electromagnetic signatures unique to gem-bearing formations, extensive on-the-ground operations can be reduced.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "imagery. With",
+    "imagery, with",
+    "imagery, with which",
+    "imagery with"
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "\"With this technology allowing ..., extensive operations can be reduced\" is its own sentence; joining it with a comma makes a comma splice."
+  },
+  {
+   "n": 17,
+   "skill": "SEC-BS",
+   "passage": "<p>Arguing that the term is pejorative and historically inaccurate and that it homogenizes up to 5,000 years of diverse human cultures across the _____ explicitly reject referring to the earliest inhabitants of Puerto Rico as “Pre-Arawak”—a term that defines these peoples not by who they were but by who they were not.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Caribbean, Pestle, and colleagues",
+    "Caribbean, Pestle and colleagues",
+    "Caribbean, Pestle and colleagues,",
+    "Caribbean Pestle and colleagues,"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "A comma ends the introductory participial phrase; no comma belongs inside the compound subject or between the subject and the verb \"reject\"."
+  },
+  {
+   "n": 18,
+   "skill": "SEC-BS",
+   "passage": "<p>In Pakistan, skilled craftspeople, including painters, welders, metalworkers, and horn installers, collaborate to create the elaborately decorated cargo trucks the country is famous _____ vibrant artistic practice dating back to the 1920s, truck art represents the blending of multiple folk art traditions.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "for—Pakistani truck art. A",
+    "for. Pakistani truck art, a",
+    "for Pakistani truck art—a",
+    "for, Pakistani truck art, a"
+   ],
+   "mine": "A",
+   "printed": null,
+   "why": "The dash names the trucks' art; the next sentence opens with the appositive \"A vibrant artistic practice ...\" before its subject \"truck art\". B and D give the second sentence two subjects; C is a run-on."
+  },
+  {
+   "n": 19,
+   "skill": "SEC-FS",
+   "passage": "<p>Set in the Ottoman Empire in the 1500s, Orhan Pamuk’s 1998 novel <em>My Name Is Red</em> shifts between the perspectives of no fewer than twenty-one different first person narrators. Each one—including the color red; artists nicknamed Black, Butterfly, and Stork; and drawings of animals and objects—_____ to the novel’s complex portrayal of the nature of art.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "contributes",
+    "contributing",
+    "contribute",
+    "are contributing"
+   ],
+   "mine": "A",
+   "printed": "A",
+   "why": "The subject is the singular \"Each one\"; the dashes enclose an interrupter, so the verb is the singular \"contributes\"."
+  },
+  {
+   "n": 20,
+   "skill": "SEC-BS",
+   "source": "SATashkent",
+   "passage": "<p>Though he’s performed on many respected albums, including <em>Trypnotyx</em> by Victor Wooten, drummer Dennis Chambers may be best known for his time as house drummer for the hip-hop label Sugar Hill Records. He did not play drums on the label’s classic song “Rapper’s _____ he joined the label after the song’s release.</p>",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Delight,” however,",
+    "Delight,” however;",
+    "Delight.” However,",
+    "Delight” however"
+   ],
+   "mine": "B",
+   "printed": null,
+   "why": "\"However\" contrasts this sentence with the previous one (best known for Sugar Hill, yet not on its classic song), so it closes the first clause, and a semicolon joins the explanation. C attaches \"however\" to the wrong clause; A is a comma splice."
   }
  ],
  "disputes": [],
  "notes": [
   "The Hawthorne main-idea question was sent twice (batches 6-10 and 11-15); kept once, as Q10."
+ ],
+ "missing": [
+  {
+   "n": 14,
+   "what": "Command of Evidence: 'Which finding from the researchers’ study, if true, would most directly support the researchers’ ...' (cut off under the obsidian screenshot)"
+  }
  ]
 }
