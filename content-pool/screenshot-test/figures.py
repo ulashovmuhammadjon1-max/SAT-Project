@@ -41,5 +41,19 @@ def line_graph():
     ax.tick_params(labelsize=8)
     save(fig, "m2h_q8_line")
 
-pyramid(); line_graph()
+# Math M2 Hard Q17: histogram of 14 salmon weights. Counts read from the source:
+# 70-75: 2, 75-80: 1, 80-85: 2, 85-90: 6, 90-95: 3 (sum 14).
+def salmon_histogram():
+    fig, ax = plt.subplots(figsize=(4.0, 3.0))
+    edges = [70, 75, 80, 85, 90]; counts = [2, 1, 2, 6, 3]
+    assert sum(counts) == 14
+    ax.bar(edges, counts, width=5, align="edge", color="#9E9E9E", edgecolor="black", lw=1)
+    ax.set_xticks([70, 75, 80, 85, 90, 95]); ax.set_yticks(range(7))
+    ax.set_xlim(68.5, 96.5); ax.set_ylim(0, 6.3)
+    ax.grid(axis="y", color="#D9DEE5", lw=0.6); ax.set_axisbelow(True)
+    ax.set_xlabel("Weight (pounds)"); ax.set_ylabel("Number of salmon")
+    ax.tick_params(labelsize=8)
+    save(fig, "m2h_q17_salmon")
+
+pyramid(); line_graph(); salmon_histogram()
 print("figures written")

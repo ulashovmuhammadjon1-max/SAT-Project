@@ -233,9 +233,90 @@
    "verify": "sympy: 77 - 45 = 32",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 16,
+   "skill": "ALG-LF",
+   "type": "MC",
+   "stem": "Line j in the xy-plane passes through the points \\(\\left(0,\\frac{9}{38}\\right)\\) and \\(\\left(\\frac{76}{k},-\\frac{6}{k}+\\frac{9}{38}\\right)\\), where k is a constant. What is the x-coordinate of the x-intercept of line j?",
+   "choices": [
+    "\\(\\frac{3k}{76}\\)",
+    "\\(6k\\)",
+    "\\(\\frac{9}{38}\\)",
+    "3"
+   ],
+   "mine": "D",
+   "verify": "sympy: slope -3/38 (k cancels), x-intercept 3",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 17,
+   "skill": "PSDA-ST",
+   "type": "MC",
+   "image": "figures/m2h_q17_salmon.png",
+   "stem": "The histogram summarizes a data set of the weights, in pounds, of 14 salmon. If an additional weight of 35 pounds is added to the original data set to create a new data set of 15 weights, which of the following measures must be less for the new data set than for the original data set?<br/>I. The median<br/>II. The mean",
+   "choices": [
+    "I only",
+    "II only",
+    "I and II",
+    "Neither I nor II"
+   ],
+   "mine": "B",
+   "verify": "35 is below every value, so the mean drops; new median is the old 7th value, old median averages the 7th and 8th (both in 85-90), which can be equal, so the median need not drop",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 18,
+   "skill": "ADV-EQ",
+   "type": "MC",
+   "stem": "\\[\\frac{42}{p}=\\frac{42}{q}-\\frac{42}{r}-\\frac{42}{s}\\]The given equation relates the positive variables p, q, r, and s. Which of the following is equivalent to q?",
+   "choices": [
+    "\\(\\frac{prs}{pr+ps+rs}\\)",
+    "\\(\\frac{prs}{42p+42r+42s}\\)",
+    "\\(p+r+s\\)",
+    "\\(42(p+r+s)\\)"
+   ],
+   "mine": "A",
+   "verify": "sympy solve: q = prs/(pr + ps + rs)",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 19,
+   "skill": "ADV-EQ",
+   "type": "FR",
+   "stem": "The expression \\(\\sqrt{486+44\\sqrt{2}}\\) is equivalent to the expression \\(r+p^{\\frac{1}{2}}\\), where r and p are positive integers. What is the value of r + p?",
+   "answerFR": [
+    "24"
+   ],
+   "mine": "24",
+   "verify": "sympy: sqrt(486 + 44√2) = 22 + √2, so r = 22, p = 2",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 20,
+   "skill": "PSDA-RP",
+   "type": "MC",
+   "stem": "In 2022, the population of American spadefoot toads in a monitored area was estimated to be 20% more than in 2021, and in 2023, the population was estimated to be 17% more than in 2022. If the population of American spadefoot toads in this area was estimated to be t times as much in 2021 as in 2023, which of the following is closest to the value of t?",
+   "choices": [
+    "0.712",
+    "0.730",
+    "1.370",
+    "1.404"
+   ],
+   "mine": "A",
+   "verify": "t = 1/(1.2 x 1.17) = 0.7123",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
   "Order follows the order screenshots were sent, not the numbers printed in them (user's instruction)."
+ ],
+ "flags": [
+  "6 free-response items, one over the ~5 cap for this rebuild; the user decides whether to keep it."
  ]
 }

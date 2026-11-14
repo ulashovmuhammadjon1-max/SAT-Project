@@ -13,4 +13,4 @@ inserted as DRAFT. The user publishes from the admin panel.
   Open: Q7 stem inferred; Q7 "resources" and Q9 "argued" are placeholders for words the watermark covered.
 - R&W Module 2 Hard: COMPLETE, 27/27, block order verified, no passage overlaps with Module 1 (checked with a positive control). Two cross-text items at the user's request.
 - Math Module 1: COMPLETE, 22/22 (4 free-response), every answer checked with sympy.
-- Math Module 2 Hard: 15 of 22 (5 free-response, at the cap). Figures redrawn by figures.py. Order = the order screenshots are sent, never the printed numbers.
+- Math Module 2 Hard: 20 of 22 (6 free-response, one over the cap). Figures redrawn by figures.py. Order = the order screenshots are sent.
