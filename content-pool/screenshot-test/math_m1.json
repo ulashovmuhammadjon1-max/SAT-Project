@@ -80,6 +80,83 @@
    "verify": "sympy: B infinitely many, A no solution, C and D one point",
    "source": "sat1600acer",
    "printed": null
+  },
+  {
+   "n": 6,
+   "skill": "ALG-LE",
+   "type": "MC",
+   "stem": "An artist made 14 pieces of pottery using 48 pounds of clay. The pottery included only bowls and vases. Each bowl used 3 pounds of clay and each vase used 5 pounds of clay. How many vases did the artist make?",
+   "choices": [
+    "3",
+    "6",
+    "8",
+    "11"
+   ],
+   "mine": "A",
+   "verify": "sympy: b + v = 14, 3b + 5v = 48 -> b = 11, v = 3",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 7,
+   "skill": "ADV-NE",
+   "type": "MC",
+   "stem": "\\[-5(v-8)(v-2)(v+9)=0\\]What value of v is a solution to the given equation?",
+   "choices": [
+    "−5",
+    "−2",
+    "8",
+    "9"
+   ],
+   "mine": "C",
+   "verify": "sympy roots [-9, 2, 8]; only 8 is a choice",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 8,
+   "skill": "GT-AV",
+   "type": "FR",
+   "stem": "In the xy-plane, an equation of circle R is \\((x+8)^{2}+(y+19)^{2}=100\\). Circle S is obtained by shifting circle R to the right 3 units. An equation defining circle S is \\((x+h)^{2}+(y+k)^{2}=100\\), where h and k are constants. What is the value of h?",
+   "answerFR": [
+    "5"
+   ],
+   "mine": "5",
+   "verify": "center (-8, -19) -> (-5, -19); (x + 5)^2 so h = 5",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 9,
+   "skill": "ADV-EQ",
+   "type": "MC",
+   "stem": "If \\((x+3)^{2}=30\\), what is the value of \\(x^{2}+6x\\)?",
+   "choices": [
+    "21",
+    "30",
+    "39",
+    "60"
+   ],
+   "mine": "A",
+   "verify": "sympy: x^2 + 6x = 21 for both roots",
+   "source": "sat1600acer",
+   "printed": null
+  },
+  {
+   "n": 10,
+   "skill": "PSDA-ST",
+   "type": "MC",
+   "stem": "A machine fills bags with approximately 11 ounces of walnuts. To test the accuracy of the filling process, 330 bags of walnuts were selected at random and weighed. Based on the sample, it is estimated that the average weight of all bags of walnuts filled by the machine in an 8-hour period is 11.17 ounces, with an associated margin of error of 0.2 ounce. Which of the following is the best interpretation of this estimate?",
+   "choices": [
+    "Plausible values for the average weight of all bags of walnuts filled by the machine are between 10.97 ounces and 11.37 ounces.",
+    "Plausible values for the average weight of all bags of walnuts filled by the machine are less than 10.97 ounces or greater than 11.37 ounces.",
+    "The average weight of all bags of walnuts filled by the machine is less than 11.02 ounces.",
+    "The average weight of all bags of walnuts filled by the machine is greater than 11.02 ounces."
+   ],
+   "mine": "A",
+   "verify": "11.17 ± 0.2 = [10.97, 11.37]",
+   "source": "sat1600acer",
+   "printed": null
   }
  ],
  "notes": [
