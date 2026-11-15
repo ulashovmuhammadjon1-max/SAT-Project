@@ -20,8 +20,13 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     },
   });
 
-  if (!attempt || attempt.userId !== user.id) notFound();
-  if (attempt.status !== "SUBMITTED") redirect(`/exam/${attempt.id}`);
+  // Admins may open any student's attempt, finished or not, read-only.
+  const isAdminView = user.role === "ADMIN" && !!attempt && attempt.userId !== user.id;
+  if (!attempt || (attempt.userId !== user.id && !isAdminView)) notFound();
+  if (attempt.status !== "SUBMITTED" && !isAdminView) redirect(`/exam/${attempt.id}`);
+  const student = isAdminView
+    ? await prisma.user.findUnique({ where: { id: attempt.userId }, select: { name: true, username: true } })
+    : null;
 
   // Named columns rather than whole rows.
   //
@@ -165,7 +170,12 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
 
   return (
     <ReviewShell
-      testTitle={attempt.test.title}
+      testTitle={
+        student
+          ? `${attempt.test.title} · ${student.name ?? student.username ?? "Student"}${attempt.status === "SUBMITTED" ? "" : " (not submitted)"}`
+          : attempt.test.title
+      }
+      backHref={student ? `/admin/statistics/students/${attempt.userId}` : undefined}
       totalScaledScore={attempt.totalScaledScore}
       rwScaledScore={attempt.rwScaledScore}
       mathScaledScore={attempt.mathScaledScore}

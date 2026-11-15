@@ -52,6 +52,7 @@ const FILTERS: { key: ReviewFilter; label: string }[] = [
 
 export function ReviewShell({
   testTitle,
+  backHref,
   totalScaledScore,
   rwScaledScore,
   mathScaledScore,
@@ -60,6 +61,7 @@ export function ReviewShell({
   items,
 }: {
   testTitle: string;
+  backHref?: string;
   totalScaledScore: number | null;
   rwScaledScore: number | null;
   mathScaledScore: number | null;
@@ -165,7 +167,7 @@ export function ReviewShell({
           </div>
           <div className="flex gap-2">
             <Button variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" asChild>
-              <Link href="/dashboard">Back to dashboard</Link>
+              <Link href={backHref ?? "/dashboard"}>{backHref ? "Back to student" : "Back to dashboard"}</Link>
             </Button>
           </div>
         </div>

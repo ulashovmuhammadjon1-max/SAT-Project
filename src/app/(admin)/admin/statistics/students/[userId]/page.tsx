@@ -367,12 +367,12 @@ export default async function StudentProfilePage({ params }: { params: { userId:
                         {a.totalScaledScore ?? "—"}
                       </td>
                       <td className="px-6 py-2 text-right">
-                        {a.status === "SUBMITTED" && (
+                        {(a.status === "SUBMITTED" || a.answered > 0) && (
                           <Link
                             href={`/review/${a.id}`}
                             className="text-xs text-primary hover:underline"
                           >
-                            Review
+                            {a.status === "SUBMITTED" ? "Review answers" : "View answers so far"}
                           </Link>
                         )}
                       </td>
