@@ -4,12 +4,17 @@
 
 Every scholarly.space Short uses the ElevenLabs voice "Liam" (`TX3LPaxmHKxFdv7VOQHJ`), generated through the vidIQ
 connector at 1.2× speed. The owner chose it over the earlier Kokoro voice. The README has the exact recipe, a
-cutting script, and the reference take. `video/sat-hardest/` (SAT Short #2 v4) is the reference video for
-structure:
-- the hook readable on frame 1,
-- a 3-second countdown,
-- a music bed under everything,
-- an end card that lights each line as it's said and ends on "Join the community!".
+cutting script, and the reference take.
+
+**Before making the next Short, read `video/PLAYBOOK.md`.** It has the real Instagram retention data from the
+first two Reels and the rules that follow from it. In short:
+- Open on the question, big, with the voice at 0.0 s.
+- Put scholarly.space on screen during the 3-2-1 countdown, where ~35% are still watching. The end card reached
+  only ~7%.
+- End within ~2 s of the answer with "Join the community!" + "Follow for #N+1", then loop.
+- Make it a numbered series, about 25 s long.
+- Ignore likes, comments and saves: most come from the owner's own accounts. Watch time and the retention curve
+  are the signal.
 
 ## Responsive layout: the conventions that keep phones working
 
