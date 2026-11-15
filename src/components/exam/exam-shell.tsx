@@ -57,7 +57,7 @@ import { cn } from "@/lib/utils";
 import { stemRegionId, type Annotation } from "@/lib/exam/annotations";
 import { toPassageHtml } from "@/lib/exam/passage-html";
 import { useEscape } from "@/lib/exam/use-escape";
-import { autosaveResponses, submitModule } from "@/server/actions/student/attempts";
+import { autosaveResponses, forfeitAttempt, submitModule } from "@/server/actions/student/attempts";
 import type { ExamModule, ExistingResponse, QuestionState } from "@/types/exam";
 
 const DIRECTIONS: Record<ExamModule["subject"], string[]> = {
@@ -106,6 +106,9 @@ function buildInitialStates(module: ExamModule, existing: ExistingResponse[]): Q
 }
 
 type Phase = "preparing" | "testing" | "module-over" | "break";
+
+const MAX_LEAVES = 6;
+const MAX_AWAY_MS = 2 * 60 * 1000;
 
 export function ExamShell({
   attemptId,
@@ -348,6 +351,79 @@ export function ExamShell({
     return () => window.removeEventListener("beforeunload", onBeforeUnload);
   }, [persist]);
 
+
+  // ---- Leaving the test: at most 6 leaves, none longer than 2 minutes ----
+  // Kept in localStorage per attempt so a reload or the next module does not
+  // reset it. Breaking either rule ends the whole attempt.
+  const leaveKey = `exam-leaves:${attemptId}`;
+  const [leaveCount, setLeaveCount] = useState(0);
+  const [leaveNotice, setLeaveNotice] = useState<string | null>(null);
+  const forfeitingRef = useRef(false);
+  const forfeit = useCallback(
+    (why: string) => {
+      if (forfeitingRef.current || submittingRef.current) return;
+      forfeitingRef.current = true;
+      submittingRef.current = true;
+      setPhase("module-over");
+      void (async () => {
+        try {
+          await persist();
+        } catch {
+          // Submit with what the server already has.
+        }
+        await forfeitAttempt(attemptId, moduleAttemptId);
+        router.push(`/results/${attemptId}?ended=${encodeURIComponent(why)}`);
+      })();
+    },
+    [attemptId, moduleAttemptId, persist, router],
+  );
+  useEffect(() => {
+    const read = (): { count: number; leftAt: number | null } => {
+      try {
+        return JSON.parse(window.localStorage.getItem(leaveKey) ?? "") ?? { count: 0, leftAt: null };
+      } catch {
+        return { count: 0, leftAt: null };
+      }
+    };
+    const write = (v: { count: number; leftAt: number | null }) => {
+      try {
+        window.localStorage.setItem(leaveKey, JSON.stringify(v));
+      } catch {
+        // Storage blocked: the in-memory count still applies this page.
+      }
+    };
+    const onReturn = () => {
+      const v = read();
+      if (v.leftAt == null) return;
+      const away = Date.now() - v.leftAt;
+      write({ count: v.count, leftAt: null });
+      setLeaveCount(v.count);
+      if (away > MAX_AWAY_MS) {
+        forfeit("away");
+      } else if (v.count > MAX_LEAVES) {
+        forfeit("leaves");
+      } else {
+        setLeaveNotice(
+          `You left the test (${v.count} of ${MAX_LEAVES} allowed). Leaving again more than ${MAX_LEAVES} times, or for longer than 2 minutes, ends the test.`,
+        );
+      }
+    };
+    const onVisibility = () => {
+      if (submittingRef.current) return;
+      if (document.visibilityState === "hidden") {
+        const v = read();
+        if (v.leftAt == null) write({ count: v.count + 1, leftAt: Date.now() });
+      } else {
+        onReturn();
+      }
+    };
+    setLeaveCount(read().count);
+    // Came back by reopening the page after leaving.
+    if (document.visibilityState === "visible") onReturn();
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, [leaveKey, forfeit]);
+
   useEffect(() => {
     if (secondsRemaining === 0) {
       handleEndModule();
@@ -574,6 +650,18 @@ export function ExamShell({
       {header}
 
       <TestingBanner>This is a practice test</TestingBanner>
+      {leaveNotice ? (
+        <div role="alert" className="flex items-start justify-between gap-3 bg-red-50 px-4 py-2 text-sm text-red-800">
+          <span>{leaveNotice}</span>
+          <button type="button" className="shrink-0 font-semibold underline" onClick={() => setLeaveNotice(null)}>
+            OK
+          </button>
+        </div>
+      ) : leaveCount > 0 ? (
+        <div className="bg-amber-50 px-4 py-1 text-center text-xs text-amber-800">
+          Left the test {leaveCount} of {MAX_LEAVES} times allowed · each time must be under 2 minutes
+        </div>
+      ) : null}
 
       {/* Timer callouts, for hidden-timer and screen-reader users alike. */}
       <p aria-live="polite" className="sr-only">

@@ -289,3 +289,24 @@ async function finalizeAttempt(attemptId: string) {
     nextSubjectLabel: null as string | null,
   };
 }
+
+/**
+ * End the whole attempt now, because the student broke the leave-the-tab rule
+ * (more than 6 leaves, or one absence over 2 minutes). Grades the module in
+ * progress with what was answered and closes every remaining module empty,
+ * through the same submitModule path, so scoring stays in one place.
+ */
+export async function forfeitAttempt(attemptId: string, moduleAttemptId: string) {
+  const user = await requireUser();
+  const attempt = await prisma.attempt.findUniqueOrThrow({ where: { id: attemptId } });
+  if (attempt.userId !== user.id) throw new Error("Not authorized.");
+  if (attempt.status === "SUBMITTED") return { finished: true };
+
+  let current: string | null = moduleAttemptId;
+  for (let i = 0; i < 8 && current; i++) {
+    const result = await submitModule(attemptId, current);
+    if (result.finished) return { finished: true };
+    current = result.nextModuleAttemptId;
+  }
+  return { finished: true };
+}

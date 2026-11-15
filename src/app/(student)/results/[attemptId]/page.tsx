@@ -23,7 +23,19 @@ export const dynamic = "force-dynamic";
  * sat the same paper, which skills cost the most marks, and a card built to be
  * screenshotted into a group chat.
  */
-export default async function ResultsPage({ params }: { params: { attemptId: string } }) {
+export default async function ResultsPage({
+  params,
+  searchParams,
+}: {
+  params: { attemptId: string };
+  searchParams?: { ended?: string };
+}) {
+  const endedReason =
+    searchParams?.ended === "away"
+      ? "Your test was ended because you left the test page for more than 2 minutes."
+      : searchParams?.ended === "leaves"
+        ? "Your test was ended because you left the test page more than 6 times."
+        : null;
   const user = await requireUser();
 
   const attempt = await prisma.attempt.findUnique({
@@ -91,6 +103,11 @@ export default async function ResultsPage({ params }: { params: { attemptId: str
 
   return (
     <div className="space-y-6">
+      {endedReason ? (
+        <div role="alert" className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          {endedReason} Questions you had not reached were scored as unanswered.
+        </div>
+      ) : null}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="font-display text-2xl font-semibold tracking-tight">
