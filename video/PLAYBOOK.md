@@ -20,7 +20,7 @@ per viewer, and where the views came from.
 | Just before the answer | ~24% (at 26 s) | ~27% (at 23 s) |
 | ~3 s after the answer | ~11% | **~7%** |
 | Saw "Join the community" | — | ~5% |
-| Follows | 1 | 0 |
+| Follows | 1 (at ~1.7k views) | 1 (at ~2k views) |
 | Profile visits | 1 | — |
 | Views from Reels tab / Explore / Feed / Profile | 87.0 / 6.3 / 2.1 / 0.4 % | 89.3 / 8.6 / 0.7 / 0.2 % |
 
@@ -37,7 +37,7 @@ What it shows:
 - **Once the answer is given, people leave.** About two-thirds of the remaining viewers are gone within ~3 s of
   it. Only ~7% saw the scholarly.space end card and ~5% heard "Join the community", while ~35% were still watching
   during the countdown.
-- **Nobody follows.** Nothing in the video gives a reason to come back, and the views come almost entirely from
+- **About 1 follow per ~2,000 views.** Nothing in the video gives a reason to come back, and the views come almost entirely from
   the Reels tab (people who don't follow), not from the profile.
 
 ## Rules for the next Short
