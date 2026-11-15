@@ -86,3 +86,35 @@ so it needs **no new voice credits**. It's meant for YouTube Shorts and TikTok, 
 
 L6, the long non-profit / 31 tests / 1580 sentence, is dropped. That information moves into the countdown text
 and the pinned comment.
+
+## Formats that grow followers: two accounts the owner flagged (data pulled 15 Nov 2026 via vidIQ)
+
+Both are animated, interactive story series, and both convert views into follows roughly 10× better than our
+single-question Reels (ours: about 1 follow per 2,000 views).
+
+| | `@trz_ftb` "Lockdown" | `@interactive_works` "Project Glow Up" |
+|---|---|---|
+| Premise | POV school-lockdown thriller, viewer is "you" | "Kevin has 30 days to glow up before prom" |
+| Posts / age | 5 parts in 3 days (12–14 Nov) | 1 reel, posted 14 Nov |
+| Plays | 22.7M (part 1), then 3.4M, 2.1M, 1.5M, 1.8M | 610K |
+| Length | 122 s for part 1, 68–76 s after | 83 s |
+| Comments | 11.5K on part 1, 2–5K on later parts | 584 |
+| Followers | 124K, about 1 per 250 plays | 3,701, about 1 per 160 plays |
+| The ask (caption) | "Run or freeze? Comment what you would do. The top answer decides Part 6." | "You control every move… Vote in the comments: SHOWER or TEETH 👇" |
+
+Why they convert:
+- **The story isn't finished.** Following is the only way to see what happens next. A self-contained math question
+  gives nothing to come back for.
+- **The audience decides.** "The top answer decides Part N" turns every viewer into a commenter, and commenters
+  come back to see whether their choice won.
+- **There are on-screen stakes and meters.** One shows DAYS LEFT and GLOW-UP %; the other has a threat that
+  escalates part by part.
+- **They post fast:** one or two parts a day.
+- **Story episodes run long (70–120 s).** A narrative holds attention that a puzzle can't, so the ~25 s rule above
+  is for single-question Reels only.
+
+The idea for scholarly.space: an **original** series in this genre, with the SAT as the stakes. For example, a
+character with N days until the SAT, a score meter and a target score. The audience votes on each day's choice,
+each episode includes one real question from our tests for viewers to solve, and scholarly.space appears inside
+the story as the tool he uses, not as an end card people skip. Don't copy either account's characters, premise
+or look.
