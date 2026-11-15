@@ -20,6 +20,10 @@ interface ReviewItem {
   passage: { title: string | null; content: string } | null;
   imageUrl: string | null;
   type: "MULTIPLE_CHOICE" | "FREE_RESPONSE";
+  /** The module attempt this answer belongs to, its display name, and the question's number within it. */
+  moduleKey: string;
+  moduleLabel: string;
+  number: number;
   difficulty: string;
   domain: string;
   skill: string;
@@ -206,14 +210,9 @@ export function ReviewShell({
               );
             })}
           </div>
-          <QuestionNavGroup
-            label="Reading & Writing"
-            items={items}
-            subject="READING_WRITING"
-            activeIndex={index}
-            onSelect={setIndex}
-          />
-          <QuestionNavGroup label="Math" items={items} subject="MATH" activeIndex={index} onSelect={setIndex} />
+          {[...new Map(items.map((it) => [it.moduleKey, it.moduleLabel])).entries()].map(([key, label]) => (
+            <QuestionNavGroup key={key} label={label} items={items} moduleKey={key} activeIndex={index} onSelect={setIndex} />
+          ))}
         </div>
 
         <div className="min-w-0 space-y-4">
@@ -223,6 +222,11 @@ export function ReviewShell({
             </Button>
 
             <div className="text-center text-sm">
+              {item && (
+                <p className="text-xs font-semibold text-muted-foreground">
+                  {item.moduleLabel} · Question {item.number}
+                </p>
+              )}
               <p className="font-medium tabular-nums">
                 {positionInMatches === -1
                   ? "Not in this filter"
@@ -253,13 +257,13 @@ export function ReviewShell({
 function QuestionNavGroup({
   label,
   items,
-  subject,
+  moduleKey,
   activeIndex,
   onSelect,
 }: {
   label: string;
   items: ReviewItem[];
-  subject: "READING_WRITING" | "MATH";
+  moduleKey: string;
   activeIndex: number;
   onSelect: (index: number) => void;
 }) {
@@ -268,7 +272,7 @@ function QuestionNavGroup({
   // question's absolute position across the whole 98-question attempt.
   const entries = items
     .map((it, i) => ({ it, i }))
-    .filter(({ it }) => it.subject === subject);
+    .filter(({ it }) => it.moduleKey === moduleKey);
 
   if (entries.length === 0) return null;
 
@@ -283,7 +287,7 @@ function QuestionNavGroup({
         </p>
       </div>
       <div className="grid grid-cols-6 gap-1.5 lg:grid-cols-5">
-        {entries.map(({ it, i }, localIndex) => (
+        {entries.map(({ it, i }) => (
           <button
             key={it.responseId}
             onClick={() => onSelect(i)}
@@ -295,7 +299,7 @@ function QuestionNavGroup({
                 : "border-destructive/40 bg-destructive/10 text-destructive"
             )}
           >
-            {localIndex + 1}
+            {it.number}
             {it.flagged && <Flag className="absolute -right-1 -top-1 h-3 w-3 fill-warning text-warning" />}
           </button>
         ))}

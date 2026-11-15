@@ -128,10 +128,22 @@ export default async function ReviewPage({ params }: { params: { attemptId: stri
     return a.question.order - b.question.order;
   });
 
+  const moduleLabelById: Record<string, string> = Object.fromEntries(
+    attempt.moduleAttempts.map((ma) => {
+      const subj = ma.module.subject === "MATH" ? "Math" : "Reading & Writing";
+      const branch =
+        ma.module.order === 1 ? "" : ma.module.difficulty === "EASY" ? " (Easy)" : ma.module.difficulty === "HARD" ? " (Hard)" : "";
+      return [ma.id, `${subj} · Module ${ma.module.order}${branch}`];
+    })
+  );
+
   const items = responses.map((r) => ({
     responseId: r.id,
     questionId: r.questionId,
     subject: subjectByModuleAttemptId[r.moduleAttemptId] ?? "READING_WRITING",
+    moduleKey: r.moduleAttemptId,
+    moduleLabel: moduleLabelById[r.moduleAttemptId] ?? "Module",
+    number: r.question.order,
     stem: r.question.stem,
     passage: r.question.passage ? { title: r.question.passage.title, content: r.question.passage.content } : null,
     imageUrl: withImage.has(r.question.id) ? `/api/question-image/${r.question.id}` : null,
