@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/session";
 import { determineModule2Difficulty, SUBJECT_ORDER } from "@/lib/adaptive/engine";
-import { estimateScaledScore, estimateTotalScore, sectionScoreForRaw } from "@/lib/scoring/estimate";
+import { estimateScaledScore, estimateTotalScore, sectionScoreForRaw, weightedSectionScore } from "@/lib/scoring/estimate";
 
 function moduleSortKey(subject: string, order: number) {
   return SUBJECT_ORDER.indexOf(subject as (typeof SUBJECT_ORDER)[number]) * 10 + order;
@@ -252,17 +252,42 @@ async function finalizeAttempt(attemptId: string) {
     include: { module: true },
   });
 
-  // A section score comes from the raw score across BOTH of its modules,
-  // converted once. The previous version scored each module on its own and
-  // averaged the two, which compresses every result toward the middle — it
-  // could not produce a 200 or an 800 from a blank or a perfect paper.
+  // Difficulty-weighted, Bluebook-style: every question in the modules the
+  // student sat counts, an unanswered one as a miss, and each miss costs
+  // points by its difficulty and by whether it is a writing question.
+  const takenIds = moduleAttempts.filter((m) => m.submittedAt != null).map((m) => m.id);
+  const [questions, responses] = await Promise.all([
+    prisma.question.findMany({
+      where: { moduleId: { in: moduleAttempts.filter((m) => m.submittedAt != null).map((m) => m.moduleId) } },
+      select: { id: true, moduleId: true, difficulty: true, domain: { select: { code: true } } },
+    }),
+    prisma.response.findMany({
+      where: { moduleAttemptId: { in: takenIds }, isCorrect: true },
+      select: { questionId: true },
+    }),
+  ]);
+  const correctIds = new Set(responses.map((r) => r.questionId));
+
   const sectionScore = (subject: "READING_WRITING" | "MATH"): number | null => {
     const taken = moduleAttempts.filter((m) => m.module.subject === subject && m.submittedAt != null);
     if (!taken.length) return null;
-    const rawCorrect = taken.reduce((sum, m) => sum + (m.correctCount ?? 0), 0);
-    const questionCount = taken.reduce((sum, m) => sum + (m.totalCount ?? 0), 0);
-    if (questionCount <= 0) return null;
-    return sectionScoreForRaw(subject, rawCorrect, questionCount);
+    const moduleIds = new Set(taken.map((m) => m.moduleId));
+    const scored = questions
+      .filter((q) => q.moduleId && moduleIds.has(q.moduleId))
+      .map((q) => ({
+        correct: correctIds.has(q.id),
+        difficulty: q.difficulty,
+        isWriting: q.domain.code === "SEC" || q.domain.code === "EOI",
+      }));
+    if (!scored.length) {
+      // No question rows to weigh (should not happen): fall back to the raw table.
+      const rawCorrect = taken.reduce((sum, m) => sum + (m.correctCount ?? 0), 0);
+      const questionCount = taken.reduce((sum, m) => sum + (m.totalCount ?? 0), 0);
+      return questionCount > 0 ? sectionScoreForRaw(subject, rawCorrect, questionCount) : null;
+    }
+    const module2 = taken.find((m) => m.module.order === 2);
+    const route = module2 ? (module2.module.difficulty === "EASY" ? "EASY" : module2.module.difficulty === "HARD" ? "HARD" : null) : null;
+    return weightedSectionScore(subject, scored, route);
   };
 
   const rwScaledScore = sectionScore("READING_WRITING");

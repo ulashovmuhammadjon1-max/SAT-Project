@@ -157,3 +157,58 @@ export function estimateTotalScore(rw: number | null, math: number | null): numb
   if (rw == null || math == null) return null;
   return toSectionScore(rw) + toSectionScore(math);
 }
+
+/**
+ * Difficulty-weighted section score, the way Bluebook behaves: start from 800
+ * and take points off per missed (or unanswered) question, more for an easy
+ * miss than a hard one, and more for a writing miss (writing is mostly
+ * easy-medium, so missing one says more). Students routed to the easier
+ * Module 2 are capped, as on the real test.
+ *
+ * Calibrated on one real Bluebook result (SAT Practice 11): 11 R&W misses on
+ * the hard route, 10 of them hard reading and 1 hard writing, scored 710.
+ * 10 x 8 + 1 x 12 = 92 off 800 -> 708 -> 710. Retune these as more real
+ * results come in.
+ */
+const MISS_PENALTY: Record<"EASY" | "MEDIUM" | "HARD", number> = { EASY: 22, MEDIUM: 14, HARD: 8 };
+const WRITING_MULTIPLIER = 1.5;
+/** Highest section score reachable when Module 2 was the easier branch. */
+const EASY_ROUTE_CAP = 620;
+/** Penalties are tuned on a 54-question R&W section; a section of a different length is scaled to it. */
+const REFERENCE_QUESTIONS: Record<ScoredSubject, number> = { READING_WRITING: 54, MATH: 44 };
+
+export interface ScoredQuestion {
+  correct: boolean;
+  difficulty: "EASY" | "MEDIUM" | "HARD";
+  isWriting: boolean;
+}
+
+export function weightedSectionScore(
+  subject: ScoredSubject,
+  questions: ScoredQuestion[],
+  route: "EASY" | "HARD" | null,
+): number | null {
+  if (!questions.length) return null;
+  // A shorter section (a partial or non-standard test) makes each miss count for more.
+  const scale = REFERENCE_QUESTIONS[subject] / Math.max(questions.length, REFERENCE_QUESTIONS[subject] / 2);
+  // Math has no writing questions and fewer of them than R&W, so each miss weighs a little more.
+  const subjectScale = subject === "MATH" ? 54 / 44 : 1;
+  let off = 0;
+  for (const q of questions) {
+    if (q.correct) continue;
+    off += MISS_PENALTY[q.difficulty] * (q.isWriting ? WRITING_MULTIPLIER : 1) * subjectScale;
+  }
+  off *= Math.min(scale, 2);
+  // Past the first ~100 points each further miss costs less, as on the real
+  // curve: half a paper wrong is a ~500, not a ~340.
+  const drop = off <= 100 ? off : 100 + (off - 100) * 0.55;
+  let score = 800 - drop;
+  if (route === "EASY") score = Math.min(score, EASY_ROUTE_CAP);
+  // Never far above what the raw count alone is worth, so a weak or blank
+  // paper still lands near 200: the weighting reorders strong results, it
+  // must not lift a paper that got little right.
+  const right = questions.filter((q) => q.correct).length;
+  const accuracy = right / questions.length;
+  score = Math.min(score, sectionScoreForRaw(subject, right, questions.length) + 80 * accuracy);
+  return toSectionScore(Math.max(200, Math.min(800, score)));
+}
