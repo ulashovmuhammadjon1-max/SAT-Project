@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Lexend, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/components/shared/providers";
 import { PALETTE_BOOT_SCRIPT } from "@/lib/appearance";
 import "./globals.css";
@@ -45,6 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${sans.variable} ${display.variable} ${serif.variable} font-sans`}>
         <Providers>{children}</Providers>
+        {/* Vercel Web Analytics: anonymous page views, referrers and countries,
+            no cookies. Only reports on Vercel deployments; inert locally. */}
+        <Analytics />
       </body>
     </html>
   );
