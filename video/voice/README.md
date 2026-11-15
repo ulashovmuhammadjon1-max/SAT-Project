@@ -66,3 +66,18 @@ Scholarly dot space is a non-profit, with thirty-one plus free SAT practice test
 
 Join the community!
 ```
+
+## Free voices for daily posting (audition: `voice-audition.mp4`)
+These were auditioned on 15 Nov 2026 because daily posting can't run on vidIQ credits: about 28 credits a take,
+against 150 a month.
+
+- **Kokoro** (`am_michael`, `am_fenrir`, `am_puck`): already installed with HyperFrames, takes seconds, never
+  mangles words, sounds flatter.
+- **Chatterbox** (Resemble AI, open source): more natural and expressive, about 50 s per 10 s of speech on this CPU.
+  It sometimes garbles a word ("and that's" became "and not"; "two s" became "two s, s"). Every line it makes must
+  be transcribed and compared against the script, and regenerated on a mismatch.
+  - Install: `uv venv --python 3.11 cbvenv` (pip on Python 3.13 gets stuck backtracking), then
+    `uv pip install chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match`,
+    then `uv pip install "setuptools<81"` (its watermarker needs `pkg_resources`).
+  - A male tone can come from a Kokoro clip as the reference voice (`audio_prompt_path`). Never clone a real
+    person's voice or ElevenLabs' Liam.
