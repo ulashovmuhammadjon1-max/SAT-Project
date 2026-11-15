@@ -181,20 +181,7 @@ export interface ScoredQuestion {
   correct: boolean;
   difficulty: "EASY" | "MEDIUM" | "HARD";
   isWriting: boolean;
-  /** Words in Context (CAS-WV). */
-  isVocab?: boolean;
-  /** Sat in Module 1 (the routing module). */
-  inModule1?: boolean;
 }
-
-/**
- * A missed vocabulary question in Module 1 costs a flat 30, whatever its label:
- * Module 1 vocabulary is the standard, mostly easy-medium set, so a miss there
- * says more than a hard Module 2 word does (those keep the normal penalty,
- * which is what keeps the calibration 710 intact: its two vocab misses were
- * hard Module 2 words).
- */
-const MODULE1_VOCAB_PENALTY = 30;
 
 export function weightedSectionScore(
   subject: ScoredSubject,
@@ -209,10 +196,7 @@ export function weightedSectionScore(
   let off = 0;
   for (const q of questions) {
     if (q.correct) continue;
-    off +=
-      q.isVocab && q.inModule1
-        ? MODULE1_VOCAB_PENALTY
-        : MISS_PENALTY[q.difficulty] * (q.isWriting ? WRITING_MULTIPLIER : 1) * subjectScale;
+    off += MISS_PENALTY[q.difficulty] * (q.isWriting ? WRITING_MULTIPLIER : 1) * subjectScale;
   }
   off *= Math.min(scale, 2);
   // Past the first ~100 points each further miss costs less, as on the real
