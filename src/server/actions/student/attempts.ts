@@ -259,7 +259,7 @@ async function finalizeAttempt(attemptId: string) {
   const [questions, responses] = await Promise.all([
     prisma.question.findMany({
       where: { moduleId: { in: moduleAttempts.filter((m) => m.submittedAt != null).map((m) => m.moduleId) } },
-      select: { id: true, moduleId: true, difficulty: true, domain: { select: { code: true } } },
+      select: { id: true, moduleId: true, difficulty: true, domain: { select: { code: true } }, skill: { select: { code: true } } },
     }),
     prisma.response.findMany({
       where: { moduleAttemptId: { in: takenIds }, isCorrect: true },
@@ -278,6 +278,8 @@ async function finalizeAttempt(attemptId: string) {
         correct: correctIds.has(q.id),
         difficulty: q.difficulty,
         isWriting: q.domain.code === "SEC" || q.domain.code === "EOI",
+        isVocab: q.skill.code === "CAS-WV",
+        inModule1: taken.some((m) => m.moduleId === q.moduleId && m.module.order === 1),
       }));
     if (!scored.length) {
       // No question rows to weigh (should not happen): fall back to the raw table.
