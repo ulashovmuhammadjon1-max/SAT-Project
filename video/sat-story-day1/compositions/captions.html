@@ -1,0 +1,256 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .red { color: #ff4d5e; }
+    .bolt { width: 34px; height: 34px; flex: none; }
+    /* HUD */
+    .hud { position: absolute; left: 0; right: 0; top: 168px; display: flex; justify-content: center; gap: 14px; z-index: 5; }
+    .hud .chip { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; background: rgba(10,12,22,0.78);
+      border: 2px solid rgba(255,255,255,0.14); color: #fff; font-family: "Archivo Black", sans-serif; font-size: 32px; letter-spacing: 0.01em; }
+    /* hook */
+    .hook { position: absolute; left: 40px; right: 40px; top: 300px; text-align: center; }
+    .hook p { display: inline-block; font-family: "Archivo Black", sans-serif; font-size: 96px; line-height: 1.02; color: #fff;
+      -webkit-text-stroke: 14px #000; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,0.35); }
+    .hook b { color: #ffd23f; font-weight: inherit; }
+    .hook .sub { margin-top: 22px; }
+    .hook .sub span { display: inline-block; padding: 16px 40px; border-radius: 999px; background: #e5252f; color: #fff;
+      font-family: "Archivo Black", sans-serif; font-size: 56px; box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
+    /* pills */
+    .pill { position: absolute; left: 0; right: 0; top: 320px; text-align: center; }
+    .pill > span { display: inline-block; padding: 18px 44px; border-radius: 999px; background: rgba(10,12,22,0.86); color: #fff;
+      font-family: "Archivo Black", sans-serif; font-size: 64px; box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
+    #fol { top: 360px; }
+    #fol .fol { background: #ffd23f; color: #111; font-size: 70px; }
+    /* question card */
+    .qcard { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(5,7,16,0.55); }
+    .qcard .card { position: absolute; left: 60px; right: 60px; top: 270px; padding: 30px 30px 26px; border-radius: 44px; background: #fbfaf6;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55); text-align: center; }
+    .card .tag { font-family: "Inter", sans-serif; font-weight: 800; font-size: 28px; letter-spacing: 0.08em; color: #6b7487; }
+    .card .ttl { margin-top: 10px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 44px; line-height: 1.2; color: #121826; }
+    .card #cones { display: block; margin: 10px auto 0; }
+    .card #cones .dim { font-family: "Archivo Black", sans-serif; font-size: 50px; fill: #e32b3a; }
+    .card #cones .vol { font-family: "Archivo Black", sans-serif; font-size: 44px; fill: #121826; }
+    #step { height: 84px; margin-top: 8px; display: flex; align-items: center; justify-content: center; opacity: 0; }
+    #step span { display: inline-block; padding: 12px 30px; border-radius: 999px; background: #1f3b8c; color: #fff; font-family: "Archivo Black", sans-serif; font-size: 40px; }
+    .chs { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 10px 0; }
+    .ch { padding: 20px 0; border-radius: 24px; background: #eef1f7; color: #121826; font-family: "Archivo Black", sans-serif; font-size: 58px; }
+    .ch b { color: #6b7487; font-weight: inherit; }
+    #xmark { position: absolute; left: 300px; top: -8px; opacity: 0; }
+    #maxtag { position: absolute; left: 6px; top: -30px; padding: 6px 18px; border-radius: 999px; background: #121826; color: #fff;
+      font-family: "Archivo Black", sans-serif; font-size: 28px; opacity: 0; }
+    #ring { position: absolute; left: -10px; top: 112px; width: 458px; height: 136px; border: 10px solid #16a34a; border-radius: 34px; opacity: 0; }
+    .card .src { margin-top: 20px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 30px; color: #1f3b8c; }
+    /* countdown */
+    .cd { position: absolute; left: 0; right: 0; top: 1450px; text-align: center; }
+    .cd .ring { display: inline-flex; align-items: center; justify-content: center; width: 190px; height: 190px; border-radius: 50%;
+      background: rgba(0,0,0,0.7); border: 12px solid #ffd23f; font-family: "Archivo Black", sans-serif; font-size: 112px; color: #fff; }
+    .cd .cdt { margin-top: 16px; font-family: "Archivo Black", sans-serif; font-size: 50px; color: #fff; -webkit-text-stroke: 10px #000; paint-order: stroke fill; }
+    /* phone notification */
+    .chat { position: absolute; left: 50px; right: 50px; top: 330px; }
+    .notif { display: flex; align-items: center; gap: 26px; padding: 30px 34px; border-radius: 40px; background: rgba(250,250,252,0.96); box-shadow: 0 24px 70px rgba(0,0,0,0.5); }
+    .notif .av { flex: none; width: 104px; height: 104px; border-radius: 50%; background: #7c3aed; color: #fff; display: flex; align-items: center; justify-content: center;
+      font-family: "Archivo Black", sans-serif; font-size: 56px; }
+    .notif .nm { font-family: "Inter", sans-serif; font-weight: 800; font-size: 44px; color: #111; }
+    .notif .nm small { font-weight: 700; font-size: 30px; color: #5f6672; margin-left: 10px; }
+    .notif .msg { margin-top: 4px; font-family: "Inter", sans-serif; font-weight: 700; font-size: 44px; line-height: 1.15; color: #222; }
+    /* A/B split */
+    .pA { position: absolute; left: 0; right: 0; top: 0; height: 940px; overflow: hidden; }
+    .party { position: absolute; inset: 0; background: linear-gradient(180deg, #1a0633 0%, #3b0d6b 55%, #6d1a8f 100%); }
+    .blob { position: absolute; left: 0; top: 0; width: 520px; height: 520px; border-radius: 50%; mix-blend-mode: screen; }
+    .b1 { background: radial-gradient(circle, rgba(255,77,141,0.85) 0%, rgba(255,77,141,0) 65%); }
+    .b2 { background: radial-gradient(circle, rgba(92,225,230,0.8) 0%, rgba(92,225,230,0) 65%); }
+    .b3 { background: radial-gradient(circle, rgba(255,210,63,0.7) 0%, rgba(255,210,63,0) 65%); }
+    .cf { position: absolute; top: 0; width: 16px; height: 30px; border-radius: 3px; display: block; }
+    .opt { display: flex; align-items: center; gap: 26px; }
+    .opt .let { flex: none; width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: "Archivo Black", sans-serif; font-size: 100px; color: #111; background: #ffd23f; box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
+    .opt .nmw { font-family: "Archivo Black", sans-serif; font-size: 108px; line-height: 1; color: #fff; -webkit-text-stroke: 12px #000; paint-order: stroke fill; }
+    .opt .why { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 10px 22px; border-radius: 999px; background: rgba(10,12,22,0.8);
+      font-family: "Inter", sans-serif; font-weight: 800; font-size: 34px; color: #fff; }
+    .party .opt { position: absolute; left: 70px; right: 40px; top: 540px; flex-wrap: wrap; }
+    .party .opt .why { flex-basis: 100%; margin-left: 176px; margin-top: -8px; }
+    .band { position: absolute; left: 0; right: 0; top: 940px; height: 150px; }
+    .band .bd { position: absolute; inset: 0; background: #ffd23f; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .band .cta { display: inline-flex; align-items: center; gap: 8px; font-family: "Archivo Black", sans-serif; font-size: 66px; color: #111; line-height: 1; }
+    .band .dec { margin-top: 6px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 32px; letter-spacing: 0.04em; color: #3a2a00; }
+    .pB { position: absolute; left: 70px; right: 40px; top: 1130px; }
+    .pB .opt .let { background: #4ade80; }
+    /* spoken captions */
+    .cap { position: absolute; left: 70px; right: 70px; top: 1590px; text-align: center; }
+    .cap p { display: inline-block; font-family: "Archivo Black", sans-serif; font-size: 66px; line-height: 1.08; color: #fff;
+      -webkit-text-stroke: 10px #000; paint-order: stroke fill; padding: 10px 26px 16px; border-radius: 26px; background: rgba(8,10,18,0.72); }
+    .cap .hot { color: #ffd23f; }
+
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="hud" class="hud clip" data-start="0" data-duration="31.507"><div class="chip">DAY 1 / 30</div><div class="chip" id="hud-en"><svg class="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="#ffd23f"/></svg><span>30%</span></div><div class="chip">SCORE <span class="red">1210</span> → 1500</div></div>
+    <div id="hook" class="hook clip" data-start="0" data-duration="4.648"><p>HE NEEDS <b>1500</b><br/>IN 30 DAYS</p><div class="sub"><span>YOU CONTROL HIM</span></div></div>
+    <div id="short" class="pill clip" data-start="4.648" data-duration="2.592"><span><span class="red">1210</span> · 290 SHORT</span></div>
+    <div id="qcard" class="qcard clip" data-start="7.24" data-duration="13.762"><div class="card"><div class="tag">TEST 31 · MATH · QUESTION 22</div>
+  <div class="ttl">Two similar cones. Heights 2 : 5.<br/>The small one holds 96 L. The big one?</div>
+  <svg id="cones" viewBox="0 0 860 516" width="860" height="516">
+  <defs><linearGradient id="liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4aa8ff"/><stop offset="1" stop-color="#1f5fd1"/></linearGradient></defs>
+  <path d="M148.0,296.0 L210,452 L272.0,296.0 Z" fill="url(#liq)"/>
+  <ellipse cx="210" cy="296" rx="62" ry="16.1" fill="#7cc0ff"/>
+  <path d="M148,296 L210,452 L272,296" fill="none" stroke="#1c2433" stroke-width="7" stroke-linejoin="round"/>
+  <ellipse cx="210" cy="296" rx="62" ry="16.1" fill="none" stroke="#1c2433" stroke-width="7"/>
+  <path id="bigliq" d="M600.0,452.0 L600,452 L600.0,452.0 Z" fill="url(#liq)"/>
+  <ellipse id="bigsurf" cx="600" cy="452" rx="0" ry="0" fill="#7cc0ff"/>
+  <path d="M445,62 L600,452 L755,62" fill="none" stroke="#1c2433" stroke-width="7" stroke-linejoin="round"/>
+  <ellipse cx="600" cy="62" rx="155" ry="40.3" fill="none" stroke="#1c2433" stroke-width="7"/>
+  <line x1="114" y1="296" x2="114" y2="452" stroke="#e32b3a" stroke-width="5"/>
+  <text x="96" y="390.0" class="dim" text-anchor="end">2</text>
+  <line x1="789" y1="62" x2="789" y2="452" stroke="#e32b3a" stroke-width="5"/>
+  <text x="805" y="273.0" class="dim">5</text>
+  <text x="210" y="498" class="vol" text-anchor="middle">96 L</text>
+  <text id="bigq" x="600" y="498" class="vol" text-anchor="middle">? L</text>
+</svg>
+  <div id="step"><span id="step-t">VOLUME GROWS WITH THE CUBE</span></div>
+  <div class="chs"><div class="ch" id="ch-A"><b>A)</b> 240</div><div class="ch" id="ch-B"><b>B)</b> 600</div><div class="ch" id="ch-C"><b>C)</b> 1,500</div><div class="ch" id="ch-D"><b>D)</b> 6,000</div><div id="xmark"><svg viewBox="0 0 24 24" width="120" height="120" fill="none" stroke="#e32b3a" stroke-width="3.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></div><div id="maxtag">MAX</div><div id="ring"></div></div>
+  <div class="src">From Test 31 · free on scholarly.space</div></div></div>
+    <div id="cd" class="cd clip" data-start="12.323" data-duration="3.0"><div class="ring"><span id="cd-n">3</span></div><div class="cdt">SOLVE IT BEFORE MAX</div></div>
+    <div id="chat" class="chat clip" data-start="21.202" data-duration="2.034"><div class="notif"><div class="av">A</div><div><div class="nm">Aziz <small>now</small></div><div class="msg">party at mine TOMORROW. u in??</div></div></div></div>
+    <div id="pA" class="pA clip" data-start="23.236" data-duration="5.213"><div class="party"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><i class="cf" id="cf0" style="left:10px;background:#ffd23f"></i><i class="cf" id="cf1" style="left:107px;background:#ff4d8d"></i><i class="cf" id="cf2" style="left:204px;background:#5ce1e6"></i><i class="cf" id="cf3" style="left:301px;background:#7c3aed"></i><i class="cf" id="cf4" style="left:398px;background:#4ade80"></i><i class="cf" id="cf5" style="left:495px;background:#ffd23f"></i><i class="cf" id="cf6" style="left:592px;background:#ff4d8d"></i><i class="cf" id="cf7" style="left:689px;background:#5ce1e6"></i><i class="cf" id="cf8" style="left:786px;background:#7c3aed"></i><i class="cf" id="cf9" style="left:883px;background:#4ade80"></i><i class="cf" id="cf10" style="left:980px;background:#ffd23f"></i><i class="cf" id="cf11" style="left:37px;background:#ff4d8d"></i><i class="cf" id="cf12" style="left:134px;background:#5ce1e6"></i><i class="cf" id="cf13" style="left:231px;background:#7c3aed"></i><i class="cf" id="cf14" style="left:328px;background:#4ade80"></i><i class="cf" id="cf15" style="left:425px;background:#ffd23f"></i><i class="cf" id="cf16" style="left:522px;background:#ff4d8d"></i><i class="cf" id="cf17" style="left:619px;background:#5ce1e6"></i><i class="cf" id="cf18" style="left:716px;background:#7c3aed"></i><i class="cf" id="cf19" style="left:813px;background:#4ade80"></i><i class="cf" id="cf20" style="left:910px;background:#ffd23f"></i><i class="cf" id="cf21" style="left:1007px;background:#ff4d8d"></i><i class="cf" id="cf22" style="left:64px;background:#5ce1e6"></i><i class="cf" id="cf23" style="left:161px;background:#7c3aed"></i><i class="cf" id="cf24" style="left:258px;background:#4ade80"></i><i class="cf" id="cf25" style="left:355px;background:#ffd23f"></i><i class="cf" id="cf26" style="left:452px;background:#ff4d8d"></i><i class="cf" id="cf27" style="left:549px;background:#5ce1e6"></i><i class="cf" id="cf28" style="left:646px;background:#7c3aed"></i><i class="cf" id="cf29" style="left:743px;background:#4ade80"></i><i class="cf" id="cf30" style="left:840px;background:#ffd23f"></i><i class="cf" id="cf31" style="left:937px;background:#ff4d8d"></i><i class="cf" id="cf32" style="left:1034px;background:#5ce1e6"></i><i class="cf" id="cf33" style="left:91px;background:#7c3aed"></i>
+  <div class="opt"><div class="let">A</div><div class="nmw">PARTY</div><div class="why"><svg class="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="#ffd23f"/></svg>+50% energy · but he loses a night</div></div></div></div>
+    <div id="band" class="band clip" data-start="23.236" data-duration="5.213"><div class="bd"><span class="cta">COMMENT A OR B <svg viewBox="0 0 24 24" width="58" height="58" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span><span class="dec">THE TOP ANSWER DECIDES DAY 2</span></div></div>
+    <div id="pB" class="pB clip" data-start="23.236" data-duration="5.213"><div class="opt"><div class="let">B</div><div><div class="nmw">STUDY</div><div class="why">practice test #2 · <svg class="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="#ffd23f"/></svg>−20% energy</div></div></div></div>
+    <div id="fol" class="pill clip" data-start="28.449" data-duration="1.658"><span class="fol">FOLLOW FOR DAY 2</span></div>
+    <div id="hook2" class="hook clip" data-start="30.107" data-duration="1.4"><p>HE NEEDS <b>1500</b><br/>IN 30 DAYS</p><div class="sub"><span>YOU CONTROL HIM</span></div></div>
+    <div id="cap0" class="cap clip" data-start="0.06" data-duration="1.19"><p>Max needs a <span class="hot">1500</span></p></div>
+    <div id="cap1" class="cap clip" data-start="1.27" data-duration="0.32"><p>for a full</p></div>
+    <div id="cap2" class="cap clip" data-start="1.61" data-duration="0.75"><p>scholarship.</p></div>
+    <div id="cap3" class="cap clip" data-start="2.38" data-duration="0.86"><p><span class="hot">30</span> days.</p></div>
+    <div id="cap4" class="cap clip" data-start="3.26" data-duration="1.418"><p>You decide <span class="hot">everything.</span></p></div>
+    <div id="cap5" class="cap clip" data-start="4.698" data-duration="1.32"><p>He just scored <span class="hot">1210.</span></p></div>
+    <div id="cap6" class="cap clip" data-start="6.038" data-duration="0.76"><p>This question <span class="hot">cost</span></p></div>
+    <div id="cap7" class="cap clip" data-start="6.818" data-duration="0.36"><p>him.</p></div>
+    <div id="cap8" class="cap clip" data-start="7.55" data-duration="0.91"><p>Two similar cones,</p></div>
+    <div id="cap9" class="cap clip" data-start="8.48" data-duration="1.09"><p>heights 2 to 5.</p></div>
+    <div id="cap10" class="cap clip" data-start="9.59" data-duration="0.63"><p>The small one</p></div>
+    <div id="cap11" class="cap clip" data-start="10.24" data-duration="1.23"><p>holds <span class="hot">96</span> litres.</p></div>
+    <div id="cap12" class="cap clip" data-start="11.49" data-duration="0.95"><p>The big one?</p></div>
+    <div id="cap13" class="cap clip" data-start="15.383" data-duration="1.18"><p>Max said <span class="hot">240.</span></p></div>
+    <div id="cap14" class="cap clip" data-start="16.583" data-duration="0.58"><p><span class="hot">Wrong!</span></p></div>
+    <div id="cap15" class="cap clip" data-start="17.183" data-duration="0.88"><p>Volume grows with</p></div>
+    <div id="cap16" class="cap clip" data-start="18.083" data-duration="0.71"><p>the <span class="hot">cube…</span></p></div>
+    <div id="cap17" class="cap clip" data-start="19.703" data-duration="0.94"><p><span class="hot">1,500.</span></p></div>
+    <div id="cap18" class="cap clip" data-start="21.322" data-duration="0.31"><p>Then…</p></div>
+    <div id="cap19" class="cap clip" data-start="21.652" data-duration="1.43"><p>his phone buzzes.</p></div>
+    <div id="cap20" class="cap clip" data-start="23.606" data-duration="1.08"><p><span class="hot">Party</span> or <span class="hot">study?</span></p></div>
+    <div id="cap21" class="cap clip" data-start="24.796" data-duration="1.55"><p>Comment <span class="hot">A</span> or <span class="hot">B.</span></p></div>
+    <div id="cap22" class="cap clip" data-start="26.366" data-duration="0.48"><p>The top answer</p></div>
+    <div id="cap23" class="cap clip" data-start="26.866" data-duration="1.06"><p>decides Day 2.</p></div>
+    <div id="cap24" class="cap clip" data-start="28.599" data-duration="1.12"><p><span class="hot">Follow</span> for Day 2.</p></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const big = document.getElementById("bigliq"), surf = document.getElementById("bigsurf");
+      const BIG = {"cx": 600, "h": 390, "r": 155}, APEX = 452;
+      const lv = { f: 0.0001 };
+      const drawBig = () => { const hh = BIG.h * lv.f, rr = BIG.r * lv.f, y = APEX - hh; big.setAttribute("d", `M${BIG.cx - rr},${y} L${BIG.cx},${APEX} L${BIG.cx + rr},${y} Z`); surf.setAttribute("cy", y); surf.setAttribute("rx", rr); surf.setAttribute("ry", rr * 0.26); };
+      drawBig();
+      tl.fromTo("#hook p", { scale: 1.06 }, { scale: 1, duration: 0.5, ease: "power3.out" }, 0);
+      tl.fromTo("#hook .sub span", { scale: 1 }, { scale: 1.1, duration: 0.14, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 3.748);
+      tl.fromTo("#short span", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, 4.648);
+      tl.fromTo("#qcard .card", { y: 120, opacity: 0, scale: 0.94 }, { y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, 7.24);
+      tl.to("#qcard .card", { y: -80, opacity: 0, duration: 0.25, ease: "power2.in" }, 20.752);
+      tl.fromTo("#cd .ring", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.4)" }, 12.323);
+      tl.fromTo("#cd .cdt", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 12.373);
+      const cdn = document.getElementById("cd-n"), cv = { v: 0 };
+      tl.fromTo(cv, { v: 0 }, { v: 3, duration: 3.0, ease: "none", onUpdate: () => { cdn.textContent = String(Math.max(1, 3 - Math.floor(cv.v))); } }, 12.323);
+      [13.323, 14.323].forEach((at) => tl.fromTo("#cd .ring", { scale: 1.15 }, { scale: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, at));
+      tl.fromTo("#maxtag", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, 15.383);
+      tl.fromTo("#xmark", { scale: 2.2, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "back.out(2.2)" }, 16.583);
+      tl.to("#ch-A", { backgroundColor: "#fde2e4", color: "#b3121f", duration: 0.15 }, 16.583);
+      tl.fromTo("#step", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, 17.133);
+      tl.to(lv, { f: 0.4000, duration: 0.35, ease: "power2.out", onUpdate: drawBig }, 17.183);
+      tl.call(() => { document.getElementById("step-t").textContent = "96 L = THE SMALL CONE"; document.getElementById("bigq").textContent = "96 L"; }, null, 17.183);
+      tl.fromTo("#step span", { scale: 1.12 }, { scale: 1, duration: 0.2, ease: "power2.out", immediateRender: false }, 17.183);
+      tl.to(lv, { f: 0.5429, duration: 0.35, ease: "power2.out", onUpdate: drawBig }, 18.023);
+      tl.call(() => { document.getElementById("step-t").textContent = "\u00d7 2.5 HEIGHT \u2192 240"; document.getElementById("bigq").textContent = "240 L"; }, null, 18.023);
+      tl.fromTo("#step span", { scale: 1.12 }, { scale: 1, duration: 0.2, ease: "power2.out", immediateRender: false }, 18.023);
+      tl.to(lv, { f: 0.7368, duration: 0.35, ease: "power2.out", onUpdate: drawBig }, 18.863);
+      tl.call(() => { document.getElementById("step-t").textContent = "\u00d7 2.5 WIDTH \u2192 600"; document.getElementById("bigq").textContent = "600 L"; }, null, 18.863);
+      tl.fromTo("#step span", { scale: 1.12 }, { scale: 1, duration: 0.2, ease: "power2.out", immediateRender: false }, 18.863);
+      tl.to(lv, { f: 1.0000, duration: 0.35, ease: "power2.out", onUpdate: drawBig }, 19.703);
+      tl.call(() => { document.getElementById("step-t").textContent = "\u00d7 2.5 DEPTH \u2192 1,500"; document.getElementById("bigq").textContent = "1,500 L"; }, null, 19.703);
+      tl.fromTo("#step span", { scale: 1.12 }, { scale: 1, duration: 0.2, ease: "power2.out", immediateRender: false }, 19.703);
+      tl.call(() => { document.getElementById("step-t").textContent = "VOLUME GROWS WITH THE CUBE"; document.getElementById("bigq").textContent = "? L"; }, null, 17.123);
+      tl.fromTo("#ring", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, 19.753);
+      tl.to("#ch-C", { backgroundColor: "#dcfce7", color: "#0f6b33", duration: 0.15 }, 19.753);
+      tl.fromTo("#chat .notif", { y: -80, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, 21.202);
+      [0, 0.6, 1.6].forEach((d) => tl.fromTo("#chat .notif", { x: -10 }, { x: 0, duration: 0.4, ease: "elastic.out(1.2, 0.2)", immediateRender: false }, 21.252 + d));
+      [0, 0.5, 1.0, 1.5].forEach((d) => tl.fromTo("#hud-en", { backgroundColor: "rgba(227,43,58,0.95)", scale: 1.12 }, { backgroundColor: "rgba(10,12,22,0.78)", scale: 1, duration: 0.45, ease: "power2.out", immediateRender: false }, 21.652 + d));
+      tl.fromTo("#pA .party", { yPercent: -100 }, { yPercent: 0, duration: 0.35, ease: "power3.out" }, 23.236);
+      tl.fromTo("#band .bd", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out" }, 23.436);
+      tl.fromTo("#pB .opt", { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)" }, 23.536);
+      tl.fromTo("#band .cta", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, 24.886);
+      tl.fromTo(".b1", { x: -200, y: 80 }, { x: 380, y: 260, duration: 5.213, ease: "sine.inOut" }, 23.236);
+      tl.fromTo(".b2", { x: 700, y: 300 }, { x: 120, y: 60, duration: 5.213, ease: "sine.inOut" }, 23.236);
+      tl.fromTo(".b3", { x: 300, y: 520 }, { x: 760, y: 420, duration: 5.213, ease: "sine.inOut" }, 23.236);
+      tl.fromTo("#cf0", { y: -60, rotation: 0 }, { y: 980, rotation: 540, duration: 2.6, ease: "none", repeat: 3 }, 23.236);
+      tl.fromTo("#cf1", { y: -113, rotation: 37 }, { y: 980, rotation: 577, duration: 3.1, ease: "none", repeat: 3 }, 23.436);
+      tl.fromTo("#cf2", { y: -166, rotation: 74 }, { y: 980, rotation: 614, duration: 3.6, ease: "none", repeat: 3 }, 23.636);
+      tl.fromTo("#cf3", { y: -219, rotation: 111 }, { y: 980, rotation: 651, duration: 4.1, ease: "none", repeat: 3 }, 23.836);
+      tl.fromTo("#cf4", { y: -272, rotation: 148 }, { y: 980, rotation: 688, duration: 4.6, ease: "none", repeat: 3 }, 24.036);
+      tl.fromTo("#cf5", { y: -325, rotation: 5 }, { y: 980, rotation: 545, duration: 2.6, ease: "none", repeat: 3 }, 24.236);
+      tl.fromTo("#cf6", { y: -378, rotation: 42 }, { y: 980, rotation: 582, duration: 3.1, ease: "none", repeat: 3 }, 24.436);
+      tl.fromTo("#cf7", { y: -431, rotation: 79 }, { y: 980, rotation: 619, duration: 3.6, ease: "none", repeat: 3 }, 23.236);
+      tl.fromTo("#cf8", { y: -84, rotation: 116 }, { y: 980, rotation: 656, duration: 4.1, ease: "none", repeat: 3 }, 23.436);
+      tl.fromTo("#cf9", { y: -137, rotation: 153 }, { y: 980, rotation: 693, duration: 4.6, ease: "none", repeat: 3 }, 23.636);
+      tl.fromTo("#cf10", { y: -190, rotation: 10 }, { y: 980, rotation: 550, duration: 2.6, ease: "none", repeat: 3 }, 23.836);
+      tl.fromTo("#cf11", { y: -243, rotation: 47 }, { y: 980, rotation: 587, duration: 3.1, ease: "none", repeat: 3 }, 24.036);
+      tl.fromTo("#cf12", { y: -296, rotation: 84 }, { y: 980, rotation: 624, duration: 3.6, ease: "none", repeat: 3 }, 24.236);
+      tl.fromTo("#cf13", { y: -349, rotation: 121 }, { y: 980, rotation: 661, duration: 4.1, ease: "none", repeat: 3 }, 24.436);
+      tl.fromTo("#cf14", { y: -402, rotation: 158 }, { y: 980, rotation: 698, duration: 4.6, ease: "none", repeat: 3 }, 23.236);
+      tl.fromTo("#cf15", { y: -455, rotation: 15 }, { y: 980, rotation: 555, duration: 2.6, ease: "none", repeat: 3 }, 23.436);
+      tl.fromTo("#cf16", { y: -108, rotation: 52 }, { y: 980, rotation: 592, duration: 3.1, ease: "none", repeat: 3 }, 23.636);
+      tl.fromTo("#cf17", { y: -161, rotation: 89 }, { y: 980, rotation: 629, duration: 3.6, ease: "none", repeat: 3 }, 23.836);
+      tl.fromTo("#cf18", { y: -214, rotation: 126 }, { y: 980, rotation: 666, duration: 4.1, ease: "none", repeat: 3 }, 24.036);
+      tl.fromTo("#cf19", { y: -267, rotation: 163 }, { y: 980, rotation: 703, duration: 4.6, ease: "none", repeat: 3 }, 24.236);
+      tl.fromTo("#cf20", { y: -320, rotation: 20 }, { y: 980, rotation: 560, duration: 2.6, ease: "none", repeat: 3 }, 24.436);
+      tl.fromTo("#cf21", { y: -373, rotation: 57 }, { y: 980, rotation: 597, duration: 3.1, ease: "none", repeat: 3 }, 23.236);
+      tl.fromTo("#cf22", { y: -426, rotation: 94 }, { y: 980, rotation: 634, duration: 3.6, ease: "none", repeat: 3 }, 23.436);
+      tl.fromTo("#cf23", { y: -79, rotation: 131 }, { y: 980, rotation: 671, duration: 4.1, ease: "none", repeat: 3 }, 23.636);
+      tl.fromTo("#cf24", { y: -132, rotation: 168 }, { y: 980, rotation: 708, duration: 4.6, ease: "none", repeat: 3 }, 23.836);
+      tl.fromTo("#cf25", { y: -185, rotation: 25 }, { y: 980, rotation: 565, duration: 2.6, ease: "none", repeat: 3 }, 24.036);
+      tl.fromTo("#cf26", { y: -238, rotation: 62 }, { y: 980, rotation: 602, duration: 3.1, ease: "none", repeat: 3 }, 24.236);
+      tl.fromTo("#cf27", { y: -291, rotation: 99 }, { y: 980, rotation: 639, duration: 3.6, ease: "none", repeat: 3 }, 24.436);
+      tl.fromTo("#cf28", { y: -344, rotation: 136 }, { y: 980, rotation: 676, duration: 4.1, ease: "none", repeat: 3 }, 23.236);
+      tl.fromTo("#cf29", { y: -397, rotation: 173 }, { y: 980, rotation: 713, duration: 4.6, ease: "none", repeat: 3 }, 23.436);
+      tl.fromTo("#cf30", { y: -450, rotation: 30 }, { y: 980, rotation: 570, duration: 2.6, ease: "none", repeat: 3 }, 23.636);
+      tl.fromTo("#cf31", { y: -103, rotation: 67 }, { y: 980, rotation: 607, duration: 3.1, ease: "none", repeat: 3 }, 23.836);
+      tl.fromTo("#cf32", { y: -156, rotation: 104 }, { y: 980, rotation: 644, duration: 3.6, ease: "none", repeat: 3 }, 24.036);
+      tl.fromTo("#cf33", { y: -209, rotation: 141 }, { y: 980, rotation: 681, duration: 4.1, ease: "none", repeat: 3 }, 24.236);
+      tl.fromTo("#fol .fol", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }, 28.449);
+      tl.fromTo("#fol .fol", { scale: 1 }, { scale: 1.08, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, 28.949);
+      tl.fromTo("#cap0 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 0.06);
+      tl.fromTo("#cap1 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 1.27);
+      tl.fromTo("#cap2 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 1.61);
+      tl.fromTo("#cap3 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 2.38);
+      tl.fromTo("#cap4 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 3.26);
+      tl.fromTo("#cap5 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 4.698);
+      tl.fromTo("#cap6 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.038);
+      tl.fromTo("#cap7 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 6.818);
+      tl.fromTo("#cap8 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 7.55);
+      tl.fromTo("#cap9 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 8.48);
+      tl.fromTo("#cap10 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 9.59);
+      tl.fromTo("#cap11 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 10.24);
+      tl.fromTo("#cap12 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 11.49);
+      tl.fromTo("#cap13 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 15.383);
+      tl.fromTo("#cap14 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 16.583);
+      tl.fromTo("#cap15 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 17.183);
+      tl.fromTo("#cap16 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 18.083);
+      tl.fromTo("#cap17 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 19.703);
+      tl.fromTo("#cap18 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 21.322);
+      tl.fromTo("#cap19 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 21.652);
+      tl.fromTo("#cap20 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 23.606);
+      tl.fromTo("#cap21 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 24.796);
+      tl.fromTo("#cap22 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 26.366);
+      tl.fromTo("#cap23 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 26.866);
+      tl.fromTo("#cap24 p", { scale: 0.75, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.12, ease: "back.out(2.5)" }, 28.599);
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

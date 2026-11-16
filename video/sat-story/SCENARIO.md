@@ -104,3 +104,15 @@ Both branches stay interesting, so whatever wins, Day 2 has a twist.
   daily episodes.
 - **Every day:** the owner reports the winning comment, Claude writes and renders the next day. The render takes
   about 20–30 min; the first episode takes longer because the sets are new.
+
+## Day 1, as built (`video/sat-story-day1/`)
+- **Length:** 31.5 s.
+- **Voice:** Chatterbox (free, local), with a male tone taken from Kokoro `am_michael`. Each line was generated
+  twice and both takes were transcribed with Whisper and checked against the script. The cleaner take was kept,
+  trimmed and sped up 1.18× (L5 1.04×), and a 0.7 s pause was added before "1,500".
+- **`build.py` times everything from the voice lines** and writes the scene's beat times, the overlays and the
+  audio layout. To change a line, replace its WAV, update `assets/voice/words.json` and rerun `python3 build.py`.
+- **Music** is the same vidIQ bed as the SAT shorts (trimmed to `music.mp3`). The phone vibration is synthesised
+  with ffmpeg.
+- **For Day 2,** copy the folder and change the HUD values, the question card, the chat, the A/B options and the
+  lines.
