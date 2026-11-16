@@ -16,6 +16,11 @@ first two Reels and the rules that follow from it. In short:
 - Ignore likes, comments and saves: most come from the owner's own accounts. Watch time and the retention curve
   are the signal.
 
+**The story series (`video/sat-story/`, "30 Days to 1500") is narrated calmly, at natural speed, never sped up.**
+The owner rejected Day 1's first cut because the voice was "too quick. It must be calm". It used Chatterbox at
+exaggeration 0.7 with a 1.18× speed-up. Use calm settings (exaggeration ~0.4, cfg ~0.5, no atempo) and stay
+under the 40 s cap by trimming words, not by speeding up.
+
 ## Responsive layout: the conventions that keep phones working
 
 - **One navigation source.** `SidebarContent` (student) and `AdminSidebarContent`

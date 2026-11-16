@@ -106,12 +106,19 @@ Both branches stay interesting, so whatever wins, Day 2 has a twist.
   about 20–30 min; the first episode takes longer because the sets are new.
 
 ## Day 1, as built (`video/sat-story-day1/`)
-- **Length:** 31.5 s.
-- **Voice:** Chatterbox (free, local), with a male tone taken from Kokoro `am_michael`. Each line was generated
-  twice and both takes were transcribed with Whisper and checked against the script. The cleaner take was kept,
-  trimmed and sped up 1.18× (L5 1.04×), and a 0.7 s pause was added before "1,500".
+- **Length:** 38.3 s.
+- **Voice:** Chatterbox (free, local), with a male tone taken from Kokoro `am_michael`, in **calm** settings
+  (exaggeration 0.4, cfg_weight 0.5) at **natural speed**.
+  - The first cut used exaggeration 0.7 and a 1.18× speed-up; the owner said "too quick. It must be calm".
+  - Each line was generated twice, both takes were transcribed with Whisper and checked against the script, and
+    the cleaner take was kept.
+  - Silences are trimmed only above 0.45 s, and a 0.6 s pause was added before "1,500" so the cube steps can be
+    read.
 - **`build.py` times everything from the voice lines** and writes the scene's beat times, the overlays and the
   audio layout. To change a line, replace its WAV, update `assets/voice/words.json` and rerun `python3 build.py`.
+- **`remix.py` rebuilds the soundtrack from `index.html` with ffmpeg,** matching HyperFrames' mix to 0.1 LU per
+  section. An audio-only fix then only needs a remux, not a re-render.
+- **The buzzer under "Wrong!" sits at 0.2.** At 0.45 it masked the word, and Whisper heard "Long".
 - **Music** is the same vidIQ bed as the SAT shorts (trimmed to `music.mp3`). The phone vibration is synthesised
   with ffmpeg.
 - **For Day 2,** copy the folder and change the HUD values, the question card, the chat, the A/B options and the

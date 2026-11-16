@@ -81,3 +81,6 @@ against 150 a month.
     then `uv pip install "setuptools<81"` (its watermarker needs `pkg_resources`).
   - A male tone can come from a Kokoro clip as the reference voice (`audio_prompt_path`). Never clone a real
     person's voice or ElevenLabs' Liam.
+
+**For the story series, narration is calm and at natural speed.** The owner said Day 1 was "too quick. It must be
+calm". Use Chatterbox at exaggeration ~0.4 and cfg_weight ~0.5, with no `atempo` speed-up.
