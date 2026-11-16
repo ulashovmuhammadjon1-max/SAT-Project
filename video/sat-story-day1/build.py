@@ -64,6 +64,7 @@ w = wp.read_text()
 tt = {"s2": T["s2"], "q": T["q"], "phone": T["phone"], "buzz": T["buzz"], "split": T["split"], "follow": T["follow"], "loop": T["loop"], "end": END}
 w = re.sub(r"/\*TT\*/.*?/\*TT\*/", "/*TT*/" + json.dumps(tt) + "/*TT*/", w)
 w = re.sub(r'data-duration="[0-9.]+"', f'data-duration="{END}"', w)
+w = re.sub(r"parseFloat\(root\.dataset\.duration\) \|\| [0-9.]+;", f"parseFloat(root.dataset.duration) || {END};", w)  # the runtime may strip data-duration
 wp.write_text(w)
 
 # ---------------------------------------------------------------- captions (spoken words)
