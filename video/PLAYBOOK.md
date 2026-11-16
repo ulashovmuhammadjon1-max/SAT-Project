@@ -111,7 +111,7 @@ Why they convert:
   escalates part by part.
 - **They post fast:** one or two parts a day.
 - **Story episodes run long (70–120 s).** A narrative holds attention that a puzzle can't, so the ~25 s rule above
-  is for single-question Reels only.
+  is for single-question Reels only. The owner caps our own story episodes at **40 s**.
 
 The idea for scholarly.space: an **original** series in this genre, with the SAT as the stakes. For example, a
 character with N days until the SAT, a score meter and a target score. The audience votes on each day's choice,

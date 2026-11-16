@@ -13,7 +13,8 @@ The premise, characters and look are our own. Every episode also contains one **
 scholarly.space test, so the series teaches as it entertains.
 
 ## The series rules (keep them honest)
-- **One episode a day,** 55–75 s, titled "DAY N / 30". Days can skip ("DAY 4") when nothing happens.
+- **One episode a day, 40 s at most** (the owner's cap), titled "DAY N / 30". Days can skip ("DAY 4") when nothing
+  happens.
 - **Every episode ends on an A/B choice:** "Comment A or B. The top answer decides Day N+1."
   - The option with more comments by the next morning wins, and the owner tells Claude which one.
   - We always follow the winner, even when it's the "wrong" choice.
@@ -50,23 +51,19 @@ Bedroom at night: desk, laptop, lamp, phone, a window with city lights, an unmad
 
 | Time | Visual | On screen (carries it on mute) | Voice |
 |---|---|---|---|
-| 0.0–4.5 | Push in on the laptop: a big red **1210** on the score report, Max's face lit by the screen | **HE NEEDS 1500 IN 30 DAYS** / **YOU CONTROL EVERYTHING** | "Max needs a fifteen hundred on the SAT. He has thirty days. And you decide everything he does." |
-| 4.5–9.5 | His phone lights up on the desk: *SCHOLARSHIP OFFER: full tuition. Condition: SAT 1500+.* Max leans back, hands on his head | FULL SCHOLARSHIP · ONLY IF 1500+ | "If he hits fifteen hundred, the scholarship is his. Tonight, he took his first practice test." |
-| 9.5–12.5 | Score report close-up: R&W 640 + Math 570; the gap counter ticks to **−290** | **1210 · 290 SHORT** | "Twelve-ten. Two hundred ninety points short." |
-| 12.5–15.5 | Max scrolls to the last question; his click on "240" is still highlighted | THE ONE HE WAS SURE ABOUT… | "And the one he was *sure* he got right… was this one." |
-| 15.5–22 | Full-screen question card: two cones (2 : 5), "96 L" on the small one, choices A–D | Two similar cones · heights 2 : 5 · small = 96 L · big = ? | "Two similar cones. Heights two to five. The small one holds ninety-six litres. The big one?" |
-| 22–25 | Countdown with a ticking clock, music lifts | **SOLVE IT BEFORE MAX ⏱ 3 · 2 · 1** · From Test 31 · free on scholarly.space | (silence, tick) |
-| 25–28 | A red ✗ slams on **A) 240**, buzzer | ✗ 240 · THE TRAP | "Max said two-forty. Wrong." |
-| 28–34 | The small cone pours into the big one: it fills ×2.5 high, ×2.5 wide, ×2.5 deep. Green circle on **C) 1,500**, ding | VOLUME GROWS WITH THE **CUBE** · (5/2)³ × 96 = **1,500** | "Volume grows with the *cube*. Five-halves, cubed, times ninety-six… fifteen hundred." |
-| 34–37 | Hard cut: his phone buzzes in the dark. Group chat **Aziz 🎉**: *"party at mine TOMORROW. everyone's coming. u in??"* | (the chat bubble itself) | "Then, at midnight… his phone buzzes." |
-| 37–41 | Max looks between the phone and the laptop. The ⚡ meter flashes **30%** | ⚡ 30% · SCORE −290 | "His energy is at thirty percent. And he's two hundred ninety points short." |
-| 41–49 | Split screen. **A:** Aziz's party, lights and music. **B:** Max at the desk with practice test #2 on scholarly.space. | **A) GO TO THE PARTY** (rest, but lose a night) · **B) STAY & STUDY** (practice, but exhausted) | "So what does Max do? A… go to the party. Or B… stay home and take another practice test." |
-| 49–53 | Both cards pulse; a comment-arrow animation | **COMMENT A OR B 👇** · THE TOP ANSWER DECIDES DAY 2 | "Comment A or B. The top answer decides Day 2." |
-| 53–56 | Max turns to the camera, unsure | **FOLLOW FOR DAY 2** | "Follow, so you don't miss what happens." |
-| 56–57.5 | Hard cut back to the red **1210** (the opening frame) | DAY 1 / 30 | — |
+| 0–3.5 | Push in on the laptop: a big red **1210**, Max's face lit by the screen | **HE NEEDS 1500 IN 30 DAYS** · **YOU CONTROL HIM** | "Max needs a fifteen hundred for a full scholarship. Thirty days. You decide everything." |
+| 3.5–6 | The score report scrolls to the question his "240" click is still on | 1210 · 290 SHORT | "He just scored twelve-ten. This question cost him." |
+| 6–10 | Full-screen question card: two cones (2 : 5), "96 L" on the small one, choices A–D | Two similar cones · heights 2 : 5 · small = 96 L · big = ? | "Two similar cones, heights two to five. The small one holds ninety-six litres. The big one?" |
+| 10–13 | Countdown, ticking clock, music lifts | **SOLVE IT BEFORE MAX ⏱ 3 · 2 · 1** · From Test 31 · free on scholarly.space | (silence, tick) |
+| 13–19 | A red ✗ on **A) 240** (buzzer), then the small cone pours into the big one; a green circle on **C) 1,500** (ding) | VOLUME GROWS WITH THE **CUBE** · (5/2)³ × 96 = **1,500** | "Max said two-forty. Wrong. Volume grows with the *cube*… fifteen hundred." |
+| 19–22 | Hard cut: his phone buzzes in the dark. **Aziz 🎉**: *"party at mine TOMORROW. u in??"* The ⚡ meter flashes **30%** | (the chat bubble) · ⚡ 30% | "Then… his phone buzzes." |
+| 22–31 | Split screen. **A:** Aziz's party, lights. **B:** Max at the desk with practice test #2 on scholarly.space. | **A) PARTY** ⚡ +50%, but lose a night · **B) STUDY** 📈 practice, but ⚡ −20% · **COMMENT A OR B 👇 · TOP ANSWER DECIDES DAY 2** | "Party… or study? Comment A or B. The top answer decides Day 2." |
+| 31–34 | Max looks at the camera, unsure | **FOLLOW FOR DAY 2** | "Follow for Day 2." |
+| 34–36 | Hard cut back to the red **1210** (the opening frame) | DAY 1 / 30 | — |
 
-About 57 s, about 150 spoken words. The story opens a new loop (the phone buzz) 1 s after the answer, so nobody
-reaches a natural "it's over" point until the vote.
+About 36 s and about 70 spoken words. Cut from the first draft: the scholarship letter (now in the first line), the
+score breakdown, and the spoken energy explanation (the A/B cards carry it on screen). The phone buzz comes 1 s
+after the answer, so there's no natural "it's over" point before the vote.
 
 ### Hook variants (test across days or platforms)
 1. "Max needs a 1500 on the SAT in 30 days. And you decide everything he does." (in the script above)
