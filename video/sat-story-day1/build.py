@@ -266,7 +266,7 @@ audio("sfx-intro", "assets/sfx/whoosh.mp3", 0, 1.3, 0.28, ' data-media-start="0.
 for i, at in enumerate([T["q"], T["phone"], T["split"], T["follow"], T["loop"]]):
     audio(f"sfx-wh{i}", "assets/sfx/whoosh.mp3", at - 0.72, 2.0, 0.24, "", 17 + i % 2)
 audio("sfx-tick", "assets/sfx/tick.mp3", T["cd"], 3.0, 3.6, ' data-fade-out="0.15"', 12)
-audio("sfx-buzz", "assets/sfx/buzz.mp3", T["wrong"], 0.3, 0.45, "", 13)
+audio("sfx-buzz", "assets/sfx/buzz.mp3", T["wrong"], 0.3, 0.2, "", 13)
 audio("sfx-ding", "assets/sfx/ding.mp3", T["ans"] + 0.05, 0.36, 1.0, "", 13)
 audio("sfx-vib", "assets/sfx/vibrate.wav", T["buzz"], 1.2, 0.9, "", 14)
 audio("sfx-vib2", "assets/sfx/vibrate.wav", T["buzz"] + 1.6, 0.6, 0.8, "", 15)
