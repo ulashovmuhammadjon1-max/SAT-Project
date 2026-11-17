@@ -6,8 +6,13 @@ import { requireUser } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 
+import { settleIfFinished } from "@/server/actions/student/attempts";
+
 export default async function ReviewPage({ params }: { params: { attemptId: string } }) {
   const user = await requireUser();
+
+  // Finish it first if the last module ran out while the student was away.
+  await settleIfFinished(params.attemptId);
 
   const attempt = await prisma.attempt.findUnique({
     where: { id: params.attemptId },

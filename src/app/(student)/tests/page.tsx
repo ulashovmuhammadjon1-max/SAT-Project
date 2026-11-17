@@ -12,8 +12,18 @@ import { sortTests } from "@/lib/tests/order";
 export const metadata = { title: "Practice Tests" };
 export const dynamic = "force-dynamic";
 
+import { settleIfFinished } from "@/server/actions/student/attempts";
+
 export default async function TestsPage() {
   const user = await requireUser();
+
+  // An attempt whose final module timed out while the student was away is
+  // finished here, so it shows a result instead of "Resume" forever.
+  const open = await prisma.attempt.findMany({
+    where: { userId: user.id, status: { in: ["IN_PROGRESS", "PAUSED"] } },
+    select: { id: true },
+  });
+  for (const a of open) await settleIfFinished(a.id);
 
   const [published, myAttempts] = await Promise.all([
     prisma.test.findMany({

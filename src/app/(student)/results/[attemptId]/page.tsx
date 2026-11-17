@@ -23,6 +23,8 @@ export const dynamic = "force-dynamic";
  * sat the same paper, which skills cost the most marks, and a card built to be
  * screenshotted into a group chat.
  */
+import { settleIfFinished } from "@/server/actions/student/attempts";
+
 export default async function ResultsPage({
   params,
   searchParams,
@@ -37,6 +39,9 @@ export default async function ResultsPage({
         ? "Your test was ended because you left the test page more than 6 times."
         : null;
   const user = await requireUser();
+
+  // Finish it first if the last module ran out while the student was away.
+  await settleIfFinished(params.attemptId);
 
   const attempt = await prisma.attempt.findUnique({
     where: { id: params.attemptId },

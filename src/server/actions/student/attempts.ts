@@ -335,3 +335,45 @@ export async function forfeitAttempt(attemptId: string, moduleAttemptId: string)
   }
   return { finished: true };
 }
+
+/**
+ * Finish an attempt whose LAST module ran out of time while the student was
+ * away (closed the tab, lost connection). Nothing else would ever submit it:
+ * the countdown only fires while the exam page is open, so the attempt sat
+ * "in progress" forever with no result and no review.
+ *
+ * Only the final module settles this way. An earlier module that expired
+ * while the student was gone is left alone so the pause-and-resume flow keeps
+ * working; opening the exam submits that one as before.
+ *
+ * Returns true when the attempt is (now) submitted.
+ */
+export async function settleIfFinished(attemptId: string): Promise<boolean> {
+  const user = await requireUser();
+  const attempt = await prisma.attempt.findUnique({
+    where: { id: attemptId },
+    include: { test: { include: { modules: { select: { subject: true, order: true } } } } },
+  });
+  if (!attempt || attempt.userId !== user.id) return false;
+  if (attempt.status === "SUBMITTED") return true;
+  if (!attempt.currentModuleId) return false;
+
+  const ma = await prisma.moduleAttempt.findFirst({
+    where: { attemptId, moduleId: attempt.currentModuleId, submittedAt: null },
+    include: { module: { select: { subject: true, order: true, timeLimitMinutes: true } } },
+  });
+  if (!ma) return false;
+
+  const graceMs = 2 * 60_000;
+  const expired = ma.startedAt.getTime() + ma.module.timeLimitMinutes * 60_000 + graceMs < Date.now();
+  if (!expired) return false;
+
+  const last = attempt.test.modules.reduce(
+    (max, m) => Math.max(max, moduleSortKey(m.subject, m.order)),
+    0,
+  );
+  if (moduleSortKey(ma.module.subject, ma.module.order) < last) return false;
+
+  const result = await submitModule(attemptId, ma.id);
+  return result.finished;
+}
